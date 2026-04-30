@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1570",
+  "section_number": "2.29.24",
+  "header": "Need summary of domains for all AWS Regions",
+  "content": "The following script uses the Amazon EC2 describe-regions AWS CLI command to create a list of all\nRegions in which OpenSearch Service could be available. Then it calls list-domain-names for each\nRegion:\nInvalid M3 instance type\n2061\nAmazon OpenSearch Service\nDeveloper Guide\nfor region in `aws ec2 describe-regions --output text | cut -f4`\ndo\necho \"\\nListing domains in region '$region':\"\naws opensearch list-domain-names --region $region --query 'DomainNames'\ndone\nYou receive the following output for each Region:\nListing domains in region:'us-west-2'...\n[\n{\n\"DomainName\": \"sample-domain\"\n}\n]\nRegions in which OpenSearch Service is not available return \"Could not connect to the endpoint\nURL.\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2090,
+      "end": 2091
+    },
+    "content_stats": {
+      "char_count": 695,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

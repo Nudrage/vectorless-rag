@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_548",
+  "section_number": "2.8.15.3",
+  "header": "Tagging domains (AWS CLI)",
+  "content": "You can create resource tags using the AWS CLI with the --add-tags command.\nSyntax\nadd-tags --arn=<domain_arn> --tag-list Key=<key>,Value=<value>\nParameter\nDescription\n--arn\nAmazon resource name for the OpenSearch Service domain to which\nthe tag is attached.\n--tag-list\nSet of space-separated key-value pairs in the following format:\nKey=<key>,Value=<value>\nExample\nThe following example creates two tags for the logs domain:\naws opensearch add-tags --arn arn:aws:es:us-east-1:379931976431:domain/logs --tag-list\nKey=service,Value=OpenSearch Key=instances,Value=m3.2xlarge\nYou can remove tags from an OpenSearch Service domain using the --remove-tags command.\nSyntax\nremove-tags --arn=<domain_arn> --tag-keys Key=<key>,Value=<value>\nTagging domains (AWS CLI)\n723\nAmazon OpenSearch Service\nDeveloper Guide\nParameter\nDescription\n--arn\nAmazon Resource Name (ARN) for the OpenSearch Service domain to\nwhich the tag is attached.\n--tag-keys\nSet of space-separated key-value pairs that you want to remove from\nthe OpenSearch Service domain.\nExample\nThe following example removes two tags from the logs domain that were created in the preceding\nexample:\naws opensearch remove-tags --arn arn:aws:es:us-east-1:379931976431:domain/logs --tag-\nkeys service instances\nYou can view the existing tags for an OpenSearch Service domain with the --list-tags command:\nSyntax\nlist-tags --arn=<domain_arn>\nParameter\nDescription\n--arn\nAmazon Resource Name (ARN) for the OpenSearch Service domain to\nwhich the tags are attached.\nExample\nThe following example lists all resource tags for the logs domain:\naws opensearch list-tags --arn arn:aws:es:us-east-1:379931976431:domain/logs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 752,
+      "end": 753
+    },
+    "content_stats": {
+      "char_count": 1657,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Tagging Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

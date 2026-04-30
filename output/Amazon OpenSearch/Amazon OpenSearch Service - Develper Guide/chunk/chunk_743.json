@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_743",
+  "section_number": "2.10.5.2",
+  "header": "Understanding Amazon OpenSearch Service log ﬁle entries",
+  "content": "A trail is a conﬁguration that enables delivery of events as log ﬁles to an Amazon S3 bucket that\nyou specify. CloudTrail log ﬁles contain one or more log entries. An event represents a single\nrequest from any source and includes information about the requested action, the date and time of\nthe action, request parameters, and so on. CloudTrail log ﬁles aren't an ordered stack trace of the\npublic API calls, so they don't appear in any speciﬁc order.\nThe following example shows a CloudTrail log entry that demonstrates the CreateDomain\noperation:\n{\n\"eventVersion\": \"1.05\",\n\"userIdentity\": {\n\"type\": \"IAMUser\",\n\"principalId\": \"AIDACKCEVSQ6C2EXAMPLE\",\n\"arn\": \"arn:aws:iam::123456789012:user/test-user\",\n\"accountId\": \"123456789012\",\n\"accessKeyId\": \"access-key\",\n\"userName\": \"test-user\",\n\"sessionContext\": {\n\"attributes\": {\n\"mfaAuthenticated\": \"false\",\n\"creationDate\": \"2018-08-21T21:59:11Z\"\n}\n},\n\"invokedBy\": \"signin.amazonaws.com\"\n},\nUnderstanding Amazon OpenSearch Service log ﬁle entries\n1276\nAmazon OpenSearch Service\nDeveloper Guide\n\"eventTime\": \"2018-08-21T22:00:05Z\",\n\"eventSource\": \"es.amazonaws.com\",\n\"eventName\": \"CreateDomain\",\n\"awsRegion\": \"us-west-1\",\n\"sourceIPAddress\": \"123.123.123.123\",\n\"userAgent\": \"signin.amazonaws.com\",\n\"requestParameters\": {\n\"engineVersion\": \"OpenSearch_1.0\",\n\"clusterConfig\": {\n\"instanceType\": \"m4.large.search\",\n\"instanceCount\": 1\n},\n\"snapshotOptions\": {\n\"automatedSnapshotStartHour\": 0\n},\n\"domainName\": \"test-domain\",\n\"encryptionAtRestOptions\": {},\n\"eBSOptions\": {\n\"eBSEnabled\": true,\n\"volumeSize\": 10,\n\"volumeType\": \"gp2\"\n},\n\"accessPolicies\": \"{\\\"Version\\\":\\\"2012-10-17\\\",\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\n\\\",\\\"Principal\\\":{\\\"AWS\\\":[\\\"123456789012\\\"]},\\\"Action\\\":[\\\"es:*\\\"],\\\"Resource\\\":\n\\\"arn:aws:es:us-west-1:123456789012:domain/test-domain/*\\\"}]}\",\n\"advancedOptions\": {\n\"rest.action.multi.allow_explicit_index\": \"true\"\n}\n},\n\"responseElements\": {\n\"domainStatus\": {\n\"created\": true,\n\"clusterConfig\": {\n\"zoneAwarenessEnabled\": false,\n\"instanceType\": \"m4.large.search\",\n\"dedicatedMasterEnabled\": false,\n\"instanceCount\": 1\n},\n\"cognitoOptions\": {\n\"enabled\": false\n},\n\"encryptionAtRestOptions\": {\n\"enabled\": false\n},\nUnderstanding Amazon OpenSearch Service log ﬁle entries\n1277\nAmazon OpenSearch Service\nDeveloper Guide\n\"advancedOptions\": {\n\"rest.action.multi.allow_explicit_index\": \"true\"\n},\n\"upgradeProcessing\": false,\n\"snapshotOptions\": {\n\"automatedSnapshotStartHour\": 0\n},\n\"eBSOptions\": {\n\"eBSEnabled\": true,\n\"volumeSize\": 10,\n\"volumeType\": \"gp2\"\n},\n\"engineVersion\": \"OpenSearch_1.0\",\n\"processing\": true,\n\"aRN\": \"arn:aws:es:us-west-1:123456789012:domain/test-domain\",\n\"domainId\": \"123456789012/test-domain\",\n\"deleted\": false,\n\"domainName\": \"test-domain\",\n\"accessPolicies\": \"{\\\"Version\\\":\\\"2012-10-17\\\",\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\n\\\",\\\"Principal\\\":{\\\"AWS\\\":\\\"arn:aws:iam::123456789012:root\\\"},\\\"Action\\\":\\\"es:*\\\",\n\\\"Resource\\\":\\\"arn:aws:es:us-west-1:123456789012:domain/test-domain/*\\\"}]}\"\n}\n},\n\"requestID\": \"12345678-1234-1234-1234-987654321098\",\n\"eventID\": \"87654321-4321-4321-4321-987654321098\",\n\"eventType\": \"AwsApiCall\",\n\"recipientAccountId\": \"123456789012\"\n}\nUnderstanding Amazon OpenSearch Service log ﬁle entries\n1278\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1305,
+      "end": 1308
+    },
+    "content_stats": {
+      "char_count": 3215,
+      "word_count": 287
+    },
+    "hierarchy": {
+      "parent": "Monitoring Amazon OpenSearch Service API calls with AWS CloudTrail",
+      "children": []
+    }
+  }
+}

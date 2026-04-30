@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_650",
+  "section_number": "2.10.1.20",
+  "header": "Cross-cluster replication metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for cross-cluster replication.\nMetric\nDescription\nReplicationRate\nThe average rate of replication operations per second. This metric is\nsimilar to the IndexingRate  metric.\nLeaderCheckPoint\nFor a speciﬁc connection, the sum of leader checkpoint values across\nall replicating indexes. You can use this metric to measure replication\nlatency.\nCross-cluster replication metrics\n1210\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nFollowerC\nheckPoint\nFor a speciﬁc connection, the sum of follower checkpoint values\nacross all replicating indexes. You can use this metric to measure\nreplication latency.\nReplicati\nonNumSync\ningIndices\nThe number of indexes that have a replication status of SYNCING.\nReplicati\nonNumBoot\nstrapping\nIndices\nThe number of indexes that have a replication status of BOOTSTRAP\nPING .\nReplicati\nonNumPaus\nedIndices\nThe number of indexes that have a replication status of PAUSED.\nReplicati\nonNumFail\nedIndices\nThe number of indexes that have a replication status of FAILED.\nCrossClus\nterOutbou\nndReplica\ntionRequests\nThe number of replication transport requests on the follower domain.\nTransport requests are internal and occur each time a replication API\noperation is called. They also occur when the follower domain polls\nchanges from the leader domain.\nCrossClus\nterInboun\ndReplicat\nionRequests\nThe number of replication transport requests on the leader domain.\nTransport requests are internal and occur each time a replication API\noperation is called.\nAutoFollo\nwNumSucce\nssStartRe\nplication\nThe number of follower indexes that have been successfully created\nby a replication rule for a speciﬁc connection.\nCross-cluster replication metrics\n1211\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nAutoFollo\nwNumFaile\ndStartRep\nlication\nThe number of follower indexes that failed to be created by a replicati\non rule when there was a matching pattern. This problem might arise\ndue to a network issue on the remote cluster, or a security issue (i.e.\nthe associated role doesn't have permission to start replication).\nAutoFollo\nwLeaderCa\nllFailure\nWhether there have been any failed queries from the follower index\nto the leader index to pull new data. A value of 1 means that there\nhave been 1 or more failed calls in the last minute.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1239,
+      "end": 1241
+    },
+    "content_stats": {
+      "char_count": 2336,
+      "word_count": 342
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

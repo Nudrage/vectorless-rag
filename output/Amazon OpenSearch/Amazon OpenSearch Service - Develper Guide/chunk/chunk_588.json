@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_588",
+  "section_number": "2.9.5.2.4",
+  "header": "Querying S3 data in OpenSearch Discover",
+  "content": "After you set up your tables and conﬁgure your desired optional query acceleration, you can start\nanalyzing your data. To query your data, select your data source from the drop-down menu. If\nyou're using Amazon S3 and OpenSearch Dashboards, go to Discover and select the data source\nname.\nIf you're using a skipping index or haven't created an index, you can use SQL or PPL to query your\ndata. If you've conﬁgured a materialized view or a covering index, you already have an index and\ncan use Dashboards Query Language (DQL) throughout Dashboards. You can also use PPL with the\nObservability plugin, and SQL with the Query Workbench plugin. Currently, only the Observability\nand Query Workbench plugins support PPL and SQL. For querying data using the OpenSearch\nService API, refer to the async API documentation.\nNote\nNot all SQL and PPL statements, commands and functions are supported. For a list of\nsupported commands, see the section called “Supported SQL and PPL commands”.\nIf you’ve created a materialized view or covering index, you can use DQL to query your data\ngiven that you’ve indexed it within.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 779,
+      "end": 779
+    },
+    "content_stats": {
+      "char_count": 1108,
+      "word_count": 185
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring and querying an S3 data source in OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

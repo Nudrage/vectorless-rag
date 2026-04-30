@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_852",
+  "section_number": "155.1.1.83.2",
+  "header": "Query for event information",
+  "content": "// List relevant events 30 minutes before and after selected LogonAttempted event\nlet selectedEventTimestamp = datetime(2020-06-04T01:29:09.2496688Z);\nsearch in (DeviceFileEvents, DeviceProcessEvents, DeviceEvents,\nDeviceRegistryEvents, DeviceNetworkEvents, DeviceImageLoadEvents,\nDeviceLogonEvents)\nTimestamp between ((selectedEventTimestamp - 30m) .. (selectedEventTimestamp +\n30m))\nand DeviceId == \"079ecf9c5798d249128817619606c1c47369eb3e\"\nWith some knowledge of the query language, you can adjust the query to your preference. For\nexample, you can adjust this line, which determines the size of the time window:\nKusto\nIn addition to modifying the query to get more relevant results, you can also:\nView the results as charts\nCreate a custom detection rule\nAdvanced hunting overview\nLearn the query language\nWork with query results\nCustom detection rules\n| sort by Timestamp desc\n| extend Relevance = iff(Timestamp == selectedEventTimestamp, \"Selected event\",\niff(Timestamp < selectedEventTimestamp, \"Earlier event\", \"Later event\"))\n| project-reorder Relevance",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 564,
+      "end": 565
+    },
+    "content_stats": {
+      "char_count": 1063,
+      "word_count": 131
+    },
+    "hierarchy": {
+      "parent": "Quickly hunt for entity or event information with go hunt",
+      "children": []
+    }
+  }
+}

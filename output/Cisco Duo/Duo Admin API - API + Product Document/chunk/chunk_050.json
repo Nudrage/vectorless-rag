@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_050",
+  "section_number": "1.6.10",
+  "header": "Delete User",
+  "content": "Delete the user with ID user_id  from the system. The API will not delete phones\nassociated only with that user right away; remove them immediately with Delete Phone.\nThis method returns 200 if the phone was found or if no such phone exists. Requires\n\"Grant resource - Write\" API permission.\nUsers deleted by the API do not get moved into the Trash view as \"Pending Deletion\" as\nthey would if removed by directory sync, user deletion, or interactively from the Duo\nAdmin Panel, and therefore are not available for restoration. Users deleted via the API\nare immediately and permanently removed from Duo.\nTo send multiple users to the Trash, see Send Multiple Users to Trash.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 31,
+      "end": 31
+    },
+    "content_stats": {
+      "char_count": 673,
+      "word_count": 115
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

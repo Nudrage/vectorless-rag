@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1557",
+  "section_number": "2.29.11",
+  "header": "Domain stuck in processing state",
+  "content": "Your OpenSearch Service domain enters the \"Processing\" state when it's in the middle of a\nconﬁguration change. When you initiate a conﬁguration change, the domain status changes to\nFailed cluster nodes\n2057\nAmazon OpenSearch Service\nDeveloper Guide\n\"Processing\" while OpenSearch Service creates a new environment. In the new environment,\nOpenSearch Service launches a new set of applicable nodes (such as data, master, or UltraWarm).\nAfter the migration completes, the older nodes are terminated.\nThe cluster can get stuck in the \"Processing\" state if either of these situations occurs:\n• A new set of data nodes fails to launch.\n• Shard migration to the new set of data nodes is unsuccessful.\n• Validation check has failed with errors.\nFor detailed resolution steps in each of these situations, see Why is my Amazon OpenSearch\nService domain stuck in the \"Processing\" state?.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2086,
+      "end": 2087
+    },
+    "content_stats": {
+      "char_count": 876,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

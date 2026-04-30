@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_395",
+  "section_number": "2.7.10.10.1",
+  "header": "Data access policies versus IAM policies",
+  "content": "Data access policies are logically separate from AWS Identity and Access Management\n(IAM) policies. IAM permissions control access to the serverless API operations, such as\nCreateCollection and ListAccessPolicies. Data access policies control access to the\nOpenSearch operations that OpenSearch Serverless supports, such as PUT <index> or GET\n_cat/indices.\nThe IAM permissions that control access to data access policy API operations, such as\naoss:CreateAccessPolicy and aoss:GetAccessPolicy (described in the next section), don't\naﬀect the permission speciﬁed in a data access policy.\nData access control\n546\nAmazon OpenSearch Service\nDeveloper Guide\nFor example, suppose an IAM policy denies a user from creating data access policies for\ncollection-a, but allows them to create data access policies for all collections (*):\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Deny\",\n\"Action\": [\n\"aoss:CreateAccessPolicy\"\n],\n\"Resource\": \"*\",\n\"Condition\": {\n\"StringLike\": {\n\"aoss:collection\": \"collection-a\"\n}\n}\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:CreateAccessPolicy\"\n],\n\"Resource\": \"*\"\n}\n]\n}\nIf the user creates a data access policy that allows certain permission to all collections\n(collection/* or index/*/*) the policy will apply to all collections, including collection A.\nImportant\nBeing granted permissions within a data access policy is not suﬃcient to access data in\nyour OpenSearch Serverless collection. An associated principal must also be granted access\nto the IAM permissions aoss:APIAccessAll and aoss:DashboardsAccessAll. Both\npermissions grant full access to collection resources, while the Dashboards permission\nalso provides access to OpenSearch Dashboards. If a principal doesn't have both of these\nData access control\n547\nAmazon OpenSearch Service\nDeveloper Guide\nIAM permissions, they will receive 403 errors when attempting to send requests to the\ncollection. For more information, see the section called “Using OpenSearch API operations”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 575,
+      "end": 577
+    },
+    "content_stats": {
+      "char_count": 1975,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

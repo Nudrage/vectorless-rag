@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_308",
+  "section_number": "155.1.1.29.1.2",
+  "header": "How recommended actions are scored",
+  "content": "Each recommended action is worth 10 points or less, and most are scored in a binary fashion. If\nyou implement the recommended action, like create a new policy or turn on a specific setting,\nyou get 100% of the points. For other recommended actions, points are given as a percentage\nof the total configuration.\nFor example, a recommended action states you get 10 points by protecting all your users with\nmultifactor authentication. You only have 50 of 100 total users protected, so you'd get a partial\nscore of five points (50 protected / 100 total * 10 max pts = 5 pts).\nCurrently there are recommendations for the following products:\nApp governance\nMicrosoft Entra ID\nCitrix ShareFile\nMicrosoft Defender for Endpoint\nMicrosoft Defender for Identity\nMicrosoft Defender for Office\nDocusign\nExchange Online\nGitHub\nMicrosoft Defender for Cloud Apps\nMicrosoft Purview Information Protection\nMicrosoft Teams\nOkta\nSalesforce\nServiceNow\nSharePoint Online\nZoom\nRecommendations for other security products are coming soon. The recommendations don't\ncover all the attack surfaces associated with each product, but they're a good baseline. You can\nalso mark the recommended actions as covered by a non-Microsoft solution or alternate\nmitigation.\nMicrosoft Secure Score includes updated recommended actions to support security defaults in\nMicrosoft Entra ID to make it easier to help protect your organization with preconfigured\nsecurity settings for common attacks.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 180,
+      "end": 181
+    },
+    "content_stats": {
+      "char_count": 1454,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "How it works",
+      "children": []
+    }
+  }
+}

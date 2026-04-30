@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1580",
+  "section_number": "2.29.34",
+  "header": "Custom plugin installation fails due to version compatibility",
+  "content": "Problem: The plugin installation failed due to a version mismatch between the plugin and the\nrunning OpenSearch instance. The system returns the following error:\nCustom plugin installation fails due to version compatibility\n2067\nAmazon OpenSearch Service\nDeveloper Guide\nPluginValidationFailureReason : The provided plugin could not be loaded.\nCause: The plugin was compiled for OpenSearch ${MAJOR}.${MINOR}.{PATCH}, but your\nenvironment is running OpenSearch ${MAJOR}.${MINOR}.0. OpenSearch requires exact version\nmatching between plugins and the core OpenSearch installation for reasons of stability and\nsecurity.\nPossible ﬁx: Build the plugin with OpenSearch version ${MAJOR}.${MINOR}.0 to match your\ncluster version.\nTo verify and update the version of OpenSearch\n1.\nUse your cluster's API or dashboard to run the following command. Replace the default\nplaceholder values with your own information.\nAPI request:\ncurl -X GET your-opensearch-endpoint/\nDev Tools console in dashboard:\nGET /\nThe command returns information in the following format.\n{\n\"name\": \"node-id\",\n\"cluster_name\": \"account-id:domain-name\",\n\"cluster_uuid\": \"cluster-uuid\",\n\"version\": {\n\"distribution\": \"opensearch\",\n\"number\": \"2.17.0\",\n\"build_type\": \"tar\",\n\"build_hash\": \"unknown\",\n\"build_date\": \"2024-12-17T11:00:09.799828091Z\",\n\"build_snapshot\": false,\n\"lucene_version\": \"9.11.1\",\n\"minimum_wire_compatibility_version\": \"7.10.0\",\n\"minimum_index_compatibility_version\": \"7.0.0\"\n},\nCustom plugin installation fails due to version compatibility\n2068\nAmazon OpenSearch Service\nDeveloper Guide\n\"tagline\": \"The OpenSearch Project: https://opensearch.org/\"\n}\n2.\nIf the version number is not ${MAJOR}.${MINOR}.0, rebuild the plugin by doing the following:\na.\nUpdate the plugin's descriptor.properties to specify version ${MAJOR}.\n${MINOR}.0.\nb.\nRebuild the plugin using the command for your project type.\nc.\nRun the update-package command using the newly built .zip ﬁle.\nd.\nRun the associate-package command to associate the latest plugin version that was\ncreated when you ran the update-package command in the previous step.\nCustom plugin installation fails due to version compatibility\n2069\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2096,
+      "end": 2099
+    },
+    "content_stats": {
+      "char_count": 2198,
+      "word_count": 277
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

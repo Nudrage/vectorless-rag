@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_537",
+  "section_number": "2.8.13.1",
+  "header": "Custom endpoints for new domains",
+  "content": "You can enable a custom endpoint for a new OpenSearch Service domain using the OpenSearch\nService console, AWS CLI, or conﬁguration API.\nCreating a custom endpoint\n715\nAmazon OpenSearch Service\nDeveloper Guide\nTo customize your endpoint (console)\n1.\nFrom the OpenSearch Service console, choose Create domain and provide a name for the\ndomain.\n2.\nUnder Custom endpoint, select Enable custom endpoint.\n3.\nFor Custom hostname, enter your preferred custom endpoint hostname. The hostname\nshould be a fully qualiﬁed domain name (FQDN), such as www.yourdomain.com or\nexample.yourdomain.com.\nNote\nIf you don't have a wildcard certiﬁcate you must obtain a new certiﬁcate for your\ncustom endpoint's subdomains.\n4.\nFor AWS certiﬁcate, choose the SSL certiﬁcate to use for your domain. If no certiﬁcates are\navailable, you can import one into ACM or use ACM to provision one. For more information, see\nIssuing and Managing Certiﬁcates in the AWS Certiﬁcate Manager User Guide.\nNote\nThe certiﬁcate must have the custom endpoint name and be in the same account as\nyour OpenSearch Service domain. The certiﬁcate status should be ISSUED.\n•\nFollow the rest of the steps to create your domain and choose Create.\n•\nSelect the domain when it's ﬁnished processing to view your custom endpoint.\nTo use the CLI or conﬁguration API, use the CreateDomain and UpdateDomainConfig\noperations. For more information, see the AWS CLI Command Reference and Amazon\nOpenSearch Service API Reference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 744,
+      "end": 745
+    },
+    "content_stats": {
+      "char_count": 1466,
+      "word_count": 231
+    },
+    "hierarchy": {
+      "parent": "Creating a custom endpoint for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

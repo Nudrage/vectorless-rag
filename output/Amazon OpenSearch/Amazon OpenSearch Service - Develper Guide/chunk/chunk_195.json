@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_195",
+  "section_number": "2.6.17.1.2",
+  "header": "Creating a pipeline",
+  "content": "After you attach the policy to the pipeline role, use the AWSOpenSearchDataMigrationPipeline\nmigration blueprint to create the pipeline. This blueprint includes a default conﬁguration for\nmigrating data between OpenSearch Service domains or collections. For more information, see the\nsection called “Working with blueprints”.\nNote\nOpenSearch Ingestion uses your source domain version and distribution to determine\nwhat mechanism to use for migration. Some versions support the point_in_time\noption. OpenSearch Serverless uses the search_after option because it doesn't support\npoint_in_time or scroll.\nNew indexes might be in the process of being created during the migration process, or documents\nmight be updating while migration is in progress. Because of this, you might need to perform\neither a single scan or multiple scans of your domain index data to pick up new or updated data.\nSpecify the number of scans to run by conﬁguring the index_read_count and interval in the\npipeline conﬁguration. The following example shows how to perform multiple scans:\nscheduling:\ninterval: \"PT2H\"\nindex_read_count: 3\nstart_time: \"2023-06-02T22:01:30.00Z\"\nOpenSearch Ingestion uses the following conﬁguration to ensure that your data is written to the\nsame index and maintains the same document ID:\nOpenSearch Service as a source\n297\nAmazon OpenSearch Service\nDeveloper Guide\nindex: \"${getMetadata(\\\"opensearch-index\\\")}\"\ndocument_id: \"${getMetadata(\\\"opensearch-document_id\\\")}\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 326,
+      "end": 327
+    },
+    "content_stats": {
+      "char_count": 1470,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "OpenSearch Service as a source",
+      "children": []
+    }
+  }
+}

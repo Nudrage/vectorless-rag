@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_614",
+  "section_number": "2.9.8.4",
+  "header": "Deleting a data source",
+  "content": "When you delete a data source, Amazon OpenSearch Service removes it from your domain or\nyour collection. OpenSearch Service also removes indexes associated with the data source. Your\ntransactional data isn't deleted from the other AWS service, but the other AWS service doesn't send\nnew data to OpenSearch Service.\nYou can delete a data source integration using the AWS Management Console or the OpenSearch\nService API.\nMonitoring with AWS Budget\n771\nAmazon OpenSearch Service\nDeveloper Guide\nAWS Management Console\nTo delete an Amazon S3 data source\n1.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/\naos/.\n2.\nFrom the left navigation pane, choose Domains.\n3.\nSelect the domain that you want to delete a data source for. This opens the domain details\npage. Choose the Connections tab below the general information and ﬁnd the Direct query\nsection.\n4.\nSelect the data source you want to delete, choose Delete, and conﬁrm deletion.\nTo delete a CloudWatch Logs or Security Lake data source\n1.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/\naos/.\n2.\nFrom the left navigation pane, choose Central management, then Connected data sources.\n3.\nSelect the data source you want to delete, choose Delete, and conﬁrm deletion.\nOpenSearch Service API\nTo delete an Amazon S3 data source, use the DeleteDataSource API operation.\nPOST https://es.region.amazonaws.com/2021-01-01/opensearch/domain/domain-name/\ndataSource/data-source-name\nTo delete a CloudWatch Logs or Security Lake data source, use the DeleteDirectQueryDataSource\nAPI operation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 800,
+      "end": 801
+    },
+    "content_stats": {
+      "char_count": 1605,
+      "word_count": 233
+    },
+    "hierarchy": {
+      "parent": "Managing a data source in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

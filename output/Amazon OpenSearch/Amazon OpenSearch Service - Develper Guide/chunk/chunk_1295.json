@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1295",
+  "section_number": "2.21.4.1.3",
+  "header": "Step 3: Conﬁgure an OpenSearch Service knowledge base using CloudFormation",
+  "content": "Use the following procedure to conﬁgure an OpenSearch Service knowledge base using AWS\nCloudFormation so that Amazon Q can generate insights.\nBefore you begin\n1778\nAmazon OpenSearch Service\nDeveloper Guide\nTo conﬁgure a knowledge base for insights\n1.\nSign in to the Amazon OpenSearch Service console https://console.aws.amazon.com/aos/\nhome in a supported AWS Region. For more information, see Supported AWS Regions.\n2.\nIn the navigation pane, choose Integrations.\n3.\nIn the Integration templates section, choose the Integrate with knowledge base through\nAmazon Bedrock template. If you don't see this template, verify you're in a supported Region.\n4.\nIn the Integrate with knowledge base through Amazon Bedrock tile, choose Conﬁgure\ndomain, and then choose one of the available options. OpenSearch Service opens the\nCloudFormation stack template with the required ﬁelds pre-populated. The CloudFormation\nstack supports integration for public and VPC domains.\n5.\nChoose Create stack. After CloudFormation creates the resources, the service displays the\nAmazon Bedrock agent AgentId, ConnectorId, and ModelId.\nWhen applicable, Amazon Q now creates insights for OpenSearch Service alerts.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1807,
+      "end": 1808
+    },
+    "content_stats": {
+      "char_count": 1186,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "Before you begin",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_158",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Use the paging parameters to change the number of results shown in a response or to\nretrieve additional results. See Response Paging for details.\nPaging\nParameter\nRequired?\nDescription\nlimit\nOptional\nThe maximum number of records returned.\nDefault: 100 ; Max: 100\n\"tokens\": [],\n\"u2ftokens\": [],\n\"user_id\": \"DUJ424R8DP0OL5D4DAFJ\",\n\"username\": \"uname2\",\n\"webauthncredentials\": []\n}\n},\n{\n\"stat\": \"OK\",\n\"response\": \"\"\n},\n{\n\"stat\": \"OK\",\n\"response\": \"\"\n},\n{\n\"stat\": \"OK\",\n\"response\": \"\"\n}\n]\n}\nGET  /admin/v1/groups\n\n\noffset\nOptional\nThe offset from 0  at which to start record retriev\nWhen used with \"limit\", the handler will return \"lim\nwhere n is the offset.\nDefault: 0\ngroup_ids\nDeprecated\nRetrieve specific groups by specifying up to 200\nList format:\ngroup_ids=DGBDKSSH37KSJ373JKSU&group_ids\nIgnores other paging parameters when used.\ngroup_id_list\nOptional\nA list of group ids used to fetch multiple groups by\n100 group_ids .\nIf you provide this parameter, the limit  and off\nMust be a JSON serialized array.\nThis API endpoint has no additional parameters.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 58,
+      "end": 59
+    },
+    "content_stats": {
+      "char_count": 1058,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Groups",
+      "children": []
+    }
+  }
+}

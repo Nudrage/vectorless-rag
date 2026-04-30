@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1921",
+  "section_number": "155.1.1.255.2",
+  "header": "Error when getting a refresh access token",
+  "content": "2. Select Microsoft Entra ID.\n3. Select your tenant.\n4. Click App Registrations. Then in the applications list, select the application.\n5. Add the following URL:\nFor the European Union: https://winatpmanagement-\neu.securitycenter.windows.com/UserAuthenticationCallback\nFor the United Kingdom: https://winatpmanagement-\nuk.securitycenter.windows.com/UserAuthenticationCallback\nFor the United States: https://winatpmanagement-\nus.securitycenter.windows.com/UserAuthenticationCallback .\n6. Click Save.\nIf you encounter an error when trying to enable the SIEM connector application, check the\npop-up blocker settings of your browser. It might be blocking the new window being opened\nwhen you enable the capability.\nUse the Microsoft Graph security API - Microsoft Graph | Microsoft Learn\nPull detections to your SIEM tools",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1417,
+      "end": 1418
+    },
+    "content_stats": {
+      "char_count": 818,
+      "word_count": 101
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot SIEM tool integration issues",
+      "children": []
+    }
+  }
+}

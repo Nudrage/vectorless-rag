@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1304",
+  "section_number": "2.27.3.1.5",
+  "header": "Create an IAM role",
+  "content": "Set up an IAM role to delegate SageMaker Runtime permissions to OpenSearch Service. To create\na new role, see Creating an IAM role (console) in the IAM User Guide. Optionally, you could use an\nexisting role as long as it has the same set of privileges. If you do create a new role instead of using\nan AWS managed role, replace opensearch-sagemaker-role in this tutorial with the name of\nyour own role.\n1. Attach the following managed IAM policy to your new role to allow OpenSearch Service to\naccess to your SageMaker AI endpoint. To attach a policy to a role, see Adding IAM identity\npermissions.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Action\": [\n\"sagemaker:InvokeEndpointAsync\",\n\"sagemaker:InvokeEndpoint\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": \"*\"\n}\n]\n}\n2. Follow the instructions in Modifying a role trust policy to edit the trust relationship of the\nrole. In the following policy, replace service-principle with one of the following service\nprinciples for OpenSearch Service or OpenSearch Serverless:\nFor OpenSearch Service\nopensearchservice.amazonaws.com\nPrerequisites\n1787\nAmazon OpenSearch Service\nDeveloper Guide\nFor OpenSearch Serverless\nml.opensearchservice.amazonaws.com\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Action\": [\n\"sts:AssumeRole\"\n],\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": [\n\"ml.opensearchservice.amazonaws.com\"\n]\n}\n}\n]\n}\nWe recommend that you use the aws:SourceAccount and aws:SourceArn condition keys to\nlimit access to a speciﬁc domain. The SourceAccount is the AWS account ID that belongs to\nthe owner of the domain, and the SourceArn is the ARN of the domain. For example, you can\nadd the following condition block to the trust policy:\n\"Condition\": {\n\"StringEquals\": {\n\"aws:SourceAccount\": \"account-id\"\n},\n\"ArnLike\": {\n\"aws:SourceArn\": \"arn:aws:es:region:account-id:domain/domain-name\"\n}\n}\nPrerequisites\n1788\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1816,
+      "end": 1818
+    },
+    "content_stats": {
+      "char_count": 1895,
+      "word_count": 273
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

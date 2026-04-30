@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_486",
+  "section_number": "2.8.7.2",
+  "header": "Oﬀ-peak Auto-Tune optimizations",
+  "content": "Previously, Auto-Tune used maintenance windows to schedule changes that required a blue/green\ndeployment. Domains that already had Auto-Tune and maintenance windows enabled prior to the\nintroduction of oﬀ-peak windows will continue to use maintenance windows for these updates,\nunless you migrate them to use the oﬀ-peak window.\nWe recommend that you migrate your domains to use the oﬀ-peak window, as it's used to\nschedule other activities on the domain such as service softwate updates. For instructions, see the\nsection called “Migrating from Auto-Tune maintenance windows”. You can't revert back to using\nmaintenance windows after you migrate your domain to the oﬀ-peak window.\nOﬀ-peak service software updates\n655\nAmazon OpenSearch Service\nDeveloper Guide\nAll domains created after February 16, 2023 will use the oﬀ-peak window, rather than legacy\nmaintenance windows, to schedule blue/green deployments. You can't disable the oﬀ-peak\nwindow for a domain. For a list of Auto-Tune optimizations that require blue/green deployments,\nsee the section called “Types of changes”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 684,
+      "end": 685
+    },
+    "content_stats": {
+      "char_count": 1078,
+      "word_count": 159
+    },
+    "hierarchy": {
+      "parent": "Deﬁning oﬀ-peak windows for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

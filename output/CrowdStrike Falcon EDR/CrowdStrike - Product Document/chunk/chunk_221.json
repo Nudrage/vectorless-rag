@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_221",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nAppName\nAppVersion\nAppArchitecture\nContextTimeStamp\nSystem time of event creation.\nInstallDate\nAppVendor\nAppPath\nAppPathFlag\nValues:\nAPP_PATH_INVALID (0)\nDIRECTORY_CUSTOM (1)\nFILE_CUSTOM (2)\nFILE_DISPLAY_ICON (3)\nFILE_UNINSTALL_STRING (4)\nFILE_MODIFY_PATH (5)\nFILE_CLSID_LOCAL_SERVER32 (6)\nFILE_CLSID_INPROC_SERVER32 (7)\nDIRECTORY_INSTALL_LOCATION (8)\nDIRECTORY_INSTALL_LOCATION_FAILED_MSI (9)\nFILE_MSI_LOCAL_PACKAGE (10)\nFAILED_NO_MSI_FILE (11)\nFAILED_NO_UNINSTALL_INFO (12)\nNOT_AVAILABLE_CUSTOM (13)\nFILESYSTEM_INDEX (14)\nAppType\nValues:\nTYPE_ALL (0)\nTYPE_UNINSTALL (1)\nTYPE_CLSID (2)\nTYPE_CUSTOM (3)\nTYPE_APPLE_BUNDLE (4)\nTYPE_INVALID (1000)\nAppProvider\nValues:\nUNKNOWN (0)\nRPM (1)\nDPKG (2)\nAPPLE_MAC_APP_STORE (3)\nPYTHON_PIP (4)\nFLATPAK (5)\nSNAP (6)\nAppSource\nAppIdentificationData\nUpdateFlag\nValues:\nUPDATE_INVALID (0)\nUPDATE_ENUMERATION (1)\nUPDATE_REMOVED (2)\nUPDATE_ADDED (3)\nUPDATE_OBSOLETE (4)\nUPDATE_REVISED (5)\nBatchTimestamp\nBatchDataNumber\nBatchDataTotal\nAppProductId\nAppUpdateIds\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n59/1226\nField\nDescription\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING (0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nUACSourceFileName\nThe output file in a UAC tarball that an event is sourced from.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 59,
+      "end": 60
+    },
+    "content_stats": {
+      "char_count": 1675,
+      "word_count": 165
+    },
+    "hierarchy": {
+      "parent": "InstalledApplication",
+      "children": []
+    }
+  }
+}

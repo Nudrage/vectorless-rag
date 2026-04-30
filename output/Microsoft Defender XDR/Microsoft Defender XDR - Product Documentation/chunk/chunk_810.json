@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_810",
+  "section_number": "155.1.1.79.1.1",
+  "header": "Obtain user accounts from email addresses",
+  "content": "//Query snippet showing how to extract the account name from an email address\nAccountName = tostring(split(RecipientEmailAddress, \"@\")[0])\nYou can get account names and other account information by merging or joining the\nIdentityInfo table. The query below obtains the list of phishing and malware detections from\nthe EmailEvents table and then joins that information with the IdentityInfo  table to get\ndetailed information about each recipient.\nKusto\nWatch this short video\nto learn how you can use Kusto Query Language to join tables.\nThe advanced hunting schema provides extensive device information in various tables. For\nexample, the DeviceInfo table provides comprehensive device information based on event data\naggregated regularly. This query uses the DeviceInfo  table to check if a potentially\ncompromised user ( <account-name> ) has logged on to any devices and then lists the alerts that\nhave been triggered on those devices.\nEmailEvents\n| where Timestamp > ago(7d)\n| project RecipientEmailAddress, AccountName =\ntostring(split(RecipientEmailAddress, \"@\")[0]);",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 536,
+      "end": 537
+    },
+    "content_stats": {
+      "char_count": 1073,
+      "word_count": 154
+    },
+    "hierarchy": {
+      "parent": "Get entity info",
+      "children": []
+    }
+  }
+}

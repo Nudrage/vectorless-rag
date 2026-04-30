@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_823",
+  "section_number": "155.1.1.79.2.5",
+  "header": "Review PowerShell activities after receipt of emails from known malicious sender",
+  "content": "known malicious sender\n//Define new table for emails from specific sender\nlet EmailsFromBadSender=EmailEvents\n| where SenderFromAddress =~ \"MaliciousSender@example.com\"\n| project TimeEmail = Timestamp, Subject, SenderFromAddress, AccountName =\ntostring(split(RecipientEmailAddress, \"@\")[0]);\n//Merge emails from sender with process-related events on devices\nEmailsFromBadSender\n| join (\nDeviceProcessEvents\n//Look for PowerShell activity\n| where FileName =~ \"powershell.exe\"\n//Add line below to check only events initiated by Outlook\n//| where InitiatingProcessParentFileName =~ \"outlook.exe\"\n| project TimeProc = Timestamp, AccountName, DeviceName,\nInitiatingProcessParentFileName, InitiatingProcessFileName, FileName,\nProcessCommandLine\n) on AccountName\n//Check only PowerShell activities within 30 minutes of receipt of an email\n| where (TimeProc - TimeEmail) between (0min.. 30min)\nAdvanced hunting overview\nLearn the query language\nWork with query results\nUse shared queries\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 542,
+      "end": 543
+    },
+    "content_stats": {
+      "char_count": 1028,
+      "word_count": 122
+    },
+    "hierarchy": {
+      "parent": "Hunting scenarios",
+      "children": []
+    }
+  }
+}

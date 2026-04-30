@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1503",
+  "section_number": "2.27.2.3",
+  "header": "Provide permissions to the S3 bucket",
+  "content": "In the AWS Identity and Access Management (IAM) console, create a role with the following\npermissions and trust relationship. When creating the role, choose S3 as the AWS Service. Name\nthe role OpenSearchSnapshotRole so it's easy to ﬁnd.\nPermissions\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Action\": [\n\"s3:ListBucket\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": [\n\"arn:aws:s3:::amzn-s3-demo-bucket\"\n]\n},\n{\n\"Action\": [\n\"s3:GetObject\",\n\"s3:PutObject\",\n\"s3:DeleteObject\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": [\n\"arn:aws:s3:::amzn-s3-demo-bucket/*\"\n]\n}\n]\nProvide permissions to the S3 bucket\n2008\nAmazon OpenSearch Service\nDeveloper Guide\n}\nTrust relationship\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"es.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRole\"\n}\n]\n}\nThen give your personal IAM role permissions to assume OpenSearchSnapshotRole. Create the\nfollowing policy and attach it to your identity:\nPermissions\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Effect\": \"Allow\",\n\"Action\": \"iam:PassRole\",\n\"Resource\": \"arn:aws:iam::123456789012:role/OpenSearchSnapshotRole\"\n}\n]\n}\nProvide permissions to the S3 bucket\n2009\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2037,
+      "end": 2039
+    },
+    "content_stats": {
+      "char_count": 1196,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Migrating to Amazon OpenSearch Service",
+      "children": [
+        "Map the snapshot role in OpenSearch Dashboards (if using ﬁne-grained access control)"
+      ]
+    }
+  }
+}

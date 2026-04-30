@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1264",
+  "section_number": "2.19.10.1.4",
+  "header": "Step 4: Searching a data stream",
+  "content": "You can search a data stream just like you search a regular index or an index alias. The search\noperation applies to all of the backing indexes (all data present in the stream).\nGET logs-redis/_search\n{\n\"query\": {\n\"match\": {\n\"message\": \"login\"\n}\n}\nGetting started with data streams\n1759\nAmazon OpenSearch Service\nDeveloper Guide\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1788,
+      "end": 1789
+    },
+    "content_stats": {
+      "char_count": 330,
+      "word_count": 56
+    },
+    "hierarchy": {
+      "parent": "Getting started with data streams",
+      "children": []
+    }
+  }
+}

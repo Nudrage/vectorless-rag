@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1285",
+  "section_number": "2.20.2.2.2",
+  "header": "Step 2: Conﬁgure an alert",
+  "content": "Now that you've created a detector, create a monitor that invokes an alert to send a message to\nSlack when it detects CPU usage that meets the conditions speciﬁed in the detector settings. You'll\nreceive Slack notiﬁcations when data from one or more indexes meets the conditions that invoke\nthe alert.\n1. Open the left panel menu in OpenSearch Dashboards and choose Alerting, then choose Create\nmonitor.\n2. Provide a name for the monitor.\n3. For Monitor type, choose Per-query monitor. A per-query monitor runs a speciﬁed query and\ndeﬁnes the triggers.\n4. For Monitor deﬁning method, choose Anomaly detector, then select the detector that you\ncreated in the previous section from the Detector dropdown menu.\n5. For Schedule, choose how often the monitor collects data and how often you receive alerts. For\nthe purposes of this tutorial, set the schedule to run every 7 minutes.\n6. In the Triggers section, choose Add trigger. For Trigger name, enter High CPU usage. For this\ntutorial, for Severity level, choose 1, which is the highest level of severity.\n7. For Anomaly grade threshold, choose IS ABOVE. On the menu under that, choose the grade\nthreshold to apply. For this tutorial, set the Anomaly grade to 0.7.\n8. For Anomaly conﬁdence threshold, choose IS ABOVE. On the menu under that, enter the same\nnumber as your Anomaly grade. For this tutorial, set the Anomaly conﬁdence threshold to 0.7.\n9. In the Actions section, choose Destination. In the Name ﬁeld, choose the name of the\ndestination. On the Type menu, choose Slack. In the Webhook URL ﬁeld, enter a webhook URL\nto receive alerts to. For more information, see Sending messages using incoming webhooks.\n10.Choose Create.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1800,
+      "end": 1800
+    },
+    "content_stats": {
+      "char_count": 1684,
+      "word_count": 282
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Detect high CPU usage with anomaly detection",
+      "children": []
+    }
+  }
+}

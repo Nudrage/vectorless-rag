@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3230",
+  "section_number": "1.7.1.2.1",
+  "header": "appinfo",
+  "content": "The following table describes the fields for the appinfo event.\nField name\nDescription\nExample value\naid\nThe sensor ID. This value is\nunique to each installation of\na Falcon sensor. When a\nsensor is updated or\nreinstalled, the host gets a\nnew aid. In those situations,\na single host could have\nmultiple aid values over time.\n\"85ae98xxxxxxd9a8f2\"\nBrowserExtensionBrowserName\nThe name of the browser\nthat the browser extension is\ninstalled on.\n\"Google Chrome\"\nBrowserExtensionEnabled\nWhether the browser\nextension is enabled on at\nleast one browser profile on\nthe asset.\n\"true\"\nData for seeing additional environment info (secondary events) [/documentation/page/fa572b1c/falcon-data-replicator#g905b0d0]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1224/1226\nField name\nDescription\nExample value\nBrowserExtensionID\nThe ID of the browser\nextension.\n\"abxxxxxxxxxxxxyz\"\nBrowserExtensionInstallations\nA list of values about the\nbrowser extension's\ninstallation, formatted as \"\n<installed_by_user>:\n<browser_profile>:\n<install_method>\".\n\"KLane:Work Profile:Developer Mode\"\nBrowserExtensionPermissions\nThe browser permissions\nthat the browser extension\nrequires to run.\n\"privacy\"\nBrowserExtensionPermissionSeverity\nThe severity of all browser\npermissions requested by\nthe browser extension as\ndetermined automatically.\n\"Critical\"\nCategory\nThe category the application\nis in.\n\"Web Browsers\"\ncid\nThe customer ID.\n0123456789ABCDEFGHIJKLMNOPQRSTUV-WX\nCompanyName\nThe name of the company.\n\"Google Inc.\"\ndetectioncount\nThe number of detections.\n\"1\"\nexternalIP\nThe external IPv4 address of\nthe asset the application is\non.\n\"192.0.2.71\"\nFileName\nThe name of the file.\n\"googleupdate.exe\"\nhostname\nThe hostname of the asset\nthe application is on.\n\"ABC-123-DEF-456\"\ninstallationTimestamp\nThe date and time the\napplication was installed, if\navailable.\n\"2022-03-16T01:51:24Z\"\nProductName\nThe name of the product.\n\"Microsoft Exchange\"\nProductVersion\nThe version of the product.\n\"15.0\"\nSHA256HashData\nThe file hash bashed on\nSHA-256.\n\"69061e33acb7587d773d05000390f9101f71dfd6eed7973b551594eaf3f04193\"\nSoftwareType\nThe type of software.\n\"browser_extension\"\n_time\nThe host's local time in\nepoch format.\n\"1538648887.051\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1224,
+      "end": 1225
+    },
+    "content_stats": {
+      "char_count": 2381,
+      "word_count": 291
+    },
+    "hierarchy": {
+      "parent": "Secondary events from Falcon Discover and Falcon Exposure Management",
+      "children": []
+    }
+  }
+}

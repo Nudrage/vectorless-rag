@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_544",
+  "section_number": "2.8.15",
+  "header": "Tagging Amazon OpenSearch Service domains",
+  "content": "Tags let you assign arbitrary information to an Amazon OpenSearch Service domain so you can\ncategorize and ﬁlter on that information. A tag is a key-value pair that you deﬁne and associate\nwith an OpenSearch Service domain. You can use these tags to track costs by grouping expenses\nfor similarly tagged resources. AWS doesn't apply any semantic meaning to your tags. Tags are\ninterpreted strictly as character strings. All tags have the following elements:\nTag\nElement\nDescription\nRequired\nTag key\nThe tag key is the name of the tag. Key must be unique to the\nOpenSearch Service domain to which they're attached. For a list\nof basic restrictions on tag keys and values, see User-Deﬁned Tag\nRestrictions.\nYes\nTag value\nThe tag value is the string value of the tag. Tag values can be null\nand don't have to be unique in a tag set. For example, you can have\na key-value pair in a tag set of project/Trinity and cost-center/Trinit\ny. For a list of basic restrictions on tag keys and values, see User-Deﬁ\nned Tag Restrictions.\nNo\nMonitoring Auto-Tune changes\n721\nAmazon OpenSearch Service\nDeveloper Guide\nEach OpenSearch Service domain has a tag set, which contains all the tags assigned to that\nOpenSearch Service domain. AWS doesn't automatically assign any tags to OpenSearch Service\ndomains. A tag set can contain between 0 and 50 tags. If you add a tag to a domain with the same\nkey as an existing tag, the new value overwrites the old value.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 750,
+      "end": 751
+    },
+    "content_stats": {
+      "char_count": 1443,
+      "word_count": 250
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": [
+        "Tagging examples",
+        "Tagging domains (console)",
+        "Tagging domains (AWS CLI)",
+        "Tagging domains (AWS SDKs)"
+      ]
+    }
+  }
+}

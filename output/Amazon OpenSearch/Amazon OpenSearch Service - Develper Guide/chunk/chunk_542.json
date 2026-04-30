@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_542",
+  "section_number": "2.8.14.2",
+  "header": "Enabling or disabling Auto-Tune",
+  "content": "OpenSearch Service enables Auto-Tune by default on new domains. To enable or disable Auto-\nTune on existing domains, we recommend using the console, which simpliﬁes the process. Enabling\nAuto-Tune doesn't cause a blue/green deployment.\nYou currently can't enable or disable Auto-Tune using AWS CloudFormation.\nConsole\nTo enable Auto-Tune on an existing domain\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nIn the navigation pane, under Domains, choose the domain name to open the cluster\nconﬁguration.\n3.\nChoose Turn on if Auto-Tune isn't already enabled.\n4.\nOptionally, select Oﬀ-peak window to schedule optimizations that require a blue/green\ndeployment during the domain's conﬁgured oﬀ-peak window. For more information, see the\nsection called “Scheduling Auto-Tune enhancements”.\n5.\nChoose Save changes.\nEnabling or disabling Auto-Tune\n719\nAmazon OpenSearch Service\nDeveloper Guide\nCLI\nTo enable Auto-Tune using the AWS CLI, send an UpdateDomainConﬁg request:\naws opensearch update-domain-config \\\n--domain-name my-domain \\\n--auto-tune-options DesiredState=ENABLED",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 748,
+      "end": 749
+    },
+    "content_stats": {
+      "char_count": 1115,
+      "word_count": 150
+    },
+    "hierarchy": {
+      "parent": "Auto-Tune for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

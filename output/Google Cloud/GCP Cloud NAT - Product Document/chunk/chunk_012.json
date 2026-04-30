@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_012",
+  "section_number": "1.2.3",
+  "header": "Define alerting policies",
+  "content": "To create a metrics-based alerting policy (/monitoring/alerts/using-alerting-ui), follow these steps:\nYou can create alerting policies to monitor the values of metrics and to notify you when\nthose metrics violate a condition.\n1. In the Google Cloud console, go to the notifications Alerting page:\nGo to Alerting (https://console.cloud.google.com/monitoring/alerting)\nIf you use the search bar to find this page, then select the result whose\nsubheading is Monitoring.\n2. If you haven't created your notification channels and if you want to be notified,\nthen click Edit Notification Channels and add your notification channels. Return to\nthe Alerting page after you add your channels.\n3. From the Alerting page, select Create policy.\n4. To select the metric, expand the Select a metric menu and then do the following:\nConsole\n(#console)\na. To limit the menu to relevant entries, enter Cloud NAT gateway or VM\nInstance into the filter bar. If there are no results after you filter the menu,\nthen disable the Show only active resources & metrics toggle.\nb. For the Resource type, select Cloud NAT gateway or VM Instance.\nc. Select a Metric category and a Metric, and then select Apply.\n5. Click Next.\n6. The settings in the Configure alert trigger page determine when the alert is\ntriggered. Select a condition type and, if necessary, specify a threshold. For more\ninformation, see Create metric-threshold alerting policies\n(/monitoring/alerts/using-alerting-ui).\n7. Click Next.\n8. Optional: To add notifications to your alerting policy, click Notification channels. In\nthe dialog, select one or more notification channels from the menu, and then click\nOK.\n9. Optional: Update the Incident autoclose duration. This field determines when\nMonitoring closes incidents in the absence of metric data.\n10. Optional: Click Documentation, and then add any information that you want\nincluded in a notification message.\n11. Click Alert name and enter a name for the alerting policy.\n12. Click Create Policy.\nFor more information, see Alerting overview (/monitoring/alerts).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 10,
+      "end": 11
+    },
+    "content_stats": {
+      "char_count": 2059,
+      "word_count": 317
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

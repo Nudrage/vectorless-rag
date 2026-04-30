@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_647",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Parameter\nRequired?\nDescription\nemail\nRequired\nEmail address for the new administrator. Must not\nalready be in use by any other administrator or\npending administrator activation.\nadmin_name\nOptional\nThe full name of the administrator. The\nadministrator's email  will be used as the name if\nnot specified.\nadmin_role\nOptional\nThe administrator's role. One of: \"Owner\",\n\"Administrator\", \"Application Manager\", \"User\nManager\",\"Security Analyst\", \"Help Desk\", \"Billing\", or\n\"Read-only\". The role names are case-sensitive.\nDefaults to \"Owner\" if not specified. Roles other than\n\"Owner\" are effective only if the customer edition\nincludes the Administrative Roles feature.\nsend_email\nOptional\nIf set to 1 , the activation link and an introductory\nmessage will be emailed to the new administrator. If\nset to 0 , no email is sent, and the link is returned to\nthe API method's caller only. Default: 0 .\nvalid_days\nOptional\nNumber of days before the link expires. Default: 7\nMaximum: 31",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 270,
+      "end": 270
+    },
+    "content_stats": {
+      "char_count": 976,
+      "word_count": 148
+    },
+    "hierarchy": {
+      "parent": "Administrators",
+      "children": []
+    }
+  }
+}

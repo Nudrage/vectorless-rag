@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_157",
+  "section_number": "2.6.16.8.4",
+  "header": "Step 2: Create the pipeline",
+  "content": "You can then conﬁgure an OpenSearch Ingestion pipeline like the following, which speciﬁes Kafka\nas the source:\nversion: \"2\"\nlog-pipeline:\nsource:\nAmazon MSK\n196\nAmazon OpenSearch Service\nDeveloper Guide\nkafka:\nacknowledgements: true\ntopics:\n- name: \"topic-name\"\ngroup_id: \"grouplambd-id\"\naws:\nmsk:\narn: \"arn:aws:kafka:region:account-id:cluster/cluster-name/cluster-id\"\nregion: \"us-west-2\"\nprocessor:\n- grok:\nmatch:\nmessage:\n- \"%{COMMONAPACHELOG}\"\n- date:\ndestination: \"@timestamp\"\nfrom_time_received: true\nsink:\n- opensearch:\nhosts: [\"https://search-domain-endpoint.us-east-1es.amazonaws.com\"]\nindex: \"index_name\"\naws_region: \"region\"\naws_sigv4: true\nYou can use a preconﬁgured Amazon MSK blueprint to create this pipeline. For more information,\nsee the section called “Working with blueprints”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 225,
+      "end": 226
+    },
+    "content_stats": {
+      "char_count": 795,
+      "word_count": 90
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon Managed Streaming for Apache Kafka",
+      "children": []
+    }
+  }
+}

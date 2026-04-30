@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_209",
+  "section_number": "3.13.1",
+  "header": "POST    /web/api/v2.1/agents/actions/move-to-console",
+  "content": "You can move Agents between Management Consoles. This command moves Agents to a target Console, Account, and Site, given the Console URL and Site token.\nYou must have Global permissions for the source Console and access to the Site token of the target Site.\nResolve all threats on the Agents to move before you run this command.\nIf the Agents have local configurations, the configurations are maintained.\nIf the new Management has different blacklists, exclusions, and other assets, these are applied the next time the Agent communicates with the Management.\nThis command works on these Agent versions: Windows 3.0 and later, macOS 3.0 and later, Linux 3.4 and later.\nAn Agent tries to connect to the new Management Console for 3 minutes. If the Agent cannot connect (has unresolved threats or other requirements are not met), it stays\nin the original Management Console.\nTo get the Site token, run the \"sites\" command (see Sites list) and take the \"registrationToken\" value.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 335,
+      "end": 335
+    },
+    "content_stats": {
+      "char_count": 975,
+      "word_count": 160
+    },
+    "hierarchy": {
+      "parent": "Move to Console",
+      "children": []
+    }
+  }
+}

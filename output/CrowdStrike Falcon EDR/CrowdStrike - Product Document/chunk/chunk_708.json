@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_708",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed thread\ninjection in an InjectedThread event\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nRpcClientProcessId\nThe ProcessId corresponding to the RPC client of this request.\nRpcClientThreadId\nRemoteAddressIP4\nRemoteAddressIP6\nClientComputerName\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nTokenType\nValues:\nINVALID_TOKEN (0)\nPRIMARY_TOKEN (1)\nIMPERSONATION_TOKEN (2)\nUserName\nOperating system username.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 175,
+      "end": 175
+    },
+    "content_stats": {
+      "char_count": 1224,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "WmiCreateProcess",
+      "children": []
+    }
+  }
+}

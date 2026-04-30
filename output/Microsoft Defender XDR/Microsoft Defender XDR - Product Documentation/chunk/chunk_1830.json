@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1830",
+  "section_number": "155.1.1.257.6.1.4.2",
+  "header": "Legacy alerts",
+  "content": "７ Note\nThe legacy alerts API is deprecated and will be removed by April 2026. We recommend that you migrate to the new alerts and incidents\nAPI.\nAlerts from the following security providers are available via the legacy alert resource. Support for GET alerts, PATCH alerts, and subscribe (via\nwebhooks) is indicated in the following table.\nSecurity provider\nGET alert\nPATCH alert\nSubscribe to alert\nMicrosoft Entra ID Protection\n✓\nFile issue\n*\n✓\nAzure Security Center\n✓\n✓\n✓\nMicrosoft 365\nDefault\nCloud App Security\nCustom Alert\n✓\nFile issue\nFile issue\nMicrosoft Defender for Cloud Apps (formerly Microsoft Cloud App Security)\n✓\nFile issue\n*\n✓\nMicrosoft Defender for Endpoint (formerly Microsoft Defender ATP) **\n✓\n✓\nFile issue\nMicrosoft Defender for Identity (formerly Azure Advanced Threat Protection) ***\n✓\nFile issue\n*\n✓\nMicrosoft Sentinel (formerly Azure Sentinel)\n✓\nNot supported in Microsoft Sentinel\n✓\nNote: New providers are continuously onboarding to the Microsoft Graph security ecosystem. To request new providers or for extended\nsupport from existing providers, file an issue in the Microsoft Graph security GitHub repo\n.\n* File issue: Alert status gets updated across Microsoft Graph security API integrated applications but isn't reflected in the provider's\nmanagement experience.\n** Microsoft Defender for Endpoint requires additional user roles to those required by the Microsoft Graph security API. Only the users in both\nMicrosoft Defender for Endpoint and Microsoft Graph security API roles can have access to the Microsoft Defender for Endpoint data. Because\napplication-only authentication isn't limited by this, we recommend that you use an application-only authentication token.\n*** Microsoft Defender for Identity alerts are available via the Microsoft Defender for Cloud Apps integration. This means you get Microsoft\nDefender for Identity alerts only if you have joined Unified SecOps and connected Microsoft Defender for Identity to Microsoft Defender for\nCloud Apps. Learn more about how to integrate Microsoft Defender for Identity and Microsoft Defender for Cloud Apps.\nAttack simulation and training is part of Microsoft Defender for Office 365. This service lets users in a tenant experience a realistic benign\nphishing attack and learn from it. Social engineering simulation and training experiences for end users help reduce the risk of users being\nbreached via those attack techniques. The attack simulation and training API enables tenant administrators to view launched simulation\nexercises and trainings, and get reports on derived insights into online behaviors of users in the phishing simulations.\nMicrosoft Purview eDiscovery (Premium) provides an end-to-end workflow to preserve, collect, analyze, review, and export content that's\nresponsive to your organization's internal and external investigations.\nMicrosoft Purview Audit provides an integrated solution to help organizations effectively respond to security events, forensic investigations,\ninternal investigations, and compliance obligations. Thousands of user and admin operations performed in dozens of Microsoft 365 services\nand solutions are captured, recorded, and retained in your organization's unified audit log. Audit records for these events are searchable by\nsecurity ops, IT admins, insider risk teams, and compliance and legal investigators in your organization. This capability provides visibility into the\nactivities performed across your Microsoft 365 organization.\nﾉ\nExpand table",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 6,
+    "font_size": 14,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1374,
+      "end": 1375
+    },
+    "content_stats": {
+      "char_count": 3495,
+      "word_count": 516
+    },
+    "hierarchy": {
+      "parent": "Alerts",
+      "children": []
+    }
+  }
+}

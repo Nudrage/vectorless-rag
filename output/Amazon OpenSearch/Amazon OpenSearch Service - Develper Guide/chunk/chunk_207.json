@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_207",
+  "section_number": "2.8.10.2.6",
+  "header": "Service-linked role for VPC access",
+  "content": "A service-linked role is a unique type of IAM role that delegates permissions to a service\nso that it can create and manage resources on your behalf. If you choose a service-\nmanaged VPC endpoint, OpenSearch Ingestion requires a service-linked role called\nConﬁguring VPC access for pipelines\n308\nAmazon OpenSearch Service\nDeveloper Guide\nAWSServiceRoleForAmazonOpenSearchIngestionService to access your VPC, create the pipeline\nendpoint, and place network interfaces in a subnet of your VPC.\nIf you choose a self-managed VPC endpoint, OpenSearch Ingestion requires a service-linked role\ncalled AWSServiceRoleForOpensearchIngestionSelfManagedVpce. For more information on these\nroles, their permissions, and how to delete them, see the section called “Pipeline creation role”.\nOpenSearch Ingestion automatically creates the role when you create an ingestion pipeline. For\nthis automatic creation to succeed, the user creating the ﬁrst pipeline in an account must have\npermissions for the iam:CreateServiceLinkedRole action. To learn more, see Service-linked\nrole permissions in the IAM User Guide. You can view the role in the AWS Identity and Access\nManagement (IAM) console after it's created.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 337,
+      "end": 338
+    },
+    "content_stats": {
+      "char_count": 1194,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring VPC access for Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

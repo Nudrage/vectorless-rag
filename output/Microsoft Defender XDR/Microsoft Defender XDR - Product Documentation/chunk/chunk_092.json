@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_092",
+  "section_number": "155.1.1.14",
+  "header": "Data security and retention in Microsoft Defender XDR",
+  "content": "Defender XDR\n10/01/2025Applies to: Microsoft Defender XDR\nMicrosoft Defender XDR integrates with several different Microsoft security services, which\ncollect data using various technologies. Integrated services allow Microsoft Defender XDR to\naccess their data for the purpose of identifying cross-product correlations.\nCustomer data collected from integrated services includes processed data, such as incidents\nand alerts, and configuration data, such as connector settings, rules, and so on.\nMicrosoft Defender XDR operates in Microsoft Azure data centers in the following\ngeographical regions:\nEuropean Union: North Europe and West Europe\nUnited Kingdom: UK South and UK West\nUnited States: East US 2 and Central US\nAustralia: Australia East and Australia Southeast\nSwitzerland: Switzerland North and Switzerland West\nIndia: Central India and South India\nUAE: UAE North and UAE Central\nOnce created, the Microsoft Defender XDR tenant can't be moved to a different region. Your\ngeographical region is shown in the Microsoft Defender portal, under Settings > Microsoft\nDefender XDR > Account.\nCustomer data stored by integrated services might also be stored in the following locations:\nThe original location for the relevant service.\nA region defined by data storage rules of an integrated service, if Microsoft Defender XDR\nshares data with that service.\nMicrosoft Defender XDR data is retained for 180 days, and is visible across the Microsoft\nDefender portal during that time, except for in Advanced hunting queries. Cases are an",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 48,
+      "end": 48
+    },
+    "content_stats": {
+      "char_count": 1533,
+      "word_count": 227
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Collected data",
+        "Data storage location",
+        "Data retention",
+        "Data sharing",
+        "Related content"
+      ]
+    }
+  }
+}

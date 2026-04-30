@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_392",
+  "section_number": "2.7.10.9.5",
+  "header": "Verify FIPS compliance",
+  "content": "To verify that your connections to OpenSearch Serverless are using FIPS-compliant cryptography,\nuse AWS CloudTrail to monitor API calls made to OpenSearch Serverless. Check that the\neventSource ﬁeld in CloudTrail logs displays aoss-fips.amazonaws.com for API calls.\nFor OpenSearch Dashboards access, you can use browser developer tools to inspect the TLS\nconnection details and verify that FIPS-compliant cipher suites are being used.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 572,
+      "end": 572
+    },
+    "content_stats": {
+      "char_count": 434,
+      "word_count": 61
+    },
+    "hierarchy": {
+      "parent": "FIPS compliance in Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

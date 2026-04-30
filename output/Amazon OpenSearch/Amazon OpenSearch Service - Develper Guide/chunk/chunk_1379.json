@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1379",
+  "section_number": "2.25.3.4",
+  "header": "Deploy across multiple Availability Zones",
+  "content": "To prevent data loss and minimize cluster downtime in the event of a service disruption, you can\ndistribute nodes across two or three Availability Zones in the same AWS Region. Best practice is\nto deploy using Multi-AZ with Standby, which conﬁgures three Availability Zones, with two zones\nactive and one acting as a standby, and with and two replica shards per index. This conﬁguration\nlets OpenSearch Service distribute replica shards to diﬀerent AZs than their corresponding\nprimary shards. There are no cross-AZ data transfer charges for cluster communications between\nAvailability Zones.\nImprove snapshot performance\n1840\nAmazon OpenSearch Service\nDeveloper Guide\nAvailability Zones are isolated locations within each Region. With a two-AZ conﬁguration, losing\none Availability Zone means that you lose half of all domain capacity. Moving to three Availability\nZones further reduces the impact of losing a single Availability Zone.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1869,
+      "end": 1870
+    },
+    "content_stats": {
+      "char_count": 936,
+      "word_count": 140
+    },
+    "hierarchy": {
+      "parent": "Stability",
+      "children": []
+    }
+  }
+}

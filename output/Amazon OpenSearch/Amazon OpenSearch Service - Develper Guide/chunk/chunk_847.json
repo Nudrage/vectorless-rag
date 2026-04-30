@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_847",
+  "section_number": "2.12.8.1.1",
+  "header": "Considerations and limitations for OpenSearch Service",
+  "content": "Before you set up an interface VPC endpoint for OpenSearch Service, review Access an AWS service\nusing an interface VPC endpoint in the AWS PrivateLink Guide.\nWhen using OpenSearch Service-managed VPC endpoints, consider the following:\nWorking with OpenSearch Service-managed VPC endpoints\n1373\nAmazon OpenSearch Service\nDeveloper Guide\n• You can only use interface VPC endpoints to connect to VPC domains. Public domains aren't\nsupported.\n• VPC endpoints can only connect to domains within the same AWS Region.\n• HTTPS is the only supported protocol for VPC endpoints. HTTP is not allowed.\n• OpenSearch Service supports making calls to all of the supported OpenSearch API operations\nthrough an interface VPC endpoint.\n• You can conﬁgure a maximum of 50 endpoints per account, and a maximum of 10 endpoints per\ndomain. A single domain can have a maximum of 10 authorized principals.\n• You currently can't use AWS CloudFormation to create interface VPC endpoints.\n• You can only create interface VPC endpoints through the OpenSearch Service console or using\nthe OpenSearch Service API. You can't create interface VPC endpoints for OpenSearch Service\nusing the Amazon VPC console.\n• OpenSearch Service-managed VPC endpoints aren't accessible from the internet. An OpenSearch\nService-managed VPC endpoint is accessible only within the VPC where the endpoint is\nprovisioned or any VPCs peered with the VPC where the endpoint is provisioned, as permitted by\nthe route tables and security groups.\n• VPC endpoint policies are not supported for OpenSearch Service. You can associate a security\ngroup with the endpoint network interfaces to control traﬃc to OpenSearch Service through the\ninterface VPC endpoint.\n• Your service-linked role must be in the same AWS account that you use to create the VPC\nendpoint.\n• To create, update, and delete the OpenSearch Service VPC endpoint, you must have the\nfollowing Amazon EC2 permissions in addition to your Amazon OpenSearch Service permissions:\n• ec2:CreateVpcEndpoint\n• ec2:DescribeVpcEndpoints\n• ec2:ModifyVpcEndpoint\n• ec2:DeleteVpcEndpoints\n• ec2:CreateTags\n• ec2:DescribeTags\n• ec2:DescribeSubnets\n• ec2:DescribeSecurityGroups\n• ec2:DescribeVpcs\nWorking with OpenSearch Service-managed VPC endpoints\n1374\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nCurrently, you can't limit VPC endpoint creation to OpenSearch Service. We're working to\nmake this possible in a future update.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1402,
+      "end": 1404
+    },
+    "content_stats": {
+      "char_count": 2422,
+      "word_count": 361
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Service using an OpenSearch Service- managed VPC endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

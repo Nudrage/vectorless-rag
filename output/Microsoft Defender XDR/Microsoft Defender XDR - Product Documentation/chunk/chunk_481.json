@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_481",
+  "section_number": "155.1.1.45.2.1",
+  "header": "Alert sources",
+  "content": "following table provides guidance to help you understand the mapping of alert sources based\non the prepended character on the alert.\nAlert source\nAlert ID with prepended characters\nMicrosoft Defender XDR\nra{GUID}\nta{GUID}  for alerts from ThreatExperts\nea{GUID}  for alerts from custom detections\nMicrosoft Defender for Office 365\nfa{GUID}\nExample: fa123a456b-c789-1d2e-12f1g33h445h6i\nMicrosoft Defender for Endpoint\nda{GUID}\ned{GUID}  for alerts from custom detections\nMicrosoft Defender for Identity\naa{GUID}\nri{GUID}  for alerts from XDR detection engine\nExample: aa123a456b-c789-1d2e-12f1g33h445h6i ,\nri001122334455667788_-0123456789\nMicrosoft Defender for Cloud\nApps\nca{GUID}\nma{GUID}  for alerts from App Governance detections and policies\nrm{GUID}  for alerts from XDR detection engine\nExample: ca123a456b-c789-1d2e-12f1g33h445h6i\nMicrosoft Entra ID Protection\nad{GUID}\nApp Governance\nma{GUID}\nMicrosoft Data Loss Prevention\ndl{GUID}\nMicrosoft Defender for Cloud\ndc{GUID}\nMicrosoft Sentinel\nsn{GUID}\nMicrosoft Purview Insider Risk\nManagement\nir{GUID}\n７ Note\nThe prepended GUIDs are specific only to unified experiences such as unified alerts\nqueue, unified alerts page, unified investigation, and unified incident.\nThe prepended character does not change the GUID of the alert. The only change to\nthe GUID is the prepended component.\nﾉ\nExpand table\n1. Go to the Microsoft Defender portal (security.microsoft.com\n), select Settings >\nMicrosoft Defender XDR.\n2. From the list, select Alert service settings, and then configure your Microsoft Entra ID\nProtection alert service.\nBy default, only the most relevant alerts for the security operation center are enabled. If you\nwant to get all Microsoft Entra IP risk detections, you can change it in the Alert service settings\nsection.\nYou can also access Alert service settings directly from the Incidents page in the Microsoft\nDefender portal.\n７ Note\nIf you have provisioned access to Microsoft Purview Insider Risk Management, you can\nview and manage insider risk management alerts and hunt for insider risk management\nevents in the Microsoft Defender portal. For more information, see Investigate insider risk\nthreats in the Microsoft Defender portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 299,
+      "end": 301
+    },
+    "content_stats": {
+      "char_count": 2206,
+      "word_count": 309
+    },
+    "hierarchy": {
+      "parent": "Analyze an alert",
+      "children": []
+    }
+  }
+}

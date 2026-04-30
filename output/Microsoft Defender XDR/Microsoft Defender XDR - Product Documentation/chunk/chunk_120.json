@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_120",
+  "section_number": "155.1.1.18.1.6",
+  "header": "Step 3: Configure event log and proxy settings on machines with the sensor",
+  "content": "on machines with the sensor\nStep\nDescription\nMore information\n1\nConfigure Windows event log\ncollection\nEvent collection with Microsoft Defender for\nIdentity\nConfigure audit policies for Windows event logs\nMicrosoft Defender for Identity lateral movement path (LMP) detection relies on queries\nthat identify local admins on specific machines. These queries are performed with the\nSAM-R protocol, using the Defender for Identity Service account.\nTo ensure Windows clients and servers allow your Defender for Identity account to\nperform SAM-R, a modification to Group Policy must be made to add the Defender for\nIdentity service account in addition to the configured accounts listed in the Network\naccess policy. Make sure to apply group policies to all computers except domain\ncontrollers.\nFor instructions on how to do this, see Configure SAM-R to enable lateral movement\npath detection in Microsoft Defender for Identity.\nThe Defender for Identity documentation includes the following articles that walk\nthrough the process of identifying and remediating various attack types:\nInvestigate assets, including suspicious users, groups, and devices\nUnderstand and investigate LMPs with Microsoft Defender for Identity\nUnderstand security alerts\nFor more information, see:\nReconnaissance alerts\nCompromised credential alerts\nLateral movement alerts\nDomain dominance alerts\nExfiltration alerts\nInvestigate a user\nﾉ\nExpand table",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 65,
+      "end": 66
+    },
+    "content_stats": {
+      "char_count": 1421,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "A B C",
+      "children": []
+    }
+  }
+}

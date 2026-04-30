@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_138",
+  "section_number": "2.6.16.8.4",
+  "header": "Step 2: Create the pipeline",
+  "content": "You can then conﬁgure an OpenSearch Ingestion pipeline like the following, which speciﬁes\nDynamoDB as the source. This sample pipeline ingests data from table-a with the PITR snapshot,\nfollowed by events from DynamoDB Streams. A start position of LATEST indicates that the pipeline\nshould read the latest data from DynamoDB Streams.\nversion: \"2\"\ncdc-pipeline:\nsource:\ndynamodb:\ntables:\n- table_arn: \"arn:aws:dynamodb:region:account-id:table/table-a\"\nAmazon DynamoDB\n152\nAmazon OpenSearch Service\nDeveloper Guide\nexport:\ns3_bucket: \"my-bucket\"\ns3_prefix: \"export/\"\nstream:\nstart_position: \"LATEST\"\naws:\nregion: \"us-east-1\"\nsink:\n- opensearch:\nhosts: [\"https://search-mydomain.region.es.amazonaws.com\"]\nindex: \"${getMetadata(\\\"table-name\\\")}\"\nindex_type: custom\nnormalize_index: true\ndocument_id: \"${getMetadata(\\\"primary_key\\\")}\"\naction: \"${getMetadata(\\\"opensearch_action\\\")}\"\ndocument_version: \"${getMetadata(\\\"document_version\\\")}\"\ndocument_version_type: \"external\"\nYou can use a preconﬁgured DynamoDB blueprint to create this pipeline. For more information, see\nthe section called “Working with blueprints”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 181,
+      "end": 182
+    },
+    "content_stats": {
+      "char_count": 1110,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon DynamoDB",
+      "children": []
+    }
+  }
+}

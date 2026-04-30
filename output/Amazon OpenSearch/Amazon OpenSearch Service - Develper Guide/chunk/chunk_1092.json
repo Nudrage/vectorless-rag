@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1092",
+  "section_number": "2.16.6.7.1",
+  "header": "Indexing vector data",
+  "content": "Index vector data as you normally would. The GPU-acceleration automatically applies to indexing\nand force-merge operations. The following example demonstrates how to add vector documents\nto your index using the bulk API. Each document contains a vector ﬁeld with numerical values and\nassociated text content:\nPOST _bulk\n{\"index\": {\"_index\": \"my-vector-index\"}}\n{\"vector_field\": [0.1, 0.2, 0.3, ...], \"text\": \"Sample document 1\"}\n{\"index\": {\"_index\": \"my-vector-index\"}}\n{\"vector_field\": [0.4, 0.5, 0.6, ...], \"text\": \"Sample document 2\"}\nForce-merge operations\nGPU-acceleration also applies to force-merge operations, which can signiﬁcantly reduce the\ntime required to optimize vector indexes. Note that force-merge operations aren't supported\non collections. The following example demonstrates how to optimize your vector index by\nconsolidating all segments into a single segment:\nPOST my-vector-index/_forcemerge?max_num_segments=1\nIndex and force-merge\n1611\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1640,
+      "end": 1641
+    },
+    "content_stats": {
+      "char_count": 1002,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Indexing vector data and force-merging",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1065",
+  "section_number": "155.1.1.147",
+  "header": "IdentityLogonEvents",
+  "content": "06/20/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe IdentityLogonEvents  table in the advanced hunting schema contains information about\nauthentication activities made through your on-premises Active Directory captured by\nMicrosoft Defender for Identity and authentication activities related to Microsoft online\nservices captured by Microsoft Defender for Cloud Apps. Use this reference to construct\nqueries that return information from this table.\nThis advanced hunting table is populated by records from Microsoft Defender for Identity or\nMicrosoft Sentinel and Microsoft Entra ID. If your organization hasn’t deployed the service in\nMicrosoft Defender XDR, queries that use the table aren’t going to work or return any results.\nFor more information about how to deploy Defender for Identity in Defender XDR, read Deploy\nsupported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the event was recorded\nActionType\nstring\nType of activity that triggered the event. See the in-portal\nschema reference for details\n Tip\nFor detailed information about the events types ( ActionType  values) supported by a table,\nuse the built-in schema reference available in Microsoft Defender XDR.\n７ Note\nThis table covers Microsoft Entra logon activities tracked by Defender for Cloud Apps,\nspecifically interactive sign-ins and authentication activities using ActiveSync and other\nlegacy protocols. Non-interactive logons that are not available in this table can be viewed\nin the Microsoft Entra audit log. Learn more about connecting Defender for Cloud Apps\nto Microsoft 365\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nApplication\nstring\nApplication that performed the recorded action\nLogonType\nstring\nType of logon session. For more information, see Supported\nlogon types.\nProtocol\nstring\nNetwork protocol used\nFailureReason\nstring\nInformation explaining why the recorded action failed\nAccountName\nstring\nUser name of the account\nAccountDomain\nstring\nDomain of the account\nAccountUpn\nstring\nUser principal name (UPN) of the account\nAccountSid\nstring\nSecurity Identifier (SID) of the account\nAccountObjectId\nstring\nUnique identifier for the account in Microsoft Entra ID\nAccountDisplayName\nstring\nName of the account user displayed in the address book.\nTypically a combination of a given or first name, a middle initial,\nand a last name or surname.\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\nDeviceType\nstring\nType of device based on purpose and functionality, such as\nnetwork device, workstation, server, mobile, gaming console, or\nprinter\nOSPlatform\nstring\nPlatform of the operating system running on the device. This\nindicates specific operating systems, including variations within\nthe same family, such as Windows 11, Windows 10 and Windows\n7.\nIPAddress\nstring\nIP address assigned to the endpoint and used during related\nnetwork communications\nPort\nint\nTCP port used during communication\nDestinationDeviceName\nstring\nName of the device running the server application that\nprocessed the recorded action\nDestinationIPAddress\nstring\nIP address of the device running the server application that\nprocessed the recorded action\nDestinationPort\nint\nDestination port of related network communications\nTargetDeviceName\nstring\nFully qualified domain name (FQDN) of the device that the\nrecorded action was applied to\nColumn name\nData\ntype\nDescription\nTargetAccountDisplayName\nstring\nDisplay name of the account that the recorded action was\napplied to\nLocation\nstring\nCity, country/region, or other geographic location associated\nwith the event\nIsp\nstring\nInternet service provider (ISP) associated with the endpoint IP\naddress\nReportId\nstring\nUnique identifier for the event\nAdditionalFields\ndynamic\nAdditional information about the entity or event\nThe following table lists the supported values for the LogonType  column.\nLogon\ntype\nMonitored\nactivity\nDescription\nLogon\ntype 2\nCredentials\nValidation\nDomain-account authentication event using the NTLM and Kerberos\nauthentication methods.\nLogon\ntype 2\nInteractive\nLogon\nUser gained network access by entering a username and password\n(authentication method Kerberos or NTLM).\nLogon\ntype 2\nInteractive\nLogon with\nCertificate\nUser gained network access by using a certificate.\nLogon\ntype 2\nVPN\nConnection\nUser connected by VPN - Authentication using RADIUS protocol.\nLogon\ntype 3\nResource\nAccess\nUser accessed a resource using Kerberos or NTLM authentication.\nLogon\ntype 3\nDelegated\nResource\nAccess\nUser accessed a resource using Kerberos delegation.\nLogon\ntype 8\nLDAP Cleartext\nUser authenticated using LDAP with a clear-text password (Simple\nauthentication).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 802,
+      "end": 804
+    },
+    "content_stats": {
+      "char_count": 4799,
+      "word_count": 687
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Supported logon types",
+        "Related topics"
+      ]
+    }
+  }
+}

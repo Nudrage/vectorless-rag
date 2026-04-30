@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1092",
+  "section_number": "1.1.155.2.1.1",
+  "header": "Required columns in the query results",
+  "content": "strong identifier for an impacted asset:\nDeviceId\nDeviceName\nRemoteDeviceName\nRecipientEmailAddress\nSenderFromAddress  (envelope sender or Return-Path address)\nSenderMailFromAddress  (sender address displayed by email client)\nSenderObjectId\nRecipientObjectId\nAccountObjectId\nAccountSid\nAccountUpn\nInitiatingProcessAccountSid\nInitiatingProcessAccountUpn\nInitiatingProcessAccountObjectId\nSimple queries, such as those that don't use the project  or summarize  operator to customize\nor aggregate results, typically return these common columns.\nThere are various ways to ensure more complex queries return these columns. For example, if\nyou prefer to aggregate and count by entity under a column such as DeviceId , you can still\nreturn Timestamp  and ReportId  by getting them from the most recent event involving each\nunique DeviceId .\nThe following sample query counts the number of unique devices ( DeviceId ) with antivirus\ndetections and uses this count to find only the devices with more than five detections. To\nreturn the latest Timestamp  and the corresponding ReportId , it uses the summarize  operator\nwith the arg_max  function.\n７ Note\nSupport for more entities will be added as new tables are added to the advanced hunting\nschema.\n） Important\nAvoid filtering custom detections by using the Timestamp  column. The data used for\ncustom detections is prefiltered based on the detection frequency.\nKusto\nWith the query in the query editor, select Create detection rule and specify the following alert\ndetails:\nDetection name - Name of the detection rule; should be unique.\nFrequency - Interval for running the query and taking action. See more guidance in the\nrule frequency section\nAlert title - Title displayed with alerts triggered by the rule; should be unique and in\nplaintext. Strings are sanitized for security purposes so HTML, Markdown, and other code\ndon't work. Any URLs included in the title should follow the percent-encoding format\nfor them to display properly.\nSeverity - Potential risk of the component or activity identified by the rule.\nCategory - Threat component or activity identified by the rule.\nMITRE ATT&CK techniques - One or more attack techniques identified by the rule as\ndocumented in the MITRE ATT&CK framework\n. This section is hidden for certain alert\ncategories, including malware, ransomware, suspicious activity, and unwanted software.\nThreat analytics report - Link the generated alert to an existing threat analytics report so\nthat it appears in the Related incidents tab in threat analytics.\nDescription - More information about the component or activity identified by the rule.\nStrings are sanitized for security purposes so HTML, Markdown, and other code don't\nwork. Any URLs included in the description should follow the percent-encoding format for\nthem to display properly.\nRecommended actions - Additional actions that responders might take in response to an\nalert.\nDeviceEvents\n| where ingestion_time() > ago(1d)\n| where ActionType == \"AntivirusDetection\"\n| summarize (Timestamp, ReportId)=arg_max(Timestamp, ReportId), count() by DeviceId\n| where count_ > 5\n Tip\nFor better query performance, set a time filter that matches your intended run frequency\nfor the rule. Since the least frequent run is every 24 hours, filtering for the past day covers\nall new data.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 825,
+      "end": 827
+    },
+    "content_stats": {
+      "char_count": 3313,
+      "word_count": 494
+    },
+    "hierarchy": {
+      "parent": "1. Prepare the query",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_019",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "\"mobile_otp\"\n],\n\"creation_date\": \"\",\n\"encrypted\": \"Encrypted\",\n\"extension\": \"\",\n\"fingerprint\": \"Configured\",\n\"last_activated_date\": \"\",\n\"last_seen\": \"2019-09-24T17:42:46\",\n\"model\": \"Google Pixel 5\",\n\"name\": \"Pixel5\",\n\"number\": \"15555550200\",\n\"os_version\": \"14\",\n\"phone_id\": \"DPFZRS9FB0D46QFTP00L\",\n\"platform\": \"Google Android\",\n\"postdelay\": \"0\",\n\"predelay\": \"0\",\n\"screenlock\": \"Locked\",\n\"sms_passcodes_sent\": false,\n\"tampered\": \"Not tampered\",\n\"type\": \"Mobile\"\n}\n],\n\"realname\": \"Chris Jones\",\n\"status\": \"active\",\n\"tokens\": [],\n\"u2ftokens\": [],\n\"user_id\": \"DU3RP9I2WOC59VZXJ05H\",\n\"username\": \"cjones\",\n\"webauthncredentials\": [\n{\n\"credential_name\": \"YubiKey\",\n\"date_added\": 1550564764,\n\"date_last_used\": 1728064132,\n\"label\": \"yubikey\",\n\"webauthnkey\": \"WA4BD9AUVMSNUFWZJ05H\"\n}\n]\n}\n]\n}\nPOST  /admin/v1/users\nParameter\nRequired?\nDescription\nusername\nRequired\nThe name of the user to create.\nalias1...4\nOptional\nA username alias for the user. Up to four aliase\nbe specified with this parameter. Aliases mus\nunique amongst users. This parameter mainta\nbackwards compatibility. Mutually exclusive w\naliases .\naliases\nOptional\nUsername aliases for the user. Up to eight alia\nbe specified with this parameter as a set of U\nencoded key-value pairs e.g.\nalias1=joe.smith&alias2=jsmith@examp\nIgnores alias position values not specified. Ali\nmust be unique amongst users. Mutually excl\nwith alias1...4 .\ncustom_attributes.\n(attribute name)\nOptional\nSets the value of a custom user attribute (e.g.\ncustom_attributes.nickName ).\ndate_of_birth\nOptional\nThe user's birthdate. Values must use the form\nYYYY-MM-DD  if you plan to use Duo identity\nverification.\nemail\nOptional\nThe email address of this user.\nenable_auto_prompt\nOptional\nIf set to 0 , the user will be shown a list of\nauthentication methods to initiate authenticat\nset to 1 , the user will be automatically prom\nuse their last-used authentication method. On\neffective in the Universal Prompt. Default: 1 .\nfirstname\nOptional\nThe user's first name/given name.\nlastname\nOptional\nThe user's last name/family name.\nnotes\nOptional\nAn optional description or notes field. Can be\nin the Duo Admin Panel.\nrealname\nOptional\nThe user's real name (or full name). This is the\nName\" shown in the Admin Panel.\nstatus\nOptional\nThe user's status. One of:\nStatus\nDescription\n\"active\"\nThe user must complete seco\nauthentication. This is the defa\nvalue if no status is specified.\n\"bypass\"\nThe user will bypass secondar\nauthentication after completin\nprimary authentication.\n\"disabled\"\nThe user will not be able to\ncomplete secondary authentic",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 19,
+      "end": 21
+    },
+    "content_stats": {
+      "char_count": 2568,
+      "word_count": 345
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

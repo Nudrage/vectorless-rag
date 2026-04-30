@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_999",
+  "section_number": "2.15.8.1.1",
+  "header": "Step 1: Initialize the plugin",
+  "content": "To initialize the Learning to Rank plugin, send the following request to your OpenSearch Service\ndomain:\nPUT _ltr\n{\n\"acknowledged\" : true,\n\"shards_acknowledged\" : true,\n\"index\" : \".ltrstore\"\n}\nThis command creates a hidden .ltrstore index that stores metadata information such as\nfeature sets and models.\nGetting started with Learning to Rank\n1524\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1553,
+      "end": 1554
+    },
+    "content_stats": {
+      "char_count": 389,
+      "word_count": 58
+    },
+    "hierarchy": {
+      "parent": "Getting started with Learning to Rank",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_205",
+  "section_number": "2.6.19.1.1",
+  "header": "Conﬁguring VPC access for a pipeline",
+  "content": "You can enable VPC access for a pipeline within the OpenSearch Service console or using the AWS\nCLI.\nConsole\nYou conﬁgure VPC access during pipeline creation. Under Source network options, choose VPC\naccess and conﬁgure the following settings:\nSetting\nDescription\nEndpoint\nmanagement\nChoose whether you want to create your VPC endpoints yourself, or have\nOpenSearch Ingestion create them for you.\nConﬁguring VPC access for pipelines\n306\nAmazon OpenSearch Service\nDeveloper Guide\nSetting\nDescription\nVPC\nChoose the ID of the virtual private cloud (VPC) that you want to use. The\nVPC and pipeline must be in the same AWS Region.\nSubnets\nChoose one or more subnets. OpenSearch Service places a VPC endpoint\nand elastic network interfaces in the subnets.\nSecurity groups\nChoose one or more VPC security groups that allow your required applicati\non to reach the OpenSearch Ingestion pipeline on the ports (80 or 443) and\nprotocols (HTTP or HTTPs) exposed by the pipeline.\nVPC attachment\noptions\nIf your source requires cross-VPC communication, such as Amazon\nDocumentDB, self-managed OpenSearch, or Conﬂuent Kafka, OpenSearch\nIngestion creates Elastic Network Interfaces (ENIs) in the subnets that you\nspecify in order to connect to these sources. OpenSearch Ingestion uses\nENIs in each Availability Zone to reach the speciﬁed sources. The Attach\nto VPC option connects the OpenSearch Ingestion data plane VPC to your\nspeciﬁed VPC.\nSelect a CIDR reservation for the managed VPC to deploy the network\ninterface.\nCLI\nTo conﬁgure VPC access using the AWS CLI, specify the --vpc-options parameter:\naws osis create-pipeline \\\n--pipeline-name vpc-pipeline \\\n--min-units 4 \\\n--max-units 10 \\\n--vpc-options\nSecurityGroupIds={sg-12345678,sg-9012345},SubnetIds=subnet-1212234567834asdf \\\n--pipeline-configuration-body \"file://pipeline-config.yaml\"\nConﬁguring VPC access for pipelines\n307\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 335,
+      "end": 337
+    },
+    "content_stats": {
+      "char_count": 1914,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring VPC access for Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_842",
+  "section_number": "155.1.1.82.1",
+  "header": "Schema tables in Microsoft Defender XDR only",
+  "content": "ﾉ\nExpand table\nTable name\nDescription\nEmailEvents\nMicrosoft 365 email events, including email delivery and blocking events\nEmailPostDeliveryEvents\nSecurity events that occur post-delivery, after Microsoft 365 has delivered the\nemails to the recipient mailbox\nEmailUrlInfo\nInformation about URLs on emails\nIdentityDirectoryEvents\nEvents involving an on-premises domain controller running Active Directory\n(AD). This table covers a range of identity-related events and system events on\nthe domain controller.\nIdentityInfo\nAccount information from various sources, including Microsoft Entra ID\nIdentityLogonEvents\nAuthentication events on Active Directory and Microsoft online services\nIdentityQueryEvents\nQueries for Active Directory objects, such as users, groups, devices, and\ndomains\nThe AlertInfo  and AlertEvidence  tables replace the DeviceAlertEvents  table in the Microsoft\nDefender for Endpoint schema. In addition to data about device alerts, these two tables include\ndata about alerts for identities, apps, and emails.\nUse the following table to check how DeviceAlertEvents  columns map to columns in the\nAlertInfo  and AlertEvidence  tables.\n） Important\nQueries and custom detections which use schema tables that are only available in\nMicrosoft Defender XDR can only be viewed in Microsoft Defender XDR.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 555,
+      "end": 556
+    },
+    "content_stats": {
+      "char_count": 1313,
+      "word_count": 178
+    },
+    "hierarchy": {
+      "parent": "Migrate advanced hunting queries from Microsoft Defender for Endpoint",
+      "children": []
+    }
+  }
+}

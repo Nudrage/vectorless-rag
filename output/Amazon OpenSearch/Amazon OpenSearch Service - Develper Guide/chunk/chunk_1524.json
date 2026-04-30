@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1524",
+  "section_number": "2.27.4.3",
+  "header": "(Optional) Step 3: Index sample data",
+  "content": "If you don't have a bunch of call recordings handy—and who does?—you can index the sample\ndocuments in sample-calls.zip, which are comparable to what call-center.py produces.\n1.\nCreate a ﬁle named bulk-helper.py:\nimport boto3\nfrom opensearchpy import OpenSearch, RequestsHttpConnection\nimport json\nfrom requests_aws4auth import AWS4Auth\nhost = '' # For example, my-test-domain.us-west-2.es.amazonaws.com\nregion = '' # For example, us-west-2\nservice = 'es'\nbulk_file = open('sample-calls.bulk', 'r').read()\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\n(Optional) Step 3: Index sample data\n2032\nAmazon OpenSearch Service\nDeveloper Guide\nsearch = OpenSearch(\nhosts = [{'host': host, 'port': 443}],\nhttp_auth = awsauth,\nuse_ssl = True,\nverify_certs = True,\nconnection_class = RequestsHttpConnection\n)\nresponse = search.bulk(bulk_file)\nprint(json.dumps(response, indent=2, sort_keys=True))\n2.\nUpdate the initial two variables for host and region.\n3.\nInstall the required package using the following command:\npip install opensearch-py\n4.\nDownload and unzip sample-calls.zip.\n5.\nPlace sample-calls.bulk in the same directory as bulk-helper.py and run the helper. A\nsample output follows:\n$ python bulk-helper.py\n{\n\"errors\": false,\n\"items\": [\n{\n\"index\": {\n\"_id\": \"1\",\n\"_index\": \"support-calls\",\n\"_primary_term\": 1,\n\"_seq_no\": 42,\n\"_shards\": {\n\"failed\": 0,\n\"successful\": 1,\n\"total\": 2\n},\n\"_type\": \"_doc\",\n\"_version\": 9,\n\"result\": \"updated\",\n\"status\": 200\n}\n},\n(Optional) Step 3: Index sample data\n2033\nAmazon OpenSearch Service\nDeveloper Guide\n...\n],\n\"took\": 27\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2061,
+      "end": 2063
+    },
+    "content_stats": {
+      "char_count": 1674,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Visualizing customer support calls with OpenSearch Service and OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

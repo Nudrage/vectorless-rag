@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1216",
+  "section_number": "2.19.5.3",
+  "header": "ISM templates",
+  "content": "You can set up an ism_template ﬁeld in a policy so when you create an index that matches the\ntemplate pattern, the policy is automatically attached to that index. In this example, any index you\ncreate with a name that begins with \"log\" is automatically matched to the ISM policy my-policy-\nid:\nPUT _plugins/_ism/policies/my-policy-id\n{\n\"policy\": {\n\"description\": \"Example policy.\",\n\"default_state\": \"...\",\n\"states\": [...],\n\"ism_template\": {\n\"index_patterns\": [\"log*\"],\n\"priority\": 100\n}\n}\n}\nFor a more detailed example, see Sample policy with ISM template for auto rollover.\nISM templates\n1728\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1757,
+      "end": 1758
+    },
+    "content_stats": {
+      "char_count": 635,
+      "word_count": 95
+    },
+    "hierarchy": {
+      "parent": "Index State Management in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

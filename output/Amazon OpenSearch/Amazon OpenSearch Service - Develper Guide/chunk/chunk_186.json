@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_186",
+  "section_number": "2.6.16.19",
+  "header": "Using an OpenSearch Ingestion pipeline with AWS Lambda",
+  "content": "Use the AWS Lambda processor to enrich data from any source or destination supported by\nOpenSearch Ingestion using custom code. With the Lambda processor, you can apply your own\ndata transformations or enrichments and then return the processed events back to your pipeline\nfor further processing. This processor enables customized data processing and gives you full\ncontrol over how data is manipulated before it moves through the pipeline.\nNote\nThe payload size limit for a single event processed by a Lambda processor is 5 MB.\nAdditionally, the Lambda processor only supports responses in JSON array format.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 320,
+      "end": 320
+    },
+    "content_stats": {
+      "char_count": 609,
+      "word_count": 96
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "Prerequisites",
+        "Create a pipeline",
+        "Batching",
+        "Conditional ﬁltering"
+      ]
+    }
+  }
+}

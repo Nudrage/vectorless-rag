@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2287",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nFfcWebShellProbability\n0 - 100 value based on gathered statistics that represents the % probability the file is a webshell.\nFfcPatternsTotalScore\nThe calculated final accumulated score based on the total hits from all regexes.\nFfcPatternsTotalHits\nThe total number of hits for all regexes against the file content.\nFfcPatternWithMostHits The regex string that hit the most number of times in the file content.\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nForensicsText\nA unit of forensically intersting text read from a system logor some other text file of interest, such as shell history, ssh config, startup\nscripts, etc.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 809,
+      "end": 809
+    },
+    "content_stats": {
+      "char_count": 810,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "WebShellDetected",
+      "children": []
+    }
+  }
+}

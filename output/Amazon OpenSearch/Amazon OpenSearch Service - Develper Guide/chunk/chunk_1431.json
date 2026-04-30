@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1431",
+  "section_number": "2.26.3.1",
+  "header": "Optional plugins",
+  "content": "In addition to the default plugins that come pre-installed, Amazon OpenSearch Service supports\nseveral optional language analyzer plugins. You can use the AWS Management Console and AWS\nCLI to associate a plugin to a domain, disassociate a plugin from a domain, and list all plugins.\nOptional plugins\n1909\nAmazon OpenSearch Service\nDeveloper Guide\nAn optional plugin package is compatible with a speciﬁc OpenSearch version, and can only be\nassociated to domains with that version.\nNote that for the Sudachi plugin, when you reassociate a dictionary ﬁle, it doesn't immediately\nreﬂect on the domain. The dictionary refreshes when the next blue/green deployment runs on\nthe domain as part of a conﬁguration change or other update. Alternatively, you can create a new\npackage with the updated data, create a new index using this new package, reindex the existing\nindex to the new index, and then delete the old index. If you prefer to use the reindexing approach,\nuse an index alias so that there's no disruption to your traﬃc.\nOptional plugins use the ZIP-PLUGIN package type. For more information about optional plugins,\nsee the section called “Packages”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1938,
+      "end": 1939
+    },
+    "content_stats": {
+      "char_count": 1154,
+      "word_count": 185
+    },
+    "hierarchy": {
+      "parent": "Plugins by engine version in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

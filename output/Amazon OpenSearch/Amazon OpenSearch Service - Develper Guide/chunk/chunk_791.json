@@ -1,0 +1,36 @@
+{
+  "chunk_id": "chunk_791",
+  "section_number": "2.12.2.9",
+  "header": "AWS managed policies for Amazon OpenSearch Service",
+  "content": "An AWS managed policy is a standalone policy that is created and administered by AWS. AWS\nmanaged policies are designed to provide permissions for many common use cases so that you can\nstart assigning permissions to users, groups, and roles.\nKeep in mind that AWS managed policies might not grant least-privilege permissions for your\nspeciﬁc use cases because they're available for all AWS customers to use. We recommend that you\nreduce permissions further by deﬁning  customer managed policies that are speciﬁc to your use\ncases.\nYou cannot change the permissions deﬁned in AWS managed policies. If AWS updates the\npermissions deﬁned in an AWS managed policy, the update aﬀects all principal identities (users,\ngroups, and roles) that the policy is attached to. AWS is most likely to update an AWS managed\nAdditional sample policies\n1319\nAmazon OpenSearch Service\nDeveloper Guide\npolicy when a new AWS service is launched or new API operations become available for existing\nservices.\nFor more information, see AWS managed policies in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1348,
+      "end": 1349
+    },
+    "content_stats": {
+      "char_count": 1054,
+      "word_count": 169
+    },
+    "hierarchy": {
+      "parent": "Identity and Access Management in Amazon OpenSearch Service",
+      "children": [
+        "AmazonOpenSearchDirectQueryGlueCreateAccess",
+        "AmazonOpenSearchServiceFullAccess",
+        "AmazonOpenSearchServiceReadOnlyAccess",
+        "AmazonOpenSearchServiceRolePolicy",
+        "AmazonOpenSearchServiceCognitoAccess",
+        "AmazonOpenSearchIngestionServiceRolePolicy",
+        "OpenSearchIngestionSelfManagedVpcePolicy",
+        "AmazonOpenSearchIngestionFullAccess",
+        "AmazonOpenSearchIngestionReadOnlyAccess",
+        "AmazonOpenSearchServerlessServiceRolePolicy",
+        "OpenSearch Service updates to AWS managed policies"
+      ]
+    }
+  }
+}

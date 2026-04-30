@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1514",
+  "section_number": "2.27.3.4.3",
+  "header": "Deploy the API and conﬁgure a stage",
+  "content": "The API Gateway console lets you deploy an API by creating a deployment and associating it with a\nnew or existing stage.\n1.\nChoose Actions and Deploy API.\n2.\nFor Deployment stage choose New Stage and name the stage opensearch-api-test.\n3.\nChoose Deploy.\n4.\nConﬁgure the following settings in the stage editor, then choose Save Changes:\nSetting\nValue\nEnable throttling\nYes\nRate\n1000\nBurst\n500\nStep 3: Create the API in API Gateway\n2019\nAmazon OpenSearch Service\nDeveloper Guide\nThese settings conﬁgure an API that has only one method: a GET request to the endpoint root\n(https://some-id.execute-api.us-west-1.amazonaws.com/search-es-api-test).\nThe request requires a single parameter (q), the query string to search for. When called, the\nmethod passes the request to Lambda, which runs the opensearch-lambda function. For more\ninformation, see Creating an API in Amazon API Gateway and Deploying a REST API in Amazon API\nGateway.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2048,
+      "end": 2049
+    },
+    "content_stats": {
+      "char_count": 928,
+      "word_count": 144
+    },
+    "hierarchy": {
+      "parent": "Step 3: Create the API in API Gateway",
+      "children": []
+    }
+  }
+}

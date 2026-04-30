@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_894",
+  "section_number": "155.1.1.89.3",
+  "header": "Optimize the join  operator",
+  "content": "The join operator merges rows from two tables by matching values in specified columns. Apply\nthese tips to optimize queries that use this operator.\nSmaller table to your left—The join  operator matches records in the table on the left\nside of your join statement to records on the right. By having the smaller table on the left,\nfewer records will need to be matched, thus speeding up the query.\nIn the table below, we reduce the left table DeviceLogonEvents  to cover only three specific\ndevices before joining it with IdentityLogonEvents  by account SIDs.\nKusto\nUse the inner-join flavor—The default join flavor or the innerunique-join deduplicates\nrows in the left table by the join key before returning a row for each match to the right\ntable. If the left table has multiple rows with the same value for the join  key, those rows\nwill be deduplicated to leave a single random row for each unique value.\nThis default behavior can leave out important information from the left table that can\nprovide useful insight. For example, the query below will only show one email containing\na particular attachment, even if that same attachment was sent using multiple emails\nmessages:\nKusto\nTo address this limitation, we apply the inner-join flavor by specifying kind=inner  to show\nall rows in the left table with matching values in the right:\nKusto\nDeviceLogonEvents\n| where DeviceName in (\"device-1.domain.com\", \"device-2.domain.com\", \"device-\n3.domain.com\")\n| where ActionType == \"LogonFailed\"\n| join\n(IdentityLogonEvents\n| where ActionType == \"LogonFailed\"\n| where Protocol == \"Kerberos\")\non AccountSid\nEmailAttachmentInfo\n| where Timestamp > ago(1h)\n| where Subject == \"Document Attachment\" and FileName == \"Document.pdf\"\n| join (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256\nJoin records from a time window—When investigating security events, analysts look for\nrelated events that occur around the same time period. Applying the same approach\nwhen using join  also benefits performance by reducing the number of records to check.\nThe query below checks for logon events within 30 minutes of receiving a malicious file:\nKusto\nApply time filters on both sides—Even if you're not investigating a specific time window,\napplying time filters on both the left and right tables can reduce the number of records to\ncheck and improve join  performance. The query below applies Timestamp > ago(1h)  to\nboth tables so that it joins only records from the past hour:\nKusto\nUse hints for performance—Use hints with the join  operator to instruct the backend to\ndistribute load when running resource-intensive operations. Learn more about join hints\nFor example, the shuffle hint helps improve query performance when joining tables using\na key with high cardinality—a key with many unique values—such as the AccountObjectId\nin the query below:\nKusto\nEmailAttachmentInfo\n| where Timestamp > ago(1h)\n| where Subject == \"Document Attachment\" and FileName == \"Document.pdf\"\n| join kind=inner (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256\nEmailEvents\n| where Timestamp > ago(7d)\n| where ThreatTypes has \"Malware\"\n| project EmailReceivedTime = Timestamp, Subject, SenderFromAddress,\nAccountName = tostring(split(RecipientEmailAddress, \"@\")[0])\n| join (\nDeviceLogonEvents\n| where Timestamp > ago(7d)\n| project LogonTime = Timestamp, AccountName, DeviceName\n) on AccountName\n| where (LogonTime - EmailReceivedTime) between (0min .. 30min)\nEmailAttachmentInfo\n| where Timestamp > ago(1h)\n| where Subject == \"Document Attachment\" and FileName == \"Document.pdf\"\n| join kind=inner (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256\nThe broadcast hint helps when the left table is small (up to 100,000 records) and the right\ntable is extremely large. For example, the query below is trying to join a few emails that\nhave specific subjects with all messages containing links in the EmailUrlInfo  table:\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 588,
+      "end": 590
+    },
+    "content_stats": {
+      "char_count": 3907,
+      "word_count": 599
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting query best practices",
+      "children": []
+    }
+  }
+}

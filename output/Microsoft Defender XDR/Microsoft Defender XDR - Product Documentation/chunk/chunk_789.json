@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_789",
+  "section_number": "155.1.1.76.2",
+  "header": "Learn common query operators",
+  "content": "ﾉ\nExpand table\nOperator\nDescription and usage\nwhere\nFilter a table to the subset of rows that satisfy a predicate.\nsummarize\nProduce a table that aggregates the content of the input table.\njoin\nMerge the rows of two tables to form a new table by matching values of the specified\ncolumn(s) from each table. Watch Joining tables in KQL\nto learn how.\ncount\nReturn the number of records in the input record set.\ntop\nReturn the first N records sorted by the specified columns.\nlimit\nReturn up to the specified number of rows.\nproject\nSelect the columns to include, rename or drop, and insert new computed columns.\nextend\nCreate calculated columns and append them to the result set.\nmakeset\nReturn a dynamic (JSON) array of the set of distinct values that Expr takes in the group.\nfind\nFind rows that match a predicate across a set of tables.\nTo see a live example of these operators, run them from the Get started section in advanced\nhunting.\nAdvanced hunting supports Kusto data types, including the following common types:\nData\ntype\nDescription and query implications\ndatetime\nData and time information typically representing event timestamps. See supported datetime\nformats\nstring\nCharacter string in UTF-8 enclosed in single quotes ( ' ) or double quotes ( \" ). Read more\nabout strings\nbool\nThis data type supports true  or false  states. See supported literals and operators\nint\n32-bit integer\nlong\n64-bit integer\nTo learn more about these data types, read about Kusto scalar data types.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 523,
+      "end": 524
+    },
+    "content_stats": {
+      "char_count": 1487,
+      "word_count": 251
+    },
+    "hierarchy": {
+      "parent": "Learn the advanced hunting query language",
+      "children": []
+    }
+  }
+}

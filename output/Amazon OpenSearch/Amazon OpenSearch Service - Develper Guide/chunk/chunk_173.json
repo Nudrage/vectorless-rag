@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_173",
+  "section_number": "2.16.6.1",
+  "header": "How it works",
+  "content": "You can create an oﬄine batch inference pipeline on OpenSearch Ingestion by adding a machine\nlearning inference processor to a pipeline. This processor enables your pipeline to connect to AI\nservices like SageMaker to run batch inference jobs. You can conﬁgure your processor to connect\nto your desired AI service through the AI connectors (with batch_predict support) running on your\ntarget domain.\nOpenSearch Ingestion uses the ml_inference processor with ML Commons to create oﬄine\nbatch inference jobs. ML Commons then uses the batch_predict API, which performs inference on\nlarge datasets in an oﬄine asynchronous mode using a model deployed on external model servers\nin Amazon Bedrock, Amazon SageMaker, Cohere, and OpenAI. The following diagram shows an\nOpenSearch Ingestion pipeline that orchestrates multiple components to perform this process end\nto end:\nML oﬄine batch inference\n245\nAmazon OpenSearch Service\nDeveloper Guide\nThe pipeline components work as follows:\nPipeline 1 (Data preparation and transformation)*:\n• Source: Data is scanned from your external source supported by OpenSearch Ingestion.\n• Data processors: The raw data is processed and transformed to the correct format for batch\ninference on the integrated AI service.\n• S3 (Sink): The processed data is staged in an Amazon S3 bucket ready to serve as input for\nrunning batch inference jobs on the integrated AI service.\nPipeline 2 (Trigger ML batch_inference):\n• Source: Automated S3 event detection of new ﬁles created by output of Pipeline 1.\n• Ml_inference processor: Processor that generates ML inferences through an asynchronous batch\njob. It connects to AI services through the conﬁgured AI connector that's running on your target\ndomain.\nML oﬄine batch inference\n246\nAmazon OpenSearch Service\nDeveloper Guide\n• Task ID: Each batch job is associated with a task ID in ml-commons for tracking and\nmanagement.\n• OpenSearch ML Commons: ML Commons, which hosts the model for real-time neural search,\nmanages the connectors to remote AI servers, and serves the APIs for batch inference and jobs\nmanagement.\n• AI services: OpenSearch ML Commons interacts with AI services like Amazon Bedrock and\nAmazon SageMaker to perform batch inference on the data, producing predictions or insights.\nThe results are saved asynchronously to a separate S3 ﬁle.\nPipeline 3 (Bulk ingestion):\n• S3 (source): The results of the batch jobs are stored in S3, which is the source of this pipeline.\n• Data transformation processors: Further processing and transformation are applied to the batch\ninference output before ingestion. This ensures the data is mapped correctly in the OpenSearch\nindex.\n• OpenSearch index (Sink): The processed results are indexed into OpenSearch for storage, search,\nand further analysis.\nNote\n*The process described by Pipeline 1 is optional. If you prefer, you can skip that process and\nsimply upload your prepared data in the S3 sink to create batch jobs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 274,
+      "end": 276
+    },
+    "content_stats": {
+      "char_count": 2945,
+      "word_count": 460
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with machine learning oﬄine batch inference",
+      "children": []
+    }
+  }
+}

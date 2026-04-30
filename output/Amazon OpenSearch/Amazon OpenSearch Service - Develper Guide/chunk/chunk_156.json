@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_156",
+  "section_number": "2.6.16.8.3",
+  "header": "Step 1: Conﬁgure a pipeline role",
+  "content": "After you have your Amazon MSK provisoned or serverless cluster set up, add the following Kafka\npermissions in the pipeline role that you want to use in your pipeline conﬁguration:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"kafka-cluster:Connect\",\nAmazon MSK\n195\nAmazon OpenSearch Service\nDeveloper Guide\n\"kafka-cluster:AlterCluster\",\n\"kafka-cluster:DescribeCluster\",\n\"kafka:DescribeClusterV2\",\n\"kafka:GetBootstrapBrokers\"\n],\n\"Resource\": [\n\"arn:aws:kafka:us-east-1:111122223333:cluster/cluster-\nname/cluster-id\"\n]\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"kafka-cluster:*Topic*\",\n\"kafka-cluster:ReadData\"\n],\n\"Resource\": [\n\"arn:aws:kafka:us-east-1:111122223333:topic/cluster-name/cluster-\nid/topic-name\"\n]\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"kafka-cluster:AlterGroup\",\n\"kafka-cluster:DescribeGroup\"\n],\n\"Resource\": [\n\"arn:aws:kafka:us-east-1:111122223333:group/cluster-name/*\"\n]\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 224,
+      "end": 225
+    },
+    "content_stats": {
+      "char_count": 915,
+      "word_count": 89
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon Managed Streaming for Apache Kafka",
+      "children": []
+    }
+  }
+}

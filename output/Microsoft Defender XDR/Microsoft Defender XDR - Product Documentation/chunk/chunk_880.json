@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_880",
+  "section_number": "155.1.1.87",
+  "header": "FileProfile()",
+  "content": "08/05/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe FileProfile()  function is an enrichment function in advanced hunting that adds the\nfollowing data to files found by the query.\nColumn\nData\ntype\nDescription\nSHA1\nstring\nSHA-1 of the file that the recorded action was applied to\nSHA256\nstring\nSHA-256 of the file that the recorded action was applied to\nMD5\nstring\nMD5 hash of the file that the recorded action was applied to\nFileSize\nint\nSize of the file in bytes\nGlobalPrevalence\nint\nNumber of instances of the entity observed by Microsoft globally\nGlobalFirstSeen\ndatetime\nDate and time when the entity was first observed by Microsoft\nglobally\nGlobalLastSeen\ndatetime\nDate and time when the entity was last observed by Microsoft\nglobally\nSigner\nstring\nInformation about the signer of the file\nIssuer\nstring\nInformation about the issuing certificate authority (CA)\nSignerHash\nstring\nUnique hash value identifying the signer\nIsCertificateValid\nboolean\nWhether the certificate used to sign the file is valid\nIsRootSignerMicrosoft\nboolean\nIndicates whether the signer of the root certificate is Microsoft and\nthe file is built in to Windows OS\nSignatureState\nstring\nState of the file signature: SignedValid - the file is signed with a valid\nsignature, SignedInvalid - the file is signed but the certificate is\ninvalid, Unsigned - the file isn't signed, Unknown - information\nabout the file can't be retrieved\nIsExecutable\nboolean\nWhether the file is a Portable Executable (PE) file\nThreatName\nstring\nDetection name for any malware or other threats found\nPublisher\nstring\nName of the organization that published the file\nﾉ\nExpand table\nColumn\nData\ntype\nDescription\nSoftwareName\nstring\nName of the software product\nProfileAvailability\nstring\nIndicates the availability status of the profile data for the file:\nAvailable - profile was successfully queried and file data returned,\nMissing - profile was successfully queried but no file info was found,\nError - error in querying the file info or maximum allotted time was\nexceeded before query could be completed, or an empty value - if\nfile ID is invalid or the maximum number of files was reached\nIf this column's value is Missing or is empty, the value of the\nGlobalPrevalance  column would be null.\nKusto\nx—file ID column to use: SHA1 , SHA256 , InitiatingProcessSHA1 , or\nInitiatingProcessSHA256 ; function uses SHA1  if unspecified\ny—limit to the number of records to enrich, 1-1000; function uses 100 if unspecified\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 581,
+      "end": 582
+    },
+    "content_stats": {
+      "char_count": 2521,
+      "word_count": 398
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Syntax",
+        "Arguments",
+        "Examples",
+        "Related topics"
+      ]
+    }
+  }
+}

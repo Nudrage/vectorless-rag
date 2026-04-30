@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_504",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n113/1226\nField\nDescription\nContextProcessId\nUPID of process originating this event.\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\nUserName\nOperating system username.\nUserPrincipal\nUserCanonical\nLogonId\nLogonDomain\nAuthenticationPackage\nLogonType\nValues:\nINTERACTIVE (2)\nNETWORK (3)\nBATCH (4)\nSERVICE (5)\nPROXY (6)\nUNLOCK (7)\nNETWORK_CLEARTEXT (8)\nNEW_CREDENTIALS (9)\nREMOTE_INTERACTIVE (10)\nCACHED_INTERACTIVE (11)\nCACHED_REMOTE_INTERACTIVE (12)\nCACHED_UNLOCK (13)\nLogonTime\nLogonServer\nUserFlags\nValues:\nLOGON_OPTIMIZED (0x4000)\nLOGON_WINLOGON (0x8000)\nLOGON_PKINIT (0x10000)\nLOGON_NOT_OPTIMIZED (0x20000)\nPasswordLastSet\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nRemoteAccount\nA boolean value set to true if the user account is not an account residing on the local computer\nUserIsAdmin\nSet to TRUE if this user is a local admin.\nContextThreadId\nUTID of thread originating this event\nSessionId\nValue that indicates the Terminal Services session identifier associated with the token.\nUserLogonFlags\nValues:\nNONE (0x00000000)\nLOGON_IS_SYNTHETIC (0x00000001)\nUSER_IS_ADMIN (0x00000002)\nUSER_IS_LOCAL (0x00000004)\nUSER_IS_BUILT_IN (0x00000008)\nUSER_IDENTITY_MISSING (0x00000010)\nResendToCloud",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 113,
+      "end": 114
+    },
+    "content_stats": {
+      "char_count": 1636,
+      "word_count": 184
+    },
+    "hierarchy": {
+      "parent": "UserIdentity",
+      "children": []
+    }
+  }
+}

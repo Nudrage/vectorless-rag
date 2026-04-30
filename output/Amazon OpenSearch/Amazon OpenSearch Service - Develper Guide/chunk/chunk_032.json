@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_032",
+  "section_number": "2.6.4",
+  "header": "Supported Data Prepper versions",
+  "content": "OpenSearch Ingestion currently supports the following major versions of Data Prepper:\n• 2.x\nWhen you create a pipeline using the code editor, use the required version option to specify\nthe major version of Data Prepper to use. For example, version: \"2\". OpenSearch Ingestion\nretrieves the latest supported minor version of that major version and provisions the pipeline with\nthat version.\nIf you don't use the code editor to create your pipeline, OpenSearch Ingestion automatically\nprovisions your pipeline with the latest supported version.\nCurrently, OpenSearch Ingestion provisions pipelines with version 2.7 of Data Prepper. For\ninformation, see the 2.7 release notes. Not every minor version of a particular major version is\nsupported by OpenSearch Ingestion.\nWhen you update a pipeline's conﬁguration, if there's support for a new minor version of Data\nPrepper, OpenSearch Ingestion automatically upgrades the pipeline to the latest supported minor\nversion of the major version that's speciﬁed in the pipeline conﬁguration. For example, you might\nhave version: \"2\" in your pipeline conﬁguration, and OpenSearch Ingestion initially provisioned\nthe pipeline with version 2.6.0. When support for version 2.7.0 is added, and you make a change\nto the pipeline conﬁguration, OpenSearch Ingestion upgrades the pipeline to version 2.7.0. This\nprocess keeps your pipeline up to date with the latest bug ﬁxes and performance improvements.\nOpenSearch Ingestion can't update the major version of your pipeline unless you manually change\nthe version option within the pipeline conﬁguration. For more information, see the section called\n“Updating pipelines”.\nSupported Data Prepper versions\n25\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 54,
+      "end": 55
+    },
+    "content_stats": {
+      "char_count": 1727,
+      "word_count": 254
+    },
+    "hierarchy": {
+      "parent": "Overview of Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

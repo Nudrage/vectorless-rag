@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1033",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of\nthe process that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that\nperformed thread injection in an InjectedThread event\nDesiredAccess\nHandleCreated\nSuspiciousHandleOpenReason\nValues:\nHIGHER_IL (0x00000001)\nNETWORK_SERVICE_ISOLATION (0x00000002)\nIntegrityLevel\nValues:\nUNTRUSTED (0x00000000)\nLOW (0x00001000)\nMEDIUM (0x00002000)\nMEDIUM_PLUS (0x00002100)\nHIGH (0x00003000)\nSYSTEM (0x00004000)\nPROTECTED (0x00005000)\nTargetIntegrityLevel\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n273/1226\nField\nDescription\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nTargetAuthenticationId\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 273,
+      "end": 274
+    },
+    "content_stats": {
+      "char_count": 1231,
+      "word_count": 141
+    },
+    "hierarchy": {
+      "parent": "SuspiciousPrivilegedProcessHandle",
+      "children": []
+    }
+  }
+}

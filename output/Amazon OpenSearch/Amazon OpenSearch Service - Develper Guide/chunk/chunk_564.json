@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_564",
+  "section_number": "2.9.3.1",
+  "header": "General recommendations",
+  "content": "We recommend you do the following when using direct query:\n• Use the COALESCE SQL function to handle missing columns and ensure results are returned.\n• Use limits on your queries to ensure you aren't pulling too much data back.\n• If you plan to analyze the same dataset many times, create an indexed view to fully ingest and\nindex the data into OpenSearch and drop it when you have completed the analysis.\n• Drop acceleration jobs and indexes when they're no longer needed.\n• Queries containing ﬁeld names that are identical but diﬀer only in case (such as field1 and\nFIELD1) are not supported.\nFor example, the following queries are not supported:\nSelect AWSAccountId, AwsAccountId from LogGroup\nSelect a.@LogStream, b.@logStream from Table A INNER Join Table B ona.id = b.id\nHowever, the following query is supported because the ﬁeld name (@logStream) is identical in\nboth log groups:\nSelect a.@logStream, b.@logStream from Table A INNER Join Table B on a.id = b.id\n• Functions and expressions must operate on ﬁeld names and be part of a SELECT statement with\na log group speciﬁed in the FROM clause.\nFor example, this query is not supported:\nSELECT cos(10) FROM LogGroup\nThis query is supported:\nSELECT cos(field1) FROM LogGroup\nGeneral recommendations\n732\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 761,
+      "end": 762
+    },
+    "content_stats": {
+      "char_count": 1301,
+      "word_count": 214
+    },
+    "hierarchy": {
+      "parent": "Recommendations for using direct queries in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

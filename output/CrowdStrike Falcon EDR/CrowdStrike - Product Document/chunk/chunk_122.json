@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_122",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Windows, Public Cloud\nThis event provides key metadata regarding EC2 instances in AWS. CrowdStrike retrieves this information by processing the response from AWS's\nDescribeInstances API [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html] on your behalf.\nThis event is only generated for Discover for AWS [/support/documentation/10/falcon-discover-feature-guide] customers. It's generated either when Discover\nfor AWS observes new or related activity via CloudTrail or during Discover for AWS's weekly full scan.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 30,
+      "end": 30
+    },
+    "content_stats": {
+      "char_count": 554,
+      "word_count": 63
+    },
+    "hierarchy": {
+      "parent": "AwsEc2Instance",
+      "children": []
+    }
+  }
+}

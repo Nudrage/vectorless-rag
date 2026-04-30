@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_923",
+  "section_number": "2.13.3.2",
+  "header": "Python",
+  "content": "This example uses the OpenSearchService low-level Python client from the AWS SDK for Python\n(Boto) to create a domain, update its conﬁguration, and delete it.\nimport boto3\nimport botocore\nfrom botocore.config import Config\nimport time\n# Build the client using the default credential configuration.\n# You can use the CLI and run 'aws configure' to set access key, secret\n# key, and default region.\nmy_config = Config(\n# Optionally lets you specify a region other than your default.\nregion_name='us-west-2'\n)\nclient = boto3.client('opensearch', config=my_config)\ndomainName = 'my-test-domain'  # The name of the domain\ndef createDomain(client, domainName):\n\"\"\"Creates an Amazon OpenSearch Service domain with the specified options.\"\"\"\nresponse = client.create_domain(\nDomainName=domainName,\nEngineVersion='OpenSearch_1.0',\nClusterConfig={\n'InstanceType': 't2.small.search',\n'InstanceCount': 5,\nPython\n1437\nAmazon OpenSearch Service\nDeveloper Guide\n'DedicatedMasterEnabled': True,\n'DedicatedMasterType': 't2.small.search',\n'DedicatedMasterCount': 3\n},\n# Many instance types require EBS storage.\nEBSOptions={\n'EBSEnabled': True,\n'VolumeType': 'gp2',\n'VolumeSize': 10\n},\nAccessPolicies=\"{\\\"Version\\\":\\\"2012-10-17\\\",\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\n\\\",\\\"Principal\\\":{\\\"AWS\\\":[\\\"arn:aws:iam::123456789012:user/user-name\\\"]},\\\"Action\\\":\n[\\\"es:*\\\"],\\\"Resource\\\":\\\"arn:aws:es:us-west-2:123456789012:domain/my-test-domain/*\n\\\"}]}\",\nNodeToNodeEncryptionOptions={\n'Enabled': True\n}\n)\nprint(\"Creating domain...\")\nprint(response)\ndef updateDomain(client, domainName):\n\"\"\"Updates the domain to use three data nodes instead of five.\"\"\"\ntry:\nresponse = client.update_domain_config(\nDomainName=domainName,\nClusterConfig={\n'InstanceCount': 3\n}\n)\nprint('Sending domain update request...')\nprint(response)\nexcept botocore.exceptions.ClientError as error:\nif error.response['Error']['Code'] == 'ResourceNotFoundException':\nprint('Domain not found. Please check the domain name.')\nelse:\nraise error\ndef deleteDomain(client, domainName):\n\"\"\"Deletes an OpenSearch Service domain. Deleting a domain can take several\nminutes.\"\"\"\nPython\n1438\nAmazon OpenSearch Service\nDeveloper Guide\ntry:\nresponse = client.delete_domain(\nDomainName=domainName\n)\nprint('Sending domain deletion request...')\nprint(response)\nexcept botocore.exceptions.ClientError as error:\nif error.response['Error']['Code'] == 'ResourceNotFoundException':\nprint('Domain not found. Please check the domain name.')\nelse:\nraise error\ndef waitForDomainProcessing(client, domainName):\n\"\"\"Waits for the domain to finish processing changes.\"\"\"\ntry:\nresponse = client.describe_domain(\nDomainName=domainName\n)\n# Every 15 seconds, check whether the domain is processing.\nwhile response[\"DomainStatus\"][\"Processing\"] == True:\nprint('Domain still processing...')\ntime.sleep(15)\nresponse = client.describe_domain(\nDomainName=domainName)\n# Once we exit the loop, the domain is available.\nprint('Amazon OpenSearch Service has finished processing changes for your\ndomain.')\nprint('Domain description:')\nprint(response)\nexcept botocore.exceptions.ClientError as error:\nif error.response['Error']['Code'] == 'ResourceNotFoundException':\nprint('Domain not found. Please check the domain name.')\nelse:\nraise error\ndef main():\n\"\"\"Create a new domain, update its configuration, and delete it.\"\"\"\ncreateDomain(client, domainName)\nwaitForDomainProcessing(client, domainName)\nPython\n1439\nAmazon OpenSearch Service\nDeveloper Guide\nupdateDomain(client, domainName)\nwaitForDomainProcessing(client, domainName)\ndeleteDomain(client, domainName)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1466,
+      "end": 1469
+    },
+    "content_stats": {
+      "char_count": 3553,
+      "word_count": 367
+    },
+    "hierarchy": {
+      "parent": "Using the AWS SDKs to interact with Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

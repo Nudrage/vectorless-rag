@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1281",
+  "section_number": "1.5.872.1",
+  "header": "Fields: Windows, macOS",
+  "content": "Field\nDescription\nDeviceTimeStamp\nThe time stamp the device action (e.g., connect or disconnect) occurred, not the time the corresponding sensor event was\ngenerated.\nDeviceUserAuthenticationId\nDeviceUserSid\nDeviceInstanceId\nBluetoothDeviceType\nThe Bluetooth device type. There are two device types - Classic (BR/EDR) and Low Energy (LE). The value is gathered when\nthe device is discovered, paired, or connected.\nValues:\nBTH_BR_EDR (0x01)\nBTH_LE (0x02)\nNONE (0x00)\nBluetoothDeviceAddress\nBluetooth MAC address, gathered when the device is discovered, paired, or connected.\nBluetoothDeviceAddressType\nBluetooth MAC address type, gathered when the device is discovered, paired, or connected.\nValues:\nBTH_ADDR_PUBLIC (0x00)\nBTH_ADDR_RANDOM (0x01)\nBTH_ADDR_RANDOM_PRIVATE (0x02)\nBTH_ADDR_RANDOM_STATIC (0x03)\nDeviceConnectedTimeStamp\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n349/1226\nField\nDescription\nBluetoothVendorIdSource\nThe source for vendor ID, gathered when the device is discovered, paired, or connected.\nValues:\nBTH_SIG (0x01)\nUSB_IMPL (0x02)\nNONE (0x00)\nDeviceVendorId\nDeviceProductId\nDeviceManufacturer\nBluetoothDeviceName\nThe Bluetooth device name, gathered when the device is discovered, paired, or connected.\nBluetoothDeviceModelNumber\nThe Bluetooth device model version, gathered when the device is discovered, paired, or connected.\nBluetoothDeviceAppearanceValue The Appearance characteristic defines the representation of the external appearance of the device for Bluetooth Low\nEnergy (LE) devices. The value is gathered when the device is discovered, paired, or connected.\nBluetoothClassOfDeviceValue\nThe Class of Device defines the representation of the external appearance of the device for Bluetooth Classic (BR/EDR)\ndevices. The value is gathered when the device is discovered, paired, or connected.\nDeviceStandardServiceClasses\nDeviceCustomServiceClasses\nDeviceStandardServiceClasses2\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 349,
+      "end": 350
+    },
+    "content_stats": {
+      "char_count": 2106,
+      "word_count": 248
+    },
+    "hierarchy": {
+      "parent": "DcBluetoothDeviceConnectedDetails",
+      "children": []
+    }
+  }
+}

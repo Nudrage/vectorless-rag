@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_769",
+  "section_number": "155.1.1.73.7.1",
+  "header": "Hunt for successful connections to specific IP",
+  "content": "To look for events involving a specific IP address where the IP is the destination of the\ncommunication, select DestinationIPAddress  under the IP Address Events section. Then select\nthe equals operator. Type the IP in the third dropdown menu and press Enter:\nThen, to add a second condition which searches for successful network communication events,\nsearch for the filter of a specific event type:\nThe EventType filter looks for the different event types logged. It is equivalent to the\nActionType column which exists in most of the tables in advanced hunting. Select it to choose\none or more event types to filter for. To look for successful network communication events,\nexpand the DeviceNetworkEvents section and then choose ConnectionSuccess :\nFinally, select Run query to hunt for all successful network communications to the\n52.168.117.170 IP address:\nTo look for all high confidence phish and spam emails that were delivered to the inbox folder\nat the time of delivery, first select ConfidenceLevel under Email Events, select equals and\nchoose High under both Phish and Spam from the suggested closed list which supports multi-\nselection:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 503,
+      "end": 507
+    },
+    "content_stats": {
+      "char_count": 1147,
+      "word_count": 182
+    },
+    "hierarchy": {
+      "parent": "Try some queries",
+      "children": []
+    }
+  }
+}

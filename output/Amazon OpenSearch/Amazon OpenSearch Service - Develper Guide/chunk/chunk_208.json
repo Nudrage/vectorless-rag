@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_208",
+  "section_number": "2.6.19.2",
+  "header": "Conﬁguring OpenSearch Ingestion pipelines for cross-account ingestion",
+  "content": "ingestion\nFor push-based sources such as HTTP and OTel, Amazon OpenSearch Ingestion enables you to\nshare pipelines across AWS accounts from a virtual private cloud (VPC) to a pipeline endpoint in a\nseparate VPC. Teams that share analytics with other teams in their organization use this feature for\na more streamlined means of, for example, sharing log analytics.\nThis section uses the following terminology:\n• Pipeline owner—The account that owns and manages the OpenSearch Ingestion pipeline. Only\none account can own a pipeline.\n• Connecting account—An account that connects to and uses a shared pipeline. Multiple accounts\ncan connect to the same pipeline.\nTo conﬁgure VPCs to share OpenSearch Ingestion pipelines across AWS accounts, complete the\nfollowing tasks, as described here:\n• (Pipeline owner) Grant connecting accounts access to a pipeline\n• (Connecting account) Create a pipeline endpoint connection for each connecting VPC",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 338,
+      "end": 338
+    },
+    "content_stats": {
+      "char_count": 938,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Security in Amazon OpenSearch Ingestion",
+      "children": [
+        "Before you begin",
+        "Grant connecting accounts access to a pipeline",
+        "Create a pipeline endpoint connection for each connecting VPC",
+        "Removing pipeline endpoints"
+      ]
+    }
+  }
+}

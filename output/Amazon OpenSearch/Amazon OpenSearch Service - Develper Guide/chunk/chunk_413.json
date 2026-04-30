@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_413",
+  "section_number": "2.7.10.11.5",
+  "header": "Create an interface endpoint for OpenSearch Serverless",
+  "content": "You can create an interface endpoint for OpenSearch Serverless using either the console or the\nOpenSearch Serverless API.\nTo create an interface endpoint for an OpenSearch Serverless collection\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nIn the left navigation pane, expand Serverless and choose VPC endpoints.\n3.\nChoose Create VPC endpoint.\n4.\nProvide a name for the endpoint.\n5.\nFor VPC, select the VPC that you'll access OpenSearch Serverless from.\n6.\nFor Subnets, select one subnet that you'll access OpenSearch Serverless from.\n• Endpoint's IP address and DNS type is based on subnet type\n• Dualstack: If all subnets have both IPv4 and IPv6 address ranges\n• IPv6: If all subnets are IPv6 only subnets\n• IPv4: If all subnets have IPv4 address ranges\n7.\nFor Security groups, select the security groups to associate with the endpoint network\ninterfaces. This is a critical step where you limit the ports, protocols, and sources for inbound\ntraﬃc that you’re authorizing into your endpoint. Make sure that the security group rules allow\nthe resources that will use the VPC endpoint to communicate with OpenSearch Serverless to\ncommunicate with the endpoint network interface.\n8.\nChoose Create endpoint.\nTo create a VPC endpoint using the OpenSearch Serverless API, use the CreateVpcEndpoint\ncommand.\nNote\nAfter you create an endpoint, note its ID (for example, vpce-abc123def4EXAMPLE. In\norder to provide the endpoint access to your collections, you must include this ID in one or\nmore network access policies.\nVPC endpoints\n567\nAmazon OpenSearch Service\nDeveloper Guide\nAfter you create an interface endpoint, you must provide it access to collections through network\naccess policies. For more information, see the section called “Network access”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 596,
+      "end": 597
+    },
+    "content_stats": {
+      "char_count": 1798,
+      "word_count": 278
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

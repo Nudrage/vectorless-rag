@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2040",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nEventSentFromTimerTrigger\nParentProcessId\nThe decimal representation of the parent process.\nGrandparentProcessId\nPatternIdList\nParentProcessPatternIdList\nGrandparentProcessPatternIdList\nTemplateInstanceIdList\nParentProcessTemplateInstanceIdList\nGrandparentProcessTemplateInstanceIdList\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nParentImageFileName\nParentCommandLine\nGrandparentImageFileName\nGrandparentCommandLine\nSourcePatternId\nProcessPatternTelemetrySource\nValues:\nUNIQUE_PATTERN (0x00000001)\nTIMER_TRIGGER (0x00000002)\nPROCESS_TERMINATE (0x00000004)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 678,
+      "end": 678
+    },
+    "content_stats": {
+      "char_count": 1031,
+      "word_count": 100
+    },
+    "hierarchy": {
+      "parent": "ProcessPatternTelemetry",
+      "children": []
+    }
+  }
+}

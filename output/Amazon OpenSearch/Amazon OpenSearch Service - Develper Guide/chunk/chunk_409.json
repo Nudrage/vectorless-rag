@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_409",
+  "section_number": "2.7.10.11.3",
+  "header": "VPCs and network access policies",
+  "content": "To grant network permission to OpenSearch APIs and Dashboards for your collections, you can\nuse OpenSearch Serverless network access policies. You can control this network access either\nfrom your VPC endpoint(s) or the public internet. Since your network policy only controls traﬃc\npermissions, you must also set up a data access policy that speciﬁes permission to operate on the\ndata in a collection and its indices. Think of an OpenSearch Serverless VPC endpoint as an access\npoint to the service, a network access policy as the network-level access point to collections and\nDashboards, and a data access policy as the access point for ﬁne-grained access control for any\noperation on data in the collection.\nSince you can specify multiple VPC endpoint IDs in a network policy, we recommend that you\ncreate a VPC endpoint for every VPC that needs to access a collection. These VPCs can belong\nto diﬀerent AWS accounts than the account that owns the OpenSearch Serverless collection and\nnetwork policy. We don’t recommend that you create a VPC-to-VPC peering or other proxying\nsolution between two accounts so that one account's VPC can use another account's VPC endpoint.\nThis is less secure and cost eﬀective than each VPC having its own endpoint. The ﬁrst VPC will\nnot be easily visible to the other VPC’s admin, who has set up access to that VPC's endpoint in the\nnetwork policy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 589,
+      "end": 589
+    },
+    "content_stats": {
+      "char_count": 1383,
+      "word_count": 230
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

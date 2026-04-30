@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_067",
+  "section_number": "2.6.9.2",
+  "header": "Splitting",
+  "content": "You can conﬁgure an OpenSearch Ingestion pipeline to split incoming events into a sub-pipeline,\nallowing you to perform diﬀerent types of processing on the same incoming event.\nThe following example pipeline splits incoming events into two sub-pipelines. Each sub-pipeline\nuses its own processor to enrich and manipulate the data, and then sends the data to diﬀerent\nOpenSearch indexes.\nversion: \"2\"\nlog-pipeline:\nsource:\nhttp:\n...\nsink:\n- pipeline:\nname: \"logs_enriched_one_pipeline\"\nSplitting\n61\nAmazon OpenSearch Service\nDeveloper Guide\n- pipeline:\nname: \"logs_enriched_two_pipeline\"\nlogs_enriched_one_pipeline:\nsource:\nlog-pipeline\nprocessor:\n...\nsink:\n- opensearch:\n# Provide a domain or collection endpoint\n# Enable the 'serverless' flag if the sink is an OpenSearch Serverless\ncollection\naws:\n...\nindex: \"enriched_one_logs\"\nlogs_enriched_two_pipeline:\nsource:\nlog-pipeline\nprocessor:\n...\nsink:\n- opensearch:\n# Provide a domain or collection endpoint\n# Enable the 'serverless' flag if the sink is an OpenSearch Serverless\ncollection\naws:\n...\nindex: \"enriched_two_logs\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 90,
+      "end": 91
+    },
+    "content_stats": {
+      "char_count": 1074,
+      "word_count": 144
+    },
+    "hierarchy": {
+      "parent": "Overview of pipeline features in Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

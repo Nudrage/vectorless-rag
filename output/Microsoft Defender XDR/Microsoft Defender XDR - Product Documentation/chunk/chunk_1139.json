@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1139",
+  "section_number": "155.1.1.160.2",
+  "header": "Microsoft Defender for Identity sensor on the domain controller",
+  "content": "domain controller\nIf you're running Active Directory on premises, you need to install the Microsoft Defender for\nIdentity sensor on the domain controller to get data for Microsoft Defender for Identity. When\ninstalled and properly configured, this data also feeds into advanced hunting through\nMicrosoft Defender for Identity and provides a more holistic picture of identity information and\nevents in your network. This data also enhances the ability of Microsoft Defender for Identity to\ngenerate relevant alerts that are also covered by advanced hunting.\nData\nDescription\nSchema table\nHow to\nconfigure\nDomain\ncontroller\nData from on-premises Active Directory\nsent to Microsoft Defender for Identity,\nenriching identity-related information,\nsuch as account details, logon activity,\nand Active Directory queries\nMultiple tables, including\nIdentityInfo,\nIdentityLogonEvents, and\nIdentityQueryEvents\n- Install the\nMicrosoft\nDefender for\nIdentity sensor\n- Turn on\nrelevant\nWindows Events\nAdvanced hunting overview\nUnderstand the schema\nﾉ\nExpand table\n７ Note\nSome tables in this article might not be available in Microsoft Defender for Endpoint. Turn\non Microsoft Defender XDR to hunt for threats using more data sources. You can move\nyour advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft\nDefender XDR by following the steps in Migrate advanced hunting queries from\nMicrosoft Defender for Endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 865,
+      "end": 866
+    },
+    "content_stats": {
+      "char_count": 1422,
+      "word_count": 206
+    },
+    "hierarchy": {
+      "parent": "Extend advanced hunting coverage with the right settings",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_089",
+  "section_number": "2.6.10.6",
+  "header": "Working with blueprints",
+  "content": "Rather than creating a pipeline deﬁnition from scratch, you can use conﬁguration blueprints, which\nare preconﬁgured templates for common ingestion scenarios such as Trace Analytics or Apache\nlogs. Conﬁguration blueprints help you easily provision pipelines without having to author a\nconﬁguration from scratch.\nConsole\nTo use a pipeline blueprint\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nChoose Pipelines in the left navigation pane and choose Create pipeline.\n3.\nSelect a blueprint from the list of use cases, then choose Select blueprint. The pipeline\nconﬁguration populates with a sub-pipeline for the use case you selected.\nThe pipeline blueprint isn't valid as-is. You need to specify additional settings depending on\nthe selected source.\nCLI\nTo get a list of all available blueprints using the AWS CLI, send a list-pipeline-blueprints request.\nWorking with blueprints\n80\nAmazon OpenSearch Service\nDeveloper Guide\naws osis list-pipeline-blueprints\nThe request returns a list of all available blueprints.\nTo get more detailed information about a speciﬁc blueprint, use the get-pipeline-blueprint\ncommand:\naws osis get-pipeline-blueprint --blueprint-name AWS-ApacheLogPipeline\nThis request returns the contents of the Apache log pipeline blueprint:\n{\n\"Blueprint\":{\n\"PipelineConfigurationBody\":\"###\\n  # Limitations: https://docs.aws.amazon.com/\nopensearch-service/latest/ingestion/ingestion.html#ingestion-limitations\\n###\\n###\\n\n# apache-log-pipeline:\\n    # This pipeline receives logs via http (e.g. FluentBit),\nextracts important values from the logs by matching\\n    # the value in the 'log' key\nagainst the grok common Apache log pattern. The grokked logs are then sent\\n    # to\nOpenSearch to an index named 'logs'\\n###\\n\\nversion: \\\"2\\\"\\napache-log-pipeline:\\n\nsource:\\n    http:\\n      # Provide the path for ingestion. ${pipelineName} will be\nreplaced with pipeline name configured for this pipeline.\\n      # In this case it\nwould be \\\"/apache-log-pipeline/logs\\\". This will be the FluentBit output URI value.\n\\n      path: \\\"/${pipelineName}/logs\\\"\\n  processor:\\n    - grok:\\n        match:\\n\nlog: [ \\\"%{COMMONAPACHELOG_DATATYPED}\\\" ]\\n  sink:\\n    - opensearch:\\n\n# Provide an AWS OpenSearch Service domain endpoint\\n        # hosts: [ \\\"https://\nsearch-mydomain-1a2a3a4a5a6a7a8a9a0a9a8a7a.us-east-1.es.amazonaws.com\\\" ]\\n        aws:\n\\n          # Provide the region of the domain.\\n          # region: \\\"us-east-1\\\"\\n\n# Enable the 'serverless' flag if the sink is an Amazon OpenSearch Serverless\ncollection\\n          # serverless: true\\n        index: \\\"logs\\\"\\n        # Enable\nthe S3 DLQ to capture any failed requests in an S3 bucket\\n        # dlq:\\n\n# s3:\\n            # Provide an S3 bucket\\n            # bucket: \\\"your-dlq-bucket-\nname\\\"\\n            # Provide a key path prefix for the failed requests\\n\n# key_path_prefix: \\\"${pipelineName}/logs/dlq\\\"\\n            # Provide the region\nof the bucket.\\n            # region: \\\"us-east-1\\\"\\n            # Provide a Role\nARN with access to the bucket. This role should have a trust relationship with osis-\npipelines.amazonaws.com\\n\"\n\"BlueprintName\":\"AWS-ApacheLogPipeline\"\n}\n}\nWorking with blueprints\n81\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch Ingestion API\nTo get information about pipeline blueprints using the OpenSearch Ingestion API, use the the\nListPipelineBlueprints and GetPipelineBlueprint operations.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 109,
+      "end": 111
+    },
+    "content_stats": {
+      "char_count": 3458,
+      "word_count": 436
+    },
+    "hierarchy": {
+      "parent": "Creating Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

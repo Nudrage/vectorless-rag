@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_357",
+  "section_number": "2.7.10.2",
+  "header": "Data access policies",
+  "content": "Data access policies deﬁne how your users access the data within your collections. Data access\npolicies help you manage collections at scale by automatically assigning access permissions\nto collections and indexes that match a speciﬁc pattern. Multiple policies can apply to a single\nresource.\nData access policies consist of a set of rules, each with three components: a resource type, granted\nresources, and a set of permissions. The resource type can be a collection or index. The granted\nresources can be collection/index names or patterns with a wildcard (*). The list of permissions\nspeciﬁes which OpenSearch API operations the policy grants access to. In addition, the policy\ncontains a list of principals, which specify the IAM roles, users, and SAML identities to grant access\nto.\nFor more information about the format of a data access policy, see the policy syntax.\nBefore you create a data access policy, you must have one or more IAM roles or users, or SAML\nidentities, to provide access to in the policy. For details, see the next section.\nNote\nSwitching from Public to Private Access for your collection, will remove the Indexes Tab in\nthe OpenSearch Serverless Collection Console.\nData access policies\n485\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 514,
+      "end": 515
+    },
+    "content_stats": {
+      "char_count": 1262,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

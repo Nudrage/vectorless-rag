@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_150",
+  "section_number": "2.6.22.1",
+  "header": "Recommended CloudWatch alarms",
+  "content": "For the best performance, we recommend that you use the following CloudWatch alarms when you\ncreate an OpenSearch Ingestion pipeline to access an Amazon DocumentDB cluster as a source.\nCloudWatch Alarm\nDescription\n<pipeline-name> .doucmentdb.creden\ntialsChanged\nThis metric indicates how often AWS secrets\nare rotated.\n<pipeline-name> .doucmentdb.execut\norRefreshErrors\nThis metric indicates failures to refresh AWS\nsecrets.\nAmazon DocumentDB\n179\nAmazon OpenSearch Service\nDeveloper Guide\nCloudWatch Alarm\nDescription\n<pipeline-name> .doucmentdb.export\nRecordsTotal\nThis metric indicates the number of records\nexported from Amazon DocumentDB.\n<pipeline-name> .doucmentdb.export\nRecordsProcessed\nThis metric indicates the number of records\nprocessed by OpenSearch Ingestion pipeline.\n<pipeline-name> .doucmentdb.export\nRecordProcessingErrors\nThis metric indicates number of processing\nerrors in an OpenSearch Ingestion pipeline\nwhile reading the data from an Amazon\nDocumentDB cluster.\n<pipeline-name> .doucmentdb.export\nRecordsSuccessTotal\nThis metric indicates the total number of\nexport records processed successfully.\n<pipeline-name> .doucmentdb.export\nRecordsFailedTotal\nThis metric indicates the total number of\nexport records that failed to process.\n<pipeline-name> .doucmentdb.bytesR\neceived\nThis metrics indicates the total number of\nbytes received by an OpenSearch Ingestion\npipeline.\n<pipeline-name> .doucmentdb.bytesP\nrocessed\nThis metrics indicates the total number of\nbytes processed by an OpenSearch Ingestion\npipeline.\n<pipeline-name> .doucmentdb.export\nPartitionQueryTotal\nThis metric indicates the export partition total.\n<pipeline-name> .doucmentdb.stream\nRecordsSuccessTotal\nThis metric indicates the number of records\nsuccessfully processed from the stream.\n<pipeline-name> .doucmentdb.stream\nRecordsFailedTotal\nThis metrics indicates the total number of\nrecords failed to process from the stream.\nAmazon DocumentDB\n180\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 208,
+      "end": 210
+    },
+    "content_stats": {
+      "char_count": 1981,
+      "word_count": 233
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon DocumentDB",
+      "children": []
+    }
+  }
+}

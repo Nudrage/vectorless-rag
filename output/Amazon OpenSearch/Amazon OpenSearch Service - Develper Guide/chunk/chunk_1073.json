@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1073",
+  "section_number": "2.16.5.4",
+  "header": "Convert JSONL to Parquet",
+  "content": "If your data is in JSONL format, you can use the following Python script to convert it to Parquet\nformat for use with auto-optimize:\n#!/usr/bin/env python3\nimport json\nimport pyarrow as pa\nimport pyarrow.parquet as pq\nfrom pathlib import Path\nfrom typing import Any, Dict, List\ndef load_json_any(path: Path) -> List[Dict[str, Any]]:\n\"\"\"\nLoad JSON that can be:\n- a list of objects\n- a single object\n- JSON Lines (one object per line)\nReturns list[dict].\n\"\"\"\ntext = path.read_text().strip()\n# Try full JSON file\ntry:\nobj = json.loads(text)\nif isinstance(obj, list):\nreturn obj\nif isinstance(obj, dict):\nreturn [obj]\nexcept json.JSONDecodeError:\npass\n# Fallback # JSON Lines\nrecords = []\nfor i, line in enumerate(text.splitlines(), start=1):\nline = line.strip()\nif not line:\nConvert JSONL to Parquet\n1596\nAmazon OpenSearch Service\nDeveloper Guide\ncontinue\ntry:\nrec = json.loads(line)\nexcept json.JSONDecodeError as e:\nraise ValueError(f\"Invalid JSON on line {i}: {e}\")\nif not isinstance(rec, dict):\nraise ValueError(f\"Line {i} must contain a JSON object\")\nrecords.append(rec)\nreturn records\ndef json_to_parquet(json_path: str, parquet_path: str, compression: str = \"snappy\"):\n\"\"\"Convert ANY JSON to Parquet (schema inferred).\"\"\"\nrecords = load_json_any(Path(json_path))\ntable = pa.Table.from_pylist(records)\npq.write_table(table, parquet_path, compression=compression)\nprint(f\"# Wrote {len(records)} rows to {parquet_path}\")\ndef print_parquet_rows(parquet_path: str, limit: int = 5):\n\"\"\"Print first N rows from the parquet file.\"\"\"\ntable = pq.read_table(parquet_path)\ndf = table.to_pandas()\nprint(f\"\\n=== Showing first {min(limit, len(df))} rows from {parquet_path} ===\")\nprint(df.head(limit).to_string())\nprint(\"===========================================================\\n\")\nif __name__ == \"__main__\":\nINPUT_JSON = \"movies_10k.json\"\nOUTPUT_PARQUET = \"movies.parquet\"\n# Convert JSON # Parquet\njson_to_parquet(INPUT_JSON, OUTPUT_PARQUET)\n# Print some rows from Parquet\nprint_parquet_rows(OUTPUT_PARQUET, limit=3)\nConvert JSONL to Parquet\n1597\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1625,
+      "end": 1627
+    },
+    "content_stats": {
+      "char_count": 2081,
+      "word_count": 261
+    },
+    "hierarchy": {
+      "parent": "Auto-optimize",
+      "children": []
+    }
+  }
+}

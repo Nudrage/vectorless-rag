@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_745",
+  "section_number": "1.23.2",
+  "header": "Activity Logs",
+  "content": "Returns a paged list of activity log events ranging from the last 180 days up to as\nrecently as two minutes before the API request. The events returned are subject to log\nretention, if set up in the account, as described here. To fetch all results, call repeatedly\nwith the next_offset  paging parameter as long as the result metadata has\nnext_offset  values. Requires \"Grant read log\" API permission.\nThere is an intentional two-minute delay in the availability of new activity events in the\nAPI response. Duo operates a large-scale distributed system, and this two-minute\nbuffer period ensures that calls will return consistent results. Querying for results more\nrecent than two minutes will return as empty.\nWe recommend requesting logs no more than once per minute.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 317,
+      "end": 317
+    },
+    "content_stats": {
+      "char_count": 769,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "Logs",
+      "children": []
+    }
+  }
+}

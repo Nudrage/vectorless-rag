@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_312",
+  "section_number": "155.1.1.29.2.1",
+  "header": "Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)",
+  "content": "role-based access control (RBAC)\n７ Note\nMicrosoft Entra global roles (for example, Global Administrator) can still be used to access\nSecure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned\nto a custom role in Microsoft Defender XDR Unified RBAC continue to have access to view (and\nmanage where permitted) Secure Score data as outlined:\nThe following roles have read and write access and can make changes, directly interact with\nSecure Score, and can assign read-only access to other users:\nGlobal Administrator\nSecurity Administrator\nExchange Administrator\nSharePoint Administrator\nThe following roles have read-only access and aren't able to edit status or notes for a\nrecommended action, edit score zones, or edit custom comparisons:\nHelpdesk Administrator\nUser Administrator\nService Support Administrator\nSecurity Reader\nSecurity Operator\nGlobal Reader\nDefender XDR Unified RBAC is automatically active for Secure Score access. Once a\ncustom role with one of the permissions is created, it has an immediate impact on\nassigned users. There is no need to activate it.\nCurrently, the model is only supported in the Microsoft Defender portal. If you want to use\nGraphAPI (for example, for internal dashboards or Defender for Identity Secure Score) you\nshould continue to use Microsoft Entra roles. Support GraphAPI is planned at a later date.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 182,
+      "end": 183
+    },
+    "content_stats": {
+      "char_count": 1379,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "Secure Score permissions",
+      "children": []
+    }
+  }
+}

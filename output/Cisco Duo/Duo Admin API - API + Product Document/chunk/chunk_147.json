@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_147",
+  "section_number": "1.7.1",
+  "header": "Bulk User Operations",
+  "content": "Performs a list of operations serially in the order provided. You can perform a maximum\nof 50 operations per request at a rate limit of 50 calls per minute. Requires \"Grant\nresource - Write\" API permission.\napprove : User approved the push.\n•\ndeny : User denied the push.\n•\nfraud : User marked the push as fraud.\n•\nwaiting : User has not responded to the push yet.\n•\n{\n\"response\": {\n\"push_id\": \"123abc45-6def-789g-h012-34567ijk8901\"\n\"result\": \"approve\"\n},\n\"stat\": \"OK\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 53,
+      "end": 53
+    },
+    "content_stats": {
+      "char_count": 470,
+      "word_count": 81
+    },
+    "hierarchy": {
+      "parent": "Bulk Operations",
+      "children": []
+    }
+  }
+}

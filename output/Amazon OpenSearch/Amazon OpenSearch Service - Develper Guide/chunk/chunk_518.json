@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_518",
+  "section_number": "2.8.11.2",
+  "header": "Taking manual snapshots",
+  "content": "Snapshots are not instantaneous. They take time to complete and don't represent perfect point-in-\ntime views of the cluster. While a snapshot is in progress, you can still index documents and make\nother requests to the cluster, but new documents and updates to existing documents generally\naren't included in the snapshot. The snapshot includes primary shards as they existed when\nOpenSearch initiated the snapshot. Depending on the size of your snapshot thread pool, diﬀerent\nshards might be included in the snapshot at slightly diﬀerent times. For snapshot best practices,\nsee the section called “Improve snapshot performance”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 719,
+      "end": 719
+    },
+    "content_stats": {
+      "char_count": 629,
+      "word_count": 96
+    },
+    "hierarchy": {
+      "parent": "Creating index snapshots in Amazon OpenSearch Service",
+      "children": [
+        "Snapshot storage and performance",
+        "Take a snapshot"
+      ]
+    }
+  }
+}

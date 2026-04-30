@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_472",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Returns a single policy object.\nKey\nValue\ncreated_at\nWhen the policy was first created, as a Unix timestamp.\nPolices created before Nov 2023 may not show a value.\n{\n\"policy_name\": \"Contractor Policy\",\n\"policy_key\": \"POMY5S1FW93239EM33BK\",\n\"is_global_policy\": false,\n\"sections\": {\n# Policy Section data appears here\n# See \"Policy Section Data\" in this document for more inform\n}\n}\n]\nGET  /admin/v2/policies/[policy_key]\nGET  /admin/v2/policies/global\nis_global_policy\nTrue if this policy is the global policy. Otherwise false\n(default). The value for this key cannot be changed.\npolicy_applies_to\nAn array of all applications, and groups within\napplications, to which the policy is applied. If the groups\nblock  is shown under an application, then the policy\nonly applies to those groups within that application. See\nSummarize Policies for a complete listing of all keys in this\nblock.\npolicy_key\nThe identifier for the policy: 20 alphanumeric characters\nstarting with “PO”, or “global” as a shortcut for the global\npolicy. The value for this key cannot be changed.\npolicy_name\nName of the custom policy, or \"Global Policy\" for the\nglobal policy. Policy names do not have to be unique.\nThis key was previously name .\nsections\nThe list of all enabled policy sections for the policy_key,\nwith associated keys/values for each section. Each\nsection here corresponds to a named section that appears\nwhen editing the policy in the Admin Panel. See Policy\nSection Data for information on all available sections,\nkeys, and values.\nPolicy Section Name\nPolicy UI\nSection Name\nanonymous_networks\nAnonymous\nNetworks\nauthentication_methods\nAuthentication\nMethods\nauthentication_policy\nAuthentication\nPolicy\nauthorized_networks\nAuthorized\nNetworks\nbrowsers\nBrowsers\nduo_desktop\nDuo Desktop\nduo_mobile_app\nDuo Mobile\nApp\nfull_disk_encryption\nFull Disk\nEncryption\nmobile_device_biometrics\nMobile Device\nBiometrics\nnew_user\nNew User\nPolicy\noperating_systems\nOperating\nSystems\nplugins\nPlugins\nremembered_devices\nRemembered\nDevices\nrisk_based_factor_selection\nRisk-Based\nFactor\nSelection\nscreen_lock\nScreen Lock\ntampered_devices\nTampered\nDevices\ntrusted_endpoints\nTrusted\nEndpoints\nuser_location\nUser Location\nThe number of sections available will vary based on which\nDuo edition you have.\nupdated_at\nWhen the policy configuration was last modified, as a\nUnix timestamp. Polices updated before Nov 2023 may\nnot show a value.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 191,
+      "end": 193
+    },
+    "content_stats": {
+      "char_count": 2404,
+      "word_count": 335
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

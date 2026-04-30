@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1979",
+  "section_number": "155.1.1.263.1.5",
+  "header": "1. Review the alerts",
+  "content": "Here's an example of an inbox manipulation rule alert in the alert queue.\nHere's an example of the details of an alert that was triggered by a malicious inbox\nmanipulation rule.\nDetermine if the rules look suspicious according to the following rule parameters or criteria:\nKeywords\nThe attacker might apply the manipulation rule only to emails that contains certain words.\nYou can find these keywords under certain attributes such as: \"BodyContainsWords,\"\n\"SubjectContainsWords,\" or \"SubjectOrBodyContainsWords.\"\nIf there are filtering by keywords, then check whether the keywords seem suspicious to\nyou (common scenarios are to filter emails related to the attacker activities, such as\n\"phish,\" \"spam,\" and \"do not reply,\" among others).\nIf there is no filter at all, it might be suspicious as well.\nDestination folder\nTo evade security detection, the attacker might move the emails to a less noticeable\nfolder and mark the emails as read (for example, \"RSS\" folder). If the attacker applies\n\"MoveToFolder\" and \"MarkAsRead\" action, check whether the destination folder is\nsomehow related to the keywords in the rule to decide if it seems suspicious or not.\nDelete all\nSome attackers will just delete all the incoming emails to hide their activity. Mostly, a rule\nof \"delete all incoming emails\" without filtering them with keywords is an indicator of\nmalicious activity.\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1466,
+      "end": 1467
+    },
+    "content_stats": {
+      "char_count": 1375,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Investigation steps",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_408",
+  "section_number": "2.7.10.11.2",
+  "header": "DNS resolution of collection endpoints",
+  "content": "When you create a VPC endpoint, the service creates a new Amazon Route 53 private hosted zone\nand attaches it to the VPC. This private hosted zone consists of a record to resolve the wildcard\nDNS record for OpenSearch Serverless collections (*.aoss.us-east-1.amazonaws.com) to the\ninterface addresses used for the endpoint. You only need one OpenSearch Serverless VPC endpoint\nin a VPC to access any and all collections and Dashboards in each AWS Region. Every VPC with an\nendpoint for OpenSearch Serverless has its own private hosted zone attached.\nOpenSearch Serverless also creates a public Route 53 wildcard DNS record for all collections in\nthe Region. The DNS name resolves to the OpenSearch Serverless public IP addresses. Clients in\nVPCs that don't have an OpenSearch Serverless VPC endpoint or clients in public networks can use\nthe public Route 53 resolver and access the collections and Dashboards with those IP addresses.\nThe IP address type (IPv4, IPv6, or Dualstack) of VPC endpoint is determined based on the subnets\nprovided when you Create an interface endpoint for OpenSearch Serverless.\nNote\nOpenSearch Serverless creates an additonal Amazon Route 53 private hosted zone\n(`<region>.opensearch.amazonaws.com`) for an OpenSearch Service domain\nVPC endpoints\n559\nAmazon OpenSearch Service\nDeveloper Guide\nresolution. You can update your existing IPv4 VPC endpoint to Dualstack by using the\nupdate-vpc-endpoint command in the AWS CLI.\nThe DNS resolver address for a given VPC is the second IP address of the VPC CIDR. Any client in\nthe VPC needs to use that resolver to get the VPC endpoint address for any collection. The resolver\nuses private hosted zone created by OpenSearch Serverless. It's suﬃcient to use that resolver\nfor all collections in any account. It's also possible to use the VPC resolver for some collection\nendpoints and the public resolver for others, although it's not typically necessary.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 588,
+      "end": 589
+    },
+    "content_stats": {
+      "char_count": 1924,
+      "word_count": 303
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

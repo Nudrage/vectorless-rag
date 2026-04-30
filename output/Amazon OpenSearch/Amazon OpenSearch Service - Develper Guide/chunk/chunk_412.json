@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_412",
+  "section_number": "2.7.11.1",
+  "header": "Permissions required",
+  "content": "VPC access for OpenSearch Serverless uses the following AWS Identity and Access Management\n(IAM) permissions. You can specify IAM conditions to restrict users to speciﬁc collections.\n• aoss:CreateVpcEndpoint – Create a VPC endpoint.\n• aoss:ListVpcEndpoints – List all VPC endpoints.\n• aoss:BatchGetVpcEndpoint – See details about a subset of VPC endpoints.\n• aoss:UpdateVpcEndpoint – Modify a VPC endpoint.\n• aoss:DeleteVpcEndpoint – Delete a VPC endpoint.\nIn addition, you need the following Amazon EC2 and Route 53 permissions in order to create a VPC\nendpoint.\n• ec2:CreateTags\n• ec2:CreateVpcEndpoint\n• ec2:DeleteVpcEndPoints\n• ec2:DescribeSecurityGroups\n• ec2:DescribeSubnets\n• ec2:DescribeVpcEndpoints\n• ec2:DescribeVpcs\n• ec2:ModifyVpcEndPoint\n• route53:AssociateVPCWithHostedZone\n• route53:ChangeResourceRecordSets\n• route53:CreateHostedZone\n• route53:DeleteHostedZone\n• route53:GetChange\n• route53:GetHostedZone\n• route53:ListHostedZonesByName\n• route53:ListHostedZonesByVPC\n• route53:ListResourceRecordSets\nVPC endpoints\n566\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 595,
+      "end": 596
+    },
+    "content_stats": {
+      "char_count": 1076,
+      "word_count": 126
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

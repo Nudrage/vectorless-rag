@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_920",
+  "section_number": "2.13.2.3",
+  "header": "Sample code (Python 3)",
+  "content": "The following sample uses opensearch-py to perform the compression and send the request. This\ncode signs the request using your IAM credentials.\nfrom opensearchpy import OpenSearch, RequestsHttpConnection\nfrom requests_aws4auth import AWS4Auth\nimport boto3\nhost = '' # e.g. my-test-domain.us-east-1.es.amazonaws.com\nregion = '' # e.g. us-west-1\nservice = 'es'\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\n# Create the client.\nsearch = OpenSearch(\nhosts = [{'host': host, 'port': 443}],\nhttp_auth = awsauth,\nuse_ssl = True,\nverify_certs = True,\nhttp_compress = True, # enables gzip compression for request bodies\nconnection_class = RequestsHttpConnection\n)\ndocument = {\n\"title\": \"Moneyball\",\n\"director\": \"Bennett Miller\",\n\"year\": \"2011\"\n}\n# Send the request.\nprint(search.index(index='movies', id='1', body=document, refresh=True))\nRequired headers\n1424\nAmazon OpenSearch Service\nDeveloper Guide\n# print(search.index(index='movies', doc_type='_doc', id='1', body=document,\nrefresh=True))\nAlternately, you can specify the proper headers, compress the request body yourself, and use a\nstandard HTTP library like Requests. This code signs the request using HTTP basic credentials,\nwhich your domain might support if you use ﬁne-grained access control.\nimport requests\nimport gzip\nimport json\nbase_url = '' # The domain with https:// and a trailing slash. For example, https://my-\ntest-domain.us-east-1.es.amazonaws.com/\nauth = ('master-user', 'master-user-password') # For testing only. Don't store\ncredentials in code.\nheaders = {'Accept-Encoding': 'gzip', 'Content-Type': 'application/json',\n'Content-Encoding': 'gzip'}\ndocument = {\n\"title\": \"Moneyball\",\n\"director\": \"Bennett Miller\",\n\"year\": \"2011\"\n}\n# Compress the document.\ncompressed_document = gzip.compress(json.dumps(document).encode())\n# Send the request.\npath = 'movies/_doc?refresh=true'\nurl = base_url + path\nresponse = requests.post(url, auth=auth, headers=headers, data=compressed_document)\nprint(response.status_code)\nprint(response.text)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1453,
+      "end": 1454
+    },
+    "content_stats": {
+      "char_count": 2120,
+      "word_count": 248
+    },
+    "hierarchy": {
+      "parent": "Compressing HTTP requests in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

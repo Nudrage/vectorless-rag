@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_902",
+  "section_number": "155.1.1.90",
+  "header": "Handle advanced hunting errors",
+  "content": "03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nAdvanced hunting displays errors to notify for syntax mistakes and whenever queries hit\npredefined quotas and usage parameters. Refer to the table below for tips on how to resolve or\navoid errors.\nError type\nCause\nResolution\nError message\nexamples\nSyntax errors\nThe query contains\nunrecognized names,\nincluding references to\nnonexistent operators,\ncolumns, functions, or tables.\nEnsure references to Kusto\noperators and functions are\ncorrect. Check the schema for\nthe correct advanced hunting\ncolumns, functions, and tables.\nEnclose variable strings in\nquotes so they are recognized.\nWhile writing your queries, use\nthe autocomplete suggestions\nfrom IntelliSense.\nA recognition error\noccurred.\nSemantic\nerrors\nWhile the query uses valid\noperator, column, function, or\ntable names, there are errors\nin its structure and resulting\nlogic. In some cases, advanced\nhunting identifies the specific\noperator that caused the error.\nCheck for errors in the\nstructure of query. Refer to\nKusto documentation for\nguidance. While writing your\nqueries, use the autocomplete\nsuggestions from IntelliSense.\n'project' operator:\nFailed to resolve\nscalar expression\nnamed 'x'\nTimeouts\nA query can only run within a\nlimited period before timing\nout. This error can happen\nmore frequently when running\ncomplex queries.\nOptimize the query\nQuery exceeded the\ntimeout period.\nCPU\nthrottling\nQueries in the same tenant\nhave exceeded the CPU\nresources that have been\nallocated based on tenant size.\nThe service checks CPU\nresource usage every 15\nminutes and daily and displays\nwarnings after usage exceeds\n10% of the allocated quota. If\nyou reach 100% utilization, the\nservice blocks queries until\nafter the next daily or 15-\nminute cycle. Optimize your\nYou have exceeded\nprocessing resources\nallocated to this\ntenant. You can run\nqueries again in\n<duration>.\nﾉ\nExpand table\nError type\nCause\nResolution\nError message\nexamples\nqueries to avoid hitting CPU\nquotas\nResult size\nlimit\nexceeded\nThe aggregate size of the\nresult set for the query has\nexceeded the maximum size.\nThis error can occur if the\nresult set is so large that\ntruncation at the 30,000-\nrecord limit can't reduce it to\nan acceptable size. Results\nthat have multiple columns\nwith sizable content are more\nlikely to be impacted by this\nerror.\nOptimize the query\nResult size limit\nexceeded. Use\n\"summarize\" to\naggregate results,\n\"project\" to drop\nuninteresting\ncolumns, or \"take\"\nto truncate results.\nExcessive\nresource\nconsumption\nThe query has consumed\nexcessive amounts of\nresources and has been\nstopped from completing. In\nsome cases, advanced hunting\nidentifies the specific operator\nthat wasn't optimized.\nOptimize the query\n- Query stopped due\nto excessive\nresource\nconsumption.\n- Query stopped.\nAdjust use of the\n<operator name>\noperator to avoid\nexcessive resource\nconsumption.\nUnknown\nerrors\nThe query failed because of an\nunknown reason.\nTry running the query again.\nContact Microsoft through the\nportal if queries continue to\nreturn unknown errors.\nAn unexpected error\noccurred during\nquery execution.\nPlease try again in\na few minutes.\nAdvanced hunting best practices\nQuotas and usage parameters\nUnderstand the schema\nKusto Query Language overview",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 596,
+      "end": 597
+    },
+    "content_stats": {
+      "char_count": 3295,
+      "word_count": 498
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

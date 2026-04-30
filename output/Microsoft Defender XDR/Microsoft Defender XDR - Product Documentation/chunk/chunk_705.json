@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_705",
+  "section_number": "155.1.1.191.1",
+  "header": "Get access",
+  "content": "Microsoft Defender XDR Unified role based access control (URBAC):\nRead-only Advanced Hunting access (Email & Collaboration tables): Membership\nassigned with the Security operations > Security data > Security data basic (read)\nURBAC permission. This permission provides access to:\nEmailEvents\nEmailUrlInfo\nEmailAttachmentInfo\nUrlClickEvents\nEmail entity metadata\nEmail & collaboration permissions in the Microsoft Defender portal: Membership in one\nof the following Email & Collaboration role groups provides access to email data tables in\nAdvanced Hunting:\nSecurity Administrator\nSecurity Operator\nSecurity Reader\nExchange Online permissions: To access Exchange Online data surfaced in Advanced\nHunting, users must be members of one of the following Exchange Online role groups:\nView-Only Organization Management\nView-Only Configuration\nSecurity Reader\nGlobal Reader\nMicrosoft Entra permissions: Membership in one of the following Microsoft Entra roles\ngrants full read access to all Advanced Hunting data:\nGlobal Administrator\nSecurity Administrator\nSecurity Reader\nGlobal Reader\nAlso, your access to endpoint data is determined by role-based access control (RBAC)\nsettings in Microsoft Defender for Endpoint. For more information, see Manage access to\nMicrosoft Defender XDR with Microsoft Entra global roles.\nAdvanced hunting data falls into two distinct types, each with a different consolidation process.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 451,
+      "end": 452
+    },
+    "content_stats": {
+      "char_count": 1409,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Proactively hunt for threats with advanced hunting in Microsoft Defender",
+      "children": []
+    }
+  }
+}

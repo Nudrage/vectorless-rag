@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_853",
+  "section_number": "2.15.10.1",
+  "header": "Considerations",
+  "content": "Consider the following when you conﬁgure SAML authentication:\n• Due to the size of the IdP metadata ﬁle, we strongly recommend using the AWS console to\nconﬁgure SAML authentication.\n• Domains only support one Dashboards authentication method at a time. If you have Amazon\nCognito authentication for OpenSearch Dashboards enabled, you must disable it before you can\nenable SAML authentication.\n• If you use a network load balancer with SAML, you must ﬁrst create a custom endpoint. For more\ninformation, see ???.\n• Service Control Policies (SCP) will not be applicable or evaluated in the case of non-IAM identities\n(like SAML in Amazon OpenSearch Serverless & SAML and basic internal user authorization for\nAmazon OpenSearch Service).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1407,
+      "end": 1407
+    },
+    "content_stats": {
+      "char_count": 734,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "SAML authentication for OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

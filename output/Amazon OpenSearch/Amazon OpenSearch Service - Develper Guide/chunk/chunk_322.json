@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_322",
+  "section_number": "2.7.5.2",
+  "header": "Maximum capacity limits",
+  "content": "The maximum total of indexes a collection can contain is 1000. For all three types of collections,\nthe default maximum OCU capacity is 10 OCUs for indexing and 10 OCUs for search. The minimum\nConﬁguring capacity settings\n454\nAmazon OpenSearch Service\nDeveloper Guide\nOCU capacity allowed for an account is 1 OCU [0.5 OCU x 2] for indexing and 1 OCU [0.5 OCU x 2]\nfor search. For all collections, the maximum allowed capacity is 1,700 OCUs for indexing and 1,700\nOCUs for search. You can conﬁgure the OCU count to be any number from 1 to the maximum\nallowed capacity, in multiples of 2.\nEach OCU includes enough hot ephemeral storage for 120 GiB of index data. OpenSearch\nServerless supports up to 1 TiB of data per index in search and vector search collections, and 100\nTiB of hot data per index in a time series collection. For time series collections, you can still ingest\nmore data, which can be stored as warm data in S3.\nFor a list of all quotas, see OpenSearch Serverless quotas.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 483,
+      "end": 484
+    },
+    "content_stats": {
+      "char_count": 985,
+      "word_count": 177
+    },
+    "hierarchy": {
+      "parent": "Managing capacity limits for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

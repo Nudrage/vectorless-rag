@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_938",
+  "section_number": "2.27.3.3.1",
+  "header": "Create the Lambda function",
+  "content": "Follow the instructions in the section called “Create the Lambda deployment package”, but create a\ndirectory named kinesis-to-opensearch and use the following code for sample.py:\nimport base64\nimport boto3\nimport json\nimport requests\nfrom requests_aws4auth import AWS4Auth\nregion = '' # e.g. us-west-1\nservice = 'es'\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\nhost = '' # the OpenSearch Service domain, e.g. https://search-mydomain.us-\nwest-1.es.amazonaws.com\nindex = 'lambda-kine-index'\ndatatype = '_doc'\nurl = host + '/' + index + '/' + datatype + '/'\nheaders = { \"Content-Type\": \"application/json\" }\ndef handler(event, context):\ncount = 0\nfor record in event['Records']:\nid = record['eventID']\ntimestamp = record['kinesis']['approximateArrivalTimestamp']\n# Kinesis data is base64-encoded, so decode here\nmessage = base64.b64decode(record['kinesis']['data'])\n# Create the JSON document\nLoading streaming data from Amazon Kinesis Data Streams\n1454\nAmazon OpenSearch Service\nDeveloper Guide\ndocument = { \"id\": id, \"timestamp\": timestamp, \"message\": message }\n# Index the document\nr = requests.put(url + id, auth=awsauth, json=document, headers=headers)\ncount += 1\nreturn 'Processed ' + str(count) + ' items.'\nEdit the variables for region and host.\nInstall pip if you haven't already, then use the following commands to install your dependencies:\ncd kinesis-to-opensearch\npip install --target ./package requests\npip install --target ./package requests_aws4auth\nThen follow the instructions in the section called “Create the Lambda function”, but specify the\nIAM role from the section called “Prerequisites” and the following settings for the trigger:\n• Kinesis stream: your Kinesis stream\n• Batch size: 100\n• Starting position: Trim horizon\nTo learn more, see What is Amazon Kinesis Data Streams? in the Amazon Kinesis Data Streams\nDeveloper Guide.\nAt this point, you have a complete set of resources: a Kinesis data stream, a function that runs\nafter the stream receives new data and indexes that data, and an OpenSearch Service domain for\nsearching and visualization.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1483,
+      "end": 1484
+    },
+    "content_stats": {
+      "char_count": 2191,
+      "word_count": 304
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon Kinesis Data Streams",
+      "children": []
+    }
+  }
+}

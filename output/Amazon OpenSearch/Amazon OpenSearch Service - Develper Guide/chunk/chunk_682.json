@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_682",
+  "section_number": "2.10.4.1.3",
+  "header": "Service software update rescheduled",
+  "content": "OpenSearch Service sends this event when an optional service software update has been\nrescheduled. For more information, see the section called “Optional versus required updates”.\nExample\nThe following is an example event of this type:\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"Amazon OpenSearch Service Software Update Notification\",\n\"source\": \"aws.es\",\n\"account\": \"123456789012\",\n\"time\": \"2016-11-01T13:12:22Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\nService software update events\n1239\nAmazon OpenSearch Service\nDeveloper Guide\n\"event\": \"Service Software Update\",\n\"status\": \"Rescheduled\",\n\"severity\": \"High\",\n\"description\": \"The service software update [R20200330-p1], which was originally\nscheduled for\n[21st May 2023 12:40 GMT], has been rescheduled to [23rd May 2023\n12:40 GMT].\nPlease see documentation for more information on scheduling\nsoftware updates:\nhttps://docs.aws.amazon.com/opensearch-service/latest/\ndeveloperguide/service-software.html.\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1268,
+      "end": 1269
+    },
+    "content_stats": {
+      "char_count": 1065,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "Service software update events",
+      "children": []
+    }
+  }
+}

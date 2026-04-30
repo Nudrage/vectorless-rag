@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_008",
+  "section_number": "1.2.5",
+  "header": "Retrieve an SSH public key",
+  "content": "User retrieved SSH public key.\nEvent details\nEvent name\nGET_SSH_PUBLIC_KEY\nParameters\nUSER_EMAIL\nstring\nThe email address of the acting user.\nSample request\neventName=DELETE_POSIX_ACCOUNT&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{USER_EMAIL} deleted a POSIX account.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/gcp?\neventName=DELETE_SSH_PUBLIC_KEY&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{USER_EMAIL} deleted an SSH public key.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/gcp?\neventName=GET_SSH_PUBLIC_KEY&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\nEvent details\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 2,
+      "end": 3
+    },
+    "content_stats": {
+      "char_count": 683,
+      "word_count": 51
+    },
+    "hierarchy": {
+      "parent": "Cloud OS Login",
+      "children": []
+    }
+  }
+}

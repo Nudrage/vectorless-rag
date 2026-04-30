@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1443",
+  "section_number": "2.26.4.1.9",
+  "header": "OpenSearch version 2.17",
+  "content": "For OpenSearch 2.17, OpenSearch Service supports the following operations. For information\nabout most of the operations, see the OpenSearch REST API reference, or the API reference for the\nspeciﬁc plugin.\nNote\nStarting with OpenSearch 2.17, the cluster.max_shards_per_node setting can't be\nmodiﬁed. For OpenSearch 2.17 and later, OpenSearch Service supports 1000 shards for\nevery 16GB of JVM heap memory up to a maximum of 4000 shards per node.\n• All operations in the index\npath (such as /index-name /\n_forcemerge , /index-nam\ne /update/id, and /index-\nname /_close)\n• /_alias\n• /_aliases\n• /_all\n• /_analyze\n• /_bulk\n• /_cat (except /_cat/nod\neattrs )\n• /_cluster/allocation/\nexplain\n• /_cluster/health\n• /_cluster/pending_tasks\n• /_delete_by_query\n1\n• /_explain\n• /_field_caps\n• /_field_stats\n• /_flush\n• /_ingest/pipeline\n• /_list\n• /_ltr\n• /_mapping\n• /_mget\n• /_msearch\n• /_mtermvectors\n• /_nodes\n• /_plugins/_asynchr\nonous_search\n• /_refresh\n• /_reindex 1\n• /_render\n• /_resolve/index\n• /_rollover\n• /_scripts 3\n• /_search2\n• /_search/pipeline\n• /_search/point_in_\ntime\n• /_search profile\n• /_shard_stores\n• /_shrink5\n• /_snapshot\n• /_split\nNotable API diﬀerences\n1915\nAmazon OpenSearch Service\nDeveloper Guide\n• /_cluster/settings\nfor\nseveral properties4:\n• action.auto_create\n_index\n• action.search.shar\nd_count.limit\n• indices.breaker.fi\nelddata.limit\n• indices.breaker.re\nquest.limit\n• indices.breaker.to\ntal.limit\n• cluster.search.req\nuest.slowlog.level\n• cluster.search.req\nuest.slowlog.thres\nhold.warn\n• cluster.search.req\nuest.slowlog.thres\nhold.info\n• cluster.search.req\nuest.slowlog.thres\nhold.debug\n• cluster.search.req\nuest.slowlog.thres\nhold.trace\n• search.phase_took_\nenabled\n• /_cluster/state\n• /_cluster/stats\n• /_count\n• /_dashboards\n• /_plugins/_alertin\ng\n• /_plugins/_anomaly\n_detection\n• /_plugins/_ism\n• /_plugins/_ml\n• /_plugins/_notific\nations\n• /_plugins/_ppl\n• /_plugins/_securit\ny\n• /_plugins/_securit\ny_analytics\n• /_plugins/_sm\n• /_plugins/_sql\n• /_percolate\n• /_rank_eval\n• /_stats\n• /_status\n• /_tasks\n• /_template\n• /_update_by_query\n1\n• /_validate\nNotable API diﬀerences\n1916\nAmazon OpenSearch Service\nDeveloper Guide\n1. Cluster conﬁguration changes might interrupt these operations before completion. We\nrecommend that you use the /_tasks operation along with these operations to verify that the\nrequests completed successfully.\n2. DELETE requests to /_search/scroll with a message body must specify \"Content-\nLength\" in the HTTP header. Most clients add this header by default. To avoid a problem with =\ncharacters in scroll_id values, use the request body, not the query string, to pass scroll_id\nvalues to OpenSearch Service.\n3. For considerations about using scripts, see the section called “Other supported resources”.\n4. Refer to the PUT method. For information about the GET method, see the section called\n“Notable API diﬀerences”. This list only refers to the generic OpenSearch operations that\nOpenSearch Service supports and does not include plugin-speciﬁc supported operations for\nanomaly detection, ISM, and others.\n5. See the section called “Shrink”.\nNote\nCurrently, changing the cluster.max_shards_per_node setting functionality is not\nenabled for customers with Multi-AZ (Availability Zone) with standby.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1944,
+      "end": 1946
+    },
+    "content_stats": {
+      "char_count": 3259,
+      "word_count": 442
+    },
+    "hierarchy": {
+      "parent": "Notable API diﬀerences",
+      "children": []
+    }
+  }
+}

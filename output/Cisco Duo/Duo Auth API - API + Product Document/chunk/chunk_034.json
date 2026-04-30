@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_034",
+  "section_number": "1.6.1",
+  "header": "Response Format",
+  "content": "Key\nValue\ndevices\nA list of the user's devices, where each device is a series\nof key/value pairs.\nThis field will only be present if result  is \"auth\" .\nKey\nValue\ncapabilities\nList of strings, each a factor that\ncan be used with the device. The\nfactors available for use may be\nlimited by an effective\nauthentication methods policy or\nRisk-based Factor Selection policy\nthat disables use of some factors.\nNote that hardware tokens do not\nhave any associated capabilities.\nCapability\nMeaning\nauto\nThe device is\nvalid for\nautomatic\nfactor\nselection\n(e.g. phone\nor push).\npush\nThe device is\nactivated for\nDuo Push.\nsms\nThe device\ncan receive\nbatches of\nSMS\npasscodes.\nphone\nThe device\ncan receive\nphone calls.\nmobile_otp\nThe device is\ncapable of\ngenerating\npasscodes\nwith the Duo\nMobile app.\ndevice\nIdentifies which of the user's\ndevices this is.\ndisplay_name\nA short string which can be used\nto identify the device in a prompt.\nname\nDevice's name. Or, if the device\nhas not been named, the empty\nstring ( \"\" ).\nnumber\nPhone number of the device, with\nall but the last four digits\nobscured. Or, if the device has no\nassociated number, the empty\nstring ( \"\" ).\nsms_nextcode\nSingle-character string containing\nthe starting number of the next\nacceptable passcode previously\nSMSed to the user, if any. For\nexample, if a user has received a\nbatch of SMS passcodes and\nauthenticated with those that\nbegan with 1 and 3, then\nsms_nextcode  will be \"2\" .\nThis field will only be present if\nthe device has the \"sms\"\ncapability and has previously\nreceived passcodes.\ntype\n\"phone\"  or \"token\" .\nenroll_portal_url\nIf result  is \"enroll\"  a unique, enrollment portal URL\nis returned. This URL may be passed to the user and\nopened in a new browser window to access a portal that\nwill help the user associate a device with the user_id\nspecified or returned when calling /preauth . The\nenrollment URL is valid for five minutes after generation.\nThis enrollment portal URL should be used instead of\ncalling /enroll  if your users need to enroll phones that\nare not capable of running Duo Mobile, such as landlines\nor cell phones. /enroll  only supports enrolling\nsmartphones that can run Duo Mobile.\nThis field will only be present if result  is \"enroll\" .\nexpiration\nUnix timestamp of time at which the txid  and\nverification_code  for completing a Verified Duo Push\nauthentication expires, 60 seconds after issuance. Not\npresent in the response when a regular Duo Push would\nbe accepted.\nYour client application should not proceed to /auth  once\nthe txid  expires.\nresult\nOne of the following strings:\nValue\nMeaning\nauth\nThe user is known and permitted to\nauthenticate. Your client application\nshould use the /auth  endpoint to\nperform authentication.\nallow\nThe user is not required to complete\nsecondary authentication, either because\nthe user has \"bypass\" status or the\neffective policy for the user's access of\nthis application allows access without\n2FA or Duo enrollment. Your client\napplication should immediately grant\naccess.\ndeny\nThe user is not permitted to authenticate\nat this time. Your client application should\nimmediately deny access.\nenroll\nThe user is not known to Duo and needs\nto enroll. Your application should deny\naccess.\nstatus_msg\nHuman-readable message describing the result. This\nstring is intended for display to the user.\ntxid\nA transaction ID to submit to the /auth  endpoint to\nperform Verified Duo Push. Not present in the response\nwhen a regular Duo Push would be accepted.\nverification_code\nA numeric string of three to six digits matching the\nVerified Duo Push code length configured in the\nauthentication methods or Risk-based Factor Selection\npolicy options. If present in the response, your client\nshould show this code to the user for entry in Duo Mobile\nas they approve a Verified Duo Push request. Not present\nin the response when a regular Duo Push would be\naccepted.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 10,
+      "end": 13
+    },
+    "content_stats": {
+      "char_count": 3889,
+      "word_count": 646
+    },
+    "hierarchy": {
+      "parent": "Endpoints",
+      "children": []
+    }
+  }
+}

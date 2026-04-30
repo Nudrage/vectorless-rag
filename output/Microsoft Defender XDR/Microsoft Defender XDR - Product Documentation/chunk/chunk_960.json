@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_960",
+  "section_number": "155.1.1.100",
+  "header": "BehaviorInfo (Preview)",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe BehaviorInfo  table in the advanced hunting schema contains information about alerts\nfrom Microsoft Defender for Cloud Apps. Use this reference to construct queries that return\ninformation from this table.\nBehaviors are a type of data in Microsoft Defender XDR based on one or more raw events.\nBehaviors provide contextual insight into events and can, but not necessarily, indicate\nmalicious activity. Read more about behaviors\nThis advanced hunting table is populated by records from Microsoft Defender for Cloud Apps.\nIf your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use\nthe table aren’t going to work or return any results. For more information about how to deploy\nservices in Defender XDR, read Deploy supported services.\nTo make sure the BehaviorInfo  table is populated by Microsoft Defender for Cloud Apps data:\n1. Go to the Defender portal and select Settings > Cloud apps > App connectors.\n2. In the Select Microsoft 365 components page, select the Microsoft 365 activities\ncheckbox. For detailed instructions, see: Connect Microsoft 365 to Microsoft Defender for\nCloud Apps\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the record was generated\nBehaviorId\nstring\nUnique identifier for the behavior\nActionType\nstring\nType of behavior\n） Important\nThe BehaviorInfo  table is in preview and is not available for GCC. The information here\nmay be substantially modified before it's commercially released. Microsoft makes no\nwarranties, express or implied, with respect to the information provided here. Have\nfeedback to share? Fill out our feedback form\n.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nDescription\nstring\nDescription of the behavior\nCategories\nstring\nType of threat indicator or breach activity identified by the behavior\nAttackTechniques\nstring\nMITRE ATT&CK techniques associated with the activity that triggered the\nbehavior\nServiceSource\nstring\nProduct or service that identified the behavior\nDetectionSource\nstring\nDetection technology or sensor that identified the notable component\nor activity\nDataSources\nstring\nProducts or services that provided information for the behavior\nDeviceId\nstring\nUnique identifier for the device in the service\nAccountUpn\nstring\nUser principal name (UPN) of the account\nAccountObjectId\nstring\nUnique identifier for the account in Microsoft Entra ID\nStartTime\ndatetime\nDate and time of the first activity related to the behavior\nEndTime\ndatetime\nDate and time of the last activity related to the behavior\nAdditionalFields\nstring\nAdditional information about the behavior\nAdvanced hunting overview\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 650,
+      "end": 651
+    },
+    "content_stats": {
+      "char_count": 2965,
+      "word_count": 438
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

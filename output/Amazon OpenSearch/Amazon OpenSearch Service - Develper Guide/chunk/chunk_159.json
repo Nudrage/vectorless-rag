@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_159",
+  "section_number": "2.6.16.9",
+  "header": "Using an OpenSearch Ingestion pipeline with Amazon RDS",
+  "content": "You can use an OpenSearch Ingestion pipeline with Amazon RDS to export existing data and\nstream changes (such as create, update, and delete) to Amazon OpenSearch Service domains\nand collections. The OpenSearch Ingestion pipeline incorporates change data capture (CDC)\ninfrastructure to provide a high-scale, low-latency way to continuously stream data from Amazon\nRDS. RDS for MySQL and RDS for PostgreSQL are supported.\nThere are two ways that you can use Amazon RDS as a source to process data—with or without\na full initial snapshot. A full initial snapshot is a snapshot of speciﬁed tables and this snapshot is\nexported to Amazon S3. From there, an OpenSearch Ingestion pipeline sends it to one index in\na domain, or partitions it to multiple indexes in a domain. To keep the data in Amazon RDS and\nOpenSearch consistent, the pipeline syncs all of the create, update, and delete events in the tables\nin Amazon RDS instances with the documents saved in the OpenSearch index or indexes.\nWhen you use a full initial snapshot, your OpenSearch Ingestion pipeline ﬁrst ingests the snapshot\nand then starts reading data from Amazon RDS change streams. It eventually catches up and\nmaintains near real-time data consistency between Amazon RDS and OpenSearch.\nYou can also use the OpenSearch Ingestion integration with Amazon RDS to track change data\ncapture and ingest all updates in Aurora to OpenSearch. Choose this option if you already have a\nAmazon RDS\n198\nAmazon OpenSearch Service\nDeveloper Guide\nfull snapshot from some other mechanism, or if you just want to capture all changes to the data in\nan Amazon RDS instance.\nWhen you choose this option you need to conﬁgure Amazon RDS for MySQL binary logging or set\nup logical replication for Amazon RDS for PostgresSQL DB instance.\nTopics\n• RDS for MySQL\n• RDS for PostgreSQL",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 227,
+      "end": 228
+    },
+    "content_stats": {
+      "char_count": 1825,
+      "word_count": 302
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "RDS for MySQL",
+        "RDS for PostgreSQL"
+      ]
+    }
+  }
+}

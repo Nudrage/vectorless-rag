@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_068",
+  "section_number": "2.6.9.3",
+  "header": "Chaining",
+  "content": "You can chain multiple sub-pipelines together in order to perform data processing and enrichment\nin chunks. In other words, you can enrich an incoming event with certain processing capabilities in\none sub-pipeline, then send it to another sub-pipeline for additional enrichment with a diﬀerent\nprocessor, and ﬁnally send it to its OpenSearch sink.\nIn the following example, the log_pipeline sub-pipeline enriches an incoming log event with\na set of processors, then sends the event to an OpenSearch index named enriched_logs. The\npipeline sends the same event to the log_advanced_pipeline sub-pipeline, which processes it\nand sends it to a diﬀerent OpenSearch index named enriched_advanced_logs.\nChaining\n62\nAmazon OpenSearch Service\nDeveloper Guide\nversion: \"2\"\nlog-pipeline:\nsource:\nhttp:\n...\nprocessor:\n...\nsink:\n- opensearch:\n# Provide a domain or collection endpoint\n# Enable the 'serverless' flag if the sink is an OpenSearch Serverless\ncollection\naws:\n...\nindex: \"enriched_logs\"\n- pipeline:\nname: \"log_advanced_pipeline\"\nlog_advanced_pipeline:\nsource:\nlog-pipeline\nprocessor:\n...\nsink:\n- opensearch:\n# Provide a domain or collection endpoint\n# Enable the 'serverless' flag if the sink is an OpenSearch Serverless\ncollection\naws:\n...\nindex: \"enriched_advanced_logs\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 91,
+      "end": 92
+    },
+    "content_stats": {
+      "char_count": 1271,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": "Overview of pipeline features in Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

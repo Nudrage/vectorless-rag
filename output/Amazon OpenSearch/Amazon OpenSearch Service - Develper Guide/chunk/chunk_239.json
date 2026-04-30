@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_239",
+  "section_number": "2.6.21.2.6",
+  "header": "Otel metrics source metrics",
+  "content": "The following metrics apply to the OTel metrics source. Each metric is preﬁxed\nby the sub-pipeline name and otel_metrics_source. For example,\nsub_pipeline_name.otel_metrics_source.requestTimeouts.count.\nMetric suﬃx\nDescription\nrequestTimeouts.count\nThe total number of requests to the plugin that time out.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestsReceived.count\nThe total number of requests received by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nsuccessRequests.count\nThe number of requests successfully processed (200\nresponse status code) by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestProcessDura\ntion.count\nA count of the latency of requests processed by the\nplugin, in seconds.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestProcessDura\ntion.sum\nThe total latency of requests processed by the plugin, in\nmilliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n341\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nrequestProcessDura\ntion.max\nThe maximum latency of requests processed by the\nplugin, in milliseconds.\nRelevant statistics: Max\nDimension: PipelineName\npayloadSize.count\nA count of the distribution of payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\npayloadSize.sum\nThe total distribution of the payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\npayloadSize.max\nThe maximum distribution of payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Max\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 370,
+      "end": 371
+    },
+    "content_stats": {
+      "char_count": 1612,
+      "word_count": 198
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

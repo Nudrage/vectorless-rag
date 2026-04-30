@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_2004",
+  "section_number": "155.1.1.263",
+  "header": "Alert classification for password spray attacks",
+  "content": "attacks\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThreat actors use innovative ways to compromise their target environments. One type of attack\ngaining traction is the password spray attack, where attackers aim to access many accounts\nwithin a network with minimal effort. Unlike traditional brute force attacks, where threat actors\ntry many passwords on a single account, password spray attacks focus on guessing the correct\npassword for many accounts with a limited set of commonly used passwords. It makes the\nattack particularly effective against organizations with weak or easily guessable passwords,\nleading to severe data breaches and financial losses for organizations.\nAttackers use automated tools to repeatedly attempt to gain access to a specific account or\nsystem using a list of commonly used passwords. Attackers sometimes abuse legitimate cloud\nservices by creating many virtual machines (VMs) or containers to launch a password spray\nattack.\nThis playbook helps investigate cases where suspicious behavior is observed as indicative of a\npassword spray attack. This guide is for security teams like the security operations center (SOC)\nand IT administrators who review, handle/manage, and classify the alerts. This guide helps in\nquickly classifying the alerts as either true positive (TP) or false positive (FP) and, in the case of\nTP, take recommended actions to remediate the attack and mitigate the security risks.\nThe intended results of using this guide are:\nYou've identified the alerts associated with password spray attempts as malicious (TP) or\nfalse positive (FP) activities.\nYou've taken the necessary actions to remediate the attack.\nThis section contains step-by-step guidance to respond to the alert and take the\nrecommended actions to protect your organization from further attacks.\nAre the alerted sign-in attempts coming from a suspicious location? Check sign-in\nattempts from locations other than those typical for impacted user accounts. Multiple\nsign-in attempts from one or many users are helpful indicators.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1484,
+      "end": 1484
+    },
+    "content_stats": {
+      "char_count": 2062,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Investigation steps",
+        "Advanced hunting queries",
+        "Recommended actions",
+        "See also"
+      ]
+    }
+  }
+}

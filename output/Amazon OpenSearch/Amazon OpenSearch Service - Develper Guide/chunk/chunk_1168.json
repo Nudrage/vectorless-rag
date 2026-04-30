@@ -1,0 +1,40 @@
+{
+  "chunk_id": "chunk_1168",
+  "section_number": "2.19.3",
+  "header": "UltraWarm storage for Amazon OpenSearch Service",
+  "content": "UltraWarm provides a cost-eﬀective way to store large amounts of read-only data on Amazon\nOpenSearch Service. Standard data nodes use \"hot\" storage, which takes the form of instance\nstores or Amazon EBS volumes attached to each node. Hot storage provides the fastest possible\nperformance for indexing and searching new data.\nRather than attached storage, UltraWarm nodes use Amazon S3 and a sophisticated caching\nsolution to improve performance. For indexes that you are not actively writing to, query less\nfrequently, and don't need the same performance from, UltraWarm oﬀers signiﬁcantly lower\ncosts per GiB of data. Because warm indexes are read-only unless you return them to hot storage,\nUltraWarm is best-suited to immutable data, such as logs.\nUltraWarm storage\n1693\nAmazon OpenSearch Service\nDeveloper Guide\nIn OpenSearch, warm indexes behave just like any other index. You can query them using the same\nAPIs or use them to create visualizations in OpenSearch Dashboards.\nTopics\n• Prerequisites\n• UltraWarm storage requirements and performance considerations\n• UltraWarm pricing\n• Enabling UltraWarm\n• Migrating indexes to UltraWarm storage\n• Automating migrations\n• Migration tuning\n• Cancelling migrations\n• Listing hot and warm indexes\n• Returning warm indexes to hot storage\n• Restoring warm indexes from snapshots\n• Manual snapshots of warm indexes\n• Migrating warm indexes to cold storage\n• Best practices for KNN indexes\n• Disabling UltraWarm",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1722,
+      "end": 1723
+    },
+    "content_stats": {
+      "char_count": 1457,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Managing indexes in Amazon OpenSearch Service",
+      "children": [
+        "Prerequisites",
+        "UltraWarm storage requirements and performance considerations",
+        "UltraWarm pricing",
+        "Enabling UltraWarm",
+        "Migrating indexes to UltraWarm storage",
+        "Automating migrations",
+        "Migration tuning",
+        "Cancelling migrations",
+        "Listing hot and warm indexes",
+        "Returning warm indexes to hot storage",
+        "Restoring warm indexes from snapshots",
+        "Manual snapshots of warm indexes",
+        "Migrating warm indexes to cold storage",
+        "Best practices for KNN indexes",
+        "Disabling UltraWarm"
+      ]
+    }
+  }
+}

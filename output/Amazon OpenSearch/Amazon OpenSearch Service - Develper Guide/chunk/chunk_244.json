@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_244",
+  "section_number": "2.6.21.2.11",
+  "header": "Lambda metrics",
+  "content": "The following metrics apply to the AWS Lambda processor. Each\nmetric is preﬁxed by the sub-pipeline name and lambda. For example,\nsub_pipeline_name.lambda.recordsSuccessfullySentToLambda.count.\nMonitoring pipeline metrics\n351\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nrecordsSuccessfull\nySentToLambda.count\nThe number of records successfully processed by the\nLambda function.\nRelevant statistics: Sum\nDimension: PipelineName\nrecordsFailedToSen\ndToLambda.count\nThe number of records that failed to be sent to the\nLambda function.\nRelevant statistics: Sum\nDimension: PipelineName\nlambdaFunctionLatency.avg\nlambdaFunctionLatency.max\nThe latency of Lambda function invocations.\nRelevant statistics: Average and Maximum\nDimension: PipelineName\nnumberOfRequestsSu\ncceeded.count\nThe total number of successful Lambda invocation\nrequests.\nRelevant statistics: Sum\nDimension: PipelineName\nnumberOfRequestsFa\niled.count\nThe total number of failed Lambda invocation requests.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestPayloadSize.avg\nThe size of request payloads sent to Lambda.\nRelevant statistics: Average\nDimension: PipelineName\nresponsePayloadSize.avg\nThe size of response payloads received from Lambda.\nMonitoring pipeline metrics\n352\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nRelevant statistics: Average\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 380,
+      "end": 382
+    },
+    "content_stats": {
+      "char_count": 1385,
+      "word_count": 156
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

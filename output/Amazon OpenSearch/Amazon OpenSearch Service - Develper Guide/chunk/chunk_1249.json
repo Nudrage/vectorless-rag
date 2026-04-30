@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1249",
+  "section_number": "2.19.8.8.1",
+  "header": "Create a replication rule",
+  "content": "Create a replication rule on the follower domain, and specify the name of the cross-cluster\nconnection:\nPOST _plugins/_replication/_autofollow\n{\n\"leader_alias\" : \"connection-alias\",\n\"name\": \"rule-name\",\n\"pattern\": \"books*\",\n\"use_roles\":{\n\"leader_cluster_role\": \"all_access\",\n\"follower_cluster_role\": \"all_access\"\n}\n}\nYou can ﬁnd the connection alias on the Connections tab on your domain dashboard.\nThis example assumes that an admin is issuing the request, and it uses all_access as the\nleader and follower domain roles for simplicity. In production environments, however, we\nrecommend that you create replication users on both the leader and follower indexes and map\nthem accordingly. The usernames must be identical. For information about these roles and how to\nmap them, see Map the leader and follower cluster roles in the OpenSearch documentation.\nTo retrieve a list of existing replication rules on a domain, use the auto-follow stats API operation.\nTo test the rule, create an index that matches the pattern on the leader domain:\nPUT books-are-fun\nAuto-follow\n1746\nAmazon OpenSearch Service\nDeveloper Guide\nAnd check that its replica appears on the follower domain:\nGET _cat/indices\nhealth status index          uuid                     pri rep docs.count docs.deleted\nstore.size pri.store.size\ngreen  open   books-are-fun  ldfHO78xYYdxRMULuiTvSQ     1   1          0            0\n208b           208b",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1775,
+      "end": 1776
+    },
+    "content_stats": {
+      "char_count": 1408,
+      "word_count": 192
+    },
+    "hierarchy": {
+      "parent": "Auto-follow",
+      "children": []
+    }
+  }
+}

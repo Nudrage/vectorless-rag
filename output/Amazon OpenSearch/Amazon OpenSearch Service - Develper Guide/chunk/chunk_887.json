@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_887",
+  "section_number": "2.12.11.4",
+  "header": "(Optional) Conﬁguring granular access",
+  "content": "You might have noticed that the default identity pool settings assign every user who logs in the\nsame IAM role (Cognito_identitypoolAuth_Role), which means that every user can access\nthe same AWS resources. If you want to use ﬁne-grained access control with Amazon Cognito—for\nexample, if you want your organization's analysts to have read-only access to several indices, but\ndevelopers to have write access to all indices—you have two options:\n• Create user groups and conﬁgure your identity provider to choose the IAM role based on the\nuser's authentication token (recommended).\n• Conﬁgure your identity provider to choose the IAM role based on one or more rules.\nFor a walkthrough that includes ﬁne-grained access control, see the section called “Tutorial: Fine-\ngrained access control with Cognito authentication”.\nImportant\nJust like the default role, Amazon Cognito must be part of each additional role's trust\nrelationship. For details, see Creating roles for role mapping in the Amazon Cognito\nDeveloper Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1434,
+      "end": 1434
+    },
+    "content_stats": {
+      "char_count": 1018,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring Amazon Cognito authentication for OpenSearch Dashboards",
+      "children": [
+        "User groups and tokens",
+        "Rules"
+      ]
+    }
+  }
+}

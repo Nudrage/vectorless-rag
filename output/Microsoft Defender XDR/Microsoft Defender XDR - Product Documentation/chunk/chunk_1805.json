@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1805",
+  "section_number": "155.1.1.248.4",
+  "header": "Set up Event Hubs",
+  "content": "In this option, Microsoft Defender XDR creates Event Hubs for you.\nFor example:\nIf you choose this option, you can skip to the Configure Microsoft Defender XDR to send email\ntables section.\nCreate Event Hubs within your Namespace by selecting Event Hub > + Event Hub.\nThe Partition Count allows for more throughput via parallelism, so it's recommended to\nincrease this number based on the load you're expecting. Default Message Retention and\nCapture values of 1 and Off are recommended.\n７ Note\nIf you are using an Event Hub Namespace that is not part of an Event Hub Cluster, you're\nonly able to choose up to 10 Event Types (Tables) to export in each Export Settings you\ndefine, due to an Azure limitation of 10 Event Hub per Event Hub Namespace.\n\nFor these Event Hubs (not namespace), you need to configure a Shared Access Policy with\nSend, Listen Claims. Click on your Event Hub > Shared access policies > + Add and then give\nit a Policy name (not used elsewhere) and check Send and Listen.\n1. Sign in to Microsoft Defender XDR\nwith an account that meets all the following role\nrequirements:\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1361,
+      "end": 1363
+    },
+    "content_stats": {
+      "char_count": 1098,
+      "word_count": 196
+    },
+    "hierarchy": {
+      "parent": "Configure your Event Hubs",
+      "children": []
+    }
+  }
+}

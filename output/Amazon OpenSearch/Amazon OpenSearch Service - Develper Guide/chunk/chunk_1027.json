@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1027",
+  "section_number": "2.15.10.2",
+  "header": "Create a PIT",
+  "content": "To run a PIT query, send HTTP requests to _search/point_in_time using the following format:\nPOST opensearch-domain/my-index/_search/point_in_time?keep_alive=time\nYou can specify the following PIT options:\nOptions\nDescription\nDefault\nvalue\nRequired\nkeep_aliv\ne\nThe amount of time to keep the PIT. Every\ntime you access a PIT with a search request,\nthe PIT lifetime is extended by the amount of\ntime equal to the keep_alive  parameter\n. This query parameter is required when you\ncreate a PIT, but optional in a search request.\nYes\npreferenc\ne\nA string that speciﬁes the node or the shard\nused to perform the search.\nRandom\nNo\nrouting\nA string that speciﬁes to route search requests\nto a speciﬁc shard.\nThe\ndocument’s\n_id\nNo\nexpand_wi\nldcards\nA string that speciﬁes type of index that\ncan match the wildcard pattern. Supports\ncomma-separated values. Valid values are the\nfollowing:\n• all: Match any index or data stream,\nincluding hidden ones.\n• open: Match open, non-hidden indexes or\nnon-hidden data streams.\nopen\nNo\nCreate a PIT\n1558\nAmazon OpenSearch Service\nDeveloper Guide\nOptions\nDescription\nDefault\nvalue\nRequired\n• closed: Match closed, non-hidden indexes\nor non-hidden data streams.\n• hidden: Match hidden indexes or data\nstreams. Must be combined with open,\nclosed or both open and closed.\n• none: No wildcard patterns are accepted.\nallow_par\ntial_pit_\ncreation\nA boolean that speciﬁes whether to create a\nPIT with partial failures.\ntrue\nNo\nSample response\n{\n\"pit_id\":\n\"o463QQEPbXktaW5kZXgtMDAwMDAxFnNOWU43ckt3U3IyaFVpbGE1UWEtMncAFjFyeXBsRGJmVFM2RTB6eVg1aVVqQncAA\n\"_shards\": {\n\"total\": 1,\n\"successful\": 1,\n\"skipped\": 0,\n\"failed\": 0\n},\n\"creation_time\": 1658146050064\n}\nWhen you create a PIT, you receive a PIT ID in the response. This is the ID that you use to perform\nsearches with the PIT.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1587,
+      "end": 1588
+    },
+    "content_stats": {
+      "char_count": 1798,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "Point in time search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

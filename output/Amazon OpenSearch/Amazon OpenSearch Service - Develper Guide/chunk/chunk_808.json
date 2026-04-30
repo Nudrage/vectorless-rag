@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_808",
+  "section_number": "2.12.4.3",
+  "header": "About the master user",
+  "content": "The master user in OpenSearch Service is either a username and password combination, or an\nIAM principal, that has full permissions to the underlying OpenSearch cluster. A user is considered\na master user if they have all access to the OpenSearch cluster along with the ability to create\ninternal users, roles, and role mappings within OpenSearch Dashboards.\nA master user created in the OpenSearch Service console or through the CLI is automatically\nmapped to two predeﬁned roles:\nKey concepts\n1336\nAmazon OpenSearch Service\nDeveloper Guide\n• all_access – Provides full access to all cluster-wide operations, permission to write to all\ncluster indexes, and permission to write to all tenants.\n• security_manager – Provides access to the Security plugin and management of users and\npermissions.\nWith these two roles, the user gains access to the Security tab in OpenSearch Dashboards, where\nthey can manage users and permissions. If you create another internal user and only map it to\nthe all_access role, the user doesn't have access to the Security tab. You can create additional\nmaster users by explicitly mapping them to both the all_access and security_manager roles.\nFor instructions, see the section called “Additional master users”.\nWhen you create a master user for your domain, you can specify either an existing IAM principal, or\ncreate a master user within the internal user database. Consider the following when deciding which\nto use:\n• IAM principal – If you choose an IAM principal for your master user, all requests to the cluster\nmust be signed using AWS Signature Version 4.\nOpenSearch Service doesn't take any of the IAM principal's permissions into consideration.\nThe IAM user or role serves purely for authentication. The policies on that user or role have no\nbearing on the authorization of the master user. Authorization is handled through the various\npermissions in the OpenSearch Security plugin.\nFor example, you can assign zero IAM permissions to an IAM principal, and as long as the\nmachine or person can authenticate to that user or role, they have the power of the master user\nin OpenSearch Service.\nWe recommend IAM if you want to use the same users on multiple clusters, if you want to use\nAmazon Cognito to access Dashboards, or if you have OpenSearch clients that support Signature\nVersion 4 signing.\n• Internal user database – If you create a master in the internal user database (with a username\nand password combination), you can use HTTP basic authentication (as well as IAM credentials)\nto make requests to the cluster. Most clients support basic authentication, including curl, which\nalso supports AWS Signature Version 4 with the --aws-sigv4 option. The internal user database is\nstored in an OpenSearch index, so you can't share it with other clusters.\nWe recommend the internal user database if you don't need to reuse users across multiple\nclusters, if you want to use HTTP basic authentication to access Dashboards (rather than Amazon\nAbout the master user\n1337\nAmazon OpenSearch Service\nDeveloper Guide\nCognito), or if you have clients that only support basic authentication. The internal user database\nis the simplest way to get started with OpenSearch Service.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1365,
+      "end": 1367
+    },
+    "content_stats": {
+      "char_count": 3208,
+      "word_count": 520
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

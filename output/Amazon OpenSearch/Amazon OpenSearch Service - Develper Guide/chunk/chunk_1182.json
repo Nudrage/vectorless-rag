@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1182",
+  "section_number": "2.19.3.9",
+  "header": "Returning warm indexes to hot storage",
+  "content": "If you need to write to an index again, migrate it back to hot storage:\nPOST _ultrawarm/migration/my-index/_hot\nYou can have up to 10 queued migrations from warm to hot storage at a time. OpenSearch Service\nprocesses migration requests one at a time, in the order that they were queued. To check the\ncurrent number, monitor the WarmToHotMigrationQueueSize metric.\nAfter the migration ﬁnishes, check the index settings to make sure they meet your needs. Indexes\nreturn to hot storage with one replica.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1733,
+      "end": 1733
+    },
+    "content_stats": {
+      "char_count": 500,
+      "word_count": 81
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

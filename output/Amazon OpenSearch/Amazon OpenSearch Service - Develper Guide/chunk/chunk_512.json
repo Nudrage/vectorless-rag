@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_512",
+  "section_number": "2.8.11",
+  "header": "Creating index snapshots in Amazon OpenSearch Service",
+  "content": "Snapshots in Amazon OpenSearch Service are backups of a cluster's indexes and state. State\nincludes cluster settings, node information, index settings, and shard allocation.\nOpenSearch Service snapshots come in the following forms:\nCreating index snapshots\n680\nAmazon OpenSearch Service\nDeveloper Guide\n• Automated snapshots are only for cluster recovery. You can use them to restore your domain in\nthe event of red cluster status or data loss. For more information, see Restoring snapshots below.\nOpenSearch Service stores automated snapshots in a preconﬁgured Amazon S3 bucket at no\nadditional charge.\n• Manual snapshots are for cluster recovery or for moving data from one cluster to another. You\nhave to initiate manual snapshots. These snapshots are stored in your own Amazon S3 bucket\nand standard S3 charges apply. If you have a snapshot from a self-managed OpenSearch cluster,\nyou can use that snapshot to migrate to an OpenSearch Service domain. For more information,\nsee Migrating to Amazon OpenSearch Service.\nAll OpenSearch Service domains take automated snapshots, but the frequency diﬀers in the\nfollowing ways:\n• For domains running OpenSearch or Elasticsearch 5.3 and later, OpenSearch Service takes hourly\nautomated snapshots and retains up to 336 of them for 14 days. Hourly snapshots are less\ndisruptive because of their incremental nature. They also provide a more recent recovery point in\ncase of domain problems.\n• For domains running Elasticsearch 5.1 and earlier, OpenSearch Service takes daily automated\nsnapshots during the hour you specify, retains up to 14 of them, and doesn't retain any snapshot\ndata for more than 30 days.\nIf your cluster enters red status, all automated snapshots fail while the cluster status persists. If you\ndon't correct the problem within two weeks, you can permanently lose the data in your cluster. For\ntroubleshooting steps, see the section called “Red cluster status”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 709,
+      "end": 710
+    },
+    "content_stats": {
+      "char_count": 1926,
+      "word_count": 300
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": [
+        "Prerequisites",
+        "Registering a manual snapshot repository",
+        "Taking manual snapshots",
+        "Restoring snapshots",
+        "Deleting manual snapshots",
+        "Automating snapshots with Snapshot Management",
+        "Automating snapshots with Index State Management",
+        "Using Curator for snapshots"
+      ]
+    }
+  }
+}

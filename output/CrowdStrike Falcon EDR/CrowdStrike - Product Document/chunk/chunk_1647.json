@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1647",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n496/1226\nField\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nFileIdentifier\nFile identified on the Windows system that is used to match with the ArchiveFileContent event to show archive content in User\nActivities.\nTargetFileName\nThe resulting file name that was downloaded\nIsOnRemovableDisk\nIf true, it means this file was located on a removable disk.\nUserName\nOperating system username.\nSize\nSize of the egressing file in bytes.\nDiskParentDeviceInstanceId\nFileCategory\nValues:\nOTHER (0)\nARCHIVES (1)\nOFFICE_DOCUMENTS (2)\nMULTIMEDIA_FILES (3)\nDESIGN_FILES (4)\nSOURCE_CODE (5)\nEXECUTABLE_FILES (6)\nVIRTUAL_MACHINE_FILES (7)\nEMAIL_FILES (8)\nDATA_AND_LOGS (9)\nENCRYPTED (10)\nVolumeSessionUUID\nFileSourcePath\nMipInformation\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING (0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nContextBaseFileName\nThe base ImageFileName of the context process.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 496,
+      "end": 497
+    },
+    "content_stats": {
+      "char_count": 1533,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": "GzipFileWritten",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_375",
+  "section_number": "155.1.1.35.2.2.1",
+  "header": "Merge direction",
+  "content": "The direction of the incident merge refers to which incident is the source and which is the\ntarget. This direction is determined by Microsoft Defender, based on its own internal logic, with\nthe goal of maximizing information retention and access. The user doesn't have any input into\nthis decision, even when merging incidents manually.\nThe contents of the incidents are handled in the following ways:\nAll alerts contained in the source incident are removed from the source incident and\nadded to the target incident.\nAny tags applied to the source incident are removed from the source incident and added\nto the target incident.\nA Redirected  tag is added to the source incident.\nEntities (assets etc.) follow the alerts they're linked to.\nAnalytics rules recorded as involved in the creation of the source incident are added to\nthe rules recorded in the target incident.\nCurrently, comments and activity log entries in the source incident are not moved to the\ntarget incident.\nTo see the source incident's comments and activity history, open the incident in Microsoft\nSentinel in the Azure portal. The activity history includes the closing of the incident and\nthe adding and removal of alerts, tags, and other items related to the incident merge.\nThese activities are attributed to the identity Microsoft Defender XDR - alert correlation.\nEven when the correlation logic indicates that two incidents should be merged, Defender\ndoesn't merge the incidents under the following circumstances:\nOne of the incidents has a status of \"Closed\". Incidents that are resolved don't get\nreopened.\nThe source and target incidents are assigned to two different people.\nThe source and target incidents have two different classifications (for example, true\npositive and false positive) or two different determinations (the subcategories of\nclassifications).\nMerging the two incidents would raise the number of entities in the target incident above\nthe allowed maximum.\nThe two incidents contain devices in different device groups as defined by the\norganization.\n(This condition is not in effect by default; it must be enabled.)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 212,
+      "end": 213
+    },
+    "content_stats": {
+      "char_count": 2111,
+      "word_count": 333
+    },
+    "hierarchy": {
+      "parent": "Details of the merge process",
+      "children": []
+    }
+  }
+}

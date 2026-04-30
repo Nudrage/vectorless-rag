@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_145",
+  "section_number": "2.6.16.6.1",
+  "header": "Step 1: Conﬁgure the pipeline role",
+  "content": "After you have your Amazon DocumentDB pipeline prerequisites set up, conﬁgure the pipeline role\nthat you want to use in your pipeline conﬁguration, and add the following Amazon DocumentDB\npermissions in the role:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"allowS3ListObjectAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"s3:ListBucket\"\nAmazon DocumentDB\n165\nAmazon OpenSearch Service\nDeveloper Guide\n],\n\"Resource\": [\n\"arn:aws:s3:::s3-bucket\"\n],\n\"Condition\": {\n\"StringLike\": {\n\"s3:prefix\": \"s3-prefix/*\"\n}\n}\n},\n{\n\"Sid\": \"allowReadAndWriteToS3ForExportStream\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"s3:PutObject\",\n\"s3:GetObject\",\n\"s3:DeleteObject\"\n],\n\"Resource\": [\n\"arn:aws:s3:::s3-bucket/s3-prefix/*\"\n]\n},\n{\n\"Sid\": \"SecretsManagerReadAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"secretsmanager:GetSecretValue\"\n],\n\"Resource\": [\n\"arn:aws:secretsmanager:us-east-1:111122223333:secret:secret-\nname\"\n]\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"ec2:AttachNetworkInterface\",\n\"ec2:CreateNetworkInterface\",\n\"ec2:CreateNetworkInterfacePermission\",\n\"ec2:DeleteNetworkInterface\",\n\"ec2:DeleteNetworkInterfacePermission\",\n\"ec2:DetachNetworkInterface\",\n\"ec2:DescribeNetworkInterfaces\"\n],\nAmazon DocumentDB\n166\nAmazon OpenSearch Service\nDeveloper Guide\n\"Resource\": [\n\"arn:aws:ec2:*:111122223333:network-interface/*\",\n\"arn:aws:ec2:*:111122223333:subnet/*\",\n\"arn:aws:ec2:*:111122223333:security-group/*\"\n]\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"ec2:DescribeDhcpOptions\",\n\"ec2:DescribeRouteTables\",\n\"ec2:DescribeSecurityGroups\",\n\"ec2:DescribeSubnets\",\n\"ec2:DescribeVpcs\",\n\"ec2:Describe*\"\n],\n\"Resource\": \"*\"\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"ec2:CreateTags\"\n],\n\"Resource\": \"arn:aws:ec2:*:*:network-interface/*\",\n\"Condition\": {\n\"StringEquals\": {\n\"aws:RequestTag/OSISManaged\": \"true\"\n}\n}\n}\n]\n}\nYou must provide the above Amazon EC2 permissions on the IAM role that you use to create the\nOpenSearch Ingestion pipeline because the pipeline uses these permissions to create and delete\na network interface in your VPC. The pipeline can only access the Amazon DocumentDB cluster\nthrough this network interface.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 194,
+      "end": 196
+    },
+    "content_stats": {
+      "char_count": 2074,
+      "word_count": 212
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon DocumentDB",
+      "children": []
+    }
+  }
+}

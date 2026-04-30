@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_290",
+  "section_number": "2.7.10.10.3",
+  "header": "Policy syntax",
+  "content": "Provide one or more rules. These rules deﬁne data lifecycle settings for your OpenSearch Serverless\nindexes.\nEach rule contains the following elements. You can either provide MinIndexRetention or\nNoMinIndexRetention in each rule, but not both.\nUsing data lifecycle policies\n416\nAmazon OpenSearch Service\nDeveloper Guide\nElement\nDescription\nResource type\nThe type of resource that the rule applies to.\nThe only supported option for data lifecycle\npolicies is index.\nResource\nA list of resource names and/or patterns.\nPatterns consist of a preﬁx and a wildcard\n(*), which allow the associated permissio\nns to apply to multiple resources. For\nexample, index/<collection-name|p\nattern> /<index-name|pattern>\n.\nMinIndexRetention\nThe minimum period, in days (d) or hours (h),\nto retain the document in the index. The lower\nbound is 24h and the upper bound is 3650d.\nNoMinIndexRetention\nIf true, OpenSearch Serverless retains\ndocuments indeﬁnitely.\nIn the following example, the ﬁrst rule applies to all indexes under the autoparts-inventory\npattern (index/autoparts-inventory/*) and requires data to be retained for at least 20 days\nbefore any actions, such as deletion or archiving, can occur.\nThe second rule targets indexes matching the auto*/gear pattern (index/auto*/gear), setting\na minimum retention period of 24 hours.\nThe third rule applies speciﬁcally to the tires index and has no minimum retention period,\nmeaning that data in this index can be deleted or archived immediately or based on other criteria.\nThese rules help manage the retention of index data with varying retention times or no retention\nrestrictions.\n{\n\"Rules\": [\n{\n\"ResourceType\": \"index\",\n\"Resource\": [\n\"index/autoparts-inventory/*\"\nUsing data lifecycle policies\n417\nAmazon OpenSearch Service\nDeveloper Guide\n],\n\"MinIndexRetention\": \"20d\"\n},\n{\n\"ResourceType\": \"index\",\n\"Resource\": [\n\"index/auto*/gear\"\n],\n\"MinIndexRetention\": \"24h\"\n},\n{\n\"ResourceType\": \"index\",\n\"Resource\": [\n\"index/autoparts-inventory/tires\"\n],\n\"NoMinIndexRetention\": true\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 445,
+      "end": 447
+    },
+    "content_stats": {
+      "char_count": 2019,
+      "word_count": 287
+    },
+    "hierarchy": {
+      "parent": "Using data lifecycle policies with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

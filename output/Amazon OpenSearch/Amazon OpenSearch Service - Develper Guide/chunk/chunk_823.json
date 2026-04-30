@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_823",
+  "section_number": "2.12.4.9",
+  "header": "Additional master users",
+  "content": "You designate a master user when you create a domain, but if you want, you can use this master\nuser to create additional master users. You have two options: OpenSearch Dashboards or the REST\nAPI.\n• In Dashboards, choose Security, Roles, and then map the new master user to the all_access\nand security_manager roles.\nAdditional master users\n1354\nAmazon OpenSearch Service\nDeveloper Guide\n• To use the REST API, send the following requests:\nPUT _plugins/_security/api/rolesmapping/all_access\n{\n\"backend_roles\": [\n\"arn:aws:iam::123456789012:role/fourth-master-user\"\n],\n\"hosts\": [],\n\"users\": [\n\"master-user\",\n\"second-master-user\",\n\"arn:aws:iam::123456789012:user/third-master-user\"\n]\n}\nPUT _plugins/_security/api/rolesmapping/security_manager\n{\nAdditional master users\n1355\nAmazon OpenSearch Service\nDeveloper Guide\n\"backend_roles\": [\n\"arn:aws:iam::123456789012:role/fourth-master-user\"\n],\n\"hosts\": [],\n\"users\": [\n\"master-user\",\n\"second-master-user\",\n\"arn:aws:iam::123456789012:user/third-master-user\"\n]\n}\nThese requests replace the current role mappings, so perform GET requests ﬁrst so that you can\ninclude all current roles in the PUT requests. The REST API is especially useful if you can't access\nDashboards and want to map an IAM role from Amazon Cognito to the all_access role.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1383,
+      "end": 1385
+    },
+    "content_stats": {
+      "char_count": 1280,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

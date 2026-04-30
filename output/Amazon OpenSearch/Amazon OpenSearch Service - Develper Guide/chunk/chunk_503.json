@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_503",
+  "section_number": "2.8.10",
+  "header": "Launching your Amazon OpenSearch Service domains within a VPC",
+  "content": "VPC\nYou can launch AWS resources, such as Amazon OpenSearch Service domains, into a virtual private\ncloud (VPC). A VPC is a virtual network that's dedicated to your AWS account. It's logically isolated\nfrom other virtual networks in the AWS Cloud. Placing an OpenSearch Service domain within a\nVPC enables secure communication between OpenSearch Service and other services within the\nVPC without the need for an internet gateway, NAT device, or VPN connection. All traﬃc remains\nsecurely within the AWS Cloud.\nVPC support\n672\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nIf you place your OpenSearch Service domain within a VPC, your computer must be able\nto connect to the VPC. This connection often takes the form of a VPN, transit gateway,\nmanaged network, or proxy server. You can't directly access your domains from outside the\nVPC.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 701,
+      "end": 702
+    },
+    "content_stats": {
+      "char_count": 839,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": [
+        "VPC versus public domains",
+        "Limitations",
+        "Architecture"
+      ]
+    }
+  }
+}

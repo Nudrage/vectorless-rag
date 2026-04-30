@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2722",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextProcessId UPID of process originating this event.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the process\nthat is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed thread injection in\nan InjectedThread event\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING (0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nFileSubType\nValues:\nNONE (0)\nPE_PACKER_ASPACK (1)\nPE_PACKER_MPRESS (2)\nPE_PACKER_THEMIDA (3)\nPE_PACKER_UPX (4)\nPE_PACKER_VMPROTECT (5)\nREG_HIVE_OTHER (20)\nREG_HIVE_SAM (21)\nREG_HIVE_SECURITY (22)\nREG_HIVE_SOFTWARE (23)\nREG_HIVE_DEFAULT (24)\nREG_HIVE_NTUSER (25)\nREG_HIVE_SYSTEM (26)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 959,
+      "end": 959
+    },
+    "content_stats": {
+      "char_count": 1006,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "ProcessExecOnPackedExecutable",
+      "children": []
+    }
+  }
+}

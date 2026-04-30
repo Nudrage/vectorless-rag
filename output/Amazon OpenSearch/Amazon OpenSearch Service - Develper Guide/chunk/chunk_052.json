@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_052",
+  "section_number": "2.15.5.1",
+  "header": "Required permissions",
+  "content": "To complete this tutorial, your user or role must have an attached identity-based policy with the\nfollowing minimum permissions. These permissions allow you to create a pipeline role and attach\na policy (iam:Create* and iam:Attach*), create or modify a domain (es:*), and work with\npipelines (osis:*).\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Effect\":\"Allow\",\n\"Resource\":\"*\",\n\"Action\":[\n\"osis:*\",\n\"iam:Create*\",\n\"iam:Attach*\",\n\"es:*\"\n]\n},\n{\n\"Resource\":[\n\"arn:aws:iam::111122223333:role/OpenSearchIngestion-PipelineRole\"\n],\n\"Effect\":\"Allow\",\n\"Action\":[\n\"iam:CreateRole\",\n\"iam:AttachRolePolicy\",\n\"iam:PassRole\"\n]\n}\nTutorial: Ingest data into a domain\n45\nAmazon OpenSearch Service\nDeveloper Guide\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 74,
+      "end": 75
+    },
+    "content_stats": {
+      "char_count": 704,
+      "word_count": 85
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Ingesting data into a domain using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

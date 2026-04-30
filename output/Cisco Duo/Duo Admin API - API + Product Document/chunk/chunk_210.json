@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_210",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Parameter\nRequired?\nDescription\nnumber\nOptional\nThe phone number; E.164 format recommended (i.e.\n\"+17345551212\"). If no leading plus sign is provided\nthen it is assumed to be a United States number and\nan implicit \"+1\" country code is prepended. Dashes\nand spaces are ignored.\nA phone with a smartphone platform but no number is\na tablet.\nname\nOptional\nFree-form label for the phone.\nextension\nOptional\nThe extension.\ntype\nOptional\nThe phone type. See Retrieve Phones for a list of\npossible values.\nplatform\nOptional\nThe phone platform. See Retrieve Phones for a list of\npossible values. If a smartphone's exact platform is\nunknown but it will have Duo Mobile installed, use\n\"Generic Smartphone\" and generate an activation\ncode. When the phone is activated its platform will be\nautomatically detected.\npredelay\nOptional\nThe time (in seconds) to wait after the number picks\nup and before dialing the extension.\n\"lastname\": \"\",\n\"notes\": \"\",\n\"realname\": \"Chris Jones\",\n\"status\": \"active\",\n\"user_id\": \"DU3RP9I2WOC59VZXJ05H\",\n\"username\": \"cjones\"\n}\n]\n}\n]\n}\nPOST  /admin/v1/phones\npostdelay\nOptional\nThe time (in seconds) to wait after the extension is\ndialed and before the speaking the prompt.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 77,
+      "end": 78
+    },
+    "content_stats": {
+      "char_count": 1189,
+      "word_count": 184
+    },
+    "hierarchy": {
+      "parent": "Phones",
+      "children": []
+    }
+  }
+}

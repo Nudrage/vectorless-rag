@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1868",
+  "section_number": "155.1.1.250.5.1.1",
+  "header": "Incident metadata",
+  "content": "ﾉ\nExpand table\nField name\nDescription\nExample value\nclassification\nThe specification for the incident. The property values are: Unknown, FalsePositive,\nTruePositive\nUnknown\ndetermination\nSpecifies the determination of the incident. The property values are: NotAvailable,\nApt, Malware, SecurityPersonnel, SecurityTesting, UnwantedSoftware, Other\nNotAvailable\ndetectionSource\nSpecifies source of detection.\nDefender for Cloud Apps\nstatus\nCategorize incidents (as Active, or Resolved). It can help you organize and manage\nyour response to incidents.\nActive\nseverity\nIndicates the possible impact on assets. The higher the severity the bigger the\nimpact. Typically higher severity items require the most immediate attention.\nOne of the following values: Informational, Low, *Medium, and High.\nMedium\ntags\nArray of custom tags associated with an incident, for example to flag a group of\nincidents with a common characteristic.\n[]\ncomments\nArray of comments created by secops when managing the incident, for example\nadditional information about the classification selection.\n[]\nalerts\nArray containing all of the alerts related to the incident, plus other information,\nsuch as severity, entities that were involved in the alert, and the source of the\nalerts.\n[] (see details on alert fields\nbelow)\nField name\nDescription\nExample value\nalertId\nUnique identifier to represent the alert\ncaD70CFEE2-1F54-32DB-9988-3A868A1EBFAC\nincidentId\nUnique identifier to represent the incident this alert is\nassociated with\n924565\nserviceSource\nService that the alert originates from, such as Microsoft\nDefender for Endpoint, Microsoft Defender for Cloud\nApps, Microsoft Defender for Identity, or Microsoft\nDefender for Office 365.\nMicrosoftCloudAppSecurity\ncreationTime\nTime when alert was first created.\n2020-09-06T14:46:55.7182276Z\nlastUpdatedTime\nTime when alert was last updated at the backend.\n2020-09-06T14:46:57.2433333Z\nresolvedTime\nTime when alert was resolved.\n2020-09-10T05:22:59Z\nfirstActivity\nTime when alert first reported that activity was updated at\nthe backend.\n2020-09-04T05:22:59Z\ntitle\nBrief identifying string value available for each alert.\nRansomware activity\ndescription\nString value describing each alert.\nThe user Test User2 (testUser2@contoso.com)\nmanipulated 99 files with multiple extensions\nending with the uncommon extension\nherunterladen. This is an unusual number of file\nmanipulations and is indicative of a potential\nransomware attack.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 16,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1387,
+      "end": 1388
+    },
+    "content_stats": {
+      "char_count": 2449,
+      "word_count": 328
+    },
+    "hierarchy": {
+      "parent": "Schema mapping",
+      "children": []
+    }
+  }
+}

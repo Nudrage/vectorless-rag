@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1780",
+  "section_number": "155.1.1.265.1",
+  "header": "Prerequisites",
+  "content": "７ Note\nThe Streaming API can be integrated either via Event Hubs or Azure Storage\nAccount.\n1. Log on to Microsoft Defender portal\nas a Security Administrator at a minimum.\n2. Go to the Streaming API settings page\n.\n3. Click on Add.\n4. Choose a name for your new settings.\n5. Choose Forward events to Azure Event Hub.\n6. You can select if you want to export the event data to a single Event Hub, or to\nexport each event table to a different Event Hubs in your Event Hubs namespace.\n7. To export the event data to a single Event Hub, enter your Event Hub name and\nyour Event Hub Namespace resource ID.\nTo get your Event Hub Namespace resource ID, go to your Azure Event Hubs\nnamespace page on Azure\n> Properties tab > copy the text under Resource ID:\n8. Go to the Supported Microsoft Defender XDR event types in event streaming API\nto review the support status of event types in the Microsoft 365 Streaming API.\n9. Choose the events you want to stream and click Save.\nJSON",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1344,
+      "end": 1345
+    },
+    "content_stats": {
+      "char_count": 970,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_415",
+  "section_number": "155.1.1.38.3.1",
+  "header": "Resolve an incident",
+  "content": "When an incident is remediated and resolved, take the following actions to record the\nresolution:\n1. Follow the instructions in the opening section to Access the Manage incident pane.\n2. Change the status. Select Resolved from the Status drop-down list. When you\nchange an incident's status to Resolved, a new field is displayed immediately\nfollowing the Status field.\n3. Enter a note in this field that explains why you consider the incident resolved. This\nnote is visible in the activity log of the incident, near the entry recording the\nincident's resolution.\nThe resolution note is also visible in the Incident details panel on both the incidents\nqueue page and the incident page of a resolved incident.\n4. Select Save.\nResolving an incident also resolves all the linked and active alerts related to the incident.\nAn incident that isn't resolved displays as Active.\nWhen you resolve an incident, or at any point in an incident's investigation, as soon as\nyou become aware of how the incident should be classified, set the Classification field\naccordingly.\n1. Follow the instructions in the opening section to Access the Manage incident pane.\n2. Choose the appropriate value from the Classification drop-down list:\nNot set (the default).\nTrue positive with a type of threat. Use this classification for incidents that\naccurately indicate a real threat. Specifying the threat type helps your security\nteam see threat patterns and act to defend your organization from them.\nInformational, expected activity with a type of activity. Use the options in\nthis category to classify incidents for security tests, red team activity, and\nexpected unusual behavior from trusted apps and users.\nFalse positive for types of incidents that you determine can be ignored\nbecause they're technically inaccurate or misleading.\nSee the available types of activities and threats for each of these classifications in\nthe following screenshot.\n3. Select Save.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 239,
+      "end": 242
+    },
+    "content_stats": {
+      "char_count": 1942,
+      "word_count": 309
+    },
+    "hierarchy": {
+      "parent": "Incident investigation and resolution",
+      "children": []
+    }
+  }
+}

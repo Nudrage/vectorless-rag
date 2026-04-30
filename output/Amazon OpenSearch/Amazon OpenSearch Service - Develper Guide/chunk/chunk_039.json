@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_039",
+  "section_number": "2.6.7.1.2",
+  "header": "Manually creating the pipeline role",
+  "content": "You might prefer to manually create the pipeline role if you need more control over permissions to\nmeet speciﬁc security or compliance requirements. Manual creation allows you to tailor roles to ﬁt\nexisting infrastructure or access management strategies. You might also choose manual setup to\nintegrate the role with other AWS services or ensure it aligns with your unique operational needs.\nTo choose a manually-created pipeline role, select Use an existing IAM role and choose an existing\nrole. The role must have all permissions needed to receive data from the selected source and write\nto the selected sink. The following sections outline how to manually create a pipeline role.\nTopics\n• Permissions to read from a source\n• Permissions to write to a domain sink\n• Permissions to write to a collection sink\n• Permissions to write to Amazon S3 or a dead-letter queue\nPermissions to read from a source\nAn OpenSearch Ingestion pipeline needs permission to read and receive data from the\nspeciﬁed source. For example, for an Amazon DynamoDB source, it needs permissions such as\ndynamodb:DescribeTable and dynamodb:DescribeStream. For sample pipeline role access\npolicies for common sources, such as Amazon S3, Fluent Bit, and the OpenTelemetry Collector, see\nthe section called “Integrating pipelines”.\nPermissions to write to a domain sink\nAn OpenSearch Ingestion pipeline needs permission to write to an OpenSearch Service domain\nthat is conﬁgured as its sink. These permissions include the ability to describe the domain and send\nPipeline role\n31\nAmazon OpenSearch Service\nDeveloper Guide\nHTTP requests to it. These permissions are the same for public and VPC domains. For instructions\nto create a pipeline role and specify it in the domain access policy, see Allowing pipelines to access\ndomains.\nPermissions to write to a collection sink\nAn OpenSearch Ingestion pipeline needs permission to write to an OpenSearch Serverless\ncollection that is conﬁgured as its sink. These permissions include the ability to describe the\ncollection and send HTTP requests to it.\nFirst, make sure your pipeline role access policy grants the required permissions. Then, include this\nrole in a data access policy and provide it permissions to create indexes, update indexes, describe\nindexes, and write documents within the collection. For instructions to complete each of these\nsteps, see Allowing pipelines to access collections.\nPermissions to write to Amazon S3 or a dead-letter queue\nIf you specify Amazon S3 as a sink destination for your pipeline, or if you enable a dead-letter\nqueue (DLQ), the pipeline role must allow it to access the S3 bucket that you specify as the\ndestination.\nAttach a separate permissions policy to the pipeline role that provides DLQ access. At minimum,\nthe role must be granted the S3:PutObject action on the bucket resource:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"WriteToS3DLQ\",\n\"Effect\": \"Allow\",\n\"Action\": \"s3:PutObject\",\n\"Resource\": \"arn:aws:s3:::my-dlq-bucket/*\"\n}\n]\n}\nPipeline role\n32\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 60,
+      "end": 62
+    },
+    "content_stats": {
+      "char_count": 3068,
+      "word_count": 477
+    },
+    "hierarchy": {
+      "parent": "Pipeline role",
+      "children": []
+    }
+  }
+}

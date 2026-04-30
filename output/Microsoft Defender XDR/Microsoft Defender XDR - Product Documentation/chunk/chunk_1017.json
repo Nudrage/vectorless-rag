@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1017",
+  "section_number": "155.1.1.124",
+  "header": "DeviceTvmInfoGathering",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmInfoGathering  table in the advanced hunting schema contains Microsoft\nDefender Vulnerability Management assessment events including the status of various\nconfigurations and attack surface area states of devices. You can use this table to hunt for\nassessment events related to mitigation for zero-days, posture assessment for emerging\nthreats supporting threat analytics mitigation status reports, enabled TLS protocol versions on\nservers, and more. Use this reference to construct queries that return information from the\ntable.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the record was generated\nLastSeenTime\ndatetime\nDate and time when the service last saw the device\nDeviceId\nstring\nUnique identifier for the device in the service\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\nOSPlatform\nstring\nPlatform of the operating system running on the device. This indicates\nspecific operating systems, including variations within the same family,\nsuch as Windows 10 and Windows 7.\nAdditionalFields\ndynamic\nAdditional information about the entity or event\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nFor example, to view devices affected by the Log4Shell vulnerability\nwhere the workaround\nmitigation hasn't been applied yet, or has been applied and is pending reboot, you can use the\nfollowing query.\nKusto\nDeviceTvmInfoGatheringKB\nUnderstand the schema\nApply query best practices\nOverview of Defender Vulnerability Management\nLearn how to manage the Log4Shell vulnerability in Microsoft Defender for Endpoint\nDeviceTvmInfoGathering\n| where AdditionalFields.Log4JEnvironmentVariableMitigation in (\"RebootRequired\",\n\"false\")\n| join kind=inner (\nDeviceTvmSoftwareVulnerabilities\n| where CveId == \"CVE-2021-44228\"\n) on DeviceId\n| summarize any(DeviceName),\nany(AdditionalFields.Log4JEnvironmentVariableMitigation) by DeviceId",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 738,
+      "end": 739
+    },
+    "content_stats": {
+      "char_count": 2628,
+      "word_count": 358
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

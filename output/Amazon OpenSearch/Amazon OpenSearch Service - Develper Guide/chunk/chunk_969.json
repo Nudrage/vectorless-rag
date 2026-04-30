@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_969",
+  "section_number": "2.15.5.6",
+  "header": "Manually updating indexes with a new dictionary",
+  "content": "Manual index updates only apply to custom dictionaries, not pre-packaged plugins. To use an\nupdated dictionary, you must manually update your indexes if you meet any of the following\nconditions:\nManually updating indexes with a new dictionary\n1485\nAmazon OpenSearch Service\nDeveloper Guide\n• Your domain runs Elasticsearch 7.7 or earlier.\n• You use custom packages as index analyzers.\n• You use custom packages as search analyzers, but don't include the updateable ﬁeld.\nTo update analyzers with the new package ﬁles, you have two options:\n• Close and open any indexes that you want to update:\nPOST my-index/_close\nPOST my-index/_open\n• Reindex the indexes. First, create an index that uses the updated synonyms ﬁle (or an entirely\nnew ﬁle). Note that only UTF-8 is supported.\nPUT my-new-index\n{\n\"settings\": {\n\"index\": {\n\"analysis\": {\n\"analyzer\": {\n\"synonym_analyzer\": {\n\"type\": \"custom\",\n\"tokenizer\": \"standard\",\n\"filter\": [\"synonym_filter\"]\n}\n},\n\"filter\": {\n\"synonym_filter\": {\n\"type\": \"synonym\",\n\"synonyms_path\": \"analyzers/F222222222\"\n}\n}\n}\n}\n},\n\"mappings\": {\n\"properties\": {\n\"description\": {\n\"type\": \"text\",\n\"analyzer\": \"synonym_analyzer\"\n}\nManually updating indexes with a new dictionary\n1486\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}\n}\nThen reindex the old index to that new index:\nPOST _reindex\n{\n\"source\": {\n\"index\": \"my-index\"\n},\n\"dest\": {\n\"index\": \"my-new-index\"\n}\n}\nIf you frequently update index analyzers, use index aliases to maintain a consistent path to the\nlatest index:\nPOST _aliases\n{\n\"actions\": [\n{\n\"remove\": {\n\"index\": \"my-index\",\n\"alias\": \"latest-index\"\n}\n},\n{\n\"add\": {\n\"index\": \"my-new-index\",\n\"alias\": \"latest-index\"\n}\n}\n]\n}\nIf you don't need the old index, delete it:\nDELETE my-index\nManually updating indexes with a new dictionary\n1487\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1514,
+      "end": 1517
+    },
+    "content_stats": {
+      "char_count": 1808,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": "Importing and managing packages in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

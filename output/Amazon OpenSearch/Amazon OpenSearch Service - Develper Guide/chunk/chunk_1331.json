@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1331",
+  "section_number": "2.22.3.6",
+  "header": "Remote inference for semantic highlighting templates",
+  "content": "Semantic highlighting is an advanced search feature that enhances result relevance by analyzing\nthe meaning and context of queries rather than relying solely on exact keyword matches. This\ncapability uses machine learning models to evaluate semantic similarity between search queries\nand document content, identifying and highlighting the most contextually relevant sentences\nor passages within documents. Unlike traditional highlighting methods that focus on exact term\nmatches, semantic highlighting leverages AI models to assess each sentence using contextual\ninformation from both the query and surrounding text, enabling it to surface pertinent information\neven when exact search terms aren' t present in the highlighted passages. This approach is\nparticularly valuable for AI-driven search implementations where users prioritize semantic\nmeaning over literal word matching, allowing search administrators to deliver more intelligent and\nRemote inference for semantic highlighting templates\n1807\nAmazon OpenSearch Service\nDeveloper Guide\ncontextually aware search experiences that highlight meaningful content spans rather than just\nkeyword occurrences. For more information, see Using semantic highlighting.\nUse the following procedure open and run an CloudFormation template that automatically\nconﬁgures Amazon SageMaker models for semantic highlighting.\nTo use the semantic highlighting CloudFormation template\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nIn the left navigation, choose Integrations.\n3.\nUnder Enable Semantic Highlighting through Amazon SageMaker integration, choose\nConﬁgure domain, Conﬁgure public domain.\n4.\nFollow the prompt to set up your model.\nNote\nOpenSearch Service also provides a separate template to conﬁgure VPC domain. If you use\nthis template, you need to provide the VPC ID for the Lambda function.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1836,
+      "end": 1837
+    },
+    "content_stats": {
+      "char_count": 1887,
+      "word_count": 255
+    },
+    "hierarchy": {
+      "parent": "Using CloudFormation to set up remote inference for semantic search",
+      "children": []
+    }
+  }
+}

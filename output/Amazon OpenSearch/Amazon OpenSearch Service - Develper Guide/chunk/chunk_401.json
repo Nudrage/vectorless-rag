@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_401",
+  "section_number": "2.7.10.10.7",
+  "header": "Creating data access policies (AWS CLI)",
+  "content": "To create a data access policy using the OpenSearch Serverless API, use the CreateAccessPolicy\ncommand. The command accepts both inline policies and .json ﬁles. Inline policies must be\nencoded as a JSON escaped string.\nData access control\n553\nAmazon OpenSearch Service\nDeveloper Guide\nThe following request creates a data access policy:\naws opensearchserverless create-access-policy \\\n--name marketing \\\n--type data \\\n--policy \"[{\\\"Rules\\\":[{\\\"ResourceType\\\":\\\"collection\\\",\\\"Resource\\\":\n[\\\"collection/autopartsinventory\\\",\\\"collection/sales*\\\"],\\\"Permission\\\":\n[\\\"aoss:UpdateCollectionItems\\\"]},{\\\"ResourceType\\\":\\\"index\\\",\\\"Resource\\\":\n[\\\"index/autopartsinventory/*\\\",\\\"index/salesorders/orders*\\\"],\\\"Permission\n\\\":[\\\"aoss:ReadDocument\\\",\\\"aoss:DescribeIndex\\\"]}],\\\"Principal\\\":\n[\\\"arn:aws:iam::123456789012:user/Shaheen\\\"]}]\"\nTo provide the policy within a .json ﬁle, use the format --policy file://my-policy.json.\nThe principals included in the policy can now use the OpenSearch operations that they were\ngranted access to.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 582,
+      "end": 583
+    },
+    "content_stats": {
+      "char_count": 1027,
+      "word_count": 99
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

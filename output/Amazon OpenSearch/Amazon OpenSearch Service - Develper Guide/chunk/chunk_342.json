@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_342",
+  "section_number": "2.7.7.4",
+  "header": "Conﬁgure permissions for Machine Learning",
+  "content": "The following section describes the collection data access policies required for Machine Learning\n(ML). Replace the placeholder values with your speciﬁc information. For more information, see\nSupported policy permissions.\nModels\n472\nAmazon OpenSearch Service\nDeveloper Guide\n{\n\"Rules\": [\n{\n\"Resource\": [\n\"model/collection_name/*\"\n],\n\"Permission\": [\n\"aoss:DescribeMLResource\",\n\"aoss:CreateMLResource\",\n\"aoss:UpdateMLResource\",\n\"aoss:DeleteMLResource\",\n\"aoss:ExecuteMLResource\"\n],\n\"ResourceType\": \"model\"\n}\n],\n\"Principal\": [\n\"arn:aws:iam::account_id:role/role_name\"\n],\n\"Description\": \"ML full access policy for collection_name\"\n}\n• aoss:DescribeMLResource – Grants permission to search and query connectors, models, and\nmodel groups.\n• aoss:CreateMLResource – Grants permission to create connectors, models, and model groups.\n• aoss:UpdateMLResource – Grants permission to update connectors, models, and model groups.\n• aoss:DeleteMLResource – Grants permission to delete connectors, models, and model groups.\n• aoss:ExecuteMLResource – Grants permission to perform predictions on models.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 501,
+      "end": 502
+    },
+    "content_stats": {
+      "char_count": 1086,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Conﬁgure Machine Learning on Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

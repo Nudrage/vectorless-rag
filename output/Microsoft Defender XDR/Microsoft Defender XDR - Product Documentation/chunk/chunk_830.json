@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_830",
+  "section_number": "155.1.1.80.2.3",
+  "header": "Deletion of data on multiple drives using cipher.exe",
+  "content": "// Look for cipher.exe deleting data from multiple drives\nDeviceProcessEvents\n| where Timestamp > ago(1d)\n| where FileName =~ \"cipher.exe\"\n// cipher.exe /w flag used for deleting data\n| where ProcessCommandLine has \"/w\"\n| summarize CipherCount = dcount(ProcessCommandLine),\nCipherList = make_set(ProcessCommandLine) by DeviceId, bin(Timestamp, 1m)\n// cipher.exe accessing multiple drives in a short timeframe\n| where CipherCount > 1",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 546,
+      "end": 546
+    },
+    "content_stats": {
+      "char_count": 432,
+      "word_count": 59
+    },
+    "hierarchy": {
+      "parent": "Check for individual signs of ransomware activity",
+      "children": []
+    }
+  }
+}

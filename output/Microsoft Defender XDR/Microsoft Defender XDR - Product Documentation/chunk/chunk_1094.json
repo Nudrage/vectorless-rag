@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1094",
+  "section_number": "1.1.155.2.2.1",
+  "header": "Rule frequency",
+  "content": "When you save a new rule, it runs and checks for matches from the past 30 days of data. The\nrule then runs again at fixed intervals, applying a lookback period based on the frequency you\nchoose:\nEvery 24 hours - Runs every 24 hours, checking data from the past 30 days.\nEvery 12 hours - Runs every 12 hours, checking data from the past 48 hours.\nEvery 3 hours - Runs every 3 hours, checking data from the past 12 hours.\nEvery hour - Runs hourly, checking data from the past 4 hours.\nContinuous (NRT) - Runs continuously, checking data from events as they're collected\nand processed in near real-time (NRT), see Continuous (NRT) frequency.\nCustom - Runs according to the frequency you selected. This option is available if the rule\nis based only on data that is ingested to Microsoft Sentinel, see Custom frequency for\nMicrosoft Sentinel data (Preview).\nWhen you edit a rule, the changes are applied in the next run time scheduled according to the\nfrequency you set. The rule frequency is based on the event timestamp and not the ingestion\ntime. There might also be small delays in specific runs, whereby the configured frequency isn't\n100% accurate.\nSetting a custom detection to run in Continuous (NRT) frequency increases your organization's\nability to identify threats faster. Using the Continuous (NRT) frequency has minimal to no\nimpact to your resource usage and should thus be considered for any qualified custom\ndetection rule in your organization.\nFrom the custom detection rules page, you can migrate custom detections rules that fit the\nContinuous (NRT) frequency with a single button, Migrate now:\n Tip\nMatch the time filters in your query with the lookback period. Results outside of the\nlookback period are ignored.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 827,
+      "end": 828
+    },
+    "content_stats": {
+      "char_count": 1730,
+      "word_count": 293
+    },
+    "hierarchy": {
+      "parent": "2. Create new rule and provide alert details",
+      "children": [
+        "Continuous (NRT) frequency"
+      ]
+    }
+  }
+}

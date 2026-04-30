@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_234",
+  "section_number": "2.6.21.2.1",
+  "header": "Common metrics",
+  "content": "The following metrics are common to all processors and sinks.\nMonitoring pipeline metrics\n332\nAmazon OpenSearch Service\nDeveloper Guide\nEach metric is preﬁxed by the sub-pipeline name and plugin name, in the format\n<sub_pipeline_name><plugin><metric_name>. For example, the full name of the\nrecordsIn.count metric for a sub-pipeline named my-pipeline and the date processor would\nbe my-pipeline.date.recordsIn.count.\nMetric suﬃx\nDescription\nrecordsIn.count\nThe ingress of records to a pipeline component. This\nmetric applies to processors and sinks.\nRelevant statistics: Sum\nDimension: PipelineName\nrecordsOut.count\nThe egress of records from a pipeline component. This\nmetric applies to processors and sources.\nRelevant statistics: Sum\nDimension: PipelineName\ntimeElapsed.count\nA count of data points recorded during execution of a\npipeline component. This metric applies to processors\nand sinks.\nRelevant statistics: Sum\nDimension: PipelineName\ntimeElapsed.sum\nThe total time elapsed during execution of a pipeline\ncomponent. This metric applies to processors and sinks,\nin milliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\ntimeElapsed.max\nThe maximum time elapsed during execution of a\npipeline component. This metric applies to processors\nand sinks, in milliseconds.\nMonitoring pipeline metrics\n333\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nRelevant statistics: Max\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 361,
+      "end": 363
+    },
+    "content_stats": {
+      "char_count": 1430,
+      "word_count": 187
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

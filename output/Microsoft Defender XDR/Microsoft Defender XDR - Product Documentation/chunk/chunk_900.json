@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_900",
+  "section_number": "155.1.1.89.5.4",
+  "header": "Parse strings",
+  "content": "There are various functions you can use to efficiently handle strings that need parsing or\nconversion.\nString\nFunction\nUsage example\nCommand-\nlines\nparse_command_line()\nExtract the command and all arguments.\nPaths\nparse_path()\nExtract the sections of a file or folder path.\nVersion\nnumbers\nparse_version()\nDeconstruct a version number with up to four sections and up to\neight characters per section. Use the parsed data to compare\nversion age.\nIPv4\naddresses\nparse_ipv4()\nConvert an IPv4 address to a long integer. To compare IPv4\naddresses without converting them, use ipv4_compare().\nIPv6\naddresses\nparse_ipv6()\nConvert an IPv4 or IPv6 address to the canonical IPv6 notation.\nTo compare IPv6 addresses, use ipv6_compare().\nTo learn about all supported parsing functions, read about Kusto string functions.\nlet abuse_sha256 = (externaldata(sha256_hash: string)\n[@\"https://bazaar.abuse.ch/export/txt/sha256/recent/\"]\nwith (format=\"txt\"))\n| where sha256_hash !startswith \"#\"\n| project sha256_hash;\nabuse_sha256\n| join (EmailAttachmentInfo\n| where Timestamp > ago(1d)\n) on $left.sha256_hash == $right.SHA256\n| project Timestamp,SenderFromAddress,RecipientEmailAddress,FileName,FileType,\nSHA256,ThreatTypes,DetectionMethods\nﾉ\nExpand table\n７ Note\nSome tables in this article might not be available in Microsoft Defender for Endpoint. Turn\non Microsoft Defender XDR to hunt for threats using more data sources. You can move",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 594,
+      "end": 594
+    },
+    "content_stats": {
+      "char_count": 1418,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "Query scenarios",
+      "children": []
+    }
+  }
+}

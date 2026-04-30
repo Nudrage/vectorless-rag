@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_980",
+  "section_number": "2.15.5.9.1",
+  "header": "Installing third-party plugins",
+  "content": "To associate a third-party plugin with an OpenSearch Service domain, you must ﬁrst upload three\nseparate packages: the license package, the conﬁguration package, and the plugin package.\n• The license package includes the licensing information or metadata associated with the plugin,\nin .json or .xml format.\n• The conﬁguration package contains the plugin conﬁguration ﬁles and supporting assets and\nsettings. These ﬁles deﬁne how the plugin behaves or integrates with OpenSearch.\n• The plugin package contains the compiled plugin binary, which is the executable code that\nOpenSearch runs. This is the core of the plugin functionality.\nAfter you upload both packages, you can associate the plugin and license with a compatible\ndomain.\nConsole\nTo associate a third-party plugin to a domain, ﬁrst import the plugin license and conﬁguration as\npackages.\nTo install a third-party plugin\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation pane, choose Packages.\n3.\nFirst, import the license package. Choose Import package.\n4.\nFor Package type, choose License.\n5.\nFor Package source, enter the path to the license JSON or XML ﬁle in Amazon S3.\nThird-party plugins\n1506\nAmazon OpenSearch Service\nDeveloper Guide\n6.\nChoose Import. The package appears on the Licenses tab of the Packages page.\n7.\nNow, import the plugin conﬁguration. Choose Import package again.\n8.\nFor Package type, choose Conﬁguration.\n9.\nFor Package source, enter the path to the plugin conﬁguration ZIP ﬁle in Amazon S3.\n10. Choose Import.\n11. Lastly, import the plugin itself. Choose Import package.\n12. For Package type, choose Plugin.\n13. For Package source, enter the path to the plugin ZIP ﬁle in Amazon S3.\n14. Select the OpenSearch engine version that the plugin supports.\n15. Choose Import.\nTo associate a third-party plugin to a domain\n1.\nNow, associate the plugin license and conﬁguration with the domain. In the left navigation\npane, choose Domains.\n2.\nChoose the name of the domain to open its cluster conﬁguration.\n3.\nNavigate to the Plugins tab.\n4.\nChoose Associate packages and select the plugin, license, and conﬁguration packages that you\njust imported.\n5.\nChoose Select.\n6.\nChoose Next. Review the packages to associate and choose Associate.\nCLI\nFirst, use the create-package command to create a new package that contains the plugin license.\nThe S3Key must point to a .json or .xml ﬁle in Amazon S3 that includes the license text or\nmetadata.\naws opensearch create-package \\\n--package-name plugin-license-package \\\n--package-type PACKAGE-LICENSE \\\n--package-source S3BucketName=my-bucket,S3Key=licenses/my-plugin-license.json\nThird-party plugins\n1507\nAmazon OpenSearch Service\nDeveloper Guide\nUse the create-package command again to create a package that contains the plugin conﬁguration.\nThe S3Key must point to a .zip ﬁle in Amazon S3 that adheres to the directory structure expected\nby the plugin.\naws opensearch create-package \\\n--package-name plugin-config-package \\\n--package-type PACKAGE-CONFIG \\\n--package-source S3BucketName=my-bucket,S3Key=path/to/package.zip\nUse the create-package command again to create a package that contains the plugin itself. The\nS3Key must point to the plugin .zip ﬁle in Amazon S3.\naws opensearch create-package \\\n--package-name plugin-package \\\n--package-type ZIP-PLUGIN \\\n--package-source S3BucketName=my-bucket,S3Key=path/to/package.zip\nFinally, use the associate-package command to link the partner plugin, license, and conﬁguration\nto a compatible domain by specifying the package IDs for each. Specify the plugin ID as a\nprerequisite for the other packages, which means that it must be associated with the domain\nbefore the other packages.\naws opensearch associate-packages \\\n--domain-name my-domain \\\n--package-list '[{\"PackageID\": \"plugin-package-id\"},{\"PackageID\": \"license-package-\nid\",\"PrerequisitePackageIDList\":[\"plugin-package-id\"]},{\"PackageID\":\"config-package-\nid\",\"PrerequisitePackageIDList\":[\"plugin-package-id\"]}]'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1535,
+      "end": 1537
+    },
+    "content_stats": {
+      "char_count": 4020,
+      "word_count": 564
+    },
+    "hierarchy": {
+      "parent": "Installing third-party plugins in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

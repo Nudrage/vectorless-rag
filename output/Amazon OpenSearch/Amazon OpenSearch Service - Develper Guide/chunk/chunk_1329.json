@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1329",
+  "section_number": "2.22.3.4.3",
+  "header": "Integration with AI agents",
+  "content": "After deployment, you can integrate the MCP server with any MCP compatible agent. For more\ninformation, see Invoke your deployed MCP server in the Amazon Bedrock Developer Guide.\nDeveloper Integration\nYou can add the MCP server endpoint to your agent conﬁguration. You can also use it with the\nAmazon Q Developer CLI, custom agents, or other MCP-compatible agents.\nEnterprise Deployment\nCentral hosted agents can connect to multiple services with OpenSearch as one component.\nThis agent supports OAuth and enterprise authentication systems, and scales to support\nmultiple users and use cases.\nExample using the Strands Agents framework\nimport os\nimport requests\nfrom strands import Agent\nfrom strands.tools.mcp import MCPClient\nfrom mcp.client.streamable_http import streamablehttp_client\ndef get_bearer_token(discovery_url: str, client_id: str, client_secret: str):\nresponse = requests.get(discovery_url)\ndiscovery_data = response.json()\ntoken_endpoint = discovery_data['token_endpoint']\nMCP server integration templates\n1805\nAmazon OpenSearch Service\nDeveloper Guide\ndata = {\n'grant_type': 'client_credentials',\n'client_id': client_id,\n'client_secret': client_secret\n}\nheaders = {\n'Content-Type': 'application/x-www-form-urlencoded'\n}\nresponse = requests.post(token_endpoint, data=data, headers=headers)\ntoken_data = response.json()\nreturn token_data['access_token']\nif __name__ == \"__main__\":\ndiscovery_url = os.environ[\"DISCOVERY_URL\"]\nclient_id = os.environ[\"CLIENT_ID\"]\nclient_secret = os.environ[\"CLIENT_SECRET\"]\nmcp_url = os.environ[\"MCP_URL\"]\nbearer_token = get_bearer_token(discovery_url, client_id, client_secret)\nopensearch_mcp_client = MCPClient(lambda: streamablehttp_client(mcp_url, {\n\"authorization\": f\"Bearer {bearer_token}\",\n\"Content-Type\": \"application/json\"\n}))\nwith opensearch_mcp_client:\ntools = opensearch_mcp_client.list_tools_sync()\nagent = Agent(tools=tools)\nagent(\"list indices\")\nFor more information, see Hosting OpenSearch MCP Server with Amazon Bedrock AgentCore on\nthe OpenSearch website.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1834,
+      "end": 1835
+    },
+    "content_stats": {
+      "char_count": 2019,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "MCP server integration templates",
+      "children": []
+    }
+  }
+}

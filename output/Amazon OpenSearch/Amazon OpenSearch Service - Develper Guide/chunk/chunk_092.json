@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_092",
+  "section_number": "2.6.14.1",
+  "header": "CLI",
+  "content": "To view pipelines using the AWS CLI, send a list-pipelines request:\naws osis list-pipelines\nThe request returns a list of all existing pipelines:\n{\n\"NextToken\": null,\n\"Pipelines\": [\n{,\n\"CreatedAt\": 1.671055851E9,\n\"LastUpdatedAt\": 1.671055851E9,\n\"MaxUnits\": 4,\n\"MinUnits\": 2,\n\"PipelineArn\": \"arn:aws:osis:us-west-2:123456789012:pipeline/log-pipeline\",\n\"PipelineName\": \"log-pipeline\",\n\"Status\": \"ACTIVE\",\n\"StatusReason\": {\n\"Description\": \"The pipeline is ready to ingest data.\"\n}\n},\n\"CreatedAt\": 1.671055851E9,\n\"LastUpdatedAt\": 1.671055851E9,\n\"MaxUnits\": 2,\n\"MinUnits\": 8,\n\"PipelineArn\": \"arn:aws:osis:us-west-2:123456789012:pipeline/another-\npipeline\",\n\"PipelineName\": \"another-pipeline\",\n\"Status\": \"CREATING\",\n\"StatusReason\": {\n\"Description\": \"The pipeline is being created. It is not able to ingest\ndata.\"\n}\n}\n]\n}\nTo get information about a single pipeline, use the get-pipeline command:\naws osis get-pipeline --pipeline-name \"my-pipeline\"\nViewing pipelines\n83\nAmazon OpenSearch Service\nDeveloper Guide\nThe request returns conﬁguration information for the speciﬁed pipeline:\n{\n\"Pipeline\": {\n\"PipelineName\": \"my-pipeline\",\n\"PipelineArn\": \"arn:aws:osis:us-east-1:123456789012:pipeline/my-pipeline\",\n\"MinUnits\": 9,\n\"MaxUnits\": 10,\n\"Status\": \"ACTIVE\",\n\"StatusReason\": {\n\"Description\": \"The pipeline is ready to ingest data.\"\n},\n\"PipelineConfigurationBody\": \"log-pipeline:\\n source:\\n http:\\n processor:\\n\n- grok:\\n match:\\nlog: [ '%{COMMONAPACHELOG}' ]\\n - date:\\n from_time_received: true\n\\n destination: \\\"@timestamp\\\"\\n  sink:\\n - opensearch:\\n hosts: [ \\\"https://search-\nmdp-performance-test-duxkb4qnycd63rpy6svmvyvfpi.us-east-1.es.amazonaws.com\\\" ]\\n index:\n\\\"apache_logs\\\"\\n aws_sts_role_arn: \\\"arn:aws:iam::123456789012:role/my-domain-role\n\\\"\\n  aws_region: \\\"us-east-1\\\"\\n  aws_sigv4: true\",,\n\"CreatedAt\": \"2022-10-01T15:28:05+00:00\",\n\"LastUpdatedAt\": \"2022-10-21T21:41:08+00:00\",\n\"IngestEndpointUrls\": [\n\"my-pipeline-123456789012.us-east-1.osis.amazonaws.com\"\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 112,
+      "end": 113
+    },
+    "content_stats": {
+      "char_count": 1971,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Viewing Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

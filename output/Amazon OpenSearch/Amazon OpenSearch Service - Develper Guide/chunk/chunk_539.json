@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_539",
+  "section_number": "2.8.14",
+  "header": "Auto-Tune for Amazon OpenSearch Service",
+  "content": "Auto-Tune in Amazon OpenSearch Service uses performance and usage metrics from your\nOpenSearch cluster to suggest memory-related conﬁguration changes, including queue and cache\nsizes and Java virtual machine (JVM) settings on your nodes. These optional changes improve\ncluster speed and stability.\nSome changes deploy immediately, while others are scheduled during your domain's oﬀ-peak\nwindow. You can revert to the default OpenSearch Service settings at any time. As Auto-Tune\ngathers and analyzes performance metrics for your domain, you can view its recommendations in\nthe OpenSearch Service console on the Notiﬁcations page.\nCNAME mapping\n717\nAmazon OpenSearch Service\nDeveloper Guide\nAuto-Tune is available in commercial AWS Regions on domains running any OpenSearch version, or\nElasticsearch 6.7 or later, with a supported instance type.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 746,
+      "end": 747
+    },
+    "content_stats": {
+      "char_count": 844,
+      "word_count": 121
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": [
+        "Types of changes",
+        "Enabling or disabling Auto-Tune",
+        "Scheduling Auto-Tune enhancements",
+        "Monitoring Auto-Tune changes"
+      ]
+    }
+  }
+}

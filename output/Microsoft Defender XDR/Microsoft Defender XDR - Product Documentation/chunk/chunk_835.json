@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_835",
+  "section_number": "155.1.1.80.2.7",
+  "header": "Backup deletion",
+  "content": "DeviceProcessEvents\n| where FileName =~ \"wmic.exe\"\n| where ProcessCommandLine has \"shadowcopy\" and ProcessCommandLine has \"delete\"\n| project DeviceId, Timestamp, InitiatingProcessFileName, FileName,\nProcessCommandLine, InitiatingProcessIntegrityLevel,\nInitiatingProcessParentFileName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 547,
+      "end": 547
+    },
+    "content_stats": {
+      "char_count": 283,
+      "word_count": 24
+    },
+    "hierarchy": {
+      "parent": "Check for individual signs of ransomware activity",
+      "children": []
+    }
+  }
+}

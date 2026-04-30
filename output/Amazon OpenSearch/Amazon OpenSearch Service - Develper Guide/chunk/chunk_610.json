@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_610",
+  "section_number": "2.9.8.1",
+  "header": "Monitoring with CloudWatch metrics data sources",
+  "content": "You can monitor direct query using CloudWatch. CloudWatch collects raw data and processes\nit into readable, near real-time metrics. These statistics are kept for 15 months, so that you can\naccess historical information and gain a better perspective on how your web application or service\nis performing.\nYou can also set alarms to monitor certain thresholds, and send notiﬁcations or take actions when\nthose thresholds are met. For more information, see What is Amazon CloudWatch.\nAmazon S3 reports the following metrics:\nManaging a data source\n767\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nAsyncQueryCreateAPI\nThe total number of requests made to the API for\ncreating asynchronous queries.\nRelevant statistics: Average, Maximum, Sum\nDimensions: ClientId,DomainName\nFrequency: 60 seconds\nAsyncQueryGetApiRequestCount\nThe total number of requests made to the API for\nretrieving asynchronous query results.\nRelevant statistics: Average, Maximum, Sum\nDimensions: ClientId, DomainName\nFrequency: 60 seconds\nAsyncQueryCancelApiRequestC\nount\nThe total number of requests made to the API for\ncanceling asynchronous queries.\nRelevant statistics: Average, Maximum, Sum\nDimensions: ClientId, DomainName\nFrequency: 60 seconds\nAsyncQueryGetApiFailedReques\ntCusErrCount\nThe number of failed requests when retrieving asynchron\nous query results due to customer-related errors (e.g.,\ninvalid query ID).\nRelevant statistics: Average, Maximum, Sum\nDimensions: ClientId, DomainName\nFrequency: 60 seconds\nMonitoring with CloudWatch metrics data sources\n768\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nAsyncQueryCancelApiFailedRe\nquestCusErrCount\nThe number of failed requests when retrieving asynchron\nous query results due to customer-related errors (e.g.,\ninvalid query ID).\nRelevant statistics: Average, Maximum, Sum\nDimensions: ClientId,DomainName\nFrequency: 60 seconds\nAsyncQueryCancelApiFailedRe\nquestSysErrCount\nThe number of failed requests when creating asynchron\nous queries due to customer-related errors.\nRelevant statistics: Average, Maximum, Sum\nDimensions: ClientId, DomainName\nFrequency: 60 seconds\nAsyncQueryGetApiFailedReques\ntSysErrCount\nThe number of failed requests when retrieving asynchron\nous query results due to system-related errors.\nRelevant statistics: Average, Maximum, Sum\nDimensions: ClientId, DomainName\nFrequency: 60 seconds\nCloudWatch Logs and Security Lake report the following metrics:\nMetric\nDescription\nDirectQueryRate\nThe rate of requests made against the data sources.\nRelevant statistics: Sum, Maximum, Minimum, Average\nDimensions: DataSourceName\nMonitoring with CloudWatch metrics data sources\n769\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nFrequency: 60 seconds\nDirectQueryLatency\nThe latency observed for running queries on the data\nsources.\nRelevant statistics: Average, P90, P99, Sum, Minimum,\nMaximum\nDimensions: DataSourceName\nFrequency: 60 seconds\nFailedDirectQueries\nThe total number of query failures that are observed on\nthe data source queries.\nRelevant statistics: Sum, Maximum, Minimum, Average\nDimensions: DataSourceName\nFrequency: 60 seconds\nDirectQueryConsumedOCU\nThe number of OCUs that are consumed for running the\nqueries on the data sources.\nRelevant statistics: Average, P90, P99, Sum, Minimum,\nMaximum\nDimensions: DataSourceName\nFrequency: 60 seconds",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 796,
+      "end": 799
+    },
+    "content_stats": {
+      "char_count": 3349,
+      "word_count": 426
+    },
+    "hierarchy": {
+      "parent": "Managing a data source in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

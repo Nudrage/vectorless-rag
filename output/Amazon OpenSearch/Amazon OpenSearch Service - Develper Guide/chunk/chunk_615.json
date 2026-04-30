@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_615",
+  "section_number": "2.9.9",
+  "header": "Optimizing query performance for Amazon OpenSearch Service data sources",
+  "content": "Service data sources\nQuery performance in Amazon OpenSearch Service might slow down when you’re accessing\nexternal data sources. This can be due to factors like network latency, data transformation, or large\ndata volumes. To improve performance, consider indexing select amounts of data depending on\nthe use case:\nOptimizing query performance\n772\nAmazon OpenSearch Service\nDeveloper Guide\n• Speeding up direct queries on Amazon S3 (skipping index)\n• Building dashboard visualizations on and Security Lake (materialized views)\n• Ingesting query results using indexed views for oﬄine review or improved performance on\nSecurity Lake (materialized views)\nFor full documentation on accelerated queries, including example queries, see Optimize query\nperformance using OpenSearch indexing in the open source documentation.\nTopics\n• Skipping indexes\n• Materialized views\n• Covering indexes",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 801,
+      "end": 802
+    },
+    "content_stats": {
+      "char_count": 881,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "Working with Amazon OpenSearch Service direct queries",
+      "children": [
+        "Skipping indexes",
+        "Materialized views",
+        "Covering indexes"
+      ]
+    }
+  }
+}

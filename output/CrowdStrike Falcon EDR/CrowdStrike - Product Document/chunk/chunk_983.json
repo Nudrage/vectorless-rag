@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_983",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: iOS\nAn event that indicates a C function has been tampered with. In iOS jailbreak, functions are modified by adding an unconditional trampoline in the first 4 words.\nFunctionName contains the function that has been determined to have been tampered with,  ImageFileName contains the path to the image where the\ntrampoline jumps to, and ExecutableBytes contains the first 4 words of the tampered-with function where the trampoline was detected.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 262,
+      "end": 262
+    },
+    "content_stats": {
+      "char_count": 453,
+      "word_count": 70
+    },
+    "hierarchy": {
+      "parent": "TrampolineDetected",
+      "children": []
+    }
+  }
+}

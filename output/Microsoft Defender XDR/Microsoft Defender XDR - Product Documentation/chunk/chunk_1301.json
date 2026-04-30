@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1301",
+  "section_number": "155.1.1.179.1",
+  "header": "How Defender Experts analysts use third-party network data to monitor customer tenants",
+  "content": "network data to monitor customer tenants\nthird-party network signals and Microsoft's unparalleled vast amount of global threat\nintelligence data to identify lateral movements, command-and-control (C2) activities, data\nexfiltration, and other adversary-in-the-middle attacks. These network signals allow us to view\nthe end-to-end attack chain comprehensively, expedite investigation and hunting, and provide\ncustomers with richer threat summaries and response recommendations.\nScenario: Defender Experts for XDR used third-party network signals to uncover lateral\nmovement and potential data exfiltration attempts.\n1. Detection: Microsoft Defender for Identity generated an Atypical Travel alert for User A ,\nwho appeared to sign in from India and Germany within a short time period using\ndifferent devices and IP addresses. While the activity suggested a potential credential\ncompromise or session hijacking, initial reviews across standard identity and cloud\nmonitoring systems didn't show obvious signs of compromise, unusual access to cloud\napplications, inbox rule changes, or privilege escalation.\n2. Correlation: With third-party network signal enrichment, Defender Experts were able to\nsee firewall logs from Palo Alto Networks, which revealed attempts to reach unauthorized\nremote access tools. Meanwhile, Zscaler proxy data highlighted encrypted interactions\nwith a legacy on-premises SharePoint server that wasn’t protected by cloud access\nsecurity policies.\n3. Investigation: The investigation revealed that the attacker authenticated from a managed\niOS device in Germany. They took advantage of token reuse and a misconfigured mobile\ndevice management compliance profile, causing the device to be mistakenly trusted, pass\nposture checks, and bypass Conditional Access. These allowed the attacker to access the\ninternal on-premises SharePoint server. In this scenario, the third-party proxy data and\nfirewall logs provided evidence of lateral movement and potential exfiltration attempts.\n4. Response: Once Defender Experts confirmed malicious access, they initiated a\ncoordinated response across identity, network, and device domains. They revoked active\ntokens, isolated affected devices, and hardened mobile policy configurations to enforce\nConditional Access more strictly.\nIf you're a Microsoft Defender XDR customer, reach out to your service delivery manager if\nyou're interested in enabling the third-party network signal enrichment.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 979,
+      "end": 980
+    },
+    "content_stats": {
+      "char_count": 2452,
+      "word_count": 332
+    },
+    "hierarchy": {
+      "parent": "Enriching Defender Experts for XDR with third-party network signals",
+      "children": []
+    }
+  }
+}

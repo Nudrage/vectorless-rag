@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1068",
+  "section_number": "2.16.6.1",
+  "header": "How it works",
+  "content": "Auto-optimize operates through a job-based architecture that analyzes your vector data and\nprovides optimization recommendations. Key points:\n• Users share their datasets as OpenSearch JSON documents in parquet format in an Amazon S3\nbucket.\n• They conﬁgure serverless auto-optimize jobs by conﬁguring their acceptable recall and\nlatency thresholds. More relaxed thresholds allow the service to discover more signiﬁcant cost\noptimizations.\n• Auto-optimize jobs run on infrastructure fully-managed by Amazon OpenSearch Service. Jobs\ndon't consume resources on your domain or collections. Workers run in parallel to evaluate\nindex conﬁgurations, and use sampling on large datasets to deliver results typically within 30-60\nminutes.\n• Each job is billed on a predictable ﬂat rate. For pricing information, see Amazon OpenSearch\nService Pricing.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1621,
+      "end": 1621
+    },
+    "content_stats": {
+      "char_count": 841,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "Auto-optimize",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_190",
+  "section_number": "2.6.17",
+  "header": "Migrating data between domains and collections using Amazon OpenSearch Ingestion",
+  "content": "OpenSearch Ingestion\nYou can use OpenSearch Ingestion pipelines to migrate data between Amazon OpenSearch Service\ndomains or OpenSearch Serverless VPC collections. To do so, you set up a pipeline in which you\nconﬁgure one domain or collection as the source, and another domain or collection as the sink.\nThis eﬀectively migrates your data from one domain or collection to the other.\nTo migrate data, you must have the following resources:\n• A source OpenSearch Service domain or OpenSearch Serverless VPC collection. This domain\nor collection contains the data that you want to migrate. If you're using a domain, it must be\nrunning OpenSearch version 1.0 or later, or Elasticsearch version 7.4 or later. The domain must\nalso have an access policy that grants the appropriate permissions to your pipeline role.\n• A separate domain or VPC collection that you want to migrate your data to. This domain or\ncollection will act as the pipeline sink.\nMigrating data between domains and collections\n294\nAmazon OpenSearch Service\nDeveloper Guide\n• An pipeline role that OpenSearch Ingestion will use to read and write to your collection\nor domain. You include the Amazon Resource Name (ARN) of this role in your pipeline\nconﬁguration. For more information, see the following resources:\n• the section called “Granting pipelines access to domains”\n• the section called “Granting pipelines access to collections”\nTopics\n• Limitations\n• OpenSearch Service as a source\n• Specifying multiple OpenSearch Service domain sinks\n• Migrating data to an OpenSearch Serverless VPC collection",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 323,
+      "end": 324
+    },
+    "content_stats": {
+      "char_count": 1568,
+      "word_count": 249
+    },
+    "hierarchy": {
+      "parent": "Overview of Amazon OpenSearch Ingestion",
+      "children": [
+        "Limitations",
+        "OpenSearch Service as a source",
+        "Specifying multiple OpenSearch Service domain sinks",
+        "Migrating data to an OpenSearch Serverless VPC collection"
+      ]
+    }
+  }
+}

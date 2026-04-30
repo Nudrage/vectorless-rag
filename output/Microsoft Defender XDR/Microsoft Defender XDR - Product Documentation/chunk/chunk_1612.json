@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1612",
+  "section_number": "155.1.1.220.1",
+  "header": "Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions",
+  "content": "permissions to existing RBAC permissions\n） Important\nAs of February 2025, the Microsoft Defender XDR Unified RBAC model is the default\npermissions model for new Microsoft Defender Endpoint organizations. New\norganizations can't export roles and permissions from the original permissions model.\nExisting organizations with roles and permissions assigned or exported before February\nmaintain their current roles and permissions configuration.\nAs of March 2025, the Microsoft Defender XDR Unified RBAC model is the default\npermissions model for new Microsoft Defender for Identity organizations. New\norganizations can't export roles and permissions from the original permissions model.\nExisting organizations with roles and permissions assigned or exported before March\nmaintain their current roles and permissions configuration.\nUse the tables in the following sections to learn more about how your existing individual RBAC\nrole definitions map to your new Microsoft Defender XDR Unified RBAC roles:\nMicrosoft Defender for Endpoint and Defender Vulnerability Management\nMicrosoft Defender for Office 365\nMicrosoft Defender for Identity\nMicrosoft Defender for Cloud Apps\nMicrosoft Defender for Cloud\nMicrosoft Entra Global roles access\nDefender for Endpoint and Defender\nVulnerability Management permissions\nMicrosoft Defender XDR Unified RBAC\npermission\nView data - Security operations\nSecurity operations \\ Security data \\ Security data\nbasics (read)\nView data - Defender Vulnerability Management\nSecurity posture \\ Posture management \\\nVulnerability management (read)\nAlerts investigation\nSecurity operations \\ Security data \\ Alerts\n(manage)\nActive remediation actions - Security operations\nSecurity operations \\ Security data \\ Response\n(manage)\nActive remediation actions - Defender Vulnerability\nManagement - Exception handling\nSecurity posture \\ Posture management \\\nException handling (manage)\nActive remediation actions - Defender Vulnerability\nManagement - Remediation handling\nSecurity posture \\ posture management \\\nRemediation handling (manage)\nActive remediation actions - Defender Vulnerability\nManagement - Application handling\nSecurity posture \\ Posture management \\\nApplication handling (manage)\nDefender Vulnerability management – Manage\nsecurity baselines assessment profiles\nSecurity posture \\ posture management \\ Security\nbaselines assessment (manage)\nLive response capabilities\nSecurity operations \\ Basic live response (manage)\nLive response capabilities - advanced\nSecurity operations \\ Advanced live response\n(manage)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1193,
+      "end": 1194
+    },
+    "content_stats": {
+      "char_count": 2542,
+      "word_count": 337
+    },
+    "hierarchy": {
+      "parent": "Map Microsoft Defender XDR Unified role- based access control (RBAC) permissions",
+      "children": [
+        "Map Defender for Endpoint and Defender Vulnerability Management permissions to the Microsoft Defender XDR RBAC permissions",
+        "Map Defender for Office 365 permissions to the Microsoft Defender XDR Unified RBAC permissions",
+        "Map Microsoft Defender for Identity permissions to the Microsoft Defender XDR Unified RBAC",
+        "Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions",
+        "Unified RBAC roles in Microsoft Defender for Cloud",
+        "Microsoft Entra Global roles access"
+      ]
+    }
+  }
+}

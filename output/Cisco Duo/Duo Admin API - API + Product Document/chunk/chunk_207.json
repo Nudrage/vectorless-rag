@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_207",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\nactivated\nHas this phone been activated for Duo Mobile yet?\nEither true  or false .\napp_version\nThe version of Duo Mobile present on the device.\nGET  /admin/v1/phones\ncapabilities\nList of strings, each a factor that can be used with the\ndevice.\nCapability\nMeaning\nauto\nThe device is valid for automatic\nfactor selection (e.g. phone or\npush).\npush\nThe device is activated for Duo\nPush.\nphone\nThe device can receive phone\ncalls.\nsms\nThe device can receive batches of\nSMS passcodes.\nmobile_otp\nThe device can generate\npasscodes with Duo Mobile.\ncreation_date\nAn integer indicating the timestamp when the device\nwas created in Duo by an end user during enrollment,\nby an administrator, or via API.\nencrypted\nThe encryption status of an Android or iOS device file\nsystem. One of: \"Encrypted\", \"Unencrypted\", or\n\"Unknown\". Blank for other platforms.\nThis information is available to Duo Premier and Duo\nAdvantage plan customers.\nextension\nAn extension, if necessary.\nfingerprint\nWhether an Android or iOS phone is configured for\nbiometric verification. One of: \"Configured\", \"Disabled\",\nor \"Unknown\". Blank for other platforms.\nThis information is available to Duo Premier and Duo\nAdvantage plan customers.\nlast_activated_date\nAn integer indicating the timestamp of the device's last\nsuccessful Duo Mobile activation.\nlast_seen\nAn integer indicating the timestamp of the last contact\nbetween Duo's service and the activated Duo Mobile\napp installed on the phone. Blank if the device has\nnever activated Duo Mobile or if the platform does not\nsupport it.\nmodel\nThe phone's model.\nname\nFree-form label for the phone.\nnumber\nThe phone number in E.164 format. A phone with a\nsmartphone platform but no number is a tablet.\nos_version\nThe device's operating system version.\nphone_id\nThe phone's Duo ID.\nplatform\nThe phone platform. One of: \"Unknown\", \"Google\nAndroid\", \"Apple iOS\", or \"Generic Smartphone\". A\nvalue of \"Unknown\" may indicate a landline.\nLegacy values for platforms no longer supported\ninclude \"Windows Phone 7\", \"Windows 10 Mobile\",\n\"RIM BlackBerry\", \"BlackBerry 10\", \"Java J2ME\", \"Palm\nWebOS\", \"Symbian OS\", and \"Windows Mobile\".\nIf a smartphone's exact platform is unknown it may\nshow \"Unknown\" or \"Generic Smartphone\". Once Duo\nMobile is activated on the phone its platform will be\nautomatically detected and the value updated.\npostdelay\nThe time (in seconds) to wait after the extension is\ndialed and before the speaking the prompt.\npredelay\nThe time (in seconds) to wait after the number picks up\nand before dialing the extension.\nscreenlock\nWhether screen lock is enabled on an Android or iOS\nphone. One of: \"Locked\", \"Unlocked\", or \"Unknown\".\nBlank for other platforms.\nThis information is available to Duo Premier and Duo\nAdvantage plan customers.\nsms_passcodes_sent\nHave SMS passcodes been sent to this phone? Either\ntrue  or false .\ntampered\nWhether an iOS or Android device is jailbroken or\nrooted. One of: \"Not Tampered\", \"Tampered\", or\n\"Unknown\". Blank for other platforms.\nThis information is available to Duo Premier and Duo\nAdvantage plan customers.\ntype\nThe type of phone. One of: \"unknown\", \"mobile\", or\n\"landline\".\nusers\nA list of users associated with this phone. See Retrieve\nUsers for descriptions of the response fields.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 72,
+      "end": 74
+    },
+    "content_stats": {
+      "char_count": 3257,
+      "word_count": 510
+    },
+    "hierarchy": {
+      "parent": "Phones",
+      "children": []
+    }
+  }
+}

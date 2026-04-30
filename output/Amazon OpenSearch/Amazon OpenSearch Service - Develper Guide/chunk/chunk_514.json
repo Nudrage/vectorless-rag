@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_514",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "To create snapshots manually, you need to work with IAM and Amazon S3. Make sure you meet the\nfollowing prerequisites before you attempt to take a snapshot:\nPrerequis\nite\nDescription\nS3 bucket\nCreate an S3 bucket to store manual snapshots for your OpenSearch Service\ndomain. For instructions, see Creating a general purpose bucket in the Amazon\nSimple Storage Service User Guide.\nPrerequisites\n681\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequis\nite\nDescription\nRemember the name of the bucket to use it in the following places:\n• The Resource statement of the IAM policy attached to your IAM role\n• The Python client used to register a snapshot repository (if you use this\nmethod)\nImportant\nDo not apply an Amazon Glacier lifecycle rule to this bucket. Manual\nsnapshots don't support the Amazon Glacier storage class.\nPrerequisites\n682\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequis\nite\nDescription\nIAM role\nCreate an IAM role to delegate permissions to OpenSearch Service. For instructi\nons, see Creating an IAM role (console) in the IAM User Guide. The rest of this\nchapter refers to this role as TheSnapshotRole .\nAttach an IAM policy\nAttach the following policy to TheSnapshotRole  to allow access to the S3\nbucket:\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Action\": [\n\"s3:ListBucket\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": [\n\"arn:aws:s3::: amzn-s3-demo-bucket\n\"\n]\n},\n{\n\"Action\": [\n\"s3:GetObject\",\n\"s3:PutObject\",\n\"s3:DeleteObject\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": [\n\"arn:aws:s3::: amzn-s3-demo-bucket\n/*\"\n]\n}\n]\n}\nFor instructions to attach a policy to a role, see Adding IAM identity permissions\n(console) in the IAM User Guide.\nPrerequisites\n683\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequis\nite\nDescription\nEdit the trust relationship\nEdit the trust relationship of TheSnapshotRole  to specify OpenSearch Service\nin the Principal  statement as shown in the following example:\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Sid\": \"\",\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"es.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRole\"\n}]\n}\nFor instructions to edit the trust relationship, see Update a role trust policy in the\nIAM User Guide.\nPrerequisites\n684\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequis\nite\nDescription\nPermissions\nIn order to register the snapshot repository, you need to be able to pass\nTheSnapshotRole  to OpenSearch Service. You also need access to the\nes:ESHttpPut  action. To grant both of these permissions, attach the\nfollowing policy to the IAM role whose credentials are being used to sign the\nrequest:\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": \"iam:PassRole\",\n\"Resource\": \"arn:aws:iam::\n123456789012 :role/TheSnapsh\notRole \"\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": \"es:ESHttpPut\",\n\"Resource\": \"arn:aws:es:\nus-east-1 :123456789\n012 :domain/domain-name /*\"\n}\n]\n}\nIf your user or role doesn't have iam:PassRole  permissions to pass\nTheSnapshotRole , you might encounter the following common error when\nyou try to register a repository in the next step:\n$ python register-repo.py\n{\"Message\":\"User: arn:aws:iam::\n123456789012 :user/MyUserAccount\nis not authorized to perform: iam:PassRole on resource:\narn:aws:iam:: 123456789012 :role/TheSnapshotRole \"}\nPrerequisites\n685\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 710,
+      "end": 715
+    },
+    "content_stats": {
+      "char_count": 3277,
+      "word_count": 470
+    },
+    "hierarchy": {
+      "parent": "Creating index snapshots in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

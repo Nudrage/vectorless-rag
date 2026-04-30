@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_476",
+  "section_number": "2.8.6.1.1",
+  "header": "Optional updates",
+  "content": "Optional service software updates generally include enhancements and support for new features\nor functionality. Optional updates aren't enforced on your domains, and there's no hard deadline\nto install them. The availability of the update is communicated through email and a console\nnotiﬁcation. You can choose to apply the update immediately or reschedule it for a more\nappropriate date and time. You can also schedule it during the domain's oﬀ-peak window. The\nmajority of software updates are optional.\nOptional versus required updates\n646\nAmazon OpenSearch Service\nDeveloper Guide\nRegardless of whether or not you schedule an update, if you make a change on the domain that\ncauses a blue/green deployment, OpenSearch Service automatically updates your service software\nfor you.\nYou can conﬁgure your domain to automatically apply optional updates during oﬀ-peak hours.\nWhen this option is turned on, OpenSearch Service waits at least 13 days from when an optional\nupdate is available and then schedules the update after seven days. You receive a console\nnotiﬁcation when the update is scheduled and you can choose to reschedule it for a later date.\nTo turn on automatic software updates, select Enable automatic software update when you\ncreate or update your domain. To conﬁgure the same setting using the AWS CLI, set --software-\nupdate-options to true when you create or update your domain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 675,
+      "end": 676
+    },
+    "content_stats": {
+      "char_count": 1396,
+      "word_count": 219
+    },
+    "hierarchy": {
+      "parent": "Optional versus required updates",
+      "children": []
+    }
+  }
+}

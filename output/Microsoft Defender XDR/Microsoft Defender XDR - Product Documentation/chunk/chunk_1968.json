@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1968",
+  "section_number": "155.1.1.263.1.2",
+  "header": "Investigate rule parameters",
+  "content": "Review the attributes that related to the IP address that performed the relevant event of rule\ncreation:\n1. Search for other suspicious cloud activities that originated from the same IP in the tenant.\nFor instance, suspicious activity might be multiple failed login attempts.\n2. Is the ISP common and reasonable for this user?\n3. Is the location common and reasonable for this user?\nYou can review all user activities before creating rules, check for indicators of compromise, and\ninvestigate user actions that seem suspicious. For instance, multiple failed sign ins.\nSign ins:\nValidate that the sign in activity prior to the rule creation event isn't suspicious (such as\nthe common location, ISP, or user-agent).\nOther alerts or incidents\nDid other alerts trigger for the user prior to the rule creation. If so, then this might\nindicate that the user got compromised.\nIf the alert correlates with other alerts to indicate an incident, then does the incident\ncontain other true positive alerts?\nAdvanced Hunting is a query-based threat hunting tool that lets you inspect events in your\nnetwork and locate threat indicators.\nRun this query to find all the new inbox rule events during a specific time window.\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1460,
+      "end": 1461
+    },
+    "content_stats": {
+      "char_count": 1213,
+      "word_count": 198
+    },
+    "hierarchy": {
+      "parent": "Investigation steps",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2008",
+  "section_number": "155.1.1.263.1.11",
+  "header": "3. Investigate possible follow-on attacks",
+  "content": "Check for suspicious admin activities performed by an impacted user.\nInternal phishing attacks\nAttackers might use an impacted user account to send internal phishing mails. Check\nsuspicious activities like email forwarding or creation of inbox manipulation or inbox\nforwarding rules. The following playbooks can guide you to further investigate email\nevents:\nClassifying alerts for suspicious email forwarding activity\nClassifying alerts for suspicious inbox forwarding rules\nClassifying alerts for suspicious inbox manipulation rules\nCheck whether the user received other alerts before the password spray activity.\nHaving these alerts indicate that the user account might be compromised. Examples\ninclude impossible travel alert, activity from infrequent country/region, and suspicious\nemail deletion activity, among others.\nAdvanced hunting is a query-based threat hunting tool that lets you inspect events in your\nnetwork and locate threat indicators.\nUse these queries to gather more information related to the alert and determine whether the\nactivity is suspicious.\nEnsure you have access to the following tables:\nAadSignInEventsBeta\nCloudAppEvents\nDeviceEvents\nEmailEvents\nEmailUrlInfo\nIdentityLogonEvents\nUrlClickEvents\nUse this query to identify password spray activity.\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1485,
+      "end": 1486
+    },
+    "content_stats": {
+      "char_count": 1284,
+      "word_count": 173
+    },
+    "hierarchy": {
+      "parent": "Investigation steps",
+      "children": []
+    }
+  }
+}

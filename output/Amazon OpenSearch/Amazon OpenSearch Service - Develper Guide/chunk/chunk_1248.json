@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1248",
+  "section_number": "2.19.8.8",
+  "header": "Auto-follow",
+  "content": "You can deﬁne a set of replication rules against a single leader domain that automatically replicate\nindexes that match a speciﬁed pattern. When an index on the leader domain matches one of the\npatterns (for example, books*), a matching follower index is created on the follower domain.\nOpenSearch Service replicates any existing indexes that match the pattern, as well as new indexes\nthat you create. It does not replicate indexes that already exist on the follower domain.\nTo replicate all indexes (with the exception of system-created indexes, and those that already exist\non the follower domain), use a wildcard (*) pattern.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1775,
+      "end": 1775
+    },
+    "content_stats": {
+      "char_count": 628,
+      "word_count": 101
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster replication for Amazon OpenSearch Service",
+      "children": [
+        "Create a replication rule",
+        "Delete a replication rule"
+      ]
+    }
+  }
+}

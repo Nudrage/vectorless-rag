@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_171",
+  "section_number": "2.6.16.13",
+  "header": "Using an OpenSearch Ingestion pipeline with Fluentd",
+  "content": "Fluentd is an open-source data collection ecosystem that provides SDKs for diﬀerent languages\nand sub-projects like Fluent Bit. This sample Fluentd conﬁguration ﬁle sends log data from Fluentd\nto an OpenSearch Ingestion pipeline. For more information about ingesting log data, see Log\nAnalytics in the Data Prepper documentation.\nNote the following:\nFluentd\n242\nAmazon OpenSearch Service\nDeveloper Guide\n• The endpoint value must be your pipeline endpoint. For example, pipeline-endpoint.us-\neast-1osis.amazonaws.com/apache-log-pipeline/logs.\n• The aws_service value must be osis.\n• The aws_role_arn value is the ARN of the AWS IAM role for the client to assume and use for\nSignature Version 4 authentication.\n<source>\n@type tail\npath logs/sample.log\npath_key log\ntag apache\n<parse>\n@type none\n</parse>\n</source>\n<filter apache>\n@type record_transformer\n<record>\nlog ${record[\"message\"]}\n</record>\n</filter>\n<filter apache>\n@type record_transformer\nremove_keys message\n</filter>\n<match apache>\n@type http\nendpoint pipeline-endpoint.us-east-1osis.amazonaws.com/apache-log-pipeline/logs\njson_array true\n<auth>\nmethod aws_sigv4\naws_service osis\naws_region region\naws_role_arn arn:aws:iam::account-id:role/ingestion-role\n</auth>\n<format>\nFluentd\n243\nAmazon OpenSearch Service\nDeveloper Guide\n@type json\n</format>\n<buffer>\nflush_interval 1s\n</buffer>\n</match>\nYou can then conﬁgure an OpenSearch Ingestion pipeline like the following, which has HTTP as the\nsource:\nversion: \"2\"\napache-log-pipeline:\nsource:\nhttp:\npath: \"/${pipelineName}/logs\"\nprocessor:\n- grok:\nmatch:\nlog:\n- \"%{TIMESTAMP_ISO8601:timestamp} %{NOTSPACE:network_node}\n%{NOTSPACE:network_host} %{IPORHOST:source_ip}:%{NUMBER:source_port:int} ->\n%{IPORHOST:destination_ip}:%{NUMBER:destination_port:int} %{GREEDYDATA:details}\"\nsink:\n- opensearch:\nhosts: [\"https://search-domain-endpoint.us-east-1es.amazonaws.com\"]\nindex: \"index_name\"\naws_region: \"region\"\naws_sigv4: true",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 271,
+      "end": 273
+    },
+    "content_stats": {
+      "char_count": 1929,
+      "word_count": 214
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": []
+    }
+  }
+}

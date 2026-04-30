@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1501",
+  "section_number": "2.27.2.1",
+  "header": "Take and upload the snapshot",
+  "content": "Although you can use the repository-s3 plugin to take snapshots directly to S3, you have to\ninstall the plugin on every node, tweak opensearch.yml (or elasticsearch.yml if using an\nRelated resources\n2005\nAmazon OpenSearch Service\nDeveloper Guide\nElasticsearch cluster), restart each node, add your AWS credentials, and ﬁnally take the snapshot.\nThe plugin is a great option for ongoing use or for migrating larger clusters.\nFor smaller clusters, a one-time approach is to take a shared ﬁle system snapshot and then use the\nAWS CLI to upload it to S3. If you already have a snapshot, skip to step 4.\nTo take a snapshot and upload it to Amazon S3\n1.\nAdd the path.repo setting to opensearch.yml (or Elasticsearch.yml) on all nodes, and\nthen restart each node.\npath.repo: [\"/my/shared/directory/snapshots\"]\n2.\nRegister a snapshot repository, which is required before you take a snapshot. A repository\nis just a storage location: a shared ﬁle system, Amazon S3, Hadoop Distributed File System\n(HDFS), etc. In this case, we'll use a shared ﬁle system (\"fs\"):\nPUT _snapshot/my-snapshot-repo-name\n{\n\"type\": \"fs\",\n\"settings\": {\n\"location\": \"/my/shared/directory/snapshots\"\n}\n}\n3.\nTake the snapshot:\nPUT _snapshot/my-snapshot-repo-name/my-snapshot-name\n{\n\"indices\": \"migration-index1,migration-index2,other-indices-*\",\n\"include_global_state\": false\n}\n4.\nInstall the AWS CLI, and run aws configure to add your credentials.\n5.\nNavigate to the snapshot directory. Then run the following commands to create a new S3\nbucket and upload the contents of the snapshot directory to that bucket:\naws s3 mb s3://amzn-s3-demo-bucket --region us-west-2\naws s3 sync . s3://amzn-s3-demo-bucket --sse AES256\nTake and upload the snapshot\n2006\nAmazon OpenSearch Service\nDeveloper Guide\nDepending on the size of the snapshot and the speed of your internet connection, this\noperation can take a while.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2034,
+      "end": 2036
+    },
+    "content_stats": {
+      "char_count": 1870,
+      "word_count": 279
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Migrating to Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

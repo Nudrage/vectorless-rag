@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1499",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Windows\nThis event is sent when Falcon detects that a scheduled task has been added to the machine, either locally or remotely. This includes things added via the at\ncommand (at.exe) or scheduled tasks (schtasks.exe). The data will indicate the initial process (command-line tool, custom utility, or GUI application) or remote\naddress/hostname that resulted in this action.\nThis service has multiple versions over time from Windows 7 to Windows 10, so some fields may not be available in all versions. The raw TaskXml will always be\navailable, which should be a superset of the other ‘Task’ fields.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 418,
+      "end": 418
+    },
+    "content_stats": {
+      "char_count": 609,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "ScheduledTaskRegistered",
+      "children": []
+    }
+  }
+}

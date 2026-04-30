@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1982",
+  "section_number": "155.1.1.263.1.8",
+  "header": "4. Investigate suspicious activity by the user prior to creating the rules",
+  "content": "the rules\nValidate that the login activity prior to the rule creation is not suspicious. (common\nlocation / ISP / user-agent).\nAlerts\nCheck whether the user received alerts prior to creating the rules. This could indicate that\nthe user account might be compromised. For example, impossible travel alert, infrequent\ncountry/region, multiple failed logins, among others.)\nIncident\nCheck whether the alert is associated with other alerts that indicate an incident. If so, then\ncheck whether the incident contains other true positive alerts.\nAdvanced Hunting is a query-based threat hunting tool that lets you inspect events in your\nnetwork to locate threat indicators.\nUse this query to find all the new inbox rule events during specific time window.\nKusto\nThe RuleConfig column will provide the new inbox rule configuration.\nUse this query to check whether the ISP is common for the user by looking at the history of the\nuser.\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1468,
+      "end": 1469
+    },
+    "content_stats": {
+      "char_count": 930,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Investigation steps",
+      "children": []
+    }
+  }
+}

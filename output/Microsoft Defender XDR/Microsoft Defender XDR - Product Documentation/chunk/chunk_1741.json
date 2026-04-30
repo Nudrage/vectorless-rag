@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1741",
+  "section_number": "155.1.1.240.1",
+  "header": "Create an app",
+  "content": "3. In the form, choose a name for your application, then select Register.\n4. On your application page, select API Permissions > Add permission > APIs my\norganization uses >, type Microsoft Threat Protection, and select Microsoft Threat\nProtection. Your app can now access Microsoft Defender XDR.\n5. Select Application permissions. Choose the relevant permissions for your scenario (for\nexample, Incident.Read.All), and then select Add permissions.\n\n Tip\nMicrosoft Threat Protection is a former name for Microsoft Defender XDR, and\ndoesn't appear in the original list. You need to start writing its name in the text box\nto see it appear.\n\n6. Select Grant admin consent. Every time you add a permission, you must select Grant\nadmin consent for it to take effect.\n\n７ Note\nYou need to select the relevant permissions for your scenario. Read all incidents is\njust an example. To determine which permission you need, check the Permissions\nsection in the API you want to call.\nFor instance, to run advanced queries, select the 'Run advanced queries' permission;\nto isolate a device, select the 'Isolate machine' permission.\n\n7. To add a secret to the application, select Certificates & secrets, add a description to the\nsecret, then select Add.\n8. Record your application ID and your tenant ID somewhere safe. They're listed under\nOverview on your application page.\n Tip\nAfter you select Add, select copy the generated secret value. You won't be able to\nretrieve the secret value after you leave.\n\n9. For Microsoft Defender XDR Partners only: Follow these instructions for partner access\nthrough the Microsoft Defender XDR APIs, set your app to be multitenant, so it can be\navailable in all tenants once you receive admin consent. Partner access is required for\nthird-party apps—for example, if you create an app that is intended to run in multiple\ncustomers' tenants. It is not required if you create a service that you want to run in your\ntenant only, like an application for your own use that only interacts with your own data.\nTo set your app to be multitenant:\nGo to Authentication, and add https://portal.azure.com\nas the Redirect URI.\nOn the bottom of the page, under Supported account types, select the Accounts in\nany organizational directory application consent for your multitenant app.\nSince your application interacts with Microsoft Defender XDR on behalf of your users, it\nneeds be approved for every tenant on which you intend to use it.\nThe Active Directory administrator for each tenant needs to select the consent link and\napprove your app.\nThe consent link has the following structure:\nHTTP\nThe digits 00000000-0000-0000-0000-000000000000  should be replaced with your\nApplication ID.\n\nhttps://login.microsoftonline.com/common/oauth2/authorize?\nprompt=consent&client_id=<00000000-0000-0000-0000-\n000000000000>&response_type=code&sso_reload=true\nDone! You've successfully registered an application! See the following examples for token\nacquisition and validation.\nFor more information on Microsoft Entra tokens, see the Microsoft Entra tutorial.\nPowerShell",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1306,
+      "end": 1311
+    },
+    "content_stats": {
+      "char_count": 3075,
+      "word_count": 475
+    },
+    "hierarchy": {
+      "parent": "Create an app to access Microsoft Defender XDR without a user",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_846",
+  "section_number": "2.12.8.1",
+  "header": "Access Amazon OpenSearch Service using an OpenSearch Service- managed VPC endpoint (AWS PrivateLink)",
+  "content": "managed VPC endpoint (AWS PrivateLink)\nYou can access an Amazon OpenSearch Service domain by setting up an OpenSearch Service-\nmanaged VPC endpoint (powered by AWS PrivateLink). These endpoints create a private\nconnection between your VPC and Amazon OpenSearch Service. You can access OpenSearch\nService VPC domains as if they were in your VPC, without the use of an internet gateway, NAT\ndevice, VPN connection, or Direct Connect connection. Instances in your VPC don't need public IP\naddresses to access OpenSearch Service.\nYou can conﬁgure OpenSearch Service domains to expose additional endpoints running on public\nor private subnets within the same VPC, diﬀerent VPC, or diﬀerent AWS accounts. This enables you\nto add an additional layer of security to access your domains regardless of where they run, with\nno infrastructure to manage. The following diagram illustrates OpenSearch Service-managed VPC\nendpoints within the same VPC:\nWorking with OpenSearch Service-managed VPC endpoints\n1372\nAmazon OpenSearch Service\nDeveloper Guide\nYou establish this private connection by creating an OpenSearch Service-managed interface VPC\nendpoint, powered by AWS PrivateLink. We create an endpoint network interface in each subnet\nthat you enable for the interface VPC endpoint. These are service-managed network interfaces\nthat serve as the entry point for traﬃc destined for OpenSearch Service. Standard AWS PrivateLink\ninterface endpoint pricing applies for OpenSearch Service managed VPC endpoints billed under\nAWS PrivateLink.\nYou can create VPC endpoints for domains running all versions of OpenSearch and legacy\nElasticsearch. For more information, see Access AWS services through AWS PrivateLink in the AWS\nPrivateLink Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1401,
+      "end": 1402
+    },
+    "content_stats": {
+      "char_count": 1728,
+      "word_count": 253
+    },
+    "hierarchy": {
+      "parent": "Infrastructure security in Amazon OpenSearch Service",
+      "children": [
+        "Considerations and limitations for OpenSearch Service",
+        "Provide access to a domain",
+        "Create an interface VPC endpoint for a VPC domain",
+        "Working with OpenSearch Service-managed VPC endpoints using the conﬁguration API"
+      ]
+    }
+  }
+}

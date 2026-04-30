@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_242",
+  "section_number": "2.6.21.2.9",
+  "header": "Aggregate metrics",
+  "content": "The following metrics apply to the Aggregate processor. Each metric\nis preﬁxed by the sub-pipeline name and aggregate. For example,\nsub_pipeline_name.aggregate.actionHandleEventsOut.count.\nMetric suﬃx\nDescription\nactionHandleEvents\nOut.count\nThe number of events that have been returned from the\nhandleEvent  call to the conﬁgured action.\nMonitoring pipeline metrics\n349\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nRelevant statistics: Sum\nDimension: PipelineName\nactionHandleEvents\nDropped.count\nThe number of events that have been returned from the\nhandleEvent  call to the conﬁgured action.\nRelevant statistics: Sum\nDimension: PipelineName\nactionHandleEvents\nProcessingErrors.count\nThe number of calls made to handleEvent  for the\nconﬁgured action that resulted in an error.\nRelevant statistics: Sum\nDimension: PipelineName\nactionConcludeGrou\npEventsOut.count\nThe number of events that have been returned from the\nconcludeGroup  call to the conﬁgured action.\nRelevant statistics: Sum\nDimension: PipelineName\nactionConcludeGrou\npEventsDropped.count\nThe number of events that have not been returned from\nthe condludeGroup  call to the conﬁgured action.\nRelevant statistics: Sum\nDimension: PipelineName\nactionConcludeGrou\npEventsProcessingE\nrrors.count\nThe number of calls made to concludeGroup  for the\nconﬁgured action that resulted in an error.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n350\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\ncurrentAggregateGr\noups.value\nThe current number of groups. This gauge decreases\nwhen groups are concluded, and increases when an event\ninitiates the creation of a new group.\nRelevant statistics: Average\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 378,
+      "end": 380
+    },
+    "content_stats": {
+      "char_count": 1744,
+      "word_count": 219
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

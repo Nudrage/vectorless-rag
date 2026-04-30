@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_100",
+  "section_number": "2.6.13.1",
+  "header": "Stopping an Amazon OpenSearch Ingestion pipeline",
+  "content": "To use an OpenSearch Ingestion pipeline or perform administration, you always begin with an\nactive pipeline, then stop the pipeline, and then start the pipeline again. While your pipeline is\nstopped, you're not charged for Ingestion OCU hours.\nConsole\nTo stop a pipeline\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the navigation pane, choose Pipelines, and then choose a pipeline. You can perform the\nstop operation from this page, or navigate to the details page for the pipeline that you want to\nstop.\n3.\nFor Actions, choose Stop pipeline.\nIf a pipeline can't be stopped and started, the Stop pipeline action isn't available.\nAWS CLI\nTo stop a pipeline using the AWS CLI, call the stop-pipeline command with the following\nparameters:\n• --pipeline-name – the name of the pipeline.\nExample\naws osis stop-pipeline --pipeline-name my-pipeline\nOpenSearch Ingestion API\nTo stop a pipeline using the OpenSearch Ingestion API, call the StopPipeline operation with the\nfollowing parameter:\n• PipelineName – the name of the pipeline.\nStopping a pipeline\n89\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 118,
+      "end": 119
+    },
+    "content_stats": {
+      "char_count": 1150,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "Managing Amazon OpenSearch Ingestion pipeline costs",
+      "children": []
+    }
+  }
+}

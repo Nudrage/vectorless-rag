@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1469",
+  "section_number": "155.1.1.202.2.2",
+  "header": "Begin the setup",
+  "content": "From the Incidents queue in the Microsoft Defender portal, select Set up agent.\nAlternatively, go to System > Settings > Microsoft Defender XDR. Under Agents, select\nOverview > Set up to start the process.\n\n\n７ Note\nTo view and manage setting in the Defender portal, you need Security Copilot (read)\nand Security data basics (read) permissions. If you don't have these permissions, you\nFollow the steps in the setup wizard, which includes:\n1. Select the identity type to assign to the agent.\n2. Select the user account you created for the agent and follow the prompts.\ncan't intiate setup from the Settings page, but you can still set up the agent from the\nincident queue if you have the Security Administrator role.\n\n3. Select Deploy agent to activate the agent.\n4. Select View incidents to navigate back to the incidents queue or Manage agent to\nmanage its settings.\nThe Phishing Triage Agent is now set up and running in the background, ready to triage user-\nreported phishing incidents coming in. Your incident queue now contains the Phishing Triage\nAgent card with the agent’s relevant metrics. This data helps demonstrate the agent’s impact\nand can be used to inform broader strategic conversations, highlight return on investment, or\nsupport decisions around scaling automation across your organization.\nThe card currently contains the following data:\nIncidents addressed: Incidents containing user-reported phishing alerts that the agent\nclassified as true phishing threats or false alarms.\nIncidents resolved: Incidents that no longer require further handling, like false alarms.\n\n７ Note\nAfter setup, you can change the agent's identity and role at any time. To do this,\nnavigate to System > Settings > Microsoft Defender XDR. Under Agents, select\nIdentity and role.\nMetrics are calculated based on the agent’s activity, beginning either from its first recorded\nincident or from the last 30 days - whichever is more recent.\nThe agent is designed to help security teams manage the overwhelming volume of suspicious\nemails organizations receive daily. Acting as a force multiplier for SOC teams, it offloads time-\nconsuming triage tasks, reduces alert fatigue, and accelerates incident response by\nautonomously identifying true phishing threats. This enables analysts to cut through the noise\nand focus their attention on the threats that truly matter.\nOnce fully set up and running, the Phishing Triage Agent is automatically triggered when a user\nreports a suspicious phishing email and an alert is created. The agent then autonomously\nanalyzes the alert using sophisticated AI tools and your organization’s context to determine\nwhether the associated threat is malicious or just a false alarm.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1093,
+      "end": 1097
+    },
+    "content_stats": {
+      "char_count": 2708,
+      "word_count": 432
+    },
+    "hierarchy": {
+      "parent": "Set up the Phishing Triage Agent",
+      "children": []
+    }
+  }
+}

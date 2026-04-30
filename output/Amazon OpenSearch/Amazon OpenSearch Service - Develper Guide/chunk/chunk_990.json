@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_990",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "Cross-cluster search has several important limitations:\n• You can't connect an Elasticsearch domain to an OpenSearch domain.\n• You can't connect to self-managed OpenSearch/Elasticsearch clusters.\n• To connect domains across Regions, both domains must be on Elasticsearch 7.10 or later or\nOpenSearch.\nLimitations\n1513\nAmazon OpenSearch Service\nDeveloper Guide\n• A domain can have a maximum of 20 outgoing connections. Similarly, a domain can have a\nmaximum of 20 incoming connections. In other words, one domain can connect to a maximum of\n20 other domains.\n• The source domain must be on the same or a higher version than the destination domain. If you\nset up a bidirectional connection between two domains and you want to upgrade one or both of\nthem, you must ﬁrst delete one of the connections.\n• You can't use custom dictionaries or SQL with cross-cluster search.\n• You can't use CloudFormation to connect domains.\n• You can't use cross-cluster search on M3 or burstable (T2 and T3) instances.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1542,
+      "end": 1543
+    },
+    "content_stats": {
+      "char_count": 996,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

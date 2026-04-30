@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1835",
+  "section_number": "155.1.1.257.6.1.8.1",
+  "header": "Health issues",
+  "content": "The Microsoft Defender for Identity health issues API allows you to monitor the health status of your sensors and agents across your hybrid\nidentity infrastructure. You can use the health issues API to retrieve information about the current health issues of your sensors, such as the\nissue type, status, configuration, and severity. You can also use the API to identify and resolve any issues that might affect the functionality or\nsecurity of your sensors and agents.\nNote: The Microsoft Defender for Identity health issues API is only available on the Defender for Identity plan or Microsoft 365 E5/A5/G5/F5\nSecurity service plans.\nThe Defender for Identity sensors management APIs allows you to:\nCreate detailed reports of the sensors in your workspace, including information about the server name, sensor version, type, state, and\nhealth status.\nManage sensor settings, such as adding descriptions, enabling or disabling delayed updates, and specifying the domain controller that the\nsensor connects to for querying Entra ID.\nIdentify servers that are ready to be activated with the unified agent.\nEnable or disable the automatic activation of eligible servers for the unified agent.\nActivate or deactivate the unified agent on eligible servers.\nEnable or disable the automatic enabling of the required events auditing configuration during the sensor’s activation.\nAn incident is a collection of correlated  alerts and associated data that make up the story of an attack. Incident management is part of Microsoft\n365 Defender and is available in the Microsoft 365 Defender portal (https://security.microsoft.com/\n).\nMicrosoft 365 services and apps create  alerts  when they detect a suspicious or malicious event or activity. Individual alerts provide valuable\nclues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as\ndevices, users, and mailboxes. The result is multiple  alerts for multiple entities in your tenant.\nBecause piecing the individual alerts together to gain insight into an attack can be challenging and time-consuming, Microsoft 365 Defender\nautomatically aggregates the alerts and their associated information into an incident.\nGrouping related alerts into an incident gives you a comprehensive view of an attack. For example, you can see:\nWhere the attack started.\nWhat tactics were used.\nHow far the attack has gone into your tenant.\nThe scope of the attack, such as how many devices, users, and mailboxes were impacted.\nAll of the data associated with the attack.\nThe  incident resource and its APIs allow you to sort through incidents to create an informed cybersecurity response. It exposes a collection of\nincidents, with their related  alerts, that were flagged in your network, within the time range you specified in your environment retention policy.\nLabels - Information protection labels provide details about how to properly apply a sensitivity label to information. The information protection\nlabel API describes the configuration of sensitivity labels that apply to a user or tenant.\nThreat assessment - The Microsoft Graph threat assessment API helps organizations assess the threat received by any user in a tenant. This\nempowers customers to report spam or suspicious emails, phishing URLs, or malware attachments they receive to Microsoft. Microsoft checks\nthe sample in question and the organizational policies in play before generating a result so that tenant administrators can understand the\nthreat scanning verdict and adjust their organizational policy. They can also use it to report legitimate emails to prevent them from getting\nblocked.\nNote: We recommend that you use the threat submission\nAPI instead.\nMicrosoft Security Copilot is a generative AI-powered security analysis tool that enables defenders to respond to threats quickly, process signals\nat machine speed, and assess risk exposure in minutes. It enhances the effectiveness of security professionals across roles and workflows,",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 6,
+    "font_size": 14,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1375,
+      "end": 1376
+    },
+    "content_stats": {
+      "char_count": 4022,
+      "word_count": 609
+    },
+    "hierarchy": {
+      "parent": "Identities",
+      "children": []
+    }
+  }
+}

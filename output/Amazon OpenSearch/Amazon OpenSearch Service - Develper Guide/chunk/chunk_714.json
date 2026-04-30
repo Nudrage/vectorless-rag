@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_714",
+  "section_number": "2.10.4.3.16",
+  "header": "Custom index routing warning",
+  "content": "OpenSearch Service sends this event when your domain is in processing state and contains indices\nwith custom index.routing.allocation settings which can cause blue-green deployments to get\nstuck. Verify settings are applied properly.\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Amazon OpenSearch Service Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2017-12-01T13:12:22Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\":{\n\"event\":\"Custom Index Routing Warning\",\n\"status\":\"Warning\",\n\"severity\":\"Medium\",\n\"description\":\"Your domain is in processing state and contains indice(s) with\ncustom index.routing.allocation\nsettings which can cause blue-green deployments to get stuck.\nVerify settings are applied properly.\nFor more information, see https://docs.aws.amazon.com/opensearch-\nservice/latest/developerguide/monitoring-events.html#monitoring-events-index-routing.\"\nCluster health events\n1261\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1290,
+      "end": 1291
+    },
+    "content_stats": {
+      "char_count": 1103,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Cluster health events",
+      "children": []
+    }
+  }
+}

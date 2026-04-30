@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_012",
+  "section_number": "2.3.7",
+  "header": "Pricing for Amazon OpenSearch Service",
+  "content": "For OpenSearch Service, you pay for each hour of use of an EC2 instance and for the cumulative\nsize of any EBS storage volumes attached to your instances. Standard AWS data transfer charges\nalso apply.\nHowever, some notable data transfer exceptions exist. If a domain uses multiple Availability\nZones, OpenSearch Service does not bill for traﬃc between the Availability Zones. Signiﬁcant\ndata transfer occurs within a domain during shard allocation and rebalancing. OpenSearch Service\nneither meters nor bills for this traﬃc. Similarly, OpenSearch Service does not bill for data transfer\nbetween UltraWarm/cold nodes and Amazon S3.\nFor full pricing details, see Amazon OpenSearch Service pricing. For information about charges\nincurred during conﬁguration changes, see the section called “Charges for conﬁguration changes”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 37,
+      "end": 37
+    },
+    "content_stats": {
+      "char_count": 823,
+      "word_count": 121
+    },
+    "hierarchy": {
+      "parent": "What is Amazon OpenSearch Service?",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_222",
+  "section_number": "2.6.19.4",
+  "header": "Logging Amazon OpenSearch Ingestion API calls using AWS CloudTrail",
+  "content": "Amazon OpenSearch Ingestion is integrated with AWS CloudTrail, a service that provides a record\nof actions taken by a user, role, or an AWS service in OpenSearch Ingestion.\nCloudTrail captures all API calls for OpenSearch Ingestion as events. The calls captured include calls\nfrom the OpenSearch Ingestion section of the OpenSearch Service console and code calls to the\nOpenSearch Ingestion API operations.\nMonitoring with CloudTrail\n323\nAmazon OpenSearch Service\nDeveloper Guide\nIf you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3\nbucket, including events for OpenSearch Ingestion. If you don't conﬁgure a trail, you can still view\nthe most recent events in the CloudTrail console in Event history.\nUsing the information collected by CloudTrail, you can determine the request that was made to\nOpenSearch Ingestion, the IP address from which the request was made, who made the request,\nwhen it was made, and additional details.\nTo learn more about CloudTrail, see the AWS CloudTrail User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 352,
+      "end": 353
+    },
+    "content_stats": {
+      "char_count": 1037,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "Security in Amazon OpenSearch Ingestion",
+      "children": [
+        "OpenSearch Ingestion information in CloudTrail",
+        "Understanding OpenSearch Ingestion log ﬁle entries"
+      ]
+    }
+  }
+}

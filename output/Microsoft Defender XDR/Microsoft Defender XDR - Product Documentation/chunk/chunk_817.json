@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_817",
+  "section_number": "155.1.1.79.1.8",
+  "header": "Get device status info",
+  "content": "DeviceInfo\n| where Timestamp > ago(1d)\n| where OnboardingStatus != \"Onboarded\"\n| summarize by DeviceId\n| join kind=inner (\nDeviceInfo\n| where Timestamp > ago(1d)\nZero-hour auto purge (ZAP) addresses malicious emails after they have been received. If ZAP\nfails, malicious code might eventually run on the device and leave accounts compromised. This\nquery checks for logon activity made by the recipients of emails that were not successfully\naddressed by ZAP.\nKusto\nThis query first identifies all credential access alerts in the AlertInfo  table. It then merges or\njoins the AlertEvidence  table, which it parses for the names of the targeted accounts and\nfilters for domain-joined accounts only. Finally, it checks the IdentityLogonEvents  table to get\nall logon activities by the domain-joined targeted accounts.\nKusto\n) on DeviceId\n| take 10",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 539,
+      "end": 540
+    },
+    "content_stats": {
+      "char_count": 843,
+      "word_count": 131
+    },
+    "hierarchy": {
+      "parent": "Get entity info",
+      "children": []
+    }
+  }
+}

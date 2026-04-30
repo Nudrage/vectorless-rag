@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_421",
+  "section_number": "2.7.10.12.4",
+  "header": "Creating SAML providers (AWS CLI)",
+  "content": "To create a SAML provider using the OpenSearch Serverless API, send a CreateSecurityConﬁg\nrequest:\naws opensearchserverless create-security-config \\\n--name myprovider \\\n--type saml \\\n--saml-options file://saml-auth0.json\nSpecify saml-options, including the metadata XML, as a key-value map within a .json ﬁle. The\nmetadata XML must be encoded as a JSON escaped string.\n{\n\"sessionTimeout\": 70,\n\"groupAttribute\": \"department\",\n\"userAttribute\": \"userid\",\n\"openSearchServerlessEntityId\": \"aws:opensearch:111122223333:app1\",\n\"metadata\": \"EntityDescriptor xmlns=\\\"urn:oasis:names:tc:SAML:2.0:metadata\n\\\" ... ... ... IDPSSODescriptor\\r\\n\\/EntityDescriptor\"\n}\nNote\n(Optional) conﬁgure a custom audience restriction using the AWS CLI. For more\ninformation, see Creating SAML providers (AWS CLI).\nSAML authentication\n577\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 606,
+      "end": 607
+    },
+    "content_stats": {
+      "char_count": 852,
+      "word_count": 97
+    },
+    "hierarchy": {
+      "parent": "SAML authentication for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

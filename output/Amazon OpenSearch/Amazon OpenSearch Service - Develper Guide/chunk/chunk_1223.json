@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1223",
+  "section_number": "2.19.5.4.1",
+  "header": "Step 1: Conﬁgure the ISM policy",
+  "content": "First, conﬁgure an ISM policy in OpenSearch Dashboards.\n1.\nFrom your domain dashboard in the OpenSearch Service console, navigate to the OpenSearch\nDashboards URL and sign in with your master username and password. The URL follows this\nformat: domain-endpoint/_dashboards/.\n2.\nIn OpenSearch Dashboards, choose Add sample data and add one or more of the sample\nindexes to your domain.\n3.\nOpen the left navigation panel and choose Index Management, then choose Create policy.\n4.\nName the policy ism-policy-example.\n5.\nReplace the default policy with the following policy:\n{\n\"policy\": {\n\"description\": \"Move indexes between storage tiers\",\n\"default_state\": \"hot\",\n\"states\": [\n{\n\"name\": \"hot\",\n\"actions\": [],\n\"transitions\": [\n{\n\"state_name\": \"snapshot\",\n\"conditions\": {\nTutorial: Automating ISM processes\n1731\nAmazon OpenSearch Service\nDeveloper Guide\n\"min_index_age\": \"24h\"\n}\n}\n]\n},\n{\n\"name\": \"snapshot\",\n\"actions\": [\n{\n\"retry\": {\n\"count\": 5,\n\"backoff\": \"exponential\",\n\"delay\": \"30m\"\n},\n\"snapshot\": {\n\"repository\": \"snapshot-repo\",\n\"snapshot\": \"ism-snapshot\"\n}\n}\n],\n\"transitions\": [\n{\n\"state_name\": \"warm\",\n\"conditions\": {\n\"min_index_age\": \"2d\"\n}\n}\n]\n},\n{\n\"name\": \"warm\",\n\"actions\": [\n{\n\"retry\": {\n\"count\": 5,\n\"backoff\": \"exponential\",\n\"delay\": \"1h\"\n},\n\"warm_migration\": {}\n}\n],\n\"transitions\": [\n{\n\"state_name\": \"cold\",\nTutorial: Automating ISM processes\n1732\nAmazon OpenSearch Service\nDeveloper Guide\n\"conditions\": {\n\"min_index_age\": \"30d\"\n}\n}\n]\n},\n{\n\"name\": \"cold\",\n\"actions\": [\n{\n\"retry\": {\n\"count\": 5,\n\"backoff\": \"exponential\",\n\"delay\": \"1h\"\n},\n\"cold_migration\": {\n\"start_time\": null,\n\"end_time\": null,\n\"timestamp_field\": \"@timestamp\",\n\"ignore\": \"none\"\n}\n}\n],\n\"transitions\": [\n{\n\"state_name\": \"delete\",\n\"conditions\": {\n\"min_index_age\": \"60d\"\n}\n}\n]\n},\n{\n\"name\": \"delete\",\n\"actions\": [\n{\n\"cold_delete\": {}\n}\n],\n\"transitions\": []\n}\n],\n\"ism_template\": [\n{\nTutorial: Automating ISM processes\n1733\nAmazon OpenSearch Service\nDeveloper Guide\n\"index_patterns\": [\n\"index-*\"\n],\n\"priority\": 100\n}\n]\n}\n}\nNote\nThe ism_template ﬁeld automatically attaches the policy to any newly created index\nthat matches one of the speciﬁed index_patterns. In this case, all indexes that start\nwith index-. You can modify this ﬁeld to match an index format in your environment.\nFor more information, see ISM templates.\n6.\nIn the snapshot section of the policy, replace snapshot-repo with the name of the\nsnapshot repository that you registered for your domain. You can also optionally replace ism-\nsnapshot, which will be the name of snapshot when it's created.\n7.\nChoose Create. The policy is now visible on the State management policies page.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1760,
+      "end": 1763
+    },
+    "content_stats": {
+      "char_count": 2616,
+      "word_count": 387
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Automating Index State Management processes",
+      "children": []
+    }
+  }
+}

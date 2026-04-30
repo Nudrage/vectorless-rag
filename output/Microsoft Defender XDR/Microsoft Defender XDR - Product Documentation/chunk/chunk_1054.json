@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1054",
+  "section_number": "155.1.1.142",
+  "header": "GraphApiAuditEvents (Preview)",
+  "content": "07/09/2025\nThe GraphApiAuditEvents  table in the advanced hunting schema contains information about\nMicrosoft Entra ID API requests made to Microsoft Graph API for resources in the tenant. Use\nthis reference to construct queries that return information from this table.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nIdentityProvider\nstring\nIdentity provider that authenticated the subject of the token\nApiVersion\nstring\nThe API version of the event\nApplicationId\nstring\nUnique identifier for the application\nIPAddress\nstring\nThe IP address of the client from where the request was made\nClientRequestId\nstring\nIdentifier for the client request sent; if none is available, the\noperation identifier is used instead\nEntityType\nstring\nType of object, such as a file, a process, a device, or a user, that made\nthe request\nRequestUri\nstring\nUniform resource identifier (URI) of the request\nAccountObjectId\nstring\nUnique identifier for the account making the request\nOperationId\nstring\nIdentifier for a batch of requests; the same identifier is used for all\nrequests in a batch but if requests are non-batched, the identifier is\nunique per request\nLocation\nstring\nName of the region that served the request\nRequestDuration\nstring\nDuration of the request in milliseconds\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nRequestId\nstring\nUnique identifier of the request\nRequestMethod\nstring\nHTTP method of the request\nTimestamp\nstring\nDate and time when the request was recorded\nResponseStatusCode\nstring\nHTTP response status code for the request\nScopes\nstring\nScopes in token claims\nUniqueTokenIdentifier\nstring\nUnique identifier embedded in every access token and ID token that\nwere issued\nAdvanced hunting overview\nLearn the query language\nUse shared queries\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 785,
+      "end": 786
+    },
+    "content_stats": {
+      "char_count": 2118,
+      "word_count": 314
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related articles"
+      ]
+    }
+  }
+}

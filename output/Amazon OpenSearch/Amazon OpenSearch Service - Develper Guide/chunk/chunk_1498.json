@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1498",
+  "section_number": "2.27.1.5",
+  "header": "Searching for documents",
+  "content": "Now that data exists in your cluster, you can search for it. For example, you might want to search\nfor all root vegetables, or get a count of all leafy greens, or ﬁnd the number of errors logged per\nhour.\nBasic searches\nA basic search looks something like this:\nGET veggies/_search?q=name:l*\nThe request produces a JSON response that contains the lettuce document.\nAdvanced searches\nYou can perform more advanced searches by providing the query options as JSON in the request\nbody:\nGET veggies/_search\n{\n\"query\": {\n\"term\": {\n\"name\": \"lettuce\"\n}\n}\n}\nSearching for documents\n2003\nAmazon OpenSearch Service\nDeveloper Guide\nThis example also produces a JSON response with the lettuce document.\nSorting\nYou can perform more of this type of query using sorting. First, you need to recreate the index,\nbecause the automatic ﬁeld mapping chose types that can’t be sorted by default. Send the\nfollowing requests to delete and recreate the index:\nDELETE /veggies\nPUT /veggies\n{\n\"mappings\":{\n\"properties\":{\n\"name\":{\n\"type\":\"keyword\"\n},\n\"color\":{\n\"type\":\"keyword\"\n},\n\"classification\":{\n\"type\":\"keyword\"\n}\n}\n}\n}\nThen repopulate the index with data:\nPOST /_bulk\n{ \"create\" : { \"_index\" : \"veggies\", \"_id\" : \"7\"  } }\n{ \"name\":\"kale\", \"color\":\"green\", \"classification\":\"leafy-green\" }\n{ \"create\" : { \"_index\" : \"veggies\", \"_id\" : \"8\" } }\n{ \"name\":\"spinach\", \"color\":\"green\", \"classification\":\"leafy-green\" }\n{ \"create\" : { \"_index\" : \"veggies\", \"_id\" : \"9\" } }\n{ \"name\":\"arugula\", \"color\":\"green\", \"classification\":\"leafy-green\" }\n{ \"create\" : { \"_index\" : \"veggies\", \"_id\" : \"10\" } }\n{ \"name\":\"endive\", \"color\":\"green\", \"classification\":\"leafy-green\" }\n{ \"create\" : { \"_index\" : \"veggies\", \"_id\" : \"11\" } }\n{ \"name\":\"lettuce\", \"color\":\"green\", \"classification\":\"leafy-green\" }\nNow you can search with a sort. This request adds an ascending sort by the classiﬁcation:\nSearching for documents\n2004\nAmazon OpenSearch Service\nDeveloper Guide\nGET veggies/_search\n{\n\"query\" : {\n\"term\": { \"color\": \"green\" }\n},\n\"sort\" : [\n\"classification\"\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2032,
+      "end": 2034
+    },
+    "content_stats": {
+      "char_count": 2020,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Creating and searching for documents in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

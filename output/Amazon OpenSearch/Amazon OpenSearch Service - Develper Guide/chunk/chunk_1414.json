@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1414",
+  "section_number": "2.25.10",
+  "header": "Dedicated coordinator nodes in Amazon OpenSearch Service",
+  "content": "Dedicated coordinator nodes in Amazon OpenSearch Service are specialized nodes that oﬄoad\ncoordination tasks from data nodes. These tasks include managing search requests and hosting\nOpenSearch Dashboards. By separating these functions, dedicated coordinator nodes reduce the\nload on data nodes, which allows them to focus on data storage, indexing, and search operations.\nThis improves overall cluster performance and resource utilization.\nAdditionally, dedicated coordinator nodes help reduce the number of private IP addresses required\nfor VPC conﬁgurations, which leads to more eﬃcient network management. This setup can result\nin up to 15% improvement in indexing throughput and 20% better query performance, depending\non workload characteristics.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1892,
+      "end": 1892
+    },
+    "content_stats": {
+      "char_count": 752,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Operational best practices for Amazon OpenSearch Service",
+      "children": [
+        "When to use dedicated coordinator nodes",
+        "Architecture and behavior",
+        "Requirements and limitations",
+        "Provisioning dedicated coordinator nodes",
+        "Best practices"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1147",
+  "section_number": "155.1.1.161.3.1.1",
+  "header": "Step 1: Select a scenario and enter scenario inputs",
+  "content": "ﾉ\nExpand table\nScenario\nDescription\nInputs\nUsers with access to\nsensitive data\nProvide any sensitive data storage of interest to\nview users that have access to it.\nUse this scenario if you want to know which\nentities have access to sensitive data, especially\nin cases when an incident indicates unusual\naccess to confidential files.\nTarget storage account\nCritical users with\naccess to storage\naccounts containing\nsensitive data\nThis scenario identifies critical users with access\nto storage resources containing sensitive data.\nUse this scenario to prevent, assess, and monitor\nunauthorized access, exposure risk, and breach\nimpact based on the privileged users.\n(None)\nData exfiltration by a\ndevice\nProvide a device ID to view paths to storage\naccounts it has access to; for instance, to check\nwhat storage accounts a certain device can\naccess in a bring your own device (BYOD)\nenvironment.\nUse this scenario when investigating suspicious\nor unauthorized data transfer from corporate\ndevices and to external sources.\nSource device\nPaths to a highly\ncritical Kubernetes\ncluster\nProvide a Kubernetes cluster with high criticality\nto view users, virtual machines, and containers\nthat have access to it.\nUse this scenario to assess, analyze and prioritize\nhandling of attack paths leading to highly critical\nKubernetes cluster.\nTarget Kubernetes cluster\nIdentities with access\nto Azure DevOps\nrepositories\nProvide an Azure DevOps (ADO) repository\nname to view users that have read and/or write\naccess to said repository.\nUse this scenario to identify entities with access\nto ADO repositories, which often contain\nsensitive assets and therefore valuable targets\nfor threat actors. This scenario gives you visibility\nand lets you plan your response in case of a\nbreach.\nTarget ADO repository\nIdentify nodes in the\nhighest number of\npaths to SQL data\nstores\nThis scenario identifies the nodes that appear in\nthe highest number of paths leading to SQL data\nstores. The scenario discovers paths in the graph\nwhere users have roles or permissions to access\n(None)\nScenario\nDescription\nInputs\nthe SQL data stores.\nUse this scenario to gain visibility to stores that\nmight contain sensitive information, assess the\nimpact in case of a breach, and prepare your\nmitigation and response.\nAttack paths to a\ncritical asset\nView the potential routes through various nodes\nleading towards a target.\nUse this scenario to examine potential lateral\nmovement that could reach a critical asset\nthrough your network.\nTarget critical asset\nEntity connections\nFind the direct connections of a given entity and\nanalyze its relationships.\nSource entity\nNote: You can use any entity\nas the seeding node for the\ngraph. The graph indicates\nincoming and outgoing\nconnections.\n\nYou can add relevant filters to make the map view of your selected scenario more precise. For\nexample, if you want to Show only the shortest paths, select this option.\nBy default, the predefined scenarios automatically apply certain filters, which you can view in\nthe Advanced Filters section of the side panel. You can remove these filters or add new ones to\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 870,
+      "end": 873
+    },
+    "content_stats": {
+      "char_count": 3108,
+      "word_count": 491
+    },
+    "hierarchy": {
+      "parent": "Use predefined scenarios in the hunting graph",
+      "children": []
+    }
+  }
+}

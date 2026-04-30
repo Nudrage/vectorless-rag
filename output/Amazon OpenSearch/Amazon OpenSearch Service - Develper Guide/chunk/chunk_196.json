@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_196",
+  "section_number": "2.6.17.2",
+  "header": "Specifying multiple OpenSearch Service domain sinks",
+  "content": "You can specify multiple public OpenSearch Service domains as destinations for your data. You\ncan use this capability to perform conditional routing or replicate incoming data into multiple\nOpenSearch Service domains. You can specify up to 10 diﬀerent public OpenSearch Service\ndomains as sinks.\nIn the following example, incoming data is conditionally routed to diﬀerent OpenSearch Service\ndomains:\n...\nroute:\n- 2xx_status: \"/response >= 200 and /response < 300\"\n- 5xx_status: \"/response >= 500 and /response < 600\"\nsink:\n- opensearch:\nhosts: [ \"https://search-response-2xx.region.es.amazonaws.com\" ]\naws:\nregion: \"us-east-1\"\nindex: \"response-2xx\"\nroutes:\n- 2xx_status\n- opensearch:\nhosts: [ \"https://search-response-5xx.region.es.amazonaws.com\" ]\naws:\nregion: \"us-east-1\"\nindex: \"response-5xx\"\nroutes:\n- 5xx_status",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 327,
+      "end": 327
+    },
+    "content_stats": {
+      "char_count": 816,
+      "word_count": 107
+    },
+    "hierarchy": {
+      "parent": "Migrating data between domains and collections using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

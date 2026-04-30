@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1502",
+  "section_number": "2.27.2.2",
+  "header": "Create a domain",
+  "content": "Although the console is the easiest way to create a domain, in this case, you already have the\nterminal open and the AWS CLI installed. Modify the following command to create a domain that\nﬁts your needs:\naws opensearch create-domain \\\n--domain-name migration-domain \\\n--engine-version OpenSearch_1.0 \\\n--cluster-config InstanceType=c5.large.search,InstanceCount=2 \\\n--ebs-options EBSEnabled=true,VolumeType=gp2,VolumeSize=100 \\\n--node-to-node-encryption-options Enabled=true \\\n--encryption-at-rest-options Enabled=true \\\n--domain-endpoint-options EnforceHTTPS=true,TLSSecurityPolicy=Policy-Min-\nTLS-1-2-2019-07 \\\n--advanced-security-options\nEnabled=true,InternalUserDatabaseEnabled=true,MasterUserOptions='{MasterUserName=master-\nuser,MasterUserPassword=master-user-password}' \\\n--access-policies '{\"Version\": \"2012-10-17\",       \"Statement\":\n[{\"Effect\":\"Allow\",\"Principal\": {\"AWS\": \"arn:aws:iam::aws-\nregion:user/UserName\"},\"Action\":[\"es:ESHttp*\"],\"Resource\":\"arn:aws:es:aws-\nregion:111122223333:domain/migration-domain/*\"}]}' \\\n--region aws-region\nAs is, the command creates an internet-accessible domain with two data nodes, each with 100\nGiB of storage. It also enables ﬁne-grained access control with HTTP basic authentication and all\nencryption settings. Use the OpenSearch Service console if you need a more advanced security\nconﬁguration, such as a VPC.\nBefore issuing the command, change the domain name, master user credentials, and account\nnumber. Specify the same AWS Region that you used for the S3 bucket and an OpenSearch/\nElasticsearch version that is compatible with your snapshot.\nImportant\nSnapshots are only forward-compatible, and only by one major version. For example, you\ncan't restore a snapshot from an OpenSearch 1.x cluster on an Elasticsearch 7.x cluster, only\nCreate a domain\n2007\nAmazon OpenSearch Service\nDeveloper Guide\nan OpenSearch 1.x or 2.x cluster. Minor version matters, too. You can't restore a snapshot\nfrom a self-managed 5.3.3 cluster on a 5.3.2 OpenSearch Service domain. We recommend\nchoosing the most recent version of OpenSearch or Elasticsearch that your snapshot\nsupports. For a table of compatible versions, see the section called “Using a snapshot to\nmigrate data”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2036,
+      "end": 2037
+    },
+    "content_stats": {
+      "char_count": 2217,
+      "word_count": 260
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Migrating to Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

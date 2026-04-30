@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_379",
+  "section_number": "2.15.10.1",
+  "header": "Considerations",
+  "content": "Consider the following when you conﬁgure network access for your collections:\n• If you plan to conﬁgure VPC endpoint access for a collection, you must ﬁrst create at least one\nOpenSearch Serverless-managed VPC endpoint.\n• Private access to AWS services only applies to the collection's OpenSearch endpoint, not to the\nOpenSearch Dashboards endpoint. Even if the ResourceType is dashboard, AWS services\ncannot be granted access to OpenSearch Dashboards.\n• If a collection is accessible from public networks, it's also accessible from all OpenSearch\nServerless-managed VPC endpoints and all AWS services.\n• Multiple network policies can apply to a single collection. For more information, see the section\ncalled “Policy precedence”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 561,
+      "end": 561
+    },
+    "content_stats": {
+      "char_count": 730,
+      "word_count": 109
+    },
+    "hierarchy": {
+      "parent": "Network access for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

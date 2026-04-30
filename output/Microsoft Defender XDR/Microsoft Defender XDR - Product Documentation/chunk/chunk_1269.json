@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1269",
+  "section_number": "155.1.1.175.1",
+  "header": "Incident updates",
+  "content": "If an incident is classified as False Positive or Informational, Expected Activity, then the incident's\nStatus field gets updated to Resolved. Our experts then conclude their work on this incident\nand the Assigned to field gets updated to Unassigned. Our experts might share updates from\ntheir investigation and their conclusion when resolving an incident. These updates are posted\nunder Investigation Summary in the incident's Managed response flyout panel.\nOtherwise, if an incident is classified as True Positive, our experts then identify the required\nresponse actions that need to be performed. The method in which the actions are performed\ndepends on the permissions and access levels you have given the Defender Experts for XDR\nservice. Learn more about granting permissions to our experts.\nIf you have granted Defender Experts for XDR the recommended Security Operator access\npermissions, our experts could perform the required response actions on the incident on\nyour behalf. These actions, along with an Investigation summary, show up in the\nincident's Managed response flyout panel in your Microsoft Defender portal for you or\nyour SOC team to review. All actions that are completed by Defender Experts for XDR\nappear under the Completed actions section. Any pending actions that require you or\nyou SOC team to complete are listed under the Pending actions section. For more\ninformation, see the Actions section. Once our experts have taken all the necessary\nactions on the incident, its Status field is then updated to Resolved and the Assigned to\nfield is updated to Customer.\nIf you have granted Defender Experts for XDR the default Security Reader access, then the\nrequired response actions, along with an Investigation summary, show up in the\nincident's Managed response flyout panel under the Pending actions section in your\n\nMicrosoft Defender portal for you or your SOC team to perform. For more information,\nsee the Actions section. To identify this handover, the incident's Status field is updated to\nAwaiting Customer Action and the Assigned to field is updated to Customer.\nYou can check the number of incidents that require your action in the Defender Experts banner\nat the top of the Microsoft Defender homepage.\nYou can view the incidents related to Defender Experts by filtering the incident queue in your\nMicrosoft Defender portal using several filter sets. Learn more about adding incident queue\nfilters\nTo view the incidents our experts are currently investigating, use the Incident assignment\nfilter, select Assigned To Defender Experts.\nTo view the incidents our experts have investigated and handed over to your team to act\non pending remediation actions, using the Incident assignment filter, choose Assigned\nTo customer team.\n\nTo view the incidents our experts have investigated and handed over to your team to act\non pending remediation actions, using the Status filter, choose Awaiting Customer\nAction.\n\nTo view the incidents our experts have completed their investigation on (and either\ndirectly resolved or assigned to your team for pending remediation actions), using the\nTags filter, choose Defender Experts.\n\nIn the Microsoft Defender portal, an incident that requires your attention using managed\nresponse has the Status field set to Awaiting Customer Action, the Assigned to field set to\nCustomer and a task card on top of the Incidents pane. Your designated incident contacts also\nreceives a corresponding email notification with a link to the Defender portal to view the\nincident. Learn more about notification contacts. You will also receive a Teams notification\ninforming you about the updates. Learn more about setting up Teams\nSelect View managed response on the task card or on the top of the portal page (Managed\nresponse tab) to open a flyout panel where you can read our experts' investigation summary,\ncomplete pending actions identified by our experts, or engage with them through chat.\nThe Investigation summary section provides you with more context about the incident\nanalyzed by our experts to provide you with visibility about its severity and potential impact if\nnot addressed immediately. It could include the device timeline, indicators of attack, and\nindicators of compromise (IOCs) observed, and other details.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 952,
+      "end": 957
+    },
+    "content_stats": {
+      "char_count": 4282,
+      "word_count": 675
+    },
+    "hierarchy": {
+      "parent": "Managed detection and response",
+      "children": []
+    }
+  }
+}

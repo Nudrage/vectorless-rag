@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1315",
+  "section_number": "2.22.2.1",
+  "header": "Create an OpenSearch Service connector",
+  "content": "To create a connector, send a POST request to the OpenSearch Service domain endpoint. You can\nuse curl, the sample Python client, Postman, or another method to send a signed request. Note\nthat you can't use a POST request in the Kibana console. The request takes the following format:\nPOST domain-endpoint/_plugins/_ml/connectors/_create\n{\n\"name\": \"Cohere Connector: embedding\",\n\"description\": \"The connector to cohere embedding model\",\n\"version\": 1,\n\"protocol\": \"http\",\n\"credential\": {\n\"secretArn\": \"arn:aws:secretsmanager:region:account-id:secret:cohere-key-id\",\n\"roleArn\": \"arn:aws:iam::account-id:role/opensearch-secretmanager-role\"\n},\n\"actions\": [\n{\n\"action_type\": \"predict\",\n\"method\": \"POST\",\n\"url\": \"https://api.cohere.ai/v1/embed\",\n\"headers\": {\n\"Authorization\": \"Bearer ${credential.secretArn.cohere-key-used-in-\nsecrets-manager}\"\n},\n\"request_body\": \"{ \\\"texts\\\": ${parameters.texts}, \\\"truncate\\\": \\\"END\\\" }\"\n}\n]\n}\nThe request body for this request is diﬀerent than that of an open-source connector request in two\nways. Inside the credential ﬁeld, you pass the ARN for the IAM role that permits OpenSearch\nService to read from Secrets Manager, along with the ARN for the what secret. In the headers\nﬁeld, you refer to the secret using the secret key and the fact its coming from an ARN.\nIf your domain resides within a virtual private cloud (VPC), your computer must be connected\nto the VPC for the request to successfully create the AI connetor. Accessing a VPC varies by\nnetwork conﬁguration, but usually involves connecting to a VPN or corporate network. To\ncheck that you can reach your OpenSearch Service domain, navigate to https://your-vpc-\nCreate an OpenSearch Service connector\n1796\nAmazon OpenSearch Service\nDeveloper Guide\ndomain.region.es.amazonaws.com in a web browser and verify that you receive the default\nJSON response.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1825,
+      "end": 1826
+    },
+    "content_stats": {
+      "char_count": 1845,
+      "word_count": 250
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service ML connectors for third-party platforms",
+      "children": [
+        "Sample Python client"
+      ]
+    }
+  }
+}

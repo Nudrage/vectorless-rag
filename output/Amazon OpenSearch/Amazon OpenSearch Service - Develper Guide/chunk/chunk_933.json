@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_933",
+  "section_number": "2.14.4.2.1",
+  "header": "Create the Lambda deployment package",
+  "content": "Deployment packages are ZIP or JAR ﬁles that contain your code and its dependencies. This\nsection includes Python sample code. For other programming languages, see Lambda deployment\npackages in the AWS Lambda Developer Guide.\nLoading streaming data from OpenSearch Ingestion\n1447\nAmazon OpenSearch Service\nDeveloper Guide\n1.\nCreate a directory. In this sample, we use the name s3-to-opensearch.\n2.\nCreate a ﬁle within the directory named sample.py:\nimport boto3\nimport re\nimport requests\nfrom requests_aws4auth import AWS4Auth\nregion = '' # e.g. us-west-1\nservice = 'es'\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\nhost = '' # the OpenSearch Service domain, e.g. https://search-mydomain.us-\nwest-1.es.amazonaws.com\nindex = 'lambda-s3-index'\ndatatype = '_doc'\nurl = host + '/' + index + '/' + datatype\nheaders = { \"Content-Type\": \"application/json\" }\ns3 = boto3.client('s3')\n# Regular expressions used to parse some simple log lines\nip_pattern = re.compile('(\\d+\\.\\d+\\.\\d+\\.\\d+)')\ntime_pattern = re.compile('\\[(\\d+\\/\\w\\w\\w\\/\\d\\d\\d\\d:\\d\\d:\\d\\d:\\d\\d\\s-\\d\\d\\d\\d)\\]')\nmessage_pattern = re.compile('\\\"(.+)\\\"')\n# Lambda execution starts here\ndef handler(event, context):\nfor record in event['Records']:\n# Get the bucket name and key for the new file\nbucket = record['s3']['bucket']['name']\nkey = record['s3']['object']['key']\n# Get, read, and split the file into lines\nobj = s3.get_object(Bucket=bucket, Key=key)\nbody = obj['Body'].read()\nlines = body.splitlines()\n# Match the regular expressions to each line and index the JSON\nLoading streaming data from Amazon S3\n1448\nAmazon OpenSearch Service\nDeveloper Guide\nfor line in lines:\nline = line.decode(\"utf-8\")\nip = ip_pattern.search(line).group(1)\ntimestamp = time_pattern.search(line).group(1)\nmessage = message_pattern.search(line).group(1)\ndocument = { \"ip\": ip, \"timestamp\": timestamp, \"message\": message }\nr = requests.post(url, auth=awsauth, json=document, headers=headers)\nEdit the variables for region and host.\n3.\nInstall pip if you haven't already, then install the dependencies to a new package directory:\ncd s3-to-opensearch\npip install --target ./package requests\npip install --target ./package requests_aws4auth\nAll Lambda execution environments have Boto3 installed, so you don't need to include it in\nyour deployment package.\n4.\nPackage the application code and dependencies:\ncd package\nzip -r ../lambda.zip .\ncd ..\nzip -g lambda.zip sample.py",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1476,
+      "end": 1478
+    },
+    "content_stats": {
+      "char_count": 2524,
+      "word_count": 328
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon S3",
+      "children": []
+    }
+  }
+}

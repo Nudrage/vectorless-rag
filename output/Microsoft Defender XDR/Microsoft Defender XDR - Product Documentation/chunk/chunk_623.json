@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_623",
+  "section_number": "155.1.1.57.5",
+  "header": "Required permissions for Action center tasks",
+  "content": "Membership in a role group in Email & collaboration permissions with the Search\nand Purge role assigned. By default, this role is assigned only to the Data\nInvestigator and Organization Management role groups in Email & collaboration\npermissions. You can add users to those role groups, or you can create a new role\ngroup in Email & collaboration permissions with the Search and Purge role\nassigned, and add the users to the custom role group.\nEmail & collaboration permissions in the Microsoft Defender portal:\nMicrosoft Defender for Office 365 remediation (Office content and email):\nMembership in the Security Administrator role group\nand\nMembership in a role group in Email & collaboration permissions with the Search\nand Purge role assigned. By default, this role is assigned only to the Data\nInvestigator and Organization Management role groups in Email & collaboration\npermissions. You can add users to those role groups, or you can create a new role\ngroup in Email & collaboration permissions with the Search and Purge role\nassigned, and add the users to the custom role group.\nMicrosoft Defender XDR Unified role based access control (RBAC)\nMicrosoft Defender for Endpoint remediation: Security operations \\ Security data \\\nResponse (manage).\nMicrosoft Defender for Office 365 remediation (Office content and email, if Email &\ncollaboration > Defender for Office 365 permissions is\nActive. Affects the\nDefender portal only, not PowerShell):\nRead access for email and Teams message headers: Security operations/Raw data\n(email & collaboration)/Email & collaboration metadata (read).\nRemediate malicious email: Security operations/Security data/Email &\ncollaboration advanced actions (manage).\nDefender for Endpoint permissions:\nMicrosoft Defender for Endpoint remediation (devices): Membership in the Active\nremediation actions role.\n Tip\nMembership in the Security Administrator role group Email & collaboration\npermissions doesn't grant access to the Action center or Microsoft Defender XDR\ncapabilities. For those, you need to be a member of the Security Administrator role\nin Microsoft Entra permissions.\nView and manage remediation actions\n Tip\nMembers of the Global Administrator role in Microsoft Entra ID can approve or reject any\npending action in the Action center. However, as a best practice, you should limit the\nmembers of the Global Administrator role. We recommend using the alternative roles and\nrole groups as described in the previous list for Action center permissions.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 399,
+      "end": 401
+    },
+    "content_stats": {
+      "char_count": 2499,
+      "word_count": 378
+    },
+    "hierarchy": {
+      "parent": "The Action center",
+      "children": []
+    }
+  }
+}

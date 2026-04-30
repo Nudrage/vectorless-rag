@@ -1,0 +1,42 @@
+{
+  "chunk_id": "chunk_233",
+  "section_number": "2.6.21.2",
+  "header": "Monitoring pipeline metrics",
+  "content": "You can monitor Amazon OpenSearch Ingestion pipelines using Amazon CloudWatch, which\ncollects raw data and processes it into readable, near real-time metrics. These statistics are kept for\n15 months, so that you can access historical information and gain a better perspective on how your\nMonitoring pipeline metrics\n331\nAmazon OpenSearch Service\nDeveloper Guide\nweb application or service is performing. You can also set alarms that watch for certain thresholds,\nand send notiﬁcations or take actions when those thresholds are met. For more information, see\nthe Amazon CloudWatch User Guide.\nThe OpenSearch Ingestion console displays a series of charts based on the raw data from\nCloudWatch on the Performance tab for each pipeline.\nOpenSearch Ingestion reports metrics from most supported plugins. If certain plugins don't have\ntheir own table below, it means that they don't report any plugin-speciﬁc metrics. Pipeline metrics\nare published in the AWS/OSIS namespace.\nTopics\n• Common metrics\n• Buﬀer metrics\n• Signature V4 metrics\n• Bounded blocking buﬀer metrics\n• Otel trace source metrics\n• Otel metrics source metrics\n• Http metrics\n• S3 metrics\n• Aggregate metrics\n• Date metrics\n• Lambda metrics\n• Grok metrics\n• Otel trace raw metrics\n• Otel trace group metrics\n• Service map stateful metrics\n• OpenSearch metrics\n• System and metering metrics",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 360,
+      "end": 361
+    },
+    "content_stats": {
+      "char_count": 1352,
+      "word_count": 213
+    },
+    "hierarchy": {
+      "parent": "Logging and monitoring Amazon OpenSearch Ingestion with Amazon CloudWatch",
+      "children": [
+        "Common metrics",
+        "Buﬀer metrics",
+        "Signature V4 metrics",
+        "Bounded blocking buﬀer metrics",
+        "Otel trace source metrics",
+        "Otel metrics source metrics",
+        "Http metrics",
+        "S3 metrics",
+        "Aggregate metrics",
+        "Date metrics",
+        "Lambda metrics",
+        "Grok metrics",
+        "Otel trace raw metrics",
+        "Otel trace group metrics",
+        "Service map stateful metrics",
+        "OpenSearch metrics",
+        "System and metering metrics"
+      ]
+    }
+  }
+}

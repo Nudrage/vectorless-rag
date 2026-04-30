@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1100",
+  "section_number": "1.1.155.2.3.1",
+  "header": "Create a dynamic alert title and description (Preview)",
+  "content": "You can dynamically craft your alert’s title and description by using the results of your query to\nmake them accurate and indicative. This feature can boost SOC analysts’ efficiency when\ntriaging alerts and incidents, and when trying to quickly understand the essence of an alert.\nTo dynamically configure the alert’s title or description, integrate them into the Alert details\nsection by using the free text names of columns that are available in your query results and\nsurrounding them with double curly brackets.\nFor example: User {{AccountName}} unexpectedly signed in from {{Location}}\nTo help you decide on the exact column names you want to reference, you can select Explore\nquery and results, which opens the Advanced hunting context pane on top of the rule creation\nwizard, where you can examine your query logic and its results.\nYou can further enhance your SOC analysts’ productivity by showing important details in the\nalert side panel. You can surface events’ data in alerts that are constructed from those events.\n７ Note\nThe number of columns you can reference in each field is limited to three.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 831,
+      "end": 832
+    },
+    "content_stats": {
+      "char_count": 1111,
+      "word_count": 182
+    },
+    "hierarchy": {
+      "parent": "3. Define alert enrichment details",
+      "children": []
+    }
+  }
+}

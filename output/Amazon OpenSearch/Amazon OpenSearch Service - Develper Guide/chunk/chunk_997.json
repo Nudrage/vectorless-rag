@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_997",
+  "section_number": "2.15.8",
+  "header": "Learning to Rank for Amazon OpenSearch Service",
+  "content": "OpenSearch uses a probabilistic ranking framework called BM-25 to calculate relevance scores. If\na distinctive keyword appears more frequently in a document, BM-25 assigns a higher relevance\nscore to that document. This framework, however, doesn’t take into account user behavior like\nclick-through data, which can further improve relevance.\nLearning to Rank is an open-source plugin that lets you use machine learning and behavioral data\nto tune the relevance of documents. It uses models from the XGBoost and Ranklib libraries to\nrescore the search results. The Elasticsearch LTR plugin was initially developed by OpenSource\nConnections, with signiﬁcant contributions by Wikimedia Foundation, Snagajob Engineering,\nBonsai, and Yelp Engineering. The OpenSearch version of the plugin is derived from the\nElasticsearch LTR plugin.\nLearning to Rank requires OpenSearch or Elasticsearch 7.7 or later. To use the Learning to Rank\nplugin, you must have full admin permissions. To learn more, see the section called “Modifying the\nmaster user”.\nNote\nThis documentation provides a general overview of the Learning to Rank plugin and helps\nyou get started using it. Full documentation, including detailed steps and API descriptions,\nis available in the Learning to Rank documentation.\nTopics\n• Getting started with Learning to Rank\n• Learning to Rank API",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1552,
+      "end": 1552
+    },
+    "content_stats": {
+      "char_count": 1346,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": [
+        "Getting started with Learning to Rank",
+        "Learning to Rank API"
+      ]
+    }
+  }
+}

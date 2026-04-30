@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_964",
+  "section_number": "2.15.5.3",
+  "header": "Importing and associating packages",
+  "content": "The console is the simplest way to import a custom dictionary into OpenSearch Service. When you\nimport a dictionary from Amazon S3, OpenSearch Service stores its own copy of the package and\nautomatically encrypts that copy using AES-256 with OpenSearch Service-managed keys.\nOptional plugins are already pre-installed in OpenSearch Service so you don't need to upload them\nyourself, but you do need to associate a plugin to a domain. Available plugins are listed on the\nPackages screen in the console.\nImport and associate a package to a domain\n1.\nIn the Amazon OpenSearch Service console, choose Packages.\n2.\nChoose Import package.\n3.\nGive the package a descriptive name.\n4.\nProvide the S3 path to the ﬁle, and then choose Import.\n5.\nReturn to the Packages screen.\n6.\nWhen the package status is Available, select it.\n7.\nChoose Associate to a domain.\n8.\nSelect a domain, and then choose Next. Review the packages and choose Associate.\n9.\nIn the navigation pane, choose your domain and go to the Packages tab.\n10. If the package is a custom dictionary, note the ID when the package becomes Available. Use\nanalyzers/id as the ﬁle path in requests to OpenSearch.\nImporting and associating packages\n1477\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1506,
+      "end": 1507
+    },
+    "content_stats": {
+      "char_count": 1241,
+      "word_count": 205
+    },
+    "hierarchy": {
+      "parent": "Importing and managing packages in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_953",
+  "section_number": "2.15.2",
+  "header": "Request body searches",
+  "content": "To perform more complex searches, use the HTTP request body and the OpenSearch domain-\nspeciﬁc language (DSL) for queries. The query DSL lets you specify the full range of OpenSearch\nsearch options.\nRequest body searches\n1467\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nYou can't include Unicode special characters in a text ﬁeld value, or the value will be\nparsed as multiple values separated by the special character. This incorrect parsing can\nlead to unintentional ﬁltering of documents and potentially compromise control over their\naccess. For more information, see A note on Unicode special characters in text ﬁelds in the\nOpenSearch documentation.\nThe following match query is similar to the ﬁnal URI search example:\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search\n{\n\"size\": 20,\n\"sort\": {\n\"year\": {\n\"order\": \"desc\"\n}\n},\n\"query\": {\n\"query_string\": {\n\"default_field\": \"title\",\n\"query\": \"house\"\n}\n}\n}\nNote\nThe _search API accepts HTTP GET and POST for request body searches, but not all HTTP\nclients support adding a request body to a GET request. POST is the more universal choice.\nIn many cases, you might want to search several ﬁelds, but not all ﬁelds. Use the multi_match\nquery:\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search\n{\n\"size\": 20,\n\"query\": {\nRequest body searches\n1468\nAmazon OpenSearch Service\nDeveloper Guide\n\"multi_match\": {\n\"query\": \"house\",\n\"fields\": [\"title\", \"plot\", \"actors\", \"directors\"]\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1496,
+      "end": 1498
+    },
+    "content_stats": {
+      "char_count": 1472,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": [
+        "Boosting ﬁelds",
+        "Search result highlighting",
+        "Count API"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_505",
+  "section_number": "13.2.1",
+  "header": "Entity details",
+  "content": "７ Note\nInvestigation Priority Score was deprecated on December 3, 2024. The Investigation\nPriority Score breakdown and the Scored activities cards are no longer available.\n(Preview) If you enable Microsoft Sentinel User and Entity Behavior Analytics (UEBA), you'll\nsee:\nThe user's top three UEBA anomalies from the last 30 days.\nLinks to launch pre-built advanced hunting queries and view all anomalous behaviors\nrelated to the user on the Sentinel events tab. This is available only for customers who\nhave UEBA enabled.\nThis card highlights important Microsoft Defender for Identity security settings for the user's\naccount. For example, it shows if the user can bypass the password by pressing enter, or if the\nuser's password never expires. Review these flags to identify account settings that might need\nyour attention.\nFor more information, see User Account Control flags.\nThis section shows the user entity's place in the organizational hierarchy as reported by\nMicrosoft Defender for Identity.\nMicrosoft Defender for Identity pulls tags out of Active Directory to give you a single interface\nfor monitoring your Active Directory users and entities. Tags provide you with details from\nActive Directory about the entity, and include:\nName\nDescription\nNew\nIndicates that the entity was created less than 30 days ago.\nDeleted\nIndicates that the entity was permanently deleted from Active Directory.\nDisabled\nIndicates that the entity is currently disabled in Active Directory. The disabled attribute is\nan Active Directory flag that's available for user accounts, computer accounts, and other\nobjects to indicate that the object isn't currently in use.\nWhen an object is disabled, it can't be used to sign in or perform actions in the domain.\nEnabled\nIndicates that the entity is currently enabled in Active Directory. The entity is currently in\nuse, and can be used to sign in or perform actions in the domain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 315,
+      "end": 316
+    },
+    "content_stats": {
+      "char_count": 1914,
+      "word_count": 302
+    },
+    "hierarchy": {
+      "parent": "Overview",
+      "children": []
+    }
+  }
+}

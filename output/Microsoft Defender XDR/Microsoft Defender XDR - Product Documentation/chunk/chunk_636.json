@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_636",
+  "section_number": "155.1.1.59.3",
+  "header": "Investigation details",
+  "content": "In the Investigation details view, you can see information on the Investigation graph, Alerts,\nMailboxes, Devices, Users, Evidence, Entities, Log, and Pending actions tabs, described in the\nfollowing table.\nTab\nDescription\nInvestigation\ngraph\nProvides a visual representation of the investigation. Depicts entities and lists threats\nfound, along with alerts and whether any actions are awaiting approval.\nYou can select an item on the graph to view more details. For example, selecting the\nEvidence icon takes you to the Evidence tab, where you can see detected entities and\ntheir verdicts.\nAlerts\nLists alerts associated with the investigation. Alerts can come from threat protection\nfeatures on a user's device, in Office apps, Microsoft Defender for Cloud Apps, and\nother Microsoft Defender XDR features.\n\n７ Note\nThe specific tabs you see in an investigation details page depends on what your\nsubscription includes. For example, if your subscription does not include Microsoft\nDefender for Office 365 Plan 2, you won't see a Mailboxes tab.\nﾉ\nExpand table\nTab\nDescription\nIf you see Unsupported alert type, it means that automated investigation capabilities\ncannot pick up that alert to run an automated investigation. However, you can\ninvestigate these alerts manually.\nDevices\nLists devices included in the investigation along with their remediation level.\n(Remediation levels correspond to the automation level for device groups.)\nMailboxes\nLists mailboxes that are impacted by detected threats.\nUsers\nLists user accounts that are impacted by detected threats.\nEvidence\nLists pieces of evidence raised by alerts or investigations. Includes verdicts (Malicious,\nSuspicious, Unknown, or No threats found) and remediation status.\nEntities\nProvides details about each analyzed entity, including a verdict for each entity type\n(Malicious, Suspicious, or No threats found).\nLog\nProvides a chronological, detailed view of all the investigation actions taken after an\nalert was triggered.\nPending actions\nhistory\nLists items that require approval to proceed. Go to the Action center\n(https://security.microsoft.com/action-center\n) to approve pending actions.\nThe following table lists investigation states and what they indicate.\nInvestigation state\nDefinition\nBenign\nArtifacts were investigated and a determination was made that no threats were\nfound.\nPendingResource\nAn automated investigation is paused because either a remediation action is\npending approval, or the device on which an artifact was found is temporarily\nunavailable.\nUnsupportedAlertType\nAn automated investigation is not available for this type of alert. Further\ninvestigation can be done manually, by using advanced hunting.\nFailed\nAt least one investigation analyzer ran into a problem where it couldn't\ncomplete the investigation. If an investigation fails after remediation actions\nwere approved, the remediation actions might still have succeeded.\nSuccessfully\nremediated\nAn automated investigation completed, and all remediation actions were\ncompleted or approved.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 407,
+      "end": 409
+    },
+    "content_stats": {
+      "char_count": 3038,
+      "word_count": 437
+    },
+    "hierarchy": {
+      "parent": "Details and results of an automated investigation",
+      "children": []
+    }
+  }
+}

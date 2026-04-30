@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1333",
+  "section_number": "155.1.1.187.1",
+  "header": "Configuring permissions in customer tenants",
+  "content": "） Important\nOnce you select the permissions you'd like to grant to our experts, we create the following\npolicies in your tenant using the Security Administrator or Global Administrator context:\nConfigure Microsoft Experts as a service provider – This setting lets our experts access\nthe tenant environment as external collaborators without requiring you to create\naccounts for them.\nConfigure role assignments for our experts – This setting controls the roles our experts\nare allowed in the tenant. You select the appropriate roles during the onboarding process\nConfigure cross-tenant access settings with MFA and compliant device as the trust\nsettings – This setting configures a trust relationship between customer and Microsoft\nExperts tenants based on MFA and device compliance in the Microsoft Experts tenant.\nThis policy can be found under Microsoft Entra ID > External Identities > Cross-tenant\naccess Settings with the name Microsoft Experts.\nConfigure conditional access policies – These policies restrict our experts to only access\nyour tenant from the Microsoft Experts secure workstations with MFA verification. Two\npolicies are configured with the naming convention Microsoft Security Experts-<policy\nname>-DO NOT DELETE.\nThese policies are configured during the onboarding process and require the relevant\nadministrator to stay signed in to complete the steps. Once the above policies are created and\nthe permissions setup is considered complete, you'll see a notification that the setup is\ncomplete.\nImportant considerations for Microsoft Defender Experts for XDR\nMicrosoft recommends that you use roles with the fewest permissions. This helps improve\nsecurity for your organization. Global Administrator is a highly privileged role that should\nbe limited to emergency scenarios when you can't use an existing role.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1002,
+      "end": 1003
+    },
+    "content_stats": {
+      "char_count": 1830,
+      "word_count": 271
+    },
+    "hierarchy": {
+      "parent": "How Microsoft Defender Experts for XDR permissions work",
+      "children": [
+        "See also"
+      ]
+    }
+  }
+}

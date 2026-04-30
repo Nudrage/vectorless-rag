@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1452",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Windows\nThis event is emitted when a hosted service (that is, a service inside a SvcHost.exe binary) is started by the service control manager (SCM).\nServiceDisplayName, TargetProcessId, ImageFileName and TargetThreadId are all for the new service. TargetThreadId is the primary thread of the new\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n402/1226\nhosted service. The data will indicate the initial process (command-line tool, custom utility, or GUI application) or remote address/hostname that resulted in\nthis action. Also, starting and stopping hosted services multiple times during boot might not always show up in this event due to caching done by the SCM.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 402,
+      "end": 403
+    },
+    "content_stats": {
+      "char_count": 862,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "HostedServiceStarted",
+      "children": []
+    }
+  }
+}

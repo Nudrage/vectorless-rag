@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1021",
+  "section_number": "155.1.1.126",
+  "header": "DeviceTvmSecureConfigurationAssessment",
+  "content": "Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nEach row in the DeviceTvmSecureConfigurationAssessment  table contains an assessment event\nfor a specific security configuration from Microsoft Defender Vulnerability Management. Use\nthis reference to check the latest assessment results and determine whether devices are\ncompliant.\nYou can join this table with the DeviceTvmSecureConfigurationAssessmentKB table using\nConfigurationId  so you can, for example, view the text description of the configuration from\nthe ConfigurationDescription  column of the DeviceTvmSecureConfigurationAssessmentKB  table,\nin the configuration assessment results.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\nOSPlatform\nstring\nPlatform of the operating system running on the device.\nIndicates specific operating systems, including variations within\nthe same family, such as Windows 11, Windows 10, and\nWindows 7.\nTimestamp\ndatetime\nDate and time when the record was generated\nConfigurationId\nstring\nUnique identifier for a specific configuration\nConfigurationCategory\nstring\nCategory or grouping to which the configuration belongs:\nApplication, OS, Network, Accounts, Security controls\nConfigurationSubcategory\nstring\nSubcategory or subgrouping to which the configuration belongs.\nIn many cases, string describes specific capabilities or features.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nConfigurationImpact\nreal\nRated impact of the configuration to the overall configuration\nscore (1-10)\nIsCompliant\nboolean\nIndicates whether the configuration or policy is properly\nconfigured\n* A value of True is Compliant\n* A value of False is Not Compliant\nIsApplicable\nboolean\nIndicates whether the configuration or policy applies to the\ndevice\n* A value of True is Applicable\n* A value of False is Not Applicable\nContext\ndynamic\nAdditional contextual information about the configuration or\npolicy\nIsExpectedUserImpact\nboolean\nIndicates whether there will be user impact if the configuration\nor policy is applied\nYou can try this example query to return information on devices with non-compliant antivirus\nconfigurations along with the relevant configuration metadata from the\nDeviceTvmSecureConfigurationAssessmentKB  table:\nKusto\nProactively hunt for threats\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\n// Get information on devices with antivirus configurations issues\nDeviceTvmSecureConfigurationAssessment\n| where ConfigurationSubcategory == 'Antivirus' and IsApplicable == 1 and\nIsCompliant == 0\n| join kind=leftouter (\nDeviceTvmSecureConfigurationAssessmentKB\n| project ConfigurationId, ConfigurationName, ConfigurationDescription,\nRiskDescription, Tags, ConfigurationImpact\n) on ConfigurationId\n| project DeviceName, OSPlatform, ConfigurationId, ConfigurationName,\nConfigurationCategory, ConfigurationSubcategory, ConfigurationDescription,\nRiskDescription, ConfigurationImpact, Tags",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 743,
+      "end": 744
+    },
+    "content_stats": {
+      "char_count": 3527,
+      "word_count": 455
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

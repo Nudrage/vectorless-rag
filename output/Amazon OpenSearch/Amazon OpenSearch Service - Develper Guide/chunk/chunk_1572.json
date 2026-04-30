@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1572",
+  "section_number": "2.29.26",
+  "header": "Node shard and storage skew",
+  "content": "Node shard skew is when one or more nodes within a cluster has signiﬁcantly more shards than\nthe other nodes. Node storage skew is when one or more nodes within a cluster has signiﬁcantly\nmore storage (disk.indices) than the other nodes. While both of these conditions can occur\ntemporarily, like when a domain has replaced a node and is still allocating shards to it, you should\naddress them if they persist.\nTo identify both types of skew, run the _cat/allocation API operation and compare the shards and\ndisk.indices entries in the response:\nshards    | disk.indices  | disk.used  | disk.avail   | disk.total   | disk.percent |\nhost     | ip       | node\n264    |       465.3mb  |    229.9mb  |       1.4tb   |       1.5tb   |             0 |\nx.x.x.x  | x.x.x.x  | node1\n115    |        7.9mb  |    83.7mb  |     49.1gb   |     49.2gb   |            0 |\nx.x.x.x  | x.x.x.x  | node2\n264    |       465.3mb  |    235.3mb  |       1.4tb   |       1.5tb   |             0 |\nx.x.x.x  | x.x.x.x  | node3\n116    |        7.9mb  |    82.8mb  |     49.1gb   |     49.2gb   |            0 |\nx.x.x.x  | x.x.x.x  | node4\n115    |        8.4mb  |      85mb  |     49.1gb   |     49.2gb   |            0 |\nx.x.x.x  | x.x.x.x  | node5\nWhile some storage skew is normal, anything over 10% from the average is signiﬁcant. When shard\ndistribution is skewed, CPU, network, and disk bandwidth usage can also become skewed. Because\nmore data generally means more indexing and search operations, the heaviest nodes also tend to\nbe the most resource-strained nodes, while the lighter nodes represent underutilized capacity.\nRemediation: Use shard counts that are multiples of the data node count to ensure that each index\nis distributed evenly across data nodes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2092,
+      "end": 2092
+    },
+    "content_stats": {
+      "char_count": 1742,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

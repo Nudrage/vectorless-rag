@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_135",
+  "section_number": "2.6.16.5",
+  "header": "Using an OpenSearch Ingestion pipeline with Amazon DynamoDB",
+  "content": "You can use the DynamoDB plugin to stream table events, such as creates, updates, and deletes, to\nAmazon OpenSearch Service domains and Amazon OpenSearch Serverless collections. The pipeline\nuses change data capture (CDC) for high-scale, low-latency streaming.\nYou can process DynamoDB data with or without a full initial snapshot.\nAmazon DynamoDB\n149\nAmazon OpenSearch Service\nDeveloper Guide\n• With a full snapshot – DynamoDB uses point-in-time recovery (PITR) to create a backup and\nuploads it to Amazon S3. OpenSearch Ingestion then indexes the snapshot in one or multiple\nOpenSearch indexes. To maintain consistency, the pipeline synchronizes all DynamoDB changes\nwith OpenSearch. This option requires you to enable both PITR and DynamoDB Streams.\n• Without a snapshot – OpenSearch Ingestion streams only new DynamoDB events. Choose this\noption if you already have a snapshot or need real-time streaming without historical data. This\noption requires you to enable only DynamoDB Streams.\nFor more information, see DynamoDB zero-ETL integration with Amazon OpenSearch Service in\nthe Amazon DynamoDB Developer Guide.\nTopics\n• Prerequisites\n• Step 1: Conﬁgure the pipeline role\n• Step 2: Create the pipeline\n• Data consistency\n• Mapping data types\n• Limitations\n• Recommended CloudWatch Alarms for DynamoDB",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 178,
+      "end": 179
+    },
+    "content_stats": {
+      "char_count": 1307,
+      "word_count": 197
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "Prerequisites",
+        "Step 1: Conﬁgure the pipeline role",
+        "Step 2: Create the pipeline",
+        "Data consistency",
+        "Mapping data types",
+        "Limitations",
+        "Recommended CloudWatch Alarms for DynamoDB"
+      ]
+    }
+  }
+}

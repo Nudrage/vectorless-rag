@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2516",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nContextTimeStamp\nSystem time of event creation.\nRemotePort\nLocalPort\nDomainName\nThe actual domain name being queried in this request.\nRemoteAddressIP4\nRemoteAddressIP6\nProtocol\nValues:\nIP (0)\nICMP (1)\nIGMP (2)\nTCP (6)\nUDP (17)\nIPV6 (41)\nGRE (47)\nICMPV6 (58)\nUNKNOWN (255)\nConnectionDirection\nValues:\nDIRECTION_OUTBOUND (0)\nDIRECTION_INBOUND (1)\nDIRECTION_NEITHER (2)\nDIRECTION_BOTH (3)\nDIRECTION_UNKNOWN (4)\nTrafficDirection\nValues:\nINBOUND (1)\nOUTBOUND (2)\nAppProtocol\nValues:\nUNSUPPORTED (0)\nDNS (100)\nSNMP (101)\nTLS (102)\nQUIC (103)\nSOCKS (104)\nWIREGUARD (105)\nNETBIOS (106)\nRFB (107)\nSSH (108)\nTELNET (109)\nHTTP (110)\nFTP (111)\nSMB (112)\nAFP (113)\nNFS (114)\nPOP (115)\nIMAP (116)\nSMTP (117)\nMQTT (118)\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n879/1226\nField\nDescription\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nEffectiveDomainName\nEffectiveRemotePort\nEffectiveRemoteAddressIP4\nEffectiveRemoteAddressIP6\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 879,
+      "end": 880
+    },
+    "content_stats": {
+      "char_count": 1575,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "AppProtocolDetected",
+      "children": []
+    }
+  }
+}

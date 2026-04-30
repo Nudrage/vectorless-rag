@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_707",
+  "section_number": "2.10.4.3.9",
+  "header": "Low disk watermark breach",
+  "content": "OpenSearch Service sends this event when all nodes in your cluster have less than 10% of available\nstorage space, or less than 10 GB. When all nodes breach the low disk watermark, any new index\nCluster health events\n1255\nAmazon OpenSearch Service\nDeveloper Guide\nresults in a yellow cluster, and when all nodes fall below the high disk watermark, it will lead to a\nred cluster.\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Amazon OpenSearch Service Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2017-12-01T13:12:22Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\":{\n\"event\":\"Low Disk Watermark Breach\",\n\"status\":\"Warning\",\n\"severity\":\"Medium\",\n\"description\":\"Low Disk Watermark threshold is about to be breached. Once the\nthreshold is breached, new index creation will be blocked on all\nnodes to prevent the cluster status from turning red. Please\nincrease disk size to suit your storage needs. For more information,\nsee https://docs.aws.amazon.com/opensearch-service/latest/\ndeveloperguide/handling-errors.html#troubleshooting-cluster-block\".\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1284,
+      "end": 1285
+    },
+    "content_stats": {
+      "char_count": 1212,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Cluster health events",
+      "children": []
+    }
+  }
+}

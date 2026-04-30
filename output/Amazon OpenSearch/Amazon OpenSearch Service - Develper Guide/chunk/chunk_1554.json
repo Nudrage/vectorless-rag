@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1554",
+  "section_number": "2.29.8",
+  "header": "JVM OutOfMemoryError",
+  "content": "A JVM OutOfMemoryError typically means that one of the following JVM circuit breakers was\nreached.\nCircuit breaker\nDescription\nCluster setting property\nParent Breaker\nTotal percentage of JVM\nheap memory allowed for\nall circuit breakers. The\ndefault value is 95%.\nindices.breaker.total.limit\nField Data Breaker\nPercentage of JVM heap\nmemory allowed to load\na single data ﬁeld into\nmemory. The default\nvalue is 40%. If you\nupload data with large\nﬁelds, you might need to\nraise this limit.\nindices.breaker.fielddata.l\nimit\nRequest Breaker\nPercentage of JVM heap\nmemory allowed for\ndata structures used\nto respond to a service\nrequest. The default value\nis 60%. If your service\nrequests involve calculati\nng aggregations, you\nmight need to raise this\nlimit.\nindices.breaker.request.limit\nJVM OutOfMemoryError\n2056\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2085,
+      "end": 2086
+    },
+    "content_stats": {
+      "char_count": 851,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

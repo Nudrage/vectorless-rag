@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "1.2.2",
+  "header": "Abuse report submitted",
+  "content": "An event indicating that an abuse report was submitted in Meet.\nEvent details\nEvent name\nabuse_report_submitted\nParameters\naction_description\nstring\nThe description for this action.\naction_reason\nstring\nThe reason for this action. Possible\nvalues:\nchild_endangerment\nLabel for a type of abuse.\nfraud\nLabel for a type of abuse.\nharassment\nLabel for a type of abuse.\nmalware\nLabel for a type of abuse.\nother\nLabel for a type of abuse.\nsexual\nLabel for a type of abuse.\nspam\nLabel for a type of abuse.\nviolence\nLabel for a type of abuse.\ncalendar_event_id\nstring\nThe identifier of the Google Calendar\nevent associated with the conference.\nEvent details\nconference_id\nstring\nThe unique identifier of the conference.\ndevice_type\nstring\nThe participant's device type. Possible\nvalues:\nandroid\nAndroid.\nchromebase\nChromebase (Meet hardware).\nchromebox\nChromebox (Meet hardware).\ninterop\nEndpoint joining over the 3rd party\nsystem.\nios\niOS.\njamboard\nJamboard.\nother_client\nOther device type.\npstn_in\nPSTN dial-in, that is, a participant\nusing a telephone to call into the\nmeeting.\npstn_out\nPSTN dial-out, that is, a telephone\ncall from the meeting.\nsmart_display\nSmart display.\nweb\nWeb browser.\ndisplay_name\nstring\nHuman readable name of the endpoint\nthat is displayed in the meeting.\nendpoint_id\nstring\nThe unique endpoint identifier for the\ncurrent call. Joining the same\nconference twice generates two\ndistinct endpoint IDs.\nEvent details\nidentifier\nstring\nThe unique participant identifier (for\nexample, an email address, phone\nnumber, or device ID).\nidentifier_type\nstring\nIndicates the type of the participant\nidentifier. Possible values:\ndevice_id\nThe unique device identifier of the\nMeet hardware.\nemail_address\nThe participant's email address.\nVisible when the participant is in-\ndomain or when the meeting is\norganized by a user who is in-\ndomain.\nphone_number\nThe participant's telephone number.\nip_address\nstring\nThe participant's external IP address.\nis_external\nboolean\nIndicates if the participant is external\nto your organization.\nmeeting_code\nstring\nThe meeting code for the Google Meet\nconference (for example, 'abc-hexp-\ntqy'). Recurrent meetings have the\nsame meeting code.\norganizer_email\nstring\nThe email address of the meeting\ncreator.\nproduct_type\nstring\nThe type of meeting product (Classic\nHangouts/Google Meet). Possible\nvalues:\nclassic_hangouts\nClassic Hangouts.\nmeet\nGoogle Meet.\nunknown_product\nOther product type.\nEvent details\ntarget_display_names\nstring\nThe target display names for this\naction.\ntarget_email\nstring\nThe target email for this action.\ntarget_phone_number\nstring\nThe target phone number for this\naction.\nSample request\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 4
+    },
+    "content_stats": {
+      "char_count": 2686,
+      "word_count": 384
+    },
+    "hierarchy": {
+      "parent": "Call event",
+      "children": []
+    }
+  }
+}

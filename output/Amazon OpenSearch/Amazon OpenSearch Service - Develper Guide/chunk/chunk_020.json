@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_020",
+  "section_number": "2.5.1",
+  "header": "Create an Amazon OpenSearch Service domain",
+  "content": "Important\nThis is a concise tutorial for conﬁguring a test  Amazon OpenSearch Service domain. Do not\nuse this process to create production domains. For a comprehensive version of the same\nprocess, see Creating and managing domains.\nAn OpenSearch Service domain is synonymous with an OpenSearch cluster. Domains are clusters\nwith the settings, instance types, instance counts, and storage resources that you specify. You can\ncreate an OpenSearch Service domain by using the console, the AWS CLI, or the AWS SDKs.\nTo create an OpenSearch Service domain using the console\n1.\nGo to https://aws.amazon.com and choose Sign In to the Console.\n2.\nUnder Analytics, choose Amazon OpenSearch Service.\n3.\nChoose Create domain.\n4.\nProvide a name for the domain. The examples in this tutorial use the name movies.\n5.\nFor the domain creation method, choose Standard create.\nNote\nTo quickly conﬁgure a production domain with best practices, you can choose Easy\ncreate. For the development and testing purposes of this tutorial, we'll use Standard\ncreate.\n6.\nFor templates, choose Dev/test.\n7.\nFor the deployment option, choose Domain with standby.\n8.\nFor Version, choose the latest version.\n9.\nFor now, ignore the Data nodes, Warm and cold data storage, Dedicated master nodes,\nSnapshot conﬁguration, and Custom endpoint sections.\n10. For simplicity in this tutorial, use a public access domain. Under Network, choose Public\naccess.\n11. In the ﬁne-grained access control settings, keep the Enable ﬁne-grained access control check\nbox selected. Select Create master user and provide a username and password.\nCreate a domain\n16\nAmazon OpenSearch Service\nDeveloper Guide\n12. For now, ignore the SAML authentication and Amazon Cognito authentication sections.\n13. For Access policy, choose Only use ﬁne-grained access control. In this tutorial, ﬁne-grained\naccess control handles authentication, not the domain access policy.\n14. Ignore the rest of the settings and choose Create. New domains typically take 15–30 minutes\nto initialize, but can take longer depending on the conﬁguration. After your domain initializes,\nselect it to open its conﬁguration pane. Note the domain endpoint under General information\n(for example, https://search-my-domain.us-east-1.es.amazonaws.com), which\nyou'll use in the next step.\nNext: Upload data to an OpenSearch Service domain for indexing",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 45,
+      "end": 46
+    },
+    "content_stats": {
+      "char_count": 2356,
+      "word_count": 356
+    },
+    "hierarchy": {
+      "parent": "Getting started with Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

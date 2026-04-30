@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_168",
+  "section_number": "2.6.16.11.1",
+  "header": "Using an OpenSearch Ingestion pipeline with Amazon Security Lake as a source",
+  "content": "You can use the Amazon S3 source plugin within your OpenSearch Ingestion pipeline to ingest\ndata from Amazon Security Lake. Security Lake automatically centralizes security data from AWS\nenvironments, on-premises systems, and SaaS providers into a purpose-built data lake.\nAmazon Security Lake has the following metadata attributes within a pipeline:\n• bucket_name: The name of the Amazon S3 bucket created by Security Lake for storing security\ndata.\n• path_prefix: The custom source name deﬁned in the Security Lake IAM role policy.\n• region: The AWS Region where the Security Lake S3 bucket is located.\n• accountID: The AWS account ID in which Security Lake is enabled.\n• sts_role_arn: The ARN of the IAM role intended for use with Security Lake.\nPrerequisites\nBefore you create your OpenSearch Ingestion pipeline, perform the following steps:\n• Enable Security Lake.\n• Create a subscriber in Security Lake.\n• Choose the sources that you want to ingest into your pipeline.\n• For Subscriber credentials, add the ID of the AWS account where you intend to create the\npipeline. For the external ID, specify OpenSearchIngestion-{accountid}.\n• For Data access method, choose S3.\n• For Notiﬁcation details, choose SQS queue.\nWhen you create a subscriber, Security Lake automatically creates two inline permissions\npolicies—one for S3 and one for SQS. The policies take the following format:\nAmazonSecurityLake-amzn-s3-demo-bucket-S3 and AmazonSecurityLake-AWSDemo-\nAmazon Security Lake\n237\nAmazon OpenSearch Service\nDeveloper Guide\nSQS. To allow your pipeline to access the subscriber sources, you must associate the required\npermissions with your pipeline role.\nConﬁgure the pipeline role\nCreate a new permissions policy in IAM that combines only the required permissions from the two\npolicies that Security Lake automatically created. The following example policy shows the least\nprivilege required for an OpenSearch Ingestion pipeline to read data from multiple Security Lake\nsources:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Effect\":\"Allow\",\n\"Action\":[\n\"s3:GetObject\"\n],\n\"Resource\":[\n\"arn:aws:s3:::aws-security-data-lake-us-east-1-abcde/aws/\nLAMBDA_EXECUTION/1.0/*\",\n\"arn:aws:s3:::aws-security-data-lake-us-east-1-abcde/aws/S3_DATA/1.0/\n*\",\n\"arn:aws:s3:::aws-security-data-lake-us-east-1-abcde/aws/\nVPC_FLOW/1.0/*\",\n\"arn:aws:s3:::aws-security-data-lake-us-east-1-abcde/aws/ROUTE53/1.0/\n*\",\n\"arn:aws:s3:::aws-security-data-lake-us-east-1-abcde/aws/\nSH_FINDINGS/1.0/*\"\n]\n},\n{\n\"Effect\":\"Allow\",\n\"Action\":[\n\"sqs:ReceiveMessage\",\n\"sqs:DeleteMessage\"\n],\n\"Resource\":[\n\"arn:aws:sqs:us-east-1:111122223333:AmazonSecurityLake-abcde-Main-\nQueue\"\nAmazon Security Lake\n238\nAmazon OpenSearch Service\nDeveloper Guide\n]\n}\n]\n}\nImportant\nSecurity Lake doesn’t manage the pipeline role policy for you. If you add or remove sources\nfrom your Security Lake subscription, you must manually update the policy. Security Lake\ncreates partitions for each log source, so you need to manually add or remove permissions\nin the pipeline role.\nYou must attach these permissions to the IAM role that you specify in the sts_role_arn option\nwithin the S3 source plugin conﬁguration, under sqs.\nversion: \"2\"\nsource:\ns3:\n...\nsqs:\nqueue_url: \"https://sqs.us-east-1amazonaws.com/account-id/\nAmazonSecurityLake-amzn-s3-demo-bucket-Main-Queue\"\naws:\n...\nprocessor:\n...\nsink:\n- opensearch:\n...\nCreate the pipeline\nAfter you add the permissions to the pipeline role, use the preconﬁgured Security Lake blueprint to\ncreate the pipeline. For more information, see the section called “Working with blueprints”.\nYou must specify the queue_url option within the s3 source conﬁguration, which is the Amazon\nSQS queue URL to read from. To format the URL, locate the Subscription endpoint in the\nsubscriber conﬁguration and change arn:aws: to https://. For example, https://sqs.us-\neast-1amazonaws.com/account-id/AmazonSecurityLake-AWSDemo-Main-Queue.\nAmazon Security Lake\n239\nAmazon OpenSearch Service\nDeveloper Guide\nThe sts_role_arn that you specify within the S3 source conﬁguration must be the ARN of the\npipeline role.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 266,
+      "end": 269
+    },
+    "content_stats": {
+      "char_count": 4079,
+      "word_count": 533
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon Security Lake",
+      "children": []
+    }
+  }
+}

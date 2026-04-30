@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2670",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n932/1226\nField\nDescription\nCrashDumpFilePath\nPlatformVersionString\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nRawThreadId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nProcessStartTime\nThe time the process began in UNIX epoch time (in decimal, non-hex format).\nProcessEndTime\nThe time the process finished (in decimal, non-hex format).\nExceptionCode\nValues:\nSTATUS_SUCCESS (0)\nEXCEPTION_ACCESS_VIOLATION (0xC0000005)\nSTATUS_ILLEGAL_INSTRUCTION (0xC000001D)\nSTATUS_PRIVILEGED_INSTRUCTION (0xC0000096)\nSTATUS_SINGLE_STEP (0x80000004)\nSTATUS_UMPP_DELAY_HOOK (0x600F0013)\nSTATUS_UMPP_NO_HOOK_ACG (0xE00F003B)\nSTATUS_UMPP_INJECTION_UWP_ABORTED (0xE00F004C)\nSTATUS_UMPP_INJECTION_SECUREPROCESS_ABORTED (0xE00F0060)\nSTATUS_UMPP_INJECTION_PROTECTEDPROCESS_ABORTED (0xE00F0061)\nSTATUS_UMPP_INJECTION_MITIGATIONS_ABORTED (0xE00F0062)\nSTATUS_UMPP_INJECTION_AVCOMPAT_ABORTED (0xE00F0063)\nSTATUS_UMPP_API_HOOKED (0xE00F002F)\nExceptionRva\nFullExceptionRecord\nCrashLoadedModules\nCrashLoadedModulesVersion\nValues:\nINITIAL_VERSION (0)\nFullContext\nCrashThreadCallStack\nCrashThreadCallStackVersion Values:\nINITIAL_VERSION (0)\nStackHashMajor\nStackHashMinor\nStackHashVersion\nValues:\nINITIAL_VERSION (0)\nSystemUptime\nFalconServiceComponent\nValues:\nFALCON_SERVICE_INVALID_SOURCE (0)\nFALCON_SERVICE_SERVLET_UNIT (1)\nFALCON_SERVICE_CORE (2)\nFALCON_SERVICE_SERVLET_FXML_PROCESS_START (3)\nFALCON_SERVICE_SERVLET_FXML_EXECUTABLE_WRITE (4)\nFALCON_SERVICE_SERVLET_PROTOCOL_ANALYZER (5)\nFALCON_SERVICE_EXTENSIBILITY_TEST_MODULE (6)\nFALCON_SERVICE_SERVLET_BYTE_PATTERN_MEMORY_SCAN (7)\nFALCON_SERVICE_SERVLET_LEDGER (8)\nFALCON_SERVICE_SERVLET_DECOMPRESS (9)\nFALCON_SERVICE_SERVLET_FILE_METADATA (10)\nFALCON_SERVICE_SERVLET_VCI_MODULE (12)\nFALCON_SERVICE_SERVLET_SOURCE_LANGUAGE_PREDICTION (13)\nFALCON_SERVICE_SERVLET_NETWORK_SCAN (14)\nFALCON_SERVICE_KERNEL_MODE (15)\nFALCON_SERVICE_SERVLET_CONTENT_CLASSIFIER (16)\nFALCON_SERVICE_SERVLET_OFFICE_FILE_PREVENTION (17)\nFALCON_SERVICE_SERVLET_BEHAVIORAL_ANALYSIS (18)\nFALCON_SERVICE_PRINT_MONITOR (19)\nFALCON_SERVICE_SERVLET_HOST_INFO (20)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n933/1226\nField\nDescription\nFALCON_SERVICE_SERVLET_MEMORY_DUMP (21)\nFALCON_SERVICE_MAX_WINDOWS_ID (9999)\nFALCON_SERVICE_MIN_LINUX_ID (10000)\nFALCON_LINUX_SERVICE_FLOW (10001)\nFALCON_LINUX_SERVICE_TEST (10002)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 932,
+      "end": 934
+    },
+    "content_stats": {
+      "char_count": 2888,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "CsUmProcessCrashSummaryEvent",
+      "children": []
+    }
+  }
+}

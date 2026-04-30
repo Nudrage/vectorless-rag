@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1096",
+  "section_number": "2.17.1.1",
+  "header": "Using a proxy to access OpenSearch Service from Dashboards",
+  "content": "Note\nThis process is only applicable if your domain uses public access and you don't want to use\nCognito authentication. See the section called “Controlling access to Dashboards ”.\nBecause Dashboards is a JavaScript application, requests originate from the user's IP address. IP-\nbased access control might be impractical due to the sheer number of IP addresses you would\nneed to allow in order for each user to have access to Dashboards. One workaround is to place a\nproxy server between Dashboards and OpenSearch Service. Then you can add an IP-based access\npolicy that allows requests from only one IP address, the proxy's. The following diagram shows this\nconﬁguration.\nUsing a proxy to access OpenSearch Service from Dashboards\n1614\nAmazon OpenSearch Service\nDeveloper Guide\n1. This is your OpenSearch Service domain. IAM provides authorized access to this domain. An\nadditional, IP-based access policy provides access to the proxy server.\n2. This is the proxy server, running on an Amazon EC2 instance.\n3. Other applications can use the Signature Version 4 signing process to send authenticated\nrequests to OpenSearch Service.\n4. Dashboards clients connect to your OpenSearch Service domain through the proxy.\nUsing a proxy to access OpenSearch Service from Dashboards\n1615\nAmazon OpenSearch Service\nDeveloper Guide\nTo enable this sort of conﬁguration, you need a resource-based policy that speciﬁes roles and IP\naddresses. Here's a sample policy:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Resource\":\"arn:aws:es:us-west-2:111111111111:domain/my-domain/*\",\n\"Principal\":{\n\"AWS\":\"arn:aws:iam::111111111111:role/allowedrole1\"\n},\n\"Action\":[\n\"es:ESHttpGet\"\n],\n\"Effect\":\"Allow\"\n},\n{\n\"Effect\":\"Allow\",\n\"Principal\":{\n\"AWS\":\"*\"\n},\n\"Action\":\"es:*\",\n\"Condition\":{\n\"IpAddress\":{\n\"aws:SourceIp\":[\n\"203.0.113.0/24\",\n\"2001:DB8:1234:5678::/64\"\n]\n}\n},\n\"Resource\":\"arn:aws:es:us-west-2:111111111111:domain/my-domain/*\"\n}\n]\n}\nWe recommend that you conﬁgure the EC2 instance running the proxy server with an Elastic IP\naddress. This way, you can replace the instance when necessary and still attach the same public IP\naddress to it. To learn more, see Elastic IP Addresses in the Amazon EC2 User Guide.\nUsing a proxy to access OpenSearch Service from Dashboards\n1616\nAmazon OpenSearch Service\nDeveloper Guide\nIf you use a proxy server and Cognito authentication, you might need to add settings for\nDashboards and Amazon Cognito to avoid redirect_mismatch errors. See the following\nnginx.conf example:\nserver {\nlisten 443;\nserver_name $host;\nrewrite ^/$ https://$host/_plugin/_dashboards redirect;\nssl_certificate           /etc/nginx/cert.crt;\nssl_certificate_key       /etc/nginx/cert.key;\nssl on;\nssl_session_cache  builtin:1000  shared:SSL:10m;\nssl_protocols  TLSv1 TLSv1.1 TLSv1.2;\nssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;\nssl_prefer_server_ciphers on;\nlocation /_plugin/_dashboards {\n# Forward requests to Dashboards\nproxy_pass https://$dashboards_host/_plugin/_dashboards;\n# Handle redirects to Cognito\nproxy_redirect https://$cognito_host https://$host;\n# Update cookie domain and path\nproxy_cookie_domain $dashboards_host $host;\nproxy_cookie_path / /_plugin/_dashboards/;\n# Response buffer settings\nproxy_buffer_size 128k;\nproxy_buffers 4 256k;\nproxy_busy_buffers_size 256k;\n}\nlocation ~ \\/(log|sign|fav|forgot|change|saml|oauth2) {\n# Forward requests to Cognito\nproxy_pass https://$cognito_host;\n# Handle redirects to Dashboards\nproxy_redirect https://$dashboards_host https://$host;\n# Update cookie domain\nUsing a proxy to access OpenSearch Service from Dashboards\n1617\nAmazon OpenSearch Service\nDeveloper Guide\nproxy_cookie_domain $cognito_host $host;\n}\n}\nNote\n(Optional) If you choose to provision a dedicated coordinator node, it will automatically\nstart hosting OpenSearch Dashboards. As a result, the availability of data node resources\nsuch as CPU and memory is increased. This increased availability of data node resources can\nhelp to improve the overall resiliency of your domain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1643,
+      "end": 1647
+    },
+    "content_stats": {
+      "char_count": 4018,
+      "word_count": 515
+    },
+    "hierarchy": {
+      "parent": "Controlling access to Dashboards",
+      "children": []
+    }
+  }
+}

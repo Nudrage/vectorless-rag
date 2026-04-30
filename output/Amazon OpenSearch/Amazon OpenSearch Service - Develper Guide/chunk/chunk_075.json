@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_075",
+  "section_number": "2.6.9.5.3",
+  "header": "Generating document IDs",
+  "content": "A pipeline can generate a document ID while indexing documents to OpenSearch. It can infer these\ndocument IDs from the ﬁelds within incoming events.\nThis example uses the uuid ﬁeld from an incoming event to generate a document ID.\npipeline:\nIndex management\n66\nAmazon OpenSearch Service\nDeveloper Guide\n...\nsink:\nopensearch:\nindex_type: custom\nindex: \"metadata-${metadataType}-%{yyyy.MM.dd}\"\n\"document_id\": \"uuid\"\nIn the following example, the Add entries processor merges the ﬁelds uuid and other_field\nfrom the incoming event to generate a document ID.\nThe create action ensures that documents with identical IDs aren't overwritten. The pipeline\ndrops duplicate documents without any retry or DLQ event. This is a reasonable expectation for\npipeline authors who use this action, because the goals is to avoid updating existing documents.\npipeline:\n...\nprocessor:\n- add_entries:\nentries:\n- key: \"my_doc_id_field\"\nformat: \"${uuid}-${other_field}\"\nsink:\n- opensearch:\n...\naction: \"create\"\ndocument_id: \"my_doc_id\"\nYou might want to set an event's document ID to a ﬁeld from a sub-object. In the following\nexample, the OpenSearch sink plugin uses the sub-object info/id to generate a document ID.\nsink:\n- opensearch:\n...\ndocument_id: info/id\nGiven the following event, the pipeline will generate a document with the _id ﬁeld set to\njson001:\n{\n\"fieldA\":\"arbitrary value\",\n\"info\":{\nIndex management\n67\nAmazon OpenSearch Service\nDeveloper Guide\n\"id\":\"json001\",\n\"fieldA\":\"xyz\",\n\"fieldB\":\"def\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 95,
+      "end": 97
+    },
+    "content_stats": {
+      "char_count": 1490,
+      "word_count": 214
+    },
+    "hierarchy": {
+      "parent": "Index management",
+      "children": []
+    }
+  }
+}

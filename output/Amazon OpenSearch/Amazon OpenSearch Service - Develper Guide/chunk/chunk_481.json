@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_481",
+  "section_number": "2.8.6.4",
+  "header": "Scheduling software updates during oﬀ-peak windows",
+  "content": "Each OpenSearch Service domain created after February 16, 2023 has a daily 10-hour window\nbetween 10:00 P.M. and 8:00 A.M. local time that we consider the oﬀ-peak window. OpenSearch\nService uses this window to schedule service software updates for the domain. Oﬀ-peak updates\nhelp to minimize strain on a cluster's dedicated master nodes during higher traﬃc periods.\nOpenSearch Service can't initiate updates outside of this 10-hour window without your consent.\nOﬀ-peak windows\n651\nAmazon OpenSearch Service\nDeveloper Guide\n• For optional updates, OpenSearch Service notiﬁes you of the update's availability and prompts\nyou to schedule the update during an upcoming oﬀ-peak window.\n• For required updates, OpenSearch Service automatically schedules the update during an\nupcoming oﬀ-peak window and notiﬁes you three days ahead of time. You can reschedule the\nupdate (for within or outside the oﬀ-peak window), but only within the required timeframe for\nthe update to be completed.\nFor each domain, you can choose to override the default 10:00 P.M. start time with a custom time.\nFor instructions, see the section called “Conﬁguring a custom oﬀ-peak window”.\nConsole\nTo schedule an update during an upcoming oﬀ-peak window\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nSelect the domain name to open its conﬁguration.\n3.\nChoose Actions, Update.\n4.\nSelect Schedule it in oﬀ-peak window.\n5.\nChoose Conﬁrm.\nYou can view the scheduled action on the Oﬀ-peak window tab and reschedule it at any time. See\nthe section called “Viewing scheduled actions”.\nCLI\nTo schedule an update during an upcoming oﬀ-peak window using the AWS CLI, send a\nStartServiceSoftwareUpdate request and specify OFF_PEAK_WINDOW for the --schedule-at\nparameter:\naws opensearch start-service-software-update \\\n--domain-name my-domain \\\n--schedule-at \"OFF_PEAK_WINDOW\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 680,
+      "end": 681
+    },
+    "content_stats": {
+      "char_count": 1879,
+      "word_count": 278
+    },
+    "hierarchy": {
+      "parent": "Service software updates in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

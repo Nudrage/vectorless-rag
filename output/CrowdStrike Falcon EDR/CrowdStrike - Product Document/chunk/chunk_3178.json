@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3178",
+  "section_number": "1.6.10.18.3",
+  "header": "XdrDetectionSummaryEvent sample response",
+  "content": "{\n\"metadata\":\n{\n\"customerIDString\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n\"eventCreationTime\": 1651174243000,\n\"eventType\": \"XdrDetectionSummaryEvent\",\n\"offset\": 34280810,\n\"version\": \"1.0\"\n},\n\"event\":\n{\n\"Author\": \"CrowdStrike\",\n\"DataDomains\": \"Identity,Network,Endpoint\",\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1193/1226\n\"Description\": \"Encrypted Metasploit traffic and login activity indicative of a brute force\nattempt were observed from a common IP.\",\n\"CompositeId\":\n\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:ind:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:xdr|eee4a5c51106f0419184d0dd08fb05bc\",\n\"EndTimeEpoch\": 1643317927664000000,\n\"IPv4Addresses\": \"192.168.0.21,192.168.0.26,192.168.0.29\",\n\"HostNames\": \"XDR-WIN10\",\n\"Name\": \"Metasploit and brute force login attempt\",\n\"PatternId\": 100011,\n\"Severity\": 90,\n\"SourceProducts\": \"Falcon,Corelight\",\n\"SourceVendors\": \"CrowdStrike,Corelight\",\n\"StartTimeEpoch\": 1643317697728000000,\n\"TacticIds\": \"TA0001,TA0002\",\n\"Tactics\": \"Initial Access,Execution\",\n\"TechniqueIds\": \"T1566.001,T1203\",\n\"Techniques\": \"Spearphishing Attachment,Exploitation for Client Execution\",\n\"XdrType\": \"xdr\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1193,
+      "end": 1194
+    },
+    "content_stats": {
+      "char_count": 1294,
+      "word_count": 105
+    },
+    "hierarchy": {
+      "parent": "XDR detection summary",
+      "children": []
+    }
+  }
+}

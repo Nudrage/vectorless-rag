@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3124",
+  "section_number": "1.6.10.2.1",
+  "header": "Sample EppDetectionSummaryEvent response",
+  "content": "{\n\"metadata\":{\n\"customerIDString\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n\"offset\": 14947764,\n\"eventType\": \"EppDetectionSummaryEvent\",\n\"eventCreationTime\": 1536846439000,\n\"version\": \"1.0\"\n},\n\"event\": {\n\"ProcessStartTime\": 1536846339,\n\"ProcessEndTime\": 0,\n\"ProcessId\": 38684386611,\n\"ParentProcessId\": 38682494050,\n\"ComputerName\": \"CS-SE-EZ64\",\n\"UserName\": \"demo\",\n\"Name\": \"Process Terminated\",\n\"Description\": \"Terminated a process related to the deletion of backups, which is often indicative of\nransomware activity.\",\n\"Nonce\": 12342371372836755000,\n\"Severity\": 90,\n\"SeverityName\": \"High\",\n\"FileName\": \"explorer.exe\",\n\"FilePath\": \"\\\\Device\\\\HarddiskVolume1\\\\Windows\",\n\"CommandLine\": \"C:\\\\Windows\\\\Explorer.EXE\",\n\"SHA256String\": \"6a671b92a69755de6fd063fcbe4ba926d83b49f78c42dbaeed8cdb6bbc57576a\",\n\"MD5String\": \"ac4c51eb24aa95b77f705ab159189e24\",\n\"MachineDomain\": \"CS-SE-EZ64\",\nEvents Data Dictionary [/documentation/page/e3ce0b24/events-data-dictionary#AssociateIndicator]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1152/1226\n\"FalconHostLink\": \"https://falcon.crowdstrike.com/activity-\nv2/detections/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:ind:ec86abd353824e96765ecbe18eb4f0b4:38655257584-547-\n3513807947159164306\",\n\"SensorId\": \"ec86abd353824e96765ecbe18eb4f0b4\",\n\"CompositeId\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:ind:ec86abd353824e96765ecbe18eb4f0b4:38655257584-547-\n3513807947159164306\",\n\"LocalIP\": \"xx.xx.xx.xx\",\n\"MACAddress\": \"xx-xx-xx-xx-xx\",\n\"Tactic\": \"Malware\",\n\"Technique\": \"Ransomware\",\n\"Objective\": \"Falcon Detection Method\",\n\"PatternDispositionDescription\": \"Prevention, process killed.\",\n\"PatternDispositionValue\": 16,\n\"PatternDispositionFlags\": {\n\"Indicator\": false,\n\"Detect\": false,\n\"InddetMask\": false,\n\"SensorOnly\": false,\n\"Rooting\": false,\n\"KillProcess\": true,\n\"KillSubProcess\": false,\n\"QuarantineMachine\": false,\n\"QuarantineFile\": false,\n\"PolicyDisabled\": false,\n\"KillParent\": false,\n\"OperationBlocked\": false,\n\"ProcessBlocked\": false\n},\n\"PatternId\": 547,\n\"Tags\": \"FalconGroupingTags/Foo, SensorGroupingTags/Bar\",\n\"HostGroups\": \"1607fe67df19464c965fbe4aaxxxxxxx, 2645bfa85bf7461f8592038a2yyyyyyy,\n309dc96a6f3c49afa513f66abzzzzzzz\",\n\"AssociatedFile\": \"\\\\Device\\\\HarddiskVolume\\\\Users\\\\aaaaa\\\\Documents\\\\ApplicationUpdate\\\\chrome.dll\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1152,
+      "end": 1153
+    },
+    "content_stats": {
+      "char_count": 2424,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Epp Detection Summary",
+      "children": []
+    }
+  }
+}

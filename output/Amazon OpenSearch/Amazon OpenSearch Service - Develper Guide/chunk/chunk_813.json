@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_813",
+  "section_number": "2.12.4.5",
+  "header": "Accessing OpenSearch Dashboards as the master user",
+  "content": "Fine-grained access control has an OpenSearch Dashboards plugin that simpliﬁes management\ntasks. You can use Dashboards to manage users, roles, mappings, action groups, and tenants. The\nOpenSearch Dashboards sign-in page and underlying authentication method diﬀers, however,\ndepending on how you manage users and conﬁgured your domain.\n• If you want to use IAM for user management, use the section called “Amazon Cognito\nauthentication for OpenSearch Dashboards” to access Dashboards. Otherwise, Dashboards shows\na nonfunctional sign-in page. See the section called “Limitations”.\nWith Amazon Cognito authentication, one of the assumed roles from the identity pool must\nmatch the IAM role that you speciﬁed for the master user. For more information about this\nconﬁguration, see the section called “(Optional) Conﬁguring granular access” and the section\ncalled “Tutorial: Fine-grained access control with Cognito authentication”.\nAccessing OpenSearch Dashboards as the master user\n1341\nAmazon OpenSearch Service\nDeveloper Guide\n• If you choose to use the internal user database, you can sign in to Dashboards with your master\nusername and password. You must access Dashboards over HTTPS. Amazon Cognito and SAML\nauthentication for Dashboards both replace this login screen.\nFor more information about this conﬁguration, see the section called “Tutorial: Internal user\ndatabase with basic authentication”.\nAccessing OpenSearch Dashboards as the master user\n1342\nAmazon OpenSearch Service\nDeveloper Guide\n• If you choose to use SAML authentication, you can sign in using credentials from an external\nidentity provider. For more information, see the section called “SAML authentication for\nOpenSearch Dashboards”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1370,
+      "end": 1372
+    },
+    "content_stats": {
+      "char_count": 1709,
+      "word_count": 245
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

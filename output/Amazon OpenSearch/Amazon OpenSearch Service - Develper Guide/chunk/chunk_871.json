@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_871",
+  "section_number": "2.12.10.1",
+  "header": "Modifying the domain access policy",
+  "content": "Before you conﬁgure IAM Identity Center, you must update the domain access policy or\nthe permissions of the IAM role conﬁgured in OpenSearch applications for Trusted Identity\nPropagation.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::111122223333:role/OpenSearchRole\"\n},\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/example-domain/\n*\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1422,
+      "end": 1422
+    },
+    "content_stats": {
+      "char_count": 430,
+      "word_count": 49
+    },
+    "hierarchy": {
+      "parent": "IAM Identity Center Trusted Identity Propagation Support for OpenSearch",
+      "children": []
+    }
+  }
+}

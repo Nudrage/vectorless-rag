@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_897",
+  "section_number": "155.1.1.89.5.1",
+  "header": "Identify unique processes with process IDs",
+  "content": "Process IDs (PIDs) are recycled in Windows and reused for new processes. On their own, they\ncan't serve as unique identifiers for specific processes.\nUsually, the only way to uniquely identify a process on a specific device was by combining its\nprocess ID with its process creation time, along with the device identifier (either DeviceId  or\nDeviceName ). While this approach is still valid, there’s a more direct method using the\nEmailEvents\n| where Timestamp > ago(1h)\n| project NetworkMessageId, SenderFromAddress\nEmailEvents\n| where Timestamp > ago(1h)\n| summarize by SenderFromAddress, RecipientEmailAddress\nEmailEvents\n| where Timestamp > ago(1h)\n| summarize hint.shufflekey = RecipientEmailAddress count() by Subject,\nRecipientEmailAddress\nProcessUniqueId  field. Both methods yield unique process instances, but as a best practice we\nrecommend using ProcessUniqueId  when available, as it simplifies queries and eliminates the\nneed to handle PID reuse scenarios.\nThis query demonstrates how to use the ProcessUniqueId  and InitiatingProcessUniqueId\nfields to link a specific parent process to its child processes. By matching each child’s\nInitiatingProcessUniqueId  to the parent’s ProcessUniqueId , it isolates only those child\nprocesses launched by that exact parent instance, even if process IDs get reused over time.\nExample query:\nKusto\nThe query summarizes by both InitiatingProcessId  and InitiatingProcessCreationTime  so\nthat it looks at a single process, without mixing multiple processes with the same process ID.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 591,
+      "end": 592
+    },
+    "content_stats": {
+      "char_count": 1532,
+      "word_count": 218
+    },
+    "hierarchy": {
+      "parent": "Query scenarios",
+      "children": []
+    }
+  }
+}

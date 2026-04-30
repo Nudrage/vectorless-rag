@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2009",
+  "section_number": "155.1.1.263.2",
+  "header": "Advanced hunting queries",
+  "content": "IdentityLogonEvents\n| where Timestamp > ago(7d)\n| where ActionType == \"LogonFailed\"\n| where isnotempty(RiskLevelDuringSignIn)\n| where AccountObjectId == <Impacted User Account Object ID>\n| summarize TargetCount = dcount(AccountObjectId), TargetCountry =\ndcount(Location), TargetIPAddress = dcount(IPAddress) by ISP\n| where TargetCount >= 100\nUse this query to identify other activities from the alerted ISP.\nKusto\nUse this query to identify sign-in patterns for the impacted user.\nKusto\nUse this query to identify MFA fatigue attacks.\nKusto\nUse this query to identify MFA reset activities.\nKusto\n| where TargetCountry >= 5\n| where TargetIPAddress >= 25\nCloudAppEvents\n| where Timestamp > ago(7d)\n| where AccountObjectId == <Impacted User Account Object ID>\n| where ISP == <Alerted ISP>\n| summarize count() by Application, ActionType, bin(Timestamp, 1h)\nIdentityLogonEvents\n| where Timestamp > ago(7d)\n| where AccountObjectId == <Impacted User Account Object ID>\n| where ISP == <Alerted ISP>\n| where Application != \"Active Directory\"\n| summarize SuccessCount = countif(ActionType == \"LogonSuccess\"), FailureCount =\ncountif(ActionType == \"LogonFailed\") by ISP\nAADSignInEventsBeta\n| where Timestamp > ago(1h)\n//Error Code : 50088 : Limit on telecom MFA calls reached\n//Error Code : 50074 : Strong Authentication is required.\n| where ErrorCode in  (\"50074\",\"50088\")\n| where isnotempty(AccountObjectId)\n| where isnotempty(IPAddress)\n| where isnotempty(Country)\n| summarize (Timestamp, ReportId) = arg_max(Timestamp, ReportId), FailureCount =\ncount() by AccountObjectId, Country, IPAddress\n| where FailureCount >= 10\nlet relevantActionTypes = pack_array(\"Disable Strong\nAuthentication.\",\"system.mfa.factor.deactivate\", \"user.mfa.factor.update\",\n\"user.mfa.factor.reset_all\", \"core.user_auth.mfa_bypass_attempted\");\nCloudAppEvents\nUse this query to find new email inbox rules created by the impacted user.\nKusto\nOnce you determine that the activities associated with this alert are malicious, classify those\nalerts as TP and take these actions for remediation:\n1. Reset the user's account credentials.\n2. Revoke access tokens of the compromised account.\n3. Use number matching in Microsoft Authenticator to mitigate MFA fatigue attacks.\n4. Apply the principle of least privilege. Create accounts with minimum privilege required to\ncomplete tasks.\n5. Configure blocking based on the sender's IP address and domains if the artifacts are\nrelated to email.\nAlertInfo\n| where Timestamp > ago(1d)\n| where isnotempty(AccountObjectId)\n| where Application in (\"Office 365\",\"Okta\")\n| where ActionType in (relevantActionTypes)\n| where RawEventData contains \"success\"\n| project Timestamp, ReportId, AccountObjectId, IPAddress, ActionType\nCloudAppEvents\n| where Timestamp > ago(1d)\n| where ApplicationId == 11161\n| where ActionType == \"Update user.\"\n| where isnotempty(AccountObjectId)\n| where RawEventData has_all(\"StrongAuthenticationRequirement\",\"[]\")\n| mv-expand ModifiedProperties = RawEventData.ModifiedProperties\n| where ModifiedProperties.Name == \"StrongAuthenticationRequirement\" and\nModifiedProperties.OldValue != \"[]\" and ModifiedProperties.NewValue == \"[]\"\n| mv-expand ActivityObject = ActivityObjects\n| where ActivityObject.Role == \"Target object\"\n| extend TargetObjectId = tostring(ActivityObject.Id)\n| project Timestamp, ReportId, AccountObjectId, ActivityObjects, TargetObjectId\nCloudAppEvents\n| where AccountObjectId == <ImpactedUser>\n| where Timestamp > ago(21d)\n| where ActionType == \"New-InboxRule\"\n| where RawEventData.SessionId in (suspiciousSessionIds)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1486,
+      "end": 1488
+    },
+    "content_stats": {
+      "char_count": 3554,
+      "word_count": 448
+    },
+    "hierarchy": {
+      "parent": "Alert classification for password spray attacks",
+      "children": []
+    }
+  }
+}

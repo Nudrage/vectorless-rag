@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1981",
+  "section_number": "1.5.786.1",
+  "header": "Fields: macOS, Windows",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nContextTimeStamp\nSystem time of event creation.\nProtocol\nValues:\nIP (0)\nICMP (1)\nIGMP (2)\nTCP (6)\nUDP (17)\nIPV6 (41)\nGRE (47)\nICMPV6 (58)\nUNKNOWN (255)\nConnectionFlags\nA ULONG field which is a socket bit mask. It has the following values:\nRAW_SOCKET (1) - raw socket\nPROMISCUOUS_MODE_SIO_RCVALL (2) - promiscuous mode RCVALL\nPROMISCUOUS_MODE_SIO_RCVALL_IGMPMCAST (4) - promiscuous mode RCVALL_IGMPMCAST\nPROMISCUOUS_MODE_SIO_RCVALL_MCAST (8) - promiscuous mode RCVALL_MCAST\nValues:\nRAW_SOCKET (1)\nPROMISCUOUS_MODE_SIO_RCVALL (2)\nPROMISCUOUS_MODE_SIO_RCVALL_IGMPMCAST (4)\nPROMISCUOUS_MODE_SIO_RCVALL_MCAST (8)\nIS_LOOPBACK (16)\nLocalAddressIP4\nRemoteAddressIP4\nLocalPort\nRemotePort\nConnectionDirection\nValues:\nDIRECTION_OUTBOUND (0)\nDIRECTION_INBOUND (1)\nDIRECTION_NEITHER (2)\nDIRECTION_BOTH (3)\nDIRECTION_UNKNOWN (4)\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nContextThreadId\nUTID of thread originating this event\nInContext\nA boolean field which indicates whether the event containing the field was emitted in the context of the process or thread that\ngenerated the event.\nOciContainerId\nAn OCI Container Id.\nRemoteAddressString\nIcmpType\nRFC-792 ICMP type\nIcmpCode\nTcpConnectErrorCode Values:\nTCP_CON_SUCCESS (0)\nTCP_CON_NO_PROTO_ERROR (92)\nTCP_CON_NET_UNREACH_ERROR (101)\nTCP_CON_NET_RESET_ERROR (102)\nTCP_CON_CONN_ABORTED_ERROR (103)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n652/1226\nField\nDescription\nTCP_CON_IS_CONN_ERROR (106)\nTCP_CON_TIMED_OUT_ERROR (110)\nTCP_CON_REFUSED_ERROR (111)\nTCP_CON_HOST_UNREACH_ERROR (113)\nContextBaseFileName The base ImageFileName of the context process.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 652,
+      "end": 653
+    },
+    "content_stats": {
+      "char_count": 1887,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "NetworkConnectIP4Blocked",
+      "children": []
+    }
+  }
+}

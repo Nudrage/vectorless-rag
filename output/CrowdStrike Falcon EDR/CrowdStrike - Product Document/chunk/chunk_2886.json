@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2886",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nTokenType\nValues:\nINVALID_TOKEN (0)\nPRIMARY_TOKEN (1)\nIMPERSONATION_TOKEN (2)\nRegObjectName\nRegValueName\nRegType\nValues:\nREG_NONE (0)\nREG_SZ (1)\nREG_EXPAND_SZ (2)\nREG_BINARY (3)\nREG_DWORD (4)\nREG_DWORD_BIG_ENDIAN (5)\nREG_LINK (6)\nREG_MULTI_SZ (7)\nREG_RESOURCE_LIST (8)\nREG_FULL_RESOURCE_DESCRIPTOR (9)\nREG_RESOURCE_REQUIREMENTS_LIST (10)\nREG_QWORD (11)\nRegNumericValue\nRegStringValue\nRegBinaryValue\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nTemplateDisposition Values:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1039/1226\nField\nDescription\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1039,
+      "end": 1040
+    },
+    "content_stats": {
+      "char_count": 1512,
+      "word_count": 147
+    },
+    "hierarchy": {
+      "parent": "RegValueQueryDetectInfo",
+      "children": []
+    }
+  }
+}

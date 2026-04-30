@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_941",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before proceeding, you must have the following resources.\nPrerequisite\nDescription\nDynamoDB table\nThe table contains your source data. For more information, see Basic\nOperations on DynamoDB Tables in the Amazon DynamoDB Developer\nGuide.\nThe table must reside in the same Region as your OpenSearch Service\ndomain and have a stream set to New image. To learn more, see\nEnabling a Stream.\nLoading streaming data from Amazon DynamoDB\n1456\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequisite\nDescription\nOpenSearch Service\ndomain\nThe destination for data after your Lambda function processes it.\nFor more information, see the section called “ Creating OpenSearch\nService domains”.\nLoading streaming data from Amazon DynamoDB\n1457\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequisite\nDescription\nIAM role\nThis role must have basic OpenSearch Service, DynamoDB, and\nLambda execution permissions, such as the following:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"es:ESHttpPost\",\n\"es:ESHttpPut\",\n\"dynamodb:DescribeStream\",\n\"dynamodb:GetRecords\",\n\"dynamodb:GetShardIterator\",\n\"dynamodb:ListStreams\",\n\"logs:CreateLogGroup\",\n\"logs:CreateLogStream\",\n\"logs:PutLogEvents\"\n],\n\"Resource\": \"*\"\n}\n]\n}\nThe role must have the following trust relationship:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"lambda.amazonaws.com\"\n},\nLoading streaming data from Amazon DynamoDB\n1458\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequisite\nDescription\n\"Action\": \"sts:AssumeRole\"\n}\n]\n}\nTo learn more, see Creating IAM roles in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1485,
+      "end": 1488
+    },
+    "content_stats": {
+      "char_count": 1605,
+      "word_count": 209
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon DynamoDB",
+      "children": []
+    }
+  }
+}

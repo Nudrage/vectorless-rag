@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_008",
+  "section_number": "1.4",
+  "header": "Firewall log format",
+  "content": "Subject to the specifications (#specifications), a log entry is created in Cloud Logging for each\nfirewall rule that has logging enabled if that rule applies to traffic to or from a VM instance. Log\nrecords are included in the JSON payload field of a Logging LogEntry\n(/logging/docs/reference/v2/rest/v2/LogEntry).\nLog records contain base fields, which are the core fields of every log record, and metadata\nfields that add additional information. You can control whether metadata fields are included. If\nyou omit them, you can save on storage costs.\nSome log fields support values that are also fields. These fields can have more than one piece\nof data in a given field. For example, the connection field is of the IpConnection format,\nwhich contains the source and destination IP address and port, plus the protocol, in a single\nfield. These fields are described in the following tables.\nField\nDescription\nField type:\nbase or\noptional\nmetadata\nconnection\nIpConnection (#ipconnection)\n5-Tuple describing the source and destination IP address,\nBase\nField\nDescription\nField type:\nbase or\noptional\nmetadata\nsource and destination port, and IP protocol of this\nconnection.\ndisposition\nstring\nIndicates whether the connection was ALLOWED or DENIED.\nBase\nrule_details\nRuleDetails (#ruledetails)\nDetails of the rule that was applied to this connection.\nrule_details.reference field\nBase\nOther rule detail fields\nMetadata\ninstance\nInstanceDetails (#instancedetails)\nVM instance details. In a Shared VPC configuration,\nproject_id corresponds to that of the service project.\nMetadata\nload_balancer_details\nLoadBalancingDetails (#loadbalancingdetails)\nDetails of the internal Application Load Balancer or internal\nproxy Network Load Balancer to which the firewall rule\napplies. When the target of a firewall rule is one of these\nload balancers, the instance field is omitted.\nMetadata\nvpc\nVpcDetails (#vpcdetails)\nVPC network details. In a Shared VPC configuration,\nproject_id corresponds to that of the host project.\nMetadata\nremote_instance\nInstanceDetails (#instancedetails)\nIf the remote endpoint of the connection was a VM located\nin the Compute Engine, this field is populated with VM\ninstance details.\nMetadata\nremote_vpc\nVpcDetails (#vpcdetails)\nIf the remote endpoint of the connection was a VM that is\nlocated in a VPC network, this field is populated with the\nnetwork details.\nMetadata\nremote_location\nGeographicDetails (#geographicdetails)\nIf the remote endpoint of the connection was external to the\nVPC network, this field is populated with available location\nmetadata.\nMetadata",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 10,
+      "end": 11
+    },
+    "content_stats": {
+      "char_count": 2582,
+      "word_count": 376
+    },
+    "hierarchy": {
+      "parent": "Firewall Rules Logging",
+      "children": [
+        "IpConnection",
+        "RuleDetails",
+        "IpPortDetails",
+        "InstanceDetails",
+        "LoadBalancingDetails",
+        "VpcDetails",
+        "GeographicDetails"
+      ]
+    }
+  }
+}

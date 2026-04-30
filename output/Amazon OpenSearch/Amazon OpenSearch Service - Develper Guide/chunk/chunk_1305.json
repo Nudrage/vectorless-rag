@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1305",
+  "section_number": "2.23.3",
+  "header": "Conﬁgure permissions",
+  "content": "In order to create the connector, you need permission to pass the IAM role to OpenSearch Service.\nYou also need access to the es:ESHttpPost action. To grant both of these permissions, attach the\nfollowing policy to the IAM role whose credentials are being used to sign the request:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": \"iam:PassRole\",\n\"Resource\": \"arn:aws:iam::111122223333:role/opensearch-sagemaker-\nrole\"\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": \"es:ESHttpPost\",\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/domain-name/*\"\n}\n]\n}\nIf your user or role doesn't have iam:PassRole permissions to pass your role, you might\nencounter an authorization error when you try to register a repository in the next step.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1818,
+      "end": 1818
+    },
+    "content_stats": {
+      "char_count": 749,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

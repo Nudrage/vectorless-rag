@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2610",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n902/1226\nField\nDescription\nSourceAccountUserName\nThe username associated with this activity.\nUalServerRoleGuid\nGUID for the server role, the type of service accessed. These are mapped to Role names in SystemIdentity.mdb.\nValues:\nFILE_SERVER (0x10A9226F50EE49D8A3939A501D47CE04)\nSHAREPOINT_ENTERPRISE (0x13269402B10E4F3E9D3968EFFD700E9C)\nWINDOWS_SERVER_2016_DATACENTER_REMOTE_DESKTOP_GATEWAY (0x1479A8C19808411E97392D3C5923E86A)\nSQL_SERVER_ANALYSIS_SERVICES (0x2414BC1B15724CD99CA565166D8DEF3D)\nWINDOWS_DEPLOYMENT_SERVICES (0x4116A14D38404F42A67FF2F9FF46EB4C)\nDHCP_SERVER (0x48EED6B29CDC4358B5A58DEA3B2F3F6A)\nFAX_SERVER (0x7CC4B071292C473297A1CF9A7301195D)\nPRINT_AND_DOCUMENT_SERVICES (0x7FB09BD37FE6435E83487D8AEFB6CEA3)\nREPORTING_SERVICES (0x8CC0AC8540F748869DAB021519800418)\nREMOTE_DESKTOP_SERVICES (0x90E64AFA70DB4FEF878B7EB8C868F091)\nBRANCH_CACHE (0x910CBAF9B6124782A21FF7C75105434A)\nREMOTE_ACCESS (0x952285D9EDB74B6B9D850C09E3DA0BBD)\nACTIVE_DIRECTORY_DOMAIN_SERVICES (0xAD495FC30EAA413DBA7D8B13FA7EC598)\nACTIVE_DIRECTORY_RIGHTS_MANAGEMENT_SERVICE (0xB4CDD739089C417E878D855F90081BE7)\nNETWORK_POLICY_AND_ACCESS_SERVICES (0xBBD85B299DCC4FD9865D3846DCBA75C7)\nSQL_SERVER_DATABASE_ENGINE (0xBD7F7C0D7C364721AFA80BA700E26D9E)\nFTP_SERVER (0xC23F1C6A30A841B6BBF7F266563DFCD6)\nACTIVE_DIRECTORY_CERTIFICATE_SERVICES (0xC50FCC83BC8D4DF58A3D89D7F80F074B)\nWEB_SERVER (0xD6256CF798FB4EB4AA18303F1DA1F770)\nWINDOWS_SERVER_UPDATE_SERVICES (0xD8DC1C8EEA1349CE9A68C9DCA8DB8B33)\nMESSAGE_QUEUING (0xDDE30B98449E4B9384A6EA86AF0B19FE)\nUalServerRoleName\nUser access log server role in SystemIdentity.mdb.\nUalTimeType\nUser Access Log entry for a particular day of the current year in sensor-compliant time.\nValues:\nUNKNOWN (0)\nFIRST_ACCESS (1)\nDAY_OF_ACCESS (2)\nLAST_ACCESS (3)\nSourceEndpointAddressIP4 The IP address of the endpoint from which this activity originates.\nMutually exclusive with the SourceEndpointAddressIP6 field.\nSourceEndpointAddressIP6 The IP address of the endpoint from which this activity originates.\nMutually exclusive with the SourceEndpointAddressIP4 field.\nUalTotalAccesses\nCount of accesses for the year (based on RoleGuid + AuthenticatedUserName + IP Address).\nTargetFileName\nThe resulting file name that was downloaded\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nUalClientName\nA GUID string for a tenant client of an installed role or product that accompanies the UAL data, if applicable.\nUalServerProductName\nThe name of the software parent product, such as Windows, that is providing UAL data.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 902,
+      "end": 903
+    },
+    "content_stats": {
+      "char_count": 2866,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "UserAccessLogEntry",
+      "children": []
+    }
+  }
+}

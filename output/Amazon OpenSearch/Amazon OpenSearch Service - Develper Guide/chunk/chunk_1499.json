@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1499",
+  "section_number": "2.27.2",
+  "header": "Tutorial: Migrating to Amazon OpenSearch Service",
+  "content": "Index snapshots are a popular way to migrate from a self-managed OpenSearch or legacy\nElasticsearch cluster to Amazon OpenSearch Service. Broadly, the process consists of the following\nsteps:\n1. Take a snapshot of the existing cluster, and upload the snapshot to an Amazon S3 bucket.\n2. Create an OpenSearch Service domain.\n3. Give OpenSearch Service permissions to access the bucket, and ensure you have permissions to\nwork with snapshots.\n4. Restore the snapshot on the OpenSearch Service domain.\nThis walk through provides more detailed steps and alternate options, where applicable.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2034,
+      "end": 2034
+    },
+    "content_stats": {
+      "char_count": 586,
+      "word_count": 90
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service tutorials",
+      "children": [
+        "Take and upload the snapshot",
+        "Create a domain",
+        "Provide permissions to the S3 bucket",
+        "Restore the snapshot"
+      ]
+    }
+  }
+}

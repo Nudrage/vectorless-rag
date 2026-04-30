@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_003",
+  "section_number": "1.1.1",
+  "header": "Enable and disable logging for private managed zones",
+  "content": "Use DNS policies to enable or disable logging for your networks. When you enable query\nlogging, every DNS query to a Cloud DNS private managed zone is logged.\nTo enable logging for a network that does not have a DNS policy, run the dns policies\ncreate (/sdk/gcloud/reference/dns/policies/create) command.\nReplace the following:\nPOLICY_NAME: the name of the DNS policy\ngcloud\n(#gcloud)\ngcloud dns policies create\n\\\n--networks=\n\\\n--enable-logging \\\n--description=\nPOLICY_NAME edit\nNETWORK edit\nDESCRIPTION edit\nNETWORK: one or more networks in a comma-separated list\nDESCRIPTION: a description of the policy\nTo enable logging for a network that has an existing DNS policy, run the dns policies update\n(/sdk/gcloud/reference/dns/policies/update) command.\nReplace the following:\nPOLICY_NAME: the name of the DNS policy\nNETWORK: one or more networks in a comma-separated list\nTo turn off logging while leaving the policy in place, run the dns policies update\n(/sdk/gcloud/reference/dns/policies/update) command.\nReplace the following:\nPOLICY_NAME: the name of the DNS policy\nNETWORK: one or more networks in a comma-separated list\nTo delete the policy entirely, run the dns policies delete\n(/sdk/gcloud/reference/dns/policies/delete) command.\nReplace POLICY_NAME with the name of the DNS policy that you want to delete.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 1314,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Use Cloud DNS logging",
+      "children": []
+    }
+  }
+}

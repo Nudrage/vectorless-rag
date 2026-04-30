@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_613",
+  "section_number": "2.9.8.3",
+  "header": "Monitoring with AWS Budget",
+  "content": "Amazon OpenSearch Service is populating OCU usage data at the account level into Billing and\nCost Management's Cost Explorer. You can account for OCU usage at the account level and set\nthresholds and alerts when thresholds have been crossed.\nThe format of the usage type to ﬁlter on in Cost Explorer looks like RegionCode-DirectQueryOCU\n(OCU-hours). If you want to be notiﬁed when DirectQueryOCU (OCU-Hours) usage meets your\nthreshold, you can create an AWS Budgets account and conﬁgure an alert based on the threshold\nyou set. Optionally for Amazon S3, you can set up an Amazon SNS topic, which will turn oﬀ a data\nsource in the event a threshold criteria is met.\nNote\nUsage data in AWS Budgets is not real-time and may be delayed up to 8 hours.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 800,
+      "end": 800
+    },
+    "content_stats": {
+      "char_count": 746,
+      "word_count": 129
+    },
+    "hierarchy": {
+      "parent": "Managing a data source in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

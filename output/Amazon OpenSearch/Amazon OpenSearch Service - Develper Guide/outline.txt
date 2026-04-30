@@ -1,0 +1,1586 @@
+DOCUMENT INDEX: Amazon OpenSearch\Amazon OpenSearch Service - Develper Guide
+============================================================================
+
+1. Developer Guide
+2. Amazon OpenSearch Service
+   2.1. Amazon OpenSearch Service: Developer Guide
+   2.2. Table of Contents
+   2.3. What is Amazon OpenSearch Service?
+      2.3.1. Features of Amazon OpenSearch Service
+      2.3.2. When to use OpenSearch versus Amazon OpenSearch Service
+      2.3.3. Supported versions of Elasticsearch and OpenSearch
+      2.3.4. Standard and extended support
+      2.3.5. Standard support and extended support of OpenSearch and Elasticsearch
+      2.3.6. Calculating extended support charges
+      2.3.7. Pricing for Amazon OpenSearch Service
+      2.3.8. Related services
+   2.4. Setting up Amazon OpenSearch Service
+      2.4.1. Grant permissions
+         2.4.1.1. Grant programmatic access
+      2.4.2. Install and conﬁgure the AWS CLI
+      2.4.3. Open the console
+   2.5. Getting started with Amazon OpenSearch Service
+      2.5.1. Create an Amazon OpenSearch Service domain
+      2.5.2. Upload data to Amazon OpenSearch Service for indexing
+         2.5.2.1. Option 1: Upload a single document
+         2.5.2.2. Option 2: Upload multiple documents
+      2.5.3. Search documents in Amazon OpenSearch Service
+         2.5.3.1. Search documents from the command line
+         2.5.3.2. Search documents using OpenSearch Dashboards
+      2.5.4. Delete an Amazon OpenSearch Service domain
+   2.6. Overview of Amazon OpenSearch Ingestion
+      2.6.1. Key concepts in Amazon OpenSearch Ingestion
+      2.6.2. Beneﬁts of Amazon OpenSearch Ingestion
+      2.6.3. Limitations of Amazon OpenSearch Ingestion
+      2.6.4. Supported Data Prepper versions
+      2.6.5. Scaling pipelines in Amazon OpenSearch Ingestion
+      2.6.6. OpenSearch Ingestion pricing
+      2.6.7. Supported AWS Regions
+      2.6.8. Setting up roles and users in Amazon OpenSearch Ingestion
+         2.6.8.1. Pipeline role
+            2.6.8.1.1. Automating pipeline role creation
+            2.6.8.1.2. Manually creating the pipeline role
+         2.6.8.2. Ingestion role
+            2.6.8.2.1. Ingestion role for push-based sources
+            2.6.8.2.2. Ingestion role for pull-based sources
+            2.6.8.2.3. Cross-account ingestion
+         2.6.8.3. Granting Amazon OpenSearch Ingestion pipelines access to domains
+            2.6.8.3.1. Step 1: Create the pipeline role
+            2.6.8.3.2. Step 2: Conﬁgure data access for the domain
+         2.6.8.4. Granting Amazon OpenSearch Ingestion pipelines access to collections
+            2.6.8.4.1. Step 1: Create the pipeline role
+            2.6.8.4.2. Step 2: Conﬁgure data and network access for the collection
+      2.6.9. Getting started with Amazon OpenSearch Ingestion
+         2.6.9.1. Tutorial: Ingesting data into a domain using Amazon OpenSearch Ingestion
+            2.6.9.1.1. Required permissions
+            2.6.9.1.2. Step 1: Create the pipeline role
+            2.6.9.1.3. Step 2: Create a domain
+            2.6.9.1.4. Step 3: Create a pipeline
+            2.6.9.1.5. Step 4: Ingest some sample data
+            2.6.9.1.6. Fixing permissions issues
+            2.6.9.1.7. Related resources
+         2.6.9.2. Tutorial: Ingesting data into a collection using Amazon OpenSearch Ingestion
+            2.6.9.2.1. Required permissions
+            2.6.9.2.2. Step 1: Create a collection
+            2.6.9.2.3. Step 2: Create a pipeline
+            2.6.9.2.4. Step 3: Ingest some sample data
+            2.6.9.2.5. Related resources
+      2.6.10. Overview of pipeline features in Amazon OpenSearch Ingestion
+         2.6.10.1. Persistent buﬀering
+         2.6.10.2. Splitting
+         2.6.10.3. Chaining
+         2.6.10.4. Dead-letter queues
+            2.6.10.4.1. Conﬁguration
+            2.6.10.4.2. Example
+         2.6.10.5. Index management
+            2.6.10.5.1. Creating indexes
+            2.6.10.5.2. Generating index names and patterns
+            2.6.10.5.3. Generating document IDs
+            2.6.10.5.4. Generating routing IDs
+         2.6.10.6. End-to-end acknowledgement
+         2.6.10.7. Source back pressure
+            2.6.10.7.1. HTTP source
+            2.6.10.7.2. OTel source
+            2.6.10.7.3. S3 source
+      2.6.11. Creating Amazon OpenSearch Ingestion pipelines
+         2.6.11.1. Prerequisites and required IAM role
+         2.6.11.2. Required IAM permissions
+         2.6.11.3. Specifying the pipeline version
+         2.6.11.4. Specifying the ingestion path
+         2.6.11.5. Creating pipelines
+         2.6.11.6. Tracking the status of pipeline creation
+         2.6.11.7. Working with blueprints
+      2.6.12. Viewing Amazon OpenSearch Ingestion pipelines
+         2.6.12.1. Console
+         2.6.12.2. CLI
+         2.6.12.3. OpenSearch Ingestion API
+      2.6.13. Updating Amazon OpenSearch Ingestion pipelines
+         2.6.13.1. Considerations
+         2.6.13.2. Permissions required
+         2.6.13.3. Updating pipelines
+         2.6.13.4. Blue/green deployments for pipeline updates
+      2.6.14. Managing Amazon OpenSearch Ingestion pipeline costs
+         2.6.14.1. Stopping an Amazon OpenSearch Ingestion pipeline
+         2.6.14.2. Starting an Amazon OpenSearch Ingestion pipeline
+      2.6.15. Deleting Amazon OpenSearch Ingestion pipelines
+         2.6.15.1. Console
+         2.6.15.2. CLI
+         2.6.15.3. OpenSearch Ingestion API
+      2.6.16. Supported plugins and options for Amazon OpenSearch Ingestion pipelines
+         2.6.16.1. Supported plugins
+         2.6.16.2. Stateless versus stateful processors
+         2.6.16.3. Conﬁguration requirements and constraints
+            2.6.16.3.1. General pipeline options
+            2.6.16.3.2. Grok processor
+            2.6.16.3.3. HTTP source
+            2.6.16.3.4. OpenSearch sink
+            2.6.16.3.5. OTel metrics source, OTel trace source, and OTel logs source
+            2.6.16.3.6. OTel trace group processor
+            2.6.16.3.7. OTel trace processor
+            2.6.16.3.8. Service-map processor
+            2.6.16.3.9. S3 source
+      2.6.17. Integrating Amazon OpenSearch Ingestion pipelines with other services and applications
+         2.6.17.1. Constructing the ingestion endpoint
+         2.6.17.2. Creating an ingestion role
+            2.6.17.2.1. Providing cross-account ingestion access
+         2.6.17.3. Using an OpenSearch Ingestion pipeline with Atlassian Services
+            2.6.17.3.1. Prerequisites
+            2.6.17.3.2. Conﬁgure a pipeline role
+            2.6.17.3.3. Jira connector pipeline conﬁguration
+            2.6.17.3.4. Conﬂuence connector pipeline conﬁguration
+            2.6.17.3.5. Data consistency
+            2.6.17.3.6. Limitations
+            2.6.17.3.7. Metrics in CloudWatch for Atlassian connectors
+            2.6.17.3.8. Connecting an Amazon OpenSearch Ingestion pipeline to Atlassian Jira or Conﬂuence using OAuth 2.0
+         2.6.17.4. Using an OpenSearch Ingestion pipeline with Amazon Aurora
+            2.6.17.4.1. Aurora MySQL
+            2.6.17.4.2. Aurora PostgreSQL
+         2.6.17.5. Using an OpenSearch Ingestion pipeline with Amazon DynamoDB
+            2.6.17.5.1. Prerequisites
+            2.6.17.5.2. Step 1: Conﬁgure the pipeline role
+            2.6.17.5.3. Step 2: Create the pipeline
+            2.6.17.5.4. Data consistency
+            2.6.17.5.5. Mapping data types
+            2.6.17.5.6. Limitations
+            2.6.17.5.7. Recommended CloudWatch Alarms for DynamoDB
+         2.6.17.6. Using an OpenSearch Ingestion pipeline with Amazon DocumentDB
+            2.6.17.6.1. Prerequisites
+            2.6.17.6.2. Step 1: Conﬁgure the pipeline role
+            2.6.17.6.3. Step 2: Create the pipeline
+            2.6.17.6.4. Data consistency
+            2.6.17.6.5. Mapping data types
+            2.6.17.6.6. Limitations
+            2.6.17.6.7. Recommended CloudWatch alarms
+         2.6.17.7. Using an OpenSearch Ingestion pipeline with Conﬂuent Cloud Kafka
+            2.6.17.7.1. Connectivity to Conﬂuent Cloud public Kafka clusters
+         2.6.17.8. Using an OpenSearch Ingestion pipeline with Amazon Managed Streaming for Apache Kafka
+            2.6.17.8.1. Provisioned Amazon MSK prerequisites
+            2.6.17.8.2. Amazon MSK Serverless prerequisites
+            2.6.17.8.3. Step 1: Conﬁgure a pipeline role
+            2.6.17.8.4. Step 2: Create the pipeline
+            2.6.17.8.5. Step 3: (Optional) Use the AWS Glue Schema Registry
+            2.6.17.8.6. Step 4: (Optional) Conﬁgure recommended compute units (OCUs) for the Amazon MSK pipeline
+         2.6.17.9. Using an OpenSearch Ingestion pipeline with Amazon RDS
+            2.6.17.9.1. RDS for MySQL
+            2.6.17.9.2. RDS for PostgreSQL
+         2.6.17.10. Using an OpenSearch Ingestion pipeline with Amazon S3
+            2.6.17.10.1. Amazon S3 as a source
+            2.6.17.10.2. Amazon S3 as a destination
+            2.6.17.10.3. Amazon S3 cross account as a source
+         2.6.17.11. Using an OpenSearch Ingestion pipeline with Amazon Security Lake
+            2.6.17.11.1. Using an OpenSearch Ingestion pipeline with Amazon Security Lake as a source
+            2.6.17.11.2. Using an OpenSearch Ingestion pipeline with Amazon Security Lake as a sink
+         2.6.17.12. Using an OpenSearch Ingestion pipeline with Fluent Bit
+         2.6.17.13. Using an OpenSearch Ingestion pipeline with Fluentd
+         2.6.17.14. Using an OpenSearch Ingestion pipeline with machine learning oﬄine batch inference
+            2.6.17.14.1. How it works
+            2.6.17.14.2. About the ml_inference processor
+            2.6.17.14.3. Conﬁgure the ml_inference processor to ingest data requests for a semantic search
+         2.6.17.15. Using an OpenSearch Ingestion pipeline with OpenTelemetry Collector
+         2.6.17.16. Using an OpenSearch Ingestion pipeline with Kafka
+            2.6.17.16.1. Migrating data from public Kafka clusters
+         2.6.17.17. Migrating data from self-managed OpenSearch clusters using Amazon OpenSearch Ingestion
+            2.6.17.17.1. Migrating from public OpenSearch clusters
+            2.6.17.17.2. Migrating data from OpenSearch clusters in a VPC
+         2.6.17.18. Use an OpenSearch Ingestion pipeline with Amazon Kinesis Data Streams
+            2.6.17.18.1. Amazon Kinesis Data Streams as a source
+            2.6.17.18.2. Amazon Kinesis Data Streams cross account as a source
+         2.6.17.19. Next steps
+         2.6.17.20. Using an OpenSearch Ingestion pipeline with AWS Lambda
+            2.6.17.20.1. Prerequisites
+            2.6.17.20.2. Create a pipeline
+            2.6.17.20.3. Batching
+            2.6.17.20.4. Conditional ﬁltering
+      2.6.18. Migrating data between domains and collections using Amazon OpenSearch Ingestion
+         2.6.18.1. Limitations
+         2.6.18.2. OpenSearch Service as a source
+            2.6.18.2.1. Creating a pipeline role in IAM
+            2.6.18.2.2. Creating a pipeline
+         2.6.18.3. Specifying multiple OpenSearch Service domain sinks
+         2.6.18.4. Migrating data to an OpenSearch Serverless VPC collection
+      2.6.19. Using the AWS SDKs to interact with Amazon OpenSearch Ingestion
+         2.6.19.1. Python
+      2.6.20. Security in Amazon OpenSearch Ingestion
+         2.6.20.1. Conﬁguring VPC access for Amazon OpenSearch Ingestion pipelines
+            2.6.20.1.1. Considerations
+            2.6.20.1.2. Limitations
+            2.6.20.1.3. Prerequisites
+            2.6.20.1.4. Conﬁguring VPC access for a pipeline
+            2.6.20.1.5. Self-managed VPC endpoints
+            2.6.20.1.6. Service-linked role for VPC access
+         2.6.20.2. Conﬁguring OpenSearch Ingestion pipelines for cross-account ingestion
+            2.6.20.2.1. Before you begin
+            2.6.20.2.2. Grant connecting accounts access to a pipeline
+            2.6.20.2.3. Create a pipeline endpoint connection for each connecting VPC
+            2.6.20.2.4. Removing pipeline endpoints
+         2.6.20.3. Identity and Access Management for Amazon OpenSearch Ingestion
+            2.6.20.3.1. Identity-based policies for OpenSearch Ingestion
+            2.6.20.3.2. Policy actions for OpenSearch Ingestion
+            2.6.20.3.3. Policy resources for OpenSearch Ingestion
+            2.6.20.3.4. Policy condition keys for Amazon OpenSearch Ingestion
+            2.6.20.3.5. ABAC with OpenSearch Ingestion
+            2.6.20.3.6. Using temporary credentials with OpenSearch Ingestion
+            2.6.20.3.7. Service-linked roles for OpenSearch Ingestion
+            2.6.20.3.8. Identity-based policy examples for OpenSearch Ingestion
+         2.6.20.4. Logging Amazon OpenSearch Ingestion API calls using AWS CloudTrail
+            2.6.20.4.1. OpenSearch Ingestion information in CloudTrail
+            2.6.20.4.2. Understanding OpenSearch Ingestion log ﬁle entries
+      2.6.21. Tagging Amazon OpenSearch Ingestion pipelines
+         2.6.21.1. Permissions required
+         2.6.21.2. Working with tags (console)
+         2.6.21.3. Working with tags (AWS CLI)
+      2.6.22. Logging and monitoring Amazon OpenSearch Ingestion with Amazon CloudWatch
+         2.6.22.1. Monitoring pipeline logs
+            2.6.22.1.1. Permissions required
+            2.6.22.1.2. Enabling log publishing
+         2.6.22.2. Monitoring pipeline metrics
+            2.6.22.2.1. Common metrics
+            2.6.22.2.2. Buﬀer metrics
+            2.6.22.2.3. Signature V4 metrics
+            2.6.22.2.4. Bounded blocking buﬀer metrics
+            2.6.22.2.5. Otel trace source metrics
+            2.6.22.2.6. Otel metrics source metrics
+            2.6.22.2.7. Http metrics
+            2.6.22.2.8. S3 metrics
+            2.6.22.2.9. Aggregate metrics
+            2.6.22.2.10. Date metrics
+            2.6.22.2.11. Lambda metrics
+            2.6.22.2.12. Grok metrics
+            2.6.22.2.13. Otel trace raw metrics
+            2.6.22.2.14. Otel trace group metrics
+            2.6.22.2.15. Service map stateful metrics
+            2.6.22.2.16. OpenSearch metrics
+            2.6.22.2.17. System and metering metrics
+      2.6.23. Best practices for Amazon OpenSearch Ingestion
+         2.6.23.1. General best practices
+         2.6.23.2. Recommended CloudWatch alarms
+            2.6.23.2.1. Other alarms you might consider
+   2.7. Amazon OpenSearch Serverless
+      2.7.1. Beneﬁts
+      2.7.2. What is Amazon OpenSearch Serverless?
+         2.7.2.1. Use cases for OpenSearch Serverless
+         2.7.2.2. How it works
+         2.7.2.3. Choosing a collection type
+         2.7.2.4. Pricing
+         2.7.2.5. Supported AWS Regions
+         2.7.2.6. Limitations
+         2.7.2.7. Comparing OpenSearch Service and OpenSearch Serverless
+      2.7.3. Tutorial: Getting started with Amazon OpenSearch Serverless
+         2.7.3.1. Step 1: Conﬁgure permissions
+         2.7.3.2. Step 2: Create a collection
+         2.7.3.3. Step 3: Upload and search data
+         2.7.3.4. Handling errors
+         2.7.3.5. Step 4: Delete the collection
+         2.7.3.6. Next steps
+      2.7.4. Amazon OpenSearch Serverless collections
+         2.7.4.1. Managing Amazon OpenSearch Serverless collections
+            2.7.4.1.1. Conﬁguring permissions for collections
+            2.7.4.1.2. About automatic semantic enrichment
+            2.7.4.1.3. Creating collections
+            2.7.4.1.4. Accessing OpenSearch Dashboards
+            2.7.4.1.5. Viewing collections
+            2.7.4.1.6. Deleting collections
+         2.7.4.2. Working with vector search collections
+            2.7.4.2.1. Getting started with vector search collections
+            2.7.4.2.2. Filtered search
+            2.7.4.2.3. Billion scale workloads
+            2.7.4.2.4. Limitations
+            2.7.4.2.5. Next steps
+         2.7.4.3. Using data lifecycle policies with Amazon OpenSearch Serverless
+            2.7.4.3.1. Data lifecycle policies
+            2.7.4.3.2. Required permissions
+            2.7.4.3.3. Policy precedence
+            2.7.4.3.4. Policy syntax
+            2.7.4.3.5. Creating data lifecycle policies
+            2.7.4.3.6. Updating data lifecycle policies
+            2.7.4.3.7. Deleting data lifecycle policies
+         2.7.4.4. Using the AWS SDKs to interact with Amazon OpenSearch Serverless
+            2.7.4.4.1. Python
+            2.7.4.4.2. JavaScript
+         2.7.4.5. Using CloudFormation to create Amazon OpenSearch Serverless collections
+         2.7.4.6. Backing up collections using snapshots
+            2.7.4.6.1. Required permissions
+            2.7.4.6.2. Working with snapshots
+            2.7.4.6.3. Restoring from a snapshot
+      2.7.5. Amazon OpenSearch Serverless collection groups
+         2.7.5.1. Key concepts
+         2.7.5.2. Collection group capacity limits
+            2.7.5.2.1. Understanding collection group capacity limits
+            2.7.5.2.2. Valid capacity limit values
+            2.7.5.2.3. Conﬁguring capacity limits
+            2.7.5.2.4. Monitoring collection group capacity
+            2.7.5.2.5. How capacity limits are enforced
+         2.7.5.3. Encryption and KMS keys in collection groups
+            2.7.5.3.1. Sharing OCUs across diﬀerent KMS keys
+            2.7.5.3.2. Required KMS permissions
+         2.7.5.4. Create collection groups
+            2.7.5.4.1. Create a collection group
+            2.7.5.4.2. Add a new collection to a collection group
+         2.7.5.5. Manage Amazon OpenSearch Serverless collection groups
+            2.7.5.5.1. View collection groups
+            2.7.5.5.2. Update collection group settings
+            2.7.5.5.3. Delete collection groups
+      2.7.6. Managing capacity limits for Amazon OpenSearch Serverless
+         2.7.6.1. Conﬁguring capacity settings
+         2.7.6.2. Maximum capacity limits
+         2.7.6.3. Monitoring capacity usage
+      2.7.7. Ingesting data into Amazon OpenSearch Serverless collections
+         2.7.7.1. Minimum required permissions
+         2.7.7.2. OpenSearch Ingestion
+         2.7.7.3. Fluent Bit
+         2.7.7.4. Amazon Data Firehose
+         2.7.7.5. Go
+         2.7.7.6. Java
+         2.7.7.7. JavaScript
+         2.7.7.8. Logstash
+         2.7.7.9. Python
+         2.7.7.10. Ruby
+         2.7.7.11. Signing HTTP requests with other clients
+            2.7.7.11.1. Indexing with cURL
+            2.7.7.11.2. Indexing with Postman
+      2.7.8. Conﬁgure Machine Learning on Amazon OpenSearch Serverless
+         2.7.8.1. Machine Learning
+         2.7.8.2. Connectors
+         2.7.8.3. Models
+         2.7.8.4. Conﬁgure permissions for Machine Learning
+         2.7.8.5. Unsupported Machine Learning APIs and features
+            2.7.8.5.1. Unsupported APIs
+            2.7.8.5.2. Unsupported features
+      2.7.9. Conﬁgure Neural Search and Hybrid Search on OpenSearch Serverless
+         2.7.9.1. Neural Search
+         2.7.9.2. Hybrid Search
+         2.7.9.3. Neural and hybrid queries
+         2.7.9.4. Conﬁgure permissions
+      2.7.10. Conﬁgure Workﬂows on Amazon OpenSearch Serverless
+         2.7.10.1. Workﬂows
+         2.7.10.2. Conﬁgure permissions
+      2.7.11. Overview of security in Amazon OpenSearch Serverless
+         2.7.11.1. Encryption policies
+         2.7.11.2. Network policies
+         2.7.11.3. Data access policies
+         2.7.11.4. IAM and SAML authentication
+         2.7.11.5. Infrastructure security
+         2.7.11.6. Getting started with security in Amazon OpenSearch Serverless
+            2.7.11.6.1. Tutorial: Getting started with security in Amazon OpenSearch Serverless (console)
+            2.7.11.6.2. Tutorial: Getting started with security in Amazon OpenSearch Serverless (CLI)
+         2.7.11.7. Identity and Access Management for Amazon OpenSearch Serverless
+            2.7.11.7.1. Identity-based policies for OpenSearch Serverless
+            2.7.11.7.2. Policy actions for OpenSearch Serverless
+            2.7.11.7.3. Policy resources for OpenSearch Serverless
+            2.7.11.7.4. Policy condition keys for Amazon OpenSearch Serverless
+            2.7.11.7.5. ABAC with OpenSearch Serverless
+            2.7.11.7.6. Using temporary credentials with OpenSearch Serverless
+            2.7.11.7.7. Service-linked roles for OpenSearch Serverless
+            2.7.11.7.8. Other policy types
+            2.7.11.7.9. Identity-based policy examples for OpenSearch Serverless
+            2.7.11.7.10. IAM Identity Center support for Amazon OpenSearch Serverless
+         2.7.11.8. Encryption in Amazon OpenSearch Serverless
+            2.7.11.8.1. Encryption at rest
+            2.7.11.8.2. Encryption in transit
+         2.7.11.9. Network access for Amazon OpenSearch Serverless
+            2.7.11.9.1. Network policies
+            2.7.11.9.2. Considerations
+            2.7.11.9.3. Permissions required to conﬁgure network policies
+            2.7.11.9.4. Policy precedence
+            2.7.11.9.5. Creating network policies (console)
+            2.7.11.9.6. Creating network policies (AWS CLI)
+            2.7.11.9.7. Viewing network policies
+            2.7.11.9.8. Updating network policies
+            2.7.11.9.9. Deleting network policies
+         2.7.11.10. FIPS compliance in Amazon OpenSearch Serverless
+            2.7.11.10.1. Using FIPS endpoints with OpenSearch Serverless
+            2.7.11.10.2. Use FIPS endpoints with AWS SDKs
+            2.7.11.10.3. Conﬁgure security groups for VPC endpoints
+            2.7.11.10.4. Use the FIPS VPC endpoint
+            2.7.11.10.5. Verify FIPS compliance
+            2.7.11.10.6. Resolve FIPS endpoint connectivity issues in private hosted zones
+         2.7.11.11. Data access control for Amazon OpenSearch Serverless
+            2.7.11.11.1. Data access policies versus IAM policies
+            2.7.11.11.2. IAM permissions required to conﬁgure data access policies
+            2.7.11.11.3. Policy syntax
+            2.7.11.11.4. Supported policy permissions
+            2.7.11.11.5. Sample datasets on OpenSearch Dashboards
+            2.7.11.11.6. Creating data access policies (console)
+            2.7.11.11.7. Creating data access policies (AWS CLI)
+            2.7.11.11.8. Viewing data access policies
+            2.7.11.11.9. Updating data access policies
+            2.7.11.11.10. Deleting data access policies
+            2.7.11.11.11. Cross-account data access
+         2.7.11.12. Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)
+            2.7.11.12.1. Creating Collection/Policies using PrivateLink
+            2.7.11.12.2. DNS resolution of collection endpoints
+            2.7.11.12.3. VPCs and network access policies
+            2.7.11.12.4. VPCs and endpoint policies
+            2.7.11.12.5. Considerations
+            2.7.11.12.6. Permissions required
+            2.7.11.12.7. Create an interface endpoint for OpenSearch Serverless
+            2.7.11.12.8. Shared VPC setup for Amazon OpenSearch Serverless
+         2.7.11.13. SAML authentication for Amazon OpenSearch Serverless
+            2.7.11.13.1. Considerations
+            2.7.11.13.2. Permissions required
+            2.7.11.13.3. Creating SAML providers (console)
+            2.7.11.13.4. Accessing OpenSearch Dashboards
+            2.7.11.13.5. Granting SAML identities access to collection data
+            2.7.11.13.6. Creating SAML providers (AWS CLI)
+            2.7.11.13.7. Viewing SAML providers
+            2.7.11.13.8. Updating SAML providers
+            2.7.11.13.9. Deleting SAML providers
+         2.7.11.14. Compliance validation for Amazon OpenSearch Serverless
+      2.7.12. Tagging Amazon OpenSearch Serverless collections
+         2.7.12.1. Permissions required
+         2.7.12.2. Tagging collections (console)
+         2.7.12.3. Tagging collections (AWS CLI)
+      2.7.13. Supported operations and plugins in Amazon OpenSearch Serverless
+         2.7.13.1. Supported OpenSearch API operations and permissions
+         2.7.13.2. Supported OpenSearch plugins
+      2.7.14. Monitoring Amazon OpenSearch Serverless
+         2.7.14.1. Monitoring OpenSearch Serverless with Amazon CloudWatch
+         2.7.14.2. Logging OpenSearch Serverless API calls using AWS CloudTrail
+            2.7.14.2.1. OpenSearch Serverless information in CloudTrail
+            2.7.14.2.2. OpenSearch Serverless data events in CloudTrail
+            2.7.14.2.3. Understanding OpenSearch Serverless Data Event entries
+            2.7.14.2.4. Understanding OpenSearch Serverless Management Events entries
+         2.7.14.3. Monitoring OpenSearch Serverless events using Amazon EventBridge
+            2.7.14.3.1. Setting up notiﬁcations
+            2.7.14.3.2. OpenSearch Compute Units (OCU) events
+   2.8. Creating and managing Amazon OpenSearch Service domains
+      2.8.1. Creating OpenSearch Service domains
+         2.8.1.1. Creating OpenSearch Service domains (console)
+         2.8.1.2. Creating OpenSearch Service domains (AWS CLI)
+            2.8.1.2.1. Example commands
+         2.8.1.3. Creating OpenSearch Service domains (AWS SDKs)
+         2.8.1.4. Creating OpenSearch Service domains (AWS CloudFormation)
+      2.8.2. Conﬁguring access policies
+      2.8.3. Migrating to OpenSearch Service with Migration Assistant
+         2.8.3.1. Overview
+         2.8.3.2. Migration scenarios
+         2.8.3.3. Getting started with Migration Assistant
+         2.8.3.4. Solution architecture
+      2.8.4. Advanced cluster settings
+      2.8.5. Automatic semantic enrichment for Amazon OpenSearch Service
+         2.8.5.1. How it works
+            2.8.5.1.1. Requirements and considerations
+         2.8.5.2. Index set up example
+         2.8.5.3. Conﬁguring permissions for automatic semantic enrichment
+            2.8.5.3.1. IAM permissions
+            2.8.5.3.2. Sample IAM policy
+            2.8.5.3.3. Fine-grained access control permissions
+      2.8.6. Making conﬁguration changes in Amazon OpenSearch Service
+         2.8.6.1. Changes that usually cause blue/green deployments
+         2.8.6.2. Changes that usually don't cause blue/green deployments
+         2.8.6.3. Determining whether a change will cause a blue/green deployment
+         2.8.6.4. Tracking a conﬁguration change
+         2.8.6.5. Stages of a conﬁguration change
+         2.8.6.6. Performance impact of blue/green deployments
+         2.8.6.7. Charges for conﬁguration changes
+         2.8.6.8. Troubleshooting validation errors
+      2.8.7. Service software updates in Amazon OpenSearch Service
+         2.8.7.1. Optional versus required updates
+            2.8.7.1.1. Optional updates
+            2.8.7.1.2. Required updates
+         2.8.7.2. Patch updates
+         2.8.7.3. Considerations
+         2.8.7.4. Starting a service software update
+         2.8.7.5. Scheduling software updates during oﬀ-peak windows
+         2.8.7.6. Monitoring service software updates
+         2.8.7.7. When domains are ineligible for an update
+      2.8.8. Deﬁning oﬀ-peak windows for Amazon OpenSearch Service
+         2.8.8.1. Oﬀ-peak service software updates
+         2.8.8.2. Oﬀ-peak Auto-Tune optimizations
+         2.8.8.3. Enabling the oﬀ-peak window
+         2.8.8.4. Conﬁguring a custom oﬀ-peak window
+         2.8.8.5. Viewing scheduled actions
+         2.8.8.6. Rescheduling actions
+         2.8.8.7. Migrating from Auto-Tune maintenance windows
+      2.8.9. Notiﬁcations in Amazon OpenSearch Service
+         2.8.9.1. Getting started with notiﬁcations
+         2.8.9.2. Notiﬁcation severities
+         2.8.9.3. Sample EventBridge event
+      2.8.10. Conﬁguring a multi-AZ domain in Amazon OpenSearch Service
+         2.8.10.1. Multi-AZ with Standby
+            2.8.10.1.1. Limitations
+         2.8.10.2. Multi-AZ without Standby
+            2.8.10.2.1. Shard distribution
+            2.8.10.2.2. Dedicated master node distribution
+         2.8.10.3. Availability zone disruptions
+      2.8.11. Launching your Amazon OpenSearch Service domains within a VPC
+         2.8.11.1. VPC versus public domains
+         2.8.11.2. Limitations
+         2.8.11.3. Architecture
+            2.8.11.3.1. Migrating from public access to VPC access
+            2.8.11.3.2. About access policies on VPC domains
+            2.8.11.3.3. Before you begin: prerequisites for VPC access
+            2.8.11.3.4. Testing VPC domains
+            2.8.11.3.5. Reserving IP addresses in a VPC subnet
+            2.8.11.3.6. Service-linked role for VPC access
+      2.8.12. Creating index snapshots in Amazon OpenSearch Service
+         2.8.12.1. Prerequisites
+         2.8.12.2. Registering a manual snapshot repository
+            2.8.12.2.1. Step 1: Map the snapshot role in OpenSearch Dashboards (if using ﬁne-grained access control)
+            2.8.12.2.2. Step 2: Register a repository
+         2.8.12.3. Taking manual snapshots
+            2.8.12.3.1. Snapshot storage and performance
+            2.8.12.3.2. Take a snapshot
+         2.8.12.4. Restoring snapshots
+         2.8.12.5. Deleting manual snapshots
+         2.8.12.6. Automating snapshots with Snapshot Management
+            2.8.12.6.1. Conﬁgure permissions
+            2.8.12.6.2. Considerations
+         2.8.12.7. Automating snapshots with Index State Management
+         2.8.12.8. Using Curator for snapshots
+      2.8.13. Upgrading Amazon OpenSearch Service domains
+         2.8.13.1. Supported upgrade paths
+         2.8.13.2. Upgrading a domain (console)
+         2.8.13.3. Upgrading a domain (CLI)
+         2.8.13.4. Upgrading a domain (SDK)
+         2.8.13.5. Troubleshooting validation failures
+         2.8.13.6. Troubleshooting an upgrade
+         2.8.13.7. Using a snapshot to migrate data
+      2.8.14. Creating a custom endpoint for Amazon OpenSearch Service
+         2.8.14.1. Custom endpoints for new domains
+         2.8.14.2. Custom endpoints for existing domains
+         2.8.14.3. CNAME mapping
+      2.8.15. Auto-Tune for Amazon OpenSearch Service
+         2.8.15.1. Types of changes
+         2.8.15.2. Enabling or disabling Auto-Tune
+         2.8.15.3. Scheduling Auto-Tune enhancements
+         2.8.15.4. Monitoring Auto-Tune changes
+      2.8.16. Tagging Amazon OpenSearch Service domains
+         2.8.16.1. Tagging examples
+         2.8.16.2. Tagging domains (console)
+         2.8.16.3. Tagging domains (AWS CLI)
+         2.8.16.4. Tagging domains (AWS SDKs)
+            2.8.16.4.1. Python
+      2.8.17. Performing administrative actions on Amazon OpenSearch Service domains
+         2.8.17.1. Restarting the OpenSearch process on a node in Amazon OpenSearch Service
+         2.8.17.2. Rebooting a data node in Amazon OpenSearch Service
+         2.8.17.3. Restarting the OpenSearch Dashboards process on a node in Amazon OpenSearch Service
+         2.8.17.4. Limitations
+   2.9. Working with Amazon OpenSearch Service direct queries
+      2.9.1. Direct query pricing
+      2.9.2. Direct query limitations
+         2.9.2.1. General limitations
+         2.9.2.2. Limitations for Amazon S3
+         2.9.2.3. Limitations for Amazon CloudWatch Logs
+         2.9.2.4. Limitations for Amazon Security Lake
+      2.9.3. Recommendations for using direct queries in Amazon OpenSearch Service
+         2.9.3.1. General recommendations
+         2.9.3.2. Amazon S3 recommendations
+         2.9.3.3. CloudWatch Logs Recommendations
+         2.9.3.4. Security Lake recommendations
+      2.9.4. Direct query quotas
+         2.9.4.1. Quotas for Amazon S3
+         2.9.4.2. Quotas for CloudWatch Logs
+         2.9.4.3. Quotas for Security Lake
+      2.9.5. Supported AWS Regions
+         2.9.5.1. Available AWS Regions for Amazon S3
+         2.9.5.2. Available AWS Regions for CloudWatch Logs
+         2.9.5.3. Available AWS Regions for Security Lake
+      2.9.6. Directly querying Amazon S3 data in OpenSearch Service
+         2.9.6.1. Creating an Amazon S3 data source integration in OpenSearch Service
+            2.9.6.1.1. Prerequisites
+            2.9.6.1.2. Procedure
+            2.9.6.1.3. Next steps
+            2.9.6.1.4. Map the AWS Glue Data Catalog role
+            2.9.6.1.5. Additional resources
+         2.9.6.2. Conﬁguring and querying an S3 data source in OpenSearch Dashboards
+            2.9.6.2.1. Create Spark Tables using Query Workbench
+            2.9.6.2.2. Setup integrations for popular AWS log types
+            2.9.6.2.3. Set up access control
+            2.9.6.2.4. Querying S3 data in OpenSearch Discover
+            2.9.6.2.5. Troubleshooting
+      2.9.7. Directly querying Amazon CloudWatch Logs data in OpenSearch Service
+         2.9.7.1. Creating an Amazon CloudWatch Logs data source integration in OpenSearch Service
+            2.9.7.1.1. Prerequisites
+            2.9.7.1.2. Procedure
+            2.9.7.1.3. Next steps
+            2.9.7.1.4. Additional resources
+         2.9.7.2. Conﬁguring and querying a CloudWatch Logs data source in OpenSearch Dashboards
+            2.9.7.2.1. Query log groups from the Discover page
+            2.9.7.2.2. Create a dashboard view for your data source
+            2.9.7.2.3. Querying CloudWatch Logs data in OpenSearch Discover
+      2.9.8. Directly querying Amazon Security Lake data in OpenSearch Service
+         2.9.8.1. Creating an Amazon Security Lake data source integration in OpenSearch Service
+            2.9.8.1.1. Prerequisites
+            2.9.8.1.2. Procedure
+            2.9.8.1.3. Next steps
+            2.9.8.1.4. Additional resources
+         2.9.8.2. Conﬁguring and querying a Security Lake data source in OpenSearch Dashboards
+            2.9.8.2.1. Query Security Lake tables from Discover
+            2.9.8.2.2. Accelerate data from Discover
+            2.9.8.2.3. Create a dashboard view for your data source
+            2.9.8.2.4. Troubleshooting
+      2.9.9. Managing a data source in Amazon OpenSearch Service
+         2.9.9.1. Monitoring with CloudWatch metrics data sources
+         2.9.9.2. Enabling and disabling data sources
+         2.9.9.3. Monitoring with AWS Budget
+         2.9.9.4. Deleting a data source
+      2.9.10. Optimizing query performance for Amazon OpenSearch Service data sources
+         2.9.10.1. Skipping indexes
+         2.9.10.2. Materialized views
+         2.9.10.3. Covering indexes
+      2.9.11. Supported SQL and PPL commands
+         2.9.11.1. Supported OpenSearch SQL commands and functions
+            2.9.11.1.1. Commands
+            2.9.11.1.2. Functions
+            2.9.11.1.3. General SQL restrictions
+            2.9.11.1.4. Additional information for CloudWatch Logs Insights users using OpenSearch SQL
+         2.9.11.2. Supported PPL commands
+            2.9.11.2.1. Commands
+            2.9.11.2.2. Functions
+            2.9.11.2.3. Additional information for CloudWatch Logs Insights users using OpenSearch PPL
+   2.10. Monitoring Amazon OpenSearch Service domains
+      2.10.1. Monitoring OpenSearch cluster metrics with Amazon CloudWatch
+         2.10.1.1. Viewing metrics in CloudWatch
+         2.10.1.2. Interpreting health charts in OpenSearch Service
+         2.10.1.3. Cluster metrics
+         2.10.1.4. Dedicated master node metrics
+         2.10.1.5. Dedicated coordinator node metrics
+         2.10.1.6. EBS volume metrics
+         2.10.1.7. Instance metrics
+         2.10.1.8. Warm metrics
+         2.10.1.9. Cold storage metrics
+         2.10.1.10. OpenSearch Optimized Instances (OR1) metrics
+         2.10.1.11. Alerting metrics
+         2.10.1.12. Anomaly detection metrics
+         2.10.1.13. Asynchronous search metrics
+         2.10.1.14. Auto-Tune metrics
+         2.10.1.15. Multi-AZ with Standby metrics
+         2.10.1.16. Point in time metrics
+         2.10.1.17. SQL metrics
+         2.10.1.18. k-NN metrics
+         2.10.1.19. Cross-cluster search metrics
+         2.10.1.20. Cross-cluster replication metrics
+         2.10.1.21. Learning to Rank metrics
+         2.10.1.22. Piped Processing Language metrics
+      2.10.2. Monitoring OpenSearch logs with Amazon CloudWatch Logs
+         2.10.2.1. Enabling log publishing (console)
+         2.10.2.2. Enabling log publishing (AWS CLI)
+         2.10.2.3. Enabling log publishing (AWS SDKs)
+         2.10.2.4. Enabling log publishing (CloudFormation)
+         2.10.2.5. Setting search request slow log thresholds
+         2.10.2.6. Setting shard slow log thresholds
+         2.10.2.7. Testing slow logs
+         2.10.2.8. Viewing logs
+      2.10.3. Monitoring audit logs in Amazon OpenSearch Service
+         2.10.3.1. Limitations
+         2.10.3.2. Enabling audit logs
+            2.10.3.2.1. Step 1: Enable audit logs and conﬁgure an access policy
+            2.10.3.2.2. Step 2: Turn on audit logs in OpenSearch Dashboards
+         2.10.3.3. Enable audit logging using the AWS CLI
+         2.10.3.4. Enable audit logging using the conﬁguration API
+         2.10.3.5. Audit log layers and categories
+         2.10.3.6. Audit log settings
+            2.10.3.6.1. General settings
+            2.10.3.6.2. Compliance settings
+         2.10.3.7. Audit log example
+            2.10.3.7.1. Step 1: Conﬁgure audit logs
+            2.10.3.7.2. Step 2: Perform read and write events
+            2.10.3.7.3. Step 3: Observe the logs
+         2.10.3.8. Conﬁguring audit logs using the REST API
+      2.10.4. Monitoring OpenSearch Service events with Amazon EventBridge
+         2.10.4.1. Service software update events
+            2.10.4.1.1. Service software update available
+            2.10.4.1.2. Service software update scheduled
+            2.10.4.1.3. Service software update rescheduled
+            2.10.4.1.4. Service software update started
+            2.10.4.1.5. Service software update completed
+            2.10.4.1.6. Service software update cancelled
+            2.10.4.1.7. Scheduled service software update cancelled
+            2.10.4.1.8. Service software update unexecuted
+            2.10.4.1.9. Service software update failed
+            2.10.4.1.10. Service software update required
+         2.10.4.2. Auto-Tune events
+            2.10.4.2.1. Auto-Tune pending
+            2.10.4.2.2. Auto-Tune started
+            2.10.4.2.3. Auto-Tune requires a scheduled blue/green deployment
+            2.10.4.2.4. Auto-Tune cancelled
+            2.10.4.2.5. Auto-Tune completed
+            2.10.4.2.6. Auto-Tune disabled and changes reverted
+            2.10.4.2.7. Auto-Tune disabled and changes retained
+         2.10.4.3. Cluster health events
+            2.10.4.3.1. Red cluster recovery started
+            2.10.4.3.2. Red cluster recovery partially completed
+            2.10.4.3.3. Red cluster recovery failed
+            2.10.4.3.4. Shards to be deleted
+            2.10.4.3.5. Shards deleted
+            2.10.4.3.6. High shard count warning
+            2.10.4.3.7. Shard count limit exceeded
+            2.10.4.3.8. Low disk space
+            2.10.4.3.9. Low disk watermark breach
+            2.10.4.3.10. EBS burst balance below 70%
+            2.10.4.3.11. EBS burst balance below 20%
+            2.10.4.3.12. Disk throughput throttle
+            2.10.4.3.13. Large shard size
+            2.10.4.3.14. High JVM usage
+            2.10.4.3.15. Insuﬃcient GC
+            2.10.4.3.16. Custom index routing warning
+            2.10.4.3.17. Failed shard lock
+         2.10.4.4. VPC endpoint events
+            2.10.4.4.1. VPC endpoint creation failed
+            2.10.4.4.2. VPC endpoint update failed
+            2.10.4.4.3. VPC endpoint deletion failed
+         2.10.4.5. Node retirement events
+            2.10.4.5.1. Node retirement scheduled
+            2.10.4.5.2. Node retirement completed
+            2.10.4.5.3. Node retirement failed
+         2.10.4.6. Degraded node retirement events
+            2.10.4.6.1. Degraded node retirement notiﬁcation
+            2.10.4.6.2. Degraded node retirement complete
+            2.10.4.6.3. Degraded node retirement failed
+         2.10.4.7. Domain error events
+            2.10.4.7.1. Domain update validation failure
+            2.10.4.7.2. KMS key inaccessible
+            2.10.4.7.3. Domain isolation
+         2.10.4.8. Tutorial: Listening for Amazon OpenSearch Service EventBridge events
+            2.10.4.8.1. Prerequisites
+            2.10.4.8.2. Step 1: Create the Lambda function
+            2.10.4.8.3. Step 2: Register an event rule
+            2.10.4.8.4. Step 3: Test your conﬁguration
+         2.10.4.9. Tutorial: Sending Amazon SNS alerts for available software updates
+            2.10.4.9.1. Prerequisites
+            2.10.4.9.2. Step 1: Create and subscribe to an Amazon SNS topic
+            2.10.4.9.3. Step 2: Register an event rule
+      2.10.5. Monitoring Amazon OpenSearch Service API calls with AWS CloudTrail
+         2.10.5.1. Amazon OpenSearch Service information in CloudTrail
+         2.10.5.2. Understanding Amazon OpenSearch Service log ﬁle entries
+   2.11. Uniﬁed operational monitoring with Cluster Insights
+      2.11.1. Beneﬁts
+      2.11.2. Create and conﬁgure an OpenSearch application to view Cluster Insights
+      2.11.3. Create and conﬁgure an application to view Cluster Insights
+      2.11.4. Understanding Cluster Insights
+         2.11.4.1. Overview Dashboard
+         2.11.4.2. Current cluster status
+         2.11.4.3. Insights trend
+         2.11.4.4. Current open insights
+         2.11.4.5. OpenSearch Service Clusters
+         2.11.4.6. Top insights by severity
+         2.11.4.7. Insight details
+         2.11.4.8. Cluster Details
+         2.11.4.9. Overview
+         2.11.4.10. Conﬁguration best practices
+         2.11.4.11. Insights
+         2.11.4.12. Metrics Section
+         2.11.4.13. Node, Index, and Shard views
+         2.11.4.14. Query View
+            2.11.4.14.1. Live dashboards
+            2.11.4.14.2. Top N queries
+            2.11.4.14.3. Query details
+      2.11.5. Insights Catalog
+   2.12. Security in Amazon OpenSearch Service
+      2.12.1. Data protection in Amazon OpenSearch Service
+         2.12.1.1. Encryption of data at rest for Amazon OpenSearch Service
+            2.12.1.1.1. Permissions
+            2.12.1.1.2. Enabling encryption of data at rest
+            2.12.1.1.3. Disabled or deleted KMS key
+            2.12.1.1.4. Disabling encryption of data at rest
+            2.12.1.1.5. Monitoring domains that encrypt data at rest
+            2.12.1.1.6. Other considerations
+         2.12.1.2. Node-to-node encryption for Amazon OpenSearch Service
+            2.12.1.2.1. Enabling node-to-node encryption
+            2.12.1.2.2. Disabling node-to-node encryption
+      2.12.2. Identity and Access Management in Amazon OpenSearch Service
+         2.12.2.1. Types of policies
+            2.12.2.1.1. Resource-based policies
+            2.12.2.1.2. Identity-based policies
+            2.12.2.1.3. IP-based policies
+         2.12.2.2. Making and signing OpenSearch Service requests
+         2.12.2.3. When policies collide
+         2.12.2.4. Policy element reference
+         2.12.2.5. Advanced options and API considerations
+         2.12.2.6. Conﬁguring access policies
+         2.12.2.7. Additional sample policies
+         2.12.2.8. Amazon OpenSearch Service API permissions reference
+         2.12.2.9. AWS managed policies for Amazon OpenSearch Service
+            2.12.2.9.1. AmazonOpenSearchDirectQueryGlueCreateAccess
+            2.12.2.9.2. AmazonOpenSearchServiceFullAccess
+            2.12.2.9.3. AmazonOpenSearchServiceReadOnlyAccess
+            2.12.2.9.4. AmazonOpenSearchServiceRolePolicy
+            2.12.2.9.5. AmazonOpenSearchServiceCognitoAccess
+            2.12.2.9.6. AmazonOpenSearchIngestionServiceRolePolicy
+            2.12.2.9.7. OpenSearchIngestionSelfManagedVpcePolicy
+            2.12.2.9.8. AmazonOpenSearchIngestionFullAccess
+            2.12.2.9.9. AmazonOpenSearchIngestionReadOnlyAccess
+            2.12.2.9.10. AmazonOpenSearchServerlessServiceRolePolicy
+            2.12.2.9.11. OpenSearch Service updates to AWS managed policies
+      2.12.3. Cross-service confused deputy prevention
+      2.12.4. Fine-grained access control in Amazon OpenSearch Service
+         2.12.4.1. The bigger picture: ﬁne-grained access control and OpenSearch Service security
+            2.12.4.1.1. Example
+         2.12.4.2. Key concepts
+         2.12.4.3. About the master user
+         2.12.4.4. Enabling ﬁne-grained access control
+            2.12.4.4.1. Enabling ﬁne-grained access control on existing domains
+            2.12.4.4.2. About the default_role
+            2.12.4.4.3. Migration scenarios
+         2.12.4.5. Accessing OpenSearch Dashboards as the master user
+         2.12.4.6. Managing permissions
+            2.12.4.6.1. Creating roles
+            2.12.4.6.2. Creating users
+            2.12.4.6.3. Mapping roles to users
+            2.12.4.6.4. Creating action groups
+            2.12.4.6.5. OpenSearch Dashboards multi-tenancy
+         2.12.4.7. Recommended conﬁgurations
+         2.12.4.8. Limitations
+         2.12.4.9. Modifying the master user
+         2.12.4.10. Additional master users
+         2.12.4.11. Manual snapshots
+         2.12.4.12. Integrations
+         2.12.4.13. REST API diﬀerences
+         2.12.4.14. Tutorial: Conﬁgure a domain with an IAM master user and Amazon Cognito authentication
+            2.12.4.14.1. Step 1: Create master and limited IAM roles
+            2.12.4.14.2. Step 2: Create a domain with Cognito authentication
+            2.12.4.14.3. Step 3: Conﬁgure Cognito users
+            2.12.4.14.4. Step 4: Map roles in OpenSearch Dashboards
+            2.12.4.14.5. Step 5: Test the permissions
+         2.12.4.15. Tutorial: Conﬁgure a domain with the internal user database and HTTP basic authentication
+            2.12.4.15.1. Step 1: Create a domain
+            2.12.4.15.2. Step 2: Create an internal user in OpenSearch Dashboards
+            2.12.4.15.3. Step 3: Map roles in OpenSearch Dashboards
+            2.12.4.15.4. Step 4: Test the permissions
+      2.12.5. Compliance validation for Amazon OpenSearch Service
+      2.12.6. Resilience in Amazon OpenSearch Service
+      2.12.7. JWT authentication and authorization for Amazon OpenSearch Service
+         2.12.7.1. Considerations
+         2.12.7.2. Modifying the domain access policy
+         2.12.7.3. Conﬁguring JWT authentication and authorization
+         2.12.7.4. Using a JWT to send a test request
+      2.12.8. Infrastructure security in Amazon OpenSearch Service
+         2.12.8.1. Access Amazon OpenSearch Service using an OpenSearch Service- managed VPC endpoint (AWS PrivateLink)
+            2.12.8.1.1. Considerations and limitations for OpenSearch Service
+            2.12.8.1.2. Provide access to a domain
+            2.12.8.1.3. Create an interface VPC endpoint for a VPC domain
+            2.12.8.1.4. Working with OpenSearch Service-managed VPC endpoints using the conﬁguration API
+      2.12.9. SAML authentication for OpenSearch Dashboards
+         2.12.9.1. SAML conﬁguration overview
+         2.12.9.2. Considerations
+         2.12.9.3. SAML authentication for VPC domains
+         2.12.9.4. Modifying the domain access policy
+         2.12.9.5. Conﬁguring SP- or IdP-initiated authentication
+            2.12.9.5.1. Step 1: Enable SAML authentication
+            2.12.9.5.2. Step 2: Conﬁgure your identity provider
+            2.12.9.5.3. Step 3: Import IdP metadata
+            2.12.9.5.4. Step 4: Conﬁgure SAML ﬁelds
+            2.12.9.5.5. Step 5: (Optional) Conﬁgure additional settings
+            2.12.9.5.6. Step 6: Update your IdP URLs
+            2.12.9.5.7. Step 7: Map SAML users to roles
+         2.12.9.6. Conﬁguring both SP- and IdP-initiated authentication
+         2.12.9.7. Conﬁguring SAML authentication (AWS CLI)
+         2.12.9.8. Conﬁguring SAML authentication (conﬁguration API)
+         2.12.9.9. SAML troubleshooting
+         2.12.9.10. Disabling SAML authentication
+      2.12.10. IAM Identity Center Trusted Identity Propagation Support for OpenSearch
+         2.12.10.1. Considerations
+         2.12.10.2. Modifying the domain access policy
+         2.12.10.3. Conﬁguring IAM Identity Center authentication and authorization (Console)
+         2.12.10.4. Conﬁguring ﬁne-grained access control
+         2.12.10.5. Conﬁguring IAM Identity Center authentication and authorization (CLI)
+         2.12.10.6. Disabling IAM Identity Center authentication on the domain
+      2.12.11. Conﬁguring Amazon Cognito authentication for OpenSearch Dashboards
+         2.12.11.1. Prerequisites
+            2.12.11.1.1. About the user pool
+            2.12.11.1.2. About the identity pool
+            2.12.11.1.3. About the CognitoAccessForAmazonOpenSearch role
+         2.12.11.2. Conﬁguring a domain to use Amazon Cognito authentication
+            2.12.11.2.1. Conﬁguring Amazon Cognito authentication (console)
+            2.12.11.2.2. Conﬁguring Amazon Cognito authentication (AWS CLI)
+            2.12.11.2.3. Conﬁguring Amazon Cognito Authentication (AWS SDKs)
+         2.12.11.3. Allowing the authenticated role
+         2.12.11.4. Conﬁguring identity providers
+         2.12.11.5. (Optional) Conﬁguring granular access
+            2.12.11.5.1. User groups and tokens
+            2.12.11.5.2. Rules
+         2.12.11.6. (Optional) Customizing the sign-in page
+         2.12.11.7. (Optional) Conﬁguring advanced security
+         2.12.11.8. Testing
+         2.12.11.9. Quotas
+         2.12.11.10. Common conﬁguration issues
+         2.12.11.11. Disabling Amazon Cognito authentication for OpenSearch Dashboards
+         2.12.11.12. Deleting domains that use Amazon Cognito authentication for OpenSearch Dashboards
+      2.12.12. Using service-linked roles for Amazon OpenSearch Service
+         2.12.12.1. Using service-linked roles to create VPC domains and direct query data sources
+            2.12.12.1.1. Legacy Elasticsearch role
+            2.12.12.1.2. Permissions
+            2.12.12.1.3. Creating the service-linked role
+            2.12.12.1.4. Editing the service-linked role
+            2.12.12.1.5. Deleting the service-linked role
+         2.12.12.2. Using service-linked roles to create OpenSearch Serverless collections
+            2.12.12.2.1. Service-linked role permissions for OpenSearch Serverless
+            2.12.12.2.2. Creating the service-linked role for OpenSearch Serverless
+            2.12.12.2.3. Editing the service-linked role for OpenSearch Serverless
+            2.12.12.2.4. Deleting the service-linked role for OpenSearch Serverless
+            2.12.12.2.5. Supported Regions for OpenSearch Serverless service-linked roles
+         2.12.12.3. Using service-linked roles to create OpenSearch Ingestion pipelines
+            2.12.12.3.1. Permissions
+            2.12.12.3.2. Creating the service-linked role for OpenSearch Ingestion
+            2.12.12.3.3. Editing the service-linked role for OpenSearch Ingestion
+            2.12.12.3.4. Deleting the service-linked role for OpenSearch Ingestion
+   2.13. Sample code for Amazon OpenSearch Service
+      2.13.1. Elasticsearch client compatibility
+      2.13.2. Compressing HTTP requests in Amazon OpenSearch Service
+         2.13.2.1. Enabling gzip compression
+         2.13.2.2. Required headers
+         2.13.2.3. Sample code (Python 3)
+      2.13.3. Using the AWS SDKs to interact with Amazon OpenSearch Service
+         2.13.3.1. Java
+         2.13.3.2. Python
+         2.13.3.3. Node
+   2.14. Indexing data in Amazon OpenSearch Service
+      2.14.1. Naming restrictions for indexes
+      2.14.2. Reducing response size
+      2.14.3. Index codecs
+      2.14.4. Loading streaming data into Amazon OpenSearch Service
+         2.14.4.1. Loading streaming data from OpenSearch Ingestion
+         2.14.4.2. Loading streaming data from Amazon S3
+            2.14.4.2.1. Prerequisites
+            2.14.4.2.2. Create the Lambda deployment package
+            2.14.4.2.3. Create the Lambda function
+            2.14.4.2.4. Testing the Lambda Function
+         2.14.4.3. Loading streaming data from Amazon Kinesis Data Streams
+            2.14.4.3.1. Prerequisites
+            2.14.4.3.2. Create the Lambda function
+            2.14.4.3.3. Test the Lambda Function
+         2.14.4.4. Loading streaming data from Amazon DynamoDB
+            2.14.4.4.1. Prerequisites
+            2.14.4.4.2. Create the Lambda function
+            2.14.4.4.3. Test the Lambda function
+         2.14.4.5. Loading streaming data from Amazon Data Firehose
+         2.14.4.6. Loading streaming data from Amazon CloudWatch
+         2.14.4.7. Loading streaming data from AWS IoT
+      2.14.5. Loading data into Amazon OpenSearch Service with Logstash
+         2.14.5.1. Conﬁguration
+            2.14.5.1.1. Fine-grained access control conﬁguration
+            2.14.5.1.2. IAM conﬁguration
+   2.15. Searching data in Amazon OpenSearch Service
+      2.15.1. URI searches
+      2.15.2. Request body searches
+         2.15.2.1. Boosting ﬁelds
+         2.15.2.2. Search result highlighting
+         2.15.2.3. Count API
+      2.15.3. Paginating search results
+         2.15.3.1. Point in time
+         2.15.3.2. The from and size parameters
+      2.15.4. Dashboards Query Language
+      2.15.5. Importing and managing packages in Amazon OpenSearch Service
+         2.15.5.1. Required permissions
+         2.15.5.2. Uploading packages to Amazon S3
+         2.15.5.3. Importing and associating packages
+         2.15.5.4. Using packages with OpenSearch
+            2.15.5.4.1. Using custom dictionaries
+            2.15.5.4.2. Using pre-packaged plugins
+         2.15.5.5. Updating packages
+         2.15.5.6. Manually updating indexes with a new dictionary
+         2.15.5.7. Dissociating and removing packages
+         2.15.5.8. Managing custom plugins in Amazon OpenSearch Service
+            2.15.5.8.1. Plugin quotas
+            2.15.5.8.2. Prerequisites
+            2.15.5.8.3. Troubleshooting
+            2.15.5.8.4. Installing a custom plugin using the console
+            2.15.5.8.5. Managing custom plugins using the AWS CLI
+            2.15.5.8.6. Amazon OpenSearch Service custom package AWS KMS integration
+         2.15.5.9. Installing third-party plugins in Amazon OpenSearch Service
+            2.15.5.9.1. Prerequisites
+            2.15.5.9.2. Installing third-party plugins
+            2.15.5.9.3. Next steps
+      2.15.6. Querying your Amazon OpenSearch Service data with SQL
+         2.15.6.1. Sample call
+         2.15.6.2. Notes and diﬀerences
+         2.15.6.3. SQL Workbench
+         2.15.6.4. SQL CLI
+         2.15.6.5. JDBC driver
+         2.15.6.6. ODBC driver
+      2.15.7. Cross-cluster search in Amazon OpenSearch Service
+         2.15.7.1. Limitations
+         2.15.7.2. Cross-cluster search prerequisites
+         2.15.7.3. Cross-cluster search pricing
+         2.15.7.4. Setting up a connection
+         2.15.7.5. Removing a connection
+         2.15.7.6. Setting up security and sample walkthrough
+         2.15.7.7. OpenSearch Dashboards
+      2.15.8. Learning to Rank for Amazon OpenSearch Service
+         2.15.8.1. Getting started with Learning to Rank
+            2.15.8.1.1. Step 1: Initialize the plugin
+            2.15.8.1.2. Step 2: Create a judgment list
+            2.15.8.1.3. Step 3: Build a feature set
+            2.15.8.1.4. Step 4: Log the feature values
+            2.15.8.1.5. Step 5: Create a training dataset
+            2.15.8.1.6. Step 6: Choose an algorithm and build the model
+            2.15.8.1.7. Step 7: Deploy the model
+            2.15.8.1.8. Step 8: Search with learning to rank
+         2.15.8.2. Learning to Rank API
+            2.15.8.2.1. Create store
+            2.15.8.2.2. Delete store
+            2.15.8.2.3. Create feature set
+            2.15.8.2.4. Delete feature set
+            2.15.8.2.5. Get feature set
+            2.15.8.2.6. Create model
+            2.15.8.2.7. Delete model
+            2.15.8.2.8. Get model
+            2.15.8.2.9. Get stats
+            2.15.8.2.10. Get cache stats
+            2.15.8.2.11. Clear cache
+      2.15.9. Asynchronous search in Amazon OpenSearch Service
+         2.15.9.1. Sample search call
+         2.15.9.2. Asynchronous search permissions
+         2.15.9.3. Asynchronous search settings
+         2.15.9.4. Cross-cluster search
+         2.15.9.5. UltraWarm
+      2.15.10. Point in time search in Amazon OpenSearch Service
+         2.15.10.1. Considerations
+         2.15.10.2. Create a PIT
+         2.15.10.3. Point in time permissions
+         2.15.10.4. PIT settings
+         2.15.10.5. Cross-cluster search
+         2.15.10.6. UltraWarm
+      2.15.11. Agentic search in Amazon OpenSearch Service
+      2.15.12. Semantic search in Amazon OpenSearch Service
+      2.15.13. Concurrent segment search in Amazon OpenSearch Service
+      2.15.14. Natural language query generation in Amazon OpenSearch Service
+         2.15.14.1. Prerequisites
+         2.15.14.2. Getting started
+         2.15.14.3. Conﬁgure permissions
+         2.15.14.4. Conﬁguration automation
+   2.16. Vector search
+      2.16.1. Import from Amazon S3 Vectors to OpenSearch Serverless
+         2.16.1.1. Integration architecture
+         2.16.1.2. Required IAM permissions
+         2.16.1.3. Conﬁguring Amazon S3 Vectors integration with OpenSearch
+      2.16.2. Advanced search capabilities with an Amazon S3 vector engine
+         2.16.2.1. Enabling S3 Vectors
+         2.16.2.2. Creating indexes with S3 vector engine
+         2.16.2.3. Functional limitations
+         2.16.2.4. Indexing documents
+         2.16.2.5. Searching documents
+         2.16.2.6. Supported mapping parameters
+         2.16.2.7. Metering and billing
+         2.16.2.8. Disabling the s3vector engine
+      2.16.3. k-Nearest Neighbor (k-NN) search in Amazon OpenSearch Service
+         2.16.3.1. Getting started with k-NN
+         2.16.3.2. k-NN diﬀerences, tuning, and limitations
+      2.16.4. Vector ingestion
+         2.16.4.1. How it works
+         2.16.4.2. OpenSearch Vector ingestion pricing
+         2.16.4.3. Prerequisites
+         2.16.4.4. Create vector database
+         2.16.4.5. Related features
+         2.16.4.6. Export Amazon S3 vector index to OpenSearch Service vector engine
+         2.16.4.7. Import Amazon S3 vector namespace to OpenSearch Service vector engine
+         2.16.4.8. View vector ingestion jobs and import history
+      2.16.5. Auto-optimize
+         2.16.5.1. Beneﬁts
+         2.16.5.2. How it works
+         2.16.5.3. Prerequisites
+         2.16.5.4. Use cases for auto-optimize
+         2.16.5.5. Limitations
+         2.16.5.6. Billing and costs
+         2.16.5.7. Convert JSONL to Parquet
+         2.16.5.8. Using auto-optimize in the console
+            2.16.5.8.1. Prerequisites
+            2.16.5.8.2. Creating a vector ingestion job
+            2.16.5.8.3. Monitoring optimization jobs
+            2.16.5.8.4. Viewing job details
+            2.16.5.8.5. Viewing and understanding results
+            2.16.5.8.6. Building an index from recommendations
+         2.16.5.9. Related features
+      2.16.6. GPU-acceleration for vector indexing
+         2.16.6.1. Prerequisites
+         2.16.6.2. How it works
+         2.16.6.3. GPU Acceleration Pricing
+         2.16.6.4. GPU-acceleration and write operations
+         2.16.6.5. Supported index conﬁgurations
+         2.16.6.6. Enabling GPU-acceleration
+            2.16.6.6.1. Console
+         2.16.6.7. Creating GPU-accelerated vector indexes
+         2.16.6.8. Indexing vector data and force-merging
+            2.16.6.8.1. Indexing vector data
+         2.16.6.9. Best practices
+   2.17. Using OpenSearch Dashboards with Amazon OpenSearch Service
+      2.17.1. Controlling access to Dashboards
+         2.17.1.1. Using a proxy to access OpenSearch Service from Dashboards
+      2.17.2. Conﬁguring Dashboards to use a WMS map server
+      2.17.3. Connecting a local Dashboards server to OpenSearch Service
+      2.17.4. Managing indexes in Dashboards
+      2.17.5. Additional features
+   2.18. Using OpenSearch UI in Amazon OpenSearch Service
+      2.18.1. Amazon OpenSearch Service user interface release history
+      2.18.2. Getting started with the OpenSearch user interface in Amazon OpenSearch Service
+         2.18.2.1. Required permissions for creating Amazon OpenSearch Service applications
+            2.18.2.1.1. General permissions
+            2.18.2.1.2. Permissions to create an application that uses IAM Identity Center authentication (optional)
+         2.18.2.2. Creating an OpenSearch UI application
+            2.18.2.2.1. Creating an OpenSearch UI application that uses IAM authentication in the console
+            2.18.2.2.2. Creating an OpenSearch UI application that uses AWS IAM Identity Center authentication in the console
+            2.18.2.2.3. Creating an OpenSearch UI application that uses AWS IAM Identity Center authentication using the AWS CLI
+         2.18.2.3. Managing application administrators
+            2.18.2.3.1. Managing OpenSearch UI administrators using the console
+            2.18.2.3.2. Managing OpenSearch UI administrators using the AWS CLI
+      2.18.3. Enabling SAML federation with AWS Identity and Access Management
+         2.18.3.1. Step 1: Set up identity provider application (Okta)
+         2.18.3.2. Step 2: Set up AWS conﬁguration for Okta
+         2.18.3.3. Step 3: Create the Amazon OpenSearch Service access policy in IAM
+         2.18.3.4. Step 4: Verify the identity provider-initiated Single Sign-On experience with SAML
+         2.18.3.5. Step 5: Conﬁgure SAML attribute-based ﬁne-grained access control
+            2.18.3.5.1. SAML attributes for ﬁne-grained access control
+            2.18.3.5.2. Task 1: Conﬁgure Okta for ﬁne-grained access control
+            2.18.3.5.3. Task 2: Conﬁgure SAML in OpenSearch domain
+            2.18.3.5.4. Task 3: Conﬁgure SAML in OpenSearch Serverless collections
+      2.18.4. Managing data source associations and Virtual Private Cloud access permissions
+         2.18.4.1. Associating a data source with an OpenSearch UI application
+            2.18.4.1.1. Associate a data source with an OpenSearch UI application (console)
+         2.18.4.2. Managing access to domains in a VPC
+            2.18.4.2.1. Managing access to domains in a VPC (console)
+            2.18.4.2.2. Managing access to domains in a VPC (AWS CLI)
+         2.18.4.3. Conﬁguring access to OpenSearch Serverless collections in a VPC
+            2.18.4.3.1. Conﬁguring access to OpenSearch Serverless collections in a VPC (console)
+            2.18.4.3.2. Conﬁguring access to OpenSearch Serverless collections in a VPC (AWS CLI)
+      2.18.5. Using Amazon OpenSearch Service workspaces
+         2.18.5.1. Creating OpenSearch UI application workspaces
+         2.18.5.2. Workspace privacy and collaborators
+         2.18.5.3. Workspace types
+      2.18.6. Cross-Region and cross-account data access with cross-cluster search
+         2.18.6.1. Setting up access permissions for cross-Region and cross-account data access with cross-cluster search
+         2.18.6.2. Creating a connection between domains
+         2.18.6.3. Testing your security setup for cross-Region and cross-account data access with cross-cluster search
+         2.18.6.4. Deleting a connection
+      2.18.7. Managing access to the OpenSearch UI from a VPC endpoint
+         2.18.7.1. Creating a private connection between a VPC and OpenSearch UI
+            2.18.7.1.1. Creating a private connection between a VPC and OpenSearch UI (console)
+            2.18.7.1.2. Creating a private connection between a VPC and OpenSearch UI (AWS CLI)
+         2.18.7.2. Updating the VPC endpoint policy to allow access to the OpenSearch UI application
+         2.18.7.3. Revoking access to OpenSearch UI in a VPC endpoint policy
+      2.18.8. OpenSearch UI endpoints and quotas
+         2.18.8.1. OpenSearch UI endpoints
+         2.18.8.2. OpenSearch UI service quotas
+   2.19. Managing indexes in Amazon OpenSearch Service
+      2.19.1. OpenSearch Optimized Instances for Amazon OpenSearch Service domains
+         2.19.1.1. Limitations
+         2.19.1.2. Tuning for better ingestion throughput
+         2.19.1.3. How OpenSearch optimized instances diﬀer from other instances
+         2.19.1.4. How OpenSearch optimized instances diﬀer from UltraWarm instances
+         2.19.1.5. Provisioning a domain with OpenSearch optimized instances
+      2.19.2. Multi-tier storage for Amazon OpenSearch Service
+         2.19.2.1. Multi-tier storage architecture
+            2.19.2.1.1. Key beneﬁts
+            2.19.2.1.2. Prerequisites
+            2.19.2.1.3. Limitations
+            2.19.2.1.4. Things to note
+            2.19.2.1.5. Creating a multi-tier domain
+            2.19.2.1.6. Managing tier migrations
+            2.19.2.1.7. Security conﬁguration
+            2.19.2.1.8. Best practices
+            2.19.2.1.9. Monitoring metrics
+      2.19.3. UltraWarm storage for Amazon OpenSearch Service
+         2.19.3.1. Prerequisites
+            2.19.3.1.1. Conﬁgure permissions
+         2.19.3.2. UltraWarm storage requirements and performance considerations
+         2.19.3.3. UltraWarm pricing
+         2.19.3.4. Enabling UltraWarm
+            2.19.3.4.1. Sample CLI command
+            2.19.3.4.2. Sample conﬁguration API request
+         2.19.3.5. Migrating indexes to UltraWarm storage
+         2.19.3.6. Automating migrations
+         2.19.3.7. Migration tuning
+         2.19.3.8. Cancelling migrations
+         2.19.3.9. Listing hot and warm indexes
+         2.19.3.10. Returning warm indexes to hot storage
+         2.19.3.11. Restoring warm indexes from snapshots
+         2.19.3.12. Manual snapshots of warm indexes
+         2.19.3.13. Migrating warm indexes to cold storage
+         2.19.3.14. Best practices for KNN indexes
+         2.19.3.15. Disabling UltraWarm
+      2.19.4. Cold storage for Amazon OpenSearch Service
+         2.19.4.1. Prerequisites
+            2.19.4.1.1. Conﬁgure permissions
+         2.19.4.2. Cold storage requirements and performance considerations
+         2.19.4.3. Cold storage pricing
+         2.19.4.4. Enabling cold storage
+            2.19.4.4.1. Sample CLI command
+            2.19.4.4.2. Sample conﬁguration API request
+         2.19.4.5. Managing cold indexes in OpenSearch Dashboards
+         2.19.4.6. Migrating indexes to cold storage
+         2.19.4.7. Automating migrations to cold storage
+         2.19.4.8. Canceling migrations to cold storage
+         2.19.4.9. Listing cold indexes
+            2.19.4.9.1. Filtering
+            2.19.4.9.2. Sorting
+            2.19.4.9.3. Pagination
+         2.19.4.10. Migrating cold indexes to warm storage
+         2.19.4.11. Restoring cold indexes from snapshots
+         2.19.4.12. Canceling migrations from cold to warm storage
+         2.19.4.13. Updating cold index metadata
+         2.19.4.14. Deleting cold indexes
+         2.19.4.15. Disabling cold storage
+      2.19.5. Index State Management in Amazon OpenSearch Service
+         2.19.5.1. Create an ISM policy
+         2.19.5.2. Sample policies
+            2.19.5.2.1. Hot to warm to cold storage
+            2.19.5.2.2. Reduce replica count
+            2.19.5.2.3. Take an index snapshot
+         2.19.5.3. ISM templates
+         2.19.5.4. Diﬀerences
+            2.19.5.4.1. ISM operations
+            2.19.5.4.2. Cold storage ISM operations
+            2.19.5.4.3. ISM settings
+         2.19.5.5. Tutorial: Automating Index State Management processes
+            2.19.5.5.1. Prerequisites
+            2.19.5.5.2. Step 1: Conﬁgure the ISM policy
+            2.19.5.5.3. Step 2: Attach the policy to one or more indexes
+      2.19.6. Summarizing indexes in Amazon OpenSearch Service with index rollups
+         2.19.6.1. Creating an index rollup job
+            2.19.6.1.1. Step 1: Set up indexes
+            2.19.6.1.2. Step 2: Deﬁne aggregations and metrics
+            2.19.6.1.3. Step 3: Specify schedules
+            2.19.6.1.4. Step 4: Review and create
+            2.19.6.1.5. Step 5: Search the target index
+      2.19.7. Transforming indexes in Amazon OpenSearch Service
+         2.19.7.1. Creating an index transform job
+            2.19.7.1.1. Step 1: Choose indexes
+            2.19.7.1.2. Step 2: Choose ﬁelds
+            2.19.7.1.3. Step 3: Specify a schedule
+            2.19.7.1.4. Step 4: Review and monitor
+            2.19.7.1.5. Step 5: Search the target index
+      2.19.8. Cross-cluster replication for Amazon OpenSearch Service
+         2.19.8.1. Limitations
+         2.19.8.2. Prerequisites
+         2.19.8.3. Permissions requirements
+         2.19.8.4. Set up a cross-cluster connection
+         2.19.8.5. Start replication
+         2.19.8.6. Conﬁrm replication
+         2.19.8.7. Pause and resume replication
+         2.19.8.8. Stop replication
+         2.19.8.9. Auto-follow
+            2.19.8.9.1. Create a replication rule
+            2.19.8.9.2. Delete a replication rule
+         2.19.8.10. Upgrading connected domains
+      2.19.9. Migrating Amazon OpenSearch Service indexes using remote reindex
+         2.19.9.1. Prerequisites
+         2.19.9.2. Reindex data between OpenSearch Service internet domains
+         2.19.9.3. Reindex data between OpenSearch Service domains when the remote is in a VPC
+         2.19.9.4. Reindex data between non-OpenSearch Service domains
+         2.19.9.5. Reindex large datasets
+         2.19.9.6. Remote reindex settings
+      2.19.10. Managing time-series data in Amazon OpenSearch Service with data streams
+         2.19.10.1. Getting started with data streams
+            2.19.10.1.1. Step 1: Create an index template
+            2.19.10.1.2. Step 2: Create a data stream
+            2.19.10.1.3. Step 3: Ingest data into the data stream
+            2.19.10.1.4. Step 4: Searching a data stream
+            2.19.10.1.5. Step 5: Rollover a data stream
+            2.19.10.1.6. Step 6: Manage data streams in OpenSearch Dashboards
+            2.19.10.1.7. Step 7: Delete a data stream
+   2.20. Monitoring data in Amazon OpenSearch Service
+      2.20.1. Conﬁguring alerts in Amazon OpenSearch Service
+         2.20.1.1. Alerting permissions
+         2.20.1.2. Getting started with alerting
+         2.20.1.3. Notiﬁcations
+         2.20.1.4. Diﬀerences
+            2.20.1.4.1. Alerting settings
+      2.20.2. Anomaly detection in Amazon OpenSearch Service
+         2.20.2.1. Prerequisites
+         2.20.2.2. Getting started with anomaly detection
+            2.20.2.2.1. Step 1: Create a detector
+            2.20.2.2.2. Step 2: Add features to your detector
+            2.20.2.2.3. Step 3: Observe the results
+            2.20.2.2.4. Step 4: Set up alerts
+         2.20.2.3. Tutorial: Detect high CPU usage with anomaly detection
+            2.20.2.3.1. Prerequisites
+            2.20.2.3.2. Step 1: Create a detector
+            2.20.2.3.3. Step 2: Conﬁgure an alert
+            2.20.2.3.4. Related resources
+   2.21. Amazon Q Developer for Amazon OpenSearch Service
+      2.21.1. Supported AWS Regions
+      2.21.2. Setting up Amazon Q for OpenSearch Service
+      2.21.3. Generate visualizations using natural language
+      2.21.4. View alert summaries and insights
+         2.21.4.1. Before you begin
+            2.21.4.1.1. Step 1: Create the LambdaInvokeOpenSearchMLCommonsRole IAM role
+            2.21.4.1.2. Step 2: Map the LambdaInvokeOpenSearchMLCommonsRole role to the OpenSearch Service ml_full_access role
+            2.21.4.1.3. Step 3: Conﬁgure an OpenSearch Service knowledge base using CloudFormation
+         2.21.4.2. Viewing alert summaries and insights
+      2.21.5. View Amazon Q-generated query result summaries on the Discover page
+      2.21.6. View recommended anomaly detectors
+      2.21.7. Access Amazon Q chat for OpenSearch-related questions
+   2.22. Machine learning for Amazon OpenSearch Service
+      2.22.1. Amazon OpenSearch Service ML connectors for AWS services
+         2.22.1.1. Prerequisites
+            2.22.1.1.1. Set up an Amazon SageMaker AI domain
+            2.22.1.1.2. Create an IAM role
+            2.22.1.1.3. Conﬁgure permissions
+            2.22.1.1.4. Map the ML role in OpenSearch Dashboards (if using ﬁne-grained access control)
+         2.22.1.2. Create an OpenSearch Service connector
+            2.22.1.2.1. Sample Python client
+      2.22.2. Amazon OpenSearch Service ML connectors for third-party platforms
+         2.22.2.1. Prerequisites
+            2.22.2.1.1. Create an IAM role
+            2.22.2.1.2. Conﬁgure permissions
+            2.22.2.1.3. Set up AWS Secrets Manager
+            2.22.2.1.4. Map the ML role in OpenSearch Dashboards (if using ﬁne-grained access control)
+         2.22.2.2. Create an OpenSearch Service connector
+            2.22.2.2.1. Sample Python client
+      2.22.3. Using CloudFormation to set up remote inference for semantic search
+         2.22.3.1. Available CloudFormation templates
+         2.22.3.2. Prerequisites
+            2.22.3.2.1. Set up an OpenSearch Service domain
+            2.22.3.2.2. Enable permissions on your AWS account
+         2.22.3.3. Amazon Bedrock templates
+         2.22.3.4. Conﬁguring Agentic Search with Bedrock Claude
+            2.22.3.4.1. Enabling Bedrock Claude Access
+            2.22.3.4.2. Building agents and running Agentic Search
+         2.22.3.5. MCP server integration templates
+            2.22.3.5.1. Template features
+            2.22.3.5.2. To use the MCP server template
+            2.22.3.5.3. Integration with AI agents
+         2.22.3.6. Amazon SageMaker templates
+         2.22.3.7. Remote inference for semantic highlighting templates
+      2.22.4. Unsupported ML Commons settings
+      2.22.5. OpenSearch Service ﬂow framework templates
+         2.22.5.1. Creating ML connectors in OpenSearch Service
+            2.22.5.1.1. Creating a connector through a ﬂow-framework service
+            2.22.5.1.2. Default templates with pretrained models
+         2.22.5.2. Conﬁgure permissions
+   2.23. Security Analytics for Amazon OpenSearch Service
+      2.23.1. Security analytics components and concepts
+         2.23.1.1. Log types
+         2.23.1.2. Detectors
+         2.23.1.3. Rules
+         2.23.1.4. Findings
+         2.23.1.5. Alerts
+      2.23.2. Exploring Security Analytics
+      2.23.3. Conﬁgure permissions
+      2.23.4. Troubleshooting
+         2.23.4.1. No such index error
+   2.24. Observability in Amazon OpenSearch Service
+      2.24.1. The observability workﬂow in OpenSearch Service
+      2.24.2. OpenSearch UI and OpenSearch Dashboards
+      2.24.3. Logs
+         2.24.3.1. OpenSearch UI and observability workspace
+         2.24.3.2. Querying your logs using PPL
+            2.24.3.2.1. Find the hosts with the most errors
+            2.24.3.2.2. Calculate average request time
+         2.24.3.3. Querying your logs using AI
+         2.24.3.4. Querying your logs using SQL
+         2.24.3.5. Querying your logs using DQL
+         2.24.3.6. Dashboards and alerts for logs
+      2.24.4. Traces
+         2.24.4.1. Trace Data Processing and Ingestion
+         2.24.4.2. OpenSearch UI and Observability Workspace
+         2.24.4.3. Key Features
+            2.24.4.3.1. Services View
+            2.24.4.3.2. Traces View
+            2.24.4.3.3. Advanced Capabilities
+   2.25. Operational best practices for Amazon OpenSearch Service
+      2.25.1. Monitoring and alerting
+         2.25.1.1. Conﬁgure CloudWatch alarms
+         2.25.1.2. Enable log publishing
+      2.25.2. Shard strategy
+         2.25.2.1. Determine shard and data node counts
+         2.25.2.2. Avoid storage skew
+      2.25.3. Stability
+         2.25.3.1. Keep current with OpenSearch
+         2.25.3.2. Improve snapshot performance
+         2.25.3.3. Enable dedicated master nodes
+         2.25.3.4. Deploy across multiple Availability Zones
+         2.25.3.5. Control ingest ﬂow and buﬀering
+         2.25.3.6. Create mappings for search workloads
+         2.25.3.7. Use index templates
+         2.25.3.8. Manage indexes with Index State Management
+         2.25.3.9. Remove unused indexes
+         2.25.3.10. Use multiple domains for high availability
+      2.25.4. Performance
+         2.25.4.1. Optimize bulk request size and compression
+         2.25.4.2. Reduce the size of bulk request responses
+         2.25.4.3. Tune refresh intervals
+         2.25.4.4. Enable Auto-Tune
+      2.25.5. Security
+         2.25.5.1. Enable ﬁne-grained access control
+         2.25.5.2. Deploy domains within a VPC
+         2.25.5.3. Apply a restrictive access policy
+         2.25.5.4. Enable encryption at rest
+         2.25.5.5. Enable node-to-node encryption
+         2.25.5.6. Monitor with AWS Security Hub CSPM
+      2.25.6. Cost optimization
+         2.25.6.1. Use the latest generation instance types
+         2.25.6.2. Use the latest Amazon EBS gp3 volumes
+         2.25.6.3. Use UltraWarm and cold storage for time-series log data
+         2.25.6.4. Review recommendations for Reserved Instances
+      2.25.7. Recommended CloudWatch alarms for Amazon OpenSearch Service
+         2.25.7.1. Other alarms you might consider
+      2.25.8. Sizing Amazon OpenSearch Service domains
+         2.25.8.1. Calculating storage requirements
+         2.25.8.2. Choosing the number of shards
+         2.25.8.3. Choosing instance types and testing
+            2.25.8.3.1. Step 1: Make an initial estimate
+            2.25.8.3.2. Step 2: Calculate storage requirements per node
+            2.25.8.3.3. Step 3: Perform representative testing
+            2.25.8.3.4. Step 4: Succeed or iterate
+      2.25.9. Petabyte scale in Amazon OpenSearch Service
+      2.25.10. Dedicated coordinator nodes in Amazon OpenSearch Service
+         2.25.10.1. When to use dedicated coordinator nodes
+         2.25.10.2. Architecture and behavior
+         2.25.10.3. Requirements and limitations
+         2.25.10.4. Provisioning dedicated coordinator nodes
+         2.25.10.5. Best practices
+            2.25.10.5.1. Node recommendations by cluster size
+      2.25.11. Dedicated master nodes in Amazon OpenSearch Service
+         2.25.11.1. Choosing the number of dedicated master nodes
+         2.25.11.2. Choosing instance types for dedicated master nodes
+            2.25.11.2.1. OpenSearch Service domain and instance quotas
+   2.26. General reference for Amazon OpenSearch Service
+      2.26.1. Supported instance types in Amazon OpenSearch Service
+         2.26.1.1. Current generation instance types
+         2.26.1.2. Previous generation instance types
+      2.26.2. Features by engine version in Amazon OpenSearch Service
+      2.26.3. Plugins by engine version in Amazon OpenSearch Service
+         2.26.3.1. Optional plugins
+      2.26.4. Supported operations in Amazon OpenSearch Service
+         2.26.4.1. Notable API diﬀerences
+            2.26.4.1.1. New List APIs
+            2.26.4.1.2. Changes to existing APIs
+            2.26.4.1.3. Settings and statistics
+            2.26.4.1.4. Shrink
+            2.26.4.1.5. New list APIs
+            2.26.4.1.6. Changes to existing APIs
+            2.26.4.1.7. Limiting the response size for _cat APIs
+            2.26.4.1.8. Choosing the instance types for dedicated master nodes
+            2.26.4.1.9. OpenSearch version 2.19
+            2.26.4.1.10. OpenSearch version 2.17
+            2.26.4.1.11. OpenSearch version 2.15
+            2.26.4.1.12. OpenSearch version 2.13
+            2.26.4.1.13. OpenSearch version 2.11
+            2.26.4.1.14. OpenSearch version 2.9
+            2.26.4.1.15. OpenSearch version 2.7
+            2.26.4.1.16. OpenSearch version 2.5
+            2.26.4.1.17. OpenSearch version 2.3
+            2.26.4.1.18. OpenSearch version 1.3
+            2.26.4.1.19. OpenSearch version 1.2
+            2.26.4.1.20. OpenSearch version 1.1
+            2.26.4.1.21. OpenSearch version 1.0
+            2.26.4.1.22. Elasticsearch version 7.10
+            2.26.4.1.23. Elasticsearch version 7.9
+            2.26.4.1.24. Elasticsearch version 7.8
+            2.26.4.1.25. Elasticsearch version 7.7
+            2.26.4.1.26. Elasticsearch version 7.4
+            2.26.4.1.27. Elasticsearch version 7.1
+            2.26.4.1.28. Elasticsearch version 6.8
+            2.26.4.1.29. Elasticsearch version 6.7
+            2.26.4.1.30. Elasticsearch version 6.5
+            2.26.4.1.31. Elasticsearch version 6.4
+            2.26.4.1.32. Elasticsearch version 6.3
+            2.26.4.1.33. Elasticsearch version 6.2
+            2.26.4.1.34. Elasticsearch version 6.0
+            2.26.4.1.35. Elasticsearch version 5.6
+            2.26.4.1.36. Elasticsearch version 5.5
+            2.26.4.1.37. Elasticsearch version 5.3
+            2.26.4.1.38. Elasticsearch version 5.1
+            2.26.4.1.39. Elasticsearch version 2.3
+            2.26.4.1.40. Elasticsearch version 1.5
+      2.26.5. Amazon OpenSearch Service quotas
+         2.26.5.1. Warm node storage quotas
+            2.26.5.1.1. UltraWarm storage quotas
+         2.26.5.2. Number of data nodes per AZ
+         2.26.5.3. Total node limit by instance family
+         2.26.5.4. EBS volume size quotas
+         2.26.5.5. Network quotas
+         2.26.5.6. Shard size quotas
+         2.26.5.7. Shard count quotas
+         2.26.5.8. Java process quota
+         2.26.5.9. Domain policy quota
+      2.26.6. Reserved Instances in Amazon OpenSearch Service
+         2.26.6.1. Purchasing Reserved Instances (console)
+         2.26.6.2. Purchasing Reserved Instances (AWS CLI)
+         2.26.6.3. Purchasing Reserved Instances (AWS SDKs)
+         2.26.6.4. Examining costs
+      2.26.7. Other supported resources in Amazon OpenSearch Service
+   2.27. Amazon OpenSearch Service tutorials
+      2.27.1. Tutorial: Creating and searching for documents in Amazon OpenSearch Service
+         2.27.1.1. Prerequisites
+         2.27.1.2. Adding a document to an index
+         2.27.1.3. Creating automatically generated IDs
+         2.27.1.4. Updating a document with a POST command
+         2.27.1.5. Performing bulk actions
+         2.27.1.6. Searching for documents
+         2.27.1.7. Related resources
+      2.27.2. Tutorial: Migrating to Amazon OpenSearch Service
+         2.27.2.1. Take and upload the snapshot
+         2.27.2.2. Create a domain
+         2.27.2.3. Provide permissions to the S3 bucket
+            2.27.2.3.1. Map the snapshot role in OpenSearch Dashboards (if using ﬁne-grained access control)
+         2.27.2.4. Restore the snapshot
+      2.27.3. Tutorial: Creating a search application with Amazon OpenSearch Service
+         2.27.3.1. Prerequisites
+         2.27.3.2. Step 1: Index sample data
+         2.27.3.3. Step 2: Create and deploy the Lambda function
+            2.27.3.3.1. Create the Lambda function
+         2.27.3.4. Step 3: Create the API in API Gateway
+            2.27.3.4.1. Create and conﬁgure the API
+            2.27.3.4.2. Conﬁgure the method request
+            2.27.3.4.3. Deploy the API and conﬁgure a stage
+         2.27.3.5. Step 4: (Optional) Modify the domain access policy
+            2.27.3.5.1. Conﬁgure Lambda execution role permissions
+         2.27.3.6. Map the Lambda role (if using ﬁne-grained access control)
+         2.27.3.7. Step 5: Test the web application
+            2.27.3.7.1. Troubleshoot CORS errors
+         2.27.3.8. Next steps
+      2.27.4. Tutorial: Visualizing customer support calls with OpenSearch Service and OpenSearch Dashboards
+         2.27.4.1. Step 1: Conﬁgure prerequisites
+         2.27.4.2. Step 2: Copy sample code
+         2.27.4.3. (Optional) Step 3: Index sample data
+         2.27.4.4. Step 4: Analyze and visualize your data
+         2.27.4.5. Step 5: Clean up resources and next steps
+   2.28. Amazon OpenSearch Service rename - Summary of changes
+      2.28.1. New API version
+      2.28.2. Renamed instance types
+      2.28.3. Access policy changes
+         2.28.3.1. IAM policies
+         2.28.3.2. SCP policies
+      2.28.4. New resource types
+      2.28.5. Kibana renamed to OpenSearch Dashboards
+      2.28.6. Renamed CloudWatch metrics
+      2.28.7. Billing and Cost Management console changes
+      2.28.8. New event format
+      2.28.9. What's staying the same?
+      2.28.10. Get started: Upgrade your domains to OpenSearch 1.x
+   2.29. Troubleshooting Amazon OpenSearch Service
+      2.29.1. Can't access OpenSearch Dashboards
+      2.29.2. Can't access VPC domain
+      2.29.3. Cluster in read-only state
+      2.29.4. Red cluster status
+         2.29.4.1. Automatic remediation of red clusters
+         2.29.4.2. Recovering from a continuous heavy processing load
+      2.29.5. Yellow cluster status
+      2.29.6. ClusterBlockException
+         2.29.6.1. Lack of available storage space
+         2.29.6.2. High JVM memory pressure
+      2.29.7. Error migrating to Multi-AZ with Standby
+         2.29.7.1. Creating an index, index template, or ISM policy during migration from domains without standby to domains with standby
+         2.29.7.2. Incorrect number of data copies
+      2.29.8. JVM OutOfMemoryError
+      2.29.9. Failed cluster nodes
+      2.29.10. Exceeded maximum shard limit
+      2.29.11. Domain stuck in processing state
+      2.29.12. Low EBS burst balance
+      2.29.13. EBS metric increases during volume resizing
+      2.29.14. Can't enable audit logs
+      2.29.15. Can't close index
+      2.29.16. Client license checks
+      2.29.17. Request throttling
+      2.29.18. Can't SSH into node
+      2.29.19. "Not Valid for the Object's Storage Class" snapshot error
+      2.29.20. Invalid host header
+      2.29.21. Invalid M3 instance type
+      2.29.22. Hot queries stop working after enabling UltraWarm
+      2.29.23. Can't downgrade after upgrade
+      2.29.24. Need summary of domains for all AWS Regions
+      2.29.25. Browser error when using OpenSearch Dashboards
+      2.29.26. Node shard and storage skew
+      2.29.27. Index shard and storage skew
+      2.29.28. Unauthorized operation after selecting VPC access
+      2.29.29. Stuck at loading after creating VPC domain
+      2.29.30. Denied requests to the OpenSearch API
+      2.29.31. Can't connect from Alpine Linux
+      2.29.32. Too many requests for Search Backpressure
+      2.29.33. Certiﬁcate error when using SDK
+      2.29.34. Custom plugin installation fails due to version compatibility
+   2.30. Document history for Amazon OpenSearch Service
+      2.30.1. Earlier updates
+   2.31. AWS Glossary

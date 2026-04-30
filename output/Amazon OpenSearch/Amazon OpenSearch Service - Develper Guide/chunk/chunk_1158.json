@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1158",
+  "section_number": "2.19.2",
+  "header": "Multi-tier storage for Amazon OpenSearch Service",
+  "content": "Multi-tier storage for Amazon OpenSearch Service is an intelligent data management solution\nthat optimizes both performance and costs by managing data across diﬀerent storage tiers. This\narchitecture allows organizations to eﬃciently balance the trade-oﬀ between performance and\ncost by keeping frequently accessed data in high-performance hot storage while moving less\nfrequently accessed data to more cost-eﬀective warm storage.\nAmazon OpenSearch Service oﬀers two architecture options for hot/warm storage tier:\n• OpenSearch Multi-tier Storage Architecture\nMulti-tier storage\n1686\nAmazon OpenSearch Service\nDeveloper Guide\n• Combines Amazon S3 with local instance storage\n• Powered by OpenSearch Optimized Instances\n• Supports write operations in warm tier\n• Supports seamless data migration between hot and warm tier\n• Available on OpenSearch 3.3 and above\n• Does not support Cold Tier\n• UltraWarm-based Architecture\n• Combines Amazon S3 with local instance storage\n• Powered by UltraWarm Instances\n• Optimized for read-only warm tier workloads\n• Available on Elasticsearch version 6.8 and above and all OpenSearch versions\n• Supports Cold Tier\nNote\nThis documentation only focuses on the multi-tier architecture. For Ultrawarm storage\narchitecture, see Ultrawarm and Cold Storage",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1715,
+      "end": 1716
+    },
+    "content_stats": {
+      "char_count": 1284,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Managing indexes in Amazon OpenSearch Service",
+      "children": [
+        "Multi-tier storage architecture"
+      ]
+    }
+  }
+}

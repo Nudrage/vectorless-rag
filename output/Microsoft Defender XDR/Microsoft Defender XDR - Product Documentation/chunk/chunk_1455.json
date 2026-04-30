@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1455",
+  "section_number": "155.1.1.201.2",
+  "header": "Microsoft Security Copilot agents in Microsoft Defender",
+  "content": "Defender\nThe Phishing Triage Agent helps security operations analysts triage and classify user-submitted\nphishing incidents. The agent operates autonomously, provides a transparent rationale for its\nclassification verdicts in natural language, and continuously learns and improves its accuracy\nbased on feedback from analysts.\nAttribute\nDescription\nIdentity\nOperates in the context of the user you connect to the agent\nLicense\nMicrosoft Defender for Endpoint P2\nPermissions\nThe agent requires these permissions to operate:\nRead Security data basics (read)\nEmail & collaboration content (read)\nEmail & collaboration metadata (read)\nSecurity Copilot (read)\nAlerts (manage)\nPlugins\nThe agent automatically activates these Security Copilot plugins:\nMicrosoft Defender XDR\nMicrosoft Threat Intelligence\nPhishing Triage Agent\nProducts\nSecurity Copilot\nMicrosoft Defender for Office 365 Plan 2\nRole-based\naccess\nSecurity Administrator Microsoft Entra role is required to set up and manage the agent\nUsers with the same permissions as the Phishing Triage Agent can view the agent's\nactivity and results, and provide feedback on the agent's classification verdict.\nTrigger\nTriggered when a user in your organization submits a phishing incident\nThe Threat Intelligence Briefing Agent provides security operations teams with regular,\ncustomized threat intelligence briefings. The agent autonomously gathers and synthesizes\nrelevant threat intelligence data from various sources, delivering concise and actionable\ninsights to help analysts stay informed about emerging threats and trends.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1083,
+      "end": 1084
+    },
+    "content_stats": {
+      "char_count": 1576,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "Deploy AI agents in Microsoft Defender",
+      "children": [
+        "Phishing Triage Agent",
+        "Threat Intelligence Briefing Agent"
+      ]
+    }
+  }
+}

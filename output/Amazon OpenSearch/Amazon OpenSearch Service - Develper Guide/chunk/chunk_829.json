@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_829",
+  "section_number": "2.12.4.13.2",
+  "header": "Step 2: Create a domain with Cognito authentication",
+  "content": "Navigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome/ and create a domain with the following settings:\n• OpenSearch 1.0 or later, or Elasticsearch 7.8 or later\n• Public access\n• Fine-grained access control enabled with MasterUserRole as the master user (created in the\nprevious step)\n• Amazon Cognito authentication enabled for OpenSearch Dashboards. For instructions to enable\nCognito authentication and select a user and identity pool, see the section called “Conﬁguring a\ndomain to use Amazon Cognito authentication”.\n• The following domain access policy:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::111122223333:root\"\n},\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/{domain-name}/*\"\n}\n]\n}\n• HTTPS required for all traﬃc to the domain\n• Node-to-node encryption\n• Encryption of data at rest\nTutorial: Fine-grained access control with Cognito authentication\n1361\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1390,
+      "end": 1391
+    },
+    "content_stats": {
+      "char_count": 1042,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Conﬁgure a domain with an IAM master user and Amazon Cognito authentication",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_135",
+  "section_number": "155.1.1.18.1.10",
+  "header": "Defender for Office 365 architecture and requirements",
+  "content": "requirements\nThe following table describes this illustration.\nCall-\nout\nDescription\n1\nThe host server for the external sender typically performs a public DNS lookup for an MX record,\nwhich provides the target server to relay the message. This referral can either be Exchange Online\n(EXO) directly or an SMTP gateway configured to relay against EXO.\n2\nExchange Online Protection negotiates and validates the inbound connection and inspects the\nmessage headers and content to determine what extra policies, tagging, or processing is\nrequired.\nMicrosoft Defender for Office 365\nMicrosoft Defender XDR\nShared signals\nAnti-Phishing\nUser impersonation\nDomain impersonation\nSafe Links\nSafe Attachments\nOn-premises integration\nExchange\nAD DS\nMicrosoft Entra\nConnect\n6\nExchange Online\nJunk Mail\nMailbox Rules\nMessage Encryption\nRights Management\nExchange Online\nProtection\nConnection Filter\nAnti-malware\nPolicy Filter\nAnti-spam\nAnti-spoofing\nContent Filter\nMicrosoft Entra ID\nAccount\nProvisioning\nDirectory Edge\nBlocking\nExternal\nSender\nInternet\nThird-Party\nSMTP Gateway\n1\n2\n3\n7\n4\n5\n\nﾉ\nExpand table\nCall-\nout\nDescription\n3\nExchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat\nprotection, mitigation, and remediation.\n4\nA message that isn't malicious, blocked, or quarantined is processed and delivered to the\nrecipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are\nevaluated and triggered.\n5\nIntegration with on-premises Active Directory can be enabled using Microsoft Entra Connect to\nsynchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and\nultimately Exchange Online.\n6\nWhen integrating an on-premises environment, it's best to use an Exchange server for supported\nmanagement and administration of mail-related attributes, settings, and configurations.\n7\nMicrosoft Defender for Office 365 shares signals to Microsoft Defender XDR for extended\ndetection and response (XDR).\nOn-premises integration is common but optional. If your environment is cloud-only, this\nguidance also works for you.\nA successful Defender for Office 365 evaluation or production pilot requires the following\nprerequisites:\nAll your recipient mailboxes are currently in Exchange Online.\nYour public MX record resolves directly to EOP or a third-party Simple Mail Transfer\nProtocol (SMTP) gateway that then relays inbound external email directly to EOP.\nYour primary email domain is configured as authoritative in Exchange Online.\nYou successfully deployed and configured Directory-Based Edge Blocking (DBEB) as\nappropriate. For more information, see Use Directory-Based Edge Blocking to reject\nmessages sent to invalid recipients.\nTo effectively evaluate Microsoft Defender for Office 365, it's important that inbound external\nemail is relayed through the Exchange Online Protection (EOP) instance associated with your\n） Important\nIf these requirements aren't applicable or you are still in a hybrid coexistence scenario,\nthen a Microsoft Defender for Office 365 evaluation can require more complex or\nadvanced configurations which aren't fully covered in this guidance.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 72,
+      "end": 74
+    },
+    "content_stats": {
+      "char_count": 3152,
+      "word_count": 450
+    },
+    "hierarchy": {
+      "parent": "A B C",
+      "children": []
+    }
+  }
+}

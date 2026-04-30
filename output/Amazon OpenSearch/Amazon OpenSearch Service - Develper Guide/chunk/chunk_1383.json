@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1383",
+  "section_number": "2.25.3.8",
+  "header": "Manage indexes with Index State Management",
+  "content": "If you're managing logs or time-series data, we recommend using Index State Management (ISM).\nISM lets you automate regular index lifecycle management tasks. With ISM, you can create policies\nthat invoke index alias rollovers, take index snapshots, move indexes between storage tiers, and\ndelete old indexes. You can even use the ISM rollover operation as an alternative data lifecycle\nmanagement strategy to avoid shard skew.\nFirst, set up an ISM policy. For example, see the section called “Sample policies”. Then, attach\nthe policy to one or more indexes. If you include an ISM template ﬁeld in the policy, OpenSearch\nService automatically applies the policy to any index that matches the speciﬁed pattern.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1872,
+      "end": 1872
+    },
+    "content_stats": {
+      "char_count": 709,
+      "word_count": 112
+    },
+    "hierarchy": {
+      "parent": "Stability",
+      "children": []
+    }
+  }
+}

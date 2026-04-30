@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2306",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nBITSJobArguments\nBackground Intelligent Transfer Service (BITS) job arguments.\nBITSJobCommand\nBackground Intelligent Transfer Service (BITS) job command.\nBITSJobDescription Background Intelligent Transfer Service (BITS) job description.\nBITSJobFlags\nBackground Intelligent Transfer Service (BITS) job flags.\nValues:\nNOTIFY_ON_XFER_COMPLETED (0x1)\nNOTIFY_ON_ERROR (0x2)\nNOTIFY_DISABLED (0x4)\nNOTIFY_ON_MODIFIED_XFER_PROGRESS (0x8)\nBITSJobGuid\nBackground Intelligent Transfer Service (BITS) job GUID.\nBITSJobName\nBackground Intelligent Transfer Service (BITS) job name.\nBITSJobOffset\nBackground Intelligent Transfer Service (BITS) job record start in target file.\nBITSJobPriority\nBackground Intelligent Transfer Service (BITS) job priority.\nValues:\nFOREGROUND (0)\nHIGH (1)\nNORMAL (2)\nLOW (3)\nBITSJobState\nBackground Intelligent Transfer Service (BITS) job state.\nValues:\nQUEUED (0)\nCONNECTING (1)\nTRANSFERRING (2)\nSUSPENDED (3)\nERROR (4)\nTRANSIENT_ERROR (5)\nTRANSFERRED (6)\nACKNOWLEDGED (7)\nCANCELLED (8)\nBITSJobType\nBackground Intelligent Transfer Service (BITS) job type.\nValues:\nDOWNLOAD (0)\nUPLOAD (1)\nUPLOAD_REPLY (2)\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n813/1226\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 813,
+      "end": 814
+    },
+    "content_stats": {
+      "char_count": 1774,
+      "word_count": 208
+    },
+    "hierarchy": {
+      "parent": "BITSJobInfo",
+      "children": []
+    }
+  }
+}

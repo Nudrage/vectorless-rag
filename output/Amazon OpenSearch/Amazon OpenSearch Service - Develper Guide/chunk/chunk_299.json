@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_299",
+  "section_number": "2.15.5.1",
+  "header": "Required permissions",
+  "content": "To work with snapshots, conﬁgure the following permissions in your data access policy. For more\ninformation about data access policies, see Data access policies versus IAM policies.\nData Access Policy\nAPIs\naoss:DescribeSnapshot\nGET /_cat/snapshots/aoss-automated\nGET _snapshot/aoss-automated/snapshot/\naoss:RestoreSnapshot\nPOST /_snapshot/aoss-automated/snapshot/\n_restore\naoss:DescribeCollectionItems\nGET /_cat/recovery\nYou can conﬁgure policies using the following AWS CLI commands:\n1. create-access-policy\n2. delete-access-policy\n3. get-access-policy\n4. update-access-policy\nHere is a sample CLI command for creating an access policy. In the command, replace the example\ncontent with your speciﬁc information.\nBacking up collections using snapshots\n435\nAmazon OpenSearch Service\nDeveloper Guide\naws opensearchserverless create-access-policy \\\n--type data \\\n--name Example-data-access-policy \\\n--region aws-region \\\n--policy '[\n{\n\"Rules\": [\n{\n\"Resource\": [\n\"collection/Example-collection\"\n],\n\"Permission\": [\n\"aoss:DescribeSnapshot\",\n\"aoss:RestoreSnapshot\",\n\"aoss:DescribeCollectionItems\"\n],\n\"ResourceType\": \"collection\"\n}\n],\n\"Principal\": [\n\"arn:aws:iam::111122223333:user/UserName\"\n],\n\"Description\": \"Data policy to support snapshot operations.\"\n}\n]'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 464,
+      "end": 465
+    },
+    "content_stats": {
+      "char_count": 1252,
+      "word_count": 140
+    },
+    "hierarchy": {
+      "parent": "Backing up collections using snapshots",
+      "children": []
+    }
+  }
+}

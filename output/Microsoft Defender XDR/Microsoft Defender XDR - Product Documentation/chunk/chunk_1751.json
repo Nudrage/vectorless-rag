@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1751",
+  "section_number": "155.1.1.240.1",
+  "header": "Create an app",
+  "content": "\nApplication type: Public client\nRedirect URI: https://portal.azure.com\n4. On your application page, select API Permissions > Add permission > APIs my\norganization uses >, type Microsoft Threat Protection, and select Microsoft Threat\nProtection. Your app can now access Microsoft Defender XDR.\n\n Tip\nMicrosoft Threat Protection is a former name for Microsoft Defender XDR, and will\nnot appear in the original list. You need to start writing its name in the text box to\nsee it appear.\n\nChoose Delegated permissions. Choose the relevant permissions for your scenario\n(for example Incident.Read), and then select Add permissions.\n5. Select Grant admin consent. Every time you add a permission, you must select Grant\nadmin consent for it to take effect.\n\n７ Note\nYou need to select the relevant permissions for your scenario. Read all incidents is\njust an example. To determine which permission you need, please look at the\nPermissions section in the API you want to call.\nFor instance, to run advanced queries, select the 'Run advanced queries' permission;\nto isolate a device, select the 'Isolate machine' permission.\n6. Record your application ID and your tenant ID somewhere safe. They're listed under\nOverview on your application page.\nFor more information on Microsoft Entra tokens, see the Microsoft Entra tutorial.\nUse the MSAL.PS library to acquire access tokens with Delegated permissions. Run the\nfollowing commands to get access token on behalf of a user:\nPowerShell\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1318,
+      "end": 1321
+    },
+    "content_stats": {
+      "char_count": 1482,
+      "word_count": 238
+    },
+    "hierarchy": {
+      "parent": "Create an app to access Microsoft Defender XDR APIs on behalf of a user",
+      "children": []
+    }
+  }
+}

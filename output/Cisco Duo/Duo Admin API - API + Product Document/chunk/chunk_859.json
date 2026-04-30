@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_859",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\n{\n\"stat\": \"OK\",\n\"response\": {\n\"authentication_attempts\": {\n\"ERROR\": 0,\n\"FAILURE\": 1,\n\"FRAUD\": 1,\n\"SUCCESS\": 50\n},\n\"maxtime\": 1352880416,\n\"mintime\": 1350288416\n}\n}\nGET  /admin/v1/info/user_authentication_attempts\nmintime\nAn integer indicating the Unix timestamp in\nseconds for the beginning of the report\nperiod.\nmaxtime\nAn integer indicating the Unix timestamp in\nseconds for the end of the report period.\nuser_authentication_attempts\nAn integer indicating the number of users\nwith authentication attempts during the\nspecified time period, broken down by\nresult. Refer to Authentication Attempts\nReport for a list of result types and their\nmeanings.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 400,
+      "end": 401
+    },
+    "content_stats": {
+      "char_count": 659,
+      "word_count": 92
+    },
+    "hierarchy": {
+      "parent": "Account Info",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,1025 @@
+{
+  "document_name": "Google Workspace\\Applications\\Drive Audit Activity Events - Product Document",
+  "generated_at": "2026-02-17T22:03:57.590727",
+  "outline_text": "DOCUMENT INDEX: Google Workspace\\Applications\\Drive Audit Activity Events - Product Document\n============================================================================================\n\n1. Drive Audit Activity Events [Page 1, 15 words]\n   1.1. You can retrieve these events by calling Activities.list() [Page 1, 3 words]\n   1.2. Access [Page 1, 8 words]\n      1.2.1. Access request denied [Pages 1-4, 477 words]\n      1.2.2. Access request expired [Pages 4-8, 490 words]\n      1.2.3. Access requested [Pages 8-12, 485 words]\n      1.2.4. Add to folder [Pages 12-15, 445 words]\n      1.2.5. Appeal abuse violation [Pages 15-19, 431 words]\n      1.2.6. Approval canceled [Pages 19-22, 431 words]\n      1.2.7. Approval comment added [Pages 22-25, 449 words]\n      1.2.8. Approval completed [Pages 26-29, 421 words]\n      1.2.9. Approval decisions reset [Pages 29-32, 431 words]\n      1.2.10. Approval due time change [Pages 32-36, 439 words]\n      1.2.11. Approval requested [Pages 36-39, 430 words]\n      1.2.12. Approval reviewer change [Pages 39-42, 433 words]\n      1.2.13. Approval reviewer responded [Pages 42-46, 435 words]\n      1.2.14. Comment created [Pages 46-49, 434 words]\n      1.2.15. Comment deleted [Pages 49-53, 438 words]\n      1.2.16. Comment edited [Pages 53-56, 426 words]\n      1.2.17. Comment reassigned [Pages 56-59, 431 words]\n      1.2.18. Comment reopened [Pages 59-63, 431 words]\n      1.2.19. Comment resolved [Pages 63-66, 431 words]\n      1.2.20. Connected Sheets Query [Pages 66-70, 507 words]\n      1.2.21. Copy [Pages 70-74, 560 words]\n      1.2.22. Create [Pages 74-78, 476 words]\n      1.2.23. Delete [Pages 78-82, 521 words]\n      1.2.24. Download [Pages 82-85, 429 words]\n      1.2.25. Drive Email as Attachment [Pages 85-89, 489 words]\n      1.2.26. Edit [Pages 89-92, 435 words]\n      1.2.27. Email collaborators [Pages 92-96, 440 words]\n      1.2.28. eSignature canceled [Pages 96-99, 429 words]\n      1.2.29. eSignature completed [Page 99, 2 words]\n         1.2.29.1. An eSignature request was completed. This indicates that some reviewers declined to eSign, or [Pages 99-103, 481 words]\n      1.2.30. eSignature requested [Pages 103-106, 427 words]\n      1.2.31. eSignature reviewer responded [Pages 106-110, 482 words]\n      1.2.32. Forms Responses Downloaded [Pages 110-113, 433 words]\n      1.2.33. Item content accessed [Pages 113-117, 455 words]\n      1.2.34. Item content prefetched [Pages 117-120, 439 words]\n      1.2.35. Item content synced [Pages 120-123, 435 words]\n      1.2.36. Item search performed [Pages 123-125, 204 words]\n      1.2.37. Label applied [Pages 125-128, 467 words]\n      1.2.38. Label applied on creation [Pages 128-132, 479 words]\n      1.2.39. Label field value changed [Pages 132-136, 506 words]\n      1.2.40. Label removed [Pages 136-140, 481 words]\n      1.2.41. Lock [Pages 140-143, 456 words]\n      1.2.42. Move [Pages 143-147, 449 words]\n      1.2.43. Preview [Pages 147-150, 433 words]\n      1.2.44. Print [Pages 150-154, 429 words]\n      1.2.45. Remove from folder [Pages 154-157, 441 words]\n      1.2.46. Rename [Pages 157-161, 441 words]\n      1.2.47. Report abuse [Pages 161-164, 428 words]\n      1.2.48. Restore [Pages 164-168, 440 words]\n      1.2.49. Revision deleted [Pages 168-171, 449 words]\n      1.2.50. Revision pinned [Pages 171-175, 467 words]\n      1.2.51. Revision unpinned [Pages 175-178, 466 words]\n      1.2.52. Script trigger created [Pages 178-183, 635 words]\n      1.2.53. Script trigger deleted [Pages 183-189, 636 words]\n      1.2.54. Sheets Import Url [Page 189, 3 words]\n         1.2.54.1. A Google Sheet fetched one or more urls via an Import function [Pages 189-192, 433 words]\n      1.2.55. Sheets ImportRange [Pages 192-194, 296 words]\n      1.2.56. Source Copy [Pages 194-198, 561 words]\n      1.2.57. Suggestion accepted [Pages 198-202, 446 words]\n      1.2.58. Suggestion created [Pages 202-205, 426 words]\n      1.2.59. Suggestion deleted [Pages 205-208, 431 words]\n      1.2.60. Suggestion rejected [Pages 208-212, 431 words]\n      1.2.61. Sync client paused [Pages 212-213, 126 words]\n      1.2.62. Sync client resumed [Page 213, 129 words]\n      1.2.63. Trash [Pages 214-217, 420 words]\n      1.2.64. Unlock [Pages 217-220, 456 words]\n      1.2.65. Unmovable item relocated [Pages 220-224, 450 words]\n      1.2.66. Upload [Pages 224-228, 488 words]\n      1.2.67. URL accessed [Page 228, 2 words]\n         1.2.67.1. A URL was accessed from an AppsScript, see URL Fetch Service [Pages 228-231, 461 words]\n      1.2.68. Video caption deleted [Pages 231-235, 441 words]\n      1.2.69. Video caption downloaded [Pages 235-238, 437 words]\n      1.2.70. Video caption uploaded [Pages 238-242, 439 words]\n      1.2.71. View [Pages 242-245, 430 words]\n   1.3. ACL changed [Page 245, 10 words]\n      1.3.1. Apply Security Update [Pages 245-249, 438 words]\n      1.3.2. Bulk Apply Security Update [Pages 249-252, 430 words]\n      1.3.3. Bulk Remove Security Update [Pages 252-255, 439 words]\n      1.3.4. Changed owners from parent folder [Pages 255-259, 510 words]\n      1.3.5. Document changed owners [Pages 259-263, 506 words]\n      1.3.6. Drive Publish Status Change [Pages 263-267, 547 words]\n      1.3.7. Editor Settings Change [Pages 268-272, 592 words]\n      1.3.8. Inherited permissions disabled [Pages 272-275, 437 words]\n      1.3.9. Inherited permissions enabled [Pages 275-279, 436 words]\n      1.3.10. Link Sharing Access Type Change [Pages 279-284, 634 words]\n      1.3.11. Link Sharing Access Type Change from Parent Folder [Pages 284-289, 643 words]\n      1.3.12. Link Sharing visibility change [Pages 289-294, 743 words]\n      1.3.13. Link Sharing visibility change from Parent Folder [Pages 295-300, 713 words]\n      1.3.14. Publish new version [Pages 300-303, 451 words]\n      1.3.15. Remove security update [Pages 303-307, 439 words]\n      1.3.16. Shared Drive Membership Change [Pages 307-311, 608 words]\n      1.3.17. Shared Drive Settings Change [Pages 311-316, 668 words]\n      1.3.18. Sheets ImportRange access change [Pages 316-318, 312 words]\n      1.3.19. User Sharing Permissions Change [Pages 318-323, 649 words]\n      1.3.20. User Sharing Permissions Change from Parent Folder [Pages 323-329, 663 words]\n   1.4. Pooled quota metadata [Page 329, 8 words]\n      1.4.1. Storage Usage Update [Page 329, 103 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Drive Audit Activity Events",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 15,
+        "summary": "This document lists the events and parameters for various types of Drive Audit activity events.",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "You can retrieve these events by calling Activities.list()",
+            "depth": 2,
+            "chunk_id": "chunk_002",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 3,
+            "summary": "(https://developers."
+          },
+          {
+            "number": "1.2",
+            "title": "Access",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 8,
+            "summary": "Events of this type are returned with type=access.",
+            "children": [
+              {
+                "number": "1.2.1",
+                "title": "Access request denied",
+                "depth": 3,
+                "chunk_id": "chunk_004",
+                "page_start": 1,
+                "page_end": 4,
+                "word_count": 477,
+                "summary": "An access request was denied."
+              },
+              {
+                "number": "1.2.2",
+                "title": "Access request expired",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 4,
+                "page_end": 8,
+                "word_count": 490,
+                "summary": "An access request expired."
+              },
+              {
+                "number": "1.2.3",
+                "title": "Access requested",
+                "depth": 3,
+                "chunk_id": "chunk_006",
+                "page_start": 8,
+                "page_end": 12,
+                "word_count": 485,
+                "summary": "Access requested to an item."
+              },
+              {
+                "number": "1.2.4",
+                "title": "Add to folder",
+                "depth": 3,
+                "chunk_id": "chunk_007",
+                "page_start": 12,
+                "page_end": 15,
+                "word_count": 445,
+                "summary": "Document add to folder."
+              },
+              {
+                "number": "1.2.5",
+                "title": "Appeal abuse violation",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 15,
+                "page_end": 19,
+                "word_count": 431,
+                "summary": "Event details\nEvent name\nappeal_abuse_violation\nParameters\nactor_is_collaborator_\naccount\nboolean\nGET https://admin."
+              },
+              {
+                "number": "1.2.6",
+                "title": "Approval canceled",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 19,
+                "page_end": 22,
+                "word_count": 431,
+                "summary": "Drive approval canceled."
+              },
+              {
+                "number": "1.2.7",
+                "title": "Approval comment added",
+                "depth": 3,
+                "chunk_id": "chunk_010",
+                "page_start": 22,
+                "page_end": 25,
+                "word_count": 449,
+                "summary": "Drive approval comment added."
+              },
+              {
+                "number": "1.2.8",
+                "title": "Approval completed",
+                "depth": 3,
+                "chunk_id": "chunk_011",
+                "page_start": 26,
+                "page_end": 29,
+                "word_count": 421,
+                "summary": "Drive approval completed."
+              },
+              {
+                "number": "1.2.9",
+                "title": "Approval decisions reset",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 29,
+                "page_end": 32,
+                "word_count": 431,
+                "summary": "Drive approval decisions reset."
+              },
+              {
+                "number": "1.2.10",
+                "title": "Approval due time change",
+                "depth": 3,
+                "chunk_id": "chunk_013",
+                "page_start": 32,
+                "page_end": 36,
+                "word_count": 439,
+                "summary": "Drive approval due time change."
+              },
+              {
+                "number": "1.2.11",
+                "title": "Approval requested",
+                "depth": 3,
+                "chunk_id": "chunk_014",
+                "page_start": 36,
+                "page_end": 39,
+                "word_count": 430,
+                "summary": "Drive approval requested."
+              },
+              {
+                "number": "1.2.12",
+                "title": "Approval reviewer change",
+                "depth": 3,
+                "chunk_id": "chunk_015",
+                "page_start": 39,
+                "page_end": 42,
+                "word_count": 433,
+                "summary": "Drive approval reviewer change."
+              },
+              {
+                "number": "1.2.13",
+                "title": "Approval reviewer responded",
+                "depth": 3,
+                "chunk_id": "chunk_016",
+                "page_start": 42,
+                "page_end": 46,
+                "word_count": 435,
+                "summary": "Drive approval reviewer responded."
+              },
+              {
+                "number": "1.2.14",
+                "title": "Comment created",
+                "depth": 3,
+                "chunk_id": "chunk_017",
+                "page_start": 46,
+                "page_end": 49,
+                "word_count": 434,
+                "summary": "A comment was created."
+              },
+              {
+                "number": "1.2.15",
+                "title": "Comment deleted",
+                "depth": 3,
+                "chunk_id": "chunk_018",
+                "page_start": 49,
+                "page_end": 53,
+                "word_count": 438,
+                "summary": "A comment was deleted."
+              },
+              {
+                "number": "1.2.16",
+                "title": "Comment edited",
+                "depth": 3,
+                "chunk_id": "chunk_019",
+                "page_start": 53,
+                "page_end": 56,
+                "word_count": 426,
+                "summary": "A comment was edited."
+              },
+              {
+                "number": "1.2.17",
+                "title": "Comment reassigned",
+                "depth": 3,
+                "chunk_id": "chunk_020",
+                "page_start": 56,
+                "page_end": 59,
+                "word_count": 431,
+                "summary": "A comment was reassigned."
+              },
+              {
+                "number": "1.2.18",
+                "title": "Comment reopened",
+                "depth": 3,
+                "chunk_id": "chunk_021",
+                "page_start": 59,
+                "page_end": 63,
+                "word_count": 431,
+                "summary": "A comment was reopened."
+              },
+              {
+                "number": "1.2.19",
+                "title": "Comment resolved",
+                "depth": 3,
+                "chunk_id": "chunk_022",
+                "page_start": 63,
+                "page_end": 66,
+                "word_count": 431,
+                "summary": "A comment was resolved."
+              },
+              {
+                "number": "1.2.20",
+                "title": "Connected Sheets Query",
+                "depth": 3,
+                "chunk_id": "chunk_023",
+                "page_start": 66,
+                "page_end": 70,
+                "word_count": 507,
+                "summary": "Event details\nEvent name\nconnected_sheets_query\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator\naccount."
+              },
+              {
+                "number": "1.2.21",
+                "title": "Copy",
+                "depth": 3,
+                "chunk_id": "chunk_024",
+                "page_start": 70,
+                "page_end": 74,
+                "word_count": 560,
+                "summary": "Document copy."
+              },
+              {
+                "number": "1.2.22",
+                "title": "Create",
+                "depth": 3,
+                "chunk_id": "chunk_025",
+                "page_start": 74,
+                "page_end": 78,
+                "word_count": 476,
+                "summary": "Document create."
+              },
+              {
+                "number": "1.2.23",
+                "title": "Delete",
+                "depth": 3,
+                "chunk_id": "chunk_026",
+                "page_start": 78,
+                "page_end": 82,
+                "word_count": 521,
+                "summary": "Document delete."
+              },
+              {
+                "number": "1.2.24",
+                "title": "Download",
+                "depth": 3,
+                "chunk_id": "chunk_027",
+                "page_start": 82,
+                "page_end": 85,
+                "word_count": 429,
+                "summary": "Document download."
+              },
+              {
+                "number": "1.2.25",
+                "title": "Drive Email as Attachment",
+                "depth": 3,
+                "chunk_id": "chunk_028",
+                "page_start": 85,
+                "page_end": 89,
+                "word_count": 489,
+                "summary": "Event details\nEvent name\nemail_as_attachment\nGET https://admin."
+              },
+              {
+                "number": "1.2.26",
+                "title": "Edit",
+                "depth": 3,
+                "chunk_id": "chunk_029",
+                "page_start": 89,
+                "page_end": 92,
+                "word_count": 435,
+                "summary": "Document edit."
+              },
+              {
+                "number": "1.2.27",
+                "title": "Email collaborators",
+                "depth": 3,
+                "chunk_id": "chunk_030",
+                "page_start": 92,
+                "page_end": 96,
+                "word_count": 440,
+                "summary": "A user emailed this item's collaborators."
+              },
+              {
+                "number": "1.2.28",
+                "title": "eSignature canceled",
+                "depth": 3,
+                "chunk_id": "chunk_031",
+                "page_start": 96,
+                "page_end": 99,
+                "word_count": 429,
+                "summary": "Event details\nEvent name\ncancel_esignature\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator\naccount."
+              },
+              {
+                "number": "1.2.29",
+                "title": "eSignature completed",
+                "depth": 3,
+                "chunk_id": "chunk_032",
+                "page_start": 99,
+                "page_end": 99,
+                "word_count": 2,
+                "summary": "eSignature completed",
+                "children": [
+                  {
+                    "number": "1.2.29.1",
+                    "title": "An eSignature request was completed. This indicates that some reviewers declined to eSign, or",
+                    "depth": 4,
+                    "chunk_id": "chunk_033",
+                    "page_start": 99,
+                    "page_end": 103,
+                    "word_count": 481,
+                    "summary": "the item was eSigned by required reviewers and signed copies were generated successfully."
+                  }
+                ]
+              },
+              {
+                "number": "1.2.30",
+                "title": "eSignature requested",
+                "depth": 3,
+                "chunk_id": "chunk_034",
+                "page_start": 103,
+                "page_end": 106,
+                "word_count": 427,
+                "summary": "Event details\nEvent name\nrequest_esignature\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator\naccount."
+              },
+              {
+                "number": "1.2.31",
+                "title": "eSignature reviewer responded",
+                "depth": 3,
+                "chunk_id": "chunk_035",
+                "page_start": 106,
+                "page_end": 110,
+                "word_count": 482,
+                "summary": "An eSignature reviewer responded with a decision, such as eSigning the document or declining\nthe request."
+              },
+              {
+                "number": "1.2.32",
+                "title": "Forms Responses Downloaded",
+                "depth": 3,
+                "chunk_id": "chunk_036",
+                "page_start": 110,
+                "page_end": 113,
+                "word_count": 433,
+                "summary": "Download Forms Response."
+              },
+              {
+                "number": "1.2.33",
+                "title": "Item content accessed",
+                "depth": 3,
+                "chunk_id": "chunk_037",
+                "page_start": 113,
+                "page_end": 117,
+                "word_count": 455,
+                "summary": "An application accessed an item's content on behalf of a user."
+              },
+              {
+                "number": "1.2.34",
+                "title": "Item content prefetched",
+                "depth": 3,
+                "chunk_id": "chunk_038",
+                "page_start": 117,
+                "page_end": 120,
+                "word_count": 439,
+                "summary": "An application prefetched an item's content on behalf of a user."
+              },
+              {
+                "number": "1.2.35",
+                "title": "Item content synced",
+                "depth": 3,
+                "chunk_id": "chunk_039",
+                "page_start": 120,
+                "page_end": 123,
+                "word_count": 435,
+                "summary": "Document synced."
+              },
+              {
+                "number": "1.2.36",
+                "title": "Item search performed",
+                "depth": 3,
+                "chunk_id": "chunk_040",
+                "page_start": 123,
+                "page_end": 125,
+                "word_count": 204,
+                "summary": "Event details\nEvent name\nsearch\nGET https://admin."
+              },
+              {
+                "number": "1.2.37",
+                "title": "Label applied",
+                "depth": 3,
+                "chunk_id": "chunk_041",
+                "page_start": 125,
+                "page_end": 128,
+                "word_count": 467,
+                "summary": "Label was applied."
+              },
+              {
+                "number": "1.2.38",
+                "title": "Label applied on creation",
+                "depth": 3,
+                "chunk_id": "chunk_042",
+                "page_start": 128,
+                "page_end": 132,
+                "word_count": 479,
+                "summary": "Label was applied automatically when the Drive item was created."
+              },
+              {
+                "number": "1.2.39",
+                "title": "Label field value changed",
+                "depth": 3,
+                "chunk_id": "chunk_043",
+                "page_start": 132,
+                "page_end": 136,
+                "word_count": 506,
+                "summary": "Label Field value was changed."
+              },
+              {
+                "number": "1.2.40",
+                "title": "Label removed",
+                "depth": 3,
+                "chunk_id": "chunk_044",
+                "page_start": 136,
+                "page_end": 140,
+                "word_count": 481,
+                "summary": "Label was removed."
+              },
+              {
+                "number": "1.2.41",
+                "title": "Lock",
+                "depth": 3,
+                "chunk_id": "chunk_045",
+                "page_start": 140,
+                "page_end": 143,
+                "word_count": 456,
+                "summary": "Document lock."
+              },
+              {
+                "number": "1.2.42",
+                "title": "Move",
+                "depth": 3,
+                "chunk_id": "chunk_046",
+                "page_start": 143,
+                "page_end": 147,
+                "word_count": 449,
+                "summary": "GET https://admin."
+              },
+              {
+                "number": "1.2.43",
+                "title": "Preview",
+                "depth": 3,
+                "chunk_id": "chunk_047",
+                "page_start": 147,
+                "page_end": 150,
+                "word_count": 433,
+                "summary": "Document preview."
+              },
+              {
+                "number": "1.2.44",
+                "title": "Print",
+                "depth": 3,
+                "chunk_id": "chunk_048",
+                "page_start": 150,
+                "page_end": 154,
+                "word_count": 429,
+                "summary": "Document print."
+              },
+              {
+                "number": "1.2.45",
+                "title": "Remove from folder",
+                "depth": 3,
+                "chunk_id": "chunk_049",
+                "page_start": 154,
+                "page_end": 157,
+                "word_count": 441,
+                "summary": "Document remove from folder."
+              },
+              {
+                "number": "1.2.46",
+                "title": "Rename",
+                "depth": 3,
+                "chunk_id": "chunk_050",
+                "page_start": 157,
+                "page_end": 161,
+                "word_count": 441,
+                "summary": "Document rename."
+              },
+              {
+                "number": "1.2.47",
+                "title": "Report abuse",
+                "depth": 3,
+                "chunk_id": "chunk_051",
+                "page_start": 161,
+                "page_end": 164,
+                "word_count": 428,
+                "summary": "Event details\nEvent name\nreport_abuse\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator\naccount."
+              },
+              {
+                "number": "1.2.48",
+                "title": "Restore",
+                "depth": 3,
+                "chunk_id": "chunk_052",
+                "page_start": 164,
+                "page_end": 168,
+                "word_count": 440,
+                "summary": "Document restore."
+              },
+              {
+                "number": "1.2.49",
+                "title": "Revision deleted",
+                "depth": 3,
+                "chunk_id": "chunk_053",
+                "page_start": 168,
+                "page_end": 171,
+                "word_count": 449,
+                "summary": "A revision of an item was deleted."
+              },
+              {
+                "number": "1.2.50",
+                "title": "Revision pinned",
+                "depth": 3,
+                "chunk_id": "chunk_054",
+                "page_start": 171,
+                "page_end": 175,
+                "word_count": 467,
+                "summary": "A revision of an item was pinned, indicating that the revision should be kept forever."
+              },
+              {
+                "number": "1.2.51",
+                "title": "Revision unpinned",
+                "depth": 3,
+                "chunk_id": "chunk_055",
+                "page_start": 175,
+                "page_end": 178,
+                "word_count": 466,
+                "summary": "A revision of an item was unpinned, indicating that the revision should not be kept forever."
+              },
+              {
+                "number": "1.2.52",
+                "title": "Script trigger created",
+                "depth": 3,
+                "chunk_id": "chunk_056",
+                "page_start": 178,
+                "page_end": 183,
+                "word_count": 635,
+                "summary": "Creation of an Apps Script trigger."
+              },
+              {
+                "number": "1.2.53",
+                "title": "Script trigger deleted",
+                "depth": 3,
+                "chunk_id": "chunk_057",
+                "page_start": 183,
+                "page_end": 189,
+                "word_count": 636,
+                "summary": "GET https://admin."
+              },
+              {
+                "number": "1.2.54",
+                "title": "Sheets Import Url",
+                "depth": 3,
+                "chunk_id": "chunk_058",
+                "page_start": 189,
+                "page_end": 189,
+                "word_count": 3,
+                "summary": "Sheets Import Url",
+                "children": [
+                  {
+                    "number": "1.2.54.1",
+                    "title": "A Google Sheet fetched one or more urls via an Import function",
+                    "depth": 4,
+                    "chunk_id": "chunk_059",
+                    "page_start": 189,
+                    "page_end": 192,
+                    "word_count": 433,
+                    "summary": "(https://support."
+                  }
+                ]
+              },
+              {
+                "number": "1.2.55",
+                "title": "Sheets ImportRange",
+                "depth": 3,
+                "chunk_id": "chunk_060",
+                "page_start": 192,
+                "page_end": 194,
+                "word_count": 296,
+                "summary": "Event details\nEvent name\nsheets_import_range\nParameters\ndoc_id\nstring\nDocument ID."
+              },
+              {
+                "number": "1.2.56",
+                "title": "Source Copy",
+                "depth": 3,
+                "chunk_id": "chunk_061",
+                "page_start": 194,
+                "page_end": 198,
+                "word_count": 561,
+                "summary": "Source document copy."
+              },
+              {
+                "number": "1.2.57",
+                "title": "Suggestion accepted",
+                "depth": 3,
+                "chunk_id": "chunk_062",
+                "page_start": 198,
+                "page_end": 202,
+                "word_count": 446,
+                "summary": "A suggestion was accepted."
+              },
+              {
+                "number": "1.2.58",
+                "title": "Suggestion created",
+                "depth": 3,
+                "chunk_id": "chunk_063",
+                "page_start": 202,
+                "page_end": 205,
+                "word_count": 426,
+                "summary": "A suggestion was created."
+              },
+              {
+                "number": "1.2.59",
+                "title": "Suggestion deleted",
+                "depth": 3,
+                "chunk_id": "chunk_064",
+                "page_start": 205,
+                "page_end": 208,
+                "word_count": 431,
+                "summary": "A suggestion was deleted."
+              },
+              {
+                "number": "1.2.60",
+                "title": "Suggestion rejected",
+                "depth": 3,
+                "chunk_id": "chunk_065",
+                "page_start": 208,
+                "page_end": 212,
+                "word_count": 431,
+                "summary": "A suggestion was rejected."
+              },
+              {
+                "number": "1.2.61",
+                "title": "Sync client paused",
+                "depth": 3,
+                "chunk_id": "chunk_066",
+                "page_start": 212,
+                "page_end": 213,
+                "word_count": 126,
+                "summary": "Event details\nEvent name\npause_sync_client\nParameters\nprimary_event\nboolean\nWhether this event is a primary event."
+              },
+              {
+                "number": "1.2.62",
+                "title": "Sync client resumed",
+                "depth": 3,
+                "chunk_id": "chunk_067",
+                "page_start": 213,
+                "page_end": 213,
+                "word_count": 129,
+                "summary": "Event details\nEvent name\nresume_sync_client\nParameters\nprimary_event\nboolean\nWhether this event is a primary event."
+              },
+              {
+                "number": "1.2.63",
+                "title": "Trash",
+                "depth": 3,
+                "chunk_id": "chunk_068",
+                "page_start": 214,
+                "page_end": 217,
+                "word_count": 420,
+                "summary": "Document trash."
+              },
+              {
+                "number": "1.2.64",
+                "title": "Unlock",
+                "depth": 3,
+                "chunk_id": "chunk_069",
+                "page_start": 217,
+                "page_end": 220,
+                "word_count": 456,
+                "summary": "Document unlock."
+              },
+              {
+                "number": "1.2.65",
+                "title": "Unmovable item relocated",
+                "depth": 3,
+                "chunk_id": "chunk_070",
+                "page_start": 220,
+                "page_end": 224,
+                "word_count": 450,
+                "summary": "GET https://admin."
+              },
+              {
+                "number": "1.2.66",
+                "title": "Upload",
+                "depth": 3,
+                "chunk_id": "chunk_071",
+                "page_start": 224,
+                "page_end": 228,
+                "word_count": 488,
+                "summary": "Document upload."
+              },
+              {
+                "number": "1.2.67",
+                "title": "URL accessed",
+                "depth": 3,
+                "chunk_id": "chunk_072",
+                "page_start": 228,
+                "page_end": 228,
+                "word_count": 2,
+                "summary": "URL accessed",
+                "children": [
+                  {
+                    "number": "1.2.67.1",
+                    "title": "A URL was accessed from an AppsScript, see URL Fetch Service",
+                    "depth": 4,
+                    "chunk_id": "chunk_073",
+                    "page_start": 228,
+                    "page_end": 231,
+                    "word_count": 461,
+                    "summary": "(https://developers."
+                  }
+                ]
+              },
+              {
+                "number": "1.2.68",
+                "title": "Video caption deleted",
+                "depth": 3,
+                "chunk_id": "chunk_074",
+                "page_start": 231,
+                "page_end": 235,
+                "word_count": 441,
+                "summary": "Delete video caption."
+              },
+              {
+                "number": "1.2.69",
+                "title": "Video caption downloaded",
+                "depth": 3,
+                "chunk_id": "chunk_075",
+                "page_start": 235,
+                "page_end": 238,
+                "word_count": 437,
+                "summary": "Download video caption."
+              },
+              {
+                "number": "1.2.70",
+                "title": "Video caption uploaded",
+                "depth": 3,
+                "chunk_id": "chunk_076",
+                "page_start": 238,
+                "page_end": 242,
+                "word_count": 439,
+                "summary": "Upload video caption."
+              },
+              {
+                "number": "1.2.71",
+                "title": "View",
+                "depth": 3,
+                "chunk_id": "chunk_077",
+                "page_start": 242,
+                "page_end": 245,
+                "word_count": 430,
+                "summary": "Document view."
+              }
+            ]
+          },
+          {
+            "number": "1.3",
+            "title": "ACL changed",
+            "depth": 2,
+            "chunk_id": "chunk_078",
+            "page_start": 245,
+            "page_end": 245,
+            "word_count": 10,
+            "summary": "ACL Changed.",
+            "children": [
+              {
+                "number": "1.3.1",
+                "title": "Apply Security Update",
+                "depth": 3,
+                "chunk_id": "chunk_079",
+                "page_start": 245,
+                "page_end": 249,
+                "word_count": 438,
+                "summary": "Document apply security update."
+              },
+              {
+                "number": "1.3.2",
+                "title": "Bulk Apply Security Update",
+                "depth": 3,
+                "chunk_id": "chunk_080",
+                "page_start": 249,
+                "page_end": 252,
+                "word_count": 430,
+                "summary": "Bulk apply security update."
+              },
+              {
+                "number": "1.3.3",
+                "title": "Bulk Remove Security Update",
+                "depth": 3,
+                "chunk_id": "chunk_081",
+                "page_start": 252,
+                "page_end": 255,
+                "word_count": 439,
+                "summary": "Bulk remove security update."
+              },
+              {
+                "number": "1.3.4",
+                "title": "Changed owners from parent folder",
+                "depth": 3,
+                "chunk_id": "chunk_082",
+                "page_start": 255,
+                "page_end": 259,
+                "word_count": 510,
+                "summary": "GET https://admin."
+              },
+              {
+                "number": "1.3.5",
+                "title": "Document changed owners",
+                "depth": 3,
+                "chunk_id": "chunk_083",
+                "page_start": 259,
+                "page_end": 263,
+                "word_count": 506,
+                "summary": "Event details\nEvent name\nchange_owner\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator\naccount."
+              },
+              {
+                "number": "1.3.6",
+                "title": "Drive Publish Status Change",
+                "depth": 3,
+                "chunk_id": "chunk_084",
+                "page_start": 263,
+                "page_end": 267,
+                "word_count": 547,
+                "summary": "Event details\nEvent name\npublish_change\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator\naccount."
+              },
+              {
+                "number": "1.3.7",
+                "title": "Editor Settings Change",
+                "depth": 3,
+                "chunk_id": "chunk_085",
+                "page_start": 268,
+                "page_end": 272,
+                "word_count": 592,
+                "summary": "Editor Settings Changed."
+              },
+              {
+                "number": "1.3.8",
+                "title": "Inherited permissions disabled",
+                "depth": 3,
+                "chunk_id": "chunk_086",
+                "page_start": 272,
+                "page_end": 275,
+                "word_count": 437,
+                "summary": "An item's inherited permissions were disabled."
+              },
+              {
+                "number": "1.3.9",
+                "title": "Inherited permissions enabled",
+                "depth": 3,
+                "chunk_id": "chunk_087",
+                "page_start": 275,
+                "page_end": 279,
+                "word_count": 436,
+                "summary": "GET https://admin."
+              },
+              {
+                "number": "1.3.10",
+                "title": "Link Sharing Access Type Change",
+                "depth": 3,
+                "chunk_id": "chunk_088",
+                "page_start": 279,
+                "page_end": 284,
+                "word_count": 634,
+                "summary": "Change in link sharing access type of document."
+              },
+              {
+                "number": "1.3.11",
+                "title": "Link Sharing Access Type Change from Parent Folder",
+                "depth": 3,
+                "chunk_id": "chunk_089",
+                "page_start": 284,
+                "page_end": 289,
+                "word_count": 643,
+                "summary": "Change in link sharing access type of document due to hierarchy reconciliation."
+              },
+              {
+                "number": "1.3.12",
+                "title": "Link Sharing visibility change",
+                "depth": 3,
+                "chunk_id": "chunk_090",
+                "page_start": 289,
+                "page_end": 294,
+                "word_count": 743,
+                "summary": "Change in link sharing visibility of document."
+              },
+              {
+                "number": "1.3.13",
+                "title": "Link Sharing visibility change from Parent Folder",
+                "depth": 3,
+                "chunk_id": "chunk_091",
+                "page_start": 295,
+                "page_end": 300,
+                "word_count": 713,
+                "summary": "Change in link sharing visibility of document due to hierarchy reconciliation."
+              },
+              {
+                "number": "1.3.14",
+                "title": "Publish new version",
+                "depth": 3,
+                "chunk_id": "chunk_092",
+                "page_start": 300,
+                "page_end": 303,
+                "word_count": 451,
+                "summary": "A new version of this item was published."
+              },
+              {
+                "number": "1.3.15",
+                "title": "Remove security update",
+                "depth": 3,
+                "chunk_id": "chunk_093",
+                "page_start": 303,
+                "page_end": 307,
+                "word_count": 439,
+                "summary": "Document remove security update."
+              },
+              {
+                "number": "1.3.16",
+                "title": "Shared Drive Membership Change",
+                "depth": 3,
+                "chunk_id": "chunk_094",
+                "page_start": 307,
+                "page_end": 311,
+                "word_count": 608,
+                "summary": "Shared drive Membership Change."
+              },
+              {
+                "number": "1.3.17",
+                "title": "Shared Drive Settings Change",
+                "depth": 3,
+                "chunk_id": "chunk_095",
+                "page_start": 311,
+                "page_end": 316,
+                "word_count": 668,
+                "summary": "Event details\nEvent name\nshared_drive_settings_change\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator\naccount."
+              },
+              {
+                "number": "1.3.18",
+                "title": "Sheets ImportRange access change",
+                "depth": 3,
+                "chunk_id": "chunk_096",
+                "page_start": 316,
+                "page_end": 318,
+                "word_count": 312,
+                "summary": "Event details\nEvent name\nsheets_import_range_access_change\nParameters\ndoc_id\nstring\nDocument ID."
+              },
+              {
+                "number": "1.3.19",
+                "title": "User Sharing Permissions Change",
+                "depth": 3,
+                "chunk_id": "chunk_097",
+                "page_start": 318,
+                "page_end": 323,
+                "word_count": 649,
+                "summary": "User Sharing Permissions Changed."
+              },
+              {
+                "number": "1.3.20",
+                "title": "User Sharing Permissions Change from Parent Folder",
+                "depth": 3,
+                "chunk_id": "chunk_098",
+                "page_start": 323,
+                "page_end": 329,
+                "word_count": 663,
+                "summary": "User Sharing Permissions Changed due to hierarchy reconciliation."
+              }
+            ]
+          },
+          {
+            "number": "1.4",
+            "title": "Pooled quota metadata",
+            "depth": 2,
+            "chunk_id": "chunk_099",
+            "page_start": 329,
+            "page_end": 329,
+            "word_count": 8,
+            "summary": "Events of this type are returned with type=pooled_quota_metadata.",
+            "children": [
+              {
+                "number": "1.4.1",
+                "title": "Storage Usage Update",
+                "depth": 3,
+                "chunk_id": "chunk_100",
+                "page_start": 329,
+                "page_end": 329,
+                "word_count": 103,
+                "summary": "Drive storage usage update."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 100,
+    "max_depth": 4
+  }
+}

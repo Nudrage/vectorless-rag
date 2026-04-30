@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1705",
+  "section_number": "155.1.1.232",
+  "header": "Create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI",
+  "content": "reports using Microsoft Graph security API\nand Power BI\nArticle • 04/25/2025 • Applies to: Microsoft Defender XDR\nEmpowering security professionals to visualize their data enables them to quickly recognize\ncomplex patterns, anomalies, and trends that might otherwise be lurking underneath the noise.\nWith visualizations, SOC teams can rapidly identify threats, make informed decisions, and\ncommunicate insights effectively across the organization.\nThere are multiple ways to visualize Microsoft Defender security data:\nNavigating built-in reports in the Microsoft Defender portal.\nUsing Microsoft Sentinel workbooks with prebuilt templates for every Defender product\n(requires integration with Microsoft Sentinel).\nApplying the render function in Advanced Hunting.\nUsing Power BI to expand existing reporting capabilities.\nIn this article, we create a sample Security Operations Center (SOC) efficiency dashboard in\nPower BI using Microsoft Graph security API. We access it in user context, therefore user must\nhave corresponding permissions to be able to view alerts and incidents data.\nIn this section, we go through the steps required to get Microsoft Defender XDR data into\nPower BI, using Alerts data as an example.\n1. Open Microsoft Power BI Desktop.\n2. Select Get Data > Blank Query.\n3. Select Advanced Editor.\n７ Note\nExample below is based on our new MS Graph security API. Find out more at: Use the\nMicrosoft Graph security API.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1277,
+      "end": 1277
+    },
+    "content_stats": {
+      "char_count": 1437,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Importing data into Power BI",
+        "Filtering data",
+        "Introducing parameters",
+        "Reviewing the report",
+        "Power BI dashboard samples",
+        "Related articles"
+      ]
+    }
+  }
+}

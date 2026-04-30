@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_049",
+  "section_number": "1.6.3",
+  "header": "Request Format",
+  "content": "All requests must have \"Authorization\" and \"Date\" headers.\nIf the request method is GET or DELETE, URL-encode parameters and send them in the\nURL query string like this: ?realname=First%20Last&username=root . They still go on\na separate line when creating the string to sign for an Authorization header.\nSend parameters for POST requests in the body as URL-encoded key-value pairs (the\nsame request format used by browsers to submit form data). The header \" Content-\nType: application/x-www-form-urlencoded \" must also be present.\nWhen URL-encoding, all bytes except ASCII letters, digits, underscore (\"_\"), period (\".\"),\ntilde (\"~\"), and hyphen (\"-\") are replaced by a percent sign (\"%\") followed by two\nhexadecimal digits containing the value of the byte. For example, a space is replaced\nwith \"%20\" and an at-sign (\"@\") becomes \"%40\". Use only upper-case A through F for\nhexadecimal digits.\nA request with parameters, as a complete URL, would look something like this:\nhttps://api-XXXXXXXX.duosecurity.com/admin/v1/users?\nrealname=First%20Last&username=root  (substituting the actual API method path\nand parameters used in your request).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 25,
+      "end": 25
+    },
+    "content_stats": {
+      "char_count": 1140,
+      "word_count": 166
+    },
+    "hierarchy": {
+      "parent": "API Details",
+      "children": []
+    }
+  }
+}

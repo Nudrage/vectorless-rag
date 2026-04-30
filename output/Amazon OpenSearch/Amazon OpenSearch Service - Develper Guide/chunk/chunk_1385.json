@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1385",
+  "section_number": "2.25.3.10",
+  "header": "Use multiple domains for high availability",
+  "content": "To achieve high availability beyond 99.9% uptime across multiple Regions, consider using two\ndomains. For small or slowly changing datasets, you can set up cross-cluster replication to maintain\nManage indexes with Index State Management\n1843\nAmazon OpenSearch Service\nDeveloper Guide\nan active-passive model. In this model, only the leader domain is written to, but either domain can\nbe read from. For larger data sets and quickly changing data, conﬁgure dual delivery in your ingest\npipeline so that all data is written independently to both domains in an active-active model.\nArchitect your upstream and downstream applications with failover in mind. Make sure to test the\nfailover process along with other disaster recovery processes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1872,
+      "end": 1873
+    },
+    "content_stats": {
+      "char_count": 737,
+      "word_count": 112
+    },
+    "hierarchy": {
+      "parent": "Stability",
+      "children": []
+    }
+  }
+}

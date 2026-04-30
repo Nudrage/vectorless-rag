@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_549",
+  "section_number": "1.5.692.1",
+  "header": "Fields: Public Cloud",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nIdpPolicyRuleId\nThe ID of the rule in the Identity Protection policy\nIdpPolicyRuleName\nThe display name of the rule in the Identity Protection policy\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n126/1226\nField\nDescription\nSimulationMode\nA flag to indicate whether the rule matched in the policy was in simulation mode\nIdpPolicyAccountEventType\nThe type of the account event matched by the Identity Protection policy\nValues:\nWEAK_PASSWORD (1)\nIdpPolicyRuleAction\nA bit mask of the actions configured in the rule in the Identity Protection policy\nValues:\nALLOW (0x1)\nBLOCK (0x2)\nMFA (0x4)\nRESET_PASSWORD (0x8)\nADD_TO_WATCH_LIST (0x10)\nAPPLY_SSO_POLICY (0x20)\nIdpPolicyRuleActionStatus\nSpecifies if the action was successfully applied, or an error message if it was not\nValues:\nSUCCESS (0x1)\nFAILURE (0x2)\nSourceAccountType\nThe type of the Active Directory bound with this activity.\nValues:\nUSER (0)\nCOMPUTER (1)\nGROUP (2)\nCLOUD_SERVICE (3)\nSourceAccountUserName\nThe username associated with this activity.\nSourceAccountSamAccountName\nThe sAMAccountName value of the account bound with this activity.\nOnly set if available as part of the raw, sniffed data, and usually set alongside the SourceAccountDomain field.\nFor stronger identification, the SourceAccountObjectSid or SourceAccountObjectGuid fields are better foreign keys -\nalthough they may not be available in some cases, such as authentication failures.\nSourceAccountDomain\nThe domain that the account bound with this activity is a member of.\nSourceAccountObjectSid\nThe objectSid value of the account bound with this activity.\nSourceAccountObjectGuid\nThe objectGUID value of the account bound with this activity.\nSourceAccountAzureId\nThe unique Azure userId value of the user associated with this activity\nSourceAccountOktaId\nThe unique OKTA actor ID of the user associated with this activity\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 126,
+      "end": 127
+    },
+    "content_stats": {
+      "char_count": 2112,
+      "word_count": 285
+    },
+    "hierarchy": {
+      "parent": "IdpPolicyAccountEventRuleMatch",
+      "children": []
+    }
+  }
+}

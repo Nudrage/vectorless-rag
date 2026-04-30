@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_559",
+  "section_number": "155.1.1.49.1",
+  "header": "Investigate DLP alerts in the Microsoft Defender portal",
+  "content": "portal\na. (in preview) In the Incidents queue > Alert policies > Alert policy title. You can search\non the DLP policy name.\n3. Search for the DLP policy name of the alerts and incidents you're interested in.\n4. To view the incident summary page, select the incident from the queue. Similarly, select\nthe alert to view the DLP alert page. Select Summarize (preview) for Security Copilot to\ngenerate a summary of the alert. The alert summary will contain the:\nalert severity\nalert title\nthe name of the policy that was matched\nthe name file involved and a link to the file\nalert status\nthe email address of the user who performed the action that matched the policy\n1. View the Alert story for details about policy and the sensitive information types detected\nin the alert. Select the event in the Related Events section to see the user activity details.\n2. View the matched sensitive content in the Sensitive info types tab and the file content in\nthe Source tab if you have the required permission (See details here).\nAdvanced hunting is a query-based threat hunting tool that lets you explore up to 30 days of\naudit logs of user, files and site locations to aid in your investigation. You can proactively\ninspect events in your network to locate threat indicators and entities. The flexible access to\ndata enables unconstrained hunting for both known and potential threats.\nThe CloudAppEvents table contains all audit logs across all locations like SharePoint, OneDrive,\nExchange and Devices.\nIf you're new to advanced hunting, you should review Get started with advanced hunting.\nBefore you can use advanced hunting you must have access to the CloudAppEvents table that\ncontains the Microsoft Purview data.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 354,
+      "end": 355
+    },
+    "content_stats": {
+      "char_count": 1707,
+      "word_count": 287
+    },
+    "hierarchy": {
+      "parent": "Investigate data loss prevention alerts with Microsoft Defender XDR",
+      "children": [
+        "Extend DLP alert investigation with advanced hunting"
+      ]
+    }
+  }
+}

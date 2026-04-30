@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2577",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n891/1226\nField\nDescription\nMftRecordId\nIndex number in sector header area of Windows Master File Table record.\nTargetFileName\nThe resulting file name that was downloaded\nMftFileInUse\nFile referenced in Mft record is in use, i.e., has not been deleted.\nMftSectorAddress\nDisk sector address of the MFT file record.\nMftSequenceNumber Windows Master File Table (MFT) sequence number.\nMftFileAttributesFn\nFile attribute flags from file name resident MFT attribute ($FILE_NAME) . See\nhttps://github.com/libyal/libfsntfs/blob/main/documentation/New%20Technologies%20File%20System%20(NTFS).asciidoc#file_attribute_flags\n[https://github.com/libyal/libfsntfs/blob/main/documentation/New%20Technologies%20File%20System%20(NTFS).asciidoc#file_attribute_flags]\nValues:\nFILE_ATTRIBUTE_READONLY (0x00000001)\nFILE_ATTRIBUTE_HIDDEN (0x00000002)\nFILE_ATTRIBUTE_SYSTEM (0x00000004)\nFILE_ATTRIBUTE_VOLUME_LABEL (0x00000008)\nFILE_ATTRIBUTE_DIRECTORY (0x00000010)\nFILE_ATTRIBUTE_ARCHIVE (0x00000020)\nFILE_ATTRIBUTE_DEVICE (0x00000040)\nFILE_ATTRIBUTE_NORMAL (0x00000080)\nFILE_ATTRIBUTE_TEMPORARY (0x00000100)\nFILE_ATTRIBUTE_SPARSE_FILE (0x00000200)\nFILE_ATTRIBUTE_REPARSE_POINT (0x00000400)\nFILE_ATTRIBUTE_COMPRESSED (0x00000800)\nFILE_ATTRIBUTE_OFFLINE (0x00001000)\nFILE_ATTRIBUTE_NOT_CONTENT_INDEXED (0x00002000)\nFILE_ATTRIBUTE_ENCRYPTED (0x00004000)\nFILE_ATTRIBUTE_INTEGRITY_STREAM (0x00008000)\nFILE_ATTRIBUTE_VIRTUAL (0x00010000)\nFILE_ATTRIBUTE_NO_SCRUB_DATA (0x00020000)\nFILE_ATTRIBUTE_RECALL_ON_OPEN (0x00040000)\nFILE_ATTRIBUTE_PINNED (0x00080000)\nFILE_ATTRIBUTE_UNPINNED (0x00100000)\nFILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS (0x00400000)\nFILE_ATTRIBUTE_HAS_I30_INDEX (0x10000000)\nFILE_ATTRIBUTE_IS_INDEX_VIEW (0x20000000)\nMftFileAttributesSi\nFile attribute flags from MFT resident standard information attribute ($STANDARD_INFORMATION). See\nhttps://github.com/libyal/libfsntfs/blob/main/documentation/New%20Technologies%20File%20System%20(NTFS).asciidoc#file_attribute_flags\n[https://github.com/libyal/libfsntfs/blob/main/documentation/New%20Technologies%20File%20System%20(NTFS).asciidoc#file_attribute_flags]\nValues:\nFILE_ATTRIBUTE_READONLY (0x00000001)\nFILE_ATTRIBUTE_HIDDEN (0x00000002)\nFILE_ATTRIBUTE_SYSTEM (0x00000004)\nFILE_ATTRIBUTE_VOLUME_LABEL (0x00000008)\nFILE_ATTRIBUTE_DIRECTORY (0x00000010)\nFILE_ATTRIBUTE_ARCHIVE (0x00000020)\nFILE_ATTRIBUTE_DEVICE (0x00000040)\nFILE_ATTRIBUTE_NORMAL (0x00000080)\nFILE_ATTRIBUTE_TEMPORARY (0x00000100)\nFILE_ATTRIBUTE_SPARSE_FILE (0x00000200)\nFILE_ATTRIBUTE_REPARSE_POINT (0x00000400)\nFILE_ATTRIBUTE_COMPRESSED (0x00000800)\nFILE_ATTRIBUTE_OFFLINE (0x00001000)\nFILE_ATTRIBUTE_NOT_CONTENT_INDEXED (0x00002000)\nFILE_ATTRIBUTE_ENCRYPTED (0x00004000)\nFILE_ATTRIBUTE_INTEGRITY_STREAM (0x00008000)\nFILE_ATTRIBUTE_VIRTUAL (0x00010000)\nFILE_ATTRIBUTE_NO_SCRUB_DATA (0x00020000)\nFILE_ATTRIBUTE_RECALL_ON_OPEN (0x00040000)\nFILE_ATTRIBUTE_PINNED (0x00080000)\nFILE_ATTRIBUTE_UNPINNED (0x00100000)\nFILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS (0x00400000)\nFILE_ATTRIBUTE_HAS_I30_INDEX (0x10000000)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n892/1226\nField\nDescription\nFILE_ATTRIBUTE_IS_INDEX_VIEW (0x20000000)\nFileIsDirectory\nMftFileSize\nFile size from MFT file record.\nMftValidFileSize\nValid File size from MFT file record. This value is rounded to the nearest cluster boundary. See https://learn.microsoft.com/en-\nus/windows/win32/devnotes/attribute-record-header [https://learn.microsoft.com/en-us/windows/win32/devnotes/attribute-record-header]\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 891,
+      "end": 893
+    },
+    "content_stats": {
+      "char_count": 3949,
+      "word_count": 270
+    },
+    "hierarchy": {
+      "parent": "MftRecord",
+      "children": []
+    }
+  }
+}

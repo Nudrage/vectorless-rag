@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_036",
+  "section_number": "2.6.7",
+  "header": "Setting up roles and users in Amazon OpenSearch Ingestion",
+  "content": "Amazon OpenSearch Ingestion uses a variety of permissions models and IAM roles in order to allow\nsource applications to write to pipelines, and to allow pipelines to write to sinks. Before you can\nstart ingesting data, you need to create one or more IAM roles with speciﬁc permissions based on\nyour use case.\nAt minimum, the following roles are required to set up a successful pipeline.\nName\nDescription\nPipeline role\nThe pipeline role provides the required permissions for a pipeline to\nread from the source and write to the domain or collection sink. You can\nmanually create the pipeline role, or you can have OpenSearch Ingestion\ncreate it for you.\nIngestion role\nThe ingestion role contains the osis:Ingest  permission for the pipeline\nresource. This permission allows push-based sources to ingest data into a\npipeline.\nThe following image demonstrates a typical pipeline setup, where a data source such as Amazon S3\nor Fluent Bit is writing to a pipeline in a diﬀerent account. In this case, the client needs to assume\nthe ingestion role in order to access the pipeline. For more information, see the section called\n“Cross-account ingestion”.\nSupported AWS Regions\n28\nAmazon OpenSearch Service\nDeveloper Guide\nFor a simple setup guide, see the section called “Tutorial: Ingest data into a domain”.\nTopics\n• the section called “Pipeline role”\n• the section called “Ingestion role”\n• the section called “Cross-account ingestion”",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 57,
+      "end": 58
+    },
+    "content_stats": {
+      "char_count": 1431,
+      "word_count": 231
+    },
+    "hierarchy": {
+      "parent": "Overview of Amazon OpenSearch Ingestion",
+      "children": [
+        "Pipeline role",
+        "Ingestion role",
+        "Granting Amazon OpenSearch Ingestion pipelines access to domains",
+        "Granting Amazon OpenSearch Ingestion pipelines access to collections"
+      ]
+    }
+  }
+}

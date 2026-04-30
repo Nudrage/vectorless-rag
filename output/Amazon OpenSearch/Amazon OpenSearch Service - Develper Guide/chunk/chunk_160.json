@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_160",
+  "section_number": "2.6.16.8.6",
+  "header": "Step 4: (Optional) Conﬁgure recommended compute units (OCUs) for the Amazon MSK pipeline",
+  "content": "MSK pipeline\nEach compute unit has one consumer per topic. Brokers balance partitions among these consumers\nfor a given topic. However, when the number of partitions is greater than the number of\nconsumers, Amazon MSK hosts multiple partitions on every consumer. OpenSearch Ingestion has\nbuilt-in auto scaling to scale up or down based on CPU usage or number of pending records in the\npipeline.\nFor optimal performance, distribute your partitions across many compute units for parallel\nprocessing. If topics have a large number of partitions (for example, more than 96, which is the\nmaximum OCUs per pipeline), we recommend that you conﬁgure a pipeline with 1–96 OCUs.\nThis is because it will automatically scale as needed. If a topic has a low number of partitions (for\nexample, less than 96), keep the maximum compute unit the same as the number of partitions.\nWhen a pipeline has more than one topic, choose the topic with the highest number of partitions\nas a reference to conﬁgure maximum computes units. By adding another pipeline with a new set of\nOCUs to the same topic and consumer group, you can scale the throughput almost linearly.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 227,
+      "end": 227
+    },
+    "content_stats": {
+      "char_count": 1143,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon Managed Streaming for Apache Kafka",
+      "children": []
+    }
+  }
+}

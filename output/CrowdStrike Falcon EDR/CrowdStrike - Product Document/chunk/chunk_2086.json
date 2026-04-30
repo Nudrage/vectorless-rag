@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2086",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n713/1226\nField\nDescription\nContextTimeStamp System time of event creation.\nContextProcessId\nUPID of process originating this event.\nTargetFileName\nThe resulting file name that was downloaded\nSize\nSize of the egressing file in bytes.\nShannonEntropy\nValues in units of Shannons, or the number of bits per byte required to optimally encode any word of a given message in 8-bit words.\nRepresented as a positive integer from 0-1000 where the higher the value is correlates to a higher relative Shannon entropy.\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nFileEcpBitmask\nValues:\nECP_SRV_OPEN (0x00000001)\nECP_CS_SENSOR_OPEN (0x00000002)\nECP_CS_SENSOR_FILE_CHARACTERISTICS (0x00000004)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 713,
+      "end": 714
+    },
+    "content_stats": {
+      "char_count": 999,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": "FileWrittenWithEntropyHigh",
+      "children": []
+    }
+  }
+}

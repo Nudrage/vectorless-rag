@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_560",
+  "section_number": "2.9.2.2",
+  "header": "Limitations for Amazon S3",
+  "content": "If you’re direct querying data in Amazon S3, the following additional limitations apply:\n• Direct query for S3 is only available on OpenSearch Service domains running OpenSearch version\n2.13 or later, and requires access to AWS Glue Data Catalog. Existing AWS Glue Data Catalog\ntables must be recreated using SQL in OpenSearch Query Workbench.\n• Direct query for S3 requires you to specify a checkpoint bucket on Amazon S3. This bucket\nmaintains the state of your indexed views, including the last refresh time and the most recently\ningested data.\n• Your OpenSearch domain and AWS Glue Data Catalog must be in the same AWS account. Your\nS3 bucket can be in a diﬀerent account (requires condition to be added to your IAM policy), but\nmust be in the same AWS Region as your domain.\n• OpenSearch Service direct queries with S3 only support Spark tables generated from Query\nWorkbench. Tables generated within AWS Glue Data Catalog or Athena are not supported by\nSpark streaming, which is needed to maintain indexed views.\nLimitations\n730\nAmazon OpenSearch Service\nDeveloper Guide\n• OpenSearch instance types have networked payload limitations of either 10 MiB or 100 MiB,\ndepending on the speciﬁc instance type you choose.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 759,
+      "end": 760
+    },
+    "content_stats": {
+      "char_count": 1219,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "Direct query limitations",
+      "children": []
+    }
+  }
+}

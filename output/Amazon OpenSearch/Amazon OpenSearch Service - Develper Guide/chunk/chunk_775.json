@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_775",
+  "section_number": "2.12.1.1.5",
+  "header": "Other considerations",
+  "content": "• Automatic key rotation preserves the properties of your AWS KMS keys, so the rotation has\nno eﬀect on your ability to access your OpenSearch data. Encrypted OpenSearch Service\ndomains don't support manual key rotation, which involves creating a new key and updating any\nreferences to the old key. To learn more, see Rotate AWS KMS keys in the AWS Key Management\nService Developer Guide.\n• Certain instance types don't support encryption of data at rest. For details, see the section called\n“Supported instance types”.\n• Domains that encrypt data at rest use a diﬀerent repository name for their automated\nsnapshots. For more information, see the section called “Restoring snapshots”.\n• While we highly recommend enabling encryption at rest, it can add additional CPU overhead and\na few milliseconds of latency. Most use cases aren't sensitive to these diﬀerences, however, and\nthe magnitude of impact depends on the conﬁguration of your cluster, clients, and usage proﬁle.\nEncryption at rest\n1297\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1326,
+      "end": 1327
+    },
+    "content_stats": {
+      "char_count": 1040,
+      "word_count": 165
+    },
+    "hierarchy": {
+      "parent": "Encryption of data at rest for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

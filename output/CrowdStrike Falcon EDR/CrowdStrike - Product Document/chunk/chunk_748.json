@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_748",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nRegOperationType\nValues:\nREG_SET_VALUE_KEY (1)\nREG_DELETE_VALUE_KEY (2)\nREG_CREATE_KEY (3)\nREG_DELETE_KEY (4)\nREG_SET_KEY_SECURITY (5)\nREG_LOAD_KEY (6)\nREG_RENAME_KEY (7)\nREG_OPEN_KEY (8)\nREG_QUERY_NAME_KEY (9)\nREG_SET_VALUE_KEY_ANTI_TAMPER (101)\nREG_DELETE_VALUE_KEY_ANTI_TAMPER (102)\nRegObjectName\nRegValueName\nRegConfigValueType\nValues:\nUNKNOWN (0)\nRegConfigClass\nValues:\nBOOT_CONFIGURATION_DATA (0)\nCROWDSTRIKE_KEY (1)\nRegConfigFlags\nValues:\nGLOBAL (0x0001)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n186/1226\nField\nDescription\nNEEDS_SOURCE_SIGNED (0x0004)\nNEEDS_SOURCE_MS_SIGNED (0x0010)\nSUSPICIOUS (0x0040)\nRegConfigIndex\nRegType\nValues:\nREG_NONE (0)\nREG_SZ (1)\nREG_EXPAND_SZ (2)\nREG_BINARY (3)\nREG_DWORD (4)\nREG_DWORD_BIG_ENDIAN (5)\nREG_LINK (6)\nREG_MULTI_SZ (7)\nREG_RESOURCE_LIST (8)\nREG_FULL_RESOURCE_DESCRIPTOR (9)\nREG_RESOURCE_REQUIREMENTS_LIST (10)\nREG_QWORD (11)\nRegNumericValue\nRegStringValue\nRegBinaryValue\nRegKeyName\nRegTamperType\nValues:\nGENERAL (0)\nNETWORK_CONFIG (1)\nSERVICE (2)\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nRegClassification\nValues:\nUNKNOWN (0)\nSYSTEM_STARTUP_AUTORUN (1)\nSYSTEM_SHUTDOWN_AUTORUN (2)\nUSER_LOGON_AUTORUN (3)\nUSER_LOGOFF_AUTORUN (4)\nAPP_START_AUTORUN (5)\nAPP_EXTENSION (6)\nSERVICE (7)\nAUTHENTICATION (8)\nCORE_PROCESSES (9)\nCUSTOM_PROCESSES (10)\nCORE_SERVICES (11)\nCORE_SERVICE_PLUGINS (12)\nSERVER_PLUGINS (13)\nNETWORK_SERVICE_PLUGINS (14)\nLANG_SERVICE_PLUGINS (15)\nMULTIMEDIA_PLUGINS (16)\nSHELL_PLUGINS (17)\nIE_COM_PLUGINS (18)\nCOM_REGISTRATION (19)\nPRINTERS (20)\nTERMINAL_SERVER (21)\nGRAPHICS_CORE (22)\nSYSTEM_CONFIG (23)\nASEP_CLASS_MARGIN (100)\nCROWDSTRIKE_DATA (101)\nCROWDSTRIKE_FIREWALL_RULE (102)\nTAMPER_RELATED_OS_KEY (103)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n187/1226\nField\nDescription\nCROWDSTRIKE_CLASS_MARGIN (105)\nSECURITY_CONFIG (106)\nFIREWALL (107)\nBOOT_CONFIGURATION_DATA (108)\nTHIRD_PARTY_AV_VENDOR (109)\nAUTHENTICATION_POLICY (110)\nBROWSER_SECURITY_POLICY (111)\nPRODAPP_SECURITY (111)\nPRODAPP_CONFIG_SECURITY (112)\nKERNEL_SERVICE_CONFIG (113)\nSYSTEM_CONFIG_METADATA (114)\nSYSTEM_CONFIG_CLASS_MARGIN (150)\nGENERIC_SUSPICIOUS (151)\nGENERIC_SUSPICIOUS_CLASS_MARGIN (154)\nRegClassificationFlags\nValues:\nGLOBAL (0x0001)\nPRIVILEGED (0x0002)\nNEEDS_SOURCE_SIGNED (0x0004)\nNEEDS_TARGET_SIGNED (0x0008)\nNEEDS_SOURCE_MS_SIGNED (0x0010)\nNEEDS_TARGET_MS_SIGNED (0x0020)\nSENSOR_ONLY (0x0040)\nFIREWALL_RULE (0x0080)\nFIREWALL_RULE_V2 (0x0100)\nAMSI_PROVIDER (0x0080)\nANTI_TAMPERING_V1 (0x0100)\nAMSI_PROVIDER_V2 (0x0200)\nANTI_TAMPERING_V2 (0x0400)\nAMSI_PROVIDER_V3 (0x0800)\nANTI_TAMPERING_V3 (0x0800)\nMUST_CONTAIN_DC_DRIVER (0x1000)\nNEEDS_RPC_INFO_WMI (0x4000)\nRegClassificationIndex\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 186,
+      "end": 188
+    },
+    "content_stats": {
+      "char_count": 3669,
+      "word_count": 361
+    },
+    "hierarchy": {
+      "parent": "FalconHostRegTamperingInfo",
+      "children": []
+    }
+  }
+}

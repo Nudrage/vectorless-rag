@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_153",
+  "section_number": "2.6.16.8",
+  "header": "Using an OpenSearch Ingestion pipeline with Amazon Managed Streaming for Apache Kafka",
+  "content": "Streaming for Apache Kafka\nYou can use the Kafka plugin to ingest data from Amazon Managed Streaming for Apache Kafka\n(Amazon MSK) into your OpenSearch Ingestion pipeline. With Amazon MSK, you can build and run\napplications that use Apache Kafka to process streaming data. OpenSearch Ingestion uses AWS\nPrivateLink to connect to Amazon MSK. You can ingest data from both Amazon MSK and Amazon\nMSK Serverless clusters. The only diﬀerence between the two processes is the prerequisite steps\nyou must take before you set up your pipeline.\nTopics\n• Provisioned Amazon MSK prerequisites\n• Amazon MSK Serverless prerequisites\n• Step 1: Conﬁgure a pipeline role\n• Step 2: Create the pipeline\n• Step 3: (Optional) Use the AWS Glue Schema Registry\n• Step 4: (Optional) Conﬁgure recommended compute units (OCUs) for the Amazon MSK pipeline",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 220,
+      "end": 220
+    },
+    "content_stats": {
+      "char_count": 829,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "Provisioned Amazon MSK prerequisites",
+        "Amazon MSK Serverless prerequisites",
+        "Step 1: Conﬁgure a pipeline role",
+        "Step 2: Create the pipeline",
+        "Step 3: (Optional) Use the AWS Glue Schema Registry",
+        "Step 4: (Optional) Conﬁgure recommended compute units (OCUs) for the Amazon MSK pipeline"
+      ]
+    }
+  }
+}

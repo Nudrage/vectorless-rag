@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_671",
+  "section_number": "2.10.3.5.1",
+  "header": "General settings",
+  "content": "General settings let you enable or disable individual categories or entire layers. We highly\nrecommend leaving GRANTED_PRIVILEGES and AUTHENTICATED as excluded categories.\nOtherwise, these categories are logged for every valid request to the cluster.\nName\nBackend\nsetting\nDescription\nREST layer\nenable_rest\nEnable or disable events that occur on the REST layer.\nREST disabled\ncategories\ndisabled_\nrest_categories\nSpecify audit categories to ignore on the REST layer.\nModifying these categories can dramatically increase the\nsize of the audit logs.\nAudit log settings\n1229\nAmazon OpenSearch Service\nDeveloper Guide\nName\nBackend\nsetting\nDescription\nTransport layer\nenable_tr\nansport\nEnable or disable events that happen on the transport\nlayer.\nTransport\ndisabled\ncategories\ndisabled_\ntransport\n_categories\nSpecify audit categories which must be ignored on the\ntransport layer. Modifying these categories can dramatica\nlly increase the size of the audit logs.\nAttribute settings let you customize the amount of detail in each log line.\nName\nBackend\nsetting\nDescription\nBulk requests\nresolve_b\nulk_requests\nEnabling this setting generates a log for each document in\na bulk request, which can dramatically increase the size of\nthe audit logs.\nRequest body\nlog_reque\nst_body\nInclude the request body of the requests.\nResolve indices\nresolve_indices\nResolve aliases to indices.\nUse ignore settings to exclude a set of users or API paths:\nName\nBackend\nsetting\nDescription\nIgnored users\nignore_users\nSpecify users that you want to exclude.\nIgnored\nrequests\nignore_requests\nSpecify request patterns that you want to exclude.\nAudit log settings\n1230\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1258,
+      "end": 1260
+    },
+    "content_stats": {
+      "char_count": 1680,
+      "word_count": 242
+    },
+    "hierarchy": {
+      "parent": "Audit log settings",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_336",
+  "section_number": "2.7.6.9.1",
+  "header": "Indexing with cURL",
+  "content": "The following example request uses the Client URL Request Library (cURL) to send a single\ndocument to an index named movies-index within a collection:\ncurl -XPOST \\\n--user \"$AWS_ACCESS_KEY_ID\":\"$AWS_SECRET_ACCESS_KEY\" \\\n--aws-sigv4 \"aws:amz:us-east-1:aoss\" \\\n--header \"x-amz-content-sha256: $REQUEST_PAYLOAD_SHA_HASH\" \\\n--header \"x-amz-security-token: $AWS_SESSION_TOKEN\" \\\n\"https://my-collection-endpoint.us-east-1.aoss.amazonaws.com/movies-index/_doc\" \\\n-H \"Content-Type: application/json\" -d '{\"title\": \"Shawshank Redemption\"}'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 499,
+      "end": 499
+    },
+    "content_stats": {
+      "char_count": 530,
+      "word_count": 50
+    },
+    "hierarchy": {
+      "parent": "Signing HTTP requests with other clients",
+      "children": []
+    }
+  }
+}

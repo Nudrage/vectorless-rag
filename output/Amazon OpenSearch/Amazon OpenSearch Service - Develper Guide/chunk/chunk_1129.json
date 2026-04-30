@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1129",
+  "section_number": "2.18.4.2.2",
+  "header": "Managing access to domains in a VPC (AWS CLI)",
+  "content": "To authorize a VPC domain using the AWS CLI\nTo authorize VPC domain using the AWS CLI, run the following command. Replace the\nplaceholder values with your own information.\naws opensearch authorize-vpc-endpoint-access \\\n--domain-name domain-name \\\n--service application.opensearchservice.amazonaws.com \\\n--region region-id\nTo revoke a VPC domain association using the console\nWhen an association is no longer needed, the VPC domain owner can revoke access using the\nfollowing procedure.\nManaging access to domains in a VPC\n1658\nAmazon OpenSearch Service\nDeveloper Guide\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation pane, choose Domains, and the choose the name of the VPC domain.\n3.\nChoose the VPC endpoints tab, and then select the button for the OpenSearch applications\n(Dashboard) row.\n4.\nChoose Revoke access.\nTo revoke a VPC domain association using the AWS CLI\nTo revoke a VPC domain association with the OpenSearch UI application, run the following\ncommand. Replace the placeholder values with your own information.\naws opensearch revoke-vpc-endpoint-access \\\n--domain-name domain-name \\\n--service application.opensearchservice.amazonaws.com \\\n--region region-id",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1687,
+      "end": 1688
+    },
+    "content_stats": {
+      "char_count": 1246,
+      "word_count": 176
+    },
+    "hierarchy": {
+      "parent": "Managing access to domains in a VPC",
+      "children": []
+    }
+  }
+}

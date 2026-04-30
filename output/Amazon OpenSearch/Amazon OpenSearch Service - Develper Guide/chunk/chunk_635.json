@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_635",
+  "section_number": "2.10.1.5",
+  "header": "Dedicated coordinator node metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for Dedicated coordinator nodes.\nMetric\nDescription\nCoordinatorCPUUtil\nization\nThe maximum percentage of CPU resources used by the\ndedicated coordinator nodes. We recommend increasing the size\nof the instance type when this metric reaches 80 percent.\nRelevant statistics: Maximum\nCoordinatorJVMMemo\nryPressure\nThe maximum percentage of the Java heap used for all dedicated\ncoordinator nodes in the cluster. We recommend moving to a\nlarger instance type when this metric reaches 85 percent.\nRelevant statistics: Maximum\nCoordinatorOldGenJ\nVMMemoryPressure\nThe maximum percentage of the Java heap used for the \"old\ngeneration\" per master node.\nRelevant statistics: Maximum\nDedicated coordinator node metrics\n1173\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nCoordinatorSysMemo\nryUtilization\nThe percentage of the coordinator node's memory that is in use.\nRelevant statistics: Maximum\nCoordinatorFreeSto\nrageSpace\nThis metric indicates that the service does not use coordinator\nnodes as data nodes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1202,
+      "end": 1203
+    },
+    "content_stats": {
+      "char_count": 1068,
+      "word_count": 144
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_971",
+  "section_number": "2.15.5.8",
+  "header": "Managing custom plugins in Amazon OpenSearch Service",
+  "content": "Using custom plugins for OpenSearch Service, you can extend OpenSearch functionality in areas\nlike language analysis, custom ﬁltering, ranking and more, making it possible for you to craft\npersonalized search experiences. Custom plugins for OpenSearch can be developed by extending\nthe org.opensearch.plugins.Plugin class and then packaging it in a .zip ﬁle.\nThe following plugin extensions are currently supported by Amazon OpenSearch Service:\n• AnalysisPlugin – Extends analysis functionality by adding, for example, custom analyzers,\ncharacter tokenizers, or ﬁlters for text processing.\nDissociating and removing packages\n1488\nAmazon OpenSearch Service\nDeveloper Guide\n• SearchPlugin – Enhances search capabilities with custom query types, similarity algorithms,\nsuggestion options, and aggregations.\n• MapperPlugin – Allows you to create custom ﬁeld types and their mapping conﬁgurations in\nOpenSearch, enabling you to deﬁne how diﬀerent types of data should be stored and indexed.\n• ScriptPlugin – Allows you to add custom scripting capabilities to OpenSearch, for example,\ncustom scripts for operations like scoring, sorting, and ﬁeld value transformations during search\nor indexing.\nYou can use the OpenSearch Service console or existing API commands for custom packages to\nupload and associate the plugin with the Amazon OpenSearch Service cluster. You can also use the\nDescribePackages command to describe all the packages in your account and to view details such\nas OpenSearch version and error details. OpenSearch Service validates plugin package for version\ncompatibility, security vulnerabilities, and permitted plugin operations. For more information\nabout custom packages, see the section called “Packages”.\nOpenSearch version and AWS Region support\nCustom plugins are supported on OpenSearch Service domains that are running OpenSearch\nversion 2.15 in the following AWS Regions:\n• US East (Ohio) (us-east-2)\n• US East (N. Virginia) (us-east-1)\n• US West (Oregon) (us-west-2)\n• Asia Paciﬁc (Mumbai) (ap-south-1)\n• Asia Paciﬁc (Seoul) (ap-northeast-2)\n• Asia Paciﬁc (Singapore) (ap-southeast-1)\n• Asia Paciﬁc (Sydney) (ap-southeast-2)\n• Asia Paciﬁc (Tokyo) (ap-northeast-1)\n• Canada (Central) (ca-central-1)\n• Europe (Frankfurt) (eu-central-1)\n• Europe (Ireland) (eu-west-1)\n• Europe (London) (eu-west-2)\n• Europe (Paris) (eu-west-3)\nCustom plugins\n1489\nAmazon OpenSearch Service\nDeveloper Guide\n• South America (São Paulo) (sa-east-1)\nNote\nCustom plugins contain user-developed code. Any issues, including SLA breaches, caused\nby user developed code aren't eligible for SLA credits. For more information, see Amazon\nOpenSearch Service - Service Level Agreement.\nTopics\n• Plugin quotas\n• Prerequisites\n• Troubleshooting\n• Installing a custom plugin using the console\n• Managing custom plugins using the AWS CLI\n• Amazon OpenSearch Service custom package AWS KMS integration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1517,
+      "end": 1519
+    },
+    "content_stats": {
+      "char_count": 2887,
+      "word_count": 408
+    },
+    "hierarchy": {
+      "parent": "Importing and managing packages in Amazon OpenSearch Service",
+      "children": [
+        "Plugin quotas",
+        "Prerequisites",
+        "Troubleshooting",
+        "Installing a custom plugin using the console",
+        "Managing custom plugins using the AWS CLI",
+        "Amazon OpenSearch Service custom package AWS KMS integration"
+      ]
+    }
+  }
+}

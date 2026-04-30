@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_148",
+  "section_number": "3.6.1",
+  "header": "POST    /web/api/v2.1/agents/actions/start-remote-shell",
+  "content": "Remote shell is an opened websocket between the browser and the Agent, with a proprietary communication protocol that requires an unreasonable effort to run from the\nAPI. We recommend that you not use this call.\nIf you do want to use this API, you must have permission through your user role (not IT or Viewer), specific Remote Shell permissions, 2FA enabled on the username with a\nvalid code in the twoFaCode parameter, valid code in the twoFaCode parameter, and permissions for the Account, Site, or Group on whose policy Remote Shell is enabled.\nTo make sure you have permission to start Remote Shell, use the \"can-start-remote-shell\" command. Best practice: Use the UUID filter to run Remote Shell on a specific\nendpoint. To get the UUID, run the \"agents\" command.\nIn the body of this command, the data parameter set is mandatory.\nRemote Shell requires a Control SKU.\nBEST PRACTICE\nUse the UUID filter to run Remote Shell on a specific endpoint. To get the UUID, run the \"agents\" command.\nIn the body of this command, the data parameter set is mandatory.\nRemote Shell requires a Control SKU.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 199,
+      "end": 199
+    },
+    "content_stats": {
+      "char_count": 1095,
+      "word_count": 187
+    },
+    "hierarchy": {
+      "parent": "Start Remote Shell",
+      "children": []
+    }
+  }
+}

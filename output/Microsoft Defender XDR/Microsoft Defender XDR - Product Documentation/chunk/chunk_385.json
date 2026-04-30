@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_385",
+  "section_number": "155.1.1.36.2",
+  "header": "Exclude a rule from correlation using the UI",
+  "content": "\nYou can manually add or remove the #DONT_CORR#  tag to control the correlation state of an\nanalytics rule.\n1. Open the analytics rule in edit mode.\n2. In the rule's Description field, add #DONT_CORR#  at the very beginning of the text.\n3. Save the rule.\nYou can programmatically control the exclusion state of analytics rules by adding or removing\nthe #DONT_CORR#  tag through the analytics API.\nTo modify a rule's correlation state:\n1. Use the Microsoft Defender XDR API to retrieve the rule's current configuration.\n2. Add or remove the #DONT_CORR#  tag at the beginning of the rule's description field.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 216,
+      "end": 217
+    },
+    "content_stats": {
+      "char_count": 609,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Exclude analytics rules from correlation in Microsoft Defender XDR (preview)",
+      "children": []
+    }
+  }
+}

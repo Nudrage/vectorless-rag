@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1250",
+  "section_number": "2.19.9",
+  "header": "Migrating Amazon OpenSearch Service indexes using remote reindex",
+  "content": "reindex\nRemote reindex lets you copy indexes from one Amazon OpenSearch Service domain to another.\nYou can migrate indexes from any OpenSearch Service domains or self-managed OpenSearch and\nElasticsearch clusters.\nA remote domain and index refers to the source of the data, or the domain and index that you want\nto copy data from. A local domain and index refers to the target for the data, or the domain and\nindex that you want to copy data to.\nUpgrading connected domains\n1747\nAmazon OpenSearch Service\nDeveloper Guide\nRemote reindexing requires OpenSearch 1.0 or later, or Elasticsearch 6.7 or later, on the local\ndomain. The remote domain must be lower or the same major version as the local domain.\nElasticsearch versions are considered to be lower than OpenSearch versions, meaning you can\nreindex data from Elasticsearch domains to OpenSearch domains. Within the same major version,\nthe remote domain can be any minor version. For example, remote reindexing from Elasticsearch\n7.10.x to 7.9 is supported, but OpenSearch 1.0 to Elasticsearch 7.10.x isn't supported.\nNote\nThis documentation describes how to reindex data between Amazon OpenSearch Service\ndomains. For full documentation for the reindex operation, including detailed steps and\nsupported options, see Reindex document in the OpenSearch documentation.\nTopics\n• Prerequisites\n• Reindex data between OpenSearch Service internet domains\n• Reindex data between OpenSearch Service domains when the remote is in a VPC\n• Reindex data between non-OpenSearch Service domains\n• Reindex large datasets\n• Remote reindex settings",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1776,
+      "end": 1777
+    },
+    "content_stats": {
+      "char_count": 1585,
+      "word_count": 244
+    },
+    "hierarchy": {
+      "parent": "Managing indexes in Amazon OpenSearch Service",
+      "children": [
+        "Prerequisites",
+        "Reindex data between OpenSearch Service internet domains",
+        "Reindex data between OpenSearch Service domains when the remote is in a VPC",
+        "Reindex data between non-OpenSearch Service domains",
+        "Reindex large datasets",
+        "Remote reindex settings"
+      ]
+    }
+  }
+}

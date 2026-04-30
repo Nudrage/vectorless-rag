@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_463",
+  "section_number": "155.1.1.43",
+  "header": "Move alerts from one incident to another in the Microsoft Defender portal",
+  "content": "another in the Microsoft Defender\nportal\nArticle • 02/04/2025 •\nApplies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nWhile Microsoft Defender already uses advanced correlation mechanisms, you might\nwant to decide differently whether a given alert belongs with a particular incident or not.\nIn such a case, you can detach an alert from one incident and attach it to another. Every\nalert must belong to an incident, so you must attach the alert either to another existing\nincident, or to a new incident that you create on the spot.\nThis article explains how to move alerts from one incident to another.\nUsers must have permissions to view the incidents queue.\nUsers must have read and write permissions on all the alerts they wish to move\nbetween incidents.\nThere are many ways to get to this panel. You can access it from anywhere you can\nselect or take action on alerts. For example:\nIn any of the following locations, select one or more alerts by marking the checkboxes at\nthe beginning of their rows. When one or more alerts are marked, the Move alerts to\nanother incident button appears on the toolbar.\nThe Incidents queue. Expand a given incident to reveal the alerts it contains.\nThe Alerts tab on the incident details page.\nThe Alerts queue.\nAlso, on the details panel on an alert details page, the Move alert to another incident\nbutton always appears.\n1. Open one of the locations mentioned in the previous section.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 285,
+      "end": 285
+    },
+    "content_stats": {
+      "char_count": 1457,
+      "word_count": 249
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Prerequisites",
+        "Access the panel to move alerts",
+        "Select the alert or alerts to move",
+        "Activity log",
+        "See also"
+      ]
+    }
+  }
+}

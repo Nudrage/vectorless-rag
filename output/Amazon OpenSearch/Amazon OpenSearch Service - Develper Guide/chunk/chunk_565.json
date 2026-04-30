@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_565",
+  "section_number": "2.9.3.2",
+  "header": "Amazon S3 recommendations",
+  "content": "If you’re using Amazon OpenSearch Service to direct query data in Amazon S3, we also recommend\nthe following:\n• Ingest data into Amazon S3 using partition formats of year, month, day, hour to speed up\nqueries.\n• When you build skipping indexes, use Bloom ﬁlters for ﬁelds with high cardinality and min/max\nindexes for ﬁelds with large value ranges. For high-cardinality ﬁelds, consider using a value-\nbased approach to improve query eﬃciency.\n• Use Index State Management to maintain storage for materialized views and covering indexes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 762,
+      "end": 762
+    },
+    "content_stats": {
+      "char_count": 536,
+      "word_count": 86
+    },
+    "hierarchy": {
+      "parent": "Recommendations for using direct queries in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

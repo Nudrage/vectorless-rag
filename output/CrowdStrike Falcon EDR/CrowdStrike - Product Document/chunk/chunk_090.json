@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_090",
+  "section_number": "1.5.910.1",
+  "header": "Fields: Windows, macOS, Linux",
+  "content": "Field\nDescription\nDeviceDescriptorSetHash\nThe SHA-256 hash of all hardware descriptors located in a device's firmware.\nEndpointDescriptorAddress\nEndpointDescriptorAttributes\nValues:\nCONTROL_TRANSFER (0x00)\nISOCHRONOUS_NOSYNCH_DATA_TRANSFER (0x01)\nBULK_TRANSFER (0x02)\nPERIODIC_INTERRUPT_TRANSFER (0x03)\nISOCHRONOUS_ASYNCH_DATA_TRANSFER (0x05)\nNOTIFICATION_INTERRUPT_TRANSFER (0x13)\nISOCHRONOUS_ADAPTIVE_DATA_TRANSFER (0x09)\nISOCHRONOUS_SYNCH_DATA_TRANSFER (0x0D)\nISOCHRONOUS_NOSYNCH_FEEDBACK_TRANSFER (0x11)\nISOCHRONOUS_ASYNCH_FEEDBACK_TRANSFER (0x15)\nISOCHRONOUS_ADAPTIVE_FEEDBACK_TRANSFER (0x19)\nISOCHRONOUS_SYNCH_FEEDBACK_TRANSFER (0x1D)\nISOCHRONOUS_NOSYNCH_IMPLICIT_FEEDBACK_TRANSFER (0x21)\nISOCHRONOUS_ASYNCH_IMPLICIT_FEEDBACK_TRANSFER (0x25)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n24/1226\nField\nDescription\nISOCHRONOUS_ADAPTIVE_IMPLICIT_FEEDBACK_TRANSFER (0x29)\nISOCHRONOUS_SYNCH_IMPLICIT_FEEDBACK_TRANSFER (0x2D)\nEndpointDescriptorMaxPacketSize\nEndpointDescriptorInterval\nDeviceDescriptorUniqueIdentifier\nAn identifier created by Device Control to uniquely identify a particular USB device hardware descriptor.\nDeviceTimeStamp\nThe time stamp the device action (e.g., connect or disconnect) occurred, not the time the corresponding sensor event was\ngenerated.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 24,
+      "end": 25
+    },
+    "content_stats": {
+      "char_count": 1469,
+      "word_count": 117
+    },
+    "hierarchy": {
+      "parent": "DcUsbEndpointDescriptor",
+      "children": []
+    }
+  }
+}

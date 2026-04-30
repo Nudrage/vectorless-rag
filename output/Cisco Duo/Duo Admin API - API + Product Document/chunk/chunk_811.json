@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_811",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Parameter\nRequired?\nDescription\nbackground_img\nOptional\nA base64 encoded background\nimage in PNG format, with\nmaximum size less than 3MB and\ndimensions between 12 by 12\npixels and 3840 by 2160 pixels.\nShown in Duo SSO and Duo\nUniversal Prompt.\ncard_accent_color\nOptional\nA CSS hex color shown as the\nhash symbol (#) followed by three\nor six hexadecimal digits, which\nrepresents the colored line\nappearing at the top of the\ninteractive user interface. Shown\nin Duo SSO and Universal Prompt.\nlogo\nOptional\nA base64 encoded logo image in\nPNG format, with maximum size\nless than 200KB and dimensions\nbetween 12 by 12 pixels and 500\nby 500 pixels. Shown in Duo SSO,\nDuo Universal Prompt, and\ntraditional prompt.\npage_background_color\nOptional\nA CSS hex color shown as the\nhash symbol (#) followed by three\nor six hexadecimal digits, which\nrepresents the color appearing\nbelow the user interface and\nbeneath any transparent\nbackground image. Shown in Duo\nSSO and Universal Prompt.\n}\n}\nPOST  /admin/v1/branding/draft\npowered_by_duo\nOptional\nIf true , Duo SSO, Duo Universal\nPrompt, and traditional prompt\nshow the \"Secured by Duo\"\nbranding. Otherwise, false .\nsso_custom_username_label\nOptional\nSpecify the string that is displayed\nfor the custom SSO Login Label.\nCan be Username , Email\nAddress , or a custom string\n(maximum length 100 characters).\nThe custom string can only\ncontain letters and numbers. No\neffect unless Duo SSO is enabled\nand configured.\nuser_ids\nOptional\nA comma separated list of user\nIDs that will see saved draft\nbranding in Duo SSO and Duo\nUniversal Prompt.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 390,
+      "end": 391
+    },
+    "content_stats": {
+      "char_count": 1575,
+      "word_count": 253
+    },
+    "hierarchy": {
+      "parent": "Custom Branding",
+      "children": []
+    }
+  }
+}

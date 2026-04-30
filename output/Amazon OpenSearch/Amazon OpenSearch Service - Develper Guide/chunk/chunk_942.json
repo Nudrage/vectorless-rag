@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_942",
+  "section_number": "2.27.3.3.1",
+  "header": "Create the Lambda function",
+  "content": "Follow the instructions in the section called “Create the Lambda deployment package”, but create a\ndirectory named ddb-to-opensearch and use the following code for sample.py:\nimport boto3\nimport requests\nfrom requests_aws4auth import AWS4Auth\nregion = '' # e.g. us-east-1\nservice = 'es'\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\nhost = '' # the OpenSearch Service domain, e.g. https://search-mydomain.us-\nwest-1.es.amazonaws.com\nindex = 'lambda-index'\ndatatype = '_doc'\nurl = host + '/' + index + '/' + datatype + '/'\nheaders = { \"Content-Type\": \"application/json\" }\ndef handler(event, context):\ncount = 0\nfor record in event['Records']:\n# Get the primary key for use as the OpenSearch ID\nid = record['dynamodb']['Keys']['id']['S']\nif record['eventName'] == 'REMOVE':\nr = requests.delete(url + id, auth=awsauth)\nelse:\nLoading streaming data from Amazon DynamoDB\n1459\nAmazon OpenSearch Service\nDeveloper Guide\ndocument = record['dynamodb']['NewImage']\nr = requests.put(url + id, auth=awsauth, json=document, headers=headers)\ncount += 1\nreturn str(count) + ' records processed.'\nEdit the variables for region and host.\nInstall pip if you haven't already, then use the following commands to install your dependencies:\ncd ddb-to-opensearch\npip install --target ./package requests\npip install --target ./package requests_aws4auth\nThen follow the instructions in the section called “Create the Lambda function”, but specify the\nIAM role from the section called “Prerequisites” and the following settings for the trigger:\n• Table: your DynamoDB table\n• Batch size: 100\n• Starting position: Trim horizon\nTo learn more, see Process New Items with DynamoDB Streams and Lambda in the Amazon\nDynamoDB Developer Guide.\nAt this point, you have a complete set of resources: a DynamoDB table for your source data, a\nDynamoDB stream of changes to the table, a function that runs after your source data changes and\nindexes those changes, and an OpenSearch Service domain for searching and visualization.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1488,
+      "end": 1489
+    },
+    "content_stats": {
+      "char_count": 2108,
+      "word_count": 297
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon DynamoDB",
+      "children": []
+    }
+  }
+}

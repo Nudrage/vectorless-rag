@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_510",
+  "section_number": "2.8.10.2.4",
+  "header": "Testing VPC domains",
+  "content": "The enhanced security of a VPC can make connecting to your domain and running basic tests a\nchallenge. If you already have an OpenSearch Service VPC domain and would rather not create a\nVPN server, try the following process:\n1. For your domain's access policy, choose Only use ﬁne-grained access control. You can always\nupdate this setting after you ﬁnish testing.\nArchitecture\n677\nAmazon OpenSearch Service\nDeveloper Guide\n2. Create an Amazon Linux Amazon EC2 instance in the same VPC, subnet, and security group as\nyour OpenSearch Service domain.\nBecause this instance is for testing purposes and needs to do very little work, choose an\ninexpensive instance type like t2.micro. Assign the instance a public IP address and either\ncreate a new key pair or choose an existing one. If you create a new key, download it to your\n~/.ssh directory.\nTo learn more about creating instances, see Getting started with Amazon EC2 Linux instances.\n3. Add an internet gateway to your VPC.\n4. In the route table for your VPC, add a new route. For Destination, specify a CIDR block that\ncontains your computer's public IP address. For Target, specify the internet gateway you just\ncreated.\nFor example, you might specify 123.123.123.123/32 for just your computer or\n123.123.123.0/24 for a range of computers.\n5. For the security group, specify two inbound rules:\nType\nProtocol\nPort Range\nSource\nSSH (22)\nTCP (6)\n22\nyour-cidr-block\nHTTPS (443)\nTCP (6)\n443\nyour-security-\ngroup-id\nThe ﬁrst rule lets you SSH into your EC2 instance. The second allows the EC2 instance to\ncommunicate with the OpenSearch Service domain over HTTPS.\n6. From the terminal, run the following command:\nssh -i ~/.ssh/your-key.pem ec2-user@your-ec2-instance-public-ip -N -L\n9200:vpc-domain-name-identifier.region.es.amazonaws.com:443\nThis command creates an SSH tunnel that forwards requests to https://localhost:9200 to your\nOpenSearch Service domain through the EC2 instance. Specifying port 9200 in the command\nsimulates a local OpenSearch install, but use whichever port you'd like. OpenSearch Service only\naccepts connections over port 80 (HTTP) or 443 (HTTPS).\nArchitecture\n678\nAmazon OpenSearch Service\nDeveloper Guide\nThe command provides no feedback and runs indeﬁnitely. To stop it, press Ctrl + C.\n7. Navigate to https://localhost:9200/_dashboards/ in your web browser. You might need to\nacknowledge a security exception.\nAlternately, you can send requests to https://localhost:9200 using curl, Postman, or your\nfavorite programming language.\nTip\nIf you encounter curl errors due to a certiﬁcate mismatch, try the --insecure ﬂag.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 706,
+      "end": 708
+    },
+    "content_stats": {
+      "char_count": 2597,
+      "word_count": 398
+    },
+    "hierarchy": {
+      "parent": "Architecture",
+      "children": []
+    }
+  }
+}

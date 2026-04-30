@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_591",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you get started, make sure that you have reviewed the following documentation:\n• the section called “Limitations for Amazon CloudWatch Logs”\n• the section called “CloudWatch Logs Recommendations”\n• the section called “Quotas for CloudWatch Logs”\nCreating a CloudWatch Logs data source\n751\nAmazon OpenSearch Service\nDeveloper Guide\nBefore you can create a data source, you must have the following resources in your AWS account:\n• Enable CloudWatch Logs. Conﬁgure CloudWatch Logs to collect logs on the same AWS account\nas your OpenSearch resource. For instructions, see Getting started with CloudWatch Logs in the\nAmazon CloudWatch Logs user guide.\n• One or more CloudWatch log groups. You can specify the log groups containing data that you\nwant to query. For instructions on creating a log group, see Create a log group in CloudWatch\nLogs in the Amazon CloudWatch Logs user guide.\n• (Optional) A manually created IAM role. You can use this role to manage access to your data\nsource. Alternatively, you can have OpenSearch Service create a role for you automatically with\nthe required permissions. If you choose to use a manually created IAM role, follow the guidance\nin the section called “Required permissions for manually created IAM roles”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 780,
+      "end": 781
+    },
+    "content_stats": {
+      "char_count": 1251,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon CloudWatch Logs data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

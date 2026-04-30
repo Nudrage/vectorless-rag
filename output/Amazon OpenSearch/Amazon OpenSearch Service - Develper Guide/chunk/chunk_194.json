@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_194",
+  "section_number": "2.6.17.1.1",
+  "header": "Creating a pipeline role in IAM",
+  "content": "To create your OpenSearch Ingestion pipeline, you must ﬁrst create a pipeline role to grant read\nand write access between domains or collections. To do this, perform the following steps:\n1. Create a new permissions policy in IAM to attach to the pipeline role. Make sure you allow\npermissions to read from the source and write to the sink. For more information on setting IAM\npipeline permissions for OpenSearch Service domains, see the section called “Granting pipelines\naccess to domains” and the section called “Granting pipelines access to collections”.\n2. Specify the following permissions within the pipeline role to read from the source:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Effect\":\"Allow\",\n\"Action\":\"es:ESHttpGet\",\n\"Resource\":[\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/\",\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/_cat/\nindices\",\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/_search\",\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/_search/\nscroll\",\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/*/_search\"\n]\n},\n{\n\"Effect\":\"Allow\",\n\"Action\":\"es:ESHttpPost\",\n\"Resource\":[\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/*/_search/\npoint_in_time\",\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/*/_search/\nscroll\"\n]\n},\n{\n\"Effect\":\"Allow\",\n\"Action\":\"es:ESHttpDelete\",\nOpenSearch Service as a source\n296\nAmazon OpenSearch Service\nDeveloper Guide\n\"Resource\":[\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/_search/\npoint_in_time\",\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name/_search/\nscroll\"\n]\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 325,
+      "end": 326
+    },
+    "content_stats": {
+      "char_count": 1594,
+      "word_count": 153
+    },
+    "hierarchy": {
+      "parent": "OpenSearch Service as a source",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1804",
+  "section_number": "155.1.1.248.3",
+  "header": "Set up Event Hubs namespace",
+  "content": "７ Note\nYou can use an existing event-hub, but the throughput and scaling are set at the\nnamespace level. Microsoft recommends to place an event-hub in its own\nnamespace.\n\n\nYou're required to add permissions to the following roles to entities that are involved in Event\nHubs data management:\nContributor: The permissions related to this role are added to entity who logs in to the\nMicrosoft Defender portal.\nReader and Azure Event Hub data Receiver: The permissions related to these roles are\nassigned to the entity who is already assigned the role of a Service Principal and logs in\nto the Microsoft Entra application.\nTo ensure that these roles are added, perform the following step:\nGo to Event Hub Namespace > Access Control (IAM) > Add and verify under Role\nassignments.\nOption 1:\nYou can create Event Hubs within your Namespace and all the Event Types (Tables) you select\nto export are written into this one Event Hub.\nOption 2:\nInstead of exporting all the Event Types (Tables) into one Event Hub, you can export each table\ninto different Event Hubs inside your Event Hubs Namespace (one Event Hub per Event Type).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1360,
+      "end": 1361
+    },
+    "content_stats": {
+      "char_count": 1122,
+      "word_count": 193
+    },
+    "hierarchy": {
+      "parent": "Configure your Event Hubs",
+      "children": [
+        "Add permissions"
+      ]
+    }
+  }
+}

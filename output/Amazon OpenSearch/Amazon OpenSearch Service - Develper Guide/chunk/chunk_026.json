@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_026",
+  "section_number": "2.5.3.2",
+  "header": "Search documents using OpenSearch Dashboards",
+  "content": "OpenSearch Dashboards is a popular open source visualization tool designed to work with\nOpenSearch. It provides a helpful user interface for you to search and monitor your indices.\nTo search documents from an OpenSearch Service domain using Dashboards\n1.\nNavigate to the OpenSearch Dashboards URL for your domain. You can ﬁnd the URL on the\ndomain's dashboard in the OpenSearch Service console. The URL follows this format:\ndomain-endpoint/_dashboards/\n2.\nLog in using your primary username and password.\n3.\nTo use Dashboards, you need to create at least one index pattern. Dashboards uses these\npatterns to identify which indexes you want to analyze. Open the left navigation panel, choose\nStack Management, choose Index Patterns, and then choose Create index pattern. For this\ntutorial, enter movies.\nSearch documents using OpenSearch Dashboards\n20\nAmazon OpenSearch Service\nDeveloper Guide\n4.\nChoose Next step and then choose Create index pattern. After the pattern is created, you can\nview the various document ﬁelds such as actor and director.\n5.\nGo back to the Index Patterns page and make sure that movies is set as the default. If it's not,\nselect the pattern and choose the star icon to make it the default.\n6.\nTo begin searching your data, open the left navigation panel again and choose Discover.\n7.\nIn the search bar, enter mars if you uploaded a single document, or rebel if you uploaded\nmultiple documents, and then press Enter. You can try searching other terms, such as actor or\ndirector names.\nNext: Delete a domain",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 49,
+      "end": 50
+    },
+    "content_stats": {
+      "char_count": 1532,
+      "word_count": 251
+    },
+    "hierarchy": {
+      "parent": "Search documents in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

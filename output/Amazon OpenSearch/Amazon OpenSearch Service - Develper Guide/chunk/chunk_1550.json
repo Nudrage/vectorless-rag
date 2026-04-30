@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1550",
+  "section_number": "2.29.6.2",
+  "header": "High JVM memory pressure",
+  "content": "When the JVMMemoryPressure metric exceeds 92% for 30 minutes, OpenSearch Service triggers\na protection mechanism and blocks all write operations to prevent the cluster from reaching red\nstatus. When the protection is on, write operations fail with a ClusterBlockException error,\nnew indexes can't be created, and the IndexCreateBlockException error is thrown.\nWhen the JVMMemoryPressure metric returns to 88% or lower for ﬁve minutes, the protection is\ndisabled, and write operations to the cluster are unblocked.\nYellow cluster status\n2054\nAmazon OpenSearch Service\nDeveloper Guide\nHigh JVM memory pressure can be caused by spikes in the number of requests to the cluster,\nunbalanced shard allocations across nodes, too many shards in a cluster, ﬁeld data or index\nmapping explosions, or instance types that can't handle incoming loads. It can also be caused by\nusing aggregations, wildcards, or wide time ranges in queries.\nTo reduce traﬃc to the cluster and resolve high JVM memory pressure issues, try one or more of\nthe following:\n• Scale the domain so that the maximum heap size per node is 32 GB.\n• Reduce the number of shards by deleting old or unused indexes.\n• Clear the data cache with the POST index-name/_cache/clear?fielddata=true API\noperation. Note that clearing the cache can disrupt in-progress queries.\nIn general, to avoid high JVM memory pressure in the future, follow these best practices:\n• Avoid aggregating on text ﬁelds, or change the mapping type for your indexes to keyword.\n• Optimize search and indexing requests by choosing the correct number of shards.\n• Set up Index State Management (ISM) policies to regularly remove unused indexes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2083,
+      "end": 2084
+    },
+    "content_stats": {
+      "char_count": 1667,
+      "word_count": 265
+    },
+    "hierarchy": {
+      "parent": "ClusterBlockException",
+      "children": []
+    }
+  }
+}

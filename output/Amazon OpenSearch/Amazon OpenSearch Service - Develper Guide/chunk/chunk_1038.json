@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1038",
+  "section_number": "2.23.3",
+  "header": "Conﬁgure permissions",
+  "content": "If you enable natural language query generation on a preexisting OpenSearch Service domain,\nthe query_assistant_access role might not be deﬁned on the domain. Non-admin users must\nbe mapped to this role in order to manage warm indexes on domains using ﬁne-grained access\ncontrol. To manually create the query_assistant_access role, perform the following steps:\n1.\nIn OpenSearch Dashboards, go to Security and choose Roles.\n2.\nChoose Create role and conﬁgure the following cluster permissions:\n• cluster:admin/opensearch/ml/config/get\n• cluster:admin/opensearch/ml/execute\n• cluster:admin/opensearch/ml/predict\n• cluster:admin/opensearch/ppl\n3.\nName the role query_assistant_access.\n4.\nChoose Create role. The query_assistant_access role is now available.\nNote\nYou must also have the indices:admin/mappings/get and read index permissions\nfor the indices that you want to use natural language questions with.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1593,
+      "end": 1593
+    },
+    "content_stats": {
+      "char_count": 906,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "Natural language query generation in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2250",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp System time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nRegConfigIndex\nModifyTime\nUnix modify time, indicating last file modification. NOTE: modifiable by users.\nUpdateTime\nShimcache Last Updated time.\nExecFlag\nExecution flag for cache entry: Yes, No or Empty, NOTE: Not always accurate.\nRegControlsetId\nIdentification of the registry section which stores the Shim cache data.\nShimEntries\nThe number of entries in the Shim artifact as reported by the artifact itself.\nShimMagicCode\nA unique identifier within the Shim artifact, which determines what format the data is in.\nShimSizeInBytes\nNumber of bytes in the Shim artifact as reported by the artifact itself.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 802,
+      "end": 802
+    },
+    "content_stats": {
+      "char_count": 837,
+      "word_count": 120
+    },
+    "hierarchy": {
+      "parent": "RegShimCache",
+      "children": []
+    }
+  }
+}

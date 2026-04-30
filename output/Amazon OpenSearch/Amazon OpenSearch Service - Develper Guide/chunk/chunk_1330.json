@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1330",
+  "section_number": "2.22.3.5",
+  "header": "Amazon SageMaker templates",
+  "content": "The Amazon SageMaker CloudFormation templates deﬁne multiple AWS resources in order to set\nup the neural plugin and semantic search for you.\nBegin by using the Integration with text embedding models through Amazon SageMaker\ntemplate to deploy a text embedding model in SageMaker Runtime as a server. If you don't\nprovide a model endpoint, CloudFormation creates an IAM role that allows SageMaker Runtime\nAmazon SageMaker templates\n1806\nAmazon OpenSearch Service\nDeveloper Guide\nto download model artifacts from Amazon S3 and deploy them to the server. If you provide an\nendpoint, CloudFormation creates an IAM role that allows the Lambda function to access the\nOpenSearch Service domain or, if the role already exists, updates and reuses the role. The endpoint\nserves the remote model that is used for the ML connector with the ML Commons plugin.\nThen, use the Integration with Sparse Encoders through Amazon SageMaker template to create\na Lambda function that has your domain set up remote inference connectors. After the connector\nis created in OpenSearch Service, the remote inference can run semantic search using the remote\nmodel in SageMaker Runtime. The template returns the model ID in your domain back to you to so\nyou can start searching.\nTo use the Amazon SageMaker AI CloudFormation templates\n1.\nOpen the Amazon OpenSearch Service console.\n2.\nIn the left navigation pane, choose Integrations.\n3.\nUnder each of the Amazon SageMaker AI templates, choose Conﬁgure domain, Conﬁgure\npublic domain.\n4.\nFollow the prompt in the CloudFormation console to provision your stack and set up a model.\nNote\nOpenSearch Service also provides a separate template to conﬁgure VPC domain. If you use\nthis template, you need to provide the VPC ID for the Lambda function.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1835,
+      "end": 1836
+    },
+    "content_stats": {
+      "char_count": 1763,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "Using CloudFormation to set up remote inference for semantic search",
+      "children": []
+    }
+  }
+}

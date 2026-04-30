@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1138",
+  "section_number": "2.18.6.1",
+  "header": "Setting up access permissions for cross-Region and cross-account data access with cross-cluster search",
+  "content": "access with cross-cluster search\nWhen you send a cross-cluster search request to the source domain, the domain evaluates that\nrequest against its domain access policy. Cross-cluster search requires ﬁne-grained access control.\nThe following is an example with an open access policy on the source domain.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": [\n\"*\"\n]\n},\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Resource\": \"arn:aws:es:us-east-1:111222333444:domain/src-domain/*\"\n}\n]\n}\nNote\nIf you include remote indexes in the path, you must URL-encode the URI in the domain\nARN.\nFor example, use the following ARN format:\n:arn:aws:es:us-east-1:111222333444:domain/my-domain/local_index,dst\n%3Aremote_index\nDo not use the following ARN format:\narn:aws:es:us-east-1:111222333444:domain/my-domain/\nlocal_index,dst:remote_index.\nSetting up access permissions for cross-Region and cross-account data access with cross-cluster search\n1667\nAmazon OpenSearch Service\nDeveloper Guide\nIf you choose to use a restrictive access policy in addition to ﬁne-grained access control, your policy\nmust at minimum allow access to es:ESHttpGet. The following is an example:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": [\n\"arn:aws:iam::111222333444:user/john-doe\"\n]\n},\n\"Action\": \"es:ESHttpGet\",\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/my-domain/*\"\n}\n]\n}\nFine-grained access control on the source domain evaluates the request to determine if it's signed\nwith valid IAM or HTTP basic credentials. If it is, ﬁne-grained access control next evaluates whether\nthe user has permission to perform the search and access the data.\nThe following are the permission requirements for searches:\n• If the request searches only data on the destination domain (for example, dest-alias:dest-\nindex/_search), permissions are required only on the destination domain.\n• If the request searches data on both domains (for example, source-index,dest-\nalias:dest-index/_search), permissions are required on both domains.\n• To use ﬁne-grained access control, the permission indices:admin/shards/search_shards\nis required in addition to standard read or search permissions for the relevant indexes.\nThe source domain passes the request to the destination domain. The destination domain\nevaluates this request against its domain access policy. To support all features in OpenSearch UI,\nsuch as indexing documents and performing standard searches, full permissions must be set. The\nfollowing is an example of our recommended policy on the destination domain:\nSetting up access permissions for cross-Region and cross-account data access with cross-cluster search\n1668\nAmazon OpenSearch Service\nDeveloper Guide\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": [\n\"*\"\n]\n},\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Resource\": \"arn:aws:es:us-east-2:111222333444:domain/my-destination-\ndomain/*\"\n},\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:ESCrossClusterGet\",\n\"Resource\": \"arn:aws:es:us-east-2:111222333444:domain/\"\n}\n]\n}\nIf you want to perform only basic searches, the minimum policy requirement is for the\nes:ESCrossClusterGet permission to be applied for the destination domain without wildcard\nsupport. For example, in the preceding policy, you would specify the domain name as /my-\ndestination-domain and not /my-destination-domain/*.\nIn this case, the destination domain performs the search and returns the results to the source\ndomain. The source domain combines its own results (if any) with the results from the destination\ndomain and returns them to you.\nSetting up access permissions for cross-Region and cross-account data access with cross-cluster search\n1669\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1696,
+      "end": 1699
+    },
+    "content_stats": {
+      "char_count": 3788,
+      "word_count": 504
+    },
+    "hierarchy": {
+      "parent": "Cross-Region and cross-account data access with cross-cluster search",
+      "children": []
+    }
+  }
+}

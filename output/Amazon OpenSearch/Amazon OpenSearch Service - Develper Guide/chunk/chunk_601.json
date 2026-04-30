@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_601",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you get started, make sure that you have reviewed the following documentation:\n• the section called “Limitations for Amazon Security Lake”\n• the section called “Security Lake recommendations”\n• the section called “Quotas for Security Lake”\nBefore you can create a data source, take the following actions in Security Lake:\n• Enable Security Lake. Conﬁgure Security Lake to collect logs on the same AWS Region as your\nOpenSearch resource. For instructions, see Getting started with Amazon Security Lake in the\nAmazon Security Lake user guide.\n• Set up Security Lake permissions. Make sure you have accepted the service linked role\npermissions for resource management and the console does not show any issues under the\nIssues page. For more information, see Service-linked role for Security Lake in the Amazon\nSecurity Lake user guide.\n• Share Security Lake data sources. When accessing OpenSearch within the same account as\nSecurity Lake, ensure that there is no message to register your Security Lake buckets with Lake\nFormation in the Security Lake console. For cross-account OpenSearch access, set up a Lake\nFormation query subscriber in the Security Lake console. Use the account associated with your\nOpenSearch resource as the subscriber. For more information, see Subscriber management in\nSecurity Lake in the Amazon Security Lake user guide.\nIn addition, you must also you must have the following resources in your AWS account:\n• (Optional) A manually created IAM role. You can use this role to manage access to your data\nsource. Alternatively, you can have OpenSearch Service create a role for you automatically with\nthe required permissions. If you choose to use a manually created IAM role, follow the guidance\nin the section called “Required permissions for manually created IAM roles”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 788,
+      "end": 788
+    },
+    "content_stats": {
+      "char_count": 1802,
+      "word_count": 286
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon Security Lake data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

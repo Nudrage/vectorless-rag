@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1029",
+  "section_number": "155.1.1.130",
+  "header": "DeviceTvmSoftwareVulnerabilities",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmSoftwareVulnerabilities  table in the advanced hunting schema contains the\nMicrosoft Defender Vulnerability Management list of vulnerabilities in installed software\nproducts. This table also includes operating system information, CVE IDs, and vulnerability\nseverity information. You can use this table, for example, to hunt for events involving devices\nthat have severe vulnerabilities in their software. Use this reference to construct queries that\nreturn information from the table.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\n） Important\nSome information relates to pre-released product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\n７ Note\nThe DeviceTvmSoftwareInventory  and DeviceTvmSoftwareVulnerabilities  tables have\nreplaced the DeviceTvmSoftwareInventoryVulnerabilities  table. Together, the first two\ntables include more columns you can use to help inform your vulnerability management\nactivities or hunt for vulnerable devices.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nOSPlatform\nstring\nPlatform of the operating system running on the device.\nIndicates specific operating systems, including variations\nwithin the same family, such as Windows 11, Windows 10, and\nWindows 7.\nOSVersion\nstring\nVersion of the operating system running on the device\nOSArchitecture\nstring\nArchitecture of the operating system running on the device\nSoftwareVendor\nstring\nName of the software publisher\nSoftwareName\nstring\nName of the software product\nSoftwareVersion\nstring\nVersion number of the software product\nCveId\nstring\nUnique identifier assigned to the security vulnerability under\nthe Common Vulnerabilities and Exposures (CVE) system\nVulnerabilitySeverityLevel\nstring\nSeverity level assigned to the security vulnerability based on\nthe CVSS score and dynamic factors influenced by the threat\nlandscape\nRecommendedSecurityUpdate\nstring\nName or description of the security update provided by the\nsoftware publisher to address the vulnerability\nRecommendedSecurityUpdateId\nstring\nIdentifier of the applicable security updates or identifier for\nthe corresponding guidance or knowledge base (KB) articles\nCveTags\ndynamic\nArray of tags relevant to the CVE; example: ZeroDay,\nNoSecurityUpdate\nProactively hunt for threats\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\nOverview of Microsoft Defender Vulnerability Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 752,
+      "end": 753
+    },
+    "content_stats": {
+      "char_count": 3221,
+      "word_count": 439
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

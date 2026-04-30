@@ -1,0 +1,34 @@
+{
+  "chunk_id": "chunk_109",
+  "section_number": "2.6.15.3",
+  "header": "Conﬁguration requirements and constraints",
+  "content": "Unless otherwise speciﬁed below, all options described in the Data Prepper conﬁguration reference\nfor the supported plugins listed above are allowed in OpenSearch Ingestion pipelines. The\nfollowing sections explain the constraints that OpenSearch Ingestion places on certain plugin\noptions.\nNote\nOpenSearch Ingestion doesn't support any buﬀer plugins because it automatically\nconﬁgures a default buﬀer. You receive a validation error if you include a buﬀer in your\npipeline conﬁguration.\nMany options are conﬁgured and managed internally by OpenSearch Ingestion, such as\nauthentication and acm_certificate_arn. Other options, such as thread_count and\nrequest_timeout, have performance impacts if changed manually. Therefore, these values are\nset internally to ensure optimal performance of your pipelines.\nLastly, some options can't be passed to OpenSearch Ingestion, such as ism_policy_file and\nsink_template, because they're local ﬁles when run in open source Data Prepper. These values\naren't supported.\nTopics\n• General pipeline options\n• Grok processor\n• HTTP source\n• OpenSearch sink\n• OTel metrics source, OTel trace source, and OTel logs source\n• OTel trace group processor\nConﬁguration requirements and constraints\n95\nAmazon OpenSearch Service\nDeveloper Guide\n• OTel trace processor\n• Service-map processor\n• S3 source",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 124,
+      "end": 125
+    },
+    "content_stats": {
+      "char_count": 1327,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "Supported plugins and options for Amazon OpenSearch Ingestion pipelines",
+      "children": [
+        "General pipeline options",
+        "Grok processor",
+        "HTTP source",
+        "OpenSearch sink",
+        "OTel metrics source, OTel trace source, and OTel logs source",
+        "OTel trace group processor",
+        "OTel trace processor",
+        "Service-map processor",
+        "S3 source"
+      ]
+    }
+  }
+}

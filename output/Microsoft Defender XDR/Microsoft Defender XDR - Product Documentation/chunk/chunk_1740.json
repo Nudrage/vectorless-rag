@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1740",
+  "section_number": "155.1.1.239",
+  "header": "Create an app to access Microsoft Defender XDR without a user",
+  "content": "XDR without a user\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThis page describes how to create an application to get programmatic access to Microsoft\nDefender XDR without a defined user—for example, if you're creating a daemon or\nbackground service.\nIf you need programmatic access to Microsoft Defender XDR on behalf of one or more users,\nsee Create an app to access Microsoft Defender XDR APIs on behalf of a user and Create an\napp with partner access to Microsoft Defender XDR APIs. If you're not sure which kind of access\nyou need, see Get started.\nMicrosoft Defender XDR exposes much of its data and actions through a set of programmatic\nAPIs. Those APIs help you automate workflows and make use of Microsoft Defender XDR's\ncapabilities. This API access requires OAuth2.0 authentication. For more information, see OAuth\n2.0 Authorization Code Flow.\nIn general, you need to take the following steps to use these APIs:\nCreate a Microsoft Entra application.\nGet an access token using this application.\nUse the token to access Microsoft Defender XDR API.\nThis article explains how to:\nCreate a Microsoft Entra application\nGet an access token to Microsoft Defender XDR\nValidate the token.\n1. Sign in to Azure\n.\n2. Navigate to Microsoft Entra ID > App registrations > New registration.\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore its general availability. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1306,
+      "end": 1306
+    },
+    "content_stats": {
+      "char_count": 1527,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Create an app",
+        "Get an access token",
+        "Validate the token",
+        "Use the token to access the Microsoft Defender XDR API",
+        "Related articles"
+      ]
+    }
+  }
+}

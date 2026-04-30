@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_827",
+  "section_number": "2.12.4.13",
+  "header": "Tutorial: Conﬁgure a domain with an IAM master user and Amazon Cognito authentication",
+  "content": "Cognito authentication\nThis tutorial covers a popular Amazon OpenSearch Service use case for ﬁne-grained access control:\nan IAM master user with Amazon Cognito authentication for OpenSearch Dashboards.\nIn the tutorial, we'll conﬁgure a master IAM role and a limited IAM role, which we'll then associate\nwith users in Amazon Cognito. The master user can then sign in to OpenSearch Dashboards, map\nthe limited user to a role, and use ﬁne-grained access control to limit the user's permissions.\nAlthough these steps use the Amazon Cognito user pool for authentication, this same basic process\nworks for any Cognito authentication provider that lets you assign diﬀerent IAM roles to diﬀerent\nusers.\nYou'll complete the following steps in this tutorial:\n1. Create master and limited IAM roles\n2. Create a domain with Cognito authentication\n3. Conﬁgure a Cognito user pool and identity pool\n4. Map roles in OpenSearch Dashboards\n5. Test the permissions",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1388,
+      "end": 1388
+    },
+    "content_stats": {
+      "char_count": 946,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": [
+        "Step 1: Create master and limited IAM roles",
+        "Step 2: Create a domain with Cognito authentication",
+        "Step 3: Conﬁgure Cognito users",
+        "Step 4: Map roles in OpenSearch Dashboards",
+        "Step 5: Test the permissions"
+      ]
+    }
+  }
+}

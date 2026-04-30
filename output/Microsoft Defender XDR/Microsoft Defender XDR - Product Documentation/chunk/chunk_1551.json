@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1551",
+  "section_number": "155.1.1.212",
+  "header": "Manage access to Microsoft Defender XDR with Microsoft Entra global roles",
+  "content": "XDR with Microsoft Entra global roles\nArticle • 06/11/2024\nApplies to:\nMicrosoft Defender XDR\nThere are two ways to manage access to Microsoft Defender XDR:\nGlobal Microsoft Entra roles\nCustom role access\nAccounts assigned the following Global Microsoft Entra roles can access Microsoft\nDefender XDR functionality and data:\nGlobal administrator\nSecurity administrator\nSecurity Operator\nGlobal Reader\nSecurity Reader\nTo review accounts with these roles, view Permissions in the Microsoft Defender\nportal\n.\n７ Note\nMicrosoft Defender XDR users can now take advantage of a centralized permissions\nmanagement solution to control user access and permissions across different\nMicrosoft security solutions. Learn more about the Microsoft Defender XDR\nUnified role-based access control (RBAC).\n） Important\nMicrosoft recommends that you use roles with the fewest permissions. This helps\nimprove security for your organization. Global Administrator is a highly privileged\nrole that should be limited to emergency scenarios when you can't use an existing\nrole.\nCustom role access is a capability in Microsoft Defender XDR that allows you to manage\naccess to specific data, tasks, and capabilities in Microsoft Defender XDR. Custom roles\noffer more control than global Microsoft Entra roles, providing users only the access\nthey need with the least-permissive roles necessary. Custom roles can be created in\naddition to global Microsoft Entra roles. Learn more about custom roles.\nAccess to specific functionality is determined by your Microsoft Entra role. Contact a\nglobal administrator if you need access to specific functionality that requires you or your\nuser group be assigned a new role.\nAutomated investigation and remediation can take action on emails, forwarding rules,\nfiles, persistence mechanisms, and other artifacts found during investigations. To\napprove or reject pending actions that require explicit approval, you must have certain\nroles assigned in Microsoft 365. To learn more, see Action center permissions.\nAccess to Microsoft Defender XDR data can be controlled using the scope assigned to\nuser groups in Microsoft Defender for Endpoint role-based access control (RBAC). If\nyour access hasn't been scoped to a specific set of devices in the Defender for Endpoint,\nyou'll have full access to data in Microsoft Defender XDR. However, once your account is\nscoped, you'll only see data about the devices in your scope.\nFor example, if you belong to only one user group with a Microsoft Defender for\nEndpoint role and that user group has been given access to sales devices only, you'll see\nonly data about sales devices in Microsoft Defender XDR. Learn more about RBAC\nsettings in Microsoft Defender for Endpoint\n７ Note\nThis article applies only to managing global Microsoft Entra roles. For more\ninformation about using custom role-based access control, see Custom roles for\nrole-based access control",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1160,
+      "end": 1161
+    },
+    "content_stats": {
+      "char_count": 2907,
+      "word_count": 442
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Access to functionality",
+        "Access to data",
+        "Related articles"
+      ]
+    }
+  }
+}

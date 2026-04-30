@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_962",
+  "section_number": "2.15.5.1",
+  "header": "Required permissions",
+  "content": "Users without administrator access require certain AWS Identity and Access Management (IAM)\nactions in order to manage packages:\n• es:CreatePackage – Create a package\n• es:DeletePackage – Delete a package\n• es:AssociatePackage – Associate a package to a domain\n• es:DissociatePackage – Dissociate a package from a domain\nYou also need permissions on the Amazon S3 bucket path or object where the custom package\nresides.\nGrant all permission within IAM, not in the domain access policy. For more information, see the\nsection called “Identity and Access Management”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1505,
+      "end": 1505
+    },
+    "content_stats": {
+      "char_count": 564,
+      "word_count": 87
+    },
+    "hierarchy": {
+      "parent": "Importing and managing packages in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

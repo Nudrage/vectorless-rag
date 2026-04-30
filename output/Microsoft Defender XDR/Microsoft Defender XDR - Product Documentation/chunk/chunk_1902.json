@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1902",
+  "section_number": "155.1.1.253.1.2",
+  "header": "Step 2: Get access and refresh tokens from your customer's tenant",
+  "content": "customer's tenant\n７ Note\n3. Create a file with the following content and save it with the name\nMsspTokensAcquisition.ps1  in the folder:\nPowerShell\nIn line 30, replace authorzationUrl  with authorizationUrl .\nparam (\n[Parameter(Mandatory=$true)][string]$clientId,\n[Parameter(Mandatory=$true)][string]$secret,\n[Parameter(Mandatory=$true)][string]$tenantId\n)\n[Net.ServicePointManager]::SecurityProtocol =\n[Net.SecurityProtocolType]::Tls12\n# Load our Login Browser Function\nImport-Module .\\LoginBrowser.psm1\n# Configuration parameters\n$login = \"https://login.microsoftonline.com\"\n$redirectUri = \"https://SiemMsspConnector\"\n$resourceId = \"https://graph.windows.net\"\nWrite-Host 'Prompt the user for his credentials, to get an\nauthorization code'\n$authorizationUrl = (\"{0}/{1}/oauth2/authorize?\nprompt=select_account&response_type=code&client_id={2}&redirect_uri=\n{3}&resource={4}\" -f\n$login, $tenantId, $clientId, $redirectUri,\n$resourceId)\nWrite-Host \"authorzationUrl: $authorizationUrl\"\n# Fake a proper endpoint for the Redirect URI\n$code = LoginBrowser $authorizationUrl $redirectUri\n# Acquire token using the authorization code\n$Body = @{\ngrant_type = 'authorization_code'\nclient_id = $clientId\ncode = $code\nredirect_uri = $redirectUri\nresource = $resourceId\nclient_secret = $secret\n}\n$tokenEndpoint = \"$login/$tenantId/oauth2/token?\"\n$Response = Invoke-RestMethod -Method Post -Uri $tokenEndpoint -Body\n$Body\n$token = $Response.access_token\n$refreshToken= $Response.refresh_token\n4. Open an elevated PowerShell command prompt in the MsspTokensAcquisition\nfolder.\n5. Run the following command: Set-ExecutionPolicy -ExecutionPolicy Bypass\n6. Enter the following commands: .\\MsspTokensAcquisition.ps1 -clientId\n<client_id> -secret <app_key> -tenantId <customer_tenant_id>\nReplace <client_id> with the Application (client) ID you got from the\nprevious step.\nReplace <app_key> with the Client Secret you created from the previous\nstep.\nReplace <customer_tenant_id> with your customer's Tenant ID.\n7. You'll be asked to provide your credentials and consent. Ignore the page redirect.\n8. In the PowerShell window, you'll receive an access token and a refresh token. Save\nthe refresh token to configure your SIEM connector.\nYou'll need to allow the application you created in Microsoft Defender XDR.\nYou'll need to have Manage portal system settings permission to allow the application.\nOtherwise, you'll need to request your customer to allow the application for you.\n1. Go to https://security.microsoft.com?tid=<customer_tenant_id>  (replace\n<customer_tenant_id> with the customer's tenant ID.\n2. Click Settings > Endpoints > APIs > SIEM.\n3. Select the MSSP tab.\n4. Enter the Application ID from the first step and your Tenant ID.\n5. Click Authorize application.\nWrite-Host \" ----------------------------------- TOKEN ----------------\n------------------ \"\nWrite-Host $token\nWrite-Host \" ----------------------------------- REFRESH TOKEN --------\n-------------------------- \"\nWrite-Host $refreshToken",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1409,
+      "end": 1411
+    },
+    "content_stats": {
+      "char_count": 2993,
+      "word_count": 345
+    },
+    "hierarchy": {
+      "parent": "Fetch incidents into your SIEM",
+      "children": []
+    }
+  }
+}

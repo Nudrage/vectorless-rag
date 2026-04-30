@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_330",
+  "section_number": "2.13.3.1",
+  "header": "Java",
+  "content": "The following sample code uses the opensearch-java client for Java to establish a secure\nconnection to the speciﬁed OpenSearch Serverless collection and create a single index. You must\nprovide values for region and host.\nJava\n460\nAmazon OpenSearch Service\nDeveloper Guide\nThe important diﬀerence compared to OpenSearch Service domains is the service name (aoss\ninstead of es).\n// import OpenSearchClient to establish connection to OpenSearch Serverless collection\nimport org.opensearch.client.opensearch.OpenSearchClient;\nSdkHttpClient httpClient = ApacheHttpClient.builder().build();\n// create an opensearch client and use the request-signer\nOpenSearchClient client = new OpenSearchClient(\nnew AwsSdk2Transport(\nhttpClient,\n\"...us-west-2.aoss.amazonaws.com\", // serverless collection endpoint\n\"aoss\" // signing service name\nRegion.US_WEST_2, // signing service region\nAwsSdk2TransportOptions.builder().build()\n)\n);\nString index = \"sample-index\";\n// create an index\nCreateIndexRequest createIndexRequest = new\nCreateIndexRequest.Builder().index(index).build();\nCreateIndexResponse createIndexResponse = client.indices().create(createIndexRequest);\nSystem.out.println(\"Create index reponse: \" + createIndexResponse);\n// delete the index\nDeleteIndexRequest deleteIndexRequest = new\nDeleteIndexRequest.Builder().index(index).build();\nDeleteIndexResponse deleteIndexResponse = client.indices().delete(deleteIndexRequest);\nSystem.out.println(\"Delete index reponse: \" + deleteIndexResponse);\nhttpClient.close();\nThe following sample code again establishes a secure connection, and then searches an index.\nimport org.opensearch.client.opensearch.OpenSearchClient;\nSdkHttpClient httpClient = ApacheHttpClient.builder().build();\nOpenSearchClient client = new OpenSearchClient(\nnew AwsSdk2Transport(\nhttpClient,\nJava\n461\nAmazon OpenSearch Service\nDeveloper Guide\n\"...us-west-2.aoss.amazonaws.com\", // serverless collection endpoint\n\"aoss\" // signing service name\nRegion.US_WEST_2, // signing service region\nAwsSdk2TransportOptions.builder().build()\n)\n);\nResponse response = client.generic()\n.execute(\nRequests.builder()\n.endpoint(\"/\" + \"users\" + \"/_search?typed_keys=true\")\n.method(\"GET\")\n.json(\"{\"\n+ \"    \\\"query\\\": {\"\n+ \"        \\\"match_all\\\": {}\"\n+ \"    }\"\n+ \"}\")\n.build());\nhttpClient.close();",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 489,
+      "end": 491
+    },
+    "content_stats": {
+      "char_count": 2287,
+      "word_count": 232
+    },
+    "hierarchy": {
+      "parent": "Ingesting data into Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

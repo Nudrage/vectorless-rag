@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2556",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "Field\nDescription\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nUID\nUnix User Identifier.\nProcessCount\nSyntheticPR2Flags\nValues:\nPROCESS_RUNDOWN (0x0)\nPROCESS_HOLLOWED (0x1)\nAPP_MONITORING (0x2)\nIMAGEHASH_FAILURE (0x4)\nFILE_PATH_EXCLUDED (0x8)\nPROCESS_FORK_FOLDING (0x10)\nIMAGEHASH_FAILURE_WITH_UMLI_IFN (0x24)\nPROCESS_PARENT_EXCLUDED (0x40)\nNEW_SESSION (0x80)\nNEW_PROCESS_GROUP (0x100)\nRootExclusionProcessId\nTimeout\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 887,
+      "end": 887
+    },
+    "content_stats": {
+      "char_count": 816,
+      "word_count": 93
+    },
+    "hierarchy": {
+      "parent": "SyntheticPR2Stats",
+      "children": []
+    }
+  }
+}

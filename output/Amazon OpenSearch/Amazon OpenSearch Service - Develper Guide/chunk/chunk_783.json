@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_783",
+  "section_number": "2.12.2.1.3",
+  "header": "IP-based policies",
+  "content": "IP-based policies restrict access to a domain to one or more IP addresses or CIDR blocks.\nTechnically, IP-based policies are not a distinct type of policy. Instead, they are just resource-based\npolicies that specify an anonymous principal and include a special Condition. For information, see\nIAM JSON policy elements: Condition in the IAM User Guide.\nThe primary appeal of IP-based policies is that they allow unsigned requests to an OpenSearch\nService domain, which lets you use clients like curl and OpenSearch Dashboards or access the\ndomain through a proxy server. To learn more, see the section called “Using a proxy to access\nOpenSearch Service from Dashboards”.\nNote\nIf you enabled VPC access for your domain, you can't conﬁgure an IP-based policy. Instead,\nyou can use security groups to control which IP addresses can access the domain. For\nmore information, see the following topics:\n• the section called “About access policies on VPC domains”\n• Control traﬃc to your AWS resources using security groups in the Amazon VPC User Guide\nThe following policy grants all HTTP requests that originate from the speciﬁed IP range access to\ntest-domain:\nTypes of policies\n1306\nAmazon OpenSearch Service\nDeveloper Guide\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Condition\": {\n\"IpAddress\": {\n\"aws:SourceIp\": [\n\"192.0.2.0/24\"\n]\n}\n},\n\"Resource\": \"arn:aws:es:us-west-1:987654321098:domain/test-domain/*\"\n}\n]\n}\nIf your domain has a public endpoint and doesn't use ﬁne-grained access control, we recommend\ncombining IAM principals and IP addresses. This policy grants test-user HTTP access only if the\nrequest originates from the speciﬁed IP range:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": [\n\"arn:aws:iam::987654321098:user/test-user\"\n]\n},\nTypes of policies\n1307\nAmazon OpenSearch Service\nDeveloper Guide\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Condition\": {\n\"IpAddress\": {\n\"aws:SourceIp\": [\n\"192.0.2.0/24\"\n]\n}\n},\n\"Resource\": \"arn:aws:es:us-west-1:987654321098:domain/test-domain/*\"\n}]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1335,
+      "end": 1337
+    },
+    "content_stats": {
+      "char_count": 2100,
+      "word_count": 305
+    },
+    "hierarchy": {
+      "parent": "Types of policies",
+      "children": []
+    }
+  }
+}

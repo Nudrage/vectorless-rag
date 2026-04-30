@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3138",
+  "section_number": "1.6.17.3.1",
+  "header": "Event fields",
+  "content": "Field Name\nDescription\nCategory\nSyslog category. This value is either Detections or Incident\nIdentity Protection Detection Summary [/documentation/page/d88d9ed6/streaming-api-event-dictionary#wc57435b]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1171/1226\nField Name\nDescription\nIncidentType\nIdentity-based incident or detection name.\nOne of:\nAbnormalUsageAlert: Unusual Access to Application\nAnomalousRpcAlert: Anomalous RPC\nBadReputationIpUsageAlert: Usage of IP with Bad Reputation\nBronzeBitAlert: Bronze Bit Alert\nCredentialScanningAlert: Credential Scanning\nCredentialTheftAlert: Unusual Use of Endpoint\nCredSspVulnerabilityAlert: Possible Exploitation Attempt\nDailyTargetVolumeAnomalyAlert: Excessive Activity - Destination Endpoints\nDailyVolumeAnomalyAlert: Excessive Activity - Origin Endpoints\nDcSyncAlert: Suspicious Domain Replication\nForbiddenCountryAlert: Access from Forbidden Country\nForgedPacAlert: Forged PAC Alert\nGeoLocationAnomalyAlert: Unusual User Geolocation\nGeoLocationVelocityAnomalyAlert: Geographic Anomaly\nGoldenTicketAlert: Golden Ticket Attack\nHiddenObjectAlert: Hidden Object Detected\nIdentityVerificationApproveAlert: Identity Verification Approved\nIdentityVerificationDenyAlert: Identity Verification Denied\nIdentityVerificationTimeoutAlert: Identity Verification Timeout\nLateralMovementAlert: Suspicious Lateral Movement\nLdapReconnaissanceAlert: Suspicious LDAP Activity\nNewEntityAbnormalUsageAlert: Unusual New Account Activity\nNewServerAccessAlert: Unusual Access to Server\nNtlmRelayAlert: Suspected NTLM Relay Activity\nPassTheHashAlert: Suspicious Protocol Implementation\nPassTheTicketAlert: Suspicious Ticket Reuse\nPasswordBruteForceAlert: Password Brute Force\nPolicyRuleMatchAlert: Policy Rule Match\nPrivilegeEscalationAlert: Privilege Escalation Alert\nRemoteCodeExecutionAlert: Remote Code Execution\nSkeletonKeyAlert: Skeleton Key Alert\nStaleAccountUsageAlert: Stale User Account Usage\nStaleHostUsageAlert: Stale Endpoint Usage\nStaleServiceUsageAlert: Stale Service Usage\nSuspiciousMachineAccountAlterationAlert: Suspicious Machine Account Alteration\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1172/1226\nField Name\nDescription\nUserBruteForceAlert: User Brute Force\nIncidentDescription\nA description of the identity-based detection or incident name value.\nSeverity\nIdentity-based detection or incident severity number:\n1: info\n3: low\n5: medium\n7: high\nSeverityName\nIdentity-based detection or incident severity name:\nINFO\nLOW\nMEDIUM\nHIGH\nStartTime\nTime of the first activity in the identity-based detection or incident.\nEndTime\nTime of the latest activity in the identity-based detection or incident.\nUserName\nIf the compromised entity is a user, this field contains the username represented as domain\\samAccountName, where\ndomain is the user’s domain, and samAccountName is the user’s Security Account Manager (SAM) account as defined in\nActive Directory (AD).\nEndpointName\nHostname if the compromised entity is a host and its hostname is known.\nEndpointIp\nHost IP address if the compromised entity is a host and its hostname is not known.\nAlways empty for a detection.\nNumbersOfAlerts\nNumber of alerts in the identity-based incident.\nAlways has the value 1 for detections.\nNumberOfCompromisedEntities\nNumber of compromised entities, users and endpoints.\nFalconHostLink\nURL to the incident details in Falcon Identity Protection\nState\nIdentity-based detection or incident status:\nNEW\nIN_PROGRESS\nDISMISS\nRESOLVED\nAUTO_RESOLVED\nIdentityProtectionIncidentId\nThe ID of the detection or incident in Falcon Identity Protection.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1171,
+      "end": 1173
+    },
+    "content_stats": {
+      "char_count": 3938,
+      "word_count": 427
+    },
+    "hierarchy": {
+      "parent": "Identity Protection Incident",
+      "children": []
+    }
+  }
+}

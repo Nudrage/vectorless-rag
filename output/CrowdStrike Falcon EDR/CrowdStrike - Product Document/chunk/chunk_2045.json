@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2045",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it\nrepresents the ID of the process that is responsible for the activity of the event in focus. For example, the\nTargetProcessId of a process that performed thread injection in an InjectedThread event\nTargetThreadId\nThe primary thread associated with this service.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process\nidentifier\nRawThreadId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process\nidentifier\nThreadStartContext\nThreadStartAddress\nInjectedThreadFlag\nValues:\nNONE (0x00000000)\nPREV_MODE_KERNEL (0x00000001)\nSTART_ADDRESS_IN_NAMED_PE (0x00000002)\nSTART_ADDRESS_IN_SYS_RANGE (0x00000004)\nSYSTEM_THREAD (0x00000008)\nSOURCE_PROCESS_IS_SYSTEM (0x00000010)\nTARGET_ANALYSIS_FAILED (0x00000020)\nCONTEXT_ANALYSIS_FAILED (0x00000040)\nSTART_ADDRESS_IN_NTDLL (0x00000080)\nSTART_ADDRESS_IN_WIN_DLL (0x00000100)\nSTART_ADDRESS_PRIVATE_MEM (0x00000200)\nSourceThreadStartAddress\nSourceThreadModule\nTargetThreadModule\nThreadStartBytes\nUserThread\nThreadStartAddressMemoryDescriptionFlags\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 679,
+      "end": 679
+    },
+    "content_stats": {
+      "char_count": 1483,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "BrowserInjectedThread",
+      "children": []
+    }
+  }
+}

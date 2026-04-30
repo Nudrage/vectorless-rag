@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1989",
+  "section_number": "155.1.1.261.1.2",
+  "header": "2. Investigate the IP address",
+  "content": "\nIs the IP address common for the tenant? Check the Activity log to see if the tenant has\nseen the IP address in the past 30 days.\nSearch for other suspicious activities or alerts that originated from the IP in the tenant.\nExamples of activities to look out for might include email deletion, forwarding rules\ncreation, or file downloads after a successful attempt to sign in.\nCheck the IP address' risk score by using tools like RiskIQ.\nOnce a suspicious IP is recognized, you can review the accounts that signed in. It's possible that\na group of accounts were compromised and successfully used to sign in from the IP or other\nsimilar IPs.\nFilter all successful attempts to sign in from the IP address around and shortly after the time of\nthe alerts. Then search for malicious or unusual activities in such accounts after signing in.\nUser account activities\nValidate that the activity in the account preceding the password spray activity is not\nsuspicious. For example, check if there's anomalous activity based on common location\nor ISP, if the account is utilizing a user-agent that it didn't use before, if any other guest\naccounts were created, if any other credentials were created after the account signed in\nfrom a malicious IP, among others.\nAlerts\nCheck whether the user received other alerts preceding the password spray activity.\nHaving these alerts indicate that the user account might be compromised. Examples\ninclude impossible travel alert, activity from infrequent country/region, and suspicious\nemail deletion activity, among others.\nIncident\nCheck whether the alert is associated with other alerts that indicate an incident. If so,\nthen check whether the incident contains other true positive alerts.\nAdvanced hunting is a query-based threat hunting tool that lets you inspect events in your\nnetwork and locate threat indicators.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1473,
+      "end": 1474
+    },
+    "content_stats": {
+      "char_count": 1848,
+      "word_count": 300
+    },
+    "hierarchy": {
+      "parent": "Investigate the alert",
+      "children": []
+    }
+  }
+}

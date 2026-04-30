@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1219",
+  "section_number": "2.20.1.3.2",
+  "header": "Cold storage ISM operations",
+  "content": "For cold indexes, you must specify a ?type=_cold parameter when you use the following ISM\nAPIs:\n• Add policy\n• Remove policy\n• Update policy\n• Retry failed index\n• Explain index\nDiﬀerences\n1729\nAmazon OpenSearch Service\nDeveloper Guide\nThese APIs for cold indexes have the following additional diﬀerences:\n• Wildcard operators are not supported except when you use it at the end. For example,\n_plugins/_ism/<add, remove, change_policy, retry, explain>/logstash-* is\nsupported but _plugins/_ism/<add, remove, change_policy, retry, explain>/\niad-*-prod isn’t supported.\n• Multiple index names and patterns are not supported. For example, _plugins/_ism/<add,\nremove, change_policy, retry, explain>/app-logs is supported but _plugins/\n_ism/<add, remove, change_policy, retry, explain>/app-logs,sample-data\nisn’t supported.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1758,
+      "end": 1759
+    },
+    "content_stats": {
+      "char_count": 818,
+      "word_count": 108
+    },
+    "hierarchy": {
+      "parent": "Diﬀerences",
+      "children": []
+    }
+  }
+}

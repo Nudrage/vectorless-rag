@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_048",
+  "section_number": "2.6.8.1.1",
+  "header": "Step 1: Create the pipeline role",
+  "content": "The pipeline role must have an attached permissions policy that allows it to send data to the\ncollection sink. It must also have a trust relationship that allows OpenSearch Ingestion to assume\nthe role. For instructions on how to attach a policy to a role, see Adding IAM identity permissions in\nthe IAM User Guide.\nGranting pipelines access to collections\n39\nAmazon OpenSearch Service\nDeveloper Guide\nThe following sample policy demonstrates the least privilege that you can provide in a pipeline role\naccess policy for it to write to collections:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"Statement1\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:APIAccessAll\",\n\"aoss:BatchGetCollection\",\n\"aoss:CreateSecurityPolicy\",\n\"aoss:GetSecurityPolicy\",\n\"aoss:UpdateSecurityPolicy\"\n],\n\"Resource\": \"*\"\n}\n]\n}\nThe role must have the following trust relationship, which allows OpenSearch Ingestion to assume\nit:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"osis-pipelines.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRole\"\n}\n]\n}\nGranting pipelines access to collections\n40\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 68,
+      "end": 70
+    },
+    "content_stats": {
+      "char_count": 1151,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "Granting Amazon OpenSearch Ingestion pipelines access to collections",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_499",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "When you set up a domain with Multi-AZ with Standby, consider the following limitations:\n• The total number of shards on a node can't exceed 1000, the total number of shards on a cluster\ncan't exceed 75000, and the size of a single shard can't exceed 65 GB.\n• Multi-AZ with Standby only works with the m5, c5, r5, r6g, r7g, c6g, m6g, r6gd and i3 instance\ntypes. For more information on supported instances, see Supported instance types.\n• You can only use Provisioned IOPs SSD, General Purpose SSD (GP3), or instance-backed storage\nwith standby.\n• If you enable UltraWarm on a Multi-AZ with Standby domain, the number of warm nodes must\nbe a multiple of the number of Availability Zones being used.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 695,
+      "end": 695
+    },
+    "content_stats": {
+      "char_count": 698,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": "Multi-AZ with Standby",
+      "children": []
+    }
+  }
+}

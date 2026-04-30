@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_279",
+  "section_number": "2.7.3.1.5",
+  "header": "Deleting collections",
+  "content": "Deleting a collection deletes all data and indexes in the collection. You can't recover collections\nafter you delete them.\nManaging collections\n403\nAmazon OpenSearch Service\nDeveloper Guide\nTo delete a collection using the console\n1.\nFrom the Collections panel of the Amazon OpenSearch Service console, select the collection\nyou want to delete.\n2.\nChoose Delete and conﬁrm deletion.\nTo delete a collection using the AWS CLI, send a DeleteCollection request:\naws opensearchserverless delete-collection --id 07tjusf2h91cunochc\nSample response\n{\n\"deleteCollectionDetail\":{\n\"id\":\"07tjusf2h91cunochc\",\n\"name\":\"my-collection\",\n\"status\":\"DELETING\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 432,
+      "end": 433
+    },
+    "content_stats": {
+      "char_count": 644,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Managing Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

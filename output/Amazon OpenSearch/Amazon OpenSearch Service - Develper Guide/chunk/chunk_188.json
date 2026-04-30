@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_188",
+  "section_number": "2.6.16.19.1",
+  "header": "Create a pipeline",
+  "content": "To use AWS Lambda as a processor, conﬁgure an OpenSearch Ingestion pipeline and specify\naws_lambda as a processor. You can also use the AWS Lambda custom enrichment blueprint to\ncreate the pipeline. For more information, see the section called “Working with blueprints”.\nThe following example pipeline receives data from an HTTP source, enriches it using a date\nprocessor and the AWS Lambda processor, and ingests the processed data to an OpenSearch\ndomain.\nversion: \"2\"\nlambda-processor-pipeline:\nsource:\nhttp:\npath: \"/${pipelineName}/logs\"\nprocessor:\n- date:\ndestination: \"@timestamp\"\nfrom_time_received: true\n- aws_lambda:\nfunction_name: \"my-lambda-function\"\nAWS Lambda\n292\nAmazon OpenSearch Service\nDeveloper Guide\ntags_on_failure: [\"lambda_failure\"]\nbatch:\nkey_name: \"events\"\naws:\nregion: region\nsink:\n- opensearch:\nhosts: [ \"https://search-mydomain.us-east-1es.amazonaws.com\" ]\nindex: \"table-index\"\naws:\nregion: \"region\"\nserverless: false\nThe following example AWS Lambda function transforms incoming data by adding a new key-value\npair (\"transformed\": \"true\") to each element in the provided array of events, and then sends\nback the modiﬁed version.\nimport json\ndef lambda_handler(event, context):\ninput_array = event.get('events', [])\noutput = []\nfor input in input_array:\ninput[\"transformed\"] = \"true\";\noutput.append(input)\nreturn output",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 321,
+      "end": 322
+    },
+    "content_stats": {
+      "char_count": 1346,
+      "word_count": 175
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with AWS Lambda",
+      "children": []
+    }
+  }
+}

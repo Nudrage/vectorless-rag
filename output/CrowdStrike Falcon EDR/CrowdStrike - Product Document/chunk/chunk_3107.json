@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_3107",
+  "section_number": "1.6.10.18.2.1",
+  "header": "Event section",
+  "content": "Field Name\nDescription\nDevice ID\nThe sensor ID of the host where the event took place\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1139/1226\nField Name\nDescription\nCustomer ID\nCustomer ID (CID)\nIpv\nIPV4 or IPV6\nCommandLine\nThe command line used to create this process\nConnectionDirection\n1-inbound2-outbound\nEventType\nThe specific kind of firewall event. Potential\nvalues:FirewallRuleIP4MatchedFirewallRuleIP6MatchedFirewallRuleApplicationFailed\nFlags\nIndicates whether the event will be reported in Endpoint security > Firewall > Activity - the matched rule has Watch mode\nenabled.Monitor - The matched rule is in a firewall policy with Monitor mode enabled.\nHostName\nHost name\nICMPCode\n8-bit decimal value for the ICMP Type field. '*' for \"Any type\". '0' when unused.\nICMPType\n8-bit decimal value for the ICMP Code field. '*' for \"Any code\". '0' when unused.\nImageFileName\nThe image file name involved\nLocalAddress\nLocal address involved\nLocalPort\nLocal port involved\nMatchCount\nThis field is the same as MatchCoundSinceLastReport, used for older sensor versions. Will be deprecated.\nMatchCountSinceLastReport\nThe number of matches on the rule since the last time it was sent to the cloud. Events are bounded once per hour, so it\nshould be the number of times the rule was matched in the last hour.\nNetworkProfile\nWindows network location profile\nPID\nProcess ID of the process that initiated the traffic.\nPolicyName\nName of the firewall policy matched\nPolicyID\nThe unique ID of the firewall policy matched\nProtocol\nAn 8-bit decimal value for matching against IP protocol field\nRemoteAddress\nRemote address involved\nRemotePort\nRemote Port involved\nRuleAction\nThe action taken on the activity:1: allowed2: blocked0: invalid - for example, the rule specifies traffic on a non-existent disk\ndrive\nRuleDescription\nDescription of the rule\nRuleFamilyID\nIdentifier that corresponds to a rule’s Version in the console. Changes each time a rule is edited.\nRuleGroupName\nName of the rule group the matched rule belongs to\nRuleName\nName of the rule\nRuleID\nIdentifier assigned to the rule when created. Always stays the same.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1140/1226\nField Name\nDescription\nStatus\nTimestamp\nTime the event happened\nTreeID\nThe PID associated with the detection tree, if present.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1139,
+      "end": 1141
+    },
+    "content_stats": {
+      "char_count": 2670,
+      "word_count": 379
+    },
+    "hierarchy": {
+      "parent": "Falcon Firewall Management",
+      "children": [
+        "Sample FirewallMatch event"
+      ]
+    }
+  }
+}

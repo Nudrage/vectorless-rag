@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1297",
+  "section_number": "2.21.5",
+  "header": "View Amazon Q-generated query result summaries on the Discover page",
+  "content": "Discover page\nOpenSearch Service enables you to query your data with natural language prompts using the\nPiped Processing Language (PPL) query language on the Discover page. For example, you can write\nqueries like the following:\n• Are there any errors in my error logs?\n• What's the average request size by week?\n• How many requests were there group by response code last week?\nIn response, Amazon Q generates natural language summaries of your query results based on the\nﬁrst ten records, like the following:\nThe combination of natural language query generation and query summaries can add an additional\nlevel of inquiry when troubleshooting an alert or a user-friendly means of understanding your data\nwithout having to write complex queries.\nView Amazon Q-generated query result summaries on the Discover page\n1780\nAmazon OpenSearch Service\nDeveloper Guide\nTo view Amazon Q-generated query result summaries on the Discover page\n1.\nVerify that you've set up Amazon Q for OpenSearch Service.\n2.\nIn the OpenSearch Dashboards main menu, choose Discover.\n3.\nIn the query language drop-down list, choose PPL.\n4.\nIn the Amazon Q text box, enter a prompt, and then click the button beside the text box to run\nthe query. Amazon Q can take up to 10 seconds to return a summary. After your initial query,\nyou must choose Generate summary for subsequent summaries.\nNote\nYou can turn summary generation oﬀ from the Amazon Q drop-down list in Discover.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1809,
+      "end": 1810
+    },
+    "content_stats": {
+      "char_count": 1440,
+      "word_count": 238
+    },
+    "hierarchy": {
+      "parent": "Amazon Q Developer for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

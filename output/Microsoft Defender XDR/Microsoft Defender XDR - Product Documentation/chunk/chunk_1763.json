@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1763",
+  "section_number": "155.1.1.241.2.5",
+  "header": "Get an access token using curl",
+  "content": "７ Note\nCurl is pre-installed on Windows 10, versions 1803 and later. For other versions of\nWindows, download and install the tool directly from the official curl website\n.\ncurl -i -X POST -H \"Content-Type:application/x-www-form-urlencoded\" -d\n\"grant_type=client_credentials\" -d \"client_id=%CLIENT_ID%\" -d\n\"scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default\" -d\nA successful response will look like this:\nBash\n1. Copy and paste the token into the JSON web token validator website, JWT,\nto decode\nit.\n2. Make sure that the roles claim within the decoded token contains the desired\npermissions.\nIn the following image, you can see a decoded token acquired from an app, with\nIncidents.Read.All , Incidents.ReadWrite.All , and AdvancedHunting.Read.All  permissions:\n\"client_secret=%CLIENT_SECRET%\"\n\"https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token\" -k\n{\"token_type\":\"Bearer\",\"expires_in\":3599,\"ext_expires_in\":0,\"access_token\":\"eyJ0eX\nAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA\"}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1334,
+      "end": 1335
+    },
+    "content_stats": {
+      "char_count": 1038,
+      "word_count": 111
+    },
+    "hierarchy": {
+      "parent": "Get an access token",
+      "children": []
+    }
+  }
+}

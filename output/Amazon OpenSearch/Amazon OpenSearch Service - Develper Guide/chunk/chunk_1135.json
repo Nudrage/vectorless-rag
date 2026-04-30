@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1135",
+  "section_number": "2.18.5.2",
+  "header": "Workspace privacy and collaborators",
+  "content": "You can deﬁne a privacy setting for a workspace as the default permission level for all users.\nYou can do this while creating a workspace or modify an existing workspace (on the workspace\nCollaborators tab). There are three privacy options to choose from:\n• Private to collaborators – Only collaborators you explicitly add to the workspace can access the\nworkspace. You can deﬁne permission levels for each collaborator.\nCreating OpenSearch UI application workspaces\n1663\nAmazon OpenSearch Service\nDeveloper Guide\n• Anyone can view – Anyone who has access to the OpenSearch UI application can access the\nworkspace and view its assets, but they can't make any changes in the workspace.\n• Anyone can edit – Anyone who has access to the OpenSearch UI application can access the\nworkspace, view assets in it, and make changes to the assets in the workspace.\nOn the workspace Collaborators tab, you can add IAM users or roles and AWS IAM Identity Center\nusers as collaborators in a workspace. There are three levels of permissions for collaborators to\nchoose from:\n• Read only – The collaborator can only view the assets in the workspace. This setting is\noverridden if the workspace is conﬁgured to use the Anyone can edit privacy setting.\n• Read and write – The collaborator can view and edit assets in the workspace. If the workspace\nconﬁgured to use the Anyone can view privacy setting, the collaborator can still edit.\n• Admin – The collaborator can update settings and delete the workspace. The collaborator can\nalso change workspace privacy settings and manage collaborators. The user who creates the\nworkspace is automatically assigned to be a workspace administrator.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1692,
+      "end": 1693
+    },
+    "content_stats": {
+      "char_count": 1670,
+      "word_count": 275
+    },
+    "hierarchy": {
+      "parent": "Using Amazon OpenSearch Service workspaces",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1869",
+  "section_number": "155.1.1.250.5.1.2",
+  "header": "Alerts metadata",
+  "content": "ﾉ\nExpand table\nField name\nDescription\nExample value\ncategory\nVisual and numeric view of how far the attack has\nprogressed along the kill chain. Aligned to the MITRE\nATT&CK™ framework\n.\nImpact\nstatus\nCategorize alerts (as New, Active, or Resolved). It can help\nyou organize and manage your response to alerts.\nNew\nseverity\nIndicates the possible impact on assets. The higher the\nseverity the bigger the impact. Typically higher severity\nitems require the most immediate attention.\nOne of the following values: Informational, Low, Medium,\nand High.\nMedium\ninvestigationId\nThe automated investigation ID triggered by this alert.\n1234\ninvestigationState\nInformation on the investigation's current status. One of\nthe following values: Unknown, Terminated,\nSuccessfullyRemediated, Benign, Failed,\nPartiallyRemediated, Running, PendingApproval,\nPendingResource, PartiallyInvestigated, TerminatedByUser,\nTerminatedBySystem, Queued, InnerFailure,\nPreexistingAlert, UnsupportedOs, UnsupportedAlertType,\nSuppressedAlert.\nUnsupportedAlertType\nclassification\nThe specification for the incident. The property values are:\nUnknown, FalsePositive, TruePositive, or null\nUnknown\ndetermination\nSpecifies the determination of the incident. The property\nvalues are: NotAvailable, Apt, Malware, SecurityPersonnel,\nSecurityTesting, UnwantedSoftware, Other or null\nApt\nassignedTo\nOwner of the incident, or null if no owner is assigned.\nsecop2@contoso.com\nactorName\nThe activity group, if any, the associated with this alert.\nBORON\nthreatFamilyName\nThreat family associated with this alert.\nnull\nmitreTechniques\nThe attack techniques, as aligned with the MITRE\nATT&CK\n™ framework.\n[]\ndevices\nAll devices where alerts related to the incident were sent.\n[] (see details on entity fields below)\nField name\nDescription\nExample value\nDeviceId\nThe device ID as designated in Microsoft Defender for\nEndpoint.\n24c222b0b60fe148eeece49ac83910cc6a7ef491\naadDeviceId\nThe device ID as designated in Microsoft Entra ID. Only\navailable for domain-joined devices.\nnull\ndeviceDnsName\nThe fully qualified domain name for the device.\nuser5cx.middleeast.corp.contoso.com\nosPlatform\nThe OS platform the device is running.\nWindowsServer2016\nosBuild\nThe build version for the OS the device is running.\n14393",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 16,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1388,
+      "end": 1389
+    },
+    "content_stats": {
+      "char_count": 2259,
+      "word_count": 293
+    },
+    "hierarchy": {
+      "parent": "Schema mapping",
+      "children": []
+    }
+  }
+}

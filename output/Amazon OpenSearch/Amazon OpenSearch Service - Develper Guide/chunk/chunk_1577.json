@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1577",
+  "section_number": "2.29.31",
+  "header": "Can't connect from Alpine Linux",
+  "content": "Alpine Linux limits DNS response size to 512 bytes. If you try to connect to your OpenSearch\nService domain from Alpine Linux version 3.18.0 or lower, DNS resolution can fail if the domain is\nin a VPC and has more than 20 nodes. If you use an Alpine Linux version higher than 3.18.0, you\nshould to be able to resolve more than 20 hosts. For more information, see the Alpine Linux 3.18.0\nrelease notes.\nIf your domain is in a VPC, we recommend using other Linux distributions, such as Debian, Ubuntu,\nCentOS, Red Hat Enterprise Linux, or Amazon Linux 2, to connect to it.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2095,
+      "end": 2095
+    },
+    "content_stats": {
+      "char_count": 570,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

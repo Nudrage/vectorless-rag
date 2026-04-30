@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_930",
+  "section_number": "155.1.1.94.1",
+  "header": "November 2025",
+  "content": "In the AADSignInEventsBeta table, the AadDeviceId  column is being replaced with a new\ncolumn, called EntraIdDeviceId , to align with current product branding. The legacy\nAadDeviceId  column will remain in the schema for 30 days to allow time for updating in your\nqueries. After this period of 30 days, AadDeviceId  will be removed from the schema.\nIn the IdentityInfo table, the SourceProvider  column was replaced by the IdentityEnvironment\ncolumn. This change was made to streamline the unified IdentityInfo  table with a similar\ntable in Microsoft Sentinel log analytics. Note that a new column, SourceProviders  (with an s)\nwas added in the unified table. This column refers to the source providers of the accounts for\nthe identity.\nThe AppFileEvents  table has been deprecated. The CloudAppEvents  table includes information\nthat used to be in the AppFileEvents  table, along with other activities in cloud services.\nThe DeviceTvmSoftwareInventoryVulnerabilities  table has been deprecated. Replacing it are\nthe DeviceTvmSoftwareInventory  and DeviceTvmSoftwareVulnerabilities  tables.\nIn the EmailAttachmentInfo and EmailEvents tables, the MalwareFilterVerdict  and\nPhishFilterVerdict  columns have been replaced by the ThreatTypes  column. The\nMalwareDetectionMethod  and PhishDetectionMethod  columns were also replaced by the\nDetectionMethods  column. This streamlining allows us to provide more information under\nthe new columns. The mapping is provided below.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 623,
+      "end": 624
+    },
+    "content_stats": {
+      "char_count": 1471,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting schema - Naming changes",
+      "children": []
+    }
+  }
+}

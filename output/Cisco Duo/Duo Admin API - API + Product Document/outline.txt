@@ -1,0 +1,864 @@
+DOCUMENT INDEX: Cisco Duo\Duo Admin API - API + Product Document
+================================================================
+
+1. Duo Admin API
+   1.1. Overview
+   1.2. About the Admin API 
+   1.3. First Steps
+   1.4. API Clients
+   1.5. API Details
+      1.5.1. Base URL
+      1.5.2. Request Format
+      1.5.3. Response Format
+      1.5.4. Response Paging
+      1.5.5. Authentication
+   1.6. Users
+      1.6.1. Retrieve Users
+      1.6.2. Parameters
+      1.6.3. Response Codes
+      1.6.4. Response Format
+      1.6.5. Example Response
+      1.6.6. Create User
+      1.6.7. Parameters
+      1.6.8. Response Codes
+      1.6.9. Response Format
+      1.6.10. Example Response
+      1.6.11. Create Multiple Users
+      1.6.12. Parameters
+      1.6.13. User Object Attributes
+      1.6.14. Response Format
+      1.6.15. Response Codes
+      1.6.16. Example Request
+      1.6.17. Example Response
+      1.6.18. Restore Multiple Users from Trash
+      1.6.19. Parameters
+      1.6.20. Response Format
+      1.6.21. Response Codes
+      1.6.22. Example Response
+      1.6.23. Send Multiple Users to Trash
+      1.6.24. Parameters
+      1.6.25. Response Format
+      1.6.26. Response Codes
+      1.6.27. Example Response
+      1.6.28. Retrieve User by ID
+      1.6.29. Parameters
+      1.6.30. Response Codes
+      1.6.31. Response Format
+      1.6.32. Example Response
+      1.6.33. Modify User
+      1.6.34. Parameters
+      1.6.35. Response Codes
+      1.6.36. Response Format
+      1.6.37. Example Response
+      1.6.38. Delete User
+      1.6.39. Parameters
+      1.6.40. Response Codes
+      1.6.41. Response Format
+      1.6.42. Example Response
+      1.6.43. Enroll User
+      1.6.44. Parameters
+      1.6.45. Response Codes
+      1.6.46. Response Format
+      1.6.47. Example Response
+      1.6.48. Create Bypass Codes for User
+      1.6.49. Parameters
+      1.6.50. Response Codes
+      1.6.51. Response Format
+      1.6.52. Example Response
+      1.6.53. Retrieve Bypass Codes by User ID
+      1.6.54. Parameters
+      1.6.55. Response Codes
+      1.6.56. Response Format
+      1.6.57. Example Response
+      1.6.58. Retrieve Groups by User ID
+      1.6.59. Parameters
+      1.6.60. Response Codes
+      1.6.61. Response Format
+      1.6.62. Example Response
+      1.6.63. Associate Group with User
+      1.6.64. Parameters
+      1.6.65. Response Codes
+      1.6.66. Response Format
+      1.6.67. Example Response
+      1.6.68. Disassociate Group from User
+      1.6.69. Parameters
+      1.6.70. Response Codes
+      1.6.71. Response Format
+      1.6.72. Example Response
+      1.6.73. Retrieve Phones by User ID
+      1.6.74. Parameters
+      1.6.75. Response Codes
+      1.6.76. Response Format
+      1.6.77. Example Response
+      1.6.78. Associate Phone with User
+      1.6.79. Parameters
+      1.6.80. Response Codes
+      1.6.81. Response Format
+      1.6.82. Example Response
+      1.6.83. Disassociate Phone from User
+      1.6.84. Parameters
+      1.6.85. Response Codes
+      1.6.86. Response Format
+      1.6.87. Example Response
+      1.6.88. Retrieve Hardware Tokens by User ID
+      1.6.89. Parameters
+      1.6.90. Response Codes
+      1.6.91. Response Format
+      1.6.92. Example Response
+      1.6.93. Associate Hardware Token with User
+      1.6.94. Parameters
+      1.6.95. Response Codes
+      1.6.96. Response Format
+      1.6.97. Example Response
+      1.6.98. Disassociate Hardware Token from User
+      1.6.99. Parameters
+      1.6.100. Response Codes
+      1.6.101. Response Format
+      1.6.102. Example Response
+      1.6.103. Retrieve U2F Tokens by User ID
+      1.6.104. Retrieve WebAuthn Credentials by User ID
+      1.6.105. Parameters
+      1.6.106. Response Codes
+      1.6.107. Response Format
+      1.6.108. Example Response
+      1.6.109. Retrieve Desktop Authenticators by User ID
+      1.6.110. Parameters
+      1.6.111. Response Codes
+      1.6.112. Response Format
+      1.6.113. Example Response
+      1.6.114. List External Directory Syncs
+      1.6.115. Parameters
+      1.6.116. Response Codes
+      1.6.117. Response Format
+      1.6.118. Example Response
+      1.6.119. Synchronize User from External Directory
+      1.6.120. Parameters
+      1.6.121. Response Codes
+      1.6.122. Response Format
+      1.6.123. Example Response
+      1.6.124. Send Verification Push
+      1.6.125. Parameters
+      1.6.126. Response Codes
+      1.6.127. Response Format
+      1.6.128. Example Response
+      1.6.129. Retrieve Verification Push Response
+      1.6.130. Parameters
+      1.6.131. Response Codes
+      1.6.132. Response Format
+      1.6.133. Example Response
+   1.7. Bulk Operations
+      1.7.1. Bulk User Operations
+      1.7.2. Parameters
+      1.7.3. Operations
+      1.7.4. Valid Operations
+      1.7.5. Response Codes
+      1.7.6. Response Format
+      1.7.7. Example Operations list
+      1.7.8. Example Response
+   1.8. Groups
+      1.8.1. Per-user Group Operations
+      1.8.2. Retrieve Groups
+      1.8.3. Parameters
+      1.8.4. Response Codes
+      1.8.5. Response Format
+      1.8.6. Example Response
+      1.8.7. Create Group
+      1.8.8. Parameters
+      1.8.9. Response Codes
+      1.8.10. Response Format
+      1.8.11. Example Response
+      1.8.12. Get Group Info
+      1.8.13. Parameters
+      1.8.14. Response Codes
+      1.8.15. Response Format
+      1.8.16. Example Response
+      1.8.17. Get Group Members
+      1.8.18. Parameters
+      1.8.19. Response Codes
+      1.8.20. Response Format
+      1.8.21. Example Response
+      1.8.22. Update Group
+      1.8.23. Parameters
+      1.8.24. Response Codes
+      1.8.25. Response Format
+      1.8.26. Example Response
+      1.8.27. Delete Group
+      1.8.28. Parameters
+      1.8.29. Response Codes
+      1.8.30. Response Format
+      1.8.31. Example Response
+   1.9. Identity Verification
+      1.9.1. Start Identity Verification
+      1.9.2. Parameters
+      1.9.3. Response Codes
+      1.9.4. Response Format
+      1.9.5. Example Response
+      1.9.6. Get Identity Verification Status
+      1.9.7. Parameters
+      1.9.8. Response Codes
+      1.9.9. Response Format
+      1.9.10. Example Response
+      1.9.11. Cancel Identity Verification
+      1.9.12. Parameters
+      1.9.13. Response Codes
+      1.9.14. Example Response
+   1.10. Phones
+      1.10.1. Per-user Phone Operations
+      1.10.2. Retrieve Phones
+      1.10.3. Parameters
+      1.10.4. Response Codes
+      1.10.5. Response Format
+      1.10.6. Example Response
+      1.10.7. Create Phone
+      1.10.8. Parameters
+      1.10.9. Response Codes
+      1.10.10. Response Format
+      1.10.11. Example Response
+      1.10.12. Retrieve Phone by ID
+      1.10.13. Parameters
+      1.10.14. Response Codes
+      1.10.15. Response Format
+      1.10.16. Example Response
+      1.10.17. Modify Phone
+      1.10.18. Parameters
+      1.10.19. Response Codes
+      1.10.20. Response Format
+      1.10.21. Example Response
+      1.10.22. Delete Phone
+      1.10.23. Parameters
+      1.10.24. Response Codes
+      1.10.25. Response Format
+      1.10.26. Example Response
+      1.10.27. Create Activation Code
+      1.10.28. Parameters
+      1.10.29. Response Codes
+      1.10.30. Response Format
+      1.10.31. Example Response
+      1.10.32. Send Activation Code via SMS
+      1.10.33. Parameters
+      1.10.34. Response Codes
+      1.10.35. Response Format
+      1.10.36. Example Response
+      1.10.37. Send Installation URL via SMS
+      1.10.38. Parameters
+      1.10.39. Response Codes
+      1.10.40. Response Format
+      1.10.41. Example Response
+      1.10.42. Send Passcodes via SMS
+      1.10.43. Parameters
+      1.10.44. Response Codes
+      1.10.45. Response Format
+      1.10.46. Example Response
+   1.11. Tokens
+      1.11.1. Per-user Token Operations
+      1.11.2. Per-administrator Token Operations
+      1.11.3. Retrieve Hardware Tokens
+      1.11.4. Parameters
+      1.11.5. Response Codes
+      1.11.6. Response Format
+      1.11.7. Example Response
+      1.11.8. Create Hardware Token
+      1.11.9. Parameters
+      1.11.10. Response Codes
+      1.11.11. Response Format
+      1.11.12. Example Response
+      1.11.13. Retrieve Hardware Token by ID
+      1.11.14. Parameters
+      1.11.15. Response Codes
+      1.11.16. Response Format
+      1.11.17. Example Response
+      1.11.18. Resync Hardware Token
+      1.11.19. Parameters
+      1.11.20. Response Codes
+      1.11.21. Response Format
+      1.11.22. Example Response
+      1.11.23. Delete Hardware Token
+      1.11.24. Parameters
+      1.11.25. Response Codes
+      1.11.26. Response Format
+      1.11.27. Example Response
+   1.12. U2F Tokens
+      1.12.1. Per-user U2F Token Operations
+   1.13. WebAuthn Credentials
+      1.13.1. Per-user WebAuthn Credential Operations
+      1.13.2. Retrieve WebAuthn Credentials
+      1.13.3. Parameters
+      1.13.4. Response Codes
+      1.13.5. Response Format
+      1.13.6. Example Response
+      1.13.7. Retrieve WebAuthn Credentials by Key
+      1.13.8. Parameters
+      1.13.9. Response Codes
+      1.13.10. Response Format
+      1.13.11. Example Response
+      1.13.12. Delete WebAuthn Credential
+      1.13.13. Parameters
+      1.13.14. Response Codes
+      1.13.15. Response Format
+      1.13.16. Example Response
+   1.14. Desktop Authenticators
+      1.14.1. Per-user Desktop Authenticators Operations
+      1.14.2. Retrieve Desktop Authenticators
+      1.14.3. Parameters
+      1.14.4. Response Codes
+      1.14.5. Response Format
+      1.14.6. Example Response
+      1.14.7. Retrieve Desktop Authenticator by Key
+      1.14.8. Parameters
+      1.14.9. Response Codes
+      1.14.10. Response Format
+      1.14.11. Example Response
+      1.14.12. Delete Desktop Authenticator
+      1.14.13. Parameters
+      1.14.14. Response Codes
+      1.14.15. Response Format
+      1.14.16. Example Response
+      1.14.17. Shared Device Authentication Retrieve Shared Device Authentication Configurations
+      1.14.18. Parameters
+      1.14.19. Response Codes
+      1.14.20. Response Format
+      1.14.21. Example Response
+      1.14.22. Retrieve Shared Device Authentication Configuration by Key
+      1.14.23. Parameters
+      1.14.24. Response Codes
+      1.14.25. Response Format
+      1.14.26. Example Response
+      1.14.27. Create Shared Device Authentication Configuration
+      1.14.28. Parameters
+      1.14.29. Response Codes
+      1.14.30. Response Format
+      1.14.31. Example Response
+      1.14.32. Update Shared Device Authentication Configuration
+      1.14.33. Parameters
+      1.14.34. Response Codes
+      1.14.35. Response Format
+      1.14.36. Example Response
+      1.14.37. Delete Shared Device Authentication Configuration
+      1.14.38. Parameters
+      1.14.39. Response Codes
+      1.14.40. Response Format
+      1.14.41. Example Response
+   1.15. Bypass Codes
+      1.15.1. Per-user Bypass Code Operations
+      1.15.2. Retrieve Bypass Codes
+      1.15.3. Parameters
+      1.15.4. Response Codes
+      1.15.5. Response Format
+      1.15.6. Example Response
+      1.15.7. Retrieve Bypass Code by ID
+      1.15.8. Parameters
+      1.15.9. Response Codes
+      1.15.10. Response Format
+      1.15.11. Example Response
+      1.15.12. Delete Bypass Code
+      1.15.13. Parameters
+      1.15.14. Response Codes
+      1.15.15. Response Format
+      1.15.16. Example Response
+   1.16. Integrations
+      1.16.1. Retrieve Integrations
+      1.16.2. Parameters
+      1.16.3. Response Codes
+      1.16.4. Response Format
+      1.16.5. Example Response
+      1.16.6. Create Integration
+      1.16.7. Parameters
+      1.16.8. Response Codes
+      1.16.9. Response Format
+      1.16.10. Example Response
+      1.16.11. Integration Types
+      1.16.12. Retrieve Integration by Integration Key
+      1.16.13. Parameters
+      1.16.14. Response Codes
+      1.16.15. Response Format
+      1.16.16. Example Response
+      1.16.17. Modify Integration
+      1.16.18. Parameters
+      1.16.19. Response Codes
+      1.16.20. Response Format
+      1.16.21. Example Response
+      1.16.22. Delete Integration
+      1.16.23. Parameters
+      1.16.24. Response Codes
+      1.16.25. Response Format
+      1.16.26. Example Response
+      1.16.27. Retrieve Secret Key
+      1.16.28. Parameters
+      1.16.29. Response Codes
+      1.16.30. Response Format
+      1.16.31. Example Response
+      1.16.32. Retrieve Client Secret for an OAuth Integration
+      1.16.33. Parameters
+      1.16.34. Response Codes
+      1.16.35. Response Format
+      1.16.36. Example Response
+      1.16.37. Reset Client Secret for an OAuth Integration
+      1.16.38. Parameters
+      1.16.39. Response Codes
+      1.16.40. Response Format
+      1.16.41. Example Response
+      1.16.42. Retrieve Client Secret for an OIDC Integration
+      1.16.43. Parameters
+      1.16.44. Response Codes
+      1.16.45. Response Format
+      1.16.46. Example Response
+      1.16.47. Reset Client Secret for an OIDC Integration
+      1.16.48. Parameters
+      1.16.49. Response Codes
+      1.16.50. Response Format
+      1.16.51. Example Response
+      1.16.52. SSO Parameters
+      1.16.53. OAuth Parameters
+      1.16.54. OIDC Parameters
+      1.16.55. SAML Parameters
+      1.16.56. Integrations (Legacy v2)
+      1.16.57. Retrieve Integrations (Legacy v2)
+      1.16.58. Parameters
+      1.16.59. Response Codes
+      1.16.60. Response Format
+      1.16.61. Example Response
+      1.16.62. Create Integration (Legacy v2)
+      1.16.63. Parameters
+      1.16.64. Response Codes
+      1.16.65. Response Format
+      1.16.66. Example Response
+      1.16.67. Retrieve Integration by Integration Key (Legacy v2)
+      1.16.68. Parameters
+      1.16.69. Response Codes
+      1.16.70. Response Format
+      1.16.71. Example Response
+      1.16.72. Modify Integration (Legacy v2)
+      1.16.73. Parameters
+      1.16.74. Response Codes
+      1.16.75. Response Format
+      1.16.76. Example Response
+      1.16.77. Delete Integration (Legacy v2)
+      1.16.78. Parameters
+      1.16.79. Response Codes
+      1.16.80. Response Format
+      1.16.81. Example Response
+      1.16.82. Retrieve Client Secret for an OAuth Integration (Legacy v2)
+      1.16.83. Parameters
+      1.16.84. Response Codes
+      1.16.85. Response Format
+      1.16.86. Example Response
+      1.16.87. Reset Client Secret for an OAuth Integration (Legacy v2)
+      1.16.88. Parameters
+      1.16.89. Response Codes
+      1.16.90. Response Format
+      1.16.91. Example Response
+      1.16.92. Retrieve Client Secret for an OIDC Integration (Legacy v2)
+      1.16.93. Parameters
+      1.16.94. Response Codes
+      1.16.95. Response Format
+      1.16.96. Example Response
+      1.16.97. Reset Client Secret for an OIDC Integration (Legacy v2)
+      1.16.98. Parameters
+      1.16.99. Response Codes
+      1.16.100. Response Format
+      1.16.101. Example Response
+      1.16.102. SSO Parameters (Legacy v2)
+   1.17. Policies
+      1.17.1. Summarize Policies
+      1.17.2. Parameters
+      1.17.3. Response Codes
+      1.17.4. Response Format
+      1.17.5. Example Response
+      1.17.6. Retrieve Policies
+      1.17.7. Parameters
+      1.17.8. Response Codes
+      1.17.9. Response Format
+      1.17.10. Example Response
+      1.17.11. Retrieve Policy by ID
+      1.17.12. Parameters
+      1.17.13. Response Codes
+      1.17.14. Response Format
+      1.17.15. Section Data
+      1.17.16. Example Response
+      1.17.17. Resulting Policy
+      1.17.18. Parameters
+      1.17.19. Response Codes
+      1.17.20. Response Format
+      1.17.21. Example Response
+      1.17.22. Copy Policy
+      1.17.23. Parameters
+      1.17.24. Response Codes
+      1.17.25. Response Format
+      1.17.26. Example Response
+      1.17.27. Create Policy
+      1.17.28. Parameters
+      1.17.29. Response Codes
+      1.17.30. Response Format
+      1.17.31. Example Response
+      1.17.32. Update Policies
+      1.17.33. Parameters
+      1.17.34. Response Codes
+      1.17.35. Response Format
+      1.17.36. Example Response
+      1.17.37. Update Policy
+      1.17.38. Parameters
+      1.17.39. Applying Policy to Groups
+      1.17.40. Example Input
+      1.17.41. Response Codes
+      1.17.42. Response Format
+      1.17.43. Example Response
+      1.17.44. Delete Policy
+      1.17.45. Parameters
+      1.17.46. Response Codes
+      1.17.47. Response Format
+      1.17.48. Example Response
+      1.17.49. Policy Section Data
+      1.17.50. Anonymous Networks
+      1.17.51. Authentication Methods
+      1.17.52. Authentication Policy
+      1.17.53. Authorized Networks
+      1.17.54. Browsers
+      1.17.55. Duo Desktop
+      1.17.56. Health Checks
+      1.17.57. Duo Mobile App
+      1.17.58. Full Disk Encryption
+      1.17.59. Mobile Device Biometrics
+      1.17.60. New User Policy
+      1.17.61. Operating Systems
+      1.17.62. Plugins
+      1.17.63. Remembered Devices
+      1.17.64. Risk-Based Factor Selection
+      1.17.65. Screen Lock
+      1.17.66. Tampered Devices
+      1.17.67. Trusted Endpoints
+      1.17.68. User Location
+   1.18. Endpoints
+      1.18.1. Retrieve Endpoints
+      1.18.2. Parameters
+      1.18.3. Response Codes
+      1.18.4. Response Format
+      1.18.5. Example Response
+      1.18.6. Retrieve Endpoint by ID
+      1.18.7. Parameters
+      1.18.8. Response Codes
+      1.18.9. Response Format
+      1.18.10. Example Response
+   1.19. Registered Devices
+      1.19.1. Retrieve Registered Devices
+      1.19.2. Parameters
+      1.19.3. Response Codes
+      1.19.4. Response Format
+      1.19.5. Example Response
+      1.19.6. Delete Registered Device
+      1.19.7. Parameters
+      1.19.8. Response Codes
+      1.19.9. Response Format
+      1.19.10. Example Response
+      1.19.11. Retrieve Registered Device by ID
+      1.19.12. Parameters
+      1.19.13. Response Codes
+      1.19.14. Response Format
+      1.19.15. Example Response
+      1.19.16. Blocked Registered Devices Retrieve Blocked Devices
+      1.19.17. Parameters
+      1.19.18. Response Codes
+      1.19.19. Response Format
+      1.19.20. Example Response
+      1.19.21. Retrieve Blocked Device by ID
+      1.19.22. Parameters
+      1.19.23. Response Codes
+      1.19.24. Response Format
+      1.19.25. Example Response
+      1.19.26. Block Devices
+      1.19.27. Parameters
+      1.19.28. Response Codes
+      1.19.29. Response Format
+      1.19.30. Example Response
+      1.19.31. Block Device by ID
+      1.19.32. Parameters
+      1.19.33. Response Codes
+      1.19.34. Response Format
+      1.19.35. Example Response
+      1.19.36. Unblock Devices
+      1.19.37. Parameters
+      1.19.38. Response Codes
+      1.19.39. Response Format
+      1.19.40. Example Response
+      1.19.41. Unblock Device by ID
+      1.19.42. Parameters
+      1.19.43. Response Codes
+      1.19.44. Response Format
+      1.19.45. Example Response
+   1.20. Passport
+      1.20.1. Retrieve Passport Configuration
+      1.20.2. Parameters
+      1.20.3. Response Codes
+      1.20.4. Response Format
+      1.20.5. Example Response
+      1.20.6. Modify Passport Configuration
+      1.20.7. Parameters
+      1.20.8. Response Codes
+      1.20.9. Response Format
+      1.20.10. Example Response
+   1.21. Administrators
+      1.21.1. Retrieve Administrators
+      1.21.2. Parameters
+      1.21.3. Response Codes
+      1.21.4. Response Format
+      1.21.5. Example Response
+      1.21.6. Create Administrator
+      1.21.7. Parameters
+      1.21.8. Response Codes
+      1.21.9. Response Format
+      1.21.10. Example Response
+      1.21.11. Retrieve Administrator by ID
+      1.21.12. Parameters
+      1.21.13. Response Codes
+      1.21.14. Response Format
+      1.21.15. Example Response
+      1.21.16. Modify Administrator
+      1.21.17. Parameters
+      1.21.18. Response Codes
+      1.21.19. Response Format
+      1.21.20. Example Response
+      1.21.21. Delete Administrator
+      1.21.22. Parameters
+      1.21.23. Response Codes
+      1.21.24. Response Format
+      1.21.25. Example Response
+      1.21.26. Reset Administrator Authentication Attempts
+      1.21.27. Parameters
+      1.21.28. Response Codes
+      1.21.29. Response Format
+      1.21.30. Example Response
+      1.21.31. Clear Administrator Expiration
+      1.21.32. Parameters
+      1.21.33. Response Codes
+      1.21.34. Response Format
+      1.21.35. Example Response
+      1.21.36. Email Activation Link to Administrator Pending Activation
+      1.21.37. Parameters
+      1.21.38. Response Codes
+      1.21.39. Response Format
+      1.21.40. Example Response
+      1.21.41. Delete Activation Link from Administrator Pending Activation
+      1.21.42. Parameters
+      1.21.43. Response Codes
+      1.21.44. Response Format
+      1.21.45. Example Response
+      1.21.46. Create Activation Link for Administrator Pending Activation
+      1.21.47. Parameters
+      1.21.48. Response Codes
+      1.21.49. Response Format
+      1.21.50. Example Response
+      1.21.51. Create Administrator Activation Link
+      1.21.52. Parameters
+      1.21.53. Response Codes
+      1.21.54. Response Format
+      1.21.55. Example Response
+      1.21.56. Retrieve Pending Administrator Activations
+      1.21.57. Parameters
+      1.21.58. Response Codes
+      1.21.59. Response Format
+      1.21.60. Example Response
+      1.21.61. Delete Pending Administrator Activation
+      1.21.62. Parameters
+      1.21.63. Response Codes
+      1.21.64. Response Format
+      1.21.65. Example Response
+      1.21.66. Synchronize Admin from Directory
+      1.21.67. Parameters
+      1.21.68. Response Codes
+      1.21.69. Response Format
+      1.21.70. Example Response
+      1.21.71. Retrieve Admin External Password Management Status
+      1.21.72. Parameters
+      1.21.73. Response Codes
+      1.21.74. Response Format
+      1.21.75. Example Response
+      1.21.76. Retrieve Admin External Password Management Status by ID
+      1.21.77. Parameters
+      1.21.78. Response Codes
+      1.21.79. Response Format
+      1.21.80. Example Response
+      1.21.81. Modify Admin External Password Management Status or Password
+      1.21.82. Parameters
+      1.21.83. Response Codes
+      1.21.84. Response Format
+      1.21.85. Example Response
+      1.21.86. Retrieve Administrator Authentication Factors
+      1.21.87. Parameters
+      1.21.88. Response Codes
+      1.21.89. Response Format
+      1.21.90. Example Response
+      1.21.91. Restrict Administrator Authentication Factors
+      1.21.92. Parameters
+      1.21.93. Response Codes
+      1.21.94. Response Format
+      1.21.95. Example Response
+   1.22. Administrative Units
+      1.22.1. Retrieve Administrative Units
+      1.22.2. Parameters
+      1.22.3. Response Codes
+      1.22.4. Response Format
+      1.22.5. Example Response
+      1.22.6. Retrieve Administrative Unit Details
+      1.22.7. Parameters
+      1.22.8. Response Codes
+      1.22.9. Response Format
+      1.22.10. Example Response
+      1.22.11. Add Administrative Unit
+      1.22.12. Parameters
+      1.22.13. Response Codes
+      1.22.14. Response Format
+      1.22.15. Modify Administrative Unit
+      1.22.16. Parameters
+      1.22.17. Response Codes
+      1.22.18. Response Format
+      1.22.19. Add Administrator to Administrative Unit
+      1.22.20. Parameters
+      1.22.21. Response Codes
+      1.22.22. Response Format
+      1.22.23. Remove Administrator from Administrative Unit
+      1.22.24. Parameters
+      1.22.25. Response Codes
+      1.22.26. Response Format
+      1.22.27. Add Group to Administrative Unit
+      1.22.28. Parameters
+      1.22.29. Response Codes
+      1.22.30. Response Format
+      1.22.31. Remove Group from Administrative Unit
+      1.22.32. Parameters
+      1.22.33. Response Codes
+      1.22.34. Response Format
+      1.22.35. Add Integration to Administrative Unit
+      1.22.36. Parameters
+      1.22.37. Response Codes
+      1.22.38. Response Format
+      1.22.39. Remove Integration from Administrative Unit
+      1.22.40. Parameters
+      1.22.41. Response Codes
+      1.22.42. Response Format
+      1.22.43. Delete Administrative Unit
+      1.22.44. Parameters
+      1.22.45. Response Codes
+      1.22.46. Response Format
+      1.22.47. Example Response
+   1.23. Logs
+      1.23.1. Authentication Logs
+      1.23.2. Parameters
+      1.23.3. Response Codes
+      1.23.4. Response Format
+      1.23.5. Example Response
+      1.23.6. Activity Logs
+      1.23.7. Parameters
+      1.23.8. Response Codes
+      1.23.9. Response Format
+      1.23.10. Example Response
+      1.23.11. Administrator Logs
+      1.23.12. Parameters
+      1.23.13. Response Codes
+      1.23.14. Response Format
+      1.23.15. Example Responses
+      1.23.16. Telephony Logs
+      1.23.17. Parameters
+      1.23.18. Response Codes
+      1.23.19. Response Format
+      1.23.20. Example Response
+      1.23.21. Offline Enrollment Logs
+      1.23.22. Parameters
+      1.23.23. Response Codes
+      1.23.24. Response Format
+      1.23.25. Example Response
+   1.24. Trust Monitor
+      1.24.1. Retrieve Events
+      1.24.2. Parameters
+      1.24.3. Response Codes
+      1.24.4. Response Format
+      1.24.5. Example Response
+   1.25. Settings
+      1.25.1. Retrieve Settings
+      1.25.2. Parameters
+      1.25.3. Response Codes
+      1.25.4. Response Format
+      1.25.5. Example Response
+      1.25.6. Modify Settings
+      1.25.7. Parameters
+      1.25.8. Response Codes
+      1.25.9. Response Format
+      1.25.10. Example Response
+      1.25.11. Retrieve Logo
+      1.25.12. Parameters
+      1.25.13. Response Codes
+      1.25.14. Response Format
+      1.25.15. Modify Logo
+      1.25.16. Parameters
+      1.25.17. Response Codes
+      1.25.18. Response Format
+      1.25.19. Delete Logo
+      1.25.20. Parameters
+      1.25.21. Response Codes
+      1.25.22. Response Format
+   1.26. Custom Branding
+      1.26.1. Retrieve Live Custom Branding
+      1.26.2. Parameters
+      1.26.3. Response Codes
+      1.26.4. Response Format
+      1.26.5. Example Response
+      1.26.6. Modify Live Custom Branding
+      1.26.7. Parameters
+      1.26.8. Response Codes
+      1.26.9. Response Format
+      1.26.10. Example Response
+      1.26.11. Retrieve Draft Custom Branding
+      1.26.12. Parameters
+      1.26.13. Response Codes
+      1.26.14. Response Format
+      1.26.15. Example Response
+      1.26.16. Modify Draft Custom Branding
+      1.26.17. Parameters
+      1.26.18. Response Codes
+      1.26.19. Response Format
+      1.26.20. Example Response
+      1.26.21. Add Draft Custom Branding User by ID
+      1.26.22. Parameters
+      1.26.23. Response Codes
+      1.26.24. Response Format
+      1.26.25. Example Response
+      1.26.26. Remove Draft Custom Branding User by ID
+      1.26.27. Parameters
+      1.26.28. Response Codes
+      1.26.29. Response Format
+      1.26.30. Example Response
+      1.26.31. Publish Draft Custom Branding as Live Custom Branding
+      1.26.32. Parameters
+      1.26.33. Response Codes
+      1.26.34. Response Format
+      1.26.35. Example Response
+      1.26.36. Retrieve Custom Messaging
+      1.26.37. Parameters
+      1.26.38. Response Codes
+      1.26.39. Response Format
+      1.26.40. Example Response
+      1.26.41. Modify Custom Messaging
+      1.26.42. Parameters
+      1.26.43. Response Codes
+      1.26.44. Response Format
+      1.26.45. Example Response
+   1.27. Account Info
+      1.27.1. Retrieve Summary
+      1.27.2. Parameters
+      1.27.3. Response Codes
+      1.27.4. Response Format
+      1.27.5. Example Response
+      1.27.6. Telephony Credits Used Report
+      1.27.7. Parameters
+      1.27.8. Response Codes
+      1.27.9. Response Format
+      1.27.10. Example Response
+      1.27.11. Authentication Attempts Report
+      1.27.12. Parameters
+      1.27.13. Response Codes
+      1.27.14. Response Format
+      1.27.15. Example Response
+      1.27.16. Users with Authentication Attempts Report
+      1.27.17. Parameters
+      1.27.18. Response Codes
+      1.27.19. Response Format
+      1.27.20. Example Response
+   1.28. Troubleshooting

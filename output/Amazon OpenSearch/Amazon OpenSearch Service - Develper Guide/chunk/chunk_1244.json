@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1244",
+  "section_number": "2.19.8.4",
+  "header": "Start replication",
+  "content": "After you establish a cross-cluster connection, you can begin to replicate data. First, create an index\non the leader domain to replicate:\nPUT leader-01\nTo replicate that index, send this command to the follower domain:\nPUT _plugins/_replication/follower-01/_start\n{\n\"leader_alias\": \"connection-alias\",\n\"leader_index\": \"leader-01\",\n\"use_roles\":{\n\"leader_cluster_role\": \"all_access\",\n\"follower_cluster_role\": \"all_access\"\n}\n}\nYou can ﬁnd the connection alias on the Connections tab on your domain dashboard.\nThis example assumes that an admin is issuing the request and uses all_access for the\nleader_cluster_role and follower_cluster_role for simplicity. In production\nenvironments, however, we recommend that you create replication users on both the leader and\nfollower indexes, and map them accordingly. The usernames must be identical. For information\nabout these roles and how to map them, see Map the leader and follower cluster roles in the\nOpenSearch documentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1772,
+      "end": 1772
+    },
+    "content_stats": {
+      "char_count": 972,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster replication for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

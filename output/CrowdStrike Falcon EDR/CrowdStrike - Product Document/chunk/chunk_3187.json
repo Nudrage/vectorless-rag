@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3187",
+  "section_number": "1.6.13.2",
+  "header": "update_policy",
+  "content": "Generated when a user updates a policy. The response will contain the values that changed. For example, if you only change a policy's description, you will only see\nthat data in the response, and not all current settings. Note that the response contains both the old and new values like so:\n{\n\"Key\": \"policy_settings_Locky\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1197/1226\n{\n\"Key\": \"old_policy_settings_Locky\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n}\nFull response:\n{\n\"event\": {\n\"AuditKeyValues\": [{\n\"Key\": \"policy_id\",\n\"ValueString\": \"0d4bde2ef7f5490ea36bcc01f5fd4565\"\n},\n{\n\"Key\": \"policy_settings_ForceASLR\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_ForceASLR\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_Locky\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_Locky\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_FileAttributeAnalysis\",\n\"ValueString\": \"{\\\"detection\\\":\\\"CAUTIOUS\\\",\\\"prevention\\\":\\\"CAUTIOUS\\\"}\"\n},\n{\n\"Key\": \"old_policy_settings_FileAttributeAnalysis\",\n\"ValueString\": \"{\\\"detection\\\":\\\"DISABLED\\\",\\\"prevention\\\":\\\"DISABLED\\\"}\"\n},\n{\n\"Key\": \"policy_settings_CustomBlacklisting\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_CustomBlacklisting\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_FileAnalysis\",\n\"ValueString\": \"{\\\"detection\\\":\\\"CAUTIOUS\\\",\\\"prevention\\\":\\\"CAUTIOUS\\\"}\"\n},\n{\n\"Key\": \"old_policy_settings_FileAnalysis\",\n\"ValueString\": \"{\\\"detection\\\":\\\"DISABLED\\\",\\\"prevention\\\":\\\"DISABLED\\\"}\"\n},\n{\n\"Key\": \"policy_settings_FileEncryption\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_FileEncryption\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_AdwareExecution\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1198/1226\n{\n\"Key\": \"old_policy_settings_AdwareExecution\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_BackupDeletion\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_BackupDeletion\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_ForceDEP\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_ForceDEP\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_HeapSprayPreallocation\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_HeapSprayPreallocation\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_Cryptowall\",\n\"ValueString\": \"{\\\"enabled\\\":true}\"\n},\n{\n\"Key\": \"old_policy_settings_Cryptowall\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n}\n],\n\"OperationName\": \"update_policy\",\n\"ServiceName\": \"prevention_policy\",\n\"UserId\": \"selfservice@cs.sys\",\n\"UserIp\": \"10.100.4.13\",\n\"UTCTimestamp\": 1480375833\n},\n\"metadata\": {\n\"customerIDString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"eventCreationTime\": 1480375833,\n\"eventType\": \"UserActivityAuditEvent\",\n\"offset\": 121\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1197,
+      "end": 1199
+    },
+    "content_stats": {
+      "char_count": 3362,
+      "word_count": 279
+    },
+    "hierarchy": {
+      "parent": "Policy management",
+      "children": []
+    }
+  }
+}

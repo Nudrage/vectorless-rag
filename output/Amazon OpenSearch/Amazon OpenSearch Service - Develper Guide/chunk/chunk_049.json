@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_049",
+  "section_number": "2.6.7.4.1",
+  "header": "Step 2: Conﬁgure data and network access for the collection",
+  "content": "Create an OpenSearch Serverless collection with the following settings. For instructions to create a\ncollection, see the section called “Creating collections”.\nData access policy\nCreate a data access policy for the collection that grants the required permissions to the pipeline\nrole. For example:\n[\n{\n\"Rules\": [\n{\n\"Resource\": [\n\"index/collection-name/*\"\n],\n\"Permission\": [\n\"aoss:CreateIndex\",\n\"aoss:UpdateIndex\",\n\"aoss:DescribeIndex\",\n\"aoss:WriteDocument\"\n],\n\"ResourceType\": \"index\"\n}\n],\n\"Principal\": [\n\"arn:aws:iam::account-id:role/pipeline-role\"\n],\n\"Description\": \"Pipeline role access\"\n}\n]\nNote\nIn the Principal element, specify the Amazon Resource Name (ARN) of the pipeline role.\nNetwork access policy\nEach collection that you create in OpenSearch Serverless has at least one network access policy\nassociated with it. Network access policies determine whether the collection is accessible over the\nGranting pipelines access to collections\n41\nAmazon OpenSearch Service\nDeveloper Guide\ninternet from public networks, or whether it must be accessed privately. For more information\nabout network policies, see the section called “Network access”.\nWithin a network access policy, you can only specify OpenSearch Serverless-managed VPC\nendpoints. For more information, see the section called “VPC endpoints”. However, in order for\nthe pipeline to write to the collection, the policy must also grant access to the VPC endpoint that\nOpenSearch Ingestion automatically creates between the pipeline and the collection. Therefore,\nif you choose an OpenSearch Serverless collection as the destination sink for a pipeline, you must\nenter the name of the associated network policy in the Network policy name ﬁeld.\nDuring pipeline creation, OpenSearch Ingestion checks for the existence of the speciﬁed network\npolicy. If it doesn't exist, OpenSearch Ingestion creates it. If it does exist, OpenSearch Ingestion\nupdates it by adding a new rule to it. The rule grants access to the VPC endpoint that connects the\npipeline and the collection.\nFor example:\n{\n\"Rules\":[\n{\n\"Resource\":[\n\"collection/my-collection\"\n],\n\"ResourceType\":\"collection\"\n}\n],\n\"SourceVPCEs\":[\n\"vpce-0c510712627e27269\" # The ID of the VPC endpoint that OpenSearch Ingestion\ncreates between the pipeline and collection\n],\n\"Description\":\"Created by Data Prepper\"\n}\nIn the console, any rules that OpenSearch Ingestion adds to your network policies are named\nCreated by Data Prepper:\nGranting pipelines access to collections\n42\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nIn general, a rule that speciﬁes public access for a collection overrides a rule that speciﬁes\nprivate access. Therefore, if the policy already had public access conﬁgured, this new rule\nthat OpenSearch Ingestion adds doesn't actually change the behavior of the policy. For\nmore information, see the section called “Policy precedence”.\nIf you stop or delete the pipeline, OpenSearch Ingestion deletes the VPC endpoint between the\npipeline and the collection. It also modiﬁes the network policy to remove the VPC endpoint from\nthe list of allowed endpoints. If you restart the pipeline, it recreates the VPC endpoint and re-\nupdates the network policy with the endpoint ID.\nGranting pipelines access to collections\n43\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 70,
+      "end": 73
+    },
+    "content_stats": {
+      "char_count": 3286,
+      "word_count": 475
+    },
+    "hierarchy": {
+      "parent": "Granting Amazon OpenSearch Ingestion pipelines access to collections",
+      "children": []
+    }
+  }
+}

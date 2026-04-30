@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_211",
+  "section_number": "2.6.19.2.2",
+  "header": "Create a pipeline endpoint connection for each connecting VPC",
+  "content": "After the pipeline owner grants access to a pipeline in their VPC using the previous procedure,\na user in the connecting account creates a pipeline endpoint in their VPC. This section includes\nprocedures for creating endpoints by using the OpenSearch Service console and the AWS CLI.\nWhen you create an endpoint, OpenSearch Ingestion performs the following actions:\nConﬁguring pipelines for cross-account ingestion\n312\nAmazon OpenSearch Service\nDeveloper Guide\n• Creates the AWSServiceRoleForAmazonOpenSearchIngestionService service-linked role in your\naccount, if it doesn't already exist. This role gives the user in the connecting account permission\nto call the CreatePipelineEndpoint API action.\n• Creates the pipeline endpoint.\n• Conﬁgures the pipeline endpoint to ingest data from the shared pipeline in the pipeline owner\nVPC.\nTopics\n• Creating a pipeline endpoint connection (console)\n• Creating a pipeline endpoint connection (CLI)\nCreating a pipeline endpoint connection (console)\nUse the following procedure to create a pipeline endpoint connection by using the OpenSearch\nService console.\nTo create a pipeline endpoint connection\n1.\nIn the Amazon OpenSearch Service console, in the navigation pane, expand Ingestion, and\nthen select VPC endpoints.\n2.\nIn the VPC endpoints page, choose Create.\n3.\nFor Pipeline location, choose an option. If you choose Current account, choose the pipeline\nfrom the list. If you choose Cross-account, specify the pipeline ARN in the ﬁeld. The pipeline\nowner must have granted access to the pipeline, as described in Grant connecting accounts\naccess to a pipeline.\n4.\nIn the VPC settings section, for VPC, choose a VPC from the list.\n5.\nFor Subnets, choose a subnet.\n6.\nFor Security groups, choose a group.\n7.\nChoose Create endpoint.\nWait for the status of the endpoint you created to transition to ACTIVE. Once the pipeline is\nACTIVE, you will see a new ﬁeld named ingestEndpointUrl. Use this endpoint to access the\npipeline and ingest data using a client like FluentBit. For more information about using FluentBit to\ningest data, see Using an OpenSearch Ingestion pipeline with Fluent Bit.\nConﬁguring pipelines for cross-account ingestion\n313\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nThe ingestEndpointUrl is the same URL for all connecting accounts.\nCreating a pipeline endpoint connection (CLI)\nUse the following procedure to crate a pipeline endpoint connection by using the AWS CLI.\nTo create a pipeline endpoint connection\n1.\nIf you haven't already, update to the latest version of the AWS CLI (version 2.0). For more\ninformation, see Installing or updating to the latest version of the AWS CLI.\n2.\nOpen the CLI in the connecting account in the AWS Region with the shared pipeline.\n3.\nRun the following command to create a pipeline endpoint.\nNote\nYou must provide at least one subnet and one security group for the connecting\naccount VPC. The security group must include port 443 and support clients in\nconnecting account VPC.\naws osis --region region create-pipeline-endpoint \\\n--pipeline-arn arn:aws:osis:region:connecting-account-ID:pipeline/shared-\npipeline-name\n--vpc-options SecurityGroupIds={sg-security-group-ID-1,sg-security-group-\nID-2},SubnetIds=subnet-subnet-ID\n4.\nRun the following command to list endpoints in the Region speciﬁed in the previous\ncommand:\naws osis-cross-account --region region list-pipeline-endpoints\nWait for the status of the endpoint you created to transition to ACTIVE. Once the pipeline is\nACTIVE, you will see a new ﬁeld named ingestEndpointUrl. Use this endpoint to access the\npipeline and ingest data using a client like FluentBit. For more information about using FluentBit to\ningest data, see Using an OpenSearch Ingestion pipeline with Fluent Bit.\nConﬁguring pipelines for cross-account ingestion\n314\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nThe ingestEndpointUrl is the same URL for all connecting accounts.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 341,
+      "end": 344
+    },
+    "content_stats": {
+      "char_count": 3911,
+      "word_count": 579
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring OpenSearch Ingestion pipelines for cross-account ingestion",
+      "children": []
+    }
+  }
+}

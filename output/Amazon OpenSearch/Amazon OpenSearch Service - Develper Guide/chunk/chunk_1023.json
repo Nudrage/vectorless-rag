@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1023",
+  "section_number": "2.15.10.4",
+  "header": "Cross-cluster search",
+  "content": "You can perform an asynchronous search across clusters with the following minor limitations:\n• You can run an asynchronous search only on the source domain.\n• You can't minimize network round trips as part of a cross-cluster search query.\nIf you set up a connection between domain-a -> domain-b with connection alias cluster_b\nand domain-a -> domain-c with connection alias cluster_c, asynchronously search domain-\na, domain-b, and domain-c as follows:\nPOST https://src-domain.us-east-1.es.amazonaws.com/\nlocal_index,cluster_b:b_index,cluster_c:c_index/_plugins/_asynchronous_search/?\npretty&size=10&wait_for_completion_timeout=500ms&keep_on_completion=true&request_cache=false\n{\n\"size\": 0,\n\"_source\": {\n\"excludes\": []\n},\n\"aggs\": {\n\"2\": {\n\"terms\": {\n\"field\": \"clientip\",\n\"size\": 50,\n\"order\": {\n\"_count\": \"desc\"\n}\n}\n}\n},\n\"stored_fields\": [\n\"*\"\n],\n\"script_fields\": {},\n\"docvalue_fields\": [\n\"@timestamp\"\n],\n\"query\": {\n\"bool\": {\nCross-cluster search\n1555\nAmazon OpenSearch Service\nDeveloper Guide\n\"must\": [\n{\n\"query_string\": {\n\"query\": \"status:404\",\n\"analyze_wildcard\": true,\n\"default_field\": \"*\"\n}\n},\n{\n\"range\": {\n\"@timestamp\": {\n\"gte\": 1483747200000,\n\"lte\": 1488326400000,\n\"format\": \"epoch_millis\"\n}\n}\n}\n],\n\"filter\": [],\n\"should\": [],\n\"must_not\": []\n}\n}\n}\nResponse\n{\n\"id\" :\n\"Fm9pYzJyVG91U19xb0hIQUJnMHJfRFEAAAAAAAknghQ1OWVBczNZQjVEa2dMYTBXaTdEagAAAAAAAAAB\",\n\"state\" : \"RUNNING\",\n\"start_time_in_millis\" : 1609329314796,\n\"expiration_time_in_millis\" : 1609761314796\n}\nFor more information, see the section called “Cross-cluster search”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1584,
+      "end": 1585
+    },
+    "content_stats": {
+      "char_count": 1531,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Asynchronous search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

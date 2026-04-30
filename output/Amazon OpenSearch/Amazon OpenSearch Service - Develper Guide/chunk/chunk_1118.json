@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1118",
+  "section_number": "2.18.3.4",
+  "header": "Step 4: Verify the identity provider-initiated Single Sign-On experience with SAML",
+  "content": "with SAML\nOpen the URL for Default Relay State to open the Okta authentication page. Enter the credentials\nof an end-user. You are automatically redirected to OpenSearch UI.\nYou can check for your current credentials by choosing the user icon on the bottom of the\nnavigation panel, as illustrated in the following image:\nStep 4: Verify the identity provider-initiated Single Sign-On experience with SAML\n1649\nAmazon OpenSearch Service\nDeveloper Guide\nYou can also verify the ﬁne-grained access control permissions for the user by accessing the\nDeveloper Tools on the bottom of the navigation panel and running queries in the console. The\nfollowing are sample queries.\nExample 1: Displays information about the current user\nRequest:\nStep 4: Verify the identity provider-initiated Single Sign-On experience with SAML\n1650\nAmazon OpenSearch Service\nDeveloper Guide\nGET _plugins/_security/api/account\nResult:\n{\n\"user_name\": \"arn:aws:iam::XXXXXXXXXXXX:role/bob-group\",\n\"is_reserved\": false,\n\"is_hidden\": false,\n\"is_internal_user\": false,\n\"user_requested_tenant\": null,\n\"backend_roles\": [\n\"arn:aws:iam::XXXXXXXXXXXX:role/bob-group\"\n],\n\"custom_attribute_names\": [],\n\"tenants\": {\n\"global_tenant\": true,\n\"arn:aws:iam::XXXXXXXXXXXX:role/bob-group\": true\n},\n\"roles\": [\n\"bob-group\"\n]\n}\nExample 2: Displays actions permitted for a user\nRequest:\nGET bob-test/_search\nResult:\n{\n\"took\": 390,\n\"timed_out\": false,\n\"_shards\": {\n\"total\": 5,\n\"successful\": 5,\n\"skipped\": 0,\n\"failed\": 0\n},\n\"hits\": {\n\"total\": {\nStep 4: Verify the identity provider-initiated Single Sign-On experience with SAML\n1651\nAmazon OpenSearch Service\nDeveloper Guide\n\"value\": 1,\n\"relation\": \"eq\"\n},\n\"max_score\": 1,\n\"hits\": [\n{\n\"_index\": \"bob-test\",\n\"_id\": \"ui01N5UBCIHpjO8Jlvfy\",\n\"_score\": 1,\n\"_source\": {\n\"title\": \"Your Name\",\n\"year\": \"2016\"\n}\n}\n]\n}\n}\nExample 3: Displays actions not permitted for a user\nRequest:\nGET alice-test\nResult:\n{\n\"error\": {\n\"root_cause\": [\n{\n\"type\": \"security_exception\",\n\"reason\": \"no permissions for [indices:admin/get]\nand User [name=arn:aws:iam::111222333444:role/bob-group,\nbackend_roles=[arn:aws:iam::111222333444:role/bob-group], requestedTenant=null]\"\n}\n],\n\"type\": \"security_exception\",\n\"reason\": \"no permissions for [indices:admin/get]\nand User [name=arn:aws:iam::111222333444:role/bob-group,\nbackend_roles=[arn:aws:iam::111222333444:role/bob-group], requestedTenant=null]\"\n},\n\"status\": 403\n}\nStep 4: Verify the identity provider-initiated Single Sign-On experience with SAML\n1652\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1678,
+      "end": 1682
+    },
+    "content_stats": {
+      "char_count": 2509,
+      "word_count": 306
+    },
+    "hierarchy": {
+      "parent": "Enabling SAML federation with AWS Identity and Access Management",
+      "children": []
+    }
+  }
+}

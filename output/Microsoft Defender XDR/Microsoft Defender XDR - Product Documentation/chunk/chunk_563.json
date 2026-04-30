@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_563",
+  "section_number": "155.1.1.49.1.1.1",
+  "header": "Using built in queries",
+  "content": "） Important\nThe Defender portal offers multiple built-in queries you can use to help with your DLP alert\ninvestigation.\n1. Go to the Microsoft Defender portal, and select Incidents & alerts in the left hand\nnavigation menu to open the incidents page. Select Incidents.\n2. Select Filters on the top right, and choose Service Source : Data Loss Prevention to view\nall incidents with DLP alerts.\n3. Open a DLP incident.\n4. Select on an alert to view its associated events.\n5. Select an event.\n6. In the event details pane, select the Go Hunt control.\na. Defender shows you a list of built-in queries that are relevant to the source location of\nthe event. For example, if the event is from SharePoint you see\ni. File shared with\nii. File activities\niii. Site activity\niv. User DLP violations for last 30 days\n7. You can choose to Run query immediately, change the time range, edit or save the query\nfor later use.\n8. Once you run the query, view the results on the Results tab.\nIf the alert is for an email message, you can download the message by selecting Actions >\nDownload email.\nIf the alert is for a file in SharePoint Online or One Drive for Business, you can take these\nactions:\nApply retention label\nUnshare\nDelete\nApply sensitivity label\nDownload (data classification content viewer role is required for this action)\nWithdraw feedback\nFor remediation actions, select the User card on the top of the alert page to open the user\ndetails.\nThis feature is in preview. Preview features aren't meant for production use and may have\nrestricted functionality. These features are available before an official release so that\ncustomers can get early access and provide feedback.\nFor Devices DLP alerts, select the device card on the top of the alert page to view the device\ndetails and take remediation actions on the device.\nGo to the incident summary page and select Manage Incident to add incident tags, assign, or\nresolve an incident.\nIncidents overview\nPrioritize incidents\nManage incidents",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 355,
+      "end": 357
+    },
+    "content_stats": {
+      "char_count": 1991,
+      "word_count": 342
+    },
+    "hierarchy": {
+      "parent": "Extend DLP alert investigation with advanced hunting",
+      "children": []
+    }
+  }
+}

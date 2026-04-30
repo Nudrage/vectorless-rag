@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_124",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you create your OpenSearch Ingestion pipeline, complete the following steps:\n1. Prepare credentials for your Jira site by choosing one of the following options. OpenSearch\nIngestion requires only ReadOnly authorization to the content.\na. Option 1: API key – Log in to your Atlassian account and use the information in the following\ntopic to generate your API key:\n• Manage API tokens for your Atlassian account\nb. Option 2: OAuth2 – Log in to your Atlassian account and use the information in the section\ncalled “Connecting an Amazon OpenSearch Ingestion pipeline to Atlassian Jira or Conﬂuence\nusing OAuth 2.0”.\n2. Create a secret in AWS Secrets Manager to store the credentials created in the previous step.\nMake the following choices as you follow the procedure:\n• For Secret type, choose Other type of secret.\n• For Key/value pairs, create the following pairs, depending on your selected authorization\ntype:\nAPI key\n{\n\"username\": user-name-usualy-email-id,\n\"password\": api-key\n}\nOAuth 2.0\n{\n\"clientId\": client-id\n\"clientSecret\": client-secret\n\"accessKey\": access-key\n\"refreshKey\": refresh-key\n}\nAtlassian Services\n105\nAmazon OpenSearch Service\nDeveloper Guide\nAfter you've created the secret, copy the Amazon Resource Name (ARN) of the secret. You will\ninclude it in the pipeline role permissions policy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 134,
+      "end": 135
+    },
+    "content_stats": {
+      "char_count": 1315,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Atlassian Services",
+      "children": []
+    }
+  }
+}

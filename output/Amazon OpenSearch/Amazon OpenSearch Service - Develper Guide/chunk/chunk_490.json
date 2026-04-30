@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_490",
+  "section_number": "2.8.7.6",
+  "header": "Rescheduling actions",
+  "content": "OpenSearch Service notiﬁes you of scheduled service software updates and Auto-Tune\noptimizations. You can choose to apply the change immediately, or reschedule it for a later date\nand time.\nNote\nOpenSearch Service can schedule the action within an hour of the time you select. For\nexmple, if you choose to apply an update at 5 P.M., it can be applied between 5 and 6 P.M.\nConsole\nTo reschedule an action\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nSelect the name of the domain to open its conﬁguration.\n3.\nNavigate to the Oﬀ-peak window tab.\n4.\nUnder Scheduled actions, select the action and choose Reschedule.\n5.\nChoose one of the following options:\n• Apply update now - Immediately schedules the action to happen in the current hour if\nthere's capacity available. If capacity isn't available, we provide other available time slots to\nchoose from.\nRescheduling actions\n659\nAmazon OpenSearch Service\nDeveloper Guide\n• Schedule it in oﬀ-peak window - Marks the action to be picked up during an upcoming\noﬀ-peak window. There's no guarantee that the change will be implemented during the\nimmediate next window. Depending on capacity, it might happen in subsequent days.\n• Reschedule this update - Lets you specify a custom date and time to apply the change. If\nthe time that you specify is unavailable for capacity reasons, you can select a diﬀerent time\nslot.\n• Cancel scheduled update - Cancels the update. This option is only available for optional\nservice software updates. It's not available for Auto-Tune actions or mandatory software\nupdates.\n6.\nChoose Save changes.\nCLI\nTo reschedule an action using the AWS CLI, send an UpdateScheduledAction request. To retrieve\nthe action ID, send a ListScheduledActions request.\nThe following request reschedules a service software update for a speciﬁc date and time:\naws opensearch update-scheduled-action \\\n--domain-name my-domain \\\n--action-id R20220721-P13 \\\n--action-type \"SERVICE_SOFTWARE_UPDATE\" \\\n--desired-start-time 1677348395000 \\\n--schedule-at TIMESTAMP\nResponse:\n{\n\"ScheduledAction\": {\n\"Cancellable\": true,\n\"Description\": \"Cluster status is updated.\",\n\"Id\": \"R20220721-P13\",\n\"Mandatory\": false,\n\"ScheduledBy\": \"CUSTOMER\",\n\"ScheduledTime\": 1677348395000,\n\"Severity\": \"HIGH\",\n\"Status\": \"PENDING_UPDATE\",\n\"Type\": \"SERVICE_SOFTWARE_UPDATE\"\n}\nRescheduling actions\n660\nAmazon OpenSearch Service\nDeveloper Guide\n}\nIf the request fails with a SlotNotAvailableException, it means that the time you speciﬁed\nisn't available for capacity reasons, and you must specify a diﬀerent time. OpenSearch Service\nprovides alternate available slot suggestions in the response.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 688,
+      "end": 690
+    },
+    "content_stats": {
+      "char_count": 2661,
+      "word_count": 388
+    },
+    "hierarchy": {
+      "parent": "Deﬁning oﬀ-peak windows for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

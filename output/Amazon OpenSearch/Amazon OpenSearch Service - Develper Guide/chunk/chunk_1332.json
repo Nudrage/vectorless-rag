@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1332",
+  "section_number": "2.22.4",
+  "header": "Unsupported ML Commons settings",
+  "content": "Amazon OpenSearch Service doesn't support use of the following ML Commons settings:\n• plugins.ml_commons.allow_registering_model_via_url\n• plugins.ml_commons.allow_registering_model_via_local_file\nImportant\nOn production clusters, do not disable the cluster setting\nplugins.ml_commons.only_run_on_ml_node (don't set it to false). The option to\ndisable this safeguard is for facilitating development, but production clusters should be\nusing the connectors. For more information, see the section called “Connectors for AWS\nservices”.\nFor more information on ML Commons settings, see ML Commons cluster settings.\nUnsupported ML Commons settings\n1808\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1837,
+      "end": 1838
+    },
+    "content_stats": {
+      "char_count": 688,
+      "word_count": 83
+    },
+    "hierarchy": {
+      "parent": "Machine learning for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

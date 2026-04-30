@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_308",
+  "section_number": "1.14.4",
+  "header": "Delete Desktop Authenticator",
+  "content": "Delete the desktop authenticator with key dakey  from the system. Requires \"Grant\nresource - Write\" API permission to delete a desktop authenticator from a user.\n{\n\"response\": {\n\"daid\": 123,\n\"dakey\": \"DDABCDE1FGHIJ23KL4M\",\n\"device_name\": \"RSANCHEZ-M-A12B\",\n\"duo_desktop_version\": \"6.12.0.0\",\n\"os_family\": \"Mac OS X\",\n\"user\": {\n\"alias1\": null,\n\"alias2\": null,\n\"alias3\": null,\n\"alias4\": null,\n\"aliases\": {},\n\"created\": 1721156264,\n\"email\": \"\",\n\"enable_auto_prompt\": true,\n\"firstname\": \"\",\n\"is_enrolled\": true,\n\"last_directory_sync\": null,\n\"last_login\": 1721245422,\n\"lastname\": \"\",\n\"notes\": \"\",\n\"realname\": \"\",\n\"status\": \"active\",\n\"user_id\": \"DABCDEFGHIJKL1MNOPQR\",\n\"username\": \"rsanchez\"\n}\n}\n\"stat\": \"OK\"\n}\nDELETE  /admin/v1/desktop_authenticators/[dakey]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 104,
+      "end": 104
+    },
+    "content_stats": {
+      "char_count": 753,
+      "word_count": 85
+    },
+    "hierarchy": {
+      "parent": "Desktop Authenticators",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_062",
+  "section_number": "2.6.8.2.2",
+  "header": "Step 2: Create a pipeline",
+  "content": "Now that you have a collection, you can create a pipeline.\nTo create a pipeline\n1.\nWithin the Amazon OpenSearch Service console, choose Pipelines from the left navigation\npane.\n2.\nChoose Create pipeline.\n3.\nSelect the Blank pipeline, then choose Select blueprint.\nTutorial: Ingest data into a collection\n55\nAmazon OpenSearch Service\nDeveloper Guide\n4.\nIn this tutorial, we'll create a simple pipeline that uses the HTTP source plugin. The plugin\naccepts log data in a JSON array format. We'll specify a single OpenSearch Serverless\ncollection as the sink, and ingest all data into the my_logs index.\nIn the Source menu, choose HTTP. For the Path, enter /logs.\n5.\nFor simplicity in this tutorial, we'll conﬁgure public access for the pipeline. For Source network\noptions, choose Public access. For information about conﬁguring VPC access, see the section\ncalled “Conﬁguring VPC access for pipelines”.\n6.\nChoose Next.\n7.\nFor Processor, enter Date and choose Add.\n8.\nEnable From time received. Leave all other settings as their defaults.\n9.\nChoose Next.\n10. Conﬁgure sink details. For OpenSearch resource type, choose Collection (Serverless). Then\nchoose the OpenSearch Service collection that you created in the previous section.\nLeave the network policy name as the default. For Index name, enter my_logs. OpenSearch\nIngestion automatically creates this index in the collection if it doesn't already exist.\n11. Choose Next.\n12. Name the pipeline ingestion-pipeline-serverless. Leave the capacity settings as their defaults.\n13. For Pipeline role, select Create and use a new service role. The pipeline role provides the\nrequired permissions for a pipeline to write to the collection sink and read from pull-based\nsources. By selecting this option, you allow OpenSearch Ingestion to create the role for you,\nrather than manually creating it in IAM. For more information, see the section called “Setting\nup roles and users”.\n14. For Service role name suﬃx, enter PipelineRole. In IAM, the role will have the format\narn:aws:iam::your-account-id:role/OpenSearchIngestion-PipelineRole.\n15. Choose Next. Review your pipeline conﬁguration and choose Create pipeline. The pipeline\ntakes 5–10 minutes to become active.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 84,
+      "end": 85
+    },
+    "content_stats": {
+      "char_count": 2208,
+      "word_count": 337
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Ingesting data into a collection using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

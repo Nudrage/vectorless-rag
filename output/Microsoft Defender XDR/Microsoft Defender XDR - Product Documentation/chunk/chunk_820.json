@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_820",
+  "section_number": "155.1.1.79.2.2",
+  "header": "Get logon attempts by domain accounts targeted by credential theft",
+  "content": "credential theft\nAlertInfo\n| where Timestamp > ago(30d)\nAssuming you know of an email address sending malicious files ( MaliciousSender@example.com ),\nyou can run this query to determine if files from this sender exist on your devices. You can use\nthis query, for example, to identify devices affected by a malware distribution campaign.\nKusto\nThis query finds the 10 latest logons performed by email recipients within 30 minutes after they\nreceived known malicious emails. You can use this query to check whether the accounts of the\nemail recipients have been compromised.\nKusto\n//Get all credential access alerts\n| where Category == \"CredentialAccess\"\n//Get more info from AlertEvidence table to get the SID of the target accounts\n| join AlertEvidence on AlertId\n| extend IsJoined=(parse_json(AdditionalFields).Account.IsDomainJoined)\n| extend TargetAccountSid=tostring(parse_json(AdditionalFields).Account.Sid)\n//Filter for domain-joined accounts only\n| where IsJoined has \"true\"\n//Merge with IdentityLogonEvents to get all logon attempts by the potentially\ncompromised target accounts\n| join kind=inner IdentityLogonEvents on $left.TargetAccountSid ==\n$right.AccountSid\n//Show only pertinent info, such as account name, the app or service, protocol,\nthe accessed device, and type of logon\n| project AccountDisplayName, TargetAccountSid, Application, Protocol, DeviceName,\nLogonType",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 540,
+      "end": 541
+    },
+    "content_stats": {
+      "char_count": 1385,
+      "word_count": 187
+    },
+    "hierarchy": {
+      "parent": "Hunting scenarios",
+      "children": []
+    }
+  }
+}

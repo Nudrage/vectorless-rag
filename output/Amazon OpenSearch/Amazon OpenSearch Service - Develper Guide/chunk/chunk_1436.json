@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1436",
+  "section_number": "2.26.4.1.2",
+  "header": "Settings and statistics",
+  "content": "OpenSearch Service only accepts PUT requests to the _cluster/settings API that use the \"ﬂat\"\nsettings form. It rejects requests that use the expanded settings form.\n// Accepted\nPUT _cluster/settings\n{\n\"persistent\" : {\n\"action.auto_create_index\" : false\n}\n}\n// Rejected\nPUT _cluster/settings\n{\n\"persistent\": {\n\"action\": {\n\"auto_create_index\": false\n}\n}\n}\nThe high-level Java REST client uses the expanded form, so if you need to send settings requests,\nuse the low-level client.\nPrior to Elasticsearch 5.3, the _cluster/settings API on OpenSearch Service domains\nsupported only the HTTP PUT method, not the GET method. OpenSearch and later versions of\nElasticsearch support the GET method, as shown in the following example:\nNotable API diﬀerences\n1911\nAmazon OpenSearch Service\nDeveloper Guide\nGET https://domain-name.region.es.amazonaws.com/_cluster/settings?pretty\nHere is a return example:\n{\n\"persistent\": {\n\"cluster\": {\n\"routing\": {\n\"allocation\": {\n\"cluster_concurrent_rebalance\": \"2\",\n\"node_concurrent_recoveries\": \"2\",\n\"disk\": {\n\"watermark\": {\n\"low\": \"1.35gb\",\n\"flood_stage\": \"0.45gb\",\n\"high\": \"0.9gb\"\n}\n},\n\"node_initial_primarirecoveries\": \"4\"\n}\n}\n},\n\"indices\": {\n\"recovery\": {\n\"max_bytper_sec\": \"40mb\"\n}\n}\n}\n}\nIf you compare responses from an open source OpenSearch cluster and OpenSearch Service for\ncertain settings and statistics APIs, you might notice missing ﬁelds. OpenSearch Service redacts\ncertain information that exposes service internals, such as the ﬁle system data path from _nodes/\nstats or the operating system name and version from _nodes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1940,
+      "end": 1941
+    },
+    "content_stats": {
+      "char_count": 1563,
+      "word_count": 218
+    },
+    "hierarchy": {
+      "parent": "Notable API diﬀerences",
+      "children": []
+    }
+  }
+}

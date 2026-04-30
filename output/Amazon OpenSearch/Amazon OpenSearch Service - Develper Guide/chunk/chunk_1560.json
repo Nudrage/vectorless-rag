@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1560",
+  "section_number": "2.29.14",
+  "header": "Can't enable audit logs",
+  "content": "You might encounter the following error when you try to enable audit log publishing using the\nOpenSearch Service console:\nThe Resource Access Policy speciﬁed for the CloudWatch Logs log group does not grant suﬃcient\npermissions for Amazon OpenSearch Service to create a log stream. Please check the Resource\nAccess Policy.\nIf you encounter this error, verify that the resource element of your policy includes the correct\nlog group ARN. If it does, take the following steps:\n1. Wait several minutes.\n2. Refresh the page in your web browser.\n3. Choose Select existing group.\n4. For Existing log group, choose the log group that you created before receiving the error\nmessage.\n5. In the access policy section, choose Select existing policy.\n6. For Existing policy, choose the policy that you created before receiving the error message.\n7. Choose Enable.\nIf the error persists after repeating the process several times, contact AWS Support.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2088,
+      "end": 2088
+    },
+    "content_stats": {
+      "char_count": 936,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

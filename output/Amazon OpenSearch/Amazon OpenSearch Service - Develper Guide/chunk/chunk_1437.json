@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1437",
+  "section_number": "2.26.4.1.3",
+  "header": "Shrink",
+  "content": "The _shrink API can cause upgrades, conﬁguration changes, and domain deletions to fail. We\ndon't recommend using it on domains that run Elasticsearch versions 5.3 or 5.1. These versions\nhave a bug that can cause snapshot restoration of shrunken indices to fail.\nNotable API diﬀerences\n1912\nAmazon OpenSearch Service\nDeveloper Guide\nIf you use the _shrink API on other Elasticsearch or OpenSearch versions, make the following\nrequest before starting the shrink operation:\nPUT https://domain-name.region.es.amazonaws.com/source-index/_settings\n{\n\"settings\": {\n\"index.routing.allocation.require._name\": \"name-of-the-node-to-shrink-to\",\n\"index.blocks.read_only\": true\n}\n}\nThen make the following requests after completing the shrink operation:\nPUT https://domain-name.region.es.amazonaws.com/source-index/_settings\n{\n\"settings\": {\n\"index.routing.allocation.require._name\": null,\n\"index.blocks.read_only\": false\n}\n}\nPUT https://domain-name.region.es.amazonaws.com/shrunken-index/_settings\n{\n\"settings\": {\n\"index.routing.allocation.require._name\": null,\n\"index.blocks.read_only\": false\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1941,
+      "end": 1942
+    },
+    "content_stats": {
+      "char_count": 1083,
+      "word_count": 115
+    },
+    "hierarchy": {
+      "parent": "Notable API diﬀerences",
+      "children": []
+    }
+  }
+}

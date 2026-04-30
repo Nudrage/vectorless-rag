@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_852",
+  "section_number": "1.5.864.1",
+  "header": "Fields: Android",
+  "content": "Field\nDescription\nSourceAndroidComponentName\nContextProcessId\nUPID of process originating this event.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nUID\nUnix User Identifier.\nTargetAndroidComponentName\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of\nthe process that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that\nperformed thread injection in an InjectedThread event\nTargetAndroidComponentType\nValues:\nCOMPONENT_TYPE_ACTIVITY (1)\nCOMPONENT_TYPE_SERVICE (2)\nCOMPONENT_TYPE_BROADCAST_RECEIVER (3)\nCOMPONENT_TYPE_CONTENT_PROVIDER (4)\nAndroidAppAction\nAndroidAppCategories\nMimeType\nAndroidAppPackageName\nAndroidComponentName\nURI\nAndroidIntentFlags\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n235/1226\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 235,
+      "end": 236
+    },
+    "content_stats": {
+      "char_count": 1136,
+      "word_count": 129
+    },
+    "hierarchy": {
+      "parent": "AndroidIntentSentIPC",
+      "children": []
+    }
+  }
+}

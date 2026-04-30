@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1728",
+  "section_number": "155.1.1.237",
+  "header": "Access the Microsoft Defender XDR APIs",
+  "content": "Article • 04/15/2025 • Applies to: Microsoft Defender XDR\nMicrosoft Defender XDR exposes much of its data and actions through a set of programmatic\nAPIs. These APIs help you automate workflows and make full use of Microsoft Defender XDR's\ncapabilities.\nIn general, you'll need to take the following steps to use the APIs:\nCreate a Microsoft Entra application\nGet an access token using this application\nUse the token to access the Microsoft Defender XDR API\nOnce you've accomplished these steps, you're ready to access the Microsoft Defender XDR API\nusing a particular context.\nUse this context for apps that run without a signed-in user present, such as background\nservices or daemons.\n1. Create a Microsoft Entra web application.\n2. Assign the desired permissions to the application.\n3. Create a key for the application.\n７ Note\nTry our new APIs using MS Graph security API. Find out more at: Use the Microsoft\nGraph security API - Microsoft Graph | Microsoft Learn.\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\n７ Note\nAPI access requires OAuth2.0 authentication. For more information, see OAuth 2.0\nAuthorization Code Flow.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1296,
+      "end": 1296
+    },
+    "content_stats": {
+      "char_count": 1308,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Application context (Recommended)",
+        "User context",
+        "Partner context",
+        "Related articles"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_496",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Parameter\nRequired?\nDescription\napply_to_apps\nOptional\nApplication assignment information for\nKey\nValue\naffect_all_apps\nValues are on\n# \"Update: Unrecognized section: <unknown-section> in $POL\n# \"Update: Unknown section to delete: <bogus-section> in $\n# \"Update: Policy (or key) $ID does not exist\"\n]\n} ]\n}\nMake the Update Policy call without one or more of the parameters describing\nwhat to modify: sections , sections_to_delete , apply_to_apps , or\napply_to_groups_in_apps ?\n•\nThe API call makes the changes you specify in the input, but all the parameters\nare optional.\n◦\nIf you make the call with no changes in any of the parameters, the call returns\nthe (unchanged) policy.\n◦\nAdd a policy section  (such as authorized_networks ) to a custom policy?\n•\nThe API enables the section (that is, makes it active in the policy) and sets the\nvalid values you specify. Any key/value pairs not specified for the section will\nbe set to their default values.\n◦\nIf you add a blank policy section, it will be enabled for the policy with default\nvalues.\n◦\nModify values for an existing policy section ?\n•\nThe API changes only the values you specify.\n◦\nPUT  /admin/v2/policies/[policy_key]\nWarning: Set\ninactive  w\napplications.\napply_list\nAn array of ap\napp_integra\npolicy.\nIf an applicati\napplied, that p\neffect.\nreplace_list\nThe array of a\napp_integra\npolicy.\nWarning: If th\napplications n\nthose applica\nunassign_list\nAn array of ap\nintegratio\npolicy.\nIf an applicati\napplied, that p\neffect.\napply_to_groups_in_apps\nOptional\nInformation about which groups (within\nthe policy. See Applying Policy to Grou\na list of group policies to affect.\nKey\napply_group_policies_list\ngroup_policy_apply_order\ninactiv\nspecify h\n•\nreplace\napps, rep\n•\napply-p\napplicatio\nalready.\n•\nunassig\nall applic\n•\nreplace_group_policies_list\nunassign_all\nunassign_group_policies_list\napply_to_user_groups\nOptional\nInformation about which groups to whi\nApplying Policy to Groups for more info\npolicies to affect.\nKey\nVa\nuser_group_apply_order\nOn\napply_user_group_list\nJS\ngr\nEx\nreplace_user_group_list\nJS\nRe\non\noc\neit\nu\nunassign_user_group_list\nJS\ngr\nEx\na\nsu\ngr\npolicy_name\nOptional\nA new name for a custom policy. Policy\nThe name  parameter, available during\nsupported. Please use policy_name .\nsections\nOptional\nThe list of policy sections to be added,\nsection. See Policy Section Data for all\nIf sections  is blank, the policy is unc\nsections_to_delete\nOptional\nAn array of section names to remove fr\nremoved from the global policy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 204,
+      "end": 207
+    },
+    "content_stats": {
+      "char_count": 2496,
+      "word_count": 385
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

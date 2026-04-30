@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1123",
+  "section_number": "2.18.3.5.4",
+  "header": "Task 3: Conﬁgure SAML in OpenSearch Serverless collections",
+  "content": "To conﬁgure SAML-based ﬁne-grained access control in OpenSearch Serverless\n1.\nOpen the AWS Management Console and navigate to Amazon OpenSearch Service.\n2.\nIn the navigation pane, under Serverless, choose Security, and then choose Authentication.\n3.\nIn the IAM Federation section, select Edit.\nYou can control the SAML attribute-based ﬁne-grained access control using this conﬁguration.\nIAM Federation is disabled by default.\n4.\nSelect Enable IAM Federation.\n5.\nEnter the subjectKey and roleKey values that you deﬁned in Okta.\nFor more information, see the section called “SAML attributes for ﬁne-grained access control ”.\nStep 5: Conﬁgure SAML attribute-based ﬁne-grained access control\n1655\nAmazon OpenSearch Service\nDeveloper Guide\n6.\nSelect Save.\n7.\nIn the navigation pane under Serverless, choose Data access policy.\n8.\nEither update an existing policy or create a new one.\n9.\nExpand a rule, choose Add principals, and then select IAM Federation users and groups.\n10. Add the required principals and choose Save.\n11. Choose Grant.\n12. Under this rule, do the following:\n• Select the permissions you want to deﬁne for the selected principals.\n• Specify the collections where you want to apply the permissions.\n• Optionally, deﬁne index-level permissions.\nNote\nYou can create multiple rules to assign diﬀerent permissions to diﬀerent groups of\nprincipals.\n13. When ﬁnished, choose Save.\n14. Choose Create.\nAlternatively, you can use CLI to create the security conﬁgurations for collections, as given below:\naws opensearchserverless create-security-config --region \"region\"  --type iamfederation\n--name \"configuration_name\" --description \"description\" --iam-federation-options\n'{\"groupAttribute\":\"GroupKey\",\"userAttribute\":\"UserKey\"}'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1684,
+      "end": 1685
+    },
+    "content_stats": {
+      "char_count": 1736,
+      "word_count": 242
+    },
+    "hierarchy": {
+      "parent": "Step 5: Conﬁgure SAML attribute-based ﬁne-grained access control",
+      "children": []
+    }
+  }
+}

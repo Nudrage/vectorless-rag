@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_929",
+  "section_number": "2.14.4",
+  "header": "Loading streaming data into Amazon OpenSearch Service",
+  "content": "You can use OpenSearch Ingestion to directly load streaming data into your Amazon OpenSearch\nService domain, without needing to use third-party solutions. To send data to OpenSearch\nIngestion, you conﬁgure your data producers and the service automatically delivers the data to the\ndomain or collection that you specify. To get started with OpenSearch Ingestion, see the section\ncalled “Tutorial: Ingest data into a collection”.\nYou can still use other sources to load streaming data, such as Amazon Data Firehose and Amazon\nCloudWatch Logs, which have built-in support for OpenSearch Service. Others, like Amazon S3,\nAmazon Kinesis Data Streams, and Amazon DynamoDB, use AWS Lambda functions as event\nhandlers. The Lambda functions respond to new data by processing it and streaming it to your\ndomain.\nNote\nLambda supports several popular programming languages and is available in most AWS\nRegions. For more information, see Getting started with Lambda in the AWS Lambda\nDeveloper Guide and AWS service endpoints in the AWS General Reference.\nIndex codecs\n1446\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1475,
+      "end": 1476
+    },
+    "content_stats": {
+      "char_count": 1102,
+      "word_count": 169
+    },
+    "hierarchy": {
+      "parent": "Indexing data in Amazon OpenSearch Service",
+      "children": [
+        "Loading streaming data from OpenSearch Ingestion",
+        "Loading streaming data from Amazon S3",
+        "Loading streaming data from Amazon Kinesis Data Streams",
+        "Loading streaming data from Amazon DynamoDB",
+        "Loading streaming data from Amazon Data Firehose",
+        "Loading streaming data from Amazon CloudWatch",
+        "Loading streaming data from AWS IoT"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1044",
+  "section_number": "2.16.1.3",
+  "header": "Conﬁguring Amazon S3 Vectors integration with OpenSearch",
+  "content": "Use the following procedure to conﬁgure Amazon S3 Vectors integration with OpenSearch\nServerless.\nNote\nIf you started the process of conﬁguring integration from the Amazon S3 console by\nchoosing the Export to OpenSearch option in the Vector buckets page, some of the steps\nin the following procedure aren't applicable, as noted in the procedure.\nTo conﬁgure Amazon S3 Vectors integration with OpenSearch Serverless\n1.\nOpen the Import S3 vector index to OpenSearch vector engine page in the Amazon\nOpenSearch Service console. The page automatically displays if you clicked Export to\nOpenSearch in the Amazon S3 console. If you are starting in the OpenSearch console, choose\nIntegration in the left navigation and then choose Import S3 vector index.\n2.\nIn the Source section, if you started in the Amazon S3 console, verify that the name of\nvector index and its Amazon Resource Name (ARN) are already speciﬁed. If you started in the\nOpenSearch console, enter the index ARN in the S3 vector index ARN ﬁeld.\n3.\nIn the Service access section, choose an option. If you choose an existing role, verify it has all\nrequired permissions for integration as described in Required IAM permissions.\n4.\n(Optional) Expand Additional settings. For Enable redundancy (active replicas) we\nrecommend leaving this option selected for production environments. When you create\nyour ﬁrst collection, OpenSearch Serverless instantiates two OCUs—one for indexing\nand one for search. To ensure high availability, it also launches a standby set of nodes in\nanother Availability Zone. For development and testing purposes, you can disable the Enable\nredundancy setting for a collection, which eliminates the two standby replicas and only\ninstantiates two OCUs. By default, the redundant active replicas are enabled, which means that\na total of four OCUs are instantiated for the ﬁrst collection in an account.\nFor Add customer-managed AWS KMS key for Amazon OpenSearch Serverless vector,\nchoose this option to encrypt data in the vector collection using a customer managed key. By\ndefault, OpenSearch uses an AWS managed key.\nConﬁguring Amazon S3 Vectors integration with OpenSearch\n1572\nAmazon OpenSearch Service\nDeveloper Guide\n5.\nIf you started this process by clicking the Export to OpenSearch option in the Amazon S3\nconsole, the Export details section lists the steps OpenSearch will take next. When you're\nready, choose Export.\nIf you started this process in the OpenSearch Service console, the Import details section lists\nthe steps OpenSearch will take next. When you're ready, choose Import.\nOpenSearch opens the history page to display all exports/imports of Amazon S3 vector\nindexes to OpenSearch Serverless indexes.\nAfter successful ingestion, OSI automatically stops the pipeline to prevent unnecessary costs\nwhile maintaining exported data in OpenSearch. You can monitor integration progress through\nCloudWatch metrics and access detailed logs for troubleshooting.\nThe OpenSearch collection remains active and available for queries after initial ingestion is\ncompleted. You can perform:\n• Similarity searches\n• Aggregations\n• Analytics operations",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1601,
+      "end": 1602
+    },
+    "content_stats": {
+      "char_count": 3132,
+      "word_count": 478
+    },
+    "hierarchy": {
+      "parent": "Import from Amazon S3 Vectors to OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

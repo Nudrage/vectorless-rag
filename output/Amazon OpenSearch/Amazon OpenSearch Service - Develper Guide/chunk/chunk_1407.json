@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1407",
+  "section_number": "2.25.8.2",
+  "header": "Choosing the number of shards",
+  "content": "After you understand your storage requirements, you can investigate your indexing strategy.\nBy default in OpenSearch Service, each index is divided into ﬁve primary shards and one replica\n(total of 10 shards). This behavior diﬀers from open source OpenSearch, which defaults to one\nprimary and one replica shard. Because you can't easily change the number of primary shards for\nan existing index, you should decide about shard count before indexing your ﬁrst document.\nThe overall goal of choosing a number of shards is to distribute an index evenly across all data\nnodes in the cluster. However, these shards shouldn't be too large or too numerous. A general\nguideline is to try to keep shard size between 10–30 GiB for workloads where search latency is a\nkey performance objective, and 30–50 GiB for write-heavy workloads such as log analytics.\nLarge shards can make it diﬃcult for OpenSearch to recover from failure, but because each shard\nuses some amount of CPU and memory, having too many small shards can cause performance\nissues and out of memory errors. In other words, shards should be small enough that the\nunderlying OpenSearch Service instance can handle them, but not so small that they place\nneedless strain on the hardware.\nFor example, suppose you have 66 GiB of data. You don't expect that number to increase over time,\nand you want to keep your shards around 30 GiB each. Your number of shards therefore should be\napproximately 66 * 1.1 / 30 = 3. You can generalize this calculation as follows:\nChoosing the number of shards\n1858\nAmazon OpenSearch Service\nDeveloper Guide\n(Source data + room to grow) * (1 + indexing overhead) / desired shard size = approximate\nnumber of primary shards\nThis equation helps compensate for data growth over time. If you expect those same 66 GiB of\ndata to quadruple over the next year, the approximate number of shards is (66 + 198) * 1.1 / 30 =\n10. Remember, though, you don't have those extra 198 GiB of data yet. Check to make sure that\nthis preparation for the future doesn't create unnecessarily tiny shards that consume huge amounts\nof CPU and memory in the present. In this case, 66 * 1.1 / 10 shards = 7.26 GiB per shard, which\nwill consume extra resources and is below the recommended size range. You might consider the\nmore middle-of-the-road approach of six shards, which leaves you with 12-GiB shards today and\n48-GiB shards in the future. Then again, you might prefer to start with three shards and reindex\nyour data when the shards exceed 50 GiB.\nA far less common issue involves limiting the number of shards per node. If you size your shards\nappropriately, you typically run out of disk space long before encountering this limit. For example,\nan m6g.large.search instance has a maximum disk size of 512 GiB. If you stay below 80% disk\nusage and size your shards at 20 GiB, it can accommodate approximately 20 shards. Elasticsearch\n7.x and later, and all versions of OpenSearch up to 2.15, have a limit of 1,000 shards per node. To\nadjust the maximum shards per node, conﬁgure the cluster.max_shards_per_node setting.\nFor OpenSearch 2.17 and later, OpenSearch Service supports 1000 shards for every 16GB of JVM\nheap memory up to a maximum of 4000 shards per node. For an example, see Cluster settings. For\nmore information about shard count, see the section called “Shard count quotas”.\nSizing shards appropriately almost always keeps you below this limit, but you can also consider the\nnumber of shards for each GiB of Java heap. On a given node, have no more than 25 shards per GiB\nof Java heap. For example, an m5.large.search instance has a 4-GiB heap, so each node should\nhave no more than 100 shards. At that shard count, each shard is roughly 5 GiB in size, which is\nwell below our recommendation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1887,
+      "end": 1888
+    },
+    "content_stats": {
+      "char_count": 3770,
+      "word_count": 650
+    },
+    "hierarchy": {
+      "parent": "Sizing Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

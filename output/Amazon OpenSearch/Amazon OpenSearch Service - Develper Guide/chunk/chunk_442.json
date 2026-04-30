@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_442",
+  "section_number": "2.7.13.3.2",
+  "header": "OpenSearch Compute Units (OCU) events",
+  "content": "OpenSearch Serverless sends events to EventBridge when one of the following OCU-related events\noccur.\nOCU usage approaching maximum limit\nOpenSearch Serverless sends this event when your search or index OCU usage reaches 75% of\nyour capacity limit. Your OCU usage is calculated based on your conﬁgured capacity limit and your\ncurrent OCU consumption.\nExample\nThe following is an example event of this type (search OCU):\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"OCU Utilization Approaching Max Limit\",\n\"source\": \"aws.aoss\",\n\"account\": \"123456789012\",\n\"time\": \"2016-11-01T13:12:22Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"eventTime\" : 1678943345789,\n\"description\": \"Your search OCU usage is at 75% and is approaching the configured\nmaximum limit.\"\n}\n}\nMonitoring with EventBridge\n605\nAmazon OpenSearch Service\nDeveloper Guide\nThe following is an example event of this type (index OCU):\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"OCU Utilization Approaching Max Limit\",\n\"source\": \"aws.aoss\",\n\"account\": \"123456789012\",\n\"time\": \"2016-11-01T13:12:22Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"eventTime\" : 1678943345789,\n\"description\": \"Your indexing OCU usage is at 75% and is approaching the configured\nmaximum limit.\"\n}\nOCU usage reached maximum limit\nOpenSearch Serverless sends this event when your search or index OCU usage reaches 100% of\nyour capacity limit. Your OCU usage is calculated based on your conﬁgured capacity limit and your\ncurrent OCU consumption.\nExample\nThe following is an example event of this type (search OCU):\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"OCU Utilization Reached Max Limit\",\n\"source\": \"aws.aoss\",\n\"account\": \"123456789012\",\n\"time\": \"2016-11-01T13:12:22Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"eventTime\" : 1678943345789,\n\"description\": \"Your search OCU usage has reached the configured maximum limit.\"\n}\n}\nMonitoring with EventBridge\n606\nAmazon OpenSearch Service\nDeveloper Guide\nThe following is an example event of this type (index OCU):\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"OCU Utilization Reached Max Limit\",\n\"source\": \"aws.aoss\",\n\"account\": \"123456789012\",\n\"time\": \"2016-11-01T13:12:22Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"eventTime\" : 1678943345789,\n\"description\": \"Your indexing OCU usage has reached the configured maximum limit.\"\n}\n}\nMonitoring with EventBridge\n607\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 634,
+      "end": 637
+    },
+    "content_stats": {
+      "char_count": 2788,
+      "word_count": 328
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch Serverless events using Amazon EventBridge",
+      "children": []
+    }
+  }
+}

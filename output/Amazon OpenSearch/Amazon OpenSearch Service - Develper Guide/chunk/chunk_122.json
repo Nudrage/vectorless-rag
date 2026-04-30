@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_122",
+  "section_number": "2.6.16.2.1",
+  "header": "Providing cross-account ingestion access",
+  "content": "Note\nYou can only provide cross-account ingestion access for public pipelines, not VPC pipelines.\nYou might need to ingest data into a pipeline from a diﬀerent AWS account, such as an account\nthat houses your source application. If the principal that is writing to a pipeline is in a diﬀerent\naccount than the pipeline itself, you need to conﬁgure the principal to trust another IAM role to\ningest data into the pipeline.\nTo conﬁgure cross-account ingestion permissions\n1.\nCreate the ingestion role with osis:Ingest permission (described in the previous section)\nwithin the same AWS account as the pipeline. For instructions, see Creating IAM roles.\n2.\nAttach a trust policy to the ingestion role that allows a principal in another account to assume\nit:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::111122223333:root\"\n},\n\"Action\": \"sts:AssumeRole\"\n}]\n}\nCreating an ingestion role\n102\nAmazon OpenSearch Service\nDeveloper Guide\n3.\nIn the other account, conﬁgure your client application (for example, Fluent Bit) to assume the\ningestion role. In order for this to work, the application account must grant permissions to the\napplication user or role to assume the ingestion role.\nThe following example identity-based policy allows the attached principal to assume\ningestion-role from the pipeline account:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": \"sts:AssumeRole\",\n\"Resource\": \"arn:aws:iam::111122223333:role/ingestion-role\"\n}\n]\n}\nThe client application can then use the AssumeRole operation to assume ingestion-role and\ningest data into the associated pipeline.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 131,
+      "end": 132
+    },
+    "content_stats": {
+      "char_count": 1651,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "Creating an ingestion role",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_609",
+  "section_number": "155.1.1.55.1",
+  "header": "Prerequisites for automated investigation and response in Microsoft Defender XDR",
+  "content": "response in Microsoft Defender XDR\nﾉ\nExpand table\nRequirement\nDetails\nWindows device\nrequirements\nWindows 11\nWindows 10, version 1709 or later installed (See Windows release\ninformation)\nThe following threat protection services are configured:\nMicrosoft Defender for Endpoint\nMicrosoft Defender Antivirus\nProtection for email\ncontent and Office\nfiles\nMicrosoft Defender for Office 365 is configured\nAutomated investigation and remediation capabilities in Defender for\nEndpoint are configured (required for manual response actions, such as\ndeleting email messages on devices)\nPermissions\nTo configure automated investigation and response capabilities, you must have\none of the following roles assigned in either Microsoft Entra ID\n(https://portal.azure.com\n) or in the Microsoft 365 admin center\n(https://admin.microsoft.com\n):\nGlobal Administrator\nSecurity Administrator\nTo work with automated investigation and response capabilities, such as by\nreviewing, approving, or rejecting pending actions, see Required permissions for\nAction center tasks.\nWhether automated investigations run, and whether remediation actions are taken\nautomatically or only upon approval for your devices depend on certain settings, such as your\norganization's device group policies. Review the configured automation level for your device\ngroup policies. You must be a global administrator or security administrator to perform the\nfollowing procedure:\n1. Go to the Microsoft Defender portal at https://security.microsoft.com\nand sign in.\n７ Note\nMicrosoft recommends using roles with fewer permissions for better security. The Global\nAdministrator role, which has many permissions, should only be used in emergencies\nwhen no other role fits.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 389,
+      "end": 390
+    },
+    "content_stats": {
+      "char_count": 1716,
+      "word_count": 234
+    },
+    "hierarchy": {
+      "parent": "Configure automated investigation and response capabilities in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

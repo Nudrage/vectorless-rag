@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1235",
+  "section_number": "2.19.7.1.2",
+  "header": "Step 2: Choose ﬁelds",
+  "content": "After choosing your indexes, choose the ﬁelds you want to use in your transform job, as well as\nwhether to use groupings or aggregations.\n• You can use groupings to place your data into separate buckets in your transformed index. For\nexample, if you want to group all of the airport destinations within the sample ﬂight data, group\nthe DestAirportID ﬁeld into a target ﬁeld of DestAirportID_terms ﬁeld, and you can ﬁnd\nthe grouped airport IDs in your transformed index after the transform job ﬁnishes.\nIndex transforms\n1737\nAmazon OpenSearch Service\nDeveloper Guide\n• On the other hand, aggregations let you perform simple calculations. For example,\nyou might include an aggregation in your transform job to deﬁne a new ﬁeld of\nsum_of_total_ticket_price that calculates the sum of all airplane tickets. Then you can\nanalyze the new data in your transformed index.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1766,
+      "end": 1767
+    },
+    "content_stats": {
+      "char_count": 863,
+      "word_count": 141
+    },
+    "hierarchy": {
+      "parent": "Creating an index transform job",
+      "children": []
+    }
+  }
+}

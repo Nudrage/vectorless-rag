@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_882",
+  "section_number": "2.12.11.1.1",
+  "header": "Conﬁguring Amazon Cognito authentication (console)",
+  "content": "Because it creates the CognitoAccessForAmazonOpenSearch role for you, the console oﬀers\nthe simplest conﬁguration experience. In addition to the standard OpenSearch Service permissions,\nyou need the following set of permissions to use the console to create a domain that uses Amazon\nCognito authentication for OpenSearch Dashboards.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"ec2:DescribeVpcs\",\n\"cognito-identity:ListIdentityPools\",\n\"cognito-idp:ListUserPools\",\n\"iam:CreateRole\",\n\"iam:AttachRolePolicy\"\n],\n\"Resource\": \"*\"\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"iam:GetRole\",\n\"iam:PassRole\"\n],\n\"Resource\": \"arn:aws:iam::123456789012:role/service-\nrole/CognitoAccessForAmazonOpenSearch\"\n}\n]\n}\nFor instructions to add permissions to an identity (user, user group, or role), see Adding IAM\nidentity permissions (console).\nIf CognitoAccessForAmazonOpenSearch already exists, you need fewer permissions:\nConﬁguring a domain to use Amazon Cognito authentication\n1400\nAmazon OpenSearch Service\nDeveloper Guide\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"ec2:DescribeVpcs\",\n\"cognito-identity:ListIdentityPools\",\n\"cognito-idp:ListUserPools\"\n],\n\"Resource\": \"*\"\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"iam:GetRole\",\n\"iam:PassRole\"\n],\n\"Resource\": \"arn:aws:iam::123456789012:role/service-\nrole/CognitoAccessForAmazonOpenSearch\"\n}\n]\n}\nTo conﬁgure Amazon Cognito authentication for Dashboards (console)\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome/.\n2.\nUnder Domains, select the domain you want to conﬁgure.\n3.\nChoose Actions, Edit security conﬁguration.\n4.\nSelect Enable Amazon Cognito authentication.\n5.\nFor Region, select the AWS Region that contains your Amazon Cognito user pool and identity\npool.\n6.\nFor Cognito user pool, select a user pool or create one. For more information, see the section\ncalled “About the user pool”.\n7.\nFor Cognito identity pool, select an identity pool or create one. For more information, see the\nsection called “About the identity pool”.\nConﬁguring a domain to use Amazon Cognito authentication\n1401\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nThe Create user pool and Create identity pool links direct you to the Amazon\nCognito console and require you to create these resources manually. The process is not\nautomatic. For more information, see the section called “Prerequisites”.\n8.\nFor IAM role name, use the default value of CognitoAccessForAmazonOpenSearch\n(recommended) or enter a new name. For more information, see the section called “About the\nCognitoAccessForAmazonOpenSearch role”.\n9.\nChoose Save changes.\nAfter your domain ﬁnishes processing, see the section called “Allowing the authenticated role” and\nthe section called “Conﬁguring identity providers” for additional conﬁguration steps.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1429,
+      "end": 1431
+    },
+    "content_stats": {
+      "char_count": 2832,
+      "word_count": 360
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring a domain to use Amazon Cognito authentication",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_263",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "OpenSearch Serverless has the following limitations:\n• Some OpenSearch API operations aren't supported. See the section called “Supported\nOpenSearch API operations and permissions”.\n• Some OpenSearch plugins aren't supported. See the section called “Supported OpenSearch\nplugins”.\n• There's currently no way to automatically migrate your data from a managed OpenSearch\nService domain to a serverless collection. You must reindex your data from a domain to a\ncollection.\n• Cross-account access to collections isn't supported. You can't include collections from other\naccounts in your encryption or data access policies.\n• Custom OpenSearch plugins aren't supported.\n• You can't take or restore snapshots of OpenSearch Serverless collections.\n• Cross-Region search and replication aren't supported.\n• There are limits on the number of serverless resources that you can have in a single account and\nRegion. See OpenSearch Serverless quotas.\nSupported AWS Regions\n376\nAmazon OpenSearch Service\nDeveloper Guide\n• The refresh interval for indexes in vector search collections is approximately 60 seconds. The\nrefresh interval for indexes in search and time series collections is approximately 10 seconds.\n• The number of shards, number of intervals, and refresh interval are not modiﬁable and are\nhandled by OpenSearch Serverless. The sharding strategy is based oﬀ the collection type\nand traﬃc. For example, a time series collection scales primary shards based on write traﬃc\nbottlenecks.\n• Geospatial features available on OpenSearch versions up to 2.1 are supported.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 405,
+      "end": 406
+    },
+    "content_stats": {
+      "char_count": 1563,
+      "word_count": 231
+    },
+    "hierarchy": {
+      "parent": "What is Amazon OpenSearch Serverless?",
+      "children": []
+    }
+  }
+}

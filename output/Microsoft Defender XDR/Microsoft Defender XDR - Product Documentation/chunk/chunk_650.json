@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_650",
+  "section_number": "155.1.1.61.4",
+  "header": "Identify when an attack disruption happens in your environment",
+  "content": "environment\nFigure 1. Incident view showing the yellow bar where automatic attack disruption took action\nThe Defender XDR user experience now includes additional visual cues to ensure visibility of\nthese automatic actions. You can find them across the following experiences:\n1. In the incident queue:\nA tag titled Attack Disruption appears next to affected incidents\n2. On the incident page:\nA tag titled Attack Disruption\nA yellow banner at the top of the page that highlights the automatic action taken\nThe current asset status is shown in the incident graph if an action is done on an\nasset, for example, account disabled or device contained\n3. Via API:\nAn (attack disruption) string is added to the end of the titles of incidents with high\nconfidence likely to be automatically disrupted. For example:\nBEC financial fraud attack launched from a compromised account (attack disruption)\nFor more information, see view attack disruption details and results.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 418,
+      "end": 419
+    },
+    "content_stats": {
+      "char_count": 960,
+      "word_count": 154
+    },
+    "hierarchy": {
+      "parent": "Automatic attack disruption in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

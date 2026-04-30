@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_893",
+  "section_number": "2.12.11.8",
+  "header": "Quotas",
+  "content": "Amazon Cognito has soft limits on many of its resources. If you want to enable Dashboards\nauthentication for a large number of OpenSearch Service domains, review Quotas in Amazon\nCognito and request limit increases as necessary.\nEach OpenSearch Service domain adds an app client to the user pool, which adds an authentication\nprovider to the identity pool. If you enable OpenSearch Dashboards authentication for more\nthan 10 domains, you might encounter the \"maximum Amazon Cognito user pool providers per\nidentity pool\" limit. If you exceed a limit, any OpenSearch Service domains that you try to conﬁgure\nto use Amazon Cognito authentication for Dashboards can get stuck in a conﬁguration state of\nProcessing.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1436,
+      "end": 1436
+    },
+    "content_stats": {
+      "char_count": 711,
+      "word_count": 112
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring Amazon Cognito authentication for OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

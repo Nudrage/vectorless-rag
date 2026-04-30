@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2399",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nUserName\nOperating system username.\nBrowserArtifactType\nType of forensic browser artifact.\nValues:\nHISTORY (1)\nDOWNLOADS (2)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n839/1226\nField\nDescription\nEXTENSIONS (3)\nCOOKIES (4)\nPREFERENCES (5)\nId\nUrl\nTitle\nBrowserVisitCount\nHow many times the site has been visited through the browser.\nBrowserUrlTypedCount\nHow many times the URL was manually typed into the browser address bar.\nBrowserVisitType\nHow the page was visited e.g. linked to, redirected, etc.\nValues:\nUNDEFINED (0)\nLINK (1)\nTYPED (2)\nAUTOBOOKMARK (3)\nBOOKMARK (4)\nEMBED (5)\nAUTOSUBFRAME (6)\nMANUALSUBFRAME (7)\nREDIRECT_PERMANENT (8)\nREDIRECT_TEMPORARY (9)\nGENERATED (10)\nSTARTPAGE (11)\nDOWNLOAD (12)\nFORMSUBMIT (13)\nRELOAD (14)\nKEYWORD (15)\nKEYWORDGENERATED (16)\nSourceFileName\nThe file's original name\nBrowserName\nName of internet browser application.\nValues:\nUNKNOWN (0)\nFIREFOX (1)\nSAFARI (2)\nCHROME (3)\nEDGE (4)\nEDGE_CHROMIUM (5)\nINTERNET_EXPLORER (6)\nEDGE_LEGACY (7)\nIE_TYPED_URL (8)\nFIREFOX_APP (9)\nCHROME_BETA (10)\nCHROME_DEV (11)\nEDGE_BETA (12)\nEDGE_DEV (13)\nSAFARI_TECH (14)\nBrowserRedirectSourceTableEntry\nSafari only - Redirect table entry for source page URL.\nBrowserRedirectDestinationTableEntry Safari only - Redirect table entry for destination page URL.\nBrowserVisitTableId\nSafari only - ID from the visits table, used for mapping redirects.\nSourceAccountDomain\nThe domain that the account bound with this activity is a member of.\nUrlLastAccessedTimeStamp\nMost recent time the URL page was accessed.\nUrlLastModifiedTimeStamp\nMost recent time the URL page was modified.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 839,
+      "end": 840
+    },
+    "content_stats": {
+      "char_count": 1856,
+      "word_count": 241
+    },
+    "hierarchy": {
+      "parent": "BrowserHistoryVisit",
+      "children": []
+    }
+  }
+}

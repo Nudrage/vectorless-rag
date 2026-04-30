@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_349",
+  "section_number": "2.7.8.3",
+  "header": "Neural and hybrid queries",
+  "content": "By default, OpenSearch calculates document scores using the keyword-based Okapi BM25\nalgorithm, which works well for search queries that contain keywords. Neural Search provides new\nquery types for natural language queries and the ability to combine both semantic and keyword\nsearch.\nExample : neural\n\"neural\": {\n\"vector_field\": {\n\"query_text\": \"query_text\",\n\"query_image\": \"image_binary\",\n\"model_id\": \"model_id\",\n\"k\": 100\n}\n}\nFor more information, see Neural query on the OpenSearch Documentation website.\nExample : hybrid\n\"hybrid\": {\n\"queries\": [\narray of lexical, neural, or combined queries\n]\n}\nFor more information, see Hybrid query on the OpenSearch Documentation website.\nNeural and hybrid queries\n476\nAmazon OpenSearch Service\nDeveloper Guide\nTo conﬁgure semantic search components in Amazon OpenSearch Serverless, follow the steps\nin the Neural Search tutorial on the OpenSearch Documentation website. Keep in mind these\nimportant diﬀerences:\n• OpenSearch Serverless supports only remote models. You must conﬁgure connectors to\nremotely hosted models. You don't need to deploy or remove remote models. For more\ninformation, see Getting started with semantic and hybrid search on the OpenSearch\nDocumentation website.\n• Expect up to 15 seconds of latency when you search against your vector index or search for\nrecently created search and ingest pipelines.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 505,
+      "end": 506
+    },
+    "content_stats": {
+      "char_count": 1364,
+      "word_count": 198
+    },
+    "hierarchy": {
+      "parent": "Conﬁgure Neural Search and Hybrid Search on OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

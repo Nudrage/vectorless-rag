@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_3120",
+  "section_number": "1.6.10.2",
+  "header": "Epp Detection Summary",
+  "content": "7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1145/1226\nFalcon generates an EppDetectionSummaryEvent for each new endpoint detection alert. Not all EppDetectionSummaryEvent types include all the fields listed in\nthe table below.\nImportant details about this event type:\nThis event type is available to all customers. However, it corresponds to detection alerts viewed in the Endpoint detections page at Endpoint security >\nMonitor > Endpoint detections that is being rolled out to customers in phases.\nThis event type has 2 fields that you can use to perform singular or bulk operations with the Alerts API, accessed using /alerts/ and discussed in\n.\nCompositeId: A global unique identifier that identifies a unique alert\nAggregateId: A global unique identifier that links multiple alerts\nFor example, if you want to assign and update the status of a singular alert, you would call /alerts/ with a singular CompositeId. To assign and update the status\nof a group of alerts, call /alerts/ with a filter query based on AggregateId.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1145,
+      "end": 1146
+    },
+    "content_stats": {
+      "char_count": 1215,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "General detection and audit events",
+      "children": [
+        "Event fields section",
+        "Metadata section",
+        "Pattern Disposition Value Descriptions",
+        "Sample EppDetectionSummaryEvent response"
+      ]
+    }
+  }
+}

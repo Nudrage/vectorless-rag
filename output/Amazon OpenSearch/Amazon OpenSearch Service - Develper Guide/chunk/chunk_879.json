@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_879",
+  "section_number": "2.27.3.1.2",
+  "header": "About the identity pool",
+  "content": "Identity pools let you assign temporary, limited-privilege roles to users after they log in. For\ninstructions about creating an identity pool, see Identity pools console overview in the Amazon\nCognito Developer Guide. When you create an identity pool to use with OpenSearch Service,\nconsider the following:\n• If you use the Amazon Cognito console, you must select the Enable access to unauthenticated\nidentities check box to create the identity pool. After you create the identity pool and conﬁgure\nthe OpenSearch Service domain, Amazon Cognito disables this setting.\n• You don't need to add external identity providers to the identity pool. When you conﬁgure\nOpenSearch Service to use Amazon Cognito authentication, it conﬁgures the identity pool to use\nthe user pool that you just created.\n• After you create the identity pool, you must choose unauthenticated and authenticated\nIAM roles. These roles specify the access policies that users have before and after they\nPrerequisites\n1397\nAmazon OpenSearch Service\nDeveloper Guide\nlog in. If you use the Amazon Cognito console, it can create these roles for you. After\nyou create the authenticated role, make note of the ARN, which takes the form of\narn:aws:iam::123456789012:role/Cognito_identitypoolnameAuth_Role.\nIdentity pool IDs take the form of region:ID-ID-ID-ID-ID. If you plan to use the AWS CLI or an\nAWS SDK to conﬁgure OpenSearch Service, make note of the ID.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1426,
+      "end": 1427
+    },
+    "content_stats": {
+      "char_count": 1420,
+      "word_count": 221
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "document_name": "Google Cloud\\GCP Firewall - Product Document",
+  "generated_at": "2026-02-17T22:03:48.935982",
+  "outline_text": "DOCUMENT INDEX: Google Cloud\\GCP Firewall - Product Document\n============================================================\n\n1. Firewall Rules Logging [Page 1, 276 words]\n   1.1. Specifications [Pages 1-2, 247 words]\n   1.2. Limitations [Page 2, 25 words]\n   1.3. Logging examples [Page 2, 66 words]\n      1.3.1. Egress deny example [Pages 2-5, 353 words]\n      1.3.2. Egress allow, ingress allow example [Pages 5-8, 424 words]\n      1.3.3. Internet ingress example [Pages 8-10, 360 words]\n   1.4. Firewall log format [Pages 10-11, 376 words]\n      1.4.1. IpConnection [Pages 11-12, 142 words]\n      1.4.2. RuleDetails [Pages 12-13, 278 words]\n      1.4.3. IpPortDetails [Page 13, 32 words]\n      1.4.4. InstanceDetails [Page 13, 31 words]\n      1.4.5. LoadBalancingDetails [Pages 13-14, 64 words]\n      1.4.6. VpcDetails [Page 14, 30 words]\n      1.4.7. GeographicDetails [Page 14, 27 words]\n   1.5. What's next [Page 14, 108 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Firewall Rules Logging",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 276,
+        "summary": "Firewall Rules Logging lets you audit, verify, and analyze the effects of your firewall rules.",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "Specifications",
+            "depth": 2,
+            "chunk_id": "chunk_002",
+            "page_start": 1,
+            "page_end": 2,
+            "word_count": 247,
+            "summary": "Firewall Rules Logging has the following specifications:\nFirewall Rules Logging can be enabled for t..."
+          },
+          {
+            "number": "1.2",
+            "title": "Limitations",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 2,
+            "page_end": 2,
+            "word_count": 25,
+            "summary": "When you use the apply_security_profile_group action with logging enabled, Cloud NGFW\ndoesn't capture logs of all sessions."
+          },
+          {
+            "number": "1.3",
+            "title": "Logging examples",
+            "depth": 2,
+            "chunk_id": "chunk_004",
+            "page_start": 2,
+            "page_end": 2,
+            "word_count": 66,
+            "summary": "A log entry is generated each time that a firewall rule with logging enabled applies to traffic.",
+            "children": [
+              {
+                "number": "1.3.1",
+                "title": "Egress deny example",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 2,
+                "page_end": 5,
+                "word_count": 353,
+                "summary": "In this example:\nTraffic between VM instances in the example-net VPC network in the example-proj\nproject is considered."
+              },
+              {
+                "number": "1.3.2",
+                "title": "Egress allow, ingress allow example",
+                "depth": 3,
+                "chunk_id": "chunk_006",
+                "page_start": 5,
+                "page_end": 8,
+                "word_count": 424,
+                "summary": "In this example:\nTraffic between VM instances in the example-net VPC network in the example-proj\nproject is considered."
+              },
+              {
+                "number": "1.3.3",
+                "title": "Internet ingress example",
+                "depth": 3,
+                "chunk_id": "chunk_007",
+                "page_start": 8,
+                "page_end": 10,
+                "word_count": 360,
+                "summary": "In this example:\nTraffic from a system outside the example-net VPC network to a VM instance in that\nnetwork is considered."
+              }
+            ]
+          },
+          {
+            "number": "1.4",
+            "title": "Firewall log format",
+            "depth": 2,
+            "chunk_id": "chunk_008",
+            "page_start": 10,
+            "page_end": 11,
+            "word_count": 376,
+            "summary": "Subject to the specifications (#specifications), a log entry is created in Cloud Logging for each\nfi...",
+            "children": [
+              {
+                "number": "1.4.1",
+                "title": "IpConnection",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 11,
+                "page_end": 12,
+                "word_count": 142,
+                "summary": "Field\nType\nDescription\nsrc_ip\nstring\nSource IP address."
+              },
+              {
+                "number": "1.4.2",
+                "title": "RuleDetails",
+                "depth": 3,
+                "chunk_id": "chunk_010",
+                "page_start": 12,
+                "page_end": 13,
+                "word_count": 278,
+                "summary": "Field\nType\nDescription\nreference\nstring\nReference to the firewall rule; format:\n\"network:{network na..."
+              },
+              {
+                "number": "1.4.3",
+                "title": "IpPortDetails",
+                "depth": 3,
+                "chunk_id": "chunk_011",
+                "page_start": 13,
+                "page_end": 13,
+                "word_count": 32,
+                "summary": "Field\nType\nDescription\nip_protocol\nstring\nIP protocol that the firewall rule applies to."
+              },
+              {
+                "number": "1.4.4",
+                "title": "InstanceDetails",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 13,
+                "page_end": 13,
+                "word_count": 31,
+                "summary": "Field\nType\nDescription\nproject_id\nstring\nID of the project containing the VM\nvm_name\nstring\nInstance..."
+              },
+              {
+                "number": "1.4.5",
+                "title": "LoadBalancingDetails",
+                "depth": 3,
+                "chunk_id": "chunk_013",
+                "page_start": 13,
+                "page_end": 14,
+                "word_count": 64,
+                "summary": "Field\nType\nDescription\nforwarding_rule_project_id\nstring\nGoogle Cloud project ID that contains the forwarding\nrule."
+              },
+              {
+                "number": "1.4.6",
+                "title": "VpcDetails",
+                "depth": 3,
+                "chunk_id": "chunk_014",
+                "page_start": 14,
+                "page_end": 14,
+                "word_count": 30,
+                "summary": "Field\nType\nDescription\nproject_id\nstring\nID of the project containing the network\nvpc_name\nstring\nNe..."
+              },
+              {
+                "number": "1.4.7",
+                "title": "GeographicDetails",
+                "depth": 3,
+                "chunk_id": "chunk_015",
+                "page_start": 14,
+                "page_end": 14,
+                "word_count": 27,
+                "summary": "Field\nType\nDescription\ncontinent\nstring\nContinent for external endpoints\ncountry\nstring\nCountry for ..."
+              }
+            ]
+          },
+          {
+            "number": "1.5",
+            "title": "What's next",
+            "depth": 2,
+            "chunk_id": "chunk_016",
+            "page_start": 14,
+            "page_end": 14,
+            "word_count": 108,
+            "summary": "To set up logging and view logs, see Use Firewall Rules Logging\n(/firewall/docs/using-firewall-rules-logging)."
+          }
+        ]
+      }
+    ],
+    "total_sections": 16,
+    "max_depth": 3
+  }
+}

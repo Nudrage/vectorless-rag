@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_003",
+  "section_number": "1.1.1",
+  "header": "Specifications",
+  "content": "The following specifications apply to Cloud NAT logging:\nCloud NAT logging handles TCP and UDP traffic only.\nCloud NAT logging only logs dropped packets if they are egress (outbound) TCP and UDP\npackets. It does not log dropped incoming packets. For example, if an inbound response\nto an outbound request is dropped for any reason, no error is logged.\nEach VM instance can only generate a certain number of log entries per unit time, proportional\nto its number of vCPUs (/compute/docs/machine-types). The VM can generate 50-100 log entries\nper second per vCPU.\nThis rate threshold affects the number of events that can be logged. Even if some events\nare filtered out, their occurrence counts toward the number of possible log entries.\nLimiting logs to only errors or only network address translation connections does not\nnecessarily increase the number of viewed log entries. For example, if you choose to log\nonly successful connections, periods of excessive failed connection attempts and NAT\nerrors can still restrict the number of successful connection log entries.\nCloud NAT logging does not log every single packet. Even if the VM's rate threshold has\nnot been reached, some conditions can cause events to be omitted from the log. You\nshould rely on the presence of entries in Cloud NAT logging to make informed decisions,\nbut you must not assume that the absence of entries means that an event didn't happen.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 1
+    },
+    "content_stats": {
+      "char_count": 1415,
+      "word_count": 233
+    },
+    "hierarchy": {
+      "parent": "Logging",
+      "children": []
+    }
+  }
+}

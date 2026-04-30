@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_497",
+  "section_number": "1.17.10",
+  "header": "Applying Policy to Groups",
+  "content": "You can choose to apply and unassign policies from groups to take effect across all\napplications, or in the context of a specific application ( integration ). The information\nyou provide in the JSON file will differ depending on your goal.\nIf you are applying or unassigning a group policy you intend to be effective for those\ngroup members for any application, then you will specify an array of groups\n( apply_user_group_list ) to which to apply policy. For example:\nKey\nValue\napply_to_user_groups\nAn array of unique group identifiers. See the response\nto Retrieve Groups to find group_id  values.\nIf you are assigning a group policy you intend to be effective for those group members\nand targeted applications, then you will need to specify both an\napp_integration_key  and an array of groups ( group_id_list ) when applying\npolicy to groups. For example:\nKey\nValue\napp_integration_key\nThe unique identifier for the application (same value as\nintegration_key ). See the response to Retrieve\nIntegrations.\ngroup_id_list\nAn array of unique group identifiers. See the response\nto Retrieve Groups to find group_id  values.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 207,
+      "end": 208
+    },
+    "content_stats": {
+      "char_count": 1120,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

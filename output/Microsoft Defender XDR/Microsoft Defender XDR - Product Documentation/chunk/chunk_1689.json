@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1689",
+  "section_number": "155.1.1.230",
+  "header": "Provide managed security service provider (MSSP) access",
+  "content": "provider (MSSP) access\nArticle • 11/20/2024\nApplies to:\nMicrosoft Defender XDR\nMicrosoft Defender for Endpoint\nTo implement a multitenant delegated access solution, take the following steps:\n1. Enable role-based access control for Defender for Endpoint via the Microsoft\nDefender portal and connect with Microsoft Entra groups.\n2. Configure entitlement management for external users within Microsoft Entra ID\nGovernance to enable access requests and provisioning.\n3. Manage access requests and audits in Microsoft Myaccess.\n1. Create access groups for MSSP resources in Customer Microsoft Entra ID:\nGroups\nThese groups are linked to the Roles you create in Defender for Endpoint in\nMicrosoft Defender portal. To do so, in the customer AD tenant, create three\n） Important\nSome information in this article relates to a prereleased product which may be\nsubstantially modified before it's commercially released. Microsoft makes no\nwarranties, expressed or implied, with respect to the information provided here.\n） Important\nProcedures in this article use features that require at a minimum Microsoft Entra ID\nP2 for each user under scope of management.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1264,
+      "end": 1264
+    },
+    "content_stats": {
+      "char_count": 1148,
+      "word_count": 172
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Enable role-based access controls in Microsoft Defender for Endpoint in Microsoft Defender portal",
+        "Configure Governance Access Packages",
+        "Manage access"
+      ]
+    }
+  }
+}

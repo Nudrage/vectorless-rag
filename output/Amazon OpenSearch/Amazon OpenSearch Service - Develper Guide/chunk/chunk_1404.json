@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1404",
+  "section_number": "2.25.7.1",
+  "header": "Other alarms you might consider",
+  "content": "Consider conﬁguring the following alarms depending on which OpenSearch Service features you\nregularly use.\nAlarm\nIssue\nWarmFreeS\ntorageSpace\nis >=\n10%\nYou have reached 10% of your total free warm storage. WarmFreeS\ntorageSpace\nmeasures the sum of your free warm storage space\nin MiB. UltraWarm uses Amazon S3 rather than attached disks.\nHotToWarm\nMigration\nQueueSize\nis >=\nA high number of indexes are concurrently moving from hot to\nUltraWarm storage. Consider scaling your cluster.\nOther alarms you might consider\n1853\nAmazon OpenSearch Service\nDeveloper Guide\nAlarm\nIssue\n20 for 1 minute, 3\nconsecutive times\nHotToWarm\nMigration\nSuccessLa\ntency  is >= 1 day, 1\nconsecutive time\nConﬁgure this alarm so that you're notiﬁed if the HotToWarm\nMigrationSuccessCount\nx latency is greater than 24 hours if\nyou’re trying to roll daily indexes.\nWarmJVMMe\nmoryPressure\nmaximum is >=\n95% for 1 minute, 3\nconsecutive times\nWarmOldGe\nnJVMMemor\nyPressure\nmaximum is >=\n80% for 1 minute, 3\nconsecutive times\nThe cluster could encounter out of memory errors if usage increases\n. Consider scaling vertically. OpenSearch Service uses half of an\ninstance's RAM for the Java heap, up to a heap size of 32 GiB. You can\nscale instances vertically up to 64 GiB of RAM, at which point you can\nscale horizontally by adding instances.\nWarmToCol\ndMigratio\nnQueueSize\nis >=\n20 for 1 minute, 3\nconsecutive times\nA high number of indexes are concurrently moving from UltraWarm to\ncold storage. Consider scaling your cluster.\nHotToWarm\nMigration\nFailureCount\nis\n>= 1 for 1 minute, 1\nconsecutive time\nMigrations might fail during snapshots, shard relocations, or force\nmerges. Failures during snapshots or shard relocation are typically due\nto node failures or S3 connectivity issues. Lack of disk space is usually\nthe underlying cause of force merge failures.\nOther alarms you might consider\n1854\nAmazon OpenSearch Service\nDeveloper Guide\nAlarm\nIssue\nWarmToCol\ndMigratio\nnFailureCount\nis\n>= 1 for 1 minute, 1\nconsecutive time\nMigrations usually fail when attempts to migrate index metadata\nto cold storage fail. Failures can also happen when the warm index\ncluster state is being removed.\nWarmToCol\ndMigratio\nnLatency  is >= 1\nday, 1 consecutive\ntime\nConﬁgure this alarm so that you're notiﬁed if the WarmToCol\ndMigrationSuccessCount\nx latency is greater than 24 hours if\nyou’re trying to roll daily indexes.\nAlertingDegraded\nis >= 1 for 1 minute, 1\nconsecutive time\nEither the alerting index is red, or one or more nodes is not on\nschedule.\nADPluginU\nnhealthy  is >= 1 for\n1 minute, 1 consecuti\nve time\nThe anomaly detection plugin isn't functioning properly, either\nbecause of high failure rates or because one of the indexes being used\nis red.\nAsynchron\nousSearch\nFailureRate\nis\n>= 1 for 1 minute, 1\nconsecutive time\nAt least one asynchronous search failed in the last minute, which likely\nmeans the coordinator node failed. The lifecycle of an asynchronous\nsearch request is managed solely on the coordinator node, so if the\ncoordinator goes down, the request fails.\nAsynchron\nousSearch\nStoreHealth\nis\n>= 1 for 1 minute, 1\nconsecutive time\nThe health of the asynchronous search response store in the persisted\nindex is red. You might be storing large asynchronous responses,\nwhich can destabilize a cluster. Try to limit your asynchronous search\nresponses to 10 MB or less.\nSQLUnhealthy  is\n>= 1 for 1 minute, 3\nconsecutive times\nThe SQL plugin is returning 5xx response codes or passing invalid\nquery DSL to OpenSearch. Troubleshoot the requests that your clients\nare making to the plugin.\nOther alarms you might consider\n1855\nAmazon OpenSearch Service\nDeveloper Guide\nAlarm\nIssue\nLTRStatus.red  is\n>= 1 for 1 minute, 1\nconsecutive time\nAt least one of the indexes needed to run the Learning to Rank plugin\nhas missing primary shards and isn't functional.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1882,
+      "end": 1885
+    },
+    "content_stats": {
+      "char_count": 3831,
+      "word_count": 619
+    },
+    "hierarchy": {
+      "parent": "Recommended CloudWatch alarms for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

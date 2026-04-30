@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1095",
+  "section_number": "1.1.155.2.2.1.1",
+  "header": "Continuous (NRT) frequency",
+  "content": "Selecting Migrate now gives you a list of all compatible rules according to their KQL query. You\ncan choose to migrate all or selected rules only according to your preferences:\nOnce you select Save, the selected rules' frequency gets updated to Continuous (NRT)\nfrequency.\nYou can run a query continuously as long as:\nThe query references one table only.\nThe query uses an operator from the list of Supported KQL features. (For matches regex ,\nregular expressions must be encoded as string literals and follow the string quoting rules.\nFor example, the regular expression \\A  is represented in KQL as \"\\\\A\" . The extra\nbackslash indicates that the other backslash is part of the regular expression \\A .)\nThe query doesn't use joins, unions, or the externaldata  operator.\nThe query doesn't include any comments line/information.\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 6,
+    "font_size": 14,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 828,
+      "end": 829
+    },
+    "content_stats": {
+      "char_count": 832,
+      "word_count": 137
+    },
+    "hierarchy": {
+      "parent": "Rule frequency",
+      "children": [
+        "Queries you can run continuously",
+        "Tables that support Continuous (NRT) frequency",
+        "Custom frequency for Microsoft Sentinel data (Preview)"
+      ]
+    }
+  }
+}

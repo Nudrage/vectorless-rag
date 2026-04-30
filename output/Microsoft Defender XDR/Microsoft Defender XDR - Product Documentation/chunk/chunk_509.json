@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_509",
+  "section_number": "155.1.1.48.1",
+  "header": "Incidents and alerts",
+  "content": "You can see all active incidents and alerts involving the user from the last six months. All the\ninformation from the main incidents and alerts queues is shown here. This list is a filtered\nversion of the incidents queue, and shows the following details:\nA short description of the incident or alert\nThe alert severity (high, medium, low, informational)\nThe alert status in the queue (new, in progress, resolved)\nThe alert classification (not set, false alert, true alert)\nThe investigation state, category, who is assigned to address it, and last activity observed.\nYou can customize the number of items displayed and which columns are displayed for each\nitem. The default behavior is to list 30 items per page. You can also filter the alerts by severity,\nstatus, or any other column in the display.\nThe impacted entities column refers to all the device and user entities referenced in the incident\nor alert.\nWhen an incident or alert is selected, a fly-out appears. You can manage the incident or alert\nand view more details such as incident/alert number and related devices. Multiple alerts can be\nselected at a time.\nTo see a full page view of an incident or alert, select its title.\n\nDevices: This section shows all the devices the user entity signed into in the prior 180\ndays, indicating the most and least used.\nLocations: This section shows all the observed locations for the user entity in the last 30\ndays.\nGroups: This section shows all observed on-premises groups for the user entity, as\nreported by Microsoft Defender for Identity.\nAccounts: This section shows all observed accounts for the identity entity, as reported by\nMicrosoft Defender for Identity.\nLateral movement paths: This section shows all profiled lateral movement paths from the\non-premises environment, as detected by Defender for Identity.\nThe Accounts tab displays all accounts linked to a specific identity across connected systems. It\nconsolidates manual and automatic correlations into a single table, giving you a centralized\nview of the identity’s footprint.\nThe table shows the following fields:\nLinkage type: Shows how the account was linked to the identity (manual, StrongIDs, API,\nor rule).\nDate of last linkage: Records the most recent date an account was linked to the identity.\nLinked by: Identifies who created the link (StrongIDs, user ID, or rule name).\nLinkage comment: Provides a short description that explains why the accounts were\nlinked. The comment is limited to 25 characters.\nPrimary account: Indicates whether the system designates this account as the primary\none for the identity.\nSelecting the Lateral movements tab lets you view a fully dynamic and clickable map where\nyou can see the lateral movement paths to and from a user. An attacker can use the path\ninformation to infiltrate your network.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 317,
+      "end": 319
+    },
+    "content_stats": {
+      "char_count": 2807,
+      "word_count": 459
+    },
+    "hierarchy": {
+      "parent": "User entity page in Microsoft Defender",
+      "children": []
+    }
+  }
+}

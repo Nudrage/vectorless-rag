@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2126",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n733/1226\nField\nDescription\nContextProcessId\nUPID of process originating this event.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of\nthe process that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that\nperformed thread injection in an InjectedThread event\nTargetThreadId\nThe primary thread associated with this service.\nThreadStartAddress\nThreadExecutionControlType\nValues:\nTHREAD_INJECT (0)\nTHREAD_INJECT_MASQUERADE (1)\nTHREAD_HIJACK (2)\nPROCESS_HOLLOWING (3)\nWINDOWS_HOOK (4)\nPROCESS_OVERWRITE_HOLLOWING (5)\nREMOTE_APC (6)\nREMOTE_ATOM_BOMB (7)\nPROCESS_HOLLOWING_APC (8)\nSET_WINDOW_LONG (9)\nSET_PROP (10)\nLOCAL_CLASSIFIED_MEMORY_OPERATION (11)\nREMOTE_CLASSIFIED_MEMORY_OPERATION (12)\nPatternId\nThe ID of the pattern\nMemoryDescriptionFlags\nHookId\nValues:\nWH_MSGFILTER (0xffffffff)\nWH_JOURNALRECORD (0)\nWH_JOURNALPLAYBACK (1)\nWH_KEYBOARD (2)\nWH_GETMESSAGE (3)\nWH_CALLWNDPROC (4)\nWH_CBT (5)\nWH_SYSMSGFILTER (6)\nWH_MOUSE (7)\nWH_HARDWARE (8)\nWH_DEBUG (9)\nWH_SHELL (10)\nWH_FOREGROUNDIDLE (11)\nWH_CALLWNDPROCRET (12)\nWH_KEYBOARD_LL (13)\nWH_MOUSE_LL (14)\nModuleName\nPayloadClassification\nValues:\nUNKNOWN (0)\nANTIVIRUS (1)\nGENERIC_MALWARE (2)\nRAT (3)\nPayloadClassificationFlags\nValues:\nNONE (0x0)\nKNOWN_BENIGN (0x1)\nSUSPICIOUS (0x2)\nKNOWN_MALICIOUS (0x4)\nENABLE_VISIBILITY (0x8)\nLARGE_VISIBILITY (0x10)\nEXPERIMENTAL (0x20)\nExecutableBytes\nTemplateInstanceId\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n734/1226\nField\nDescription\nTEMPLATE_DISPOSITION_ANALYSIS (3)\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\nWellKnownTargetFunction\nValues:\nUNKNOWN (0)\nLOAD_LIBRARY_A (1)\nLOAD_LIBRARY_W (2)\nGLOBAL_GET_ATOM_NAME_A (3)\nGLOBAL_GET_ATOM_NAME_W (4)\nRTL_DISPATCH_APC (5)\nWindowLongNewValue\nWindowLongIndex\nWindowHandle\nAtom\nData\nModifiedRegisters\nValues:\nINVALID (0)\nAX (0x00000001)\nCX (0x00000002)\nSP (0x00000004)\nIP (0x00000008)\nCONTEXT (0x80000000)\nCONTEXT_OR_IP (0x80000008)\nInjecteeImageFileName\nInjectorImageFileName\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 733,
+      "end": 735
+    },
+    "content_stats": {
+      "char_count": 2829,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "ProcessInjection",
+      "children": []
+    }
+  }
+}

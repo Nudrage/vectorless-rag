@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_511",
+  "section_number": "1.17.17",
+  "header": "Authorized Networks",
+  "content": "Section Name: authorized_networks\nCorresponds to: Authorized Networks\nenforce  (default): Requires 2FA or enrollment\nwhen applicable, unless another policy supersedes\nit.\n•\nbypass : Skips 2FA and enrollment, unless another\npolicy supersedes it.\n•\ndeny : Denies authentication to all users.\n•\nKey\nValue\nno_2fa_required\nNetworks the user can access with no 2FA required.\nKey\nValue\nip_list\nComma-separated list of\npublic IP addresses for\nwhich 2FA is not required.\nIP address lists can contain\nindividual IPs, IP ranges\nand IP ranges in CIDR\nnotation. Example:\n[\"192.0.2.8\",\n\"198.51.100.0-\n198.51.100.20\",\n\"203.0.113.0/24\"]\nrequire_enrollment\nIs true  (default) if users\nlogging in from these IP\naddresses must enroll in\nDuo. Otherwise false .\nAt least one value must be\nin the ip_list  to change\nthis value.\nmfa_required\nNetworks the user can access that require MFA. Available\nin the Premier and Advantage editions.\nKey\nValue\nip_list\nComma-separated list of public IP\naddresses for which MFA is required. IP\naddress lists can contain individual IPs,\nIP ranges and IP ranges in CIDR\nnotation. Example: [\"192.0.2.8\",\n\"198.51.100.0-198.51.100.20\",\n\"203.0.113.0/24\"]\ndeny_other_access\nIs true  if users must log in from IP addresses listed in\none of the ip_list keys above. Otherwise false  (default).\nAt least one IP address must be in either of the ip_list\nkeys above to change this value. Available in the Premier\nand Advantage editions.\nblocked\nNetworks from which users will be blocked. Available in\nthe Premier and Advantage editions.\nKey\nValue\nip_list\nComma-separated list of public IP\naddresses for which access is blocked.\nIP address lists can contain individual\nIPs, IP ranges and IP ranges in CIDR\nnotation. Example: [\"192.0.2.8\",\n\"198.51.100.0-198.51.100.20\",\n\"203.0.113.0/24\"]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 212,
+      "end": 214
+    },
+    "content_stats": {
+      "char_count": 1784,
+      "word_count": 264
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

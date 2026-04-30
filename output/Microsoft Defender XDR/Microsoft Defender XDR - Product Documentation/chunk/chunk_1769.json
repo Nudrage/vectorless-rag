@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1769",
+  "section_number": "155.1.1.243.1",
+  "header": "Error codes",
+  "content": "ﾉ\nExpand table\nError code\nHTTP status code\nMessage\nInvalidUrl\nBadRequest (400)\nURL <the invalid URL> is invalid.\nMaximumBatchSizeExceeded\nBadRequest (400)\nMaximum batch size exceeded. Received: <batch\nsize received>, allowed: {batch size allowed}.\nMissingRequiredParameter\nBadRequest (400)\nParameter <the missing parameter> is missing.\nOsPlatformNotSupported\nBadRequest (400)\nOS Platform <the client OS Platform> isn't\nsupported for this action.\nClientVersionNotSupported\nBadRequest (400)\n<The requested action> is supported on client\nversion <supported client version> and later.\nUnauthorized\nUnauthorized (401)\nUnauthorized\nThis error is usually caused by an invalid or expired\nauthorization header.\nForbidden\nForbidden (403)\nForbidden\nThis error can occur with a valid token but\ninsufficient permission for the action.\nDisabledFeature\nForbidden (403)\nTenant feature isn't enabled.\nDisallowedOperation\nForbidden (403)\n<the disallowed operation and the reason>.\nNotFound\nNot Found (404)\nGeneral Not Found error message.\nResourceNotFound\nNot Found (404)\nResource <the requested resource> wasn't found.\nInternalServerError\nInternal Server\nError (500)\nIf there's no error message, retry the operation.\nContact Microsoft if it doesn't get resolved.\nJSON\nJSON",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1339,
+      "end": 1340
+    },
+    "content_stats": {
+      "char_count": 1255,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "Common Microsoft Defender XDR REST API error codes",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "1.1.3",
+  "header": "View logs",
+  "content": "You can view logs in the Google Cloud console.\nIn the Google Cloud console, go to the Logs Explorer page.\nGo to Logs Explorer (https://console.cloud.google.com/logs/viewer?resource=dns_query)\nView record format fields\nEvery log entry has the following fields, if applicable. Some of the fields are also shared with\nmonitoring metrics.\nField\nField type\nDescription\nUsed in\nmetrics\nalias_query_\nresponse_code\nString\nThe response code returned from the query to resolve\nthe ALIAS record's canonical name\nYes\nauthAnswer\nBoolean / DNS\nAuthoritative answer, IANA DNS Parameters: DNS\nHeader Flags\n(https://www.iana.org/assignments/dns-\nparameters/dns-parameters.xhtml#dns-parameters-12)\nNo\ngcloud\n(#gcloud)\ngcloud dns managed-zones update\n--log-dns-queries \\\nZONE_NAME edit\ngcloud\n(#gcloud)\ngcloud dns managed-zones update\n--no-log-dns-queries \\\nZONE_NAME edit\nConsole\n(#console)\nField\nField type\nDescription\nUsed in\nmetrics\ndestinationIP\nString / Target\nTarget IP address, only applicable for forwarding cases No\negressError\nString\nEgress proxy error, the actual error reported by the\negress proxy as received from the on-premises DNS\nserver\nThis field can be used to differentiate an actual\nSERVFAIL returned by the on-premises DNS versus a\nnetwork error encountered by the egress proxy\nNo\nhealthyIps\nString\nSet of IP addresses in the ResourceRecordSet that are\nknown to be HEALTHY to Cloud DNS at the time of the\nquery\nNo\nlocation\nString\nGoogle Cloud region, for example us-east1, from\nwhich the response was served\nYes\nproject_id\nString\nGoogle Cloud project ID of the network from which the\nquery was received\nYes\nprotocol\nString / DNS\nTCP | UDP\nNo\nqueryName\nString / DNS\nDNS query name, RFC 1035 4.1.2\n(https://datatracker.ietf.org/doc/html/rfc1035#section-\n4.1.2)\nNo\nqueryType\nString / DNS\nDNS query type, IANA DNS Parameters: Resource\nRecord (RR) TYPEs\n(https://www.iana.org/assignments/dns-\nparameters/dns-parameters.xhtml#dns-parameters-4)\nNo\nresponseCode\nNumber / DNS\nResponse code, IANA DNS Parameters: DNS RCODEs\n(https://www.iana.org/assignments/dns-\nparameters/dns-parameters.xhtml#dns-parameters-6)\nNo\nrdata\nString / DNS\nDNS answer in presentation format, IANA DNS\nParameters: Resource Record (RR) TYPEs\n(https://www.iana.org/assignments/dns-\nparameters/dns-parameters.xhtml#dns-parameters-4)\n, truncated to 260 bytes\nNo\nsourceIP\nString / Source\nIP originating the query\nNo\nsourceNetwork\nString / Source\nNetwork from which the query reached our system\nNo\nsource_type\nString\nSource of the query: inbound-forwarding, gce-vm,\ninternet, peering-zone, fqdn-forwarding-\ntarget\nNo\ntarget_name\nString\nThe target name, for example zone name, policy name,\ninternal zone name, external domain name\nYes\ntarget_type\nString\nType of target resolving the DNS query: private-\nzone, forwarding-zone, forwarding-policy,\npeering-zone, internal, external, response-\npolicy, service-directory-zone, reverse-\nlookup-zone, zonal-private-zone\nYes\nField\nField type\nDescription\nUsed in\nmetrics\nunHealthyIps\nString\nSet of IP addresses in the ResourceRecordSet known to\nbe UNHEALTHY to Cloud DNS at the time of the query\nNo\nvmInstanceId\nNumber / Source\nCompute Engine VM instance ID, only applicable to\nqueries initiated by Compute Engine VMs\nNo\nvmInstanceName\nString / Source\nCompute Engine VM instance name, only applicable to\nqueries initiated by Compute Engine VMs\nNo\nvmProjectId\nString / Source\nGoogle Cloud project ID of the network from which the\nquery was sent, only applicable to queries initiated by\nCompute Engine VMs\nNo\nvmZoneName\nString / Source\nName of the VM zone from which the query was sent,\nonly applicable to queries initiated by Compute Engine\nVMs\nNo",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 3,
+      "end": 5
+    },
+    "content_stats": {
+      "char_count": 3650,
+      "word_count": 503
+    },
+    "hierarchy": {
+      "parent": "Use Cloud DNS logging",
+      "children": []
+    }
+  }
+}

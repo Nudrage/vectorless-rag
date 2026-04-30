@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1986",
+  "section_number": "155.1.1.261",
+  "header": "Alert classification for suspicious IP addresses related to password spray attacks",
+  "content": "addresses related to password spray\nattacks\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThreat actors use password guessing techniques to gain access to user accounts. In a password\nspray attack, the threat actor might resort to a few of the most used passwords against many\ndifferent accounts. Attackers successfully compromise accounts using password spraying since\nmany users still utilize default and weak passwords.\nThis playbook helps you investigate instances where IP addresses have been labeled risky or\nassociated with a password spray attack, or suspicious unexplained activities were detected,\nsuch as a user signing in from an unfamiliar location or a user getting unexpected multi-factor\nauthentication (MFA) prompts. This guide is for security teams like the security operations\ncenter (SOC) and IT administrators who review, handle/manage, and classify the alerts. This\nguide helps in quickly classifying the alerts as either true positive (TP) or false positive (FP) and,\nin the case of TP, take recommended actions to remediate the attack and mitigate the security\nrisks.\nThe intended results of using this guide are:\nYou've identified the alerts associated with password-spray IP addresses as malicious (TP)\nor false positive (FP) activities.\nYou've taken the necessary action if IP addresses have been performing password spray\nattacks.\nThis section contains step-by-step guidance to respond to the alert and take the\nrecommended actions to protect your organization from further attacks.\nHere's an example of a password spray alert in the alert queue:\nThis means there's suspicious user activity originating from an IP address that might be\nassociated with a brute-force or password spray attempt according to threat intelligence\nsources.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1472,
+      "end": 1472
+    },
+    "content_stats": {
+      "char_count": 1773,
+      "word_count": 267
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Investigate the alert",
+        "Advanced hunting queries",
+        "Recommended Actions",
+        "See also"
+      ]
+    }
+  }
+}

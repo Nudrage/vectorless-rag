@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_513",
+  "section_number": "2.8.10.2.6",
+  "header": "Service-linked role for VPC access",
+  "content": "A service-linked role is a unique type of IAM role that delegates permissions to a service so that it\ncan create and manage resources on your behalf. OpenSearch Service requires a service-linked role\nto access your VPC, create the domain endpoint, and place network interfaces in a subnet of your\nVPC.\nOpenSearch Service automatically creates the role when you use the OpenSearch Service\nconsole to create a domain within a VPC. For this automatic creation to succeed, you must have\npermissions for the iam:CreateServiceLinkedRole action. To learn more, see Service-linked\nrole permissions in the IAM User Guide.\nAfter OpenSearch Service creates the role, you can view it\n(AWSServiceRoleForAmazonOpenSearchService) using the IAM console.\nFor full information on this role's permissions and how to delete it, see the section called “Using\nservice-linked roles”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 709,
+      "end": 709
+    },
+    "content_stats": {
+      "char_count": 860,
+      "word_count": 131
+    },
+    "hierarchy": {
+      "parent": "Architecture",
+      "children": []
+    }
+  }
+}

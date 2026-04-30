@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_282",
+  "section_number": "2.7.3.2.2",
+  "header": "Filtered search",
+  "content": "You can use ﬁlters to reﬁne your semantic search results. To create an index and perform a ﬁltered\nsearch on your documents, substitute Upload and search data in the previous tutorial with the\nfollowing instructions. The other steps remain the same. For more information about ﬁlters, see k-\nNN search with ﬁlters.\nTo index and search data in the movies collection\n1.\nTo create a single index for your collection, send the following request in the Dev Tools\nconsole:\nPUT housing-index-filtered\n{\n\"settings\": {\n\"index.knn\": true\n},\n\"mappings\": {\n\"properties\": {\n\"housing-vector\": {\n\"type\": \"knn_vector\",\n\"dimension\": 3,\n\"method\": {\n\"engine\": \"faiss\",\n\"name\": \"hnsw\"\n}\n},\n\"title\": {\n\"type\": \"text\"\n},\nWorking with vector search collections\n409\nAmazon OpenSearch Service\nDeveloper Guide\n\"price\": {\n\"type\": \"long\"\n},\n\"location\": {\n\"type\": \"geo_point\"\n}\n}\n}\n}\n2.\nTo index a single document into housing-index-ﬁltered, send the following request:\nPOST housing-index-filtered/_doc\n{\n\"housing-vector\": [\n10,\n20,\n30\n],\n\"title\": \"2 bedroom in downtown Seattle\",\n\"price\": \"2800\",\n\"location\": \"47.71, 122.00\"\n}\n3.\nTo search your data for an apartment in Seattle under a given price and within a given distance\nof a geographical point, send the following request:\nGET housing-index-filtered/_search\n{\n\"size\": 5,\n\"query\": {\n\"knn\": {\n\"housing-vector\": {\n\"vector\": [\n0.1,\n0.2,\n0.3\n],\n\"k\": 5,\n\"filter\": {\n\"bool\": {\n\"must\": [\n{\nWorking with vector search collections\n410\nAmazon OpenSearch Service\nDeveloper Guide\n\"query_string\": {\n\"query\": \"Find me 2 bedroom apartment in Seattle under $3000 \",\n\"fields\": [\n\"title\"\n]\n}\n},\n{\n\"range\": {\n\"price\": {\n\"lte\": 3000\n}\n}\n},\n{\n\"geo_distance\": {\n\"distance\": \"100miles\",\n\"location\": {\n\"lat\": 48,\n\"lon\": 121\n}\n}\n}\n]\n}\n}\n}\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 438,
+      "end": 440
+    },
+    "content_stats": {
+      "char_count": 1746,
+      "word_count": 281
+    },
+    "hierarchy": {
+      "parent": "Working with vector search collections",
+      "children": []
+    }
+  }
+}

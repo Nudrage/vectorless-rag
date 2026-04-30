@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "1.3.1",
+  "header": "Egress deny example",
+  "content": "In this example:\nTraffic between VM instances in the example-net VPC network in the example-proj\nproject is considered.\nThe two VM instances are:\nVM1 in zone us-west1-a with IP address 10.10.0.99 in the west-subnet (us-\nwest1 region).\nVM2 in zone us-east1-b with IP address 10.20.0.99 in the east-subnet (us-\neast1 region).\nRule A: An egress deny firewall rule has a target of all instances in the network, a\ndestination of 10.20.0.99 (VM2), and applies to TCP port 80.\nLogging is enabled for this rule.\nRule B: An ingress allow firewall rule has a target of all instances in the network, a source\nof 10.10.0.99 (VM1), and applies to TCP port 80.\nLogging is also enabled for this rule.\nThe following gcloud commands can be used to create the firewall rules:\nRule A: egress deny rule for TCP port 80, applicable to all instances, destination\n10.20.0.99:\nRule B: ingress allow rule for TCP port 80, applicable to all instances, source 10.10.0.99:\ngcloud compute firewall-rules create rule-a \\\n--network example-net \\\n--action deny \\\n--direction EGRESS \\\n--rules tcp:80 \\\n--destination-ranges 10.20.0.99/32 \\\n--priority 10 \\\n--enable-logging\ngcloud compute firewall-rules create rule-b \\\n--network example-net \\\n--action allow \\\n--direction INGRESS \\\n--rules tcp:80 \\\n--source-ranges 10.10.0.99/32 \\\n--priority 10 \\\n--enable-logging\n(/static/firewall/images/firewall-rules-logs/firewall-rules-logging-1.svg)\nVM1 to VM2 connection (click to enlarge).\nSuppose VM1 attempts to connect to VM2 on TCP port 80. The following firewall rules are\nlogged:\nA log entry for rule A from the perspective of VM1 is generated while VM1 attempts to\nconnect to 10.20.0.99 (VM2).\nBecause rule A actually blocks the traffic, rule B isn't considered, so there is no log entry\nfor rule B from the perspective of VM2.\nThe following firewall log record is reported.\nField\nValues\nconnection\nsrc_ip=10.10.0.99\nsrc_port=[EPHEMERAL_PORT]\ndest_ip=10.20.0.99\ndest_port=80\nprotocol=6\ndisposition\nDENIED\nrule_details\nreference = \"network:example-net/firewall:rule-a\"\npriority = 10\naction = DENY\ndestination_range = 10.20.0.99/32\nip_port_info = tcp:80\ndirection = egress\ninstance\nproject_id=\"example-proj\"\ninstance_name=VM1\nField\nValues\nregion=us-west1\nzone=us-west1-a\nvpc\nproject_id=\"example-proj\"\nvpc_name=example-net\nsubnetwork_name=west-subnet\nremote_instance\nproject_id=\"example-proj\"\ninstance_name=VM2\nregion=us-east1\nzone=us-east1-b\nremote_vpc\nproject_id=\"example-proj\"\nvpc_name=example-net\nsubnetwork_name=east-subnet\nremote_location\nNo information. This field is only used if the destination is outside your VPC\nnetwork.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 2,
+      "end": 5
+    },
+    "content_stats": {
+      "char_count": 2593,
+      "word_count": 353
+    },
+    "hierarchy": {
+      "parent": "Logging examples",
+      "children": []
+    }
+  }
+}

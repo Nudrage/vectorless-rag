@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_230",
+  "section_number": "2.6.21.1",
+  "header": "Monitoring pipeline logs",
+  "content": "You can enable logging for Amazon OpenSearch Ingestion pipelines to expose error and warning\nmessages raised during pipeline operations and ingestion activity. OpenSearch Ingestion publishes\nall logs to Amazon CloudWatch Logs. CloudWatch Logs can monitor information in the log ﬁles and\nnotify you when certain thresholds are met. You can also archive your log data in highly durable\nstorage. For more information, see the Amazon CloudWatch Logs User Guide.\nWorking with tags (AWS CLI)\n329\nAmazon OpenSearch Service\nDeveloper Guide\nLogs from OpenSearch Ingestion might indicate failed processing of requests, authentication errors\nfrom the source to the sink, and other warnings that can be helpful for troubleshooting. For its\nlogs, OpenSearch Ingestion uses the log levels of INFO, WARN, ERROR, and FATAL. We recommend\nenabling log publishing for all pipelines.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 358,
+      "end": 359
+    },
+    "content_stats": {
+      "char_count": 863,
+      "word_count": 130
+    },
+    "hierarchy": {
+      "parent": "Logging and monitoring Amazon OpenSearch Ingestion with Amazon CloudWatch",
+      "children": [
+        "Permissions required",
+        "Enabling log publishing"
+      ]
+    }
+  }
+}

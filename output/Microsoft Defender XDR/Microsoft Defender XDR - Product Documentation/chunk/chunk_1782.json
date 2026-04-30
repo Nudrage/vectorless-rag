@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1782",
+  "section_number": "155.1.1.245.1",
+  "header": "The schema of the events in Azure Event Hub",
+  "content": "{\n\"records\": [\n{\nEach Event Hubs message in Azure Event Hubs contains list of records.\nEach record contains the event name, the time Microsoft Defender XDR received\nthe event, the tenant it belongs (you'll only get events from your tenant), and the\nevent in JSON format in a property called \"properties\".\nFor more information about the schema of Microsoft Defender XDR events, see\nAdvanced Hunting overview.\nIn Advanced Hunting, the DeviceInfo table has a column named MachineGroup\nwhich contains the group of the device. Here every event will be decorated with\nthis column as well.\nTo get the data types for event properties, do the following steps:\n1. Log on to Microsoft Defender XDR\nand go to Advanced Hunting page\n.\n2. Run the following query to get the data types mapping for each event:\nKusto\nHere's an example for Device Info event:\n\"time\": \"<The time Microsoft Defender XDR received the\nevent>\"\n\"tenantId\": \"<The Id of the tenant that the event belongs\nto>\"\n\"category\": \"<The Advanced Hunting table name with\n'AdvancedHunting-' prefix>\"\n\"properties\": { <Microsoft Defender XDR Advanced Hunting\nevent as Json> }\n}\n...\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1345,
+      "end": 1346
+    },
+    "content_stats": {
+      "char_count": 1129,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub",
+      "children": []
+    }
+  }
+}

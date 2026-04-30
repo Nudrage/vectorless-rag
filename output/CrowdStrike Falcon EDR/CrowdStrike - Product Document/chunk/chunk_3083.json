@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3083",
+  "section_number": "1.6.3.5",
+  "header": "Update",
+  "content": "This event indicates a change to the state of an app within the CrowdStrike Store. This event can apply to both CrowdStrike apps and partner apps. The UserID\nfield shows which organization updated the app status.\n{\n\"UserId\": \"Example Partner Inc.\",\n\"UserIp\": \"192.0.2.100\",\n\"OperationName\": \"update\",\n\"ServiceName\": \"cs_store\",\n\"AuditKeyValues\": [{\n\"Key\": \"owner_name\",\n\"ValueString\": \"Example Partner Inc.\"\n}, {\n\"Key\": \"app_name\",\n\"ValueString\": \"Example App Name\"\n},{\n\"Key\": \"state\",\n\"ValueString\": \"in_trial\"\n}],\n\"UTCTimestamp\": 1549374908,\n\"cid\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"EventType\": \"Event_ExternalApiEvent\",\n\"ExternalApiType\": \"Event_UserActivityAuditEvent\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1133,
+      "end": 1133
+    },
+    "content_stats": {
+      "char_count": 677,
+      "word_count": 78
+    },
+    "hierarchy": {
+      "parent": "CrowdStrike Store",
+      "children": []
+    }
+  }
+}

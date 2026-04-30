@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_946",
+  "section_number": "155.1.1.263.2.3.2",
+  "header": "Suspicious HTTP request to nonstandard port",
+  "content": "Identify agents that use HTTP actions on ports other than 443 or 80.\nRecommendations:\nConfirm with the agent owner whether it's necessary and inquire about the specific\nbusiness use case.\nKusto\nIdentify agents that use HTTP actions to an endpoint with an available Power Platform\nconnector.\nRecommendations:\nVerify with the agent owner if it's necessary and ask about the business use case. Consider\nusing a connector instead.\nKusto\nAIAgentsInfo\n// Find agents with topic that contains Http request action to non 443 port\n| summarize arg_max(Timestamp, *) by AIAgentId\n| where AgentStatus != \"Deleted\"\n| mvexpand Topic = AgentTopicsDetails\n| where Topic has \"HttpRequestAction\"\n| extend TopicActions = Topic.beginDialog.actions\n| mvexpand action = TopicActions\n| where action['$kind'] == \"HttpRequestAction\"\n| extend Url = tostring(action.url.literalValue)\n| extend ParsedUrl = parse_url(Url)\n| extend Port = tostring(ParsedUrl[\"Port\"])\n| where isnotempty(Port) and Port != 443\n| project-reorder AgentCreationTime ,AIAgentId, AIAgentName, ParsedUrl ,Url, Port,\nAgentStatus, CreatorAccountUpn, OwnerAccountUpns, Topic",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 637,
+      "end": 638
+    },
+    "content_stats": {
+      "char_count": 1116,
+      "word_count": 153
+    },
+    "hierarchy": {
+      "parent": "Sample queries",
+      "children": []
+    }
+  }
+}

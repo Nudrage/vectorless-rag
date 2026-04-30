@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_844",
+  "section_number": "2.12.7.2",
+  "header": "Using a JWT to send a test request",
+  "content": "After creating a new JWT with a speciﬁed a subject and role pair, you can send a test request. To do\nthis, use the private key to sign your request through the tool that created the JWT. OpenSearch\nService is able to validate the incoming request by verifying this signature.\nNote\nIf you speciﬁed a custom subject key or roles key for your JWT, you must use the correct\nclaims names for your JWT.\nThe following is an example of how to use a JWT token to access OpenSearch Service through your\ndomain's search endpoint:\ncurl -XGET \"$search_endpoint\" -H \"Authorization: Bearer <JWT>\"\nConﬁguring JWT authentication and authorization (AWS CLI)\nThe following AWS CLI command enables JWT authentication and authorization for OpenSearch\nprovided that the domain exists:\naws opensearch update-domain-config --domain-name <your_domain_name> --advanced-\nsecurity-options '{\"JWTOptions\":{\"Enabled\":true, \"PublicKey\": \"<your_public_key>\",\n\"SubjectKey\": \"<your_subject_key>\", \"RolesKey\": \"<your_roles_key>\"}}'\nConﬁguring JWT authentication and authorization (conﬁguration via API)\nThe following request to the conﬁguration API enables JWT authentication and authorization for\nOpenSearch on an existing domain:\nPOST https://es.us-east-1.amazonaws.com/2021-01-01/opensearch/domain/my-domain/config\n{\n\"AdvancedSecurityOptions\": {\n\"JWTOptions\": {\n\"Enabled\": true,\n\"PublicKey\": \"public-key\",\n\"RolesKey\": \"optional-roles-key\",\n\"SubjectKey\": \"optional-subject-key\"\nUsing a JWT to send a test request\n1370\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}\n}\nGenerating a key pair\nIn order to conﬁgure JWTs for your OpenSearch domain, you will need to provide a public key\nin Privacy-Enhanced Mail (PEM) format. Amazon OpenSearch Service currently supports two\nasymetric encryption algorithms when using JWTs: RSA and ECDSA.\nTo create an RSA key pair using the common openssl library, follow these steps:\n1. openssl genrsa -out privatekey.pem 2048\n2. openssl rsa -in privatekey.pem -pubout -out publickey.pem\nIn this example, the publickey.pem ﬁle contains the public key for use with Amazon OpenSearch\nService, while privatekey.pem contains the private for signing the JWTs sent to the service.\nAdditionally, you have the option to convert the private key into the commonly used pkcs8 format\nif you need that to generate your JWTs.\nIf you use the upload button to add a PEM ﬁle directly to the console, the ﬁle must have a .pem\nextension, other ﬁle extensions such as .crt,.cert, or .key are not supported at this time.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1399,
+      "end": 1400
+    },
+    "content_stats": {
+      "char_count": 2494,
+      "word_count": 356
+    },
+    "hierarchy": {
+      "parent": "JWT authentication and authorization for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

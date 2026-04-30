@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1316",
+  "section_number": "155.1.1.183",
+  "header": "Understanding and managing Defender Experts for XDR incident updates",
+  "content": "Experts for XDR incident updates\nArticle • 10/30/2024\nApplies to:\nMicrosoft Defender XDR\nThe following section lists down questions your SOC team might have regarding the\nreceipt of incident notifications.\nQuestions\nAnswers\nHow do I know whether a\nDefender Experts analyst\nhas started working on an\nincident?\nWhen a Defender Experts analyst starts working on an incident, the\nincident's Assigned to field is updated to Defender Experts.\nHow do I know whether a\nDefender Experts analyst\nhas resolved an incident?\nWhen a Defender Experts analyst has resolved an incident, the\nincident's Status field is updated to Resolved.\nHow do I know what\nconclusion led a Defender\nExperts analyst to resolve\nan incident?\nWhen Defender Experts analysts resolve an incident, they modify\nthe incident's Classification and Determination fields and provide a\nconcise summary in its Comments section.\nIf an incident is classified as a True Positive, a comprehensive\nInvestigation summary appears in the Managed response flyout\npanel in your Microsoft Defender portal.\nHow do I know what\nactions a Defender\nExperts analyst took in my\ntenant when investigating\nan incident?\nFor each incident they investigate, the Defender Experts analyst\nsummarizes any actions they performed within your tenant in the\nincident's Investigation summary located in the Managed response\nflyout panel in your Microsoft Defender portal.\nYou can also retrieve information about these actions, and the times\nthey signed into your tenant, by searching your audit logs either on\nthe Microsoft Purview compliance portal or through the Office 365\nManagement Activity API.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 991,
+      "end": 991
+    },
+    "content_stats": {
+      "char_count": 1622,
+      "word_count": 249
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "In Microsoft Defender portal and Graph Security API",
+        "In Microsoft Sentinel",
+        "In third-party SIEM, SOAR, or ITSM apps",
+        "In other communication services"
+      ]
+    }
+  }
+}

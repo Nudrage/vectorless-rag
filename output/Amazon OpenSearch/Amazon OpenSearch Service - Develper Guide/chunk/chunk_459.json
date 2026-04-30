@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_459",
+  "section_number": "2.16.6.1.1",
+  "header": "Requirements and considerations",
+  "content": "Before implementing automatic semantic enrichment, consider the following requirements and\nlimitations:\nVersion requirements\nAutomatic semantic enrichment is available for Amazon OpenSearch Service version 2.19 and\nlater. For existing domains running Amazon OpenSearch Service version 2.19 or 3.1, you must\nupdate to the latest patch version to use this feature.\nPublic domains only\nAutomatic Semantic Enrichment is available only for public domains. You can't use it with VPC\ndomains.\nProcessing overhead\nThe enrichment process adds minimal processing time during data ingestion as the system\ngenerates semantic embeddings for designated ﬁelds.\nHow it works\n623\nAmazon OpenSearch Service\nDeveloper Guide\nStorage implications\nEnriched data requires additional storage space for the semantic embeddings generated\nalongside your original data.\nLanguage support\nAutomatic semantic enrichment for managed domains oﬀers the following language options:\nEnglish-only option\n• Ideal for applications primarily dealing with English text\nMulti-lingual option\n• Supports the following languages: Arabic, Bengali, Chinese, English, Finnish, French, Hindi,\nIndonesian, Japanese, Korean, Persian, Russian, Spanish, Swahili, and Telugu\n• Perfect for diverse, international content or multilingual applications\nPricing\nWith Automatic Semantic Enrichment, you pay only for the resources your workload consumes. The\ncompute capacity is measured in OpenSearch Compute Units (OCUs). Check the pricing details for\nyour speciﬁc Region and pricing illustration on the https://aws.amazon.com/opensearch-service/\npricing/OpenSearch Service pricing page.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 652,
+      "end": 653
+    },
+    "content_stats": {
+      "char_count": 1628,
+      "word_count": 213
+    },
+    "hierarchy": {
+      "parent": "How it works",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_070",
+  "section_number": "2.14.5.1",
+  "header": "Conﬁguration",
+  "content": "To conﬁgure a dead-letter queue for a sub-pipeline, choose Enable S3 DLQ when you conﬁgure\nyour sink destination. Then, specify the required settings for the queue. For more information, see\nConﬁguration in the Data Prepper DLQ documentation.\nFiles written to this S3 DLQ have the following naming pattern:\ndlq-v${version}-${pipelineName}-${pluginId}-${timestampIso8601}-${uniqueId}\nFor instructions to manually conﬁgure the pipeline role to allow access to the S3 bucket that the\nDLQ writess to, see the section called “Permissions to write to Amazon S3 or a dead-letter queue”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 93,
+      "end": 93
+    },
+    "content_stats": {
+      "char_count": 579,
+      "word_count": 83
+    },
+    "hierarchy": {
+      "parent": "Dead-letter queues",
+      "children": []
+    }
+  }
+}

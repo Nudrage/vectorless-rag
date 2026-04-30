@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1253",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Remote reindex has the following requirements:\n• The remote domain must be accessible from the local domain. For a remote domain that resides\nwithin a VPC, the local domain must have access to the VPC. This process varies by network\nconﬁguration, but likely involves connecting to a VPN or managed network, or using the native\nVPC endpoint connection. To learn more, see the section called “VPC support”.\n• The request must be authorized by the remote domain like any other REST request. If the remote\ndomain has ﬁne-grained access control enabled, you must have permission to perform reindex\non the remote domain and read the index on the local domain. For more security considerations,\nsee the section called “Fine-grained access control”.\n• We recommend you create an index with the desired setting on your local domain before you\nstart the reindex process.\nPrerequisites\n1748\nAmazon OpenSearch Service\nDeveloper Guide\n• If your domain uses a T2 or T3 instance type for your data nodes, you can't use remote reindex.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1777,
+      "end": 1778
+    },
+    "content_stats": {
+      "char_count": 1019,
+      "word_count": 169
+    },
+    "hierarchy": {
+      "parent": "Migrating Amazon OpenSearch Service indexes using remote reindex",
+      "children": []
+    }
+  }
+}

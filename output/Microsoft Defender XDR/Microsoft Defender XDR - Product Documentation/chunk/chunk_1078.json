@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1078",
+  "section_number": "155.1.1.152.1",
+  "header": "Schema",
+  "content": "ﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nServicePrincipalId\nstring\nThe unique identifier for the service principal instance of the\napplication in the tenant\nAppName\nstring\nThe application's display name as exposed by the associated service\nprincipal\nAddedOnTime\ndatetime\nDate and time when the application was registered\nLastModifiedTime\ndatetime\nTimestamp when the app was last modified\nAppStatus\nstring\nStatus of the app; can be: Enabled, DisabledByMicrosoft,\nDisabledByAppGovernancePolicy, DisabledByUser, Deleted\n(information for apps with Deleted status is only available for 30 days\nsince the app was deleted)\nVerifiedPublisher\ndynamic\nSpecifies details about the verified publisher of the application which\nthis service principal represents. It includes information such as:\nDisplayName, VerifiedPublisherId, AddedDateTime\nPrivilegeLevel\nstring\nThe privilege level of the app based on the highest classified\npermission granted to the app\nPermissions\ndynamic\nContains an array of permission objects; each permission object\nincludes PermissionName, TargetAppId, TargetAppDisplayName,\nPermissionType, PrivilegeLevel, UsageStatus\nConsentedUsersCount\ninteger\nCount of users who have consented to the app; this information is\nonly available when the app isn't admin consented\nIsAdminConsented\nboolean\nValue is True if a user has provided admin consent to the app on\nbehalf of all the users in the org, otherwise the value is False\nAppOrigin\nstring\nSpecifies whether the app is internal to the organization or registered\nin an external tenant\nLastUsedTime\ndatetime\nDate and time when the app last signed in. Tracking of this data goes\nback to June, 2022\nAppOwnerTenantId\nstring\nSpecifies the ID of the tenant where the app was registered\nThe OAuthAppInfo  table updates information on an hourly basis to record any changes in\nmetadata or insights for OAuth apps based on data from Defender for Cloud Apps app\ngovernance.\nAdditionally, to ensure that OAuthAppInfo  table retains data for the covered apps, a complete\nsnapshot of all OAuth apps is sent twice a month.\nProactively hunt for threats\nLearn the query language\nUnderstand the schema\nApply query best practices\nLast updated on 12/03/2025",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 816,
+      "end": 818
+    },
+    "content_stats": {
+      "char_count": 2203,
+      "word_count": 320
+    },
+    "hierarchy": {
+      "parent": "OAuthAppInfo (Preview)",
+      "children": []
+    }
+  }
+}

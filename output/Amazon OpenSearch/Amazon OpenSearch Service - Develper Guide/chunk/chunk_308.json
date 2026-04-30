@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_308",
+  "section_number": "2.7.4.1.4",
+  "header": "Monitoring collection group capacity",
+  "content": "OpenSearch Serverless emits the following Amazon CloudWatch Logs metrics at one-minute\nintervals to help you monitor OCU utilization and capacity limits at the collection group level:\n• IndexingOCU – The number of indexing OCUs currently in use by the collection group.\n• SearchOCU – The number of search OCUs currently in use by the collection group.\nOpenSearch Serverless also emits OCU metrics at the account level for collections not associated\nwith any collection group. You can aggregate these metrics in CloudWatch to visualize the sum of\nOCUs across all collection groups and account-level collections.\nConﬁgure alarms to notify you when your collection group approaches its capacity limits so you\ncan adjust settings as needed. For more information about OpenSearch Serverless metrics, see the\nsection called “Monitoring OpenSearch Serverless”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 473,
+      "end": 473
+    },
+    "content_stats": {
+      "char_count": 853,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Collection group capacity limits",
+      "children": []
+    }
+  }
+}

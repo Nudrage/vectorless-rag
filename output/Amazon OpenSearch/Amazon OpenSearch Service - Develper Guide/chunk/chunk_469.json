@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_469",
+  "section_number": "2.8.5.4",
+  "header": "Tracking a conﬁguration change",
+  "content": "You can request one conﬁguration change at a time, or group multiple changes in a single request.\nUse the Domain processing status and Conﬁguration change status ﬁelds in the console to\ntrack conﬁguration changes. Wait for the domain status to become Active before you request\nadditional changes.\nA domain can have the following processing statuses:\n• Active – No conﬁguration change is in progress. You can submit a new conﬁguration change\nrequest.\n• Creating – Domain is being created.\n• Modifying – Conﬁguration changes, such as the addition of new data nodes, EBS, gp3, IOPS\nprovisioning, or setting up KMS keys, are in progress.\n• Upgrading engine version – An engine version upgrade is in progress.\n• Updating service software – A service software update is in progress.\n• Deleting – The domain is being deleted.\n• Isolated – The domain is suspended.\nA domain can have the following conﬁguration change statuses:\n• Pending – A conﬁguration change request has been submitted.\n• Initializing – The service is initializing a conﬁguration change.\n• Validating – The service is validating the requested changes and resources required.\n• Awaiting user inputs – The service expects conﬁguration changes, such as an instance type\nchange, to proceed. You can edit the conﬁguration changes.\n• Applying changes – Service is applying the requested conﬁguration changes.\n• Cancelled – The conﬁguration change is cancelled. Choose Cancel roll back all changes.\n• Completed – The requested conﬁguration changes have been successfully completed.\n• Validation failed – The requested conﬁguration changes failed to complete. No\nconﬁguration changes were applied.\nTracking a conﬁguration change\n635\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nValidation failures can be the result of red indexes present in your domain, unavailability\nof a chosen instance type, or low disk space. For a list of validation errors, see the section\ncalled “Troubleshooting validation errors”. During a validation failure event, you can\ncancel, retry, or edit conﬁguration changes.\nWhen the conﬁguration changes are complete, the domain status changes back to Active.\nYou can review the cluster health and Amazon CloudWatch metrics and see that the number of\nnodes in the cluster temporarily increases—often doubling—while the domain update occurs.\nIn the following illustration, you can see the number of nodes doubling from 11 to 22 during a\nconﬁguration change and returning to 11 when the update is complete.\nThis temporary increase can strain the cluster's dedicated master nodes, which suddenly\nmight have many more nodes to manage. It can also increase search and indexing latencies as\nOpenSearch Service copies data from the old cluster to the new one. It's important to maintain\nsuﬃcient capacity on the cluster to handle the overhead that is associated with these blue/green\ndeployments.\nImportant\nYou do not incur any additional charges during conﬁguration changes and service\nmaintenance. You're billed only for the number of nodes that you request for your cluster.\nFor speciﬁcs, see the section called “Charges for conﬁguration changes”.\nTo prevent overloading dedicated master nodes, you can monitor usage with the Amazon\nCloudWatch metrics. For recommended maximum values, see the section called “Recommended\nCloudWatch alarms”.\nTracking a conﬁguration change\n636\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 664,
+      "end": 666
+    },
+    "content_stats": {
+      "char_count": 3391,
+      "word_count": 524
+    },
+    "hierarchy": {
+      "parent": "Making conﬁguration changes in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

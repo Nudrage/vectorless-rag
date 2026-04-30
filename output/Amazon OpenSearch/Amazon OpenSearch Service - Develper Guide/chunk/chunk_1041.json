@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1041",
+  "section_number": "2.16.1",
+  "header": "Import from Amazon S3 Vectors to OpenSearch Serverless",
+  "content": "Amazon S3 Vectors delivers the ﬁrst cloud object store with native support to store and query\nvectors. S3 Vectors provides cost-eﬀective, elastic, and durable vector storage that can be queried\nbased on semantic meaning and similarity. It delivers sub-second query response times and up to\n90% lower costs for uploading, storing, and querying vectors.\nAmazon S3 Vectors introduces S3 vector buckets, which you can use to store, access, and query\nvector data without provisioning any infrastructure. Inside a vector bucket, you can organize your\nvector data within vector indexes. Your vector bucket can have multiple vector indexes, and each\nvector index can hold millions of vectors. For more information, see Working with Amazon S3\nVectors and vector buckets in the Amazon S3 User Guide.\nEach vector consists of:\n• A unique key\n• Vector data\n• Optional metadata in JSON format\nVector indexes support Euclidean and Cosine distance functions for similarity search operations.\nNote\nThe primary advantage of vector buckets is their ability to store massive datasets at\nextremely low cost while providing direct API access for vector operations.\nImport from Amazon S3 Vectors to OpenSearch Serverless\n1566\nAmazon OpenSearch Service\nDeveloper Guide\nFor more information about Amazon S3 vector buckets, including how to create one, see Working\nwith Amazon S3 Vectors and vector buckets in the Amazon S3 User Guide. For more information\nabout integration with OpenSearch Service beyond what's described in this topic, see Using S3\nVectors with OpenSearch Service\nYou can use S3 Vectors with Amazon OpenSearch Service to lower the cost of vector storage\nwhen queries are less frequent, and then quickly move those datasets to OpenSearch as demands\nincrease or to enhance search capabilities.\nOpenSearch Service integrates with Amazon S3 Vectors to provide enhanced performance\nand functionality beyond what Amazon S3 vector buckets oﬀer by themselves. Consider this\nintegration when you need:\n• Higher query throughput\n• Sub-second search latency\n• Advanced analytics capabilities like aggregations\n• Hybrid search combining text and vector data\nThis integration is particularly useful when multiple applications consume the same vector\ndata with diﬀerent performance requirements. You can have some applications interact directly\nwith Amazon S3 vector buckets for cost-sensitive use cases, while others leverage OpenSearch\nintegration for performance-critical operations.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1595,
+      "end": 1596
+    },
+    "content_stats": {
+      "char_count": 2465,
+      "word_count": 370
+    },
+    "hierarchy": {
+      "parent": "Vector search",
+      "children": [
+        "Integration architecture",
+        "Required IAM permissions",
+        "Conﬁguring Amazon S3 Vectors integration with OpenSearch"
+      ]
+    }
+  }
+}

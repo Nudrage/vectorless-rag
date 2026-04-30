@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_519",
+  "section_number": "2.8.11.2.1",
+  "header": "Snapshot storage and performance",
+  "content": "OpenSearch snapshots are incremental, meaning they only store data that changed since the last\nsuccessful snapshot. This incremental nature means the diﬀerence in disk usage between frequent\nand infrequent snapshots is often minimal. In other words, taking hourly snapshots for a week\n(for a total of 168 snapshots) might not use much more disk space than taking a single snapshot\nTaking manual snapshots\n690\nAmazon OpenSearch Service\nDeveloper Guide\nat the end of the week. Also, the more frequently you take snapshots, the less time they take\nto complete. For example, daily snapshots can take 20-30 minutes to complete, whereas hourly\nsnapshots might complete within a few minutes. Some OpenSearch users take snapshots as often\nas every half hour.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 719,
+      "end": 720
+    },
+    "content_stats": {
+      "char_count": 750,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "Taking manual snapshots",
+      "children": []
+    }
+  }
+}

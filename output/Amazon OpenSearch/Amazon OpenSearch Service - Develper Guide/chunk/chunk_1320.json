@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1320",
+  "section_number": "2.27.3.1.8",
+  "header": "Set up an OpenSearch Service domain",
+  "content": "Before you can use a CloudFormation template, you must set up an Amazon OpenSearch Service\ndomain with version 2.9 or later and ﬁne-grained access control enabled. Create an OpenSearch\nService backend role to give the ML Commons plugin permission to create your connector for you.\nThe CloudFormation template creates a Lambda IAM role for you with the default name\nLambdaInvokeOpenSearchMLCommonsRole, which you can override if you want to choose\na diﬀerent name. After the template creates this IAM role, you need to give the Lambda\nfunction permission to call your OpenSearch Service domain. To do so, map the role named\nml_full_access to your OpenSearch Service backend role with the following steps:\n1.\nNavigate to the OpenSearch Dashboards plugin for your OpenSearch Service domain. You can\nﬁnd the Dashboards endpoint on your domain dashboard on the OpenSearch Service console.\n2.\nFrom the main menu choose Security, Roles, and select the ml_full_access role.\n3.\nChoose Mapped users, Manage mapping.\n4.\nUnder Backend roles, add the ARN of the Lambda role that needs permission to call your\ndomain.\narn:aws:iam::account-id:role/role-name\n5.\nSelect Map and conﬁrm the user or role shows up under Mapped users.\nAfter you've mapped the role, navigate to the security conﬁguration of your domain and add the\nLambda IAM role to your OpenSearch Service access policy.\nPrerequisites\n1800\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1829,
+      "end": 1830
+    },
+    "content_stats": {
+      "char_count": 1427,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

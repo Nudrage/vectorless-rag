@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1496",
+  "section_number": "2.27.1.3",
+  "header": "Updating a document with a POST command",
+  "content": "To update a document, you use an HTTP POST command with the ID number.\nFirst, create a document with an ID of 42:\nPOST fruits/_doc/42\n{\n\"name\":\"banana\",\n\"color\":\"yellow\"\n}\nThen use that ID to update the document:\nPOST fruits/_doc/42\n{\n\"name\":\"banana\",\n\"color\":\"yellow\",\n\"classification\":\"berries\"\n}\nThis command updates the document with the new ﬁeld classification. It produces the\nfollowing response:\n{\n\"_index\" : \"fruits\",\n\"_type\" : \"_doc\",\n\"_id\" : \"42\",\n\"_version\" : 2,\n\"result\" : \"updated\",\n\"_shards\" : {\n\"total\" : 2,\n\"successful\" : 2,\nUpdating a document with a POST command\n2001\nAmazon OpenSearch Service\nDeveloper Guide\n\"failed\" : 0\n},\n\"_seq_no\" : 1,\n\"_primary_term\" : 1\n}\nNote\nIf you try to update a document that does not exist, OpenSearch Service creates the\ndocument.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2030,
+      "end": 2031
+    },
+    "content_stats": {
+      "char_count": 779,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Creating and searching for documents in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

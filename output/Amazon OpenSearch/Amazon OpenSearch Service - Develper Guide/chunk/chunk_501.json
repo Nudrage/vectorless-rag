@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_501",
+  "section_number": "2.8.9.2.2",
+  "header": "Dedicated master node distribution",
+  "content": "Even if you select two Availability Zones when conﬁguring your domain, OpenSearch Service\nautomatically distributes dedicated master nodes across three Availability Zones. This distribution\nhelps prevent cluster downtime if a zone experiences a service disruption. If you use the\nrecommended three dedicated master nodes and one Availability Zone goes down, your cluster still\nhas a quorum (2) of dedicated master nodes and can elect a new master. The following diagram\ndemonstrates this conﬁguration.\nIf you choose an older-generation instance type that is not available in three Availability Zones, the\nfollowing scenarios apply:\n• If you chose three Availability Zones for the domain, OpenSearch Service throws an error. Choose\na diﬀerent instance type, and try again.\n• If you chose two Availability Zones for the domain, OpenSearch Service distributes the dedicated\nmaster nodes across two zones.\nMulti-AZ without Standby\n670\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 699,
+      "end": 700
+    },
+    "content_stats": {
+      "char_count": 972,
+      "word_count": 144
+    },
+    "hierarchy": {
+      "parent": "Multi-AZ without Standby",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_278",
+  "section_number": "2.7.3.1.4",
+  "header": "Viewing collections",
+  "content": "You can view the existing collections in your AWS account on the Collections tab of the Amazon\nOpenSearch Service console.\nTo list collections along with their IDs, send a ListCollections request.\naws opensearchserverless list-collections\nSample response\n{\n\"collectionSummaries\":[\n{\n\"arn\":\"arn:aws:aoss:us-east-1:123456789012:collection/07tjusf2h91cunochc\",\n\"id\":\"07tjusf2h91cunochc\",\n\"name\":\"my-collection\",\n\"status\":\"CREATING\"\n}\n]\n}\nTo limit the search results, use collection ﬁlters. This request ﬁlters the response to collections in\nthe ACTIVE state:\naws opensearchserverless list-collections --collection-filters '{ \"status\": \"ACTIVE\" }'\nTo get more detailed information about one or more collections, including the OpenSearch\nendpoint and the OpenSearch Dashboards endpoint, send a BatchGetCollection request:\naws opensearchserverless batch-get-collection --ids [\"07tjusf2h91cunochc\",\n\"1iu5usc4rame\"]\nNote\nYou can include --names or --ids in the request, but not both.\nSample response\nManaging collections\n402\nAmazon OpenSearch Service\nDeveloper Guide\n{\n\"collectionDetails\":[\n{\n\"id\": \"07tjusf2h91cunochc\",\n\"name\": \"my-collection\",\n\"status\": \"ACTIVE\",\n\"type\": \"SEARCH\",\n\"description\": \"\",\n\"arn\": \"arn:aws:aoss:us-east-1:123456789012:collection/07tjusf2h91cunochc\",\n\"kmsKeyArn\": \"arn:aws:kms:us-\neast-1:123456789012:key/1234abcd-12ab-34cd-56ef-1234567890ab\",\n\"createdDate\": 1667446262828,\n\"lastModifiedDate\": 1667446300769,\n\"collectionEndpoint\": \"https://07tjusf2h91cunochc.us-\neast-1.aoss.amazonaws.com\",\n\"dashboardEndpoint\": \"https://07tjusf2h91cunochc.us-east-1.aoss.amazonaws.com/\n_dashboards\"\n},\n{\n\"id\": \"178ukvtg3i82dvopdid\",\n\"name\": \"another-collection\",\n\"status\": \"ACTIVE\",\n\"type\": \"TIMESERIES\",\n\"description\": \"\",\n\"arn\": \"arn:aws:aoss:us-east-1:123456789012:collection/178ukvtg3i82dvopdid\",\n\"kmsKeyArn\": \"arn:aws:kms:us-\neast-1:123456789012:key/1234abcd-12ab-34cd-56ef-1234567890ab\",\n\"createdDate\": 1667446262828,\n\"lastModifiedDate\": 1667446300769,\n\"collectionEndpoint\": \"https://178ukvtg3i82dvopdid.us-\neast-1.aoss.amazonaws.com\",\n\"dashboardEndpoint\": \"https://178ukvtg3i82dvopdid.us-\neast-1.aoss.amazonaws.com/_dashboards\"\n}\n],\n\"collectionErrorDetails\":[]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 431,
+      "end": 432
+    },
+    "content_stats": {
+      "char_count": 2173,
+      "word_count": 184
+    },
+    "hierarchy": {
+      "parent": "Managing Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

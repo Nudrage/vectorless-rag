@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_484",
+  "section_number": "2.8.7",
+  "header": "Deﬁning oﬀ-peak windows for Amazon OpenSearch Service",
+  "content": "When you create an Amazon OpenSearch Service domain, you deﬁne a daily 10-hour window\nthat's considered oﬀ-peak hours. OpenSearch Service uses this window to schedule service\nsoftware updates and Auto-Tune optimizations that require a blue/green deployment during\ncomparatively lower traﬃc times, whenever possible. Blue/green refers to the process of creating\na new environment for domain updates and routing users to the new environment after those\nupdates are complete.\nAlthough blue/green deployments are non-disruptive, to minimize any potential performance\nimpact while resources are being consumed for a blue/green deployment, we recommend that you\nschedule these deployments during the domain's conﬁgured oﬀ-peak window. Updates such as\nnode replacements, or those that need to be deployed to the domain immediately, don't use the\noﬀ-peak window.\nYou can modify the start time for the oﬀ-peak window, but you can't modify the length of the\nwindow.\nNote\nOﬀ-peak windows were introduced on February 16, 2023. All domains created before\nthis date have the oﬀ-peak window disabled by default. You must manually enable and\nconﬁgure the oﬀ-peak window for these domains. All domains created after this date will\nhave the oﬀ-peak window enabled by default. You can't disable the oﬀ-peak window for a\ndomain after it's enabled.\nOﬀ-peak windows\n654\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 683,
+      "end": 684
+    },
+    "content_stats": {
+      "char_count": 1389,
+      "word_count": 209
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": [
+        "Oﬀ-peak service software updates",
+        "Oﬀ-peak Auto-Tune optimizations",
+        "Enabling the oﬀ-peak window",
+        "Conﬁguring a custom oﬀ-peak window",
+        "Viewing scheduled actions",
+        "Rescheduling actions",
+        "Migrating from Auto-Tune maintenance windows"
+      ]
+    }
+  }
+}

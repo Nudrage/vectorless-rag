@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1262",
+  "section_number": "1.5.616.1",
+  "header": "Fields: Linux, Falcon Container, macOS",
+  "content": "Field\nDescription\nConfigurationVersion\nConfigIDBase\nConfigIDBuild\nConfigIDPlatform\nValues:\nAGENT_PLATFORM_WIN7_X86 (0x0001)\nAGENT_PLATFORM_WIN7_X64 (0x0002)\nAGENT_PLATFORM_MACOS (0x0004)\nAGENT_PLATFORM_LINUX (0x0008)\nAGENT_PLATFORM_ANDROID (0x0010)\nAGENT_PLATFORM_IOS (0x0020)\nAGENT_PLATFORM_LINUX_S390X (0x0040)\nAGENT_PLATFORM_LINUX_AARCH64 (0x0080)\nAGENT_PLATFORM_LINUX_LUMOS_X64 (0x0100)\nAGENT_PLATFORM_WINDOWS_AARCH64 (0x0200)\nAGENT_PLATFORM_LINUX_K8S_X64 (0x0400)\nAGENT_PLATFORM_LINUX_PPC64 (0x0800)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n344/1226\nField\nDescription\nAGENT_PLATFORM_LINUX_PPC64LE (0x1000)\nAGENT_PLATFORM_WIN_LEGACY_X86 (0x2000)\nAGENT_PLATFORM_WIN_LEGACY_X64 (0x4000)\nAGENT_PLATFORM_VMCLUSTER (0x8000)\nAGENT_PLATFORM_LINUX_K8S_AARCH64 (0x10000)\nAGENT_PLATFORM_LINUX_LUMOS_AARCH64 (0x20000)\nConnectTime\nPreviousConnectTime\nFailedConnectCount\nConnectType\nThe type of the connection\nValues:\nCONNECT_INVALID (0)\nCONNECT_DIRECT (1)\nCONNECT_WPAD (2)\nCONNECT_IE_AUTOPROXY (3)\nCONNECT_IE_PROXY (4)\nCONNECT_SIMPLESTORE_AUTOCONFIG (5)\nCONNECT_CACHE_PROXY (6)\nCONNECT_PERSISTED_PROXY (7)\nCONNECT_APP_PROXY (8)\nCONNECT_DIRECT_DNS_BYPASS (9)\nCONNECT_CACHE_PROXYFORURL_WPAD (10)\nCONNECT_CACHE_PROXYFORURL_PACURL (11)\nCONNECT_CACHE_PROXYFORURL_IE_PACURL (12)\nNetworkContainmentState\nValues:\nNETWORK_CONTAINMENT_STATE_UNCONTAINED (0x00)\nNETWORK_CONTAINMENT_STATE_CONTAINED (0x01)\nProvisionState\nValues:\nSENSOR_NOT_PROVISIONED (0x0)\nSENSOR_PROVISIONED (0x1)\nVerifiedCertificate\nConnectionAddressIP4\nConnectionAddressIP6",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 344,
+      "end": 345
+    },
+    "content_stats": {
+      "char_count": 1714,
+      "word_count": 120
+    },
+    "hierarchy": {
+      "parent": "AgentConnect",
+      "children": []
+    }
+  }
+}

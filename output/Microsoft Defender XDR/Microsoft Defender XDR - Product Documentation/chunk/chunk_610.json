@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_610",
+  "section_number": "155.1.1.55.2",
+  "header": "Review or change the automation level for device groups",
+  "content": "groups\n2. Go to System > Settings > Endpoints > Device groups under Permissions.\n3. Review your device group policies. In particular, look at the Remediation level column.\nWe recommend using Full - remediate threats automatically. You might need to create\nor edit your device groups to get the level of automation you want. To get help with this\ntask, see the following articles:\nHow threats are remediated\nCreate and manage device groups\nMicrosoft provides built-in alert policies that help identify certain risks. These risks include\nExchange admin permissions abuse, malware activity, potential external and internal threats,\nand data lifecycle management risks. Some alerts can trigger automated investigation and\nresponse in Office 365. Make sure your Defender for Office 365 features are configured\ncorrectly.\nAlthough certain alerts and security policies can trigger automated investigations, no\nremediation actions are taken automatically for email and content. Instead, all remediation\nactions for email and email content await approval by your security operations team in the\nAction center.\nSecurity settings in Exchange Online Protection (EOP) and Defender for Office 365 help protect\nemail and content. We recommend using the Standard and Strict preset security policies to\nassign protection to users.\nIf you're using custom policies, use the Configuration analyzer to compare your policy settings\nto the Standard and Strict preset security policy settings. For a detailed listing of all policy\nsettings, see the tables in Recommended settings for EOP and Microsoft Defender for Office\n365 security.\nYou can review your alert policies in the Defender portal at https://security.microsoft.com\n>\nPolicies & rules > Alert policy or directly at https://security.microsoft.com/alertpoliciesv2\n.\nSeveral default alert policies are in the Threat management category. Some of the alert\npolicies in the Threat management category can trigger automated investigation and\nresponse. To learn more, see Threat management alert policies.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 390,
+      "end": 391
+    },
+    "content_stats": {
+      "char_count": 2035,
+      "word_count": 300
+    },
+    "hierarchy": {
+      "parent": "Configure automated investigation and response capabilities in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

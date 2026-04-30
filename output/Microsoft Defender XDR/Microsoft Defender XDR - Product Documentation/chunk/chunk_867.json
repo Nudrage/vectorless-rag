@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_867",
+  "section_number": "155.1.1.85",
+  "header": "AssignedIPAddresses()",
+  "content": "03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nUse the AssignedIPAddresses()  function in your advanced hunting queries to quickly obtain\nthe latest IP addresses that have been assigned to a device. If you specify a timestamp\nargument, this function obtains the most recent IP addresses at the specified time.\nThis function returns a table with the following columns:\nColumn\nData\ntype\nDescription\nTimestamp\ndatetime\nLatest time when the device was observed using the IP address\nIPAddress\nstring\nIP address used by the device\nIPType\nstring\nIndicates whether the IP address is a public or private address\nNetworkAdapterType\nint\nNetwork adapter type used by the device that has been assigned the IP\naddress. For the possible values, refer to this enumeration\nConnectedNetworks\nint\nNetworks that the adapter with the assigned IP address is connected\nto. Each JSON array contains the network name, category (public,\nprivate, or domain), a description, and a flag indicating if it's connected\npublicly to the internet\nKusto\nx— DeviceId  or DeviceName  value identifying the device\ny— Timestamp  (datetime) value instructing the function to obtain the most recent\nassigned IP addresses from a specific time. If not specified, the function returns the latest\nIP addresses.\nﾉ\nExpand table",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 577,
+      "end": 577
+    },
+    "content_stats": {
+      "char_count": 1330,
+      "word_count": 204
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Syntax",
+        "Arguments",
+        "Examples",
+        "Related topics"
+      ]
+    }
+  }
+}

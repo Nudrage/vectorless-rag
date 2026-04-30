@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_642",
+  "section_number": "2.10.1.12",
+  "header": "Anomaly detection metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for anomaly detection.\nMetric\nDescription\nADPluginU\nnhealthy\nA value of 1 means that the anomaly detection plugin is not functioni\nng properly, either because of a high number of failures or because one\nAnomaly detection metrics\n1197\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nof the indexes that it uses is red. A value of 0 indicates the plugin is\nworking as expected.\nRelevant statistics: Maximum\nADExecute\nRequestCount\nThe number of requests to detect anomalies.\nRelevant statistics: Sum\nADExecute\nFailureCount\nThe number of failed requests to detect anomalies.\nRelevant statistics: Sum\nADHCExecu\nteFailureCount\nThe number of failed requests to detect anomalies for high cardinality\ndetectors.\nRelevant statistics: Sum\nADHCExecu\nteRequestCount\nThe number of requests to detect anomalies for high cardinality\ndetectors.\nRelevant statistics: Sum\nADAnomaly\nResultsIn\ndexStatus\nIndexExists\nA value of 1 means the index that the .opensearch-anomaly-\nresults  alias points to exists. Until you use anomaly detection for\nthe ﬁrst time, this value remains 0.\nRelevant statistics: Maximum\nADAnomaly\nResultsIn\ndexStatus.red\nA value of 1 means the index that the .opensearch-anomaly-\nresults  alias points to is red. A value of 0 means it is not. Until you\nuse anomaly detection for the ﬁrst time, this value remains 0.\nRelevant statistics: Maximum\nAnomaly detection metrics\n1198\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nADAnomaly\nDetectors\nIndexStat\nusIndexExists\nA value of 1 means that the .opensearch-anomaly-detecto\nrs  index exists. A value of 0 means it does not. Until you use anomaly\ndetection for the ﬁrst time, this value remains 0.\nRelevant statistics: Maximum\nADAnomaly\nDetectors\nIndexStat\nus.red\nA value of 1 means that the .opensearch-anomaly-detecto\nrs  index is red. A value of 0 means it is not. Until you use anomaly\ndetection for the ﬁrst time, this value remains 0.\nRelevant statistics: Maximum\nADModelsC\nheckpoint\nIndexStat\nusIndexExists\nA value of 1 means that the .opensearch-anomaly-checkpo\nints  index exists. A value of 0 means it does not. Until you use\nanomaly detection for the ﬁrst time, this value remains 0.\nRelevant statistics: Maximum\nADModelsC\nheckpoint\nIndexStat\nus.red\nA value of 1 means that the .opensearch-anomaly-checkpo\nints  index is red. A value of 0 means it is not. Until you use anomaly\ndetection for the ﬁrst time, this value remains 0.\nRelevant statistics: Maximum",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1226,
+      "end": 1228
+    },
+    "content_stats": {
+      "char_count": 2502,
+      "word_count": 378
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

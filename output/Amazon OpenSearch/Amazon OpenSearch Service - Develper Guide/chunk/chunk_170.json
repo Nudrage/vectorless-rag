@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_170",
+  "section_number": "2.6.16.12",
+  "header": "Using an OpenSearch Ingestion pipeline with Fluent Bit",
+  "content": "This sample Fluent Bit conﬁguration ﬁle sends log data from Fluent Bit to an OpenSearch Ingestion\npipeline. For more information about ingesting log data, see Log Analytics in the Data Prepper\ndocumentation.\nNote the following:\n• The host value must be your pipeline endpoint. For example, pipeline-endpoint.us-\neast-1osis.amazonaws.com.\n• The aws_service value must be osis.\n• The aws_role_arn value is the ARN of the AWS IAM role for the client to assume and use for\nSignature Version 4 authentication.\n[INPUT]\nname                  tail\nrefresh_interval      5\npath                  /var/log/test.log\nread_from_head        true\n[OUTPUT]\nName http\nMatch *\nHost pipeline-endpoint.us-east-1osis.amazonaws.com\nPort 443\nURI /log/ingest\nFormat json\naws_auth true\naws_region region\naws_service osis\naws_role_arn arn:aws:iam::account-id:role/ingestion-role\nLog_Level trace\ntls On\nFluent Bit\n241\nAmazon OpenSearch Service\nDeveloper Guide\nYou can then conﬁgure an OpenSearch Ingestion pipeline like the following, which has HTTP as the\nsource:\nversion: \"2\"\nunaggregated-log-pipeline:\nsource:\nhttp:\npath: \"/log/ingest\"\nprocessor:\n- grok:\nmatch:\nlog:\n- \"%{TIMESTAMP_ISO8601:timestamp} %{NOTSPACE:network_node}\n%{NOTSPACE:network_host} %{IPORHOST:source_ip}:%{NUMBER:source_port:int} ->\n%{IPORHOST:destination_ip}:%{NUMBER:destination_port:int} %{GREEDYDATA:details}\"\n- grok:\nmatch:\ndetails:\n- \"'%{NOTSPACE:http_method} %{NOTSPACE:http_uri}' %{NOTSPACE:protocol}\"\n- \"TLS%{NOTSPACE:tls_version} %{GREEDYDATA:encryption}\"\n- \"%{NUMBER:status_code:int} %{NUMBER:response_size:int}\"\n- delete_entries:\nwith_keys: [\"details\", \"log\"]\nsink:\n- opensearch:\nhosts: [\"https://search-domain-endpoint.us-east-1es.amazonaws.com\"]\nindex: \"index_name\"\nindex_type: custom\nbulk_size: 20\naws:\nregion: \"region\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 270,
+      "end": 271
+    },
+    "content_stats": {
+      "char_count": 1778,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": []
+    }
+  }
+}

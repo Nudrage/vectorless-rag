@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3087",
+  "section_number": "1.6.4.6.1",
+  "header": "Fields list:",
+  "content": "Field Name\nField Description\nAppTrusted\nA boolean value that indicates whether the CrowdStrike Falcon app is trusted as determined by the Android Play Integrity\nAttestation APIs.\n0: The app isn’t trusted\n1: The app is trusted\nContextTimeStamp\nSystem time of event creation.\nIsEcho\nIndicates if the same event was sent before.\nMeetsBasicIntegrity\nThe result of a more lenient verdict for device integrity. Returned by Google Play Integrity Attestation API.\nMeetsDeviceIntegrity\nThe result of a stricter verdict for device integrity. Returned by Google Play Integrity Attestation API.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1134/1226\n\n\n\n\nField Name\nField Description\nMeetsStrongIntegrity\nThe result of a very stricter verdict for device integrity. Returned by Google Play Integrity Attestation API.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1134,
+      "end": 1135
+    },
+    "content_stats": {
+      "char_count": 993,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "MobilePlayIntegrityStatus",
+      "children": []
+    }
+  }
+}

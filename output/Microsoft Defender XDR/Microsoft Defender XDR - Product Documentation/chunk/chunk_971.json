@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_971",
+  "section_number": "155.1.1.103",
+  "header": "CloudProcessEvents (Preview)",
+  "content": "Article • 05/20/2025 •\nApplies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe CloudProcessEvents  table in the advanced hunting schema contains information about\nprocess events in multicloud hosted environments such as Azure Kubernetes Service, Amazon\nElastic Kubernetes Service, and Google Kubernetes Engine as protected by the organization's\nMicrosoft Defender for Cloud. Use this reference to construct queries that return information\nfrom this table.\nThis advanced hunting table is populated by records from Microsoft Defender for Cloud. If\nyour organization doesn't have Microsoft Defender for Cloud, queries that use the table aren’t\ngoing to work or return any results. For more information about prerequisites in integrating\nDefender for Cloud with Defender XDR, read Microsoft Defender XDR integration.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the event was recorded\nAzureResourceId\nstring\nUnique identifier of the Azure resource associated with\nthe process\nAwsResourceName\nstring\nUnique identifier specific to Amazon Web Services\ndevices, containing the Amazon resource name\nGcpFullResourceName\nstring\nUnique identifier specific to Google Cloud Platform\ndevices, containing a combination of zone and ID for GCP\nContainerImageName\nstring\nThe container image name or ID, if it exists\nKubernetesNamespace\nstring\nThe Kubernetes namespace name\nKubernetesPodName\nstring\nThe Kubernetes pod name\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nKubernetesResource\nstring\nIdentifier value that includes namespace, resource type\nand name\nContainerName\nstring\nName of the container in Kubernetes or another runtime\nenvironment\nContainerId\nstring\nThe container identifier in Kubernetes or another runtime\nenvironment\nActionType\nstring\nType of activity that triggered the event. See the in-portal\nschema reference for details.\nFileName\nstring\nName of the file that the recorded action was applied to\nFolderPath\nstring\nFolder containing the file that the recorded action was\napplied to\nProcessId\nlong\nProcess ID (PID) of the newly created process\nProcessName\nstring\nThe name of the process\nParentProcessName\nstring\nThe name of the parent process\nParentProcessId\nstring\nThe process ID (PID) of the parent process\nProcessCommandLine\nstring\nCommand line used to create the new process\nProcessCreationTime\ndatetime\nDate and time the process was created\nProcessCurrentWorkingDirectory\nstring\nCurrent working directory of the running process\nAccountName\nstring\nUser name of the account\nLogonId\nlong\nIdentifier for a logon session. This identifier is unique on\nthe same pod or container between restarts.\nInitiatingProcessId\nstring\nProcess ID (PID) of the process that initiated the event\nAdditionalFields\nstring\nAdditional information about the event in JSON array\nformat\nYou can use this table to get detailed information on processes invoked in a cloud\nenvironment. The information is useful in hunting scenarios and can discover threats that can\nbe observed through process details, like malicious processes or command-line signatures.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 659,
+      "end": 660
+    },
+    "content_stats": {
+      "char_count": 3425,
+      "word_count": 486
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Sample queries",
+        "Related topics"
+      ]
+    }
+  }
+}

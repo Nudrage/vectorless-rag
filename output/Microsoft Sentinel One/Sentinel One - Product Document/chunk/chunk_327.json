@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_327",
+  "section_number": "3.29",
+  "header": "Set Persistent Configuration Overrides",
+  "content": "POST    /web/api/v2.1/agents/actions/set-config\nThis command requires Global permissions or Support.\nThe configuration of an Agent can be changed in different ways, such as through  Policy settings, Policy Override, SentinelCtl, and changes to the LocalConfig.json file.\nFor Windows, Policy Override overwrites policy settings, and local changes (to the file and from this command) overwrite Policy Override from the Console or with policy\nupdates from the API.\nFor macOS, the Policy Override has the highest priority. If you run this command and then update a Group policy that affects both Windows and macOS endpoints, the\nsettings of this command are applied to the Windows endpoints. But the macOS endpoints will apply the settings of the policy, for settings that are duplicated in both the\npolicy and this command.\nWhen you use this command, enter the filter values to set which Agents get the change. Then use the data parameter to set the actual changes. Get the JSON settings for\ndata from the Agent Configuration or see the Knowledge Base: https://support.sentinelone.com/hc/en-us/articles/360022158673-sentinelctl",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 639,
+      "end": 639
+    },
+    "content_stats": {
+      "char_count": 1124,
+      "word_count": 167
+    },
+    "hierarchy": {
+      "parent": "Agent Actions",
+      "children": [
+        "Response Messages",
+        "Response Schema",
+        "Body Schema"
+      ]
+    }
+  }
+}

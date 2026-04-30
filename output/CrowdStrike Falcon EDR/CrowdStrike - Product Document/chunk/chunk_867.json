@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_867",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nRawThreadId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nRawTargetProcessId\nRawTargetThreadId\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed\nthread injection in an InjectedThread event\nTargetThreadId\nThe primary thread associated with this service.\nContextMask\nContextFlags\nInstructionPointer\nStackPointer\nRegisterA\nProcessStartKey\nTargetProcessStartKey\nTargetProcessStartTime\nPerformanceCounter\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 238,
+      "end": 238
+    },
+    "content_stats": {
+      "char_count": 1015,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "SetThreadCtxEtw",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_238",
+  "section_number": "2.6.21.2.5",
+  "header": "Otel trace source metrics",
+  "content": "The following metrics apply to the OTel trace source. Each metric is\npreﬁxed by the sub-pipeline name and otel_trace_source. For example,\nsub_pipeline_name.otel_trace_source.requestTimeouts.count.\nMetric suﬃx\nDescription\nrequestTimeouts.count\nThe number of requests that timed out.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestsReceived.count\nThe number of requests received by the plugin.\nMonitoring pipeline metrics\n338\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nRelevant statistics: Sum\nDimension: PipelineName\nsuccessRequests.count\nThe number of requests that were successfully processed\nby the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nbadRequests.count\nThe number of requests with an invalid format that were\nprocessed by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestsTooLarge.count\nThe number of requests of which the number of spans in\nthe content is larger than the buﬀer capacity.\nRelevant statistics: Sum\nDimension: PipelineName\ninternalServerError.count\nThe number of requests processed by the plugin with a\ncustom exception type.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestProcessDura\ntion.count\nA count of data points recorded while processing requests\nby the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n339\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nrequestProcessDura\ntion.sum\nThe total latency of requests processed by the plugin, in\nmilliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestProcessDura\ntion.max\nThe maximum latency of requests processed by the\nplugin, in milliseconds.\nRelevant statistics: Max\nDimension: PipelineName\npayloadSize.count\nA count of the distribution of payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\npayloadSize.sum\nThe total distribution of the payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\npayloadSize.max\nThe maximum distribution of payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Max\nDimension: PipelineName\nMonitoring pipeline metrics\n340\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 367,
+      "end": 370
+    },
+    "content_stats": {
+      "char_count": 2211,
+      "word_count": 275
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

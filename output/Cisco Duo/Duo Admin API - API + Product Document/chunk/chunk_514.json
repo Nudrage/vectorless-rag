@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_514",
+  "section_number": "1.17.20",
+  "header": "Health Checks",
+  "content": "Section Name: health_checks\nCorresponds to: Duo Desktop & Device Health\nThis section differs from Duo Desktop in that it allows Duo Advantage and Premier\ncustomers to use additional device data sources, like Chrome Enterprise browser, and\nto specify health checks for Chrome OS.\nKey\nValue\nrequires_duo_desktop\nComma-separated list of operating\nsystems that require Duo Desktop (one or\nmore of linux , macos , or windows ).\nListing an operating system here is the\nequivalent of setting the “Require Duo\nDesktop” policy option to \"Require the\napp\" for that OS when editing a policy in\nthe Admin Panel.\nbypass_encryption_for_vm\nComma-separated list of operating\nsystems that will allow the disk\nencryption, FileVault, or BitLocker check\nto be bypassed for virtual machines (one\nor more of linux , macos , or\nwindows ). This key is available in the\nPremier and Advantage editions.\nenforce_device_id_pinning\nSet to enforce-enabled  to block\nauthentication from any device that\npresents the same identifiers as another\ndevice previously registered by Duo\nDesktop. Default: no-enforcement .\nThis setting requires\nenforce_signed_payload  be set to\nenforce-enabled  in the same policy.\nenforce_encryption\nComma-separated list of operating\nsystems that will require the hard drive to\nbe encrypted (one or more of chromeos ,\nlinux , macos , or windows ). This key\nis available in the Premier and Advantage\neditions.\nenforce_firewall\nComma-separated list of operating\nsystems that will require a firewall to be\nactive (one or more of chromeos ,\nlinux , macos , or windows ). This key\nis available in the Premier and Advantage\neditions.\nenforce_signed_payload\nSet to enforce-enabled  to require\ndevice registration with Duo Desktop\nduring initial authentication. The access\ndevice must support TPM 2.0 on\nWindows or Secure Enclave on macOS.\nDefault: no-enforcement .\nenforce_system_password\nComma-separated list of operating\nsystems that will require a system\npassword to be set (one or more of\nchromeos , linux , macos , or\nwindows ). This key is available in the\nPremier and Advantage editions.\nlinux_endpoint_security_list\nComma-separated list of Duo-supported\nendpoint security agents that are allowed.\nFor agents in this list, the application will\nblock access unless one of those agents\nis running. A complete list of Linux\nsecurity agents is available in a drop-\ndown when editing the policy in the\nAdmin Panel. This key is available in the\nPremier edition.\nlinux_remediation_note\nA text note (max 700 characters) with\nremediation instructions when an end\nuser is blocked. This key is available in the\nPremier edition.\nmacos_endpoint_security_list\nComma-separated list of Duo-supported\nendpoint security agents that are allowed.\nFor agents in this list, the application will\nblock access unless one of those agents\nis running. A complete list of macOS\nsecurity agents is available in a drop-\ndown when editing the policy in the\nAdmin Panel. This key is available in the\nPremier edition.\nmacos_remediation_note\nA text note (max 700 characters) with\nremediation instructions when an end\nuser is blocked. This key is available in the\nPremier edition.\nwindows_endpoint_security_list\nComma-separated list of Duo-supported\nendpoint security agents that are allowed.\nFor agents in this list, the application will\nblock access unless one of those agents\nis running. A complete list of Windows\nsecurity agents is available in a drop-\ndown when editing the policy in the\nAdmin Panel. This key is available in the\nPremier edition.\nwindows_remediation_note\nA text note (max 700 characters) with\nremediation instructions when an end\nuser is blocked. This key is available in the\nPremier edition.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 217,
+      "end": 219
+    },
+    "content_stats": {
+      "char_count": 3676,
+      "word_count": 565
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

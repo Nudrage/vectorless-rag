@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_040",
+  "section_number": "2.6.7.2",
+  "header": "Ingestion role",
+  "content": "The ingestion role is an IAM role that allows external services to securely interact with and send\ndata to an OpenSearch Ingestion pipeline. For push-based sources, such as Amazon Security Lake,\nthis role must grant permissions to push data into the pipeline, including osis:Ingest. For pull-\nbased sources, like Amazon S3, the role must enable OpenSearch Ingestion to assume it and access\nthe data with the necessary permissions.\nTopics\n• Ingestion role for push-based sources\n• Ingestion role for pull-based sources\n• Cross-account ingestion",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 62,
+      "end": 62
+    },
+    "content_stats": {
+      "char_count": 543,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Setting up roles and users in Amazon OpenSearch Ingestion",
+      "children": [
+        "Ingestion role for push-based sources",
+        "Ingestion role for pull-based sources",
+        "Cross-account ingestion"
+      ]
+    }
+  }
+}

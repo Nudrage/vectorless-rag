@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_873",
+  "section_number": "2.12.10.3",
+  "header": "Conﬁguring ﬁne-grained access control",
+  "content": "Once you have enabled IAM Identity Center option on your OpenSearch domain, you can conﬁgure\naccess to IAM Identity Center principals by creating role mapping to the backend role. The backend\nrole value for the principal is based on the IdC principal’s group membership and the RolesKey\nconﬁguration of GroupId or GroupName.\nNote\nAmazon OpenSearch Service can support up to 100 groups for a single user. If you try to\nuse more than the number of allowed instances, you will experience inconsistency with\nyour ﬁne-grained-access-control authorization processing and receive a 403error message.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1423,
+      "end": 1423
+    },
+    "content_stats": {
+      "char_count": 592,
+      "word_count": 92
+    },
+    "hierarchy": {
+      "parent": "IAM Identity Center Trusted Identity Propagation Support for OpenSearch",
+      "children": []
+    }
+  }
+}

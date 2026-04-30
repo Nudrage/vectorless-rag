@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_020",
+  "section_number": "1.3.11",
+  "header": "Only hosts can send in-call messages",
+  "content": "An event indicating that sending chat messages is restricted to hosts and co-hosts.\nEvent details\nEvent name\nsend_chat_hosts\nParameters\naction_time\nstring\nAction time.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/meet?\neventName=send_chat_contributors&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\nA host limited in-call messages to contributors,\nhosts, and co-hosts. Live stream viewers cannot\nsend messages.\nEvent details\nconference_id\nstring\nThe unique identifier of the conference.\nidentifier\nstring\nThe unique participant identifier (for\nexample, an email address, phone\nnumber, or device ID).\nidentifier_type\nstring\nIndicates the type of the participant\nidentifier. Possible values:\ndevice_id\nThe unique device identifier of the\nMeet hardware.\nemail_address\nThe participant's email address.\nVisible when the participant is in-\ndomain or when the meeting is\norganized by a user who is in-\ndomain.\nphone_number\nThe participant's telephone number.\nis_external\nboolean\nIndicates if the participant is external\nto your organization.\nmeeting_code\nstring\nThe meeting code for the Google Meet\nconference (for example, 'abc-hexp-\ntqy'). Recurrent meetings have the\nsame meeting code.\nSample request\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 28,
+      "end": 29
+    },
+    "content_stats": {
+      "char_count": 1262,
+      "word_count": 158
+    },
+    "hierarchy": {
+      "parent": "Conference action",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "chunk_id": "chunk_1066",
+  "section_number": "2.16.5",
+  "header": "Auto-optimize",
+  "content": "Auto-optimize is a service that automates vector index optimizations, enabling users to balance\nsearch quality, speed, and cost without requiring weeks of manual expert tuning. It evaluates index\nconﬁgurations based on user-deﬁned latency and recall requirements and generates optimization\nrecommendations, so minimal expertise is required. Recommendations are typically delivered\nwithin 30-60 minutes.\nTraditional vector index conﬁguration requires signiﬁcant expertise and experimentation to\nachieve optimal performance. Parameters like ef_construction (which controls index build\nquality), m (which determines the number of graph connections), ef_search (which controls\nHNSW search), and quantization methods (Binary Quantization (32x, 16x, 8x), Scalar quantization\n(4x)) signiﬁcantly impact both search accuracy and resource utilization. Auto-optimize uses\nhyperparameter optimization algorithms to discover index conﬁgurations that are uniquely optimal\nfor your dataset within your deﬁned latency and recall requirements.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1620,
+      "end": 1620
+    },
+    "content_stats": {
+      "char_count": 1026,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Vector search",
+      "children": [
+        "Beneﬁts",
+        "How it works",
+        "Prerequisites",
+        "Use cases for auto-optimize",
+        "Limitations",
+        "Billing and costs",
+        "Convert JSONL to Parquet",
+        "Using auto-optimize in the console",
+        "Related features"
+      ]
+    }
+  }
+}

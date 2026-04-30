@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_819",
+  "section_number": "155.1.1.79.2.1",
+  "header": "List logon activities of users that received emails that were not zapped successfully",
+  "content": "zapped successfully\nEmailPostDeliveryEvents\n| where Timestamp > ago(7d)\n//List malicious emails that were not zapped successfully\n| where ActionType has \"ZAP\" and ActionResult == \"Error\"\n| project ZapTime = Timestamp, ActionType, NetworkMessageId ,\nRecipientEmailAddress\n//Get logon activity of recipients using RecipientEmailAddress and AccountUpn\n| join kind=inner IdentityLogonEvents on $left.RecipientEmailAddress ==\n$right.AccountUpn\n| where Timestamp between ((ZapTime-24h) .. (ZapTime+24h))\n//Show only pertinent info, such as account name, the app or service, protocol,\nthe target device, and type of logon\n| project ZapTime, ActionType, NetworkMessageId , RecipientEmailAddress,\nAccountUpn,\nLogonTime = Timestamp, AccountDisplayName, Application, Protocol, DeviceName,\nLogonType",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 540,
+      "end": 540
+    },
+    "content_stats": {
+      "char_count": 787,
+      "word_count": 94
+    },
+    "hierarchy": {
+      "parent": "Hunting scenarios",
+      "children": []
+    }
+  }
+}

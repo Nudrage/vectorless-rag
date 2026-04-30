@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_011",
+  "section_number": "1.2.2",
+  "header": "Define custom dashboards",
+  "content": "To create a custom dashboard (/monitoring/charts/dashboards) to view VM instance metrics\n(#vm-metrics) or NAT gateway metrics (#gateway-metrics), follow these steps:\n1. In the Google Cloud console, go to the dashboard Dashboards page:\nGo to Dashboards (https://console.cloud.google.com/monitoring/dashboards)\nIf you use the search bar to find this page, then select the result whose\nsubheading is Monitoring.\n2. Click Create dashboard\n3. Optional: Update the dashboard title with a descriptive name for your dashboard.\n4. Click Add Widget and then select Metric.\n5. Expand the Metric menu, enter Cloud NAT Gateway or VM Instance in the filter\nbar, and then use the submenus to select a specific resource type and metric:\na. In the Active resources menu, select Cloud NAT Gateway or VM Instance.\nConsole\n(#console)\nConsole\n(#console)\nb. In the Active metric categories menu, select Nat.\nc. In the Active metrics menu, select the metric that you want to view.\nd. Click Apply.\n6. Combine time series:\nTo display every time series, in the Aggregation element, ensure the first\nmenu is set to Unaggregated and the second menu is set to None.\nTo combine time series, in the Aggregation element, use the first menu to\nselect a function and the second menu to select the labels. If the second\nmenu is set to None, then the chart displays one time series.\nFor example, to display the average value of time series after grouping by\nzone, set the first menu to Mean and the second to zone.\nFor information about combining time series, see Choose how to display charted\ndata (/monitoring/charts/metrics-selector#select_display).\n7. For each additional widget that you want to add to your dashboard, click Add\nwidget, complete the dialog, and then select Apply.\nFor more information about adding widgets, see the following pages:\nAdd charts and tables (/monitoring/charts#add_chart).\nDisplay alert charts and incidents (/monitoring/dashboards/alerts-and-incidents).\nDisplay logs (/monitoring/charts/view-logs).\nAdd text and groupings (/monitoring/dashboards/text-and-grouping).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 9,
+      "end": 10
+    },
+    "content_stats": {
+      "char_count": 2064,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

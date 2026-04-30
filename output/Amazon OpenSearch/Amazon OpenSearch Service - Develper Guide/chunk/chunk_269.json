@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_269",
+  "section_number": "2.7.2.4",
+  "header": "Handling errors",
+  "content": "When running index and search operations, you may get the following error responses:\nHandling errors\n384\nAmazon OpenSearch Service\nDeveloper Guide\n• HTTP 507 – Indicates that an internal server error occurred. This error generally indicates that\nyour OpenSearch compute units (OCUs) are overloaded by the volume or complexity of your\nrequests. Although OpenSearch Serverless scales automatically to manage the load, there can be\na delay in deploying additional resources.\nTo mitigate this error, implement an exponential backoﬀ retry policy. This approach temporarily\nreduces the request rate to eﬀectively manage the load. For more details, refer to Retry behavior\nin the AWS SDKs and Tools Reference Guide.\n• HTTP 402 – Indicates that you reached the maximum OpenSearch compute unit (OCU) capacity\nlimit. Optimize your workload to reduce the OCU usage or request a quota increase.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 413,
+      "end": 414
+    },
+    "content_stats": {
+      "char_count": 882,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Getting started with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_044",
+  "section_number": "1.27.8",
+  "header": "Example Response",
+  "content": "\n\n{\n\"response\": [\n{\"user_id\": \"DU123456789012345678\", \"success\": true},\n{\"user_id\": \"DU234567890123456789\", \"success\": false, \"error\":\n],\n\"stat\": \"OK\"\n}\nGET  /admin/v1/users/[user_id]\n{\n\"stat\": \"OK\",\n\"response\": {\n\"alias1\": \"joe.smith\",\n\"alias2\": \"jsmith@example.com\",\n\"alias3\": null,\n\"alias4\": null,\n\"aliases\": {\n\"alias1\": \"joe.smith\",\n\"alias2\": \"jsmith@example.com\"\n},\n\"created\": 1489612729,\n\"directory_key\": \"DABC0DEFGHIJKLMNOPQR\",\n\"email\": \"jsmith@example.com\",\n\"enable_auto_prompt\": true,\n\"external_id\": \"1a2345b6-7cd8-9e0f-g1hi-23j45kl6m789\",\n\"firstname\": \"Joe\",\n\"groups\": [\n{\n\"desc\": \"People with hardware tokens\",\n\"group_id\": \"DGBDKSSH37KSJ373JKSU\",\n\"mobile_otp_enabled\": false,\n\"name\": \"token_users\",\n\"push_enabled\": false,\n\"sms_enabled\": false,\n\"status\": \"Active\",\n\"voice_enabled\": false\n}\n],\n\"is_enrolled\": true,\n\"last_directory_sync\": 1508789163,\n\"last_login\": 1343921403,\n\"lastname\": \"Smith\",\n\"lockout_reason\": null,\n\"notes\": \"\",\n\"phones\": [\n{\n\"activated\": true,\n\"app_version\": \"4.86.0\",\n\"capabilities\": [\n\"auto\",\n\"push\",\n\"sms\",\n\"phone\",\n\"mobile_otp\"\n],\n\"creation_date\": \"\",\n\"encrypted\": \"Encrypted\",\n\"extension\": \"\",\n\"fingerprint\": \"Configured\",\n\"last_activated_date\": \"\",",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 27,
+      "end": 28
+    },
+    "content_stats": {
+      "char_count": 1188,
+      "word_count": 113
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

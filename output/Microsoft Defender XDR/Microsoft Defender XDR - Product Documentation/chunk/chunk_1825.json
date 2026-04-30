@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1825",
+  "section_number": "155.1.1.257.6.1.3",
+  "header": "Custom detections",
+  "content": "You can create advanced hunting Custom detection rules specific to your security operations to allow you to proactively monitor for threats and\ntake action. For instance, you can make custom detection rules that look for known indicators or misconfigured devices. These automatically\ntrigger alerts and any response actions that you specify.\n1. Get multiple rules: 10 rules per minute per application, 300 rules per hour per application, 600 rules per hour per tenant\n2. Get a single rule: 100 rules per minute per application, 1,500 rules per hour per application, 1,800 rules per hour per tenant\n3. Create rule: 10 rules per minute per application, 1,500 rules per hour per application, 1,800 rules per hour per tenant\n4. Update rule: 100 rules per minute per application, 1,500 rules per hour per application, 1,800 rules per hour per tenant\n5. Delete rule: 100 rules per minute per application, 1,500 rules per hour per application, 1,800 rules per hour per tenant\nAlerts are detailed warnings about suspicious activities in a customer's tenant that Microsoft or partner security providers have identified and\nflagged for action. Attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The\nresult is alerts from multiple security providers for multiple entities in the tenant. Piecing the individual alerts together to gain insight into an\nattack can be challenging and time-consuming.\nThe beta version of the security API offers two types of alerts that aggregate other alerts from security providers and make analyzing attacks\nand determining responses easier:\nAlerts and incidents - the latest generation of alerts in the Microsoft Graph security API. They're represented by the alert resource and its\ncollection, incident resource, defined in the microsoft.graph.security  namespace.\nLegacy alerts - the first generation of alerts in the Microsoft Graph security API. They're represented by the alert resource defined in the\nmicrosoft.graph  namespace.\nThese alert resources first pull alert data from security provider services, that are either part of or integrated with Microsoft 365 Defender. Then\nthey consume the data to return rich, valuable clues about a completed or ongoing attack, the impacted assets, and associated evidence. In\naddition, they automatically correlate other alerts with the same attack techniques or the same attacker into an incident to provide a broader\ncontext of an attack. They recommend response and remediation actions, offering consistent actionability across all the different providers. The\nrich content makes it easier for analysts to investigate and respond to threats collectively.\nAlerts from the following security providers are available via these rich alerts and incidents:\nMicrosoft Entra ID Protection\nMicrosoft 365 Defender\nMicrosoft Defender for Cloud Apps\nMicrosoft Defender for Endpoint\nMicrosoft Defender for Identity\nMicrosoft Defender for Office 365\nMicrosoft Purview Data Loss Prevention\nMicrosoft Purview Insider Risk Management\nThe legacy alert resources federate calling of supported Azure and Microsoft 365 Defender security providers. They aggregate common alert\ndata among the different domains to allow applications to unify and streamline the management of security issues across all integrated\nsolutions. They enable applications to correlate alerts and context to improve threat protection and response.\nWith the alert update capability, you can sync the status of specific alerts across different security products and services that are integrated with\nthe Microsoft Graph security API by updating your alert entity.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 17,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1373,
+      "end": 1374
+    },
+    "content_stats": {
+      "char_count": 3654,
+      "word_count": 547
+    },
+    "hierarchy": {
+      "parent": "Use the Microsoft Graph security API",
+      "children": [
+        "Quotas"
+      ]
+    }
+  }
+}

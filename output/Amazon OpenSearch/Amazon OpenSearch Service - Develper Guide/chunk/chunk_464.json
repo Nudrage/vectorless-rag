@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_464",
+  "section_number": "2.8.4.2.3",
+  "header": "Fine-grained access control permissions",
+  "content": "If your Amazon OpenSearch Service domain has ﬁne-grained access control enabled, you need\nadditional permissions beyond the IAM permissions. The following permissions are required for\neach index operation.\nCreateIndex API permissions\nWhen ﬁne-grained access control is enabled, the following additional permissions are required for\ncreating an index with automatic semantic enrichment:\nConﬁguring permissions for automatic semantic enrichment\n626\nAmazon OpenSearch Service\nDeveloper Guide\n• indices:admin/create – Create index operations.\n• indices:admin/mapping/put – Create and update index mappings.\n• cluster:admin/opensearch/ml/create_connector – Create machine learning connectors\nfor semantic processing.\n• cluster:admin/opensearch/ml/register_model – Register machine learning models for\nsemantic enrichment.\n• cluster:admin/ingest/pipeline/put – Create ingest pipelines for data processing.\n• cluster:admin/search/pipeline/put – Create search pipelines for query processing.\nUpdateIndex API permissions\nWhen ﬁne-grained access control is enabled, the following additional permissions are required for\nupdating an index with automatic semantic enrichment:\n• indices:admin/get – Retrieve index information.\n• indices:admin/settings/update – Update index settings.\n• indices:admin/mapping/put – Update index mappings.\n• cluster:admin/opensearch/ml/create_connector – Create machine learning connectors.\n• cluster:admin/opensearch/ml/register_model – Register machine learning models.\n• cluster:admin/ingest/pipeline/put – Create ingest pipelines.\n• cluster:admin/search/pipeline/put – Create search pipelines.\n• cluster:admin/ingest/pipeline/get – Retrieve ingest pipeline information.\n• cluster:admin/search/pipeline/get – Retrieve search pipeline information.\nGetIndex API permissions\nWhen ﬁne-grained access control is enabled, the following additional permissions are required for\nretrieving information about an index with automatic semantic enrichment:\n• indices:admin/get – Retrieve index information.\n• cluster:admin/ingest/pipeline/get – Retrieve ingest pipeline information.\n• cluster:admin/search/pipeline/get – Retrieve search pipeline information.\nConﬁguring permissions for automatic semantic enrichment\n627\nAmazon OpenSearch Service\nDeveloper Guide\nDeleteIndex API permissions\nWhen ﬁne-grained access control is enabled, the following additional permission is required for\ndeleting an index with automatic semantic enrichment:\n• indices:admin/delete – Delete index operations.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 655,
+      "end": 657
+    },
+    "content_stats": {
+      "char_count": 2497,
+      "word_count": 282
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring permissions for automatic semantic enrichment",
+      "children": []
+    }
+  }
+}

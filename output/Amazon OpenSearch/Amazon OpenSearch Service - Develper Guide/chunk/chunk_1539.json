@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1539",
+  "section_number": "2.28.10",
+  "header": "Get started: Upgrade your domains to OpenSearch 1.x",
+  "content": "OpenSearch 1.x supports upgrades from Elasticsearch versions 6.8 and 7.x. For instructions to\nupgrade your domain, see the section called “Upgrading a domain (console)”. If you're using the\nAWS CLI or conﬁguration API to upgrade your domain, you need to specify the TargetVersion as\nOpenSearch_1.x.\nOpenSearch 1.x introduces an additional domain setting called Enable compatibility mode.\nBecause certain Elasticsearch OSS clients and plugins check the cluster version before connecting,\ncompatibility mode sets OpenSearch to report its version as 7.10 so these clients continue to work.\nYou can enable compatibility mode when you create OpenSearch domains for the ﬁrst time, or\nwhen you upgrade to OpenSearch from an Elasticsearch version. If it's not set, the parameter\ndefaults to false when you create a domain, and true when you upgrade a domain.\nTo enable compatibility mode using the conﬁguration API, set\noverride_main_response_version to true:\nPOST https://es.us-east-1.amazonaws.com/2021-01-01/opensearch/upgradeDomain\n{\n\"DomainName\": \"domain-name\",\n\"TargetVersion\": \"OpenSearch_1.0\",\n\"AdvancedOptions\": {\n\"override_main_response_version\": \"true\"\n}\n}\nTo enable or disable compatibility mode on existing OpenSearch domains, you need to use the\nOpenSearch _cluster/settings API operation:\nPUT /_cluster/settings\n{\n\"persistent\" : {\nGet started: Upgrade your domains to OpenSearch 1.x\n2046\nAmazon OpenSearch Service\nDeveloper Guide\n\"compatibility.override_main_response_version\" : true\n}\n}\nGet started: Upgrade your domains to OpenSearch 1.x\n2047\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2075,
+      "end": 2077
+    },
+    "content_stats": {
+      "char_count": 1593,
+      "word_count": 213
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service rename - Summary of changes",
+      "children": []
+    }
+  }
+}

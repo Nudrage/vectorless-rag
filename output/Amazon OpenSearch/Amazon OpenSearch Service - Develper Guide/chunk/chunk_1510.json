@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1510",
+  "section_number": "2.27.3.3.1",
+  "header": "Create the Lambda function",
+  "content": "In this solution, API Gateway passes requests to a Lambda function, which queries OpenSearch\nService and returns results. Because this sample function uses external libraries, you need to create\na deployment package and upload it to Lambda.\nTo create the deployment package\n1.\nOpen a command prompt and create a my-opensearch-function project directory. For\nexample, on macOS:\nmkdir my-opensearch-function\n2.\nNavigate to the my-sourcecode-function project directory.\ncd my-opensearch-function\n3.\nCopy the contents of the following sample Python code and save it in a new ﬁle named\nopensearch-lambda.py. Add your Region and host endpoint to the ﬁle.\nimport boto3\nimport json\nimport requests\nfrom requests_aws4auth import AWS4Auth\nregion = '' # For example, us-west-1\nservice = 'es'\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\nhost = '' # The OpenSearch domain endpoint with https:// and without a trailing\nslash\nindex = 'movies'\nurl = host + '/' + index + '/_search'\n# Lambda execution starts here\ndef lambda_handler(event, context):\nStep 2: Create and deploy the Lambda function\n2015\nAmazon OpenSearch Service\nDeveloper Guide\n# Put the user query into the query DSL for more accurate search results.\n# Note that certain fields are boosted (^).\nquery = {\n\"size\": 25,\n\"query\": {\n\"multi_match\": {\n\"query\": event['queryStringParameters']['q'],\n\"fields\": [\"title^4\", \"plot^2\", \"actors\", \"directors\"]\n}\n}\n}\n# Elasticsearch 6.x requires an explicit Content-Type header\nheaders = { \"Content-Type\": \"application/json\" }\n# Make the signed HTTP request\nr = requests.get(url, auth=awsauth, headers=headers, data=json.dumps(query))\n# Create the response and add some extra content to support CORS\nresponse = {\n\"statusCode\": 200,\n\"headers\": {\n\"Access-Control-Allow-Origin\": '*'\n},\n\"isBase64Encoded\": False\n}\n# Add the search results to the response\nresponse['body'] = r.text\nreturn response\n4.\nInstall the external libraries to a new package directory.\npip3 install --target ./package boto3\npip3 install --target ./package requests\npip3 install --target ./package requests_aws4auth\n5.\nCreate a deployment package with the installed library at the root. The following command\ngenerates a my-deployment-package.zip ﬁle in your project directory.\ncd package\nzip -r ../my-deployment-package.zip .\nStep 2: Create and deploy the Lambda function\n2016\nAmazon OpenSearch Service\nDeveloper Guide\n6.\nAdd the opensearch-lambda.py ﬁle to the root of the zip ﬁle.\ncd ..\nzip my-deployment-package.zip opensearch-lambda.py\nFor more information about creating Lambda functions and deployment packages, see Deploy\nPython Lambda functions with .zip ﬁle archives in the AWS Lambda Developer Guide and the\nsection called “Create the Lambda deployment package” in this guide.\nTo create your function using the Lambda console\n1.\nNavigate to the Lambda console at https://console.aws.amazon.com/lambda/home. On the\nleft navigation pane, choose Functions.\n2.\nSelect Create function.\n3.\nConﬁgure the following ﬁelds:\n• Function name: opensearch-function\n• Runtime: Python 3.9\n• Architecture: x86_64\nKeep all other default options and choose Create function.\n4.\nIn the Code source section of the function summary page, choose the Upload from dropdown\nand select .zip ﬁle. Locate the my-deployment-package.zip ﬁle that you created and\nchoose Save.\n5.\nThe handler is the method in your function code that processes events. Under Runtime\nsettings, choose Edit and change the handler name according to the name of the ﬁle in\nyour deployment package where the Lambda function is located. Since your ﬁle is named\nopensearch-lambda.py, rename the handler to opensearch-lambda.lambda_handler.\nFor more information, see Lambda function handler in Python.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2044,
+      "end": 2046
+    },
+    "content_stats": {
+      "char_count": 3825,
+      "word_count": 544
+    },
+    "hierarchy": {
+      "parent": "Step 2: Create and deploy the Lambda function",
+      "children": []
+    }
+  }
+}

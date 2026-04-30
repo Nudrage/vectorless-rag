@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_519",
+  "section_number": "1.17.25",
+  "header": "Operating Systems",
+  "content": "Section Name: operating_systems\nCorresponds to: Operating Systems\nThis section is available in the Premier and Advantage editions.\nThe operating_systems  section affects devices used to access applications\nprotected by Duo's browser-based authentication prompt, and mobile devices using\nDuo Mobile as a second factor.\nThe operating system names that can be in each of the lists below are: android ,\nblackberry , chromeos , ios , linux , macos , windows , windowsphone , and\nunknownos .\nNote: No operating system should be listed in more than one of\nallow_unrestricted_os_list , block_os_list , and os_restrictions . In the\ncase of conflicts, the API call will fail.\nKey\nValue\nallow_unrestricted_os_list\nComma-separated list of operating systems that\nconstraints or warnings. allow_unrestricted_\nblock_os_list  must not contain the same valu\nenroll  (default): Require the user to enroll\nwhenever possible.\n•\nno-mfa : MFA is not required for unknown users;\nunenrolled users must enroll.\n•\ndeny : Denies authentication to unenrolled users.\n•\nblock_os_list\nComma-separated list of operating systems that\nallow_unrestricted_os_list  and block_os\ncontain the same values. Blocked Android or iOS\nable to authenticate using Duo Push or Duo Mob\nos_restrictions\nCan contain up to 4 blocks of keys – one for each\ncan be further restricted: android , ios , maco\nKey\nValue\nwarn_policy\nIndicates when\nwarned that th\nValue is one of\nwarn_version\nThe specific O\nlist in the edit p\nthe out-of-date\nonly if warn_p\nthan-version\nwarn_remediation_days\nNumber of day\nwarned. Value\n14 , 30  (defa\nor 365 .\nblock_policy\nIndicates when\nblocked from a\nsame as warn_\nblock_version\nThe specific O\nlist in the edit p\nblocked. Value\nwarn_versio\nno-remed\nversion ch\n“Never” w\nin the UI.\n•\nend-of-l\nlonger rele\nupdates.\n•\nnot-up-t\nthe most r\nversion.\n•\nless-tha\nat the mos\nversion.\n•\nless-tha\nolder than\nin warn_v\n•\nblock_policy\nversion .\nblock_remediation_days\nNumber of day\nbe blocked. Va\nwarn_remedi\nExample section: Warn for two weeks if iOS is no\n60 days total.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 221,
+      "end": 223
+    },
+    "content_stats": {
+      "char_count": 2035,
+      "word_count": 322
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_411",
+  "section_number": "2.15.10.1",
+  "header": "Considerations",
+  "content": "Before you set up an interface endpoint for OpenSearch Serverless, consider the following:\n• OpenSearch Serverless supports making calls to all supported OpenSearch API operations (not\nconﬁguration API operations) through the interface endpoint.\n• After you create an interface endpoint for OpenSearch Serverless, you still need to include it in\nnetwork access policies in order for it to access serverless collections.\n• By default, full access to OpenSearch Serverless is allowed through the interface endpoint.\nYou can associate a security group with the endpoint network interfaces to control traﬃc to\nOpenSearch Serverless through the interface endpoint.\n• A single AWS account can have a maximum of 50 OpenSearch Serverless VPC endpoints.\n• If you enable public internet access to your collection’s API or Dashboards in a network policy,\nyour collection is accessible by any VPC and by the public internet.\n• If you're on-premises and outside of the VPC, you can't use a DNS resolver for the OpenSearch\nServerless VPC endpoint resolution directly. If you need VPN access, the VPC needs a DNS proxy\nresolver for external clients to use. Route 53 provides an inbound endpoint option that you can\nuse to resolve DNS queries to your VPC from your on-premises network or another VPC.\n• The private hosted zone that OpenSearch Serverless creates and attaches to the VPC is managed\nby the service, but it shows up in your Amazon Route 53 resources and is billed to your account.\n• For other considerations, see Considerations in the AWS PrivateLink Guide.\nVPC endpoints\n565\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 594,
+      "end": 595
+    },
+    "content_stats": {
+      "char_count": 1614,
+      "word_count": 259
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

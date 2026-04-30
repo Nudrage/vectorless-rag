@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_224",
+  "section_number": "2.6.19.4.2",
+  "header": "Understanding OpenSearch Ingestion log ﬁle entries",
+  "content": "A trail is a conﬁguration that enables delivery of events as log ﬁles to an Amazon S3 bucket that\nyou specify. CloudTrail log ﬁles contain one or more log entries.\nAn event represents a single request from any source. It includes information about the requested\naction, the date and time of the action, request parameters, and so on. CloudTrail log ﬁles aren't an\nordered stack trace of the public API calls, so they don't appear in any speciﬁc order.\nThe following example shows a CloudTrail log entry that demonstrates the DeletePipeline\naction.\n{\n\"eventVersion\": \"1.08\",\n\"userIdentity\": {\n\"type\": \"AssumedRole\",\n\"principalId\": \"AIDACKCEVSQ6C2EXAMPLE\",\n\"arn\":\"arn:aws:iam::123456789012:user/test-user\",\n\"accountId\": \"123456789012\",\n\"accessKeyId\": \"access-key\",\n\"sessionContext\": {\n\"sessionIssuer\": {\n\"type\": \"Role\",\n\"principalId\": \"AIDACKCEVSQ6C2EXAMPLE\",\n\"arn\": \"arn:aws:iam::123456789012:role/Admin\",\n\"accountId\": \"123456789012\",\n\"userName\": \"Admin\"\n},\n\"webIdFederationData\": {},\n\"attributes\": {\n\"creationDate\": \"2023-04-21T16:48:33Z\",\n\"mfaAuthenticated\": \"false\"\n}\n}\nMonitoring with CloudTrail\n325\nAmazon OpenSearch Service\nDeveloper Guide\n},\n\"eventTime\": \"2023-04-21T16:49:22Z\",\n\"eventSource\": \"osis.amazonaws.com\",\n\"eventName\": \"UpdatePipeline\",\n\"awsRegion\": \"us-west-2\",\n\"sourceIPAddress\": \"123.456.789.012\",\n\"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36\n(KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36\",\n\"requestParameters\": {\n\"pipelineName\": \"my-pipeline\",\n\"pipelineConfigurationBody\": \"version: \\\"2\\\"\\nlog-pipeline:\\n  source:\\n\nhttp:\\n        path: \\\"/test/logs\\\"\\n  processor:\\n    - grok:\\n        match:\\n\nlog: [ '%{COMMONAPACHELOG}' ]\\n    - date:\\n        from_time_received: true\n\\n        destination: \\\"@timestamp\\\"\\n  sink:\\n    - opensearch:\\n        hosts:\n[ \\\"https://search-b5zd22mwxhggheqpj5ftslgyle.us-west-2.es.amazonaws.com\\\" ]\\n\nindex: \\\"apache_logs2\\\"\\n        aws_sts_role_arn: \\\"arn:aws:iam::709387180454:role/\ncanary-bootstrap-OsisRole-J1BARLD26QKN\\\"\\n        aws_region: \\\"us-west-2\\\"\\n\naws_sigv4: true\\n\"\n},\n\"responseElements\": {\n\"pipeline\": {\n\"pipelineName\": \"my-pipeline\",sourceIPAddress\n\"pipelineArn\": \"arn:aws:osis:us-west-2:123456789012:pipeline/my-pipeline\",\n\"minUnits\": 1,\n\"maxUnits\": 1,\n\"status\": \"UPDATING\",\n\"statusReason\": {\n\"description\": \"An update was triggered for the pipeline. It is still\navailable to ingest data.\"\n},\n\"pipelineConfigurationBody\": \"version: \\\"2\\\"\\nlog-pipeline:\\n  source:\\n\nhttp:\\n        path: \\\"/test/logs\\\"\\n  processor:\\n    - grok:\\n        match:\n\\n          log: [ '%{COMMONAPACHELOG}' ]\\n    - date:\\n        from_time_received:\ntrue\\n        destination: \\\"@timestamp\\\"\\n  sink:\\n    - opensearch:\\n        hosts:\n[ \\\"https://search-b5zd22mwxhggheqpj5ftslgyle.us-west-2.es.amazonaws.com\\\" ]\\n\nindex: \\\"apache_logs2\\\"\\n        aws_sts_role_arn: \\\"arn:aws:iam::709387180454:role/\ncanary-bootstrap-OsisRole-J1BARLD26QKN\\\"\\n        aws_region: \\\"us-west-2\\\"\\n\naws_sigv4: true\\n\",\n\"createdAt\": \"Mar 29, 2023 1:03:44 PM\",\n\"lastUpdatedAt\": \"Apr 21, 2023 9:49:21 AM\",\n\"ingestEndpointUrls\": [\n\"my-pipeline-tu33ldsgdltgv7x7tjqiudvf7m.us-west-2.osis.amazonaws.com\"\n]\n}\nMonitoring with CloudTrail\n326\nAmazon OpenSearch Service\nDeveloper Guide\n},\n\"requestID\": \"12345678-1234-1234-1234-987654321098\",\n\"eventID\": \"12345678-1234-1234-1234-987654321098\",\n\"readOnly\": false,\n\"eventType\": \"AwsApiCall\",\n\"managementEvent\": true,\n\"recipientAccountId\": \"709387180454\",\n\"eventCategory\": \"Management\",\n\"tlsDetails\": {\n\"tlsVersion\": \"TLSv1.2\",\n\"cipherSuite\": \"ECDHE-RSA-AES128-GCM-SHA256\",\n\"clientProvidedHostHeader\": \"osis.us-west-2.amazonaws.com\"\n},\n\"sessionCredentialFromConsole\": \"true\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 354,
+      "end": 356
+    },
+    "content_stats": {
+      "char_count": 3684,
+      "word_count": 331
+    },
+    "hierarchy": {
+      "parent": "Logging Amazon OpenSearch Ingestion API calls using AWS CloudTrail",
+      "children": []
+    }
+  }
+}

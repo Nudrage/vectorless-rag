@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_300",
+  "section_number": "2.7.3.6.1",
+  "header": "Working with snapshots",
+  "content": "By default, when you create a new collection, OpenSearch Serverless automatically creates\nsnapshots every hour. You don't need to take any action. Each snapshot includes all indexes in the\ncollection. After OpenSearch Serverless creates snapshots, you can list them and review the details\nof the snapshot using the following procedures.\nList snapshots\nUse the following procedures to list all snapshots in a collection and review their details.\nConsole\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/.\n2.\nIn the left navigation pane, choose Serverless, then choose Collections.\n3.\nChoose the name of your collection to open its details page.\nBacking up collections using snapshots\n436\nAmazon OpenSearch Service\nDeveloper Guide\n4.\nChoose the Snapshots tab to display all generated snapshots.\n5.\nReview the snapshot information including:\n• Snapshot ID - Unique identiﬁer for the snapshot\n• Status - Current state (Available, In Progress)\n• Created time - When the snapshot was taken\nAWS CLI\n•\nUse the following command to list all snapshots in a collection:\nGET /_cat/snapshots/aoss-automated\nOpenSearch Serverless returns a response like the following:\nid                                 status  start_epoch start_time end_epoch\nend_time    duration    indexes successful_shards failed_shards total_shards\nsnapshot-ExampleSnapshotID1     SUCCESS 1737964331  07:52:11   1737964382\n07:53:02    50.4s       1\nsnapshot-ExampleSnapshotID2     SUCCESS 1737967931  08:52:11   1737967979\n08:52:59    47.7s       2\nsnapshot-ExampleSnapshotID3     SUCCESS 1737971531  09:52:11   1737971581\n09:53:01    49.1s       3\nsnapshot-ExampleSnapshotID4 IN_PROGRESS 1737975131  10:52:11   -          -\n4.8d       3\nGet snapshot details\nUse the following procedures to retrieve detailed information about a speciﬁc snapshot.\nConsole\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/.\n2.\nIn the left navigation pane, choose Serverless, then choose Collections.\n3.\nChoose the name of your collection to open its details page.\n4.\nChoose the Snapshots tab.\nBacking up collections using snapshots\n437\nAmazon OpenSearch Service\nDeveloper Guide\n5.\nChoose the snapshot job ID to display detailed information about the snapshot, including\nmetadata, indexes included, and timing information.\nAWS CLI\n•\nUse the following command to retrieve information about a snapshot. In the command,\nreplace the example content with your speciﬁc information.\nGET _snapshot/aoss-automated/snapshot/\nExample Request:\nGET _snapshot/aoss-automated/snapshot-ExampleSnapshotID1/\nExample Response:\n{\n\"snapshots\": [\n{\n\"snapshot\": \"snapshot-ExampleSnapshotID1-5e01-4423-9833Example\",\n\"uuid\": \"Example-5e01-4423-9833-9e9eb757Example\",\n\"version_id\": 136327827,\n\"version\": \"2.11.0\",\n\"remote_store_index_shallow_copy\": true,\n\"indexes\": [\n\"Example-index-0117\"\n],\n\"data_streams\": [],\n\"include_global_state\": true,\n\"metadata\": {},\n\"state\": \"SUCCESS\",\n\"start_time\": \"2025-01-27T09:52:11.953Z\",\n\"start_time_in_millis\": 1737971531953,\n\"end_time\": \"2025-01-27T09:53:01.062Z\",\n\"end_time_in_millis\": 1737971581062,\n\"duration_in_millis\": 49109,\n\"failures\": [],\n\"shards\": {\n\"total\": 0,\n\"failed\": 0,\n\"successful\": 0\nBacking up collections using snapshots\n438\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}\n]\n}\nThe snapshot response includes several key ﬁelds: id provides a unique identiﬁer for the snapshot\noperation, status returns the current state SUCCESS or IN_PROGRESS, duration indicates the\ntime taken to complete the snapshot operation, and indexes returns the number of indexes\nincluded in the snapshot.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 465,
+      "end": 468
+    },
+    "content_stats": {
+      "char_count": 3614,
+      "word_count": 442
+    },
+    "hierarchy": {
+      "parent": "Backing up collections using snapshots",
+      "children": []
+    }
+  }
+}

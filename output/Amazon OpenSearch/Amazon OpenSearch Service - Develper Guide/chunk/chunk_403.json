@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_403",
+  "section_number": "2.7.10.10.9",
+  "header": "Updating data access policies",
+  "content": "When you update a data access policy, all associated collections are impacted. To update a data\naccess policy in the OpenSearch Serverless console, choose Data access control, select the policy\nto modify, and choose Edit. Make your changes and choose Save.\nTo update a data access policy using the OpenSearch Serverless API, send an\nUpdateAccessPolicy request. You must include a policy version, which you can retrieve using\nthe ListAccessPolicies or GetAccessPolicy commands. Including the most recent policy\nversion ensures that you don't inadvertently override a change made by someone else.\nThe following UpdateAccessPolicy request updates a data access policy with a new policy JSON\ndocument:\naws opensearchserverless update-access-policy \\\n--name sales-inventory \\\n--type data \\\n--policy-version MTY2NDA1NDE4MDg1OF8x \\\n--policy file://my-new-policy.json\nThere might be a few minutes of lag time between when you update the policy and when the new\npermissions are enforced.\nData access control\n555\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 584,
+      "end": 585
+    },
+    "content_stats": {
+      "char_count": 1044,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

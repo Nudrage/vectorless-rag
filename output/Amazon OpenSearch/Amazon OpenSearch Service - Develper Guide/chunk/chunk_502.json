@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_502",
+  "section_number": "2.8.9.3",
+  "header": "Availability zone disruptions",
+  "content": "Availability Zone disruptions are rare, but do occur. The following table lists diﬀerent Multi-AZ\nconﬁgurations and behaviors during a disruption. The last row in the table applies to Multi-AZ with\nStandby, while all other rows have conﬁgurations that only apply to Multi-AZ without Standby.\nNumber of\nAvailability\nZones in a\nregion\nNumber of\nAvailability\nZones you\nchose\nNumber of\ndedicated\nmaster\nnodes\nBehavior if one Availability Zone experiences\na disruption\n2 or more\n2\n0\nDowntime. Your cluster loses half of its data\nnodes and must replace at least one in the\nremaining Availability Zone before it can elect\na master.\n2\n2\n3\n50/50 chance of downtime. OpenSearch\nService distributes two dedicated master\nnodes into one Availability Zone and one into\nthe other:\n• If the Availability Zone with one dedicated\nmaster node experiences a disruption,\nthe two dedicated master nodes in the\nremaining Availability Zone can elect a\nmaster.\n• If the Availability Zone with two dedicated\nmaster nodes experiences a disruption, the\ncluster is unavailable until the remaining\nAvailability Zone recovers.\n3 or more\n2\n3\nNo downtime. OpenSearch Service automatic\nally distributes the dedicated master nodes\nacross three Availability Zones, so the\nremaining two dedicated master nodes can\nelect a master.\nAvailability zone disruptions\n671\nAmazon OpenSearch Service\nDeveloper Guide\nNumber of\nAvailability\nZones in a\nregion\nNumber of\nAvailability\nZones you\nchose\nNumber of\ndedicated\nmaster\nnodes\nBehavior if one Availability Zone experiences\na disruption\n3 or more\n3\n0\nNo downtime. Roughly two-thirds of your data\nnodes are still available to elect a master.\n3 or more\n3\n3\nNo downtime. The remaining two dedicated\nmaster nodes can elect a master.\nIn all conﬁgurations, regardless of the cause, node failures can cause the cluster's remaining data\nnodes to experience a period of increased load while OpenSearch Service automatically conﬁgures\nnew nodes to replace the now-missing ones.\nFor example, in the event of an Availability Zone disruption in a three-zone conﬁguration, two-\nthirds as many data nodes have to process just as many requests to the cluster. As they process\nthese requests, the remaining nodes are also replicating shards onto new nodes as they come\nonline, which can further impact performance. If availability is critical to your workload, consider\nadding resources to your cluster to alleviate this concern.\nNote\nOpenSearch Service manages Multi-AZ domains transparently, so you can't manually\nsimulate Availability Zone disruptions.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 700,
+      "end": 701
+    },
+    "content_stats": {
+      "char_count": 2542,
+      "word_count": 398
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring a multi-AZ domain in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

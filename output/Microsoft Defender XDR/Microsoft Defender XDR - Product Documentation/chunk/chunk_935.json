@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_935",
+  "section_number": "155.1.1.94.6",
+  "header": "February 2021",
+  "content": "ﾉ\nExpand table\nTable name\nOriginal column name\nNew column\nname\nReason for change\nEmailAttachmentInfo\nMalwareDetectionMethod\nPhishDetectionMethod\nDetectionMethods\nInclude more detection\nmethods\nEmailAttachmentInfo\nMalwareFilterVerdict\nPhishFilterVerdict\nThreatTypes\nInclude more threat types\nEmailEvents\nMalwareDetectionMethod\nPhishDetectionMethod\nDetectionMethods\nInclude more detection\nmethods\nEmailEvents\nMalwareFilterVerdict\nPhishFilterVerdict\nThreatTypes\nInclude more threat types\nIn the EmailAttachmentInfo  and EmailEvents  tables, the ThreatNames  column was added\nto give more information about the email threat. This column contains values like Spam\nor Phish.\nIn the DeviceInfo table, the DeviceObjectId  column was replaced by the AadDeviceId\ncolumn based on customer feedback.\nIn the DeviceEvents table, several ActionType names were modified to better reflect the\ndescription of the action. Details of the changes can be found below.\nTable name\nOriginal ActionType name\nNew ActionType name\nReason for change\nDeviceEvents\nUsbDriveMount\nUsbDriveMounted\nCustomer feedback\nDeviceEvents\nUsbDriveUnmount\nUsbDriveUnmounted\nCustomer feedback\nDeviceEvents\nWriteProcessMemoryApiCall\nWriteToLsassProcessMemory\nCustomer feedback\nColumn name\nOriginal value name\nNew value name\nReason for\nchange\nDetectionSource\nDefender for Cloud Apps\nMicrosoft Defender for Cloud\nApps\nRebranding\nDetectionSource\nWindowsDefenderAtp\nEDR\nRebranding\nﾉ\nExpand table",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 624,
+      "end": 625
+    },
+    "content_stats": {
+      "char_count": 1443,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting schema - Naming changes",
+      "children": []
+    }
+  }
+}

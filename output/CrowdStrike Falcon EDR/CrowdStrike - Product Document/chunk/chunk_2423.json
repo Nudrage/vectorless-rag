@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2423",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nFfcAutoRunType\nA field used by the Falcon Forensics Collector platform to indicate which OS subsystem is executing the process.\nValues:\nLOGIN_ITEM (0)\nSANDBOXED_LOGIN_ITEM (1)\nSTARTUP_ITEM (2)\nLAUNCH_ITEM (3)\nPERIODIC_RULE_ITEM (4)\nCRON_TASK (5)\nSCRIPTING_ADDITION (6)\nSTARTUP_INFO (7)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n848/1226\nField\nDescription\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nImageFileIdentifier\n24-byte unique file identifer for a binary executable image.\nBundleID\nCommandLineParameters\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\nUserName\nOperating system username.\nUserSecurityDomain\nDomain for the file/process/registry owner (mapped from SID).\nStartUpLogonNumber\nStartupInfo logon number.\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed\nthread injection in an InjectedThread event\nProcessCpuUsageMicroSec CPU cycles used by process in micro-seconds.\nProcessDiskUsageBytes\nDisk storage used by process in bytes.\nParentBaseFileName\nThe base ImageFileName of the parent process.\nParentProcessId\nThe decimal representation of the parent process.\nParentProcessStartTime\nStart time of parent process.\nProcessStartedInTraceSec\nNumber of seconds process has been monitored.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 848,
+      "end": 849
+    },
+    "content_stats": {
+      "char_count": 2165,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "AutoRunProcessInfo",
+      "children": []
+    }
+  }
+}

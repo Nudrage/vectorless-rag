@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1376",
+  "section_number": "2.25.3.1",
+  "header": "Keep current with OpenSearch",
+  "content": "Service software updates\nOpenSearch Service regularly releases software updates that add features or otherwise improve\nyour domains. Updates don't change the OpenSearch or Elasticsearch engine version. We\nrecommend that you schedule a recurring time to run the DescribeDomain API operation, and\ninitiate a service software update if the UpdateStatus is ELIGIBLE. If you don't update your\ndomain within a certain time frame (typically two weeks), OpenSearch Service automatically\nperforms the update.\nOpenSearch version upgrades\nOpenSearch Service regularly adds support for community-maintained versions of OpenSearch.\nAlways upgrade to the latest OpenSearch versions when they're available.\nOpenSearch Service simultaneously upgrades both OpenSearch and OpenSearch Dashboards\n(or Elasticsearch and Kibana if your domain is running a legacy engine). If the cluster has\ndedicated master nodes, upgrades complete without downtime. Otherwise, the cluster might\nbe unresponsive for several seconds post-upgrade while it elects a master node. OpenSearch\nDashboards might be unavailable during some or all of the upgrade.\nThere are two ways to upgrade a domain:\n• In-place upgrade – This option is easier because you keep the same cluster.\nAvoid storage skew\n1839\nAmazon OpenSearch Service\nDeveloper Guide\n• Snapshot/restore upgrade – This option is good for testing new versions on a new cluster or\nmigrating between clusters.\nRegardless of which upgrade process you use, we recommend that you maintain a domain that is\nsolely for development and testing, and upgrade it to the new version before you upgrade your\nproduction domain. Choose Development and testing for the deployment type when you're\ncreating the test domain. Make sure to upgrade all clients to compatible versions immediately\nfollowing the domain upgrade.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1868,
+      "end": 1869
+    },
+    "content_stats": {
+      "char_count": 1818,
+      "word_count": 267
+    },
+    "hierarchy": {
+      "parent": "Stability",
+      "children": []
+    }
+  }
+}

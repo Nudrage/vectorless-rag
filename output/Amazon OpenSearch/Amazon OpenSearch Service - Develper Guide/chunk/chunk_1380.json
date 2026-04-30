@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1380",
+  "section_number": "2.25.3.5",
+  "header": "Control ingest ﬂow and buﬀering",
+  "content": "We recommend that you limit the overall request count using the _bulk API operation. It's more\neﬃcient to send one _bulk request that contains 5,000 documents than it is to send 5,000\nrequests that contain a single document.\nFor optimal operational stability, it's sometimes necessary to limit or even pause the upstream ﬂow\nof indexing requests. Limiting the rate of index requests is an important mechanism for dealing\nwith unexpected or occasional spikes in requests that might otherwise overwhelm the cluster.\nConsider building a ﬂow control mechanism into your upstream architecture.\nThe following diagram shows multiple component options for a log ingest architecture. Conﬁgure\nthe aggregation layer to allow suﬃcient space to buﬀer incoming data for sudden traﬃc spikes and\nbrief domain maintenance.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1870,
+      "end": 1870
+    },
+    "content_stats": {
+      "char_count": 806,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": "Stability",
+      "children": []
+    }
+  }
+}

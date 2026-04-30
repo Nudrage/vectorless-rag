@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_042",
+  "section_number": "1.2.38",
+  "header": "Label applied on creation",
+  "content": "Label was applied automatically when the Drive item was created.\nEvent details\nEvent name\nlabel_added_by_item_create\nParameters\ndoc_id\nstring\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/drive?\neventName=label_added&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{actor} applied Label {label_title}.\nEvent details\nDocument ID.\ndoc_title\nstring\nDocument title.\ndoc_type\nstring\nDocument type. Possible values:\ndocument\nDoc type document.\ndrawing\nDoc type drawing.\nfolder\nDoc type folder.\nform\nDoc type form.\nhtml\nDoc type HTML.\njam\nDoc type Jam.\njpeg\nDoc type JPEG.\nmp4\nDoc type MP4.\nmpeg\nDoc type MPEG.\nmsexcel\nDoc type MS Excel.\nmspowerpoint\nDoc type MS Powerpoint.\nmsword\nDoc type MS Word.\npdf\nDoc type PDF.\npng\nDoc type PNG.\npresentation\nDoc type presentation.\nquicktime\nDoc type Quicktime.\nscript\nGoogle Apps Script.\nshortcut\nDoc type is Google Shortcut.\nEvent details\nsites\nDoc type is Google Sites.\nspreadsheet\nDoc type spreadsheet.\nshared_drive\nDoc type is a shared drive.\ntxt\nDoc type txt.\nunknown\nDoc type unknown.\nvideo\nDoc type is a Google Vids Video.\nis_encrypted\nboolean\nWhether the file is client-side\nencrypted.\nlabel\nstring\nThe unique Identifier of a Label.\nlabel_title\nstring\nLabel title.\noriginating_app_id\nstring\nThe Google Cloud project number of\nthe application that performed the\naction. Use the Drive REST API\n(/drive/v2/reference/apps/get) to\nretrieve the app title.\nowner\nstring\nThe email address of the document's\nowner. For items contained in a shared\ndrive, the owner is the name of the\nshared drive.\nowner_is_shared_drive\nboolean\nBoolean flag denoting whether the\nowner is a shared drive.\nowner_shared_drive_id\nstring\nThe shared drive root ID if the\ndocument owner is a shared drive.\nprimary_event\nboolean\nWhether this event is a primary event.\nA single user action in Drive can\ngenerate several events, multiple of\nwhich can be primary\nEvent details\n(primary_event=true). The\nremaining events are deemed to be\nside effects of the primary event(s)\n(primary_event=false). For\nexample, when a user creates a\ndocument, several events are\ngenerated, with only the create event\nhaving primary_event=true. But\nwhen a user shares a document with\nmultiple other users in one action, an\naccess change event having\nprimary_event=true is created for\neach sharee. Possible values:\nfalse\nBoolean value false.\ntrue\nBoolean value true.\nreason\nstring\nReason for label addition, removal, or\nvalue change event. Possible values:\ncopy\nReason for change Drive item copy.\ndefault_label\nReason for change default label\nbehavior.\ndlp_action\nReason for change DLP.\nreason_unspecified\nReason for change unspecified.\nuser_action\nReason for change is a user action.\nshared_drive_id\nstring\nThe unique identifier of the shared\ndrive. Only populated for events or\nitems from a shared drive.\nvisibility\nstring\nVisibility of target file. Possible values:\npeople_with_link\nAnyone with the link can access.\npeople_within_domain_with_\nlink\nAnyone with the link within the\naudience can access.\nprivate\nPrivate.\nEvent details\npublic_in_the_domain\nAnyone within the audience can\naccess.\npublic_on_the_web\nPublic on the web.\nshared_externally\nShared with explicit users/groups\nexternal to the domain.\nshared_internally\nShared with explicit users/groups\ninternal to the domain.\nunknown\nUnknown visibility.\nSample request\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 128,
+      "end": 132
+    },
+    "content_stats": {
+      "char_count": 3374,
+      "word_count": 479
+    },
+    "hierarchy": {
+      "parent": "Access",
+      "children": []
+    }
+  }
+}

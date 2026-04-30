@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_566",
+  "section_number": "2.9.3.3",
+  "header": "CloudWatch Logs Recommendations",
+  "content": "If you’re using Amazon OpenSearch Service to direct query data in CloudWatch Logs, we also\nrecommend the following:\n• When searching multiple log groups in one query, use the appropriate syntax. For more\ninformation, see the section called “Multi-log group functions”.\n• When using SQL or PPL commands, enclose certain ﬁelds in backticks to successfully query\nthem. Backticks are needed for ﬁelds with special characters (non-alphabetic and non-numeric).\nFor example, enclose @message, Operation.Export, and Test::Field in backticks. You\ndon't need to enclose columns with purely alphabetic names in backticks.\nExample query with simple ﬁelds:\nSELECT SessionToken, Operation, StartTime  FROM `LogGroup-A`\nLIMIT 1000;\nSimilar query with backticks appended:\nSELECT `@SessionToken`, `@Operation`, `@StartTime` FROM `LogGroup-A`\nLIMIT 1000;\nAmazon S3 recommendations\n733\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 762,
+      "end": 763
+    },
+    "content_stats": {
+      "char_count": 908,
+      "word_count": 124
+    },
+    "hierarchy": {
+      "parent": "Recommendations for using direct queries in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

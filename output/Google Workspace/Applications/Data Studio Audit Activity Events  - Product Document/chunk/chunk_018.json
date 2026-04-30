@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_018",
+  "section_number": "1.3.2",
+  "header": "Change Data Source Access Type",
+  "content": "Change data source access type event name.\nEvent details\nEvent name\nCHANGE_DATA_SOURCE_ACCESS_TYPE\nParameters\nASSET_ID\nstring\nAsset Id.\nASSET_NAME\nstring\nAsset name.\nASSET_TYPE\nstring\nAsset type. Possible values:\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/data_studio?\neventName=VIEW&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{actor} viewed an asset\nEvent details\nDATA_SOURCE\nAsset type data source.\nEXPLORER\nAsset type explorer.\nREPORT\nAsset type report.\nWORKSPACE\nAsset type workspace.\nCONNECTOR_TYPE\nstring\nConnector type.\nCURRENT_VALUE\nstring\nCurrent value.\nEMBEDDED_IN_REPORT_ID\nstring\nID of the report where the data source\nis embedded.\nNEW_VALUE\nstring\nNew value. Possible values:\nOWNERS_CREDENTIALS\nCredential option that uses the\ncredentials of the data source\nowner to authorize access to the\ndata set.\nVIEWERS_CREDENTIALS\nCredential option that uses viewer's\ncredentials to authorize access to\nthe data set.\nOLD_VALUE\nstring\nOld value. Possible values:\nOWNERS_CREDENTIALS\nCredential option that uses the\ncredentials of the data source\nowner to authorize access to the\ndata set.\nVIEWERS_CREDENTIALS\nCredential option that uses viewer's\ncredentials to authorize access to\nthe data set.\nOWNER_EMAIL\nstring\nOwner email.\nPARENT_WORKSPACE_ID\nstring\nParent Workspace Id.\nEvent details\nPREVIOUS_VALUE\nstring\nPrevious value.\nPRIOR_VISIBILITY\nstring\nPrior Visibility. Possible values:\nPEOPLE_WITH_LINK\nAnyone with the link can access.\nPEOPLE_WITHIN_DOMAIN_WITH_\nLINK\nAnyone with the link within the\ndomain can access.\nPRIVATE\nPrivate.\nPUBLIC_ON_THE_WEB\nPublic on the web.\nSHARED_EXPLICITLY\nShared with explicit users/groups.\nUNKNOWN\nUnknown visibility.\nVISIBILITY\nstring\nVisibility. Possible values:\nPEOPLE_WITH_LINK\nAnyone with the link can access.\nPEOPLE_WITHIN_DOMAIN_WITH_\nLINK\nAnyone with the link within the\ndomain can access.\nPRIVATE\nPrivate.\nPUBLIC_ON_THE_WEB\nPublic on the web.\nSHARED_EXPLICITLY\nShared with explicit users/groups.\nUNKNOWN\nUnknown visibility.\nSample request\nAdmin Console message format\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/data_studio?\neventName=CHANGE_DATA_SOURCE_ACCESS_TYPE\n&maxResults=10&access_token=YOUR_ACCESS_TOKEN\n{actor} changed access type from {OLD_VALUE} to\nEvent details",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 19,
+      "end": 22
+    },
+    "content_stats": {
+      "char_count": 2301,
+      "word_count": 265
+    },
+    "hierarchy": {
+      "parent": "ACL Changed",
+      "children": []
+    }
+  }
+}

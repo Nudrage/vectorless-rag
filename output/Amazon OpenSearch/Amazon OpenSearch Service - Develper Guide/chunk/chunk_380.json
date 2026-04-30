@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_380",
+  "section_number": "2.7.10.8.2",
+  "header": "Permissions required to conﬁgure network policies",
+  "content": "Network access for OpenSearch Serverless uses the following AWS Identity and Access\nManagement (IAM) permissions. You can specify IAM conditions to restrict users to network policies\nassociated with speciﬁc collections.\n• aoss:CreateSecurityPolicy – Create a network access policy.\nNetwork access\n532\nAmazon OpenSearch Service\nDeveloper Guide\n• aoss:ListSecurityPolicies – List all network policies in the current account.\n• aoss:GetSecurityPolicy – View a network access policy speciﬁcation.\n• aoss:UpdateSecurityPolicy – Modify a given network access policy, and change the VPC ID\nor public access designation.\n• aoss:DeleteSecurityPolicy – Delete a network access policy (after it's detached from all\ncollections).\nThe following identity-based access policy allows a user to view all network policies, and update\npolicies with the resource pattern collection/application-logs:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:UpdateSecurityPolicy\"\n],\n\"Resource\": \"*\",\n\"Condition\": {\n\"StringEquals\": {\n\"aoss:collection\": \"application-logs\"\n}\n}\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:ListSecurityPolicies\",\n\"aoss:GetSecurityPolicy\"\n],\n\"Resource\": \"*\"\n}\n]\n}\nNetwork access\n533\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nIn addition, OpenSearch Serverless requires the aoss:APIAccessAll and\naoss:DashboardsAccessAll permissions for collection resources. For more information,\nsee the section called “Using OpenSearch API operations”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 561,
+      "end": 563
+    },
+    "content_stats": {
+      "char_count": 1475,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "Network access for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

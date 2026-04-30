@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_438",
+  "section_number": "2.7.13.2.3",
+  "header": "Understanding OpenSearch Serverless Data Event entries",
+  "content": "In the following example:\n• The requestParameters ﬁeld contains details about the API call made to the collection. It\nincludes the base request path (without query parameters).\n• The responseElements ﬁeld includes a status code that indicates the outcome of your\nrequest when modifying resources. This status code helps you track whether your changes were\nprocessed successfully or require attention.\n• OpenSearch Serverless logs CloudTrail data events only for requests that have successfully\ncompleted IAM authentication.\nMonitoring with CloudTrail\n601\nAmazon OpenSearch Service\nDeveloper Guide\nExample\n\"accessKeyId\": \"access-key\",\n\"userName\": \"\",\n\"sessionContext\": {\n\"sessionIssuer\": {\n\"type\": \"Role\",\n\"principalId\": \"AROA123456789EXAMPLE\",\n\"arn\": \"arn:aws:iam::111122223333:role/Admin\",\n\"accountId\": \"111122223333\",\n\"userName\": \"Admin\"\n},\n\"attributes\": {\n\"creationDate\": \"2025-08-15T22:57:38Z\",\n\"mfaAuthenticated\": \"false\"\n},\n\"sourceIdentity\": \"\",\n\"ec2RoleDelivery\": \"\",\n\"assumedRoot\": \"\"\n},\n\"identityProvider\": \"\",\n\"credentialId\": \"\"\n},\n\"eventTime\": \"2025-08-15T22:58:00Z\",\n\"eventSource\": \"aoss.amazonaws.com\",\n\"eventName\": \"Search\",\n\"awsRegion\": \"us-east-1\",\n\"sourceIPAddress\": \"AWS Internal\",\n\"userAgent\": \"python-requests/2.32.3\",\n\"requestParameters\": {\n\"pathPrefix\": \"/_search\"\n},\n\"responseElements\": null,\n\"requestID\": \"2cfee788-EXAM-PLE1-8617-4018cEXAMPLE\",\n\"eventID\": \"48d43617-EXAM-PLE1-9d9c-f7EXAMPLE\",\n\"readOnly\": true,\n\"resources\": [\n{\n\"type\": \"AWS::AOSS::Collection\",\n\"ARN\": \"arn:aws:aoss:us-east-1:111122223333:collection/aab9texampletu45xh77\"\n}\n],\n\"eventType\": \"AwsApiCall\",\n\"managementEvent\": false,\n\"recipientAccountId\": \"111122223333\",\n\"eventCategory\": \"Data\"\n}\n]\n}\nMonitoring with CloudTrail\n602\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 630,
+      "end": 632
+    },
+    "content_stats": {
+      "char_count": 1760,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "Logging OpenSearch Serverless API calls using AWS CloudTrail",
+      "children": []
+    }
+  }
+}

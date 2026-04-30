@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_557",
+  "section_number": "2.9.1",
+  "header": "Direct query pricing",
+  "content": "When you use OpenSearch Service direct queries, you'll incur separate charges for OpenSearch\nService and the resources used to process and store your data on Amazon S3, Amazon CloudWatch\nLogs, and Amazon Security Lake. As you run direct queries, you'll see charges for OpenSearch\nCompute Units (OCUs) per hour, listed as DirectQuery OCU usage type on your bill.\nDirect queries are of two types—interactive and indexed view queries.\n• Interactive queries are used to populate the data selector and perform analytics on your data in\nS3, CloudWatch Logs, or Security Lake.\nFor Amazon S3 direct queries, when you run a new query from Discover, OpenSearch Service\nstarts a new session that lasts for a minimum of three minutes. OpenSearch Service keeps this\nsession active to ensure that subsequent queries run quickly.\nFor CloudWatch Logs and Security Lake queries, OpenSearch Service handles each query with a\nseparate pre-warmed job, without maintaining an extended session.\n• Indexed view queries use compute to maintain indexed views in OpenSearch Service. These\nqueries usually take longer because they ingest a varying amount of data into a named index. By\nindexing data, you can make future interactive queries run faster or unlock advanced analytics\ncapabilities such as dashboards or alerts, which require an index to reference.\nFor Amazon S3 data sources, the indexed data is stored in a domain based on an instance\ntype purchased. For CloudWatch Logs and Security Lake connected data sources, the indexed\ndata is stored in an OpenSearch Serverless collection where you are charged for data indexed\n(IndexingOCU), data searched (SearchOCU), and data stored in GB.\nPricing\n729\nAmazon OpenSearch Service\nDeveloper Guide\nFor more information, see the Direct Query and Serverless sections within Amazon OpenSearch\nService Pricing.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 758,
+      "end": 759
+    },
+    "content_stats": {
+      "char_count": 1832,
+      "word_count": 286
+    },
+    "hierarchy": {
+      "parent": "Working with Amazon OpenSearch Service direct queries",
+      "children": []
+    }
+  }
+}

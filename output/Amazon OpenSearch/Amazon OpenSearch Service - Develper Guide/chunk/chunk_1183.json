@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1183",
+  "section_number": "2.19.3.10",
+  "header": "Restoring warm indexes from snapshots",
+  "content": "In addition to the standard repository for automated snapshots, UltraWarm adds a second\nrepository for warm indexes, cs-ultrawarm. Each snapshot in this repository contains only one\nindex. If you delete a warm index, its snapshot remains in the cs-ultrawarm repository for 14\ndays, just like any other automated snapshot.\nWhen you restore a snapshot from cs-ultrawarm, it restores to warm storage, not hot storage.\nSnapshots in the cs-automated and cs-automated-enc repositories restore to hot storage.\nTo restore an UltraWarm snapshot to warm storage\n1.\nIdentify the latest snapshot that contains the index you want to restore:\nListing hot and warm indexes\n1704\nAmazon OpenSearch Service\nDeveloper Guide\nGET _snapshot/cs-ultrawarm/_all?verbose=false\n{\n\"snapshots\": [{\n\"snapshot\": \"snapshot-name\",\n\"version\": \"1.0\",\n\"indices\": [\n\"my-index\"\n]\n}]\n}\nNote\nBy default, the GET _snapshot/<repo> operation displays verbose data information\nsuch as start time, end time, and duration for each snapshot within a repository.\nThe GET _snapshot/<repo> operation retrieves information from the ﬁles of\neach snapshot contained in a repository. If you do not need the start time, end time,\nand duration and require only the name and index information of a snapshot, we\nrecommend using the verbose=false parameter when listing snapshots to minimize\nprocessing time and prevent timing out.\n2.\nIf the index already exists, delete it:\nDELETE my-index\nIf you don't want to delete the index, return it to hot storage and reindex it.\n3.\nRestore the snapshot:\nPOST _snapshot/cs-ultrawarm/snapshot-name/_restore\nUltraWarm ignores any index settings you specify in this restore request, but you can specify\noptions like rename_pattern and rename_replacement. For a summary of OpenSearch\nsnapshot restore options, see the OpenSearch documentation.\nRestoring warm indexes from snapshots\n1705\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1733,
+      "end": 1735
+    },
+    "content_stats": {
+      "char_count": 1906,
+      "word_count": 278
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

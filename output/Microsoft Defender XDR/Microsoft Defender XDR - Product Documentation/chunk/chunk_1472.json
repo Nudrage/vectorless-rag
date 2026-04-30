@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1472",
+  "section_number": "155.1.1.202.3.1",
+  "header": "Agent trigger and flow",
+  "content": "If the alert is determined to be a false alarm, the agent classifies it as a False Positive and\nresolves it accordingly. If the alert is deemed malicious, it's classified as a True Positive, and the\nstatus of the associated incident remains open and in progress for an analyst to investigate and\ntake further action.\nFor every alert it processes, the agent provides a detailed explanation of its verdict—enhancing\ntransparency and building analyst confidence in the corresponding incident.\nTo maintain transparency, the agent routinely updates incident fields during the triage process.\nWhen triaging starts, the agent assigns the alert to itself and adds an Agent tag to the\ncorresponding incident. Analysts can filter the incident queue to see only those tagged by the\nagent, which simplifies oversight and prioritization.\nWhen an alert is identified as a true phishing threat, the Phishing Triage Agent marks it as a\nTrue Positive. This enables analysts to prioritize confirmed phishing threats and respond more\nswiftly. With these alerts clearly flagged, analysts can easily filter the queue to focus on verified\nthreats, resulting in significant queue reduction and minimizing the time spent sorting through\nfalse positives. This allows them to concentrate their efforts where they matter most.\nThe Phishing Triage Agent is purpose-built to clearly explain why and how it made each\ndecision. For every alert it processes, it provides a detailed explanation in plain text along with\na full graphical representation of its decision-making workflow. This level of transparency\nallows analysts to quickly interpret results, build trust in the agent’s output, and focus their\ntime on making informed decisions—rather than repeating manual steps in the phishing triage\nprocess.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1097,
+      "end": 1098
+    },
+    "content_stats": {
+      "char_count": 1776,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "Enhance incident response with the Phishing Triage Agent",
+      "children": []
+    }
+  }
+}

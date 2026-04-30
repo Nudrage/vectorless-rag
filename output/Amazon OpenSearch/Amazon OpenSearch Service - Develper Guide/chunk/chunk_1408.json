@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1408",
+  "section_number": "2.25.8.3",
+  "header": "Choosing instance types and testing",
+  "content": "After you calculate your storage requirements and choose the number of shards that you need, you\ncan start to make hardware decisions. Hardware requirements vary dramatically by workload, but\nwe can still oﬀer some basic recommendations.\nIn general, the storage limits for each instance type map to the amount of CPU and memory that\nyou might need for light workloads. For example, an m6g.large.search instance has a maximum\nEBS volume size of 512 GiB, 2 vCPU cores, and 8 GiB of memory. If your cluster has many shards,\nChoosing instance types and testing\n1859\nAmazon OpenSearch Service\nDeveloper Guide\nperforms taxing aggregations, updates documents frequently, or processes a large number of\nqueries, those resources might be insuﬃcient for your needs. If your cluster falls into one of these\ncategories, try starting with a conﬁguration closer to 2 vCPU cores and 8 GiB of memory for every\n100 GiB of your storage requirement.\nTip\nFor a summary of the hardware resources that are allocated to each instance type, see\nAmazon OpenSearch Service pricing.\nStill, even those resources might be insuﬃcient. Some OpenSearch users report that they need\nmany times those resources to fulﬁll their requirements. To ﬁnd the right hardware for your\nworkload, you have to make an educated initial estimate, test with representative workloads,\nadjust, and test again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1888,
+      "end": 1889
+    },
+    "content_stats": {
+      "char_count": 1357,
+      "word_count": 218
+    },
+    "hierarchy": {
+      "parent": "Sizing Amazon OpenSearch Service domains",
+      "children": [
+        "Step 1: Make an initial estimate",
+        "Step 2: Calculate storage requirements per node",
+        "Step 3: Perform representative testing",
+        "Step 4: Succeed or iterate"
+      ]
+    }
+  }
+}

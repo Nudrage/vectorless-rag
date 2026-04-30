@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_824",
+  "section_number": "2.12.4.10",
+  "header": "Manual snapshots",
+  "content": "Fine-grained access control introduces some additional complications with taking manual\nsnapshots. To register a snapshot repository—even if you use HTTP basic authentication for\nall other purposes—you must map the manage_snapshots role to an IAM role that has\niam:PassRole permissions to assume TheSnapshotRole, as deﬁned in the section called\n“Prerequisites”.\nThen use that IAM role to send a signed request to the domain, as outlined in the section called\n“Registering a manual snapshot repository”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1385,
+      "end": 1385
+    },
+    "content_stats": {
+      "char_count": 502,
+      "word_count": 73
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

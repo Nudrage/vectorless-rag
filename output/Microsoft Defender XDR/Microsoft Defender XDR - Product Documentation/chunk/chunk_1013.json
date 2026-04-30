@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1013",
+  "section_number": "155.1.1.122",
+  "header": "DeviceTvmCertificateInfo (Preview)",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmCertificateInfo  table in the advanced hunting schema contains data from\nMicrosoft Defender Vulnerability Management related to certificate information for devices in\nthe organization. Use this reference to construct queries that return information from the table.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nThumbprint\nstring\nUnique identifier for the certificate\nPath\nstring\nThe location of the certificate\nSerialNumber\nstring\nUnique identifier for the certificate within a certificate authority's\nsystems\nIssuedTo\ndynamic\nEntity that a certificate belongs to; can be a device, an individual, or an\norganization\nIssuedBy\ndynamic\nEntity that verified the information and signed the certificate\nFriendlyName\nstring\nEasy-to-understand version of a certificate's title\nSignatureAlgorithm\nstring\nHashing algorithm and encryption algorithm used\nKeySize\nstring\nSize of the key used in the signature algorithm\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nExpirationDate\nstring\nThe date and time beyond which the certificate is no longer valid\nIssueDate\nstring\nThe earliest date and time when the certificate became valid\nSubjectType\nstring\nIndicates if the holder of the certificate is a CA or end entity\nKeyUsage\nstring\nThe valid cryptographic uses of the certificate's public key\nExtendedKeyUsage\nstring\nOther valid uses for the certificate\nOverview of Microsoft Defender Vulnerability Management\nProactively hunt for threats\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 734,
+      "end": 735
+    },
+    "content_stats": {
+      "char_count": 2411,
+      "word_count": 343
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

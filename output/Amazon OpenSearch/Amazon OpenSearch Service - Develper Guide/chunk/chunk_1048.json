@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1048",
+  "section_number": "2.16.2.3",
+  "header": "Functional limitations",
+  "content": "Consider the following limitations before using s3vector engine in an index:\nFeatures and behaviors not supported with s3vector engine\nFeature\nBehavior\nSplit/Shrink/Clone index\nThese APIs fail when used with an index conﬁgured with\ns3vector engine in knn_vector  ﬁeld.\nSnapshots\nIndices using s3vector engine don't support snapshots. For\nmanaged domains:\n• Automated snapshots only include indices not using\ns3vector engine.\n• Manual snapshot requests for s3vector indices fail.\nNote\nWhile snapshots aren't supported for point-in-time\nrecovery, s3vector engine, along with OpenSearch\nOptimized instances, provide 11 nines of durability.\nUltraWarm tier\nIndices conﬁgured with s3vector engine can't migrate to\nUltraWarm tier.\nCross-cluster replication\nIndices conﬁgured with s3vector engine don't support cross-\ncluster replication.\nAccidental delete protection\nBecause snapshots aren't supported for indices using\ns3vector engine, accidental delete protection isn't available.\nYou can still restore other indices in the domain.\nFunctional limitations\n1577\nAmazon OpenSearch Service\nDeveloper Guide\nFeature\nBehavior\nRadial search\nQueries with radial search aren't supported on ﬁelds using\ns3vector engine.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1606,
+      "end": 1607
+    },
+    "content_stats": {
+      "char_count": 1203,
+      "word_count": 160
+    },
+    "hierarchy": {
+      "parent": "Advanced search capabilities with an Amazon S3 vector engine",
+      "children": []
+    }
+  }
+}

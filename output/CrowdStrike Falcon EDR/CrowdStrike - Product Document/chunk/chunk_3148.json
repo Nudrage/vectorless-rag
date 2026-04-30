@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3148",
+  "section_number": "1.6.10.7.7",
+  "header": "updateUserRoles",
+  "content": "{\n\"metadata\": {\n\"customerIDString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"offset\": 1234567,\n\"eventType\": \"AuthActivityAuditEvent\",\n\"eventCreationTime\": 1494701512034,\n\"version\": \"1.0\"\n},\n\"event\": {\n\"UserId\": \"user@example.com\",\n\"UserIp\": \"192.0.2.100\",\n\"OperationName\": \"updateUserRoles\",\n\"ServiceName\": \"Crowdstrike Authentication\",\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1177/1226\n\"Success\": true,\n\"AuditKeyValues\": [\n{\n\"Key\": \"actor_user_uuid\",\n\"ValueString\": \"b3gf3d59-8of0-4fcb-a66f-c5a76456789\"\n},\n{\n\"Key\": \"target_name\",\n\"ValueString\": \"user@example.com\"\n},\n{\n\"Key\": \"target_user_uuid\",\n\"ValueString\": \"daef221f-7244-4219-9f62-b3c5955c4567\"\n},\n{\n\"Key\": \"target_cid\",\n\"ValueString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\"\n},\n{\n\"Key\": \"roles\",\n\"ValueString\": \"falconhost_analyst\"\n},\n{\n\"Key\": \"actor_user\",\n\"ValueString\": \"user@example.com\"\n},\n{\n\"Key\": \"actor_cid\",\n\"ValueString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\"\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1177,
+      "end": 1178
+    },
+    "content_stats": {
+      "char_count": 1115,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

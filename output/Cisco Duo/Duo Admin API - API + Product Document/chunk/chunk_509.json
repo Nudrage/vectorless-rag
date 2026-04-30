@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_509",
+  "section_number": "1.17.15",
+  "header": "Authentication Methods",
+  "content": "Section Name: authentication_methods\nCorresponds to: Authentication Methods\nKey\nValue\n{\n\"stat\": \"OK\",\n\"response\": \"\"\n}\nallowed_auth_list\nComma-separated list of allowed authentication\nmethods. The list defaults to: duo-push ,\nhardware-token , webauthn-platform ,\nwebauthn-roaming , and sms . If Duo\nPasswordless is turned on for your account, there are\nthree additional authentication methods available:\nduo-push-pwl , webauthn-platform-pwl , and\nwebauthn-roaming-pwl .\nauto_retry_sms\nIs true  if a new SMS passcode will be sent up to 3\ntimes when delivery fails. Otherwise false\n(default). Any retries will use additional telephony\ncredits.\nblocked_auth_list\nComma-separated list of blocked authentication\nmethods. The list defaults to: desktop , duo-\npasscode , and phonecall .\nrequire_verified_push\nIs true  if the user logging in must verify the push\nby entering the number provided on their\nauthentication device. Otherwise false . Default is\ntrue  for the Essentials edition and false  for\nPremier and Advantage editions. Applies if duo-\npush  is in the allowed_auth_list .\nverified_push_digits\nThe number of digits a verified push requires the\nuser to enter. An integer between 3  and 6 ,\ninclusive. Defaults to 3 .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 211,
+      "end": 212
+    },
+    "content_stats": {
+      "char_count": 1222,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

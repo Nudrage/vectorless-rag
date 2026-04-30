@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_976",
+  "section_number": "155.1.1.104",
+  "header": "CloudStorageAggregatedEvents (Preview)",
+  "content": "08/05/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe CloudStorageAggregatedEvents  table in the advanced hunting schema contains information\nabout storage activity and related events. Use this reference to construct queries that return\ninformation from this table.\nThis advanced hunting table is populated by records from Microsoft Defender for Cloud. If\nyour organization doesn't have Microsoft Defender for Cloud, queries that use the table aren’t\ngoing to work or return any results. For more information about prerequisites in integrating\nDefender for Cloud with Defender XDR, read Microsoft Defender XDR integration.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDataAggregationStartTime\ndatetime\nThe start time during which the data was\naggregated\nDataAggregationEndTime\ndatetime\nThe end time during which the data was\naggregated\nDataSource\nstring\nThe source of the aggregated logs\nSubscriptionId\nstring\nUnique identifier assigned to the Azure subscription\nResourceGroup\nstring\nName of the resource group where the storage\naccount resides\nStorageAccount\nstring\nThe identifier for the storage account\nStorageContainer\nstring\nThe identifier for the storage container\nStorageFileShare\nstring\nThe identifier for the storage file share\n） Important\nSome information relates to prereleased product, which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nServiceType\nstring\nSpecifies the type of storage service (for example,\nBlob, ADLS Gen2, Files.REST, Files.SMB)\nIpAddress\nstring\nThe IP addresses from which the storage was\naccessed\nUserAgentHeader\nstring\nDetails of the user agent accessing the storage (for\nexample, browser or application)\nOperationNamesList\nobject\nA list of storage operations performed (for example,\nCreateContainer, DeleteContainer)\nAuthenticationType\nstring\nThe authentication method used to access the\nstorage (for example, AccountKey, SAS, Oauth)\nAccountObjectId\nstring\nThe unique identifier of the object is making the\nstorage access\nAccountTenantId\nlong\nThe unique identifier of the Azure tenant\nAccountApplicationId\nstring\nThe application ID associated with the storage\naccess\nAccountUpn\nstring\nThe user principal name of the accessing user\nAccountType\nlong\nThe account type used\nOperationsCount\nint\nThe total number of storage operations performed\nSuccessfulOperationsCount\nint\nThe count of successful storage operations\nFailedOperationsCount\nint\nThe count of failed storage operations\nFirstEventTimestamp\ndatetime\nThe timestamp of the first observed operation in\nthe aggregation period\nLastEventTimestamp\ndatetime\nThe timestamp of the last observed operation in the\naggregation period\nTotalResponseLength\nint\nThe total response length of all GET operations\nduring the aggregation period\nSuccessfulReadOperations\nint\nThe count of successful read operations\nDistinctGetOperations\nint\nThe count of distinct GET operations performed\nAnonymousSuccessfulOperations\nint\nThe count of successful anonymous operations\nHasAnonymousResourceNotFoundFailures\nbool\nIndicates whether anonymous resource not found\nColumn name\nData\ntype\nDescription\nfailures occurred\nCountryName\nstring\nThe name of the country from where the storage\nwas accessed\nCityName\nstring\nThe name of the city from where the storage was\naccessed\nProvinceName\nstring\nThe name of the province or state from where the\nstorage was accessed\nClientSystemServiceName\nstring\nThe name of the system service is in the data center\nClientCloudPlatformName\nstring\nThe name of the cloud platform where the data\ncenter is located\nIsTorExitNode\nbool\nIndicates whether the IP address is a Tor exit node\nIsKnownSuspiciousIp\nbool\nIndicates whether the IP address is known to be\nsuspicious\nIsPrivateIp\nbool\nIndicates whether the IP address is private\nSuspiciousUserAgentName\nstring\nThe name of the suspicious user agent accessing\nthe storage\nHashReputationMd5List\nobject\nA list of MD5 hash reputations for the accessed\nresources\nAzureResourceId\nstring\nThe Azure Resource ID of the storage account\nLocation\nstring\nThe location of the storage account (region)\nTimestamp\ndatetime\nIndicate the time when the record was generated\nReportId\nstring\nGUID to identify the record in the specific table\nActionType\nstring\nType of action (aggregated logs)\nAdditionalFields\ndynamic\nAdditional information about the event in JSON\narray format\nTo detect failed anonymous authentication attempts:\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 662,
+      "end": 664
+    },
+    "content_stats": {
+      "char_count": 4650,
+      "word_count": 639
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Sample queries",
+        "Related topics"
+      ]
+    }
+  }
+}

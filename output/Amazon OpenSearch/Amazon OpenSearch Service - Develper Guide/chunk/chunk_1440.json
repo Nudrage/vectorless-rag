@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1440",
+  "section_number": "2.26.4.1.6",
+  "header": "Limiting the response size for _cat APIs",
+  "content": "To support large clusters with total instance count more than 200 across data and warm nodes,\nwe have a 10,000 limit on the number of indexes returned by _cat/segments API. If the number of\nindexes in the response exceeds this limit, the API returns a 429 error. To avoid this, you can specify\nan index pattern ﬁlter in your query (for example, _cat/segments/<index-pattern> ).\nAdditionally, support for task cancellation has is now available for _cat/shards API for task\ncancellation by specifying cancel_after_time_interval request parameter. For more\ninformation on this, see CAT shards.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1943,
+      "end": 1943
+    },
+    "content_stats": {
+      "char_count": 590,
+      "word_count": 92
+    },
+    "hierarchy": {
+      "parent": "Notable API diﬀerences",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1213",
+  "section_number": "2.19.5.2.1",
+  "header": "Hot to warm to cold storage",
+  "content": "This sample policy moves an index from hot storage to UltraWarm, and eventually to\ncold storage. Then, it deletes the index.\nThe index is initially in the hot state. After ten days, ISM moves it\nto the warm state. 80 days later, after the index is 90 days old, ISM moves the index to the\ncold state. After a year, the service sends a notiﬁcation to an Amazon Chime room that the index\nis being deleted and then permanently deletes it.\nNote that cold indexes require the cold_delete operation rather than the normal delete\noperation. Also note that an explicit timestamp_field is required in your data in order to\nmanage cold indexes with ISM.\n{\n\"policy\": {\n\"description\": \"Demonstrate a hot-warm-cold-delete workflow.\",\nSample policies\n1724\nAmazon OpenSearch Service\nDeveloper Guide\n\"default_state\": \"hot\",\n\"schema_version\": 1,\n\"states\": [{\n\"name\": \"hot\",\n\"actions\": [],\n\"transitions\": [{\n\"state_name\": \"warm\",\n\"conditions\": {\n\"min_index_age\": \"10d\"\n}\n}]\n},\n{\n\"name\": \"warm\",\n\"actions\": [{\n\"warm_migration\": {},\n\"retry\": {\n\"count\": 5,\n\"delay\": \"1h\"\n}\n}],\n\"transitions\": [{\n\"state_name\": \"cold\",\n\"conditions\": {\n\"min_index_age\": \"90d\"\n}\n}]\n},\n{\n\"name\": \"cold\",\n\"actions\": [{\n\"cold_migration\": {\n\"timestamp_field\": \"<your timestamp field>\"\n}\n}\n],\n\"transitions\": [{\n\"state_name\": \"delete\",\n\"conditions\": {\n\"min_index_age\": \"365d\"\n}\n}]\n},\n{\nSample policies\n1725\nAmazon OpenSearch Service\nDeveloper Guide\n\"name\": \"delete\",\n\"actions\": [{\n\"notification\": {\n\"destination\": {\n\"chime\": {\n\"url\": \"<URL>\"\n}\n},\n\"message_template\": {\n\"source\": \"The index {{ctx.index}} is being deleted.\"\n}\n}\n},\n{\n\"cold_delete\": {}\n}]\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1753,
+      "end": 1755
+    },
+    "content_stats": {
+      "char_count": 1611,
+      "word_count": 245
+    },
+    "hierarchy": {
+      "parent": "Sample policies",
+      "children": []
+    }
+  }
+}

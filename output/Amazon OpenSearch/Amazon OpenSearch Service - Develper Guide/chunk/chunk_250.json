@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_250",
+  "section_number": "2.6.21.2.17",
+  "header": "System and metering metrics",
+  "content": "The following metrics apply to the overall OpenSearch Ingestion system. These metrics aren't\npreﬁxed by anything.\nMetric\nDescription\nsystem.cpu.usage.value\nThe percentage of available CPU usage for all data nodes.\nRelevant statistics: Average\nDimension: PipelineName , area, id\nsystem.cpu.count.value\nThe total amount of CPU usage for all data nodes.\nRelevant statistics: Average\nMonitoring pipeline metrics\n362\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nDimension: PipelineName , area, id\njvm.memory.max.value\nThe maximum amount of memory that can be used for\nmemory management, in bytes.\nRelevant statistics: Average\nDimension: PipelineName , area, id\njvm.memory.used.value\nThe total amount of memory used, in bytes.\nRelevant statistics: Average\nDimension: PipelineName , area, idsigna\njvm.memory.committ\ned.value\nThe amount of memory that is committed for use by the\nJava virtual machine (JVM), in bytes.\nRelevant statistics: Average\nDimension: PipelineName , area, id\ncomputeUnits\nThe number of Ingestion OpenSearch Compute Units\n(Ingestion OCUs) in use by a pipeline.\nRelevant statistics: Max, Sum, Average\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 391,
+      "end": 392
+    },
+    "content_stats": {
+      "char_count": 1153,
+      "word_count": 156
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

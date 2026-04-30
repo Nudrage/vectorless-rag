@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_632",
+  "section_number": "2.10.1.2",
+  "header": "Interpreting health charts in OpenSearch Service",
+  "content": "To view metrics in OpenSearch Service, use the Cluster health and Instance health tabs. The\nInstance health tab uses box charts to provide at-a-glance visibility into the health of each\nOpenSearch node:\nViewing metrics in CloudWatch\n1163\nAmazon OpenSearch Service\nDeveloper Guide\n• Each colored box shows the range of values for the node over the speciﬁed time period.\n• Blue boxes represent values that are consistent with other nodes. Red boxes represent outliers.\n• The white line within each box shows the node's current value.\n• The “whiskers” on either side of each box show the minimum and maximum values for all nodes\nover the time period.\nIf you make conﬁguration changes to your domain, the list of individual instances in the Cluster\nhealth and Instance health tabs often double in size for a brief period before returning to the\ncorrect number. For an explanation of this behavior, see the section called “Conﬁguration changes”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1192,
+      "end": 1193
+    },
+    "content_stats": {
+      "char_count": 940,
+      "word_count": 155
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

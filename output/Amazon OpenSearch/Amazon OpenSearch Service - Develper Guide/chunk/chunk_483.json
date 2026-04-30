@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_483",
+  "section_number": "2.8.6.6",
+  "header": "When domains are ineligible for an update",
+  "content": "Your domain is ineligible for a service software update if it's in any of the following states:\nState\nDescription\nDomain in processing\nThe domain is in the middle of a conﬁguration change. Check update\neligibility after the operation completes.\nRed cluster status\nOne or more indexes in the cluster is red. For troubleshooting steps, see\nthe section called “Red cluster status”.\nHigh error rate\nThe OpenSearch cluster is returning a large number of 5xx errors when\nattempting to process requests. This problem is usually the result of\ntoo many simultaneous read or write requests. Consider reducing traﬃc\nto the cluster or scaling your domain.\nSplit brain\nSplit brain means your OpenSearch cluster has more than one master\nnode and has split into two clusters that never will rejoin on their\nown. You can avoid split brain by using the recommended number of\ndedicated master nodes. For help recovering from split brain, contact\nSupport.\nAmazon Cognito\nintegration issue\nYour domain uses authentication for OpenSearch Dashboards, and\nOpenSearch Service can't ﬁnd one or more Amazon Cognito resources.\nThis problem usually occurs if the Amazon Cognito user pool is missing.\nTo correct the issue, recreate the missing resource and conﬁgure the\nOpenSearch Service domain to use it.\nWhen domains are ineligible for an update\n653\nAmazon OpenSearch Service\nDeveloper Guide\nState\nDescription\nOther service issue\nIssues with OpenSearch Service itself might cause your domain to\ndisplay as ineligible for an update. If none of the previous conditions\napply to your domain and the problem persists for more than a day,\ncontact Support.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 682,
+      "end": 683
+    },
+    "content_stats": {
+      "char_count": 1624,
+      "word_count": 259
+    },
+    "hierarchy": {
+      "parent": "Service software updates in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

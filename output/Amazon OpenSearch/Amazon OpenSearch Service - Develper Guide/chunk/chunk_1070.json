@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1070",
+  "section_number": "2.16.5.2",
+  "header": "Use cases for auto-optimize",
+  "content": "Auto-optimize is particularly valuable in the following scenarios:\nInitial conﬁguration optimization\nUse cases for auto-optimize\n1593\nAmazon OpenSearch Service\nDeveloper Guide\nWhen ﬁrst deploying vector search applications, determining optimal HNSW parameters often\nrequires extensive testing and domain expertise. Auto-optimize eliminates this trial-and-error\nprocess by analyzing your data and workload characteristics to recommend production-ready\nconﬁgurations.\nThis use case is ideal for teams new to vector search or those migrating from other vector database\nplatforms who need to establish baseline conﬁgurations quickly.\nScaling optimization\nAs your vector dataset grows from thousands to millions of vectors, parameters that worked\nwell initially may become suboptimal. Auto-optimize recommends adjustments to maintain\nperformance at scale.\nCost reduction\nVector indexes can consume signiﬁcant compute and storage resources, especially with high-\ndimensional embeddings. Auto-optimize identiﬁes opportunities to reduce costs by ﬁnding more\neﬃcient parameter conﬁgurations that maintain your required performance levels while using\nfewer resources.\nFor example, auto-optimize might discover that your current m value (graph connectedness) is\nhigher than necessary for your accuracy requirements, allowing you to reduce indexing time and\nstorage without impacting search quality.\nPerformance troubleshooting\nWhen experiencing slow query performance or high latency in vector search operations, auto-\noptimize can analyze your dataset and identify a more optimal conﬁguration. The service\nprovides speciﬁc recommendations to address performance bottlenecks, such as adjusting graph\nconnectivity or search parameters.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1622,
+      "end": 1623
+    },
+    "content_stats": {
+      "char_count": 1723,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "Auto-optimize",
+      "children": []
+    }
+  }
+}

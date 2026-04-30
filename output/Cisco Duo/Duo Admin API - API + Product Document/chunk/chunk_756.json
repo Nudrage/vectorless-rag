@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_756",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Query\nParameter\nRequired?\nAllow\nMultiple?\nDescription\nmintime\nRequired\nNo\nReturn records that have a 13 character U\ntimestamp  in milliseconds of mintime\nlater. This value must be strictly less than\nmaxtime .\nExample: 1661022959934\n\n\n{\n\"stat\": \"OK\",\n\"response\": [{\n\"action\": \"admin_login_error\",\n\"description\": \"{\\\"ip_address\\\": \\\"10.1.23.116\\\", \\\"error\\\":\n\"isotimestamp\": \"2020-01-23T16:18:58+00:00\",\n\"object\": null,\n\"timestamp\": 1579796338,\n\"username\": \"\"\n}]\n}\nGET  /admin/v2/logs/telephony\n\n\nmaxtime\nRequired\nNo\nReturn records that have a 13 character U\ntimestamp  in milliseconds of maxtime\nearlier. This value must be strictly greater\nthan mintime .\nMaximum: 180 days\nExample: 1661022969934\nlimit\nOptional\nNo\nThe maximum number of records returne\nDefault: 100 ; Max: 1000\nnext_offset\nOptional\nYes\nThe offset at which to start record retriev\nThis value is provided in the metadata in t\nform of a 13 character date string in\nmilliseconds and the event txid . Both o\nthese values must be provided when used\nseparated by a comma.\nWhen used with \"limit\", the handler will\nreturn \"limit\" records starting at the n-th\nrecord, where n is the offset.\nDefault: None\nExample:\nnext_offset=1547486297000,5bea1c1\n612c-4f1d-b310-75fd31385b15\nsort\nOptional\nNo\nThe order in which to return records. One\nof:\nValue\nDescription\nts:asc\nReturn logs in\nchronological order.\nts:desc\nReturn logs in reverse\nchronological order.\nDefault: ts:desc",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 355,
+      "end": 356
+    },
+    "content_stats": {
+      "char_count": 1428,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Logs",
+      "children": []
+    }
+  }
+}

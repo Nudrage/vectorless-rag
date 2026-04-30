@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_285",
+  "section_number": "2.7.3.3",
+  "header": "Using data lifecycle policies with Amazon OpenSearch Serverless",
+  "content": "A data lifecycle policy in Amazon OpenSearch Serverless deﬁnes how long OpenSearch Serverless\nretains data in a time series collection. For example, you can set a policy to retain log data for 30\ndays before OpenSearch Serverless deletes it.\nYou can conﬁgure a separate policy for each index within each time series collection in your AWS\naccount. OpenSearch Serverless retains documents for at least the duration that you specify in the\npolicy. It then deletes the documents automatically on a best-eﬀort basis, typically within 48 hours\nor 10% of the retention period, whichever is longer.\nOnly time series collections support data lifecycle policies. Search and vector search collections do\nnot.\nUsing data lifecycle policies\n412\nAmazon OpenSearch Service\nDeveloper Guide\nTopics\n• Data lifecycle policies\n• Required permissions\n• Policy precedence\n• Policy syntax\n• Creating data lifecycle policies\n• Updating data lifecycle policies\n• Deleting data lifecycle policies",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 441,
+      "end": 442
+    },
+    "content_stats": {
+      "char_count": 971,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless collections",
+      "children": [
+        "Data lifecycle policies",
+        "Required permissions",
+        "Policy precedence",
+        "Policy syntax",
+        "Creating data lifecycle policies",
+        "Updating data lifecycle policies",
+        "Deleting data lifecycle policies"
+      ]
+    }
+  }
+}

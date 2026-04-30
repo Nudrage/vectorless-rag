@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1089",
+  "section_number": "1.155.1.2",
+  "header": "Managing required permissions",
+  "content": "７ Note\nIn the Microsoft Defender portal, go to Advanced hunting and select an existing query or\ncreate a new query. When you use a new query, run the query to identify errors and\nunderstand possible results.\nTo create a custom detection rule using Defender XDR data, the query must return the\nfollowing columns:\n1. Timestamp  or TimeGenerated  - This column sets the timestamp for generated alerts. The\nquery shouldn't manipulate this column and should return it exactly as it appears in the\nraw event.\n2. For detections based on XDR tables, a column or combination of columns that uniquely\nidentify the event in these tables:\nFor Microsoft Defender for Endpoint tables, the Timestamp , DeviceId , and ReportId\ncolumns must appear in the same event\nFor Alert* tables, Timestamp  must appear in the event\nFor Observation* tables, Timestamp and ObservationId  must appear in the same\nevent\nFor all others, Timestamp  and ReportId  must appear in the same event\n3. A column that contains a strong identifier for an impacted asset. To map an impacted\nasset automatically in the wizard, project one of the following columns that contain a\nA user also needs to have the appropriate permissions for the devices in the device scope\nof a custom detection rule that they're creating or editing before they can proceed. A user\ncan't edit a custom detection rule that is scoped to run on all devices, if the same user\ndoesn't have permissions for all devices.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 824,
+      "end": 825
+    },
+    "content_stats": {
+      "char_count": 1447,
+      "word_count": 245
+    },
+    "hierarchy": {
+      "parent": "Required permissions for managing custom detections",
+      "children": []
+    }
+  }
+}

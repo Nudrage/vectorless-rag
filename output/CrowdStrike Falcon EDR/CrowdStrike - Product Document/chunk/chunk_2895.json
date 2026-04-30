@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2895",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nTargetFileName\nThe resulting file name that was downloaded\nIPCOperationType\nValues:\nNAMED_PIPE_CREATE (1)\nNAMED_PIPE_OPEN (2)\nNAMED_PIPE_IMPERSONATE (3)\nMAILSLOT_CREATE (4)\nMAILSLOT_OPEN (5)\nDesiredAccess\nOptions\nShareAccess\nNamedPipeImpersonationType Values:\nUNKNOWN (0)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1041/1226\nField\nDescription\nUSER_TO_USER (1)\nUSER_TO_SERVICE (2)\nUSER_TO_SYSTEM (3)\nSERVICE (4)\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a\nsystem.\nValues:\nSELF_RID (0x01010000000000050A000000)\nPipeType\nValues:\nPIPE_TYPE_BYTE (0)\nPIPE_TYPE_MESSAGE (4)\nPipeReadMode\nValues:\nPIPE_READMODE_BYTE (0)\nPIPE_READMODE_MESSAGE (2)\nShareSecuritySddl\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1041,
+      "end": 1042
+    },
+    "content_stats": {
+      "char_count": 2035,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "IPCDetectInfo",
+      "children": []
+    }
+  }
+}

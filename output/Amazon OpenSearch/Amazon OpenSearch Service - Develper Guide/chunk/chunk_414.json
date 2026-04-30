@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_414",
+  "section_number": "2.7.10.11.6",
+  "header": "Shared VPC setup for Amazon OpenSearch Serverless",
+  "content": "You can use Amazon Virtual Private Cloud (VPC) to share VPC subnets with other AWS accounts in\nyour organization, as well as share networking infrastructure such as a VPN between resources in\nmultiple AWS accounts.\nCurrently, Amazon OpenSearch Serverless doesn’t support creating an AWS PrivateLink connection\ninto a shared VPC unless you are an owner of that VPC. AWS PrivateLink also doesn’t support\nsharing connections between AWS accounts.\nHowever, based on the ﬂexible and modular architecture of OpenSearch Serverless, you can still set\nup a shared VPC. This is because the OpenSearch Serverless networking infrastructure is separate\nfrom that of the individual collection (OpenSearch Service) infrastructure. You can therefore create\nan AWS PrivateLink VPCe endpoint for one account where a VPC located, and then use a VPCe ID in\nthe network policy of other accounts to restrict traﬃc to come only from that shared VPC.\nThe following procedures refer to an owner account and a consumer account.\nAn owner account acts as a common networking account where you set up a VPC and share it with\nother accounts. Consumer accounts are those accounts that create and maintain their OpenSearch\nServerless collections in the VPC shared with them by the owner account.\nPrerequisites\nEnsure the following requirements are met before setting up the shared VPC:\n• The intended owner account must have already set up a VPC, subnets, route table, and other\nrequired resources in Amazon Virtual Private Cloud. For more information, see the Amazon VPC\nUser Guide.\n• The intended owner account and consumer accounts must belong to the same organization in\nAWS Organizations. For more information, see the AWS Organizations User Guide.\nTo set up a shared VPC in an owner account/common networking account.\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\nVPC endpoints\n568\nAmazon OpenSearch Service\nDeveloper Guide\n2.\nFollow the steps in the section called “Create an interface endpoint”. As you do, make the\nfollowing selections:\n• Select a VPC and subnets that are shared with the consumer accounts in your organization.\n3.\nAfter you create the endpoint, make a note of the VPCe ID that is generated and provide it to\nthe administrators who are to perform the setup task in consumer accounts.\nVPCe IDs are in the format vpce-abc123def4EXAMPLE.\nTo set up a shared VPC in a consumer account\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nUse the information in the section called “Managing collections” to create a collection, if you\ndon't have one already.\n3.\nUse the information in the section called “Creating network policies (console)” to create a\nnetwork policy. As you do, make the following selections.\nNote\nYou can also update an existing network policy for this purpose.\na.\nFor Access type, select VPC (recommended).\nb.\nFor VPC endpoints for access, choose the VPCe ID provided to you by the owner account,\nin the format vpce-abc123def4EXAMPLE.\nc.\nIn the Resource type area, do the following:\n• Select the Enable access to OpenSearch endpoint box, and then select the collection\nname or collection pattern to use to enable access from that shared VPC.\n• Select the Enable access to OpenSearch Dashboard box, and then select the collection\nname or collection pattern to use to enable access from that shared VPC.\n4.\nFor a new policy, choose Create. For an existing policy, choose Update.\nVPC endpoints\n569\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 597,
+      "end": 599
+    },
+    "content_stats": {
+      "char_count": 3543,
+      "word_count": 569
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_144",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you create your OpenSearch Ingestion pipeline, perform the following steps:\n1. Create a Amazon DocumentDB cluster with permission to read data by following the steps in\nCreate an Amazon DocumentDB cluster in the Amazon DocumentDB Developer Guide. If you use\nCDC infrastructure, conﬁgure your Amazon DocumentDB cluster to publish change streams.\n2. Enable TLS on your Amazon DocumentDB cluster.\n3. Set up a VPC CIDR of a private address space for use with OpenSearch Ingestion.\n4. Set up authentication on your Amazon DocumentDB cluster with AWS Secrets Manager.\nEnable secrets rotation by following the steps in Automatically rotating passwords for Amazon\nDocumentDB. For more information, see Database access using Role-Based Access Control and\nSecurity in Amazon DocumentDB.\n5. If you use a change stream to subscribe to data changes on your Amazon DocumentDB\ncollection, avoid data loss by extending the retention period to up to 7 days using the\nchange_stream_log_retention_duration parameter. Change streams events are stored\nfor 3 hours, by default, after the event has been recorded, which isn't enough time for large\ncollections. To modify the change stream retention period, see Modifying the change stream log\nretention duration.\n6. Create an OpenSearch Service domain or OpenSearch Serverless collection. For more\ninformation, see the section called “ Creating OpenSearch Service domains” and the section\ncalled “Creating collections”.\n7. Attach a resource-based policy to your domain or a data access policy to your collection. These\naccess policies allow OpenSearch Ingestion to write data from your Amazon DocumentDB cluster\nto your domain or collection.\nThe following sample domain access policy allows the pipeline role, which you create in the next\nstep, to write data to a domain. Make sure that you update the resource with your own ARN.\nAmazon DocumentDB\n164\nAmazon OpenSearch Service\nDeveloper Guide\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::444455556666:role/pipeline-role\"\n},\n\"Action\": [\n\"es:DescribeDomain\",\n\"es:ESHttp*\"\n],\n\"Resource\": [\n\"arn:aws:es:us-east-1:111122223333:domain/domain-name\"\n]\n}\n]\n}\nTo create an IAM role with the correct permissions to access write data to the collection or\ndomain, see the section called “Setting up roles and users”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 193,
+      "end": 194
+    },
+    "content_stats": {
+      "char_count": 2346,
+      "word_count": 347
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon DocumentDB",
+      "children": []
+    }
+  }
+}

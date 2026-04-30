@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_721",
+  "section_number": "2.10.4.5.1",
+  "header": "Node retirement scheduled",
+  "content": "OpenSearch Service sends this event when a node retirement has been scheduled.\nExample\nThe following is an example event of this type:\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"Amazon OpenSearch Service Notification\",\n\"source\": \"aws.es\",\n\"account\": \"123456789012\",\n\"time\": \"2023-04-07T10:07:33Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"event\": \"Node Retirement Notification\",\n\"status\": \"Scheduled\",\n\"severity\": \"Medium\",\n\"description\": \"An automated action to retire and replace a node has been scheduled\non your domain.\nThe node will be replaced in the next off-peak window. For more\ninformation, see\nhttps://docs.aws.amazon.com/opensearch-service/latest/\ndeveloperguide/monitoring-events.html.\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1294,
+      "end": 1294
+    },
+    "content_stats": {
+      "char_count": 806,
+      "word_count": 86
+    },
+    "hierarchy": {
+      "parent": "Node retirement events",
+      "children": []
+    }
+  }
+}

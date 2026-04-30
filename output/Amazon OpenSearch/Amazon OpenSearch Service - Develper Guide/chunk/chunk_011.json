@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_011",
+  "section_number": "2.3.6",
+  "header": "Calculating extended support charges",
+  "content": "Domains running versions under extended support will be charged a ﬂat additional fee/Normalized\nInstance Hour (NIH), for example, $0.0065 in the US East (North Virginia) Region. NIH is computed\nas a factor of the instance size (e.g., medium, large), and the number of instance hours. For\nexample, if you are running an m7g.medium.search instance for 24 hours in the US East (North\nVirginia) Region, which is priced at $0.068/Instance hour (on-demand), you will typically pay\n$1.632 ($0.068x24). If you are running a version that is in extended support, you will pay an\nadditional $0.0065/NIH, which is computed as $0.0065 x 24 (number of instance hours) x 2 (size\nnormalization factor; 2 for medium-sized instances), which comes to $0.312 for extended support\nfor 24 hours. The total amount you will pay for 24 hours will be a sum of the standard instance\nusage cost and the extended support cost, which is $1.944 ($1.632+$0.312). The below table\nshows the normalization factor for various instance sizes in OpenSearch Service.\nInstance size\nNormalization Factor\nnano\n0.25\nmicro\n0.5\nsmall\n1\nmedium\n2\nlarge\n4\nxlarge\n8\n2xlarge\n16\n4xlarge\n32\n8xlarge\n64\nCalculating extended support charges\n7\nAmazon OpenSearch Service\nDeveloper Guide\nInstance size\nNormalization Factor\n9xlarge\n72\n10xlarge\n80\n12xlarge\n96\n16xlarge\n128\n18xlarge\n144\n24xlarge\n192\n32xlarge\n256",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 36,
+      "end": 37
+    },
+    "content_stats": {
+      "char_count": 1352,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "What is Amazon OpenSearch Service?",
+      "children": []
+    }
+  }
+}

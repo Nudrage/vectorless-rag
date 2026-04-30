@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_784",
+  "section_number": "2.12.2.2",
+  "header": "Making and signing OpenSearch Service requests",
+  "content": "Even if you conﬁgure a completely open resource-based access policy, all requests to the\nOpenSearch Service conﬁguration API must be signed. If your policies specify IAM roles or users,\nrequests to the OpenSearch APIs also must be signed using AWS Signature Version 4. The signing\nmethod diﬀers by API:\n• To make calls to the OpenSearch Service conﬁguration API, we recommend that you use one of\nthe AWS SDKs. The SDKs greatly simplify the process and can save you a signiﬁcant amount of\ntime compared to creating and signing your own requests. The conﬁguration API endpoints use\nthe following format:\nes.region.amazonaws.com/2021-01-01/\nFor example, the following request makes a conﬁguration change to the movies domain, but\nyou have to sign it yourself (not recommended):\nPOST https://es.us-east-1.amazonaws.com/2021-01-01/opensearch/domain/movies/config\n{\n\"ClusterConfig\": {\n\"InstanceType\": \"c5.xlarge.search\"\n}\n}\nIf you use one of the SDKs, such as Boto 3, the SDK automatically handles the request signing:\nMaking and signing OpenSearch Service requests\n1308\nAmazon OpenSearch Service\nDeveloper Guide\nimport boto3\nclient = boto3.client(es)\nresponse = client.update_domain_config(\nDomainName='movies',\nClusterConfig={\n'InstanceType': 'c5.xlarge.search'\n}\n)\nFor a Java code sample, see the section called “Using the AWS SDKs”.\n• To make calls to the OpenSearch APIs, you must sign your own requests. The OpenSearch APIs\nuse the following format:\ndomain-id.region.es.amazonaws.com\nFor example, the following request searches the movies index for thor:\nGET https://my-domain.us-east-1.es.amazonaws.com/movies/_search?q=thor\nNote\nThe service ignores parameters passed in URLs for HTTP POST requests that are signed\nwith Signature Version 4.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1337,
+      "end": 1338
+    },
+    "content_stats": {
+      "char_count": 1741,
+      "word_count": 243
+    },
+    "hierarchy": {
+      "parent": "Identity and Access Management in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

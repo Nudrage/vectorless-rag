@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_876",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nRawThreadId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nRawTargetProcessId\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID\nof the process that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that\nperformed thread injection in an InjectedThread event\nIsRemote\nTargetAddress\nSize\nSize of the egressing file in bytes.\nPreviousMemoryRegionProtection\nValues:\nPAGE_NOACCESS (0x01)\nPAGE_READONLY (0x02)\nPAGE_READWRITE (0x04)\nPAGE_WRITECOPY (0x08)\nPAGE_EXECUTE (0x10)\nPAGE_EXECUTE_READ (0x20)\nPAGE_EXECUTE_READWRITE (0x40)\nPAGE_EXECUTE_WRITECOPY (0x80)\nMemoryRegionProtection\nValues:\nPAGE_NOACCESS (0x01)\nPAGE_READONLY (0x02)\nPAGE_READWRITE (0x04)\nPAGE_WRITECOPY (0x08)\nPAGE_EXECUTE (0x10)\nPAGE_EXECUTE_READ (0x20)\nPAGE_EXECUTE_READWRITE (0x40)\nPAGE_EXECUTE_WRITECOPY (0x80)\nContextProcessId\nUPID of process originating this event.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID\nof the process that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that\nperformed thread injection in an InjectedThread event\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 240,
+      "end": 240
+    },
+    "content_stats": {
+      "char_count": 1685,
+      "word_count": 220
+    },
+    "hierarchy": {
+      "parent": "ProtectVmEtw",
+      "children": []
+    }
+  }
+}

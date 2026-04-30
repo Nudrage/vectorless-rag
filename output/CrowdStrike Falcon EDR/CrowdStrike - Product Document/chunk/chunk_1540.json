@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1540",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nCallStackModuleNames\nSemicolon-delimited list of modules or memory regions present in the call stack. Format determined by the accompanying\nCallStackModuleNamesVersion field on Windows.\nAnalysisType\nValues:\nCREATE_PROCESS (0x00000001)\nCREATE_THREAD (0x00000002)\nCONNECT_IP4 (0x00000003)\nCONNECT_IP6 (0x00000004)\nUSER_MEMORY_ALLOCATE_EXECUTABLE (0x00000005)\nOPEN_PROCESS (0x00000006)\nMULTIPLE (0x00000007)\nUSER_EXCEPTION (0x00000008)\nUMPPC_ENTRY (0x00000009)\nPE_FILE_WRITTEN (0x0000000A)\nSCRIPT_WRITTEN (0x0000000B)\nEEPB (0x0000000C)\nKERNEL_CALLBACK_TABLE_PATCH (0x0000000D)\nCONFIG_TESTING (0x0000000E)\nXUMD (0x0000000F)\nSCRIPT_CONTROL (0x00000010)\nETW (0x40000000)\nETW_SECURITY_MITIGATIONS (0x40000001)\nKERNEL_CSA (0x80000000)\nKERNEL_CSA_CREATE_THREAD (0x80000001)\nCallStackModuleNamesVersion\nValues:\nINVALID_VERSION (0)\nCSMN_FORMAT_5 (5)\nCSMN_FORMAT_6 (6)\nCSMN_FORMAT_7 (7)\nCSMN_FORMAT_8 (8)\nCSMN_FORMAT_CURRENT (8)\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nSuspectStackFlag\nValues:\nNOT_SUSPECT (0x00000000)\nTHREAD_START_NOT_IN_MODULE (0x00000001)\nTHREAD_START_IN_NON_IMAGE_FILE (0x00000002)\nINVALID_TEB_STACK_VALUES (0x00000004)\nSTACK_POINTER_NOT_IN_STACK (0x00000008)\nBASE_POINTER_NOT_IN_STACK (0x00000010)\nSYSCALL_RETURN_ADDRESS_NOT_IN_NTDLL (0x00000020)\nSYSCALL_RETURN_ADDRESS_ON_STACK (0x00000040)\nSTACK_IS_EXECUTABLE (0x00000080)\nRETURN_ADDRESS_NOT_IN_MODULE (0x00000100)\nRETURN_ADDRESS_IN_NON_IMAGE_FILE (0x00000200)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n434/1226\nField\nDescription\nRETURN_ADDRESS_IS_WRITABLE (0x00000400)\nADDRESS_IN_REFLECTIVELY_LOADED_DLL (0x00000800)\nETW_PROVIDED_CALLSTACK (0x00001000)\nRETURN_ADDRESS_NOT_IN_MODULE_AND_IS_WRITABLE (0x00000500)\nReflectiveDllName\nPatternIdList\nParentImageFileName\nParentCommandLine\nParentProcessPatternIdList\nGrandparentImageFileName\nGrandparentCommandLine\nGrandparentProcessPatternIdList\nExecutableBytesAsString\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\nTemplateInstanceVersion\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 434,
+      "end": 435
+    },
+    "content_stats": {
+      "char_count": 3035,
+      "word_count": 246
+    },
+    "hierarchy": {
+      "parent": "CSAResultsGenericDetectInfo",
+      "children": []
+    }
+  }
+}

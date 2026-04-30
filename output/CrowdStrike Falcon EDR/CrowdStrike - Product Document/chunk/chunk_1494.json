@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1494",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nRpcOpNum\nThe operation this RPC message is describing.\nValues:\nSAM_ADD_MEMBER_TO_ALIAS (31)\nSAM_REMOVE_MEMBER_FROM_ALIAS (32)\nInterfaceGuid\nThe UUID from the RPC_IF_ID field of the RPC endpoint.\nValues:\nSAMR (0x785734123412CDABEF000123456789AC)\nSVCCTL (0x81bb7a364498f135ad3298f038001003)\nITASKSCHEDULERSERVICE (0x4959d386c9834440b424db363231fd0c)\nWINREG (0x01d08c334422f131aaaa900038001003)\nIWBEMSERVICES (0x99DC56958C82CF11A37E00AA003240C7)\nIUSERPROFILE (0xE3316732C0C1694AAE207D9044A4EA5C)\nSSPIRPRC (0xC8AD324F5260044A8701293CCF2096F0)\nBITSJOB (0x378D66377E506041931626306D150B12)\nEVENTSVC (0xF7AFBEF6191EBB4F9F8FB89E2018337C)\nEVENTSVCLEGACY (0xDC3F27822AE3C3183F78827929DC23EA)\nVSSPROVCREATESNAPSHOTSET (0x5B4E895F391E78478E239ABAD9F0E08C)\nVSSSOFTWARESNAPSHOTPROVIDER (0x3e129e605a2cd3448f010b1d9a47d1ff)\nInterfaceVersion\nRpcNestingLevel\nServiceDisplayName\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n416/1226\nField\nDescription\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed thread\ninjection in an InjectedThread event\nRpcClientProcessId\nThe ProcessId corresponding to the RPC client of this request.\nRpcClientThreadId\nRemoteAddressIP4\nRemoteAddressIP6\nClientComputerName\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nTokenType\nValues:\nINVALID_TOKEN (0)\nPRIMARY_TOKEN (1)\nIMPERSONATION_TOKEN (2)\nUserName\nOperating system username.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 416,
+      "end": 417
+    },
+    "content_stats": {
+      "char_count": 2344,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "ServiceStarted",
+      "children": []
+    }
+  }
+}

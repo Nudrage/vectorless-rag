@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1068",
+  "section_number": "44.40.3.1",
+  "header": "Name Description Required Value",
+  "content": "Description\nRequired\nValue\npagination\nPagination\ninformation\ntrue\nName\nDescription\nRequired\nValue\ntotalItems\nTotal number\nof items\nfound\nmatching\nyour query\ntrue\ninteger\nnextCursor\nPass this\nvalue as\n\"cursor\" on\nyour next\nrequest, to\nget the next\npage of\nresults (Will\nbe \"null\"\nwhen last\npage\nreached)\nfalse\nstring\n1188\ndata\nResponse\ndata\nfalse\nName\nDescription\nRequired\nValue\naccountId\nThe Account\nId\nfalse\ninteger\naccountName\nAccount\nname\nfalse\nstring\nagentPercent\nage\nPercentage of\nagents of the\naccount in\nthis network\ncalculated as\nnumberOfAge\nnts/\ntotalAgents *\n100\nfalse\nnumber\nallowScan\nDo we allow\nscanning in\nthis network\nfalse\nboolean\narchived\nArchived\nnetwork\nfalse\nboolean\nconnectedRan\ngers\nThe number\nof active\nrangers\nfalse\ninteger\ncreatedAt\nCreated at\nfalse\nstring\ndiscoveryMet\nhod\nDiscovery\nmethod\nfalse\nenum\nexpiryDate\nDate when\nthis network\nwill expire,\nnull if it won't\nexpire\nfalse\nstring\nexternalIp\nThe gateway\nexternal Ip\nfalse\nstring\nicmpScan\nICMP scan\nenabled\nfalse\nboolean\nid\nThe gateway\nid\nfalse\nstring\ninheritSetting\ns\nTrue if\ninherited\nvalues are\ntaken from\nfalse\nboolean\n1189\naccount\nsettings\nip\nThe gateway\nlocal ip\nfalse\nstring\nmacAddress\nThe gateway\nmac address\nfalse\nstring\nmanufacturer\nThe gateway\nmanufacturer\nobtained\nfrom the mac\naddress\nfalse\nstring\nmdnsScan\nMDNS scan\nenabled\nfalse\nboolean\nmultiScanSsd\np\nMulticast\nSSDP scan\nenabled\nfalse\nboolean\nnetworkNam\ne\nThe network\nname\nfalse\nstring\nnew\nTrue if this is\nnetwork was\nfirst seen\nsome days\nago, 3 by\ndefault\nfalse\nboolean\nnumberOfAge\nnts\nThe number\nof non\ndecommission\ned agents in\nthis network\nfalse\ninteger\nnumberOfRan\ngers\nThe number\nof rangers in\nthis network\nfalse\ninteger\nrdnsScan\nRDNS scan\nenabled\nfalse\nboolean\nrestrictions\nA set of ips\nthat should\nnot be\nscanned in\nthe specific\nnetwork\nfalse\nName\nDescription\nRequired\nValue\nannotation\nAn optional\nnote with the\nreason for\nthe\nrestriction\nfalse\nstring\n1190\ntype\nfalse\nenum\nvalues\nIt will be one\nIP or one\nCIDR or two\nvalues for a\nRange\nfalse\nstring []\nscanOnlyLoca\nlSubnets\nAllow remote\ntasks form\nthis network\nfalse\nboolean\nsiteId\nThe Site Id\nfalse\ninteger\nsmbScan\nSMB scan\nenabled\nfalse\nboolean\nsnmpScan\nSNMP scan\nenabled\nfalse\nboolean\ntcpPorts\nAllowed TCP\nports\nfalse\ninteger []\ntcpPortScan\nTCP Port\nscan enabled\nfalse\nboolean\ntotalAgents\nThe total of\nnon\ndecommission\ned agents in\nthe account\nfalse\ninteger\nudpPorts\nAllowed UDP\nports\nfalse\ninteger []\nudpPortScan\nUDP Port\nscan enabled\nfalse\nboolean\nerrors\nErrors\nfalse\narray\n1191",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1188,
+      "end": 1191
+    },
+    "content_stats": {
+      "char_count": 2486,
+      "word_count": 391
+    },
+    "hierarchy": {
+      "parent": "Response Schema",
+      "children": []
+    }
+  }
+}

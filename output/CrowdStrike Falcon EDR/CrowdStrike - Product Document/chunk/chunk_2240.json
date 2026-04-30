@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2240",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nModuleCharacteristics\nA bitmask field indicating optional characteristics of the loaded module.\nValues:\nRELOCS_STRIPPED (0x1)\nEXECUTABLE_IMAGE (0x2)\nLINE_NUMS_STRIPPED (0x4)\nLOCAL_SYMS_STRIPPED (0x8)\nAGGRESSIVE_WS_TRIM (0x10)\nLARGE_ADDRESS_AWARE (0x20)\nBYTES_RESERVED_LO (0x80)\n_32BIT_MACHINE (0x100)\nDEBUG_STRIPPED (0x200)\nREMOVABLE_RUN_FROM_SWAP (0x400)\nNET_RUN_FROM_SWAP (0x800)\nFILE_SYSTEM (0x1000)\nFILE_DLL (0x2000)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n798/1226\nField\nDescription\nUP_SYSTEM_ONLY (0x4000)\nBYTES_RESERVED_HI (0x8000)\nImageMachine\nValues:\nUNKNOWN (0)\nI386 (0x14c)\nMIPS_R3000 (0x162)\nMIPS_R4000 (0x168)\nMIPS_R10000 (0x168)\nMIPS_WCE_V2 (0x169)\nALPHA_AXP (0x184)\nSH3 (0x1a2)\nSH3DSP (0x1a3)\nSH3E (0x1a4)\nSH4 (0x1a6)\nSH5 (0x1a8)\nARM (0x1c0)\nTHUMB (0x1c2)\nAM33 (0x1d3)\nPOWER_PC (0x1f0)\nPOWER_PCFP (0x1f1)\nIA64 (0x200)\nMIPS_16 (0x266)\nALPHA_64 (0x284)\nMIPSFPU (0x366)\nMIPSFPU16 (0x466)\nINFINEON_TRICORE (0x520)\nCEF (0xCEF)\nEBC (0xebc)\nAMD64 (0x8664)\nM32R (0x9041)\nCEE (0xc0ee)\nImageNumberOfSections\nImageNumberOfSymbols\nImageSizeOfOptionalHeader\nPeImageTimeStamp\nFfcCollectionTag\nUser-assigned tag for a forensics collection.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 798,
+      "end": 799
+    },
+    "content_stats": {
+      "char_count": 1563,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "PeHeaderInfo",
+      "children": []
+    }
+  }
+}

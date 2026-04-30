@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1351",
+  "section_number": "2.24.2",
+  "header": "OpenSearch UI and OpenSearch Dashboards",
+  "content": "OpenSearch Service provides two distinct user interfaces for observability. We recommend that\nyou use OpenSearch UI and set up an observability workspace for new installations and migrate\nfrom existing OpenSearch Dashboards. Below is a table outlining the beneﬁts of OpenSearch UI v.\ntraditional OpenSearch Dashboards.\nFeature\nOpenSearch UI\nOpenSearch Dashboards\nData sources\nMulti-source – can connect\nto multiple OpenSearch\nService domains, OpenSearc\nh Serverless collections, and\nother data sources.\nSingle-source – co-locate\nd with a single OpenSearch\nService domain.\nUpdates\nNew features arrive here ﬁrst\nbecause it is not tied to a\nspeciﬁc OpenSearch version.\nNew features are tied to the\nOpenSearch version. Updates\nmay be deprecated in the\nfuture.\nOpenSearch UI and OpenSearch Dashboards\n1826\nAmazon OpenSearch Service\nDeveloper Guide\nFeature\nOpenSearch UI\nOpenSearch Dashboards\nAvailability\nHosted in the AWS Cloud\nensuring zero downtime\nduring cluster upgrades.\nCan become temporarily\nunavailable during domain\nmaintenance and upgrades\nCollaboration\nFeatures workspaces for\ncurated team collaboration\non speciﬁc workﬂows.\nCollaboration is based on\nsharing saved objects in a\nsingle domain.\nNote – To make getting started easier, we’ve created a new Get Started workﬂow for logs in the\nAmazon OpenSearch Service console which will set up a new OTel tailored ingestion pipeline, allow\nyou to select an existing OpenSearch cluster, and create a new OpenSearch UI application with an\nobservability workspace created. All you have to do is point your OTel agents to the new ingestion\nendpoint and you are ready to unlock insights on your OTel formatted data.\nSince ingestion and analytics are handled diﬀerently in logs and traces, we’ve created separate\nsections to dive deep into.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1855,
+      "end": 1856
+    },
+    "content_stats": {
+      "char_count": 1787,
+      "word_count": 266
+    },
+    "hierarchy": {
+      "parent": "Observability in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

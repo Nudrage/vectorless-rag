@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_808",
+  "section_number": "155.1.1.79",
+  "header": "Hunt for threats across devices, emails, apps, and identities",
+  "content": "apps, and identities\n03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nAdvanced hunting in Microsoft Defender XDR allows you to proactively hunt for threats across:\nDevices managed by Microsoft Defender for Endpoint\nEmails processed by Microsoft 365\nCloud app activities, authentication events, and domain controller activities tracked by\nMicrosoft Defender for Cloud Apps and Microsoft Defender for Identity\nWith this level of visibility, you can quickly hunt for threats that traverse sections of your\nnetwork, including sophisticated intrusions that arrive on email or the web, elevate local\nprivileges, acquire privileged domain credentials, and move laterally to across your devices.\nHere are general techniques and sample queries based on various hunting scenarios that can\nhelp you explore how you might construct queries when hunting for such sophisticated threats.\nUse these queries to learn how you can quickly get information about user accounts, devices,\nand files.\nWhen constructing queries across tables that cover devices and emails, you will likely need to\nobtain user account names from sender or recipient email addresses. You can generally do this\nfor either recipient or sender address using the local-host from the email address.\nIn the snippet below, we use the tostring() Kusto function to extract the local-host right before\nthe @  from recipient email addresses in the column RecipientEmailAddress .\nKusto\nThe query below shows how this snippet can be used:\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 536,
+      "end": 536
+    },
+    "content_stats": {
+      "char_count": 1536,
+      "word_count": 230
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Get entity info",
+        "Hunting scenarios",
+        "Related topics"
+      ]
+    }
+  }
+}

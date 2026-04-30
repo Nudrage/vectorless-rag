@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_723",
+  "section_number": "1.5.830.1",
+  "header": "Fields: Windows, macOS, Linux, Falcon Container",
+  "content": "Field\nDescription\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it\nrepresents the ID of the process that is responsible for the activity of the event in focus. For example, the\nTargetProcessId of a process that performed thread injection in an InjectedThread event\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process\nidentifier\nExitCode\nA ULongHex field which is the exit code for a process.\nKernelTime\nUserTime\nThe total time executed in user mode. This field is in 100-nanosecond units.\nCycleTime\nA ULong64Hex field which is the number of number of processor clock cycles used.\nMaxThreadCount\nConHostId\nThe raw process ID of the Conhost.exe (console host process) associated with this process. The PID is zero if no\nsuch host exists.\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a\nuser in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\nNetworkConnectCount\nNetworkListenCount\nNetworkRecvAcceptCount\nNetworkCloseCount\nAsepWrittenCount\nServiceEventCount\nNetworkBindCount\nNewExecutableWrittenCount\nInjectedThreadCount\nPrivilegedProcessHandleCount\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n179/1226\nField\nDescription\nExeAndServiceCount\nNetworkCapableAsepWriteCount\nCLIUnderListenCount\nDnsRequestCount\nA per-process count of service events generated. On windows and linux, has been deprecated, and the value will\nalways be 1.\nSuspiciousDnsRequestCount\nSuspectStackCount\nExecutableDeletedCount\nActivePrivilegeEscalationCount\nInjectedDllCount\nSuspiciousRawDiskReadCount\nSuspiciousCredentialModuleLoadCount\nUnsignedModuleLoadCount\nRegKeySecurityDecreasedCount\nSnapshotFileOpenCount\nBinaryExecutableWrittenCount\nNamedObjectCount\nFileDeletedCount\nDirectoryCreatedCount\nUserMemoryAllocateExecutableCount\nUserMemoryProtectExecutableCount\nUserMemoryAllocateExecutableRemoteCount\nUserMemoryProtectExecutableRemoteCount\nConHostProcessId\nOpenDirectoryCount\nCLICreationCount\nScriptEngineInvocationCount\nRunDllInvocationCount\nProcessBehaviorBitfield\nValues:\nOPENED_RECYCLE_BIN (0x0000000000000001)\nSERVICE_PROCESS (0x0000000000000002)\nNetworkConnectCountUdp\nDirectoryEnumeratedCount\nSuspiciousFontLoadCount\nNetworkModuleLoadCount\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING\n(0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nContextData\nAncestry\nParentProcessId\nThe decimal representation of the parent process.\nProcessStartTime\nThe time the process began in UNIX epoch time (in decimal, non-hex format).\nAllocateVirtualMemoryCount\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n180/1226\nField\nDescription\nProtectVirtualMemoryCount\nQueueApcCount\nSetThreadContextCount\nArchiveFileWrittenCount\nDocumentFileWrittenCount\nGenericFileWrittenCount\nRemovableDiskFileWrittenCount\nModuleLoadCount\nImageSubsystem\nValues:\nUNKNOWN (0x0)\nNATIVE (0x1)\nGUI (0x2)\nCUI (0x3)\nPOSIX_CUI (0x7)\nWINDOWS_BOOT_APPLICATION (0x10)\nIMAGE_SUBSYSTEM_UNKNOWN (0x0)\nIMAGE_SUBSYSTEM_NATIVE (0x1)\nIMAGE_SUBSYSTEM_WINDOWS_GUI (0x2)\nIMAGE_SUBSYSTEM_WINDOWS_CUI (0x3)\nIMAGE_SUBSYSTEM_POSIX_CUI (0x7)\nIMAGE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION (0x10)\nIMAGE_SUBSYSTEM_WSL (0x100)\nScreenshotsTakenCount\nCreateProcessCount\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 179,
+      "end": 181
+    },
+    "content_stats": {
+      "char_count": 4125,
+      "word_count": 413
+    },
+    "hierarchy": {
+      "parent": "EndOfProcess",
+      "children": []
+    }
+  }
+}

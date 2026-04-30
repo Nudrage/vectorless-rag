@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_268",
+  "section_number": "2.7.2.3",
+  "header": "Step 3: Upload and search data",
+  "content": "You can upload data to an OpenSearch Serverless collection using Postman or cURL. For brevity,\nthese examples use Dev Tools within the OpenSearch Dashboards console.\nTo index and search data in the movies collection\n1.\nChoose Collections in the left navigation pane and choose the movies collection to open its\ndetails page.\n2.\nChoose the OpenSearch Dashboards URL for the collection. The URL takes the\nformat https://dashboards.{region}.aoss.amazonaws.com/_login/?\ncollectionId={collection-id}.\nStep 3: Upload and search data\n383\nAmazon OpenSearch Service\nDeveloper Guide\n3.\nWithin OpenSearch Dashboards, open the left navigation pane and choose Dev Tools.\n4.\nTo create a single index called movies-index, send the following request:\nPUT movies-index\n5.\nTo index a single document into movies-index, send the following request:\nPUT movies-index/_doc/1\n{\n\"title\": \"Shawshank Redemption\",\n\"genre\": \"Drama\",\n\"year\": 1994\n}\n6.\nTo search data in OpenSearch Dashboards, you need to conﬁgure at least one index pattern.\nOpenSearch uses these patterns to identify which indexes you want to analyze. Open the left\nnavigation pane, choose Stack Management, choose Index Patterns, and then choose Create\nindex pattern. For this tutorial, enter movies.\n7.\nChoose Next step and then choose Create index pattern. After the pattern is created, you can\nview the various document ﬁelds such as title and genre.\n8.\nTo begin searching your data, open the left navigation pane again and choose Discover, or use\nthe search API within Dev Tools.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 412,
+      "end": 413
+    },
+    "content_stats": {
+      "char_count": 1524,
+      "word_count": 230
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Getting started with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_908",
+  "section_number": "2.12.12.2.4",
+  "header": "Deleting the service-linked role for OpenSearch Serverless",
+  "content": "If you no longer need to use a feature or service that requires a service-linked role, we recommend\nthat you delete that role. This prevents you from having an unused entity that isn't actively\nmonitored or maintained. However, you must clean up the resources for your service-linked role\nbefore you can manually delete it.\nTo delete the AWSServiceRoleForAmazonOpenSearchServerless, you must ﬁrst delete all\nOpenSearch Serverless collections in your AWS account.\nNote\nIf OpenSearch Serverless is using the role when you try to delete the resources, then the\ndeletion might fail. If that happens, wait for a few minutes and try the operation again.\nTo manually delete the service-linked role using IAM\nUse the IAM console, the AWS CLI, or the AWS API to delete the\nAWSServiceRoleForAmazonOpenSearchServerless service-linked role. For more information, see\nDeleting a service-linked role in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1447,
+      "end": 1447
+    },
+    "content_stats": {
+      "char_count": 908,
+      "word_count": 141
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles to create OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

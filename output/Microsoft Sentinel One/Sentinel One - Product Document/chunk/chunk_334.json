@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_334",
+  "section_number": "3.30",
+  "header": "Broadcast Message",
+  "content": "POST    /web/api/v2.1/agents/actions/broadcast\nYou can send a message through the Agents that users can see.\nThis is useful for endpoints that have human users. This command is supported on Windows and macOS endpoints (not supported on Linux). The message is sent to all\nendpoints that match the filter.\nPut the message in the data parameter: \"data\":{\"message\":\"<your message>\"}\nThe message must be 140 characters or less.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 658,
+      "end": 658
+    },
+    "content_stats": {
+      "char_count": 422,
+      "word_count": 64
+    },
+    "hierarchy": {
+      "parent": "Agent Actions",
+      "children": [
+        "Response Messages",
+        "Response Schema",
+        "Body Schema"
+      ]
+    }
+  }
+}

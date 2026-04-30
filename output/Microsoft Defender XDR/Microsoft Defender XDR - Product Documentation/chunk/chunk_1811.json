@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_1811",
+  "section_number": "155.1.1.249",
+  "header": "Microsoft Defender XDR Advanced hunting API",
+  "content": "API\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nAdvanced hunting is a threat-hunting tool that uses specially constructed queries to examine\nthe past 30 days of event data in Microsoft Defender XDR. You can use advanced hunting\nqueries to inspect unusual activity, detect possible threats, and even respond to attacks. The\nadvanced hunting API allows you to programmatically query event data.\nThe following conditions relate to all queries.\n1. Queries explore and return data from the past 30 days.\n2. Results can return up to 100,000 rows.\n3. You can make up to at least 45 calls per minute per tenant. The number of calls varies per\ntenant based on its size.\n4. Each tenant is allocated CPU resources, based on the tenant size. Queries are blocked if\nthe tenant has reached 100% of the allocated resources until after the next 15-minute\ncycle. To avoid blocked queries due to excess consumption, follow the guidance in\nOptimize your queries to avoid hitting CPU quotas.\n5. If a single request runs for more than three minutes, it times out and returns an error.\n6. A 429  HTTP response code indicates that you've reached the allocated CPU resources,\neither by number of requests sent, or by allotted running time. Read the response body\nto understand the limit you have reached.\n２ Warning\nThis advanced hunting API is an older version with limited capabilities. A more\ncomprehensive version of the advanced hunting API is already available in the Microsoft\nGraph security API. See Advanced hunting using Microsoft Graph security API\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1368,
+      "end": 1368
+    },
+    "content_stats": {
+      "char_count": 1777,
+      "word_count": 289
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Quotas and resource allocation",
+        "Permissions",
+        "HTTP request",
+        "Request headers",
+        "Request body",
+        "Response",
+        "Example",
+        "Related articles"
+      ]
+    }
+  }
+}

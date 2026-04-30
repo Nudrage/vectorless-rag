@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3186",
+  "section_number": "1.6.13.1",
+  "header": "create_policy",
+  "content": "Generated when a user creates a policy. For automatic policies, the policy_type will have a value string of Automatic, and for manual policies, the value string\nwill be Manual.\n{\n\"metadata\": {\n\"customerIDString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"offset\": 11614099,\n\"eventType\": \"UserActivityAuditEvent\",\n\"eventCreationTime\": 1480467692\n},\n\"event\": {\n\"UserId\": \"user@example.com\",\n\"UserIp\": \"192.0.2.100\",\n\"OperationName\": \"create_policy\",\n\"ServiceName\": \"prevention_policy\",\n\"AuditKeyValues\": [\n{\n\"Key\": \"policy_id\",\n\"ValueString\": \"3525384666fd4c828d1f9ba9ded0339e\"\n},\n{\n\"Key\": \"policy_name\",\n\"ValueString\": \"Test Policy\"\n},\n{\n\"Key\": \"policy_description\",\n\"ValueString\": \"Test policy with auto assignment\"\n},\n{\n\"Key\": \"policy_type\",\n\"ValueString\": \"Automatic\"\n},\n{\n\"Key\": \"policy_enabled\",\n\"ValueString\": \"false\"\n},\n{\n\"Key\": \"policy_platform\",\n\"ValueString\": \"Windows\"\n},\n{\n\"Key\": \"policy_assignment_rule\",\n\"ValueString\": \"\"\n},\n{\n\"Key\": \"policy_settings_FileAttributeAnalysis\",\n\"ValueString\": \"{\\\"detection\\\":\\\"DISABLED\\\",\\\"prevention\\\":\\\"DISABLED\\\"}\"\n},\n{\n\"Key\": \"policy_settings_FileAnalysis\",\n\"ValueString\": \"{\\\"detection\\\":\\\"DISABLED\\\",\\\"prevention\\\":\\\"DISABLED\\\"}\"\n},\n{\n\"Key\": \"policy_settings_CustomBlacklisting\",\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1196/1226\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_ForceASLR\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_ForceDEP\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_HeapSprayPreallocation\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_BackupDeletion\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_Cryptowall\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_FileEncryption\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_Locky\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_ApplicationExploitationActivity\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_ChopperWebshell\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_DriveByDownload\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_WindowsLogonBypassStickyKeys\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n},\n{\n\"Key\": \"policy_settings_AdwareExecution\",\n\"ValueString\": \"{\\\"enabled\\\":false}\"\n}\n],\n\"UTCTimestamp\": 1480467692\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1196,
+      "end": 1197
+    },
+    "content_stats": {
+      "char_count": 2553,
+      "word_count": 219
+    },
+    "hierarchy": {
+      "parent": "Policy management",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1664",
+  "section_number": "155.1.1.225",
+  "header": "Get email notifications for response actions",
+  "content": "actions\nArticle • 01/17/2025 • Applies to: Microsoft Defender XDR\nYou can set up email notifications in the Microsoft Defender portal to notify you about\nmanual or automated response actions.\nManual response actions are actions that security teams can use to stop threats or aid in\ninvestigation of attacks. These actions vary depending on the Defender workload\nenabled in your environment.\nAutomated response actions are capabilities in Microsoft Defender XDR that scale\ninvestigation and resolution to threats automatically. Automated remediation\ncapabilities consist of automatic attack disruption and automated investigation and\nresponse.\n） Important\nSome information in this article relates to a prereleased product which may be\nsubstantially modified before it's commercially released. Microsoft makes no\nwarranties, expressed or implied, with respect to the information provided here.\n７ Note\nYou need the Manage security settings permission to configure email notification\nsettings. If you've chosen to use basic permissions management, users with Security\nAdministrator or Global Administrator roles can configure email notifications.\nLikewise, if your organization is using role-based access control (RBAC), you can\nonly create, edit, delete, and receive notifications based on device groups that you\nare allowed to manage.\n７ Note\nMicrosoft recommends using roles with fewer permissions for better security. The\nGlobal Administrator role, which has many permissions, should only be used in\nemergencies when no other role fits.\nTo create a rule for email notifications, perform the following steps:\n1. In the navigation pane of the Microsoft Defender portal, select Settings >\nMicrosoft Defender XDR. Under General, select Email notifications. Go to the\nActions tab.\n2. Select Add notification rule. Add a rule name and description under Basics. Both\nName and Description fields accept letters, numbers, and spaces only.\n3. Proceed to the next section by selecting Next located at the bottom of the pane.\n4. You can choose what type of action, what status, and where the action will be\nsourced from in the Notification settings section.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1241,
+      "end": 1242
+    },
+    "content_stats": {
+      "char_count": 2144,
+      "word_count": 320
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Create a rule for email notifications",
+        "Next steps",
+        "See also"
+      ]
+    }
+  }
+}

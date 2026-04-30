@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1350",
+  "section_number": "2.24.1",
+  "header": "The observability workﬂow in OpenSearch Service",
+  "content": "Getting data from your applications into OpenSearch Service for analysis uses a multi-stage\npipeline:\n1. Collection\nThe observability workﬂow in OpenSearch Service\n1824\nAmazon OpenSearch Service\nDeveloper Guide\nThe process begins at the source with lightweight agents or collectors that gather telemetry\ndata from your signal producers such as applications and infrastructure. Two common open-\nsource agents are:\n• OpenTelemetry (OTel) collector – The industry standard and preferred method for collecting\nlogs and traces.\n• Fluent Bit – A lightweight, high-performance log processor and forwarder that supports the\nOTel schema for logs and traces.\n2. Ingestion (Amazon OpenSearch Ingestion)\nAfter telemetry is collected, data is sent to OpenSearch Ingestion, a fully managed, serverless\ndata pipeline. You can create custom pipelines to:\n• Filter – Remove unnecessary data to reduce storage costs.\n• Enrich – Add valuable metadata, such as geographic information from an IP address.\n• Transform and normalize – Structure unstructured logs into a consistent format.\n• Route – Send diﬀerent types of data to diﬀerent OpenSearch Service indexes or Amazon S3.\n3. Analytics and visualization\nAfter processing, data is loaded into an OpenSearch Service domain or collection. You can store,\nindex, and analyze vast amounts of data in near real time. You interact with this data through\na visualization interface such as OpenSearch UI's observability workspace to run queries, build\ndashboards, and set up alerts.\nThe observability workﬂow in OpenSearch Service\n1825\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1853,
+      "end": 1855
+    },
+    "content_stats": {
+      "char_count": 1601,
+      "word_count": 239
+    },
+    "hierarchy": {
+      "parent": "Observability in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

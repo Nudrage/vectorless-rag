@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_141",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "Consider the following limitations when you set up an OpenSearch Ingestion pipeline for\nDynamoDB:\n• The OpenSearch Ingestion integration with DynamoDB currently doesn't support cross-Region\ningestion. Your DynamoDB table and OpenSearch Ingestion pipeline must be in the same AWS\nRegion.\n• Your DynamoDB table and OpenSearch Ingestion pipeline must be in the same AWS account.\nAmazon DynamoDB\n159\nAmazon OpenSearch Service\nDeveloper Guide\n• An OpenSearch Ingestion pipeline supports only one DynamoDB table as its source.\n• DynamoDB Streams only stores data in a log for up to 24 hours. If ingestion from an initial\nsnapshot of a large table takes 24 hours or more, there will be some initial data loss. To mitigate\nthis data loss, estimate the size of the table and conﬁgure appropriate compute units of\nOpenSearch Ingestion pipelines.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 188,
+      "end": 189
+    },
+    "content_stats": {
+      "char_count": 835,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon DynamoDB",
+      "children": []
+    }
+  }
+}

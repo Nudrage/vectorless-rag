@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1203",
+  "section_number": "2.19.4.9",
+  "header": "Migrating cold indexes to warm storage",
+  "content": "After you narrow down your list of cold indexes with the ﬁltering criteria in the previous section,\nmigrate them back to UltraWarm where you can query the data and use it to create visualizations.\nThe following request migrates two cold indexes back to warm storage:\nPOST _cold/migration/_warm\n{\n\"indices\": \"my-index1,my-index2\"\n}\n{\n\"acknowledged\" : true\n}\nTo check the status of the migration and retrieve the migration ID, send the following request:\nGET _cold/migration/_status\nSample response\nMigrating cold indexes to warm storage\n1719\nAmazon OpenSearch Service\nDeveloper Guide\n{\n\"cold_to_warm_migration_status\" : [\n{\n\"migration_id\" : \"tyLjXCA-S76zPQbPVHkOKA\",\n\"indices\" : [\n\"my-index1,my-index2\"\n],\n\"state\" : \"RUNNING_INDEX_CREATION\"\n}\n]\n}\nTo get index-speciﬁc migration information, include the index name:\nGET _cold/migration/my-index/_status\nRather than specifying an index, you can list the indexes by their current migration status. Valid\nvalues are _failed, _accepted, and _all.\nThe following command gets the status of all indexes in a single migration request:\nGET _cold/migration/_status?migration_id=my-migration-id\nRetrieve the migration ID using the status request. For detailed migration information, add\n&verbose=true.\nYou can migrate indexes from cold to warm storage in batches of 10 or less, with a maximum\nof 100 indexes being migrated simultaneously. Any request that exceeds the limit will be\nrejected. To check the current number of migrations currently taking place, monitor the\nColdToWarmMigrationQueueSize metric. The migration process has the following states:\nACCEPTED_MIGRATION_REQUEST - Migration request is accepted and queued.\nRUNNING_INDEX_CREATION - Migration request is picked up for processing and will create\nwarm indexes in the cluster.\nPENDING_COLD_METADATA_CLEANUP - Warm index is created and the migration service will\nattempt to clean up cold metadata.\nRUNNING_COLD_METADATA_CLEANUP - Cleaning up cold metadata from the indexes migrated to\nwarm storage.\nFAILED_COLD_METADATA_CLEANUP - Failed to clean up metadata in the cold tier.\nFAILED_INDEX_CREATION - Failed to create an index in the warm tier.\nMigrating cold indexes to warm storage\n1720\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1748,
+      "end": 1750
+    },
+    "content_stats": {
+      "char_count": 2230,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": "Cold storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

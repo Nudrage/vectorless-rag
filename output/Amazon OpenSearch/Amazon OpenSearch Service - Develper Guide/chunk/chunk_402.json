@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_402",
+  "section_number": "2.7.10.10.8",
+  "header": "Viewing data access policies",
+  "content": "Before you create a collection, you might want to preview the existing data access policies in\nyour account to see which one has a resource pattern that matches your collection's name. The\nfollowing ListAccessPolicies request lists all data access policies in your account:\naws opensearchserverless list-access-policies --type data\nThe request returns information about all conﬁgured data access policies. To view the pattern\nrules deﬁned in the one speciﬁc policy, ﬁnd the policy information in the contents of the\naccessPolicySummaries element in the response. Note the name and type of this policy and\nuse these properties in a GetAccessPolicy request to receive a response with the following policy\ndetails:\n{\n\"accessPolicyDetails\": [\n{\n\"type\": \"data\",\n\"name\": \"my-policy\",\n\"policyVersion\": \"MTY2NDA1NDE4MDg1OF8x\",\n\"description\": \"My policy\",\n\"policy\": \"[{\\\"Rules\\\":[{\\\"ResourceType\\\":\\\"collection\\\",\n\\\"Resource\\\":[\\\"collection/autopartsinventory\\\",\\\"collection/sales*\\\"],\nData access control\n554\nAmazon OpenSearch Service\nDeveloper Guide\n\\\"Permission\\\":[\\\"aoss:UpdateCollectionItems\\\"]},{\\\"ResourceType\\\":\\\"index\\\",\n\\\"Resource\\\":[\\\"index/autopartsinventory/*\\\",\\\"index/salesorders/orders*\\\"],\n\\\"Permission\\\":[\\\"aoss:ReadDocument\\\",\\\"aoss:DescribeIndex\\\"]}],\\\"Principal\\\":\n[\\\"arn:aws:iam::123456789012:user/Shaheen\\\"]}]\",\n\"createdDate\": 1664054180858,\n\"lastModifiedDate\": 1664054180858\n}\n]\n}\nYou can include resource ﬁlters to limit the results to policies that contain speciﬁc collections or\nindexes:\naws opensearchserverless list-access-policies --type data --resource\n\"index/autopartsinventory/*\"\nTo view details about a speciﬁc policy, use the GetAccessPolicy command.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 583,
+      "end": 584
+    },
+    "content_stats": {
+      "char_count": 1676,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

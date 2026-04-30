@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_504",
+  "section_number": "2.8.10.1",
+  "header": "VPC versus public domains",
+  "content": "The following are some of the ways VPC domains diﬀer from public domains. Each diﬀerence is\ndescribed later in more detail.\n• Because of their logical isolation, domains that reside within a VPC have an extra layer of security\ncompared to domains that use public endpoints.\n• While public domains are accessible from any internet-connected device, VPC domains require\nsome form of VPN or proxy.\n• Compared to public domains, VPC domains display less information in the console. Speciﬁcally,\nthe Cluster health tab does not include shard information, and the Indices tab isn't present.\n• The domain endpoints take diﬀerent forms (https://search-domain-name vs.\nhttps://vpc-domain-name).\n• You can't apply IP-based access policies to domains that reside within a VPC because security\ngroups already enforce IP-based access policies.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 702,
+      "end": 702
+    },
+    "content_stats": {
+      "char_count": 830,
+      "word_count": 126
+    },
+    "hierarchy": {
+      "parent": "Launching your Amazon OpenSearch Service domains within a VPC",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_886",
+  "section_number": "2.12.11.3",
+  "header": "Conﬁguring identity providers",
+  "content": "When you conﬁgure a domain to use Amazon Cognito authentication for Dashboards, OpenSearch\nService adds an app client to the user pool and adds the user pool to the identity pool as an\nauthentication provider.\nWarning\nDon't rename or delete the app client.\nDepending on how you conﬁgured your user pool, you might need to create user accounts\nmanually, or users might be able to create their own. If these settings are acceptable, you don't\nneed to take further action. Many people, however, prefer to use external identity providers.\nTo enable a SAML 2.0 identity provider, you must provide a SAML metadata document. To enable\nsocial identity providers like Login with Amazon, Facebook, and Google, you must have an app ID\nand app secret from those providers. You can enable any combination of identity providers.\nConﬁguring identity providers\n1404\nAmazon OpenSearch Service\nDeveloper Guide\nThe easiest way to conﬁgure your user pool is to use the Amazon Cognito console. For instructions,\nsee User pool sign-in with third party identity providers and Application-speciﬁc settings with app\nclient in the Amazon Cognito Developer Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1433,
+      "end": 1434
+    },
+    "content_stats": {
+      "char_count": 1136,
+      "word_count": 182
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring Amazon Cognito authentication for OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

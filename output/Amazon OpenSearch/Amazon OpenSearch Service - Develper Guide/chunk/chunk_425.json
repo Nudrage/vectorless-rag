@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_425",
+  "section_number": "2.7.10.12.7",
+  "header": "Deleting SAML providers",
+  "content": "When you delete a SAML provider, any references to associated users and groups in your data\naccess policies are no longer functional. To avoid confusion, we suggest that you remove all\nreferences to the endpoint in your access policies before you delete the endpoint.\nTo delete a SAML provider using the OpenSearch Serverless console, choose Authentication, select\nthe provider, and choose Delete.\nTo delete a provider through the OpenSearch Serverless API, send a DeleteSecurityConﬁg request:\naws opensearchserverless delete-security-config --id saml/123456789012/myprovider",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 608,
+      "end": 608
+    },
+    "content_stats": {
+      "char_count": 575,
+      "word_count": 80
+    },
+    "hierarchy": {
+      "parent": "SAML authentication for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_709",
+  "section_number": "2.10.4.3.11",
+  "header": "EBS burst balance below 20%",
+  "content": "OpenSearch Service sends this event when the EBS burst balance on one or more data nodes falls\nbelow 20%. EBS burst balance depletion can cause widespread cluster unavailability and throttling\nof I/O requests, which can lead to high latencies and timeouts on indexing and search requests. For\nsteps to ﬁx this issue, see the section called “Low EBS burst balance”.\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Amazon OpenSearch Service Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2017-12-01T13:12:22Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\":{\n\"event\":\"EBS Burst Balance\",\n\"status\":\"Warning\",\n\"severity\":\"High\",\n\"description\":\"EBS burst balance on one or more data nodes is below 20%.\nCluster health events\n1257\nAmazon OpenSearch Service\nDeveloper Guide\nFollow https://docs.aws.amazon.com/opensearch-service/latest/\ndeveloperguide/handling-errors.html#handling-errors-low-ebs-burst\nto fix this issue.\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1286,
+      "end": 1287
+    },
+    "content_stats": {
+      "char_count": 1078,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "Cluster health events",
+      "children": []
+    }
+  }
+}

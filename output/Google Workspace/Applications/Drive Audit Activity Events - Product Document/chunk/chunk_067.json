@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_067",
+  "section_number": "1.2.62",
+  "header": "Sync client resumed",
+  "content": "Event details\nEvent name\nresume_sync_client\nParameters\nprimary_event\nboolean\nWhether this event is a primary event.\nA single user action in Drive can\ngenerate several events, multiple of\nwhich can be primary\n(primary_event=true). The\nremaining events are deemed to be\nside effects of the primary event(s)\n(primary_event=false). For\nexample, when a user creates a\ndocument, several events are\ngenerated, with only the create event\nhaving primary_event=true. But\nwhen a user shares a document with\nmultiple other users in one action, an\naccess change event having\nprimary_event=true is created for\neach sharee. Possible values:\nfalse\nBoolean value false.\ntrue\nBoolean value true.\nSample request\nAdmin Console message format\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/drive?\neventName=pause_sync_client&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\nFile syncing paused for {target_user} due to\npotential ransomware.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/drive?\neventName=resume_sync_client&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{actor} resumed file syncing.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 213,
+      "end": 213
+    },
+    "content_stats": {
+      "char_count": 1147,
+      "word_count": 129
+    },
+    "hierarchy": {
+      "parent": "Access",
+      "children": []
+    }
+  }
+}

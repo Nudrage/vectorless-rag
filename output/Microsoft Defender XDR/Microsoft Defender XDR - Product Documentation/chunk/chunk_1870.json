@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1870",
+  "section_number": "155.1.1.250.5.1.3",
+  "header": "Device format",
+  "content": "ﾉ\nExpand table\nField name\nDescription\nExample value\nrbacGroupName\nThe role-based access control (RBAC) group associated with the\ndevice.\nWDATP-Ring0\nfirstSeen\nTime when device was first seen.\n2020-02-06T14:16:01.9330135Z\nhealthStatus\nThe health state of the device.\nActive\nriskScore\nThe risk score for the device.\nHigh\nentities\nAll entities that have been identified to be part of, or related to,\na given alert.\n[] (see details on entity fields below)\nField name\nDescription\nExample value\nentityType\nEntities that have been\nidentified to be part of, or\nrelated to, a given alert.\nThe properties values are:\nUser, Ip, Url, File, Process,\nMailBox, MailMessage,\nMailCluster, Registry\nUser\nsha1\nAvailable if entityType is\nFile.\nThe file hash for alerts\nassociated with a file or\nprocess.\n5de839186691aa96ee2ca6d74f0a38fb8d1bd6dd\nsha256\nAvailable if entityType is\nFile.\nThe file hash for alerts\nassociated with a file or\nprocess.\n28cb017dfc99073aa1b47c1b30f413e3ce774c4991eb4158de50f9dbb36d8043\nfileName\nAvailable if entityType is\nFile.\nThe file name for alerts\nassociated with a file or\nprocess\nDetector.UnitTests.dll\nfilePath\nAvailable if entityType is\nFile.\nThe file path for alerts\nassociated with a file or\nprocess\nC:\\\\agent_work_temp\\Deploy\\SYSTEM\\2020-09-06 12_14_54\\Out\nprocessId\nAvailable if entityType is\nProcess.\n24348\nprocessCommandLine\nAvailable if entityType is\nProcess.\n\"Your File Is Ready To Download_1911150169.exe\"\nprocessCreationTime\nAvailable if entityType is\nProcess.\n2020-07-18T03:25:38.5269993Z",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 16,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1389,
+      "end": 1390
+    },
+    "content_stats": {
+      "char_count": 1512,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "Schema mapping",
+      "children": []
+    }
+  }
+}

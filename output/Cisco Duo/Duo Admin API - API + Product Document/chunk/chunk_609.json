@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_609",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Returns the single administrator object, with the same information as Retrieve\nAdministrators plus:\nactivation_url\nLink to the activation form if an activation link exists for that\nadmin.\nsubaccount_role\nThe administrator's role when accessing a subaccount. One\nof: \"Owner\", \"Administrator\", \"Application Manager\", \"User\nManager\", \"Security Analyst\", \"Help Desk\", \"Billing\", or\n\"Read-only\". Only present in the response if the customer\nedition includes the Administrative Roles feature and the\ncustomer is an MSP customer, has the Accounts API feature,\nor has existing subaccounts.\n\"last_directory_sync\": null,\n\"last_login\": null,\n\"name\": \"Rachael Scott\",\n\"password_change_required\": false,\n\"phone\": null,\n\"phone_details\": [],\n\"restricted_by_admin_units\": false,\n\"role\": \"Help Desk\",\n\"status\": \"Pending Activation\"\n}\n}\nGET  /admin/v1/admins/[admin_id]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 260,
+      "end": 260
+    },
+    "content_stats": {
+      "char_count": 851,
+      "word_count": 105
+    },
+    "hierarchy": {
+      "parent": "Administrators",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1098",
+  "section_number": "1.1.155.2.2.1.1.3",
+  "header": "Custom frequency for Microsoft Sentinel data (Preview)",
+  "content": "1. For detections set to run more frequently than once a day, the lookback is four times the\nfrequency. For example, if the frequency is 20 minutes, the lookback is 80 minutes.\n2. For detections set to run once a day or less frequently, the lookback is 30 days. For\nexample, if set to run every three days, the lookback is 30 days\nYou can enrich alerts by providing and defining more details, allowing you to:\nCreate a dynamic alert title and description\nAdd custom details to display in the alert side panel\nLink entities\n\n） Important\nWhen you select a custom frequency, we fetch your data from Microsoft Sentinel. This\nmeans that:\n1. You must have data available in Microsoft Sentinel.\n2. Defender XDR data won't support scoping, since Microsoft Sentinel doesn't support\nscoping.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 7,
+    "font_size": 13,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 830,
+      "end": 831
+    },
+    "content_stats": {
+      "char_count": 782,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "Continuous (NRT) frequency",
+      "children": []
+    }
+  }
+}

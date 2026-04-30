@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_599",
+  "section_number": "155.1.1.53.1",
+  "header": "Create a data security investigation",
+  "content": "To create an investigation in Data Security Investigations (preview) in the Microsoft Defender\nportal, follow these steps:\n1. Sign in to the Microsoft Defender portal at security.microsoft.com\n.\n2. In the navigation pane, select Investigation & response > Incidents & alerts > Incidents\nto open the incident queue. Select an incident from the queue to open the incident page.\n3. When the selected incident contains potentially impacted data, the option to create a\nData Security investigation appears on the incident page message banner. Choose\nInvestigate this incident.\n4. In the pop-up window, provide a name and description for the investigation. Investigation\nnames must be unique.\n\n\n5. In the Investigation scope, attach mailboxes or files and mail messages to the\ninvestigation.\n6. Select Create investigation to finish creating the data security investigation.\nOnce the investigation in Data Security Investigations (preview) is created, a link to the\nMicrosoft Purview portal appears on the message banner in the incident page. Here’s an\nexample.\nYou can also create an investigation in Data Security Investigations (preview) from the incident\npage in the following ways:\nFrom the Incidents page, select the More actions ellipsis to see the options, then choose\nInvestigate data security with AI.\n７ Note\nYou can attach either mailboxes or files and mail messages in an investigation, but\nnot both at the same time. If an incident involves both mailboxes and files or mail\nmessages, you need to create separate investigations. For example, create one\ninvestigation for all mailboxes and another for all files and mail messages. Files and\nmail messages can be attached in one investigation.\n\nWhen you select an entity like an email in the incident graph, choose Investigate data\nsecurity with AI from the entity context menu.\nEach investigation in Data Security Investigations (preview) created is recorded in the Microsoft\nDefender portal activity log. The activity log entry also includes the relevant link to the\ninvestigation created in the Microsoft Purview portal.\n\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 380,
+      "end": 384
+    },
+    "content_stats": {
+      "char_count": 2086,
+      "word_count": 328
+    },
+    "hierarchy": {
+      "parent": "Create investigations in Data Security Investigations (preview) from the Microsoft Defender portal",
+      "children": []
+    }
+  }
+}

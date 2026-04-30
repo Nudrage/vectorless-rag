@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_317",
+  "section_number": "2.7.4.4.1",
+  "header": "View collection groups",
+  "content": "Display your OpenSearch Serverless collection groups to review their conﬁgurations, associated\ncollections, and current status.\nConsole\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/.\n2.\nIn the left navigation pane, choose Serverless, then choose Collections\n3.\nChoose the Collection groups tab. Your account's collection groups are displayed.\n4.\nChoose the Name of a collection group to display its details.\nAWS CLI\n•\nUse the list-collection-groups command to list all collection groups in your account.\nUse the batch-get-collection-group command to view details about speciﬁc collection\ngroups. In the following commands, replace the example content with your own speciﬁc\ninformation.\nTo list all collection groups:\naws opensearchserverless list-collection-groups\nTo get details about speciﬁc collection groups:\naws opensearchserverless batch-get-collection-group \\\n--names my-collection-group another-group\nManage collection groups\n449\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 478,
+      "end": 479
+    },
+    "content_stats": {
+      "char_count": 1018,
+      "word_count": 130
+    },
+    "hierarchy": {
+      "parent": "Manage Amazon OpenSearch Serverless collection groups",
+      "children": []
+    }
+  }
+}

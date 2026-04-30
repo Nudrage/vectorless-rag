@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1464",
+  "section_number": "155.1.1.202.2",
+  "header": "Set up the Phishing Triage Agent",
+  "content": "The Phishing Triage Agent operates under the identity you assign to it. Before setup, you need\nto create this identity and ensure it has the appropriate permissions to perform triage actions.\nThe Phishing Triage Agent currently only operates with existing user accounts. For information\non creating a user account, see Create a new user.\nWhen you connect the agent to an account, we recommend setting a long account expiration\ndate and closely monitoring its authentication status to ensure continuous operation of the\nagent. If authentication expires, the agent stops functioning until it’s renewed.\nThe agent's specified user identity isn't compatible with PIM or TAP, as they don't support\nlong-term background operations.\nThe user account you assign the agent needs these permissions to access emails, analyze their\ncontent, and manage alerts:\nSecurity data basics (read): Used to access basic security data, such as alerts and\nincidents.\nAlerts (manage): Used to classify the alert and monitor the alert’s state, preventing\noverride of the alert status.\nSecurity Copilot (read): Used to access Security Copilot capabilities.\nEmail & collaboration metadata (read): Used to access metadata for user reported\nemails.\n７ Note\nTo set up the Phishing Triage Agent, you need the Security Administrator role in Microsoft\nEntra ID. Ensure that all prerequisites are met before setting up the agent.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1090,
+      "end": 1091
+    },
+    "content_stats": {
+      "char_count": 1393,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)",
+      "children": [
+        "Create the agent’s identity and assign permissions",
+        "Begin the setup"
+      ]
+    }
+  }
+}

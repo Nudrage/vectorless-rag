@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1085",
+  "section_number": "2.16.6.2",
+  "header": "GPU Acceleration Pricing",
+  "content": "AWS charges you when OpenSearch detects opportunities to accelerate your domain's or\ncollection's index build workloads. Each Vector Acceleration OCU is a combination of approximately\n8 GiB of CPU memory, 2 vCPUs, and 6 GiB of GPU memory.\nGPU-acceleration for vector indexing\n1604\nAmazon OpenSearch Service\nDeveloper Guide\nAWS bills OCU with second-level granularity. In your account statement, you'll see an entry for\ncompute in OCU-hours.\nFor example, when you use GPU-acceleration for one hour to create an index, using 2 vCPU and\n1 GiB of GPU memory, you're billed 1 OCU. If you use 9 GiB of CPU memory while using GPU-\nacceleration, you're billed 2 OCU.\nOpenSearch Serverless adds additional OCUs in increments of 1 OCU based on the compute power\nand storage needed to support your collections. You can conﬁgure a maximum number of OCUs for\nyour account in order to control costs.\nNote\nThe number of OCUs provisioned at any time can vary and isn't exact. Over time, the\nalgorithm that OpenSearch and OpenSearch Serverless uses will continue to improve in\norder to better minimize system usage.\nFor full pricing details, see Amazon OpenSearch Service Pricing.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1633,
+      "end": 1634
+    },
+    "content_stats": {
+      "char_count": 1163,
+      "word_count": 190
+    },
+    "hierarchy": {
+      "parent": "GPU-acceleration for vector indexing",
+      "children": []
+    }
+  }
+}

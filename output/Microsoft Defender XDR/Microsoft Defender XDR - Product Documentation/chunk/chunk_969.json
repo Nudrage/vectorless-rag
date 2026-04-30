@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_969",
+  "section_number": "155.1.1.102.1",
+  "header": "Sample query",
+  "content": "CloudAuditEvents\n| where Timestamp > ago(7d)\n| where OperationName startswith \"Microsoft.Compute/virtualMachines/write\"\n| extend Status = RawEventData[\"status\"], SubStatus = RawEventData[\"subStatus\"]\n| sample 10",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 658,
+      "end": 658
+    },
+    "content_stats": {
+      "char_count": 211,
+      "word_count": 22
+    },
+    "hierarchy": {
+      "parent": "CloudAuditEvents (Preview)",
+      "children": []
+    }
+  }
+}

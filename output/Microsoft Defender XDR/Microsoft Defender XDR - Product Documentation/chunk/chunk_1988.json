@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1988",
+  "section_number": "155.1.1.261.1.1",
+  "header": "1. Review the alert",
+  "content": "\nLook at the activities that originated from the IP:\nIs it mostly failed attempts to sign in?\nDoes the interval between attempts to sign in look suspicious? Automated password\nspray attacks tend to have a regular time interval between attempts.\nAre there successful attempts of a user/several users signing in with MFA prompts?\nThe existence of these attempts might indicate that the IP isn't malicious.\nAre legacy protocols used? Using protocols like POP3, IMAP, and SMTP might indicate\nan attempt to perform a password spray attack. Finding Unknown(BAV2ROPC)  in the user\nagent (Device type) in the Activity log indicates use of legacy protocols. You can refer\nto the example below when looking at the Activity log. This activity must be further\ncorrelated to other activities.\nFigure 1. The Device type field shows Unknown(BAV2ROPC)  user agent in Microsoft\nDefender XDR.\nCheck the use of anonymous proxies or the Tor network. Threat actors often use\nthese alternative proxies to hide their information, making them difficult to trace.\nHowever, not all use of said proxies correlate with malicious activities. You must\ninvestigate other suspicious activities that might provide better attack indicators.\nIs the IP address coming from a virtual private network (VPN)? Is the VPN trustworthy?\nCheck if the IP originated from a VPN and review the organization behind it by\nusing tools like RiskIQ\n.\nCheck other IPs with the same subnet/ISP. Sometimes password spray attacks\noriginate from many different IPs within the same subnet/ISP.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1472,
+      "end": 1473
+    },
+    "content_stats": {
+      "char_count": 1536,
+      "word_count": 244
+    },
+    "hierarchy": {
+      "parent": "Investigate the alert",
+      "children": []
+    }
+  }
+}

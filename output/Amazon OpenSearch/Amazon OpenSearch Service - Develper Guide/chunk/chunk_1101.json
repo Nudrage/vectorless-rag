@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_1101",
+  "section_number": "2.18",
+  "header": "Using OpenSearch UI in Amazon OpenSearch Service",
+  "content": "OpenSearch UI (user interface) is a modernized operational analytics experience for Amazon\nOpenSearch Service that provides a uniﬁed view for you to interact with data across multiple\nsources. Unlike OpenSearch Dashboards, which works with only the one domain or collection that\nhosts it, OpenSearch UI is hosted in the AWS Cloud. This makes it possible for OpenSearch UI\nto achieve high availability and stay functional during cluster upgrades, and to natively connect\nwith multiple data sources. For information about OpenSearch Dashboards, see  OpenSearch\nDashboards.\nThe following are key features of OpenSearch UI:\n• Multiple data source support – OpenSearch UI can connect with multiple data sources to create\na comprehensive view. This includes OpenSearch domains and serverless collections, as well as\nintegrated AWS data sources such as Amazon CloudWatch, Amazon Security Lake, and Amazon\nSimple Storage Service (Amazon S3).\n• Zero downtime during upgrades – OpenSearch UI is hosted in the AWS Cloud. This means that\nOpenSearch remains operational and can retrieve data from clusters during upgrade processes.\n• Workspaces – Curated spaces for team collaborations for various workﬂows, such as\nObservability, Security Analytics and Search. You can deﬁne the privacy settings and manage\npermissions for collaborators in your workspace.\n• Single sign-on – OpenSearch UI works with AWS IAM Identity Center and SAML through AWS\nIdentity and Access Management (IAM) federatation to integrate with your identity providers to\ncreate a single sign-on experience for your end users.\n• GenAI-powered analytics – OpenSearch UI supports natural language query generation to help\ngenerate the right queries for your analysis. OpenSearch UI also works with Amazon Q Developer\nto provide the Amazon Q chat and help generate visualizations, alert summary, insights, and\nrecommended anomaly detectors.\n• Multiple query language support – OpenSearch UI supports Piped Processing Language (PPL),\nSQL, Lucene, and Dashboards Query Language (DQL).\n• Cross-Region and cross-account support – OpenSearch UI can utilize the cross-cluster search\nfeature to connect with OpenSearch domains in diﬀerent accounts and diﬀerent Regions for\naggregated analysis and visualizations.\n1622\nAmazon OpenSearch Service\nDeveloper Guide\nTo get started and create your ﬁrst OpenSearch UI, follow the instructions in the section called\n“Getting started”.\nFor information about the latest features released for OpenSearch UI, see the section called\n“Release history”.\nTopics\n• Amazon OpenSearch Service user interface release history\n• Getting started with the OpenSearch user interface in Amazon OpenSearch Service\n• Enabling SAML federation with AWS Identity and Access Management\n• Managing data source associations and Virtual Private Cloud access permissions\n• Using Amazon OpenSearch Service workspaces\n• Cross-Region and cross-account data access with cross-cluster search\n• Managing access to the OpenSearch UI from a VPC endpoint\n• OpenSearch UI endpoints and quotas",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 20,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1651,
+      "end": 1652
+    },
+    "content_stats": {
+      "char_count": 3041,
+      "word_count": 447
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service",
+      "children": [
+        "Amazon OpenSearch Service user interface release history",
+        "Getting started with the OpenSearch user interface in Amazon OpenSearch Service",
+        "Enabling SAML federation with AWS Identity and Access Management",
+        "Managing data source associations and Virtual Private Cloud access permissions",
+        "Using Amazon OpenSearch Service workspaces",
+        "Cross-Region and cross-account data access with cross-cluster search",
+        "Managing access to the OpenSearch UI from a VPC endpoint",
+        "OpenSearch UI endpoints and quotas"
+      ]
+    }
+  }
+}

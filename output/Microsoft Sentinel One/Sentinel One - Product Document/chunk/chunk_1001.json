@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1001",
+  "section_number": "44.40.3.1",
+  "header": "Name Description Required Value",
+  "content": "Description\nRequired\nValue\npagination\nPagination\ninformation\ntrue\nName\nDescription\nRequired\nValue\ntotalItems\nTotal number\nof items\nfound\nmatching\nyour query\ntrue\ninteger\nnextCursor\nPass this\nvalue as\n\"cursor\" on\nyour next\nrequest, to\nget the next\npage of\nresults (Will\nbe \"null\"\nwhen last\npage\nreached)\nfalse\nstring\ndata\nResponse\ndata\nfalse\nName\nDescription\nRequired\nValue\naction\nDefines if\nagent shall\nBlock or\nAllow use of\nfirewalls\nwhich\nmatches the\nrule\nparameters.\nfalse\nenum\napplication\nApplication\nfor the rule\nfalse\ncreatedAt\nDate of rule\ncreation\nfalse\nstring\ncreator\nFull name of\nthe creating\nuser\nfalse\nstring\ncreatorId\nId of the\ncreating user\nfalse\nstring\ndescription\nDescription\nfalse\nstring\ndirection\nDefines the\nfalse\nenum\n1141\nDirection of\nthe Firewall\nrule.\neditable\nTrue if the\nrule can be\nmodified at\nthis scope\nlevel\nfalse\nboolean\nid\nRule ID\nfalse\nstring\nlocalHost\nLocal host\nfalse\nlocalPort\nLocal ports\nfalse\nlocation\nLocation\nassociated\nwith the rule\nfalse\nName\nDescription\nRequired\nValue\ntype\nLocation type\ntrue\nenum\nvalues\nLocation IDs\n(applicable\nfor the\n\"specific\"\nlocation type\nonly)\nfalse\nName\nDescription\nRequired\nValue\nid\nLocation ID\ntrue\nstring\nname\nLocation\nname\nfalse\nstring\nscope\nLocation\nscope\nfalse\nenum\nname\nThe name of\nthe firewall\nrule.\nfalse\nstring\norder\nPosition in\nthe list of\nrules\nfalse\ninteger\nosType\n[DEPRECATE\nD] Please use\nos_types\nsince multiple\nos types are\nsupported.Thi\ns field will\nreturn the\nfirst os_type,\nnot\nnecessarily\nthe only one.\nfalse\nenum\nosTypes\nOs types\nfalse\nstring []\n1142\nproductId\nProduct\nidentifier.\nUnique for a\nspecific\nproduct\nmodule, per\nvendor ID,\nInterface.\nfalse\nstring\nprotocol\nThe protocol.\nfalse\nstring\nremoteHost\n[DEPRECATE\nD] First\nremote host\nin the rule.\nFull list in\nremote_hosts\nfalse\nremoteHosts\nList of remote\nhosts\nfalse\nName\nDescription\nRequired\nValue\ntype\nType of the\nhost\nfalse\nenum\nvalues\nValue of the\nhost\nfalse\nstring []\nremotePort\nRemote ports\nfalse\nruleCategory\nNetwork\nquarantine\nrule or\nstandard\nfirewall rule\nfalse\nenum\nscope\nScope of the\nrule\nfalse\nenum\nscopeId\nThe group or\nsite id\ndepending on\nthe scope.\nnull if it is\nglobal.\nfalse\nstring\nstatus\nDefines if\nrule is\nEnabled or\nDisabled\nfalse\nenum\ntag\n[DEPRECATE\nD] Free text\nfalse\nstring\n1143\nto describe\nthe rule.\nPlease use\ndescription\ninstead.\ntagIds\nTag ids\nfalse\nstring []\ntagNames\nTag names\nfalse\nstring []\ntags\nTags\nfalse\nName\nDescription\nRequired\nValue\nid\nfalse\nstring\nname\nfalse\nstring\nupdatedAt\nDate of last\nupdate\nfalse\nstring\nerrors\nErrors\nfalse\narray\n1144",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1141,
+      "end": 1144
+    },
+    "content_stats": {
+      "char_count": 2521,
+      "word_count": 403
+    },
+    "hierarchy": {
+      "parent": "Response Schema",
+      "children": []
+    }
+  }
+}

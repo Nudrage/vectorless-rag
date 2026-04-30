@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_861",
+  "section_number": "2.12.9.3.5",
+  "header": "Step 5: (Optional) Conﬁgure additional settings",
+  "content": "Under Additional settings, conﬁgure the following optional ﬁelds:\n• Subject key – You can leave this ﬁeld empty to use the NameID element of the SAML assertion\nfor the username. If your assertion doesn't use this standard element and instead includes the\nusername as a custom attribute, specify that attribute here.\n• Roles key – If you want to use backend roles (recommended), specify an attribute from the\nassertion in this ﬁeld, such as role or group. This is another situation in which tools like SAML-\ntracer can help.\n• Session time to live – By default, OpenSearch Dashboards logs users out after 24 hours. You can\nconﬁgure this value to any number between 60 and 1,440 (24 hours) by specifying a new value.\nAfter you're satisﬁed with your conﬁguration, save the domain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1414,
+      "end": 1414
+    },
+    "content_stats": {
+      "char_count": 777,
+      "word_count": 133
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring SP- or IdP-initiated authentication",
+      "children": []
+    }
+  }
+}

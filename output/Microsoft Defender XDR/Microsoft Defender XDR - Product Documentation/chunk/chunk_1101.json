@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1101",
+  "section_number": "1.1.155.2.3.2",
+  "header": "Add custom details (Preview)",
+  "content": "This feature gives your SOC analysts immediate event content visibility of their incidents,\nenabling them to triage, investigate, and draw conclusions faster.\nIn the Custom details section, add key-value pairs corresponding to the details you want to\nsurface:\nIn the Key field, enter a name of your choosing that appears as the field name in alerts.\nIn the Parameter field, choose the event parameter you wish to surface in the alerts from\nthe dropdown list. This list is populated by values corresponding to the column names\nthat your KQL query outputs.\nThe following screenshot shows how the custom details are surfaced in the alert side panel:\n\n\n） Important\nCustom details have the following limitations:\n1. Each rule is limited to up to 20 key/values pairs of custom details\n2. The combined size limit for all custom details and their values in a single alert is 4 KB.\nIf the custom details array exceeds this limit, the whole custom details array is\ndropped from the alert.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 832,
+      "end": 834
+    },
+    "content_stats": {
+      "char_count": 980,
+      "word_count": 167
+    },
+    "hierarchy": {
+      "parent": "3. Define alert enrichment details",
+      "children": []
+    }
+  }
+}

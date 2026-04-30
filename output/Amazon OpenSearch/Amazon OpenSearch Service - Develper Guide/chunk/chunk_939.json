@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_939",
+  "section_number": "2.14.4.3.1",
+  "header": "Test the Lambda Function",
+  "content": "After you create the function, you can test it by adding a new record to the data stream using the\nAWS CLI:\naws kinesis put-record --stream-name test --data \"My test data.\" --partition-key\npartitionKey1 --region us-west-1\nThen use the OpenSearch Service console or OpenSearch Dashboards to verify that lambda-\nkine-index contains a document. You can also use the following request:\nLoading streaming data from Amazon Kinesis Data Streams\n1455\nAmazon OpenSearch Service\nDeveloper Guide\nGET https://domain-name/lambda-kine-index/_search\n{\n\"hits\" : [\n{\n\"_index\": \"lambda-kine-index\",\n\"_type\": \"_doc\",\n\"_id\":\n\"shardId-000000000000:49583511615762699495012960821421456686529436680496087042\",\n\"_score\": 1,\n\"_source\": {\n\"timestamp\": 1523648740.051,\n\"message\": \"My test data.\",\n\"id\":\n\"shardId-000000000000:49583511615762699495012960821421456686529436680496087042\"\n}\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1484,
+      "end": 1485
+    },
+    "content_stats": {
+      "char_count": 862,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon Kinesis Data Streams",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_458",
+  "section_number": "2.16.6.1",
+  "header": "How it works",
+  "content": "The enrichment process analyzes designated text ﬁelds and generates semantic embeddings that\ncapture meaning and context. These embeddings help the search engine understand relationships\nbetween concepts, synonyms, and related terms even when they don't appear in your search query.\nFor example, if a user searches for \"how to treat a headache\", a semantic search system might\nreturn the following results:\n• Migraine remedies\n• Pain management techniques\n• Over-the-counter pain relievers\n• Natural headache relief methods\nThe system understands the underlying intent even when these exact phrases aren't in the original\nquery.\nAutomatic semantic enrichment oﬀers the following beneﬁts:\nSimpliﬁed implementation\nYou don't need machine learning expertise or complex integrations to implement semantic\nsearch capabilities.\nIndex-level conﬁguration\nSemantic enrichment is conﬁgured at the index level during creation, giving you granular\ncontrol over which data receives semantic processing.\nHow it works\n622\nAmazon OpenSearch Service\nDeveloper Guide\nMinimal impact on search latency\nAutomatic Semantic Enrichment stores sparse encodings directly in your index during indexing.\nYou don't need separate KNN indices. Your searches maintain their original speed while\ndelivering enhanced results.\nAutomated process\nSemantic enrichment happens automatically during data ingestion without requiring manual\nintervention.\nImproved search relevance\nSemantic enrichment enhances the quality and contextual accuracy of search results by\nunderstanding user intent.\nScalability\nSemantic enrichment applies semantic search capabilities to large datasets without manual\nintervention.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 651,
+      "end": 652
+    },
+    "content_stats": {
+      "char_count": 1667,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Automatic semantic enrichment for Amazon OpenSearch Service",
+      "children": [
+        "Requirements and considerations"
+      ]
+    }
+  }
+}

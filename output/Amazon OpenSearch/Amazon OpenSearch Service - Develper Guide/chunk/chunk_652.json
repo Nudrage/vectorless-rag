@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_652",
+  "section_number": "2.10.2",
+  "header": "Monitoring OpenSearch logs with Amazon CloudWatch Logs",
+  "content": "Amazon OpenSearch Service exposes the following OpenSearch logs through Amazon CloudWatch\nLogs:\n• Error logs\n• Search request slow logs\n• Shard slow logs\n• Audit logs\nSearch shard slow logs, indexing shard slow logs, and error logs are useful for troubleshooting\nperformance and stability issues. Audit logs track user activity for compliance purposes. All the logs\nare disabled by default. If enabled, standard CloudWatch pricing applies.\nNote\nError logs are available only for OpenSearch and Elasticsearch versions 5.1 and later. Slow\nlogs are available for all OpenSearch and Elasticsearch versions.\nPiped Processing Language metrics\n1213\nAmazon OpenSearch Service\nDeveloper Guide\nFor its logs, OpenSearch uses Apache Log4j 2 and its built-in log levels (from least to most severe)\nof TRACE, DEBUG, INFO, WARN, ERROR, and FATAL.\nIf you enable error logs, OpenSearch Service publishes log lines of WARN, ERROR, and FATAL to\nCloudWatch. OpenSearch Service also publishes several exceptions from the DEBUG level, including\nthe following:\n• org.opensearch.index.mapper.MapperParsingException\n• org.opensearch.index.query.QueryShardException\n• org.opensearch.action.search.SearchPhaseExecutionException\n• org.opensearch.common.util.concurrent.OpenSearchRejectedExecutionException\n• java.lang.IllegalArgumentException\nError logs can help with troubleshooting in many situations, including the following:\n• Painless script compilation issues\n• Invalid queries\n• Indexing issues\n• Snapshot failures\n• Index State Management migration failures\nNote\nNot all errors are reported in the error logs.\nNote\nOpenSearch Service does not log all errors that occur.\nTopics\n• Enabling log publishing (console)\n• Enabling log publishing (AWS CLI)\n• Enabling log publishing (AWS SDKs)\nMonitoring logs\n1214\nAmazon OpenSearch Service\nDeveloper Guide\n• Enabling log publishing (CloudFormation)\n• Setting search request slow log thresholds\n• Setting shard slow log thresholds\n• Testing slow logs\n• Viewing logs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1242,
+      "end": 1244
+    },
+    "content_stats": {
+      "char_count": 1987,
+      "word_count": 270
+    },
+    "hierarchy": {
+      "parent": "Monitoring Amazon OpenSearch Service domains",
+      "children": [
+        "Enabling log publishing (console)",
+        "Enabling log publishing (AWS CLI)",
+        "Enabling log publishing (AWS SDKs)",
+        "Enabling log publishing (CloudFormation)",
+        "Setting search request slow log thresholds",
+        "Setting shard slow log thresholds",
+        "Testing slow logs",
+        "Viewing logs"
+      ]
+    }
+  }
+}

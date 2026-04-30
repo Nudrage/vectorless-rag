@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1809",
+  "section_number": "155.1.1.248.5.2",
+  "header": "Verify that the events are being exported to the Event Hubs",
+  "content": "EmailEvents\n|join kind=fullouter EmailAttachmentInfo on NetworkMessageId\n|join kind=fullouter EmailUrlInfo on NetworkMessageId\n|join kind=fullouter EmailPostDeliveryEvents on NetworkMessageId\n|where Timestamp > ago(1h)\n|count\nOnce you've verified there's data to export, you can view the Event Hubs page to verify that\nmessages are incoming. This process can take up to one hour.\n1. In Azure, go to Event Hub > Click on the Namespace > Event Hub > Click on the Event\nHub.\n2. Under Overview, scroll down and in the Messages graph you should see Incoming\nMessages. If you don't see any results, then there are no messages for your custom app\nto ingest.\nUse the Microsoft Graph security API - Microsoft Graph | Microsoft Learn\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1365,
+      "end": 1366
+    },
+    "content_stats": {
+      "char_count": 727,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "Configure Microsoft Defender XDR to send email tables",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1215",
+  "section_number": "2.19.5.2.3",
+  "header": "Take an index snapshot",
+  "content": "This sample policy uses the snapshot operation to take a snapshot of an index as soon as it\ncontains at least one document. repository is the name of the manual snapshot repository you\nregistered in Amazon S3. snapshot is the name of the snapshot. For snapshot prerequisites and\nsteps to register a repository, see the section called “Creating index snapshots”.\n{\n\"policy\": {\n\"description\": \"Takes an index snapshot.\",\n\"schema_version\": 1,\n\"default_state\": \"empty\",\n\"states\": [{\n\"name\": \"empty\",\n\"actions\": [],\n\"transitions\": [{\n\"state_name\": \"occupied\",\n\"conditions\": {\n\"min_doc_count\": 1\nSample policies\n1727\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}]\n},\n{\n\"name\": \"occupied\",\n\"actions\": [{\n\"snapshot\": {\n\"repository\": \"<my-repository>\",\n\"snapshot\": \"<my-snapshot>\"\n}\n}],\n\"transitions\": []\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1756,
+      "end": 1757
+    },
+    "content_stats": {
+      "char_count": 803,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "Sample policies",
+      "children": []
+    }
+  }
+}

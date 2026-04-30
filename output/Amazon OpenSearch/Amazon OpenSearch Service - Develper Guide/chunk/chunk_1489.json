@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1489",
+  "section_number": "2.26.7",
+  "header": "Other supported resources in Amazon OpenSearch Service",
+  "content": "This topic describes additional resources that Amazon OpenSearch Service supports.\nExamining costs\n1996\nAmazon OpenSearch Service\nDeveloper Guide\nbootstrap.memory_lock\nOpenSearch Service enables bootstrap.memory_lock in opensearch.yml, which locks\nJVM memory and prevents the operating system from swapping it to disk. This applies to all\nsupported instance types except for the following:\n• t2.micro.search\n• t2.small.search\n• t2.medium.search\n• t3.small.search\n• t3.medium.search\nScripting module\nOpenSearch Service supports scripting for Elasticsearch 5.x and later domains. It does not\nsupport scripting for 1.5 or 2.3.\nSupported scripting options include the following:\n• Painless\n• Lucene Expressions\n• Mustache\nFor Elasticsearch 5.5 and later domains, and all OpenSearch domains, OpenSearch Service\nsupports stored scripts using the _scripts endpoint. Elasticsearch 5.3 and 5.1 domains\nsupport inline scripts only.\nTLS transport\nOpenSearch Service supports HTTP on port 80 and HTTPS over port 443, but does not support\nTLS transport.\nOther supported resources\n1997\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2025,
+      "end": 2027
+    },
+    "content_stats": {
+      "char_count": 1113,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "General reference for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1186",
+  "section_number": "2.19.3.13",
+  "header": "Best practices for KNN indexes",
+  "content": "• Ultrawarm/Cold tier is available for all KNN index engine types. We recommend it for KNN\nindexes using Lucene engine and Disk-optimized vector search, which does not require to fully\nload the graph data in oﬀ-heap memory. While using it with native in-memory engines like\nFAISS and NMSLIB, you must account for the shards graph size that will be actively searched on,\nand provision the UltraWarm instances, preferably of the uw.large instance type, accordingly.\nFor example, if customers have 2 uw.large instances conﬁgured, then they each will have\napproximately knn.memory.circuit_breaker.limit * 61 GiB available oﬀ-heap memory.\nYou get optimal performance if all your warm queries are targeting shards whose cumulative\ngraph size does not exceed available oﬀ-heap memory. Latency is impacted if the available\nmemory is lower than needed to load the graph because of evictions and waiting on oﬀ-heap\nmemory to become available. That's why we don’t recommend using uw.medium instances\nfor use cases where in-memory engines are being used or for higher search throughput cases,\nirrespective of engines.\n• KNN indexes migrating to UltraWarm will not be force-merged to single segment. This avoids\nany impact on the hot and warm nodes running into OOM issues because of graph size becoming\ntoo big for in-memory engines. Due to the increase in number of segments per shard, this might\nresult in consuming more local cache space and allowing fewer indices to migrate to the warm\ntier. You can choose to force-merge indexes to single segment by using the existing setting, and\noverriding it before migrating indexes to the warm tier. For more information, see the section\ncalled “Migration tuning”.\n• If you have a use case where indexes are searched infrequently and do not serve a latency\nsensitive workload, you can choose to migrate those indexes to the UltraWarm tier. This will help\nyou to scale down the hot tier compute instances and let the UltraWarm tier compute handle the\nquery on such low priority indexes. This can also help to provide isolation of resources consumed\nbetween the queries of low and high priority indexes so they don't impact each other.\nMigrating warm indexes to cold storage\n1707\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1736,
+      "end": 1737
+    },
+    "content_stats": {
+      "char_count": 2252,
+      "word_count": 363
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

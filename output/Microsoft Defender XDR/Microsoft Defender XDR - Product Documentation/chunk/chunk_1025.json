@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1025",
+  "section_number": "155.1.1.128",
+  "header": "DeviceTvmSoftwareEvidenceBeta",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmSoftwareEvidenceBeta  table in the advanced hunting schema contains data from\nMicrosoft Defender Vulnerability Management related to the software evidence section. This\ntable allows you to view evidence of where a specific software was detected on a device. You\ncan use this table, for example, to identify the file paths of specific software. Use this reference\nto construct queries that return information from the table.\nMicrosoft Defender for Endpoint data populates this advanced hunting table. If your\norganization didn't deploy the service in Microsoft Defender XDR, queries that use the table\naren’t going to work or return any results. For more information about how to deploy Defender\nfor Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nSoftwareVendor\nstring\nName of the software publisher\nSoftwareName\nstring\nName of the software product\nSoftwareVersion\nstring\nVersion number of the software product\nRegistryPaths\ndynamic\nRegistry paths where evidence indicating the existence of the software on\na device was detected\nDiskPaths\ndynamic\nDisk paths where file-level evidence indicating the existence of the\nsoftware on a device was detected\nLastSeenTime\nstring\nDate and time when the device was last seen by this service\n） Important\nThe DeviceTvmSoftwareEvidenceBeta  table is currently in beta. Once it leaves beta, the final\ntable name changes and column names might also change. The modifications are likely to\nbreak queries that are still using previous names. Users are advised to review and adjust\ntheir queries when this table is finalized.\nﾉ\nExpand table\nMicrosoft Defender Vulnerability Management\nProactively hunt for threats\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 748,
+      "end": 749
+    },
+    "content_stats": {
+      "char_count": 2106,
+      "word_count": 312
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Read more"
+      ]
+    }
+  }
+}

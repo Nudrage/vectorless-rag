@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_703",
+  "section_number": "2.10.4.3.5",
+  "header": "Shards deleted",
+  "content": "OpenSearch Service sends this event after your cluster status has been continuously red for 21\ndays. It proceeds to delete the unassigned shards (storage and compute) on all red indexes. For\ndetails, see the section called “Automatic remediation of red clusters”.\nExample\nCluster health events\n1252\nAmazon OpenSearch Service\nDeveloper Guide\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Amazon OpenSearch Service Cluster Status Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2022-04-09T10:54:48Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\n\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"\n],\n\"detail\":{\n\"severity\":\"High\",\n\"description\":\"We have deleted unassinged shards, the unit of storage and\ncompute, in\nred indices: index-1, index-2 because these indices were red for\nmore than\n21 days and could not be restored with the automated restore\nprocess.\nPlease refer to https://docs.aws.amazon.com/opensearch-service/\nlatest/developerguide/handling-errors.html#handling-errors-red-cluster-status for\ntroubleshooting steps.\",\n\"event\":\"Automatic Snapshot Restore for Red Indices\",\n\"status\":\"Shard(s) deleted\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1281,
+      "end": 1282
+    },
+    "content_stats": {
+      "char_count": 1209,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "Cluster health events",
+      "children": []
+    }
+  }
+}

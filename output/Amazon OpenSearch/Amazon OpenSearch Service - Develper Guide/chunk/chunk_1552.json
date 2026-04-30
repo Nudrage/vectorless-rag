@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1552",
+  "section_number": "2.29.7.1",
+  "header": "Creating an index, index template, or ISM policy during migration from domains without standby to domains with standby",
+  "content": "domains without standby to domains with standby\nIf you create an index while migrating a domain from Multi-AZ without Standby to with Standby,\nand the index template or ISM policy doesn't follow the recommended data copy guidelines, this\ncan cause a data inconsistency and the migration may fail. To avoid this situation, create the new\nindex with a data copy count (including both primary nodes and replicas) that is multiple of three.\nYou can check the migration progress using the DescribeDomainChangeProgress API. If you\nencounter a replica count error, ﬁx the error and then contact AWS Support to retry the migration.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2084,
+      "end": 2084
+    },
+    "content_stats": {
+      "char_count": 623,
+      "word_count": 101
+    },
+    "hierarchy": {
+      "parent": "Error migrating to Multi-AZ with Standby",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1966",
+  "section_number": "155.1.1.263.1",
+  "header": "Investigation steps",
+  "content": "This section contains detailed step-by-step guidance to respond to the incident and take the\nrecommended steps to protect your organization from further attacks.\nHere's an example of an inbox forwarding rule alert in the alert queue.\nHere's an example of the details of alert that was triggered by a malicious inbox forwarding\nrule.\nThe purpose of this stage is to determine if the rules look suspicious by certain criteria:\nRecipients of the forwarding rule:\nValidate destination email address isn't an additional mailbox owned by the same user\n(avoiding cases where the user is self-forwarding emails between personal mailboxes).\nValidate the destination email address isn't an internal address or sub-domain that\nbelongs to the company.\nFilters:\nIf the inbox rule contains filters, which search for specific keywords in the subject or body\nof the email, check whether the provided keywords, such as finance, credentials, and\nnetworking, among others, seem related to malicious activity. You can find these filters\nunder the following attributes (which shows up in the event RawEventData column):\n\"BodyContainsWords\", \"SubjectContainsWords\" or \"SubjectOrBodyContainsWords\"\nIf the attacker chooses not to set any filter to the mails, and instead the inbox rule\nforwards all the mailbox items to the attacker's mailbox), then this behavior is suspicious\nas well.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1459,
+      "end": 1460
+    },
+    "content_stats": {
+      "char_count": 1362,
+      "word_count": 206
+    },
+    "hierarchy": {
+      "parent": "Alert classification for suspicious inbox forwarding rules",
+      "children": [
+        "Review generated alerts",
+        "Investigate rule parameters",
+        "Investigate IP address",
+        "Investigate any suspicious activity with the user inbox before creating rules"
+      ]
+    }
+  }
+}

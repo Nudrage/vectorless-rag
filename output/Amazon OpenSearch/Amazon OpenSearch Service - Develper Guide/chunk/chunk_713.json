@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_713",
+  "section_number": "2.10.4.3.15",
+  "header": "Insuﬃcient GC",
+  "content": "OpenSearch Service sends this event when maximum JVM is above 70% and diﬀerence between\nthe maximum and minimum is less than 30%. This may indicate that the JVM is unable to reclaim\nsuﬃcient memory during garbage collection cycles for your workload. This can lead to increasingly\nslower responses and higher latencies; and in some cases even node drops due to timed out health\nchecks. To ensure optimum cluster stability, reduce traﬃc to the cluster or scale your domain to\nprovide suﬃcient memory for your workload.\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Amazon OpenSearch Service Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2017-12-01T13:12:22Z\",\nCluster health events\n1260\nAmazon OpenSearch Service\nDeveloper Guide\n\"region\":\"us-east-1\",\n\"resources\":[\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\":{\n\"event\":\"Insufficient GC\",\n\"status\":\"Warning\",\n\"severity\":\"Medium\",\n\"description\":\"Maximum JVM is above 70% and JVM range is less than 30%. This may\nindicate insufficient garbage collection for your workload.\nFor more information, see https://docs.aws.amazon.com/opensearch-\nservice/latest/developerguide/monitoring-events.html#monitoring-events-insufficient-\ngc.\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1289,
+      "end": 1290
+    },
+    "content_stats": {
+      "char_count": 1307,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Cluster health events",
+      "children": []
+    }
+  }
+}

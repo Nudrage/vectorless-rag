@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1411",
+  "section_number": "2.25.9",
+  "header": "Petabyte scale in Amazon OpenSearch Service",
+  "content": "Amazon OpenSearch Service domains oﬀer attached storage of up to 10 PB. You can conﬁgure a\ndomain with 1000 OR1.16xlarge.search instance types, each with 36 TB of storage. Because\nof the sheer diﬀerence in scale, recommendations for domains of this size diﬀer from our general\nrecommendations. This section discusses considerations for creating domains, costs, storage, and\nshard size.\nWhile this section frequently references the i3.16xlarge.search instance types, you can use\nseveral other instance types to reach 10 PB of total domain storage.\nCreating domains\nDomains of this size exceed the default limit of 80 instances per domain. To request a service\nlimit increase of up to 1000 instances per domain, open a case at the AWS Support Center.\nPetabyte scale\n1861\nAmazon OpenSearch Service\nDeveloper Guide\nPricing\nBefore creating a domain of this size, check the Amazon OpenSearch Service pricing page\nto ensure that the associated costs match your expectations. Examine the section called\n“UltraWarm storage” to see if a hot-warm architecture ﬁts your use case.\nStorage\nThe i3 instance types are designed to provide fast, local non-volatile memory express (NVMe)\nstorage. Because this local storage tends to oﬀer performance beneﬁts when compared to\nAmazon Elastic Block Store, EBS volumes are not an option when you select these instance\ntypes in OpenSearch Service. If you prefer EBS storage, use another instance type, such as\nr6.12xlarge.search.\nShard size and count\nA common OpenSearch guideline is not to exceed 50 GB per shard. Given the number\nof shards necessary to accommodate large domains and the resources available to\ni3.16xlarge.search instances, we recommend a shard size of 100 GB.\nFor example, if you have 450 TB of source data and want one replica, your minimum storage\nrequirement is closer to 450 TB * 2 * 1.1 / 0.95 = 1.04 PB. For an explanation of this calculation,\nsee the section called “Calculating storage requirements”. Although 1.04 PB / 15 TB = 70\ninstances, you might select 90 or more i3.16xlarge.search instances to give yourself a\nstorage safety net, deal with node failures, and account for some variance in the amount of\ndata over time. Each instance adds another 20 GiB to your minimum storage requirement, but\nfor disks of this size, those 20 GiB are almost negligible.\nControlling the number of shards is tricky. OpenSearch users often rotate indexes on a daily\nbasis and retain data for a week or two. In this situation, you might ﬁnd it useful to distinguish\nbetween \"active\" and \"inactive\" shards. Active shards are, well, actively being written to or read\nfrom. Inactive shards might service some read requests, but are largely idle. In general, you\nshould keep the number of active shards below a few thousand. As the number of active shards\napproaches 10,000, considerable performance and stability risks emerge.\nTo calculate the number of primary shards, use this formula: 450,000 GB * 1.1 / 100 GB per\nshard = 4,950 shards. Doubling that number to account for replicas is 9,900 shards, which\nrepresents a major concern if all shards are active. But if you rotate indexes and only 1/7th or\n1/14th of the shards are active on any given day (1,414 or 707 shards, respectively), the cluster\nmight work well. As always, the most important step of sizing and conﬁguring your domain is to\nperform representative client testing using a realistic dataset.\nPetabyte scale\n1862\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1890,
+      "end": 1892
+    },
+    "content_stats": {
+      "char_count": 3461,
+      "word_count": 564
+    },
+    "hierarchy": {
+      "parent": "Operational best practices for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

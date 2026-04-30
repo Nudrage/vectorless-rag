@@ -1,0 +1,209 @@
+{
+  "document_name": "Google Cloud\\GCP Cloud NAT - Product Document",
+  "generated_at": "2026-02-17T22:03:47.941886",
+  "outline_text": "DOCUMENT INDEX: Google Cloud\\GCP Cloud NAT - Product Document\n=============================================================\n\n1. Logs and metrics [Page 1, 3 words]\n   1.1. Logging [Page 1, 71 words]\n      1.1.1. Specifications [Page 1, 233 words]\n      1.1.2. Configure logging [Pages 1-3, 331 words]\n      1.1.3. View logs [Pages 3-4, 129 words]\n      1.1.4. What is logged [Pages 4-6, 469 words]\n      1.1.5. Examples [Pages 6-7, 201 words]\n      1.1.6. Pricing for Cloud NAT logging [Page 8, 4 words]\n   1.2. Monitoring [Page 8, 102 words]\n      1.2.1. View predefined dashboards [Pages 8-9, 172 words]\n      1.2.2. Define custom dashboards [Pages 9-10, 310 words]\n      1.2.3. Define alerting policies [Pages 10-11, 317 words]\n      1.2.4. Metric reporting frequency and retention [Page 11, 77 words]\n      1.2.5. VM instance metrics [Pages 11-14, 1019 words]\n      1.2.6. NAT gateway metrics [Pages 14-17, 702 words]\n      1.2.7. Query metrics using the Monitoring API [Page 17, 45 words]\n         1.2.7.1. interval.end_time: 2019-09-24T16:58:53Z [Page 17, 49 words]\n      1.2.8. Pricing for Cloud NAT monitoring [Page 18, 8 words]\n   1.3. What's next [Page 18, 85 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Logs and metrics",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 3,
+        "summary": "Logs and metrics",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "Logging",
+            "depth": 2,
+            "chunk_id": "chunk_002",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 71,
+            "summary": "Cloud NAT logging lets you log NAT connections and errors.",
+            "children": [
+              {
+                "number": "1.1.1",
+                "title": "Specifications",
+                "depth": 3,
+                "chunk_id": "chunk_003",
+                "page_start": 1,
+                "page_end": 1,
+                "word_count": 233,
+                "summary": "The following specifications apply to Cloud NAT logging:\nCloud NAT logging handles TCP and UDP traffic only."
+              },
+              {
+                "number": "1.1.2",
+                "title": "Configure logging",
+                "depth": 3,
+                "chunk_id": "chunk_004",
+                "page_start": 1,
+                "page_end": 3,
+                "word_count": 331,
+                "summary": "To configure Cloud NAT logging, follow these steps."
+              },
+              {
+                "number": "1.1.3",
+                "title": "View logs",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 3,
+                "page_end": 4,
+                "word_count": 129,
+                "summary": "To view NAT logs, do the following:\n1."
+              },
+              {
+                "number": "1.1.4",
+                "title": "What is logged",
+                "depth": 3,
+                "chunk_id": "chunk_006",
+                "page_start": 4,
+                "page_end": 6,
+                "word_count": 469,
+                "summary": "Cloud NAT log entries contain information useful for monitoring and debugging your NAT\ntraffic."
+              },
+              {
+                "number": "1.1.5",
+                "title": "Examples",
+                "depth": 3,
+                "chunk_id": "chunk_007",
+                "page_start": 6,
+                "page_end": 7,
+                "word_count": 201,
+                "summary": "Example 1: NAT-ed TCP connection record from a VM instance in a Shared VPC\n(/vpc/docs/shared-vpc) network going to an external server in France."
+              },
+              {
+                "number": "1.1.6",
+                "title": "Pricing for Cloud NAT logging",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 8,
+                "page_end": 8,
+                "word_count": 4,
+                "summary": "See Logging pricing (https://cloud."
+              }
+            ]
+          },
+          {
+            "number": "1.2",
+            "title": "Monitoring",
+            "depth": 2,
+            "chunk_id": "chunk_009",
+            "page_start": 8,
+            "page_end": 8,
+            "word_count": 102,
+            "summary": "Cloud NAT exposes key metrics to Cloud Monitoring that give you insights into your fleet's\nusage of NAT gateways.",
+            "children": [
+              {
+                "number": "1.2.1",
+                "title": "View predefined dashboards",
+                "depth": 3,
+                "chunk_id": "chunk_010",
+                "page_start": 8,
+                "page_end": 9,
+                "word_count": 172,
+                "summary": "Cloud NAT provides a set of predefined dashboards that display activity across your gateway:\nVpc: {\n..."
+              },
+              {
+                "number": "1.2.2",
+                "title": "Define custom dashboards",
+                "depth": 3,
+                "chunk_id": "chunk_011",
+                "page_start": 9,
+                "page_end": 10,
+                "word_count": 310,
+                "summary": "To create a custom dashboard (/monitoring/charts/dashboards) to view VM instance metrics\n(#vm-metric..."
+              },
+              {
+                "number": "1.2.3",
+                "title": "Define alerting policies",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 10,
+                "page_end": 11,
+                "word_count": 317,
+                "summary": "To create a metrics-based alerting policy (/monitoring/alerts/using-alerting-ui), follow these steps..."
+              },
+              {
+                "number": "1.2.4",
+                "title": "Metric reporting frequency and retention",
+                "depth": 3,
+                "chunk_id": "chunk_013",
+                "page_start": 11,
+                "page_end": 11,
+                "word_count": 77,
+                "summary": "Metrics for Cloud NAT are batched and exported to Monitoring every one minute."
+              },
+              {
+                "number": "1.2.5",
+                "title": "VM instance metrics",
+                "depth": 3,
+                "chunk_id": "chunk_014",
+                "page_start": 11,
+                "page_end": 14,
+                "word_count": 1019,
+                "summary": "The \"metric type\" strings in this table must be prefixed with compute."
+              },
+              {
+                "number": "1.2.6",
+                "title": "NAT gateway metrics",
+                "depth": 3,
+                "chunk_id": "chunk_015",
+                "page_start": 14,
+                "page_end": 17,
+                "word_count": 702,
+                "summary": "The \"metric type\" strings in this table must be prefixed with router."
+              },
+              {
+                "number": "1.2.7",
+                "title": "Query metrics using the Monitoring API",
+                "depth": 3,
+                "chunk_id": "chunk_016",
+                "page_start": 17,
+                "page_end": 17,
+                "word_count": 45,
+                "summary": "You can construct arbitrary queries over the Cloud NAT metrics by using the Monitoring API's\nv3 projects.",
+                "children": [
+                  {
+                    "number": "1.2.7.1",
+                    "title": "interval.end_time: 2019-09-24T16:58:53Z",
+                    "depth": 4,
+                    "chunk_id": "chunk_017",
+                    "page_start": 17,
+                    "page_end": 17,
+                    "word_count": 49,
+                    "summary": "aggregation."
+                  }
+                ]
+              },
+              {
+                "number": "1.2.8",
+                "title": "Pricing for Cloud NAT monitoring",
+                "depth": 3,
+                "chunk_id": "chunk_018",
+                "page_start": 18,
+                "page_end": 18,
+                "word_count": 8,
+                "summary": "There is no cost for Cloud NAT monitoring."
+              }
+            ]
+          },
+          {
+            "number": "1.3",
+            "title": "What's next",
+            "depth": 2,
+            "chunk_id": "chunk_019",
+            "page_start": 18,
+            "page_end": 18,
+            "word_count": 85,
+            "summary": "Learn more about logging (/logging/docs/overview)."
+          }
+        ]
+      }
+    ],
+    "total_sections": 19,
+    "max_depth": 4
+  }
+}

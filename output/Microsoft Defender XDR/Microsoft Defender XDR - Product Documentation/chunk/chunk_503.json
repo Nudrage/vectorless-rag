@@ -1,0 +1,35 @@
+{
+  "chunk_id": "chunk_503",
+  "section_number": "155.1.1.46",
+  "header": "User entity page in Microsoft Defender",
+  "content": "Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe user entity page in the Microsoft Defender portal helps you in your investigation of user\nentities. The page contains all the important information about a given user entity. If an alert or\nincident indicates that a user might be compromised or is suspicious, check and investigate the\nuser entity.\nYou can find user entity information in the following views:\nIdentities page, under Assets\nAlerts queue\nAny individual alert/incident\nDevices page\nAny individual device entity page\nActivity log\nAdvanced hunting queries\nAction center\nWherever user entities appear in these views, select the entity to view the User page, which\ndisplays more details about the user. For example, you can see the details of user accounts\nidentified in the alerts of an incident in the Microsoft Defender portal at Incidents & alerts >\nIncidents > incident > Assets > Users.\nWhen you investigate a specific user entity, you see the following tabs on its entity page:\nOverview, including entity details, incidents and alerts visual view, user account control\nflags and so on.\nIncidents and alerts tab\nObserved in organization tab\nTimeline tab\nMicrosoft Sentinel events tab\nThe identity page shows the Microsoft Entra organization and groups, helping you understand\nthe groups and permissions associated with a user.\nThe Entity details panel on the left side of the page provides information about the user, such\nas the Microsoft Entra identity risk level, the insider risk severity level (Preview), the number of\ndevices the user is signed in to, when the user was first and last seen, the user's accounts,\ngroups that the user belongs to, and contact information. This card includes all incidents and\nalerts associated with the user entity, grouped by severity.\nYou see other details depending on the services and features you enabled, including:\n(Preview) Microsoft Defender XDR users with access to Microsoft Purview Insider Risk\nManagement can now see a user's insider risk severity and gain insights on a user's\nsuspicious activities in the user page. Select the insider risk severity under Entity details\nto see the risk insights about the user.\n） Important\nMicrosoft Sentinel is generally available in the Microsoft Defender portal, with or without\nMicrosoft Defender XDR or an E5 license. For more information, see Microsoft Sentinel in\nthe Microsoft Defender portal\n.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 314,
+      "end": 315
+    },
+    "content_stats": {
+      "char_count": 2445,
+      "word_count": 389
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Overview",
+        "Incidents and alerts",
+        "Observed in organization",
+        "Timeline",
+        "Security recommendations",
+        "Attack paths",
+        "Microsoft Sentinel events",
+        "Remediation actions",
+        "Next steps",
+        "See also"
+      ]
+    }
+  }
+}

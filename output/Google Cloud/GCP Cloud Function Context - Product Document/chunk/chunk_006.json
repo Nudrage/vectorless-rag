@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "6",
+  "header": "StorageSource",
+  "content": "Location of the source in an archive file in Google Cloud Storage.\n{\n\"runtimeVersion\": string\n}\n{\n// Union field source can be only one of the following:\n\"storageSource\": {\nobject (StorageSource (/functions/docs/reference/rest/v2/projects.locations.functions#StorageSource\n},\n\"repoSource\": {\nobject (RepoSource (/functions/docs/reference/rest/v2/projects.locations.functions#RepoSource))\n},\n\"gitUri\": string\n// End of list of possible types for union field source.\n}\nJSON representation\nFields\nbucket\nstring\nGoogle Cloud Storage bucket containing the source (see Bucket Name Requirements\n(https://cloud.google.com/storage/docs/bucket-naming#requirements)).\nobject\nstring\nGoogle Cloud Storage object containing the source.\nThis object must be a gzipped archive file (.tar.gz) containing source to build.\ngeneration\nstring (int64 (https://developers.google.com/discovery/v1/type-format)\nformat)\nGoogle Cloud Storage generation for the object. If the generation is omitted, the latest\ngeneration will be used.\nsourceUploadUrl\nstring\nWhen the specified storage bucket is a 1st gen function uploard url bucket, this field\nshould be set as the generated upload url for 1st gen deployment.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 17,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 6,
+      "end": 7
+    },
+    "content_stats": {
+      "char_count": 1182,
+      "word_count": 145
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

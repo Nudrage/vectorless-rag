@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1197",
+  "section_number": "2.19.4.5",
+  "header": "Migrating indexes to cold storage",
+  "content": "When you migrate indexes to cold storage, you provide a time range for the data to make discovery\neasier. You can select a timestamp ﬁeld based on the data in your index, manually provide a start\nand end timestamp, or choose to not specify one.\nParameter\nSupported value\nDescription\ntimestamp_field\nThe date/time ﬁeld from the\nindex mapping.\nThe minimum and maximum\nvalues of the provided ﬁeld\nare computed and stored\nas the start_time  and\nend_time metadata for the\ncold index.\nstart_time  and end_time\nOne of the following formats:\n• strict_date_optional_time.\nFor example: yyyy-MM-d\nd'T'HH:mm:ss.SSSZ\nor\nyyyy-MM-dd\n• Epoch time in milliseconds\nThe provided values are\nstored as the start_time\nand end_time metadata for\nthe cold index.\nIf you don't want to specify a timestamp, add ?ignore=timestamp to the request instead.\nManaging cold indexes in OpenSearch Dashboards\n1713\nAmazon OpenSearch Service\nDeveloper Guide\nThe following request migrates a warm index to cold storage and provides start and end times for\nthe data in that index:\nPOST _ultrawarm/migration/my-index/_cold\n{\n\"start_time\": \"2020-03-09\",\n\"end_time\": \"2020-03-09T23:00:00Z\"\n}\nThen check the status of the migration:\nGET _ultrawarm/migration/my-index/_status\n{\n\"migration_status\": {\n\"index\": \"my-index\",\n\"state\": \"RUNNING_METADATA_RELOCATION\",\n\"migration_type\": \"WARM_TO_COLD\"\n}\n}\nOpenSearch Service migrates one index at a time to cold storage. You can have up to 100\nmigrations in the queue. Any request that exceeds the limit will be rejected. To check the current\nnumber of migrations in the queue, monitor the WarmToColdMigrationQueueSize metric. The\nmigration process has the following states:\nACCEPTED_COLD_MIGRATION - Migration request is accepted and queued.\nRUNNING_METADATA_MIGRATION - The migration request was selected for execution and\nmetadata is migrating to cold storage.\nFAILED_METADATA_MIGRATION - The attempt to add index metadata has failed and all\nretries are exhausted.\nPENDING_INDEX_DETACH - Index metadata migration to cold storage is completed. Preparing\nto detach the warm index state from the local cluster.\nRUNNING_INDEX_DETACH - Local warm index state from the cluster is being removed. Upon\nsuccess, the migration request will be completed.\nFAILED_INDEX_DETACH - The index detach process failed and all retries are exhausted.\nMigrating indexes to cold storage\n1714\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1742,
+      "end": 1744
+    },
+    "content_stats": {
+      "char_count": 2409,
+      "word_count": 346
+    },
+    "hierarchy": {
+      "parent": "Cold storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1140",
+  "section_number": "2.18.6.3",
+  "header": "Testing your security setup for cross-Region and cross-account data access with cross-cluster search",
+  "content": "access with cross-cluster search\nAfter you've set up access permissions for cross-Region and cross-account data access with\ncross-cluster search, we recommend testing the setup using Postman, a third-party platform for\ncollaborative API development.\nTo set your security setup using Postman\n1.\nOn the destination domain, index a document. The following is a sample request:\nTesting your security setup for cross-Region and cross-account data access with cross-cluster search\n1671\nAmazon OpenSearch Service\nDeveloper Guide\nPOST https://dst-domain.us-east-1.es.amazonaws.com/books/_doc/1\n{\n\"Dracula\": \"Bram Stoker\"\n}\n2.\nTo query this index from the source domain, include the connection alias of the destination\ndomain within the query. You can ﬁnd the connection alias on the Connections tab on your\ndomain dashboard. The following are a sample request and truncated response:\nGET https://src-domain.us-east-1.es.amazonaws.com/connection_alias:books/_search\n{\n...\n\"hits\": [\n{\n\"_index\": \"source-destination:books\",\n\"_type\": \"_doc\",\n\"_id\": \"1\",\n\"_score\": 1,\n\"_source\": {\n\"Dracula\": \"Bram Stoker\"\n}\n}\n]\n}\n3.\n(Optional) You can create a conﬁguration that includes multiple domains in a single search. For\nexample, say that you set up the following:\nA connection between domain-a to domain-b, with connection alias named cluster_b\nA connection between domain-a to domain-c, with a connection alias named cluster_c\nIn this case, your searches include the content domain-a, domain-b, and domain-c. The\nfollowing are a sample request and response:\nRequest\nGET https://src-domain.us-east-1.es.amazonaws.com/\nlocal_index,cluster_b:b_index,cluster_c:c_index/_search\n{\n\"query\": {\nTesting your security setup for cross-Region and cross-account data access with cross-cluster search\n1672\nAmazon OpenSearch Service\nDeveloper Guide\n\"match\": {\n\"user\": \"domino\"\n}\n}\n}\nResponse:\n{\n\"took\": 150,\n\"timed_out\": false,\n\"_shards\": {\n\"total\": 3,\n\"successful\": 3,\n\"failed\": 0,\n\"skipped\": 0\n},\n\"_clusters\": {\n\"total\": 3,\n\"successful\": 3,\n\"skipped\": 0\n},\n\"hits\": {\n\"total\": 3,\n\"max_score\": 1,\n\"hits\": [\n{\n\"_index\": \"local_index\",\n\"_type\": \"_doc\",\n\"_id\": \"0\",\n\"_score\": 1,\n\"_source\": {\n\"user\": \"domino\",\n\"message\": \"This is message 1\",\n\"likes\": 0\n}\n},\n{\n\"_index\": \"cluster_b:b_index\",\n\"_type\": \"_doc\",\n\"_id\": \"0\",\n\"_score\": 2,\n\"_source\": {\nTesting your security setup for cross-Region and cross-account data access with cross-cluster search\n1673\nAmazon OpenSearch Service\nDeveloper Guide\n\"user\": \"domino\",\n\"message\": \"This is message 2\",\n\"likes\": 0\n}\n},\n{\n\"_index\": \"cluster_c:c_index\",\n\"_type\": \"_doc\",\n\"_id\": \"0\",\n\"_score\": 3,\n\"_source\": {\n\"user\": \"domino\",\n\"message\": \"This is message 3\",\n\"likes\": 0\n}\n}\n]\n}\n}\nIf you did not choose to skip unavailable clusters in your connection setup, all destination clusters\nthat you search must be available for your search request to run successfully. Otherwise, the whole\nrequest fails—even if one of the domains is not available, no search results are returned.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1700,
+      "end": 1703
+    },
+    "content_stats": {
+      "char_count": 2974,
+      "word_count": 416
+    },
+    "hierarchy": {
+      "parent": "Cross-Region and cross-account data access with cross-cluster search",
+      "children": []
+    }
+  }
+}

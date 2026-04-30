@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_258",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Parameter\nRequired?\nDescription\ntype\nRequired\nThe type of hardware token to import. One of:\nType\nDescription\n\"h6\"\nHOTP-6 hardware token\n\"h8\"\nHOTP-8 hardware token\n\"yk\"\nYubiKey AES hardware token\nDuo-D100 tokens (type \"d1\") are imported when\npurchased from Duo and may not be created via the\nAdmin API.\nserial\nRequired\nThe serial number of the token (maximum length 128\ncharacters).\nsecret\nOptional\nThe HOTP secret. This parameter is required for\nHOTP-6 and HOTP-8 hardware tokens.\ncounter\nOptional\nInitial value for the HOTP counter. This parameter is\nonly valid for HOTP-6 and HOTP-8 hardware tokens.\nDefault: 0 .\nprivate_id\nOptional\nThe 12-character hexadecimal YubiKey private ID.\nThis parameter is required for YubiKey hardware\ntokens.\n\"realname\": \"Joe Smith\",\n\"status\": \"active\",\n\"user_id\": \"DUJZ2U4L80HT45MQ4EOQ\",\n\"username\": \"jsmith\"\n}\n]\n}\n]\n}\nPOST  /admin/v1/tokens\naes_key\nOptional\nThe 32-character hexadecimal YubiKey AES key. This\nparameter is required for YubiKey hardware tokens.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 90,
+      "end": 91
+    },
+    "content_stats": {
+      "char_count": 992,
+      "word_count": 145
+    },
+    "hierarchy": {
+      "parent": "Tokens",
+      "children": []
+    }
+  }
+}

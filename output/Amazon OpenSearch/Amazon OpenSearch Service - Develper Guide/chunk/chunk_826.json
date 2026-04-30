@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_826",
+  "section_number": "2.12.4.12",
+  "header": "REST API diﬀerences",
+  "content": "The ﬁne-grained access control REST API diﬀers slightly depending on your OpenSearch/\nElasticsearch version. Prior to making a PUT request, make a GET request to verify the expected\nrequest body. For example, a GET request to _plugins/_security/api/user returns all users,\nwhich you can then modify and use to make valid PUT requests.\nOn Elasticsearch 6.x, requests to create users look like this:\nPUT _opendistro/_security/api/user/new-user\n{\n\"password\": \"some-password\",\n\"roles\": [\"new-backend-role\"]\n}\nOn OpenSearch or Elasticsearch 7.x, requests look like this (change _plugins to _opendistro if\nusing Elasticsearch):\nPUT _plugins/_security/api/user/new-user\n{\n\"password\": \"some-password\",\n\"backend_roles\": [\"new-backend-role\"]\n}\nFurther, tenants are properties of roles in Elasticsearch 6.x:\nGET _opendistro/_security/api/roles/all_access\nREST API diﬀerences\n1357\nAmazon OpenSearch Service\nDeveloper Guide\n{\n\"all_access\": {\n\"cluster\": [\"UNLIMITED\"],\n\"tenants\": {\n\"admin_tenant\": \"RW\"\n},\n\"indices\": {\n\"*\": {\n\"*\": [\"UNLIMITED\"]\n}\n},\n\"readonly\": \"true\"\n}\n}\nIn OpenSearch and Elasticsearch 7.x, they're objects with their own URI (change _plugins to\n_opendistro if using Elasticsearch)::\nGET _plugins/_security/api/tenants\n{\n\"global_tenant\": {\n\"reserved\": true,\n\"hidden\": false,\n\"description\": \"Global tenant\",\n\"static\": false\n}\n}\nFor documentation on the OpenSearch REST API, see the Security plugin API reference.\nTip\nIf you use the internal user database, you can use curl to make requests and test your\ndomain. Try the following sample commands:\ncurl -XGET -u 'master-user:master-user-password' 'domain-endpoint/_search'\ncurl -XGET -u 'master-user:master-user-password' 'domain-endpoint/_plugins/\n_security/api/user'\nREST API diﬀerences\n1358\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1386,
+      "end": 1388
+    },
+    "content_stats": {
+      "char_count": 1788,
+      "word_count": 227
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

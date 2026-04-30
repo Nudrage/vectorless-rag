@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1318",
+  "section_number": "155.1.1.183.2",
+  "header": "In Microsoft Sentinel",
+  "content": "ﾉ\nExpand table\nQuestions\nAnswers\nDefender XDR incidents are mapped to the corresponding fields in\nSentinel, namely Owner, Status, and Reason for closing.\nHow do I get Defender\nExperts updates in\nSentinel to\nautomatically trigger a\nplaybook?\nTo get Defender Experts updates, first, set up automation rules in\nSentinel that are triggered with the following Defender Experts\nupdates:\nWhen the Owner field in Microsoft Sentinel is updated to\nDefender Experts or Customer.\nWhen the Status field in Microsoft Sentinel is updated to Active\nor Closed, which corresponds to Microsoft Defender XDR Status\nActive and In Progress respectively.\nWhen Sentinel Tag Awaiting Customer Action gets added, which\ncorresponds to Microsoft Defender XDR Status Awaiting\nCustomer Action.\nNext, set up playbooks in Microsoft Sentinel to automatically sync\nincident updates or send incident notifications into other apps.\nSend email, or Teams message, or Slack message to your SOC\nteam when a Defender Experts analyst is assigned to an incident.\nSend SMS or phone call via Azure Communications Services or\nTwilio connector to your SOC lead when Defender Experts\npublishes response action for your team.\nCreate a task or ticket in apps such as Azure DevOps,\nServiceNow, Jira, ZenDesk, FreshService, PagerDuty, etc. for your\nIT Ops team.\nHow can I access\nmanaged response\nactions published by\nDefender Experts from\nSentinel?\nOnce Defender Experts publish managed response actions for an\nincident in your Microsoft Defender portal, the Owner field is updated\nto Customer automatically, and the tag Awaiting Customer Action is\navailable in Sentinel. You can use these field changes as a trigger to\nreview the managed response panel for the corresponding incident in\nthe Microsoft Defender portal.\nQuestions\nAnswers\nHow do I get Defender Experts\nupdates from Microsoft\nDefender XDR to sync into third-\nparty security information and\nevent management (SIEM),\nsecurity orchestration,\nYou can get Defender Experts updates from Microsoft\nDefender XDR through the Graph Security API\n(microsoft.graph.security.incident).\nTo initiate the synchronization process:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 992,
+      "end": 993
+    },
+    "content_stats": {
+      "char_count": 2124,
+      "word_count": 320
+    },
+    "hierarchy": {
+      "parent": "Understanding and managing Defender Experts for XDR incident updates",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "chunk_id": "chunk_376",
+  "section_number": "2.7.10.8",
+  "header": "Network access for Amazon OpenSearch Serverless",
+  "content": "The network settings for an Amazon OpenSearch Serverless collection determine whether the\ncollection is accessible over the internet from public networks, or whether it must be accessed\nprivately.\nPrivate access can apply to one or both of the following:\n• OpenSearch Serverless-managed VPC endpoints\n• Supported AWS services such as Amazon Bedrock\nYou can conﬁgure network access separately for a collection's OpenSearch endpoint and its\ncorresponding OpenSearch Dashboards endpoint.\nNetwork access is the isolation mechanism for allowing access from diﬀerent source networks.\nFor example, if a collection's OpenSearch Dashboards endpoint is publicly accessible but the\nOpenSearch API endpoint isn't, a user can access the collection data only through Dashboards\nwhen connecting from a public network. If they try to call the OpenSearch APIs directly from a\npublic network, they'll be blocked. Network settings can be used for such permutations of source\nto resource type. Amazon OpenSearch Serverless supports both IPv4 and IPv6 connectivity.\nNetwork access\n529\nAmazon OpenSearch Service\nDeveloper Guide\nTopics\n• Network policies\n• Considerations\n• Permissions required to conﬁgure network policies\n• Policy precedence\n• Creating network policies (console)\n• Creating network policies (AWS CLI)\n• Viewing network policies\n• Updating network policies\n• Deleting network policies",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 558,
+      "end": 559
+    },
+    "content_stats": {
+      "char_count": 1379,
+      "word_count": 200
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": [
+        "Network policies",
+        "Considerations",
+        "Permissions required to conﬁgure network policies",
+        "Policy precedence",
+        "Creating network policies (console)",
+        "Creating network policies (AWS CLI)",
+        "Viewing network policies",
+        "Updating network policies",
+        "Deleting network policies"
+      ]
+    }
+  }
+}

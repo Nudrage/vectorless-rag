@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_478",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Returns information about the resulting policy. The sections  key has the same format\nas policy section data returned from other Policies endpoints. See Policy Section Data\n[\n{\n\"created_at\": 1746722558,\n\"is_global_policy\": false,\n\"policy_applies_to\": [],\n\"policy_key\": \"POAEOB3BJ4S8RSJPRKVK\",\n\"policy_name\": \"Contractor Policy\",\n\"sections\": {},\n\"updated_at\": 1751905029\n}\n]\nGET  /admin/v2/policies/calculate\nfor descriptions of all policy section data keys and values.\nKey\nValue\nsections\nPolicy Section Data from the resulting policy. Each section\ncontains the following information:\nKey\nValue\nsource_policy_key\nThe policy key value indicating\nwhich policy the section is\nderived from.\nsource_policies\nA list of policies that were combined to form the resulting\npolicy. This list is ordered according to the order of\nprecedence used to determine the resulting policy, with the\nhighest precedence policy coming first. Each entry in the list\ncontains the following information:\nKey\nValue\npolicy_key\nThe policy key value.\npolicy_name\nThe the policy's name.\npolicy_type\nOne of global , application , or\ngroup .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 194,
+      "end": 195
+    },
+    "content_stats": {
+      "char_count": 1106,
+      "word_count": 155
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

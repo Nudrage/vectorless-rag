@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1184",
+  "section_number": "2.19.3.11",
+  "header": "Manual snapshots of warm indexes",
+  "content": "You can take manual snapshots of warm indexes, but we don't recommend it. The automated\ncs-ultrawarm repository already contains a snapshot for each warm index, taken during the\nmigration, at no additional charge.\nBy default, OpenSearch Service does not include warm indexes in manual snapshots. For example,\nthe following call only includes hot indexes:\nPUT _snapshot/my-repository/my-snapshot\nIf you choose to take manual snapshots of warm indexes, several important considerations apply.\n• You can't mix hot and warm indexes. For example, the following request fails:\nPUT _snapshot/my-repository/my-snapshot\n{\n\"indices\": \"warm-index-1,hot-index-1\",\n\"include_global_state\": false\n}\nIf they include a mix of hot and warm indexes, wildcard (*) statements fail, as well.\n• You can only include one warm index per snapshot. For example, the following request fails:\nPUT _snapshot/my-repository/my-snapshot\n{\n\"indices\": \"warm-index-1,warm-index-2,other-warm-indices-*\",\n\"include_global_state\": false\n}\nThis request succeeds:\nPUT _snapshot/my-repository/my-snapshot\n{\n\"indices\": \"warm-index-1\",\n\"include_global_state\": false\n}\n• Manual snapshots always restore to hot storage, even if they originally included a warm index.\nManual snapshots of warm indexes\n1706\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1735,
+      "end": 1736
+    },
+    "content_stats": {
+      "char_count": 1299,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

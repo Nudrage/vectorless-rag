@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1529",
+  "section_number": "155.1.1.208.1.4",
+  "header": "Update production runbooks and playbooks",
+  "content": "based on size, skill set, roles, and segregation of duties. Once a runbook has been updated, the\nplaybook update process should follow.\nPlaybooks are the steps the SOC teams need to follow when a real event occurs, based on the\nsuccessful integration and test of the use case. Therefore, it's imperative that the SOC follows a\nformalized approach to incident response, such as the NIST Incident Response Standard\nthat has\nbecome one of the leading industry standards for incident response.\nThe NIST four step incident response process includes four phases:\n1. Preparation\n2. Detection and analysis\n3. Containment, eradication, and recovery\n4. Post-incident activity\nOne of the core foundations of an escalation playbook is to ensure there's little ambiguity as to what\neach SOC team is supposed to do before, during, and after an event or incident. Therefore, it's good\npractice to list out step by step instructions.\nFor example, the Preparation phase could include an if/then or XoR matrix of tasks. In the case of the\nnew phishing variant example use case, such a matrix could look like this:\nWhy is Escalation Warranted?\nNext Step\nAlert in SOC Monitoring rated as critical triggered\n> 500/hour\nGo to Playbook A, Section 2, Activity 5 (with a link to the\nplaybook section)\neCommerce reported potential DDoS attack\nInvoke Playbook B-Section C, Activity 19 (with a link to the\nplaybook section)\nExecutive reported a suspicious email as spear\nphishing attempt\nGo to Playbook 5, Section 2, Activity 5 (with a link to the\nplaybook section)\nAfter executing the Preparation phase, organizations should invoke the remaining phases as outlined\nby NIST:\nDetection and analysis\nContainment, eradication, and recovery\nPost-incident activity\nStep 6. Identify SOC maintenance tasks",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 20,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1147,
+      "end": 1148
+    },
+    "content_stats": {
+      "char_count": 1770,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "Step 5. Develop and test use cases",
+      "children": []
+    }
+  }
+}

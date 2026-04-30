@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_021",
+  "section_number": "1.5.4",
+  "header": "/enroll",
+  "content": "{\n\"stat\": \"OK\",\n\"response\": {\n\"time\": 1357020061\n}\n}\nGET  /auth/v2/logo\nThe /enroll  endpoint provides a programmatic way to enroll new users with Duo\ntwo-factor authentication. It creates the user in Duo and returns a code (as a QR code)\nthat Duo Mobile can scan with its built-in camera or the user can scan with the phone's\ncamera app. Scanning the QR code adds the user's account to Duo Mobile so that they\nreceive and respond to Duo Push login requests. This endpoint may be limited by an\neffective new user policy. For example, if an Auth API application has an effective \"New\nUser policy\" set to Deny access, you will not be able to use this enrollment endpoint,\nand will receive a deny response instead of an enrollment link.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 5,
+      "end": 6
+    },
+    "content_stats": {
+      "char_count": 733,
+      "word_count": 130
+    },
+    "hierarchy": {
+      "parent": "Endpoints",
+      "children": []
+    }
+  }
+}

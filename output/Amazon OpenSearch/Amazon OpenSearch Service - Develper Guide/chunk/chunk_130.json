@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_130",
+  "section_number": "2.6.16.3.4",
+  "header": "Metrics in CloudWatch for Atlassian connectors",
+  "content": "Type: Jira connector metrics\nAtlassian Services\n113\nAmazon OpenSearch Service\nDeveloper Guide\nSource\nMetric\nMetric Type\nacknowled\ngementSet\nSuccesses\n.count\nCounter\nIf acknowledgments are enabled, this\nmetric provides the number of tickets\nsuccessfully synced.\nacknowled\ngementSet\nFailures.\ncount\nCounter\nIf acknowledgments are enabled, this\nmetric provides the number of tickets\nthat failed to sync.\ncrawlingT\nime.avg\nTimer\nThe time it took to crawl through all the\nnew changes.\nticketFet\nchLatency\n.avg\nTimer\nThe ticket fetch API latency average.\nticketFet\nchLatency\n.max\nTimer\nThe ticket fetch API latency maximum.\nticketsRe\nquested.c\nount\nCounter\nNumber of ticket fetch requests made.\nticketReq\nuestedFai\nled.count\nCounter\nNumber of ticket fetch requests failed.\nticketReq\nuestedSuc\ncess.coun\nt\nCounter\nNumber of ticket fetch requests\nsucceeded.\nAtlassian Services\n114\nAmazon OpenSearch Service\nDeveloper Guide\nSource\nMetric\nMetric Type\nsearchCal\nlLatency.\navg\nTimer\nSearch API call latency average.\nsearchCal\nlLatency.\nmax\nTimer\nSearch API call latency maximum.\nsearchRes\nultsFound\n.count\nCounter\nNumber of items found in a given\nsearch call.\nsearchReq\nuestFaile\nd.count\nCounter\nSearch API call failures count.\nauthFailu\nres.count\nCounter\nAuthentication failure count.\nType: Conﬂuence connector metrics\nSource\nMetric\nMetric Type\nacknowled\ngementSet\nSuccesses\n.count\nCounter\nIf acknowledgments are enabled, this\nmetric provides the number of pages\nsuccessfully synced.\nacknowled\ngementSet\nFailures.\ncount\nCounter\nIf acknowledgments are enabled, this\nmetric provides the number of pages\nthat failed to sync.\ncrawlingT\nime.avg\nTimer\nThe time it took to crawl through all the\nnew changes.\nAtlassian Services\n115\nAmazon OpenSearch Service\nDeveloper Guide\nSource\nMetric\nMetric Type\npageFetch\nLatency.a\nvg\nTimer\nContent fetching API latency (average).\npageFetch\nLatency.m\nax\nTimer\nContent fetching API latency\n(maximum).\npagesRequ\nested.cou\nnt\nCounter\nNumber of invocations of content\nfetching API.\npageReque\nstFailed.\ncount\nCounter\nNumber of failed requests of content\nfetching API.\npageReque\nstedSucce\nss.count\nCounter\nNumber of successful requests of\ncontent fetching API.\nsearchCal\nlLatency.\navg\nTimer\nSearch API call latency average.\nsearchCal\nlLatency.\nmax\nTimer\nSearch API call latency max.\nsearchRes\nultsFound\n.count\nCounter\nNumber of items found in a given\nsearch call.\nsearchReq\nuestsFail\ned.count\nCounter\nSearch API call failures count.\nAtlassian Services\n116\nAmazon OpenSearch Service\nDeveloper Guide\nSource\nMetric\nMetric Type\nauthFailu\nres.count\nCounter\nAuthentication failure count.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 142,
+      "end": 146
+    },
+    "content_stats": {
+      "char_count": 2594,
+      "word_count": 360
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Atlassian Services",
+      "children": []
+    }
+  }
+}

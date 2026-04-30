@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3205",
+  "section_number": "1.6.16.2.1",
+  "header": "Fields",
+  "content": "Field\nDescription\nName\nMobileDetectionJsonData\nMobileDetectionId\nID of the mobile detection.\nContextTimeStamp\nThe time the event occurred on the system, as seen by the sensor. Not to be confused with timestamp which is the time the event was\nreceived by the cloud.\nCID\nThe customer ID. A 32-character (hex) identifier in the CrowdStrike cloud.\nAID\nThe sensor ID. This value is unique to each installation of a Falcon sensor. When a sensor is updated or reinstalled, the host gets a new\nAID. In those situations, a single host could have multiple AID values over time.\nevent_platform\nThe platform on which the sensor is running.Values: Android, iOS\napp_id\nThe identifier of the application related to the detection, if known.\npatternId\nThe Pattern ID associated with the detection.\nioc_type\nThe type of data on which the detection is based (for example \"sha256\").\nioc_value\nThe value related to the detection.(For example, a \"sha256\" ioc_type will have a sha256 hex string as an ioc_value, and a \"domain\"\nioc_type will have a domain name.)\nioc_source\nThe source data type for the ioc_value (for example \"primary_module\").\ninstaller_info\nThe installer of the app, if known. Values: For apps that run inside Falcon Mobile, it will be \"containerized\".\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1209/1226\n\n\nField\nDescription\napp_label\nThe application label, if known",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1209,
+      "end": 1210
+    },
+    "content_stats": {
+      "char_count": 1553,
+      "word_count": 233
+    },
+    "hierarchy": {
+      "parent": "MobileDetectionJsonData",
+      "children": []
+    }
+  }
+}

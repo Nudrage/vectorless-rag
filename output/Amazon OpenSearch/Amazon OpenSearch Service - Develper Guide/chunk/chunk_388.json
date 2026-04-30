@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_388",
+  "section_number": "2.7.10.9.1",
+  "header": "Using FIPS endpoints with OpenSearch Serverless",
+  "content": "In AWS Regions where FIPS is supported, OpenSearch Serverless collections are accessible through\nboth standard and FIPS-compliant endpoints. For more information, see FIPS compliance in the\nAWS Veriﬁed access User Guide.\nIn the following examples, replace collection_id and AWS Region with your collection ID and\nits AWS Region.\n• Standard endpoint – https://collection_id.AWS Region.aoss.amazonaws.com.\n• FIPS-compliant endpoint – https://collection_id.AWS Region.aoss-\nfips.amazonaws.com.\nSimilarly, OpenSearch Dashboards are accessible through both standard and FIPS-compliant\nendpoints:\n• Standard Dashboards endpoint – https://collection_id.AWS\nRegion.aoss.amazonaws.com/_dashboards.\n• FIPS-compliant Dashboards endpoint – https://collection_id.AWS Region.aoss-\nfips.amazonaws.com/_dashboards.\nNote\nIn FIPS-enabled Regions, both standard and FIPS-compliant endpoints provide FIPS-\ncompliant cryptography. The FIPS-speciﬁc endpoints help you meet compliance\nrequirements that speciﬁcally mandate the use of endpoints with FIPS in the name.\nFIPS compliance\n541\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 570,
+      "end": 571
+    },
+    "content_stats": {
+      "char_count": 1105,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "FIPS compliance in Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

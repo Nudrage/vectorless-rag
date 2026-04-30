@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_015",
+  "section_number": "2.4.1",
+  "header": "Grant permissions",
+  "content": "In production environments, we recommend that you use ﬁner-grained policies. To learn more\nabout access management, see Access management for AWS resources in the IAM User Guide.\nTo provide access, add permissions to your users, groups, or roles:\n• Users and groups in AWS IAM Identity Center:\nCreate a permission set. Follow the instructions in Create a permission set in the AWS IAM\nIdentity Center User Guide.\n• Users managed in IAM through an identity provider:\nCreate a role for identity federation. Follow the instructions in Create a role for a third-party\nidentity provider (federation) in the IAM User Guide.\n• IAM users:\n• Create a role that your user can assume. Follow the instructions in Create a role for an IAM user\nin the IAM User Guide.\n• (Not recommended) Attach a policy directly to a user or add a user to a user group. Follow the\ninstructions in Adding permissions to a user (console) in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 40,
+      "end": 40
+    },
+    "content_stats": {
+      "char_count": 928,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "Setting up Amazon OpenSearch Service",
+      "children": [
+        "Grant programmatic access"
+      ]
+    }
+  }
+}

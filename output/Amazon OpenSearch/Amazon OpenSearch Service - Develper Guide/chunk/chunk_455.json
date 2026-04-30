@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_455",
+  "section_number": "2.8.3",
+  "header": "Advanced cluster settings",
+  "content": "Use advanced options to conﬁgure the following:\nIndices in request bodies\nSpeciﬁes whether explicit references to indexes are allowed inside the body of HTTP requests.\nSetting this property to false prevents users from bypassing access control for subresources.\nBy default, the value is true. For more information, see the section called “Advanced options\nand API considerations”.\nSolution architecture\n620\nAmazon OpenSearch Service\nDeveloper Guide\nFielddata cache allocation\nSpeciﬁes the percentage of Java heap space that is allocated to ﬁeld data. By default, this\nsetting is 20% of the JVM heap.\nNote\nMany customers query rotating daily indices. We recommend that you begin benchmark\ntesting with indices.fielddata.cache.size conﬁgured to 40% of the JVM heap\nfor most of these use cases. For very large indices, you might need a large ﬁeld data\ncache.\nMax clause count\nSpeciﬁes the maximum number of clauses allowed in a Lucene boolean query. The default is\n1,024. Queries with more than the permitted number of clauses result in a TooManyClauses\nerror. For more information, see the Lucene documentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 649,
+      "end": 650
+    },
+    "content_stats": {
+      "char_count": 1109,
+      "word_count": 171
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

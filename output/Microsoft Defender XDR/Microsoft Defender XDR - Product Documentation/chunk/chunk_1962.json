@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1962",
+  "section_number": "155.1.1.259",
+  "header": "Alert classification for suspicious inbox forwarding rules",
+  "content": "forwarding rules\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThreat actors can use compromised user accounts for several malicious purposes including\nreading emails in a user's inbox, creating inbox rules to forward emails to external accounts,\nsending phishing mails, among others. Malicious inbox rules are widely common during\nbusiness email compromise (BEC) and phishing campaigns, and it important to monitor them\nconsistently. This playbook helps you investigate alerts for suspicious inbox forwarding rules\nand quickly grade them as either a true positive (TP) or a false positive (FP). You can then take\nrecommended actions for the TP alerts to remediate the attack.\nFor an overview of alert classification for Microsoft Defender for Office 365 and Microsoft\nDefender for Cloud Apps, see the introduction article.\nThe results of using this playbook are:\nYou've identified the alerts associated with inbox forwarding rules as malicious (TP) or\nbenign (FP) activities.\nIf malicious, you have removed malicious inbox forwarding rules.\nYou've taken the necessary action if emails have been forwarded to a malicious email\naddress.\nYou configure inbox rules to automatically manage email messages based on predefined\ncriteria. For example, you can create an inbox rule to move all messages from your manager\ninto another folder, or forward messages you receive to another email address.\nAfter gaining access to users' mailboxes, attackers often create an inbox rule that allows them\nto exfiltrate sensitive data to an external email address and use it for malicious purposes.\nMalicious inbox rules automate the exfiltration process. With specific rules, every email in the\ntarget user's inbox that matches the rule criteria will be forwarded to the attacker's mailbox.\nFor example, an attacker might want to gather sensitive data related to finance. They create an\ninbox rule to forward all emails that contain keywords, such as 'finance' and 'invoice' in the\nsubject or message body, to their mailbox.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1458,
+      "end": 1458
+    },
+    "content_stats": {
+      "char_count": 2018,
+      "word_count": 311
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Inbox forwarding rules",
+        "Workflow",
+        "Investigation steps",
+        "Advanced hunting queries",
+        "Recommended actions",
+        "See also"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_769",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\nevents\nArray of events that match the Parameters. The information returned for\neach event includes:\nbypass_status_enabled\nAn integer indicating the Unix\ntimestamp in milliseconds when\nbypass status was enabled for the\nuser or group.\nReturned for events with\ntype=bypass_status .\nenabled_by\nThe application or the\nadministrator that enabled bypass\nstatus.\nReturned for events with\ntype=bypass_status .\nenabled_for\nThe user or group with bypass\nstatus.\nReturned for events with\ntype=bypass_status .\nexplanations\nAn array of objects describing\nwhy Trust Monitor surfaced the\nevent. The summary  provides\nadditional details.\nEvents with type=auth :\nThe type  value will be one of:\nGRANTED_AUTH ,\nNEW_COUNTRY_CODE ,\nNEW_DEVICE , NEW_FACTOR ,\nNEW_NETBLOCK ,\nUNREALISTIC_GEOVELOCITY ,\nUNUSUAL_COUNTRY_CODE ,\nUNUSUAL_DEVICE ,\nUNUSUAL_FACTOR ,\nUNUSUAL_NETBLOCK ,\nUNUSUAL_TIME_OF_DAY , or\nUSER_MARKED_FRAUD .\nEvents with\ntype=device_registration :\nThe type  value will be one of:\nREGISTER_INACTIVE_USER ,\nREGISTER_OS_OUTDATED ,\nREGISTER_UNLOCK , or\nREGISTER_TAMPERED .\nfrom_common_netblock\nA boolean describing if this event\nwas created from a common IP\nnetblock. Either true  or false .\nReturned for events with\ntype=auth .\nfrom_new_user\nA boolean describing if this event\nwas created for a new user. Either\ntrue  or false .\nReturned for events with\ntype=auth  or\ntype=device_registration .\nlow_risk_ip\nA boolean describing if this event\nwas created from an IP address\nidentified in the Risk Profile\nconfiguration as a low risk IP\naddress. Either true  or false .\nReturned for events with\ntype=auth .\npriority_event\nA boolean describing if the event\nmatches the Risk Profile\nconfiguration. Either true  or\nfalse .\npriority_reasons\nAn array of objects describing\nhow the event matches the Trust\nMonitor Risk Profile configuration.\nEach object contains:\ntype\nThe type of priority\nreason for the\nevent's match.\nlabel\nThe label of the\npriority reason for\nthe event's match.\nReturned for events with\ntype=auth  or\ntype=device_registration .\nsekey\nThe unique identifier for this event\nas a 20 character string. This is\nunique across all different event\ntypes.\nstate\nA string describing the state of the\nevent. One of state new or\nstate processed.\nstate_updated_timestamp\nAn integer indicating the Unix\ntimestamp in milliseconds of the\nlast change to the state of the\nevent.\nsurfaced_auth\nAn object which represents the\nactual authentication. See the\nAuthentication Logs response\nformat for authentication event\ndetails.\nReturned for events with\ntype=auth .\nsurfaced_timestamp\nAn integer indicating the Unix\ntimestamp in milliseconds when\nthe event was surfaced by Trust\nMonitor.\ntriaged_as_interesting\nA boolean describing if this event\nwas triaged as being interesting or\nnot interesting. Either true  or\nfalse .\ntriage_event_uri\nA string representing the URI of\nthe security event, which a Duo\nadministrator can use to view and\nprocess the surfaced event in the\nDuo Admin Panel.\nReturned for events with\ntype=auth .\ntype\nThe type of event, as a string. One\nof auth , bypass_status , or\ndevice_registration .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 362,
+      "end": 364
+    },
+    "content_stats": {
+      "char_count": 3104,
+      "word_count": 464
+    },
+    "hierarchy": {
+      "parent": "Trust Monitor",
+      "children": []
+    }
+  }
+}

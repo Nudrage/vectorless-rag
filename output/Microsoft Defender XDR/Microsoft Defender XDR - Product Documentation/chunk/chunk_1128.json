@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1128",
+  "section_number": "155.1.1.158.1",
+  "header": "Link results to new or existing incidents",
+  "content": "\n3. Find the Alert details section in the Link to incident pane, then select Create new incident\nto convert the events to alerts and group them to a new incident:\nOr select Link to an existing incident to add the selected records to an existing one.\nChoose the related incident from the dropdown list of existing incidents. You can also\nenter the first few characters of the incident name or ID to find the existing incident.\n4. For either selection, provide the following details, then select Next:\nAlert title - Provide a descriptive title for the results that your incident responders\ncan understand. This descriptive title becomes the alert title.\n\n\nSeverity - Choose the severity applicable to the group of alerts.\nCategory - Choose the appropriate threat category for the alerts.\nDescription - Give a helpful description for the grouped alerts.\nRecommended actions - Provide remediation actions.\n5. In the Entities section, you can find which entities are used to correlate other alerts to the\nlinked incident. They also appear in the incident page. You can review the preselected\nentities categorized as follows:\na. Impacted assets – Assets impacted by the selected events, can be:\nAccount\nDevice\nMailbox\nCloud application\nAzure resource\nAmazon Web Services resource\nGoogle Cloud Platform resource\nb. Related evidence – Non-assets that appear in the selected events. The supported\nentity types are:\nProcess\nFile\nRegistry value\nIP\nOAuth application\nDNS\nSecurity group\nURL\nMail cluster\nMail message\n6. After an entity type is selected, select an identifier type that exists in the selected records\nso that it can be used to identify this entity. Each entity type has a list of supported\nidentifiers, as can be seen in the relevant drop down. Read the description displayed\nwhen hovering on each identifier to better understand it.\n7. After selecting the identifier, select a column from the query results that contain the\nselected identifier. You can select Explore query and results to open the advanced\nhunting context panel. This allows you to explore your query and results to make sure you\nchose the right column for the selected identifier.\nIn our example, we used a query to find events related to a possible email exfiltration\nincident, therefore the recipient's mailbox and recipient's account are the impacted\nentities, and the sender's IP as well as email message are related evidence.\nA different alert is created for each record with a unique combination of impacted\nentities. In our example, if there are three different recipient mailboxes and recipient\n\n\nobject ID combinations, for instance, then three alerts are created and linked to the\nchosen incident.\n8. Select Next.\n9. Review the details you've provided in the Summary section.\n10. Select Done.\nYou can select the generated link from the summary step of the wizard or select the incident\nname from the incident queue, to view the incident to which the events are linked.\nIn our example, the three alerts, representing the three selected events, were linked\nsuccessfully to a new incident. In each of the alert pages, you can find the complete\ninformation on the event or events in timeline view (if available) and the query results view.\nYou can also select the event from the timeline view or from the query results view to open the\nInspect record pane.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 855,
+      "end": 859
+    },
+    "content_stats": {
+      "char_count": 3338,
+      "word_count": 554
+    },
+    "hierarchy": {
+      "parent": "Link query results to an incident",
+      "children": []
+    }
+  }
+}

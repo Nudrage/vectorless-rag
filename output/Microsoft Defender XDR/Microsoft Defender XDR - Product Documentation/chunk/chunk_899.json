@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_899",
+  "section_number": "155.1.1.89.5.3",
+  "header": "Ingest data from external sources",
+  "content": "To incorporate long lists or large tables into your query, use the externaldata operator to ingest\ndata from a specified URI. You can get data from files in TXT, CSV, JSON, or other formats. The\n// Non-durable query - do not use\nDeviceProcessEvents\n| where ProcessCommandLine == \"net stop MpsSvc\"\n| limit 10\n// Better query - filters on file name, does case-insensitive matches\nDeviceProcessEvents\n| where Timestamp > ago(7d) and FileName in~ (\"net.exe\", \"net1.exe\") and\nProcessCommandLine contains \"stop\" and ProcessCommandLine contains \"MpsSvc\"\n// Best query also ignores quotes\nDeviceProcessEvents\n| where Timestamp > ago(7d) and FileName in~ (\"net.exe\", \"net1.exe\")\n| extend CanonicalCommandLine=replace(\"\\\"\", \"\", ProcessCommandLine)\n| where CanonicalCommandLine contains \"stop\" and CanonicalCommandLine contains\n\"MpsSvc\"\nexample below shows how you can utilize the extensive list of malware SHA-256 hashes\nprovided by MalwareBazaar (abuse.ch) to check attachments on emails:\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 593,
+      "end": 594
+    },
+    "content_stats": {
+      "char_count": 985,
+      "word_count": 138
+    },
+    "hierarchy": {
+      "parent": "Query scenarios",
+      "children": []
+    }
+  }
+}

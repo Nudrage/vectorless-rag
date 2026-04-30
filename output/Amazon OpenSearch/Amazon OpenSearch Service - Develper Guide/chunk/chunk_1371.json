@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1371",
+  "section_number": "2.25.2",
+  "header": "Shard strategy",
+  "content": "Shards distribute your workload across the data nodes in your OpenSearch Service domain.\nProperly conﬁgured indexes can help boost overall domain performance.\nWhen you send data to OpenSearch Service, you send that data to an index. An index is analogous\nto a database table, with documents as the rows, and ﬁelds as the columns. When you create the\nindex, you tell OpenSearch how many primary shards you want to create. The primary shards are\nindependent partitions of the full dataset. OpenSearch Service automatically distributes your data\nacross the primary shards in an index. You can also conﬁgure replicas of the index. Each replica\nshard comprises a full set of copies of the primary shards for that index.\nOpenSearch Service maps the shards for each index across the data nodes in your cluster. It ensures\nthat the primary and replica shards for the index reside on diﬀerent data nodes. The ﬁrst replica\nensures that you have two copies of the data in the index. You should always use at least one\nreplica. Additional replicas provide additional redundancy and read capacity.\nOpenSearch sends indexing requests to all of the data nodes that contain shards that belong to the\nindex. It sends indexing requests ﬁrst to data nodes that contain primary shards, and then to data\nnodes that contain replica shards. Search requests are routed by the coordinator node to either a\nprimary or replica shard for all shards belonging to the index.\nFor example, for an index with ﬁve primary shards and one replica, each indexing request touches\n10 shards. In contrast, search requests are sent to n shards, where n  is the number of primary\nshards. For an index with ﬁve primary shards and one replica, each search query touches ﬁve shards\n(primary or replica) from that index.\nEnable log publishing\n1837\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1866,
+      "end": 1867
+    },
+    "content_stats": {
+      "char_count": 1843,
+      "word_count": 306
+    },
+    "hierarchy": {
+      "parent": "Operational best practices for Amazon OpenSearch Service",
+      "children": [
+        "Determine shard and data node counts",
+        "Avoid storage skew"
+      ]
+    }
+  }
+}

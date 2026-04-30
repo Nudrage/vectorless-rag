@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_537",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nTargetFileName\nThe resulting file name that was downloaded\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nServiceStart\nValues:\nSERVICE_BOOT_START (0)\nSERVICE_SYSTEM_START (1)\nSERVICE_AUTO_START (2)\nSERVICE_DEMAND_START (3)\nSERVICE_DISABLED (4)\nServiceType\nValues:\nSERVICE_KERNEL_DRIVER (1)\nSERVICE_FILE_SYSTEM_DRIVER (2)\nSERVICE_ADAPTER (4)\nSERVICE_RECOGNIZER_DRIVER (8)\nSERVICE_WIN32_OWN_PROCESS (16)\nSERVICE_WIN32_SHARE_PROCESS (32)\nSERVICE_INTERACTIVE_PROCESS (256)\nServiceStartType\nValues:\nSERVICE_KERNEL_DRIVER (1)\nSERVICE_FILE_SYSTEM_DRIVER (2)\nSERVICE_ADAPTER (4)\nSERVICE_RECOGNIZER_DRIVER (8)\nSERVICE_WIN32_OWN_PROCESS (16)\nSERVICE_WIN32_SHARE_PROCESS (32)\nSERVICE_INSTANCE (128)\nSERVICE_INTERACTIVE_PROCESS (256)\nServiceTypeString\nServicePathUnquoted\nServiceDisplayName\nServiceDescription\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nServiceRegLastWriteTime\nServiceObjectName\nServiceSid\nServiceIsWoW64\nServiceCurrentState\nValues:\nUNABLE_TO_QUERY_SERVICE_STATE (0)\nSERVICE_STOPPED (1)\nSERVICE_START_PENDING (2)\nSERVICE_STOP_PENDING (3)\nSERVICE_RUNNING (4)\nSERVICE_CONTINUE_PENDING (5)\nSERVICE_PAUSE_PENDING (6)\nSERVICE_PAUSED (7)\nFfcServiceFlags\nValues:\nSERVICE_RUNS_IN_USER_PROCESS_OR_DOWN (0x0)\nSERVICE_RUNS_IN_SYSTEM_PROCESS (0x00000001)\nErrorCode\ntop [#top]\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n125/1226",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 125,
+      "end": 125
+    },
+    "content_stats": {
+      "char_count": 1918,
+      "word_count": 175
+    },
+    "hierarchy": {
+      "parent": "ServicesStatusInfo",
+      "children": []
+    }
+  }
+}

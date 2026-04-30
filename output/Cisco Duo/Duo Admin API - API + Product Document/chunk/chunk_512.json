@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_512",
+  "section_number": "1.17.18",
+  "header": "Browsers",
+  "content": "Section Name: browsers\nCorresponds to: Browsers\nThis section is available in the Premier and Advantage editions.\nKey\nValue\nallowed_browsers_list\nComma-separated list of allowed browsers. Any of:\nchrome , chrome-mobile , edge , edge-mobile ,\nfirefox , firefox-mobile , ie , safari ,\nsafari-mobile , or other-browsers .\nDefault behavior permits all browsers.\nblocked_browsers_list\nComma-separated list of blocked browsers. Any of:\nchrome , chrome-mobile , edge , edge-mobile ,\nfirefox , firefox-mobile , ie , safari ,\nsafari-mobile , or other-browsers .\nDefault: none.\nout_of_date_behavior\nValue is one of warn-only , warn-and-block , or\nno-remediation  (default). This affects all browsers\nin the allowed_browsers_list .\nbrowser_max_ood_days\nThe number of days that a browser may be out of\ndate before access to it is blocked\n( out_of_date_behavior  must be warn-and-\nblock  for the browser to be blocked). Value is one\nof 0 , 3 , 7 , 14 , 30  (default), 60 , 90 , 180 , or\n365 . Other values are invalid.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 214,
+      "end": 214
+    },
+    "content_stats": {
+      "char_count": 1004,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

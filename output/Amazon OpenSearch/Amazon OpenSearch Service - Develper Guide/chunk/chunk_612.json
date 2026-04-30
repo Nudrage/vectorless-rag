@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_612",
+  "section_number": "2.9.8.2",
+  "header": "Enabling and disabling data sources",
+  "content": "Note\nThe following information is only applicable to Amazon S3 data sources.\nEnabling and disabling data sources\n770\nAmazon OpenSearch Service\nDeveloper Guide\nFor circumstances when you want to halt direct query usage for a data source, you can opt to\ndisable the data source. Disabling a data source will ﬁnish executing existing queries and halt all\nnew queries from being executed.\nAccelerations setup to boost query performance such as skipping indexes, materialized views,\ncovering indexes will be set to manual once a data source is disabled. Once a data source is set to\nactive after being disabled, user queries will run as expected. Accelerations which were previously\nsetup and set to manual, will need to be manually conﬁgured to run on a schedule again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 799,
+      "end": 800
+    },
+    "content_stats": {
+      "char_count": 765,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "Managing a data source in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

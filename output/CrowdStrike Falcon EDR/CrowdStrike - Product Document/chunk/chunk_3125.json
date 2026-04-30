@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_3125",
+  "section_number": "1.6.10.3",
+  "header": "Detection Summary",
+  "content": "Important: DetectionSummaryEvent is scheduled to be decommissioned September 30, 2025.\nFalcon generates the DetectionSummaryEvent for many detections, particularly from desktop-based sensors. Not all Detection Summary events include all fields\nlisted in the table below.\nSome Detection Summary events include multiple detections, when multiple malicious behaviors are detected. Each additional behavior will generate a separate\ndetection summary event with the same detection ID, and will have its own offset value.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1153,
+      "end": 1153
+    },
+    "content_stats": {
+      "char_count": 515,
+      "word_count": 69
+    },
+    "hierarchy": {
+      "parent": "General detection and audit events",
+      "children": [
+        "Event fields section",
+        "Metadata section",
+        "Pattern Disposition Value Descriptions",
+        "Sample DetectionSummaryEvent response"
+      ]
+    }
+  }
+}

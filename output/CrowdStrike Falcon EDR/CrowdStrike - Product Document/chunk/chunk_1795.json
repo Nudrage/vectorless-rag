@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1795",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nContextProcessId\nUPID of process originating this event.\nContextTimeStamp\nSystem time of event creation.\nHttpInternalSource\nValues:\nHTTP_INVALID_SOURCE (0)\nHTTP_WFP_NETWORK_EVENT_SOURCE (1)\nHTTP_ETW_WININET_SOURCE (2)\nHTTP_ETW_WININET_CAPTURE_SOURCE (3)\nHttpUrl\nHttpMethod\nValues:\nHTTP_METHOD_UNKNOWN (0)\nHTTP_METHOD_GET (1)\nHTTP_METHOD_HEAD (2)\nHTTP_METHOD_POST (3)\nHTTP_METHOD_PUT (4)\nHTTP_METHOD_DELETE (5)\nHTTP_METHOD_OPTIONS (6)\nHTTP_METHOD_CONNECT (7)\nHTTP_METHOD_TRACE (8)\nHTTP_METHOD_PATCH (9)\nHTTP_METHOD_WILDCARD (10)\nHTTP_METHOD_ACL (11)\nHTTP_METHOD_BASELINECONTROL (12)\nHTTP_METHOD_BIND (13)\nHTTP_METHOD_CHECKIN (14)\nHTTP_METHOD_CHECKOUT (15)\nHTTP_METHOD_COPY (16)\nHTTP_METHOD_LABEL (17)\nHTTP_METHOD_LINK (18)\nHTTP_METHOD_LOCK (19)\nHTTP_METHOD_MERGE (20)\nHTTP_METHOD_MKACTIVITY (21)\nHTTP_METHOD_MKCALENDAR (22)\nHTTP_METHOD_MKCOL (23)\nHTTP_METHOD_MKREDIRECTREF (24)\nHTTP_METHOD_MKWORKSPACE (25)\nHTTP_METHOD_MOVE (26)\nHTTP_METHOD_ORDERPATCH (27)\nHTTP_METHOD_PRI (28)\nHTTP_METHOD_PROPFIND (29)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n583/1226\nField\nDescription\nHTTP_METHOD_PROPPATCH (30)\nHTTP_METHOD_REBIND (31)\nHTTP_METHOD_REPORT (32)\nHTTP_METHOD_SEARCH (33)\nHTTP_METHOD_UNBIND (34)\nHTTP_METHOD_UNCHECKOUT (35)\nHTTP_METHOD_UNLINK (36)\nHTTP_METHOD_UNLOCK (37)\nHTTP_METHOD_UPDATE (38)\nHTTP_METHOD_UPDATEREDIRECTREF (39)\nHTTP_METHOD_VERSIONCONTROL (40)\nHttpRequestHeader\nHttpPostBody\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nUserName\nOperating system username.\nParentCommandLine\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 583,
+      "end": 584
+    },
+    "content_stats": {
+      "char_count": 2150,
+      "word_count": 212
+    },
+    "hierarchy": {
+      "parent": "HttpRequestDetect",
+      "children": []
+    }
+  }
+}

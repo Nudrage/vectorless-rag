@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1103",
+  "section_number": "1.1.155.2.3.3.1",
+  "header": "Expanded entity mapping (Preview)",
+  "content": "７ Note\nEntities impact how alerts are grouped into incidents so make sure to carefully review the\nentities to ensure high incidents’ quality. Learn more about incidents correlation and alerts\ngrouping.\nRegistry value\nIP\nOAuth application\nDNS\nSecurity group\nURL\nMail cluster\nMail message\nAfter you select an entity type, select an identifier type that exists in the selected query results\nso that it can be used to identify this entity. Each entity type has a list of supported identifiers,\nas shown in the relevant dropdown menu. Read the description displayed when hovering on\neach identifier to better understand it.\nAfter selecting the identifier, select a column from the query results that contains the selected\nidentifier. Select Explore query and results to open the advanced hunting context panel. This\noption allows you to explore your query and results to make sure you choose the right column\nfor the selected identifier.\n７ Note\nCurrently, you can only map assets as impacted entities.\n\nIf your custom detection rule uses Defender XDR data, it can automatically take actions on\ndevices, files, users, or emails that the query returns.\nThese actions are applied to devices in the DeviceId  column of the query results:\nIsolate device - Uses Microsoft Defender for Endpoint to apply full network isolation,\npreventing the device from connecting to any application or service. Learn more about",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 6,
+    "font_size": 14,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 835,
+      "end": 837
+    },
+    "content_stats": {
+      "char_count": 1402,
+      "word_count": 226
+    },
+    "hierarchy": {
+      "parent": "Link entities",
+      "children": []
+    }
+  }
+}

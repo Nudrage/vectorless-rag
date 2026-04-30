@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_227",
+  "section_number": "155.1.1.18.1.43.2.2",
+  "header": "Create a detection",
+  "content": "\n７ Note\n2. Fill in the required fields with the information that will allow the security team to\nunderstand the alert, why it was generated, and what actions you expect them to\ntake.\nEnsure that you fill out the fields with clarity to help give the next user an informed\ndecision about this detection rule alert\n3. Select what entities are impacted in this alert. In this case, select Device and\nMailbox.\nIf you select Create detection rule and you have syntax errors in your query,\nyour detection rule won't be saved. Double-check your query to ensure\nthere's no errors.\n\n4. Determine what actions should take place if the alert is triggered. In this case, run\nan antivirus scan, though other actions could be taken.\n5. Select the scope for the alert rule. Since this query involves devices, the device\ngroups are relevant in this custom detection according to Microsoft Defender for\nEndpoint context. When creating a custom detection that doesn't include devices\nas impacted entities, scope doesn't apply.\n\n\nFor this pilot, you might want to limit this rule to a subset of testing devices in your\nproduction environment.\n6. Select Create. Then, select Custom detection rules from the navigation panel.\nFrom this page, you can select the detection rule, which will open a details page.\n\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 6,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 133,
+      "end": 136
+    },
+    "content_stats": {
+      "char_count": 1296,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Run the simulation",
+      "children": []
+    }
+  }
+}

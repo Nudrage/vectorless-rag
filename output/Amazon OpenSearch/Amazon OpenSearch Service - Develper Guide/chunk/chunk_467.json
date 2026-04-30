@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_467",
+  "section_number": "2.8.5.2",
+  "header": "Changes that usually don't cause blue/green deployments",
+  "content": "In most cases, the following operations do not cause blue/green deployments:\n• Modifying the access policy\nChanges that usually don't cause blue/green deployments\n629\nAmazon OpenSearch Service\nDeveloper Guide\n• Modifying the custom endpoint\n• Changing the Transport Layer Security (TLS) policy\n• Changing the automated snapshot hour\n• Enabling or disabling Require HTTPS\n• Enabling Auto-Tune or disabling it without rolling back its changes\n• If your domain has dedicated master nodes, changing the data node or UltraWarm node count\n• If your domain has dedicated master nodes, changing the dedicated master instance type or\ncount (except for Multi-AZ domains with two dedicated master nodes)\n• Enabling or disabling the publication of error logs or slow logs to CloudWatch\n• Disabling the publication of audit logs to CloudWatch\n• Increasing the volume size up to 3 TiB per data node, changing the volume type, IOPS, or\nthroughput\n• Adding or removing tags\nNote\nThere are some exceptions depending on your service software version. If you want to\nbe sure that a change won't cause a blue/green deployment, perform a dry run before\nupdating your domain, if this option is available. Some changes don't oﬀer a dry run\noption. We generally recommend that you make changes to your cluster outside of peak\ntraﬃc hours.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 658,
+      "end": 659
+    },
+    "content_stats": {
+      "char_count": 1314,
+      "word_count": 214
+    },
+    "hierarchy": {
+      "parent": "Making conﬁguration changes in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

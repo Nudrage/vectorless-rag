@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1114",
+  "section_number": "2.18.3",
+  "header": "Enabling SAML federation with AWS Identity and Access Management",
+  "content": "Management\nOpenSearch UI supports Security Assertion Markup Language 2.0 (SAML), an open standard\nthat many identity providers use. This enables identity federation with AWS Identity and Access\nManagement (IAM). With this support, users in your account or organization can directly access\nOpenSearch UI by assuming IAM roles. You can create an identity provider-initiated (IdP) single\nsign-on experience for your end users, where they can authenticate in the external identity\nprovider and be routed directly to your deﬁned page in OpenSearch UI. You can also implement\nﬁne-grained access control by conﬁguring your end-users or groups to assume diﬀerent IAM roles\nwith diﬀerent permissions for accessing OpenSearch UI and the associated data sources.\nThis topic presents step-by-step instructions for conﬁguring SAML use with OpenSearch UI. In\nthese procedures, we use the steps for conﬁguring the Okta identity and access management\napplication as an example. The conﬁguration steps for other identity providers, such as Azure\nActive Directory and Ping, are similar.\nTopics\n• Step 1: Set up identity provider application (Okta)\n• Step 2: Set up AWS conﬁguration for Okta\n• Step 3: Create the Amazon OpenSearch Service access policy in IAM\n• Step 4: Verify the identity provider-initiated Single Sign-On experience with SAML\n• Step 5: Conﬁgure SAML attribute-based ﬁne-grained access control",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1669,
+      "end": 1669
+    },
+    "content_stats": {
+      "char_count": 1392,
+      "word_count": 210
+    },
+    "hierarchy": {
+      "parent": "Using OpenSearch UI in Amazon OpenSearch Service",
+      "children": [
+        "Step 1: Set up identity provider application (Okta)",
+        "Step 2: Set up AWS conﬁguration for Okta",
+        "Step 3: Create the Amazon OpenSearch Service access policy in IAM",
+        "Step 4: Verify the identity provider-initiated Single Sign-On experience with SAML",
+        "Step 5: Conﬁgure SAML attribute-based ﬁne-grained access control"
+      ]
+    }
+  }
+}

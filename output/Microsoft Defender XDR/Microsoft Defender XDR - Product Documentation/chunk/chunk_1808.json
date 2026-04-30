@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1808",
+  "section_number": "155.1.1.248.5.1",
+  "header": "Set up Microsoft Defender XDR send Email tables to Splunk via Event Hubs",
+  "content": "via Event Hubs\nContributor role at the Event Hubs Namespace Resource level or higher for the\nEvent Hubs that you're be exporting to. An export error occurs when you try to save\nthe settings without this permission.\nSecurity Admin Role on the tenant tied to Microsoft Defender XDR and Azure.\n2. Click on Raw Data Export > +Add.\nUse the data that you previously recorded.\nName: This value is local and should be whatever works in your environment.\nForward events to event hub: Select this checkbox.\nEvent-Hub Resource ID: This value is the Event Hubs Namespace Resource ID you\nrecorded when you set up the Event Hubs.\nEvent-Hub name: If you created an Event Hubs inside your Event Hubs Namespace, paste\nthe Event Hubs name you previously recorded.\nIf you choose to let Microsoft Defender XDR to create Event Hubs per Event Types\n(Tables) for you, leave this field empty.\nEvent Types: Select the Advanced Hunting tables that you want to forward to the Event\nHubs and then on to your custom app. Alert tables are from Microsoft Defender XDR,\nDevices tables are from Microsoft Defender for Endpoint (EDR), and Email tables are from\nMicrosoft Defender for Office 365. Email Events records all Email Transactions. The URL\n\n(Safe Links), Attachment (Safe Attachments), and Post Delivery Events (ZAP) are also\nrecorded and can be joined to the Email Events on the NetworkMessageId field.\n3. Make sure to click Submit.\nYou can verify that events are being sent to the Event Hubs by running a basic Advanced\nHunting query. Select Hunting > Advanced Hunting > Query and enter the following query:\nConsole\nThis query shows you how many emails were received in the last hour joined across all the\nother tables. It also shows you if you're seeing events that could be exported to the event\nhubs. If this count shows 0, then you won't see any data going out to the Event Hubs.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1363,
+      "end": 1365
+    },
+    "content_stats": {
+      "char_count": 1863,
+      "word_count": 324
+    },
+    "hierarchy": {
+      "parent": "Configure Microsoft Defender XDR to send email tables",
+      "children": []
+    }
+  }
+}

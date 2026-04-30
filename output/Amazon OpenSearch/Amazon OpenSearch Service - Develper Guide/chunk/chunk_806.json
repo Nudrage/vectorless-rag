@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_806",
+  "section_number": "2.12.4.1.1",
+  "header": "Example",
+  "content": "Consider a GET request to movies/_search?q=thor. Does the user have permissions to search\nthe movies index? If so, does the user have permissions to see all documents within it? Should the\nresponse omit or anonymize any ﬁelds? For the master user, the response might look like this:\n{\n\"hits\": {\n\"total\": 7,\n\"max_score\": 8.772789,\n\"hits\": [{\n\"_index\": \"movies\",\n\"_type\": \"_doc\",\n\"_id\": \"tt0800369\",\n\"_score\": 8.772789,\n\"_source\": {\n\"directors\": [\n\"Kenneth Branagh\",\n\"Joss Whedon\"\n],\n\"release_date\": \"2011-04-21T00:00:00Z\",\n\"genres\": [\n\"Action\",\n\"Adventure\",\n\"Fantasy\"\n],\n\"plot\": \"The powerful but arrogant god Thor is cast out of Asgard to\nlive amongst humans in Midgard (Earth), where he soon becomes one of their finest\ndefenders.\",\n\"title\": \"Thor\",\n\"actors\": [\n\"Chris Hemsworth\",\nThe bigger picture: ﬁne-grained access control and OpenSearch Service security\n1334\nAmazon OpenSearch Service\nDeveloper Guide\n\"Anthony Hopkins\",\n\"Natalie Portman\"\n],\n\"year\": 2011\n}\n},\n...\n]\n}\n}\nIf a user with more limited permissions issues the exact same request, the response might look like\nthis:\n{\n\"hits\": {\n\"total\": 2,\n\"max_score\": 8.772789,\n\"hits\": [{\n\"_index\": \"movies\",\n\"_type\": \"_doc\",\n\"_id\": \"tt0800369\",\n\"_score\": 8.772789,\n\"_source\": {\n\"year\": 2011,\n\"release_date\":\n\"3812a72c6dd23eef3c750c2d99e205cbd260389461e19d610406847397ecb357\",\n\"plot\": \"The powerful but arrogant god Thor is cast out of Asgard to\nlive amongst humans in Midgard (Earth), where he soon becomes one of their finest\ndefenders.\",\n\"title\": \"Thor\"\n}\n},\n...\n]\n}\n}\nThe response has fewer hits and fewer ﬁelds for each hit. Also, the release_date ﬁeld is\nanonymized. If a user with no permissions makes the same request, the cluster returns an error:\n{\nThe bigger picture: ﬁne-grained access control and OpenSearch Service security\n1335\nAmazon OpenSearch Service\nDeveloper Guide\n\"error\": {\n\"root_cause\": [{\n\"type\": \"security_exception\",\n\"reason\": \"no permissions for [indices:data/read/search] and User [name=limited-\nuser, roles=[], requestedTenant=null]\"\n}],\n\"type\": \"security_exception\",\n\"reason\": \"no permissions for [indices:data/read/search] and User [name=limited-\nuser, roles=[], requestedTenant=null]\"\n},\n\"status\": 403\n}\nIf a user provides invalid credentials, the cluster returns an Unauthorized exception.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1363,
+      "end": 1365
+    },
+    "content_stats": {
+      "char_count": 2273,
+      "word_count": 317
+    },
+    "hierarchy": {
+      "parent": "The bigger picture: ﬁne-grained access control and OpenSearch Service security",
+      "children": []
+    }
+  }
+}

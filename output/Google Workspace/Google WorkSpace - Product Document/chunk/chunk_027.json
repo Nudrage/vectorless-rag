@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_027",
+  "section_number": "1.21.3",
+  "header": "Calendar. This can represent one of the following:",
+  "content": "{\n\"email\": string\n}\n{\n\"values\": [\n{\nobject (UserValue (/workspace/admin/reports/reference/rest/v1/activities/list#UserValue))\n}\n]\n}\nA full date, with non-zero year, month, and day values.\nA month and day, with a zero year (for example, an anniversary).\nA year on its own, with a zero month and a zero day.\nA year and month, with a zero day (for example, a credit card expiration date).\nRelated types:\ngoogle.type.TimeOfDay\ngoogle.type.DateTime\ngoogle.protobuf.Timestamp\n(https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)\nJSON representation\nFields\nyear\ninteger\nYear of the date. Must be from 1 to 9999, or 0 to specify a date without a year.\nmonth\ninteger\nMonth of a year. Must be from 1 to 12, or 0 to specify a year without a month and\nday.\nday\ninteger\nDay of a month. Must be from 1 to 31 and valid for the year and month, or 0 to\nspecify a year by itself or a year and month where the day isn't significant.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 18,
+      "end": 19
+    },
+    "content_stats": {
+      "char_count": 929,
+      "word_count": 154
+    },
+    "hierarchy": {
+      "parent": "Date",
+      "children": []
+    }
+  }
+}

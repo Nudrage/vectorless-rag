@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_604",
+  "section_number": "2.9.7.1.2",
+  "header": "Additional resources",
+  "content": "Required permissions for manually created IAM roles\nWhen creating a data source, you choose an IAM role to manage access to your data. You have two\noptions:\n1. Create a new IAM role automatically\n2. Use an existing IAM role that you created manually\nIf you use a manually created role, you need to attach the correct permissions to the role. The\npermissions must allow access to the speciﬁc data source, and allow OpenSearch Service to assume\nthe role so that OpenSearch Service can securely access and interact with your data. Additionally,\ngrant LakeFormation permissions to the role for any databases and tables that you want to query.\nCreating a Security Lake data source\n761\nAmazon OpenSearch Service\nDeveloper Guide\nGrant DESCRIBE permissions to the role on SecurityLake databases that you want to query from\nthe direct query connection. Grant at least SELECT and DESCRIBE permissions to the data source\nrole for tables within the database.\nThe following sample policy demonstrates the least-privilege permissions required to create and\nmanage a data source. If you have broader permissions, such as the AdminstratorAccess policy,\nthese permissions encompasses the least-privilege permissions in the sample policy.\nIn the following sample policy, replace the placeholder text with your own information.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"AmazonOpenSearchDirectQueryServerlessAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:APIAccessAll\",\n\"aoss:DashboardsAccessAll\"\n],\n\"Resource\": \"arn:aws:aoss:us-\neast-1:111122223333:collection/collectionname/*\"\n},\n{\n\"Sid\": \"AmazonOpenSearchDirectQueryGlueAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"glue:GetDatabase\",\n\"glue:GetDatabases\",\n\"glue:GetPartition\",\n\"glue:GetPartitions\",\n\"glue:GetTable\",\n\"glue:GetTableVersions\",\n\"glue:GetTables\",\n\"glue:SearchTables\",\n\"glue:BatchGetPartition\"\n],\n\"Resource\": [\n\"arn:aws:glue:us-east-1:111122223333:table/databasename/*\",\n\"arn:aws:glue:us-east-1:111122223333:database/databasename\",\nCreating a Security Lake data source\n762\nAmazon OpenSearch Service\nDeveloper Guide\n\"arn:aws:glue:us-east-1:111122223333:catalog\",\n\"arn:aws:glue:us-east-1:111122223333:database/default\"\n]\n},\n{\n\"Sid\": \"AmazonOpenSearchDirectQueryLakeFormationAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"lakeformation:GetDataAccess\"\n],\n\"Resource\": [\n\"*\"\n]\n}\n]\n}\nThe role must also have the following trust policy, which speciﬁes the target ID.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"directquery.opensearchservice.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRole\"\n}\n]\n}\nFor instructions to create the role, see Creating a role using custom trust policies.\nBy default, the role has access to direct query data source indexes only. Although you can conﬁgure\nthe role to limit or grant access to your data source, it is recommended you not adjust the access of\nthis role. If you delete the data source, this role will be deleted. This will remove access for any\nother users if they are mapped to the role.\nCreating a Security Lake data source\n763\nAmazon OpenSearch Service\nDeveloper Guide\nQuerying Security Lake data that's encrypted with a customer managed key\nIf the Security Lake bucket associated with the data connection is encrypted using server-side\nencryption with a customer managed AWS KMS key, you must add the LakeFormation service role\nto the key policy. This allows the service to access and read the data for your queries.\nIn the following sample policy, replace the placeholder text with your own information.\n{\n\"Sid\": \"Allow LakeFormation to access the key\",\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::account:role/aws-service-role/lakeformation.amazonaws.com/\nAWSServiceRoleForLakeFormationDataAccess\"\n},\n\"Action\": [\n\"kms:Encrypt\",\n\"kms:Decrypt\",\n\"kms:ReEncrypt*\",\n\"kms:GenerateDataKey*\",\n\"kms:DescribeKey\"\n],\n\"Resource\": \"*\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 790,
+      "end": 793
+    },
+    "content_stats": {
+      "char_count": 3864,
+      "word_count": 497
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon Security Lake data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

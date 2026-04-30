@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1725",
+  "section_number": "155.1.1.236.3",
+  "header": "Other restrictions",
+  "content": "The advanced hunting API has some limitations on the number of results returned, and\nthe data that can be queried.\n1. You can only query data from the past 30 days.\n2. The results will include a maximum of 100,000 rows.\nThe Microsoft Defender XDR APIs have throttling thresholds.\nIncidents API: Up to 50 calls per minute or 1500 calls per hour.\nAdvanced Hunting API: Up to 45 calls per minute, 10 minutes of running time per\nhour, and 4 hours of running time per day.\nThe HTTP response status code indicating throttling is 429 .\nIf your request has been throttled, the response body will indicate the time when you\ncan start making requests again.\nMicrosoft Defender XDR APIs overview\nSupported Microsoft Defender XDR APIs\nAccess the Microsoft Defender XDR APIs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1294,
+      "end": 1295
+    },
+    "content_stats": {
+      "char_count": 761,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR APIs license and terms of use",
+      "children": [
+        "Quotas and resource allocation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_782",
+  "section_number": "2.12.2.1.2",
+  "header": "Identity-based policies",
+  "content": "Unlike resource-based policies, which are a part of each OpenSearch Service domain, you attach\nidentity-based policies to users or roles using the AWS Identity and Access Management (IAM)\nservice. Just like resource-based policies, identity-based policies specify who can access a service,\nwhich actions they can perform, and if applicable, the resources on which they can perform those\nactions.\nWhile they certainly don't have to be, identity-based policies tend to be more generic. They often\ngovern only the conﬁguration API actions a user can perform. After you have these policies in\nplace, you can use resource-based policies (or ﬁne-grained access control) in OpenSearch Service to\noﬀer users access to OpenSearch indexes and APIs.\nNote\nUsers with the AWS managed AmazonOpenSearchServiceReadOnlyAccess policy can't\nsee cluster health status on the console. To allow them to see cluster health status (and\nother OpenSearch data), add the es:ESHttpGet action to an access policy and attach it to\ntheir accounts or roles.\nTypes of policies\n1302\nAmazon OpenSearch Service\nDeveloper Guide\nBecause identity-based policies attach to users or roles (principals), the JSON doesn't specify a\nprincipal. The following policy grants access to actions that begin with Describe and List. This\ncombination of actions provides read-only access to domain conﬁgurations, but not to the data\nstored in the domain itself:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Action\": [\n\"es:Describe*\",\n\"es:List*\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": \"*\"\n}\n]\n}\nAn administrator might have full access to OpenSearch Service and all data stored on all domains:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Action\": [\n\"es:*\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": \"*\"\n}\n]\n}\nTypes of policies\n1303\nAmazon OpenSearch Service\nDeveloper Guide\nIdentity-based policies let you use tags to control access to the conﬁguration API. The following\npolicy, for example, lets attached principals view and update a domain's conﬁguration if the\ndomain has the team:devops tag:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Action\": [\n\"es:UpdateDomainConfig\",\n\"es:DescribeDomain\",\n\"es:DescribeDomainConfig\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": \"*\",\n\"Condition\": {\n\"ForAnyValue:StringEquals\": {\n\"aws:ResourceTag/team\": [\n\"devops\"\n]\n}\n}\n}]\n}\nYou can also use tags to control access to the OpenSearch API. Tag-based policies for\nthe OpenSearch API only apply to HTTP methods. For example, the following policy lets\nattached principals send GET and PUT requests to the OpenSearch API if the domain has the\nenvironment:production tag:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Action\": [\n\"es:ESHttpGet\",\n\"es:ESHttpPut\"\n],\nTypes of policies\n1304\nAmazon OpenSearch Service\nDeveloper Guide\n\"Effect\": \"Allow\",\n\"Resource\": \"*\",\n\"Condition\": {\n\"ForAnyValue:StringEquals\": {\n\"aws:ResourceTag/environment\": [\n\"production\"\n]\n}\n}\n}]\n}\nFor more granular control of the OpenSearch API, consider using ﬁne-grained access control.\nNote\nAfter you add one or more OpenSearch APIs to any tag-based policy, you must perform a\nsingle tag operation (such as adding, removing, or modifying a tag) in order for the changes\nto take eﬀect on a domain. You must be on service software R20211203 or later to include\nOpenSearch API operations in tag-based policies.\nOpenSearch Service supports the RequestTag and TagKeys global condition keys for the\nconﬁguration API, not the OpenSearch API. These conditions only apply to API calls that include\ntags within the request, such as CreateDomain, AddTags, and RemoveTags. The following policy\nlets attached principals create domains, but only if they include the team:it tag in the request:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": {\n\"Effect\": \"Allow\",\n\"Action\": [\n\"es:CreateDomain\",\n\"es:AddTags\"\n],\n\"Resource\": \"*\",\n\"Condition\": {\n\"StringEquals\": {\nTypes of policies\n1305\nAmazon OpenSearch Service\nDeveloper Guide\n\"aws:RequestTag/team\": [\n\"it\"\n]\n}\n}\n}\n}\nFor more information about using tags for access control and the diﬀerences between resource-\nbased and identity-based policies, see the Deﬁne permissions based on attributes with ABAC\nauthorization in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1331,
+      "end": 1335
+    },
+    "content_stats": {
+      "char_count": 4158,
+      "word_count": 609
+    },
+    "hierarchy": {
+      "parent": "Types of policies",
+      "children": []
+    }
+  }
+}

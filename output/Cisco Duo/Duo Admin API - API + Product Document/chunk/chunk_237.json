@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_237",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\nactivation_msg\nThe text of the activation message.\nactivation_barcode\nURL of a QR code. Scan the code with Duo Mobile to\ncomplete activation. This QR code contains the same\nactivation code as activation_url .\nPOST  /admin/v1/phones/[phone_id]/send_sms_activation\ninstallation_msg\nThe text of the installation message. Only present if the\ninstall  parameter was set to 1  in the request.\nvalid_secs\nAn integer indicating the number of seconds that the\nactivation URL remains valid.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 84,
+      "end": 85
+    },
+    "content_stats": {
+      "char_count": 490,
+      "word_count": 71
+    },
+    "hierarchy": {
+      "parent": "Phones",
+      "children": []
+    }
+  }
+}

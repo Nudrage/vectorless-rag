@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1086",
+  "section_number": "2.16.6.3",
+  "header": "GPU-acceleration and write operations",
+  "content": "GPU-acceleration is activated when OpenSearch's vector ingestion rate (MB/\nsec) is within a range. On OpenSearch domains, you have the ﬂexibility to\nconﬁgure this range through index.knn.remote_index_build.size.min and\nindex.knn.remote_index_build.size.max. For example, with the lower range default of 50\nMB, writing 15,000 full-precision vectors with 768 dimension between refresh intervals will trigger\nGPU-acceleration by default.\nData is written with the following API operations:\n• Flush\n• Bulk\n• Reindex\n• Index\n• Update\n• Delete\n• Force Merge\nGPU-acceleration and write operations\n1605\nAmazon OpenSearch Service\nDeveloper Guide\nGPU-acceleration is activated with both automatic and manual segment merges.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1634,
+      "end": 1635
+    },
+    "content_stats": {
+      "char_count": 712,
+      "word_count": 97
+    },
+    "hierarchy": {
+      "parent": "GPU-acceleration for vector indexing",
+      "children": []
+    }
+  }
+}

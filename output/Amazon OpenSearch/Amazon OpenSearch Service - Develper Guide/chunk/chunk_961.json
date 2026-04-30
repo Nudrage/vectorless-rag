@@ -1,0 +1,34 @@
+{
+  "chunk_id": "chunk_961",
+  "section_number": "2.15.5",
+  "header": "Importing and managing packages in Amazon OpenSearch Service",
+  "content": "Service\nAmazon OpenSearch Service lets you upload custom dictionary ﬁles, such as stop words and\nsynonyms, and associate plugins with your domain. These plugins can be pre-packaged, custom, or\nthird-party, which gives you ﬂexibility to extend your domain’s functionality. The generic term for\nall these types of ﬁles is packages.\n• Dictionary ﬁles help reﬁne search results by instructing OpenSearch to ignore common high-\nfrequency words or to treat similar terms, like \"frozen custard,\" \"gelato,\" and \"ice cream,\" as\nequivalent. They can also improve stemming, as seen with the Japanese (kuromoji) analysis\nplugin.\n• Pre-packaged plugins provide built-in functionality, such as the Amazon Personalize plugin\nfor personalized search results. These plugins use the ZIP-PLUGIN package type. For more\ninformation, see the section called “Plugins by engine version”.\n• Custom and third-party plugins allow you to add tailored features or integrate with external\nsystems, which oﬀers even more ﬂexibility for your domain. Like pre-packaged plugins, you\nupload custom plugins as ZIP-PLUGIN packages. For third-party plugins, you must also import\nthe plugin license and conﬁguration ﬁles as separate packages, then associate them all with the\ndomain.\nFor more information, see the following topics:\n• the section called “Custom plugins”\n• the section called “Third-party plugins”\nNote\nYou can associate a maximum of 20 plugins with a single domain. This limit includes all\nplugin types—optional, third-party, and custom plugins.\nTopics\n• Required permissions\n• Uploading packages to Amazon S3\n• Importing and associating packages\nPackages\n1475\nAmazon OpenSearch Service\nDeveloper Guide\n• Using packages with OpenSearch\n• Updating packages\n• Manually updating indexes with a new dictionary\n• Dissociating and removing packages\n• Managing custom plugins in Amazon OpenSearch Service\n• Installing third-party plugins in Amazon OpenSearch Service",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1504,
+      "end": 1505
+    },
+    "content_stats": {
+      "char_count": 1936,
+      "word_count": 285
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": [
+        "Required permissions",
+        "Uploading packages to Amazon S3",
+        "Importing and associating packages",
+        "Using packages with OpenSearch",
+        "Updating packages",
+        "Manually updating indexes with a new dictionary",
+        "Dissociating and removing packages",
+        "Managing custom plugins in Amazon OpenSearch Service",
+        "Installing third-party plugins in Amazon OpenSearch Service"
+      ]
+    }
+  }
+}

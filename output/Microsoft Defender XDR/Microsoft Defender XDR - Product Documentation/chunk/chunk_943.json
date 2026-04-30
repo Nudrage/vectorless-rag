@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_943",
+  "section_number": "155.1.1.97",
+  "header": "AIAgentsInfo (Preview)",
+  "content": "Applies to: Microsoft Defender XDR, Microsoft Defender for Cloud Apps\nThe AIAgentsInfo  table in the advanced hunting schema contains information about various\nentities—files, IP addresses, URLs, users, or devices—associated with alerts from Microsoft\nDefender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps,\nand Microsoft Defender for Identity. Use this reference to construct queries that return\ninformation from this table.\nThis advanced hunting table is populated by records from various Microsoft Defender services.\nIf your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the\ntable don't work or return any results. For more information about how to deploy services in\nMicrosoft Defender XDR, see Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nLast date and time recorded for the agent info\nAIAgentId\nguid\nUnique identifier for the agent as assigned to it in\nMicrosoft 365 Copilot or Copilot Studio\nAIAgentName\nstring\nDisplay name of the agent\nAgentCreationTime\ndatetime\nDate and time when the agent was created\nCreatorAccountUpn\nstring\nUser principal name (UPN) of the account that created\nthe agent\nOwnerAccountUpns\nstring\nUser principal names (UPN) of all the owners of the\nagent\nLastModifiedByUpn\nstring\nUser principal name (UPN) of the account that last\n） Important\nSome information relates to prereleased product that may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nmodified that agent\nLastModifiedTime\ndatetime\nDate and time when the agent was last modified\nLastPublishedTime\ndatetime\nDate and time when the agent was last published\nLastPublishedByUpn\nstring\nUser principal name (UPN) of the account that last\npublished the agent\nAgentDescription\nstring\nDescription of the agent as displayed in the agent's\nsource\nAgentStatus\nstring\nStatus of the agent; possible values: Created, Published,\nDeleted\nUserAuthenticationType\nstring\nThe agent’s configured authentication type for users\ninteracting with the agent; possible values: None,\nMicrosoft, Custom\nAgentUsers\nstring\nList of user principal names (UPNs) or group IDs that\ncan use the agent\nKnowledgeDetails\nstring\nDetails about the knowledge sources added to the\nagent\nAgentActionTriggers\nstring\nList of triggers that makes an autonomous agent take\naction\nRawAgentInfo\nstring\nContents of the raw JSON that describes the agent and\ncontains configuration details, as received from the\nprovider\nAuthenticationTrigger\nstring\nIndicates when authentication is triggered for the agent;\npossible values: As Needed, Always\nAccessControlPolicy\nstring\nUsers that can interact with the agent; possible values:\nAny, Copilot readers, Group membership, Any\n(multitenant)\nAuthorizedSecurityGroupIds\ndynamic\nList of Azure Active Directory Group IDs that are allowed\nto interact with the agent\nAgentTopicsDetails\ndynamic\nSpecifications of the topics that the agent can perform\nAgentToolsDetails\ndynamic\nSpecifications of the tools that the agent can access and\nperform actions on\nEnvironmentId\nstring\nThe identifier of the Microsoft Power Platform\nenvironment the agent resides in\nColumn name\nData\ntype\nDescription\nPlatform\nstring\nThe platform that provided the information about the\nagents; possible values: Copilot Studio\nIsGenerativeOrchestrationEnabled\nboolean\nndicates whether the agent uses generative\norchestration (that is, dynamically chooses tools,\nknowledge, and actions based on context) to operate\nAgentAppId\nstring\nThe unique app identifier registered for the agent in\nMicrosoft Entra\nConnectedAgentsSchemaNames\ndynamic\nLists the schema names of connected agents, which are\nindependently managed agents that are linked to the\nmain one for orchestration\nChildAgentsSchemaNames\ndynamic\nLists the schema names of the child agents that exist\nwithin the main agent\nIt's critical to identify agents that lack authentication mechanisms, as these agents might pose\nsignificant risks to the organization due to their public availability. Organizations should know\nabout these agents so they can address any issues.\nRecommendations:\nConfirm the agent's use case with the owner to determine if it's intended for public\naccess.\nReview the topics, actions, and knowledge sources to ensure there's no internal or\nsensitive information included.\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 635,
+      "end": 637
+    },
+    "content_stats": {
+      "char_count": 4564,
+      "word_count": 649
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Sample queries",
+        "Related topics"
+      ]
+    }
+  }
+}

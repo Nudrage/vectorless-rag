@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_423",
+  "section_number": "2.7.10.12.6",
+  "header": "Updating SAML providers",
+  "content": "To update a SAML provider using the OpenSearch Serverless console, choose SAML\nauthentication, select your identity provider, and choose Edit. You can modify all ﬁelds, including\nthe metadata and custom attributes.\nTo update a provider through the OpenSearch Serverless API, send an UpdateSecurityConﬁg\nrequest and include the identiﬁer of the policy to be updated. You must also include\na conﬁguration version, which you can retrieve using the ListSecurityConfigs or\nSAML authentication\n578\nAmazon OpenSearch Service\nDeveloper Guide\nGetSecurityConfig commands. Including the most recent version ensures that you don't\ninadvertently override a change made by someone else.\nThe following request updates the SAML options for a provider:\naws opensearchserverless update-security-config \\\n--id saml/123456789012/myprovider \\\n--type saml \\\n--saml-options file://saml-auth0.json \\\n--config-version MTY2NDA1MjY4NDQ5M18x\nSpecify your SAML conﬁguration options as a key-value map within a .json ﬁle.\nImportant\nUpdates to SAML options are not incremental. If you don't specify a value for a parameter\nin the SAMLOptions object when you make an update, the existing values will be\noverridden with empty values. For example, if the current conﬁguration contains a value for\nuserAttribute, and then you make an update and don't include this value, the value is\nremoved from the conﬁguration. Make sure you know what the existing values are before\nyou make an update by calling the GetSecurityConfig operation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 607,
+      "end": 608
+    },
+    "content_stats": {
+      "char_count": 1497,
+      "word_count": 217
+    },
+    "hierarchy": {
+      "parent": "SAML authentication for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_647",
+  "section_number": "155.1.1.61.1",
+  "header": "How automatic attack disruption works",
+  "content": "This game-changing capability limits a threat actor's progress early on and dramatically\nreduces the overall impact of an attack, from associated costs to loss of productivity.\nWe understand that taking automatic action sometimes comes with hesitation from security\nteams, given the potential impact it can have on an organization. Therefore, the automatic\nattack disruption capabilities in Defender XDR are designed to rely on high-fidelity signals. It\nalso uses Defender XDR's incident correlation with millions of Defender product signals across\nemail, identity, applications, documents, devices, networks, and files. Insights from the\ncontinuous investigation of thousands of incidents by Microsoft's security research team\nensure that automatic attack disruption maintains a high signal-to-noise ratio (SNR).\nInvestigations are integral to monitoring our signals and the attack threat landscape to ensure\nhigh quality and accurate protection.\nAutomatic attack disruption uses Microsoft-based XDR response actions. Examples of these\nactions are:\nDevice contain - based on Microsoft Defender for Endpoint's capability, this action is an\nautomatic containment of a suspicious device to block any incoming/outgoing\ncommunication with the said device.\nIn addition, Defender for Endpoint automatically contains malicious IP addresses\nassociated with undiscovered/not onboarded devices to block any lateral movement\nand encryption activity to other Defender for Endpoint-onboarded/discovered devices.\nIt does this through its Contain IP (Preview) policy. Moreover, compromised critical\nassets' IP addresses are also automatically contained with specific blocking\nmechanisms to stop the spread of an attack while avoiding productivity loss.\nDisable user - based on Microsoft Defender for Identity's capability, this action is an\nautomatic suspension of a compromised account to prevent additional damage like",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 416,
+      "end": 417
+    },
+    "content_stats": {
+      "char_count": 1905,
+      "word_count": 261
+    },
+    "hierarchy": {
+      "parent": "Automatic attack disruption in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

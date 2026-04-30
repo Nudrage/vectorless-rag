@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_063",
+  "section_number": "2.6.8.2.3",
+  "header": "Step 3: Ingest some sample data",
+  "content": "When the pipeline status is Active, you can start ingesting data into it. You must sign all HTTP\nrequests to the pipeline using Signature Version 4. Use an HTTP tool such as Postman or awscurl to\nsend some data to the pipeline. As with indexing data directly to a collection, ingesting data into a\npipeline always requires either an IAM role or an IAM access key and secret key.\nTutorial: Ingest data into a collection\n56\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nThe principal signing the request must have the osis:Ingest IAM permission.\nFirst, get the ingestion URL from the Pipeline settings page:\nThen, send some sample data to the ingestion path. The following sample request uses awscurl to\nsend a single log ﬁle to the pipeline:\nawscurl --service osis --region us-east-1 \\\n-X POST \\\n-H \"Content-Type: application/json\" \\\n-d\n'[{\"time\":\"2014-08-11T11:40:13+00:00\",\"remote_addr\":\"122.226.223.69\",\"status\":\"404\",\"request\":\nhttp://www.k2proxy.com//hello.html HTTP/1.1\",\"http_user_agent\":\"Mozilla/4.0\n(compatible; WOW64; SLCC2;)\"}]' \\\nhttps://pipeline-endpoint.us-east-1.osis.amazonaws.com/logs\nYou should see a 200 OK response.\nNow, query the my_logs index to ensure that the log entry was successfully ingested:\nawscurl --service aoss --region us-east-1 \\\n-X GET \\\nhttps://collection-id.us-east-1.aoss.amazonaws.com/my_logs/_search | json_pp\nSample response:\n{\n\"took\":348,\n\"timed_out\":false,\nTutorial: Ingest data into a collection\n57\nAmazon OpenSearch Service\nDeveloper Guide\n\"_shards\":{\n\"total\":0,\n\"successful\":0,\n\"skipped\":0,\n\"failed\":0\n},\n\"hits\":{\n\"total\":{\n\"value\":1,\n\"relation\":\"eq\"\n},\n\"max_score\":1.0,\n\"hits\":[\n{\n\"_index\":\"my_logs\",\n\"_id\":\"1%3A0%3ARJgDvIcBTy5m12xrKE-y\",\n\"_score\":1.0,\n\"_source\":{\n\"time\":\"2014-08-11T11:40:13+00:00\",\n\"remote_addr\":\"122.226.223.69\",\n\"status\":\"404\",\n\"request\":\"GET http://www.k2proxy.com//hello.html HTTP/1.1\",\n\"http_user_agent\":\"Mozilla/4.0 (compatible; WOW64; SLCC2;)\",\n\"@timestamp\":\"2023-04-26T05:22:16.204Z\"\n}\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 85,
+      "end": 87
+    },
+    "content_stats": {
+      "char_count": 1968,
+      "word_count": 233
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Ingesting data into a collection using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

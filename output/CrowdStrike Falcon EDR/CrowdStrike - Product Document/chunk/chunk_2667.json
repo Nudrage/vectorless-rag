@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2667",
+  "section_number": "1.5.910.1",
+  "header": "Fields: Windows, macOS, Linux",
+  "content": "Field\nDescription\nHbfwRuleId\nContextTimeStamp\nSystem time of event creation.\nLocalAddressIP4\nRemoteAddressIP4\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n931/1226\nField\nDescription\nNetworkProfile\nValues:\nNET_PROFILE_INVALID (0)\nNET_PROFILE_DOMAIN (0x01)\nNET_PROFILE_PUBLIC (0x02)\nNET_PROFILE_PRIVATE (0x04)\nNET_PROFILE_ANY (0xff)\nRuleMatchCount\nConnectionDirection\nValues:\nDIRECTION_OUTBOUND (0)\nDIRECTION_INBOUND (1)\nDIRECTION_NEITHER (2)\nDIRECTION_BOTH (3)\nDIRECTION_UNKNOWN (4)\nRuleAction\nValues:\nRULE_ACTION_INVALID (0)\nRULE_ACTION_ALLOW (1)\nRULE_ACTION_DENY (2)\nRULE_ACTION_DELAY (3)\nProtocol\nValues:\nIP (0)\nICMP (1)\nIGMP (2)\nTCP (6)\nUDP (17)\nIPV6 (41)\nGRE (47)\nICMPV6 (58)\nUNKNOWN (255)\nContextProcessId\nUPID of process originating this event.\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nLocalPort\nRemotePort\nIcmpType\nRFC-792 ICMP type\nIcmpCode\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nPolicyIdentifier\nID of Data Protection Policy matched to the egress event.\nHbfwRuleFlags\nRuleMatchCountSinceLastReport\nDomainNameList\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 931,
+      "end": 932
+    },
+    "content_stats": {
+      "char_count": 1650,
+      "word_count": 199
+    },
+    "hierarchy": {
+      "parent": "FirewallRuleIP4Matched",
+      "children": []
+    }
+  }
+}

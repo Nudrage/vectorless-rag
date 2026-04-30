@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_963",
+  "section_number": "2.15.5.2",
+  "header": "Uploading packages to Amazon S3",
+  "content": "This section covers how to upload custom dictionary packages, since pre-packaged plugin packages\nare already installed. Before you can associate a custom dictionary with your domain, you must\nupload it to an Amazon S3 bucket. For instructions, see Uploading objects in the Amazon Simple\nStorage Service User Guide. Supported plugins don't need to be uploaded.\nIf your dictionary contains sensitive information, specify server-side encryption with S3-managed\nkeys when you upload it. OpenSearch Service can't access ﬁles in S3 that you protect using an AWS\nKMS key.\nAfter you upload the ﬁle, make note of its S3 path. The path format is s3://amzn-s3-demo-\nbucket/file-path/file-name.\nRequired permissions\n1476\nAmazon OpenSearch Service\nDeveloper Guide\nYou can use the following synonyms ﬁle for testing purposes. Save it as synonyms.txt.\ndanish, croissant, pastry\nice cream, gelato, frozen custard\nsneaker, tennis shoe, running shoe\nbasketball shoe, hightop\nCertain dictionaries, such as Hunspell dictionaries, use multiple ﬁles and require their own\ndirectories on the ﬁle system. At this time, OpenSearch Service only supports single-ﬁle\ndictionaries.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1505,
+      "end": 1506
+    },
+    "content_stats": {
+      "char_count": 1152,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "Importing and managing packages in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

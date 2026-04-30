@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_382",
+  "section_number": "2.7.10.8.4",
+  "header": "Creating network policies (console)",
+  "content": "Network policies can apply to existing policies as well as future policies. We recommend that you\ncreate network policies before you start creating collections.\nTo create an OpenSearch Serverless network policy\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nOn the left navigation panel, expand Serverless and choose Network policies.\n3.\nChoose Create network policy.\n4.\nProvide a name and description for the policy.\n5.\nProvide one or more rules. These rules deﬁne access permissions for your OpenSearch\nServerless collections and their OpenSearch Dashboards endpoints.\nEach rule contains the following elements:\nElement\nDescription\nRule name\nA name that describes the contents of the\nrule. For example, \"VPC access for marketing\nteam\".\nAccess type\nChoose either public or private access. Then,\nselect one or both of the following:\nNetwork access\n535\nAmazon OpenSearch Service\nDeveloper Guide\nElement\nDescription\n• VPC endpoints for access – Specify one\nor more OpenSearch Serverless-managed\nVPC endpoints–managed VPC endpoints.\n• AWS service private access – Select one\nor more supported AWS services.\nResource type\nSelect whether to provide access to\nOpenSearch endpoints (which allows\nmaking calls to the OpenSearch API), to\nOpenSearch Dashboards (which allows\naccess to visualizations and the user\ninterface for OpenSearch plugins), or both.\nNote\nAWS service private access only\napplies to the collection's OpenSearc\nh endpoint, not to the OpenSearc\nh Dashboards endpoint. Even if you\nselect OpenSearch Dashboards,\nAWS services can only be granted\nendpoint access.\nFor each resource type that you select, you can choose existing collections to apply the policy\nsettings to, and/or create one or more resource patterns. Resource patterns consist of a preﬁx\nand a wildcard (*), and deﬁne which collections the policy settings will apply to.\nFor example, if you include a pattern called Marketing*, any new or existing collections\nwhose names start with \"Marketing\" will have the network settings in this policy automatically\napplied to them. A single wildcard (*) applies the policy to all current and future collections.\nIn addition, you can specify the name of a future collection without a wildcard, such as\nFinance. OpenSearch Serverless will apply the policy settings to any newly created collection\nwith that exact name.\nNetwork access\n536\nAmazon OpenSearch Service\nDeveloper Guide\n6.\nWhen you're satisﬁed with your policy conﬁguration, choose Create.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 564,
+      "end": 566
+    },
+    "content_stats": {
+      "char_count": 2506,
+      "word_count": 377
+    },
+    "hierarchy": {
+      "parent": "Network access for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1220",
+  "section_number": "2.19.5.4",
+  "header": "Tutorial: Automating Index State Management processes",
+  "content": "This tutorial demonstrates how to implement an ISM policy that automates routine index\nmanagement tasks and apply them to indexes and index patterns.\nIndex State Management (ISM) in Amazon OpenSearch Service lets you automate recurring index\nmanagement activities, so you can avoid using additional tools to manage index lifecycles. You can\ncreate a policy that automates these operations based on index age, size, and other conditions, all\nfrom within your Amazon OpenSearch Service domain.\nOpenSearch Service supports three storage tiers: the default \"hot\" state for active writing and\nlow-latency analytics, UltraWarm for read-only data up to three petabytes, and cold storage for\nunlimited long-term archival.\nTutorial: Automating ISM processes\n1730\nAmazon OpenSearch Service\nDeveloper Guide\nThis tutorial presents a sample use case of handling time-series data in daily indexes. In this\ntutorial, you set up a policy that takes an automated snapshot of each attached index after 24\nhours. It then migrates the index from the default hot state to UltraWarm storage after two days,\ncold storage after 30 days, and ﬁnally deletes the index after 60 days.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1759,
+      "end": 1760
+    },
+    "content_stats": {
+      "char_count": 1156,
+      "word_count": 178
+    },
+    "hierarchy": {
+      "parent": "Index State Management in Amazon OpenSearch Service",
+      "children": [
+        "Prerequisites",
+        "Step 1: Conﬁgure the ISM policy",
+        "Step 2: Attach the policy to one or more indexes"
+      ]
+    }
+  }
+}

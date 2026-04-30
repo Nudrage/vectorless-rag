@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_210",
+  "section_number": "2.6.19.2.1",
+  "header": "Grant connecting accounts access to a pipeline",
+  "content": "The procedures in this section describe how to use the OpenSearch Service console and the AWS\nCLI to set up cross-account pipeline access by creating a resource policy. A resource policy enables a\npipeline owner to specify other accounts that can access a pipeline. Once created, pipeline policies\nexist for as long as the pipeline exists or until the policy is deleted.\nNote\nResource policies don't replace standard OpenSearch Ingestion authoriziation using IAM\npermissions. Resource policies are an added authorization mechanism for enabling cross-\naccount pipeline access.\nTopics\n• Grant connecting accounts access to a pipeline (console)\nConﬁguring pipelines for cross-account ingestion\n310\nAmazon OpenSearch Service\nDeveloper Guide\n• Grant connecting accounts access to a pipeline (CLI)\nGrant connecting accounts access to a pipeline (console)\nUse the following procedure to grant connecting accounts access to a pipeline by using the Amazon\nOpenSearch Service console.\nTo create a pipeline endpoint connection\n1.\nIn the Amazon OpenSearch Service console, in the navigation pane, expand Ingestion, and\nthen select Pipelines.\n2.\nIn the Pipelines section, choose the name of a pipeline that you want to grant access for a\nconnecting account.\n3.\nChoose the VPC endpoints tab.\n4.\nIn the Authorized principals section, choose Authorize account.\n5.\nIn the AWS account ID ﬁeld, enter the 12-digit number account ID, and then select Authorize.\nGrant connecting accounts access to a pipeline (CLI)\nUse the following procedure to grant connecting accounts access to a pipeline by using the AWS\nCLI.\nTo grant connecting accounts access to the pipeline\n1.\nUpdate to the latest version of the AWS CLI (version 2.0). For more information, see Installing\nor updating to the latest version of the AWS CLI.\n2.\nOpen the CLI in the account and AWS Region with the pipeline you want to share.\n3.\nRun the following command to create a resource policy for the pipeline. This policy gives\nthe osis:CreatePipelineEndpoint permission on the pipeline. The policy includes a\nparameter where you can list AWS account IDs to allow.\nNote\nIn the following command, you must use the short form of the account ID by providing\nonly the twelve- digit account ID. Using an ARN will not work. You must also provide\nConﬁguring pipelines for cross-account ingestion\n311\nAmazon OpenSearch Service\nDeveloper Guide\nthe Amazon Resource Name (ARN) of the pipeline in the CLI parameter for resource-\narn and in the policy JSON under Resource, as shown.\naws --region region osis-cross-account put-resource-policy \\\n--resource-arn arn:aws:osis:region:pipeline-owner-account-ID:pipeline/pipeline-\nname\n--policy 'IAM-policy'\nUse a policy like the following for IAM-policy\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"AllowAccess\",\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": [\n\"111122223333\",\n\"444455556666\"\n]\n},\n\"Action\":\n\"osis:CreatePipelineEndpoint\",\n\"Resource\": \"arn:aws:osis:us-east-1:123456789012:pipeline/pipeline-name\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 339,
+      "end": 341
+    },
+    "content_stats": {
+      "char_count": 2996,
+      "word_count": 445
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring OpenSearch Ingestion pipelines for cross-account ingestion",
+      "children": []
+    }
+  }
+}

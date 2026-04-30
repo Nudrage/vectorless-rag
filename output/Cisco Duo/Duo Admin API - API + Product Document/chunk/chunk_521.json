@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_521",
+  "section_number": "1.17.27",
+  "header": "Remembered Devices",
+  "content": "Section Name: remembered_devices\nCorresponds to: Remembered Devices\nThis section affects how and when users can skip subsequent 2FA and Duo\nPasswordless (if enabled) login requests.\nNote: Passwordless users will be able to remember devices for no longer than three\ndays, regardless of the selected length of time entered via max_time_units  and\nmax_time_value .\nKey\nValue\nbrowser_apps\nKey\nValue\nenabled\nIs true  (default) if devices are rememb\nfor browser-based apps. Otherwise fal\nremember_method\nOne of user-based  or risk-based\n(default). risk-based  only available in\nPremier and Advantage editions.\nuser_based\nAllow users to remember their devices f\nbrowser-based applications.\nKey\nValue\nconfirm_per_app\nIs true  if the\nuser must con\nfor each brow\nbased applicat\nseparately.\nOtherwise fa\n(default).\nallow-all : No restrictions.\n•\nwarn-only  (default): Warn if plugin is out of date.\n•\nwarn-and-block : warn if out of date; block after\njava_max_ood_days .\n•\nblock-all : Blocked; no access.\n•\nmax_time_units\nOne of days\nhours  (defau\nmax_time_value\nIf\nmax_time_un\nis set to:\nDefaults to 12\nrisk_based\nThis set of keys is available in the Premie\nAdvantage editions. Remember user dev\nusing risk-based authentication.\nKey\nValue\nmax_time_units\nOne of days\n(default) or hou\nmax_time_value\nIf\nmax_time_uni\nis set to:\nDefaults to 30\nwindows_logon\nKey\nValue\nenabled\nIs true  if devices are remembered for\nWindows Logon. Otherwise false  (def\n2FA will be enforced after users sign out,\nreboot, or change networks.\ndays : an\ninteger 1\n365 ,\ninclusive.\n•\nhours : a\ninteger  1\n8760 ,\ninclusive.\n•\ndays : an\ninteger 1\n365 , inclu\n•\nhours : an\ninteger  1\n8760 ,\ninclusive.\n•\nmax_time_units\nOne of days  (default) or hours .\nmax_time_value\nIf max_time_units  is set to:\nDefaults to 30 .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 224,
+      "end": 226
+    },
+    "content_stats": {
+      "char_count": 1775,
+      "word_count": 281
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

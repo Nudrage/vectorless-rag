@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1494",
+  "section_number": "2.27.1.1",
+  "header": "Adding a document to an index",
+  "content": "To add a document to an index, you can use any HTTP tool, such as Postman, cURL, or the\nOpenSearch Dashboards console. These examples assume that you’re using the developer console\nin OpenSearch Dashboards. If you’re using a diﬀerent tool, adjust accordingly by providing the full\nURL and credentials, if necessary.\nTo add a document to an index\n1.\nNavigate to the OpenSearch Dashboards URL for your domain. You can ﬁnd the URL on the\ndomain's dashboard in the OpenSearch Service console. The URL follows this format:\ndomain-endpoint/_dashboards/\n2.\nSign in using your primary username and password.\n3.\nOpen the left navigation panel and choose Dev Tools.\n4.\nThe HTTP verb for creating a new resource is PUT, which is what you use to create a new\ndocument and index. Enter the following command in the console:\nPUT fruit/_doc/1\n{\n\"name\":\"strawberry\",\n\"color\":\"red\"\n}\nThe PUT request creates an index named fruit and adds a single document to the index with an\nID of 1. It produces the following response:\n{\n\"_index\" : \"fruit\",\n\"_type\" : \"_doc\",\n\"_id\" : \"1\",\n\"_version\" : 1,\n\"result\" : \"created\",\n\"_shards\" : {\n\"total\" : 2,\n\"successful\" : 2,\n\"failed\" : 0\n},\n\"_seq_no\" : 0,\nAdding a document to an index\n1999\nAmazon OpenSearch Service\nDeveloper Guide\n\"_primary_term\" : 1\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2028,
+      "end": 2029
+    },
+    "content_stats": {
+      "char_count": 1270,
+      "word_count": 217
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Creating and searching for documents in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

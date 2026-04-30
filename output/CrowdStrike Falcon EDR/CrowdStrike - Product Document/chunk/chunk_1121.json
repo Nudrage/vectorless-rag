@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1121",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING (0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nTags\nField used for Falcon diagnostic information.\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nBehaviorMLContextPatterns\nBehaviorMLContextTemplates\nModelPrediction\nParentProcessId\nThe decimal representation of the parent process.\nGrandparentProcessId\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nProcessBehavioralContext\nParentProcessBehavioralContext\nGrandparentProcessBehavioralContext",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 297,
+      "end": 297
+    },
+    "content_stats": {
+      "char_count": 973,
+      "word_count": 97
+    },
+    "hierarchy": {
+      "parent": "BMLFeatureData",
+      "children": []
+    }
+  }
+}

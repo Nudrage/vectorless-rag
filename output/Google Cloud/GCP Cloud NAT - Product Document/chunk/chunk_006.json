@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "1.1.4",
+  "header": "What is logged",
+  "content": "Cloud NAT log entries contain information useful for monitoring and debugging your NAT\ntraffic. Log entries contain the following types of information:\nGeneral information shown in most Google Cloud logs, such as severity, project ID,\nproject number, and timestamp.\nSpecific information related to Cloud NAT. Some log fields contain entries that are\nthemselves multiple fields. These entries and field descriptions are shown in the\nfollowing tables.\nLog fields\nField\nValue\nMeaning\nconnection\nobject(NatIpConnection\n(#natipconnection))\n7-tuple describing the source VM IP address and port,\nNAT source IP address and port, destination IP\naddress and port, and IP address protocol of this\nconnection.\nallocation_status\nenum\nIndicates whether this connection was successfully\nallocated or dropped. One of OK or DROPPED.\ngateway_identifiers object(NatGateway\n(#natgateway))\nThe NAT gateway configuration that the connection\nused.\nendpoint\nobject(InstanceDetails\n(#instancedetails))\nVM instance details. In a Shared VPC configuration,\nproject_id corresponds to the service project.\nvpc\nobject(VpcDetails\n(#vpcdetails))\nVirtual Private Cloud (VPC) network details. In a\nShared VPC configuration, project_id corresponds\nto that of the host project.\ndestination\nobject(DestinationDetails\n(#destinationdetails))\nDetails of the destination of the connection.\nNatIpConnection field format\nField\nType\nDescription\nsrc_ip\nstring\nSource IP address\nsrc_port\nint32\nSource port\nnat_ip\nstring\nNAT IP address\nresource.type=\"nat_gateway\"\nlogName=\"projects/{#project_id}/logs/compute.googleapis.com%2Fnat_flows\"\nnat_port\nint32\nNAT assigned port\ndest_ip\nstring\nDestination IP address1\ndest_port\nint32\nDestination port\nprotocol\nint32\nIANA protocol number\n1 For NAT64, this field is populated with the destination IPv4-embedded IPv6 address.\nNatGateway field format\nField\nType\nDescription\ngateway_name\nstring\nName of the NAT gateway\nrouter_name\nstring\nCloud Router associated with the NAT gateway\nregion\nstring\nRegion of the Cloud Router\nInstanceDetails field format\nField\nType\nDescription\nproject_id\nstring\nID of the project containing the VM\nvm_name\nstring\nInstance name of the VM\nregion\nstring\nRegion of the VM\nzone\nstring\nZone of the VM\nVpcDetails field format\nField\nType\nDescription\nproject_id\nstring\nID of the project containing the network\nvpc_name\nstring\nNetwork on which the VM is operating\nsubnetwork_name string\nSubnet on which the VM is operating\nDestinationDetails field format\nField\nType\nDescription\ngeo_location\nobject(GeographicDetails\n(#geographicdetails))\nIf the destination of the connection was external to\nGoogle Cloud, this field is populated with available\nlocation metadata.\ninstance\nobject(InstanceDetails\n(#instancedetails))\nIf the destination of the connection is an instance\nwithin the same project as the source, this field is\npopulated with VM instance details.\nvpc\nobject(VpcDetails (#vpcdetails))If the destination of the connection is within the same\nproject as the source, this field is populated with the\ndestination VPC network details. If the destination is a\ncross-project VPC network, then this field will display\na blank.\nGeographicDetails field format\nField\nType\nDescription\ncontinent\nstring\nContinent for external endpoints\ncountry\nstring\nCountry for external endpoints\nregion\nstring\nRegion for external endpoints\ncity\nstring\nCity for external endpoints\nasn\nstring\nThe autonomous system number (ASN) of the external network\nto which this endpoint belongs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 4,
+      "end": 6
+    },
+    "content_stats": {
+      "char_count": 3471,
+      "word_count": 469
+    },
+    "hierarchy": {
+      "parent": "Logging",
+      "children": []
+    }
+  }
+}

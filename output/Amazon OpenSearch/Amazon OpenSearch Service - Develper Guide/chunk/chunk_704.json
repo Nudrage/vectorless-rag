@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_704",
+  "section_number": "2.10.4.3.6",
+  "header": "High shard count warning",
+  "content": "OpenSearch Service sends this event when the average shard count across your hot data nodes has\nexceeded 90% of the recommended default limit of 1,000. Although later versions of Elasticsearch\nand OpenSearch support a conﬁgurable max shard count per node limit, we recommend you have\nno more than 1,000 shards per node. See Choosing the number of shards.\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\nCluster health events\n1253\nAmazon OpenSearch Service\nDeveloper Guide\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Amazon OpenSearch Service Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2016-11-01T13:12:22Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\":{\n\"event\":\"High Shard Count\",\n\"status\":\"Warning\",\n\"severity\":\"Low\",\n\"description\":\"One or more data nodes have close to 1000 shards. To ensure optimum\nperformance and stability of your\ncluster, please refer to the best practice guidelines - https://\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/sizing-domains.html#bp-\nsharding.\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1282,
+      "end": 1283
+    },
+    "content_stats": {
+      "char_count": 1124,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Cluster health events",
+      "children": []
+    }
+  }
+}

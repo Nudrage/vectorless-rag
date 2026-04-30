@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_672",
+  "section_number": "2.10.3.5.2",
+  "header": "Compliance settings",
+  "content": "Compliance settings let you tune for index, document, or ﬁeld-level access.\nName\nBackend\nsetting\nDescription\nCompliance\nlogging\nenable_co\nmpliance\nEnable or disable compliance logging.\nYou can specify the following settings for read and write event logging.\nName\nBackend\nsetting\nDescription\nInternal conﬁg\nlogging\ninternal_conﬁg\nEnable or disable logging of events on the .opendist\nro_security\nindex.\nYou can specify the following settings for read events.\nName\nBackend\nsetting\nDescription\nRead metadata\nread_meta\ndata_only\nInclude only metadata for read events. Do not include any\ndocument ﬁelds.\nIgnored users\nread_igno\nre_users\nDo not include certain users for read events.\nWatched ﬁelds\nread_watc\nhed_ﬁelds\nSpecify the indices and ﬁelds to watch for read events.\nAdding watched ﬁelds generates one log per document\naccess, which can dramatically increase the size of the\naudit logs. Watched ﬁelds support index patterns and ﬁeld\npatterns:\n{\nAudit log settings\n1231\nAmazon OpenSearch Service\nDeveloper Guide\nName\nBackend\nsetting\nDescription\n\"index-name-pattern\": [\n\"field-name-pattern\"\n],\n\"logs*\": [\n\"message\"\n],\n\"twitter\": [\n\"id\",\n\"user*\"\n]\n}\nYou can specify the following settings for write events.\nName\nBackend\nsetting\nDescription\nWrite metadata\nwrite_met\nadata_only\nInclude only metadata for write events. Do not include any\ndocument ﬁelds.\nLog diﬀs\nwrite_log_diﬀs\nIf write_metadata_only is false, include only the diﬀerenc\nes between write events.\nIgnored users\nwrite_ign\nore_users\nDo not include certain users for write events.\nWatch indices\nwrite_wat\nched_indices\nSpecify the indices or index patters to watch for write\nevents. Adding watched ﬁelds generates one log per\ndocument access, which can dramatically increase the size\nof the audit logs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1260,
+      "end": 1261
+    },
+    "content_stats": {
+      "char_count": 1757,
+      "word_count": 255
+    },
+    "hierarchy": {
+      "parent": "Audit log settings",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3173",
+  "section_number": "1.6.16.2.1",
+  "header": "Fields",
+  "content": "Field\nDescription\nUserUUID\nThe username of the person who created the scheduled report/search entity in the UI. (Typically an email address)\nUserID\nThe system-generated UUID of the person who created the scheduled report/search entity in the UI.\nExecutionID\nThe unique system-generated ID of the scheduled report/search execution.\nReportID\nThe UUID of the scheduled report/search entity that the execution generated from.\nReportName\nThe user-defined name of the scheduled report/search entity.\nReportType\nA string value representing the report type:\ncloud_security_posture_detections_ioa: Scheduled reports with indicators of attack (IOA) findings\ncloud_security_posture_detections_iom: Scheduled reports with indicators of misconfiguration (IOM) findings\ndashboard: Scheduled reports from dashboards\ndiscover_applications: Scheduled reports with asset management - application data\nfilevantage: Scheduled reports with FileVantage monitored file change data\nhosts: Scheduled reports with host management data\nspotlight_installed_patches: Scheduled vulnerability management reports with installed patches data\nspotlight_remediations: Scheduled vulnerability management reports with remediation data\nspotlight_vulnerabilities: Scheduled vulnerability management reports with vulnerability data\nspotlight_vulnerabilty_logic: Scheduled vulnerability management reports with vulnerability evaluation logic data\nevent_search: Scheduled searches\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1191/1226\n\n\nField\nDescription\nReportFileReference\nA partial URL that would allow for the report to be downloaded via the /reports/entities/report-executions-\ndownloads/v1 endpoint.\nStatus\nAn integer representing the state of the execution with 1 representing “Done” (successful execution), 2 representing “Failed”, and\n3 representing “No Data”.\nStatusMessage\nA human-readable description of the status with an empty string representing a successful execution.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1191,
+      "end": 1192
+    },
+    "content_stats": {
+      "char_count": 2132,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "ScheduledReportNotificationEvent",
+      "children": []
+    }
+  }
+}

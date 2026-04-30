@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2017",
+  "section_number": "1.5.910.1",
+  "header": "Fields: Windows, macOS, Linux",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n666/1226\nField\nDescription\nDeviceTimeStamp\nThe time stamp the device action (e.g., connect or disconnect) occurred, not the time the corresponding sensor event\nwas generated.\nDeviceUserAuthenticationId\nDeviceInstanceId\nDeviceUsbVersion\nDeviceUsbClass\nThe USB specification class of the device.\nDeviceUsbSubclass\nThe USB specification subclass of the device.\nDeviceProtocol\nThe USB specification protocol of the device.\nDeviceVendorId\nDeviceProductId\nDeviceVersion\nDeviceManufacturer\nDeviceProduct\nDeviceSerialNumber\nDeviceActiveConfigurationNumber\nDeviceConnectionStatus\nValues:\nCONNECTED (1)\nFAILED_ENUMERATION (2)\nGENERAL_FAILURE (3)\nCAUSED_OVER_CURRENT (4)\nNOT_ENOUGH_POWER (5)\nNOT_ENOUGH_BANDWIDTH (6)\nHUB_NESTED_TOO_DEEPLY (7)\nIN_LEGACY_HUB (8)\nENUMERATING (9)\nRESET (10)\nParentHubInstanceId\nParentHubPort\nDevicePropertyClassGuid\nDevicePropertyClassName\nDevicePropertyDeviceDescription\nDevicePropertyFriendlyName\nDevicePropertyLocationInformation\nDevicePropertyManufacturer\nDeviceDescriptorSetHash\nThe SHA-256 hash of all hardware descriptors located in a device's firmware.\nDeviceUserSid\nDcPolicyId\nDcPolicyGroupId\nDcPolicyAction\nValues:\nALLOW (0)\nBLOCK (1)\nMASSSTORAGE (2)\nDcPolicyFlags\nValues:\nNONE (0)\nSHOW_IN_UI (1)\nINVASIVE_BLOCK (2)\nREPORT_ONLY (4)\nMTP_PTP_RULE (8)\nDcPolicyMassStorageBlockPermissions Values:\nNONE (0)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n667/1226\nField\nDescription\nREAD (1)\nWRITE (2)\nEXECUTE (4)\nContextTimeStamp\nSystem time of event creation.\nDcPolicyId\nDcPolicyGroupId\nDcPolicyPrecedence\nDcPolicyBlockTechnique\nValues:\nNONE (0)\nANY (1)\nINSTALLATION_STRINGS (2)\nSTART_IRP (3)\nDcPolicyAction\nValues:\nALLOW (0)\nBLOCK (1)\nMASSSTORAGE (2)\nDcPolicyMatchMethod\nValues:\nDEVICECLASS (1)\nDEVICECLASS_VID (2)\nDEVICECLASS_VID_PID (3)\nDEVICECLASS_VID_PID_SERIAL (4)\nDEVICECLASS_SUBCLASS_PROTOCOL (5)\nANYCLASS_VID (6)\nANYCLASS_VID_PID (7)\nANYCLASS_VID_PID_SERIAL (8)\nDEVICECLASS_MINOR (9)\nDEVICECLASS_MINOR_VID (10)\nDEVICECLASS_MINOR_VID_PID (11)\nDcPolicyFlags\nValues:\nNONE (0)\nSHOW_IN_UI (1)\nINVASIVE_BLOCK (2)\nREPORT_ONLY (4)\nMTP_PTP_RULE (8)\nDcPolicyMassStorageBlockPermissions\nValues:\nNONE (0)\nREAD (1)\nWRITE (2)\nEXECUTE (4)\nDcPolicyDeviceSerialNumber\nDcPolicyDeviceVendorId\nDcPolicyDeviceProductId\nDcPolicyDeviceUsbClass\nDcPolicyDeviceUsbSubclass\nDcPolicyDeviceProtocol\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 666,
+      "end": 668
+    },
+    "content_stats": {
+      "char_count": 2730,
+      "word_count": 264
+    },
+    "hierarchy": {
+      "parent": "DcUsbDeviceBlocked",
+      "children": []
+    }
+  }
+}

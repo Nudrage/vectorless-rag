@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_148",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Windows, Public Cloud\nThis event provides key metadata regarding network interfaces in AWS. CrowdStrike retrieves this information by processing the response from AWS's\nDescribeNetworkInterfaces API [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNetworkInterfaces.html] on your behalf.\nNetwork interfaces can either be in detached or attached state. When attached, they have an associated EC2 instance ID which can be used to correlate\nbetween the two events. Note that multiple network interface objects can also be associated to a single EC2 instance.\nThis event is only generated for Discover for AWS [/support/documentation/10/falcon-discover-feature-guide] customers. It's generated either when Discover\nfor AWS observes new or related activity via CloudTrail or during Discover for AWS's weekly full scan.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 39,
+      "end": 39
+    },
+    "content_stats": {
+      "char_count": 843,
+      "word_count": 107
+    },
+    "hierarchy": {
+      "parent": "AwsEc2NetworkInterface",
+      "children": []
+    }
+  }
+}

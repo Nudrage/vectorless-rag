@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1166",
+  "section_number": "2.19.2.1.5",
+  "header": "Security conﬁguration",
+  "content": "If you enable multi-tier storage on a preexisting Amazon OpenSearch Service domain, the\nstorage_tiering_manager role might not be deﬁned on the domain. Non-admin users must\nMulti-tier storage architecture\n1691\nAmazon OpenSearch Service\nDeveloper Guide\nbe mapped to this role in order to manage warm indexes on domains using ﬁne-grained access\ncontrol. To manually create the storage_tiering_manager role, perform the following steps:\n1.\nIn OpenSearch Dashboards, go to Security and choose Permissions.\n2.\nChoose Create action group and conﬁgure the following groups:\nGroup Name\nPermissions\nstorage_tiering_cl\nuster\nindices:admin/_tier/all\nstorage_tiering_in\ndex_read\nindices:admin/_tier/get, indices:admin/get\nstorage_tiering_in\ndex_write\nindices:admin/_tier/hot_to_warm, indices:admin/_tier/warm_to_hot\n3.\nChoose Roles and Create role.\n4.\nName the role storage_tiering_manager.\n5.\nFor Cluster permissions, select storage_tiering_cluster and cluster_monitor.\n6.\nFor Index, type *.\n7.\nFor Index permissions, select storage_tiering_index_read,\nstorage_tiering_index_write and indices_monitor.\n8.\nChoose Create.\n9.\nAfter you create the role, map it to any user or backend role that will manage multi-tier\nindexes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1720,
+      "end": 1721
+    },
+    "content_stats": {
+      "char_count": 1210,
+      "word_count": 150
+    },
+    "hierarchy": {
+      "parent": "Multi-tier storage architecture",
+      "children": []
+    }
+  }
+}

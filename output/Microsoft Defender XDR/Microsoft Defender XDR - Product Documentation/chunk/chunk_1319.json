@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1319",
+  "section_number": "155.1.1.183.3",
+  "header": "In third-party SIEM, SOAR, or ITSM apps",
+  "content": "ﾉ\nExpand table\nQuestions\nAnswers\nautomation and response\n(SOAR), or IT service\nmanagement (ITSM) apps?\n1. Establish the mapping between fields in Microsoft\nDefender XDR and the corresponding fields in the\ndesired application. Determine whether the sync should\nbe uni- or bi-directional and ensure that the other\napplication supports that.\n2. Develop, test, and deploy your sync integration. In\nmost cases, it's recommended to periodically poll the\nGraph Security API every minute or so to check for\nupdates.\n3. Periodically validate that the field mapping is up to\ndate.\nCan I sync managed response\nactions published by Defender\nExperts in Microsoft Defender\nportal to third-party SIEM,\nSOAR, or ITSM apps?\nOnce Defender Experts publish managed response actions for\nan incident in your Microsoft Defender portal, the Assigned\nto field is changed to Customer and the Status field is\nupdated to Awaiting Customer Action. You can sync these\nfields via the Graph Security API and then use these changes\nas a trigger to review the managed response actions in the\nMicrosoft Defender portal.\nManaged response actions are expected to be available in the\nGraph Security API later this year, at which time it will be\npossible to sync them with your third-party apps.\nQuestions\nAnswers\nCan I get Defender Experts updates\nfrom Microsoft Defender XDR in\nemail?\nOnce a Defender Experts analyst publishes\nrecommended response actions to an incident, your\ndesignated incident contacts will receive a corresponding\nemail notification to the email addresses specified in\nSettings > Defender Experts > Notification contacts in\nyour Microsoft Defender portal.\nAdditionally, you can configure a Logic App to send all\nincident updates to your designated email address(es)\nautomatically.\nCan I get Defender Experts updates\nfrom Microsoft Defender XDR in\nMicrosoft Teams?\nA two-way chat functionality is accessible through an\nincident's Managed response flyout panel in your\nMicrosoft Defender portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 993,
+      "end": 994
+    },
+    "content_stats": {
+      "char_count": 1977,
+      "word_count": 305
+    },
+    "hierarchy": {
+      "parent": "Understanding and managing Defender Experts for XDR incident updates",
+      "children": []
+    }
+  }
+}

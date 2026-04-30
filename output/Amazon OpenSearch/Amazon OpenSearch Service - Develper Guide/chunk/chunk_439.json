@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_439",
+  "section_number": "2.7.13.2.4",
+  "header": "Understanding OpenSearch Serverless Management Events entries",
+  "content": "A trail is a conﬁguration that enables delivery of events as log ﬁles to an Amazon S3 bucket that\nyou specify. CloudTrail log ﬁles contain one or more log entries.\nAn event represents a single request from any source. It includes information about the requested\naction, the date and time of the action, request parameters, and so on. CloudTrail log ﬁles aren't an\nordered stack trace of the public API calls, so they don't appear in any speciﬁc order.\nThe following example displays a CloudTrail log entry that demonstrates the CreateCollection\naction.\n{\n\"eventVersion\":\"1.08\",\n\"userIdentity\":{\n\"type\":\"AssumedRole\",\n\"principalId\":\"AIDACKCEVSQ6C2EXAMPLE\",\n\"arn\":\"arn:aws:iam::123456789012:user/test-user\",\n\"accountId\":\"123456789012\",\n\"accessKeyId\":\"access-key\",\n\"sessionContext\":{\n\"sessionIssuer\":{\n\"type\":\"Role\",\n\"principalId\":\"AIDACKCEVSQ6C2EXAMPLE\",\n\"arn\":\"arn:aws:iam::123456789012:role/Admin\",\n\"accountId\":\"123456789012\",\n\"userName\":\"Admin\"\n},\n\"webIdFederationData\":{\n},\n\"attributes\":{\n\"creationDate\":\"2022-04-08T14:11:34Z\",\n\"mfaAuthenticated\":\"false\"\n}\n}\n},\n\"eventTime\":\"2022-04-08T14:11:49Z\",\n\"eventSource\":\"aoss.amazonaws.com\",\n\"eventName\":\"CreateCollection\",\n\"awsRegion\":\"us-east-1\",\n\"sourceIPAddress\":\"AWS Internal\",\nMonitoring with CloudTrail\n603\nAmazon OpenSearch Service\nDeveloper Guide\n\"userAgent\":\"aws-cli/2.1.30 Python/3.8.8 Linux/5.4.176-103.347.amzn2int.x86_64 exe/\nx86_64.amzn.2 prompt/off command/aoss.create-collection\",\n\"errorCode\":\"HttpFailureException\",\n\"errorMessage\":\"An unknown error occurred\",\n\"requestParameters\":{\n\"accountId\":\"123456789012\",\n\"name\":\"test-collection\",\n\"description\":\"A sample collection\",\n\"clientToken\":\"d3a227d2-a2a7-49a6-8fb2-e5c8303c0718\"\n},\n\"responseElements\": null,\n\"requestID\":\"12345678-1234-1234-1234-987654321098\",\n\"eventID\":\"12345678-1234-1234-1234-987654321098\",\n\"readOnly\":false,\n\"eventType\":\"AwsApiCall\",\n\"managementEvent\":true,\n\"recipientAccountId\":\"123456789012\",\n\"eventCategory\":\"Management\",\n\"tlsDetails\":{\n\"clientProvidedHostHeader\":\"user.aoss-sample.us-east-1.amazonaws.com\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 632,
+      "end": 633
+    },
+    "content_stats": {
+      "char_count": 2042,
+      "word_count": 164
+    },
+    "hierarchy": {
+      "parent": "Logging OpenSearch Serverless API calls using AWS CloudTrail",
+      "children": []
+    }
+  }
+}

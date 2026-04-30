@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_313",
+  "section_number": "2.7.4.2.2",
+  "header": "Required KMS permissions",
+  "content": "When you specify a KMS key in the CreateCollection request, you need the following additional\npermissions:\n• kms:DescribeKey – Allows OpenSearch Serverless to retrieve information about the KMS key.\n• kms:CreateGrant – Allows OpenSearch Serverless to create a grant for the KMS key to enable\nencryption operations.\nThese permissions are not required when using AWS owned keys.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 475,
+      "end": 475
+    },
+    "content_stats": {
+      "char_count": 376,
+      "word_count": 57
+    },
+    "hierarchy": {
+      "parent": "Encryption and KMS keys in collection groups",
+      "children": []
+    }
+  }
+}

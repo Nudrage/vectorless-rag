@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_167",
+  "section_number": "2.6.16.10.3",
+  "header": "Amazon S3 cross account as a source",
+  "content": "You can grant access across accounts with Amazon S3 so that OpenSearch Ingestion pipelines can\naccess S3 buckets in another account as a source. To enable cross-account access, see Bucket owner\ngranting cross-account bucket permissions in the Amazon S3 User Guide. After you have granted\naccess, ensure that your pipeline role has the required permissions.\nThen, you can create a pipeline using bucket_owners to enable cross-account access to an\nAmazon S3 bucket as a source:\ns3-pipeline:\nsource:\ns3:\nnotification_type: \"sqs\"\ncodec:\ncsv:\ndelimiter: \",\"\nquote_character: \"\\\"\"\ndetect_header: True\nsqs:\nqueue_url: \"https://sqs.ap-northeast-1.amazonaws.com/401447383613/test-s3-queue\"\nbucket_owners:\nmy-bucket-01: 123456789012\nmy-bucket-02: 999999999999\ncompression: \"gzip\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 265,
+      "end": 265
+    },
+    "content_stats": {
+      "char_count": 769,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon S3",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1137",
+  "section_number": "2.18.6",
+  "header": "Cross-Region and cross-account data access with cross-cluster search",
+  "content": "search\nUsing Cross-cluster search in Amazon OpenSearch Serverless, you can perform queries and\naggregations across multiple connected domains.\nCross-cluster search in Amazon OpenSearch Serverless uses the concepts of a source domain\nand destination domain. A cross-cluster search request originates from a source domain. The\ndestination domain can be in a diﬀerent AWS account or AWS Region (or both) for the source\ndomain to query from. Using cross-cluster search, you can conﬁgure a source domain to associate\nwith your OpenSearch UI in the same account and then create connections to destination domains.\nAs a result, you can use OpenSearch UI with data from the destination domains even if they are in a\ndiﬀerent account or Region.\nYou pay standard AWS data transfer charges for data transferred in and out of Amazon\nOpenSearch Service. You are not charged for data transferred between nodes within your\nOpenSearch Service domain. For more information about data \"in\" and \"out\" charges, see Data\nTransfer on the Amazon EC2 On-Demand Pricing page.\nYou can use cross-cluster search as the mechanism for your OpenSearch UI to be associated with\nclusters in a diﬀerent account or diﬀerent Region. The requests between domains are encrypted in\ntransit by default as part of the node-to-node encryption.\nNote\nThe open source OpenSearch tool also documents cross-cluster search. Note that setup for\nthe open source tool diﬀers signiﬁcantly for open source clusters as compared to managed\nAmazon OpenSearch Serverless domains.\nMost notably, in Amazon OpenSearch Serverless, you conﬁgure cross-cluster connections\nusing the AWS Management Console instead of using cURL requests. The managed service\nuses AWS Identity and Access Management (IAM) for cross-cluster authentication in\naddition to ﬁne-grained access control.\nTherefore, we recommend using the content in this topic to conﬁgure cross-cluster search\nfor your domains instead of the open source OpenSearch documentation.\nFunctional diﬀerences when using cross-cluster search\nCross-Region and cross-account data access with cross-cluster search\n1665\nAmazon OpenSearch Service\nDeveloper Guide\nIn comparison to regular domains, destination domains created using Cross-cluster search have the\nfollowing functional diﬀerences and requirements:\n• You can't write to or run PUT commands to the remote cluster. Your access to the remote cluster\nis read-only.\n• Both the source and destination domain must be OpenSearch domains. You can't connect an\nElasticsearch domain or self-managed OpenSearch/Elasticsearch clusters for OpenSearch UI.\n• A domain can have a maximum of 20 connections to other domains. This includes both outgoing\nand incoming connections.\n• The source domain must be on the same or a higher version of OpenSearch than the destination\ndomain. If you want to set up bi-directional connections between two domains, the two domains\nshould be in the same version. We recommend upgrading both domains to the latest version\nbefore making the connection. If you need to update domains after setting up the bi-directional\nconnection, you must ﬁrst delete the connection, and then recreate it afterwards.\n• You can't use custom dictionaries or SQL with the remote clusters.\n• You can't use CloudFormation to connect domains.\n• You can't use cross-cluster search on M3 or burstable (T2 and T3) instances.\n• Cross-cluster search does not work for Amazon OpenSearch Serverless collections.\nCross-cluster search prerequisites for OpenSearch UI\nBefore you set up cross-cluster search with two OpenSearch domains, make sure that your domains\nmeet the following requirements:\n• Fine-grained access control is enabled for both domains\n• Node-to-node encryption is enabled for both domains\nTopics\n• Setting up access permissions for cross-Region and cross-account data access with cross-cluster\nsearch\n• Creating a connection between domains\n• Testing your security setup for cross-Region and cross-account data access with cross-cluster\nsearch\n• Deleting a connection\nCross-Region and cross-account data access with cross-cluster search\n1666\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1694,
+      "end": 1696
+    },
+    "content_stats": {
+      "char_count": 4131,
+      "word_count": 617
+    },
+    "hierarchy": {
+      "parent": "Using OpenSearch UI in Amazon OpenSearch Service",
+      "children": [
+        "Setting up access permissions for cross-Region and cross-account data access with cross-cluster search",
+        "Creating a connection between domains",
+        "Testing your security setup for cross-Region and cross-account data access with cross-cluster search",
+        "Deleting a connection"
+      ]
+    }
+  }
+}

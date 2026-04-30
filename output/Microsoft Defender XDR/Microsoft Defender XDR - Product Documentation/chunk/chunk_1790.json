@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1790",
+  "section_number": "155.1.1.246.2",
+  "header": "Enable raw data streaming",
+  "content": "７ Note\n1. Go to the Microsoft Defender portal\nand sign in using an account with at least\nSecurity Administrator permissions.\n2. Go to Settings > Microsoft Defender XDR > Streaming API. To go directly to the\nStreaming API page, use\nhttps://security.microsoft.com/settings/mtp_settings/raw_data_export\n.\n3. Select Add.\n4. In the Add new Streaming API settings flyout that appears, configure the\nfollowing settings:\nName: Choose a name for your new settings.\nSelect Forward events to Azure Storage.\n5. To display the Azure Resource Manager resource ID for a storage account in the\nAzure portal, follow these steps:\na. Navigate to your storage account in the Azure portal\n.\nb. In the Overview page, in the Essentials section, select the JSON View link.\nc. The resource ID for the storage account is displayed at the top of the page.\nCopy the text under Storage Account Resource ID.\nd. In the Add new Streaming API settings flyout, choose the Event types that you\nwant to stream.\ne. When you're finished, select Submit.\nWhen using the Streaming API to an Azure Storage account, ensure the option\nAllow trusted Microsoft services to access this storage account  is enabled in\nthe storage account settings to allow for data to be streamed from Microsoft\nDefender for Endpoint.\n） Important\nMicrosoft recommends that you use roles with the fewest permissions. Using\nlower permissioned accounts helps improve security for your organization.\nGlobal Administrator is a highly privileged role that should be limited to\nemergency scenarios when you can't use an existing role.\nA blob container is created for each event type:\nThe schema of each row in a blob is the following JSON:\nJSON\nEach blob contains multiple rows.\nEach row contains the event name, the time Defender for Endpoint received the\nevent, the tenant it belongs (you'll only get events from your tenant), and the\nevent in JSON format in a property called \"properties\".\nFor more information about the schema of Microsoft Defender XDR events, see\nAdvanced Hunting overview.\nTo get the data types for events properties, follow these steps:\n1. Go to the Microsoft Defender portal\nand sign in.\n2. Go to Hunting > Advanced hunting. To go directly to the Advanced hunting\npage, use https://security.microsoft.com/advanced-hunting\n.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1349,
+      "end": 1351
+    },
+    "content_stats": {
+      "char_count": 2276,
+      "word_count": 369
+    },
+    "hierarchy": {
+      "parent": "Stream Microsoft Defender XDR events to your storage account",
+      "children": []
+    }
+  }
+}

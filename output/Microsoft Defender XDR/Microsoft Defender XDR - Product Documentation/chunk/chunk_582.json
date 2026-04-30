@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_582",
+  "section_number": "155.1.1.52",
+  "header": "Investigate insider risk threats in the Microsoft Defender portal",
+  "content": "Microsoft Defender portal\nArticle • 02/17/2025 •\nApplies to: ✅ Microsoft Defender XDR, Microsoft's unified security operations platform\nMicrosoft Purview Insider Risk Management alerts in the Microsoft Defender portal are\nvital for protecting an organization's sensitive information and maintaining security.\nThese alerts and insights from Microsoft Purview Insider Risk Management help identify\nand mitigate internal threats like data leaks and intellectual property theft by employees\nor contractors. Monitoring these alerts allows organizations to address security incidents\nproactively, ensuring sensitive data remains protected and compliance requirements are\nmet.\nOne key benefit of monitoring insider risk alerts is the unified view of all alerts related to\na user, allowing security operations center (SOC) analysts to correlate alerts from\nMicrosoft Purview Insider Risk Management with other Microsoft security solutions.\nAdditionally, having these alerts in the Microsoft Defender portal enables seamless\nintegration with advanced hunting capabilities, enhancing the ability to investigate and\nrespond to incidents effectively.\nAnother advantage is the automatic synchronization of alert updates between Microsoft\nPurview and the Defender portals, ensuring real-time visibility and reducing the chances\nof oversight. This integration strengthens an organization's ability to detect, investigate,\nand respond to insider threats, thereby enhancing overall security posture.\nYou can manage insider risk management alerts in the Microsoft Defender portal by\nnavigating to Incidents & alerts, where you can:\nView all insider risk alerts grouped under incidents in the Microsoft Defender\nportal incident queue.\nView insider risk alerts correlated with other Microsoft solutions, like Microsoft\nPurview Data Loss Prevention and Microsoft Entra ID, under a single incident.\nView individual insider risk alerts in the alert queue.\nFilter by service source on the incident and alert queues.\n） Important\nSome information in this article relates to a prereleased product, which may be\nsubstantially modified before it's commercially released. Microsoft makes no\nwarranties expressed or implied, with respect to the information provided here.\nHunt for all activities and all alerts related to the user in the insider risk alert.\nView a user's insider risk activity summary and risk level in the user entity page.\nIf you're new to Microsoft Purview and insider risk management, consider reading the\nfollowing articles:\nLearn about Microsoft Purview\nLearn about Microsoft Purview Insider Risk Management\nMicrosoft Purview data security solutions\nTo investigate insider risk management alerts in the Microsoft Defender portal, you need\nto do the following:\nConfirm your Microsoft 365 subscription supports insider risk management access.\nKnow more about subscription and licensing.\nConfirm your access to Microsoft Defender XDR. See Microsoft Defender XDR\nlicensing requirements.\nData sharing with other security solutions must be turned on in the Data sharing\nsettings in Microsoft Purview Insider Risk Management. Turning on Share user risk\ndetails with other security solutions in the Microsoft Purview portal enables users with\nthe correct permissions to review user risk details in the user entity pages in the\nMicrosoft Defender portal.\nSee Share alert severity levels with other Microsoft security solutions for more\ninformation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 370,
+      "end": 371
+    },
+    "content_stats": {
+      "char_count": 3431,
+      "word_count": 487
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Know before you begin",
+        "Prerequisites",
+        "Permissions and roles",
+        "Investigation experience in the Microsoft Defender portal",
+        "Integrate insider risk management data with Microsoft Graph security API",
+        "Impact to Microsoft Sentinel users",
+        "Next steps"
+      ]
+    }
+  }
+}

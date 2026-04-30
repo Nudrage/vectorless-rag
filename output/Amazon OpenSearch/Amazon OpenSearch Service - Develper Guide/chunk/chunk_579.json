@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_579",
+  "section_number": "2.9.7.1.1",
+  "header": "Procedure",
+  "content": "You can set up a direct-query data source on a domain with the AWS Management Console or the\nOpenSearch Service API.\nTo set up a data source using the AWS Management Console\n1.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/\naos/.\n2.\nIn the left navigation pane, choose Domains.\n3.\nSelect the domain that you want to set up a new data source for. This opens the domain\ndetails page.\n4.\nChoose the Connections tab below the general domain details and ﬁnd the Direct query\nsection.\n5.\nChoose Conﬁgure data source.\n6.\nEnter a name and an optional description for your new data source.\n7.\nChoose Amazon S3 with AWS Glue Data Catalog.\nCreating an S3 data source\n741\nAmazon OpenSearch Service\nDeveloper Guide\n8.\nUnder IAM permission access settings, choose how to manage access.\na.\nIf you want to automatically create a role for this data source, follow these steps:\ni.\nSelect Create a new role.\nii.\nEnter a name for the IAM role.\niii.\nSelect one or more S3 buckets that contain data you want to query.\niv.\nSelect an checkpoint S3 bucket to store query checkpoints in.\nv.\nSelect one or more AWS Glue databases or tables to deﬁne which data can be\nqueried. If tables haven't been created yet, provide access to the default database.\nb.\nIf you want to use an existing role that you manage yourself, follow these steps:\ni.\nSelect Use an existing role.\nii.\nSelect an existing role from the drop-down menu.\nNote\nWhen using your own role, you must ensure it has all necessary permissions by\nattaching required policies from the IAM console. For more information, refer to the\nsample policy in the section called “Required permissions for manually created IAM\nroles”.\n9.\nChoose Conﬁgure. This opens the data source details screen with an OpenSearch Dashboards\nURL. You can navigate to this URL to complete the next steps.\nOpenSearch Service API\nUse the AddDataSource API operation to create a new data source in your domain.\nPOST https://es.region.amazonaws.com/2021-01-01/opensearch/domain/domain-name/\ndataSource\n{\n\"DataSourceType\": {\n\"S3GlueDataCatalog\": {\n\"RoleArn\": \"arn:aws:iam::account-id:role/role-name\"\n}\n}\nCreating an S3 data source\n742\nAmazon OpenSearch Service\nDeveloper Guide\n\"Description\": \"data-source-description\",\n\"Name\": \"my-data-source\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 770,
+      "end": 772
+    },
+    "content_stats": {
+      "char_count": 2281,
+      "word_count": 364
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon S3 data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

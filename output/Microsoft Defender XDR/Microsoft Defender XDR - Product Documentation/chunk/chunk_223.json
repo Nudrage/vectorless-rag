@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_223",
+  "section_number": "155.1.1.18.1.43",
+  "header": "Step 6. Use advanced hunting",
+  "content": "７ Note\nBefore we walk you through the advanced hunting simulation, watch the following\nvideo to understand advanced hunting concepts, see where you can find it in the\nportal, and know how it can help you in your security operations.\nhttps://learn-video.azurefd.net/vod/player?id=197cbd32-a06e-4efc-ade0-\n0c9875d7b105&locale=en-us&embedUrl=%2Fdefender-xdr%2Fpilot-deploy-\ninvestigate-respond\nenumeration events, or find more discovery activities in various other protocols in\nMicrosoft Defender for Identity data using the IdentityQueryEvents  table.\nThere's a single internal mailbox and device required for this simulation. You'll also need\nan external email account to send the test message.\n1. Verify that your tenant has enabled Microsoft Defender XDR.\n2. Identify a target mailbox to be used for receiving email.\nThis mailbox must be monitored by Microsoft Defender for Office 365\nThe device from requirement 3 needs to access this mailbox\n3. Configure a test device:\na. Make sure you're using Windows 10 version 1903 or later version.\nb. Join the test device to the test domain.\nc. Turn on Microsoft Defender Antivirus. If you're having trouble enabling\nMicrosoft Defender Antivirus, see this troubleshooting topic.\nd. Onboard to Microsoft Defender for Endpoint.\n1. From an external email account, send an email to the mailbox identified in step 2\nof the hunting environment requirements section. Include an attachment that will\nbe allowed through any existing email filter policies. This file doesn't need to be\nmalicious or an executable. Suggested file types are .pdf, .exe (if allowed), or an\nOffice document type such as a Word file.\n2. Open the sent email from the device configured as defined in step 3 of the hunting\nenvironment requirements section. Either open the attachment or save the file to\nthe device.\n1. Open the Microsoft Defender portal\n.\n2. From the navigation pane, select Hunting > Advanced hunting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 128,
+      "end": 129
+    },
+    "content_stats": {
+      "char_count": 1927,
+      "word_count": 291
+    },
+    "hierarchy": {
+      "parent": "A B C",
+      "children": [
+        "Hunting environment requirements",
+        "Run the simulation",
+        "Feedback"
+      ]
+    }
+  }
+}

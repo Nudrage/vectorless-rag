@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1023",
+  "section_number": "155.1.1.127",
+  "header": "DeviceTvmSecureConfigurationAssessment KB",
+  "content": "KB\n03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmSecureConfigurationAssessmentKB  table in the advanced hunting schema contains\ninformation about the various secure configurations checked by Microsoft Defender\nVulnerability Management. It also includes risk information, related industry benchmarks, and\napplicable MITRE ATT&CK techniques and tactics.\nThis table doesn't return events or records. We recommend joining this table to the\nDeviceTvmSecureConfigurationAssessment table using ConfigurationId  to view text\ninformation about the security configurations in the returned assessments.\nFor example, when you query the DeviceTvmSecureConfigurationAssessment  table you might\nwant to view the ConfigurationDescription  for the security configurations that come up in the\nassessment results. You can see this information by joining this table to\nDeviceTvmSecureConfigurationAssessment  using ConfigurationId  and project\nConfigurationDescription .\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nConfigurationId\nstring\nUnique identifier for a specific configuration\nConfigurationImpact\nreal\nRated impact of the configuration to the overall configuration\nscore (1-10)\nConfigurationName\nstring\nDisplay name of the configuration\nConfigurationDescription\nstring\nDescription of the configuration\nRiskDescription\nstring\nDescription of the associated risk\nConfigurationCategory\nstring\nCategory or grouping to which the configuration belongs:\nApplication, OS, Network, Accounts, Security controls\nConfigurationSubcategory\nstring\nSubcategory or subgrouping to which the configuration belongs.\nIn many cases, this describes specific capabilities or features.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nConfigurationBenchmarks\ndynamic\nList of industry benchmarks recommending the same or similar\nconfiguration\nTags\ndynamic\nLabels representing various attributes used to identify or\ncategorize a security configuration\nRemediationOptions\nstring\nRecommended actions to reduce or address any associated risks\nYou can try this example query to return relevant configuration metadata along with\ninformation on devices with non-compliant antivirus configurations from the\nDeviceTvmSecureConfigurationAssessment  table:\nKusto\nProactively hunt for threats\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\nOverview of Microsoft Defender Vulnerability Management\n// Get information on devices with antivirus configurations issues\nDeviceTvmSecureConfigurationAssessment\n| where ConfigurationSubcategory == 'Antivirus' and IsApplicable == 1 and\nIsCompliant == 0\n| join kind=leftouter (\nDeviceTvmSecureConfigurationAssessmentKB\n| project ConfigurationId, ConfigurationName, ConfigurationDescription,\nRiskDescription, Tags, ConfigurationImpact\n) on ConfigurationId\n| project DeviceName, OSPlatform, ConfigurationId, ConfigurationName,\nConfigurationCategory, ConfigurationSubcategory, ConfigurationDescription,\nRiskDescription, ConfigurationImpact, Tags",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 746,
+      "end": 747
+    },
+    "content_stats": {
+      "char_count": 3181,
+      "word_count": 370
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

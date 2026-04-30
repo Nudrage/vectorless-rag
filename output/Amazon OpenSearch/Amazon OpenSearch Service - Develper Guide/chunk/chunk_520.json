@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_520",
+  "section_number": "2.8.11.2.2",
+  "header": "Take a snapshot",
+  "content": "You specify the following information when you create a snapshot:\n• The name of your snapshot repository\n• A name for the snapshot\nThe examples in this chapter use curl, a common HTTP client, for convenience and brevity. To pass\na username and password to your curl request, see the Getting started tutorial.\nIf your access policies specify users or roles, you must sign your snapshot requests. For curl, you can\nuse the --aws-sigv4 option with version 7.75.0 or later. You can also use the commented-out\nexamples in the sample Python client to make signed HTTP requests to the same endpoints that\nthe curl commands use.\nTo take a manual snapshot, perform the following steps:\n1.\nYou can't take a snapshot if one is currently in progress. To check, run the following command:\ncurl -XGET 'domain-endpoint/_snapshot/_status'\n2.\nRun the following command to take a manual snapshot:\ncurl -XPUT 'domain-endpoint/_snapshot/repository-name/snapshot-name'\nTo include or exclude certain indexes and specify other settings, add a request body. For the\nrequest structure, see Take snapshots in the OpenSearch documentation.\nNote\nThe time required to take a snapshot increases with the size of the OpenSearch Service\ndomain. Long-running snapshot operations sometimes encounter the following error: 504\nGATEWAY_TIMEOUT. You can typically ignore these errors and wait for the operation to\nTaking manual snapshots\n691\nAmazon OpenSearch Service\nDeveloper Guide\ncomplete successfully. Run the following command to verify the state of all snapshots of\nyour domain:\ncurl -XGET 'domain-endpoint/_snapshot/repository-name/_all?pretty'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 720,
+      "end": 721
+    },
+    "content_stats": {
+      "char_count": 1614,
+      "word_count": 241
+    },
+    "hierarchy": {
+      "parent": "Taking manual snapshots",
+      "children": []
+    }
+  }
+}

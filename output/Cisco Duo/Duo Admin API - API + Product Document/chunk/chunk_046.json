@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_046",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Parameter\nRequired?\nDescription\nalias1...4\nOptional\nA username alias for the user. Up to four aliase\nbe specified with this parameter. Aliases mus\nunique amongst users. This parameter mainta\nbackwards compatibility. Mutually exclusive w\naliases .\naliases\nOptional\nUsername aliases for the user. Up to eight alia\nbe specified with this parameter as a set of U\nencoded key-value pairs e.g.\nalias1=joe.smith&alias2=jsmith@examp\nIgnores alias position values not specified. Re\nthe value for an existing alias by specifying a b\nvalue e.g. alias1= . Aliases must be unique\nusers. Mutually exclusive with alias1...4 .\ncustom_attributes.\n(attribute name)\nOptional\nSets the value of a custom user attribute (e.g.\ncustom_attributes.nickName ).\ndate_of_birth\nOptional\nThe user's birthdate. Values must use the form\nYYYY-MM-DD  if you plan to use Duo identity\nverification.\nemail\nOptional\nThe new email address.\nenable_auto_prompt\nOptional\nIf set to 0 , the user will be shown a list of\nauthentication methods to initiate authenticat\nset to 1 , the user will be automatically prom\nuse their last-used authentication method. On\neffective in the Universal Prompt. Default: 1 .\nfirstname\nOptional\nThe user's first name/given name.\nlastname\nOptional\nThe user's last name/family name.\nnotes\nOptional\nThe new notes field.\nrealname\nOptional\nThe user's new real name (or full name). This i\n\"Display Name\" shown in the Admin Panel.\nstatus\nOptional\nThe new status. Must be one of \"active\", \"disa\n\"bypass\", or \"locked out\". See Retrieve Users f\nexplanation of these fields.\nPOST  /admin/v1/users/[user_id]\nThe \"disabled\" status may not be set via Adm\nusers managed by Active Directory or Entra ID\nnor can the API set \"active\" status for users di\nby directory sync.\nusername\nOptional\nThe new username.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 30,
+      "end": 31
+    },
+    "content_stats": {
+      "char_count": 1777,
+      "word_count": 275
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

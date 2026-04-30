@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_404",
+  "section_number": "2.7.10.11",
+  "header": "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+  "content": "(AWS PrivateLink)\nYou can use AWS PrivateLink to create a private connection between your VPC and Amazon\nOpenSearch Serverless. You can access OpenSearch Serverless as if it were in your VPC, without the\nuse of an internet gateway, NAT device, VPN connection, or Direct Connect connection. Instances in\nyour VPC don't need public IP addresses to access OpenSearch Serverless. For more information on\nVPC network access, see Network connectivity patterns for Amazon OpenSearch Serverless.\nYou establish this private connection by creating an interface endpoint, powered by AWS\nPrivateLink. We create an endpoint network interface in each subnet that you specify for the\ninterface endpoint. These are requester-managed network interfaces that serve as the entry point\nfor traﬃc destined for OpenSearch Serverless.\nFor more information, see Access AWS services through AWS PrivateLink in the AWS PrivateLink\nGuide.\nTopics\n• Creating Collection/Policies using PrivateLink\n• DNS resolution of collection endpoints\nVPC endpoints\n556\nAmazon OpenSearch Service\nDeveloper Guide\n• VPCs and network access policies\n• VPCs and endpoint policies\n• Considerations\n• Permissions required\n• Create an interface endpoint for OpenSearch Serverless\n• Shared VPC setup for Amazon OpenSearch Serverless",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 585,
+      "end": 586
+    },
+    "content_stats": {
+      "char_count": 1281,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": [
+        "Creating Collection/Policies using PrivateLink",
+        "DNS resolution of collection endpoints",
+        "VPCs and network access policies",
+        "VPCs and endpoint policies",
+        "Considerations",
+        "Permissions required",
+        "Create an interface endpoint for OpenSearch Serverless",
+        "Shared VPC setup for Amazon OpenSearch Serverless"
+      ]
+    }
+  }
+}

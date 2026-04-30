@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_470",
+  "section_number": "2.8.5.5",
+  "header": "Stages of a conﬁguration change",
+  "content": "After you initiate a conﬁguration change, OpenSearch Service goes through a series of steps to\nupdate your domain. You can view the progress of the conﬁguration change under Conﬁguration\nchange status in the console. The exact steps that an update goes through depends on\nthe type of change you're making. You can also monitor a conﬁguration change using the\nDescribeDomainChangeProgress API operation.\nThe following are possible stages an update can go through during a conﬁguration change:\nStage name\nDescription\nValidation\nValidatin\ng that the\ndomain is\neligible for\nan update,\nand surfacing\nvalidatio\nn issues if\nnecessary.\nCreating a new environment\nCompleting\nthe necessary\nprerequisites\nand creating\nrequired\nresources\nto start the\nblue/green\ndeployment.\nProvisioning new nodes\nCreating a\nnew set of\ninstances\nin the new\nenvironment.\nStages of a conﬁguration change\n637\nAmazon OpenSearch Service\nDeveloper Guide\nStage name\nDescription\nTraﬃc routing on new nodes\nRedirecting\ntraﬃc to the\nnewly created\ndata nodes.\nTraﬃc routing on old nodes\nDisabling\ntraﬃc on\nthe old data\nnodes.\nPreparing nodes for removal\nPreparing to\nremove nodes.\nThis step\nonly happens\nwhen you're\ndownscaling\nyour domain\n(for example,\nfrom 8 nodes\nto 6 nodes).\nCopying shards to new nodes\nMoving shards\nfrom the old\nnodes to the\nnew nodes.\nTerminating nodes\nTerminating\nand deleting\nold nodes\nafter shards\nare removed.\nStages of a conﬁguration change\n638\nAmazon OpenSearch Service\nDeveloper Guide\nStage name\nDescription\nDeleting older resources\nDeleting\nresources\nassociated\nwith the old\nenvironme\nnt (e.g. load\nbalancer).\nDynamic update\nDisplayed\nwhen the\nupdate does\nnot require\na blue/gree\nn deploymen\nt and can be\ndynamically\napplied.\nApplying dedicated master related changes\nDisplayed\nwhen the\ndedicated\nmaster\ninstance type\nor count is\nchanged.\nApplying volume related changes\nDisplayed\nwhen volume\nsize, type,\nIOPS and\nthroughput\nare changed.\nStages of a conﬁguration change\n639\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 666,
+      "end": 669
+    },
+    "content_stats": {
+      "char_count": 2007,
+      "word_count": 305
+    },
+    "hierarchy": {
+      "parent": "Making conﬁguration changes in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

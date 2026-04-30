@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_1852",
+  "section_number": "155.1.1.250",
+  "header": "Microsoft Defender XDR incidents API and the incidents resource type",
+  "content": "the incidents resource type\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nAn incident is a collection of related alerts that help describe an attack. Events from different\nentities in your organization are aggregated automatically by Microsoft Defender XDR. You can\nuse the incidents API to programmatically access your organization's incidents and related\nalerts.\nYou can request up to 50 calls per minute or 1,500 calls per hour. Each method also has its own\nquotas. For more information on method-specific quotas, see the respective article for the\nmethod you want to use.\nA 429  HTTP response code indicates that you've reached a quota, either by number of\nrequests sent, or by allotted running time. The response body includes the time until the quota\nyou reached is reset.\nThe incidents API requires different kinds of permissions for each of its methods. For more\ninformation about required permissions, see the respective method's article.\n７ Note\nTry our new APIs using MS Graph security API. Find out more at: Use the Microsoft\nGraph security API - Microsoft Graph | Microsoft Learn.\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1383,
+      "end": 1383
+    },
+    "content_stats": {
+      "char_count": 1333,
+      "word_count": 210
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Quotas and resource allocation",
+        "Permissions",
+        "Methods",
+        "Request body, response, and examples",
+        "Common properties",
+        "Related articles",
+        "List incidents API in Microsoft Defender XDR"
+      ]
+    }
+  }
+}

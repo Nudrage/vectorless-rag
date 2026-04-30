@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_065",
+  "section_number": "1.6.13",
+  "header": "Retrieve Bypass Codes by User ID",
+  "content": "Returns a paged list of bypass code metadata associated with the user with ID\nuser_id . To fetch all results, call repeatedly with the offset  parameter as long as\n{\n\"stat\": \"OK\",\n\"response\": [\n\"407176182\",\n\"016931781\",\n\"338390347\",\n\"537828175\",\n\"006165274\",\n\"438680449\",\n\"877647224\",\n\"196167433\",\n\"719424708\",\n\"727559878\"\n]\n}\nthe result metadata has a next_offset  value. Does not return the actual bypass\ncodes. Requires \"Grant resource - Read\" API permission.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 34,
+      "end": 35
+    },
+    "content_stats": {
+      "char_count": 462,
+      "word_count": 67
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

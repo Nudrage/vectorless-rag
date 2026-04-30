@@ -1,0 +1,3234 @@
+DOCUMENT INDEX: CrowdStrike Falcon EDR\CrowdStrike - Product Document
+=====================================================================
+
+1. Events Full Reference (Events Data Dictionary)
+   1.1. Overview
+   1.2. Additional event resources
+   1.3. Introduction
+   1.4. Before you begin
+      1.4.1. Searching
+      1.4.2. Sample queries
+      1.4.3. Key data fields
+   1.5. Sensor events
+      1.5.1. AcUninstallConfirmation
+         1.5.1.1. Description
+         1.5.1.2. Fields: Windows, macOS, Linux
+      1.5.2. AcUnloadConfirmation
+         1.5.2.1. Description
+         1.5.2.2. Fields: Windows, macOS, Linux
+      1.5.3. WfpFilterTamperingFilterDeleted
+         1.5.3.1. Description
+         1.5.3.2. Fields: Windows
+      1.5.4. HostInfo
+         1.5.4.1. Description
+         1.5.4.2. Fields: Windows, Windows Legacy
+         1.5.4.3. Fields: macOS
+         1.5.4.4. Fields: iOS
+      1.5.5. LFODownloadConfirmation
+         1.5.5.1. Description
+         1.5.5.2. Fields: Windows, macOS, Linux, Falcon Container, Android, iOS, Kubernetes, Vmcluster
+      1.5.6. HookedDriverObject
+         1.5.6.1. Description
+         1.5.6.2. Fields: Windows
+      1.5.7. WfpFilterTamperingFilterAdded
+         1.5.7.1. Description
+         1.5.7.2. Fields: Windows
+      1.5.8. ConfigStateUpdate
+         1.5.8.1. Description
+         1.5.8.2. Fields: Windows, macOS, Linux, Falcon Container, Android, iOS, Kubernetes, Windows Legacy, Vmcluster
+      1.5.9. LocalIpAddressIP6
+         1.5.9.1. Description
+         1.5.9.2. Fields: Windows
+         1.5.9.3. Fields: macOS
+         1.5.9.4. Fields: Linux, Falcon Container
+         1.5.9.5. Fields: iOS
+         1.5.9.6. Fields: Forensics
+         1.5.9.7. Fields: Android
+      1.5.10. NeighborListIP4
+         1.5.10.1. Description
+         1.5.10.2. Fields: Windows, macOS, Linux, Falcon Container
+         1.5.10.3. Fields: Forensics
+      1.5.11. LocalIpAddressIP4
+         1.5.11.1. Description
+         1.5.11.2. Fields: Windows
+         1.5.11.3. Fields: macOS
+         1.5.11.4. Fields: Linux, Falcon Container
+         1.5.11.5. Fields: iOS
+         1.5.11.6. Fields: Forensics
+         1.5.11.7. Fields: Android
+      1.5.12. NeighborListIP6
+         1.5.12.1. Description
+         1.5.12.2. Fields: Windows, macOS, Linux, Falcon Container
+         1.5.12.3. Fields: Forensics
+      1.5.13. LocalIpAddressRemovedIP6
+         1.5.13.1. Description
+         1.5.13.2. Fields: Windows, macOS
+         1.5.13.3. Fields: Linux, Falcon Container
+         1.5.13.4. Fields: iOS, Android
+      1.5.14. UserLogoff
+         1.5.14.1. Description
+         1.5.14.2. Fields: Windows
+         1.5.14.3. Fields: Linux
+         1.5.14.4. Fields: ChromeOS
+         1.5.14.5. Fields: macOS
+      1.5.15. DeliverLocalFXToCloud
+         1.5.15.1. Description
+         1.5.15.2. Fields: Windows, macOS, Linux
+      1.5.16. DcUsbHIDDescriptor
+         1.5.16.1. Description
+         1.5.16.2. Fields: Windows, macOS, Linux
+      1.5.17. DcUsbInterfaceDescriptor
+         1.5.17.1. Description
+         1.5.17.2. Fields: Windows, macOS, Linux
+      1.5.18. DcUsbConfigurationDescriptor
+         1.5.18.1. Description
+         1.5.18.2. Fields: Windows, macOS, Linux
+      1.5.19. LocalIpAddressRemovedIP4
+         1.5.19.1. Description
+         1.5.19.2. Fields: Windows, macOS
+         1.5.19.3. Fields: Linux, Falcon Container
+         1.5.19.4. Fields: iOS, Android
+      1.5.20. DcUsbEndpointDescriptor
+         1.5.20.1. Description
+         1.5.20.2. Fields: Windows, macOS, Linux
+      1.5.21. DcOffline
+         1.5.21.1. Description
+         1.5.21.2. Fields: Windows, macOS, Linux
+      1.5.22. AwsIamAccountAlias
+         1.5.22.1. Description
+         1.5.22.2. Fields: Windows
+         1.5.22.3. Fields: Public Cloud
+      1.5.23. DcStatus
+         1.5.23.1. Description
+         1.5.23.2. Fields: Windows, macOS, Linux
+      1.5.24. DcOnline
+         1.5.24.1. Description
+         1.5.24.2. Fields: Windows, macOS, Linux
+      1.5.25. DcUsbDeviceWhitelisted
+         1.5.25.1. Description
+         1.5.25.2. Fields: Windows, macOS, Linux
+      1.5.26. DcUsbDeviceDisconnected
+         1.5.26.1. Description
+         1.5.26.2. Fields: Windows, macOS, Linux
+      1.5.27. AwsEc2Vpc
+         1.5.27.1. Description
+         1.5.27.2. Fields: Windows
+         1.5.27.3. Fields: Public Cloud
+      1.5.28. FirmwareRegionMeasured
+         1.5.28.1. Description
+         1.5.28.2. Fields: Windows, macOS
+      1.5.29. AwsEc2NetworkInterfacePrivateIP
+         1.5.29.1. Description
+         1.5.29.2. Fields: Windows
+         1.5.29.3. Fields: Public Cloud
+      1.5.30. AwsEc2Instance
+         1.5.30.1. Description
+         1.5.30.2. Fields: Windows
+         1.5.30.3. Fields: Public Cloud
+      1.5.31. FirmwareAnalysisErrorEvent
+         1.5.31.1. Description
+         1.5.31.2. Fields: Windows, macOS
+      1.5.32. AwsEc2Image
+         1.5.32.1. Description
+         1.5.32.2. Fields: Windows
+         1.5.32.3. Fields: Public Cloud
+      1.5.33. AwsEc2NetworkAcl
+         1.5.33.1. Description
+         1.5.33.2. Fields: Windows
+         1.5.33.3. Fields: Public Cloud
+      1.5.34. AwsEc2SecurityGroup
+         1.5.34.1. Description
+         1.5.34.2. Fields: Windows
+         1.5.34.3. Fields: Public Cloud
+      1.5.35. AwsEc2NetworkAclEntry
+         1.5.35.1. Description
+         1.5.35.2. Fields: Windows
+         1.5.35.3. Fields: Public Cloud
+      1.5.36. FirmwareAnalysisHardwareData
+         1.5.36.1. Description
+         1.5.36.2. Fields: Windows, macOS
+      1.5.37. AwsEc2NetworkInterface
+         1.5.37.1. Description
+         1.5.37.2. Fields: Windows
+         1.5.37.3. Fields: Public Cloud
+      1.5.38. FirmwareAnalysisStatus
+         1.5.38.1. Description
+         1.5.38.2. Fields: Windows, macOS
+      1.5.39. AwsEc2Volume
+         1.5.39.1. Description
+         1.5.39.2. Fields: Windows
+         1.5.39.3. Fields: Public Cloud
+      1.5.40. AwsEc2Subnet
+         1.5.40.1. Description
+         1.5.40.2. Fields: Windows
+         1.5.40.3. Fields: Public Cloud
+      1.5.41. AwsEc2SecurityGroupRule
+         1.5.41.1. Description
+         1.5.41.2. Fields: Windows
+         1.5.41.3. Fields: Public Cloud
+      1.5.42. IOServiceRegister
+         1.5.42.1. Description
+         1.5.42.2. Fields: macOS
+      1.5.43. GroupIdentity
+         1.5.43.1. Description
+         1.5.43.2. Fields: macOS
+         1.5.43.3. Fields: Forensics
+      1.5.44. HostnameChanged
+         1.5.44.1. Description
+         1.5.44.2. Fields: Linux, Falcon Container, macOS
+      1.5.45. MobileAppsManifest
+         1.5.45.1. Description
+         1.5.45.2. Fields: Android
+      1.5.46. OsVersionInfo
+         1.5.46.1. Description
+         1.5.46.2. Fields: Android
+         1.5.46.3. Fields: iOS
+         1.5.46.4. Fields: Windows
+         1.5.46.5. Fields: Windows Legacy
+         1.5.46.6. Fields: Forensics
+         1.5.46.7. Fields: macOS
+         1.5.46.8. Fields: Linux, Falcon Container, Vmcluster, Kubernetes
+      1.5.47. ContainerizationUpdate
+         1.5.47.1. Description
+         1.5.47.2. Fields: Android
+      1.5.48. MobilePowerStats
+         1.5.48.1. Description
+         1.5.48.2. Fields: Android
+         1.5.48.3. Fields: iOS
+      1.5.49. WiFiConnect
+         1.5.49.1. Description
+         1.5.49.2. Fields: Android, iOS
+      1.5.50. ClipboardCopy
+         1.5.50.1. Description
+         1.5.50.2. Fields: iOS
+         1.5.50.3. Fields: Android
+      1.5.51. APKMetadata
+         1.5.51.1. Description
+         1.5.51.2. Fields: Android
+      1.5.52. UncontainerizeAppResponse
+         1.5.52.1. Description
+         1.5.52.2. Fields: Android
+      1.5.53. WiFiDisconnect
+         1.5.53.1. Description
+         1.5.53.2. Fields: iOS, Android
+      1.5.54. FileInfo
+         1.5.54.1. Description
+         1.5.54.2. Fields: Forensics
+         1.5.54.3. Fields: macOS
+         1.5.54.4. Fields: macOS
+      1.5.55. InstalledApplication
+         1.5.55.1. Description
+         1.5.55.2. Fields: Windows
+         1.5.55.3. Fields: Linux
+         1.5.55.4. Fields: macOS
+         1.5.55.5. Fields: Forensics
+      1.5.56. SmbServerV1AuditEtw
+         1.5.56.1. Description
+         1.5.56.2. Fields: Windows
+      1.5.57. SmbClientShareOpenedEtw
+         1.5.57.1. Description
+         1.5.57.2. Fields: Windows
+      1.5.58. AccessoryDisconnected
+         1.5.58.1. Description
+         1.5.58.2. Fields: Android
+         1.5.58.3. Fields: iOS
+      1.5.59. SmbClientShareClosedEtw
+         1.5.59.1. Description
+         1.5.59.2. Fields: Windows
+      1.5.60. AccessoryConnected
+         1.5.60.1. Description
+         1.5.60.2. Fields: Android
+         1.5.60.3. Fields: iOS
+      1.5.61. DeactivateMobileSensorResponse
+         1.5.61.1. Description
+         1.5.61.2. Fields: iOS, Android
+      1.5.62. EtwErrorEvent
+         1.5.62.1. Description
+         1.5.62.2. Fields: Windows
+      1.5.63. BillingInfo
+         1.5.63.1. Description
+         1.5.63.2. Fields: Linux, Falcon Container, Windows, macOS
+      1.5.64. OciContainerTelemetry
+         1.5.64.1. Description
+         1.5.64.2. Fields: Linux, Falcon Container
+      1.5.65. OciContainerHeartbeat
+         1.5.65.1. Description
+         1.5.65.2. Fields: Linux, Falcon Container
+      1.5.66. AuditCveUmEtw
+         1.5.66.1. Description
+         1.5.66.2. Fields: Windows
+      1.5.67. CsUmProcessCrashAuxiliaryEvent
+         1.5.67.1. Description
+         1.5.67.2. Fields: Windows
+      1.5.68. OciImageInfo
+         1.5.68.1. Description
+         1.5.68.2. Fields: Linux, Falcon Container
+      1.5.69. OciContainerStopped
+         1.5.69.1. Description
+         1.5.69.2. Fields: Linux, Falcon Container
+      1.5.70. FsVolumeMounted
+         1.5.70.1. Description
+         1.5.70.2. Fields: Forensics
+         1.5.70.3. Fields: iOS
+         1.5.70.4. Fields: Windows
+         1.5.70.5. Fields: Linux, Falcon Container
+         1.5.70.6. Fields: macOS
+      1.5.71. AuditCveKmEtw
+         1.5.71.1. Description
+         1.5.71.2. Fields: Windows
+      1.5.72. OciContainerEngineInfo
+         1.5.72.1. Description
+         1.5.72.2. Fields: Linux, Falcon Container
+      1.5.73. OciContainerStarted
+         1.5.73.1. Description
+         1.5.73.2. Fields: Linux, Falcon Container
+      1.5.74. OciImageHeartbeat
+         1.5.74.1. Description
+         1.5.74.2. Fields: Linux, Falcon Container
+      1.5.75. AndroidManifestXmlUploaded
+         1.5.75.1. Description
+         1.5.75.2. Fields: Android
+      1.5.76. AndroidManifestFragmentData
+         1.5.76.1. Description
+         1.5.76.2. Fields: Android
+      1.5.77. SystemCapacity
+         1.5.77.1. Description
+         1.5.77.2. Fields: Windows, macOS, Linux
+      1.5.78. AzureIpConfiguration
+         1.5.78.1. Description
+         1.5.78.2. Fields: Public Cloud
+      1.5.79. AzureDisk
+         1.5.79.1. Description
+         1.5.79.2. Fields: Public Cloud
+      1.5.80. GcpComputeFirewall
+         1.5.80.1. Description
+         1.5.80.2. Fields: Public Cloud
+      1.5.81. GcpAsset
+         1.5.81.1. Description
+         1.5.81.2. Fields: Public Cloud
+      1.5.82. GcpIamServiceAccount
+         1.5.82.1. Description
+         1.5.82.2. Fields: Public Cloud
+      1.5.83. GcpComputeNetworkPeering
+         1.5.83.1. Description
+         1.5.83.2. Fields: Public Cloud
+      1.5.84. AzureVirtualNetwork
+         1.5.84.1. Description
+         1.5.84.2. Fields: Public Cloud
+      1.5.85. GcpProject
+         1.5.85.1. Description
+         1.5.85.2. Fields: Public Cloud
+      1.5.86. GcpComputeDisk
+         1.5.86.1. Description
+         1.5.86.2. Fields: Public Cloud
+      1.5.87. AzureVirtualNetworkPeering
+         1.5.87.1. Description
+         1.5.87.2. Fields: Public Cloud
+      1.5.88. GcpComputeSubnetwork
+         1.5.88.1. Description
+         1.5.88.2. Fields: Public Cloud
+      1.5.89. AzureNetworkInterface
+         1.5.89.1. Description
+         1.5.89.2. Fields: Public Cloud
+      1.5.90. AzureResourceGroup
+         1.5.90.1. Description
+         1.5.90.2. Fields: Public Cloud
+      1.5.91. CloudScanControl
+         1.5.91.1. Description
+         1.5.91.2. Fields: Public Cloud
+      1.5.92. AzureVirtualMachineState
+         1.5.92.1. Description
+         1.5.92.2. Fields: Public Cloud
+      1.5.93. GcpComputeInstance
+         1.5.93.1. Description
+         1.5.93.2. Fields: Public Cloud
+      1.5.94. GcpComputeNetwork
+         1.5.94.1. Description
+         1.5.94.2. Fields: Public Cloud
+      1.5.95. GcpComputeNetworkInterface
+         1.5.95.1. Description
+         1.5.95.2. Fields: Public Cloud
+      1.5.96. AzureFirewallRuleCollection
+         1.5.96.1. Description
+         1.5.96.2. Fields: Public Cloud
+      1.5.97. AzurePublicIpAddress
+         1.5.97.1. Description
+         1.5.97.2. Fields: Public Cloud
+      1.5.98. AzurePrivateEndpoint
+         1.5.98.1. Description
+         1.5.98.2. Fields: Public Cloud
+      1.5.99. AzureSubnet
+         1.5.99.1. Description
+         1.5.99.2. Fields: Public Cloud
+      1.5.100. GcpComputeImage
+         1.5.100.1. Description
+         1.5.100.2. Fields: Public Cloud
+      1.5.101. AzureNetworkFirewallRule
+         1.5.101.1. Description
+         1.5.101.2. Fields: Public Cloud
+      1.5.102. AzureFirewall
+         1.5.102.1. Description
+         1.5.102.2. Fields: Public Cloud
+      1.5.103. AzureVirtualMachine
+         1.5.103.1. Description
+         1.5.103.2. Fields: Public Cloud
+      1.5.104. AzureNetworkSecurityGroupRule
+         1.5.104.1. Description
+         1.5.104.2. Fields: Public Cloud
+      1.5.105. AzureNetworkSecurityGroup
+         1.5.105.1. Description
+         1.5.105.2. Fields: Public Cloud
+      1.5.106. AzureSubscription
+         1.5.106.1. Description
+         1.5.106.2. Fields: Public Cloud
+      1.5.107. AzureApplicationFirewallRule
+         1.5.107.1. Description
+         1.5.107.2. Fields: Public Cloud
+      1.5.108. AzureNatFirewallRule
+         1.5.108.1. Description
+         1.5.108.2. Fields: Public Cloud
+      1.5.109. DnsServerSigRedExploitAttemptEtw
+         1.5.109.1. Description
+         1.5.109.2. Fields: Windows
+      1.5.110. AmsiRegistrationStatus
+         1.5.110.1. Description
+         1.5.110.2. Fields: Windows
+      1.5.111. FileVaultStatus
+         1.5.111.1. Description
+         1.5.111.2. Fields: macOS
+      1.5.112. PtActivationStatus
+         1.5.112.1. Description
+         1.5.112.2. Fields: Windows
+      1.5.113. EksFargateProfile
+         1.5.113.1. Description
+         1.5.113.2. Fields: Public Cloud
+      1.5.114. ProvisioningEnded
+         1.5.114.1. Description
+         1.5.114.2. Fields: Windows
+      1.5.115. ProvisioningStarted
+         1.5.115.1. Description
+         1.5.115.2. Fields: Windows
+      1.5.116. EksCluster
+         1.5.116.1. Description
+         1.5.116.2. Fields: Public Cloud
+      1.5.117. EksNodeGroup
+         1.5.117.1. Description
+         1.5.117.2. Fields: Public Cloud
+      1.5.118. ProvisioningStatusUpdate
+         1.5.118.1. Description
+         1.5.118.2. Fields: Windows
+      1.5.119. K8SCluster
+         1.5.119.1. Description
+         1.5.119.2. Fields: Public Cloud
+      1.5.120. SpotlightEntitySystemState
+         1.5.120.1. Description
+         1.5.120.2. Fields: Windows, macOS, Linux
+      1.5.121. SpotlightEntityBatchHeader
+         1.5.121.1. Description
+         1.5.121.2. Fields: Windows, macOS, Linux
+      1.5.122. RemovableMediaVolumeMounted
+         1.5.122.1. Description
+         1.5.122.2. Fields: Android
+         1.5.122.3. Fields: Windows
+      1.5.123. RemovableMediaFileWritten
+         1.5.123.1. Description
+         1.5.123.2. Fields: Android
+      1.5.124. FsVolumeUnmounted
+         1.5.124.1. Description
+         1.5.124.2. Fields: iOS
+         1.5.124.3. Fields: Windows
+         1.5.124.4. Fields: macOS
+         1.5.124.5. Fields: Linux, Falcon Container
+      1.5.125. RemovableMediaVolumeUnmounted
+         1.5.125.1. Description
+         1.5.125.2. Fields: Android
+      1.5.126. AksCluster
+         1.5.126.1. Description
+         1.5.126.2. Fields: Public Cloud
+      1.5.127. AksAgentPool
+         1.5.127.1. Description
+         1.5.127.2. Fields: Public Cloud
+      1.5.128. ActiveDirectoryAccountPasswordUpdate
+         1.5.128.1. Description
+         1.5.128.2. Fields: Windows
+      1.5.129. ActiveDirectoryAccountDisabled
+         1.5.129.1. Description
+         1.5.129.2. Fields: Windows
+      1.5.130. ActiveDirectoryAccountDepartmentUpdate
+         1.5.130.1. Description
+         1.5.130.2. Fields: Windows
+      1.5.131. ActiveDirectoryAccountLocked
+         1.5.131.1. Description
+         1.5.131.2. Fields: Windows
+      1.5.132. ActiveDirectoryAccountEnabled
+         1.5.132.1. Description
+         1.5.132.2. Fields: Windows
+      1.5.133. ActiveDirectoryAccountCreated
+         1.5.133.1. Description
+         1.5.133.2. Fields: Windows
+      1.5.134. ResourceUtilization
+         1.5.134.1. Description
+         1.5.134.2. Fields: Linux, Kubernetes
+         1.5.134.3. Fields: Windows, macOS
+      1.5.135. StaticAnalysisContainerTelemetry
+         1.5.135.1. Description
+         1.5.135.2. Fields: Windows
+      1.5.136. ActiveDirectoryAccountNameUpdate
+         1.5.136.1. Description
+         1.5.136.2. Fields: Windows
+      1.5.137. ActiveDirectoryAccountOuUpdate
+         1.5.137.1. Description
+         1.5.137.2. Fields: Windows
+      1.5.138. AksVMSS
+         1.5.138.1. Description
+         1.5.138.2. Fields: Public Cloud
+      1.5.139. ActiveDirectoryAccountUnlocked
+         1.5.139.1. Description
+         1.5.139.2. Fields: Windows
+      1.5.140. CidMigrationComplete
+         1.5.140.1. Description
+         1.5.140.2. Fields: Windows, macOS, Linux
+      1.5.141. TcgPcrInfo
+         1.5.141.1. Description
+         1.5.141.2. Fields: Windows
+      1.5.142. DcBluetoothDeviceDisconnected
+         1.5.142.1. Description
+         1.5.142.2. Fields: Windows, macOS
+      1.5.143. DcBluetoothDeviceConnected
+         1.5.143.1. Description
+         1.5.143.2. Fields: Windows, macOS
+      1.5.144. AppUninstalled
+         1.5.144.1. Description
+         1.5.144.2. Fields: Android
+      1.5.145. UserIdentity
+         1.5.145.1. Description
+         1.5.145.2. Fields: Linux
+         1.5.145.3. Fields: macOS
+         1.5.145.4. Fields: Windows
+         1.5.145.5. Fields: Forensics
+      1.5.146. UserInformationEtw
+         1.5.146.1. Description
+         1.5.146.2. Fields: Windows
+      1.5.147. CidMigrationConfirmation
+         1.5.147.1. Description
+         1.5.147.2. Fields: Windows, Linux, macOS
+      1.5.148. DiskUtilization
+         1.5.148.1. Description
+         1.5.148.2. Fields: Linux
+         1.5.148.3. Fields: Forensics
+      1.5.149. DriverPreventionStatus
+         1.5.149.1. Description
+         1.5.149.2. Fields: Windows
+      1.5.150. SysConfigInfo
+         1.5.150.1. Description
+         1.5.150.2. Fields: Linux, Falcon Container
+      1.5.151. MemoryScanEnabled
+         1.5.151.1. Description
+         1.5.151.2. Fields: Windows
+      1.5.152. UserLogon
+         1.5.152.1. Description
+         1.5.152.2. Fields: Linux
+         1.5.152.3. Fields: ChromeOS
+         1.5.152.4. Fields: Windows
+         1.5.152.5. Fields: macOS
+      1.5.153. SensorAntiTamperState
+         1.5.153.1. Description
+         1.5.153.2. Fields: Windows
+      1.5.154. ServicesStatusInfo
+         1.5.154.1. Description
+         1.5.154.2. Fields: Windows
+         1.5.154.3. Fields: Forensics
+      1.5.155. OdsStartRequestReceived
+         1.5.155.1. Description
+         1.5.155.2. Fields: Windows
+      1.5.156. SensorGroupingTagsUpdate
+         1.5.156.1. Description
+         1.5.156.2. Fields: Windows
+      1.5.157. OdsScheduleCanceled
+         1.5.157.1. Description
+         1.5.157.2. Fields: Windows
+      1.5.158. IdpPolicyAccountEventRuleMatch
+         1.5.158.1. Description
+         1.5.158.2. Fields: Public Cloud
+      1.5.159. UserLogonFailed2
+         1.5.159.1. Description
+         1.5.159.2. Fields: Linux
+         1.5.159.3. Fields: ChromeOS
+         1.5.159.4. Fields: macOS
+         1.5.159.5. Fields: Windows
+      1.5.160. OdsScheduleCancelRequestReceived
+         1.5.160.1. Description
+         1.5.160.2. Fields: Windows
+      1.5.161. OdsScheduleRequestReceived
+         1.5.161.1. Description
+         1.5.161.2. Fields: Windows
+      1.5.162. OdsProfileReceived
+         1.5.162.1. Description
+         1.5.162.2. Fields: Windows
+      1.5.163. OdsActionStatus
+         1.5.163.1. Description
+         1.5.163.2. Fields: Windows
+      1.5.164. OdsStarted
+         1.5.164.1. Description
+         1.5.164.2. Fields: Windows
+      1.5.165. OdsMaliciousFileFound
+         1.5.165.1. Description
+         1.5.165.2. Fields: Windows
+      1.5.166. OdsCancelRequestReceived
+         1.5.166.1. Description
+         1.5.166.2. Fields: Windows
+      1.5.167. DcIdentification
+         1.5.167.1. Description
+         1.5.167.2. Fields: Windows
+      1.5.168. OdsStatus
+         1.5.168.1. Description
+         1.5.168.2. Fields: Windows
+      1.5.169. ChannelActive
+         1.5.169.1. Description
+         1.5.169.2. Fields: Windows
+      1.5.170. SensorHeartbeat
+         1.5.170.1. Description
+         1.5.170.2. Fields: ChromeOS
+         1.5.170.3. Fields: Windows Legacy
+         1.5.170.4. Fields: Kubernetes, Linux, Falcon Container, Windows, macOS, Vmcluster
+         1.5.170.5. Fields: Android, iOS
+      1.5.171. AgentOnline
+         1.5.171.1. Description
+         1.5.171.2. Fields: ChromeOS
+         1.5.171.3. Fields: macOS, Windows
+         1.5.171.4. Fields: Android
+         1.5.171.5. Fields: iOS
+         1.5.171.6. Fields: Windows Legacy
+         1.5.171.7. Fields: Vmcluster, Kubernetes, Linux, Falcon Container
+      1.5.172. K8SClusterInfo
+         1.5.172.1. Description
+         1.5.172.2. Fields: Kubernetes
+      1.5.173. SmbClientShareLogonBruteForceLowThreshold
+         1.5.173.1. Description
+         1.5.173.2. Fields: Windows
+      1.5.174. LocalWindowsUserUpdate
+         1.5.174.1. Description
+         1.5.174.2. Fields: Windows
+      1.5.175. SmbClientShareLogonBruteForceSuspected
+         1.5.175.1. Description
+         1.5.175.2. Fields: Windows
+      1.5.176. SensorMetadataUpdate
+         1.5.176.1. Description
+         1.5.176.2. Fields: Linux
+      1.5.177. CsKmCrashSummaryEvent
+         1.5.177.1. Description
+         1.5.177.2. Fields: Windows
+      1.5.178. LockdownModeStatus
+         1.5.178.1. Description
+         1.5.178.2. Fields: iOS
+      1.5.179. IdpContainerRestarted
+         1.5.179.1. Description
+         1.5.179.2. Fields: Windows
+      1.5.180. LoadImage
+         1.5.180.1. Description
+         1.5.180.2. Fields: Windows
+         1.5.180.3. Fields: macOS
+         1.5.180.4. Fields: Linux, Falcon Container
+      1.5.181. TerminateProcess
+         1.5.181.1. Description
+         1.5.181.2. Fields: Windows
+         1.5.181.3. Fields: macOS
+         1.5.181.4. Fields: Linux, Falcon Container
+         1.5.181.5. Fields: ChromeOS
+      1.5.182. ProcessRollup
+         1.5.182.1. Description
+         1.5.182.2. Fields: Windows
+      1.5.183. AsepKeyUpdate
+         1.5.183.1. Description
+         1.5.183.2. Fields: Windows
+      1.5.184. PeVersionInfo
+         1.5.184.1. Description
+         1.5.184.2. Fields: Windows
+      1.5.185. AsepValueUpdate
+         1.5.185.1. Description
+         1.5.185.2. Fields: Windows
+      1.5.186. KernelModeLoadImage
+         1.5.186.1. Description
+         1.5.186.2. Fields: Windows
+         1.5.186.3. Fields: macOS
+         1.5.186.4. Fields: Linux, Falcon Container
+         1.5.186.5. Fields: Forensics
+      1.5.187. RansomwareRenameFile
+         1.5.187.1. Description
+         1.5.187.2. Fields: Windows
+      1.5.188. UACCredentialCaptureElevation
+         1.5.188.1. Description
+         1.5.188.2. Fields: Windows
+      1.5.189. IoSessionLoggedOn
+         1.5.189.1. Description
+         1.5.189.2. Fields: Windows
+      1.5.190. ModifyServiceBinary
+         1.5.190.1. Description
+         1.5.190.2. Fields: Windows
+      1.5.191. UACMSIElevation
+         1.5.191.1. Description
+         1.5.191.2. Fields: Windows
+      1.5.192. UACExeElevation
+         1.5.192.1. Description
+         1.5.192.2. Fields: Windows
+      1.5.193. UACAxisElevation
+         1.5.193.1. Description
+         1.5.193.2. Fields: Windows
+      1.5.194. IoSessionConnected
+         1.5.194.1. Description
+         1.5.194.2. Fields: Windows
+      1.5.195. CreateService
+         1.5.195.1. Description
+         1.5.195.2. Fields: Windows
+      1.5.196. DllInjection
+         1.5.196.1. Description
+         1.5.196.2. Fields: Windows
+      1.5.197. NewExecutableRenamed
+         1.5.197.1. Description
+         1.5.197.2. Fields: Windows
+         1.5.197.3. Fields: macOS
+      1.5.198. ExecutableDeleted
+         1.5.198.1. Description
+         1.5.198.2. Fields: Windows
+         1.5.198.3. Fields: macOS, Linux
+      1.5.199. WroteExeAndGeneratedServiceEvent
+         1.5.199.1. Description
+         1.5.199.2. Fields: Windows
+      1.5.200. SuspiciousDnsRequest
+         1.5.200.1. Description
+         1.5.200.2. Fields: Windows
+         1.5.200.3. Fields: Linux
+         1.5.200.4. Fields: macOS
+      1.5.201. UACCOMElevation
+         1.5.201.1. Description
+         1.5.201.2. Fields: Windows
+      1.5.202. HostedServiceStopped
+         1.5.202.1. Description
+         1.5.202.2. Fields: Windows
+      1.5.203. WmiCreateProcess
+         1.5.203.1. Description
+         1.5.203.2. Fields: Windows
+      1.5.204. ProcessSelfDeleted
+         1.5.204.1. Description
+         1.5.204.2. Fields: Windows
+         1.5.204.3. Fields: macOS, Linux
+      1.5.205. UnsignedModuleLoad
+         1.5.205.1. Description
+         1.5.205.2. Fields: Windows
+      1.5.206. SuspiciousRawDiskRead
+         1.5.206.1. Description
+         1.5.206.2. Fields: Windows
+      1.5.207. CommandHistory
+         1.5.207.1. Description
+         1.5.207.2. Fields: Windows
+      1.5.208. EndOfProcess
+         1.5.208.1. Description
+         1.5.208.2. Fields: Windows, macOS, Linux, Falcon Container
+      1.5.209. BehaviorWhitelisted
+         1.5.209.1. Description
+         1.5.209.2. Fields: Windows, macOS
+         1.5.209.3. Fields: Linux
+      1.5.210. FlashThreadCreateProcess
+         1.5.210.1. Description
+         1.5.210.2. Fields: Windows, macOS
+      1.5.211. UserLogonFailed
+         1.5.211.1. Description
+         1.5.211.2. Fields: Windows
+      1.5.212. ScriptControlErrorEvent
+         1.5.212.1. Description
+         1.5.212.2. Fields: Windows
+      1.5.213. SuspiciousRegAsepUpdate
+         1.5.213.1. Description
+         1.5.213.2. Fields: Windows
+      1.5.214. SuspiciousEseFileWritten
+         1.5.214.1. Description
+         1.5.214.2. Fields: Windows
+      1.5.215. FalconHostFileTamperingInfo
+         1.5.215.1. Description
+         1.5.215.2. Fields: Windows
+      1.5.216. FalconHostRegTamperingInfo
+         1.5.216.1. Description
+         1.5.216.2. Fields: Windows
+      1.5.217. LowILModuleLoadAttempt
+         1.5.217.1. Description
+         1.5.217.2. Fields: Windows
+      1.5.218. RemovableDiskModuleLoadAttempt
+         1.5.218.1. Description
+         1.5.218.2. Fields: Windows
+      1.5.219. NetworkModuleLoadAttempt
+         1.5.219.1. Description
+         1.5.219.2. Fields: Windows
+      1.5.220. FileDeleteInfo
+         1.5.220.1. Description
+         1.5.220.2. Fields: Windows, macOS, Linux
+      1.5.221. SystemTokenStolen
+         1.5.221.1. Description
+         1.5.221.2. Fields: Windows
+      1.5.222. ImageHash
+         1.5.222.1. Description
+         1.5.222.2. Fields: macOS
+         1.5.222.3. Fields: Linux, Falcon Container
+         1.5.222.4. Fields: Windows
+      1.5.223. CreateProcessArgs
+         1.5.223.1. Description
+         1.5.223.2. Fields: macOS
+      1.5.224. SyntheticProcessRollup2
+         1.5.224.1. Description
+         1.5.224.2. Fields: macOS
+         1.5.224.3. Fields: ChromeOS
+         1.5.224.4. Fields: Windows
+         1.5.224.5. Fields: Linux, Falcon Container
+      1.5.225. KextLoad
+         1.5.225.1. Description
+         1.5.225.2. Fields: macOS
+      1.5.226. ProcessActivitySummary
+         1.5.226.1. Description
+         1.5.226.2. Fields: macOS
+         1.5.226.3. Fields: Windows
+      1.5.227. DirectoryCreate
+         1.5.227.1. Description
+         1.5.227.2. Fields: macOS, Linux
+         1.5.227.3. Fields: Windows
+      1.5.228. KextUnload
+         1.5.228.1. Description
+         1.5.228.2. Fields: macOS
+      1.5.229. CriticalFileModified
+         1.5.229.1. Description
+         1.5.229.2. Fields: macOS
+         1.5.229.3. Fields: Linux, Falcon Container
+         1.5.229.4. Fields: ChromeOS
+      1.5.230. FirewallEnabled
+         1.5.230.1. Description
+         1.5.230.2. Fields: macOS
+      1.5.231. CriticalFileAccessed
+         1.5.231.1. Description
+         1.5.231.2. Fields: macOS, Linux, Falcon Container
+         1.5.231.3. Fields: ChromeOS
+      1.5.232. PtyCreated
+         1.5.232.1. Description
+         1.5.232.2. Fields: macOS
+      1.5.233. FileCreateInfo
+         1.5.233.1. Description
+         1.5.233.2. Fields: macOS
+         1.5.233.3. Fields: Linux, Falcon Container
+         1.5.233.4. Fields: Windows
+      1.5.234. ProcessBlocked
+         1.5.234.1. Description
+         1.5.234.2. Fields: Linux, Falcon Container
+         1.5.234.3. Fields: Windows
+         1.5.234.4. Fields: macOS
+         1.5.234.5. Fields: Windows Legacy
+      1.5.235. FileOpenInfo
+         1.5.235.1. Description
+         1.5.235.2. Fields: macOS
+         1.5.235.3. Fields: Linux, Falcon Container
+         1.5.235.4. Fields: Windows
+      1.5.236. FirewallDisabled
+         1.5.236.1. Description
+         1.5.236.2. Fields: macOS
+      1.5.237. ClipboardPaste
+         1.5.237.1. Description
+         1.5.237.2. Fields: Android
+      1.5.238. CriticalEnvironmentVariableChanged
+         1.5.238.1. Description
+         1.5.238.2. Fields: Linux, Falcon Container
+      1.5.239. ProcessRollup2
+         1.5.239.1. Description
+         1.5.239.2. Understanding TargetProcessId
+         1.5.239.3. Understanding ContextProcessId
+         1.5.239.4. Understanding ParentProcessId
+         1.5.239.5. Fields: Android
+         1.5.239.6. Fields: ChromeOS
+         1.5.239.7. Fields: Forensics
+         1.5.239.8. Fields: Windows
+         1.5.239.9. Fields: macOS
+         1.5.239.10. Fields: Windows Legacy
+         1.5.239.11. Fields: Linux, Falcon Container
+      1.5.240. JarFileWritten
+         1.5.240.1. Description
+         1.5.240.2. Fields: Android
+         1.5.240.3. Fields: Windows
+         1.5.240.4. Fields: macOS
+         1.5.240.5. Fields: Linux
+      1.5.241. AndroidIntentSentIPC
+         1.5.241.1. Description
+         1.5.241.2. Fields: Android
+      1.5.242. MobileOsIntegrityStatus
+         1.5.242.1. Description
+         1.5.242.2. Fields: Android, iOS
+      1.5.243. FileDeleted
+         1.5.243.1. Description
+         1.5.243.2. Fields: Android
+         1.5.243.3. Fields: Windows
+         1.5.243.4. Fields: Forensics
+      1.5.244. ProcessWitness
+         1.5.244.1. Description
+         1.5.244.2. Fields: iOS
+      1.5.245. SetThreadCtxEtw
+         1.5.245.1. Description
+         1.5.245.2. Fields: Windows
+      1.5.246. ProcessExecOnSMBFile
+         1.5.246.1. Description
+         1.5.246.2. Fields: Windows
+      1.5.247. SetWindowsHookExEtw
+         1.5.247.1. Description
+         1.5.247.2. Fields: Windows
+      1.5.248. ProtectVmEtw
+         1.5.248.1. Description
+         1.5.248.2. Fields: Windows
+      1.5.249. ReflectiveDllLoaded
+         1.5.249.1. Description
+         1.5.249.2. Fields: Windows
+      1.5.250. AllocVmEtw
+         1.5.250.1. Description
+         1.5.250.2. Fields: Windows
+      1.5.251. SetWinEventHookEtw
+         1.5.251.1. Description
+         1.5.251.2. Fields: Windows
+      1.5.252. RegisterRawInputDevicesEtw
+         1.5.252.1. Description
+         1.5.252.2. Fields: Windows
+      1.5.253. SmbClientNamedPipeConnectEtw
+         1.5.253.1. Description
+         1.5.253.2. Fields: Windows
+      1.5.254. WmiFilterConsumerBindingEtw
+         1.5.254.1. Description
+         1.5.254.2. Fields: Windows
+      1.5.255. MobileDetection
+         1.5.255.1. Description
+         1.5.255.2. Fields: Android, iOS
+      1.5.256. RegGenericValueUpdate
+         1.5.256.1. Description
+         1.5.256.2. Fields: Windows
+      1.5.257. RegSystemConfigValueUpdate
+         1.5.257.1. Description
+         1.5.257.2. Fields: Windows
+      1.5.258. QueueApcEtw
+         1.5.258.1. Description
+         1.5.258.2. Fields: Windows
+      1.5.259. TokenImpersonated
+         1.5.259.1. Description
+         1.5.259.2. Fields: Windows
+      1.5.260. WmiProviderRegistrationEtw
+         1.5.260.1. Description
+         1.5.260.2. Fields: Windows
+      1.5.261. ScreenshotTakenEtw
+         1.5.261.1. Description
+         1.5.261.2. Fields: Windows
+      1.5.262. DebuggableFlagTurnedOn
+         1.5.262.1. Description
+         1.5.262.2. Fields: Android
+      1.5.263. DexFileWritten
+         1.5.263.1. Description
+         1.5.263.2. Fields: Android
+      1.5.264. DeveloperOptionsStatus
+         1.5.264.1. Description
+         1.5.264.2. Fields: Android, iOS
+      1.5.265. SELinuxStatus
+         1.5.265.1. Description
+         1.5.265.2. Fields: Android
+      1.5.266. StorageEncryptionStatus
+         1.5.266.1. Description
+         1.5.266.2. Fields: Android
+      1.5.267. LockScreenStatus
+         1.5.267.1. Description
+         1.5.267.2. Fields: Android, iOS
+      1.5.268. DuplicateInstallFromPlayStore
+         1.5.268.1. Description
+         1.5.268.2. Fields: Android
+      1.5.269. HarmfulAppData
+         1.5.269.1. Description
+         1.5.269.2. Fields: Android
+      1.5.270. ScriptControlScanInfo
+         1.5.270.1. Description
+         1.5.270.2. Fields: Windows
+         1.5.270.3. Fields: macOS
+         1.5.270.4. Fields: Linux
+      1.5.271. SystemPartitionStatus
+         1.5.271.1. Description
+         1.5.271.2. Fields: Android
+      1.5.272. ObjCRuntimeAltered
+         1.5.272.1. Description
+         1.5.272.2. Fields: iOS
+      1.5.273. DebuggedState
+         1.5.273.1. Description
+         1.5.273.2. Fields: iOS
+      1.5.274. CertificatePinningCompromised
+         1.5.274.1. Description
+         1.5.274.2. Fields: iOS
+      1.5.275. FileSystemAttributesStatus
+         1.5.275.1. Description
+         1.5.275.2. Fields: iOS
+      1.5.276. RemoteBruteForceDetectInfo
+         1.5.276.1. Description
+         1.5.276.2. Fields: Windows
+      1.5.277. UnexpectedEnvironmentVariable
+         1.5.277.1. Description
+         1.5.277.2. Fields: iOS
+      1.5.278. DnsRequestResult
+         1.5.278.1. Description
+         1.5.278.2. Fields: iOS, Android
+      1.5.279. PackedExecutableWritten
+         1.5.279.1. Description
+         1.5.279.2. Fields: Windows
+      1.5.280. BootLoaderStatus
+         1.5.280.1. Description
+         1.5.280.2. Fields: Android
+      1.5.281. SafetyNetCompatibilityStatus
+         1.5.281.1. Description
+         1.5.281.2. Fields: Android
+      1.5.282. CodeSigningAltered
+         1.5.282.1. Description
+         1.5.282.2. Fields: iOS
+      1.5.283. TrampolineDetected
+         1.5.283.1. Description
+         1.5.283.2. Fields: iOS
+      1.5.284. UnexpectedFileFound
+         1.5.284.1. Description
+         1.5.284.2. Fields: iOS, Android
+      1.5.285. InstallFromUnknownSourcesStatus
+         1.5.285.1. Description
+         1.5.285.2. Fields: Android
+      1.5.286. SystemPartitionAltered
+         1.5.286.1. Description
+         1.5.286.2. Fields: iOS
+      1.5.287. UnexpectedDynamicLibraryLoaded
+         1.5.287.1. Description
+         1.5.287.2. Fields: iOS
+      1.5.288. SafetyNetCheckFailed
+         1.5.288.1. Description
+         1.5.288.2. Fields: Android
+      1.5.289. PathUnexpectedlyReadable
+         1.5.289.1. Description
+         1.5.289.2. Fields: iOS
+      1.5.290. ProcessTokenStolen
+         1.5.290.1. Description
+         1.5.290.2. Fields: Windows
+      1.5.291. SensitiveWmiQuery
+         1.5.291.1. Description
+         1.5.291.2. Fields: Windows
+      1.5.292. ThreadBlocked
+         1.5.292.1. Description
+         1.5.292.2. Fields: Windows
+      1.5.293. DCSyncAttempted
+         1.5.293.1. Description
+         1.5.293.2. Fields: Windows
+      1.5.294. DNSRequestDetectInfo
+         1.5.294.1. Description
+         1.5.294.2. Fields: Android, iOS
+      1.5.295. RemediationMonitorRegistryRemoval
+         1.5.295.1. Description
+         1.5.295.2. Fields: Windows
+      1.5.296. DnsRequestBlocked
+         1.5.296.1. Description
+         1.5.296.2. Fields: Android, iOS
+      1.5.297. VerifyAppsDisabled
+         1.5.297.1. Description
+         1.5.297.2. Fields: Android
+      1.5.298. DwmCompositionResourceExploitAttempt
+         1.5.298.1. Description
+         1.5.298.2. Fields: Windows
+      1.5.299. UserSetProcessBreakOnTermination
+         1.5.299.1. Description
+         1.5.299.2. Fields: Windows
+      1.5.300. SuspiciousPrivilegedProcessHandle
+         1.5.300.1. Description
+         1.5.300.2. Fields: Windows
+      1.5.301. NtfsQueryEaExploitAttempt
+         1.5.301.1. Description
+         1.5.301.2. Fields: Windows
+      1.5.302. FileWrittenAndExecutedInContainer
+         1.5.302.1. Description
+         1.5.302.2. Fields: Linux, Falcon Container
+      1.5.303. ReflectiveDotnetModuleLoad
+         1.5.303.1. Description
+         1.5.303.2. Fields: Windows
+      1.5.304. GenericFileWritten
+         1.5.304.1. Description
+         1.5.304.2. Fields: macOS
+         1.5.304.3. Fields: Windows
+      1.5.305. SuspiciousAndroidActivityFound
+         1.5.305.1. Description
+         1.5.305.2. Fields: Android
+      1.5.306. AndroidInitServiceRemoved
+         1.5.306.1. Description
+         1.5.306.2. Fields: Android
+      1.5.307. HookedAndroidMethodFound
+         1.5.307.1. Description
+         1.5.307.2. Fields: Android
+      1.5.308. SuspiciousAppFound
+         1.5.308.1. Description
+         1.5.308.2. Fields: Android
+      1.5.309. AndroidInitServiceAdded
+         1.5.309.1. Description
+         1.5.309.2. Fields: Android
+      1.5.310. RemediationMonitorServiceRemoval
+         1.5.310.1. Description
+         1.5.310.2. Fields: Windows
+      1.5.311. SuspiciousAndroidStackTraceElementFound
+         1.5.311.1. Description
+         1.5.311.2. Fields: Android
+      1.5.312. RemediationMonitorScheduledTaskRemoval
+         1.5.312.1. Description
+         1.5.312.2. Fields: Windows
+      1.5.313. SuspiciousAndroidLogcatMessageFound
+         1.5.313.1. Description
+         1.5.313.2. Fields: Android
+      1.5.314. SuspiciousAndroidSystemPropertyFound
+         1.5.314.1. Description
+         1.5.314.2. Fields: Android
+      1.5.315. SystemUpdatesBlockedByDNS
+         1.5.315.1. Description
+         1.5.315.2. Fields: iOS
+      1.5.316. NewExecutableWritten
+         1.5.316.1. Description
+         1.5.316.2. Fields: Linux
+         1.5.316.3. Fields: macOS
+         1.5.316.4. Fields: Windows
+      1.5.317. SystemUpdatesBlockedByHTTP
+         1.5.317.1. Description
+         1.5.317.2. Fields: iOS
+      1.5.318. SafetyNetVerifyAppsStatus
+         1.5.318.1. Description
+         1.5.318.2. Fields: Android
+      1.5.319. MemoryProtectionUpdated
+         1.5.319.1. Description
+         1.5.319.2. Fields: Linux, Falcon Container
+      1.5.320. SystemUpdatesBlockedByFilesystem
+         1.5.320.1. Description
+         1.5.320.2. Fields: iOS
+      1.5.321. ProcessExecOnRDPFile
+         1.5.321.1. Description
+         1.5.321.2. Fields: Windows
+      1.5.322. ProcessSessionCreated
+         1.5.322.1. Description
+         1.5.322.2. Fields: Linux, Falcon Container
+      1.5.323. NamespaceChanged
+         1.5.323.1. Description
+         1.5.323.2. Fields: Linux, Falcon Container
+      1.5.324. ScriptControlDotNetMetadata
+         1.5.324.1. Description
+         1.5.324.2. Fields: Windows
+      1.5.325. FileSetMode
+         1.5.325.1. Description
+         1.5.325.2. Fields: Linux, Falcon Container
+      1.5.326. RegCredAccessDetectInfo
+         1.5.326.1. Description
+         1.5.326.2. Fields: Windows
+      1.5.327. HostTimeModified
+         1.5.327.1. Description
+         1.5.327.2. Fields: Linux, Falcon Container
+      1.5.328. BMLFeatureData
+         1.5.328.1. Description
+         1.5.328.2. Fields: Windows
+         1.5.328.3. Fields: Linux, Falcon Container, macOS
+      1.5.329. RootkitDetectionResponse
+         1.5.329.1. Description
+         1.5.329.2. Fields: Windows
+      1.5.330. MbrOverwriteRawDetectInfo
+         1.5.330.1. Description
+         1.5.330.2. Fields: Windows
+      1.5.331. KernelServiceStarted
+         1.5.331.1. Description
+         1.5.331.2. Fields: Windows
+      1.5.332. SourceCodeFileWritten
+         1.5.332.1. Description
+         1.5.332.2. Fields: macOS, Windows
+      1.5.333. ArchiveFileContent
+         1.5.333.1. Description
+         1.5.333.2. Fields: Windows, macOS
+      1.5.334. ScheduledTaskTamperingRegistryOperation
+         1.5.334.1. Description
+         1.5.334.2. Fields: Windows
+      1.5.335. ScriptFileWrittenInfo
+         1.5.335.1. Description
+         1.5.335.2. Fields: Windows
+      1.5.336. UnixName
+         1.5.336.1. Description
+         1.5.336.2. Fields: Linux
+      1.5.337. ImapCommand
+         1.5.337.1. Description
+         1.5.337.2. Fields: Windows
+         1.5.337.3. Fields: Linux
+      1.5.338. PacketFilterAttached
+         1.5.338.1. Description
+         1.5.338.2. Fields: Linux
+      1.5.339. UnixFileWritten
+         1.5.339.1. Description
+         1.5.339.2. Fields: Android
+      1.5.340. SessionPatternTelemetry
+         1.5.340.1. Description
+         1.5.340.2. Fields: Linux, macOS
+      1.5.341. FileStatFsInfo
+         1.5.341.1. Description
+         1.5.341.2. Fields: Linux
+      1.5.342. ProcessTokenPrivilegesEdited
+         1.5.342.1. Description
+         1.5.342.2. Fields: Windows
+      1.5.343. Pop3Command
+         1.5.343.1. Description
+         1.5.343.2. Fields: Windows
+         1.5.343.3. Fields: Linux
+      1.5.344. IntrusivePackageDiscovered
+         1.5.344.1. Description
+         1.5.344.2. Fields: Android
+      1.5.345. SmtpEmailMessage
+         1.5.345.1. Description
+         1.5.345.2. Fields: Windows
+      1.5.346. ThreadPreviousModeMismatch
+         1.5.346.1. Description
+         1.5.346.2. Fields: Windows
+      1.5.347. SigningIdentity
+         1.5.347.1. Description
+         1.5.347.2. Fields: iOS
+      1.5.348. MobileOsForensicsReport
+         1.5.348.1. Description
+         1.5.348.2. Fields: Android, iOS
+      1.5.349. IntrusivePropertyDiscovered
+         1.5.349.1. Description
+         1.5.349.2. Fields: Android
+      1.5.350. SensorTampering
+         1.5.350.1. Description
+         1.5.350.2. Fields: Linux
+      1.5.351. IntrusiveProcessDiscovered
+         1.5.351.1. Description
+         1.5.351.2. Fields: iOS
+      1.5.352. MotwWritten
+         1.5.352.1. Description
+         1.5.352.2. Fields: Windows
+      1.5.353. DetectionExcluded
+         1.5.353.1. Description
+         1.5.353.2. Fields: iOS, Android
+         1.5.353.3. Fields: Windows, macOS
+         1.5.353.4. Fields: Linux, Falcon Container
+      1.5.354. SignInfoWithContext
+         1.5.354.1. Description
+         1.5.354.2. Fields: Windows
+         1.5.354.3. Fields: macOS
+      1.5.355. InjectedThreadFromUnsignedModule
+         1.5.355.1. Description
+         1.5.355.2. Fields: Windows
+      1.5.356. SignInfoWithCertAndContext
+         1.5.356.1. Description
+         1.5.356.2. Fields: Windows, macOS
+      1.5.357. SuspiciousCredentialModuleLoad
+         1.5.357.1. Description
+         1.5.357.2. Fields: Windows
+      1.5.358. SuspiciousRawDiskReadFromUnsignedModule
+         1.5.358.1. Description
+         1.5.358.2. Fields: Windows
+      1.5.359. FileIntegrityMonitorRuleMatched
+         1.5.359.1. Description
+         1.5.359.2. Fields: macOS
+         1.5.359.3. Fields: Windows
+         1.5.359.4. Fields: Linux
+      1.5.360. MacroContentInfo
+         1.5.360.1. Description
+         1.5.360.2. Fields: Windows
+      1.5.361. LoginItemAdded
+         1.5.361.1. Description
+         1.5.361.2. Fields: macOS
+      1.5.362. SensorSettingsUpdate
+         1.5.362.1. Description
+         1.5.362.2. Fields: Windows, macOS
+      1.5.363. IdpConnectionsOverloadNotification
+         1.5.363.1. Description
+      1.5.364. ProcessTreeCompositionPatternTelemetry
+         1.5.364.1. Description
+         1.5.364.2. Fields: Windows
+      1.5.365. K8SAdmissionReviewResult
+         1.5.365.1. Description
+         1.5.365.2. Fields: Kubernetes
+      1.5.366. K8SAdmissionReviewResultPrime
+         1.5.366.1. Description
+         1.5.366.2. Fields: Public Cloud
+      1.5.367. RemoteCommandResponse
+         1.5.367.1. Description
+         1.5.367.2. Fields: macOS, Linux, Windows
+      1.5.368. PromiscuousBindIP6
+         1.5.368.1. Description
+         1.5.368.2. Fields: Windows
+      1.5.369. ProcessRollup2Stats
+         1.5.369.1. Description
+         1.5.369.2. Fields: Linux, Falcon Container, macOS
+      1.5.370. SuspiciousLackOfProcessRollupEvents
+         1.5.370.1. Description
+         1.5.370.2. Fields: Windows
+      1.5.371. CurrentSystemTags
+         1.5.371.1. Description
+         1.5.371.2. Fields: Windows Legacy, Android, Windows, Kubernetes, iOS, Linux, Falcon Container, macOS, Vmcluster
+      1.5.372. AgentConnect
+         1.5.372.1. Description
+         1.5.372.2. Fields: Windows Legacy
+         1.5.372.3. Fields: Windows
+         1.5.372.4. Fields: Kubernetes
+         1.5.372.5. Fields: Linux, Falcon Container, macOS
+         1.5.372.6. Fields: Android, iOS
+      1.5.373. FirmwareImageAnalyzed
+         1.5.373.1. Description
+         1.5.373.2. Fields: Windows, macOS
+      1.5.374. IsoExtensionFileWritten
+         1.5.374.1. Description
+         1.5.374.2. Fields: Windows
+      1.5.375. ImgExtensionFileWritten
+         1.5.375.1. Description
+         1.5.375.2. Fields: Windows
+      1.5.376. DeliverRulesEngineResultsToCloud
+         1.5.376.1. Description
+         1.5.376.2. Fields: Windows, macOS, Linux
+      1.5.377. DirectoryTraversalOverSMB
+         1.5.377.1. Description
+         1.5.377.2. Fields: Windows
+      1.5.378. DcBluetoothDeviceConnectedDetails
+         1.5.378.1. Description
+         1.5.378.2. Fields: Windows, macOS
+      1.5.379. ShellCommandLineInfo
+         1.5.379.1. Description
+         1.5.379.2. Fields: Linux
+      1.5.380. USNRecord
+         1.5.380.1. Description
+         1.5.380.2. Fields: Forensics
+      1.5.381. CrashNotification
+         1.5.381.1. Description
+         1.5.381.2. Fields: macOS, Windows
+      1.5.382. OciContainerComplianceInfo
+         1.5.382.1. Description
+         1.5.382.2. Fields: Linux, Falcon Container
+      1.5.383. IdpDcPerfReport
+         1.5.383.1. Description
+         1.5.383.2. Fields: Windows
+      1.5.384. LfoUploadDataFailed
+         1.5.384.1. Description
+         1.5.384.2. Fields: Kubernetes, Vmcluster, Windows, Linux, macOS, Android
+      1.5.385. LfoUploadDataUnneeded
+         1.5.385.1. Description
+         1.5.385.2. Fields: Kubernetes, Vmcluster, Windows, macOS, Linux, Android
+      1.5.386. FileRenameInfo
+         1.5.386.1. Description
+         1.5.386.2. Fields: Linux, Falcon Container, macOS
+         1.5.386.3. Fields: Windows
+      1.5.387. SensorSelfDiagnosticAlert
+         1.5.387.1. Description
+         1.5.387.2. Fields: Windows, macOS, Linux
+      1.5.388. SensorSelfDiagnosticTelemetry
+         1.5.388.1. Description
+         1.5.388.2. Fields: Windows, Linux, macOS
+      1.5.389. SpotlightEntityBatch
+         1.5.389.1. Description
+         1.5.389.2. Fields: Windows, Linux, macOS
+      1.5.390. ASLRBypassAttempt
+         1.5.390.1. Description
+         1.5.390.2. Fields: Windows
+      1.5.391. HeapSprayAttempt
+         1.5.391.1. Description
+         1.5.391.2. Fields: Windows
+      1.5.392. SEHOverWriteAttempt
+         1.5.392.1. Description
+         1.5.392.2. Fields: Windows
+      1.5.393. UserExceptionDEP
+         1.5.393.1. Description
+         1.5.393.2. Fields: Windows
+      1.5.394. CustomIOADomainNameDetectionInfoEvent
+         1.5.394.1. Description
+         1.5.394.2. Fields: Windows
+      1.5.395. CustomIOAFileWrittenDetectionInfoEvent
+         1.5.395.1. Description
+         1.5.395.2. Fields: Windows, macOS, Linux
+      1.5.396. CustomIOABasicProcessDetectionInfoEvent
+         1.5.396.1. Description
+         1.5.396.2. Fields: Windows, Linux, Falcon Container, macOS
+      1.5.397. CustomIOANetworkConnectionDetectionInfoEvent
+         1.5.397.1. Description
+         1.5.397.2. Fields: Windows, macOS
+      1.5.398. RegistryOperationBlocked
+         1.5.398.1. Description
+         1.5.398.2. Fields: Windows
+      1.5.399. RegistryOperationDetectInfo
+         1.5.399.1. Description
+         1.5.399.2. Fields: Windows
+      1.5.400. ProcessHandleOpDetectInfo
+         1.5.400.1. Description
+         1.5.400.2. Fields: Windows
+      1.5.401. UmppcDetectInfo
+         1.5.401.1. Description
+         1.5.401.2. Fields: Windows
+      1.5.402. MacroDetectInfo
+         1.5.402.1. Description
+         1.5.402.2. Fields: Windows
+      1.5.403. SnapshotVolumeMounted
+         1.5.403.1. Description
+         1.5.403.2. Fields: Windows
+      1.5.404. ImpersonationTokenInfo
+         1.5.404.1. Description
+         1.5.404.2. Fields: Windows
+      1.5.405. ProcessSubstituteUser
+         1.5.405.1. Description
+         1.5.405.2. Fields: macOS
+      1.5.406. OpenDirectoryAttributeSet
+         1.5.406.1. Description
+         1.5.406.2. Fields: macOS
+      1.5.407. OpenDirectoryGroupAdd
+         1.5.407.1. Description
+         1.5.407.2. Fields: macOS
+      1.5.408. OpenDirectoryCreateUser
+         1.5.408.1. Description
+         1.5.408.2. Fields: macOS
+      1.5.409. OpenDirectoryGroupSet
+         1.5.409.1. Description
+         1.5.409.2. Fields: macOS
+      1.5.410. OpenDirectoryDeleteUser
+         1.5.410.1. Description
+         1.5.410.2. Fields: macOS
+      1.5.411. OpenDirectoryGroupRemove
+         1.5.411.1. Description
+         1.5.411.2. Fields: macOS
+      1.5.412. OpenDirectoryAttributeAdd
+         1.5.412.1. Description
+         1.5.412.2. Fields: macOS
+      1.5.413. OpenDirectoryPasswordModification
+         1.5.413.1. Description
+         1.5.413.2. Fields: macOS
+      1.5.414. OpenDirectoryAttributeRemove
+         1.5.414.1. Description
+         1.5.414.2. Fields: macOS
+      1.5.415. DriverLoad
+         1.5.415.1. Description
+         1.5.415.2. Fields: Forensics
+         1.5.415.3. Fields: Windows
+      1.5.416. DnsServer
+         1.5.416.1. Description
+         1.5.416.2. Fields: Forensics
+      1.5.417. FilesStatisticInfo
+         1.5.417.1. Description
+         1.5.417.2. Fields: Forensics
+      1.5.418. NetShareInfo
+         1.5.418.1. Description
+         1.5.418.2. Fields: Forensics
+      1.5.419. NetworkHostsFileEntry
+         1.5.419.1. Description
+         1.5.419.2. Fields: Forensics
+      1.5.420. RouteIP6
+         1.5.420.1. Description
+         1.5.420.2. Fields: Forensics
+      1.5.421. RuntimeEnvironmentVariable
+         1.5.421.1. Description
+         1.5.421.2. Fields: Forensics
+      1.5.422. WmiQuery
+         1.5.422.1. Description
+         1.5.422.2. Fields: Forensics
+      1.5.423. UserAccountDeleted
+         1.5.423.1. Description
+         1.5.423.2. Fields: Forensics
+         1.5.423.3. Fields: Windows
+         1.5.423.4. Fields: Linux
+      1.5.424. ProcessTrace
+         1.5.424.1. Description
+         1.5.424.2. Fields: Linux, Falcon Container
+      1.5.425. InstanceMetadata
+         1.5.425.1. Description
+         1.5.425.2. Fields: macOS, Windows, Kubernetes, Linux, Falcon Container
+      1.5.426. FileAccessOperationOverSMB
+         1.5.426.1. Description
+         1.5.426.2. Fields: Windows
+      1.5.427. MachOHeaderParsed
+         1.5.427.1. Description
+         1.5.427.2. Fields: macOS
+      1.5.428. K8SWatchStopped
+         1.5.428.1. Description
+         1.5.428.2. Fields: Kubernetes
+      1.5.429. K8SWatchStarted
+         1.5.429.1. Description
+         1.5.429.2. Fields: Kubernetes
+      1.5.430. K8SSnapshot
+         1.5.430.1. Description
+         1.5.430.2. Fields: Kubernetes
+      1.5.431. K8SResource
+         1.5.431.1. Description
+         1.5.431.2. Fields: Kubernetes
+      1.5.432. SigningPublicKey
+         1.5.432.1. Description
+         1.5.432.2. Fields: Android, iOS
+      1.5.433. IdpEntityRiskScoreChange
+         1.5.433.1. Description
+         1.5.433.2. Fields: Public Cloud
+      1.5.434. HostedServiceStarted
+         1.5.434.1. Description
+         1.5.434.2. Fields: Windows
+      1.5.435. EventLogCleared
+         1.5.435.1. Description
+         1.5.435.2. Fields: Windows
+      1.5.436. FirewallDeleteRule
+         1.5.436.1. Description
+         1.5.436.2. Fields: Windows
+      1.5.437. NetShareSecurityModify
+         1.5.437.1. Description
+         1.5.437.2. Fields: Windows
+      1.5.438. UserAccountCreated
+         1.5.438.1. Description
+         1.5.438.2. Fields: Windows
+         1.5.438.3. Fields: Linux
+      1.5.439. BITSJobCreated
+         1.5.439.1. Description
+         1.5.439.2. Fields: Windows
+      1.5.440. UserAccountAddedToGroup
+         1.5.440.1. Description
+         1.5.440.2. Fields: Windows
+         1.5.440.3. Fields: Linux
+      1.5.441. NetShareAdd
+         1.5.441.1. Description
+         1.5.441.2. Fields: Windows
+      1.5.442. NetShareDelete
+         1.5.442.1. Description
+         1.5.442.2. Fields: Windows
+      1.5.443. VolumeSnapshotCreated
+         1.5.443.1. Description
+         1.5.443.2. Fields: Windows
+      1.5.444. VolumeSnapshotOperationBlocked
+         1.5.444.1. Description
+         1.5.444.2. Fields: Windows
+      1.5.445. VolumeSnapshotDeleted
+         1.5.445.1. Description
+         1.5.445.2. Fields: Windows
+      1.5.446. ScheduledTaskDeleted
+         1.5.446.1. Description
+         1.5.446.2. Fields: Windows
+      1.5.447. ServiceStarted
+         1.5.447.1. Description
+         1.5.447.2. Fields: Windows
+      1.5.448. FirewallSetRule
+         1.5.448.1. Description
+         1.5.448.2. Fields: Windows
+      1.5.449. ScheduledTaskRegistered
+         1.5.449.1. Description
+         1.5.449.2. Fields: Windows
+      1.5.450. FirewallChangeOption
+         1.5.450.1. Description
+         1.5.450.2. Fields: Windows
+      1.5.451. ScheduledTaskModified
+         1.5.451.1. Description
+         1.5.451.2. Fields: Windows
+      1.5.452. UserAccountRemovedFromGroup
+         1.5.452.1. Description
+         1.5.452.2. Fields: Windows
+         1.5.452.3. Fields: Linux
+      1.5.453. MemoryScanErrorEvent
+         1.5.453.1. Description
+         1.5.453.2. Fields: Windows
+      1.5.454. ServiceStopped
+         1.5.454.1. Description
+         1.5.454.2. Fields: Windows
+      1.5.455. CreateThreadReflectiveDll
+         1.5.455.1. Description
+         1.5.455.2. Fields: Windows
+      1.5.456. CreateThreadNoStartImage
+         1.5.456.1. Description
+         1.5.456.2. Fields: Windows
+      1.5.457. SuspectCreateThreadStack
+         1.5.457.1. Description
+         1.5.457.2. Fields: Windows
+      1.5.458. UmppcEntryAnomaly
+         1.5.458.1. Description
+         1.5.458.2. Fields: Windows
+      1.5.459. ExtendedExploitMitigationViolatedDetectInfo
+         1.5.459.1. Description
+         1.5.459.2. Fields: Windows
+      1.5.460. SuspiciousPeFileWritten
+         1.5.460.1. Description
+         1.5.460.2. Fields: Windows
+      1.5.461. ReflectiveDllOpenProcess
+         1.5.461.1. Description
+         1.5.461.2. Fields: Windows
+      1.5.462. CSAResultsGenericDetectInfo
+         1.5.462.1. Description
+         1.5.462.2. Fields: Windows
+      1.5.463. ScriptControlScanTelemetry
+         1.5.463.1. Description
+         1.5.463.2. Fields: Windows
+      1.5.464. CreateThreadKernelNoStartImage
+         1.5.464.1. Description
+         1.5.464.2. Fields: Windows
+      1.5.465. K8SDaemonSet
+         1.5.465.1. Description
+         1.5.465.2. Fields: Public Cloud
+      1.5.466. K8SDeployment
+         1.5.466.1. Description
+         1.5.466.2. Fields: Public Cloud
+      1.5.467. K8SPod
+         1.5.467.1. Description
+         1.5.467.2. Fields: Public Cloud
+      1.5.468. PodInfo
+         1.5.468.1. Description
+         1.5.468.2. Fields: Linux, Falcon Container
+      1.5.469. K8SService
+         1.5.469.1. Description
+         1.5.469.2. Fields: Public Cloud
+      1.5.470. K8SReplicaSet
+         1.5.470.1. Description
+         1.5.470.2. Fields: Public Cloud
+      1.5.471. K8SNode
+         1.5.471.1. Description
+         1.5.471.2. Fields: Public Cloud
+      1.5.472. PdfFileWritten
+         1.5.472.1. Description
+         1.5.472.2. Fields: Windows
+         1.5.472.3. Fields: macOS
+         1.5.472.4. Fields: Linux
+      1.5.473. DwgFileWritten
+         1.5.473.1. Description
+         1.5.473.2. Fields: Windows
+      1.5.474. SevenZipFileWritten
+         1.5.474.1. Description
+         1.5.474.2. Fields: Windows
+         1.5.474.3. Fields: macOS
+         1.5.474.4. Fields: Linux
+      1.5.475. MachOFileWritten
+         1.5.475.1. Description
+         1.5.475.2. Fields: Windows
+         1.5.475.3. Fields: macOS
+         1.5.475.4. Fields: Linux
+      1.5.476. IdwFileWritten
+         1.5.476.1. Description
+         1.5.476.2. Fields: Windows
+      1.5.477. OoxmlFileWritten
+         1.5.477.1. Description
+         1.5.477.2. Fields: Windows
+         1.5.477.3. Fields: macOS
+         1.5.477.4. Fields: Linux
+      1.5.478. RtfFileWritten
+         1.5.478.1. Description
+         1.5.478.2. Fields: Windows
+         1.5.478.3. Fields: macOS
+         1.5.478.4. Fields: Linux
+      1.5.479. ZipFileWritten
+         1.5.479.1. Description
+         1.5.479.2. Fields: Windows
+         1.5.479.3. Fields: macOS
+         1.5.479.4. Fields: Linux
+      1.5.480. TarFileWritten
+         1.5.480.1. Description
+         1.5.480.2. Fields: Windows
+         1.5.480.3. Fields: macOS
+         1.5.480.4. Fields: Linux
+      1.5.481. DmpFileWritten
+         1.5.481.1. Description
+         1.5.481.2. Fields: macOS
+         1.5.481.3. Fields: Windows
+         1.5.481.4. Fields: Linux
+      1.5.482. PeFileWritten
+         1.5.482.1. Description
+         1.5.482.2. Fields: macOS
+         1.5.482.3. Fields: Windows
+         1.5.482.4. Fields: Linux
+      1.5.483. BZip2FileWritten
+         1.5.483.1. Description
+         1.5.483.2. Fields: Windows
+         1.5.483.3. Fields: macOS
+         1.5.483.4. Fields: Linux
+      1.5.484. XarFileWritten
+         1.5.484.1. Description
+         1.5.484.2. Fields: Windows
+         1.5.484.3. Fields: macOS
+         1.5.484.4. Fields: Linux
+      1.5.485. OleFileWritten
+         1.5.485.1. Description
+         1.5.485.2. Fields: macOS
+         1.5.485.3. Fields: Windows
+         1.5.485.4. Fields: Linux
+      1.5.486. RarFileWritten
+         1.5.486.1. Description
+         1.5.486.2. Fields: Windows
+         1.5.486.3. Fields: macOS
+         1.5.486.4. Fields: Linux
+      1.5.487. CabFileWritten
+         1.5.487.1. Description
+         1.5.487.2. Fields: Windows
+         1.5.487.3. Fields: macOS
+         1.5.487.4. Fields: Linux
+      1.5.488. GzipFileWritten
+         1.5.488.1. Description
+         1.5.488.2. Fields: Windows
+         1.5.488.3. Fields: macOS
+         1.5.488.4. Fields: Linux
+      1.5.489. ELFFileWritten
+         1.5.489.1. Description
+         1.5.489.2. Fields: Windows
+         1.5.489.3. Fields: macOS
+         1.5.489.4. Fields: Android
+         1.5.489.5. Fields: Linux
+      1.5.490. JavaClassFileWritten
+         1.5.490.1. Description
+         1.5.490.2. Fields: Windows
+         1.5.490.3. Fields: macOS
+         1.5.490.4. Fields: Linux
+      1.5.491. ArjFileWritten
+         1.5.491.1. Description
+         1.5.491.2. Fields: macOS
+         1.5.491.3. Fields: Windows
+         1.5.491.4. Fields: Linux
+      1.5.492. ArcFileWritten
+         1.5.492.1. Description
+         1.5.492.2. Fields: Windows
+         1.5.492.3. Fields: macOS
+         1.5.492.4. Fields: Linux
+      1.5.493. PngFileWritten
+         1.5.493.1. Description
+         1.5.493.2. Fields: Windows
+         1.5.493.3. Fields: macOS
+         1.5.493.4. Fields: Linux
+      1.5.494. BmpFileWritten
+         1.5.494.1. Description
+         1.5.494.2. Fields: Windows
+         1.5.494.3. Fields: macOS
+         1.5.494.4. Fields: Linux
+      1.5.495. TiffFileWritten
+         1.5.495.1. Description
+         1.5.495.2. Fields: macOS
+         1.5.495.3. Fields: Windows
+         1.5.495.4. Fields: Linux
+      1.5.496. VdiFileWritten
+         1.5.496.1. Description
+         1.5.496.2. Fields: Windows
+         1.5.496.3. Fields: macOS
+         1.5.496.4. Fields: Linux
+      1.5.497. VmdkFileWritten
+         1.5.497.1. Description
+         1.5.497.2. Fields: Windows
+         1.5.497.3. Fields: macOS
+         1.5.497.4. Fields: Linux
+      1.5.498. MSPptxFileWritten
+         1.5.498.1. Description
+         1.5.498.2. Fields: Windows
+         1.5.498.3. Fields: macOS
+         1.5.498.4. Fields: Linux
+      1.5.499. MSXlsxFileWritten
+         1.5.499.1. Description
+         1.5.499.2. Fields: Windows
+         1.5.499.3. Fields: macOS
+         1.5.499.4. Fields: Linux
+      1.5.500. JpegFileWritten
+         1.5.500.1. Description
+         1.5.500.2. Fields: macOS
+         1.5.500.3. Fields: Windows
+         1.5.500.4. Fields: Linux
+      1.5.501. GifFileWritten
+         1.5.501.1. Description
+         1.5.501.2. Fields: Windows
+         1.5.501.3. Fields: macOS
+         1.5.501.4. Fields: Linux
+      1.5.502. MSVsdxFileWritten
+         1.5.502.1. Description
+         1.5.502.2. Fields: macOS
+         1.5.502.3. Fields: Windows
+         1.5.502.4. Fields: Linux
+      1.5.503. MSDocxFileWritten
+         1.5.503.1. Description
+         1.5.503.2. Fields: Windows
+         1.5.503.3. Fields: macOS
+         1.5.503.4. Fields: Linux
+      1.5.504. BlfFileWritten
+         1.5.504.1. Description
+         1.5.504.2. Fields: macOS
+         1.5.504.3. Fields: Windows
+         1.5.504.4. Fields: Linux
+      1.5.505. RpmFileWritten
+         1.5.505.1. Description
+         1.5.505.2. Fields: Windows
+         1.5.505.3. Fields: macOS
+         1.5.505.4. Fields: Linux
+      1.5.506. DebFileWritten
+         1.5.506.1. Description
+         1.5.506.2. Fields: macOS
+         1.5.506.3. Fields: Windows
+         1.5.506.4. Fields: Linux
+      1.5.507. DxfFileWritten
+         1.5.507.1. Description
+         1.5.507.2. Fields: Windows
+      1.5.508. MsiFileWritten
+         1.5.508.1. Description
+         1.5.508.2. Fields: Windows
+         1.5.508.3. Fields: macOS
+         1.5.508.4. Fields: Linux
+      1.5.509. LnkFileWritten
+         1.5.509.1. Description
+         1.5.509.2. Fields: Windows
+         1.5.509.3. Fields: macOS
+         1.5.509.4. Fields: Linux
+      1.5.510. EmailFileWritten
+         1.5.510.1. Description
+         1.5.510.2. Fields: macOS
+         1.5.510.3. Fields: Windows
+         1.5.510.4. Fields: Linux
+      1.5.511. EmailArchiveFileWritten
+         1.5.511.1. Description
+         1.5.511.2. Fields: macOS
+      1.5.512. EseFileWritten
+         1.5.512.1. Description
+         1.5.512.2. Fields: macOS
+         1.5.512.3. Fields: Windows
+         1.5.512.4. Fields: Linux
+      1.5.513. PythonFileWritten
+         1.5.513.1. Description
+         1.5.513.2. Fields: Windows
+      1.5.514. DmgFileWritten
+         1.5.514.1. Description
+         1.5.514.2. Fields: macOS
+         1.5.514.3. Fields: Windows
+         1.5.514.4. Fields: Linux
+      1.5.515. SldFileWritten
+         1.5.515.1. Description
+         1.5.515.2. Fields: Windows
+      1.5.516. ADExplorerFileWritten
+         1.5.516.1. Description
+         1.5.516.2. Fields: Windows
+      1.5.517. CrxFileWritten
+         1.5.517.1. Description
+         1.5.517.2. Fields: Windows
+         1.5.517.3. Fields: macOS
+         1.5.517.4. Fields: Linux
+      1.5.518. RegistryHiveFileWritten
+         1.5.518.1. Description
+         1.5.518.2. Fields: Windows
+      1.5.519. WebScriptFileWritten
+         1.5.519.1. Description
+         1.5.519.2. Fields: macOS
+         1.5.519.3. Fields: Windows
+         1.5.519.4. Fields: Linux
+      1.5.520. HttpRequestDetect
+         1.5.520.1. Description
+         1.5.520.2. Fields: Windows
+      1.5.521. HttpRequest
+         1.5.521.1. Description
+         1.5.521.2. Fields: Linux
+         1.5.521.3. Fields: macOS
+      1.5.522. DcBluetoothDeviceProperties
+         1.5.522.1. Description
+         1.5.522.2. Fields: macOS, Windows
+      1.5.523. DcBluetoothAuthorizationStatus
+         1.5.523.1. Description
+         1.5.523.2. Fields: macOS
+      1.5.524. IdpCloudHealthStatus
+         1.5.524.1. Description
+         1.5.524.2. Fields: Windows
+      1.5.525. K8SRunningContainerStatus
+         1.5.525.1. Description
+         1.5.525.2. Fields: Public Cloud
+      1.5.526. K8SInitContainerStatus
+         1.5.526.1. Description
+         1.5.526.2. Fields: Public Cloud
+      1.5.527. AndroidModuleStateUpdate
+         1.5.527.1. Description
+         1.5.527.2. Fields: Android
+      1.5.528. K8SRunningContainer
+         1.5.528.1. Description
+         1.5.528.2. Fields: Public Cloud
+      1.5.529. K8SEphemeralContainer
+         1.5.529.1. Description
+         1.5.529.2. Fields: Public Cloud
+      1.5.530. K8SInitContainer
+         1.5.530.1. Description
+         1.5.530.2. Fields: Public Cloud
+      1.5.531. DiskCapacity
+         1.5.531.1. Description
+         1.5.531.2. Fields: Windows
+         1.5.531.3. Fields: Linux
+      1.5.532. ErrorEvent
+         1.5.532.1. Description
+         1.5.532.2. Fields: Vmcluster, Linux, Falcon Container, Windows, Kubernetes, macOS
+      1.5.533. FileHashesEvent
+         1.5.533.1. Description
+         1.5.533.2. Fields: Forensics
+      1.5.534. MemoryMapped
+         1.5.534.1. Description
+         1.5.534.2. Fields: Linux, Falcon Container
+      1.5.535. TlsClientHello
+         1.5.535.1. Description
+         1.5.535.2. Fields: Linux, Windows
+         1.5.535.3. Fields: macOS
+      1.5.536. SmtpCommand
+         1.5.536.1. Description
+         1.5.536.2. Fields: Linux
+      1.5.537. FtpCommand
+         1.5.537.1. Description
+         1.5.537.2. Fields: Linux
+      1.5.538. NetworkLinkConfigGetAddress
+         1.5.538.1. Description
+         1.5.538.2. Fields: Linux
+      1.5.539. SmtpAttachment
+         1.5.539.1. Description
+         1.5.539.2. Fields: Linux
+      1.5.540. NetworkLinkConfigGetLink
+         1.5.540.1. Description
+         1.5.540.2. Fields: Linux
+      1.5.541. AsepFileChangeDetectInfo
+         1.5.541.1. Description
+         1.5.541.2. Fields: macOS
+      1.5.542. RansomwareFileAccessPattern
+         1.5.542.1. Description
+         1.5.542.2. Fields: Windows
+      1.5.543. FileSystemOperationBlocked
+         1.5.543.1. Description
+         1.5.543.2. Fields: macOS
+         1.5.543.3. Fields: Windows
+      1.5.544. BPFCommandIssued
+         1.5.544.1. Description
+         1.5.544.2. Fields: Linux, Falcon Container
+      1.5.545. AsepFileChangeScanInfo
+         1.5.545.1. Description
+         1.5.545.2. Fields: macOS
+      1.5.546. SecureTrafficDecrypted
+         1.5.546.1. Description
+         1.5.546.2. Fields: Android, iOS
+      1.5.547. FileSystemOperationDetectInfo
+         1.5.547.1. Description
+         1.5.547.2. Fields: Windows
+      1.5.548. ModuleBlockedEventWithPatternId
+         1.5.548.1. Description
+         1.5.548.2. Fields: macOS, Linux, Falcon Container, Windows
+      1.5.549. ModuleBlockedEvent
+         1.5.549.1. Description
+         1.5.549.2. Fields: macOS, Linux, Falcon Container, Windows
+      1.5.550. ChannelVersionRequired
+         1.5.550.1. Description
+         1.5.550.2. Fields: Windows, macOS, Linux, Falcon Container, Android, Kubernetes, Vmcluster, iOS
+      1.5.551. LfoUploadDataComplete
+         1.5.551.1. Description
+         1.5.551.2. Fields: macOS, Windows, Linux, Android, Kubernetes, Vmcluster
+      1.5.552. LfoUploadStart
+         1.5.552.1. Description
+         1.5.552.2. Fields: Android, macOS, Windows, Linux, Vmcluster, Kubernetes
+      1.5.553. ProvisioningChannelVersionRequired
+         1.5.553.1. Description
+         1.5.553.2. Fields: Windows, macOS, Linux, Falcon Container, iOS, Android
+      1.5.554. IdpWatchdogRemediationActionTakenForMemory
+         1.5.554.1. Description
+         1.5.554.2. Fields: Windows
+      1.5.555. IdpWatchdogRemediationActionTaken
+         1.5.555.1. Description
+         1.5.555.2. Fields: Windows
+      1.5.556. IdpWatchdogReEnabled
+         1.5.556.1. Description
+         1.5.556.2. Fields: Windows
+      1.5.557. WindowsTimelineEntryTimestamp
+         1.5.557.1. Description
+         1.5.557.2. Fields: Forensics
+      1.5.558. DataProtectionBrowserConnect
+         1.5.558.1. Description
+         1.5.558.2. Fields: Windows, macOS
+      1.5.559. NetworkConnectIP6
+         1.5.559.1. Description
+         1.5.559.2. Fields: Windows, macOS, Linux, Falcon Container
+         1.5.559.3. Fields: iOS
+         1.5.559.4. Fields: Android
+         1.5.559.5. Fields: Forensics
+         1.5.559.6. Fields: ChromeOS
+      1.5.560. NetworkConnectIP4
+         1.5.560.1. Description
+         1.5.560.2. Fields: Windows, macOS, Linux, Falcon Container
+         1.5.560.3. Fields: Android
+         1.5.560.4. Fields: Forensics
+         1.5.560.5. Fields: iOS
+         1.5.560.6. Fields: ChromeOS
+      1.5.561. NetworkCloseIP4
+         1.5.561.1. Description
+         1.5.561.2. Fields: Windows, macOS, Linux, Falcon Container
+         1.5.561.3. Fields: Android
+         1.5.561.4. Fields: Forensics
+      1.5.562. NetworkReceiveAcceptIP6
+         1.5.562.1. Description
+         1.5.562.2. Fields: Windows, macOS, Android, Linux, Falcon Container
+         1.5.562.3. Fields: Forensics
+      1.5.563. NetworkListenIP6
+         1.5.563.1. Description
+         1.5.563.2. Fields: Windows, macOS, Android, Linux, Falcon Container
+         1.5.563.3. Fields: Forensics
+         1.5.563.4. Fields: ChromeOS
+      1.5.564. NetworkListenIP4
+         1.5.564.1. Description
+         1.5.564.2. Fields: Windows, macOS, Android, Linux, Falcon Container
+         1.5.564.3. Fields: Forensics
+         1.5.564.4. Fields: ChromeOS
+      1.5.565. PromiscuousBindIP4
+         1.5.565.1. Description
+         1.5.565.2. Fields: Windows
+      1.5.566. NetworkReceiveAcceptIP4
+         1.5.566.1. Description
+         1.5.566.2. Fields: Windows, macOS, Android, Linux, Falcon Container
+         1.5.566.3. Fields: Forensics
+      1.5.567. FirewallSetRuleIP4
+         1.5.567.1. Description
+         1.5.567.2. Fields: macOS
+      1.5.568. FirewallDeleteRuleIP4
+         1.5.568.1. Description
+         1.5.568.2. Fields: macOS
+      1.5.569. FirewallDeleteRuleIP6
+         1.5.569.1. Description
+         1.5.569.2. Fields: macOS
+      1.5.570. FirewallSetRuleIP6
+         1.5.570.1. Description
+         1.5.570.2. Fields: macOS
+      1.5.571. NetworkCloseIP6
+         1.5.571.1. Description
+         1.5.571.2. Fields: Windows, macOS, Linux, Falcon Container
+         1.5.571.3. Fields: Android
+         1.5.571.4. Fields: Forensics
+      1.5.572. RawBindIP4
+         1.5.572.1. Description
+         1.5.572.2. Fields: Windows, Android, macOS, Linux, Falcon Container
+         1.5.572.3. Fields: Forensics
+      1.5.573. RawBindIP6
+         1.5.573.1. Description
+         1.5.573.2. Fields: Android, Linux, Falcon Container, Windows, macOS
+         1.5.573.3. Fields: Forensics
+      1.5.574. NetworkConnectIP4Blocked
+         1.5.574.1. Description
+         1.5.574.2. Fields: macOS, Windows
+         1.5.574.3. Fields: iOS
+         1.5.574.4. Fields: Android
+      1.5.575. NetworkConnectIP6Blocked
+         1.5.575.1. Description
+         1.5.575.2. Fields: Windows, macOS
+         1.5.575.3. Fields: Android
+         1.5.575.4. Fields: iOS
+      1.5.576. NetworkConnectIP6DetectInfo
+         1.5.576.1. Description
+         1.5.576.2. Fields: Android
+         1.5.576.3. Fields: iOS
+      1.5.577. RemediationActionKillIP6Connection
+         1.5.577.1. Description
+         1.5.577.2. Fields: iOS
+         1.5.577.3. Fields: Android
+      1.5.578. CreateSocket
+         1.5.578.1. Description
+         1.5.578.2. Fields: Linux, Falcon Container
+         1.5.578.3. Fields: Forensics
+      1.5.579. NetworkConnectIP4DetectInfo
+         1.5.579.1. Description
+         1.5.579.2. Fields: Android
+         1.5.579.3. Fields: iOS
+      1.5.580. RemediationActionKillIP4Connection
+         1.5.580.1. Description
+         1.5.580.2. Fields: Android
+         1.5.580.3. Fields: iOS
+      1.5.581. NetworkOutboundPortScanDetectInfo
+         1.5.581.1. Description
+         1.5.581.2. Fields: Windows
+      1.5.582. DriverLoadBlocked
+         1.5.582.1. Description
+         1.5.582.2. Fields: Windows
+      1.5.583. DcUsbDeviceBlocked
+         1.5.583.1. Description
+         1.5.583.2. Fields: Windows, macOS, Linux
+      1.5.584. DcUsbDeviceConnected
+         1.5.584.1. Description
+         1.5.584.2. Fields: macOS, Windows, Linux
+      1.5.585. DcUsbDevicePolicyViolation
+         1.5.585.1. Description
+         1.5.585.2. Fields: macOS, Windows, Linux
+      1.5.586. NewScriptWritten
+         1.5.586.1. Description
+         1.5.586.2. Fields: Linux
+         1.5.586.3. Fields: macOS
+         1.5.586.4. Fields: Windows
+      1.5.587. RecentlyModifiedFileExecutedInContainer
+         1.5.587.1. Description
+         1.5.587.2. Fields: Linux, Falcon Container
+      1.5.588. PatternHandlingError
+         1.5.588.1. Description
+         1.5.588.2. Fields: Windows, macOS, Linux, Falcon Container
+      1.5.589. ProcessPatternTelemetry
+         1.5.589.1. Description
+         1.5.589.2. Fields: Windows
+         1.5.589.3. Fields: macOS
+      1.5.590. KernelParameter
+         1.5.590.1. Description
+         1.5.590.2. Fields: Forensics
+      1.5.591. BrowserInjectedThread
+         1.5.591.1. Description
+         1.5.591.2. Fields: Windows
+      1.5.592. KernelCallbackTableUpdate
+         1.5.592.1. Description
+         1.5.592.2. Fields: Windows
+      1.5.593. SsoApplicationAccessFailure
+         1.5.593.1. Description
+         1.5.593.2. Fields: Public Cloud
+      1.5.594. ActiveDirectoryIncomingPsExecExecution2
+         1.5.594.1. Description
+         1.5.594.2. Fields: Windows
+      1.5.595. IdpPolicyAccessRuleMatch
+         1.5.595.1. Description
+         1.5.595.2. Fields: Windows
+      1.5.596. IdpPolicyAlertRuleMatch
+         1.5.596.1. Description
+         1.5.596.2. Fields: Public Cloud
+      1.5.597. ActiveDirectoryIncomingDceRpcEpmRequest
+         1.5.597.1. Description
+         1.5.597.2. Fields: Windows
+      1.5.598. SsoUserLogonFailure
+         1.5.598.1. Description
+         1.5.598.2. Fields: Public Cloud
+      1.5.599. FileDetectInfo
+         1.5.599.1. Description
+         1.5.599.2. Fields: Linux, macOS, Windows
+      1.5.600. IdpPolicyFederatedAccessRuleMatch
+         1.5.600.1. Description
+         1.5.600.2. Fields: Public Cloud
+      1.5.601. BootLoopProtectionTelemetry
+         1.5.601.1. Description
+         1.5.601.2. Fields: Windows
+      1.5.602. IdpWatchdogRemediationActionTakenForCpu
+         1.5.602.1. Description
+         1.5.602.2. Fields: Windows
+      1.5.603. LightningUnresponsiveStatus
+         1.5.603.1. Description
+         1.5.603.2. Fields: Windows, macOS
+      1.5.604. AndroidEnterpriseInfo
+         1.5.604.1. Description
+         1.5.604.2. Fields: Android
+      1.5.605. FileWrittenWithEntropyHigh
+         1.5.605.1. Description
+         1.5.605.2. Fields: Windows
+      1.5.606. InjectedThread
+         1.5.606.1. Description
+         1.5.606.2. Fields: Windows
+      1.5.607. JavaInjectedThread
+         1.5.607.1. Description
+         1.5.607.2. Fields: Windows
+      1.5.608. DocumentProgramInjectedThread
+         1.5.608.1. Description
+         1.5.608.2. Fields: Windows
+      1.5.609. ConfigurationLoaded
+         1.5.609.1. Description
+         1.5.609.2. Fields: iOS, Android
+      1.5.610. ActiveDirectoryIncomingLdapSearchRequest
+         1.5.610.1. Description
+         1.5.610.2. Fields: Windows
+      1.5.611. ActiveDirectoryInteractiveDomainLogon
+         1.5.611.1. Description
+         1.5.611.2. Fields: Windows
+      1.5.612. ActiveDirectoryAuthenticationFailure
+         1.5.612.1. Description
+         1.5.612.2. Fields: Windows
+      1.5.613. ProcessHandleTableEntry
+         1.5.613.1. Description
+         1.5.613.2. Fields: Forensics
+      1.5.614. RemoteThreadCreate
+         1.5.614.1. Description
+         1.5.614.2. Fields: macOS
+      1.5.615. ProcessSignal
+         1.5.615.1. Description
+         1.5.615.2. Fields: Linux
+      1.5.616. SensorEnteredSafemode
+         1.5.616.1. Description
+         1.5.616.2. Fields: Linux, Falcon Container, macOS
+         1.5.616.3. Fields: Windows
+      1.5.617. SetWindowsHook
+         1.5.617.1. Description
+         1.5.617.2. Fields: Windows
+      1.5.618. ProcessInjection
+         1.5.618.1. Description
+         1.5.618.2. Fields: Windows
+      1.5.619. ScriptControlDetectInfo
+         1.5.619.1. Description
+         1.5.619.2. Fields: macOS
+         1.5.619.3. Fields: Windows
+         1.5.619.4. Fields: Linux
+      1.5.620. ActiveDirectoryAuthentication
+         1.5.620.1. Description
+         1.5.620.2. Fields: Windows
+      1.5.621. ActiveDirectoryServiceAccessRequestFailure
+         1.5.621.1. Description
+         1.5.621.2. Fields: Windows
+      1.5.622. ActiveDirectoryIncomingDceRpcRequest
+         1.5.622.1. Description
+         1.5.622.2. Fields: Windows
+      1.5.623. PtyDetached
+         1.5.623.1. Description
+         1.5.623.2. Fields: Linux
+      1.5.624. ActiveDirectoryServiceAccessRequest
+         1.5.624.1. Description
+         1.5.624.2. Fields: Windows
+      1.5.625. SsoApplicationAccess
+         1.5.625.1. Description
+         1.5.625.2. Fields: Public Cloud
+      1.5.626. DcBluetoothDeviceBlocked
+         1.5.626.1. Description
+         1.5.626.2. Fields: macOS
+      1.5.627. DcBluetoothDevicePolicyViolation
+         1.5.627.1. Description
+         1.5.627.2. Fields: macOS
+      1.5.628. FileExtendedAttrOperation
+         1.5.628.1. Description
+         1.5.628.2. Fields: macOS
+      1.5.629. DBusMessage
+         1.5.629.1. Description
+         1.5.629.2. Fields: Linux
+      1.5.630. CloudAssociateTreeIdWithRoot
+         1.5.630.1. Description
+         1.5.630.2. Fields: Windows, macOS
+         1.5.630.3. Fields: Linux, Falcon Container
+         1.5.630.4. Fields: ChromeOS
+      1.5.631. XProtectAction
+         1.5.631.1. Description
+         1.5.631.2. Fields: macOS
+      1.5.632. AssociateTreeIdWithRoot
+         1.5.632.1. Description
+         1.5.632.2. Fields: Windows Legacy
+         1.5.632.3. Fields: Windows
+         1.5.632.4. Fields: Linux, Falcon Container
+         1.5.632.5. Fields: macOS
+      1.5.633. K8SProductConfig
+         1.5.633.1. Description
+         1.5.633.2. Fields: Kubernetes
+      1.5.634. IdpTelemetryData
+         1.5.634.1. Description
+         1.5.634.2. Fields: Windows
+      1.5.635. SyntheticSystemdServiceCreated
+         1.5.635.1. Description
+         1.5.635.2. Fields: Linux
+      1.5.636. SystemdServiceCreated
+         1.5.636.1. Description
+         1.5.636.2. Fields: Linux
+      1.5.637. SystemdServiceDeleted
+         1.5.637.1. Description
+         1.5.637.2. Fields: Linux
+      1.5.638. IdpPacketDiversionLdapsConnectionsOverloadNotification
+         1.5.638.1. Description
+      1.5.639. SsoUserLogon
+         1.5.639.1. Description
+         1.5.639.2. Fields: Public Cloud
+      1.5.640. DataProtectionArchiveAssessed
+         1.5.640.1. Description
+         1.5.640.2. Fields: Windows, macOS
+      1.5.641. FileTimestampsModified
+         1.5.641.1. Description
+         1.5.641.2. Fields: Windows
+      1.5.642. KernelModeExecImage
+         1.5.642.1. Description
+         1.5.642.2. Fields: Linux, Falcon Container
+      1.5.643. OciContainerInfo
+         1.5.643.1. Description
+         1.5.643.2. Fields: Linux, Falcon Container
+      1.5.644. HostedServiceStatusInfo
+         1.5.644.1. Description
+         1.5.644.2. Fields: Forensics
+      1.5.645. ShimDbTag
+         1.5.645.1. Description
+         1.5.645.2. Fields: Forensics
+      1.5.646. SruApplicationResourceUsage
+         1.5.646.1. Description
+         1.5.646.2. Fields: Forensics
+      1.5.647. ArchiveInfo
+         1.5.647.1. Description
+         1.5.647.2. Fields: Forensics
+      1.5.648. RegGenericInfo
+         1.5.648.1. Description
+         1.5.648.2. Fields: Forensics
+      1.5.649. SruNetworkDataUsage
+         1.5.649.1. Description
+         1.5.649.2. Fields: Forensics
+      1.5.650. ShellBagFileTimeStampMetadata
+         1.5.650.1. Description
+         1.5.650.2. Fields: Forensics
+      1.5.651. FileTimestampMetadata
+         1.5.651.1. Description
+         1.5.651.2. Fields: Forensics
+      1.5.652. PeLanguageId
+         1.5.652.1. Description
+         1.5.652.2. Fields: Forensics
+      1.5.653. PeCodePageInfo
+         1.5.653.1. Description
+         1.5.653.2. Fields: Forensics
+      1.5.654. PeHeaderInfo
+         1.5.654.1. Description
+         1.5.654.2. Fields: Forensics
+      1.5.655. PeHeaderOptionalInfo
+         1.5.655.1. Description
+         1.5.655.2. Fields: Forensics
+      1.5.656. PeSectionInfo
+         1.5.656.1. Description
+         1.5.656.2. Fields: Forensics
+      1.5.657. RegShimCache
+         1.5.657.1. Description
+         1.5.657.2. Fields: Forensics
+      1.5.658. SruApplicationTimelineProvider
+         1.5.658.1. Description
+         1.5.658.2. Fields: Forensics
+      1.5.659. VMClusterInfo
+         1.5.659.1. Description
+         1.5.659.2. Fields: Vmcluster
+      1.5.660. WSLDistributionRegistered
+         1.5.660.1. Description
+         1.5.660.2. Fields: Windows
+      1.5.661. WSLVMStarted
+         1.5.661.1. Description
+         1.5.661.2. Fields: Windows
+      1.5.662. WSLDistributionStarted
+         1.5.662.1. Description
+         1.5.662.2. Fields: Windows
+      1.5.663. WSLVMStopping
+         1.5.663.1. Description
+         1.5.663.2. Fields: Windows
+      1.5.664. WSLDistributionStopping
+         1.5.664.1. Description
+         1.5.664.2. Fields: Windows
+      1.5.665. WSLDistributionUnregistered
+         1.5.665.1. Description
+         1.5.665.2. Fields: Windows
+      1.5.666. BITSJobMetadata
+         1.5.666.1. Description
+         1.5.666.2. Fields: Forensics
+      1.5.667. VmcSensorStatus
+         1.5.667.1. Description
+         1.5.667.2. Fields: Vmcluster
+      1.5.668. FileEntry
+         1.5.668.1. Description
+         1.5.668.2. Fields: Forensics
+      1.5.669. WebShellDetected
+         1.5.669.1. Description
+         1.5.669.2. Fields: Forensics
+      1.5.670. UsbDeviceInfo
+         1.5.670.1. Description
+         1.5.670.2. Fields: Forensics
+      1.5.671. EventTapInfo
+         1.5.671.1. Description
+         1.5.671.2. Fields: Forensics
+      1.5.672. ForensicsCollectorOffline
+         1.5.672.1. Description
+         1.5.672.2. Fields: Forensics
+      1.5.673. ArchiveMemberInfo
+         1.5.673.1. Description
+         1.5.673.2. Fields: Forensics
+      1.5.674. VmcVmAsset
+         1.5.674.1. Description
+         1.5.674.2. Fields: Vmcluster
+      1.5.675. BITSJobFileInfo
+         1.5.675.1. Description
+         1.5.675.2. Fields: Forensics
+      1.5.676. BITSJobInfo
+         1.5.676.1. Description
+         1.5.676.2. Fields: Forensics
+      1.5.677. OdsScanComplete
+         1.5.677.1. Description
+         1.5.677.2. Fields: Forensics
+      1.5.678. FileSignatureMismatch
+         1.5.678.1. Description
+         1.5.678.2. Fields: Forensics
+      1.5.679. FileSignatureStatistics
+         1.5.679.1. Description
+         1.5.679.2. Fields: Forensics
+      1.5.680. MacMRU
+         1.5.680.1. Description
+         1.5.680.2. Fields: Forensics
+      1.5.681. SystemExtension
+         1.5.681.1. Description
+         1.5.681.2. Fields: Forensics
+      1.5.682. PhpExecuteScript
+         1.5.682.1. Description
+         1.5.682.2. Fields: Linux
+      1.5.683. PhpBase64Decode
+         1.5.683.1. Description
+         1.5.683.2. Fields: Linux
+      1.5.684. PhpEvalString
+         1.5.684.1. Description
+         1.5.684.2. Fields: Linux
+      1.5.685. DnsCache
+         1.5.685.1. Description
+         1.5.685.2. Fields: Forensics
+      1.5.686. SruNetworkConnectivityUsage
+         1.5.686.1. Description
+         1.5.686.2. Fields: Forensics
+      1.5.687. ActiveDirectoryAuditGroupMemberModified
+         1.5.687.1. Description
+         1.5.687.2. Fields: Windows
+      1.5.688. ActiveDirectoryAuditGroupModified
+         1.5.688.1. Description
+         1.5.688.2. Fields: Windows
+      1.5.689. PrefetchFile
+         1.5.689.1. Description
+         1.5.689.2. Fields: Forensics
+      1.5.690. LinkFileInfo
+         1.5.690.1. Description
+         1.5.690.2. Fields: Forensics
+      1.5.691. ActiveDirectoryAuditPasswordModificationAttempt
+         1.5.691.1. Description
+         1.5.691.2. Fields: Windows
+      1.5.692. IdpPolicyCloudAccessRuleMatch
+         1.5.692.1. Description
+         1.5.692.2. Fields: Public Cloud
+      1.5.693. MalPaths
+         1.5.693.1. Description
+         1.5.693.2. Fields: Forensics
+      1.5.694. ActiveDirectoryAuditUserModified
+         1.5.694.1. Description
+         1.5.694.2. Fields: Windows
+      1.5.695. JumpListInfo
+         1.5.695.1. Description
+         1.5.695.2. Fields: Forensics
+      1.5.696. ActiveDirectoryAuditGpoModified
+         1.5.696.1. Description
+         1.5.696.2. Fields: Windows
+      1.5.697. KernelExtension
+         1.5.697.1. Description
+         1.5.697.2. Fields: Forensics
+      1.5.698. AmcacheEntry
+         1.5.698.1. Description
+         1.5.698.2. Fields: Forensics
+      1.5.699. MacKnowledgeActivityStart
+         1.5.699.1. Description
+         1.5.699.2. Fields: Forensics
+      1.5.700. MacFsEventRecord
+         1.5.700.1. Description
+         1.5.700.2. Fields: Forensics
+      1.5.701. MacKnowledgeActivityEnd
+         1.5.701.1. Description
+         1.5.701.2. Fields: Forensics
+      1.5.702. NamedPipe
+         1.5.702.1. Description
+         1.5.702.2. Fields: Forensics
+      1.5.703. NetworkEndPointDataUsage
+         1.5.703.1. Description
+         1.5.703.2. Fields: Forensics
+      1.5.704. ProcessDataUsage
+         1.5.704.1. Description
+         1.5.704.2. Fields: Forensics
+      1.5.705. LocalGroupIdentity
+         1.5.705.1. Description
+         1.5.705.2. Fields: Forensics
+      1.5.706. RegCrowdstrikeValueUpdate
+         1.5.706.1. Description
+         1.5.706.2. Fields: Windows
+      1.5.707. BrowserHistoryVisit
+         1.5.707.1. Description
+         1.5.707.2. Fields: Forensics
+      1.5.708. BrowserAccountInfo
+         1.5.708.1. Description
+         1.5.708.2. Fields: Forensics
+      1.5.709. BamRegAppRunTime
+         1.5.709.1. Description
+         1.5.709.2. Fields: Forensics
+      1.5.710. BrowserDownloadStarted
+         1.5.710.1. Description
+         1.5.710.2. Fields: Forensics
+      1.5.711. BrowserCookieInfo
+         1.5.711.1. Description
+         1.5.711.2. Fields: Forensics
+      1.5.712. BrowserHistoryClearInfo
+         1.5.712.1. Description
+         1.5.712.2. Fields: Forensics
+      1.5.713. RegSystemConfigKeyUpdate
+         1.5.713.1. Description
+         1.5.713.2. Fields: Windows
+      1.5.714. RecentExecutionTimestamp
+         1.5.714.1. Description
+         1.5.714.2. Fields: Forensics
+      1.5.715. AutoRunProcessInfo
+         1.5.715.1. Description
+         1.5.715.2. Fields: Forensics
+      1.5.716. QuarantineXattribute
+         1.5.716.1. Description
+         1.5.716.2. Fields: Forensics
+      1.5.717. FileSystemContainmentStatus
+         1.5.717.1. Description
+         1.5.717.2. Fields: Windows
+      1.5.718. LSQuarantineEvent
+         1.5.718.1. Description
+         1.5.718.2. Fields: Forensics
+      1.5.719. RegCrowdstrikeKeyUpdate
+         1.5.719.1. Description
+         1.5.719.2. Fields: Windows
+      1.5.720. UserAccount
+         1.5.720.1. Description
+         1.5.720.2. Fields: Forensics
+      1.5.721. ClassifiedSensitiveFileAccess
+         1.5.721.1. Description
+         1.5.721.2. Fields: Windows
+      1.5.722. DataProtectionDataEncryption
+         1.5.722.1. Description
+         1.5.722.2. Fields: Windows
+      1.5.723. LogEntry
+         1.5.723.1. Description
+         1.5.723.2. Fields: Forensics
+      1.5.724. EddScanStart
+         1.5.724.1. Description
+         1.5.724.2. Fields: Windows
+      1.5.725. ForensicsCollectorOnline
+         1.5.725.1. Description
+         1.5.725.2. Fields: Forensics
+      1.5.726. XzFileWritten
+         1.5.726.1. Description
+         1.5.726.2. Fields: Windows, macOS, Linux
+      1.5.727. LzfseFileWritten
+         1.5.727.1. Description
+         1.5.727.2. Fields: Linux, macOS, Windows
+      1.5.728. PeFileWrittenDetectInfo
+         1.5.728.1. Description
+         1.5.728.2. Fields: Windows
+      1.5.729. ProcessState
+         1.5.729.1. Description
+         1.5.729.2. Fields: Forensics
+      1.5.730. SignInfo
+         1.5.730.1. Description
+         1.5.730.2. Fields: Windows
+         1.5.730.3. Fields: macOS
+         1.5.730.4. Fields: Forensics
+      1.5.731. SyntheticSharedObjectLoaded
+         1.5.731.1. Description
+         1.5.731.2. Fields: Linux
+      1.5.732. ScheduledTaskTemplateDetectInfo
+         1.5.732.1. Description
+         1.5.732.2. Fields: Windows
+      1.5.733. RemoteProcessMemoryRead
+         1.5.733.1. Description
+         1.5.733.2. Fields: Linux
+      1.5.734. MountedVolume
+         1.5.734.1. Description
+         1.5.734.2. Fields: Windows
+      1.5.735. InternetExposureData
+         1.5.735.1. Description
+         1.5.735.2. Fields: Windows, Linux, macOS
+      1.5.736. PcaGeneralDbEntry
+         1.5.736.1. Description
+         1.5.736.2. Fields: Forensics
+      1.5.737. InboundHttpHeader
+         1.5.737.1. Description
+         1.5.737.2. Fields: Windows, macOS, Linux
+      1.5.738. PcaAppLaunchEntry
+         1.5.738.1. Description
+         1.5.738.2. Fields: Forensics
+      1.5.739. HttpResponse
+         1.5.739.1. Description
+         1.5.739.2. Fields: Linux
+         1.5.739.3. Fields: macOS
+      1.5.740. SudoCommandAttempt
+         1.5.740.1. Description
+         1.5.740.2. Fields: macOS
+      1.5.741. SharedObjectLoaded
+         1.5.741.1. Description
+         1.5.741.2. Fields: Linux
+      1.5.742. SuperfetchAppInfo
+         1.5.742.1. Description
+         1.5.742.2. Fields: Forensics
+      1.5.743. FalconProcessHandleOpDetectInfo
+         1.5.743.1. Description
+         1.5.743.2. Fields: Windows
+      1.5.744. RemoteProcessMemoryWrite
+         1.5.744.1. Description
+         1.5.744.2. Fields: Linux
+      1.5.745. AppProtocolDetected
+         1.5.745.1. Description
+         1.5.745.2. Fields: macOS
+      1.5.746. MemoryAdvise
+         1.5.746.1. Description
+         1.5.746.2. Fields: Linux
+      1.5.747. InboundHttpParsingStatus
+         1.5.747.1. Description
+         1.5.747.2. Fields: macOS, Windows, Linux
+      1.5.748. SyntheticProcessTrace
+         1.5.748.1. Description
+         1.5.748.2. Fields: Linux
+      1.5.749. SuperfetchAppSchedule
+         1.5.749.1. Description
+         1.5.749.2. Fields: Forensics
+      1.5.750. VirtualMemoryArea
+         1.5.750.1. Description
+         1.5.750.2. Fields: Linux
+      1.5.751. WindowsTimelineEntry
+         1.5.751.1. Description
+         1.5.751.2. Fields: Forensics
+      1.5.752. SpotlightSearchEntry
+         1.5.752.1. Description
+         1.5.752.2. Fields: Forensics
+      1.5.753. ConfigurationProfileModified
+         1.5.753.1. Description
+         1.5.753.2. Fields: macOS
+      1.5.754. MemoryProtectionChanged
+         1.5.754.1. Description
+         1.5.754.2. Fields: Linux
+      1.5.755. FfcBytePatternScanResult
+         1.5.755.1. Description
+         1.5.755.2. Fields: Forensics
+      1.5.756. VulnerableDriverDetectInfo
+         1.5.756.1. Description
+         1.5.756.2. Fields: Windows
+      1.5.757. SyntheticVirtualMemoryArea
+         1.5.757.1. Description
+         1.5.757.2. Fields: Linux
+      1.5.758. SyntheticPR2Stats
+         1.5.758.1. Description
+         1.5.758.2. Fields: macOS
+      1.5.759. ResourceLimit
+         1.5.759.1. Description
+         1.5.759.2. Fields: Linux
+      1.5.760. FileOfInterestBasicInfo
+         1.5.760.1. Description
+         1.5.760.2. Fields: macOS, Windows
+         1.5.760.3. Fields: Linux
+      1.5.761. UserGroupDeleted
+         1.5.761.1. Description
+         1.5.761.2. Fields: Linux
+      1.5.762. RouteIP4
+         1.5.762.1. Description
+         1.5.762.2. Fields: Forensics
+      1.5.763. UserGroupCreated
+         1.5.763.1. Description
+         1.5.763.2. Fields: Linux
+      1.5.764. GroupAccount
+         1.5.764.1. Description
+         1.5.764.2. Fields: Forensics
+      1.5.765. MftRecord
+         1.5.765.1. Description
+         1.5.765.2. Fields: Forensics
+      1.5.766. SyscacheEntry
+         1.5.766.1. Description
+         1.5.766.2. Fields: Forensics
+      1.5.767. ShellBagInfo
+         1.5.767.1. Description
+         1.5.767.2. Fields: Forensics
+      1.5.768. RegGenericKeyUpdate
+         1.5.768.1. Description
+         1.5.768.2. Fields: Windows
+      1.5.769. BrowserDownloadEnded
+         1.5.769.1. Description
+         1.5.769.2. Fields: Forensics
+      1.5.770. MemoryLocked
+         1.5.770.1. Description
+         1.5.770.2. Fields: Linux
+      1.5.771. MpThreat
+         1.5.771.1. Description
+         1.5.771.2. Fields: Forensics
+      1.5.772. MpThreatDetection
+         1.5.772.1. Description
+         1.5.772.2. Fields: Forensics
+      1.5.773. MpThreatAction
+         1.5.773.1. Description
+         1.5.773.2. Fields: Forensics
+      1.5.774. BrowserProxyInfo
+         1.5.774.1. Description
+         1.5.774.2. Fields: Forensics
+      1.5.775. TerminalSavedStateInfo
+         1.5.775.1. Description
+         1.5.775.2. Fields: Forensics
+      1.5.776. UserAccessLogEntry
+         1.5.776.1. Description
+         1.5.776.2. Fields: Forensics
+      1.5.777. OsUpdateTimestamp
+         1.5.777.1. Description
+         1.5.777.2. Fields: Forensics
+      1.5.778. MftBootSector
+         1.5.778.1. Description
+         1.5.778.2. Fields: Forensics
+      1.5.779. UserAssistAppLaunchInfo
+         1.5.779.1. Description
+         1.5.779.2. Fields: Forensics
+      1.5.780. AtJobInfo
+         1.5.780.1. Description
+         1.5.780.2. Fields: Forensics
+      1.5.781. NetworkDnsSuffix
+         1.5.781.1. Description
+         1.5.781.2. Fields: Forensics
+      1.5.782. PtyAttached
+         1.5.782.1. Description
+         1.5.782.2. Fields: Linux
+      1.5.783. EntropyScan
+         1.5.783.1. Description
+         1.5.783.2. Fields: Forensics
+      1.5.784. ForensicsCollectorLog
+         1.5.784.1. Description
+         1.5.784.2. Fields: Forensics
+      1.5.785. BrowserExtensionInfo
+         1.5.785.1. Description
+         1.5.785.2. Fields: Forensics
+      1.5.786. InstalledBrowserExtension
+         1.5.786.1. Description
+         1.5.786.2. Fields: macOS, Windows
+      1.5.787. BrowserExtensionStatus
+         1.5.787.1. Description
+         1.5.787.2. Fields: macOS
+      1.5.788. ScheduledTaskInfo
+         1.5.788.1. Description
+         1.5.788.2. Fields: Forensics
+      1.5.789. PemFileWritten
+         1.5.789.1. Description
+         1.5.789.2. Fields: Linux
+         1.5.789.3. Fields: Windows
+         1.5.789.4. Fields: macOS
+      1.5.790. AppleScriptFileWritten
+         1.5.790.1. Description
+         1.5.790.2. Fields: macOS
+         1.5.790.3. Fields: Windows
+         1.5.790.4. Fields: Linux
+      1.5.791. AssociateIndicator
+         1.5.791.1. Description
+         1.5.791.2. Fields: Windows
+         1.5.791.3. Fields: macOS
+         1.5.791.4. Fields: Linux, Falcon Container
+      1.5.792. FirewallRuleIP6Matched
+         1.5.792.1. Description
+         1.5.792.2. Fields: Windows, macOS, Linux
+      1.5.793. FirewallRuleIP4Matched
+         1.5.793.1. Description
+         1.5.793.2. Fields: Windows, macOS, Linux
+      1.5.794. CsUmProcessCrashSummaryEvent
+         1.5.794.1. Description
+         1.5.794.2. Fields: Windows
+      1.5.795. NamedMutantHandleClosedTelemetry
+         1.5.795.1. Description
+         1.5.795.2. Fields: Windows
+      1.5.796. ClassifiedModuleLoad
+         1.5.796.1. Description
+         1.5.796.2. Fields: Windows
+      1.5.797. ProcessControl
+         1.5.797.1. Description
+         1.5.797.2. Fields: Linux, Falcon Container
+      1.5.798. DataEgress
+         1.5.798.1. Description
+         1.5.798.2. Fields: Windows, macOS
+      1.5.799. NamedSemaphoreHandleClosedTelemetry
+         1.5.799.1. Description
+         1.5.799.2. Fields: Windows
+      1.5.800. FirewallRuleInfo
+         1.5.800.1. Description
+         1.5.800.2. Fields: Forensics
+      1.5.801. LsassHandleFromUnsignedModule
+         1.5.801.1. Description
+         1.5.801.2. Fields: Windows
+      1.5.802. SAMHashDumpFromUnsignedModule
+         1.5.802.1. Description
+         1.5.802.2. Fields: Windows
+      1.5.803. PrivilegedProcessHandleFromUnsignedModule
+         1.5.803.1. Description
+         1.5.803.2. Fields: Windows
+      1.5.804. KernelCallbackTablePatch
+         1.5.804.1. Description
+         1.5.804.2. Fields: Windows
+      1.5.805. SuspiciousUserFontLoad
+         1.5.805.1. Description
+         1.5.805.2. Fields: Windows
+      1.5.806. UserFontLoad
+         1.5.806.1. Description
+         1.5.806.2. Fields: Windows
+      1.5.807. EarlyExploitPivotDetect
+         1.5.807.1. Description
+         1.5.807.2. Fields: Windows
+      1.5.808. NetworkContainmentCompleted
+         1.5.808.1. Description
+         1.5.808.2. Fields: Linux, Android, iOS, macOS, Windows
+      1.5.809. NetworkUncontainmentCompleted
+         1.5.809.1. Description
+         1.5.809.2. Fields: Linux, iOS, Android, macOS, Windows
+      1.5.810. FirewallRuleApplicationFailed
+         1.5.810.1. Description
+         1.5.810.2. Fields: Windows, Linux, macOS
+      1.5.811. ProcessExecOnPackedExecutable
+         1.5.811.1. Description
+         1.5.811.2. Fields: Windows
+      1.5.812. FalconServiceStatus
+         1.5.812.1. Description
+         1.5.812.2. Fields: Windows
+      1.5.813. ConfigDownloadComplete
+         1.5.813.1. Description
+         1.5.813.2. Fields: Linux, Falcon Container, Vmcluster, Kubernetes, Windows, macOS
+      1.5.814. ProcessHandleOpDowngraded
+         1.5.814.1. Description
+         1.5.814.2. Fields: Windows
+      1.5.815. ECBDownloadComplete
+         1.5.815.1. Description
+         1.5.815.2. Fields: Linux, macOS, Windows
+      1.5.816. SuspiciousUserRemoteAPCAttempt
+         1.5.816.1. Description
+         1.5.816.2. Fields: Windows
+      1.5.817. ChannelDataDownloadComplete
+         1.5.817.1. Description
+         1.5.817.2. Fields: Android, Linux, Falcon Container, Windows, macOS, Kubernetes, Vmcluster, iOS
+      1.5.818. HttpVisibilityStatus
+         1.5.818.1. Description
+         1.5.818.2. Fields: Windows
+      1.5.819. GetAsyncKeyStateEtwBatch
+         1.5.819.1. Description
+         1.5.819.2. Fields: Windows
+      1.5.820. ManifestDownloadComplete
+         1.5.820.1. Description
+         1.5.820.2. Fields: Vmcluster, macOS, Windows, Kubernetes, Linux, Falcon Container
+      1.5.821. QuarantinedFile
+         1.5.821.1. Description
+         1.5.821.2. Fields: Vmcluster, Linux, Windows, macOS, Kubernetes
+      1.5.822. RecoveryActionGetSystemTagsComplete
+         1.5.822.1. Description
+         1.5.822.2. Fields: macOS, Windows, Linux, Falcon Container, Kubernetes
+      1.5.823. RecoveryActionGetRuntimeSystemTagsComplete
+         1.5.823.1. Description
+         1.5.823.2. Fields: Linux, Falcon Container, macOS, Windows
+      1.5.824. QuarantineActionResult
+         1.5.824.1. Description
+         1.5.824.2. Fields: Vmcluster, macOS, Kubernetes, Windows, Linux
+      1.5.825. RecoveryActionKillProcessesComplete
+         1.5.825.1. Description
+         1.5.825.2. Fields: Windows, Kubernetes, macOS, Linux, Falcon Container
+      1.5.826. RecoveryActionKillProcessesReply
+         1.5.826.1. Description
+         1.5.826.2. Fields: Linux, Falcon Container, macOS, Windows, Kubernetes
+      1.5.827. RecoveryActionManipulateModuleTableComplete
+         1.5.827.1. Description
+         1.5.827.2. Fields: Linux, Falcon Container, macOS, Windows
+      1.5.828. RecoveryActionRegistrySetValueKeyReply
+         1.5.828.1. Description
+         1.5.828.2. Fields: Windows
+      1.5.829. RecoveryActionRegistryDeleteKeyComplete
+         1.5.829.1. Description
+         1.5.829.2. Fields: Windows
+      1.5.830. RecoveryActionSetRuntimeSystemTagsComplete
+         1.5.830.1. Description
+         1.5.830.2. Fields: Windows, macOS, Linux, Falcon Container
+      1.5.831. FsPostOpenSnapshotFile
+         1.5.831.1. Description
+         1.5.831.2. Fields: Windows
+      1.5.832. RegKeySecurityDecreasedFromUnsignedModule
+         1.5.832.1. Description
+         1.5.832.2. Fields: Windows
+      1.5.833. RegNtPostOpenKeyExUpImpersonating
+         1.5.833.1. Description
+         1.5.833.2. Fields: Windows
+      1.5.834. RansomwareCreateFile
+         1.5.834.1. Description
+         1.5.834.2. Fields: Windows
+      1.5.835. PrivilegedProcessHandle
+         1.5.835.1. Description
+         1.5.835.2. Fields: Windows
+      1.5.836. FsPostOpenUpImpersonating
+         1.5.836.1. Description
+         1.5.836.2. Fields: Windows
+      1.5.837. ModuleDownloadComplete
+         1.5.837.1. Description
+         1.5.837.2. Fields: macOS, Windows, Linux
+      1.5.838. RemediationActionRegistryRemoval
+         1.5.838.1. Description
+         1.5.838.2. Fields: Windows
+      1.5.839. RemediationMonitorQuarantineFile
+         1.5.839.1. Description
+         1.5.839.2. Fields: Windows
+      1.5.840. XumdStatus
+         1.5.840.1. Description
+         1.5.840.2. Fields: Windows
+      1.5.841. FirewallRuleIP6
+         1.5.841.1. Description
+         1.5.841.2. Fields: Forensics
+      1.5.842. SystemdTimerDeleted
+         1.5.842.1. Description
+         1.5.842.2. Fields: Linux
+      1.5.843. SyntheticSystemdTimerCreated
+         1.5.843.1. Description
+         1.5.843.2. Fields: Linux
+      1.5.844. FirewallRuleIP4
+         1.5.844.1. Description
+         1.5.844.2. Fields: Forensics
+      1.5.845. SystemdTimerCreated
+         1.5.845.1. Description
+         1.5.845.2. Fields: Linux
+      1.5.846. FsPostCreate
+         1.5.846.1. Description
+         1.5.846.2. Fields: Windows
+      1.5.847. WlanInterfaceInfo
+         1.5.847.1. Description
+         1.5.847.2. Fields: Forensics
+      1.5.848. QuarantinedFileState
+         1.5.848.1. Description
+         1.5.848.2. Fields: Windows, macOS, Kubernetes, Vmcluster, Linux
+      1.5.849. ExcelDocumentOpened
+         1.5.849.1. Description
+         1.5.849.2. Fields: Windows
+      1.5.850. RecoveryActionDeleteFilesComplete
+         1.5.850.1. Description
+         1.5.850.2. Fields: Linux, Falcon Container, macOS, Windows, Kubernetes
+      1.5.851. IdpWatchdogConfigurationsSetResponse
+         1.5.851.1. Description
+         1.5.851.2. Fields: Windows
+      1.5.852. RemediationMonitorKillProcess
+         1.5.852.1. Description
+         1.5.852.2. Fields: Linux, macOS, Windows
+      1.5.853. RecoveryActionDeleteFilesReply
+         1.5.853.1. Description
+         1.5.853.2. Fields: Linux, Falcon Container, Kubernetes, Windows, macOS
+      1.5.854. RecoveryActionGetModuleTableRecordComplete
+         1.5.854.1. Description
+         1.5.854.2. Fields: Linux, Falcon Container, Windows, macOS
+      1.5.855. IdpCloudHealthConfigurationsSetResponse
+         1.5.855.1. Description
+         1.5.855.2. Fields: Windows
+      1.5.856. IdpWatchdogConfigurationsGetResponse
+         1.5.856.1. Description
+         1.5.856.2. Fields: Windows
+      1.5.857. IdpCloudHealthConfigurationsGetResponse
+         1.5.857.1. Description
+         1.5.857.2. Fields: Windows
+      1.5.858. RemediationActionKillProcess
+         1.5.858.1. Description
+         1.5.858.2. Fields: Linux, Windows Legacy, macOS, Windows
+      1.5.859. RegFeatureUsageInfo
+         1.5.859.1. Description
+         1.5.859.2. Fields: Forensics
+      1.5.860. IdpCloudHealthCheck
+         1.5.860.1. Description
+         1.5.860.2. Fields: Windows
+      1.5.861. MobileAppIdentifiers
+         1.5.861.1. Description
+         1.5.861.2. Fields: Android
+      1.5.862. ScriptControlBlocked
+         1.5.862.1. Description
+         1.5.862.2. Fields: Windows
+      1.5.863. ModuleDetectInfo
+         1.5.863.1. Description
+         1.5.863.2. Fields: macOS, Windows, Linux, Falcon Container
+      1.5.864. AppSideLoaded
+         1.5.864.1. Description
+         1.5.864.2. Fields: Android
+      1.5.865. ScriptFileContentsDetectInfo
+         1.5.865.1. Description
+         1.5.865.2. Fields: Windows
+      1.5.866. RegValueQueryDetectInfo
+         1.5.866.1. Description
+         1.5.866.2. Fields: Windows
+      1.5.867. NtfsLinkCreatedDetectInfo
+         1.5.867.1. Description
+         1.5.867.2. Fields: Windows
+      1.5.868. WmiQueryDetectInfo
+         1.5.868.1. Description
+         1.5.868.2. Fields: Windows
+      1.5.869. IPCDetectInfo
+         1.5.869.1. Description
+         1.5.869.2. Fields: Windows
+      1.5.870. EddScanStatus
+         1.5.870.1. Description
+         1.5.870.2. Fields: Windows
+      1.5.871. ProcessAncestryInformation
+         1.5.871.1. Description
+         1.5.871.2. Fields: macOS, Windows, Linux, Falcon Container
+      1.5.872. AdditionalHostInfo
+         1.5.872.1. Description
+         1.5.872.2. Fields: Windows, macOS
+      1.5.873. LogonBehaviorCompositionDetectInfo
+         1.5.873.1. Description
+         1.5.873.2. Fields: Windows
+      1.5.874. FileDescriptorMonitor
+         1.5.874.1. Description
+         1.5.874.2. Fields: Forensics
+      1.5.875. NamedPipeDetectInfo
+         1.5.875.1. Description
+         1.5.875.2. Fields: Windows
+      1.5.876. XumdHookEvent
+         1.5.876.1. Description
+         1.5.876.2. Fields: Windows
+      1.5.877. DotnetModuleLoadDetectInfo
+         1.5.877.1. Description
+         1.5.877.2. Fields: Windows
+      1.5.878. DriverLoadedV2DetectInfo
+         1.5.878.1. Description
+         1.5.878.2. Fields: Windows
+      1.5.879. RansomwareOpenFile
+         1.5.879.1. Description
+         1.5.879.2. Fields: Windows
+      1.5.880. TriggeredMemoryDumpResponse
+         1.5.880.1. Description
+         1.5.880.2. Fields: Windows
+      1.5.881. FsPostOpen
+         1.5.881.1. Description
+         1.5.881.2. Fields: Windows
+      1.5.882. AmsBytePatternScanResult
+         1.5.882.1. Description
+         1.5.882.2. Fields: Windows
+      1.5.883. AmsBytePatternScanTelemetry
+         1.5.883.1. Description
+         1.5.883.2. Fields: Windows
+      1.5.884. OsfmDownloadComplete
+         1.5.884.1. Description
+         1.5.884.2. Fields: Windows
+      1.5.885. InstallServiceDownloadComplete
+         1.5.885.1. Description
+         1.5.885.2. Fields: Windows
+      1.5.886. UmppaErrorEvent
+         1.5.886.1. Description
+         1.5.886.2. Fields: Windows
+      1.5.887. NullPageProtectionModificationAttempt
+         1.5.887.1. Description
+         1.5.887.2. Fields: Windows
+      1.5.888. RegNtPostOpenKeyEx
+         1.5.888.1. Description
+         1.5.888.2. Fields: Windows
+      1.5.889. RemediationActionQuarantineFile
+         1.5.889.1. Description
+         1.5.889.2. Fields: Windows
+      1.5.890. DriverPreventFailed
+         1.5.890.1. Description
+         1.5.890.2. Fields: Windows
+      1.5.891. ZerologonExploitAttempt
+         1.5.891.1. Description
+         1.5.891.2. Fields: Windows
+      1.5.892. KillProcessError
+         1.5.892.1. Description
+         1.5.892.2. Fields: macOS, Windows, Linux, Falcon Container
+      1.5.893. NullPageUnmapAttempt
+         1.5.893.1. Description
+         1.5.893.2. Fields: Windows
+      1.5.894. BlockThreadFailed
+         1.5.894.1. Description
+         1.5.894.2. Fields: Windows
+      1.5.895. InstallBundleDownloadComplete
+         1.5.895.1. Description
+         1.5.895.2. Fields: Windows
+      1.5.896. InstalledUpdates
+         1.5.896.1. Description
+         1.5.896.2. Fields: Windows
+      1.5.897. UpdateManifestDownloadComplete
+         1.5.897.1. Description
+         1.5.897.2. Fields: Windows
+      1.5.898. TerminateRemoteProcessEtw
+         1.5.898.1. Description
+         1.5.898.2. Fields: Windows
+      1.5.899. HttpRequestV2Detect
+         1.5.899.1. Description
+         1.5.899.2. Fields: Windows
+      1.5.900. CidMigrationError
+         1.5.900.1. Description
+         1.5.900.2. Fields: Windows, macOS, Linux
+      1.5.901. SuspendProcessError
+         1.5.901.1. Description
+         1.5.901.2. Fields: Linux, Falcon Container, Windows, macOS
+      1.5.902. EtwComponentResponse
+         1.5.902.1. Description
+         1.5.902.2. Fields: Windows
+      1.5.903. RemediationActionQuarantineOfficeMacroFile
+         1.5.903.1. Description
+         1.5.903.2. Fields: Windows
+      1.5.904. MsiTransactionExecuted
+         1.5.904.1. Description
+         1.5.904.2. Fields: Windows
+      1.5.905. ModuleLoadV3DetectInfo
+         1.5.905.1. Description
+         1.5.905.2. Fields: Windows
+      1.5.906. RemediationActionScheduledTaskRemoval
+         1.5.906.1. Description
+         1.5.906.2. Fields: Windows
+      1.5.907. PtTelemetry
+         1.5.907.1. Description
+         1.5.907.2. Fields: Windows
+      1.5.908. RemediationActionServiceRemoval
+         1.5.908.1. Description
+         1.5.908.2. Fields: Windows
+      1.5.909. RemediationActionQuarantineMacroFile
+         1.5.909.1. Description
+         1.5.909.2. Fields: Windows
+      1.5.910. CidMigrationManifestDownloadComplete
+         1.5.910.1. Description
+         1.5.910.2. Fields: Windows, macOS, Linux
+      1.5.911. CommsLogReset
+         1.5.911.1. Description
+         1.5.911.2. Fields: macOS
+      1.5.912. IdpDcTiConfiguration
+         1.5.912.1. Description
+         1.5.912.2. Fields: Windows
+      1.5.913. ScriptControlDetectInvalidInfo
+         1.5.913.1. Description
+         1.5.913.2. Fields: Linux
+      1.5.914. DnsRequest
+         1.5.914.1. Description
+         1.5.914.2. Fields: Windows
+         1.5.914.3. Fields: Linux
+         1.5.914.4. Fields: macOS
+         1.5.914.5. Fields: iOS, Android
+      1.5.915. SmbServerShareOpenedEtw
+         1.5.915.1. Description
+         1.5.915.2. Fields: Windows
+      1.5.916. RecoveryActionSetSystemTagsComplete
+         1.5.916.1. Description
+         1.5.916.2. Fields: Linux, Falcon Container, Kubernetes, macOS, Windows
+      1.5.917. RecoveryActionRegistrySetValueKeyComplete
+         1.5.917.1. Description
+         1.5.917.2. Fields: Windows
+      1.5.918. RecoveryActionRegistryDeleteKeyReply
+         1.5.918.1. Description
+         1.5.918.2. Fields: Windows
+      1.5.919. RecoveryActionRegistryDeleteValueKeyReply
+         1.5.919.1. Description
+         1.5.919.2. Fields: Windows
+      1.5.920. ProcessOpenedFileDescriptor
+         1.5.920.1. Description
+         1.5.920.2. Fields: Forensics
+      1.5.921. RecoveryActionRegistryDeleteValueKeyComplete
+         1.5.921.1. Description
+         1.5.921.2. Fields: Windows
+      1.5.922. RecoveryActionRegistryCreateKeyComplete
+         1.5.922.1. Description
+         1.5.922.2. Fields: Windows
+      1.5.923. SuspiciousCreateSymbolicLink
+         1.5.923.1. Description
+         1.5.923.2. Fields: Windows
+      1.5.924. RecoveryActionRegistryCreateKeyReply
+         1.5.924.1. Description
+         1.5.924.2. Fields: Windows
+   1.6. Cloud Events
+      1.6.1. Cloud Security Posture Management
+         1.6.1.1. CSPMIOAStreamingEvent
+            1.6.1.1.1. Event fields list
+            1.6.1.1.2. Sample event
+         1.6.1.2. CSPMSearchStreamingEvent
+            1.6.1.2.1. Event fields list
+            1.6.1.2.2. Sample event
+      1.6.2. CrowdScore
+         1.6.2.1. IncidentSummaryEvent
+            1.6.2.1.1. Event fields
+            1.6.2.1.2. Event metadata
+            1.6.2.1.3. Sample IncidentSummary event response
+      1.6.3. CrowdStrike Store
+         1.6.3.1. Activate
+         1.6.3.2. Suspend
+         1.6.3.3. Reinstate
+         1.6.3.4. Terminate
+         1.6.3.5. Update
+      1.6.4. Device Integrity Events
+         1.6.4.1. MobilePlayIntegrityDetection
+            1.6.4.1.1. Fields list:
+         1.6.4.2. MobilePlayIntegrityStatus
+            1.6.4.2.1. Fields list:
+         1.6.4.3. MobileSafetyNetDetection
+            1.6.4.3.1. Fields list :
+         1.6.4.4. MobileSafetyNetStatus
+            1.6.4.4.1. Fields list:
+         1.6.4.5. MobileKeyStoreDetection
+            1.6.4.5.1. Fields list:
+         1.6.4.6. MobileKeyStoreStatus
+            1.6.4.6.1. Fields list:
+      1.6.5. Event streams
+         1.6.5.1. streamStarted
+            1.6.5.1.1. Sample event
+         1.6.5.2. streamStopped
+            1.6.5.2.1. Sample event
+      1.6.6. Image Assessment Events
+         1.6.6.1. OciImageScanEvent
+         1.6.6.2. OciImageScanVulnerabilityEvent
+         1.6.6.3. OciImageScanDetectionEvent
+         1.6.6.4. OciImageScanWorkflowEvent
+      1.6.7. Falcon Firewall Management
+         1.6.7.1. Event section
+            1.6.7.1.1. Sample FirewallMatch event
+      1.6.8. Falcon Intelligence Recon
+         1.6.8.1. ReconNotificationSummaryEvent
+            1.6.8.1.1. Event fields
+      1.6.9. Falcon Privileged Access
+         1.6.9.1. Event fields
+         1.6.9.2. permission_granted
+         1.6.9.3. permission_revoked
+         1.6.9.4. permission_denied
+         1.6.9.5. permission_extended
+      1.6.10. General detection and audit events
+         1.6.10.1. ASLRBypassAttemptBlocked
+         1.6.10.2. Epp Detection Summary
+            1.6.10.2.1. Event fields section
+            1.6.10.2.2. Metadata section
+            1.6.10.2.3. Pattern Disposition Value Descriptions
+            1.6.10.2.4. Sample EppDetectionSummaryEvent response
+         1.6.10.3. Detection Summary
+            1.6.10.3.1. Event fields section
+            1.6.10.3.2. Metadata section
+            1.6.10.3.3. Pattern Disposition Value Descriptions
+            1.6.10.3.4. Sample DetectionSummaryEvent response
+         1.6.10.4. Mobile Detection Summary
+            1.6.10.4.1. Event fields section
+            1.6.10.4.2. Metadata section
+            1.6.10.4.3. Sample MobileDetectionSummaryEvent response
+         1.6.10.5. Identity Protection Detection Summary
+            1.6.10.5.1. Event fields section
+            1.6.10.5.2. Sample IDPDetectionSummaryEvent response
+         1.6.10.6. Identity Protection Incident
+            1.6.10.6.1. Event fields
+         1.6.10.7. Authentication
+            1.6.10.7.1. Event fields section
+            1.6.10.7.2. Metadata section
+            1.6.10.7.3. Sample AuthActivityAuditEvent response activateUser
+            1.6.10.7.4. createUser
+            1.6.10.7.5. changePassword
+            1.6.10.7.6. deactivateUser
+            1.6.10.7.7. deleteUser
+            1.6.10.7.8. grantUserRoles
+            1.6.10.7.9. updateUserRoles
+            1.6.10.7.10. revokeUserRoles
+            1.6.10.7.11. requestResetPassword
+            1.6.10.7.12. resetAuthSecret
+            1.6.10.7.13. grantCustomerSubscriptions
+            1.6.10.7.14. revokeCustomerSubscriptions
+            1.6.10.7.15. selfAcceptEula
+            1.6.10.7.16. twoFactorAuthenticate
+            1.6.10.7.17. updateUser
+            1.6.10.7.18. userAuthenticate
+         1.6.10.8. Detection status update
+            1.6.10.8.1. Metadata section
+            1.6.10.8.2. Event section
+         1.6.10.9. Sample UserActivityAuditEvent response
+         1.6.10.10. Uploaded IoCs
+         1.6.10.11. Metadata section
+            1.6.10.11.1. Event section
+            1.6.10.11.2. Sample CustomerIOCEvent response
+         1.6.10.12. DetectionSummaryEvent
+         1.6.10.13. HardwareAction
+         1.6.10.14. IDPDetectionSummaryEvent
+            1.6.10.14.1. Fields
+         1.6.10.15. LoginAuditEvent
+         1.6.10.16. ModuleBlockedWithPatternId
+         1.6.10.17. ScheduledReportNotificationEvent
+            1.6.10.17.1. Fields
+         1.6.10.18. UserActivityAuditEvent
+         1.6.10.19. XDR detection summary
+            1.6.10.19.1. Event fields section
+            1.6.10.19.2. Metadata section
+            1.6.10.19.3. XdrDetectionSummaryEvent sample response
+      1.6.11. IP whitelisting events
+         1.6.11.1. ip_whitelist
+         1.6.11.2. ip_rules_added
+      1.6.12. Network containment
+         1.6.12.1. containment_requested
+         1.6.12.2. lift_containment_request
+      1.6.13. Policy management
+         1.6.13.1. create_policy
+         1.6.13.2. update_policy
+         1.6.13.3. assign_policy
+         1.6.13.4. remove_policy
+         1.6.13.5. enable_policy
+         1.6.13.6. disable_policy
+         1.6.13.7. delete_policy
+         1.6.13.8. update_precedence
+      1.6.14. Real Time Response
+         1.6.14.1. RemoteResponseSessionStartEvent
+            1.6.14.1.1. Sample event
+         1.6.14.2. RemoteResponseSessionEndEvent
+            1.6.14.2.1. Sample event
+      1.6.15. SIEM Connector
+         1.6.15.1. APIActivityAuditEvent
+      1.6.16. Mobile Events
+         1.6.16.1. MobileDetectionSummaryEvent
+            1.6.16.1.1. Fields
+         1.6.16.2. MobileDetectionJsonData
+            1.6.16.2.1. Fields
+         1.6.16.3. Mobile device management
+            1.6.16.3.1. hide_host_requested
+         1.6.16.4. Mobile custom application management
+            1.6.16.4.1. create_private
+            1.6.16.4.2. create_private_version
+            1.6.16.4.3. update_private
+            1.6.16.4.4. update_private_version
+            1.6.16.4.5. delete_private
+            1.6.16.4.6. delete_private_version
+      1.6.17. Vulnerability management events
+         1.6.17.1. FEMVulnerabilityMutation
+            1.6.17.1.1. Event fields
+         1.6.17.2. FEMVulnerabilityEvidenceMutation
+            1.6.17.2.1. Event fields
+         1.6.17.3. FEMRemediationMutation
+            1.6.17.3.1. Event fields
+      1.6.18. Next-Gen SIEM events, alerts, and incidents
+   1.7. Falcon Data Replicator Events
+      1.7.1. References
+         1.7.1.1. Secondary events from Falcon Insight XDR
+            1.7.1.1.1. aid_master
+            1.7.1.1.2. managedassets
+            1.7.1.1.3. notmanaged
+         1.7.1.2. Secondary events from Falcon Discover and Falcon Exposure Management
+            1.7.1.2.1. appinfo
+            1.7.1.2.2. userinfo

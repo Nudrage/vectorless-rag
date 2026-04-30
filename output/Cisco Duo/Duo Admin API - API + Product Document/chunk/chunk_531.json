@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_531",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\nbrowsers\nCollected information about all detected\nbrowsers on an individual endpoint.\nKey\nValue\nbrowser_family\nThe web browser\nfamily.\nbrowser_version\nThe web browser\nversion.\nflash_version\nThe Flash plugin\nversion. If not\npresent then\n\"uninstalled\".\njava_version\nThe Java plugin\nversion. If not\npresent then\n\"uninstalled\".\nlast_used\nThe date and time\nthat the endpoint's\nbrowser was last\nused for access,\nshown as a Unix\ntimestamp.\ncomputer_sid\nThe machine security identifier of a Windows\nendpoint.\ncpu_id\nThe CPU ID of a Windows endpoint.\ndevice_id\nCustom device identifier of a Meraki-managed\niOS endpoint. Returned for Duo Premier\ncustomers only.\ndevice_identifier\nThe unique device attribute value that\nidentifies the endpoint. Returned for Duo\nPremier customers only. This property will be\ndeprecated in a future release.\ndevice_identifier_type\nThe device attribute used to identify a unique\nendpoint. One of \"hardware_uuid\", \"fqdn\",\n\"hardware_serial\", \"device_udid\", or none. This\nproperty will be deprecated in a future release.\ndevice_name\nThe endpoint's hostname.\ndevice_udid\nThe unique device identifier for iOS endpoints\nmanaged by Workspace ONE, Ivanti Endpoint\nManager Mobile, Ivanti Neurons for MDM, or\nSophos Mobile via certificates. Returned for\nDuo Premier customers only.\ndevice_username\nThe unique attribute value that identifies the\nendpoint's associated user in the management\nsystem. Returned for Duo Premier customers\nonly.\ndevice_username_type\nThe management system attribute used to\nidentify the user associated with the unique\nendpoint. One of \"os_username\", \"upn\",\n\"username\", \"email\", or none. Returned for Duo\nPremier customers only.\ndisk_encryption_status\nThe hard drive encryption status of the\nendpoint as detected by Duo Desktop. One of\n\"On\", \"Off\", or \"Unknown\".\ndomain_sid\nThe Active Directory domain security identifier\nfor a domain-joined Windows endpoint. Empty\nif the Windows endpoint is not joined to a\ndomain.\nemail\nThe email address, if present, of the user\nassociated with an endpoint.\nepkey\nThe endpoint's unique identifier. Most reliable\nwhen reported by Duo Desktop installed on\nthe endpoint.\nfirewall_status\nStatus of the endpoint's local firewall as\ndetected by Duo Desktop. One of \"On\", \"Off\",\nor \"Unknown\".\nhardware_uuid\nThe universally unique identifier for a Mac\nendpoint.\nhealth_app_client_version\nThe version of Duo Desktop installed on the\nendpoint.\nhealth_data_last_collected\nThe last time Duo Desktop performed a device\nhealth check, as a Unix timestamp.\nlast_updated\nThe last time the endpoint accessed Duo, as a\nUnix timestamp.\nmachine_guid\nThe globally unique identifier for a Windows or\nmacOS endpoint.\nmodel\nThe device model of a 2FA endpoint.\nos_build\nThe endpoint's operating system build\nnumber.\nos_family\nThe endpoint's operating system platform.\nos_version\nThe endpoint's operating system version.\npassword_status\nWhether the local admin password is set on\nthe endpoint as detected by Duo Desktop.\nOne of \"Set\", \"Unset\", or \"Unknown\".\nsecurity_agents\nInformation about security agents present on\nthe endpoint as detected by Duo Desktop.\nReturned for Duo Premier customers only.\nKey\nValue\nsecurity_agent\nThe name of the\nsecurity agent.\nversion\nThe security agent\nversion.\ntrusted_endpoint\nWhether the endpoint is a Duo managed\nendpoint. One of \"yes\", \"no\", or \"unknown\".\ntype\nThe endpoint's device class.\nusername\nThe Duo username of the user associated with\nan endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 230,
+      "end": 233
+    },
+    "content_stats": {
+      "char_count": 3449,
+      "word_count": 494
+    },
+    "hierarchy": {
+      "parent": "Endpoints",
+      "children": []
+    }
+  }
+}

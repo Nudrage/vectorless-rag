@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1261",
+  "section_number": "2.19.10.1.1",
+  "header": "Step 1: Create an index template",
+  "content": "To create a data stream, you ﬁrst need to create an index template that conﬁgures a set of indexes\nas a data stream. The data_stream object indicates that it’s a data stream and not a regular index\ntemplate. The index pattern matches with the name of the data stream:\nPUT _index_template/logs-template\n{\n\"index_patterns\": [\n\"my-data-stream\",\n\"logs-*\"\n],\n\"data_stream\": {},\n\"priority\": 100\n}\nIn this case, each ingested document must have an @timestamp ﬁeld. You can also deﬁne your\nown custom timestamp ﬁeld as a property in the data_stream object:\nPUT _index_template/logs-template\n{\n\"index_patterns\": \"my-data-stream\",\n\"data_stream\": {\n\"timestamp_field\": {\n\"name\": \"request_time\"\n}\nGetting started with data streams\n1758\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1787,
+      "end": 1788
+    },
+    "content_stats": {
+      "char_count": 768,
+      "word_count": 114
+    },
+    "hierarchy": {
+      "parent": "Getting started with data streams",
+      "children": []
+    }
+  }
+}

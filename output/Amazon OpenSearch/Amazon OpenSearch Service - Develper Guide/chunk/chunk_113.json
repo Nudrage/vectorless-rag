@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_113",
+  "section_number": "2.6.15.3.4",
+  "header": "OpenSearch sink",
+  "content": "The OpenSearch sink plugin has the following requirements and limitations.\n• The aws option is required, and must contain the following options:\n• sts_role_arn\n• region\n• hosts\n• serverless (if the sink is an OpenSearch Serverless collection)\n• The sts_role_arn option must point to the same role for each sink within a YAML deﬁnition\nﬁle.\n• The hosts option must specify an OpenSearch Service domain endpoint or an OpenSearch\nServerless collection endpoint. You can't specify a custom endpoint for a domain; it must be the\nstandard endpoint.\n• If the hosts option is a serverless collection endpoint, you must set the serverless option to\ntrue. In addition, if your YAML deﬁnition ﬁle contains the index_type option, it must be set to\nmanagement_disabled, otherwise validation fails.\n• The following options aren't supported:\n• username\n• password\nConﬁguration requirements and constraints\n97\nAmazon OpenSearch Service\nDeveloper Guide\n• cert\n• proxy\n• dlq_file - If you want to oﬄoad failed events to a dead letter queue (DLQ), you must use\nthe dlq option and specify an S3 bucket.\n• ism_policy_file\n• socket_timeout\n• template_file\n• insecure",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 126,
+      "end": 127
+    },
+    "content_stats": {
+      "char_count": 1144,
+      "word_count": 185
+    },
+    "hierarchy": {
+      "parent": "Conﬁguration requirements and constraints",
+      "children": []
+    }
+  }
+}

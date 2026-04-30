@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3222",
+  "section_number": "1.6.18",
+  "header": "Next-Gen SIEM events, alerts, and incidents",
+  "content": "In Falcon Next-Gen SIEM, detections and incidents show activity in your environment. Individual events that are part of these detections and incidents are shown\nin Advanced Event Search in the repo xdr_indicatorsrepo.\nThis type of event contains metadata about the detection or incident. However, this metadata is intended for internal CrowdStrike use, and you may see other\nitems in this repo that are not documented here.\nImportant: This metadata is subject to change or deprecation. We recommend you do not rely on this data for business processes or decisions.\nSample items in this repo:\nNgsiem.alert.id: ID of a Next-Gen SIEM detection referencing this indicator\nNgsiem.detection.id: ID of a Next-Gen SIEM incident referencing this indicator. All supporting events tied to an incident share the same value for this\nfield.\nNgsiem.event.data_domain: Associated data domain of this indicator\nNgsiem.event.id: ID of an associated Next-Gen SIEM event for this indicator\nNgsiem.event.product: Associated product for this indicator (deprecated, use Ngsiem.indicator.source_product)\nNgsiem.event.vendor: Associated vendor for this indicator (deprecated, use Ngsiem.indicator.source_vendor)\nNgsiem.indicator.display_name: Display name of this indicator\nNgsiem.indicator.id: ID of this indicator. All supporting events tied to an indicator share the same value for this field.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1220/1226\nNgsiem.indicator.source_product: Associated product list for this indicator\nNgsiem.indicator.source_vendor: Associated vendor list for this indicator\nNgsiem.pattern.id: ID of a pattern referenced for this indicator. Detections from third-party data and correlation rules have the pattern ID 100012.\nNgsiem.parent.incident.id: ID of a parent incident for this indicator",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 16,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1220,
+      "end": 1221
+    },
+    "content_stats": {
+      "char_count": 1982,
+      "word_count": 257
+    },
+    "hierarchy": {
+      "parent": "Cloud Events",
+      "children": []
+    }
+  }
+}

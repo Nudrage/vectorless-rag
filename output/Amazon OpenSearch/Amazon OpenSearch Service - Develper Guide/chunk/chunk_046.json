@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_046",
+  "section_number": "2.6.7.3.1",
+  "header": "Step 2: Conﬁgure data access for the domain",
+  "content": "In order for a pipeline to write data to a domain, the domain must have a domain-level access\npolicy that allows the pipeline role to access it.\nThe following sample domain access policy allows the pipeline role named pipeline-role to\nwrite data to the domain named ingestion-domain:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::111122223333:role/pipeline-role\"\n},\n\"Action\": [\n\"es:DescribeDomain\",\n\"es:ESHttp*\"\n],\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/domain-name/*\"\n}\n]\n}\nMap the pipeline role (only for domains that use ﬁne-grained access control)\nIf your domain uses ﬁne-grained access control for authentication, there are extra steps you need\nto take to provide your pipeline access to a domain. The steps diﬀer depending on your domain\nconﬁguration:\n• Scenario 1: Diﬀerent master role and pipeline role – If you're using an IAM Amazon Resource\nName (ARN) as the master user and it's diﬀerent than the pipeline role, you need to map the\npipeline role to the OpenSearch all_access backend role. This adds the pipeline role as an\nadditional master user. For more information, see Additional master users.\n• Scenario 2: Master user in the internal user database – If your domain uses a master user in\nthe internal user database and HTTP basic authentication for OpenSearch Dashboards, you can't\nGranting pipelines access to domains\n37\nAmazon OpenSearch Service\nDeveloper Guide\npass the master username and password directly into the pipeline conﬁguration. Instead, map\nthe pipeline role to the OpenSearch all_access backend role. This adds the pipeline role as an\nadditional master user. For more information, see Additional master users.\n• Scenario 3: Same master role and pipeline role (uncommon) – If you're using an IAM ARN as\nthe master user, and it's the same ARN that you're using as the pipeline role, you don't need to\ntake any further action. The pipeline has the required permissions to write to the domain. This\nscenario is uncommon because most environments use an administrator role or some other role\nas the master role.\nThe following image shows how to map the pipeline role to a backend role:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 66,
+      "end": 67
+    },
+    "content_stats": {
+      "char_count": 2185,
+      "word_count": 342
+    },
+    "hierarchy": {
+      "parent": "Granting Amazon OpenSearch Ingestion pipelines access to domains",
+      "children": []
+    }
+  }
+}

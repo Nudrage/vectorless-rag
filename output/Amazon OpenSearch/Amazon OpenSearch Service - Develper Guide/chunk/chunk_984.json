@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_984",
+  "section_number": "2.15.6.2",
+  "header": "Notes and diﬀerences",
+  "content": "Calls to _plugins/_sql include index names in the request body, so they have the same access\npolicy considerations as the bulk, mget, and msearch operations. As always, follow the principle of\nleast privilege when you grant permissions to API operations.\nFor security considerations related to using SQL with ﬁne-grained access control, see the section\ncalled “Fine-grained access control”.\nThe OpenSearch SQL plugin includes many tunable settings. In OpenSearch Service, use the\n_cluster/settings path, not the plugin settings path (_plugins/_query/settings):\nPUT _cluster/settings\n{\n\"transient\" : {\n\"plugins.sql.enabled\" : true\n}\n}\nFor legacy Elasticsearch domains, replace plugins with opendistro:\nPUT _cluster/settings\n{\n\"transient\" : {\n\"opendistro.sql.enabled\" : true\n}\n}\nNotes and diﬀerences\n1511\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1540,
+      "end": 1541
+    },
+    "content_stats": {
+      "char_count": 844,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "Querying your Amazon OpenSearch Service data with SQL",
+      "children": []
+    }
+  }
+}

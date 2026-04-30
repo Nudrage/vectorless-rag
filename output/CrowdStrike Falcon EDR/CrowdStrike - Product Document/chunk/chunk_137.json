@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_137",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Windows, Public Cloud\nThis event provides key metadata regarding security groups in AWS. CrowdStrike retrieves this information by processing the response from AWS's\nDescribeSecurityGroups API [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html] on your behalf.\nSecurity groups control the level of network based access to resources within a VPC and can typically associated to network interfaces and their attached EC2\ninstances.\nThis event is only generated for Discover for AWS [/support/documentation/10/falcon-discover-feature-guide] customers. It's generated either when Discover\nfor AWS observes new or related activity via CloudTrail or during Discover for AWS's weekly full scan.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 35,
+      "end": 35
+    },
+    "content_stats": {
+      "char_count": 735,
+      "word_count": 89
+    },
+    "hierarchy": {
+      "parent": "AwsEc2SecurityGroup",
+      "children": []
+    }
+  }
+}

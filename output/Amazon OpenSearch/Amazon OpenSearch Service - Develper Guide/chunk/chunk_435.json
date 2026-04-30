@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_435",
+  "section_number": "2.7.13.2",
+  "header": "Logging OpenSearch Serverless API calls using AWS CloudTrail",
+  "content": "Amazon OpenSearch Serverless is integrated with AWS CloudTrail, a service that provides a record\nof actions taken by a user, role, or an AWS service in Serverless.\nCloudTrail captures all API calls for OpenSearch Serverless as events. The calls captured include\ncalls from the Serverless section of the OpenSearch Service console and code calls to the\nOpenSearch Serverless API operations.\nIf you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3\nbucket, including events for OpenSearch Serverless. If you don't conﬁgure a trail, you can still view\nthe most recent events in the CloudTrail console in Event history.\nUsing the information collected by CloudTrail, you can determine the request that was made to\nOpenSearch Serverless, the IP address from which the request was made, who made the request,\nwhen it was made, and additional details.\nTo learn more about CloudTrail, see the AWS CloudTrail User Guide.\nMonitoring with CloudTrail\n599\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 628,
+      "end": 629
+    },
+    "content_stats": {
+      "char_count": 1022,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "Monitoring Amazon OpenSearch Serverless",
+      "children": [
+        "OpenSearch Serverless information in CloudTrail",
+        "OpenSearch Serverless data events in CloudTrail",
+        "Understanding OpenSearch Serverless Data Event entries",
+        "Understanding OpenSearch Serverless Management Events entries"
+      ]
+    }
+  }
+}

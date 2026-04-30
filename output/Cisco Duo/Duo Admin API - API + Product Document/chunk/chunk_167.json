@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_167",
+  "section_number": "1.8.4",
+  "header": "Get Group Info",
+  "content": "See the Admin API v1 legacy instructions for more information about the\nGet Group Info v1 endpoint.\n{\n\"stat\": \"OK\",\n\"response\": {\n\"desc\": \"This is an example group\",\n\"group_id\": \"DGBDKSSH37KSJ373JKSU\",\n\"mobile_otp_enabled\": false,\n\"name\": \"Example Group\",\n\"push_enabled\": false,\n\"sms_enabled\": false,\n\"status\": \"active\",\n\"voice_enabled\": false\n}\n}\nRetrieve information about a group. Note that this output does not include a list of\ngroup members. To retrieve group members, use\n/admin/v2/groups/[group_id]/users . Requires \"Grant resource - Read\" API\npermission.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 62,
+      "end": 63
+    },
+    "content_stats": {
+      "char_count": 563,
+      "word_count": 76
+    },
+    "hierarchy": {
+      "parent": "Groups",
+      "children": []
+    }
+  }
+}

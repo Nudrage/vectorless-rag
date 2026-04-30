@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_029",
+  "section_number": "2.6.1",
+  "header": "Key concepts in Amazon OpenSearch Ingestion",
+  "content": "Before you start using OpenSearch Ingestion, it's helpful to understand these key concepts.\nPipeline\nFrom an OpenSearch Ingestion perspective, a pipeline refers to a single provisioned data\ncollector that you create within OpenSearch Service. You can think of it as the entire YAML\nKey concepts\n22\nAmazon OpenSearch Service\nDeveloper Guide\nconﬁguration ﬁle, which includes one or more sub-pipelines. For steps to create an ingestion\npipeline, see the section called “Creating pipelines”.\nSub-pipeline\nYou deﬁne sub-pipelines within a YAML conﬁguration ﬁle. Each sub-pipeline is a combination\nof a source, a buﬀer, zero or more processors, and one or more sinks. You can deﬁne multiple\nsub-pipelines in a single YAML ﬁle, each with unique sources, processors, and sinks. To aid in\nmonitoring with CloudWatch and other services, we recommend that you specify a pipeline\nname that's distinct from all of its sub-pipelines.\nYou can string multiple sub-pipelines together within a single YAML ﬁle, so that the source for\none sub-pipeline is another sub-pipeline, and its sink is a third sub-pipeline. For an example, see\nthe section called “OpenTelemetry Collector”.\nSource\nThe input component of a sub-pipeline. It deﬁnes the mechanism through which a pipeline\nconsumes records. The source can consume events either by receiving them over HTTPS, or by\nreading from external endpoints such as Amazon S3. There are two types of sources: push-based\nand pull-based. Push-based sources, such as HTTP and OTel logs, stream records to ingestion\nendpoints. Pull-based sources, such as OTel trace and S3, pull data from the source.\nProcessors\nIntermediate processing units that can ﬁlter, transform, and enrich records into a desired format\nbefore publishing them to the sink. The processor is an optional component of a pipeline. If you\ndon't deﬁne a processor, records are published in the format deﬁned in the source. You can have\nmore than one processor. A pipeline runs processors in the order that you deﬁne them.\nSink\nThe output component of a sub-pipeline. It deﬁnes one or more destinations that a sub-pipeline\npublishes records to. OpenSearch Ingestion supports OpenSearch Service domains as sinks.\nIt also supports sub-pipelines as sinks. This means that you can string together multiple sub-\npipelines within a single OpenSearch Ingestion pipeline (YAML ﬁle). Self-managed OpenSearch\nclusters aren't supported as sinks.\nBuﬀer\nThe part of a processor that acts as the layer between the source and the sink. You can't\nmanually conﬁgure a buﬀer within your pipeline. OpenSearch Ingestion uses a default buﬀer\nconﬁguration.\nKey concepts\n23\nAmazon OpenSearch Service\nDeveloper Guide\nRoute\nThe part of a processor that allows pipeline authors to only send events that match certain\nconditions to diﬀerent sinks.\nA valid sub-pipeline deﬁnition must contain a source and a sink. For more information about each\nof these pipeline elements, see the conﬁguration reference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 51,
+      "end": 53
+    },
+    "content_stats": {
+      "char_count": 2961,
+      "word_count": 459
+    },
+    "hierarchy": {
+      "parent": "Overview of Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

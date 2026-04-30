@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1060",
+  "section_number": "155.1.1.145",
+  "header": "IdentityEvents (Preview)",
+  "content": "08/12/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe IdentityEvents  table in the advanced hunting schema contains information about identity\nevents obtained from other cloud identity service providers. Use this reference to construct\nqueries that return information from this table.\nThis advanced hunting table is populated by records from Microsoft Defender for Identity. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Identity in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the record was generated\nReportId\nstring\nUnique identifier for the event\nAccountId\nstring\nUnique identifier for the account in the source application\nAccountType\nstring\nType of user account, indicating its general role like User,\nSystemPrincipal\nAccountDisplayName\nstring\nName displayed in the address book entry for the account user. This\nis usually a combination of the given name, middle initial, and\nsurname of the user.\n） Important\nSome information relates to prereleased product, which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\n７ Note\nThis advanced hunting table is populated only when other identity services like Okta are\nconnected to Defender for Identity.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nAccountUpn\nstring\nAlternate ID, email, or name for the account in the source\napplication\nActionType\nstring\nType of activity that triggered the event in the raw format received\nfrom the source application\nActionResult\nstring\nResult of the action\nActionFailureReason\nstring\nInformation explaining why the recorded action failed\nIPAddress\nstring\nIP address assigned to the device and used during related network\ncommunications\nUserAgent\nstring\nUser agent information from the web browser or other client\napplication\nTargetObjects\ndynamic\nList of the target objects of this activity. Target object can be user,\ngroup, role, domain, application, and more.\nApplication\nstring\nThe source application where this event was received from\nApplicationInstanceId\nstring\nDomain of the source application\nApplicationEventId\nstring\nRaw event ID provided by the source application\nApplicationSessionId\nstring\nRaw session ID provided by the source application\nRawEventData\ndynamic\nFull raw event information from the source application in JSON\nformat\nAdditionalFields\ndynamic\nAdditional information about the entity or event\nAdvanced hunting overview\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 794,
+      "end": 795
+    },
+    "content_stats": {
+      "char_count": 2965,
+      "word_count": 427
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

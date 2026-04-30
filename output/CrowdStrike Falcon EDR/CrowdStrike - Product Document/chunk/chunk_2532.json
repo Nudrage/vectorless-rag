@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2532",
+  "section_number": "1.5.914.1",
+  "header": "Fields: Linux",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nTargetAddress\nVirtualAddress\nLength\nMemoryProtectionFlags\nValues:\nPROT_NONE (0x00000000)\nPROT_READ (0x00000001)\nPROT_WRITE (0x00000002)\nPROT_EXEC (0x00000004)\nMmapFlags\nValues:\nMAP_SHARED (0x00000001)\nMAP_PRIVATE (0x00000002)\nMAP_SHARED_VALIDATE (0x00000003)\nMAP_FIXED (0x00000010)\nMAP_ANONYMOUS (0x00000020)\nMAP_32BIT (0x00000040)\nMAP_GROWSDOWN (0x00000100)\nMAP_LOCKED (0x00002000)\nMAP_NORESERVE (0x00004000)\nMAP_POPULATE (0x00008000)\nMAP_NONBLOCK (0x00010000)\nMAP_STACK (0x00020000)\nMAP_HUGETLB (0x00040000)\nMAP_SYNC (0x00080000)\nMAP_FIXED_NOREPLACE (0x00100000)\nMAP_UNINITIALIZED (0x04000000)\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 882,
+      "end": 882
+    },
+    "content_stats": {
+      "char_count": 1163,
+      "word_count": 124
+    },
+    "hierarchy": {
+      "parent": "VirtualMemoryArea",
+      "children": []
+    }
+  }
+}

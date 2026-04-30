@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1071",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "• Regional availability - Auto-optimize is available only in the following AWS Regions:\n• ap-south-1\n• eu-west-1\n• us-west-2\n• us-east-2\n• us-east-1\nLimitations\n1594\nAmazon OpenSearch Service\nDeveloper Guide\n• eu-central-1\n• ap-southeast-2\n• ap-northeast-1\n• ap-southeast-1\n• Collection types - Auto-optimize is supported only for Vector Search Collections and\nOpenSearch Domains (2.19, 3.1, and 3.3).\n• Engine support\nEngine support by deployment type\nEngine\nServerless\nOpenSearch Managed\nLucene\nNo\nYes\nFaiss\nYes\nYes\nNmslib\nNo\nNo\n• Algorithm support - Auto-optimize supports only HNSW-based vector indexes.\n• Concurrent jobs - You can run up to 10 concurrent optimization jobs per account per Region. No\nnew jobs can be accepted if limit is reached.\n• Job duration - Optimization jobs can take from 15 minutes to several hours depending on\ndataset size, dimension, and required performance metrics.\n• Recommendations - Auto-optimize suggests only up to 3 recommendations.\n• Dataset\n• Supported formats: parquet\n• Data store: Amazon S3",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1623,
+      "end": 1624
+    },
+    "content_stats": {
+      "char_count": 1035,
+      "word_count": 159
+    },
+    "hierarchy": {
+      "parent": "Auto-optimize",
+      "children": []
+    }
+  }
+}

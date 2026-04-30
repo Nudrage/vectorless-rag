@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_004",
+  "section_number": "1.1.2",
+  "header": "Configure logging",
+  "content": "To configure Cloud NAT logging, follow these steps.\nEnable logging\nIf logging is enabled, all collected logs are sent to Cloud Logging by default. You can filter\nthese so that only certain logs are sent.\nYou can also specify these values when you create or edit a NAT gateway. The following\ndirections show how to enable logging for an existing NAT gateway.\n1. In the Google Cloud console, go to the Cloud NAT page.\nGo to Cloud NAT (https://console.cloud.google.com/net-services/nat/list)\n2. Click your NAT gateway.\n3. Click editEdit.\n4. Click Advanced configurations.\n5. In the Logging section, select one of the following:\nNo logging: disables logging\nTranslation and errors: sends all logs to Logging\nTranslation only: sends a log only when a connection is created; does not\nlog dropped packets\nErrors only: sends a log when a packet is dropped because no port was\navailable; does not log new connections\n6. Click Save.\nClear log filters\nIf you have a filter set, you can clear it. Clearing a log filter means that both network address\ntranslation events and errors are logged, provided that logging is enabled.\n1. In the Google Cloud console, go to the Cloud NAT page.\nGo to Cloud NAT (https://console.cloud.google.com/net-services/nat/list)\n2. Click your NAT gateway.\n3. Click editEdit.\n4. Click Advanced configurations.\n5. In the Logging section, select Translation and errors.\n6. Click Save.\nDisable logging\nTo disable logging, do the following:\nConsole\n(#console)\ngcloud  (#gcloud)\nConsole\n(#console)\ngcloud  (#gcloud)\n1. In the Google Cloud console, go to the Cloud NAT page.\nGo to Cloud NAT (https://console.cloud.google.com/net-services/nat/list)\n2. Click your NAT gateway.\n3. Click editEdit.\n4. Click Advanced configurations.\n5. In the Logging section, select No logging.\n6. Click Save.\nDetermine logging status\nTo determine the status for logging, do the following:\n1. In the Google Cloud console, go to the Cloud NAT page.\nGo to Cloud NAT (https://console.cloud.google.com/net-services/nat/list)\n2. Click your NAT gateway.\n3. Click editEdit.\n4. Click Advanced configurations.\n5. Inspect the selections in the Logging section.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 3
+    },
+    "content_stats": {
+      "char_count": 2139,
+      "word_count": 331
+    },
+    "hierarchy": {
+      "parent": "Logging",
+      "children": []
+    }
+  }
+}

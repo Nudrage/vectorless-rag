@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_462",
+  "section_number": "2.8.4.2.1",
+  "header": "IAM permissions",
+  "content": "The following IAM permissions are required for automatic semantic enrichment operations. These\npermissions vary depending on the speciﬁc index operation you want to perform.\nCreateIndex API permissions\nTo create an index with automatic semantic enrichment, you need the following IAM permissions:\n• es:CreateIndex – Create an index with semantic enrichment capabilities.\n• es:ESHttpHead – Perform HEAD requests to check index existence.\n• es:ESHttpPut – Perform PUT requests for index creation.\n• es:ESHttpPost – Perform POST requests for index operations.\nUpdateIndex API permissions\nTo update an existing index with automatic semantic enrichment, you need the following IAM\npermissions:\n• es:UpdateIndex – Update index settings and mappings.\n• es:ESHttpPut – Perform PUT requests for index updates.\n• es:ESHttpGet – Perform GET requests to retrieve index information.\n• es:ESHttpPost – Perform POST requests for index operations.\nGetIndex API permissions\nTo retrieve information about an index with automatic semantic enrichment, you need the\nfollowing IAM permissions:\n• es:GetIndex – Retrieve index information and settings.\n• es:ESHttpGet – Perform GET requests to retrieve index data.\nDeleteIndex API permissions\nTo delete an index with automatic semantic enrichment, you need the following IAM permissions:\n• es:DeleteIndex – Delete an index and its semantic enrichment components.\nConﬁguring permissions for automatic semantic enrichment\n625\nAmazon OpenSearch Service\nDeveloper Guide\n• es:ESHttpDelete – Perform DELETE requests for index removal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 654,
+      "end": 655
+    },
+    "content_stats": {
+      "char_count": 1554,
+      "word_count": 219
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring permissions for automatic semantic enrichment",
+      "children": []
+    }
+  }
+}

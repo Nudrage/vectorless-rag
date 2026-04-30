@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_248",
+  "section_number": "2.6.21.2.15",
+  "header": "Service map stateful metrics",
+  "content": "The following metrics apply to the Service-map stateful processor. Each metric is preﬁxed by the\nsub-pipeline name and service-map-stateful. For example, sub_pipeline_name.service-\nmap-stateful.spansDbSize.count.\nMetric suﬃx\nDescription\nspansDbSize.value\nThe in-memory byte sizes of spans in MapDB across the\ncurrent and previous window durations.\nRelevant statistics: Average\nDimension: PipelineName\ntraceGroupDbSize.value\nThe in-memory byte sizes of trace groups in MapDB\nacross the current and previous window durations.\nRelevant statistics: Average\nDimension: PipelineName\nspansDbCount.value\nThe count of spans in MapDB across the current and\nprevious window durations.\nRelevant statistics: Sum\nDimension: PipelineName\ntraceGroupDbCount.value\nThe count of trace groups in MapDB across the current\nand previous window durations.\nRelevant statistics: Sum\nDimension: PipelineName\nrelationshipCount.value\nThe count of relationships stored across the current and\nprevious window durations.\nRelevant statistics: Sum\nMonitoring pipeline metrics\n356\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 385,
+      "end": 386
+    },
+    "content_stats": {
+      "char_count": 1135,
+      "word_count": 138
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

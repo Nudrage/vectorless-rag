@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_082",
+  "section_number": "2.6.10.1",
+  "header": "Prerequisites and required IAM role",
+  "content": "To create an OpenSearch Ingestion pipeline, you must have the following resources:\n• An IAM role, called the pipeline role, that OpenSearch Ingestion assumes in order to write to\nthe sink. You can create this role ahead of time, or you can have OpenSearch Ingestion create it\nautomatically while you're creating the pipeline.\n• An OpenSearch Service domain or OpenSearch Serverless collection to act as the sink. If you're\nwriting to a domain, it must be running OpenSearch 1.0 or later, or Elasticsearch 7.4 or later. The\nCreating pipelines\n70\nAmazon OpenSearch Service\nDeveloper Guide\nsink must have an access policy that grants the appropriate permissions to your IAM pipeline\nrole.\nFor instructions to create these resources, see the following topics:\n• the section called “Granting pipelines access to domains”\n• the section called “Granting pipelines access to collections”\nNote\nIf you're writing to a domain that uses ﬁne-grained access control, there are extra steps you\nneed to complete. See the section called “Map the pipeline role (only for domains that use\nﬁne-grained access control)”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 99,
+      "end": 100
+    },
+    "content_stats": {
+      "char_count": 1099,
+      "word_count": 175
+    },
+    "hierarchy": {
+      "parent": "Creating Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

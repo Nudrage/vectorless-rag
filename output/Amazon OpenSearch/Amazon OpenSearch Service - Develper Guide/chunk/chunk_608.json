@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_608",
+  "section_number": "2.9.7.2.3",
+  "header": "Create a dashboard view for your data source",
+  "content": "When you use OpenSearch Service, you can analyze popular AWS log types using pre-built\ndashboard templates. For Security Lake there are templates for VPC, CloudTrail, and WAF logs.\nThese templates allow you to create a dashboard tailored to your speciﬁc data. They include pre-\nbuilt queries and dashboards tailored for that speciﬁc log type. This enables you to quickly get up\nand running with analyzing these popular AWS log sources, without having to build everything\nfrom scratch.\nNote\nDashboards use indexed views, which ingest data from Security Lake and contribute to\ndirect query and collection compute.\nFollow these steps to create a dashboard using one of these pre-built templates, so you can start\nexploring and analyzing your data right away.\nTo create a dashboard view\n1.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/\naos/.\n2.\nFrom the left navigation pane, choose Central management, then Connected data sources.\n3.\nSelect the data source to open the details page.\n4.\nChoose Create dashboard.\n5.\nChoose which type of dashboard you want to create.\n6.\nEnter a name for your dashboard.\n7.\nEnter an optional description for your dashboard.\n8.\nSelect one or more AWS Glue tables to view on your dashboard.\n9.\nChoose how often you want to refresh the data in your dashboard.\n10. Choose which OpenSearch workspace you want to use.\na.\nTo create a new workspace, select Create new workspace.\nConﬁguring a Security Lake data source\n766\nAmazon OpenSearch Service\nDeveloper Guide\nb.\nTo use an existing workspace, select Select existing workspace.\n11. Enter a name for your workspace.\n12. Choose Create dashboard.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 795,
+      "end": 796
+    },
+    "content_stats": {
+      "char_count": 1654,
+      "word_count": 266
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring and querying a Security Lake data source in OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

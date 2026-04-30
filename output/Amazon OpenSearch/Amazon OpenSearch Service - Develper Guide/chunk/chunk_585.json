@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_585",
+  "section_number": "2.9.5.2.2",
+  "header": "Setup integrations for popular AWS log types",
+  "content": "You can integrate AWS log types stored in Amazon S3 with OpenSearch Service. Use OpenSearch\nDashboards to install integrations that create AWS Glue Data Catalog tables, saved queries, and\ndashboards. These integrations use indexed views to keep dashboards updated.\nFor instructions to install an integration, see Installing an integration asset in the OpenSearch\ndocumentation.\nWhen you select an integration, make sure it has the S3 Glue tag.\nWhen you set up the integration, specify S3 Connection for the connection type. Then, select the\ndata source for the integration, the Amazon S3 location of the data, the checkpoint to manage\nacceleration indexing, and the assets required for your use case.\nNote\nMake sure the S3 bucket for your checkpoint has write permissions for the checkpoint\nlocation. Without these permissions, the integration's accelerations will fail.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 778,
+      "end": 778
+    },
+    "content_stats": {
+      "char_count": 870,
+      "word_count": 133
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring and querying an S3 data source in OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

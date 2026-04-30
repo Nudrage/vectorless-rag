@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1075",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you can use auto-optimize in the console, you must have the following:\n• An active AWS account with access to the OpenSearch console.\n• An existing OpenSearch Serverless collection of type vector search or a Managed OpenSearch\ndomain.\n• IAM permissions for the following actions:\n• opensearch:SubmitAutoOptimizeJob\n• opensearch:GetAutoOptimizeJob\n• opensearch:DeleteAutoOptimizeJob\n• opensearch:CancelAutoOptimizeJob\n• opensearch:ListAutoOptimizeJobs\nNote\nThese are identity-based policies. AWS does not support resource-based policies for\nauto-optimize resources.\n• Conﬁgure your federated user session to have a minimum credential expiry of at least 1 hour. For\nvery large datasets or high dimensions, consider increasing the expiration duration up to 3 hours.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1627,
+      "end": 1627
+    },
+    "content_stats": {
+      "char_count": 769,
+      "word_count": 103
+    },
+    "hierarchy": {
+      "parent": "Using auto-optimize in the console",
+      "children": []
+    }
+  }
+}

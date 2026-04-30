@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_757",
+  "section_number": "155.1.1.158.1",
+  "header": "Link results to new or existing incidents",
+  "content": "\n\nYou can also select Link to an existing incident to add the selected records to an existing\nincident. Choose the related incident from the dropdown list of existing incidents. You can\nalso enter the first few characters of the incident name or ID to find the incident you\nwant.\n4. For either selection, provide the following details, then select Next:\nAlert title – A descriptive title for the results that your incident responders can\nunderstand; this descriptive title becomes the alert title\nSeverity – Choose the severity applicable to the group of alerts\nCategory – Choose the appropriate threat category for the alerts\nDescription – Give a helpful description of the grouped alerts\nRecommended actions – List the recommended remediation actions for the security\nanalysts who are investigating the incident\n5. In the Entities section, select the entities that are involved in the suspicious events. Those\nentities are used to correlate other alerts to the linked incident and are visible from the\nincident page.\nFor Microsoft Defender XDR data, the entities are automatically selected. If the data is\nfrom Microsoft Sentinel, you need to select the entities manually.\nThere are two sections for which you can select entities:\n\na. Impacted assets – Impacted assets that appear in the selected events should be added\nhere. The following types of assets can be added:\nAccount\nDevice\nMailbox\nCloud application\nAzure resource\nAmazon Web Services resource\nGoogle Cloud Platform resource\nb. Related evidence – Non-assets that appear in the selected events can be added in this\nsection. The supported entity types are:\nProcess\nFile\nRegistry value\nIP\nOAuth application\nDNS\nSecurity group\nURL\nMail cluster\nMail message\n6. After an entity type is selected, select an identifier type that exists in the selected records\nso that it can be used to identify this entity. Each entity type has a list of supported\nidentifiers, as can be seen in the relevant drop down. Read the description displayed\nwhen hovering on each identifier to better understand it.\n7. After selecting the identifier, select a column from the query results that contain the\nselected identifier. You can select Explore query and results to open the advanced\nhunting context panel. This allows you to explore your query and results to make sure you\nchose the right column for the selected identifier.\n７ Note\nFor queries containing only XDR data, only entity types that are available in XDR tables are\nshown.\nIn our example, we used a query to find events related to a possible email exfiltration\nincident, therefore the recipient's mailbox and recipient's account are the impacted\nentities, and the sender's IP as well as email message are related evidence.\nA different alert is created for each record with a unique combination of impacted\nentities. In our example, if there are three different recipient mailboxes and recipient\n\n\nobject ID combinations, for instance, then three alerts are created and linked to the\nchosen incident.\n8. Select Next.\n9. Review the details you've provided in the Summary section.\n10. Select Done.\nYou can select the generated link from the summary step of the wizard or select the incident\nname from the incident queue, to view the incident to which the events are linked.\nIn our example, the three alerts, representing the three selected events, were linked\nsuccessfully to a new incident. In each of the alert pages, you can find the complete\ninformation on the event or events in timeline view (if available) and the query results view.\nYou can also select the event from the timeline view or from the query results view to open the\nInspect record pane.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 490,
+      "end": 494
+    },
+    "content_stats": {
+      "char_count": 3657,
+      "word_count": 606
+    },
+    "hierarchy": {
+      "parent": "Link query results to an incident",
+      "children": []
+    }
+  }
+}

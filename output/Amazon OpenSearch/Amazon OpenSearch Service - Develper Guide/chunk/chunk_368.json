@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_368",
+  "section_number": "2.7.10.6.5",
+  "header": "ABAC with OpenSearch Serverless",
+  "content": "Supports ABAC (tags in policies): Yes\nAttribute-based access control (ABAC) is an authorization strategy that deﬁnes permissions based\non attributes called tags. You can attach tags to IAM entities and AWS resources, then design ABAC\npolicies to allow operations when the principal's tag matches the tag on the resource.\nTo control access based on tags, you provide tag information in the condition element of a policy\nusing the aws:ResourceTag/key-name, aws:RequestTag/key-name, or aws:TagKeys\ncondition keys.\nIf a service supports all three condition keys for every resource type, then the value is Yes for the\nservice. If a service supports all three condition keys for only some resource types, then the value is\nPartial.\nFor more information about ABAC, see Deﬁne permissions with ABAC authorization in the IAM User\nGuide. To view a tutorial with steps for setting up ABAC, see Use attribute-based access control\n(ABAC) in the IAM User Guide.\nFor more information about tagging OpenSearch Serverless resources, see the section called\n“Tagging collections”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 534,
+      "end": 534
+    },
+    "content_stats": {
+      "char_count": 1061,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "Identity and Access Management for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

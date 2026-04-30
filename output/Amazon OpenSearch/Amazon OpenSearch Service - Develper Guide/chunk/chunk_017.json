@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_017",
+  "section_number": "2.4.2",
+  "header": "Install and conﬁgure the AWS CLI",
+  "content": "If you want to use OpenSearch Service APIs, you must install the latest version of the AWS\nCommand Line Interface (AWS CLI). You don't need the AWS CLI to use OpenSearch Service from\nthe console, and you can get started without the CLI by following the steps in Getting started with\nAmazon OpenSearch Service.\nTo set up the AWS CLI\n1.\nTo install the latest version of the AWS CLI for macOS, Linux, or Windows, see Installing or\nupdating the latest version of the AWS CLI.\n2.\nTo conﬁgure the AWS CLI and secure setup of your access to AWS services, including\nOpenSearch Service, see Quick conﬁguration with aws configure.\n3.\nTo verify the setup, enter the following DataBrew command at the command prompt.\nSet up the AWS CLI\n13\nAmazon OpenSearch Service\nDeveloper Guide\naws opensearch help\nAWS CLI commands use the default AWS Region from your conﬁguration, unless you set it with\na parameter or a proﬁle. To set your AWS Region with a parameter, you can add the --region\nparameter to each command.\nTo set your AWS Region with a proﬁle, ﬁrst add a named proﬁle in the ~/.aws/config ﬁle or\nthe %UserProfile%/.aws/config ﬁle (for Microsoft Windows). Follow the steps in Named\nproﬁles for the AWS CLI. Next, set your AWS Region and other settings with a command similar\nto the one in the following example.\n[profile opensearch]\naws_access_key_id = ACCESS-KEY-ID-OF-IAM-USER\naws_secret_access_key = SECRET-ACCESS-KEY-ID-OF-IAM-USER\nregion = us-east-1\noutput = text",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 42,
+      "end": 43
+    },
+    "content_stats": {
+      "char_count": 1459,
+      "word_count": 243
+    },
+    "hierarchy": {
+      "parent": "Setting up Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

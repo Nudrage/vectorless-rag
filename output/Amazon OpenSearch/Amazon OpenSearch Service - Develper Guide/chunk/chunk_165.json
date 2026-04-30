@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_165",
+  "section_number": "2.6.16.10.2",
+  "header": "Amazon S3 as a destination",
+  "content": "To write data from an OpenSearch Ingestion pipeline to an S3 bucket, use the preconﬁgured S3\nblueprint to create a pipeline with an S3 sink. This pipeline routes selective data to an OpenSearch\nsink and simultaneously sends all data for archival in S3. For more information, see the section\ncalled “Working with blueprints”.\nWhen you create your S3 sink, you can specify your preferred formatting from a variety of sink\ncodecs. For example, if you want to write data in columnar format, choose the Parquet or Avro\nAmazon S3\n234\nAmazon OpenSearch Service\nDeveloper Guide\ncodec. If you prefer a row-based format, choose JSON or NDJSON. To write data to S3 in a speciﬁed\nschema, you can also deﬁne an inline schema within sink codecs using the Avro format.\nThe following example deﬁnes an inline schema in an S3 sink:\n- s3:\ncodec:\nparquet:\nschema: >\n{\n\"type\" : \"record\",\n\"namespace\" : \"org.vpcFlowLog.examples\",\n\"name\" : \"VpcFlowLog\",\n\"fields\" : [\n{ \"name\" : \"version\", \"type\" : \"string\"},\n{ \"name\" : \"srcport\", \"type\": \"int\"},\n{ \"name\" : \"dstport\", \"type\": \"int\"},\n{ \"name\" : \"start\", \"type\": \"int\"},\n{ \"name\" : \"end\", \"type\": \"int\"},\n{ \"name\" : \"protocol\", \"type\": \"int\"},\n{ \"name\" : \"packets\", \"type\": \"int\"},\n{ \"name\" : \"bytes\", \"type\": \"int\"},\n{ \"name\" : \"action\", \"type\": \"string\"},\n{ \"name\" : \"logStatus\", \"type\" : \"string\"}\n]\n}\nWhen you deﬁne this schema, specify a superset of all keys that might be present in the diﬀerent\ntypes of events that your pipeline delivers to a sink.\nFor example, if an event has the possibility of a key missing, add that key in your schema with a\nnull value. Null value declarations allow the schema to process non-uniform data (where some\nevents have these keys and others don't). When incoming events do have these keys present, their\nvalues are written to sinks.\nThis schema deﬁnition acts as a ﬁlter that only allows deﬁned keys to be sent to sinks, and drops\nundeﬁned keys from incoming events.\nYou can also use include_keys and exclude_keys in your sink to ﬁlter data that's routed to\nother sinks. These two ﬁlters are mutually exclusive, so you can only use one at a time in your\nschema. Additionally, you can't use them within user-deﬁned schemas.\nAmazon S3\n235\nAmazon OpenSearch Service\nDeveloper Guide\nTo create pipelines with such ﬁlters, use the preconﬁgured sink ﬁlter blueprint. For more\ninformation, see the section called “Working with blueprints”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 263,
+      "end": 265
+    },
+    "content_stats": {
+      "char_count": 2400,
+      "word_count": 404
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon S3",
+      "children": []
+    }
+  }
+}

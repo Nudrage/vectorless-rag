@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1165",
+  "section_number": "2.19.2.1.4",
+  "header": "Managing tier migrations",
+  "content": "Multi-tier domains support:\nMulti-tier storage architecture\n1689\nAmazon OpenSearch Service\nDeveloper Guide\n• New Tiering APIs for a simpliﬁed experience\n• Legacy UltraWarm APIs for compatibility\nNew tiering APIs\nMigrate an index to warm:\ncurl -XPOST 'https://localhost:9200/index-name/_tier/warm'\nResponse:\n{\"acknowledged\": true}\nMigrate an index to hot:\ncurl -XPOST 'https://localhost:9200/index-name/_tier/hot'\nResponse:\n{\"acknowledged\": true}\nCheck tiering status:\ncurl -XGET 'https://localhost:9200/index-name/_tier'\nExample response:\n{\n\"tiering_status\": {\n\"index\": \"index-name\",\n\"state\": \"RUNNING_SHARD_RELOCATION\",\n\"source\": \"HOT\",\n\"target\": \"WARM\",\n\"start_time\": 1745836500563,\n\"shard_level_status\": {\n\"running\": 0,\n\"total\": 100,\n\"pending\": 100,\n\"succeeded\": 0\nMulti-tier storage architecture\n1690\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}\n}\nDetailed shard view:\ncurl 'https://localhost:9200/index1/_tier?detailed=true'\nList all ongoing migrations (text):\ncurl 'https://localhost:9200/_tier/all'\nList all ongoing migrations (JSON):\ncurl 'https://localhost:9200/_tier/all?format=json'\nFilter by target tier:\ncurl 'https://localhost:9200/_tier/all?target=_warm'\nLegacy UltraWarm APIs for compatibility\nMigrate to warm:\ncurl -XPOST localhost:9200/_ultrawarm/migration/index2/_warm\nMigrate to hot:\ncurl -XPOST localhost:9200/_ultrawarm/migration/index2/_hot\nCheck status:\ncurl -XGET localhost:9200/_ultrawarm/migration/index2/_status",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1718,
+      "end": 1720
+    },
+    "content_stats": {
+      "char_count": 1440,
+      "word_count": 141
+    },
+    "hierarchy": {
+      "parent": "Multi-tier storage architecture",
+      "children": []
+    }
+  }
+}

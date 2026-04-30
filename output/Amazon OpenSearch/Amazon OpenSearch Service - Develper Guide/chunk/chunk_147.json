@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_147",
+  "section_number": "2.6.16.6.2",
+  "header": "Data consistency",
+  "content": "The pipeline ensures data consistency by continuously polling or receiving changes from the\nAmazon DocumentDB cluster and updating the corresponding documents in the OpenSearch index.\nOpenSearch Ingestion supports end-to-end acknowledgement to ensure data durability. When a\npipeline reads snapshots or streams, it dynamically creates partitions for parallel processing. The\npipeline marks a partition as complete when it receives an acknowledgement after ingesting all\nrecords in the OpenSearch domain or collection.\nIf you want to ingest into an OpenSearch Serverless search collection, you can generate\na document ID in the pipeline. If you want to ingest into an OpenSearch Serverless time\nseries collection, note that the pipeline doesn't generate a document ID, so you must omit\ndocument_id: \"${getMetadata(\\\"primary_key\\\")}\" in your pipeline sink conﬁguration.\nAn OpenSearch Ingestion pipeline also maps incoming event actions into corresponding bulk\nindexing actions to help ingest documents. This keeps data consistent, so that every data change in\nAmazon DocumentDB is reconciled with the corresponding document changes in OpenSearch.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 198,
+      "end": 198
+    },
+    "content_stats": {
+      "char_count": 1144,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon DocumentDB",
+      "children": []
+    }
+  }
+}

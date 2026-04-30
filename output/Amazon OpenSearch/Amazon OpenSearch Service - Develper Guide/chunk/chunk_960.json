@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_960",
+  "section_number": "2.15.4",
+  "header": "Dashboards Query Language",
+  "content": "You can use the Dashboards Query Language (DQL) to search for data and visualizations in\nOpenSearch Dashboards. DQL uses four primary query types: terms, Boolean, date and range, and\nnested ﬁeld.\nTerms query\nA terms query requires you to specify the term that you're searching for.\nTo perform a terms query, enter the following:\nhost:www.example.com\nBoolean query\nYou can use the Boolean operators AND, or, and not to combine multiple queries.\nTo perform a Boolean query, paste the following:\nhost.keyword:www.example.com and response.keyword:200\nDate and range query\nYou can use a date and range query to ﬁnd a date before or after your query.\n• > indicates a search for a date after your speciﬁed date.\n• < indicates a search for a date before your speciﬁed date.\n@timestamp > \"2020-12-14T09:35:33\"\nNested ﬁeld query\nIf you have a document with nested ﬁelds, you have to specify which parts of the document that\nyou want to retrieve. The following is a sample document that contains nested ﬁelds:\nDashboards Query Language\n1473\nAmazon OpenSearch Service\nDeveloper Guide\n{\"NBA players\":[\n{\"player-name\": \"Lebron James\",\n\"player-position\": \"Power forward\",\n\"points-per-game\": \"30.3\"\n},\n{\"player-name\": \"Kevin Durant\",\n\"player-position\": \"Power forward\",\n\"points-per-game\": \"27.1\"\n},\n{\"player-name\": \"Anthony Davis\",\n\"player-position\": \"Power forward\",\n\"points-per-game\": \"23.2\"\n},\n{\"player-name\": \"Giannis Antetokounmpo\",\n\"player-position\": \"Power forward\",\n\"points-per-game\":\"29.9\"\n}\n]\n}\nTo retrieve a speciﬁc ﬁeld using DQL, paste the following:\nNBA players: {player-name: Lebron James}\nTo retrieve multiple objects from the nested document, paste the following:\nNBA players: {player-name: Lebron James} and NBA players: {player-name: Giannis\nAntetokounmpo}\nTo search within a range, paste the following:\nNBA players: {player-name: Lebron James} and NBA players: {player-name: Giannis\nAntetokounmpo and < 30}\nIf your document has an object nested within another object, you can still retrieve data by\nspecifying all of the levels. To do this, paste the following:\nTop-Power-forwards.NBA players: {player-name:Lebron James}\nDashboards Query Language\n1474\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1502,
+      "end": 1504
+    },
+    "content_stats": {
+      "char_count": 2197,
+      "word_count": 312
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

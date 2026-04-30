@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1284",
+  "section_number": "2.20.2.2.1",
+  "header": "Step 1: Create a detector",
+  "content": "First, create a detector that identiﬁes anomalies in your CPU usage data.\n1.\nOpen the left panel menu in OpenSearch Dashboards and choose Anomaly Detection, then\nchoose Create detector.\n2.\nName the detector high-cpu-usage.\n3.\nFor your data source, choose your index that contains CPU usage log ﬁles where you want to\nidentify anomalies.\n4.\nChoose the Timestamp ﬁeld from your data. Optionally, you can add a data ﬁlter. This data\nﬁlter analyzes only a subset of the data source and reduces the noise from data that's not\nrelevant.\n5.\nSet the Detector interval to 2 minutes. This interval deﬁnes the time (by minute interval) for\nthe detector to collect the data.\n6.\nIn Window delay, add a 1-minute delay. This delay adds extra processing time to ensure that\nall data within the window is present.\n7.\nChoose Next. On the anomaly detection dashboard, under the detector name, choose\nConﬁgure model.\n8.\nFor Feature name, enter max_cpu_usage. For Feature state, select Enable feature.\n9.\nFor Find anomalies based on, choose Field value.\n10. For Aggregation method, choose max().\n11. For Field, select the ﬁeld in your data to check for anomalies. For example, it might be called\ncpu_usage_percentage.\n12. Keep all other settings as their defaults and choose Next.\n13. Ignore the detector jobs setup and choose Next.\n14. In the pop-up window, choose when to start the detector (automatically or manually), and\nthen choose Conﬁrm.\nNow that the detector is conﬁgured, after it initializes, you will be able to see real-time results of\nthe CPU usage in the Real-time results section of your detector panel. The Live anomalies section\ndisplays any anomalies that occur as data is being ingested in real time.\nTutorial: Detect high CPU usage with anomaly detection\n1770\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1799,
+      "end": 1800
+    },
+    "content_stats": {
+      "char_count": 1801,
+      "word_count": 297
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Detect high CPU usage with anomaly detection",
+      "children": []
+    }
+  }
+}

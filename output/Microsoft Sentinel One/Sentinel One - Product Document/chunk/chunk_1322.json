@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1322",
+  "section_number": "44.40.3.1",
+  "header": "Name Description Required Value",
+  "content": "Description\nRequired\nValue\ndata\nData\ntrue\nName\nDescription\nRequired\nValue\naction\nDefines if\nagent shall\nBlock or\nAllow use of\nfirewalls\nwhich\nmatches the\nrule\nparameters.\ntrue\nenum\nname\nThe name of\nthe firewall\nrule.\ntrue\nstring\nstatus\nDefines if\nrule is\nEnabled or\nDisabled\ntrue\nenum\napplication\nApplication\nfor the rule\nfalse\nName\nDescription\nRequired\nValue\ntype\nType of the\napplication\nfalse\nenum\nvalues\nValue of the\napplication\nfalse\nstring []\ndescription\nDescription\nfalse\nstring\ndirection\nDefines the\nDirection of\nthe Firewall\nrule.\nfalse\nenum\nlocalHost\nLocal host\nstructure\nwith a type\nand a set of\nvalues\nfalse\nName\nDescription\nRequired\nValue\ntype\nType of the\nhost\nfalse\nenum\nvalues\nValue of the\nhost\nfalse\nstring []\nlocalPort\nLocal ports\nstructure\nwith a type\nfalse\nName\nDescription\nRequired\nValue\ntype\nType of the\nfalse\nenum\n1362\nand a set of\nvalues\nports\nvalues\nA list of port\nnumbers\nfalse\ninteger []\nlocation\nLocation\nstructure\nwith a type\nand a set of\nvalues\nfalse\nName\nDescription\nRequired\nValue\ntype\nLocation type\ntrue\nenum\nvalues\nLocation IDs\n(applicable\nfor the\n\"specific\"\nlocation type\nonly)\nfalse\nName\nDescription\nRequired\nValue\nid\nLocation ID\ntrue\nstring\nname\nLocation\nname\nfalse\nstring\nscope\nLocation\nscope\nfalse\nenum\nosType\n[DEPRECATE\nD] Please use\nos_types\nsince multiple\nos types are\nsupported.Thi\ns field will\nreturn the\nfirst os_type,\nnot\nnecessarily\nthe only one.\nfalse\nenum\nosTypes\nOs types\nfalse\nstring []\nprotocol\nThe protocol\nfalse\nstring\nremoteHost\n[DEPRECATE\nD] Please use\nremote_hosts\n.Remote host\nstructure\nwith a type\nand a set of\nvalues.\nfalse\nName\nDescription\nRequired\nValue\ntype\nType of the\nhost\nfalse\nenum\nvalues\nValue of the\nhost\nfalse\nstring []\nremoteHosts\nList of remote\nhosts, each\nstructured\nwith a type\nand a set of\nfalse\nName\nDescription\nRequired\nValue\ntype\nType of the\nhost\nfalse\nenum\nvalues\nValue of the\nfalse\nstring []\n1363\nvalues\nhost\nremotePort\nRemote ports\nstructure\nwith a type\nand a set of\nvalues\nfalse\nName\nDescription\nRequired\nValue\ntype\nType of the\nports\nfalse\nenum\nvalues\nA list of port\nnumbers\nfalse\ninteger []\ntag\n[DEPRECATE\nD] Free text\nto describe\nthe rule.\nPlease use\ndescription\ninstead.\nfalse\nstring\ntagIds\nTag ids\nfalse\nstring []\nfilter\nFilter\ntrue\nName\nDescription\nRequired\nValue\naccountIds\nList of\nAccount IDs\nto filter by\nfalse\nstring []\ngroupIds\nList of Group\nIDs to filter\nby\nfalse\nstring []\nsiteIds\nList of Site\nIDs to filter\nby\nfalse\nstring []\ntenant\nIndicates a\ntenant scope\nrequest\nfalse\nboolean\n1364",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1362,
+      "end": 1364
+    },
+    "content_stats": {
+      "char_count": 2477,
+      "word_count": 416
+    },
+    "hierarchy": {
+      "parent": "Body Schema",
+      "children": []
+    }
+  }
+}

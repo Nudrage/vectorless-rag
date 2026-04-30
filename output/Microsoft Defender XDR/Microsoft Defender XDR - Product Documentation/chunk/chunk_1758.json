@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1758",
+  "section_number": "155.1.1.241.1",
+  "header": "Create the multi-tenant app",
+  "content": "\nAfter you're done filling out the form, select Register.\n4. On your application page, select API Permissions > Add permission > APIs my\norganization uses >, type Microsoft Threat Protection, and select Microsoft Threat\nProtection. Your app can now access Microsoft Defender XDR.\n\n Tip\nMicrosoft Threat Protection is a former name for Microsoft Defender XDR, and will\nnot appear in the original list. You need to start writing its name in the text box to\nsee it appear.\n5. Select Application permissions. Choose the relevant permissions for your scenario (for\nexample, Incident.Read.All), and then select Add permissions.\n\n\n７ Note\nYou need to select the relevant permissions for your scenario. Read all incidents is\njust an example. To determine which permission you need, please look at the\nPermissions section in the API you want to call.\nFor instance, to run advanced queries, select the 'Run advanced queries' permission;\nto isolate a device, select the 'Isolate machine' permission.\n6. Select Grant admin consent. Every time you add a permission, you must select Grant\nadmin consent for it to take effect.\n7. To add a secret to the application, select Certificates & secrets, add a description to the\nsecret, then select Add.\n\n Tip\nAfter you select Add, select copy the generated secret value. You won't be able to\nretrieve the secret value after you leave.\n\n8. Record your application ID and your tenant ID somewhere safe. They're listed under\nOverview on your application page.\n9. Add the application to your user's tenant.\nSince your application interacts with Microsoft Defender XDR on behalf of your users, it\nneeds be approved for every tenant on which you intend to use it.\nAn administrator from your user's tenant needs to view the consent link and approve your\napplication.\nConsent link is of the form:\nHTTP\nThe digits 00000000-0000-0000-0000-000000000000  should be replaced with your\nApplication ID.\nAfter clicking on the consent link, sign in as an administrator of the user's tenant and\ngrant consent for the application.\n\nhttps://login.microsoftonline.com/common/oauth2/authorize?\nprompt=consent&client_id=00000000-0000-0000-0000-\n000000000000&response_type=code&sso_reload=true\nYou'll also need to ask your user for their tenant ID. The tenant ID is one of the identifiers\nused to acquire access tokens.\nDone! You've successfully registered an application!\nSee examples below for token acquisition and validation.\nFor more information on Microsoft Entra tokens, see the Microsoft Entra tutorial.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1326,
+      "end": 1331
+    },
+    "content_stats": {
+      "char_count": 2526,
+      "word_count": 393
+    },
+    "hierarchy": {
+      "parent": "Create an app with partner access to Microsoft Defender XDR APIs",
+      "children": []
+    }
+  }
+}

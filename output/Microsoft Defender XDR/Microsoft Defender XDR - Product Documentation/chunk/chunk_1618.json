@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1618",
+  "section_number": "155.1.1.220.1.4",
+  "header": "Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions",
+  "content": "Microsoft Defender XDR Unified RBAC permissions\n） Important\nVirtually all app governance experiences are controlled by Microsoft Entra ID roles\nonly. The only exception is the OAuthAppInfo table in advanced hunting. Unified\nRBAC permissions in Defender for Cloud Apps grant access to the app governance\ndata in this specific table.\nDefender for Cloud Apps\npermission\nDefender XDR Unified RBAC permission\nLocal Global administrator\nSecurity operations \\ Security data \\ Security data basics (read)\nSecurity operations \\ Security data \\ Alerts (manage)\nAuthorization and settings \\ Authorization (all permissions)\nAuthorization and settings \\ Security settings (all permissions)\nAuthorization and settings \\ System settings (all permissions)\nLocal Security operator\nSecurity operations \\ Security data \\ Security data basics (read)\nSecurity operations \\ Security data \\ Alerts (manage)\nAuthorization and settings \\ Authorization (read)\nAuthorization and settings \\ Security setting (all permissions)\nAuthorization and settings \\ System setting (read)\nLocal Security reader\nSecurity operations \\ Security data \\ Security data basics (read)\nAuthorization and settings \\ Authorization (read)\nAuthorization and settings \\ Security settings \\ Security settings\n(read)\nAuthorization and settings \\ System settings (read)\nLocal Compliance administrator\nSecurity operations \\ Security data \\ Security data basics (read)\nSecurity operations \\ Security data \\ Alerts (manage)\nAuthorization and settings \\ Authorization (read)\nAuthorization and settings \\ Security settings \\ Security settings (all\nIn the unified alerts and incidents experiences in Defender XDR, access to app\ngovernance data is controlled by Microsoft Entra ID only.\nFor more information about permissions in app governance, see App governance\nroles.\nActivating Defender for Cloud Apps integration with Defender XDR Unified RBAC\nhas the following results:\nMicrosoft Entra ID roles continue to function as normal.\nThe following built-in scoped roles in Defender for Cloud Apps are no longer\nsupported:\nApp/instance admin\nUser group admin\nCloud Discovery global admin\nCloud Discovery report admin\nﾉ\nExpand table\nDefender for Cloud Apps\npermission\nDefender XDR Unified RBAC permission\npermissions)\nAuthorization and settings \\ System settings (read)\nUnified Role-Based Access Control (uRBAC) lets you manage permissions across Microsoft\nDefender for Cloud resources using a consistent model. Roles define what actions users can\nperform and assign roles carefully to maintain least-privilege access.\nThe following table lists the available uRBAC roles and their permissions.\nRole\nPermissions\nDescription\nSecurity data basics: Security operations /\nSecurity data / Security data basics (read)\nRead\nAccess alerts, incidents, investigations,\nhunting, devices, cloud assets, and\nreports. Includes cloud inventory and\nthreat protection.\nAlerts: Security operations / Security data /\nAlerts (manage)\nManage\nManage alerts, investigations, scans,\ndevice tags, and packages. Includes\ncloud threat protection features.\nVulnerability Management: Security posture\n/ Posture management / Vulnerability\nmanagement (read)\nRead\nView vulnerability data: software\ninventory, weaknesses, missing KBs,\nbaselines, hunting, and devices. Includes\ndata lake (Preview).\nExposure Management: Security posture /\nPosture management / Exposure\nManagement (read); Security posture /\nPosture management / Exposure\nManagement (manage)\nRead/Manage\nView or manage exposure insights,\nincluding Secure Score,\nrecommendations, initiatives, and\nmetrics.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1198,
+      "end": 1200
+    },
+    "content_stats": {
+      "char_count": 3567,
+      "word_count": 487
+    },
+    "hierarchy": {
+      "parent": "Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions",
+      "children": []
+    }
+  }
+}

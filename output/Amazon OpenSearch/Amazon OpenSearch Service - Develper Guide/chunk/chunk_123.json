@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_123",
+  "section_number": "2.6.16.3",
+  "header": "Using an OpenSearch Ingestion pipeline with Atlassian Services",
+  "content": "You can use the Atlassian Jira and Conﬂuence source plugins to ingest data from Atlassian services\ninto your OpenSearch Ingestion pipeline. These integrations enable you to create a uniﬁed\nsearchable knowledge base by synchronizing complete Jira projects and Conﬂuence spaces, while\nmaintaining real-time relevance through continuous monitoring and automatic synchronization of\nupdates.\nIntegrating with Jira\nTransform your Jira experience with powerful contextual search capabilities by integrating\nyour Jira content into OpenSearch. The Data Prepper Atlassian Jira source plugin enables you\nto create a uniﬁed searchable knowledge base by synchronizing complete Jira projects, while\nmaintaining real-time relevance through continuous monitoring and automatic synchronization\nof updates. This integration allows for data synchronization with ﬂexible ﬁltering options\nAtlassian Services\n103\nAmazon OpenSearch Service\nDeveloper Guide\nfor speciﬁc projects, issue types, and status, ensuring that only the information you need is\nimported.\nTo ensure secure and reliable connectivity, the plugin supports multiple authentication\nmethods, including basic API key authentication and OAuth2 authentication, with the added\nsecurity of managing credentials using a secret stored in AWS Secrets Manager. It also features\nautomatic token renewal for uninterrupted access, ensuring continuous operation. Built on\nAtlassian's API version 2, this integration empowers teams to unlock valuable insights from their\nJira data through OpenSearch's advanced search capabilities.\nIntegrating with Conﬂuence\nEnhance your team's knowledge management and collaboration capabilities by integrating\nAtlassian Conﬂuence content into OpenSearch through Data Prepper's Conﬂuence source\nplugin. This integration enables you to create a centralized, searchable repository of collective\nknowledge, improving information discovery and team productivity. By synchronizing\nConﬂuence content and continuously monitoring for updates, the plugin ensures that your\nOpenSearch index remains up-to-date and comprehensive.\nThe integration oﬀers ﬂexible ﬁltering options, allowing you to selectively import content\nfrom speciﬁc spaces or page types, tailoring the synchronized content to your organization's\nneeds. The plugin supports both basic API key and OAuth2 authentication methods, with the\noption of securely managing credentials through AWS Secrets Manager. The plugin's automatic\ntoken renewal feature ensures uninterrupted access and seamless operation. Built on Atlassian's\nConﬂuence API, this integration enables teams to leverage OpenSearch's advanced search\ncapabilities across their Conﬂuence content, enhancing information accessibility and utilization\nwithin the organization.\nTopics\n• Prerequisites\n• Conﬁgure a pipeline role\n• Jira connector pipeline conﬁguration\n• Conﬂuence connector pipeline conﬁguration\n• Data consistency\n• Limitations\n• Metrics in CloudWatch for Atlassian connectors\nAtlassian Services\n104\nAmazon OpenSearch Service\nDeveloper Guide\n• Connecting an Amazon OpenSearch Ingestion pipeline to Atlassian Jira or Conﬂuence using\nOAuth 2.0",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 132,
+      "end": 134
+    },
+    "content_stats": {
+      "char_count": 3132,
+      "word_count": 411
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "Prerequisites",
+        "Conﬁgure a pipeline role",
+        "Jira connector pipeline conﬁguration",
+        "Conﬂuence connector pipeline conﬁguration",
+        "Data consistency",
+        "Limitations",
+        "Metrics in CloudWatch for Atlassian connectors",
+        "Connecting an Amazon OpenSearch Ingestion pipeline to Atlassian Jira or Conﬂuence using OAuth 2.0"
+      ]
+    }
+  }
+}

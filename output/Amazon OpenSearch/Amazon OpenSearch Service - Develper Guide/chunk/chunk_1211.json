@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1211",
+  "section_number": "2.19.5.1",
+  "header": "Create an ISM policy",
+  "content": "To get started with Index State Management\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nSelect the domain that you want to create an ISM policy for.\n3.\nFrom the domain's dashboard, navigate to the OpenSearch Dashboards URL and sign in with\nyour master username and password. The URL follows this format:\ndomain-endpoint/_dashboards/\n4.\nOpen the left navigation panel within OpenSearch Dashboards and choose Index\nManagement, then Create policy.\nCreate an ISM policy\n1723\nAmazon OpenSearch Service\nDeveloper Guide\n5.\nUse the visual editor or JSON editor to create policies. We recommend using the visual editor\nas it oﬀers a more structured way of deﬁning policies. For help creating policies, see the\nsample policies below.\n6.\nAfter you create a policy, attach it to one or more indexes:\nPOST _plugins/_ism/add/my-index\n{\n\"policy_id\": \"my-policy-id\"\n}\nNote\nIf your domain is running a legacy Elasticsearch version, use _opendistro instead of\n_plugins.\nAlternatively, select the index in OpenSearch Dashboards and choose Apply policy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1752,
+      "end": 1753
+    },
+    "content_stats": {
+      "char_count": 1081,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Index State Management in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

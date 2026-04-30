@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_554",
+  "section_number": "2.8.16.3",
+  "header": "Restarting the OpenSearch Dashboards process on a node in Amazon OpenSearch Service",
+  "content": "OpenSearch Service\nYou can restart the OpenSearch Dashboards (previously Kibana) process to recover from issues\nsuch as a frozen interface, loading failures, or unresponsive visualizations. The option to restart\nOpenSearch Dashboards is only available for the node that is actively running the Dashboards\nprocess. In most OpenSearch Service domains, this process runs on dedicated coordinator nodes,\nnot data nodes. As a result, when you open the Actions dropdown in the console, the option\ntypically appears only for coordinator nodes. For more information, see the section called\n“Dedicated coordinator nodes”.\nThis behavior depends on how your domain is conﬁgured.\n• Domains with dedicated coordinator nodes – The Dashboards process runs exclusively on those\nnodes, and only they show the restart option.\n• Domains without dedicated coordinator nodes – In simpler or older setups, Dashboards might\nrun on a data node instead, and the restart option appears there.\n• Master nodes – These nodes are solely for managing cluster state and elections. They don't run\nDashboards and never show the restart option.\nRebooting a data node\n727\nAmazon OpenSearch Service\nDeveloper Guide\nTo determine which node is running the Dashboards process, navigate to the Cluster conﬁguration\nsection of your domain and review the node roles. The option to restart is only available for the\nnode hosting the Dashboards process.\nTo restart the Dashboards process on a node\n1.\nNavigate to the OpenSearch Service console at https://console.aws.amazon.com/aos/.\n2.\nIn the left navigation pane, choose Domains. Choose the name of the domain that you want to\nwork with.\n3.\nAfter the domain details page opens, navigate to the Instance health tab.\n4.\nIn the section for the nodes that are running the Dashboards process, select the button next to\nthe node that you want to restart the process on.\n5.\nSelect the Actions dropdown and choose Restart Dashboard/Kibana process.\n6.\nChoose Conﬁrm on the modal.\n7.\nTo see the status of the action that you initiated, select the name of the node. After the node\ndetails page opens, choose the Events tab under the name of the node to see a list of events\nassociated with that node.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 756,
+      "end": 757
+    },
+    "content_stats": {
+      "char_count": 2196,
+      "word_count": 354
+    },
+    "hierarchy": {
+      "parent": "Performing administrative actions on Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

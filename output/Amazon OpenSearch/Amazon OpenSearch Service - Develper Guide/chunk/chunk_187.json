@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_187",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you create a pipeline with a Lambda processor, create the following resources:\n• An AWS Lambda function that enriches and transforms your source data. For instructions, see\nCreate your ﬁrst Lambda function.\n• An OpenSearch Service domain or OpenSearch Serverless collection that will be the pipeline\nsink. For more information, see the section called “ Creating OpenSearch Service domains” and\nthe section called “Creating collections”.\n• A pipeline role that includes permissions to write to the domain or collection sink. For more\ninformation, see the section called “Pipeline role”.\nThe pipeline role also needs an attached permissions policy that allows it to invoke the Lambda\nfunction speciﬁed in the pipeline conﬁguration. For example:\nNext steps\n291\nAmazon OpenSearch Service\nDeveloper Guide\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"allowinvokeFunction\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"lambda:invokeFunction\",\n\"lambda:InvokeAsync\",\n\"lambda:ListFunctions\"\n],\n\"Resource\": \"arn:aws:lambda:us-\neast-1:111122223333:function:function-name\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 320,
+      "end": 321
+    },
+    "content_stats": {
+      "char_count": 1070,
+      "word_count": 144
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with AWS Lambda",
+      "children": []
+    }
+  }
+}

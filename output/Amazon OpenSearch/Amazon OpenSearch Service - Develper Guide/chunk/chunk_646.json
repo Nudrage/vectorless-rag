@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_646",
+  "section_number": "2.10.1.16",
+  "header": "Point in time metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for point in time (PIT) searches.\nPIT coordinator node statistics (per coordinator node)\nMetric\nDescription\nCurrentPo\nintInTime\nThe number of active PIT search contexts in the node.\nTotalPoin\ntInTime\nThe number of expired PIT search contexts since the node up time.\nPoint in time metrics\n1204\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nAvgPointI\nnTimeAliveTime\nThe average keep alive of PIT search contexts since the node up time.\nHasActive\nPointInTime\nA value of 1 indicates that there are active PIT contexts on nodes since\nthe node up time. A value of 0 means there are not.\nHasUsedPo\nintInTime\nA value of 1 indicates that there are expired PIT contexts on nodes\nsince the node up time. A value of 0 means there are not.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1233,
+      "end": 1234
+    },
+    "content_stats": {
+      "char_count": 798,
+      "word_count": 131
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

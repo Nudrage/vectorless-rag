@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_866",
+  "section_number": "2.12.9.6",
+  "header": "Conﬁguring SAML authentication (conﬁguration API)",
+  "content": "The following request to the conﬁguration API enables SAML authentication for OpenSearch\nDashboards on an existing domain:\nPOST https://es.us-east-1.amazonaws.com/2021-01-01/opensearch/domain/my-domain/config\n{\n\"AdvancedSecurityOptions\": {\n\"SAMLOptions\": {\nConﬁguring both SP- and IdP-initiated authentication\n1387\nAmazon OpenSearch Service\nDeveloper Guide\n\"Enabled\": true,\n\"MasterUserName\": \"my-idp-user\",\n\"MasterBackendRole\": \"my-idp-group-or-role\",\n\"Idp\": {\n\"EntityId\": \"entity-id\",\n\"MetadataContent\": \"metadata-content-with-quotes-escaped\"\n},\n\"RolesKey\": \"optional-roles-key\",\n\"SessionTimeoutMinutes\": 180,\n\"SubjectKey\": \"optional-subject-key\"\n}\n}\n}\nYou must escape all quotes and newline characters in the metadata XML. For example, use\n<KeyDescriptor use=\\\"signing\\\">\\n instead of <KeyDescriptor use=\"signing\"> and a\nline break. For detailed information about using the conﬁguration API, see the OpenSearch Service\nAPI reference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1416,
+      "end": 1417
+    },
+    "content_stats": {
+      "char_count": 935,
+      "word_count": 97
+    },
+    "hierarchy": {
+      "parent": "SAML authentication for OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

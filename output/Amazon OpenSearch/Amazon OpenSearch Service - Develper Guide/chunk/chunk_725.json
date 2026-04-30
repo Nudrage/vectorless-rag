@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_725",
+  "section_number": "2.10.4.6.1",
+  "header": "Degraded node retirement notiﬁcation",
+  "content": "OpenSearch Service sends this event when the automated action to retire and replace a degraded\nnode has been scheduled for your domain.\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"db233454-aad1-7676-3b15-10a84b052baa\",\n\"detail-type\":\"Amazon OpenSearch Service Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2024-01-11T08:16:06Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\n\"arn:aws:es:us-east-1:123456789012:domain/test-node-replacement\"\n],\n\"detail\":{\n\"severity\":\"Medium\",\n\"description\":\"An automated action to retire and replace a node has\nbeen scheduled on your domain. For more information, please see https://\ndocs.aws.amazon.com/opensearch-service/latest/developerguide/monitoring-events.html.\",\n\"event\":\"Degraded Node Retirement Notification\",\n\"status\":\"Scheduled\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1296,
+      "end": 1296
+    },
+    "content_stats": {
+      "char_count": 823,
+      "word_count": 77
+    },
+    "hierarchy": {
+      "parent": "Degraded node retirement events",
+      "children": []
+    }
+  }
+}

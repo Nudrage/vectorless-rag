@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_479",
+  "section_number": "2.15.10.1",
+  "header": "Considerations",
+  "content": "Consider the following when deciding whether to update your domain:\n• Manually updating your domain lets you take advantage of new features more quickly. When you\nchoose Update, OpenSearch Service places the request in a queue and begins the update when it\nhas time.\n• When you initiate a service software update, OpenSearch Service sends a notiﬁcation when the\nupdate starts and when it completes.\n• Software updates use blue/green deployments to minimize downtime. Updates can temporarily\nstrain a cluster's dedicated master nodes, so make sure to maintain suﬃcient capacity to handle\nthe associated overhead.\n• Updates typically complete within minutes, but can also take several hours or even days if your\nsystem is experiencing heavy load. Consider updating your domain during the conﬁgured oﬀ-\npeak window to avoid long update periods.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 677,
+      "end": 677
+    },
+    "content_stats": {
+      "char_count": 841,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "Service software updates in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

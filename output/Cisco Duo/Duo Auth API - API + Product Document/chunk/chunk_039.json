@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_039",
+  "section_number": "1.5.9",
+  "header": "Response formats",
+  "content": "If async  was not enabled:\nKey\nValue\nresult\nEither \"allow\" or \"deny\". If \"allow\" was returned, your\napplication should grant access to the user. If \"deny\",\nit should not.\nstatus\nString detailing the progress or outcome of the\nauthentication attempt.\nValue\nMeaning\ncalling\nCurrently calling the user's\nphone. The result  will be\n\" waiting \".\nanswered\nPhone call answered. The\nresult  will be \" waiting \".\npushed\nA Duo Push authentication\nrequest has been sent to the\ndevice. The result  will be\n\" waiting \".\npush_failed\nAn error occurred while sending\nthe push notification to the\nuser's device. The user should\nretrieve the request manually\nusing the Duo Push button in\nthe Duo Mobile app. The\nresult  will be \" waiting \".\ntimeout\nAuthentication timed out. Duo\nPush times out after 60 seconds\nand phone calls will also time\nout after approximately one\nminute. The result  will be\n\" deny \".\nfraud\nThe authentication request was\nreported as fraudulent. The\nresult  will be \"deny\".\nallow\nAuthentication succeeded. The\nresult  will be \"allow\".\nbypass\nAuthentication has been\nskipped for a user in bypass\nmode. The result  will be\n\"allow\".\ndeny\nAuthentication denied. The\nresult  will be \"deny\".\nlocked_out\nThe user has been disabled due\nto authentication failures. The\nresult  will be \"deny\".\nsent\nPasscodes have been sent to\nthe device. The result  will be\n\"deny\".\nstatus_msg\nHuman-readable string describing the status of the\nauthentication attempt. If the authentication attempt\nwas denied, it may identify a reason. This string is\nintended for display to the user.\ntrusted_device_token\nA string containing a token for that trusted device,\nwhich can be passed into the next /preauth  call to\nbypass 2FA for the lifetime of the token. Requires an\neffective policy on the Auth API application that\nenables Remembered Devices for each browser-\nbased application (Duo Essentials) or without risk-\nbased protection on a per-application basis (Duo\nAdvantage and Premier).\nIf async  was enabled:\nKey\nValue\ntxid\nA transaction ID to be used to query the authentication status using the\n/auth_status  endpoint.\nIf you specify async  in conjunction with a txid  value for Verified Duo\nPush received from the /preauth  response, then the same txid  value\nis returned in the /auth  response.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 19,
+      "end": 21
+    },
+    "content_stats": {
+      "char_count": 2277,
+      "word_count": 367
+    },
+    "hierarchy": {
+      "parent": "Endpoints",
+      "children": []
+    }
+  }
+}

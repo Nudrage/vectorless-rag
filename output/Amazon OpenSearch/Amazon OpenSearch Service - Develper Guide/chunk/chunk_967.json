@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_967",
+  "section_number": "2.15.5.4.2",
+  "header": "Using pre-packaged plugins",
+  "content": "OpenSearch Service lets you associate pre-installed, optional OpenSearch plugins to use with your\ndomain. An pre-packaged plugin package is compatible with a speciﬁc OpenSearch version, and\ncan only be associated to domains with that version. The list of available packages for your domain\nincludes all supported plugins that are compatible with your domain version. After you associate a\nplugin to a domain, an installation process on the domain begins. Then, you can reference and use\nthe plugin when you make requests to OpenSearch Service.\nAssociating and dissociating a plugin requires a blue/green deployment. For more information, see\nthe section called “Changes that usually cause blue/green deployments”.\nOptional plugins include language analyzers and customized search results. For example, the\nAmazon Personalize Search Ranking plugin uses machine learning to personalize search results\nfor your customers. For more information about this plugin, see Personalizing search results from\nOpenSearch. For a list of all supported plugins, see the section called “Plugins by engine version”.\nSudachi plugin\nFor the Sudachi plugin, when you reassociate a dictionary ﬁle, it doesn't immediately reﬂect on the\ndomain. The dictionary refreshes when the next blue/green deployment runs on the domain as\npart of a conﬁguration change or other update. Alternatively, you can create a new package with\nthe updated data, create a new index using this new package, reindex the existing index to the new\nindex, and then delete the old index. If you prefer to use the reindexing approach, use an index\nalias so that there's no disruption to your traﬃc.\nAdditionally, the Sudachi plugin only supports binary Sudachi dictionaries, which you can upload\nwith the CreatePackage API operation. For information on the pre-built system dictionary and\nprocess for compiling user dictionaries, see the Sudachi documentation.\nThe following example demonstrates how to use system and user dictionaries with the Sudachi\ntokenizer. You must upload these dictionaries as custom packages with type TXT-DICTIONARY and\nprovide their package IDs in the additional settings.\nPUT sudachi_sample\n{\n\"settings\": {\n\"index\": {\n\"analysis\": {\n\"tokenizer\": {\n\"sudachi_tokenizer\": {\nUsing packages with OpenSearch\n1481\nAmazon OpenSearch Service\nDeveloper Guide\n\"type\": \"sudachi_tokenizer\",\n\"additional_settings\": \"{\\\"systemDict\\\": \\\"<system-dictionary-package-\nid>\\\",\\\"userDict\\\": [\\\"<user-dictionary-package-id>\\\"]}\"\n}\n},\n\"analyzer\": {\n\"sudachi_analyzer\": {\n\"filter\": [\"my_searchfilter\"],\n\"tokenizer\": \"sudachi_tokenizer\",\n\"type\": \"custom\"\n}\n},\n\"filter\":{\n\"my_searchfilter\": {\n\"type\": \"sudachi_split\",\n\"mode\": \"search\"\n}\n}\n}\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1510,
+      "end": 1511
+    },
+    "content_stats": {
+      "char_count": 2695,
+      "word_count": 380
+    },
+    "hierarchy": {
+      "parent": "Using packages with OpenSearch",
+      "children": []
+    }
+  }
+}

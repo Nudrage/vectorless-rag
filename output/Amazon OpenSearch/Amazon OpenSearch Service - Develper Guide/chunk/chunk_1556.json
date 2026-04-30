@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1556",
+  "section_number": "2.29.10",
+  "header": "Exceeded maximum shard limit",
+  "content": "OpenSearch as well as 7.x versions of Elasticsearch have a default setting of no more than 1,000\nshards per node. OpenSearch/Elasticsearch throw an error if a request, such as creating a new\nindex, would cause you to exceed this limit. If you encounter this error, you have several options:\n• Add more data nodes to the cluster.\n• Increase the _cluster/settings/cluster.max_shards_per_node setting.\n• Use the _shrink API to reduce the number of shards on the node.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2086,
+      "end": 2086
+    },
+    "content_stats": {
+      "char_count": 464,
+      "word_count": 76
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

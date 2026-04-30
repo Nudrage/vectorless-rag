@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1571",
+  "section_number": "155.1.1.215.3",
+  "header": "February 2025",
+  "content": "You can control access and grant granular permissions for Microsoft Defender for Cloud Apps\nas part of the Microsoft Defender XDR Unified RBAC model. For more information, see Map\nMicrosoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC\npermissions. To activate the Defender for Cloud Apps workload, see Activate Microsoft\nDefender XDR Unified RBAC.\nThe permissions model to access Email & collaboration schema in advanced hunting for\nMicrosoft Defender for Office 365 customers has been updated to align with Threat Explorer.\nAs part of this change, customers who are using Microsoft Defender XDR Unified RBAC with\nDefender for Office 365 should use the Security operations \\ Raw data \\ Email & collaboration\nmetadata (read) permission to grant analysts access to the Email & collaboration schema in\nadvanced hunting.\nUsers with the Security operations \\ Security data \\ Security data basics (read) permission for\nDefender for Office 365 will no longer have access to the Email & collaboration schema in\nadvanced hunting, but will keep their access to the Alerts & behaviors schema.\nMicrosoft Defender XDR Unified RBAC is now generally available to GCC High and DoD\ncustomers. To learn more about the supported workloads and supported data sources, see\nMicrosoft Defender XDR Unified role-based access control (RBAC).\nThe process of importing roles from individual workloads' RBAC models into Microsoft\nDefender XDR Unified RBAC has been improved. Admins can now view the permissions and\nassignment of a role before importing it by clicking the role name at the roles to import\nselection stage.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1170,
+      "end": 1171
+    },
+    "content_stats": {
+      "char_count": 1627,
+      "word_count": 256
+    },
+    "hierarchy": {
+      "parent": "What's new in Microsoft Defender XDR Unified role-based access control (RBAC)",
+      "children": []
+    }
+  }
+}

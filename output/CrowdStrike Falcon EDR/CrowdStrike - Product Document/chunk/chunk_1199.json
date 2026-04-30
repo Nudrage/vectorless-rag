@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1199",
+  "section_number": "1.5.872.1",
+  "header": "Fields: Windows, macOS",
+  "content": "Field\nDescription\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the\nID of the process that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process\nthat performed thread injection in an InjectedThread event\nPatternId\nThe ID of the pattern\nExclusionSource\nValues:\nPPDM_PROCESS_EXCLUSION (1)\nPPDM_TREE_EXCLUSION (2)\nLEGACY_SBDM_EXCLUSION (4)\nALLOWED_BY_ENGINE (5)\nCUSTOMER_EXCLUSION (6)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n316/1226\nField\nDescription\nSYSTEM_PROCESS_EXCLUSION (7)\nNGAV_EXCLUSION_MIGO_TEMPLATE (8)\nOFP_ML_EXCLUSION_TEMPLATE (9)\nExclusionType\nValues:\nBEHAVIORAL_IOA (0x00000001)\nHASH_BASED_IOC (0x00000002)\nCERTIFICATE_BASED (0x00000004)\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nTemplateInstanceId\nTargetFileName\nThe resulting file name that was downloaded\nTargetSHA256HashData\nContextTimeStamp\nSystem time of event creation.\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nContextData\nAllowlistingFilterId\nSessionProcessId\nProcess which started the session.\nModulePolicyRequestPipelineSource\nTemplateId\nOciContainerId\nAn OCI Container Id.\nMigoTemplateInstanceId\nMLModelVersion\nTargetProcessTags\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a\nsystem.\nValues:\nSELF_RID (0x01010000000000050A000000)\nDocumentSHA256HashData\nEventCorrelationId",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 316,
+      "end": 317
+    },
+    "content_stats": {
+      "char_count": 2083,
+      "word_count": 251
+    },
+    "hierarchy": {
+      "parent": "DetectionExcluded",
+      "children": []
+    }
+  }
+}

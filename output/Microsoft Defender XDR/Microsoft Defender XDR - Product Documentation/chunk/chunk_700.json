@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_700",
+  "section_number": "155.1.1.66.3.1",
+  "header": "Track enabled predictive shielding hardening policies",
+  "content": "This sample query retrieves policy modification events in the environment, including\napplication and removal of hardening policies from devices onboarded to Defender for\nEndpoint. The query uses the DisruptionAndResponseEvents table.\nKusto\nThis sample query retrieves blocked events related to predictive shielding hardening policies,\nand allows you to monitor when specific actions were blocked on devices. The query uses the\nDisruptionAndResponseEvents table.\nKusto\nDisruptionAndResponseEvents\nlet hardeningPolicyType =\nlet lookBackTime =\nDisruptionAndResponseEvents\n| where Timestamp > lookBackTime\n| where PolicyName == hardeningPolicyType\n| where DomainName == domainName\n| summarize arg_max(Timestamp, IsPolicyOn) by DeviceId\n| where IsPolicyOn",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 448,
+      "end": 449
+    },
+    "content_stats": {
+      "char_count": 750,
+      "word_count": 94
+    },
+    "hierarchy": {
+      "parent": "Track policy modifications in advanced hunting",
+      "children": []
+    }
+  }
+}

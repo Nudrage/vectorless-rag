@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_739",
+  "section_number": "155.1.1.70.2",
+  "header": "What to expect for Defender XDR tables streamed to Microsoft Sentinel",
+  "content": "to Microsoft Sentinel\n７ Note\nUsing the unified portal, where you can query Microsoft Sentinel data after connecting a\nMicrosoft Sentinel workspace, doesn't automatically mean you can also query Defender\nYou can use advanced hunting KQL (Kusto Query Language) queries to hunt through Microsoft\nDefender XDR and Microsoft Sentinel data.\nWhen you open the advanced hunting page for the first time after connecting a workspace,\nyou can find many of that workspace's tables organized by solution after the Microsoft\nDefender XDR tables under the Schema tab.\nLikewise, you can find the functions from Microsoft Sentinel in the Functions tab, and your\nshared and sample queries from Microsoft Sentinel can be found in the Queries tab inside\nfolders marked Sentinel.\nTo learn more about a schema table, select the vertical ellipses (\n) to the right of any schema\ntable name under the Schema tab, then select View schema.\nIn the unified portal, in addition to viewing the schema column names and descriptions, you\ncan also view:\nXDR data while in Microsoft Sentinel. Raw data ingestion of Defender XDR should still be\nconfigured in Microsoft Sentinel for this to happen.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 480,
+      "end": 481
+    },
+    "content_stats": {
+      "char_count": 1161,
+      "word_count": 189
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal",
+      "children": []
+    }
+  }
+}

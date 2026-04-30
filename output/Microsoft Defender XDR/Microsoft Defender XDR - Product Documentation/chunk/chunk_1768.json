@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1768",
+  "section_number": "155.1.1.243",
+  "header": "Common Microsoft Defender XDR REST API error codes",
+  "content": "API error codes\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nError codes can be returned by an operation on any of the Microsoft Defender XDR APIs. Every\nerror response contains an error message, which can help resolve the problem. The error\nmessage column in the table section provides some sample messages. The content of actual\nmessages varies based on the factors that triggered the response. Variable content is indicated\nby angle brackets ( < > ) in the following table:\nError code\nHTTP status code\nMessage\nBadRequest\nBadRequest (400)\nGeneral Bad Request error message.\nODataError\nBadRequest (400)\nInvalid OData URI query <the specific error is\nspecified>.\nInvalidInput\nBadRequest (400)\nInvalid input <the invalid input>.\nInvalidRequestBody\nBadRequest (400)\nInvalid request body.\nInvalidHashValue\nBadRequest (400)\nHash value <the invalid hash> is invalid.\nInvalidDomainName\nBadRequest (400)\nDomain name <the invalid domain> is invalid.\nInvalidIpAddress\nBadRequest (400)\nIP address <the invalid IP> is invalid.\n７ Note\nTry our new APIs using MS Graph security API. Find out more at: Use the Microsoft\nGraph security API - Microsoft Graph | Microsoft Learn.\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1339,
+      "end": 1339
+    },
+    "content_stats": {
+      "char_count": 1402,
+      "word_count": 210
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Error codes",
+        "Examples",
+        "Body parameters",
+        "Tracking ID",
+        "Related articles"
+      ]
+    }
+  }
+}

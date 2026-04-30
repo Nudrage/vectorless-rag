@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_895",
+  "section_number": "155.1.1.89.4",
+  "header": "Optimize the summarize  operator",
+  "content": "The summarize operator aggregates the contents of a table. Apply these tips to optimize\nqueries that use this operator.\nFind distinct values—In general, use summarize  to find distinct values that can be\nrepetitive. It can be unnecessary to use it to aggregate columns that don't have repetitive\nvalues.\nWhile a single email can be part of multiple events, the example below is not an efficient\nuse of summarize  because a network message ID for an individual email always comes\nwith a unique sender address.\nKusto\nThe summarize  operator can be easily replaced with project , yielding potentially the\nsame results while consuming fewer resources:\nKusto\nIdentityInfo\n| where JobTitle == \"CONSULTANT\"\n| join hint.shufflekey = AccountObjectId\n(IdentityDirectoryEvents\n| where Application == \"Active Directory\"\n| where ActionType == \"Private data retrieval\")\non AccountObjectId\nEmailEvents\n| where Subject in (\"Warning: Update your credentials now\", \"Action required:\nUpdate your credentials now\")\n| join hint.strategy = broadcast EmailUrlInfo on NetworkMessageId\nEmailEvents\n| where Timestamp > ago(1h)\n| summarize by NetworkMessageId, SenderFromAddress\nThe following example is a more efficient use of summarize  because there can be multiple\ndistinct instances of a sender address sending email to the same recipient address. Such\ncombinations are less distinct and are likely to have duplicates.\nKusto\nShuffle the query—While summarize  is best used in columns with repetitive values, the\nsame columns can also have high cardinality or large numbers of unique values. Like the\njoin  operator, you can also apply the shuffle hint with summarize  to distribute processing\nload and potentially improve performance when operating on columns with high\ncardinality.\nThe query below uses summarize  to count distinct recipient email address, which can run\nin the hundreds of thousands in large organizations. To improve performance, it\nincorporates hint.shufflekey :\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 590,
+      "end": 591
+    },
+    "content_stats": {
+      "char_count": 1966,
+      "word_count": 291
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting query best practices",
+      "children": []
+    }
+  }
+}

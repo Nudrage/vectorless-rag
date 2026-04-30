@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_240",
+  "section_number": "2.6.21.2.7",
+  "header": "Http metrics",
+  "content": "The following metrics apply to the HTTP source. Each metric is preﬁxed by the sub-pipeline name\nand http. For example, sub_pipeline_name.http.requestsReceived.count.\nMetric suﬃx\nDescription\nrequestsReceived.count\nThe number of requests received by the /log/ingest\nendpoint.\nMonitoring pipeline metrics\n342\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nRelevant statistics: Sum\nDimension: PipelineName\nrequestsRejected.count\nThe number of requests rejected (429 response status\ncode) by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nsuccessRequests.count\nThe number of requests successfully processed (200\nresponse status code) by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nbadRequests.count\nThe number of requests with invalid content type or\nformat (400 response status code) processed by the\nplugin.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestTimeouts.count\nThe number of requests that time out in the HTTP source\nserver (415 response status code).\nRelevant statistics: Sum\nDimension: PipelineName\nrequestsTooLarge.count\nThe number of requests of which the events size in the\ncontent is larger than the buﬀer capacity (413 response\nstatus code).\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n343\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\ninternalServerError.count\nThe number of requests processed by the plugin with a\ncustom exception type (500 response status code).\nRelevant statistics: Sum\nDimension: PipelineName\nrequestProcessDura\ntion.count\nA count of the latency of requests processed by the\nplugin, in seconds.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestProcessDura\ntion.sum\nThe total latency of requests processed by the plugin, in\nmilliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\nrequestProcessDura\ntion.max\nThe maximum latency of requests processed by the\nplugin, in milliseconds.\nRelevant statistics: Max\nDimension: PipelineName\npayloadSize.count\nA count of the distribution of payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n344\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\npayloadSize.sum\nThe total distribution of the payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\npayloadSize.max\nThe maximum distribution of payload sizes of incoming\nrequests, in bytes.\nRelevant statistics: Max\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 371,
+      "end": 374
+    },
+    "content_stats": {
+      "char_count": 2512,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

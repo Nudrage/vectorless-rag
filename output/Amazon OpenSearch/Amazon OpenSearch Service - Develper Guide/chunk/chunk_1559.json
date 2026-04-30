@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1559",
+  "section_number": "2.29.13",
+  "header": "EBS metric increases during volume resizing",
+  "content": "When modifying Amazon Elastic Block Store volume sizes, you might observe temporary increases\nin various EBS metrics such as Write Throughput, Write Throughput Micro bursting,\nDisk Queue Depth, and IOPS. This is expected behavior during the resize operation and typically\nlasts a few seconds. The duration may vary, however, based on the volume size being modiﬁed.\nTo avoid latency issues and request rejections, perform EBS volume resizes only when the cluster is\nhealthy and network traﬃc is low.\nLow EBS burst balance\n2058\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2087,
+      "end": 2088
+    },
+    "content_stats": {
+      "char_count": 567,
+      "word_count": 88
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

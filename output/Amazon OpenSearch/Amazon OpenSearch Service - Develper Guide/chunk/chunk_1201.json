@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1201",
+  "section_number": "2.19.4.8.1",
+  "header": "Filtering",
+  "content": "You can ﬁlter cold indexes based on a preﬁx-based index pattern and time range oﬀsets.\nThe following request lists indexes that match the preﬁx pattern of event-*:\nGET _cold/indices/_search\n{\n\"filters\":{\n\"index_pattern\": \"event-*\"\n}\n}\nSample response\n{\n\"pagination_id\" : \"je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY\",\nListing cold indexes\n1716\nAmazon OpenSearch Service\nDeveloper Guide\n\"total_results\" : 1,\n\"indices\" : [\n{\n\"index\" : \"events-index\",\n\"index_cold_uuid\" : \"4eFiab7rRfSvp3slrIsIKA\",\n\"size\" : 32263273,\n\"creation_date\" : \"2021-08-18T18:25:31.845Z\",\n\"start_time\" : \"2020-03-09T00:00Z\",\n\"end_time\" : \"2020-03-09T23:00Z\"\n}\n]\n}\nThe following request returns indexes with start_time and end_time metadata ﬁelds between\n2019-03-01 and 2020-03-01:\nGET _cold/indices/_search\n{\n\"filters\": {\n\"time_range\": {\n\"start_time\": \"2019-03-01\",\n\"end_time\": \"2020-03-01\"\n}\n}\n}\nSample response\n{\n\"pagination_id\" : \"je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY\",\n\"total_results\" : 1,\n\"indices\" : [\n{\n\"index\" : \"my-index\",\n\"index_cold_uuid\" : \"4eFiab7rRfSvp3slrIsIKA\",\n\"size\" : 32263273,\n\"creation_date\" : \"2021-08-18T18:25:31.845Z\",\n\"start_time\" : \"2019-05-09T00:00Z\",\n\"end_time\" : \"2019-09-09T23:00Z\"\n}\n]\n}\nListing cold indexes\n1717\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1745,
+      "end": 1747
+    },
+    "content_stats": {
+      "char_count": 1257,
+      "word_count": 150
+    },
+    "hierarchy": {
+      "parent": "Listing cold indexes",
+      "children": []
+    }
+  }
+}

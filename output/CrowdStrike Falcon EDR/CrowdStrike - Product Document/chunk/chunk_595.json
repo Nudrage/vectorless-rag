@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_595",
+  "section_number": "1.5.786.1",
+  "header": "Fields: macOS, Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nConfigurationVersion\nTargetFileName\nThe resulting file name that was downloaded\nConfigIDBase\nConfigIDBuild\nConfigIDPlatform\nValues:\nAGENT_PLATFORM_WIN7_X86 (0x0001)\nAGENT_PLATFORM_WIN7_X64 (0x0002)\nAGENT_PLATFORM_MACOS (0x0004)\nAGENT_PLATFORM_LINUX (0x0008)\nAGENT_PLATFORM_ANDROID (0x0010)\nAGENT_PLATFORM_IOS (0x0020)\nAGENT_PLATFORM_LINUX_S390X (0x0040)\nAGENT_PLATFORM_LINUX_AARCH64 (0x0080)\nAGENT_PLATFORM_LINUX_LUMOS_X64 (0x0100)\nAGENT_PLATFORM_WINDOWS_AARCH64 (0x0200)\nAGENT_PLATFORM_LINUX_K8S_X64 (0x0400)\nAGENT_PLATFORM_LINUX_PPC64 (0x0800)\nAGENT_PLATFORM_LINUX_PPC64LE (0x1000)\nAGENT_PLATFORM_WIN_LEGACY_X86 (0x2000)\nAGENT_PLATFORM_WIN_LEGACY_X64 (0x4000)\nAGENT_PLATFORM_VMCLUSTER (0x8000)\nAGENT_PLATFORM_LINUX_K8S_AARCH64 (0x10000)\nAGENT_PLATFORM_LINUX_LUMOS_AARCH64 (0x20000)\nConfigSwitchReason\nValues:\nUNDEFINED (0)\nBOOT_PHASE_PASSED (1)\nPROVISIONING_SWITCH (2)\nFAILED_CONFIG_LOAD (3)\nCLOUD_REQUEST (4)\nRECOVERY_TOOLKIT_REQUEST (5)\nSAFEMODE_SENSOR_CRASH_DETECTED (10)\nSAFEMODE_BAD_CHANNEL_FILE_IDENTIFIED (11)\nSAFEMODE_WATCHDOG_TRIGGER (12)\nSAFEMODE_SWITCH_TEST (127)\nSAFEMODE_WATCHDOG_TEST (128)\nSAFEMODE_TEST_FAILED (129)\nCLOUDSIM_TEST (130)\nCONFIGMGR_TEST (131)\nSELFDIAGNOSTIC_TEST (132)\nConfigurationId\nValues:\nCONFIG_ZERO (0)\nCONFIG_SAFEMODE (1)\nCONFIG_SYSTEM_START (100)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n139/1226\nField\nDescription\nSTANDARD_CONFIGURATION (1007)\nCONFIG_UNSPECIFIED (9999)\nAgentVersion\nThe version of the sensor running on a host.\nComputerName\nName of the device on which sensor is running.\nAgentLoadFlags\nAgentLocalTime\nBiosManufacturer\nBiosVersion\nBiosReleaseDate\nSystemManufacturer\nSystemProductName\nMoboManufacturer\nMoboProductName\nChasisManufacturer\nBootId\nBaseTime\nBootStatusDataBootGood\nBootStatusDataBootAttemptCount\nBootStatusDataBootShutdown\nBootStatusDataAabEnabled\nCpuFeaturesMask\nChassisType\nProvisionState\nValues:\nSENSOR_NOT_PROVISIONED (0x0)\nSENSOR_PROVISIONED (0x1)\nSideChannelMitigationFlags\nCpuVendor\nValues:\nINTEL (0)\nAMD (1)\nAPPLE (2)\nARM64CPU (3)\nIBM (4)\nCpuSignature\nSystemSerialNumber\nSystemSku\nMicrocodeSignature\nNorthBridgeVendorId\nNorthBridgeDeviceId\nSouthBridgeVendorId\nSouthBridgeDeviceId\nSensorGroupingTags\nPlatformSecurityStatus\nPlatformSecuritySettings\nValues:\nSYSTEM_VBS_ENABLED (0x0001)\nPOLICY_VBS_ENABLED (0x0002)\nRESERVED_VBS (0x0004)\nSYSTEM_HVCI_ENABLED (0x0008)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n140/1226\nField\nDescription\nPOLICY_HVCI_ENABLED (0x0010)\nSCENARIO_HVCI_ENABLED (0x0020)\nSCENARIO_SYSTEMGUARD_ENABLED (0x0040)\nRESERVED_SYSTEMGUARD1 (0x0080)\nRESERVED_SYSTEMGUARD2 (0x0100)\nSYSTEM_CREDENTIALGUARD_ENABLED (0x0200)\nPOLICY_CREDENTIALGUARD_ENABLED (0x0400)\nLSA_PROTECTED_PROCESS_ENABLED (0x0800)\nSYSTEM_SECUREBOOT_REQUESTED (0x1000)\nSYSTEM_IOMMU_REQUESTED (0x2000)\nSYSTEM_SECUREMOR_REQUESTED (0x4000)\nSYSTEM_MEASUREDLAUNCH_REQUESTED (0x8000)\nPOLICY_SECUREBOOT_REQUESTED (0x10000)\nPOLICY_IOMMU_REQUESTED (0x20000)\nPOLICY_SECUREMOR_REQUESTED (0x40000)\nPOLICY_MEASUREDLAUNCH_REQUESTED (0x80000)\nMS_SIGNED_BOOT_CHAIN_REQUIRED (0x100000)\nDEPLOY_CONFIG_CI_POLICY (0x200000)\nHVCIMAT_REQUIRED (0x400000)\nPRINTER_INSTALLATION_RESTRICTED_TO_ADMIN (0x800000)\nPRINTER_DEVICE_CONTROL_ENABLED (0x1000000)\nINSTANT_LOCK_ENFORCED (0x2000000)\nSANDBOX_AUDIO_INPUT_ALLOWED (0x4000000)\nSANDBOX_CLIPBOARD_REDIRECTION_ALLOWED (0x8000000)\nSANDBOX_NETWORKING_ALLOWED (0x10000000)\nSANDBOX_PRINTER_REDIRECTION_ALLOWED (0x20000000)\nSANDBOX_VIDEO_INPUT_ALLOWED (0x40000000)\nKERNEL_DMA_PROTECTION_ENABLED (0x80000000)\nCUSTOM_SSPS_APS_ALLOWED (0x100000000)\nMdmDeviceId\nTpmType\nTpmSpecification\nTpmFirmwareVersion\nTpmManufacturer\nTpmProductName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 139,
+      "end": 141
+    },
+    "content_stats": {
+      "char_count": 4047,
+      "word_count": 294
+    },
+    "hierarchy": {
+      "parent": "AgentOnline",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1021",
+  "section_number": "2.15.9.2",
+  "header": "Asynchronous search permissions",
+  "content": "Asynchronous search supports ﬁne-grained access control. For details on mixing and matching\npermissions to ﬁt your use case, see Asynchronous search security.\nFor domains with ﬁne-grained access control enabled, you need the following minimum\npermissions for a role:\n# Allows users to use all asynchronous search functionality\nasynchronous_search_full_access:\nreserved: true\ncluster_permissions:\n- 'cluster:admin/opensearch/asynchronous-search/*'\nindex_permissions:\n- index_patterns:\n- '*'\nallowed_actions:\n- 'indices:data/read/search*'\n# Allows users to read stored asynchronous search results\nasynchronous_search_read_access:\nreserved: true\ncluster_permissions:\n- 'cluster:admin/opensearch/asynchronous-search/get'\nFor domains with ﬁne-grained access control disabled, use your IAM access and secret key to sign\nall requests. You can access the results with the asynchronous search ID.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1583,
+      "end": 1583
+    },
+    "content_stats": {
+      "char_count": 887,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Asynchronous search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

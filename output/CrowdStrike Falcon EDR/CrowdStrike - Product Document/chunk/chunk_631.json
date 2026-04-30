@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_631",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp System time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the process\nthat is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed thread injection in\nan InjectedThread event\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nExitCode\nA ULongHex field which is the exit code for a process.\nKernelTime\nUserTime\nThe total time executed in user mode. This field is in 100-nanosecond units.\nCycleTime\nA ULong64Hex field which is the number of number of processor clock cycles used.\nMaxThreadCount\nConHostId\nThe raw process ID of the Conhost.exe (console host process) associated with this process. The PID is zero if no such host exists.\nConHostProcessId",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 152,
+      "end": 152
+    },
+    "content_stats": {
+      "char_count": 1131,
+      "word_count": 178
+    },
+    "hierarchy": {
+      "parent": "TerminateProcess",
+      "children": []
+    }
+  }
+}

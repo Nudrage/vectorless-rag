@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1328",
+  "section_number": "2.22.3.4.2",
+  "header": "To use the MCP server template",
+  "content": "Follow these steps to deploy the MCP server template and connect it to your OpenSearch domain.\n1.\nOpen the Amazon OpenSearch Service console.\n2.\nIn the left navigation pane, choose Integrations.\n3.\nLocate the MCP server integration template.\n4.\nChoose Conﬁgure domain. Then, enter your OpenSearch domain endpoint.\nThe template creates an AgentCore Runtime and the following components, if the corresponding\noptional parameters are not speciﬁed:\n• An Amazon ECR repository\n• An Amazon Cognito user pool as the OAuth authorizer\n• An execution role used by the AgentCore Runtime\nMCP server integration templates\n1804\nAmazon OpenSearch Service\nDeveloper Guide\nAfter you complete this procedure, you should follow these post-creation steps:\n1. For Amazon OpenSearch Service: Map your execution role ARN to an OpenSearch backend role\nto control access to your domain.\nFor Amazon OpenSearch Serverless: Create a data access policy that allows your execution role\nto access your collection.\n2. Get an OAuth access token from your authorizer. Then use this token to access the MCP server at\nthe URL listed in your CloudFormation stack output.\nFor more information, see Policy actions for OpenSearch Serverless.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1833,
+      "end": 1834
+    },
+    "content_stats": {
+      "char_count": 1201,
+      "word_count": 186
+    },
+    "hierarchy": {
+      "parent": "MCP server integration templates",
+      "children": []
+    }
+  }
+}

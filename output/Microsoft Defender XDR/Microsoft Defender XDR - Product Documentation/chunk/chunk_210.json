@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_210",
+  "section_number": "155.1.1.18.1.39.3",
+  "header": "Investigate the incident for the simulated attack",
+  "content": "７ Note\nBefore we walk you through this simulation, watch the following video to see how\nincident management helps you piece the related alerts together as part of the\nSwitching to the SOC analyst point of view, you can now start to investigate the attack in\nthe Microsoft Defender portal.\n1. Open the Microsoft Defender portal\n.\n2. From the navigation pane, select Incidents & Alerts > Incidents.\n3. The new incident for the simulated attack will appear in the incident queue.\nMicrosoft Defender XDR correlates analytics and aggregates all related alerts and\ninvestigations from different products into one incident entity. By doing so, Microsoft\nDefender XDR shows a broader attack story, allowing the SOC analyst to understand\nand respond to complex threats.\nThe alerts generated during this simulation are associated with the same threat, and as a\nresult, are automatically aggregated as a single incident.\nTo view the incident:\n1. Open the Microsoft Defender portal\n.\n2. From the navigation pane, select Incidents & Alerts > Incidents.\n3. Select the newest item by clicking on the circle located left of the incident name. A\nside panel displays additional information about the incident, including all the\nrelated alerts. Each incident has a unique name that describes it based on the\nattributes of the alerts it includes.\nThe alerts that are shown in the dashboard can be filtered based on service\nresources: Microsoft Defender for Identity, Microsoft Defender for Cloud Apps,\ninvestigation process, where you can find it in the portal, and how it can help you in\nyour security operations:\nhttps://learn-video.azurefd.net/vod/player?id=208a5393-24b6-4f17-8523-\ne78bdb5a34cc%3F&locale=en-us&embedUrl=%2Fdefender-xdr%2Fpilot-deploy-\ninvestigate-respond\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 115,
+      "end": 116
+    },
+    "content_stats": {
+      "char_count": 1757,
+      "word_count": 264
+    },
+    "hierarchy": {
+      "parent": "Simulate an attack with an isolated domain controller and client device (optional)",
+      "children": [
+        "Investigate the attack as a single incident",
+        "Review generated alerts",
+        "Review the device timeline with Microsoft Defender for Endpoint",
+        "Review the user information with Microsoft Defender for Cloud Apps",
+        "Automated investigation and remediation",
+        "Resolve the incident"
+      ]
+    }
+  }
+}

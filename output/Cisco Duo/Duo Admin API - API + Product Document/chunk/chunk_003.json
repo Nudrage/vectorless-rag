@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_003",
+  "section_number": "1.2",
+  "header": "About the Admin API ",
+  "content": "\nDocumented properties will not be removed within a stable version of the API. Once a\ngiven API endpoint is documented to return a given property, a property with that name\nwill always appear (although certain properties may only appear under certain\nconditions, like if the customer is using a specific edition). When Duo deprecates a\nproperty, the API continues to accept that property in requests, although it no longer\nhas any effect.\nProperties that enumerate choices may gain new values at any time, e.g. the device\nplatform  value could return new device platforms that did not previously exist. Duo\nmay cease to return legacy values for properties as well. Duo will update our API\ndocumentation with changes to property values in a timely fashion, adding new\nproperty values or indicating changes to existing property values.\nNew, undocumented properties may also appear at any time. For instance, Duo may\nmake available a beta feature involving extra information returned by an API endpoint.\nUntil the property is documented here its format may change or it may even be entirely\nremoved from our API.\nWe have started implementing v2 and v3 handlers for endpoints. In these cases, the API\nv1 and v2 handlers remain supported, but will be limited or deprecated in the future. We\nencourage use of the most current endpoints where available and recommend\nmigrating existing API implementations to the v2 and v3 handlers.\nPlease note that all Unix timestamps are in seconds, except where noted.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 1499,
+      "word_count": 246
+    },
+    "hierarchy": {
+      "parent": "Duo Admin API",
+      "children": []
+    }
+  }
+}

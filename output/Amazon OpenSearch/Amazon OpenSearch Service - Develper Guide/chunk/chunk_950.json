@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_950",
+  "section_number": "2.14.5.1.2",
+  "header": "IAM conﬁguration",
+  "content": "If your domain uses an IAM-based domain access policy or ﬁne-grained access control with a\nmaster user, you must sign all requests to OpenSearch Service using IAM credentials. The following\nidentity-based policy grants all HTTP requests to your domain's subresources.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/domain-name/*\"\n}\nConﬁguration\n1463\nAmazon OpenSearch Service\nDeveloper Guide\n]\n}\nTo set up your Logstash conﬁguration, change your conﬁguration ﬁle to use the plugin for its\noutput. This example conﬁguration ﬁle takes its input from ﬁles in an S3 bucket:\ninput {\ns3 {\nbucket => \"amzn-s3-demo-\"\nregion => \"us-east-1\"\n}\n}\noutput {\nopensearch {\nhosts => [\"domain-endpoint:443\"]\nauth_type => {\ntype => 'aws_iam'\naws_access_key_id => 'your-access-key'\naws_secret_access_key => 'your-secret-key'\nregion => 'us-east-1'\n}\nindex  => \"logstash-logs-%{+YYYY.MM.dd}\"\necs_compatibility => disabled\n}\n}\nIf you don't want to provide your IAM credentials within the conﬁguration ﬁle, you can export them\n(or run aws configure):\nexport AWS_ACCESS_KEY_ID=\"your-access-key\"\nexport AWS_SECRET_ACCESS_KEY=\"your-secret-key\"\nexport AWS_SESSION_TOKEN=\"your-session-token\"\nIf your OpenSearch Service domain is in a VPC, the Logstash OSS machine must be able to connect\nto the VPC and have access to the domain through the VPC security groups. For more information,\nsee the section called “About access policies on VPC domains”.\nConﬁguration\n1464\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1492,
+      "end": 1494
+    },
+    "content_stats": {
+      "char_count": 1579,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Conﬁguration",
+      "children": []
+    }
+  }
+}

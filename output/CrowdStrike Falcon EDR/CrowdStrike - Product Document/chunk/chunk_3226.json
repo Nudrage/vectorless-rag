@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3226",
+  "section_number": "1.7.1.1.1",
+  "header": "aid_master",
+  "content": "The following table describes the fields for the aid_master event.\nNote: This event is updated about every 5 minutes.\nField name\nDescription\nExample value\nAgentLoadFlags\nWhether the sensor loaded during or after the Windows host's boot\nprocess. This is a bitfield, and may contain more than one value.\n0: The sensor loaded after startup, indicating a\nnewly installed or updated sensor. (For Mac and\nLinux hosts, this value is always 0.)\n1: The sensor loaded during the boot process,\nindicating the host booted normally with the\nsensor installed.\n2: Used for falcon system diagnostic purposes.\n3: A combination of values 0 and 1.\nAgentLocalTime\nThe local time for the sensor in epoch format.\n\"1538648887.051\"\nAgentTimeOffset\nThe time since the last reboot in epoch format.\n\"-15967.470\"\nAgentVersion\nThe version of the sensor running on a host.\n\"2.0.0002.2180\"\naid\nThe sensor ID. This value is unique to each installation of a Falcon\nsensor. When a sensor is updated or reinstalled, the host gets a new\naid. In those situations, a single host could have multiple aid values\nover time.\n\"85ae98xxxxxxd9a8f2\"\naip\nThe sensor’s IP, as seen from the CrowdStrike cloud. This is typically\nthe public IP of the sensor. This helps determine the location of a\ncomputer, depending on your network.\n\"#.##.#.###\"\nBiosManufacturer\nThe manufacturer of the host's BIOS.\n\"Phoenix Technologies LTC\"\nBiosVersion\nThe version of the host's BIOS.\n\"6.00\"\nData for seeing additional environment info (secondary events) [/documentation/page/fa572b1c/falcon-data-replicator#g905b0d0]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1221/1226\nField name\nDescription\nExample value\nChassisType\nType of system chassis, as defined in SMBIOS Standard.\nDesktop\nLaptop\nNotebook\ncid\nThe customer ID.\n0123456789ABCDEFGHIJKLMNOPQRSTUV-WX\nCity\nThe system's city of origin.\n\"Sunnyvale\"\nComputerName\nThe name of the host.\n\"my-host-name\"\nConfigIDBuild\nBuild number used as part of the ConfigID.\n\"####\"\nContinent\nThe sensor's continent, as seen from the CrowdStrike cloud.\n\"North America\"\nCountry\nThe system's country of origin.\n\"United States\"\nFalconGroupingTags\nThe host tags that were added by using the UI or API.\n\"win2019serversmsexcl\"\nFirstSeen\nThe first time the sensor was seen by the CrowdStrike cloud in epoch\nformat.\n\"1538648887.051\"\nMachineDomain\nThe Windows domain name to which the host is currently joined.\n\"XYZ.CORP\"\nOU\nThe organizational unit of the host as seen by the sensor.\nDefined by system admin\nPointerSize\nThe processor architecture (in decimal, non-hex format).\n\"4\": 32-bit\n\"8\": 64-bit\nProductType\nThe type of product (in decimal, non-hex format).\n\"1\": Workstation\n\"2\": Domain Controller\n\"3\": Server\nSensorGroupingTags\nThe host tags that were added during installation.\n\"Japan\"\nServicePackMajor\nThe major version # of the OS Service Pack (in decimal, non-hex\nformat).\n\"1\"\nSiteName\nThe site name of the domain to which the host is joined.\nDefined by system admin\nSystemManufacturer\nThe host's system manufacturer.\n\"Dell Inc.\"\nSystemProductName\nThe host's product name.\n\"Latitude E7240\"\nTime\nTimestamp of when the event was received by the CrowdStrike\ncloud. This is not to be confused with the time the event was\ngenerated locally on the system (the _timeevent). This is the\ntimestamp of the event from the cloud's point of view. This value can\nbe converted to any time format and can be used for calculations.\n\"1538648887.051\"\nTimezone\nThe sensor's time zone, as seen from the CrowdStrike cloud.\n\"America/Los_Angeles\"\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1222/1226\n\n\nField name\nDescription\nExample value\nVersion\nThe host's system version.\n\"Windows 8.1\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1221,
+      "end": 1223
+    },
+    "content_stats": {
+      "char_count": 4014,
+      "word_count": 581
+    },
+    "hierarchy": {
+      "parent": "Secondary events from Falcon Insight XDR",
+      "children": []
+    }
+  }
+}

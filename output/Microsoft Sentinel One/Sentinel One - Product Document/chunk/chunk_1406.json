@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1406",
+  "section_number": "27.4.2",
+  "header": "Account, the protocols and ports of the scans, and more:",
+  "content": "* minAgentsInNetworkToScan - To help you determine which networks are corporate, Ranger looks at the number of secured endpoints (Agents) in a network. If there are\nnot enough Agents in a network - set by this parameter value - Ranger considers the network to be non-corporate and will not scan it.\n* scanOnlyLocalSubnets - If false, Ranger scans remote subnets that do not have online Ranger scanners. This will create network traffic through the corporate firewall (and\nbetween different corporate locations), which can impact network performance.\n* usePeriodicSnapshots - A complete scan includes scanner port scanning and Ranger AI analysis of the scanner data to update the Device Inventory Snapshot. If this\nsetting is true, Ranger runs a new scan on an interval. If snapshotPeriod is shorter, the data is more accurate. If longer, there is better performance.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1526,
+      "end": 1526
+    },
+    "content_stats": {
+      "char_count": 866,
+      "word_count": 138
+    },
+    "hierarchy": {
+      "parent": "Get Ranger Settings",
+      "children": []
+    }
+  }
+}

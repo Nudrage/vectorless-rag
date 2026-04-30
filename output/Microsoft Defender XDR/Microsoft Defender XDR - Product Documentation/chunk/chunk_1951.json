@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1951",
+  "section_number": "155.1.1.258.1.1",
+  "header": "Suspicious email forwarding activity",
+  "content": "Attackers might set up email rules to hide incoming emails in the compromised user mailbox\nto obscure their malicious activities from the user. They might also set rules in the\ncompromised user mailbox to delete emails, move the emails into another less noticeable\nfolder such as an RSS folder, or forward emails to an external account.\nSome rules might move all the emails to another folder and mark them as \"read\", while some\nrules might move only mails that contain specific keywords in the email message or subject.\nFor example, the inbox rule might be set to look for keywords like \"invoice,\" \"phish,\" \"do not\nreply,\" \"suspicious email,\" or \"spam,\" among others, and move them to an external email\naccount. Attackers might also use the compromised user mailbox to distribute spam, phishing\nemails, or malware.\nMicrosoft Defender for Office 365 can detect and alert on suspicious email forwarding rules,\nallowing you to find and delete hidden rules at the source.\nFor more information, see these blog posts:\nBusiness Email Compromise\nBehind the scenes of business email compromise: Using cross-domain threat data to\ndisrupt a large BEC campaign\nTo review the Suspicious Email Forwarding Activity alert, open the Alerts page to see the\nActivity list section. Here's an example.\nSelect Activity to view the details of that activity in the sidebar. Here's an example.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1449,
+      "end": 1450
+    },
+    "content_stats": {
+      "char_count": 1368,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Email forwarding rules",
+      "children": []
+    }
+  }
+}

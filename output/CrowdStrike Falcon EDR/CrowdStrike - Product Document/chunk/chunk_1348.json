@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1348",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n369/1226\nField\nDescription\nContextProcessId\nUPID of process originating this event.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID\nof the process that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that\nperformed thread injection in an InjectedThread event\nDesiredAccess\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nParentImageFileName\nParentCommandLine\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\nTemplateInstanceVersion\nPatternIdList\nHandleOperationType\nValues:\nOPEN (0)\nDUPLICATE (1)\nFORK (2)\nParentProcessPatternIdList\nGrandparentProcessPatternIdList\nContextProcessTagsAsString\nCallStackModuleNames\nSemicolon-delimited list of modules or memory regions present in the call stack. Format determined by the accompanying\nCallStackModuleNamesVersion field on Windows.\nSuspectStackFlag\nValues:\nNOT_SUSPECT (0x00000000)\nTHREAD_START_NOT_IN_MODULE (0x00000001)\nTHREAD_START_IN_NON_IMAGE_FILE (0x00000002)\nINVALID_TEB_STACK_VALUES (0x00000004)\nSTACK_POINTER_NOT_IN_STACK (0x00000008)\nBASE_POINTER_NOT_IN_STACK (0x00000010)\nSYSCALL_RETURN_ADDRESS_NOT_IN_NTDLL (0x00000020)\nSYSCALL_RETURN_ADDRESS_ON_STACK (0x00000040)\nSTACK_IS_EXECUTABLE (0x00000080)\nRETURN_ADDRESS_NOT_IN_MODULE (0x00000100)\nRETURN_ADDRESS_IN_NON_IMAGE_FILE (0x00000200)\nRETURN_ADDRESS_IS_WRITABLE (0x00000400)\nADDRESS_IN_REFLECTIVELY_LOADED_DLL (0x00000800)\nETW_PROVIDED_CALLSTACK (0x00001000)\nRETURN_ADDRESS_NOT_IN_MODULE_AND_IS_WRITABLE (0x00000500)\nReflectiveDllName\ntop [#top]\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n370/1226",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 369,
+      "end": 370
+    },
+    "content_stats": {
+      "char_count": 2881,
+      "word_count": 272
+    },
+    "hierarchy": {
+      "parent": "ProcessHandleOpDetectInfo",
+      "children": []
+    }
+  }
+}

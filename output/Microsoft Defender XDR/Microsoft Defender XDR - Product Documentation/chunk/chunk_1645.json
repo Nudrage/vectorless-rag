@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1645",
+  "section_number": "155.1.1.222.9.3.2",
+  "header": "Mail flow alert policies",
+  "content": "ﾉ\nExpand table\nName\nDescription\nSeverity\nAutomated\ninvestigation\nRequired\nsubscription\nMessages\nhave been\ndelayed\nGenerates an alert when Microsoft can't deliver\nemail messages to your on-premises organization\nor a partner server by using a connector. When this\nhappens, the message is queued in Office 365. This\nalert is triggered when there are 2,000 messages or\nmore that have been queued for more than an\nhour.\nHigh\nNo\nE1/F1/G1,\nE3/F3/G3, or\nE5/G5\nReply-all\nstorm\ndetected\nThis alert is triggered when a reply-all storm is\ndetected and at least one reply-all to the mail\nthread was blocked. For more information, see the\nReply-all storm protection report.\nHigh\nNo\nE1/F1/G1,\nE3/F3/G3, or\nE5/G5\nName\nDescription\nSeverity\nAutomated\ninvestigation\nRequired\nsubscription\nElevation of\nExchange\nadmin\nprivilege\nGenerates an alert when someone is assigned\nadministrative permissions in your Exchange\nOnline organization. For example, when a user\nis added to the Organization Management role\ngroup in Exchange Online.\nLow\nNo\nE1/F1/G1,\nE3/F3/G3, or\nE5/G5\nName\nDescription\nSeverity\nAutomated\ninvestigation\nRequired\nsubscription\nA potentially\nmalicious URL click\nwas detected\nGenerates an alert when a user protected by Safe\nLinks in your organization clicks a malicious link.\nThis alert is generated when a user clicks on a link\nand this event triggers a URL verdict change\nidentification by Microsoft Defender for Office\n365. It also checks for any clicks in the past 48\nhours from the time the malicious URL verdict is\nidentified, and generates alerts for the clicks that\nhappened in the 48-hour timeframe for that\nmalicious link. This alert automatically triggers\nautomated investigation and response in\nDefender for Office 365 Plan 2. For more\ninformation on events that trigger this alert, see\nSet up Safe Links policies.\nHigh\nYes\nE5/G5 or\nDefender for\nOffice 365\nPlan 2 add-\non\nsubscription.\nA Tenant Allow\nBlock List entry has\nGenerates an alert when Microsoft determines\nthat the admin submission corresponding to an\nInformational\nNo\nE1/F1/G1,\nE3/F3/G3, or",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 16,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1218,
+      "end": 1219
+    },
+    "content_stats": {
+      "char_count": 2056,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "Default alert policies",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2447",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nFfcLogSourceType\nIdentifies the type of log from which a log entry is derived.(e.g., Linux Audit logs, Apple Unified logs, etc.)\nValues:\nLOG_UNDEFINED (0)\nLOG_FLATFILE (1)\nLOG_LINUXAUDIT (2)\nLOG_UTMPRECORD (3)\nLOG_APPLESYSTEMLOG (4)\nLOG_WINDOWSEVENTLOG (5)\nLOG_APPLEUNIFIED (6)\nLOG_APPLEAUDIT (7)\nLOG_APPLESPOTLIGHT (8)\nLOG_WINDOWSWEBLOG (9)\nFfcLogOrigin\nFile path or name of utility from which a log entry was read.\nFfcLogConfidenceInterval\nConfidence interval of timestamp parsing, in 100ns ticks.\nForensicsText\nA unit of forensically intersting text read from a system logor some other text file of interest, such as shell history, ssh config,\nstartup scripts, etc.\nFfcStructuredLogEntry\nAn entry of structured log data.\nComputerName\nName of the device on which sensor is running.\nFfcLogName\nName of event log.\nFfcLogEventId\nNumerical code to distinguish an event. See https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx\n[https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx]\nFfcWindowsLogEventCategory\nNumerical category of event, organizing events so Event Viewer can filter them. Each event source can define its own\nnumbered categories and the text strings to which they are mapped. See https://learn.microsoft.com/en-\nus/windows/win32/eventlog/event-categories [https://learn.microsoft.com/en-us/windows/win32/eventlog/event-categories]\nFfcWindowsLogEventType\nWindows application indicates the event type when it reports an event. Each event must be of a single type.\nValues:\nSUCCESS (0x0000)\nERROR (0x0001)\nWARNING (0x0002)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n855/1226\nField\nDescription\nINFORMATION (0x0004)\nAUDIT_SUCCESS (0x0008)\nAUDIT_FAILURE (0x0010)\nFfcLogFilterTag\nTag indicating which directive in the collector configuration file captured an event. Useful as a quick filter for events.\nFfcLogKeyword\n64-bit mask defined in an event provider, used to group the event with other similar events (based on the usage of the events).\nSee https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?\nview=netframework-4.8 [https://learn.microsoft.com/en-\nus/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?view=netframework-4.8]\nValues:\nNONE (0)\nAUDIT_FAILURE (0x0010000000000000)\nAUDIT_SUCCESS (0x0020000000000000)\nCORRELATION_HINT2 (0x0040000000000000)\nEVENTLOG_CLASSIC (0x0080000000000000)\nRESPONSE_TIME (0x0001000000000000)\nWDI_CONTEXT (0x0002000000000000)\nWDI_DIAGNOSTIC (0x0004000000000000)\nSQM (0x0008000000000000)\nFfcLogRecordNumber\nRecord identifier within the event log.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 855,
+      "end": 856
+    },
+    "content_stats": {
+      "char_count": 2875,
+      "word_count": 302
+    },
+    "hierarchy": {
+      "parent": "LogEntry",
+      "children": []
+    }
+  }
+}

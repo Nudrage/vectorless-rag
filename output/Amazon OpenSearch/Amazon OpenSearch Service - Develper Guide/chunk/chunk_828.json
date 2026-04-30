@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_828",
+  "section_number": "2.12.4.13.1",
+  "header": "Step 1: Create master and limited IAM roles",
+  "content": "Navigate to the AWS Identity and Access Management (IAM) console and create two separate roles:\n• MasterUserRole – The master user, which will have full permissions to the cluster and manage\nroles and role mappings.\nTutorial: Fine-grained access control with Cognito authentication\n1359\nAmazon OpenSearch Service\nDeveloper Guide\n• LimitedUserRole – A more restricted role, which you'll grant limited access to as the master\nuser.\nFor instructions to create the roles, see Creating a role using custom trust policies in the IAM User\nGuide.\nBoth roles must have the following trust policy, which allows your Cognito identity pool to assume\nthe roles:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Federated\": \"cognito-identity.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRoleWithWebIdentity\",\n\"Condition\": {\n\"StringEquals\": {\n\"cognito-identity.amazonaws.com:aud\": \"{identity-pool-id}\"\n},\n\"ForAnyValue:StringLike\": {\n\"cognito-identity.amazonaws.com:amr\": \"authenticated\"\n}\n}\n}]\n}\nNote\nReplace identity-pool-id with the unique identiﬁer of your Amazon Cognito identity\npool. For example, us-east-1:0c6cdba7-3c3c-443b-a958-fb9feb207aa6.\nTutorial: Fine-grained access control with Cognito authentication\n1360\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1388,
+      "end": 1390
+    },
+    "content_stats": {
+      "char_count": 1275,
+      "word_count": 160
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Conﬁgure a domain with an IAM master user and Amazon Cognito authentication",
+      "children": []
+    }
+  }
+}

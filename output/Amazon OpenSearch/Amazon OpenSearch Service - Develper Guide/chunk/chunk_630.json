@@ -1,0 +1,47 @@
+{
+  "chunk_id": "chunk_630",
+  "section_number": "2.10.1",
+  "header": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+  "content": "CloudWatch\nAmazon OpenSearch Service publishes data from your domains to Amazon CloudWatch.\nCloudWatch lets you retrieve statistics about those data points as an ordered set of time-\nseries data, known as metrics. OpenSearch Service sends most metrics to CloudWatch in 60-\nsecond intervals. If you use General Purpose or Magnetic EBS volumes, the EBS volume metrics\nupdate only every ﬁve minutes. All cumulative metrics (e.g. ThreadpoolWriteRejected,\nThreadpoolSearchRejected) are in-memory and will lose state. Metrics will reset during a node\ndrop, node bounce, node replacement, and blue/green deployment. For more information about\nAmazon CloudWatch, see the Amazon CloudWatch User Guide.\nThe OpenSearch Service console displays a series of charts based on the raw data from\nCloudWatch. Depending on your needs, you might prefer to view cluster data in CloudWatch\ninstead of the graphs in the console. The service archives metrics for two weeks before discarding\nthem. The metrics are provided at no extra charge, but CloudWatch still charges for creating\ndashboards and alarms. For more information, see Amazon CloudWatch pricing.\nOpenSearch Service publishes the following metrics to CloudWatch:\n• the section called “Cluster metrics”\n• the section called “Dedicated master node metrics”\n• the section called “EBS volume metrics”\n• the section called “Instance metrics”\n• the section called “Warm metrics”\n• the section called “Dedicated coordinator node metrics”\n• the section called “Cold storage metrics”\n• the section called “Alerting metrics”\n• the section called “Anomaly detection metrics”\n• the section called “Asynchronous search metrics”\n• the section called “SQL metrics”\nMonitoring cluster metrics\n1162\nAmazon OpenSearch Service\nDeveloper Guide\n• the section called “k-NN metrics”\n• the section called “Cross-cluster search metrics”\n• the section called “Cross-cluster replication metrics”\n• the section called “Learning to Rank metrics”\n• the section called “Piped Processing Language metrics”",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1191,
+      "end": 1192
+    },
+    "content_stats": {
+      "char_count": 2012,
+      "word_count": 296
+    },
+    "hierarchy": {
+      "parent": "Monitoring Amazon OpenSearch Service domains",
+      "children": [
+        "Viewing metrics in CloudWatch",
+        "Interpreting health charts in OpenSearch Service",
+        "Cluster metrics",
+        "Dedicated master node metrics",
+        "Dedicated coordinator node metrics",
+        "EBS volume metrics",
+        "Instance metrics",
+        "Warm metrics",
+        "Cold storage metrics",
+        "OpenSearch Optimized Instances (OR1) metrics",
+        "Alerting metrics",
+        "Anomaly detection metrics",
+        "Asynchronous search metrics",
+        "Auto-Tune metrics",
+        "Multi-AZ with Standby metrics",
+        "Point in time metrics",
+        "SQL metrics",
+        "k-NN metrics",
+        "Cross-cluster search metrics",
+        "Cross-cluster replication metrics",
+        "Learning to Rank metrics",
+        "Piped Processing Language metrics"
+      ]
+    }
+  }
+}

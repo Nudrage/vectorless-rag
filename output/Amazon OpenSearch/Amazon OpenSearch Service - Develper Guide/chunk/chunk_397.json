@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_397",
+  "section_number": "2.7.10.10.3",
+  "header": "Policy syntax",
+  "content": "A data access policy includes a set of rules, each with the following elements:\nElement\nDescription\nResourceType\nThe type of resource (collection or index) that the permissions apply to.\nAlias and template permissions are at the collection level, while permissions\nfor creating, modifying, and searching data are at the index level. For more\ninformation, see Supported policy permissions.\nResource\nA list of resource names and/or patterns. Patterns are preﬁxes followed by\na wildcard (*), which allow the associated permissions to apply to multiple\nresources.\n• Collections take the format collection/ <name|pattern> .\n• Indexes take the format index/<collection-name|p\nattern> /<index-name|pattern/>\n.\nPermission\nA list of permissions to grant for the speciﬁed resources. For a complete\nlist of permissions and the API operations they allow, see the section called\n“Supported OpenSearch API operations and permissions”.\nData access control\n549\nAmazon OpenSearch Service\nDeveloper Guide\nElement\nDescription\nPrincipal\nA list of one or more principals to grant access to. Principals can be IAM role\nARNs or SAML identities. These principals must be within the current AWS\naccount. Data access policies don't directly support cross-account access,\nbut you can include a role in your policy that a user from a diﬀerent AWS\naccount can assume in the collection-owning account. For more informati\non, see the section called “Cross-account data access”.\nThe following example policy grants alias and template permissions to the collection called\nautopartsinventory, as well as any collections that begin with the preﬁx sales*. It also grants\nread and write permissions to all indexes within the autopartsinventory collection, and any\nindexes in the salesorders collection that begin with the preﬁx orders*.\n[\n{\n\"Description\": \"Rule 1\",\n\"Rules\":[\n{\n\"ResourceType\":\"collection\",\n\"Resource\":[\n\"collection/autopartsinventory\",\n\"collection/sales*\"\n],\n\"Permission\":[\n\"aoss:CreateCollectionItems\",\n\"aoss:UpdateCollectionItems\",\n\"aoss:DescribeCollectionItems\"\n]\n},\n{\n\"ResourceType\":\"index\",\n\"Resource\":[\n\"index/autopartsinventory/*\",\n\"index/salesorders/orders*\"\n],\n\"Permission\":[\n\"aoss:*\"\n]\n}\nData access control\n550\nAmazon OpenSearch Service\nDeveloper Guide\n],\n\"Principal\":[\n\"arn:aws:iam::123456789012:user/Dale\",\n\"arn:aws:iam::123456789012:role/RegulatoryCompliance\",\n\"saml/123456789012/myprovider/user/Annie\",\n\"saml/123456789012/anotherprovider/group/Accounting\"\n]\n}\n]\nYou can't explicitly deny access within a policy. Therefore, all policy permissions are additive.\nFor example, if one policy grants a user aoss:ReadDocument, and another policy grants\naoss:WriteDocument, the user will have both permissions. If a third policy grants the same user\naoss:*, then the user can perform all actions on the associated index; more restrictive permissions\ndon't override less restrictive ones.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 578,
+      "end": 580
+    },
+    "content_stats": {
+      "char_count": 2874,
+      "word_count": 377
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

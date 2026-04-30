@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1757",
+  "section_number": "155.1.1.241",
+  "header": "Create an app with partner access to Microsoft Defender XDR APIs",
+  "content": "Microsoft Defender XDR APIs\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThis page describes how to create a Microsoft Entra app that has programmatic access to\nMicrosoft Defender XDR, on behalf of users across multiple tenants. Multi-tenant apps are\nuseful for serving large groups of users.\nIf you need programmatic access to Microsoft Defender XDR on behalf of a single user, see\nCreate an app to access Microsoft Defender XDR APIs on behalf of a user. If you need access\nwithout a user explicitly defined (for example, if you're writing a background app or daemon),\nsee Create an app to access Microsoft Defender XDR without a user. If you're not sure which\nkind of access you need, see Get started.\nMicrosoft Defender XDR exposes much of its data and actions through a set of programmatic\nAPIs. Those APIs help you automate workflows and make use of Microsoft Defender XDR's\ncapabilities. This API access requires OAuth2.0 authentication. For more information, see OAuth\n2.0 Authorization Code Flow.\nIn general, you'll need to take the following steps to use these APIs:\nCreate a Microsoft Entra application.\nGet an access token using this application.\nUse the token to access Microsoft Defender XDR API.\nSince this app is multi-tenant, you'll also need admin consent from each tenant on behalf of its\nusers.\nThis article explains how to:\nCreate a multi-tenant Microsoft Entra application\nGet authorized consent from your user administrator for your application to access the\nMicrosoft Defender XDR that resources it needs.\nGet an access token to Microsoft Defender XDR\nValidate the token\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nMicrosoft Defender XDR exposes much of its data and actions through a set of programmatic\nAPIs. Those APIs will help you automate work flows and innovate based on Microsoft Defender\nXDR capabilities. The API access requires OAuth2.0 authentication. For more information, see\nOAuth 2.0 Authorization Code Flow.\nIn general, you'll need to take the following steps to use the APIs:\nCreate a multi-tenant Microsoft Entra application.\nGet authorized (consent) by your user administrator for your application to access\nMicrosoft Defender XDR resources it needs.\nGet an access token using this application.\nUse the token to access Microsoft Defender XDR API.\nThe following steps with guide you how to create a multi-tenant Microsoft Entra application,\nget an access token to Microsoft Defender XDR and validate the token.\n1. Sign in to Azure\n.\n2. Navigate to Microsoft Entra ID > App registrations > New registration.\n3. In the registration form:\nChoose a name for your application.\nFrom Supported account types, select Accounts in any organizational directory\n(Any Microsoft Entra directory) - Multitenant.\nFill out the Redirect URI section. Select type Web and give the redirect URI as\nhttps://portal.azure.com\n.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1325,
+      "end": 1326
+    },
+    "content_stats": {
+      "char_count": 3043,
+      "word_count": 480
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Create the multi-tenant app",
+        "Get an access token",
+        "Validate the token",
+        "Use the token to access the Microsoft Defender XDR API",
+        "Related articles"
+      ]
+    }
+  }
+}

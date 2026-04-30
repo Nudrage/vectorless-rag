@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1116",
+  "section_number": "2.18.3.2",
+  "header": "Step 2: Set up AWS conﬁguration for Okta",
+  "content": "Complete the following tasks to set up your AWS conﬁguration for Okta.\nTask 1: Gather Okta Information\nFor this step, you will need to gather your Okta information so that you can later conﬁgure it in\nAWS.\n1.\nSign in to your Okta organization at https://login.okta.com/ as a user with administrative\nprivileges.\n2.\nOn the Sign On tab, in the lower right corner of the page, choose View SAML setup\ninstructions.\nStep 2: Set up AWS conﬁguration for Okta\n1644\nAmazon OpenSearch Service\nDeveloper Guide\n3.\nTake note of the value for Identity Provider Single Sign-on URL. You can use this URL when\nconnecting to any third-party SQL client such as SQL Workbench/J.\n4.\nUse the identity provider metadata in block 4, and then save the metadata ﬁle in .xml format\n(for example, metadata.xml).\nTask 2: Create the IAM provider\nTo create your IAM provider, complete the following steps:\n1.\nSign in to the AWS Management Console and open the IAM console at https://\nconsole.aws.amazon.com/iam/.\n2.\nIn the navigation pane, under Access management , choose Identity providers.\n3.\nChoose Add provider.\n4.\nFor Provider type¸ select SAML.\n5.\nFor Provider name¸ enter a name.\n6.\nFor Metadata document, choose Choose ﬁle and upload the metadata ﬁle (.xml) you\ndownloaded earlier.\n7.\nChoose Add provider.\nTask 3: Create IAM role\nTo create your AWS Identity and Access Management role, complete the following steps:\n1.\nSign in to the AWS Management Console and open the IAM console at https://\nconsole.aws.amazon.com/iam/.\n2.\nIn the navigation pane, under Access management , choose Roles.\n3.\nChoose Create role.\n4.\nFor Trusted entity type, select SAML 2.0 federation.\n5.\nFor SAML 2.0-based provider, choose the identity provider you created earlier.\n6.\nSelect Allow programmatic and AWS Management Console access.\n7.\nChoose Next.\n8.\nIn the Permissions policies list, select the check boxes for policies that\ngrant OpenSearch Service permissions, for example, AWS managed policy\nAmazonOpenSearchServiceFullAccess.\nStep 2: Set up AWS conﬁguration for Okta\n1645\nAmazon OpenSearch Service\nDeveloper Guide\n9.\nChoose Next.\n10. In the Review area, for Role name, enter the name of your role; for example, oktarole.\n11. (Optional) For Description, enter a brief description of the purpose of the role.\n12. Choose Create role.\n13. Navigate to the role that you just created, choose the Trust Relationships tab, and then\nchoose Edit trust policy.\n14. In the Edit statement pane, under Add actions for STS, select the box for TagSession.\n15. Choose Update policy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1673,
+      "end": 1675
+    },
+    "content_stats": {
+      "char_count": 2531,
+      "word_count": 411
+    },
+    "hierarchy": {
+      "parent": "Enabling SAML federation with AWS Identity and Access Management",
+      "children": []
+    }
+  }
+}

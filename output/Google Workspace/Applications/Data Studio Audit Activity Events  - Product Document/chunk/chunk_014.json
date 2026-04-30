@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_014",
+  "section_number": "1.2.11",
+  "header": "Update Report Email Delivery",
+  "content": "Update report email delivery event name.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/data_studio?\neventName=TRASH&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{actor} trashed an asset\nEvent details\nEvent name\nUPDATE_REPORT_EMAIL_DELIVERY\nParameters\nASSET_ID\nstring\nAsset Id.\nASSET_NAME\nstring\nAsset name.\nASSET_TYPE\nstring\nAsset type. Possible values:\nDATA_SOURCE\nAsset type data source.\nEXPLORER\nAsset type explorer.\nREPORT\nAsset type report.\nWORKSPACE\nAsset type workspace.\nOWNER_EMAIL\nstring\nOwner email.\nPARENT_WORKSPACE_ID\nstring\nParent Workspace Id.\nSample request\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 16,
+      "end": 17
+    },
+    "content_stats": {
+      "char_count": 639,
+      "word_count": 67
+    },
+    "hierarchy": {
+      "parent": "Access",
+      "children": []
+    }
+  }
+}

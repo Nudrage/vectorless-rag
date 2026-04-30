@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_014",
+  "section_number": "1.3.5",
+  "header": "In-call messages visible to all",
+  "content": "An event indicating that everyone in the call can see chat messages.\nEvent details\nEvent name\nsee_chat_everyone\nParameters\naction_time\nstring\nAction time.\nconference_id\nstring\nThe unique identifier of the conference.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/meet?\neventName=in_meet_broadcast_activity\n&maxResults=10&access_token=YOUR_ACCESS_TOKEN\nThe endpoint performed an action that requires\nto be reported\nEvent details\nidentifier\nstring\nThe unique participant identifier (for\nexample, an email address, phone\nnumber, or device ID).\nidentifier_type\nstring\nIndicates the type of the participant\nidentifier. Possible values:\ndevice_id\nThe unique device identifier of the\nMeet hardware.\nemail_address\nThe participant's email address.\nVisible when the participant is in-\ndomain or when the meeting is\norganized by a user who is in-\ndomain.\nphone_number\nThe participant's telephone number.\nis_external\nboolean\nIndicates if the participant is external\nto your organization.\nmeeting_code\nstring\nThe meeting code for the Google Meet\nconference (for example, 'abc-hexp-\ntqy'). Recurrent meetings have the\nsame meeting code.\nSample request\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 21,
+      "end": 22
+    },
+    "content_stats": {
+      "char_count": 1203,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Conference action",
+      "children": []
+    }
+  }
+}

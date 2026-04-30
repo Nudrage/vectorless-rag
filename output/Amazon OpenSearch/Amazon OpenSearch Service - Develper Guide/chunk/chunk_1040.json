@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1040",
+  "section_number": "2.16",
+  "header": "Vector search",
+  "content": "Vector search in Amazon OpenSearch Service enables you to search for semantically similar\ncontent using machine learning embeddings rather than traditional keyword matching. Vector\nsearch converts your data (text, images, audio, etc.) into high-dimensional numerical vectors\n(embeddings) that capture the semantic meaning of the content. When you perform a search,\nOpenSearch compares the vector representation of your query against the stored vectors to ﬁnd\nthe most similar items.\nVector search includes the following key components.\nVector ﬁelds\nOpenSearch supports the knn_vector ﬁeld type to store dense vectors with conﬁgurable\ndimensions (up to 16,000).\nSearch methods\n• k-NN (k-nearest neighbors): Finds the k most similar vectors\n• Approximate k-NN: Uses algorithms like HNSW (Hierarchical Navigable Small World) for\nfaster searches on large datasets\nDistance metrics\nSupports various similarity calculations including:\n• Euclidean distance\n• Cosine similarity\n• Dot product\nCommon use cases\nVector search supports the following common use cases.\n• Semantic search: Find documents with similar meaning, not just matching keywords\n• Recommendation systems: Suggest similar products, content, or users\n• Image search: Find visually similar images\n• Anomaly detection: Identify outliers in data patterns\n• RAG (Retrieval Augmented Generation): Enhance LLM responses with relevant context\n1565\nAmazon OpenSearch Service\nDeveloper Guide\nIntegration with machine learning\nOpenSearch integrates with the following machine learning services and models:\n• Amazon Bedrock: For generating embeddings using foundation models\n• Amazon SageMaker AI: For custom ML model deployment\n• Hugging Face models: Pre-trained embedding models\n• Custom models: Your own trained embedding models\nWith vector search, you can build sophisticated AI-powered applications that understand context\nand meaning, going far beyond traditional text matching capabilities.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 20,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1594,
+      "end": 1595
+    },
+    "content_stats": {
+      "char_count": 1944,
+      "word_count": 270
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service",
+      "children": [
+        "Import from Amazon S3 Vectors to OpenSearch Serverless",
+        "Advanced search capabilities with an Amazon S3 vector engine",
+        "k-Nearest Neighbor (k-NN) search in Amazon OpenSearch Service",
+        "Vector ingestion",
+        "Auto-optimize",
+        "GPU-acceleration for vector indexing"
+      ]
+    }
+  }
+}

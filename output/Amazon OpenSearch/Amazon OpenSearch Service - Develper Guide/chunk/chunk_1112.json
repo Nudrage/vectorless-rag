@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1112",
+  "section_number": "2.18.2.3.1",
+  "header": "Managing OpenSearch UI administrators using the console",
+  "content": "You can add additional administrators to an OpenSearch UI application in the AWS Management\nConsole, either during the application creation workﬂow or in the Edit page after the application\nhas been created.\nThe OpenSearch UI application administrator role grants permissions to edit and delete an\nOpenSearch UI application. Application administrators can also create, edit and delete workspaces\nin an OpenSearch UI application.\nManaging application administrators\n1636\nAmazon OpenSearch Service\nDeveloper Guide\nOn an application detail page, you can search for the Amazon Resource Name (ARN) of an IAM\nprincipal or search for the name of IAM Identity Center user.\nTo manage OpenSearch UI administrators using the console\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation pane, choose OpenSearch UI (Dashboards).\n3.\nIn the OpenSearch applications area, choose the name of an existing application.\n4.\nChoose Edit\n5.\nTo grant administrator permissions to other users, choose one of the following:\n• Grant administrator's permission to speciﬁc user(s) – In the OpenSearch application\nadmins ﬁeld, in the Properties pop-up list, select IAM users or\nAWS IAM Identity Center users, and then choose the individual users to grant administrator\npermissions to.\n• Grant administrator permission to all users – All users in your organization or account are\ngranted administrator permissions.\n6.\nChoose Update.\nYou can remove additional administrators, but each OpenSearch UI application must retain at least\none administrator.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1665,
+      "end": 1666
+    },
+    "content_stats": {
+      "char_count": 1588,
+      "word_count": 235
+    },
+    "hierarchy": {
+      "parent": "Managing application administrators",
+      "children": []
+    }
+  }
+}

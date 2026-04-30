@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1094",
+  "section_number": "2.17",
+  "header": "Using OpenSearch Dashboards with Amazon OpenSearch Service",
+  "content": "Service\nOpenSearch Dashboards is an open-source visualization tool designed to work with OpenSearch.\nAmazon OpenSearch Service provides an installation of Dashboards with every OpenSearch Service\ndomain. Dashboards runs on the hot data nodes in the domain.\nOpenSearch Dashboards is a visualization tool for exploring and analyzing data within a single\nOpenSearch domain. In contrast, the centralized OpenSearch user interface (also called an\nOpenSearch application) is a cloud-based UI that connects to multiple OpenSearch domains,\nOpenSearch Serverless collections, and AWS data sources. It includes workspaces for speciﬁc use\ncases like observability and security analytics, and provides a uniﬁed experience across data sets.\nWhile Dashboards is tied to individual domains, the centralized UI enables cross-domain data\nintegration and analysis. For more information, see OpenSearch UI.\nYou can ﬁnd a link to OpenSearch Dashboards on your domain dashboard in the OpenSearch\nService console. For domains running OpenSearch, the URL is domain-endpoint/\n_dashboards/. For domains running legacy Elasticsearch, the URL is domain-endpoint/\n_plugin/kibana.\nQueries using this default Dashboards installation have a 300-second timeout.\nNote\nThis documentation discusses OpenSearch Dashboards in the context of Amazon\nOpenSearch Service, including diﬀerent ways to connect to it. For comprehensive\ndocumentation, including a getting started guide, instruction to create a dashboard,\ndashboards management, and Dashboards Query Language (DQL), see OpenSearch\nDashboards in the open source OpenSearch documentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 20,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1642,
+      "end": 1642
+    },
+    "content_stats": {
+      "char_count": 1606,
+      "word_count": 218
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service",
+      "children": [
+        "Controlling access to Dashboards",
+        "Conﬁguring Dashboards to use a WMS map server",
+        "Connecting a local Dashboards server to OpenSearch Service",
+        "Managing indexes in Dashboards",
+        "Additional features"
+      ]
+    }
+  }
+}

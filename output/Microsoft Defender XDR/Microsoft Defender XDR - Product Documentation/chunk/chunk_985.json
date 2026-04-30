@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_985",
+  "section_number": "155.1.1.108",
+  "header": "DeviceBaselineComplianceAssessmentKB (Preview)",
+  "content": "(Preview)\n06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceBaselineComplianceAssessmentKB  table in the advanced hunting schema contains\ninformation about various security configurations used by baseline compliance to assess\ndevices.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nConfigurationId\nstring\nUnique identifier for a specific configuration\nConfigurationName\nstring\nDisplay name of the configuration\nConfigurationDescription\nstring\nDescription of the configuration\nConfigurationRationale\nstring\nDescription of any associated risks and rationale behind the\nconfiguration\nConfigurationCategory\nstring\nCategory or grouping to which the configuration belongs\nBenchmarkProfileLevels\ndynamic\nList of benchmark compliance levels for which the configuration\nis applicable\nCCEReference\nstring\nUnique Common Configuration Enumeration (CCE) identifier for\nthe configuration\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nRemediationOptions\nstring\nRecommended actions to reduce or address any associated risks\nConfigurationBenchmark\nstring\nIndustry benchmark recommending the configuration\nSource\ndynamic\nThe registry path or other location used to determine the\ncurrent device setting\nRecommendedValue\ndynamic\nSet of expected values for the current device setting to be\ncompliant\nDeviceBaselineComplianceAssessment\nUnderstand the schema\nApply query best practices\nOverview of Defender Vulnerability Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 677,
+      "end": 678
+    },
+    "content_stats": {
+      "char_count": 2134,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

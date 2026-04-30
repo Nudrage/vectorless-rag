@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_497",
+  "section_number": "2.8.9.1",
+  "header": "Multi-AZ with Standby",
+  "content": "Multi-AZ with Standby is a deployment option for Amazon OpenSearch Service domains that oﬀers\n99.99% availability, consistent performance for production workloads, and simpliﬁed domain\nconﬁguration and management. When you use Multi-AZ with Standby, domains are resilient to\ninfrastructure failures, with no impact to performance or availability. This deployment option\nachieves this standard by mandating a number of best practices, such as a speciﬁed data node\ncount, master node count, instance type, replica count, software update settings, and Auto-Tune\nturned on.\nNote\nMulti-AZ with Standby is available for OpenSearch version 1.3 and above, and requires\nregions with at least three Availability Zones.\nWhen you use Multi-AZ with Standby, OpenSearch Service creates a domain across three\nAvailability Zones, with each zone containing a complete copy of data and with the data equally\ndistributed in each of the zones. Your domain reserves nodes in one of these zones as standby,\nwhich means that they don't serve search requests. When OpenSearch Service detects a failure in\nthe underlying infrastructure, it automatically activates the standby nodes in less than a minute.\nThe domain continues to serve indexing and search requests, and any impact is limited to the\ntime it takes to perform the failover. There is no redistribution of data or resources, which results\nin unaﬀected cluster performance and no risk of degraded availability. Multi-AZ with Standby is\navailable at no extra cost.\nMulti-AZ with Standby\n665\nAmazon OpenSearch Service\nDeveloper Guide\nYou have two options to create a domain with standby on the AWS Management Console. First,\nyou can create a domain with the Easy create creation method, and OpenSearch Service will\nautomatically use a predetermined conﬁguration, which includes the following:\n• Three Availability Zones, with one acting as a standby\n• Three dedicated master node and data nodes\n• Auto-Tune enabled on the domain\n• GP3 storage for the data nodes\nYou can also choose the Standard create creation method and select Domain with standby as\nyour deployment option. This allows you to customize your domain while still mandating key\nfeatures of standby, such as three zones and three master nodes. We recommend choosing a data\nnode count that's a multiple of three (the number of Availability Zones).\nOnce you've created your domain, you can navigate to the domain details pages and, in the Cluster\nconﬁguration tab, conﬁrm that 3-AZ with standby appears under Availability Zone(s).\nIf you have problems migrating an existing domain to Multi-AZ with Standby, see Error migrating\nto Multi-AZ with Standby in the troubleshooting guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 694,
+      "end": 695
+    },
+    "content_stats": {
+      "char_count": 2676,
+      "word_count": 416
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring a multi-AZ domain in Amazon OpenSearch Service",
+      "children": [
+        "Limitations"
+      ]
+    }
+  }
+}

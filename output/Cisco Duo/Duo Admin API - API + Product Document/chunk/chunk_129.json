@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_129",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\n{\n\"response\": [\n{\n\"daid\": 365,\n\"dakey\": \"DDABCDE1FGHIJ23KL45\",\n\"device_name\": \"DESKTOP-ABC1234\",\n\"duo_desktop_version\": \"6.12.0\",\n\"os_family\": \"Windows\"\n}\n],\n\"stat\": \"OK\"\n}\nGET  /admin/v1/users/directorysync\ndirectory_key\nThe external directory sync's unique identifier.\ndirectory_type\nThe type of external directory sync. One of:\nactivedirectory , azure , google , or\nopenldap .\nlast_full_sync_result\nThe outcome of the last full sync attempt, either\ncompleted  or failed .\nlast_full_sync_time\nTimestamp of the last full sync.\nname\nThe name of the directory sync.\npaused\nWhether automatic sync of this directory is paused;\ntrue  or false .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 48,
+      "end": 49
+    },
+    "content_stats": {
+      "char_count": 650,
+      "word_count": 89
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

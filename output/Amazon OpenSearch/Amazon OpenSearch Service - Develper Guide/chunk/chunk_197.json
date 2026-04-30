@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_197",
+  "section_number": "2.6.17.3",
+  "header": "Migrating data to an OpenSearch Serverless VPC collection",
+  "content": "You can use OpenSearch Ingestion to migrate data from a source OpenSearch Service domain\nor OpenSearch Serverless collection to a VPC collection sink. You must provide a network\naccess policy within the pipeline conﬁguration. For more information about data ingestion\ninto OpenSearch Serverless VPC collections, see the section called “Tutorial: Ingest data into a\ncollection”.\nSpecifying multiple OpenSearch Service domain sinks\n298\nAmazon OpenSearch Service\nDeveloper Guide\nTo migrate data to a VPC collection\n1.\nCreate an OpenSearch Serverless collection. For instructions, see the section called “Tutorial:\nIngest data into a collection”.\n2.\nCreate a network policy for the collection that speciﬁes VPC access to both the collection\nendpoint and the Dashboards endpoint. For instructions, see the section called “Network\naccess”.\n3.\nCreate the pipeline role if you don't already have one. For instructions, see the section called\n“Pipeline role”.\n4.\nCreate the pipeline. For instructions, see the section called “Working with blueprints”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 327,
+      "end": 328
+    },
+    "content_stats": {
+      "char_count": 1042,
+      "word_count": 153
+    },
+    "hierarchy": {
+      "parent": "Migrating data between domains and collections using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

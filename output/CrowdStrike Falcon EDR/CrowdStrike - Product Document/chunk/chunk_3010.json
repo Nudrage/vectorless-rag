@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3010",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nPtAnalysisTrigger\nValues:\nCREATE_PROCESS_TRIGGER (1)\nLOAD_IMAGE_TRIGGER (2)\nPROTECT_VM_TRIGGER (3)\nDISABLE_DEP_TRIGGER (4)\nEXCEPTION_TRIGGER (5)\nREG_WRITE_TRIGGER (6)\nPtAnalysisDuration\nPtNumberOfPackets\nPtNumberOfPacketDecodeErrors\nPtNumberOfIncompletePackets\nPtNumberOfInstructions\nPtNumberOfInstructionDecodeErrors\nPtNumberOfBindingErrors\nPtNumberOfControlTransfers\nPtNumberOfRets\nPtNumberOfSuspectRets\nPtSuspectControlTransferInfo\nPtNumberOfShadowStackFailures\nPtRopChainLength\nPtRopChainData\nPtAnalysisFilterString\nContextImageFileName\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nParentImageFileName\nParentCommandLine\nTemplateInstanceId\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1100,
+      "end": 1100
+    },
+    "content_stats": {
+      "char_count": 947,
+      "word_count": 74
+    },
+    "hierarchy": {
+      "parent": "PtTelemetry",
+      "children": []
+    }
+  }
+}

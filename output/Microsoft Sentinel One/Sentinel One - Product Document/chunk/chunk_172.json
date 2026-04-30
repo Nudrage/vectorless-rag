@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_172",
+  "section_number": "3.9.1",
+  "header": "POST    /web/api/v2.1/agents/actions/firewall-logging",
+  "content": "Get Firewall Control events in the local log file, written in clear text, for Firewall Control events of an endpoint with Firewall Control enabled. Enable the logs for Agents\nthat match the filter.\nWhen Firewall Logging is enabled, you can choose if blocked traffic events go only to a local log on the endpoint (reportMgmt: false, reportLog: true), or also to Console >\nActivity (reportMgmt: true).\nAllowed traffic is not logged.\nEach Agent with Firewall Control Event Logging enabled keeps five log files, for a total of 100 MB maximum. The logs cycle older lines to maintain the size threshold.\nOn Windows endpoints, the Firewall Control logs are in C:\\ProgramData\\Sentinel\\logs\\. Search for log files with \"visible\" in the filename.\nOn macOS, run: sudo sentinelctl log.\nOn Linux, run: sudo /opt/sentinelone/bin/sentinelctl log generate /output_path.\nMake sure the Group and Site of the Agent has Firewall Control enabled. Firewall Control requires a Control SKU.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 257,
+      "end": 257
+    },
+    "content_stats": {
+      "char_count": 966,
+      "word_count": 152
+    },
+    "hierarchy": {
+      "parent": "Fetch Firewall Logs",
+      "children": []
+    }
+  }
+}

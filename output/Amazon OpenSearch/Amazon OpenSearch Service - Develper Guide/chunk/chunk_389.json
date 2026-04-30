@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_389",
+  "section_number": "2.7.10.9.2",
+  "header": "Use FIPS endpoints with AWS SDKs",
+  "content": "When using AWS SDKs, you can specify the FIPS endpoint when creating the client. In the following\nexample, replace collection_id and AWS Region with your collection ID and its AWS Region.\n# Python SDK example\nfrom opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth\nimport boto3\nhost = '\"https://collection_id.AWS Region.aoss-fips.amazonaws.com\"\nregion = 'us-west-2'\nservice = 'aoss'\ncredentials = boto3.Session().get_credentials()\nauth = AWSV4SignerAuth(credentials, region, service)\nclient = OpenSearch(\nhosts = [{'host': host, 'port': 443}],\nhttp_auth = auth,\nuse_ssl = True,\nverify_certs = True,\nconnection_class = RequestsHttpConnection,\npool_maxsize = 20\n)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 571,
+      "end": 571
+    },
+    "content_stats": {
+      "char_count": 682,
+      "word_count": 86
+    },
+    "hierarchy": {
+      "parent": "FIPS compliance in Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

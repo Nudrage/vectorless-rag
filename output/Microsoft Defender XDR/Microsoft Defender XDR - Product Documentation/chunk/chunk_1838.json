@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1838",
+  "section_number": "155.1.1.257.6.1.10",
+  "header": "Security Copilot (Preview)",
+  "content": "supporting incident response, threat hunting, intelligence gathering, posture management, and more.\nSecurity Copilot transforms natural language prompts into intelligent, actionable guidance, streamlining complex operations and bridging\ncybersecurity talent gaps. It allows defenders to complete tasks in minutes instead of hours or days.\nThe Security Copilot resource and its APIs allow developers to embed Security Copilot chat experiences into custom portals or applications. It\nsupports creating sessions, prompts, evaluations using the available plugins, enabling tailored AI-driven security workflows.\nA session in Security Copilot stores any AI prompts and evaluation results generated. Sessions can only be viewed by the user who created\nthe session.\nYou can have one or more prompt objects within a session. Creating a prompt does not generate an automatic AI result. The evaluation\nAPI is required to start processing the prompt.\nAI processing begins as soon as an evaluation is created. Creation of an evaluation using the prompt starts the AI reasoning. The API\nallows you to poll for the intermediary results until the AI evaluation is complete.\nFor more information, see:\nSecurity Copilot primary use cases\nUsage and billing in Microsoft Security Copilot\nMost organizations need to manage data to proactively comply with industry regulations and internal policies, reduce risk in the event of\nlitigation or a security breach, and let their employees effectively and agilely share knowledge that is current and relevant to them. You can use\nthe records management APIs to systematically apply retention labels to different types of content that require different retention settings. For\nexample, you can configure the start of retention period from when the content was created, last modified, labeled, or when an event occurs for\na particular event type. Further, you can use file plan descriptors to improve the manageability of these retention labels.\nMicrosoft Secure Score\nis a security analytics solution that gives you visibility into your security portfolio and how to improve it. With a single\nscore, you can better understand what you have done to reduce your risk in Microsoft solutions. You can also compare your score with other\norganizations and see how your score has been trending over time. The secureScore and secureScoreControlProfile entities help you balance\nyour organization's security and productivity needs while enabling the appropriate mix of security features. You can also project what your\nscore will be after you adopt security features.\nMicrosoft Defender Threat Intelligence delivers world-class threat intelligence to help protect your organization from modern cyber threats. You\ncan use Threat Intelligence to identify adversaries and their operations, accelerate detection and remediation, and enhance your security\ninvestments and workflows.\nThe threat intelligence APIs (preview) allow you to operationalize intelligence found within the user interface. This includes finished intelligence\nin the forms of articles and intel profiles, machine intelligence including IoCs and reputation verdicts, and finally, enrichment data including\npassive DNS, cookies, components, and trackers.\nThreat indicators also referred to as indicators of compromise (IoCs), represent data about known threats, such as malicious files, URLs,\ndomains, and IP addresses. Customers can generate indicators through internal threat intelligence gathering or acquire indicators from threat\nintelligence communities, licensed feeds, and other sources. These indicators are then used in various security tools to defend against related\nthreats.\nThe tiIndicator entity allows customers to feed threat indicators to Microsoft security solutions to take a block or alert action on a malicious\nactivity, or to allow the activity that has been determined to be irrelevant to the organization and suppress actions for the indicator. To send an\nindicator, specify the Microsoft security solution intended to utilize the indicator and the action to take for that indicator.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 17,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1376,
+      "end": 1377
+    },
+    "content_stats": {
+      "char_count": 4087,
+      "word_count": 599
+    },
+    "hierarchy": {
+      "parent": "Use the Microsoft Graph security API",
+      "children": []
+    }
+  }
+}

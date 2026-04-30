@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_396",
+  "section_number": "2.7.10.10.2",
+  "header": "IAM permissions required to conﬁgure data access policies",
+  "content": "Data access control for OpenSearch Serverless uses the following IAM permissions. You can specify\nIAM conditions to restrict users to speciﬁc access policy names.\n• aoss:CreateAccessPolicy – Create an access policy.\n• aoss:ListAccessPolicies – List all access policies.\n• aoss:GetAccessPolicy – See details about a speciﬁc access policy.\n• aoss:UpdateAccessPolicy – Modify an access policy.\n• aoss:DeleteAccessPolicy – Delete an access policy.\nThe following identity-based access policy allows a user to view all access policies, and update\npolicies that contain the resource pattern collection/logs.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Action\": [\n\"aoss:ListAccessPolicies\",\n\"aoss:GetAccessPolicy\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": \"*\"\n},\n{\n\"Action\": [\n\"aoss:UpdateAccessPolicy\"\n],\n\"Effect\": \"Allow\",\n\"Resource\": \"*\",\n\"Condition\": {\n\"StringEquals\": {\nData access control\n548\nAmazon OpenSearch Service\nDeveloper Guide\n\"aoss:collection\": [\n\"logs\"\n]\n}\n}\n}\n]\n}\nNote\nIn addition, OpenSearch Serverless requires the aoss:APIAccessAll and\naoss:DashboardsAccessAll permissions for collection resources. For more information,\nsee the section called “Using OpenSearch API operations”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 577,
+      "end": 578
+    },
+    "content_stats": {
+      "char_count": 1187,
+      "word_count": 156
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

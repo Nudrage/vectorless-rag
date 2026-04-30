@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_834",
+  "section_number": "1.5.239.1",
+  "header": "Understanding TargetProcessId",
+  "content": "Every ProcessRollup2 event contains a field called TargetProcessId. This ID is generated internally by the sensor, and will be unique for every instance of a\nprocess. For example, if you run cmd.exe twice, you will see two different ProcessRollup2 events with two unique values for TargetProcessId. This ID should\nnot be confused with the host operating system PID for the process, which will be a different value.\nProcesses often generate multiple, if not dozens of related events. For example, opening a browser or running an executable can generate network connectivity\nevents, temporary file write events, DNS request events, etc. We therefore need a way to understand the parent-child relationship between processes and the\nevents they generate.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "CalibreWeb",
+    "page_range": {
+      "start": 220,
+      "end": 220
+    },
+    "content_stats": {
+      "char_count": 750,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "ProcessRollup2",
+      "children": []
+    }
+  }
+}

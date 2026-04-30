@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_099",
+  "section_number": "2.6.13",
+  "header": "Managing Amazon OpenSearch Ingestion pipeline costs",
+  "content": "You can start and stop ingestion pipelines in Amazon OpenSearch Ingestion to control data ﬂow\nbased on your needs. Stopping a pipeline halts data processing while preserving conﬁgurations, so\nyou can restart it without reconﬁguring it. This can help optimize costs, manage resource usage,\nor troubleshoot issues. When you stop a pipeline, OpenSearch Ingestion doesn't process incoming\ndata, but previously ingested data remains available in OpenSearch.\nStarting and stopping simpliﬁes the setup and teardown processes for pipelines that you use for\ndevelopment, testing, or similar activities that don't require continuous availability. While your\npipeline is stopped, you aren't charged for any Ingestion OCU hours. You can still update stopped\npipelines, and they receive automatic minor version updates and security patches. Restarting a\npipeline resumes processing from new incoming data.\nNote\nIf your pipeline has excess capacity but needs to remain operational, consider adjusting its\nmaximum capacity limits rather than stopping and restarting it. This can help manage costs\nwhile ensuring that the pipeline continues processing data eﬃciently. For more details, see\nthe section called “Scaling pipelines”.\nThe following topics explain how to start and stop pipelines using the AWS Management Console,\nAWS CLI, and OpenSearch Ingestion API.\nTopics\n• Stopping an Amazon OpenSearch Ingestion pipeline\n• Starting an Amazon OpenSearch Ingestion pipeline\nManaging pipeline costs\n88\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 117,
+      "end": 118
+    },
+    "content_stats": {
+      "char_count": 1525,
+      "word_count": 221
+    },
+    "hierarchy": {
+      "parent": "Overview of Amazon OpenSearch Ingestion",
+      "children": [
+        "Stopping an Amazon OpenSearch Ingestion pipeline",
+        "Starting an Amazon OpenSearch Ingestion pipeline"
+      ]
+    }
+  }
+}

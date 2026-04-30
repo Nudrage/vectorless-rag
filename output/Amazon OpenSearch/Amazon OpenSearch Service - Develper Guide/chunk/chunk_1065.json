@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1065",
+  "section_number": "2.16.4.5",
+  "header": "View vector ingestion jobs and import history",
+  "content": "Vector ingestion jobs create a pipeline for vectorizing data sets, automating vector index tuning\nand accelerating large-scale index builds.\nTo view vector ingestion jobs\n1.\nIn the Vector ingestion jobs section, view the summary information:\n• Jobs - Total number of ingestion jobs\n• Choose Create vector database to create a new ingestion job\n2.\nIn the Amazon S3 vectors imports section, view the import summary:\n• Total imports - Number of completed imports\n• Choose Import Amazon S3 vectors to start a new import\n3.\nIn the Vector ingestion jobs table, monitor active jobs with the following information:\n• Name - The job name\n• Status - Current job status (e.g., Active)\n• Data source - Source location (e.g., s3://location)\n• Destination - Target destination\n• Last updated - Most recent update timestamp\n4.\nUse the search box to Find vector ingestion job to locate speciﬁc jobs.\n5.\nTo manage jobs, choose from the following actions:\n• Choose Delete to remove selected jobs\n• Choose Create vector database to create additional jobs\n6.\nIn the Amazon S3 vectors import history section, track import events:\na.\nUse the Date range ﬁlter to specify a time period for import history.\nView vector ingestion jobs and import history\n1590\nAmazon OpenSearch Service\nDeveloper Guide\nb.\nUse the Status dropdown to ﬁlter by import status (e.g., Any status).\nc.\nUse the search box to Find imports by Amazon S3 vector index na... to locate speciﬁc\nimports.\nd.\nView import details including:\n• Import initiated on (UTC+5:30) - When the import started\n• Import status - Current status (In progress, Complete, Failed, Partially complete)\n• Amazon S3 vector index ARN - Source index identiﬁer\n• OpenSearch Service vector collection - Destination collection\n7.\nChoose Import Amazon S3 vector to start a new import process.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1619,
+      "end": 1620
+    },
+    "content_stats": {
+      "char_count": 1805,
+      "word_count": 300
+    },
+    "hierarchy": {
+      "parent": "Vector ingestion",
+      "children": []
+    }
+  }
+}

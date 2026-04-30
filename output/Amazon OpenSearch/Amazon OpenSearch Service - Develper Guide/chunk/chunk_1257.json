@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1257",
+  "section_number": "2.19.9.4",
+  "header": "Reindex large datasets",
+  "content": "Remote reindex sends a scroll request to the remote domain with the following default values:\n• Search context of 5 minutes\n• Socket timeout of 30 seconds\n• Batch size of 1,000\nWe recommend tuning these parameters to accommodate your data. For large documents,\nconsider a smaller batch size and/or longer timeout. For more information, see Paginate results.\nPOST _reindex?pretty=true&scroll=10h&wait_for_completion=false\n{\nReindex data between non-OpenSearch Service domains\n1755\nAmazon OpenSearch Service\nDeveloper Guide\n\"source\": {\n\"remote\": {\n\"host\": \"https://remote-domain-endpoint:443\",\n\"socket_timeout\": \"60m\"\n},\n\"size\": 100,\n\"index\": \"remote_index\"\n},\n\"dest\": {\n\"index\": \"local_index\"\n}\n}\nWe also recommend adding the following settings to the local index for better performance:\nPUT local_index\n{\n\"settings\": {\n\"refresh_interval\": -1,\n\"number_of_replicas\": 0\n}\n}\nAfter the reindex process is complete, you can set your desired replica count and remove the\nrefresh interval setting.\nTo reindex only a subset of documents that you select through a query, send this request to the\nlocal domain:\nPOST _reindex\n{\n\"source\": {\n\"remote\": {\n\"host\": \"https://remote-domain-endpoint:443\"\n},\n\"index\": \"remote_index\",\n\"query\": {\n\"match\": {\n\"field_name\": \"text\"\n}\n}\n},\nReindex large datasets\n1756\nAmazon OpenSearch Service\nDeveloper Guide\n\"dest\": {\n\"index\": \"local_index\"\n}\n}\nRemote reindex doesn't support slicing, so you can't perform multiple scroll operations for the\nsame request in parallel.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1784,
+      "end": 1786
+    },
+    "content_stats": {
+      "char_count": 1491,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "Migrating Amazon OpenSearch Service indexes using remote reindex",
+      "children": []
+    }
+  }
+}

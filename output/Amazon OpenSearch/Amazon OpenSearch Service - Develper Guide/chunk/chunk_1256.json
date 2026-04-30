@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1256",
+  "section_number": "2.19.9.3",
+  "header": "Reindex data between non-OpenSearch Service domains",
+  "content": "If the remote index is hosted outside of OpenSearch Service, like in a self-managed EC2 instance,\nset the external parameter to true:\nPOST _reindex\n{\n\"source\": {\n\"remote\": {\n\"host\": \"https://remote-domain-endpoint:443\",\n\"username\": \"username\",\n\"password\": \"password\",\n\"external\": true\n},\n\"index\": \"remote_index\"\n},\n\"dest\": {\n\"index\": \"local_index\"\n}\n}\nIn this case, only basic authentication with a username and password is supported. The remote\ndomain must have a publicly accessible endpoint (even if it's in the same VPC as the local\nOpenSearch Service domain) and a certiﬁcate signed by a public CA. Self-signed or private CA-\nsigned certiﬁcates aren't supported.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1784,
+      "end": 1784
+    },
+    "content_stats": {
+      "char_count": 667,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "Migrating Amazon OpenSearch Service indexes using remote reindex",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1200",
+  "section_number": "2.19.4.8",
+  "header": "Listing cold indexes",
+  "content": "Before querying, you can list the indexes in cold storage to decide which ones to migrate to\nUltraWarm for further analysis. The following request lists all cold indexes, sorted by index name:\nGET _cold/indices/_search\nSample response\n{\n\"pagination_id\" : \"je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY\",\n\"total_results\" : 3,\n\"indices\" : [\n{\nAutomating migrations to cold storage\n1715\nAmazon OpenSearch Service\nDeveloper Guide\n\"index\" : \"my-index-1\",\n\"index_cold_uuid\" : \"hjEoh26mRRCFxRIMdgvLmg\",\n\"size\" : 10339,\n\"creation_date\" : \"2021-06-28T20:23:31.206Z\",\n\"start_time\" : \"2020-03-09T00:00Z\",\n\"end_time\" : \"2020-03-09T23:00Z\"\n},\n{\n\"index\" : \"my-index-2\",\n\"index_cold_uuid\" : \"0vIS2n-oROmOWDFmwFIgdw\",\n\"size\" : 6068,\n\"creation_date\" : \"2021-07-15T19:41:18.046Z\",\n\"start_time\" : \"2020-03-09T00:00Z\",\n\"end_time\" : \"2020-03-09T23:00Z\"\n},\n{\n\"index\" : \"my-index-3\",\n\"index_cold_uuid\" : \"EaeXOBodTLiDYcivKsXVLQ\",\n\"size\" : 32403,\n\"creation_date\" : \"2021-07-08T00:12:01.523Z\",\n\"start_time\" : \"2020-03-09T00:00Z\",\n\"end_time\" : \"2020-03-09T23:00Z\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1744,
+      "end": 1745
+    },
+    "content_stats": {
+      "char_count": 1038,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "Cold storage for Amazon OpenSearch Service",
+      "children": [
+        "Filtering",
+        "Sorting",
+        "Pagination"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_334",
+  "section_number": "2.7.6.8",
+  "header": "Ruby",
+  "content": "The opensearch-aws-sigv4 gem provides access to OpenSearch Serverless, along with\nOpenSearch Service, out of the box. It has all features of the opensearch-ruby client because it's a\ndependency of this gem.\nWhen instantiating the Sigv4 signer, specify aoss as the service name:\nrequire 'opensearch-aws-sigv4'\nrequire 'aws-sigv4'\nRuby\n468\nAmazon OpenSearch Service\nDeveloper Guide\nsigner = Aws::Sigv4::Signer.new(service: 'aoss',\nregion: 'us-west-2',\naccess_key_id: 'key_id',\nsecret_access_key: 'secret')\n# create an opensearch client and use the request-signer\nclient = OpenSearch::Aws::Sigv4Client.new(\n{ host: 'https://your.amz-opensearch-serverless.endpoint',\nlog: true },\nsigner)\n# create an index\nindex = 'prime'\nclient.indices.create(index: index)\n# insert data\nclient.index(index: index, id: '1', body: { name: 'Amazon Echo',\nmsrp: '5999',\nyear: 2011 })\n# query the index\nclient.search(body: { query: { match: { name: 'Echo' } } })\n# delete index entry\nclient.delete(index: index, id: '1')\n# delete the index\nclient.indices.delete(index: index)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 497,
+      "end": 498
+    },
+    "content_stats": {
+      "char_count": 1051,
+      "word_count": 137
+    },
+    "hierarchy": {
+      "parent": "Ingesting data into Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

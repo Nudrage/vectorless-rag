@@ -1,0 +1,35 @@
+{
+  "chunk_id": "chunk_1236",
+  "section_number": "2.19.8",
+  "header": "Cross-cluster replication for Amazon OpenSearch Service",
+  "content": "With cross-cluster replication in Amazon OpenSearch Service, you can replicate user indexes,\nmappings, and metadata from one OpenSearch Service domain to another. Using cross-cluster\nreplication helps to ensure disaster recovery if there is an outage, and allows you to replicate data\nacross geographically distant data centers to reduce latency. You pay standard AWS data transfer\ncharges for the data transferred between domains.\nCross-cluster replication\n1738\nAmazon OpenSearch Service\nDeveloper Guide\nCross-cluster replication follows an active-passive replication model where the local or follower\nindex pulls data from the remote or leader index. The leader index refers to the source of the data,\nor the index that you want to replicate data from. The follower index refers to the target for the\ndata, or the index that you want to replicate data to.\nCross-cluster replication is available on domains running Elasticsearch 7.10 or OpenSearch 1.1 or\nlater.\nNote\nThis documentation describes how to set up cross-cluster replication from an Amazon\nOpenSearch Service perspective. This includes using the AWS Management Console to set\nup cross-cluster connections, which is not possible on a self-managed OpenSearch cluster.\nFor full documentation, including a settings reference and a comprehensive API reference,\nsee Cross-cluster replication in the OpenSearch documentation.\nTopics\n• Limitations\n• Prerequisites\n• Permissions requirements\n• Set up a cross-cluster connection\n• Start replication\n• Conﬁrm replication\n• Pause and resume replication\n• Stop replication\n• Auto-follow\n• Upgrading connected domains",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1767,
+      "end": 1768
+    },
+    "content_stats": {
+      "char_count": 1615,
+      "word_count": 235
+    },
+    "hierarchy": {
+      "parent": "Managing indexes in Amazon OpenSearch Service",
+      "children": [
+        "Limitations",
+        "Prerequisites",
+        "Permissions requirements",
+        "Set up a cross-cluster connection",
+        "Start replication",
+        "Conﬁrm replication",
+        "Pause and resume replication",
+        "Stop replication",
+        "Auto-follow",
+        "Upgrading connected domains"
+      ]
+    }
+  }
+}

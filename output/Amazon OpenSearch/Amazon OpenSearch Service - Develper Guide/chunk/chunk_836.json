@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_836",
+  "section_number": "2.12.4.14.3",
+  "header": "Step 3: Map roles in OpenSearch Dashboards",
+  "content": "Now that your user is conﬁgured, you can map your user to a role.\n1.\nStay in the Security section of OpenSearch Dashboards and choose Roles, Create role.\n2.\nName the role new-role.\n3.\nFor Index, specify opensearch_dashboards_sample_data_fli*\n(kibana_sample_data_fli* on Elasticsearch domains) for the index pattern.\n4.\nFor the action group, choose read.\n5.\nFor Document level security, specify the following query:\n{\n\"match\": {\n\"FlightDelay\": true\n}\n}\n6.\nFor ﬁeld-level security, choose Exclude and specify FlightNum.\n7.\nFor Anonymization, specify Dest.\nTutorial: Internal user database with basic authentication\n1365\nAmazon OpenSearch Service\nDeveloper Guide\n8.\nChoose Create.\n9.\nChoose Mapped users, Manage mapping. Then add new-user to Users and choose Map.\n10. Return to the list of roles and choose opensearch_dashboards_user. Choose Mapped users,\nManage mapping. Then add new-user to Users and choose Map.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1394,
+      "end": 1395
+    },
+    "content_stats": {
+      "char_count": 911,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Conﬁgure a domain with the internal user database and HTTP basic authentication",
+      "children": []
+    }
+  }
+}

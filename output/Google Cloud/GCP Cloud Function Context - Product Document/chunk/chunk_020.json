@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_020",
+  "section_number": "18",
+  "header": "EventFilter",
+  "content": "Filters events based on exact matches on the CloudEvents attributes.\nJSON representation\nFields\nattribute\nstring\nRequired. The name of a CloudEvents attribute.\nvalue\nstring\nRequired. The value for the attribute.\n{\n\"attribute\": string,\n\"value\": string,\n\"operator\": string\n}\nFields\noperator\nstring\nOptional. The operator used for matching the events with the value of the filter. If not\nspecified, only events that have an exact key-value pair specified in the filter are\nmatched. The only allowed value is match-path-pattern.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 17,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 16,
+      "end": 17
+    },
+    "content_stats": {
+      "char_count": 524,
+      "word_count": 78
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_770",
+  "section_number": "2.12.12.3.1",
+  "header": "Permissions",
+  "content": "To use the OpenSearch Service console to conﬁgure encryption of data at rest, you must have read\npermissions to AWS KMS, such as the following identity-based policy:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"kms:List*\",\n\"kms:Describe*\"\n],\n\"Resource\": \"*\"\n}\n]\n}\nIf you want to use a key other than the AWS owned key, you must also have permissions to create\ngrants for the key. These permissions typically take the form of a resource-based policy that you\nspecify when you create the key.\nIf you want to keep your key exclusive to OpenSearch Service, you can add the kms:ViaService\ncondition to that key policy:\n\"Condition\": {\nEncryption at rest\n1295\nAmazon OpenSearch Service\nDeveloper Guide\n\"StringEquals\": {\n\"kms:ViaService\": \"es.us-west-1.amazonaws.com\"\n},\n\"Bool\": {\n\"kms:GrantIsForAWSResource\": \"true\"\n}\n}\nFor more information, see Key policies in AWS KMS in the AWS Key Management Service Developer\nGuide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1324,
+      "end": 1325
+    },
+    "content_stats": {
+      "char_count": 948,
+      "word_count": 147
+    },
+    "hierarchy": {
+      "parent": "Encryption of data at rest for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

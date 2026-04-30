@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1544",
+  "section_number": "2.29.4",
+  "header": "Red cluster status",
+  "content": "A red cluster status means that at least one primary shard and its replicas are not allocated to a\nnode. OpenSearch Service keeps trying to take automated snapshots of all indexes regardless of\ntheir status, but the snapshots fail while the red cluster status persists.\nThe most common causes of a red cluster status are failed cluster nodes and the OpenSearch\nprocess crashing due to a continuous heavy processing load.\nNote\nOpenSearch Service stores automated snapshots for 14 days regardless of the cluster\nstatus. Therefore, if the red cluster status persists for more than two weeks, the last healthy\nautomated snapshot will be deleted and you could permanently lose your cluster's data.\nIf your OpenSearch Service domain enters a red cluster status, Support might contact you\nto ask whether you want to address the problem yourself or you want the support team to\nassist. You can set a CloudWatch alarm to notify you when a red cluster status occurs.\nUltimately, red shards cause red clusters, and red indexes cause red shards. To identify the indexes\ncausing the red cluster status, OpenSearch has some helpful APIs.\n• GET /_cluster/allocation/explain chooses the ﬁrst unassigned shard that it ﬁnds and\nexplains why it cannot be allocated to a node:\n{\n\"index\": \"test4\",\n\"shard\": 0,\n\"primary\": true,\n\"current_state\": \"unassigned\",\n\"can_allocate\": \"no\",\n\"allocate_explanation\": \"cannot allocate because allocation is not permitted to\nany of the nodes\"\n}\n• GET /_cat/indices?v shows the health status, number of documents, and disk usage for\neach index:\nhealth status index            uuid                   pri rep docs.count docs.deleted\nstore.size pri.store.size\nRed cluster status\n2050\nAmazon OpenSearch Service\nDeveloper Guide\ngreen  open   test1            30h1EiMvS5uAFr2t5CEVoQ   5   0        820            0\n14mb           14mb\ngreen  open   test2            sdIxs_WDT56afFGu5KPbFQ   1   0          0            0\n233b           233b\ngreen  open   test3            GGRZp_TBRZuSaZpAGk2pmw   1   1          2            0\n14.7kb          7.3kb\nred    open   test4            BJxfAErbTtu5HBjIXJV_7A   1   0\ngreen  open   test5            _8C6MIXOSxCqVYicH3jsEA   1   0          7            0\n24.3kb         24.3kb\nDeleting red indexes is the fastest way to ﬁx a red cluster status. Depending on the reason for the\nred cluster status, you might then scale your OpenSearch Service domain to use larger instance\ntypes, more instances, or more EBS-based storage and try to recreate the problematic indexes.\nIf deleting a problematic index isn't feasible, you can restore a snapshot, delete documents from\nthe index, change the index settings, reduce the number of replicas, or delete other indexes to\nfree up disk space. The important step is to resolve the red cluster status before reconﬁguring\nyour OpenSearch Service domain. Reconﬁguring a domain with a red cluster status can compound\nthe problem and lead to the domain being stuck in a conﬁguration state of Processing until you\nresolve the status.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2079,
+      "end": 2080
+    },
+    "content_stats": {
+      "char_count": 3012,
+      "word_count": 441
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": [
+        "Automatic remediation of red clusters",
+        "Recovering from a continuous heavy processing load"
+      ]
+    }
+  }
+}

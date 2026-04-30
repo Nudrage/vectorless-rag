@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_061",
+  "section_number": "2.6.8.2.1",
+  "header": "Step 1: Create a collection",
+  "content": "First, create a collection to ingest data into. We'll name the collection ingestion-collection.\n1.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nChoose Collections from the left navigation and choose Create collection.\n3.\nName the collection ingestion-collection.\n4.\nFor Security, choose Standard create.\n5.\nUnder Network access settings, change the access type to Public.\n6.\nKeep all other settings as their defaults and choose Next.\n7.\nNow, conﬁgure a data acces policy for the collection. Deselect Automatically match access\npolicy settings.\n8.\nFor Deﬁnition method, choose JSON and paste the following policy into the editor. This policy\ndoes two things:\n• Allows the pipeline role to write to the collection.\n• Allows you to read from the collection. Later, after you ingest some sample data into the\npipeline, you'll query the collection to ensure that the data was successfully ingested and\nwritten to the index.\nTutorial: Ingest data into a collection\n54\nAmazon OpenSearch Service\nDeveloper Guide\n[\n{\n\"Rules\": [\n{\n\"Resource\": [\n\"index/ingestion-collection/*\"\n],\n\"Permission\": [\n\"aoss:CreateIndex\",\n\"aoss:UpdateIndex\",\n\"aoss:DescribeIndex\",\n\"aoss:ReadDocument\",\n\"aoss:WriteDocument\"\n],\n\"ResourceType\": \"index\"\n}\n],\n\"Principal\": [\n\"arn:aws:iam::your-account-id:role/OpenSearchIngestion-PipelineRole\",\n\"arn:aws:iam::your-account-id:role/Admin\"\n],\n\"Description\": \"Rule 1\"\n}\n]\n9.\nModify the Principal elements to include your AWS account ID. For the second principal,\nspecify a user or role that you can use to query the collection later.\n10. Choose Next. Name the access policy pipeline-collection-access and choose Next again.\n11. Review your collection conﬁguration and choose Submit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 83,
+      "end": 84
+    },
+    "content_stats": {
+      "char_count": 1742,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Ingesting data into a collection using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

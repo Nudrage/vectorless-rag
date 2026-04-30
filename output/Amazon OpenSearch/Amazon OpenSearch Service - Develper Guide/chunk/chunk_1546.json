@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1546",
+  "section_number": "2.29.4.2",
+  "header": "Recovering from a continuous heavy processing load",
+  "content": "To determine if a red cluster status is due to a continuous heavy processing load on a data node,\nmonitor the following cluster metrics.\nRelevant metric\nDescription\nRecovery\nJVMMemoryPressure\nSpeciﬁes the percentage of the\nJava heap used for all data nodes\nin a cluster. View the Maximum\nstatistic for this metric, and look\nfor smaller and smaller drops\nin memory pressure as the Java\ngarbage collector fails to reclaim\nsuﬃcient memory. This pattern\nlikely is due to complex queries or\nlarge data ﬁelds.\nx86 instance types use the\nConcurrent Mark Sweep (CMS)\ngarbage collector, which runs\nalongside application threads to\nkeep pauses short. If CMS is unable\nto reclaim enough memory during\nits normal collections, it triggers a\nfull garbage collection, which can\nlead to long application pauses and\nimpact cluster stability.\nARM-based Graviton instance types\nuse the Garbage-First (G1) garbage\ncollector, which is similar to CMS,\nbut uses additional short pauses and\nheap defragmentation to further\nSet memory circuit breakers\nfor the JVM. For more\ninformation, see the section\ncalled “JVM OutOfMemo\nryError”.\nIf the problem persists,\ndelete unnecessary indexes,\nreduce the number or\ncomplexity of requests to\nthe domain, add instances,\nor use larger instance types.\nRecovering from a continuous heavy processing load\n2052\nAmazon OpenSearch Service\nDeveloper Guide\nRelevant metric\nDescription\nRecovery\nreduce the need for full garbage\ncollections.\nIn either case, if memory usage\ncontinues to grow beyond what the\ngarbage collector can reclaim during\nfull garbage collections, OpenSearc\nh crashes with an out of memory\nerror. On all instance types, a good\nrule of thumb is to keep usage\nbelow 80%.\nThe _nodes/stats/jvm  API\noﬀers a useful summary of JVM\nstatistics, memory pool usage, and\ngarbage collection information:\nGET domain-endpoint /_nodes/s\ntats/jvm?pretty\nCPUUtilization\nSpeciﬁes the percentage of CPU\nresources used for data nodes\nin a cluster. View the Maximum\nstatistic for this metric, and look for\na continuous pattern of high usage.\nAdd data nodes or increase\nthe size of the instance\ntypes of existing data\nnodes.\nNodes\nSpeciﬁes the number of nodes in a\ncluster. View the Minimum statistic\nfor this metric. This value ﬂuctuate\ns when the service deploys a new\nﬂeet of instances for a cluster.\nAdd data nodes.\nRecovering from a continuous heavy processing load\n2053\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2081,
+      "end": 2083
+    },
+    "content_stats": {
+      "char_count": 2424,
+      "word_count": 380
+    },
+    "hierarchy": {
+      "parent": "Red cluster status",
+      "children": []
+    }
+  }
+}

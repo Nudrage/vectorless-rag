@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_540",
+  "section_number": "2.8.13.3",
+  "header": "CNAME mapping",
+  "content": "After you enable a custom endpoint for your OpenSearch Service domain, you can create a CNAME\nmapping in Amazon Route 53 (or your preferred DNS service provider). Creating a CNAME mapping\nwill enable you to route traﬃc to your custom endpoint and its subdomains. Without this mapping,\nyou won't be able to route traﬃc to your custom endpoint. For steps to create this mapping in\nRoute 53, see Conﬁguring DNS routing for a new domain  and Creating a new hosted zone for a\nsubdomain. For other providers, consult their documentation.\nCreate a CNAME record that points the custom endpoint to the automatically generated domain\nendpoint. If your domain is dual stack, you can point your CNAME record to either of the two\nservice generated endpoints. The dual stack capabilty of your custom endpoint depends on the\nservice generated endpoint that you point the CNAME record to. The custom endpoint hostname\nis the name of the CNAME record, and the domain endpoint hostname is the value of the CNAME\nrecord.\nIf you use SAML authentication for OpenSearch Dashboards, you must update your IdP with the\nnew SSO URL.\nYou can use Amazon Route 53 to create an alias record type to point your domain's custom\nendpoint to a dual stack search endpoint. To create an alias record type, you must conﬁgure your\ndomain to use the dual stack IP address type. You can do this using the Route 53 API.\nTo create an alias record type using the Route 53 API, specify the alias target of your domain.\nYou can ﬁnd the alias target of your domain in the Hosted Zone (dual stack) ﬁeld in the custom\nendpoint section of the OpenSearch Service console or by using the DescribeDomain API and\ncopying the value of the DomainEndpointV2HostedZoneId.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 746,
+      "end": 746
+    },
+    "content_stats": {
+      "char_count": 1714,
+      "word_count": 296
+    },
+    "hierarchy": {
+      "parent": "Creating a custom endpoint for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1265",
+  "section_number": "2.19.10.1.5",
+  "header": "Step 5: Rollover a data stream",
+  "content": "You can set up an Index State Management (ISM) policy to automate the rollover process for the\ndata stream. The ISM policy is applied to the backing indexes at the time of their creation. When\nyou associate a policy to a data stream, it only aﬀects the future backing indexes of that data\nstream. You also don’t need to provide the rollover_alias setting, because the ISM policy infers\nthis information from the backing index.\nNote\nIf you migrate a backing index to cold storage, OpenSearch removes this index from\nthe data stream. Even if you move the index back to UltraWarm, the index remains\nindependent and not part of the original data stream. After an index has been removed\nfrom the data stream, searching against the stream won't return any data from the index.\nWarning\nThe write index for a data stream can't be migrated to cold storage. If you wish to migrate\ndata in your data stream to cold storage, you must rollover the data stream before\nmigration.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1789,
+      "end": 1789
+    },
+    "content_stats": {
+      "char_count": 964,
+      "word_count": 169
+    },
+    "hierarchy": {
+      "parent": "Getting started with data streams",
+      "children": []
+    }
+  }
+}

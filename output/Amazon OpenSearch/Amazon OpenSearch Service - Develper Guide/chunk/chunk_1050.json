@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1050",
+  "section_number": "2.16.2.5",
+  "header": "Searching documents",
+  "content": "You can search your index using the standard _search API to execute text, k-NN, or hybrid queries.\nFor queries on knn_vector ﬁelds conﬁgured with s3vector engine, OpenSearch automatically\noﬄoads the query to the corresponding S3 vectors index.\nIndexing documents\n1578\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nWith s3vector engine, k-NN search queries support a maximum k value of 100. This\nmeans a maxmium of 100 nearest neighbors can be returned in the search results.\nExample search query\nGET my-first-s3vector-index/_search\n{\n\"size\": 2,\n\"query\": {\n\"knn\": {\n\"my_vector_1\": {\n\"vector\": [2.5, 3.5],\n\"k\": 2\n}\n}\n}\n}\nYou can run ﬁltered vector search on OpenSearch kNN index using s3vector engine. OpenSearch\napplies the ﬁlter as the post ﬁlter and uses oversampling mechanism based on certain heuristics to\nbalance recall vs latency.\nExample search query with ﬁlter:\nGET my-index/_search\n{\n\"size\": 10,\n\"query\": {\n\"knn\": {\n\"my_vector_field\": {\n\"vector\": [2.5, 3.5, 1.2, 4.8],\n\"k\": 10,\n\"filter\": {\n\"range\": {\n\"price\": {\n\"gte\": 10,\n\"lte\": 100\n}\nSearching documents\n1579\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}\n}\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1607,
+      "end": 1609
+    },
+    "content_stats": {
+      "char_count": 1124,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "Advanced search capabilities with an Amazon S3 vector engine",
+      "children": []
+    }
+  }
+}

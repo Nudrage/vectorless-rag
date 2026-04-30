@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_331",
+  "section_number": "2.7.6.6",
+  "header": "JavaScript",
+  "content": "The following sample code uses the opensearch-js client for JavaScript to establish a secure\nconnection to the speciﬁed OpenSearch Serverless collection, create a single index, add a\ndocument, and delete the index. You must provide values for node and region.\nThe important diﬀerence compared to OpenSearch Service domains is the service name (aoss\ninstead of es).\nVersion 3\nThis example uses version 3 of the SDK for JavaScript in Node.js.\nconst { defaultProvider } = require('@aws-sdk/credential-provider-node');\nconst { Client } = require('@opensearch-project/opensearch');\nconst { AwsSigv4Signer } = require('@opensearch-project/opensearch/aws');\nasync function main() {\n// create an opensearch client and use the request-signer\nconst client = new Client({\n...AwsSigv4Signer({\nregion: 'us-west-2',\nJavaScript\n462\nAmazon OpenSearch Service\nDeveloper Guide\nservice: 'aoss',\ngetCredentials: () => {\nconst credentialsProvider = defaultProvider();\nreturn credentialsProvider();\n},\n}),\nnode: '' # // serverless collection endpoint\n});\nconst index = 'movies';\n// create index if it doesn't already exist\nif (!(await client.indices.exists({ index })).body) {\nconsole.log((await client.indices.create({ index })).body);\n}\n// add a document to the index\nconst document = { foo: 'bar' };\nconst response = await client.index({\nid: '1',\nindex: index,\nbody: document,\n});\nconsole.log(response.body);\n// delete the index\nconsole.log((await client.indices.delete({ index })).body);\n}\nmain();\nVersion 2\nThis example uses version 2 of the SDK for JavaScript in Node.js.\nconst AWS = require('aws-sdk');\nconst { Client } = require('@opensearch-project/opensearch');\nconst { AwsSigv4Signer } = require('@opensearch-project/opensearch/aws');\nasync function main() {\n// create an opensearch client and use the request-signer\nconst client = new Client({\n...AwsSigv4Signer({\nregion: 'us-west-2',\nJavaScript\n463\nAmazon OpenSearch Service\nDeveloper Guide\nservice: 'aoss',\ngetCredentials: () =>\nnew Promise((resolve, reject) => {\nAWS.config.getCredentials((err, credentials) => {\nif (err) {\nreject(err);\n} else {\nresolve(credentials);\n}\n});\n}),\n}),\nnode: '' # // serverless collection endpoint\n});\nconst index = 'movies';\n// create index if it doesn't already exist\nif (!(await client.indices.exists({ index })).body) {\nconsole.log((await client.indices.create({\nindex\n})).body);\n}\n// add a document to the index\nconst document = {\nfoo: 'bar'\n};\nconst response = await client.index({\nid: '1',\nindex: index,\nbody: document,\n});\nconsole.log(response.body);\n// delete the index\nconsole.log((await client.indices.delete({ index })).body);\n}\nmain();\nJavaScript\n464\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 491,
+      "end": 494
+    },
+    "content_stats": {
+      "char_count": 2677,
+      "word_count": 357
+    },
+    "hierarchy": {
+      "parent": "Ingesting data into Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

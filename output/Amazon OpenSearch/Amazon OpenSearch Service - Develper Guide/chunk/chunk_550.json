@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_550",
+  "section_number": "2.13.3.2",
+  "header": "Python",
+  "content": "This example uses the OpenSearchService low-level Python client from the AWS SDK for Python\n(Boto) to add a tag to a domain, list the tag attached to the domain, and remove a tag from the\ndomain. You must provide values for DOMAIN_ARN, TAG_KEY, and TAG_VALUE.\nimport boto3\nfrom botocore.config import Config  # import configuration\nDOMAIN_ARN = ''  # ARN for the domain. i.e \"arn:aws:es:us-east-1:123456789012:domain/\nmy-domain\nTAG_KEY = ''  # The name of the tag key. i.e 'Smileyface'\nTAG_VALUE = ''  # The value assigned to the tag. i.e 'Practicetag'\n# defines the configurations parameters such as region\nmy_config = Config(region_name='us-east-1')\nclient = boto3.client('opensearch', config=my_config)\n# defines the client variable\ndef addTags():\n\"\"\"Adds tags to the domain\"\"\"\nresponse = client.add_tags(ARN=DOMAIN_ARN,\nTagList=[{'Key': TAG_KEY,\n'Value': TAG_VALUE}])\nprint(response)\ndef listTags():\n\"\"\"List tags that have been added to the domain\"\"\"\nresponse = client.list_tags(ARN=DOMAIN_ARN)\nprint(response)\ndef removeTags():\nTagging domains (AWS SDKs)\n725\nAmazon OpenSearch Service\nDeveloper Guide\n\"\"\"Remove tags that have been added to the domain\"\"\"\nresponse = client.remove_tags(ARN=DOMAIN_ARN, TagKeys=[TAG_KEY])\nprint('Tag removed')\nreturn response",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 754,
+      "end": 755
+    },
+    "content_stats": {
+      "char_count": 1260,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "Tagging domains (AWS SDKs)",
+      "children": []
+    }
+  }
+}

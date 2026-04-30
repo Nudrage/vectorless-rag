@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3085",
+  "section_number": "1.6.4.6.1",
+  "header": "Fields list:",
+  "content": "Field Name\nField Description\nContextTimeStamp\nSystem time of event creation\nIsEcho\nIndicates if the same event was sent before.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1133/1226\n\n\nField Name\nField Description\nMobileDetectionID\nID of the mobile detection.\nPatternID\nThe ID of the detection for this event.\nPlayIntegrityErrorType\nDescribes a Play Integrity error. The error could have multiple reasons. Values:\nPLAY_INTEGRITY_DECODING_ERROR (1)\nPLAY_INTEGRITY_MARSHAL_ERROR (2)\nPLAY_INTEGRITY_INVALID_NONCE (3)\nPLAY_INTEGRITY_REQUEST_PACKAGE_NAME_INVALID (4)\nPLAY_INTEGRITY_APK_PACKAGE_NAME_INVALID (5)\nPLAY_INTEGRITY_TIMESTAMP_EXPIRED (6)\nPLAY_INTEGRITY_APK_CERTIFICATE_SHA_INVALID (7)\nPLAY_INTEGRITY_NO_DEVICE_INTEGRITY (8)\nPLAY_INTEGRITY_ONLY_BASIC_INTEGRITY (9)\nPLAY_INTEGRITY_PARTIAL_INTEGRITY (10)\nPLAY_INTEGRITY_UNEVALUATED_APP_INTEGRITY (11)\nPLAY_INTEGRITY_UNRECOGNIZED_APP_VERSION (12)\nMeetsBasicIntegrity\nThe result of a more lenient verdict for device integrity. Returned by Google Play Integrity Attestation API.\nMeetsDeviceIntegrity\nThe result of a stricter verdict for device integrity. Returned by Google Play Integrity Attestation API.\nMeetsStrongIntegrity\nThe result of a very stricter verdict for device integrity. Returned by Google Play Integrity Attestation API.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1133,
+      "end": 1134
+    },
+    "content_stats": {
+      "char_count": 1475,
+      "word_count": 154
+    },
+    "hierarchy": {
+      "parent": "MobilePlayIntegrityDetection",
+      "children": []
+    }
+  }
+}

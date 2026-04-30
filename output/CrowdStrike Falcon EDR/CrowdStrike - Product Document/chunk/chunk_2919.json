@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2919",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nContextProcessId\nUPID of process originating this event.\nParentProcessId\nThe decimal representation of the parent process.\nGrandparentProcessId\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nOriginalFilename\nThe OriginalFilename of the PE, extracted from VersionInfo resource.\nParentImageFileName\nParentCommandLine\nParentOriginalFilename\nGrandparentImageFileName\nGrandparentCommandLine\nGrandparentOriginalFilename\nAssemblyName\nAssemblyFlags\nValues:\nASSEMBLY_DOMAIN_NEUTRAL (0x00000001)\nASSEMBLY_DYNAMIC (0x00000002)\nASSEMBLY_HAS_NATIVE_IMAGE (0x00000004)\nASSEMBLY_COLLECTIBLE (0x00000008)\nModuleILPath\nModuleNativePath\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1049/1226\nField\nDescription\nDotnetModuleFlags\nValues:\nDOTNET_MODULE_DOMAIN_NEUTRAL (0x00000001)\nDOTNET_MODULE_HAS_NATIVE_IMAGE (0x00000002)\nDOTNET_MODULE_DYNAMIC (0x00000004)\nDOTNET_MODULE_MANIFEST (0x00000008)\nManagedPdbBuildPath\nNativePdbBuildPath\nPatternIdList\nParentProcessPatternIdList\nGrandparentProcessPatternIdList\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1049,
+      "end": 1050
+    },
+    "content_stats": {
+      "char_count": 2056,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "DotnetModuleLoadDetectInfo",
+      "children": []
+    }
+  }
+}

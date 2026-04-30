@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_393",
+  "section_number": "155.1.1.37.2",
+  "header": "Filters",
+  "content": "\nSelect the filters you want to use, then select Add. The selected filters are shown along with the\nexisting applied filters. Select the new filter to specify its conditions. For example, if you chose\nthe \"Service/detection sources\" filter, select it to choose the sources by which to filter the list.\nYou can remove a filter by selecting the X on the filter name in the filters list.\nThe following table lists the available filters.\nFilter name\nDescription/Conditions\nStatus\nSelect New, In progress, or Resolved.\nAlert severity\nIncident severity\nThe severity of an alert or incident is indicative of the impact it can have on your\nassets. The higher the severity, the bigger the impact and typically requires the\nmost immediate attention. Select High, Medium, Low, or Informational.\nIncident assignment\nSelect the assigned user or users.\nMultiple service\nsources\nSpecify whether the filter is for more than one service source.\nService/detection\nsources\nSpecify incidents that contain alerts from one or more of the following:\nMicrosoft Defender for Identity\nMicrosoft Defender for Cloud Apps\nMicrosoft Defender for Endpoint\nMicrosoft Defender XDR\nMicrosoft Defender for Office 365\nApp Governance\n\nﾉ\nExpand table\nFilter name\nDescription/Conditions\nMicrosoft Entra ID Protection\nMicrosoft Data Loss Prevention\nMicrosoft Defender for Cloud\nMicrosoft Sentinel\nMicrosoft Purview Insider Risk Management\nMany of these services can be expanded in the menu to reveal further choices of\ndetection sources within a given service.\nTags\nSelect one or multiple tag names from the list.\nMultiple category\nSpecify whether the filter is for more than one category.\nCategories\nChoose categories to focus on specific tactics, techniques, or attack components\nseen.\nEntities\nSpecify the name of an asset such as a user, device, mailbox, or application name.\nSensitivity label\nFilter incidents based on the sensitivity label applied on the data. Some attacks\nfocus on exfiltrating sensitive or valuable data. By applying a filter for specific\nsensitivity labels, you can quickly determine if sensitive information is potentially\ncompromised and prioritize addressing those incidents.\nDevice groups\nSpecify a device group name.\nOS platform\nSpecify device operating systems.\nClassification\nSpecify the set of classifications of the related alerts.\nAutomated\ninvestigation state\nSpecify the status of automated investigation.\nAssociated threat\nSpecify a named threat.\nPolicy/policy rule\nFilter incidents based on policy or policy rule.\nProduct names\nFilter incidents based on product name.\nData stream\nFilter incidents based on the location or workload.\n７ Note\nIf you have provisioned access to Microsoft Purview Insider Risk Management, you can\nview and manage insider risk management alerts and hunt for insider risk management\nevents in the Microsoft Defender portal. For more information, see Investigate insider risk\nthreats in the Microsoft Defender portal.\nThe default filter is to show all alerts and incidents with a status of New and In progress and\nwith a severity of High, Medium, or Low.\nYou can also create filter sets within the incidents page by selecting Saved filter queries >\nCreate filter set. If no filter sets have been created, select Save to create one.\nOnce you've configured a useful filter in the incidents queue, you can bookmark the URL of the\nbrowser tab or otherwise save it as a link on a Web page, a Word document, or a place of your\nchoice. Bookmarking gives you single-click access to key views of the incident queue, such as:\nNew incidents\nHigh-severity incidents\nUnassigned incidents\n\n７ Note\nMicrosoft Defender XDR customers can now filter incidents with alerts where a\ncompromised device communicated with operational technology (OT) devices connected\nto the enterprise network through the device discovery integration of Microsoft\nDefender for IoT and Microsoft Defender for Endpoint. To filter these incidents, select\nAny in the Service/detection sources, then select Microsoft Defender for IoT in the\nProduct name or see Investigate incidents and alerts in Microsoft Defender for IoT in\nthe Defender portal. You can also use device groups to filter for site-specific alerts. For\nmore information about Defender for IoT prerequisites, see Get started with enterprise\nIoT monitoring in Microsoft Defender XDR.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 223,
+      "end": 226
+    },
+    "content_stats": {
+      "char_count": 4329,
+      "word_count": 668
+    },
+    "hierarchy": {
+      "parent": "Prioritize incidents in the Microsoft Defender portal",
+      "children": [
+        "Save custom filters as URLs"
+      ]
+    }
+  }
+}

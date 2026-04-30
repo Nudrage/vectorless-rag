@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_532",
+  "section_number": "2.8.12.4",
+  "header": "Upgrading a domain (SDK)",
+  "content": "This sample uses the OpenSearchService low-level Python client from the AWS SDK for\nPython (Boto) to check if a domain is eligible for upgrade to a speciﬁc version, upgrades it, and\ncontinuously checks the upgrade status.\nimport boto3\nfrom botocore.config import Config\nimport time\n# Build the client using the default credential configuration.\n# You can use the CLI and run 'aws configure' to set access key, secret\n# key, and default Region.\nDOMAIN_NAME = ''  # The name of the domain to upgrade\nTARGET_VERSION = ''  # The version you want to upgrade the domain to. For example,\nOpenSearch_1.1\nmy_config = Config(\n# Optionally lets you specify a Region other than your default.\nregion_name='us-east-1'\n)\nclient = boto3.client('opensearch', config=my_config)\ndef check_versions():\n\"\"\"Determine whether domain is eligible for upgrade\"\"\"\nresponse = client.get_compatible_versions(\nDomainName=DOMAIN_NAME\n)\ncompatible_versions = response['CompatibleVersions']\nfor i in range(len(compatible_versions)):\nif TARGET_VERSION in compatible_versions[i][\"TargetVersions\"]:\nprint('Domain is eligible for upgrade to ' + TARGET_VERSION)\nupgrade_domain()\nprint(response)\nelse:\nprint('Domain not eligible for upgrade to ' + TARGET_VERSION)\ndef upgrade_domain():\n\"\"\"Upgrades the domain\"\"\"\nresponse = client.upgrade_domain(\nUpgrading a domain (SDK)\n704\nAmazon OpenSearch Service\nDeveloper Guide\nDomainName=DOMAIN_NAME,\nTargetVersion=TARGET_VERSION\n)\nprint('Upgrading domain to ' + TARGET_VERSION + '...' + response)\ntime.sleep(5)\nwait_for_upgrade()\ndef wait_for_upgrade():\n\"\"\"Get the status of the upgrade\"\"\"\nresponse = client.get_upgrade_status(\nDomainName=DOMAIN_NAME\n)\nif (response['UpgradeStep']) == 'UPGRADE' and (response['StepStatus']) ==\n'SUCCEEDED':\nprint('Domain successfully upgraded to ' + TARGET_VERSION)\nelif (response['StepStatus']) == 'FAILED':\nprint('Upgrade failed. Please try again.')\nelif (response['StepStatus']) == 'SUCCEEDED_WITH_ISSUES':\nprint('Upgrade succeeded with issues')\nelif (response['StepStatus']) == 'IN_PROGRESS':\ntime.sleep(30)\nwait_for_upgrade()\ndef main():\ncheck_versions()\nif __name__ == \"__main__\":\nmain()",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 733,
+      "end": 734
+    },
+    "content_stats": {
+      "char_count": 2128,
+      "word_count": 258
+    },
+    "hierarchy": {
+      "parent": "Upgrading Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_406",
+  "section_number": "2.7.10.10.11",
+  "header": "Cross-account data access",
+  "content": "While you can't create a data access policy with cross-account identity or cross-account collections,\nyou can still set up cross-account access with the assume role option. For example, if account-\na owns a collection that account-b needs access to, the user from account-b can assume\na role in account-a. The role must have the IAM permissions aoss:APIAccessAll and\naoss:DashboardsAccessAll, and be included in the data access policy on account-a.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 585,
+      "end": 585
+    },
+    "content_stats": {
+      "char_count": 448,
+      "word_count": 69
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

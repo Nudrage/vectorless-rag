@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_436",
+  "section_number": "2.7.13.2.1",
+  "header": "OpenSearch Serverless information in CloudTrail",
+  "content": "CloudTrail is enabled on your AWS account when you create the account. When activity occurs in\nOpenSearch Serverless, that activity is recorded in a CloudTrail event along with other AWS service\nevents in Event history. You can view, search, and download recent events in your AWS account.\nFor more information, see Viewing events with CloudTrail Event history.\nFor an ongoing record of events in your AWS account, including events for OpenSearch Serverless,\ncreate a trail. A trail enables CloudTrail to deliver log ﬁles to an Amazon S3 bucket. By default,\nwhen you create a trail in the console, the trail applies to all AWS Regions.\nThe trail logs events from all Regions in the AWS partition and delivers the log ﬁles to the Amazon\nS3 bucket that you specify. Additionally, you can conﬁgure other AWS services to further analyze\nand act upon the event data collected in CloudTrail logs. For more information, see the following:\n• Overview for creating a trail\n• CloudTrail supported services and integrations\n• Conﬁguring Amazon SNS notiﬁcations for CloudTrail\n• Receiving CloudTrail log ﬁles from multiple regions and Receiving CloudTrail log ﬁles from\nmultiple accounts\nAll OpenSearch Serverless actions are logged by CloudTrail and are documented in the OpenSearch\nServerless API reference. For example, calls to the CreateCollection, ListCollections, and\nDeleteCollection actions generate entries in the CloudTrail log ﬁles.\nEvery event or log entry contains information about who generated the request. The identity\ninformation helps you determine:\n• Whether the request was made with root or AWS Identity and Access Management (IAM) user\ncredentials.\n• Whether the request was made with temporary security credentials for a role or federated user.\n• Whether the request was made by another AWS service.\nFor more information, see the CloudTrail userIdentity element.\nMonitoring with CloudTrail\n600\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 629,
+      "end": 630
+    },
+    "content_stats": {
+      "char_count": 1948,
+      "word_count": 302
+    },
+    "hierarchy": {
+      "parent": "Logging OpenSearch Serverless API calls using AWS CloudTrail",
+      "children": []
+    }
+  }
+}

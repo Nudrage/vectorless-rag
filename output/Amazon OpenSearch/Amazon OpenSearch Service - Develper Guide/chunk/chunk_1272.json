@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1272",
+  "section_number": "2.20.1.4",
+  "header": "Notiﬁcations",
+  "content": "Alerting integrates with Notiﬁcations, which is a uniﬁed system for OpenSearch notiﬁcations.\nNotiﬁcations let you conﬁgure which communication service you want to use and see relevant\nstatistics and troubleshooting information. For comprehensive documentation, see Notiﬁcations in\nthe OpenSearch documentation.\nYour domain must be running OpenSearch version 2.3 or later to use notiﬁcations.\nNote\nOpenSearch notiﬁcations are separate from OpenSearch Service notiﬁcations, which\nprovide details about service software updates, Auto-Tune enhancements, and other\nimportant domain-level information. OpenSearch notiﬁcations are plugin-speciﬁc.\nNotiﬁcation channels replaced alerting destinations starting with OpenSearch version 2.0.\nDestinations were oﬃcially deprecated, and all alerting notiﬁcation will be managed through\nchannels going forward.\nWhen you upgrade your domains to version 2.3 or later (since OpenSearch Service support for 2.x\nstarts with 2.3), your existing destinations are automatically migrated to notiﬁcation channels. If\na destination fails to migrate, the monitor will continue to use it until the monitor is migrated to\na notiﬁcation channel. For more inforation, see Questions about destinations in the OpenSearch\ndocumentation.\nTo get started with notiﬁcations, sign in to OpenSearch Dashboards and choose Notiﬁcations,\nChannels, and Create channel.\nAmazon Simple Notiﬁcation Service (Amazon SNS) is a supported channel type for notiﬁcations.\nIn order to authenticate users, you either need to provide the user with full access to Amazon SNS,\nor let them assume an IAM role that has permissions to access Amazon SNS. For instructions, see\nAmazon SNS as a channel type.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1792,
+      "end": 1792
+    },
+    "content_stats": {
+      "char_count": 1693,
+      "word_count": 236
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring alerts in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

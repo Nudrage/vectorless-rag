@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_937",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before proceeding, you must have the following resources.\nPrerequisite\nDescription\nAmazon Kinesis Data\nStream\nThe event source for your Lambda function. To learn more, see Kinesis\nData Streams.\nOpenSearch Service\nDomain\nThe destination for data after your Lambda function processes it.\nFor more information, see the section called “ Creating OpenSearch\nService domains”\nIAM Role\nThis role must have basic OpenSearch Service, Kinesis, and Lambda\npermissions, such as the following:\nLoading streaming data from Amazon Kinesis Data Streams\n1452\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequisite\nDescription\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"es:ESHttpPost\",\n\"es:ESHttpPut\",\n\"logs:CreateLogGroup\",\n\"logs:CreateLogStream\",\n\"logs:PutLogEvents\",\n\"kinesis:GetShardIterator\",\n\"kinesis:GetRecords\",\n\"kinesis:DescribeStream\",\n\"kinesis:ListStreams\"\n],\n\"Resource\": \"*\"\n}\n]\n}\nThe role must have the following trust relationship:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"lambda.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRole\"\n}\n]\nLoading streaming data from Amazon Kinesis Data Streams\n1453\nAmazon OpenSearch Service\nDeveloper Guide\nPrerequisite\nDescription\n}\nTo learn more, see Creating IAM roles in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1481,
+      "end": 1483
+    },
+    "content_stats": {
+      "char_count": 1305,
+      "word_count": 165
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon Kinesis Data Streams",
+      "children": []
+    }
+  }
+}

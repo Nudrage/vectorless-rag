@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_706",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n174/1226\nPlatforms: Windows\nWindows Management Instrumentation (WMI) is a default service installed on machines with Windows XP and newer. WMI is the infrastructure for management\ndata and operations which allows a user to remotely manage machines and automate administrative tasks. WMI also supports scripting languages such as\nPowerShell and VBScript. Adversaries have utilized the WMI service to install implants, tools and perform credential theft via scripting in an effort to maneuver\nthroughout customer environments. The Enhanced Attacker Execution Profiling (EAEP) event “WmiCreateProcess” will be useful in tracking the adversary’s\nlateral activity and/or origin of an attack during an intrusion. The Enhanced Attacker Execution Profiling (EAEP) event category focuses on gathering\nadditional endpoint data on things like service creation, scheduled tasks, firewall rule modification, etc.\nThis event is emitted when it is determined WMI was used to start a new process. ProcessRollup2 may also be updated to include RPC client information if\navailable.\nThere may be some known inconsistencies with attribution of the real RPC client data here, due to worker thread indirection that occurs within the WMI service\nprocess. If so, a later update will resolve those inconsistencies.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 174,
+      "end": 175
+    },
+    "content_stats": {
+      "char_count": 1521,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "WmiCreateProcess",
+      "children": []
+    }
+  }
+}

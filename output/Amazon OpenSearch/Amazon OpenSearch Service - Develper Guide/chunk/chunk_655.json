@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_655",
+  "section_number": "2.10.2.2",
+  "header": "Enabling log publishing (AWS CLI)",
+  "content": "Before you can enable log publishing, you need a CloudWatch log group. If you don't already have\none, you can create one using the following command:\naws logs create-log-group --log-group-name my-log-group\nEnter the next command to ﬁnd the log group's ARN, and then make a note of it:\naws logs describe-log-groups --log-group-name my-log-group\nNow you can give OpenSearch Service permissions to write to the log group. You must provide the\nlog group's ARN near the end of the command:\naws logs put-resource-policy \\\n--policy-name my-policy \\\n--policy-document '{ \"Version\": \"2012-10-17\",        \"Statement\": [{ \"Sid\":\n\"\", \"Effect\": \"Allow\", \"Principal\": { \"Service\": \"es.amazonaws.com\"}, \"Action\":\n[ \"logs:PutLogEvents\",\"logs:CreateLogStream\"],\"Resource\": \"cw_log_group_arn:*\"}]}'\nImportant\nCloudWatch Logs supports 10 resource policies per Region. If you plan to enable shard slow\nlogs for several OpenSearch Service domains, you should create and reuse a broader policy\nthat includes multiple log groups to avoid reaching this limit.\nIf you need to review this policy at a later time, use the aws logs describe-resource-\npolicies command. To update the policy, issue the same aws logs put-resource-policy\ncommand with a new policy document.\nFinally, you can use the --log-publishing-options option to enable publishing. The syntax for\nthe option is the same for both the create-domain and update-domain-config commands.\nEnabling log publishing (AWS CLI)\n1217\nAmazon OpenSearch Service\nDeveloper Guide\nParameter\nValid Values\nSEARCH_SLOW_LOGS={CloudWatchLogsLogG\nroupArn= cw_log_group_arn ,Enabled=true|false}\nINDEX_SLOW_LOGS={CloudWatchLogsLogGr\noupArn= cw_log_group_arn ,Enabled=true|false}\nES_APPLICATION_LOGS={CloudWatchLogsLogGroupAr\nn= cw_log_group_arn ,Enabled=true|false}\n--log-publishing-o\nptions\nAUDIT_LOGS={CloudWatchLogsLogGroupAr\nn= cw_log_group_arn ,Enabled=true|false}\nNote\nIf you plan to enable multiple logs, we recommend publishing each to its own log group.\nThis separation makes the logs easier to scan.\nExample\nThe following example enables the publishing of search and indexing shard slow logs for the\nspeciﬁed domain:\naws opensearch update-domain-config \\\n--domain-name my-domain \\\n--log-publishing-options\n\"SEARCH_SLOW_LOGS={CloudWatchLogsLogGroupArn=arn:aws:logs:us-east-1:123456789012:log-\ngroup:my-log-\ngroup,Enabled=true},INDEX_SLOW_LOGS={CloudWatchLogsLogGroupArn=arn:aws:logs:us-\neast-1:123456789012:log-group:my-other-log-group,Enabled=true}\"\nTo disable publishing to CloudWatch, run the same command with Enabled=false.\nIf you enabled one of the shard slow logs, see the section called “Setting shard slow log\nthresholds”. If you enabled audit logs, see the section called “Step 2: Turn on audit logs in\nOpenSearch Dashboards”. If you enabled only error logs, you don't need to perform any additional\nconﬁguration steps.\nEnabling log publishing (AWS CLI)\n1218\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1246,
+      "end": 1248
+    },
+    "content_stats": {
+      "char_count": 2933,
+      "word_count": 363
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch logs with Amazon CloudWatch Logs",
+      "children": []
+    }
+  }
+}

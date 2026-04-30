@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_509",
+  "section_number": "2.8.10.2.3",
+  "header": "Before you begin: prerequisites for VPC access",
+  "content": "Before you can enable a connection between a VPC and your new OpenSearch Service domain, you\nmust do the following:\n• Create a VPC\nTo create your VPC, you can use the Amazon VPC console, the AWS CLI, or one of the AWS SDKs.\nFor more information, see Working with VPCs in the Amazon VPC User Guide. If you already have\na VPC, you can skip this step.\n• Reserve IP addresses\nOpenSearch Service enables the connection of a VPC to a domain by placing network interfaces\nin a subnet of the VPC. Each network interface is associated with an IP address. You must\nreserve a suﬃcient number of IP addresses in the subnet for the network interfaces. For more\ninformation, see Reserving IP addresses in a VPC subnet.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 706,
+      "end": 706
+    },
+    "content_stats": {
+      "char_count": 704,
+      "word_count": 129
+    },
+    "hierarchy": {
+      "parent": "Architecture",
+      "children": []
+    }
+  }
+}

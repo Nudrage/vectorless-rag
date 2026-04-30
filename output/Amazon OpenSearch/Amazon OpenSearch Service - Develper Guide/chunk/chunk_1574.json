@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1574",
+  "section_number": "2.29.28",
+  "header": "Unauthorized operation after selecting VPC access",
+  "content": "When you create a new domain using the OpenSearch Service console, you have the option\nto select VPC or public access. If you select VPC access, OpenSearch Service queries for VPC\ninformation and fails if you don't have the proper permissions:\nYou are not authorized to perform this operation. (Service: AmazonEC2; Status Code:\n403; Error Code: UnauthorizedOperation\nTo enable this query, you must have access to the ec2:DescribeVpcs, ec2:DescribeSubnets,\nand ec2:DescribeSecurityGroups operations. This requirement is only for the console. If you\nuse the AWS CLI to create and conﬁgure a domain with a VPC endpoint, you don't need access to\nthose operations.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2093,
+      "end": 2093
+    },
+    "content_stats": {
+      "char_count": 659,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_119",
+  "section_number": "2.6.16.1",
+  "header": "Constructing the ingestion endpoint",
+  "content": "To ingest data into a pipeline, send it to the ingestion endpoint. To locate the ingestion URL,\nnavigate to the Pipeline settings page and copy the Ingestion URL.\nIntegrating pipelines\n100\nAmazon OpenSearch Service\nDeveloper Guide\nTo construct the full ingestion endpoint for pull-based sources like OTel trace and OTel metrics,\nadd the ingestion path from your pipeline conﬁguration to the ingestion URL.\nFor example, say that your pipeline conﬁguration has the following ingestion path:\nThe full ingestion endpoint, which you specify in your client conﬁguration, will take the following\nformat: https://ingestion-pipeline-abcdefg.us-east-1.osis.amazonaws.com/my/\ntest_path.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 129,
+      "end": 130
+    },
+    "content_stats": {
+      "char_count": 675,
+      "word_count": 93
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1974",
+  "section_number": "155.1.1.260",
+  "header": "Alert classification for suspicious inbox manipulation rules",
+  "content": "manipulation rules\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThreat actors can use compromised user accounts for many malicious purposes including\nreading emails in a user's inbox, creating inbox rules to forward emails to external accounts,\ndeleting traces, and sending phishing mails. Malicious inbox rules are common during business\nemail compromise (BEC) and phishing campaigns and it's important to monitor for them\nconsistently.\nThis playbook helps you investigate any incident related to suspicious inbox manipulation rules\nconfigured by attackers and take recommended actions to remediate the attack and protect\nyour network. This playbook is for security teams, including security operations center (SOC)\nanalysts and IT administrators who review, investigate, and grade the alerts. You can quickly\ngrade alerts as either a true positive (TP) or a false positive (TP) and take recommended actions\nfor the TP alerts to remediate the attack.\nThe results of using this playbook are:\nYou identify the alerts associated with inbox manipulation rules as malicious (TP) or\nbenign (FP) activities.\nIf malicious, you remove malicious inbox manipulation rules.\nYou take the necessary action if emails were forwarded to a malicious email address.\nInbox rules are set to automatically manage email messages based on predefined criteria. For\nexample, you can create an inbox rule to move all messages from your manager into another\nfolder, or forward messages you receive to another email address.\nAttackers might set up email rules to hide incoming emails in the compromised user mailbox\nto obscure their malicious activities from the user. They might also set rules in the\ncompromised user mailbox to delete emails, move the emails into another less noticeable\nfolder (like RSS), or forward mails to an external account. Some rules might move all the emails\nto another folder and mark them as \"read\", while some rules might move only mails that\ncontain specific keywords in the email message or subject.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1464,
+      "end": 1464
+    },
+    "content_stats": {
+      "char_count": 2017,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Inbox manipulation rules",
+        "Workflow",
+        "Investigation steps",
+        "Advanced hunting queries",
+        "Recommended actions",
+        "See also"
+      ]
+    }
+  }
+}

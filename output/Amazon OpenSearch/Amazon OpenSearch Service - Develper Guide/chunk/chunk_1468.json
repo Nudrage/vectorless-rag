@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1468",
+  "section_number": "2.26.4.1.34",
+  "header": "Elasticsearch version 5.6",
+  "content": "For Elasticsearch 5.6, OpenSearch Service supports the following operations.\n• All operations in the index\npath (such as /index-name /\n_forcemerge  and /index-\nname /update/id) except\n/index-name /_close\n• /_alias\n• /_aliases\n• /_all\n• /_analyze\n• /_bulk\n• /_cat (except /_cat/nod\neattrs )\n• /_cluster/state\n• /_cluster/stats\n• /_count\n• /_delete_by_query\n1\n• /_explain\n• /_field_caps\n• /_field_stats\n• /_flush\n• /_ingest/pipeline\n• /_mapping\n• /_mget\n• /_render\n• /_rollover\n• /_scripts 3\n• /_search2\n• /_search profile\n• /_shard_stores\n• /_shrink5\n• /_snapshot\n• /_stats\n• /_status\n• /_tasks\nNotable API diﬀerences\n1957\nAmazon OpenSearch Service\nDeveloper Guide\n• /_cluster/allocation/\nexplain\n• /_cluster/health\n• /_cluster/pending_tasks\n• /_cluster/settings\nfor\nseveral properties4:\n• action.auto_create\n_index\n• action.search.shar\nd_count.limit\n• indices.breaker.fi\nelddata.limit\n• indices.breaker.re\nquest.limit\n• indices.breaker.to\ntal.limit\n• /_msearch\n• /_mtermvectors\n• /_nodes\n• /_percolate\n• /_plugin/kibana\n• /_refresh\n• /_reindex 1\n• /_template\n• /_update_by_query\n1\n• /_validate\n1. Cluster conﬁguration changes might interrupt these operations before completion. We\nrecommend that you use the /_tasks operation along with these operations to verify that the\nrequests completed successfully.\n2. DELETE requests to /_search/scroll with a message body must specify \"Content-\nLength\" in the HTTP header. Most clients add this header by default. To avoid a problem with =\ncharacters in scroll_id values, use the request body, not the query string, to pass scroll_id\nvalues to OpenSearch Service.\n3. For considerations about using scripts, see the section called “Other supported resources”.\n4. Refers to the PUT method. For information about the GET method, see the section called\n“Notable API diﬀerences”. This list only refers to the generic Elasticsearch operations that\nOpenSearch Service supports and does not include plugin-speciﬁc supported operations for\nanomaly detection, ISM, and so on.\n5. See the section called “Shrink”.\nNotable API diﬀerences\n1958\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1986,
+      "end": 1988
+    },
+    "content_stats": {
+      "char_count": 2113,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "Notable API diﬀerences",
+      "children": []
+    }
+  }
+}

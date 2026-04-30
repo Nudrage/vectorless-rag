@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_245",
+  "section_number": "2.6.21.2.12",
+  "header": "Grok metrics",
+  "content": "The following metrics apply to the Grok processor. Each metric is preﬁxed by the sub-pipeline\nname and grok. For example, sub_pipeline_name.grok.grokProcessingMatch.count.\nMetric suﬃx\nDescription\ngrokProcessingMatch.count\nThe number of records that found at least one pattern\nmatch from the match conﬁguration option.\nRelevant statistics: Sum\nDimension: PipelineName\ngrokProcessingMism\natch.count\nThe number of records that didn't match any of the\npatterns speciﬁed in the match conﬁguration option.\nRelevant statistics: Sum\nDimension: PipelineName\ngrokProcessingErro\nrs.count\nThe number of record processing errors.\nRelevant statistics: Sum\nDimension: PipelineName\ngrokProcessingTime\nouts.count\nThe number of records that timed out while matching.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n353\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\ngrokProcessingTime.count\nA count of data points recorded while an individua\nl record matched against patterns from the match\nconﬁguration option.\nRelevant statistics: Sum\nDimension: PipelineName\ngrokProcessingTime.sum\nThe total amount of time that each individual record\ntakes to match against patterns from the match\nconﬁguration option, in milliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\ngrokProcessingTime.max\nThe maximum amount of time that each individual\nrecord takes to match against patterns from the match\nconﬁguration option, in milliseconds.\nRelevant statistics: Max\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 382,
+      "end": 383
+    },
+    "content_stats": {
+      "char_count": 1512,
+      "word_count": 190
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

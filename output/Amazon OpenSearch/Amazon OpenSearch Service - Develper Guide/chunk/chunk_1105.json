@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1105",
+  "section_number": "2.18.2.1.1",
+  "header": "General permissions",
+  "content": "To work with applications in OpenSearch Service, you need the permissions shown in the following\npolicy. The permissions serve the following purposes:\n• The ﬁve es:*Application permissions are required to create and manage an application.\n• The three es:*Tags permissions are required to add, list and remove tags from the application.\n• The aoss:BatchGetCollection, es:DescribeDomain and\nes:GetDirectQueryDataSource permissions are required to associate data sources.\n• The aoss:APIAccessAll, es:ESHttp*, and 4 opensearch:*DirectQuery* permissions are\nrequired to access data sources.\n• The iam:CreateServiceLinkedRole provides permission to Amazon OpenSearch Service for\ncreating a service-linked role (SLR) in your account. This role is used and makes it possible for\nthe OpenSearch UI application to publish Amazon CloudWatch metrics in your account. For more\ninformation, see the section called “Permissions” in the topic Using service-linked roles to create\nVPC domains and direct query data sources.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"VisualEditor0\",\n\"Effect\": \"Allow\",\n\"Action\": [\nRequired permissions for creating Amazon OpenSearch Service applications\n1625\nAmazon OpenSearch Service\nDeveloper Guide\n\"es:CreateApplication\",\n\"es:DeleteApplication\",\n\"es:GetApplication\",\n\"es:ListApplications\",\n\"es:UpdateApplication\",\n\"es:AddTags\",\n\"es:ListTags\",\n\"es:RemoveTags\",\n\"aoss:APIAccessAll\",\n\"es:ESHttp*\",\n\"opensearch:StartDirectQuery\",\n\"opensearch:GetDirectQuery\",\n\"opensearch:CancelDirectQuery\",\n\"opensearch:GetDirectQueryResult\",\n\"aoss:BatchGetCollection\",\n\"aoss:ListCollections\",\n\"es:DescribeDomain\",\n\"es:DescribeDomains\",\n\"es:ListDomainNames\",\n\"es:GetDirectQueryDataSource\",\n\"es:ListDirectQueryDataSources\"\n],\n\"Resource\": \"*\"\n},\n{\n\"Sid\": \"VisualEditor1\",\n\"Effect\": \"Allow\",\n\"Action\": \"iam:CreateServiceLinkedRole\",\n\"Resource\": \"arn:aws:iam::*:role/aws-service-role/\nopensearchservice.amazonaws.com/AWSServiceRoleForAmazonOpenSearchService\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1654,
+      "end": 1655
+    },
+    "content_stats": {
+      "char_count": 1971,
+      "word_count": 204
+    },
+    "hierarchy": {
+      "parent": "Required permissions for creating Amazon OpenSearch Service applications",
+      "children": []
+    }
+  }
+}

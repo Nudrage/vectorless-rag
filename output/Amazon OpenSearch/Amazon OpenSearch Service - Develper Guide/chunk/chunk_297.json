@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_297",
+  "section_number": "2.7.3.5",
+  "header": "Using CloudFormation to create Amazon OpenSearch Serverless collections",
+  "content": "collections\nYou can use CloudFormation to create Amazon OpenSearch Serverless resources such as\ncollections, security policies, and VPC endpoints. For the comprehensive OpenSearch Serverless\nCloudFormation reference, see Amazon OpenSearch Serverless in the CloudFormation User Guide.\nThe following sample CloudFormation template creates a simple data access policy, network policy,\nand security policy, as well as a matching collection. It's a good way to get up and running quickly\nwith Amazon OpenSearch Serverless and provision the necessary elements to create and use a\ncollection.\nImportant\nThis example uses public network access, which isn't recommended for production\nworkloads. We recommend using VPC access to protect your collections. For more\ninformation, see AWS::OpenSearchServerless::VpcEndpoint and the section called “VPC\nendpoints”.\nAWSTemplateFormatVersion: 2010-09-09\nDescription: 'Amazon OpenSearch Serverless template to create an IAM user, encryption\npolicy, data access policy and collection'\nResources:\nIAMUSer:\nType: 'AWS::IAM::User'\nProperties:\nUserName:  aossadmin\nDataAccessPolicy:\nType: 'AWS::OpenSearchServerless::AccessPolicy'\nProperties:\nName: quickstart-access-policy\nType: data\nDescription: Access policy for quickstart collection\nPolicy: !Sub >-\n[{\"Description\":\"Access for cfn user\",\"Rules\":\n[{\"ResourceType\":\"index\",\"Resource\":[\"index/*/*\"],\"Permission\":[\"aoss:*\"]},\n{\"ResourceType\":\"collection\",\"Resource\":[\"collection/quickstart\"],\"Permission\":\n[\"aoss:*\"]}],\n\"Principal\":[\"arn:aws:iam::${AWS::AccountId}:user/aossadmin\"]}]\nCreating collections with CloudFormation\n433\nAmazon OpenSearch Service\nDeveloper Guide\nNetworkPolicy:\nType: 'AWS::OpenSearchServerless::SecurityPolicy'\nProperties:\nName: quickstart-network-policy\nType: network\nDescription: Network policy for quickstart collection\nPolicy: >-\n[{\"Rules\":[{\"ResourceType\":\"collection\",\"Resource\":[\"collection/\nquickstart\"]}, {\"ResourceType\":\"dashboard\",\"Resource\":[\"collection/\nquickstart\"]}],\"AllowFromPublic\":true}]\nEncryptionPolicy:\nType: 'AWS::OpenSearchServerless::SecurityPolicy'\nProperties:\nName: quickstart-security-policy\nType: encryption\nDescription: Encryption policy for quickstart collection\nPolicy: >-\n{\"Rules\":[{\"ResourceType\":\"collection\",\"Resource\":[\"collection/\nquickstart\"]}],\"AWSOwnedKey\":true}\nCollection:\nType: 'AWS::OpenSearchServerless::Collection'\nProperties:\nName: quickstart\nType: TIMESERIES\nDescription: Collection to holds timeseries data\nDependsOn: EncryptionPolicy\nOutputs:\nIAMUser:\nValue: !Ref IAMUSer\nDashboardURL:\nValue: !GetAtt Collection.DashboardEndpoint\nCollectionARN:\nValue: !GetAtt Collection.Arn",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 462,
+      "end": 463
+    },
+    "content_stats": {
+      "char_count": 2629,
+      "word_count": 243
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

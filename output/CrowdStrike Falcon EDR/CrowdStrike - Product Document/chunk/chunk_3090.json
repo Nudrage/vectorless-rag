@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3090",
+  "section_number": "1.6.4.3.1",
+  "header": "Fields list :",
+  "content": "Field Name\nDescription\nMobileDetectionId\nID of the mobile detection.\nBasicIntegrity\nThe result of a more lenient verdict for device integrity. Returned by Google SafetyNet Attestation API.\nContextTimeStamp\nSystem time of event creation.\nCTSProfileMatch\nThe result of a stricter verdict for device integrity. Returned by Google SafetyNet Attestation API.\nIsEcho\nIndicates if the same event was sent before.\nPatternId\nThe ID of the detection for this event.\nSafetyNetAdvice\nProvides information to help explain why the Google SafetyNet Attestation API set either CTSProfileMatch or BasicIntegrity\nfields to false.\nSafetyNetErrorMessage\nAn encoded error message. Returned by Google SafetyNet Attestation API.\nSafetyNetErrorType\nDescribes SafetyNet error. Error could have multiple reasons. Values:\nPARSE_ERROR (1)\nPROFILE_MATCH_FAILED (2)\nBASIC_INTEGRITY_FAILED (3)\nNONCE_INVALID (4)\nAPK_PACKAGE_NAME_INVALID (5)\nAPK_CERTIFICATE_INVALID (7)\nSIGNATURE_INVALID (10)\nCERTIFICATE_INVALID (11)\nSafetyNetEvaluationType\nProvides information about the type of measurements used to compute fields like CTSProfileMatch and BasicIntegrity.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1135,
+      "end": 1135
+    },
+    "content_stats": {
+      "char_count": 1125,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "MobileSafetyNetDetection",
+      "children": []
+    }
+  }
+}

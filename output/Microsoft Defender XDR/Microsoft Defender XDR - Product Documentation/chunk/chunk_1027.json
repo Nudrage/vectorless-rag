@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1027",
+  "section_number": "155.1.1.129",
+  "header": "DeviceTvmSoftwareInventory",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmSoftwareInventory  table in the advanced hunting schema contains the Microsoft\nDefender Vulnerability Management inventory of software currently installed on devices in\nyour network, including end of support information. You can, for instance, hunt for events\ninvolving devices that are installed with a currently vulnerable software version. Use this\nreference to construct queries that return information from the table.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\nOSPlatform\nstring\nPlatform of the operating system running on the device. This indicates\nspecific operating systems, including variations within the same family,\n） Important\nSome information relates to prereleased product which might be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\n７ Note\nThe DeviceTvmSoftwareInventory  and DeviceTvmSoftwareVulnerabilities  tables have\nreplaced the DeviceTvmSoftwareInventoryVulnerabilities  table. Together, the first two\ntables include more columns you can use to help inform your vulnerability management\nactivities or hunt for vulnerable devices.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nsuch as Windows 11, Windows 10, and Windows 7.\nOSVersion\nstring\nVersion of the operating system running on the device\nOSArchitecture\nstring\nArchitecture of the operating system running on the device\nSoftwareVendor\nstring\nName of the software vendor\nSoftwareName\nstring\nName of the software product\nSoftwareVersion\nstring\nVersion number of the software product\nEndOfSupportStatus\nstring\nIndicates the lifecycle stage of the software product relative to its\nspecified end-of-support (EOS) or end-of-life (EOL) date\nEndOfSupportDate\ndatetime\nEnd-of-support (EOS) or end-of-life (EOL) date of the software product\nProductCodeCpe\nstring\nThe standard Common Platform Enumeration (CPE) name of the\nsoftware product version or 'not available' where there's no CPE\nHunt for threats proactively\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\nLearn about Microsoft Defender Vulnerability Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 750,
+      "end": 751
+    },
+    "content_stats": {
+      "char_count": 2877,
+      "word_count": 398
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Read more"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1491",
+  "section_number": "155.1.1.203",
+  "header": "Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender",
+  "content": "Intelligence Briefing Agent in Microsoft\nDefender\nApplies to: Microsoft Defender XDR\nThreat intelligence analysts face several challenges in delivering insightful, actionable,\ncontextualized intelligence. The task of developing threat intelligence briefings involves\ncollecting information from various threat feeds, tools, and portals; filtering and correlating this\ninformation; and analyzing and mapping organizational risks. These activities happen before\nanalysts can even start developing the report itself and generating insights for when they\ndeliver the briefing. By then, as these processes can take anywhere from hours to days, the\nthreats facing the organization have already evolved, which can render the briefing obsolete.\nThe Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender was\ndeveloped in response to these pain points. It generates threat intelligence briefings based on\nthe latest threat actor activity and both internal and external vulnerability information in a\nmatter of minutes. It can help security teams save time by creating a customized, relevant\nreport that provides CISOs, security managers, and analysts with key situational awareness and\na solid foundation for defense work.\nThe agent leverages dynamic automation and deep generative AI along with its wealth of\nthreat intelligence knowledge and signals. When building the briefing, the agent dynamically\nchooses the next step based on the outcome of the previous step, allowing it to decide in real-\ntime what threat intelligence to include and prioritize. The agent then translates this technical\ninformation into a digestible report that can be consumed by various audiences.\nThe Threat Intelligence Briefing Agent is best suited for customers who have turned on\nMicrosoft Defender for Endpoint and Microsoft Defender External Attack Surface, as the agent\nrelies on signals and insights from these first-party integrations to deliver accurate and\ncontext-rich reports.\n７ Note\nThis article discusses the Threat Intelligence Briefing Agent embedded experience in\nMicrosoft Defender portal. To learn more about the standalone experience in Security\nCopilot, read Threat Intelligence Briefing Agent (standalone experience)\nThe Threat Intelligence Briefing Agent appears as a banner at the top of the Threat analytics\npage in the Microsoft Defender portal.\nTo access Threat analytics, from the navigation menu, select Threat intelligence > Threat\nanalytics.\nMicrosoft Security Copilot is needed to run this agent.\nThe following plugins are required to run this agent:\nMicrosoft Threat Intelligence\nMicrosoft Threat Intelligence agents\nThe following plugin is optional but can add more context to the output:\nMicrosoft Defender External Attack Surface Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1114,
+      "end": 1115
+    },
+    "content_stats": {
+      "char_count": 2777,
+      "word_count": 397
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Where to find the Threat Intelligence Briefing Agent",
+        "Prerequisites",
+        "Set up the agent",
+        "View briefing and manage the agent",
+        "Assess and provide feedback on the agent’s output",
+        "See also"
+      ]
+    }
+  }
+}

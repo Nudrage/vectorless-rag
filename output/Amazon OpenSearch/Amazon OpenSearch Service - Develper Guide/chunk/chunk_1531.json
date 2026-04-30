@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1531",
+  "section_number": "2.28.3.1",
+  "header": "IAM policies",
+  "content": "We recommend that you update your IAM policies to use the renamed API operations.\nHowever, OpenSearch Service will continue to respect existing policies by internally\nreplicating the old API permissions. For example, if you currently have permission to\nperform the CreateElasticsearchDomain operation, you can now make calls to both\nCreateElasticsearchDomain (old API operation) and CreateDomain (new API operation).\nThe same applies to explicit denies. For a list of updated API operations, see the policy element\nreference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2070,
+      "end": 2070
+    },
+    "content_stats": {
+      "char_count": 525,
+      "word_count": 76
+    },
+    "hierarchy": {
+      "parent": "Access policy changes",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_301",
+  "section_number": "2.7.3.6.2",
+  "header": "Restoring from a snapshot",
+  "content": "Restoring from a snapshot recovers data from a previously taken backup. This process is crucial for\ndisaster recovery and data management in OpenSearch Serverless. Before restoring, understand\nthat restored indexes will have diﬀerent UUIDs than their original versions, snapshots can only\nbe restored to their original collection (cross-collection restoration is not supported), and restore\noperations will impact cluster performance so plan accordingly.\nUse the following procedures to restore backed up indexes from a snapshot.\nConsole\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/.\n2.\nIn the left navigation pane, choose Serverless, then choose Collections.\n3.\nChoose the name of your collection to open its details page.\n4.\nChoose the Snapshots tab to display available snapshots.\n5.\nChoose the snapshot you want to restore from, then choose Restore from snapshot.\n6.\nIn the Restore from snapshot dialog:\n• For Snapshot name, verify the selected snapshot ID.\n• For Snapshot scope, choose either:\n• All indexes in collection - Restore all indexes from the snapshot\n• Speciﬁc indexes - Select individual indexes to restore\n• For Destination, choose the collection to restore to.\n• (Optional) Conﬁgure Rename settings to rename restored indexes:\n• Do not rename - Keep original index names\nBacking up collections using snapshots\n439\nAmazon OpenSearch Service\nDeveloper Guide\n• Add preﬁx to restored index names - Add a preﬁx to avoid conﬂicts\n• Rename using regular expression - Use advanced renaming patterns\n• (Optional) Conﬁgure Notiﬁcation settings to be notiﬁed when the restore completes or\nencounters errors.\n7.\nChoose Save to start the restore operation.\n8.\nMonitor the restore progress in the Restore activity tab, which shows the status, start time,\ncompletion time, and aﬀected indexes.\nAWS CLI\n1.\nRun the following command to identify the appropriate snapshot.\nGET /_snapshot/aoss-automated/_all\nFor a smaller list of snapshots, run the following command.\nGET /_cat/snapshots/aoss-automated\n2.\nRun the following command to verify the details of the snapshot before restoring. In the\ncommand, replace the example content with your speciﬁc information.\nGET _snapshot/aoss-automated/snapshot-ExampleSnapshotID1/\n3.\nRun the following command to restore from a speciﬁc snapshot.\nPOST /_snapshot/aoss-automated/snapshot-ID/_restore\nYou can customize the restore operation by including a request body. Here's an example.\nPOST /_snapshot/aoss-automated/snapshot-\nExampleSnapshotID1-5e01-4423-9833Example/_restore\n{\n\"indexes\": \"opensearch-dashboards*,my-index*\",\n\"ignore_unavailable\": true,\n\"include_global_state\": false,\n\"include_aliases\": false,\n\"rename_pattern\": \"opensearch-dashboards(.+)\",\n\"rename_replacement\": \"restored-opensearch-dashboards$1\"\nBacking up collections using snapshots\n440\nAmazon OpenSearch Service\nDeveloper Guide\n}\n4.\nRun the following command to view the restore progress.\nGET /_cat/recovery\nNote\nWhen restoring a snapshot with a command that includes a request body, you can use\nseveral parameters to control the restore behavior. The indexes parameter speciﬁes\nwhich indexes to restore and supports wildcard patterns. Set ignore_unavailable\nto continue the restore operation even if an index in the snapshot is missing. Use\ninclude_global_state to determine whether to restore the cluster state, and\ninclude_aliases to control whether to restore associated aliases. The rename_pattern\nand rename_replacement parameters rename indexes during the restore operation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 468,
+      "end": 470
+    },
+    "content_stats": {
+      "char_count": 3533,
+      "word_count": 480
+    },
+    "hierarchy": {
+      "parent": "Backing up collections using snapshots",
+      "children": []
+    }
+  }
+}

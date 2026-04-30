@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_955",
+  "section_number": "2.15.2.2",
+  "header": "Search result highlighting",
+  "content": "The highlight option tells OpenSearch to return an additional object inside of the hits array if\nthe query matched one or more ﬁelds:\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search\n{\n\"size\": 20,\n\"query\": {\n\"multi_match\": {\n\"query\": \"house\",\n\"fields\": [\"title^4\", \"plot^2\", \"actors\", \"directors\"]\n}\n},\nBoosting ﬁelds\n1469\nAmazon OpenSearch Service\nDeveloper Guide\n\"highlight\": {\n\"fields\": {\n\"plot\": {}\n}\n}\n}\nIf the query matched the content of the plot ﬁeld, a hit might look like the following:\n{\n\"_index\": \"movies\",\n\"_type\": \"movie\",\n\"_id\": \"tt0091541\",\n\"_score\": 11.276199,\n\"_source\": {\n\"directors\": [\n\"Richard Benjamin\"\n],\n\"release_date\": \"1986-03-26T00:00:00Z\",\n\"rating\": 6,\n\"genres\": [\n\"Comedy\",\n\"Music\"\n],\n\"image_url\": \"http://ia.media-imdb.com/images/M/\nMV5BMTIzODEzODE2OF5BMl5BanBnXkFtZTcwNjQ3ODcyMQ@@._V1_SX400_.jpg\",\n\"plot\": \"A young couple struggles to repair a hopelessly dilapidated house.\",\n\"title\": \"The Money Pit\",\n\"rank\": 4095,\n\"running_time_secs\": 5460,\n\"actors\": [\n\"Tom Hanks\",\n\"Shelley Long\",\n\"Alexander Godunov\"\n],\n\"year\": 1986,\n\"id\": \"tt0091541\"\n},\n\"highlight\": {\n\"plot\": [\n\"A young couple struggles to repair a hopelessly dilapidated <em>house</em>.\"\n]\n}\nSearch result highlighting\n1470\nAmazon OpenSearch Service\nDeveloper Guide\n}\nBy default, OpenSearch wraps the matching string in <em> tags, provides up to 100 characters of\ncontext around the match, and breaks content into sentences by identifying punctuation marks,\nspaces, tabs, and line breaks. All of these settings are customizable:\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search\n{\n\"size\": 20,\n\"query\": {\n\"multi_match\": {\n\"query\": \"house\",\n\"fields\": [\"title^4\", \"plot^2\", \"actors\", \"directors\"]\n}\n},\n\"highlight\": {\n\"fields\": {\n\"plot\": {}\n},\n\"pre_tags\": \"<strong>\",\n\"post_tags\": \"</strong>\",\n\"fragment_size\": 200,\n\"boundary_chars\": \".,!? \"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1498,
+      "end": 1500
+    },
+    "content_stats": {
+      "char_count": 1874,
+      "word_count": 238
+    },
+    "hierarchy": {
+      "parent": "Request body searches",
+      "children": []
+    }
+  }
+}

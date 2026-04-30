@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_452",
+  "section_number": "1.16.25",
+  "header": "Reset Client Secret for an OIDC Integration (Legacy v2)",
+  "content": "Reset the client_secret  for the specified OIDC integration. Requires \"Grant\napplications\" API permission.\n{\n\"response\": {},\n\"stat\": \"OK\"\n}\nGET  /admin/v2/integrations/oidc/[integration_key]/client_secret\n{\n\"response\": {\n\"client_secret\": \"Zh5eGmUq9zpfQnyUIu5OL9iWoMMv5ZNmk3zLJ4Ep\"\n},\n\"stat\": \"OK\"\n}\n\n\nPOST  /admin/v2/integrations/oidc/[integration_key]/client_secret",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 175,
+      "end": 175
+    },
+    "content_stats": {
+      "char_count": 368,
+      "word_count": 34
+    },
+    "hierarchy": {
+      "parent": "Integrations",
+      "children": []
+    }
+  }
+}

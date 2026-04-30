@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1996",
+  "section_number": "155.1.1.262.1.1",
+  "header": "Malicious Exchange connectors",
+  "content": "This alert tries to identify such instances of mail flow, wherein the mail sending activity seems\nsuspicious adding to that relevant information on sender is unavailable.\nYou must follow the sequence to identify malicious Exchange connectors:\nIdentify which accounts are sending emails:\nDo accounts appear to be compromised?\nIdentify the connector relaying on emails to check:\nIf the connector is supposed to send out high volume emails?\nIf the connector was modified or created recently?\nAre emails going to internal email addresses?\nAre emails going to external addresses (Spray and pray spam)?\nAre emails going to external addresses belonging to customers or vendors (supply\nchain type attack)?\nCheck if the FROM header and Envelope Sender domains are the same or different.\nThis section describes the steps to investigate an alert and remediate the security risk due to\nthis incident.\nDetermine whether the connector demonstrates bad (malicious) behavior.\nLook for events indicating unusual mail traffic and identify, whether any new and\nrecently added Exchange connector.\nFor mail traffic observed, determine if the email accounts are compromised by\ninspecting whether the accounts are responsible for unusual mail traffic.\nLook for mail content containing malicious artifacts (bad links/attachments).\nLook for domains that are not part of your environment.\nDetermine the email accounts are not compromised. Identify the connector that was\nrecently added or modified in the environment.\nLook for:\nField values in the P1 sender (email header sender) and P2 sender (envelope sender),\nand check whether there's a mismatch.\nEmpty values in the SenderObjectId field.\nUse telemetry data to note:\nThe NetworkMessageId (Message ID) of the emails that were sent from the malicious\nconnector.\nThe connector creation date, last modified date, and last modified by date.\nThe IP address of the connector from where the email traffic is observed.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1478,
+      "end": 1479
+    },
+    "content_stats": {
+      "char_count": 1937,
+      "word_count": 296
+    },
+    "hierarchy": {
+      "parent": "What are Exchange connectors?",
+      "children": []
+    }
+  }
+}

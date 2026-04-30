@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_616",
+  "section_number": "2.9.9.1",
+  "header": "Skipping indexes",
+  "content": "A skipping index ingests only the metadata of data stored in Amazon S3. When you query a table\nwith a skipping index, the query planner uses the index to rewrite the query, eﬃciently identifying\nthe location of the data without scanning all partitions and ﬁles. This approach helps narrow down\nthe exact location of the stored data.\nThere are two ways to create a skipping index. The ﬁrst way is to autogenerate the skipping index\nfrom within data source details. The second is to use Query Workbench to manually create the\nskipping index using a SQL statement.\nTo autogenerate a skipping index from your data source, go to Dashboard management and\nAccelerate data, then select your database and table (you might need to refresh to get the\nlatest databases and tables). You can then choose Generate to autogenerate a skipping index, or\nmanually select each ﬁeld you want to index and specify the acceleration (skipping index type).\nLastly, choose Create acceleration to create a reoccurring job that populates the new skipping\nindex.\nSkipping indexes are supported only for Amazon S3 data sources.\nFor more information about setting up skipping indexes using Query Workbench, see Skipping\nindexes in the OpenSearch documentation.\nSkipping indexes\n773\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 802,
+      "end": 803
+    },
+    "content_stats": {
+      "char_count": 1292,
+      "word_count": 208
+    },
+    "hierarchy": {
+      "parent": "Optimizing query performance for Amazon OpenSearch Service data sources",
+      "children": []
+    }
+  }
+}

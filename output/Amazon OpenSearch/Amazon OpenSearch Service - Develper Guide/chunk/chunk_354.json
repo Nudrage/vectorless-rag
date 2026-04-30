@@ -1,0 +1,39 @@
+{
+  "chunk_id": "chunk_354",
+  "section_number": "2.7.10",
+  "header": "Overview of security in Amazon OpenSearch Serverless",
+  "content": "Security in Amazon OpenSearch Serverless diﬀers fundamentally from security in Amazon\nOpenSearch Service in the following ways:\nSecurity in OpenSearch Serverless\n481\nAmazon OpenSearch Service\nDeveloper Guide\nFeature\nOpenSearch Service\nOpenSearch Serverless\nData access\ncontrol\nData access is determined by IAM policies\nand ﬁne-grained access control.\nData access is determined by\ndata access policies.\nEncryption at\nrest\nEncryption at rest is optional for domains.\nEncryption at rest is required for\ncollections.\nSecurity setup\nand administr\nation\nYou must conﬁgure network, encryptio\nn, and data access individually for each\ndomain.\nYou can use security policies to\nmanage security settings for\nmultiple collections at scale.\nThe following diagram illustrates the security components that make up a functional collection.\nA collection must have an assigned encryption key, network access settings, and a matching data\naccess policy that grants permission to its resources.\nTopics\n• Encryption policies\n• Network policies\nSecurity in OpenSearch Serverless\n482\nAmazon OpenSearch Service\nDeveloper Guide\n• Data access policies\n• IAM and SAML authentication\n• Infrastructure security\n• Getting started with security in Amazon OpenSearch Serverless\n• Identity and Access Management for Amazon OpenSearch Serverless\n• Encryption in Amazon OpenSearch Serverless\n• Network access for Amazon OpenSearch Serverless\n• FIPS compliance in Amazon OpenSearch Serverless\n• Data access control for Amazon OpenSearch Serverless\n• Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)\n• SAML authentication for Amazon OpenSearch Serverless\n• Compliance validation for Amazon OpenSearch Serverless",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 510,
+      "end": 512
+    },
+    "content_stats": {
+      "char_count": 1706,
+      "word_count": 239
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless",
+      "children": [
+        "Encryption policies",
+        "Network policies",
+        "Data access policies",
+        "IAM and SAML authentication",
+        "Infrastructure security",
+        "Getting started with security in Amazon OpenSearch Serverless",
+        "Identity and Access Management for Amazon OpenSearch Serverless",
+        "Encryption in Amazon OpenSearch Serverless",
+        "Network access for Amazon OpenSearch Serverless",
+        "FIPS compliance in Amazon OpenSearch Serverless",
+        "Data access control for Amazon OpenSearch Serverless",
+        "Access Amazon OpenSearch Serverless using an interface endpoint (AWS PrivateLink)",
+        "SAML authentication for Amazon OpenSearch Serverless",
+        "Compliance validation for Amazon OpenSearch Serverless"
+      ]
+    }
+  }
+}

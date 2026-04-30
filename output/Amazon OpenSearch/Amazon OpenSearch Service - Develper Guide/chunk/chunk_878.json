@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_878",
+  "section_number": "2.27.3.1.1",
+  "header": "About the user pool",
+  "content": "User pools have two main features: create and manage a directory of users, and let users sign up\nand log in. For instructions to create a user pool, see Getting started with user pools in the Amazon\nCognito Developer Guide.\nWhen you create a user pool to use with OpenSearch Service, consider the following:\n• Your Amazon Cognito user pool must have a domain name. OpenSearch Service uses this domain\nname to redirect users to a login page for accessing Dashboards. Other than a domain name, the\nuser pool doesn't require any non-default conﬁguration.\n• You must specify the pool's required standard attributes—attributes like name, birth date, email\naddress, and phone number. You can't change these attributes after you create the user pool, so\nchoose the ones that matter to you at this time.\n• While creating your user pool, choose whether users can create their own accounts, the minimum\npassword strength for accounts, and whether to enable multi-factor authentication. If you plan\nto use an external identity provider, these settings are inconsequential. Technically, you can\nenable the user pool as an identity provider and enable an external identity provider, but most\npeople prefer one or the other.\nUser pool IDs take the form of region_ID. If you plan to use the AWS CLI or an AWS SDK to\nconﬁgure OpenSearch Service, make note of the ID.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1426,
+      "end": 1426
+    },
+    "content_stats": {
+      "char_count": 1350,
+      "word_count": 227
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

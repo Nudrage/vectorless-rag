@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_169",
+  "section_number": "2.6.16.11.2",
+  "header": "Using an OpenSearch Ingestion pipeline with Amazon Security Lake as a sink",
+  "content": "Use the Amazon S3 sink plugin in OpenSearch Ingestion to send data from any supported source\nto Amazon Security Lake. Security Lake collects and stores security data from AWS, on-premises\nenvironments, and SaaS providers in a dedicated data lake.\nTo conﬁgure your pipeline to write log data to Security Lake, use the preconﬁgured Firewall Traﬃc\nlogs blueprint. The blueprint includes a default conﬁguration for retrieving raw security logs or\nother data stored in an Amazon S3 bucket, processing the records, and normalizing them. It then\nmaps the data to Open Cybersecurity Schema Framework (OCSF) and sends the transformed\nOCSF-compliant data to Security Lake.\nThe pipeline has the following metadata attributes:\n• bucket_name: The name of the Amazon S3 bucket created by Security Lake for storing security\ndata.\n• path_prefix: The custom source name deﬁned in the Security Lake IAM role policy.\n• region: The AWS Region where the Security Lake S3 bucket is located.\n• accountID: The AWS account ID in which Security Lake is enabled.\n• sts_role_arn: The ARN of the IAM role intended for use with Security Lake.\nPrerequisites\nBefore you create a pipeline to send data to Security Lake, perform the following steps:\n• Enable and conﬁgure Amazon Security Lake: Set up Amazon Security Lake to centralize security\ndata from various sources. For instructions, see Enabling Security Lake using the console.\nWhen you select a source, choose Ingest speciﬁc AWS sources and select one or more log and\nevent sources that you want to ingest.\n• Set up permissions: Conﬁgure the pipeline role with the required permissions to write data to\nSecurity Lake. For more information, see Pipeline role.\nAmazon Security Lake\n240\nAmazon OpenSearch Service\nDeveloper Guide\nCreate the pipeline\nUse the preconﬁgured Security Lake blueprint to create the pipeline. For more information, see\nUsing blueprints to create a pipeline.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 269,
+      "end": 270
+    },
+    "content_stats": {
+      "char_count": 1904,
+      "word_count": 304
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon Security Lake",
+      "children": []
+    }
+  }
+}

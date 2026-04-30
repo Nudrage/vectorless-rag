@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_584",
+  "section_number": "2.9.5.2.1",
+  "header": "Create Spark Tables using Query Workbench",
+  "content": "Direct queries from OpenSearch Service to Amazon S3 use Spark tables within the AWS Glue\nData Catalog. You can create tables from within the Query Workbench without having to leave\nOpenSearch Dashboards.\nTo manage existing databases and tables in your data source, or to create new tables that you want\nto use direct queries on, choose Query Workbench from the left navigation and select the Amazon\nS3 data source from the data source drop down.\nTo set up a table for VPC Flow logs stored in S3 in Parquet format, run the following query:\nCREATE TABLE\ndatasourcename.gluedatabasename.vpclogstable (version INT, account_id STRING,\ninterface_id STRING,\nsrcaddr STRING, dstaddr STRING, srcport INT, dstport INT, protocol INT, packets\nBIGINT,\nbytes BIGINT, start BIGINT, end BIGINT, action STRING, log_status STRING,\n`aws-account-id` STRING, `aws-service` STRING, `aws-region` STRING, year STRING,\nmonth STRING, day STRING, hour STRING)\nUSING parquet PARTITIONED BY (aws-account-id, aws-service, aws-region, year, month,\nday, hour)\nLOCATION \"s3://accountnum-vpcflow/AWSLogs\"\nAfter creating the table, run the following query to ensure that it's compatible with direct queries:\nConﬁguring an S3 data source\n748\nAmazon OpenSearch Service\nDeveloper Guide\nMSCK REPAIR TABLE  datasourcename.databasename.vpclogstable",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 777,
+      "end": 778
+    },
+    "content_stats": {
+      "char_count": 1307,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring and querying an S3 data source in OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

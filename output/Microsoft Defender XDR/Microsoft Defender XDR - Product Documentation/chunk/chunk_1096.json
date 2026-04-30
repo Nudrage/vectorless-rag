@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1096",
+  "section_number": "1.1.155.2.2.1.1.1",
+  "header": "Queries you can run continuously",
+  "content": "Near real-time detections are supported for the following tables:\nAlertEvidence\nCloudAppEvents\nDeviceEvents\nDeviceFileCertificateInfo\nDeviceFileEvents\nDeviceImageLoadEvents\nDeviceLogonEvents\nDeviceNetworkEvents\nDeviceNetworkInfo\nDeviceInfo\nDeviceProcessEvents\nDeviceRegistryEvents\nEmailAttachmentInfo\nEmailEvents  (except LatestDeliveryLocation  and LatestDeliveryAction  columns)\nEmailPostDeliveryEvents\nEmailUrlInfo\nIdentityDirectoryEvents\nIdentityLogonEvents\nIdentityQueryEvents\nUrlClickEvents\nMicrosoft Sentinel customers who are onboarded to Microsoft Defender can select Custom\nfrequency when the rule is based only on data that is ingested to Microsoft Sentinel.\nWhen you select this frequency option, the Run query every input component appears. Type\nthe desired frequency for the rule and use the dropdown to select the units: minutes, hours, or\ndays. The supported range is any value from 5 minutes to 14 days. When you select a\nfrequency, the lookback period is determined automatically with the following logic:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 7,
+    "font_size": 13,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 829,
+      "end": 830
+    },
+    "content_stats": {
+      "char_count": 1023,
+      "word_count": 120
+    },
+    "hierarchy": {
+      "parent": "Continuous (NRT) frequency",
+      "children": []
+    }
+  }
+}

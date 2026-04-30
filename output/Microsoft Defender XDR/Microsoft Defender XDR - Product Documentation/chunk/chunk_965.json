@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_965",
+  "section_number": "155.1.1.265.1",
+  "header": "Prerequisites",
+  "content": "ﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nWindows 7.\nIPAddress\nstring\nIP address assigned to the device during communication\nIsAnonymousProxy\nboolean\nIndicates whether the IP address belongs to a known anonymous proxy\nCountryCode\nstring\nTwo-letter code indicating the country where the client IP address is geolocated\nCity\nstring\nCity where the client IP address is geolocated\nIsp\nstring\nInternet service provider associated with the IP address\nUserAgent\nstring\nUser agent information from the web browser or other client application\nActivityType\nstring\nType of activity that triggered the event\nActivityObjects\ndynamic\nList of objects, such as files or folders, that were involved in the recorded activity\nObjectName\nstring\nName of the object that the recorded action was applied to\nObjectType\nstring\nType of object, such as a file or a folder, that the recorded action was applied to\nObjectId\nstring\nUnique identifier of the object that the recorded action was applied to\nReportId\nstring\nUnique identifier for the event\nAccountType\nstring\nType of user account, indicating its general role and access levels, such as Regular, System,\nAdmin, Application\nIsExternalUser\nboolean\nIndicates whether a user inside the network doesn't belong to the organization's domain\nIsImpersonated\nboolean\nIndicates whether the activity was performed by one user for another (impersonated) user\nIPTags\ndynamic\nCustomer-defined information applied to specific IP addresses and IP address ranges\nIPCategory\nstring\nAdditional information about the IP address\nUserAgentTags\ndynamic\nMore information provided by Microsoft Defender for Cloud Apps in a tag in the user agent\nfield. Can have any of the following values: Native client, Outdated browser, Outdated operating\nsystem, Robot\nRawEventData\ndynamic\nRaw event information from the source application or service in JSON format\nAdditionalFields\ndynamic\nAdditional information about the entity or event\nLastSeenForUser\ndynamic\nIndicates the number of days since a specific attribute was last seen for the user. A value of 0\nmeans the attribute was seen today, a negative value indicates the attribute is being seen for the\nfirst time, and a positive value represents the number of days since the attribute was last seen.\nFor example: {\"ActionType\":\"0\",\"OSPlatform\":\"4\",\"ISP\":\"-1\"}\nUncommonForUser\ndynamic\nLists the attributes in the event that are uncommon for the user, helping to rule out false\npositives and find anomalies. For example: [\"ActivityType\",\"ActionType\"].  To filter out\nnonanomalous results: events with low or insignificant security value won't go through\nenrichment processes and will have a value of \"\", while high-value events will go through\nenrichment processes and, if no anomalies are found, will have a value of \"[]\".\nAuditSource\nstring\nAudit data source. Possible values are one of the following:\n- Defender for Cloud Apps access control\nColumn name\nData\ntype\nDescription\n- Defender for Cloud Apps session control\n- Defender for Cloud Apps app connector\nSessionData\ndynamic\nThe Defender for Cloud Apps session ID for access or session control. For example:\n{InLineSessionId:\"232342\"}\nOAuthAppId\nstring\nA unique identifier that is assigned to an application when it's registered to Microsoft Entra with\nOAuth 2.0 protocol.\nThe CloudAppEvents table contains enriched logs from all SaaS applications connected to Microsoft Defender for\nCloud Apps, such as:\nOffice 365 and Microsoft Applications, including:\nExchange Online\nSharePoint Online\nMicrosoft Teams\nDynamics 365\nSkype for Business\nViva Engage\nPower Automate\nPower BI\nDropbox\nSalesforce\nGitHub\nAtlassian\nConnect supported cloud apps for instant, out-of-the-box protection, deep visibility into the app's user and\ndevice activities, and more. For more information, see Protect connected apps using cloud service provider APIs.\nAdvanced hunting overview\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 19,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 654,
+      "end": 656
+    },
+    "content_stats": {
+      "char_count": 4010,
+      "word_count": 591
+    },
+    "hierarchy": {
+      "parent": "CloudAppEvents",
+      "children": []
+    }
+  }
+}

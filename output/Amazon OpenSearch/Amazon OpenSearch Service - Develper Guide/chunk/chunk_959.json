@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_959",
+  "section_number": "2.15.3.2",
+  "header": "The from and size parameters",
+  "content": "The simplest way to paginate is with the from and size parameters. The following request returns\nresults 20–39 of the zero-indexed list of search results:\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search\n{\n\"from\": 20,\n\"size\": 20,\n\"query\": {\n\"multi_match\": {\n\"query\": \"house\",\n\"fields\": [\"title^4\", \"plot^2\", \"actors\", \"directors\"]\n}\n}\n}\nPaginating search results\n1472\nAmazon OpenSearch Service\nDeveloper Guide\nFor more information about search pagination, see Paginate results in the OpenSearch\ndocumentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1501,
+      "end": 1502
+    },
+    "content_stats": {
+      "char_count": 532,
+      "word_count": 68
+    },
+    "hierarchy": {
+      "parent": "Paginating search results",
+      "children": []
+    }
+  }
+}

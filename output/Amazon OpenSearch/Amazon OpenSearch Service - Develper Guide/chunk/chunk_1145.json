@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1145",
+  "section_number": "2.18.7.2",
+  "header": "Updating the VPC endpoint policy to allow access to the OpenSearch UI application",
+  "content": "application\nAfter you create the private connection, update the VPC endpoint policy to allow access to the\nOpenSearch UI application in the VPC endpoint policy by specifying the application ID.\nFor information about updating a VPC endpoint policy, see Update a VPC endpoint policy in the\nAWS PrivateLink Guide.\nUpdating the VPC endpoint policy to allow access to the OpenSearch UI application\n1676\nAmazon OpenSearch Service\nDeveloper Guide\nEnsure that the VPC endpoint policy includes the following statement. Replace the placeholder\nvalue with your own information.\n{\n\"Statement\": [{\n\"Action\": [\"opensearch:*\"],\n\"Effect\": \"Allow\",\n\"Principal\": \"*\",\n\"Resource\": \"*\",\n\"Condition\": {\n\"StringEquals\": {\n\"opensearch:ApplicationId\": [\"opensearch-ui-application-id\"]\n}\n}\n}]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1705,
+      "end": 1706
+    },
+    "content_stats": {
+      "char_count": 769,
+      "word_count": 107
+    },
+    "hierarchy": {
+      "parent": "Managing access to the OpenSearch UI from a VPC endpoint",
+      "children": []
+    }
+  }
+}

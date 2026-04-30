@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1983",
+  "section_number": "155.1.1.263.2",
+  "header": "Advanced hunting queries",
+  "content": "let start_date = now(-10h);\nlet end_date = now();\nlet user_id = \"\"; // enter here the user id\nCloudAppEvents\n| where Timestamp between (start_date .. end_date)\n| where AccountObjectId == user_id\n| where Application == @\"Microsoft Exchange Online\"\n| where ActionType in (\"Set-Mailbox\", \"New-InboxRule\", \"Set-InboxRule\",\n\"UpdateInboxRules\") //set new inbox rule related operations\n| project Timestamp, ActionType, CountryCode, City, ISP, IPAddress, RuleConfig =\nRawEventData.Parameters, RawEventData\nlet alert_date = now(); //enter alert date\nlet timeback = 60d;\nlet userid = \"\"; //enter here user id\nCloudAppEvents\n| where Timestamp between ((alert_date-timeback)..(alert_date-1h))\nUse this query to check whether the country/region is common for the user by looking at the\nhistory of the user.\nKusto\nUse this query to check whether the user agent is common for the user by looking at the\nhistory of the user.\nKusto\n1. Disable the malicious inbox rule.\n2. Reset the user account's credentials. You can also verify if the user account has been\ncompromised with Microsoft Defender for Cloud Apps, which gets security signals from\nMicrosoft Entra ID Protection.\n3. Search for other malicious activities performed by the impacted user account.\n4. Check for other suspicious activity in the tenant that originated from the same IP or from\nthe same ISP (if the ISP is uncommon) to find other compromised user accounts.\n| where AccountObjectId == userid\n| make-series ActivityCount = count() default = 0 on Timestamp  from (alert_date-\ntimeback) to (alert_date-1h) step 12h by ISP\nlet alert_date = now(); //enter alert date\nlet timeback = 60d;\nlet userid = \"\"; //enter here user id\nCloudAppEvents\n| where Timestamp between ((alert_date-timeback)..(alert_date-1h))\n| where AccountObjectId == userid\n| make-series ActivityCount = count() default = 0 on Timestamp  from (alert_date-\ntimeback) to (alert_date-1h) step 12h by CountryCode\nlet alert_date = now(); //enter alert date\nlet timeback = 60d;\nlet userid = \"\"; //enter here user id\nCloudAppEvents\n| where Timestamp between ((alert_date-timeback)..(alert_date-1h))\n| where AccountObjectId == userid\n| make-series ActivityCount = count() default = 0 on Timestamp  from (alert_date-\ntimeback) to (alert_date-1h) step 12h by UserAgent",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1469,
+      "end": 1470
+    },
+    "content_stats": {
+      "char_count": 2274,
+      "word_count": 337
+    },
+    "hierarchy": {
+      "parent": "Alert classification for suspicious inbox manipulation rules",
+      "children": []
+    }
+  }
+}

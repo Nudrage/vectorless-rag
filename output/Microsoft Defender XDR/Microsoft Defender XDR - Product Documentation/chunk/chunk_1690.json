@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1690",
+  "section_number": "155.1.1.230.1",
+  "header": "Enable role-based access controls in Microsoft Defender for Endpoint in Microsoft Defender portal",
+  "content": "Defender for Endpoint in Microsoft Defender\nportal\ngroups. In our example approach, we create the following groups:\nTier 1 Analyst\nTier 2 Analyst\nMSSP Analyst Approvers\n2. Create Defender for Endpoint roles for appropriate access levels in Customer\nDefender for Endpoint in Microsoft Defender portal roles and groups.\nTo enable RBAC in the customer Microsoft Defender portal, access Permissions >\nEndpoints roles & groups > Roles with a user account with Security Administrator\nrights.\nThen, create RBAC roles to meet MSSP SOC Tier needs. Link these roles to the\ncreated user groups via \"Assigned user groups\".\nTwo possible roles:\nTier 1 Analysts\nPerform all actions except for live response and manage security settings.\nTier 2 Analysts\nTier 1 capabilities with the addition to live response.\nFor more information, see Manage portal access using role-based access control.\n\n1. Add MSSP as Connected Organization in Customer Microsoft Entra ID: Identity\nGovernance\nAdding the MSSP as a connected organization allows the MSSP to request and\nhave accesses provisioned.\nTo do so, in the customer AD tenant, access Identity Governance: Connected\norganization. Add a new organization and search for your MSSP Analyst tenant via\nTenant ID or Domain. We suggest creating a separate AD tenant for your MSSP\nAnalysts.\n2. Create a resource catalog in Customer Microsoft Entra ID: Identity Governance\nResource catalogs are a logical collection of access packages, created in the\ncustomer AD tenant.\nTo do so, in the customer AD tenant, access Identity Governance: Catalogs, and\nadd New Catalog. In our example, we'll call it MSSP Accesses.\nFurther more information, see Create a catalog of resources.\n3. Create access packages for MSSP resources Customer Microsoft Entra ID:\nIdentity Governance\nAccess packages are the collection of rights and accesses that a requestor grants\nupon approval.\nTo do so, in the customer AD tenant, access Identity Governance: Access Packages,\nand add New Access Package. Create an access package for the MSSP approvers\nand each analyst tier. For example, the following Tier 1 Analyst configuration\ncreates an access package that:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1264,
+      "end": 1266
+    },
+    "content_stats": {
+      "char_count": 2150,
+      "word_count": 337
+    },
+    "hierarchy": {
+      "parent": "Provide managed security service provider (MSSP) access",
+      "children": []
+    }
+  }
+}

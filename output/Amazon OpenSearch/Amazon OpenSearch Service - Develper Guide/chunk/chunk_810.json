@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_810",
+  "section_number": "2.12.4.4.1",
+  "header": "Enabling ﬁne-grained access control on existing domains",
+  "content": "You can enable ﬁne-grained access control on existing domains running OpenSearch or\nElasticsearch 6.7 or later.\nTo enable ﬁne-grained access control on an existing domain (console)\n1.\nSelect your domain and choose Actions and Edit security conﬁguration.\n2.\nSelect Enable ﬁne-grained access control.\n3.\nChoose how to create the master user:\n• If you want to use IAM for user management, choose Set IAM ARN as master user and\nspecify the ARN for an IAM role.\n• If you want to use the internal user database, choose Create master user and specify a\nusername and password.\n4.\n(Optional) Select Enable migration period for open/IP-based access policy. This setting\nenables a 30-day transition period during which your existing users can continue to access\nthe domain without disruptions, and existing open and IP-based access policies will continue\nto work with your domain. During this migration period, we recommend that administrators\ncreate the necessary roles and map them to users for the domain. If you use identity-based\npolicies instead of an open or IP-based access policy, you can disable this setting.\nYou also need to update your clients to work with ﬁne-grained access control during the\nmigration period. For example, if you map IAM roles with ﬁne-grained access control, you must\nEnabling ﬁne-grained access control\n1338\nAmazon OpenSearch Service\nDeveloper Guide\nupdate your clients to start signing requests with AWS Signature Version 4. If you conﬁgure\nHTTP basic authentication with ﬁne-grained access control, you must update your clients to\nprovide appropriate basic authentication credentials in requests.\nDuring the migration period, users who access the OpenSearch Dashboards endpoint for the\ndomain will land directly on the Discover page rather than the login page. Administrators and\nmaster users can choose Login to log in with admin credentials and conﬁgure role mappings.\nImportant\nOpenSearch Service automatically disables the migration period after 30 days. We\nrecommend ending it as soon as you create the necessary roles and map them to users.\nAfter the migration period ends, you can't re-enable it.\n5.\nChoose Save changes.\nThe change triggers a blue/green deployment during which the cluster health becomes red, but all\ncluster operations remain unaﬀected.\nTo enable ﬁne-grained access control on an existing domain (CLI)\nSet AnonymousAuthEnabled to true to enable the migration period with ﬁne-grained access\ncontrol:\naws opensearch update-domain-config --domain-name test-domain --region us-east-1 \\\n--advanced-security-options '{ \"Enabled\": true,\n\"InternalUserDatabaseEnabled\":true, \"MasterUserOptions\": {\"MasterUserName\":\"master-\nusername\",\"MasterUserPassword\":\"master-password\"},\"AnonymousAuthEnabled\": true}'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1367,
+      "end": 1368
+    },
+    "content_stats": {
+      "char_count": 2745,
+      "word_count": 396
+    },
+    "hierarchy": {
+      "parent": "Enabling ﬁne-grained access control",
+      "children": []
+    }
+  }
+}

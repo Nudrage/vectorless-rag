@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1419",
+  "section_number": "2.25.10.5",
+  "header": "Best practices",
+  "content": "Consider the following best practices when you use dedicated coordinator nodes.\n• Use general purpose instances for most use cases. They provide a balanced approach between\ncost and performance. Memory-optimized instances are ideal for workloads that require\nsubstantial memory resources, such as those that involve complex aggregations or large-scale\nsearches.\n• A good starting point is to provision between 5% and 10% of your data nodes as dedicated\ncoordinator nodes. For example, if your domain has 90 data nodes of a particular instance type,\nconsider provisioning 5 to 9 coordinator nodes of the same instance type.\nNote\nInstance type availability varies by region. When selecting instance types for coordinator\nnodes, verify that your chosen instance type is available in your target region. You can\ncheck instance type availability in the OpenSearch Service console when creating or\nmodifying your domain.\n• To minimize the risk of a single point of failure, provision at least two dedicated coordinator\nnodes. This ensures that your cluster remains operational even if one node fails.\n• If you're using cross-Region search, provision dedicated coordinator nodes in the destination\ndomains. Source domains typically don't handle coordination tasks.\nBest practices\n1865\nAmazon OpenSearch Service\nDeveloper Guide\n• For indexing-heavy environments, consider CPU-optimized instances that match the instance size\nof your data nodes for optimal performance.\n• For memory-intensive workloads, use a slightly larger instance type for your dedicated\ncoordinator nodes to help manage the increased memory demands.\n• Track the CoordinatorCPUUtilization Amazon CloudWatch metric. If it consistently exceeds\n80%, it might indicate that you need larger or additional coordinator nodes to handle the load.\n• Size your dedicated coordinator nodes to match your data nodes. For example, start with 4xlarge\ngeneral purpose coordinator nodes when using 4xlarge data nodes.\n• Use multiple smaller instances instead of fewer larger instances for coordinator nodes, unless\nyour individual requests or responses need extremely high memory (in GBs). For example, choose\n12 4xl instances rather than 6 8xlarge general purpose instances.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1894,
+      "end": 1895
+    },
+    "content_stats": {
+      "char_count": 2220,
+      "word_count": 329
+    },
+    "hierarchy": {
+      "parent": "Dedicated coordinator nodes in Amazon OpenSearch Service",
+      "children": [
+        "Node recommendations by cluster size"
+      ]
+    }
+  }
+}

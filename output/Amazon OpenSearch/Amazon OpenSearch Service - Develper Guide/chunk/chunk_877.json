@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_877",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you can conﬁgure Amazon Cognito authentication for OpenSearch Dashboards, you must\nfulﬁll several prerequisites. The OpenSearch Service console helps streamline the creation of\nthese resources, but understanding the purpose of each resource helps with conﬁguration and\ntroubleshooting. Amazon Cognito authentication for Dashboards requires the following resources:\n• Amazon Cognito user pool\n• Amazon Cognito identity pool\n• IAM role that has the AmazonOpenSearchServiceCognitoAccess policy attached\n(CognitoAccessForAmazonOpenSearch)\nNote\nThe user pool and identity pool must be in the same AWS Region. You can use the\nsame user pool, identity pool, and IAM role to add Amazon Cognito authentication for\nDashboards to multiple OpenSearch Service domains. To learn more, see the section called\n“Quotas”.\nPrerequisites\n1396\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1425,
+      "end": 1426
+    },
+    "content_stats": {
+      "char_count": 871,
+      "word_count": 120
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring Amazon Cognito authentication for OpenSearch Dashboards",
+      "children": [
+        "About the user pool",
+        "About the identity pool",
+        "About the CognitoAccessForAmazonOpenSearch role"
+      ]
+    }
+  }
+}

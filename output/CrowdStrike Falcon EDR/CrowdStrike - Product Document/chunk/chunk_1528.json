@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1528",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nUmppcEntryReason\nValues:\nPROCESS_UNLOAD (1)\nUNLOAD_FAILED (2)\nSUSPECT_CALLER (3)\nINVALID_BASE (4)\nINVALID_REASON (5)\nINVALID_RESERVED (6)\nSuspectValue\nSuspectStackFlag\nValues:\nNOT_SUSPECT (0x00000000)\nTHREAD_START_NOT_IN_MODULE (0x00000001)\nTHREAD_START_IN_NON_IMAGE_FILE (0x00000002)\nINVALID_TEB_STACK_VALUES (0x00000004)\nSTACK_POINTER_NOT_IN_STACK (0x00000008)\nBASE_POINTER_NOT_IN_STACK (0x00000010)\nSYSCALL_RETURN_ADDRESS_NOT_IN_NTDLL (0x00000020)\nSYSCALL_RETURN_ADDRESS_ON_STACK (0x00000040)\nSTACK_IS_EXECUTABLE (0x00000080)\nRETURN_ADDRESS_NOT_IN_MODULE (0x00000100)\nRETURN_ADDRESS_IN_NON_IMAGE_FILE (0x00000200)\nRETURN_ADDRESS_IS_WRITABLE (0x00000400)\nADDRESS_IN_REFLECTIVELY_LOADED_DLL (0x00000800)\nETW_PROVIDED_CALLSTACK (0x00001000)\nRETURN_ADDRESS_NOT_IN_MODULE_AND_IS_WRITABLE (0x00000500)\nSuspectAddress\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n428/1226\nField\nDescription\nMemoryRegionStart\nMemoryRegionProtection\nValues:\nPAGE_NOACCESS (0x01)\nPAGE_READONLY (0x02)\nPAGE_READWRITE (0x04)\nPAGE_WRITECOPY (0x08)\nPAGE_EXECUTE (0x10)\nPAGE_EXECUTE_READ (0x20)\nPAGE_EXECUTE_READWRITE (0x40)\nPAGE_EXECUTE_WRITECOPY (0x80)\nPreviousAddress\nPreviousAddressRegionStart\nPreviousAddressFileName\nReflectiveDllName\nReflectivePeTimestamp\nReflectivePeEntryRva\nProcessExecuteFlags\nCallStackModuleNames\nSemicolon-delimited list of modules or memory regions present in the call stack. Format determined by the accompanying\nCallStackModuleNamesVersion field on Windows.\nCallStackModuleNames\nSemicolon-delimited list of modules or memory regions present in the call stack. Format determined by the accompanying\nCallStackModuleNamesVersion field on Windows.\nCallStackModuleNames\nSemicolon-delimited list of modules or memory regions present in the call stack. Format determined by the accompanying\nCallStackModuleNamesVersion field on Windows.\nCallStackModuleNames\nSemicolon-delimited list of modules or memory regions present in the call stack. Format determined by the accompanying\nCallStackModuleNamesVersion field on Windows.\nCallStackModuleNamesVersion\nValues:\nINVALID_VERSION (0)\nCSMN_FORMAT_5 (5)\nCSMN_FORMAT_6 (6)\nCSMN_FORMAT_7 (7)\nCSMN_FORMAT_8 (8)\nCSMN_FORMAT_CURRENT (8)\nExecutableBytes\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 428,
+      "end": 429
+    },
+    "content_stats": {
+      "char_count": 2637,
+      "word_count": 244
+    },
+    "hierarchy": {
+      "parent": "UmppcEntryAnomaly",
+      "children": []
+    }
+  }
+}

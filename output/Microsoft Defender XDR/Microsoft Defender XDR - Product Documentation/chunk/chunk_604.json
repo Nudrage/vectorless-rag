@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_604",
+  "section_number": "155.1.1.54.3",
+  "header": "The automated investigation process",
+  "content": "security operations team. All actions, whether pending or completed, are listed in the Action\ncenter.\nWhile an investigation is running, any other related alerts that arise are added to the\ninvestigation until it completes. If an affected entity is seen elsewhere, the automated\ninvestigation expands its scope to include that entity, and the investigation process repeats.\nIn Microsoft Defender XDR, each automated investigation correlates signals across Microsoft\nDefender for Identity, Microsoft Defender for Endpoint, and Microsoft Defender for Office 365,\nas summarized in the following table:\nEntities\nThreat protection services\nDevices (also referred to as endpoints or machines)\nDefender for Endpoint\nOn-premises Active Directory users, entity behavior, and activities\nDefender for Identity\nEmail content (email messages that can contain files and URLs)\nDefender for Office 365\nTo view investigations, go to the Incidents page. Select an incident, and then select the\nInvestigations tab. To learn more, see Details and results of an automated investigation.\nThe Automated investigation & response card is available in the Microsoft Defender portal\n(https://security.microsoft.com\n) homepage. This card provides visibility to the total number\nof available remediation actions. The card also gives an overview of all the alerts and required\napproval time for each alert.\nﾉ\nExpand table\n７ Note\nNot every alert triggers an automated investigation, and not every investigation results in\nautomated remediation actions. It depends on how automated investigation and response\nis configured for your organization. See Configure automated investigation and response\ncapabilities.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 386,
+      "end": 387
+    },
+    "content_stats": {
+      "char_count": 1678,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "Automated investigation and response in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_834",
+  "section_number": "2.12.4.14.1",
+  "header": "Step 1: Create a domain",
+  "content": "Navigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome/ and create a domain with the following settings:\n• OpenSearch 1.0 or later, or Elasticsearch 7.9 or later\n• Public access\n• Fine-grained access control with a master user in the internal user database (TheMasterUser\nfor the rest of this tutorial)\n• Amazon Cognito authentication for Dashboards disabled\n• The following access policy:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::111122223333:root\"\n},\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/{domain-name}/*\"\n}\n]\n}\nTutorial: Internal user database with basic authentication\n1364\nAmazon OpenSearch Service\nDeveloper Guide\n• HTTPS required for all traﬃc to the domain\n• Node-to-node encryption\n• Encryption of data at rest",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1393,
+      "end": 1394
+    },
+    "content_stats": {
+      "char_count": 864,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Conﬁgure a domain with the internal user database and HTTP basic authentication",
+      "children": []
+    }
+  }
+}

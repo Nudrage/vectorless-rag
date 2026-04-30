@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_631",
+  "section_number": "2.10.1.1",
+  "header": "Viewing metrics in CloudWatch",
+  "content": "CloudWatch metrics are grouped ﬁrst by the service namespace, and then by the various dimension\ncombinations within each namespace.\nTo view metrics using the CloudWatch console\n1.\nOpen the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.\n2.\nIn the left navigation pane, ﬁnd Metrics and choose All metrics. Select the ES/\nOpenSearchService namespace.\n3.\nChoose a dimension to view the corresponding metrics. Metrics for individual nodes are in\nthe ClientId, DomainName, NodeId dimension. Cluster metrics are in the Per-Domain,\nPer-Client Metrics dimension. Some node metrics are aggregated at the cluster level\nand thus included in both dimensions. Shard metrics are in the ClientId, DomainName,\nNodeId, ShardRole dimension.\nTo view a list of metrics using the AWS CLI\nRun the following command:\naws cloudwatch list-metrics --namespace \"AWS/ES\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1192,
+      "end": 1192
+    },
+    "content_stats": {
+      "char_count": 860,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_843",
+  "section_number": "155.1.1.82.2",
+  "header": "Map DeviceAlertEvents table",
+  "content": " Tip\nIn addition to the columns in the following table, the AlertEvidence  table includes many\nother columns that provide a more holistic picture of alerts from various sources. See all\nAlertEvidence columns\nﾉ\nExpand table\nDeviceAlertEvents\ncolumn\nWhere to find the same data in Microsoft Defender XDR\nAlertId\nAlertInfo  and AlertEvidence  tables\nTimestamp\nAlertInfo  and AlertEvidence  tables\nDeviceId\nAlertEvidence  table\nDeviceName\nAlertEvidence  table\nSeverity\nAlertInfo  table\nCategory\nAlertInfo  table\nTitle\nAlertInfo  table\nFileName\nAlertEvidence  table\nSHA1\nAlertEvidence  table\nRemoteUrl\nAlertEvidence  table\nRemoteIP\nAlertEvidence  table\nAttackTechniques\nAlertInfo  table\nReportId\nThis column is typically used in Microsoft Defender for Endpoint to locate related\nrecords in other tables. In Microsoft Defender XDR, you can get related data\ndirectly from the AlertEvidence  table.\nTable\nThis column is typically used in Microsoft Defender for Endpoint for additional\nevent information in other tables. In Microsoft Defender XDR, you can get\nrelated data directly from the AlertEvidence  table.\nMicrosoft Defender for Endpoint queries will work as-is unless they reference the\nDeviceAlertEvents  table. To use these queries in Microsoft Defender XDR, apply these changes:\nReplace DeviceAlertEvents  with AlertInfo .\nJoin the AlertInfo  and the AlertEvidence  tables on AlertId  to get equivalent data.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 556,
+      "end": 557
+    },
+    "content_stats": {
+      "char_count": 1411,
+      "word_count": 195
+    },
+    "hierarchy": {
+      "parent": "Migrate advanced hunting queries from Microsoft Defender for Endpoint",
+      "children": []
+    }
+  }
+}

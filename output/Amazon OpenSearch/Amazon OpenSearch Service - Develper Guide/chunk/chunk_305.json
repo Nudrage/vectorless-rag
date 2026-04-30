@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_305",
+  "section_number": "2.7.4.1.1",
+  "header": "Understanding collection group capacity limits",
+  "content": "You can conﬁgure minimum and maximum OCU limits for both indexing and search operations\nat the collection group level. These limits control how OpenSearch Serverless scales resources for\ncollections in the group:\n• Minimum OCU – The minimum number of OCUs that OpenSearch Serverless maintains for the\ncollection group, ensuring consistent baseline performance.\n• If the workload requires fewer OCU's than the speciﬁed minimum value, OpenSearch\nServerless would still maintain the speciﬁed minimum value of OCU's and billing would reﬂect\nthe same.\n• If the workload requires higher number of OCU's than the speciﬁed minimum value,\nOpenSearch Serverless would maintain that level of OCU's that's required for the workload\nand the billing would reﬂect the higher OCU utilization.\n• Maximum OCU – The maximum number of OCUs that OpenSearch Serverless can scale up to for\nthe collection group, helping you control costs.\nCollection group capacity limits are decoupled from account-level limits. Account-level maximum\nOCU settings apply only to collections not associated with any collection group, while collection\ngroup maximum OCU settings apply to collections within that speciﬁc group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 472,
+      "end": 472
+    },
+    "content_stats": {
+      "char_count": 1184,
+      "word_count": 178
+    },
+    "hierarchy": {
+      "parent": "Collection group capacity limits",
+      "children": []
+    }
+  }
+}

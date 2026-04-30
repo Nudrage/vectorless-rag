@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_821",
+  "section_number": "1.5.797.1",
+  "header": "Fields: Linux, Falcon Container",
+  "content": "Field\nDescription\nContextTimeStamp System time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nTargetFileName\nThe resulting file name that was downloaded\nFileMode\nMode used to open a file handle (reading/writing)\nUnixMode\nDescribes the traditional Unix permissions of a file system entry (eg. 0755).\nUID\nUnix User Identifier.\nGID\nUnix Group Identifier.\nPosixFileType\nFile type returned by POSIX stat()\nValues:\nNON (0)\nREG (1)\nDIR (2)\nBLK (3)\nCHR (4)\nLNK (5)\nSOCK (6)\nFIFO (7)\nOciContainerId\nAn OCI Container Id.\nAccessTime\nUnix access time, indicating last access NOTE: modifiable by users.\nChangeTime\nUnix change time, indicating last status change or file modification. NOTE: This is the only timestamp which is not modifiable, unlike the\nother file timestamps.\nModifyTime\nUnix modify time, indicating last file modification. NOTE: modifiable by users.\nOpenFlags",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 217,
+      "end": 217
+    },
+    "content_stats": {
+      "char_count": 1023,
+      "word_count": 156
+    },
+    "hierarchy": {
+      "parent": "FileOpenInfo",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_843",
+  "section_number": "2.12.7.1",
+  "header": "Conﬁguring JWT authentication and authorization",
+  "content": "You can enable JWT authentication and authorization during the domain creation process or by\nupdating an existing domain. The set-up steps vary slightly depending on which option you choose.\nThe following steps explain how to conﬁgure an existing domain for JWT authentication and\nauthorization in the OpenSearch Service console:\n1.\nUnder Domain conﬁguration, navigate to JWT authentication and authorization for\nOpenSearch, select Enable JWT authentication and authorization.\n2.\nConﬁgure the public key to use for your domain. To do this, you can either upload a PEM ﬁle,\ncontaining a public key, or manually enter it.\nNote\nIf the uploaded or entered key is not valid, a warning will appear above the text box\nspecifying the issue.\n3.\n(Optional) Under Additional settings, you can conﬁgure the following optional ﬁelds\n• Subject key — you can leave this ﬁeld empty to use the default sub key for your JWTs.\n• Roles key — you can leave this ﬁeld empty to use the default roles key for your JWTs.\nAfter you've made your changes, save your domain.\nConﬁguring JWT authentication and authorization\n1369\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1398,
+      "end": 1399
+    },
+    "content_stats": {
+      "char_count": 1140,
+      "word_count": 185
+    },
+    "hierarchy": {
+      "parent": "JWT authentication and authorization for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

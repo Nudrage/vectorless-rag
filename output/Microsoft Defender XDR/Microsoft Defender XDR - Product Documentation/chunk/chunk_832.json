@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_832",
+  "section_number": "155.1.1.80.2.5",
+  "header": "Turning off services using sc.exe",
+  "content": "// Look for sc.exe disabling services\nDeviceProcessEvents\n| where Timestamp > ago(1d)\nThis query identifies attempts to stop System Restore and prevent the system from creating\nrestore points, which can be used to recover data encrypted by ransomware. Run query\nKusto\nThis query identifies use of wmic.exe to delete shadow copy snapshots prior to encryption. Run\nquery\nKusto\nInstead of running several queries separately, you can also use a comprehensive query that\nchecks for multiple signs of ransomware activity to identify affected devices. The following\nconsolidated query:\n| where ProcessCommandLine has \"sc\" and ProcessCommandLine has \"config\" and\nProcessCommandLine has \"disabled\"\n| summarize ScDisableCount = dcount(ProcessCommandLine), ScDisableList =\nmake_set(ProcessCommandLine) by DeviceId, bin(Timestamp, 5m)\n| where ScDisableCount > 10",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 546,
+      "end": 547
+    },
+    "content_stats": {
+      "char_count": 850,
+      "word_count": 117
+    },
+    "hierarchy": {
+      "parent": "Check for individual signs of ransomware activity",
+      "children": []
+    }
+  }
+}

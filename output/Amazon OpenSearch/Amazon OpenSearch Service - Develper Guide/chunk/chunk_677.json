@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_677",
+  "section_number": "2.10.3.7",
+  "header": "Conﬁguring audit logs using the REST API",
+  "content": "We recommend using OpenSearch Dashboards to conﬁgure audit logs, but you can also use the\nﬁne-grained access control REST API. This section contains a sample request. Full documentation\non the REST API is available in the OpenSearch documentation.\nPUT _opendistro/_security/api/audit/config\n{\n\"enabled\": true,\n\"audit\": {\n\"enable_rest\": true,\n\"disabled_rest_categories\": [\n\"GRANTED_PRIVILEGES\",\n\"AUTHENTICATED\"\n],\n\"enable_transport\": true,\n\"disabled_transport_categories\": [\n\"GRANTED_PRIVILEGES\",\n\"AUTHENTICATED\"\nConﬁguring audit logs using the REST API\n1235\nAmazon OpenSearch Service\nDeveloper Guide\n],\n\"resolve_bulk_requests\": true,\n\"log_request_body\": true,\n\"resolve_indices\": true,\n\"exclude_sensitive_headers\": true,\n\"ignore_users\": [\n\"kibanaserver\"\n],\n\"ignore_requests\": [\n\"SearchRequest\",\n\"indices:data/read/*\",\n\"/_cluster/health\"\n]\n},\n\"compliance\": {\n\"enabled\": true,\n\"internal_config\": true,\n\"external_config\": false,\n\"read_metadata_only\": true,\n\"read_watched_fields\": {\n\"read-index-1\": [\n\"field-1\",\n\"field-2\"\n],\n\"read-index-2\": [\n\"field-3\"\n]\n},\n\"read_ignore_users\": [\n\"read-ignore-1\"\n],\n\"write_metadata_only\": true,\n\"write_log_diffs\": false,\n\"write_watched_indices\": [\n\"write-index-1\",\n\"write-index-2\",\n\"log-*\",\n\"*\"\n],\n\"write_ignore_users\": [\n\"write-ignore-1\"\n]\n}\nConﬁguring audit logs using the REST API\n1236\nAmazon OpenSearch Service\nDeveloper Guide\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1264,
+      "end": 1266
+    },
+    "content_stats": {
+      "char_count": 1361,
+      "word_count": 147
+    },
+    "hierarchy": {
+      "parent": "Monitoring audit logs in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

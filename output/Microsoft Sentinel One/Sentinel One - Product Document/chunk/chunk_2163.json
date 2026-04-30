@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_2163",
+  "section_number": "42.20",
+  "header": "Exclusion Options",
+  "content": "GET    /web/api/v2.1/threats/{threat_id}/whitening-options\nGet the Exclusion types that can be created from the detection data.\nFor example, if a threat is a file with a detected SHA1 hash and pathname, the values of the whiteningOptions in the response are \"path\" and \"file_hash\". This command\nrequires the ID of the threat, which you can get from \"threats\" (see Get Threats). To create an Exclusion, see Exclusions.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 2054,
+      "end": 2054
+    },
+    "content_stats": {
+      "char_count": 417,
+      "word_count": 64
+    },
+    "hierarchy": {
+      "parent": "Threats",
+      "children": [
+        "Response Messages",
+        "Response Schema"
+      ]
+    }
+  }
+}

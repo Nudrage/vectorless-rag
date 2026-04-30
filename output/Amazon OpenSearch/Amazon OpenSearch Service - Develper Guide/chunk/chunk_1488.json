@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1488",
+  "section_number": "2.26.6.3",
+  "header": "Purchasing Reserved Instances (AWS SDKs)",
+  "content": "The AWS SDKs (except the Android and iOS SDKs) support all the operations that are deﬁned in the\nAmazon OpenSearch Service API Reference, including the following:\nPurchasing Reserved Instances (AWS SDKs)\n1994\nAmazon OpenSearch Service\nDeveloper Guide\n• DescribeReservedInstanceOfferings\n• PurchaseReservedInstanceOffering\n• DescribeReservedInstances\nThis sample script uses the OpenSearchService low-level Python client from the AWS SDK for\nPython (Boto3) to purchase Reserved Instances. You must provide a value for instance_type.\nimport boto3\nfrom botocore.config import Config\n# Build the client using the default credential configuration.\n# You can use the CLI and run 'aws configure' to set access key, secret\n# key, and default region.\nmy_config = Config(\n# Optionally lets you specify a region other than your default.\nregion_name='us-east-1'\n)\nclient = boto3.client('opensearch', config=my_config)\ninstance_type = '' # e.g. m4.2xlarge.search\ndef describe_RI_offerings(client):\n\"\"\"Gets the Reserved Instance offerings for this account\"\"\"\nresponse = client.describe_reserved_instance_offerings()\nofferings = (response['ReservedInstanceOfferings'])\nreturn offerings\ndef check_instance(offering):\n\"\"\"Returns True if instance type is the one you specified above\"\"\"\nif offering['InstanceType'] == instance_type:\nreturn True\nreturn False\ndef get_instance_id():\nPurchasing Reserved Instances (AWS SDKs)\n1995\nAmazon OpenSearch Service\nDeveloper Guide\n\"\"\"Iterates through the available offerings to find the ID of the one you\nspecified\"\"\"\ninstance_type_iterator = filter(\ncheck_instance, describe_RI_offerings(client))\noffering = list(instance_type_iterator)\nid = offering[0]['ReservedInstanceOfferingId']\nreturn id\ndef purchase_RI_offering(client):\n\"\"\"Purchase Reserved Instances\"\"\"\nresponse = client.purchase_reserved_instance_offering(\nReservedInstanceOfferingId = get_instance_id(),\nReservationName = 'my-reservation',\nInstanceCount = 1\n)\nprint('Purchased reserved instance offering of type ' + instance_type)\nprint(response)\ndef main():\n\"\"\"Purchase Reserved Instances\"\"\"\npurchase_RI_offering(client)\nFor more information about installing and using the AWS SDKs, see AWS Software Development\nKits.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2023,
+      "end": 2025
+    },
+    "content_stats": {
+      "char_count": 2199,
+      "word_count": 259
+    },
+    "hierarchy": {
+      "parent": "Reserved Instances in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

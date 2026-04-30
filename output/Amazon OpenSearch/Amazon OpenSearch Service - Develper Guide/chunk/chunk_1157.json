@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1157",
+  "section_number": "2.19.1.4",
+  "header": "Provisioning a domain with OpenSearch optimized instances",
+  "content": "You can select OpenSearch optimized instances for your data nodes when you create a new domain\nwith the AWS Management Console or the AWS Command Line Interface (AWS CLI). You can then\nindex and query the data using your existing tools.\nConsole\n1.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/\naos/.\n2.\nIn the left navigation pane, choose Domains.\n3.\nChoose Create domain.\n4.\nIn the Number of data nodes section, expand the Instance family menu and choose\nOpenSearch optimized.\n5.\nChoose the instance type and other storage settings.\n6.\nIn the Encryption section, make sure that Enable encryption of data at rest is selected.\n7.\nConﬁgure the rest of your domain and choose Create.\nAWS CLI\nTo provision a domain that uses OpenSearch optimized storage using the AWS CLI, you must\nprovide the value of the speciﬁc instance type size (such as OR1, OR2, OM2, or OI2) in the\nInstanceType.\nThe following example creates a domain with OR1 instances of size 2xlarge and enables\nencryption at rest.\naws opensearch create-domain \\\n--domain-name test-domain \\\n--engine-version OpenSearch_2.11 \\\n--cluster-config\n\"InstanceType=or1.2xlarge.search,InstanceCount=3,DedicatedMasterEnabled=true,DedicatedMasterTy\n\\\nProvisioning a domain with OpenSearch optimized instances\n1685\nAmazon OpenSearch Service\nDeveloper Guide\n--ebs-options \"EBSEnabled=true,VolumeType=gp3,VolumeSize=200\" \\\n--encryption-at-rest-options Enabled=true \\\n--advanced-security-options\n\"Enabled=true,InternalUserDatabaseEnabled=true,MasterUserOptions={MasterUserName=test-\nuser,MasterUserPassword=test-password}\" \\\n--node-to-node-encryption-options Enabled=true \\\n--domain-endpoint-options EnforceHTTPS=true \\\n--access-policies '{\"Version\": \"2012-10-17\",       \"Statement\":\n[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"es:*\",\"Resource\":\"arn:aws:es:us-\neast-1:account-id:domain/test-domain/*\"}]}'\nThe following example creates a domain with OI2 instances of size large and enables encryption\nat rest. Note that OI2 instances do not require EBS conﬁguration as they use local NVMe storage.\naws opensearch create-domain \\\n--domain-name test-domain-oi2 \\\n--engine-version OpenSearch_2.11 \\\n--cluster-config\n\"InstanceType=oi2.2xlarge.search,InstanceCount=3,DedicatedMasterEnabled=true,DedicatedMasterTy\n\\\n--encryption-at-rest-options Enabled=true \\\n--advanced-security-options\n\"Enabled=true,InternalUserDatabaseEnabled=true,MasterUserOptions={MasterUserName=test-\nuser,MasterUserPassword=test-password}\" \\\n--node-to-node-encryption-options Enabled=true \\\n--domain-endpoint-options EnforceHTTPS=true \\\n--access-policies '{\"Version\": \"2012-10-17\",       \"Statement\":\n[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"es:*\",\"Resource\":\"arn:aws:es:us-\neast-1:account-id:domain/test-domain-oi2/*\"}]}'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1714,
+      "end": 1715
+    },
+    "content_stats": {
+      "char_count": 2792,
+      "word_count": 282
+    },
+    "hierarchy": {
+      "parent": "OpenSearch Optimized Instances for Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

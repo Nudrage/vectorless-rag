@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_247",
+  "section_number": "2.6.21.2.14",
+  "header": "Otel trace group metrics",
+  "content": "The following metrics apply to the OTel trace group processor. Each metric\nis preﬁxed by the sub-pipeline name and otel_trace_group. For example,\nsub_pipeline_name.otel_trace_group.recordsInMissingTraceGroup.count.\nMetric suﬃx\nDescription\nrecordsInMissingTr\naceGroup.count\nThe number of ingress records missing trace group ﬁelds.\nRelevant statistics: Sum\nDimension: PipelineName\nrecordsOutFixedTra\nceGroup.count\nThe number of egress records with trace group ﬁelds that\nwere ﬁlled successfully.\nRelevant statistics: Sum\nDimension: PipelineName\nrecordsOutMissingT\nraceGroup.count\nThe number of egress records missing trace group ﬁelds.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n355\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 384,
+      "end": 385
+    },
+    "content_stats": {
+      "char_count": 756,
+      "word_count": 87
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

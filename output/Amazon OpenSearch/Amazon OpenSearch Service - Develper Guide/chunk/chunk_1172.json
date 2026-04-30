@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1172",
+  "section_number": "2.19.3.1",
+  "header": "UltraWarm storage requirements and performance considerations",
+  "content": "As covered in the section called “Calculating storage requirements”, data in hot storage incurs\nsigniﬁcant overhead: replicas, Linux reserved space, and OpenSearch Service reserved space. For\nexample, a 20 GiB primary shard with one replica shard requires roughly 58 GiB of hot storage.\nBecause it uses Amazon S3, UltraWarm incurs none of this overhead. When calculating UltraWarm\nstorage requirements, you consider only the size of the primary shards. The durability of data\nin S3 removes the need for replicas, and S3 abstracts away any operating system or service\nconsiderations. That same 20 GiB shard requires 20 GiB of warm storage. If you provision an\nultrawarm1.large.search instance, you can use all 20 TiB of its maximum storage for primary\nshards. See the section called “UltraWarm storage quotas” for a summary of instance types and the\nmaximum amount of storage that each can address.\nWith UltraWarm, we still recommend a maximum shard size of 50 GiB. The number of CPU cores\nand amount of RAM allocated to each UltraWarm instance type gives you an idea of the number\nof shards they can simultaneously search. Note that while only primary shards count toward\nUltraWarm storage in S3, OpenSearch Dashboards and _cat/indices still report UltraWarm\nindex size as the total of all primary and replica shards.\nFor example, each ultrawarm1.medium.search instance has two CPU cores and can address\nup to 1.5 TiB of storage on S3. Two of these instances have a combined 3 TiB of storage, which\nworks out to approximately 62 shards if each shard is 50 GiB. If a request to the cluster only\nsearches four of these shards, performance might be excellent. If the request is broad and\nsearches all 62 of them, the four CPU cores might struggle to perform the operation. Monitor the\nWarmCPUUtilization and WarmJVMMemoryPressure UltraWarm metrics to understand how\nthe instances handle your workloads.\nIf your searches are broad or frequent, consider leaving the indexes in hot storage. Just like any\nother OpenSearch workload, the most important step to determining if UltraWarm meets your\nneeds is to perform representative client testing using a realistic dataset.\nUltraWarm storage requirements and performance considerations\n1696\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1725,
+      "end": 1726
+    },
+    "content_stats": {
+      "char_count": 2274,
+      "word_count": 361
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

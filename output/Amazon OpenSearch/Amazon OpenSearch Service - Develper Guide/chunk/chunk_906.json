@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_906",
+  "section_number": "2.12.12.2.2",
+  "header": "Creating the service-linked role for OpenSearch Serverless",
+  "content": "You don't need to manually create a service-linked role. When you create an OpenSearch Serverless\ncollection in the AWS Management Console, the AWS CLI, or the AWS API, OpenSearch Serverless\ncreates the service-linked role for you.\nNote\nThe ﬁrst time you create a collection, you must be assigned the\niam:CreateServiceLinkedRole in an identity-based policy.\nIf you delete this service-linked role, and then need to create it again, you can use the same\nprocess to recreate the role in your account. When you create an OpenSearch Serverless collection,\nOpenSearch Serverless creates the service-linked role for you again.\nYou can also use the IAM console to create a service-linked role with the Amazon OpenSearch\nServerless use case. In the AWS CLI or the AWS API, create a service-linked role with the\nobservability.aoss.amazonaws.com service name:\naws iam create-service-linked-role --aws-service-name\n\"observability.aoss.amazonaws.com\"\nCollection creation role\n1417\nAmazon OpenSearch Service\nDeveloper Guide\nFor more information, see Creating a service-linked role in the IAM User Guide. If you delete this\nservice-linked role, you can use this same process to create the role again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1446,
+      "end": 1447
+    },
+    "content_stats": {
+      "char_count": 1186,
+      "word_count": 176
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles to create OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

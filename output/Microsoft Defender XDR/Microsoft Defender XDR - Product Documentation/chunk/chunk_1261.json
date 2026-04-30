@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1261",
+  "section_number": "155.1.1.174.1",
+  "header": "Grant permissions to our experts",
+  "content": "） Important\nBy default, Defender Experts for XDR requires Service provider access that lets our experts sign\ninto your tenant and deliver services based on assigned security roles. Learn more about cross-\ntenant access\nYou also need to grant our experts one or both of the following permissions:\nInvestigate incidents and guide my responses (default) – This option lets our experts\nproactively monitor and investigate incidents and guide you through any necessary\nresponse actions. (Access level: Security Reader)\nRespond directly to active threats (recommended) – This option lets our experts contain\nand remediate active threats immediately while investigating, thus reducing the threat's\nimpact, and improving your overall response efficiency. (Access level: Security Operator)\nMicrosoft recommends that you use roles with the fewest permissions. This helps improve\nsecurity for your organization. Global Administrator is a highly privileged role that should\nbe limited to emergency scenarios when you can't use an existing role.\n\n） Important\nIf you skip providing additional permissions, our experts won't be able to take certain\nresponse actions to secure your organization.\nEven though our experts are granted these relatively powerful permissions, they'll only\nhave individual access to specific areas for a limited period. Learn more about how\nDefender Experts for XDR permissions work\nTo grant our experts permissions:\n1. In the same Defender Experts settings setup, under Permissions, choose one or more\naccess levels you want to grant our experts.\n2. If you wish to exclude device and user groups in your organization from remediation\nactions, select Manage exclusions.\n3. Select Next to add contact persons or groups.\nTo edit or update permissions after the initial setup, go to Settings > Defender Experts >\nPermissions.\nDefender Experts for XDR lets you exclude devices and users from remediation actions taken\nby our experts and instead get remediation guidance for those entities. These exclusions are\nbased on identified device groups in Microsoft Defender for Endpoint and identified user\ngroups in Microsoft Entra ID.\nTo exclude device groups:\n1. In the same Defender Experts settings setup, under Exclusions, go to the Device groups\ntab.\n2. Select + Add device groups, then search for and choose one or more device groups that\nyou wish to exclude.\n3. Select Add device groups.\n4. Back on the Device groups tab, review the list of excluded device groups. If you wish to\nremove a device group from the exclusion list, choose it then select Remove device\ngroup.\n5. Select Next to confirm your exclusion list and proceed to adding contact persons or\ngroups. Otherwise, select Skip, and all your added exclusions are discarded.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 942,
+      "end": 944
+    },
+    "content_stats": {
+      "char_count": 2743,
+      "word_count": 429
+    },
+    "hierarchy": {
+      "parent": "Get started with Microsoft Defender Experts for XDR",
+      "children": []
+    }
+  }
+}

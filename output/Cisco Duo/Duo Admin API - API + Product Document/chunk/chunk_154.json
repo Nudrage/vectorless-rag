@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_154",
+  "section_number": "1.27.8",
+  "header": "Example Response",
+  "content": "\"alias2\": \"my_alias2\",\n\"alias3\": \"my_alias3\",\n\"alias4\": \"my_alias4\",\n\"email\": \"user@example.com\",\n\"status\": \"active\",\n\"notes\": \"This is a user\"\n}\n},\n{\n\"method\": \"POST\",\n\"path\": \"/admin/v1/users/DUJ424R8DJFJ05HASDFJ\",\n\"body\": {\n\"username\": \"uname2\",\n\"alias2\": \"updated_alias2\",\n\"email\": \"user2@example.com\",\n\"status\": \"active\",\n\"notes\": \"This is another user\"\n}\n},\n{\n\"method\": \"DELETE\",\n\"path\": \"/admin/v1/users/DUJ424R8DJFJ05HASDFJ\",\n\"body\": {}\n},\n{\n\"method\": \"POST\",\n\"path\": \"/admin/v1/users/DUJ424R8DJFJ05HASDFJ/grou\n\"body\": {\n\"group_id\": \"DGBDKSSH37KSJ373JKSU\",\n}\n},\n{\n\"method\": \"DELETE\",\n\"path\": \"/admin/v1/users/DUJ424R8DJFJ05HASDFJ/grou\n\"body\": {}\n}\n]\n}\n{\n[\n{\n\"stat\": \"OK\",\n\"response\":{\n\"alias1\": \"my_alias1\",\n\"alias2\": \"my_alias2\",\n\"alias3\": \"my_alias3\",\n\"alias4\": \"my_alias4\",\n\"aliases\": {\n\"alias1\": \"my_alias1\",\n\"alias2\": \"my_alias2\",\n\"alias3\": \"my_alias3\",\n\"alias4\": \"my_alias4\",\n},\n\"created\": 1657222760,\n\"email\": \"user@example.com\",\n\"enable_auto_prompt\": true,\n\"firstname\": \"\",\n\"groups\": [],\n\"is_enrolled\": false,\n\"last_directory_sync\": null,\n\"last_login\": null,\n\"lastname\": \"\",\n\"lockout_reason\": null,\n\"notes\": \"This is a user\",\n\"phones\": [],\n\"realname\": \"\",\n\"status\": \"active\",\n\"tokens\": [],\n\"u2ftokens\": [],\n\"user_id\": \"DUJ424R8DJFJ05HASDFJ\",\n\"username\": \"uname1\",\n\"webauthncredentials\": []\n}\n},\n{\n\"stat\": \"OK\",\n\"response\":{\n\"alias1\": null,\n\"alias2\": \"my_alias2\",\n\"alias3\": null,\n\"alias4\": null,\n\"aliases\": {\n\"alias2\": \"updated_alias2\",\n},\n\"created\": 1657223860,\n\"email\": \"user2@example.com\",\n\"enable_auto_prompt\": true,\n\"firstname\": \"\",\n\"groups\": [],\n\"is_enrolled\": false,\n\"last_directory_sync\": null,\n\"last_login\": null,\n\"lastname\": \"\",\n\"lockout_reason\": null,\n\"notes\": \"This is another user\",\n\"phones\": [],\n\"realname\": \"\",\n\"status\": \"active\",",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 56,
+      "end": 57
+    },
+    "content_stats": {
+      "char_count": 1760,
+      "word_count": 184
+    },
+    "hierarchy": {
+      "parent": "Bulk Operations",
+      "children": []
+    }
+  }
+}

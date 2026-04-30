@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_723",
+  "section_number": "2.10.4.5.3",
+  "header": "Node retirement failed",
+  "content": "OpenSearch Service sends this event when a node retirement fails.\nExample\nThe following is an example event of this type:\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"Amazon OpenSearch Service Notification\",\n\"source\": \"aws.es\",\n\"account\": \"123456789012\",\n\"time\": \"2023-04-07T10:07:33Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"event\": \"Node Retirement Notification\",\n\"status\": \"Failed\",\n\"severity\": \"Medium\",\n\"description\": \"Node retirement failed. No actions are required from your end. We\nwill automatically\nretry replacing the node.\"\n}\n}\nNode retirement events\n1266\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1295,
+      "end": 1296
+    },
+    "content_stats": {
+      "char_count": 712,
+      "word_count": 79
+    },
+    "hierarchy": {
+      "parent": "Node retirement events",
+      "children": []
+    }
+  }
+}

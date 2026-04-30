@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_314",
+  "section_number": "2.7.4.3.1",
+  "header": "Create a collection group",
+  "content": "Use the following procedures to create a new collection group and conﬁgure its settings. Create a\ncollection group using the OpenSearch Serverless console, AWS CLI, or the AWS SDKs . When you\ncreate a collection group, you specify capacity limits and other conﬁguration options.\nConsole\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/.\n2.\nIn the left navigation pane, choose Serverless, then choose Collection groups\n3.\nChoose Create collection group.\n4.\nFor Collection group name, enter a name for your collection group. The name must be\n3-32 characters long, start with a lowercase letter, and contain only lowercase letters,\nnumbers, and hyphens.\n5.\n(Optional) For Description, enter a description for your collection group.\n6.\nIn the Capacity management section, conﬁgure the OCU limits:\n• Maximum indexing capacity – The maximum number of indexing OCUs that collections\nin this group can scale up to.\nCreate collection groups\n446\nAmazon OpenSearch Service\nDeveloper Guide\n• Maximum search capacity – The maximum number of search OCUs that collections in\nthis group can scale up to.\n• Minimum indexing capacity – The minimum number of indexing OCUs to maintain for\nconsistent performance.\n• Minimum search capacity – The minimum number of search OCUs to maintain for\nconsistent performance.\n7.\n(Optional) In the Tags section, add tags to help organize and identify your collection group.\n8.\nChoose Create collection group.\nAWS CLI\n•\nUse the create-collection-group command to create a new collection group. In the\ncommand, replace the example content with your own speciﬁc information.\naws opensearchserverless create-collection-group \\\n--name my-collection-group \\\n--description \"Collection group for production workloads\" \\\n--capacity-limits\nmaxIndexingCapacityInOCU=20,maxSearchCapacityInOCU=20,minIndexingCapacityInOCU=2,minSea\n\\\n--tags key=Environment,value=Production key=Team,value=DataEngineering\nThe command returns details about the created collection group, including its unique ID\nand ARN.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 475,
+      "end": 476
+    },
+    "content_stats": {
+      "char_count": 2042,
+      "word_count": 286
+    },
+    "hierarchy": {
+      "parent": "Create collection groups",
+      "children": []
+    }
+  }
+}

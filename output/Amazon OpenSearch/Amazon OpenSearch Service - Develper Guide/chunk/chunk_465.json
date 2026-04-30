@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_465",
+  "section_number": "2.8.5",
+  "header": "Making conﬁguration changes in Amazon OpenSearch Service",
+  "content": "Amazon OpenSearch Service uses a blue/green deployment process when updating domains.\nA blue/green deployment creates an idle environment for domain updates that copies the\nproduction environment, and routes users to the new environment after those updates\nare complete. In a blue/green deployment, the blue environment is the current production\nenvironment. The green environment is the idle environment.\nData is migrated from the blue environment to the green environment. When the new environment\nis ready, OpenSearch Service switches over the environments to promote the green environment\nto be the new production environment. The switchover happens with no data loss. This practice\nminimizes downtime and maintains the original environment in the event that deployment to the\nnew environment is unsuccessful.\nTopics\n• Changes that usually cause blue/green deployments\n• Changes that usually don't cause blue/green deployments\n• Determining whether a change will cause a blue/green deployment\n• Tracking a conﬁguration change\n• Stages of a conﬁguration change\n• Performance impact of blue/green deployments\n• Charges for conﬁguration changes\n• Troubleshooting validation errors",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 657,
+      "end": 657
+    },
+    "content_stats": {
+      "char_count": 1181,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": [
+        "Changes that usually cause blue/green deployments",
+        "Changes that usually don't cause blue/green deployments",
+        "Determining whether a change will cause a blue/green deployment",
+        "Tracking a conﬁguration change",
+        "Stages of a conﬁguration change",
+        "Performance impact of blue/green deployments",
+        "Charges for conﬁguration changes",
+        "Troubleshooting validation errors"
+      ]
+    }
+  }
+}

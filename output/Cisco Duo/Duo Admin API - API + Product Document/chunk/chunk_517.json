@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_517",
+  "section_number": "1.17.23",
+  "header": "Mobile Device Biometrics",
+  "content": "Section Name: mobile_device_biometrics\nCorresponds to: Mobile Device Biometrics\nThis section is available in the Premier and Advantage editions.\nKey\nValue\nblock_biometric_pin_fallback\nIs true  if the mobile device used to\nauthenticate is not allowed to fall back to\nthe device's passcode when approving Duo\nPush login requests and biometric\nverification fails. Otherwise false\n(default).\nno-remediation  (default): No version\nchecking; equivalent to “Never” when editing\nthe policy in the UI.\n•\nless-than-latest : Duo Mobile app is not at\nthe most recently-released version.\n•\nless-than-version : Duo Mobile app is\nolder than the version specified in\nwarn_version .\n•\nrequire_biometrics\nIs true  if the mobile device used to\nauthenticate requires Apple Touch ID, Face\nID, or Android Fingerprint as additional\nverification when approving Duo Push login\nrequests. Otherwise false  (default).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 220,
+      "end": 221
+    },
+    "content_stats": {
+      "char_count": 889,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

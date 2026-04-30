@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_898",
+  "section_number": "2.12.12.1",
+  "header": "Using service-linked roles to create VPC domains and direct query data sources",
+  "content": "sources\nAmazon OpenSearch Service uses AWS Identity and Access Management (IAM) service-linked roles.\nA service-linked role is a unique type of IAM role that is linked directly to OpenSearch Service.\nService-linked roles are predeﬁned by OpenSearch Service and include all the permissions that the\nservice requires to call other AWS services on your behalf.\nOpenSearch Service uses the service-linked role named\nAWSServiceRoleForAmazonOpenSearchService, which provides the minimum Amazon EC2 and\nELB permissions necessary for the role to enable VPC access for a domain or a direct query data\nsource.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1442,
+      "end": 1442
+    },
+    "content_stats": {
+      "char_count": 599,
+      "word_count": 88
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles for Amazon OpenSearch Service",
+      "children": [
+        "Legacy Elasticsearch role",
+        "Permissions",
+        "Creating the service-linked role",
+        "Editing the service-linked role",
+        "Deleting the service-linked role"
+      ]
+    }
+  }
+}

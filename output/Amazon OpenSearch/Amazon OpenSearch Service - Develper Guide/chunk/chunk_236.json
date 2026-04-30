@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_236",
+  "section_number": "2.6.21.2.3",
+  "header": "Signature V4 metrics",
+  "content": "The following metrics apply to the ingestion endpoint for a pipeline and are associate with the\nsource plugins (http, otel_trace, and otel_metrics). All requests to the ingestion endpoint\nmust be signed using Signature Version 4. These metrics can help you identify authorization issues\nwhen connecting to your pipeline, or conﬁrm that you're successfully authenticating.\nEach metric is preﬁxed by the sub-pipeline name and osis_sigv4_auth. For example,\nsub_pipeline_name.osis_sigv4_auth.httpAuthSuccess.count.\nMetric suﬃx\nDescription\nhttpAuthSuccess.count\nThe number of successful Signature V4 requests to the\npipeline.\nRelevant statistics: Sum\nDimension: PipelineName\nhttpAuthFailure.count\nThe number of failed Signature V4 requests to the\npipeline.\nRelevant statistics: Sum\nDimension: PipelineName\nhttpAuthServerError.count\nThe number of Signature V4 requests to the pipeline that\nreturned server errors.\nRelevant statistics: Sum\nMonitoring pipeline metrics\n337\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 366,
+      "end": 367
+    },
+    "content_stats": {
+      "char_count": 1054,
+      "word_count": 133
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

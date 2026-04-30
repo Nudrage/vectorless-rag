@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_987",
+  "section_number": "155.1.1.109",
+  "header": "DeviceBaselineComplianceProfiles (Preview)",
+  "content": "(Preview)\n06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceBaselineComplianceProfiles  table in the advanced hunting schema contains\nbaseline profiles used for monitoring device baseline compliance. Use this reference to\nconstruct queries that return information from the table.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nProfileId\nstring\nUnique identifier for the profile\nProfileName\nstring\nDisplay name of the profile\nProfileDescription\nstring\nOptional description providing additional information related to the\nprofile\nOSPlatform\ndynamic\nPlatform of the operating system running on the device. This\nindicates specific operating systems, including variations within the\nsame family, such as Windows 11, Windows 10 and Windows 7.\nOSVersion\nstring\nVersion of the operating system running on the device\nBaseBenchmark\nstring\nIndustry benchmark on top of which the profile was created\nBenchmarkVersion\nstring\nVersion of the industry benchmark on top of which the profile was\ncreated\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nBenchmarkProfileLevel\nstring\nBenchmark compliance level set for the profile\nStatus\nboolean\nIndicator of the profile status - can be Enabled or Disabled\nCreatedBy\nstring\nIdentity of the user account who created the profile\nCreatedOn\ndatetime\nDate and time when the profile was created\nLastUpdatedBy\nstring\nIdentity of the user account who last updated the profile\nLastUpdatedOn\ndatetime\nDate and time when the profile was last updated\nProactively hunt for threats\nUnderstand the schema\nApply query best practices\nOverview Defender Vulnerability Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 679,
+      "end": 680
+    },
+    "content_stats": {
+      "char_count": 2312,
+      "word_count": 330
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

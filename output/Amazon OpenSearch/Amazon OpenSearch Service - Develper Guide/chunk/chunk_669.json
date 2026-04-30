@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_669",
+  "section_number": "2.10.3.4",
+  "header": "Audit log layers and categories",
+  "content": "Cluster communication occurs over two separate layers: the REST layer and the transport layer.\n• The REST layer covers communication with HTTP clients such as curl, Logstash, OpenSearch\nDashboards, the Java high-level REST client, the Python Requests library—all HTTP requests that\narrive at the cluster.\n• The transport layer covers communication between nodes. For example, after a search request\narrives at the cluster (over the REST layer), the coordinating node serving the request sends the\nquery to other nodes, receives their responses, gathers the necessary documents, and collates\nthem into the ﬁnal response. Operations such as shard allocation and rebalancing also occur over\nthe transport layer.\nYou can enable or disable audit logs for entire layers, as well as individual audit categories for a\nlayer. The following table contains a summary of audit categories and the layers for which they are\navailable.\nCategory\nDescription\nAvailable\nfor REST\nAvailable for transport\nFAILED_LOGIN\nA request contained\ninvalid credentials, and\nauthentication failed.\nYes\nYes\nMISSING_PRIVILEGES\nA user did not have the\nprivileges to make the\nrequest.\nYes\nYes\nGRANTED_PRIVILEGES\nA user had the privileges\nto make the request.\nYes\nYes\nAudit log layers and categories\n1227\nAmazon OpenSearch Service\nDeveloper Guide\nCategory\nDescription\nAvailable\nfor REST\nAvailable for transport\nOPENSEARCH_SECURIT\nY_INDEX_ATTEMPT\nA request tried to\nmodify the .opendist\nro_security\nindex.\nNo\nYes\nAUTHENTICATED\nA request contained\nvalid credentials,\nand authentication\nsucceeded.\nYes\nYes\nINDEX_EVENT\nA request performed an\nadministrative operation\non an index, such as\ncreating one, setting\nan alias, or performin\ng a force merge. The\nfull list of indices:a\ndmin/  actions that\nthis category includes\nare available in the\nOpenSearch documenta\ntion.\nNo\nYes\nIn addition to these standard categories, ﬁne-grained access control oﬀers several additional\ncategories designed to meet data compliance requirements.\nCategory\nDescription\nCOMPLIANC\nE_DOC_READ\nA request performed a read event on a document in an index.\nCOMPLIANC\nE_DOC_WRITE\nA request performed a write event on a document in an index.\nAudit log layers and categories\n1228\nAmazon OpenSearch Service\nDeveloper Guide\nCategory\nDescription\nCOMPLIANC\nE_INTERNA\nL_CONFIG_READ\nA request performed a read event on the .opendistro_security\nindex.\nCOMPLIANC\nE_INTERNA\nL_CONFIG_WRITE\nA request performed a write event on the .opendistro_security\nindex.\nYou can have any combination of categories and message attributes. For example, if you send a\nREST request to index a document, you might see the following lines in the audit logs:\n• AUTHENTICATED on REST layer (authentication)\n• GRANTED_PRIVILEGE on transport layer (authorization)\n• COMPLIANCE_DOC_WRITE (document written to an index)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1256,
+      "end": 1258
+    },
+    "content_stats": {
+      "char_count": 2813,
+      "word_count": 412
+    },
+    "hierarchy": {
+      "parent": "Monitoring audit logs in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

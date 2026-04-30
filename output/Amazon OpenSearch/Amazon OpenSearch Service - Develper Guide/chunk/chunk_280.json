@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_280",
+  "section_number": "2.7.3.2",
+  "header": "Working with vector search collections",
+  "content": "The vector search collection type in OpenSearch Serverless provides a similarity search capability\nthat is scalable and high performing. It makes it easy for you to build modern machine learning\n(ML) augmented search experiences and generative artiﬁcial intelligence (AI) applications without\nhaving to manage the underlying vector database infrastructure.\nUse cases for vector search collections include image searches, document searches, music retrieval,\nproduct recommendations, video searches, location-based searches, fraud detection, and anomaly\ndetection.\nBecause the vector engine for OpenSearch Serverless is powered by the k-nearest neighbor (k-NN)\nsearch feature in OpenSearch, you get the same functionality with the simplicity of a serverless\nenvironment. The engine supports k-NN plugin API. With these operations, you can take advantage\nof full-text search, advanced ﬁltering, aggregations, geospatial queries, nested queries for faster\nretrieval of data, and enhanced search results.\nThe vector engine provides distance metrics such as Euclidean distance, cosine similarity, and dot\nproduct similarity, and can accommodate 16,000 dimensions. You can store ﬁelds with various\nWorking with vector search collections\n404\nAmazon OpenSearch Service\nDeveloper Guide\ndata types for metadata, such as numbers, Booleans, dates, keywords, and geopoints. You can also\nstore ﬁelds with text for descriptive information to add more context to stored vectors. Colocating\nthe data types reduces complexity, increases maintainability, and avoids data duplication, version\ncompatibility challenges, and licensing issues.\nNote\nNote the following information:\n• Amazon OpenSearch Serverless supports Faiss 16-bit scalar quantization which can be\nused to perform conversions between 32-bit ﬂoating and 16-bit vectors. To learn more,\nsee  Faiss 16-bit scalar quantization. You can also use binary vectors to reduce memory\ncosts. For more information, see Binary vectors.\n• Amazon OpenSearch Serverless supports disk-based vector search. Disk-based vector\nsearch signiﬁcantly reduces the operational costs for vector workloads in low-memory\nenvironments. For more information, see Disk-based vector search.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 433,
+      "end": 434
+    },
+    "content_stats": {
+      "char_count": 2200,
+      "word_count": 300
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless collections",
+      "children": [
+        "Getting started with vector search collections",
+        "Filtered search",
+        "Billion scale workloads",
+        "Limitations",
+        "Next steps"
+      ]
+    }
+  }
+}

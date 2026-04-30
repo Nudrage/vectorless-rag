@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2001",
+  "section_number": "155.1.1.263.2.4",
+  "header": "Query considerations",
+  "content": "//modify timeWindow to modify the lookback.\nlet timeWindow = now(-7d); let timeNow = now();\nlet logonFail= materialize (\nIdentityLogonEvents\n| where Timestamp between (timeWindow .. timeNow)\n| where isnotempty(AccountObjectId)\n| where Application != \"Active Directory\"\n| where ActionType == \"LogonFailed\"\n| where ISP != \"Microsoft Azure\"\n| summarize failedLogonCount=count(), LatestTime = max(Timestamp),\nEarliestTime = min(Timestamp) by AccountObjectId, Application, ISP,\nCountryCode, bin(Timestamp, 60s)\n| where failedLogonCount > 100);\n// let hasLogonFails = isnotempty(toscalar (logonFail));\nlet logonFailUsers = materialize ( logonFail | distinct AccountObjectId |\ntake 100);\nlet hasLogonFails = isnotempty(toscalar (logonFailUsers));\nlet logonSuccess=\nIdentityLogonEvents\n| where hasLogonFails\n| where Timestamp between (timeWindow .. timeNow)\n| where AccountObjectId in (logonFailUsers)\n| where Application != \"Active Directory\"\n| where ISP != \"Microsoft Azure\"\n| where ActionType == \"LogonSuccess\"\n| project SuccessTime= Timestamp, ReportId, AccountUpn, AccountObjectId,\nISP, CountryCode, Application;\nlogonFail\n| join kind = innerunique logonSuccess on AccountObjectId, ISP, Application\n| where SuccessTime between (LatestTime .. (LatestTime + 10s))\n| summarize arg_min(SuccessTime, ReportId), EarliestFailedTime=min\n(EarliestTime), LatestFailedTime=max(LatestTime), failedLogonCount=\ntake_any(failedLogonCount), SuccessLogonCount=count(), ISPSet=\nmake_set(ISP), CountrySet=make_set(CountryCode), AppSet=make_set\n(Application) by AccountObjectId, AccountUpn\n| project-rename Timestamp=SuccessTime\nOnce it's determined that the observed alert activities are part of TP, classify those alerts and\nperform the actions below:\nDisable or remove the connector that was found to be malicious.\nIf the admin account was compromised, reset the admin's account credentials. Also,\ndisable/revoke tokens for the compromised admin account and enable multi-factor\nauthentication for all admin accounts.\nLook for suspicious activities performed by the admin.\nCheck for other suspicious activities across other connectors in the environment.\nOverview of alert classification\nInvestigate alerts",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1482,
+      "end": 1483
+    },
+    "content_stats": {
+      "char_count": 2185,
+      "word_count": 259
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting queries",
+      "children": []
+    }
+  }
+}

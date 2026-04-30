@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1076",
+  "section_number": "2.16.5.5.1",
+  "header": "Creating a vector ingestion job",
+  "content": "A vector ingestion job analyzes your vector data and provides optimization recommendations for\nindex conﬁguration.\nTo create a vector ingestion job\n1.\nSign in to the Amazon OpenSearch Service console at AWS Management Console.\n2.\nIn the navigation pane, choose Auto-Optimize.\nUsing auto-optimize in the console\n1598\nAmazon OpenSearch Service\nDeveloper Guide\n3.\nChoose Create vector ingestion job.\n4.\nUnder Job details, enter a name for your vector ingestion job. This name helps you identify\nthe job in the console.\n5.\nUnder Data source, conﬁgure the following:\na.\nFor Amazon S3 URI, enter the Amazon S3 URI of the folder containing your Parquet\nﬁles. The URI must point to the enclosing folder, not individual ﬁles. For example, if your\nParquet ﬁle is at s3://my-bucket/my-folder/file1.parquet, enter s3://my-\nbucket/my-folder/.\nb.\nFor Region, select the AWS Region where your Amazon S3 bucket is located. The Region\nmust match the bucket location.\n6.\nUnder OpenSearch domain, select an existing domain or collection, or choose Create new to\ncreate one.\nNote\nYou can specify either an OpenSearch Managed domain or an OpenSearch Serverless\nserverless collection.\n7.\nUnder Data source permissions, specify the IAM role that has permissions to access your\nAmazon S3 bucket and OpenSearch domain or collection. The role must have the necessary\npermissions based on your domain or collection conﬁguration:\n• For OpenSearch domains with a domain access policy, grant the role access through that\npolicy.\n• For OpenSearch domains with ﬁne-grained access control, add the role as a backend role.\n• For OpenSearch Serverless collections, add the role to the data access policy.\n8.\nChoose Next.\n9.\nUnder Conﬁgure index, specify the following:\na.\nFor Field name, enter the column name from your Parquet dataset that contains the\nvector data.\nb.\nFor Space type, select the distance metric used to calculate the distance between vectors:\n• l2 - Euclidean distance\n• cosinesimil - Cosine similarity\nUsing auto-optimize in the console\n1599\nAmazon OpenSearch Service\nDeveloper Guide\n• innerproduct - Inner product\nc.\nFor Dimension, enter the number of ﬂoating point values in each vector.\n10. Under Performance requirements, conﬁgure the following:\na.\nFor Recall, specify your desired search quality as a decimal value between 0 and 1. Higher\nrecall values return more relevant results. For example:\n• 0.95 indicates that on average 19 of the 20 true nearest document vectors to a query\nvector are returned\n• 0.9 indicates 9 in 10\n• 0.8 indicates 8 in 10\nb.\nFor Search latency requirements, select your latency tolerance. Modest requirements\nallow for more cost savings through compression methods that decrease memory\nrequirements.\n11. Choose Next.\n12. Review your conﬁguration and choose Create.\nThe job begins processing. You can monitor its progress in the Vector Ingestion Jobs table.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1627,
+      "end": 1629
+    },
+    "content_stats": {
+      "char_count": 2874,
+      "word_count": 454
+    },
+    "hierarchy": {
+      "parent": "Using auto-optimize in the console",
+      "children": []
+    }
+  }
+}

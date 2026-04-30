@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_002",
+  "section_number": "1.1",
+  "header": "Specifications",
+  "content": "Firewall Rules Logging has the following specifications:\nFirewall Rules Logging can be enabled for the following:\nFirewall rules in hierarchical firewall policies, regional system firewall policies,\nglobal network firewall policies, and regional network firewall policies that are\nassociated with a regular VPC network.\nVPC firewall rules in a regular VPC network.\nFirewall rules in regional network firewall policies that are associated with an RoCE\nVPC network (/firewall/docs/firewall-for-roce).\nFirewall Rules Logging doesn't support the following:\nVPC firewall rules in Legacy networks (/vpc/docs/legacy).\nImplied deny ingress and implied allow egress rules\n(/firewall/docs/firewalls#default_firewall_rules) of a regular VPC network.\nImplied allow ingress and egress rules\n(/firewall/docs/firewall-for-roce#implied_firewall_rules) of an RoCE VPC network.\nFirewall Rules Logging only records TCP and UDP connections. Although you can create\na firewall rule that applies to other protocols (/firewall/docs/firewalls#protocols_and_ports),\nyou cannot log their connections. If you want to also log other protocols, consider using\nPacket Mirroring (/vpc/docs/packet-mirroring).\nLog entries are written from the perspective of VMs. Log entries are only created if a\nfirewall rule has logging enabled and if the rule applies to traffic sent to or from the VM.\nEntries are created according to the connection logging limits on a best effort basis.\nThe number of connections that Firewall Rules Logging can log per unit of time:\nIs based on machine type (/vpc/docs/quota#logging_limits) for regular VPC networks.\nDepends on the monitoring or logging action of the firewall rule\n(/firewall/docs/firewall-for-roce#monitoring_and_logging) for RoCE VPC networks.\nChanges to firewall rules can be viewed in VPC audit logs (/vpc/docs/audit-logging).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 1839,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "Firewall Rules Logging",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_241",
+  "section_number": "2.6.21.2.8",
+  "header": "S3 metrics",
+  "content": "The following metrics apply to the S3 source. Each metric is preﬁxed by the sub-pipeline name and\ns3. For example, sub_pipeline_name.s3.s3ObjectsFailed.count.\nMetric suﬃx\nDescription\ns3ObjectsFailed.count\nThe total number of S3 objects that the plugin failed to\nread.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectsNotFound.count\nThe number of S3 objects that the plugin failed to read\ndue to a Not Found error from S3. These metrics also\ncount toward the s3ObjectsFailed  metric.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectsAccessDen\nied.count\nThe number of S3 objects that the plugin failed to read\ndue to an Access Denied or Forbidden  error from\nMonitoring pipeline metrics\n345\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nS3. These metrics also count toward the s3Objects\nFailed  metric.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectReadTimeEl\napsed.count\nThe amount of time the plugin takes to perform a GET\nrequest for an S3 object, parse it, and write events to the\nbuﬀer.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectReadTimeEl\napsed.sum\nThe total amount of time that the plugin takes to\nperform a GET request for an S3 object, parse it, and\nwrite events to the buﬀer, in milliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectReadTimeEl\napsed.max\nThe maximum amount of time that the plugin takes to\nperform a GET request for an S3 object, parse it, and\nwrite events to the buﬀer, in milliseconds.\nRelevant statistics: Max\nDimension: PipelineName\ns3ObjectSizeBytes.count\nThe count of the distribution of S3 object sizes, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n346\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\ns3ObjectSizeBytes.sum\nThe total distribution of S3 object sizes, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectSizeBytes.max\nThe maximum distribution of S3 object sizes, in bytes.\nRelevant statistics: Max\nDimension: PipelineName\ns3ObjectProcessedB\nytes.count\nThe count of the distribution of S3 objects processed by\nthe plugin, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectProcessedB\nytes.sum\nThe total distribution of S3 objects processed by the\nplugin, in bytes.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectProcessedB\nytes.max\nThe maximum distribution of S3 objects processed by the\nplugin, in bytes.\nRelevant statistics: Max\nDimension: PipelineName\ns3ObjectsEvents.count\nThe count of the distribution of S3 events received by the\nplugin.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n347\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\ns3ObjectsEvents.sum\nThe total distribution of S3 events received by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\ns3ObjectsEvents.max\nThe maximum distribution of S3 events received by the\nplugin.\nRelevant statistics: Max\nDimension: PipelineName\nsqsMessageDelay.count\nA count of data points recorded while S3 records an\nevent time for the creation of an object to when it's fully\nparsed.\nRelevant statistics: Sum\nDimension: PipelineName\nsqsMessageDelay.sum\nThe total amount of time between when S3 records an\nevent time for the creation of an object to when it's fully\nparsed, in milliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\nsqsMessageDelay.max\nThe maximum amount of time between when S3 records\nan event time for the creation of an object to when it's\nfully parsed, in milliseconds.\nRelevant statistics: Max\nDimension: PipelineName\nMonitoring pipeline metrics\n348\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\ns3ObjectsSucceeded.count\nThe number of S3 objects that the plugin successfully\nread.\nRelevant statistics: Sum\nDimension: PipelineName\nsqsMessagesReceived.count\nThe number of Amazon SQS messages received from the\nqueue by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nsqsMessagesDeleted.count\nThe number of Amazon SQS messages deleted from the\nqueue by the plugin.\nRelevant statistics: Sum\nDimension: PipelineName\nsqsMessagesFailed.count\nThe number of Amazon SQS messages that the plugin\nfailed to parse.\nRelevant statistics: Sum\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 374,
+      "end": 378
+    },
+    "content_stats": {
+      "char_count": 4247,
+      "word_count": 580
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

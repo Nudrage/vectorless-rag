@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2006",
+  "section_number": "155.1.1.263.1.9",
+  "header": "1. Investigate the security alerts",
+  "content": "Are there unusual events with uncommon properties? Unique properties for an\nimpacted user, like unusual ISP, country/region, or city, might indicate suspicious sign-in\npatterns.\nIs there a marked increase in email or file-related activities? Suspicious events like\nincreased attempts in mail access or send activity or an increase in uploading of files to\nSharePoint or OneDrive for an impacted user are some signs to look for.\nAre there multiple failed sign-in attempts? A high number of failed sign-in attempts\nfrom various IPs and geographic locations by an impacted user might indicate a password\nspray attack.\nIdentify the ISP from the sign-in activity of an impacted user. Check for sign-in activities\nby other user accounts from the same ISP.\nInspect any recent modifications in your environment:\nChanges in Office 365 applications like Exchange Online permission, mail auto-\nforwarding, mail redirection\nModifications in PowerApps, like automated data transmission configuration through\nPowerAutomate\nModifications in Azure environments, like Azure portal subscription changes\nChanges to SharePoint Online, like the impacted user account gaining access to\nmultiple sites or files with sensitive/confidential/company-only content\nInspect the impacted account's activities that occur within a short time span on\nmultiple platforms and apps. Audit events to check the timeline of activities, like\ncontrasting the user's time spent reading or sending email followed by allocating\nresources to the user's account or other accounts.\nInspect your environment for other attacks involving impacted user accounts as attackers\noften perform malicious activities after a successful password spray attack. Consider\ninvestigating the following possibly suspicious activities:\nMulti-factor authentication (MFA)-related attacks\nAttackers use MFA fatigue to bypass this security measure that organizations adopt to\nprotect their systems. Check for multiple MFA requests raised by an impacted user\naccount.\nAttackers might perform MFA tampering using an impacted user account with\nelevated privileges by disabling MFA protection for other accounts within the tenant.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1484,
+      "end": 1485
+    },
+    "content_stats": {
+      "char_count": 2156,
+      "word_count": 306
+    },
+    "hierarchy": {
+      "parent": "Investigation steps",
+      "children": []
+    }
+  }
+}

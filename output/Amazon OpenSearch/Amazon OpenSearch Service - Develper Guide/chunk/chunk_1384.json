@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1384",
+  "section_number": "2.25.3.9",
+  "header": "Remove unused indexes",
+  "content": "Regularly review the indexes in your cluster and identify any that aren't in use. Take a snapshot\nof those indexes so that they're stored in S3, and then delete them. When you remove unused\nindexes, you reduce the shard count, and make it possible to have more balanced storage\ndistribution and resource utilization across nodes. Even when they're idle, indexes consume some\nresources during internal index maintenance activities.\nRather than manually deleting unused indexes, you can use ISM to automatically take a snapshot\nand delete indexes after a certain period of time.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1872,
+      "end": 1872
+    },
+    "content_stats": {
+      "char_count": 576,
+      "word_count": 92
+    },
+    "hierarchy": {
+      "parent": "Stability",
+      "children": []
+    }
+  }
+}

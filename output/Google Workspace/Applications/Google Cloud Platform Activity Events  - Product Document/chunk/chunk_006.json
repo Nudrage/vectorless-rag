@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "1.2.3",
+  "header": "Delete a POSIX account",
+  "content": "User deleted a POSIX account.\nEvent details\nEvent name\nDELETE_POSIX_ACCOUNT\nParameters\nUSER_EMAIL\nstring\nThe email address of the acting user.\nSample request\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/gcp?\neventName=IMPORT_SSH_PUBLIC_KEY&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{USER_EMAIL} added an SSH public key.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/gcp?\nEvent details\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 492,
+      "word_count": 42
+    },
+    "hierarchy": {
+      "parent": "Cloud OS Login",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1868",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nFileSystemOperationType\nValues:\nOP_INVALID (0)\nOP_RENAME (1)\nOP_DELETE (2)\nOP_WRITE (3)\nOP_HARDLINK (4)\nOP_SET_ENDOFFILE (5)\nOP_ACL_MODIFY (6)\nFsOperationClassification\nValues:\nCLASS_INVALID (0)\nCLASS_SUPPRESS (1)\nCLASS_GENERIC (2)\nCLASS_TAMPER_START_BOUNDARY (3)\nCLASS_INJECTED_DLLS_MODIFY (3)\nCLASS_SERVICE_BINS_MODIFY (4)\nCLASS_CORE_DRIVERS_MODIFY (5)\nCLASS_EXTRA_DRIVERS_MODIFY (6)\nCLASS_SUPPORT_TOOLS_MODIFY (7)\nCLASS_INSTALLER_CACHES_MODIFY (8)\nCLASS_OSFM_AND_CHANNELS_MODIFY (9)\nCLASS_CS_PROGRAM_FILES_MODIFY (10)\nANTI_TAMPERING_START_BOUNDARY_V1 (11)\nCLASS_SUPPRESS_V1 (11)\nCLASS_GENERIC_V1 (12)\nCLASS_INJECTED_DLLS_MODIFY_V1 (13)\nCLASS_SERVICE_BINS_MODIFY_V1 (14)\nCLASS_CORE_DRIVERS_MODIFY_V1 (15)\nCLASS_EXTRA_DRIVERS_MODIFY_V1 (16)\nCLASS_SUPPORT_TOOLS_MODIFY_V1 (17)\nCLASS_INSTALLER_CACHES_MODIFY_V1 (18)\nCLASS_OSFM_AND_CHANNELS_MODIFY_V1 (19)\nCLASS_CS_PROGRAM_FILES_MODIFY_V1 (20)\nANTI_TAMPERING_END_BOUNDARY_V1 (20)\nANTI_TAMPERING_START_BOUNDARY_V2 (21)\nCLASS_INJECTED_DLLS_MODIFY_V2 (21)\nCLASS_SERVICE_BINS_MODIFY_V2 (22)\nCLASS_CORE_DRIVERS_MODIFY_V2 (23)\nCLASS_EXTRA_DRIVERS_MODIFY_V2 (24)\nCLASS_INSTALLER_CACHES_MODIFY_V2 (25)\nCLASS_OSFM_AND_CHANNELS_MODIFY_V2 (26)\nCLASS_CS_PROGRAM_FILES_MODIFY_V2 (27)\nANTI_TAMPERING_END_BOUNDARY_V2 (27)\nCLASS_TAMPER_END_BOUNDARY (31)\nCLASS_GENERIC_START_BOUNDARY (32)\nCLASS_GENERIC_PRODAPP_AUTOSTART (32)\nCLASS_GENERIC_END_BOUNDARY (511)\nTargetFileName\nThe resulting file name that was downloaded\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n604/1226\nField\nDescription\nSourceFileName\nThe file's original name\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\nFsOperationClassificationFlags Values:\nANTI_TAMPERING_V1 (0x0001)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 604,
+      "end": 605
+    },
+    "content_stats": {
+      "char_count": 2414,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": "FileSystemOperationBlocked",
+      "children": []
+    }
+  }
+}

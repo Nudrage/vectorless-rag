@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_962",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2 events,\nthis is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nUserName\nOperating system username.\nLogonDomain\nLogonType\nValues:\nINTERACTIVE (2)\nNETWORK (3)\nBATCH (4)\nSERVICE (5)\nPROXY (6)\nUNLOCK (7)\nNETWORK_CLEARTEXT (8)\nNEW_CREDENTIALS (9)\nREMOTE_INTERACTIVE (10)\nCACHED_INTERACTIVE (11)\nCACHED_REMOTE_INTERACTIVE (12)\nCACHED_UNLOCK (13)\nPatternId\nThe ID of the pattern\nRemoteAddressIP4\nRemoteAddressIP6\nTotalCount\nPasswordLastSet\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 258,
+      "end": 258
+    },
+    "content_stats": {
+      "char_count": 1070,
+      "word_count": 137
+    },
+    "hierarchy": {
+      "parent": "RemoteBruteForceDetectInfo",
+      "children": []
+    }
+  }
+}

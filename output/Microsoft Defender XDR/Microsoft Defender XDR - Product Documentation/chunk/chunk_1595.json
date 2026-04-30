@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1595",
+  "section_number": "155.1.1.217.1",
+  "header": "Import roles to Microsoft Defender XDR Unified RBAC from individual RBAC models",
+  "content": "Unified RBAC from individual RBAC models\n７ Note\nOnce roles are migrated, you can modify the imported roles and change the level\nof permissions as needed.\n） Important\nYou must be a Global Administrator or Security Administrator in Microsoft Entra ID,\nor have all the Authorization permissions assigned in Microsoft Defender XDR\nUnified RBAC to perform this task. For more information on permissions, see\nPermission pre-requisites. Microsoft recommends that you use roles with the\nfewest permissions to help improve security for your organization. Global\nAdministrator is a highly privileged role that should be limited to emergency\nscenarios when you can't use an existing role.\n2. In the navigation pane, select Permissions.\n3. Select Roles under Microsoft Defender XDR to get to the Permissions and roles\npage.\n4. Select Import role.\n5. Select the products you want to import roles from.\n6. Select Next to choose the roles to import. You can choose all roles or select\nspecific roles from the list. Select the role name to review the permissions and\nassigned users or groups for that specific role.\n7. Select the roles you want to import and select Next.\n8. Select Submit.\n\n７ Note\nIf the role you want to import appears in the Roles not eligible for import list,\nit contains assignments for users or user groups that no longer exist in Entra\nID.\nTo import this role to Microsoft Defender XDR Unified RBAC, remove the user\nor user group from the role in the original RBAC model. Select the role to view\nthe list of users that still exist for that role to determine which user or group\nto remove.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1181,
+      "end": 1182
+    },
+    "content_stats": {
+      "char_count": 1596,
+      "word_count": 273
+    },
+    "hierarchy": {
+      "parent": "Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)",
+      "children": [
+        "Feedback"
+      ]
+    }
+  }
+}

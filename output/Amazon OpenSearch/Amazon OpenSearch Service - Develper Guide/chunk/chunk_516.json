@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_516",
+  "section_number": "2.8.11.1.1",
+  "header": "Step 1: Map the snapshot role in OpenSearch Dashboards (if using ﬁne-grained access control)",
+  "content": "access control)\nFine-grained access control introduces an additional step when registering a repository. Even if you\nuse HTTP basic authentication for all other purposes, you need to map the manage_snapshots\nrole to your IAM role that has iam:PassRole permissions to pass TheSnapshotRole.\n1.\nNavigate to the OpenSearch Dashboards plugin for your OpenSearch Service domain. You can\nﬁnd the Dashboards endpoint on your domain dashboard on the OpenSearch Service console.\n2.\nFrom the main menu choose Security, Roles, and select the manage_snapshots role.\n3.\nChoose Mapped users, Manage mapping.\n4.\nAdd the ARN of the role that has permissions to pass TheSnapshotRole. Put role ARNs under\nBackend roles.\narn:aws:iam::123456789123:role/role-name\n5.\nSelect Map and conﬁrm the user or role shows up under Mapped users.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 715,
+      "end": 715
+    },
+    "content_stats": {
+      "char_count": 812,
+      "word_count": 122
+    },
+    "hierarchy": {
+      "parent": "Registering a manual snapshot repository",
+      "children": []
+    }
+  }
+}

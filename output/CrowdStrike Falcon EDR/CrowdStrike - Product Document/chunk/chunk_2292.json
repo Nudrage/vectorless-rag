@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2292",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nEventTapId\nThe macOS assigned identifier of the Event Tap.\nEventTapPoint\nDescribes the point in macOS where the events are captured.\nValues:\nHID_EVENT_TAP (0)\nSESSION_EVENT_TAP (1)\nANNOTATED_SESSION_EVENT_TAP (2)\nEventTapOptions\nIndicates if the macOS Event Tap is an active filter or passive listener.\nValues:\nACTIVE_FILTER (0)\nPASSIVE_LISTENER (1)\nEventTapEventsOfInterest\nIndicates which macOS HID events are being captured.\nValues:\nNULL_EVENT (1)\nLEFT_MOUSE_BUTTON_DOWN_EVENT (2)\nLEFT_MOUSE_BUTTON_UP_EVENT (4)\nRIGHT_MOUSE_BUTTON_DOWN_EVENT (8)\nRIGHT_MOUSE_BUTTON_UP_EVENT (16)\nMOUSE_MOVED_EVENT (32)\nLEFT_MOUSE_BUTTON_DRAGGED_EVENT (64)\nRIGHT_MOUSE_BUTTON_DRAGGED_EVENT (128)\nKEY_DOWN_EVENT (1024)\nKEY_UP_EVENT (2048)\nFLAGS_CHANGED_EVENT (4096)\nSCROLL_WHEEL_EVENT (4194304)\nTABLET_POINTER_EVENT (8388608)\nTABLET_PROXIMITY_EVENT (16777216)\nOTHER_MOUSE_BUTTON_DOWN_EVENT (33554432)\nOTHER_MOUSE_BUTTON_UP_EVENT (67108864)\nOTHER_MOUSE_BUTTON_DRAGGED_EVENT (134217728)\nSourceProcessId\nUPID of creating process.\nNote that in Windows [http://msdn.microsoft.com/en- us/library/windows/hardware/ff559960%28v=vs.85%29.aspx] , the\nParentProcessId does not have to be the same as SourceProcessId since a different parent can be specified for creation. On\nMac, SourceProcessId is the responsible_pid which is used by XPC to note the process requesting this XPC process.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed\nthread injection in an InjectedThread event\nEventTapIsEnabled\nIndicates if the macOS Event Tap is enabled.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 810,
+      "end": 810
+    },
+    "content_stats": {
+      "char_count": 1826,
+      "word_count": 213
+    },
+    "hierarchy": {
+      "parent": "EventTapInfo",
+      "children": []
+    }
+  }
+}

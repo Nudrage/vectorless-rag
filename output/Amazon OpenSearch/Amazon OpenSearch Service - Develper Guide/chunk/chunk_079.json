@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_079",
+  "section_number": "2.6.15.3.1",
+  "header": "HTTP source",
+  "content": "Pipelines that use the HTTP source plugin handle back pressure diﬀerently depending on which\npipeline component is congested:\n• Buﬀers – When buﬀers are full, the pipeline starts returning HTTP status REQUEST_TIMEOUT\nwith error code 408 back to the source endpoint. As buﬀers are freed up, the pipeline starts\nprocessing HTTP events again.\n• Source threads – When all HTTP source threads are busy executing requests and the\nunprocessed request queue size has exceeded the maximum allowed number of requests, the\npipeline starts to return HTTP status TOO_MANY_REQUESTS with error code 429 back to the\nsource endpoint. When the request queue drops below the maximum allowed queue size, the\npipeline starts processing requests again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 98,
+      "end": 98
+    },
+    "content_stats": {
+      "char_count": 730,
+      "word_count": 114
+    },
+    "hierarchy": {
+      "parent": "Source back pressure",
+      "children": []
+    }
+  }
+}

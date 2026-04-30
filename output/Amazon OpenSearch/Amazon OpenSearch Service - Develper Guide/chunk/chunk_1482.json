@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1482",
+  "section_number": "2.26.6",
+  "header": "Reserved Instances in Amazon OpenSearch Service",
+  "content": "Reserved Instances (RIs) in Amazon OpenSearch Service oﬀer signiﬁcant discounts compared\nto standard On-Demand Instances. The instances themselves are identical; RIs are just a billing\ndiscount applied to On-Demand Instances in your account. For long-lived applications with\npredictable usage, RIs can provide considerable savings over time.\nShard count quotas\n1990\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch Service RIs require one- or three-year terms and have three payment options that\naﬀect the discount rate:\n• No Upfront – You pay nothing upfront. You pay a discounted hourly rate for every hour within\nthe term.\n• Partial Upfront – You pay a portion of the cost upfront, and you pay a discounted hourly rate for\nevery hour within the term.\n• All Upfront – You pay the entirety of the cost upfront. You don't pay an hourly rate for the term.\nGenerally speaking, a larger upfront payment means a larger discount. You can't cancel Reserved\nInstances—when you reserve them, you commit to paying for the entire term—and upfront\npayments are nonrefundable.\nRIs are not ﬂexible; they only apply to the exact instance type that you reserve. For\nexample, a reservation for eight c5.2xlarge.search instances does not apply to sixteen\nc5.xlarge.search instances or four c5.4xlarge.search instances. However, linked accounts\nthat are part of an organization in AWS Organizations can beneﬁt from any unused discount\napplication from the owning account of the RI as long as the instance types, Region, family, and\nsize match. For more information, see Amazon OpenSearch Service pricing and FAQ.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2019,
+      "end": 2020
+    },
+    "content_stats": {
+      "char_count": 1598,
+      "word_count": 250
+    },
+    "hierarchy": {
+      "parent": "General reference for Amazon OpenSearch Service",
+      "children": [
+        "Purchasing Reserved Instances (console)",
+        "Purchasing Reserved Instances (AWS CLI)",
+        "Purchasing Reserved Instances (AWS SDKs)",
+        "Examining costs"
+      ]
+    }
+  }
+}

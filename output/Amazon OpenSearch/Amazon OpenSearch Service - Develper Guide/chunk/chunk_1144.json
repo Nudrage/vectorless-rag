@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1144",
+  "section_number": "2.18.7.1.1",
+  "header": "Creating a private connection between a VPC and OpenSearch UI (console)",
+  "content": "To create a private connection between a VPC and OpenSearch UI using the console\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation, under Serverless, choose VPC endpoints.\n3.\nChoose Create VPC endpoint.\n4.\nFor Name, enter a name for the endpoint.\n5.\nFor VPC, select the VPC that you'll access OpenSearch UI applications from.\n6.\nFor Subnets, select one subnet that you'll access OpenSearch UI applications from.\nNote\nAn endpoint's IP address and DNS type are based on subnet type:\nManaging access to the OpenSearch UI from a VPC endpoint\n1675\nAmazon OpenSearch Service\nDeveloper Guide\n• Dual-stack: If all subnets have both IPv4 and IPv6 address ranges.\n• IPv6: If all subnets are IPv6 only subnets.\n• IPv4: If all subnets have IPv4 address ranges.\n7.\nFor Security groups, select one or more security group to associate with the endpoint network\ninterfaces.\nNote\nIn this step, you are limiting the ports, protocols, and sources for inbound traﬃc that\nyou’re authorizing into your endpoint. Ensure that the security group rules allow\nthe resources that will use the VPC endpoint to communicate with OpenSearch UI\napplications to also communicate with the endpoint network interface.\n8.\n8. Choose Create endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1704,
+      "end": 1705
+    },
+    "content_stats": {
+      "char_count": 1284,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Creating a private connection between a VPC and OpenSearch UI",
+      "children": []
+    }
+  }
+}

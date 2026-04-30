@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_952",
+  "section_number": "2.15.1",
+  "header": "URI searches",
+  "content": "Universal Resource Identiﬁer (URI) searches are the simplest form of search. In a URI search, you\nspecify the query as an HTTP request parameter:\nGET https://search-my-domain.us-west-1.es.amazonaws.com/_search?q=house\nA sample response might look like the following:\n{\n\"took\": 25,\n\"timed_out\": false,\n\"_shards\": {\n\"total\": 10,\n\"successful\": 10,\n\"skipped\": 0,\n\"failed\": 0\n},\n\"hits\": {\n\"total\": {\n\"value\": 85,\n\"relation\": \"eq\",\n},\n\"max_score\": 6.6137657,\n\"hits\": [\n{\n\"_index\": \"movies\",\n\"_type\": \"movie\",\n\"_id\": \"tt0077975\",\n\"_score\": 6.6137657,\n\"_source\": {\n\"directors\": [\n\"John Landis\"\n],\n\"release_date\": \"1978-07-27T00:00:00Z\",\n\"rating\": 7.5,\n\"genres\": [\n\"Comedy\",\n\"Romance\"\n],\n\"image_url\": \"http://ia.media-imdb.com/images/M/\nMV5BMTY2OTQxNTc1OF5BMl5BanBnXkFtZTYwNjA3NjI5._V1_SX400_.jpg\",\nURI searches\n1466\nAmazon OpenSearch Service\nDeveloper Guide\n\"plot\": \"At a 1962 College, Dean Vernon Wormer is determined to expel the\nentire Delta Tau Chi Fraternity, but those troublemakers have other plans for him.\",\n\"title\": \"Animal House\",\n\"rank\": 527,\n\"running_time_secs\": 6540,\n\"actors\": [\n\"John Belushi\",\n\"Karen Allen\",\n\"Tom Hulce\"\n],\n\"year\": 1978,\n\"id\": \"tt0077975\"\n}\n},\n...\n]\n}\n}\nBy default, this query searches all ﬁelds of all indices for the term house. To narrow the search,\nspecify an index (movies) and a document ﬁeld (title) in the URI:\nGET https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search?q=title:house\nYou can include additional parameters in the request, but the supported parameters provide only a\nsmall subset of the OpenSearch search options. The following request returns 20 results (instead of\nthe default of 10) and sorts by year (rather than by _score):\nGET https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search?\nq=title:house&size=20&sort=year:desc",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1495,
+      "end": 1496
+    },
+    "content_stats": {
+      "char_count": 1797,
+      "word_count": 228
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

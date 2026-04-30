@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3227",
+  "section_number": "1.7.1.1.2",
+  "header": "managedassets",
+  "content": "The following table describes the fields for the managedassets event.\nField name\nDescription\nExample value\naid\nThe sensor ID. This value is unique to each installation of a Falcon sensor. When a\nsensor is updated or reinstalled, the host gets a new aid. In those situations, a single\nhost could have multiple aidvalues over time.\n\"85ae98xxxxxxd9a8f2\"\ncid\nThe customer ID.\n0123456789ABCDEFGHIJKLMNOPQRSTUV-WX\nGatewayIP\nThe gateway of the system where the sensor is installed.\n\"10.10.10.1\"\nGatewayMAC\nThe MAC address of the gateway.\n\"00-00-5E-00-53-00\"\nInterfaceAlias\nThe user-friendly name of the IP interface.\n\"Local Area Network\"\n\"Ethernet\"\nInterfaceDescription\nThe network adapter used for the IP interface.\n\"Intel(R) PRO/1000 MT Network\nConnection\"\nLocalAddressIP4\nThe device's local IP address in IPv4 format.\n\"192.0.2.100\"\nMAC\nThe MAC address of the system.\n\"00-00-5E-00-53-00\"\nMACPrefix\nAn identifier unique to the organization.\n\"00-00-5E\"\n_time\nThe host's local time in epoch format.\n\"1538648887.051\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1223,
+      "end": 1223
+    },
+    "content_stats": {
+      "char_count": 1007,
+      "word_count": 142
+    },
+    "hierarchy": {
+      "parent": "Secondary events from Falcon Insight XDR",
+      "children": []
+    }
+  }
+}

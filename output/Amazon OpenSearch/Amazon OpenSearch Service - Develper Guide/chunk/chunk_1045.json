@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_1045",
+  "section_number": "2.16.2",
+  "header": "Advanced search capabilities with an Amazon S3 vector engine",
+  "content": "Amazon OpenSearch Service oﬀers the ability to use Amazon S3 as a vector engine for vector\nindexes. This feature allows you to oﬄoad vector data to Amazon S3 while maintaining sub-second\nvector search capabilities at low cost.\nWith this feature, OpenSearch stores vector embeddings in an Amazon S3 vector index while\nkeeping other document ﬁelds in the OpenSearch cluster's storage. This architecture oﬀers the\nfollowing beneﬁts:\n• Durability: Data written to S3 Vectors is stored on S3, which is designed for 11 9s of data\ndurability.\n• Scalability: Oﬄoad large vector datasets to S3 without consuming cluster storage.\n• Cost-eﬀectiveness: Optimize storage costs for vector-heavy workloads.\nOpenSearch has the following requirements for using S3 vector indexes:\nAdvanced search capabilities with an Amazon S3 vector engine\n1573\nAmazon OpenSearch Service\nDeveloper Guide\n• OpenSearch version 2.19 or later\n• OpenSearch Optimized instances\n• Latest patch version for your OpenSearch release",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1602,
+      "end": 1603
+    },
+    "content_stats": {
+      "char_count": 989,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Vector search",
+      "children": [
+        "Enabling S3 Vectors",
+        "Creating indexes with S3 vector engine",
+        "Functional limitations",
+        "Indexing documents",
+        "Searching documents",
+        "Supported mapping parameters",
+        "Metering and billing",
+        "Disabling the s3vector engine"
+      ]
+    }
+  }
+}

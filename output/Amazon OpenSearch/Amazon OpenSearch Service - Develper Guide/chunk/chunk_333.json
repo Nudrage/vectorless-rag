@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_333",
+  "section_number": "2.13.3.2",
+  "header": "Python",
+  "content": "The following sample code uses the opensearch-py client for Python to establish a secure\nconnection to the speciﬁed OpenSearch Serverless collection, create a single index, and search that\nindex. You must provide values for region and host.\nThe important diﬀerence compared to OpenSearch Service domains is the service name (aoss\ninstead of es).\nfrom opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth\nimport boto3\nhost = ''  # serverless collection endpoint, without https://\nregion = ''  # e.g. us-east-1\nservice = 'aoss'\ncredentials = boto3.Session().get_credentials()\nauth = AWSV4SignerAuth(credentials, region, service)\n# create an opensearch client and use the request-signer\nclient = OpenSearch(\nhosts=[{'host': host, 'port': 443}],\nhttp_auth=auth,\nuse_ssl=True,\nverify_certs=True,\nconnection_class=RequestsHttpConnection,\npool_maxsize=20,\nPython\n467\nAmazon OpenSearch Service\nDeveloper Guide\n)\n# create an index\nindex_name = 'books-index'\ncreate_response = client.indices.create(\nindex_name\n)\nprint('\\nCreating index:')\nprint(create_response)\n# index a document\ndocument = {\n'title': 'The Green Mile',\n'director': 'Stephen King',\n'year': '1996'\n}\nresponse = client.index(\nindex = 'books-index',\nbody = document,\nid = '1'\n)\n# delete the index\ndelete_response = client.indices.delete(\nindex_name\n)\nprint('\\nDeleting index:')\nprint(delete_response)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 496,
+      "end": 497
+    },
+    "content_stats": {
+      "char_count": 1374,
+      "word_count": 173
+    },
+    "hierarchy": {
+      "parent": "Ingesting data into Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_934",
+  "section_number": "2.27.3.3.1",
+  "header": "Create the Lambda function",
+  "content": "After you create the deployment package, you can create the Lambda function. When you create\na function, choose a name, runtime (for example, Python 3.8), and IAM role. The IAM role deﬁnes\nthe permissions for your function. For detailed instructions, see Create a Lambda function with the\nconsole in the AWS Lambda Developer Guide.\nThis example assumes you're using the console. Choose Python 3.9 and a role that has S3 read\npermissions and OpenSearch Service write permissions, as shown in the following screenshot:\nLoading streaming data from Amazon S3\n1449\nAmazon OpenSearch Service\nDeveloper Guide\nAfter you create the function, you must add a trigger. For this example, we want the code to run\nwhenever a log ﬁle arrives in an S3 bucket:\n1.\nChoose Add trigger and select S3.\n2.\nChoose your bucket.\n3.\nFor Event type, choose PUT.\n4.\nFor Preﬁx, type logs/.\n5.\nFor Suﬃx, type .log.\n6.\nAcknowledge the recursive invocation warning and choose Add.\nLoading streaming data from Amazon S3\n1450\nAmazon OpenSearch Service\nDeveloper Guide\nFinally, you can upload your deployment package:\n1.\nChoose Upload from and .zip ﬁle, then follow the prompts to upload your deployment\npackage.\n2.\nAfter the upload ﬁnishes, edit the Runtime settings and change the Handler to\nsample.handler. This setting tells Lambda the ﬁle (sample.py) and method (handler)\nthat it should run after a trigger.\nAt this point, you have a complete set of resources: a bucket for log ﬁles, a function that runs\nwhenever a log ﬁle is added to the bucket, code that performs the parsing and indexing, and an\nOpenSearch Service domain for searching and visualization.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1478,
+      "end": 1480
+    },
+    "content_stats": {
+      "char_count": 1627,
+      "word_count": 270
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon S3",
+      "children": []
+    }
+  }
+}

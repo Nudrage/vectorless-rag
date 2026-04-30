@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1737",
+  "section_number": "155.1.1.238.1.3",
+  "header": "Get a list of recent incidents",
+  "content": "The following script uses Get-Token.ps1 to access the API. It then retrieves a list of incidents\nthat were last updated within the past 48 hours, and saves the list as a JSON file.\nPowerShell\nYou're all done! You've successfully:\n） Important\nSave this script in the same folder you saved Get-Token.ps1.\n# This script returns incidents last updated within the past 48 hours.\n$token = ./Get-Token.ps1\n# Get incidents from the past 48 hours.\n# The script may appear to fail if you don't have any incidents in that time\nframe.\n$dateTime = (Get-Date).ToUniversalTime().AddHours(-48).ToString(\"o\")\n# This URL contains the type of query and the time filter we created above.\n# Note that `$filter` does not refer to a local variable in our script --\n# it's actually an OData operator and part of the API's syntax.\n$url = \"https://api.security.microsoft.com/api/incidents`?\n`$filter=lastUpdateTime+ge+$dateTime\"\n# Set the webrequest headers\n$headers = @{\n'Content-Type' = 'application/json'\n'Accept' = 'application/json'\n'Authorization' = \"Bearer $token\"\n}\n# Send the request and get the results.\n$response = Invoke-WebRequest -Method Get -Uri $url -Headers $headers -ErrorAction\nStop\n# Extract the incidents from the results.\n$incidents =  ($response | ConvertFrom-Json).value | ConvertTo-Json -Depth 99\n# Get a string containing the execution time. We concatenate that string to the\nname\n# of the output file to avoid overwriting the file on consecutive runs of the\nscript.\n$dateTimeForFileName = Get-Date -Format o | foreach {$_ -replace \":\", \".\"}\n# Save the result as json\n$outputJsonPath = \"./Latest Incidents $dateTimeForFileName.json\"\nOut-File -FilePath $outputJsonPath -InputObject $incidents\nCreated and registered an application.\nGranted permission for that application to read alerts.\nConnected to the API.\nUsed a PowerShell script to return incidents updated in the past 48 hours.\nMicrosoft Defender XDR APIs overview\nAccess the Microsoft Defender XDR APIs\nCreate an app to access Microsoft Defender XDR without a user\nCreate an app to access Microsoft Defender XDR APIs on behalf of a user\nCreate an app with multitenant partner access to Microsoft Defender XDR APIs\nManage secrets in your server apps with Azure Key Vault\nOAuth 2.0 Authorization for user sign in and API access",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1303,
+      "end": 1305
+    },
+    "content_stats": {
+      "char_count": 2282,
+      "word_count": 350
+    },
+    "hierarchy": {
+      "parent": "Get incidents using a simple PowerShell script",
+      "children": []
+    }
+  }
+}

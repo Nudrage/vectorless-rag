@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_433",
+  "section_number": "2.7.13",
+  "header": "Monitoring Amazon OpenSearch Serverless",
+  "content": "Monitoring is an important part of maintaining the reliability, availability, and performance\nof Amazon OpenSearch Serverless and your other AWS solutions. AWS provides the following\nmonitoring tools to watch OpenSearch Serverless, report when something is wrong, and take\nautomatic actions when appropriate:\n• Amazon CloudWatch monitors your AWS resources and the applications that you run on AWS in\nreal time. You can collect and track metrics, create customized dashboards, and set alarms that\nnotify you or take actions when a speciﬁed metric reaches a threshold that you specify.\nFor example, you can have CloudWatch track CPU usage or other metrics of your Amazon EC2\ninstances and automatically launch new instances when needed. For more information, see the\nAmazon CloudWatch User Guide.\nMonitoring OpenSearch Serverless\n592\nAmazon OpenSearch Service\nDeveloper Guide\n• AWS CloudTrail captures API calls and related events made by or on behalf of your AWS account.\nIt delivers the log ﬁles to an Amazon S3 bucket that you specify. You can identify which users\nand accounts called AWS, the source IP address from which the calls were made, and when the\ncalls occurred. For more information, see the AWS CloudTrail User Guide.\n• Amazon EventBridge delivers a near real-time stream of system events that describe changes in\nyour OpenSearch Service domains. You can create rules that watch for certain events, and trigger\nautomated actions in other AWS services when these events occur. For more information, see the\nAmazon EventBridge User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 621,
+      "end": 622
+    },
+    "content_stats": {
+      "char_count": 1550,
+      "word_count": 243
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless",
+      "children": [
+        "Monitoring OpenSearch Serverless with Amazon CloudWatch",
+        "Logging OpenSearch Serverless API calls using AWS CloudTrail",
+        "Monitoring OpenSearch Serverless events using Amazon EventBridge"
+      ]
+    }
+  }
+}

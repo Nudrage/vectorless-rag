@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1531",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nExtendedMitigationViolated\nValues:\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n429/1226\nField\nDescription\nARBITRARY_CODE_GUARD (0)\nCODE_INTEGRITY_GUARD (1)\nDISALLOW_WIN32K_SYSTEM_CALLS (2)\nPROHIBIT_REMOTE_IMAGE_LOADS (3)\nCET_USER_SHADOW_STACK (4)\nIsAuditModeAsString\nProcessSignatureLevelAsString\nSectionSignatureLevelAsString\nProcessProtectionAsString\nReturnAddressModuleName\nReturnAddressModuleOffsetAsString\nIsReturnAddressCetCompatibleAsString\nUnsignedImageName\nChildImageFileName\nCallStackModuleNamesVersion\nValues:\nINVALID_VERSION (0)\nCSMN_FORMAT_5 (5)\nCSMN_FORMAT_6 (6)\nCSMN_FORMAT_7 (7)\nCSMN_FORMAT_8 (8)\nCSMN_FORMAT_CURRENT (8)\nCallStackModuleNames\nSemicolon-delimited list of modules or memory regions present in the call stack. Format determined by the\naccompanying CallStackModuleNamesVersion field on Windows.\nSuspectStackFlag\nValues:\nNOT_SUSPECT (0x00000000)\nTHREAD_START_NOT_IN_MODULE (0x00000001)\nTHREAD_START_IN_NON_IMAGE_FILE (0x00000002)\nINVALID_TEB_STACK_VALUES (0x00000004)\nSTACK_POINTER_NOT_IN_STACK (0x00000008)\nBASE_POINTER_NOT_IN_STACK (0x00000010)\nSYSCALL_RETURN_ADDRESS_NOT_IN_NTDLL (0x00000020)\nSYSCALL_RETURN_ADDRESS_ON_STACK (0x00000040)\nSTACK_IS_EXECUTABLE (0x00000080)\nRETURN_ADDRESS_NOT_IN_MODULE (0x00000100)\nRETURN_ADDRESS_IN_NON_IMAGE_FILE (0x00000200)\nRETURN_ADDRESS_IS_WRITABLE (0x00000400)\nADDRESS_IN_REFLECTIVELY_LOADED_DLL (0x00000800)\nETW_PROVIDED_CALLSTACK (0x00001000)\nRETURN_ADDRESS_NOT_IN_MODULE_AND_IS_WRITABLE (0x00000500)\nSuspectAddress\nPatternIdList\nParentImageFileName\nParentCommandLine\nParentProcessPatternIdList\nGrandparentImageFileName\nGrandparentCommandLine\nGrandparentProcessPatternIdList\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n430/1226\nField\nDescription\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\nTemplateInstanceVersion\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 429,
+      "end": 431
+    },
+    "content_stats": {
+      "char_count": 3156,
+      "word_count": 257
+    },
+    "hierarchy": {
+      "parent": "ExtendedExploitMitigationViolatedDetectInfo",
+      "children": []
+    }
+  }
+}

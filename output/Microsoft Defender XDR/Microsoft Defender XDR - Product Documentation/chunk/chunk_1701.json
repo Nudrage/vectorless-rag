@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1701",
+  "section_number": "155.1.1.231.5.2",
+  "header": "Implement required Enterprise Application permissions",
+  "content": "） Important\nMicrosoft recommends that you use roles with the fewest permissions. This helps improve\nsecurity for your organization. Global Administrator is a highly privileged role that should\nbe limited to emergency scenarios when you can't use an existing role.\n1. Open Enterprise Application settings\n.\n2. Select Grant admin consent for organization.\n3. If you're able to do so, review the API permissions required for this application, as the\nfollowing image shows. Provide consent for the tenant.\n4. If the administrator receives an error while attempting to provide consent manually, try\neither Option 1 or Option 2 as possible workarounds.\nMicrosoft Entra Administrators need to allow for users to request admin consent to apps. Verify\nthe setting is configured to Yes in Enterprise applications\n.\nMore information is available in Configure Admin consent workflow.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1270,
+      "end": 1271
+    },
+    "content_stats": {
+      "char_count": 871,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "I can't submit files",
+      "children": [
+        "Option 1: Approve enterprise application permissions by user request",
+        "Option 2: Provide admin consent by authenticating the application as an admin",
+        "Option 3: Delete and readd app permissions"
+      ]
+    }
+  }
+}

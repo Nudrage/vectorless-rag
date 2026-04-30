@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_231",
+  "section_number": "2.7.11.1",
+  "header": "Permissions required",
+  "content": "In order to enable OpenSearch Ingestion to send logs to CloudWatch Logs, you must be signed in\nas a user that has certain IAM permissions.\nYou need the following CloudWatch Logs permissions in order to create and update log delivery\nresources:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Resource\": \"*\",\n\"Action\": [\n\"logs:CreateLogDelivery\",\n\"logs:PutResourcePolicy\",\n\"logs:UpdateLogDelivery\",\n\"logs:DeleteLogDelivery\",\n\"logs:DescribeResourcePolicies\",\n\"logs:GetLogDelivery\",\n\"logs:ListLogDeliveries\"\n]\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 359,
+      "end": 359
+    },
+    "content_stats": {
+      "char_count": 532,
+      "word_count": 64
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline logs",
+      "children": []
+    }
+  }
+}

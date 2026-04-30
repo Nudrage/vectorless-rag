@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_676",
+  "section_number": "1.21.17",
+  "header": "Modify Admin External Password Management Status or Password",
+  "content": "Enable or disable an administrator, specified by admin_id , for external password\nmanagement, or set the password for an administrator with\nhas_external_password_mgmt  set to true  (either passed in with the same POST or\npreviously set).\nAdministrator passwords must have at least twelve characters, and may also require a\nmix of character types depending on your Admin Password Policy settings. New\npasswords will be checked against common passwords, usernames, and other account\ninformation to ensure uniqueness.\nSetting has_external_password_mgmt  also updates the administrator account's\npassword_change_required  value. When has_external_password_mgmt  is set to\ntrue , password_change_required  is updated to false , as enabling external\npassword management restricts administrators from performing self-service password\nresets via the Duo Admin Panel UI. When has_external_password_mgmt  is set to\nfalse , password_change_required  is updated to true  to ensure that an\nadministrator no longer subject to external password management updates their\npassword to a new value not known by the external system.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 277,
+      "end": 277
+    },
+    "content_stats": {
+      "char_count": 1112,
+      "word_count": 152
+    },
+    "hierarchy": {
+      "parent": "Administrators",
+      "children": []
+    }
+  }
+}

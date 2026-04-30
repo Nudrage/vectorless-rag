@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_964",
+  "section_number": "155.1.1.101.1",
+  "header": "CloudAppEvents",
+  "content": "Article • 05/15/2025\nApplies to:\nMicrosoft Defender XDR\nThe CloudAppEvents  table in the advanced hunting schema contains information about events involving accounts\nand objects in Office 365 and other cloud apps and services. Use this reference to construct queries that return\ninformation from this table.\nTo make sure the CloudAppEvents  data is populated:\n1. Go to the Defender portal and select Settings > Cloud apps > App connectors.\n2. In the Select Microsoft 365 components page, select the Microsoft 365 activities checkbox.\nFor detailed instructions, see: Connect Microsoft 365 to Microsoft Defender for Cloud Apps\nFor information on other tables in the advanced hunting schema, see the advanced hunting reference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the event was recorded\nActionType\nstring\nType of activity that triggered the event\nApplication\nstring\nApplication that performed the recorded action\nApplicationId\nint\nUnique identifier for the application\nAppInstanceId\nint\nUnique identifier for the instance of an application. To convert this to Microsoft Defender for\nCloud Apps App-connector-ID, use CloudAppEvents| distinct\nApplicationId,AppInstanceId,binary_or(binary_shift_left(AppInstanceId,20),Application|order\nby ApplicationId,AppInstanceId\nAccountObjectId\nstring\nUnique identifier for the account in Microsoft Entra ID\nAccountId\nstring\nAn identifier for the account as found by Microsoft Defender for Cloud Apps. Could be Microsoft\nEntra ID, user principal name, or other identifiers.\nAccountDisplayName\nstring\nName displayed in the address book entry for the account user. This is usually a combination of\nthe given name, middle initial, and surname of the user.\nIsAdminOperation\nbool\nIndicates whether the activity was performed by an administrator\nDeviceType\nstring\nType of device based on purpose and functionality, such as network device, workstation, server,\nmobile, gaming console, or printer\nOSPlatform\nstring\nPlatform of the operating system running on the device. This column indicates specific operating\nsystems, including variations within the same family, such as Windows 11, Windows 10, and",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 23,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 654,
+      "end": 654
+    },
+    "content_stats": {
+      "char_count": 2161,
+      "word_count": 303
+    },
+    "hierarchy": {
+      "parent": "CampaignInfo (Preview)",
+      "children": [
+        "Prerequisites",
+        "Apps and services covered",
+        "Related articles"
+      ]
+    }
+  }
+}

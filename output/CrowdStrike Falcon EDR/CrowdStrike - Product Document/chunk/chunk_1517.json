@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1517",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed\nthread injection in an InjectedThread event\nServiceDisplayName\nEtwRawRpcClientProcessId\nClientProcessStartKey\nSourceProcessId\nUPID of creating process.\nNote that in Windows [http://msdn.microsoft.com/en- us/library/windows/hardware/ff559960%28v=vs.85%29.aspx] , the\nParentProcessId does not have to be the same as SourceProcessId since a different parent can be specified for creation. On\nMac, SourceProcessId is the responsible_pid which is used by XPC to note the process requesting this XPC process.\nPatternId\nThe ID of the pattern\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nEtwRawProcessId\nIsHosted\nValues:\nFALSE (0)\nTRUE (1)\nTargetThreadId\nThe primary thread associated with this service.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 423,
+      "end": 423
+    },
+    "content_stats": {
+      "char_count": 1442,
+      "word_count": 198
+    },
+    "hierarchy": {
+      "parent": "ServiceStopped",
+      "children": []
+    }
+  }
+}

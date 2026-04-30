@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_982",
+  "section_number": "2.15.6",
+  "header": "Querying your Amazon OpenSearch Service data with SQL",
+  "content": "You can use SQL to query your Amazon OpenSearch Service, rather than using the JSON-based\nOpenSearch query DSL. Querying with SQL is useful if you're already familiar with the language\nor want to integrate your domain with an application that uses it. SQL support is available on\ndomains running OpenSearch or Elasticsearch 6.5 or higher.\nNote\nThis documentation describes version compatibility between OpenSearch Service and\nvarious versions of the SQL plugin, as well as the JDBC and ODBC driver. See the open\nsource OpenSearch documentation for information about the syntax for basic and complex\nqueries, functions, metadata queries, and aggregate functions.\nUse the following table to ﬁnd the version of the SQL plugin that's supported by each OpenSearch\nand Elasticsearch version.\nOpenSearch\nOpenSearch\nversion\nSQL plugin\nversion\nNotable features\n2.19.0\n2.19.0.0\n2.18.0\n2.18.0.0\n2.17.0\n2.17.0.0\n2.15.0\n2.15.0.0\n2.13.0\n2.13.0.0\n2.11.0\n2.11.0.0\nAdd support for PPL language and queries\n2.9.0\n2.9.0.0\nAdd Spark connector, and support table and PromQL\nfunctions\n2.7.0\n2.7.0.0\nAdd datasource  API\nSQL support\n1509\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch\nversion\nSQL plugin\nversion\nNotable features\n2.5.0\n2.5.0.0\n2.3.0\n2.3.0.0\nAdd maketime and makedate datetime functions\n1.3.0\n1.3.0.0\nSupport default query limit size, and IN clause to select\nfrom within a value list\n1.2.0\n1.2.0.0\nAdd new protocol for visualization response format\n1.1.0\n1.1.0.0\nSupport match function as ﬁlter in SQL and PPL\n1.0.0\n1.0.0.0\nSupport querying a data stream\nOpen Distro for Elasticsearch\nElasticsearch\nversion\nSQL plugin\nversion\nNotable features\n7.10\n1.13.0\nNULL FIRST and LAST for window functions, CAST()\nfunction, SHOW and DESCRIBE commands\n7.9\n1.11.0\nAdd additional date/time functions, ORDER BY keyword\n7.8\n1.9.0\n7.7\n1.8.0\n7.3\n1.3.0\nMultiple string and number operators\n7.1\n1.1.0",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1538,
+      "end": 1539
+    },
+    "content_stats": {
+      "char_count": 1878,
+      "word_count": 281
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": [
+        "Sample call",
+        "Notes and diﬀerences",
+        "SQL Workbench",
+        "SQL CLI",
+        "JDBC driver",
+        "ODBC driver"
+      ]
+    }
+  }
+}

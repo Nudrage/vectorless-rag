@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_016",
+  "section_number": "1.13",
+  "header": "ResourceDetails",
+  "content": "Details of the resource on which the action was performed.\nJSON representation\nFields\nid\nstring\nIdentifier of the resource.\ntitle\nstring\nTitle of the resource. For instance, in case of a drive document, this would be the\ntitle of the document. In case of an email, this would be the subject.\ntype\nstring\nType of the resource - document, email, chat message\ninteger\n],\n\"regionCode\": string,\n\"subdivisionCode\": string\n}\n{\n\"id\": string,\n\"title\": string,\n\"type\": string,\n\"appliedLabels\": [\n{\nobject (AppliedLabel (/workspace/admin/reports/reference/rest/v1/activities/list#AppliedLab\n}\n],\n\"relation\": string\n}\nFields\nappliedLabels[]\nobject (AppliedLabel\n(/workspace/admin/reports/reference/rest/v1/activities/list#AppliedLabel))\nactivities.list of labels applied on the resource\nrelation\nstring\nDefines relationship of the resource to the events",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 13,
+      "end": 14
+    },
+    "content_stats": {
+      "char_count": 841,
+      "word_count": 109
+    },
+    "hierarchy": {
+      "parent": "Method: activities.list",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1106",
+  "section_number": "2.18.2.1.2",
+  "header": "Permissions to create an application that uses IAM Identity Center authentication (optional)",
+  "content": "(optional)\nBy default, dashboard applications are authenticated using AWS Identity and Access Management\n(IAM) to manage permissions for AWS resource users. However, you can choose to provide a single\nsign-on experience by using IAM Identity Center, which lets you use your existing identity providers\nfor logging into OpenSearch UI applications. In this case, you'll select the Authentication with IAM\nRequired permissions for creating Amazon OpenSearch Service applications\n1626\nAmazon OpenSearch Service\nDeveloper Guide\nIdentity Center option in the procedure later in this topic, and then grant IAM Identity Center users\nthe permissions required to access the OpenSearch UI application.)\nTo create an application that uses IAM Identity Center authentication, you'll need the following\npermissions. Replace the placeholder values with your own information. Contact an account\nadministrator for assistance if required.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"IDCPermissions\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"es:CreateApplication\",\n\"es:DeleteApplication\",\n\"es:GetApplication\",\n\"es:ListApplications\",\n\"es:UpdateApplication\",\n\"es:AddTags\",\n\"es:ListTags\",\n\"es:RemoveTags\",\n\"aoss:BatchGetCollection\",\n\"aoss:ListCollections\",\n\"es:DescribeDomain\",\n\"es:DescribeDomains\",\n\"es:ListDomainNames\",\n\"es:GetDirectQueryDataSource\",\n\"es:ListDirectQueryDataSources\",\n\"sso:CreateApplication\",\n\"sso:DeleteApplication\",\n\"sso:PutApplicationGrant\",\n\"sso:PutApplicationAccessScope\",\n\"sso:PutApplicationAuthenticationMethod\",\n\"sso:ListInstances\",\n\"sso:DescribeApplicationAssignment\",\n\"sso:DescribeApplication\",\n\"sso:CreateApplicationAssignment\",\n\"sso:ListApplicationAssignments\",\n\"sso:DeleteApplicationAssignment\",\nRequired permissions for creating Amazon OpenSearch Service applications\n1627\nAmazon OpenSearch Service\nDeveloper Guide\n\"sso-directory:SearchGroups\",\n\"sso-directory:SearchUsers\",\n\"sso:ListDirectoryAssociations\",\n\"identitystore:DescribeUser\",\n\"identitystore:DescribeGroup\",\n\"iam:ListRoles\"\n],\n\"Resource\": \"*\"\n},\n{\n\"Sid\": \"SLRPermission\",\n\"Effect\": \"Allow\",\n\"Action\": \"iam:CreateServiceLinkedRole\",\n\"Resource\": \"arn:aws:iam::*:role/aws-service-role/\nopensearchservice.amazonaws.com/AWSServiceRoleForAmazonOpenSearchService\"\n},\n{\n\"Sid\": \"PassRolePermission\",\n\"Effect\": \"Allow\",\n\"Action\": \"iam:PassRole\",\n\"Resource\": \"arn:aws:iam::111122223333:role/iam-role-for-identity-\ncenter\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1655,
+      "end": 1657
+    },
+    "content_stats": {
+      "char_count": 2389,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Required permissions for creating Amazon OpenSearch Service applications",
+      "children": []
+    }
+  }
+}

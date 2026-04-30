@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_864",
+  "section_number": "2.12.9.4",
+  "header": "Conﬁguring both SP- and IdP-initiated authentication",
+  "content": "If you want to conﬁgure both SP- and IdP-initiated authentication, you must do so through your\nidentity provider. For example, in Okta, you can perform the following steps:\n1.\nWithin your SAML application, go to General, SAML settings.\n2.\nFor the Single sign on URL, provide your IdP-initiated SSO URL. For example,\nhttps://search-domain-hash/_dashboards/_opendistro/_security/saml/\nacs/idpinitiated.\n3.\nEnable Allow this app to request other SSO URLs.\n4.\nUnder Requestable SSO URLs, add one or more SP-initiated SSO URLs. For example,\nhttps://search-domain-hash/_dashboards/_opendistro/_security/saml/acs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1416,
+      "end": 1416
+    },
+    "content_stats": {
+      "char_count": 606,
+      "word_count": 79
+    },
+    "hierarchy": {
+      "parent": "SAML authentication for OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3133",
+  "section_number": "1.6.10.4.1",
+  "header": "Sample MobileDetectionSummaryEvent response",
+  "content": "{\n\"metadata\": {\n\"customerIDString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"offset\": 701283,\n\"eventType\": \"MobileDetectionSummaryEvent\",\n\"eventCreationTime\": 1649420269000,\n\"version\": \"1.0\"\n},\n\"event\": {\n\"SensorId\": \"85ae98xxxxxxd9a8f2\",\n\"MobileDetectionId\": 1310556238,\n\"ComputerName\": \"CS-SE-EZ64\",\n\"UserName\": \"demo\",\n\"ContextTimeStamp\": 1649061056,\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1165/1226\n\"CompositeId\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV:ind:85ae98xxxxxxd9a8f2:41104|1310556238\",\n\"Name\": \"AppSideloadDetected\",\n\"Description\": \"Apps are installed from outside the PlayStore. Trigger based on a System callback\nwhen apps are installed or updated.\",\n\"Tactic\": \"Insecure security posture\",\n\"TacticId\": \"CSTA0009\",\n\"Technique\": \"Bad device settings\",\n\"TechniqueId\": \"CST0024\",\n\"Objective\": \"Falcon Detection Method\",\n\"Severity\": 50,\n\"FalconHostLink\":\n\"https://falcon.crowdstrike.com/mobile/detections/0123456789ABCDEFGHIJKLMNOPQRSTUV:ind:85ae98xxxxxxd9a8f2:4\n1104|1310556238?_cid=0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"MobileAppsDetails\": [\n{\n\"AppIdentifier\": \"com.facebook.katana\",\n\"AndroidAppLabel\": \"Facebook\",\n\"DexFileHashes\": \"abc456xxxxxxxxxxxxxxxxdef789\",\n\"ImageFileName\": \"/data/app/com.facebook.katana-djFExxxxxxxxxrkg==/base.apk\",\n\"AppInstallerInformation\": \"unknown\",\n\"IsBeingDebugged\": false,\n\"AndroidAppVersionName\": \"323.0.0.46.119\",\n\"IsContainerized\": false\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1165,
+      "end": 1166
+    },
+    "content_stats": {
+      "char_count": 1575,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "Mobile Detection Summary",
+      "children": []
+    }
+  }
+}

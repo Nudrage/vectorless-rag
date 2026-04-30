@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1425",
+  "section_number": "1.5.797.1",
+  "header": "Fields: Linux, Falcon Container",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nOciContainerId\nAn OCI Container Id.\nPtraceRequest\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed thread\ninjection in an InjectedThread event\nTargetAddress\nPtraceData\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nTargetImageFileName The full path to the executable file for the target process.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 398,
+      "end": 398
+    },
+    "content_stats": {
+      "char_count": 1179,
+      "word_count": 174
+    },
+    "hierarchy": {
+      "parent": "ProcessTrace",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2598",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nMpMagicVersion\nMicrosoft protection magic version string in the source DetectionHistory file.\nMpResource\nResource path.\nMpResourceType\nResource type: file, ...\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nMpCategoryID\nMicrosoft protection categories.\nValues:\nINVALID (0)\nADWARE (1)\nSPYWARE (2)\nPASSWORDSTEALER (3)\nTROJANDOWNLOADER (4)\nWORM (5)\nBACKDOOR (6)\nREMOTEACCESSTROJAN (7)\nTROJAN (8)\nEMAILFLOODER (9)\nKEYLOGGER (10)\nDIALER (11)\nMONITORINGSOFTWARE (12)\nBROWSERMODIFIER (13)\nCOOKIE (14)\nBROWSERPLUGIN (15)\nAOLEXPLOIT (16)\nNUKER (17)\nSECURITYDISABLER (18)\nJOKEPROGRAM (19)\nHOSTILEACTIVEXCONTROL (20)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n899/1226\nField\nDescription\nSOFTWAREBUNDLER (21)\nSTEALTHNOTIFIER (22)\nSETTINGSMODIFIER (23)\nTOOLBAR (24)\nREMOTECONTROLSOFTWARE (25)\nTROJANFTP (26)\nPOTENTIALUNWANTEDSOFTWARE (27)\nICQEXPLOIT (28)\nTROJANTELNET (29)\nFILESHARINGPROGRAM (30)\nMALWARE_CREATION_TOOL (31)\nREMOTE_CONTROL_SOFTWARE (32)\nTOOL (33)\nTROJAN_DENIALOFSERVICE (34)\nTROJAN_DROPPER (36)\nTROJAN_MASSMAILER (37)\nTROJAN_MONITORINGSOFTWARE (38)\nTROJAN_PROXYSERVER (39)\nVIRUS (40)\nKNOWN (42)\nUNKNOWN (43)\nSPP (44)\nBEHAVIOR (45)\nVULNERABILTIY (46)\nPOLICY (47)\nMpDetectionID\nMicrosoft protection detection ID.\nMpDomainUser1\nMicrosoft protection domain user 1.\nMpDomainUser2\nMicrosoft protection domain user 2.\nMpInitialDetectionTime\nMpLastThreatStatusChangeTime Microsoft protection last threat status change time.\nTargetProcessName\nMpRemediationTime\nMicrosoft protection remediation time.\nMpSeverityID\nMicrosoft protection severity code.\nMpThreatID\nMicrosoft protection ID.\nMpThreatName\nMicrosoft protection name.\nMpThreatStatusID\nMicrosoft protection threat status ID.\nValues:\nUNKNOWN (0)\nDETECTED (1)\nCLEANED (2)\nQUARANTINED (3)\nREMOVED (4)\nALLOWED (5)\nBLOCKED_CLEAN_FAILED (6)\nQUARANTINE_FAILED (102)\nREMOVE_FAILED (103)\nALLOW_FAILED (104)\nABANDONED (105)\nBLOCKED_FAILED (107)\nMpThreatStatusErrorCode\nMicrosoft protection threat status error code: 0 -> no error.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 899,
+      "end": 900
+    },
+    "content_stats": {
+      "char_count": 2344,
+      "word_count": 260
+    },
+    "hierarchy": {
+      "parent": "MpThreatDetection",
+      "children": []
+    }
+  }
+}

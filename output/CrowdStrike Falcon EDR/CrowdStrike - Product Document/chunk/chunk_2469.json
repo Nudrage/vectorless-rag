@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2469",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "Field\nDescription\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2 events,\nthis is the full path to the main executable for the created process.\nSHA1HashData\nThe SHA1 hash of a file.  In most cases, the hash of the file referred to by the ImageFileName field.\nSignatureState\nExtendedKeyUsages\nPublicKeys\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING (0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nSignatureErrorState\nValues:\nNONE (0x0000)\nMINCRYPT_POLICY_NO_SIGNATURE (0x0001)\nMINCRYPT_POLICY_BAD_CHAIN (0x0002)\nMINCRYPT_POLICY_BAD_SIGNATURE (0x0004)\nMINCRYPT_POLICY_NO_CODE_EKU (0x0008)\nMINCRYPT_POLICY_NO_PAGE_HASHES (0x0010)\nMINCRYPT_POLICY_CERT_REVOKED (0x0020)\nMINCRYPT_POLICY_CERT_EXPIRED (0x0040)\nMINCRYPT_POLICY_UNKNOWN_ERROR (0x1000)\nSignInfoFlags\nThe image had a self-signed certificate.\nValues:\nSIGNATURE_FLAG_SELF_SIGNED (0x00000001)\nSIGNATURE_FLAG_MS_SIGNED (0x00000002)\nSIGNATURE_FLAG_TEST_SIGNED (0x00000004)\nSIGNATURE_FLAG_MS_CROSS_SIGNED (0x00000008)\nSIGNATURE_FLAG_CAT_SIGNED (0x00000010)\nSIGNATURE_FLAG_DRM_SIGNED (0x00000020)\nSIGNATURE_FLAG_DRM_TEST_SIGNED (0x00000040)\nSIGNATURE_FLAG_MS_CAT_SIGNED (0x00000080)\nSIGNATURE_FLAG_CATALOGS_RELOADED (0x00000100)\nSIGNATURE_FLAG_NO_SIGNATURE (0x00000200)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n863/1226\nField\nDescription\nSIGNATURE_FLAG_INVALID_SIGN_CHAIN (0x00000400)\nSIGNATURE_FLAG_SIGN_HASH_MISMATCH (0x00000800)\nSIGNATURE_FLAG_NO_CODE_KEY_USAGE (0x00001000)\nSIGNATURE_FLAG_NO_PAGE_HASHES (0x00002000)\nSIGNATURE_FLAG_FAILED_CERT_CHECK (0x00004000)\nSIGNATURE_FLAG_NO_EMBEDDED_CERT (0x00008000)\nSIGNATURE_FLAG_FAILED_COPY_KEYS (0x00010000)\nSIGNATURE_FLAG_UNKNOWN_ERROR (0x00020000)\nSIGNATURE_FLAG_HAS_VALID_SIGNATURE (0x00040000)\nSIGNATURE_FLAG_EMBEDDED_SIGNED (0x00080000)\nSIGNATURE_FLAG_3RD_PARTY_ROOT (0x00100000)\nSIGNATURE_FLAG_TRUSTED_BOOT_ROOT (0x00200000)\nSIGNATURE_FLAG_UEFI_ROOT (0x00400000)\nSIGNATURE_FLAG_PRS_WIN81_ROOT (0x00800000)\nSIGNATURE_FLAG_FLIGHT_ROOT (0x01000000)\nSIGNATURE_FLAG_APPLE_SIGNED (0x02000000)\nSIGNATURE_FLAG_ESBCACHE (0x04000000)\nSIGNATURE_FLAG_NO_CACHED_DATA (0x08000000)\nSIGNATURE_FLAG_CERT_EXPIRED (0x10000000)\nSIGNATURE_FLAG_CERT_REVOKED (0x20000000)\nPublicKey1\nPublicKey2\nPublicKey3\nPublicKey4\nElapsedSystemTime\nKernelTime",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 863,
+      "end": 864
+    },
+    "content_stats": {
+      "char_count": 2733,
+      "word_count": 209
+    },
+    "hierarchy": {
+      "parent": "SignInfo",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_384",
+  "section_number": "155.1.1.36.1",
+  "header": "How exclusion works",
+  "content": "This exclusion is controlled by adding the #DONT_CORR#  tag to the beginning of the rule's\ndescription.\nYou can exclude an analytics rule from correlation using a toggle in the analytics rule wizard.\n1. Go to the Microsoft Defender portal\nand sign in.\n2. Navigate to the Analytics rule wizard.\n3. In the General tab of the rule wizard, enter and name and description.\n4. In the Set rule logic tab, configure the rule logic as needed.\n5. In the Incident settings tab, make sure the Enable correlation toggle is set to Disabled.\n6. Set the toggle to On to exclude the rule from correlation.\nWhen you exclude a rule using the UI toggle, the #DONT_CORR#  tag is automatically added to\nthe beginning of the rule's description. The analytics rules view now includes a column for\ncorrelation state so you can easily see which rules are excluded as well as filter the list to see\nrules in a specific state.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 215,
+      "end": 216
+    },
+    "content_stats": {
+      "char_count": 898,
+      "word_count": 159
+    },
+    "hierarchy": {
+      "parent": "Exclude analytics rules from correlation in Microsoft Defender XDR (preview)",
+      "children": []
+    }
+  }
+}

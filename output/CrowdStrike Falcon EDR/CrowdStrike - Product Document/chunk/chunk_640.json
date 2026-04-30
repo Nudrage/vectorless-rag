@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_640",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nRegObjectName\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nRegOperationType\nValues:\nREG_SET_VALUE_KEY (1)\nREG_DELETE_VALUE_KEY (2)\nREG_CREATE_KEY (3)\nREG_DELETE_KEY (4)\nREG_SET_KEY_SECURITY (5)\nREG_LOAD_KEY (6)\nREG_RENAME_KEY (7)\nREG_OPEN_KEY (8)\nREG_QUERY_NAME_KEY (9)\nREG_SET_VALUE_KEY_ANTI_TAMPER (101)\nREG_DELETE_VALUE_KEY_ANTI_TAMPER (102)\nAsepValueType\nValues:\nUNKNOWN (0)\nCMD_LINE (1)\nDLL_PATH (2)\nDLL_NAME (3)\nAPP_NAME (4)\nGUID (5)\nAsepClass\nValues:\nUNKNOWN (0)\nSYSTEM_STARTUP_AUTORUN (1)\nSYSTEM_SHUTDOWN_AUTORUN (2)\nUSER_LOGON_AUTORUN (3)\nUSER_LOGOFF_AUTORUN (4)\nAPP_START_AUTORUN (5)\nAPP_EXTENSION (6)\nSERVICE (7)\nAUTHENTICATION (8)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n154/1226\nField\nDescription\nCORE_PROCESSES (9)\nCUSTOM_PROCESSES (10)\nCORE_SERVICES (11)\nCORE_SERVICE_PLUGINS (12)\nSERVER_PLUGINS (13)\nNETWORK_SERVICE_PLUGINS (14)\nLANG_SERVICE_PLUGINS (15)\nMULTIMEDIA_PLUGINS (16)\nSHELL_PLUGINS (17)\nIE_COM_PLUGINS (18)\nCOM_REGISTRATION (19)\nPRINTERS (20)\nTERMINAL_SERVER (21)\nGRAPHICS_CORE (22)\nSYSTEM_CONFIG (23)\nASEP_CLASS_MARGIN (100)\nBOOT_CONFIGURATION_DATA (100)\nCROWDSTRIKE_KEY (101)\nAsepFlags\nValues:\nGLOBAL (0x0001)\nPRIVILEGED (0x0002)\nNEEDS_SOURCE_SIGNED (0x0004)\nNEEDS_TARGET_SIGNED (0x0008)\nNEEDS_SOURCE_MS_SIGNED (0x0010)\nNEEDS_TARGET_MS_SIGNED (0x0020)\nSUSPICIOUS (0x0040)\nAsepIndex\nRpcClientProcessId\nThe ProcessId corresponding to the RPC client of this request.\nRpcClientThreadId\nRemoteAddressIP4\nRemoteAddressIP6\nClientComputerName\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nTokenType\nValues:\nINVALID_TOKEN (0)\nPRIMARY_TOKEN (1)\nIMPERSONATION_TOKEN (2)\nUserName\nOperating system username.\nRegKeyName\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 154,
+      "end": 155
+    },
+    "content_stats": {
+      "char_count": 2122,
+      "word_count": 219
+    },
+    "hierarchy": {
+      "parent": "AsepKeyUpdate",
+      "children": []
+    }
+  }
+}

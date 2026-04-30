@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_292",
+  "section_number": "2.7.3.3.3",
+  "header": "Updating data lifecycle policies",
+  "content": "To update a data lifecycle policy, you can modify existing rules to reﬂect changes in your\ndata retention or deletion requirements. This allows you to adapt your policies as your data\nmanagement needs evolve.\nThere might be a few minutes of lag time between when you update the policy and when\nOpenSearch Serverless starts to enforce the new retention periods.\nUsing data lifecycle policies\n419\nAmazon OpenSearch Service\nDeveloper Guide\nConsole\nTo update a data lifecycle policy\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation pane, choose Data lifecycle policies.\n3.\nSelect the data lifecycle policy that you want to update, then choose Edit.\n4.\nModify the policy using the visual editor or the JSON editor.\n5.\nChoose Save.\nAWS CLI\nTo update a data lifecycle policy using the AWS CLI, use the update-lifecycle-policy command.\nYou must include the --policy-version parameter in the request. You can retrieve the policy\nversion by using the list-lifecycle-policies or batch-get-lifecycle-policy commands. We recommend\nincluding the most recent policy version to prevent accidentally overwriting changes made by\nothers.\nThe following request updates a data lifecycle policy with a new policy JSON document.\nExample\naws opensearchserverless update-lifecycle-policy \\\n--name my-policy \\\n--type retention \\\n--policy-version MTY2MzY5MTY1MDA3Ml8x \\\n--policy file://my-new-policy.json",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 448,
+      "end": 449
+    },
+    "content_stats": {
+      "char_count": 1451,
+      "word_count": 212
+    },
+    "hierarchy": {
+      "parent": "Using data lifecycle policies with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

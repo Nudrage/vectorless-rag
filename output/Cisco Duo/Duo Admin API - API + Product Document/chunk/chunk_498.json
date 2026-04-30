@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_498",
+  "section_number": "1.17.11",
+  "header": "Example Input",
+  "content": "In this example, the \"Update Policy\" input will apply group policy assignments to the\nspecified groups at the top of the stack, effective for all applications.\nIn this example, the \"Update Policy\" input will remove group policy assignments for the\nspecified groups from two specific applications.\n\n\n{\n\"apply_to_user_groups\": {\n\"user_group_apply_order\": \"top\",\n\"apply_user_group_list\": [\"DGZS6AUDFWW80QFI3MZF\", \"DGONE3A69\n}\n}\n{\n\"apply_to_groups_in_apps\": {\n\"unassign_group_policies_list\": [ {\n\"app_integration_key\": \"DIRWIH0ZZPV4GJ05H7VQ\",\n\"group_id_list\": [\"DGBDKSSH37KSJ373JKSU\", \"DGJKSLSH393Y\n},\n{\n\"app_integration_key\": \"DIRWIH0ZZPV4GJ05H7HQ\",\n\"group_id_list\": [\"DGBDKSSH37KSJ373JKSU\", \"DGJKSLSH393Y\n} ]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 208,
+      "end": 208
+    },
+    "content_stats": {
+      "char_count": 708,
+      "word_count": 78
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

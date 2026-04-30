@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_487",
+  "section_number": "2.8.7.3",
+  "header": "Enabling the oﬀ-peak window",
+  "content": "Any domains created before February 16, 2023 (when oﬀ-peak windows were introduced) have the\nfeature disabled by default. You must manually enable it for these domains. You can't disable the\noﬀ-peak window after it's enabled.\nConsole\nTo enable the oﬀ-peak window for a domain\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nSelect the name of the domain to open its conﬁguration.\n3.\nNavigate to the Oﬀ-peak window tab and choose Edit.\n4.\nSpecify a custom start time in Coordinated Universal Time (UTC). For example, to conﬁgure a\nstart time of 11:30 P.M. in the US West (Oregon) Region, specify 07:30.\n5.\nChoose Save changes.\nCLI\nTo modify the oﬀ-peak window using the AWS CLI, send an UpdateDomainConﬁg request:\naws opensearch update-domain-config \\\n--domain-name my-domain \\\n--off-peak-window-options 'Enabled=true,\nOffPeakWindow={WindowStartTime={Hours=02,Minutes=00}}'\nIf you don't specify a custom window start time, it defaults to 00:00 UTC.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 685,
+      "end": 685
+    },
+    "content_stats": {
+      "char_count": 992,
+      "word_count": 145
+    },
+    "hierarchy": {
+      "parent": "Deﬁning oﬀ-peak windows for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

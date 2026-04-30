@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_505",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n114/1226\nField\nDescription\nContextTimeStamp\nSystem time of event creation.\nPrimaryDisplayName\nUserName\nOperating system username.\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a\nsystem.\nValues:\nSELF_RID (0x01010000000000050A000000)\nUserSidInfo\nUserSidType\nValues:\nNONE (0)\nUSER (1)\nGROUP (2)\nDOMAIN (3)\nALIAS (4)\nWELL_KNOWN_GROUP (5)\nDELETED_ACCOUNT (6)\nINVALID (7)\nUNKNOWN (8)\nCOMPUTER (9)\nLABEL (10)\nLOGON_SESSION (11)\nLogonDomain\nLastLogonTime\nPasswordLastSet\nRemoteAccount\nA boolean value set to true if the user account is not an account residing on the local computer\nUserIsAdmin\nSet to TRUE if this user is a local admin.\nAccountNeverExpires\nAccountExpirationTime\nAuthenticationFailureMsErrorCode\nA Microsoft-specific error code annotating the authentication or service access failure, available for both Kerberos and\nNTLM activities.\nFor Kerberos activities this provides a more fine-grained error cause compared to the KerberosErrorCode value.\nValues:\nSTATUS_ACCESS_DENIED (0xC0000022)\nSTATUS_WRONG_PASSWORD (0xC000006A)\nSTATUS_LOGON_FAILURE (0xC000006D)\nSTATUS_NO_SUCH_USER (0xC0000064)\nSTATUS_ACCOUNT_RESTRICTION (0xC000006E)\nSTATUS_INVALID_LOGON_HOURS (0xC000006F)\nSTATUS_INVALID_WORKSTATION (0xC0000070)\nSTATUS_PASSWORD_EXPIRED (0xC0000071)\nSTATUS_ACCOUNT_DISABLED (0xC0000072)\nSTATUS_LOGON_NOT_GRANTED (0xC0000155)\nSTATUS_LOGON_TYPE_NOT_GRANTED (0xC000015B)\nSTATUS_ACCOUNT_EXPIRED (0xC0000193)\nSTATUS_ACCOUNT_LOCKED_OUT (0xC0000234)\nFailedLogonCount\nUserIsEnabled\nUserIsGuest\nLogonCount\nUserComment\nUserSystemComment\nUserProfile\nUserPasswordNeverExpires\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n115/1226\nField\nDescription\nUID\nUnix User Identifier.\nGID\nUnix Group Identifier.\nHomeDirectory\nUserMemberGIDs\nList of GIDs that a user belongs to.\nUserRealName\nReal (full) name of a user.\nDefaultLoginShell\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 114,
+      "end": 116
+    },
+    "content_stats": {
+      "char_count": 2326,
+      "word_count": 248
+    },
+    "hierarchy": {
+      "parent": "UserIdentity",
+      "children": []
+    }
+  }
+}

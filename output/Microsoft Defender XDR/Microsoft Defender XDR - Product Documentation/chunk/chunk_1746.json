@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1746",
+  "section_number": "155.1.1.241.2.5",
+  "header": "Get an access token using curl",
+  "content": "７ Note\nCurl is pre-installed on Windows 10, versions 1803 and later. For other versions of\nWindows, download and install the tool directly from the official curl website\n.\n3. Set TENANT_ID to the Azure tenant ID of the customer that wants to use your app to\naccess Microsoft Defender XDR.\n4. Run the following command:\nBash\nA successful response looks like this:\nBash\n1. Copy and paste the token into the JSON web token validator website, JWT,\nto decode\nit.\n2. Make sure that the roles claim within the decoded token contains the desired\npermissions.\nIn the following image, you can see a decoded token acquired from an app, with\nIncidents.Read.All , Incidents.ReadWrite.All , and AdvancedHunting.Read.All\npermissions:\ncurl -i -X POST -H \"Content-Type:application/x-www-form-urlencoded\" -d\n\"grant_type=client_credentials\" -d \"client_id=%CLIENT_ID%\" -d\n\"scope=https://api.security.microsoft.com/.default\" -d\n\"client_secret=%CLIENT_SECRET%\"\n\"https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token\" -k\n{\"token_type\":\"Bearer\",\"expires_in\":3599,\"ext_expires_in\":0,\"access_token\":\"e\nyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA\"}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1313,
+      "end": 1314
+    },
+    "content_stats": {
+      "char_count": 1163,
+      "word_count": 138
+    },
+    "hierarchy": {
+      "parent": "Get an access token",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_121",
+  "section_number": "2.6.16.2",
+  "header": "Creating an ingestion role",
+  "content": "All requests to OpenSearch Ingestion must be signed with Signature Version 4. At minimum, the\nrole that signs the request must be granted permission for the osis:Ingest action, which allows\nit to send data to an OpenSearch Ingestion pipeline.\nFor example, the following AWS Identity and Access Management (IAM) policy allows the\ncorresponding role to send data to a single pipeline:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": \"osis:Ingest\",\n\"Resource\": \"arn:aws:osis:us-east-1:111122223333:pipeline/pipeline-name\"\n}\n]\n}\nCreating an ingestion role\n101\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nTo use the role for all pipelines, replace the ARN in the Resource element with a wildcard\n(*).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 130,
+      "end": 131
+    },
+    "content_stats": {
+      "char_count": 727,
+      "word_count": 105
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "Providing cross-account ingestion access"
+      ]
+    }
+  }
+}

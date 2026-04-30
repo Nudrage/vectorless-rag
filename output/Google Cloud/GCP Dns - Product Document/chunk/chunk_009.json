@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_009",
+  "section_number": "1.5",
+  "header": "Monitor DNS propagation",
+  "content": "When you use the Google Cloud CLI or the REST API to make changes, the changes are initially\nmarked as pending until the operation is completed. You can use the gcloud CLI or the REST\nAPI to check on the status of changes or get a history of changes.\nAn operation is completed (status: done) when Cloud DNS has successfully updated the\nsystem that controls the servers. There might still be delays before all name servers are\nupdated.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 6,
+      "end": 6
+    },
+    "content_stats": {
+      "char_count": 434,
+      "word_count": 78
+    },
+    "hierarchy": {
+      "parent": "Use logging and monitoring",
+      "children": [
+        "List changes for a managed zone",
+        "Verify DNS propagation"
+      ]
+    }
+  }
+}

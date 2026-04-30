@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_356",
+  "section_number": "2.7.10.8.1",
+  "header": "Network policies",
+  "content": "Network policies deﬁne whether your collections are accessible privately, or over the internet from\npublic networks. Private collections can be accessed through OpenSearch Serverless–managed VPC\nendpoints, or by speciﬁc AWS services such as Amazon Bedrock using AWS service private access.\nJust like encryption policies, network policies can apply to multiple collections, which allows you to\nmanage network access for many collections at scale.\nNetwork policies consist of two components: an access type and a resource type. The access\ntype can either be public or private. The resource type determines whether the access you choose\napplies to the collection endpoint, the OpenSearch Dashboards endpoint, or both.\nIf you plan to conﬁgure VPC access within a network policy, you must ﬁrst create one or more\nOpenSearch Serverless-managed VPC endpoints. These endpoints let you access OpenSearch\nServerless as if it were in your VPC, without the use of an internet gateway, NAT device, VPN\nconnection, or Direct Connect connection.\nPrivate access to AWS services can only apply to the collection's OpenSearch endpoint, not to\nthe OpenSearch Dashboards endpoint. AWS services cannot be granted access to OpenSearch\nDashboards.\nNetwork policies\n484\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 513,
+      "end": 514
+    },
+    "content_stats": {
+      "char_count": 1287,
+      "word_count": 192
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

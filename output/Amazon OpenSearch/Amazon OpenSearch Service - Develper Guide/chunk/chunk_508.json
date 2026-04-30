@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_508",
+  "section_number": "2.8.10.2.2",
+  "header": "About access policies on VPC domains",
+  "content": "Placing your OpenSearch Service domain within a VPC provides an inherent, strong layer of\nsecurity. When you create a domain with public access, the endpoint takes the following form:\nhttps://search-domain-name-identifier.region.es.amazonaws.com\nAs the \"public\" label suggests, this endpoint is accessible from any internet-connected device,\nthough you can (and should) control access to it. If you access the endpoint in a web browser, you\nmight receive a Not Authorized message, but the request reaches the domain.\nWhen you create a domain with VPC access, the endpoint looks similar to a public endpoint:\nhttps://vpc-domain-name-identifier.region.es.amazonaws.com\nIf you try to access the endpoint in a web browser, however, you might ﬁnd that the request times\nout. To perform even basic GET requests, your computer must be able to connect to the VPC. This\nconnection often takes the form of a VPN, transit gateway, managed network, or proxy server. For\ndetails on the various forms it can take, see Examples for VPC in the Amazon VPC User Guide. For a\ndevelopment-focused example, see the section called “Testing VPC domains”.\nIn addition to this connectivity requirement, VPCs let you manage access to the domain through\nsecurity groups. For many use cases, this combination of security features is suﬃcient, and you\nmight feel comfortable applying an open access policy to the domain.\nOperating with an open access policy does not mean that anyone on the internet can access the\nOpenSearch Service domain. Rather, it means that if a request reaches the OpenSearch Service\nArchitecture\n676\nAmazon OpenSearch Service\nDeveloper Guide\ndomain and the associated security groups permit it, the domain accepts the request. The only\nexception is if you're using ﬁne-grained access control or an access policy that speciﬁes IAM roles.\nIn these situations, for the domain to accept a request, the security groups must permit it and it\nmust be signed with valid credentials.\nNote\nBecause security groups already enforce IP-based access policies, you can't apply IP-based\naccess policies to OpenSearch Service domains that reside within a VPC. If you use public\naccess, IP-based policies are still available.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 705,
+      "end": 706
+    },
+    "content_stats": {
+      "char_count": 2203,
+      "word_count": 341
+    },
+    "hierarchy": {
+      "parent": "Architecture",
+      "children": []
+    }
+  }
+}

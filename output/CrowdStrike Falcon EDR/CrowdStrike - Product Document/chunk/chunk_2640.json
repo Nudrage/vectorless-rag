@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2640",
+  "section_number": "1.5.786.1",
+  "header": "Fields: macOS, Windows",
+  "content": "Field\nDescription\nBrowserExtensionId\nUnique identifier for browser extensions.\nBrowserExtensionName\nName of browser extension.\nBrowserExtensionVersion\nThe browser extension version.\nBrowserExtensionAuthor\nThe browser extension author\nBrowserExtensionStatusEnabled\nIf true, the browser extension is enabled\nBrowserExtensionInstalledTimestamp\nTimestamp when browser extension was installed\nBrowserExtensionInstallMethod\nInstall method of the browser extension:\nUNIDENTIFIED (0x00): Browser extension install method can't be identified\nBROWSER (0x01): Browser extension installed by default with browser\nWEBSTORE (0x02): Browser extension installed from browser store\nGPO (0x03): Browser extension installed by enterprise policy using GPO\nSIDELOADED (0x04): Browser extension installed in dev mode\nWEBSTORE_3RD_PARTY (0x05): Browser extension installed from third-party extension store\nValues:\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n908/1226\nField\nDescription\nUNIDENTIFIED (0x00)\nBROWSER (0x01)\nWEBSTORE (0x02)\nGPO (0x03)\nSIDELOADED (0x04)\nWEBSTORE_3RD_PARTY (0x05)\nBrowserExtensionRequestedPermissions Comma-separated list of permissions requested by the browser extension\nBrowserExtensionPath\nInstall path of the browser extension\nBrowserName\nName of internet browser application.\nValues:\nUNKNOWN (0)\nFIREFOX (1)\nSAFARI (2)\nCHROME (3)\nEDGE (4)\nEDGE_CHROMIUM (5)\nINTERNET_EXPLORER (6)\nEDGE_LEGACY (7)\nIE_TYPED_URL (8)\nFIREFOX_APP (9)\nCHROME_BETA (10)\nCHROME_DEV (11)\nEDGE_BETA (12)\nEDGE_DEV (13)\nSAFARI_TECH (14)\nBrowserFilePath\nInstall path of the browser\nBrowserFileHash\nSHA256 hash of the browser file path\nBrowserVersion\nThe User Agent of the browser generating the event.\nUpdateFlag\nValues:\nUPDATE_INVALID (0)\nUPDATE_ENUMERATION (1)\nUPDATE_REMOVED (2)\nUPDATE_ADDED (3)\nUPDATE_OBSOLETE (4)\nUPDATE_REVISED (5)\nUserName\nOperating system username.\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user\nin a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\nBrowserProfileName\nProfile name of the browser extension\nBrowserProfileId\nProfile ID of the browser extension\nBatchTimestamp\nBatchDataNumber\nBatchDataTotal\nCloudRequestId\nBrowserExtensionArchitecture\nValues:\nUNKNOWN (0x00)\nMANIFEST_V2 (0x02)\nMANIFEST_V3 (0x03)\nSAFARI_APP (0x04)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 908,
+      "end": 909
+    },
+    "content_stats": {
+      "char_count": 2510,
+      "word_count": 288
+    },
+    "hierarchy": {
+      "parent": "InstalledBrowserExtension",
+      "children": []
+    }
+  }
+}

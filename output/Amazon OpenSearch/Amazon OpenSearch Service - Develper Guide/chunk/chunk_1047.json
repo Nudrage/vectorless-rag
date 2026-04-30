@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1047",
+  "section_number": "2.16.2.2",
+  "header": "Creating indexes with S3 vector engine",
+  "content": "After you conﬁgure a domain, you can create one or more k-NN indexes with ﬁelds using\ns3vector as the backend vector engine in the index mappings. You can conﬁgure diﬀerent vector\nﬁelds with diﬀerent engine types based on your use case.\nImportant\nYou can only use the s3vector engine in mapping a ﬁeld deﬁnition during index creation.\nYou can't add or update the mapping with s3vector engine after index creation.\nHere are some examples that create S3 vector engine indexes.\nExample: Creating a k-NN index with S3 vector engine\nPUT my-first-s3vector-index\n{\n\"settings\": {\nEnabling S3 Vectors\n1574\nAmazon OpenSearch Service\nDeveloper Guide\n\"index\": {\n\"knn\": true\n}\n},\n\"mappings\": {\n\"properties\": {\n\"my_vector_1\": {\n\"type\": \"knn_vector\",\n\"dimension\": 2,\n\"space_type\": \"l2\",\n\"method\": {\n\"engine\": \"s3vector\"\n}\n},\n\"price\": {\n\"type\": \"float\"\n}\n}\n}\n}\nExample: Creating a k-NN index with both S3 vector and FAISS engines\nThis example highlights the fact you can use multiple vector engines within the same index.\nPUT my-vector-index\n{\n\"settings\": {\n\"index\": {\n\"knn\": true\n}\n},\n\"mappings\": {\n\"properties\": {\n\"my_vector_1\": {\n\"type\": \"knn_vector\",\n\"dimension\": 2,\n\"space_type\": \"l2\",\n\"method\": {\n\"engine\": \"s3vector\"\n}\n},\n\"price\": {\n\"type\": \"float\"\nCreating indexes with S3 vector engine\n1575\nAmazon OpenSearch Service\nDeveloper Guide\n},\n\"my_vector_2\": {\n\"type\": \"knn_vector\",\n\"dimension\": 2,\n\"space_type\": \"cosine\",\n\"method\": {\n\"name\": \"hnsw\",\n\"engine\": \"faiss\",\n\"parameters\": {\n\"ef_construction\": 128,\n\"m\": 24\n}\n}\n}\n}\n}\n}\nUnsupported example: Adding S3 vector engine after index creation\nThe following approach is not supported and will fail.\nPUT my-first-s3vector-index\n{\n\"settings\": {\n\"index\": {\n\"knn\": true\n}\n}\n}\nPUT my-first-s3vector-index/_mapping\n{\n\"properties\": {\n\"my_vector_1\": {\n\"type\": \"knn_vector\",\n\"dimension\": 2,\n\"space_type\": \"l2\",\n\"method\": {\n\"engine\": \"s3vector\"\n}\n},\n\"price\": {\n\"type\": \"float\"\nCreating indexes with S3 vector engine\n1576\nAmazon OpenSearch Service\nDeveloper Guide\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1603,
+      "end": 1606
+    },
+    "content_stats": {
+      "char_count": 1995,
+      "word_count": 302
+    },
+    "hierarchy": {
+      "parent": "Advanced search capabilities with an Amazon S3 vector engine",
+      "children": []
+    }
+  }
+}

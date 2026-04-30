@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_440",
+  "section_number": "2.7.13.3",
+  "header": "Monitoring OpenSearch Serverless events using Amazon EventBridge",
+  "content": "Amazon OpenSearch Service integrates with Amazon EventBridge to notify you of certain\nevents that aﬀect your domains. Events from AWS services are delivered to EventBridge in near\nreal time. The same events are also sent to Amazon CloudWatch Events, the predecessor of\nAmazon EventBridge. You can write rules to indicate which events are of interest to you, and\nwhat automated actions to take when an event matches a rule. Examples of actions that you can\nautomatically activate include the following:\n• Invoking an AWS Lambda function\n• Invoking an Amazon EC2 Run Command\n• Relaying the event to Amazon Kinesis Data Streams\n• Activating an AWS Step Functions state machine\n• Notifying an Amazon SNS topic or an Amazon SQS queue\nMonitoring with EventBridge\n604\nAmazon OpenSearch Service\nDeveloper Guide\nFor more information, see Get started with Amazon EventBridge in the Amazon EventBridge User\nGuide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 633,
+      "end": 634
+    },
+    "content_stats": {
+      "char_count": 902,
+      "word_count": 145
+    },
+    "hierarchy": {
+      "parent": "Monitoring Amazon OpenSearch Serverless",
+      "children": [
+        "Setting up notiﬁcations",
+        "OpenSearch Compute Units (OCU) events"
+      ]
+    }
+  }
+}

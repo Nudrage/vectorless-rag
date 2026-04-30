@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_031",
+  "section_number": "2.6.3",
+  "header": "Limitations of Amazon OpenSearch Ingestion",
+  "content": "OpenSearch Ingestion has the following limitations:\n• You can only ingest data into domains running OpenSearch 1.0 or later, or Elasticsearch 6.8 or\nlater. If you're using the OTel trace source, we recommend using Elasticsearch 7.9 or later so that\nyou can use the OpenSearch Dashboards plugin.\n• If a pipeline is writing to an OpenSearch Service domain that's within a VPC, the pipeline must be\ncreated in the same AWS Region as the domain.\nBeneﬁts\n24\nAmazon OpenSearch Service\nDeveloper Guide\n• You can only conﬁgure a single data source within a pipeline deﬁnition.\n• You can't specify self-managed OpenSearch clusters as sinks.\n• You can't specify a custom endpoint as a sink. You can still write to a domain that has custom\nendpoints enabled, but you must specify its standard endpoint.\n• You can't specify resources within opt-in Regions as sources or sinks.\n• There are some constraints on the parameters that you can include in a pipeline conﬁguration.\nFor more information, see the section called “Conﬁguration requirements and constraints”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 53,
+      "end": 54
+    },
+    "content_stats": {
+      "char_count": 1050,
+      "word_count": 172
+    },
+    "hierarchy": {
+      "parent": "Overview of Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_525",
+  "section_number": "2.15.10.1",
+  "header": "Considerations",
+  "content": "Consider the following when you conﬁgure snapshot management:\n• One policy is allowed per repository.\n• Up to 400 snapshots are allowed for one policy.\n• This feature won't run if your domain has a red status, is under high JVM pressure (85% or\nabove), or has a stuck snapshot function. When the overall indexing and searching performance\nof your cluster is impacted, SM may also be impacted.\n• A snapshot operation only starts after the previous operation ﬁnishes, so that no concurrent\nsnapshot operations are activated by one policy.\n• Multiple policies with the same schedule can cause a resource spike. If the policies' snapshotted\nindices overlap, the shard-level snapshot operations can only run sequentially, which can cause\na cascaded performance problem. If the policies share a repository, there will be spike of write\noperations to that repository.\n• We recommend that you schedule your snapshot operations automation to no more than once\nper hour, unless you have a special use case.\nAutomating snapshots with Snapshot Management\n696\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 725,
+      "end": 726
+    },
+    "content_stats": {
+      "char_count": 1088,
+      "word_count": 174
+    },
+    "hierarchy": {
+      "parent": "Automating snapshots with Snapshot Management",
+      "children": []
+    }
+  }
+}

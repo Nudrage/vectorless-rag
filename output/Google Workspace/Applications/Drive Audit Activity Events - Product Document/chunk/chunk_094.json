@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_094",
+  "section_number": "1.3.16",
+  "header": "Shared Drive Membership Change",
+  "content": "Shared drive Membership Change.\nEvent details\nEvent name\nshared_drive_membership_change\nParameters\nactor_is_collaborator_\naccount\nboolean\nWhether the actor is a collaborator acco\nadded_role\nstring\nAdded membership role to a user or gro\nshared drive. See Shared drives access\n(https://support.google.com/a/answer\nfor more information about roles. Possi\nvalues:\ncommenter\nShared drive role Commenter.\ncontent_manager\nShared drive role Content manager.\neditor\nShared drive role Contributor.\nnone\nNo role in shared drive.\norganizer\nShared drive role Manager.\nviewer\nShared drive role Viewer.\nbillable\nboolean\nWhether this activity is billable.\ndoc_id\nstring\nDocument ID.\ndoc_title\nstring\nDocument title.\ndoc_type\nstring\nDocument type. Possible values:\n{actor} removed the security update from a file\nEvent details\ndocument\nDoc type document.\ndrawing\nDoc type drawing.\nfolder\nDoc type folder.\nform\nDoc type form.\nhtml\nDoc type HTML.\njam\nDoc type Jam.\njpeg\nDoc type JPEG.\nmp4\nDoc type MP4.\nmpeg\nDoc type MPEG.\nmsexcel\nDoc type MS Excel.\nmspowerpoint\nDoc type MS Powerpoint.\nmsword\nDoc type MS Word.\npdf\nDoc type PDF.\npng\nDoc type PNG.\npresentation\nDoc type presentation.\nquicktime\nDoc type Quicktime.\nscript\nGoogle Apps Script.\nshortcut\nDoc type is Google Shortcut.\nsites\nDoc type is Google Sites.\nspreadsheet\nDoc type spreadsheet.\nshared_drive\nDoc type is a shared drive.\ntxt\nDoc type txt.\nEvent details\nunknown\nDoc type unknown.\nvideo\nDoc type is a Google Vids Video.\nis_encrypted\nboolean\nWhether the file is client-side encrypted\nmembership_change_type\nstring\nType of change in shared drive member\nuser/group. Possible values:\nadd_to_shared_drive\nAddition to a shared drive.\nchange_roles\nChange of a member's role in a share\nre_share\nRe-share of a member's role in a sha\nremove_from_shared_drive\nRemoval from a shared drive.\noriginating_app_id\nstring\nThe Google Cloud project number of the\napplication that performed the action. U\nDrive REST API  (/drive/v2/reference/ap\nretrieve the app title.\nowner\nstring\nThe email address of the document's ow\nitems contained in a shared drive, the ow\nthe name of the shared drive.\nowner_is_shared_drive\nboolean\nBoolean flag denoting whether the owne\nshared drive.\nowner_shared_drive_id\nstring\nThe shared drive root ID if the documen\na shared drive.\nprimary_event\nboolean\nWhether this event is a primary event. A\nuser action in Drive can generate severa\nmultiple of which can be primary\n(primary_event=true). The remainin\nare deemed to be side effects of the pri\nevent(s) (primary_event=false). Fo\nexample, when a user creates a docume\nseveral events are generated, with only t\nevent having primary_event=true. B\nuser shares a document with multiple o\nEvent details\nin one action, an access change event h\nprimary_event=true is created for e\nsharee. Possible values:\nfalse\nBoolean value false.\ntrue\nBoolean value true.\nremoved_role\nstring\nRemoved membership role of a user/gro\nshared drive. Possible values:\ncommenter\nShared drive role Commenter.\ncontent_manager\nShared drive role Content manager.\neditor\nShared drive role Contributor.\nnone\nNo role in shared drive.\norganizer\nShared drive role Manager.\nviewer\nShared drive role Viewer.\ntarget\nstring\nTarget User or Group.\ntarget_user\nstring\nThe email address of the user or group\naccess permissions were changed, or th\nof the domain for which access permiss\nchanged. If the user has multiple email\non their Google account, their display em\nused instead of the specific email that t\nwas shared with.\nshared_drive_id\nstring\nThe unique identifier of the shared drive\npopulated for events or items from a sh\ndrive.\nvisibility\nstring\nVisibility of target file. Possible values:\npeople_with_link\nAnyone with the link can access.\npeople_within_domain_with_l\nAnyone with the link within the audie\nEvent details\naccess.\nprivate\nPrivate.\npublic_in_the_domain\nAnyone within the audience can acce\npublic_on_the_web\nPublic on the web.\nshared_externally\nShared with explicit users/groups ex\nthe domain.\nshared_internally\nShared with explicit users/groups int\nthe domain.\nunknown\nUnknown visibility.\nSample request\nAdmin Console message format",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 307,
+      "end": 311
+    },
+    "content_stats": {
+      "char_count": 4112,
+      "word_count": 608
+    },
+    "hierarchy": {
+      "parent": "ACL changed",
+      "children": []
+    }
+  }
+}

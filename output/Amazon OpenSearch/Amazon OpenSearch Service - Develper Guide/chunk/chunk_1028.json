@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1028",
+  "section_number": "2.15.10.3",
+  "header": "Point in time permissions",
+  "content": "PIT supports ﬁne-grained access control. If you're upgrading to an OpenSearch version 2.5\ndomain and need ﬁne-grain access control, you need to manually create roles with the following\npermissions:\n# Allows users to use all point in time search search functionality\npoint_in_time_full_access:\nPoint in time permissions\n1559\nAmazon OpenSearch Service\nDeveloper Guide\nreserved: true\nindex_permissions:\n- index_patterns:\n- '*'\nallowed_actions:\n- \"indices:data/read/point_in_time/create\"\n- \"indices:data/read/point_in_time/delete\"\n- \"indices:data/read/point_in_time/readall\"\n- \"indices:data/read/search\"\n- \"indices:monitor/point_in_time/segments\"\n# Allows users to use point in time search search functionality for specific index\n# All type operations like list all PITs, delete all PITs are not supported in this\ncase\npoint_in_time_index_access:\nreserved: true\nindex_permissions:\n- index_patterns:\n- 'my-index-1'\nallowed_actions:\n- \"indices:data/read/point_in_time/create\"\n- \"indices:data/read/point_in_time/delete\"\n- \"indices:data/read/search\"\n- \"indices:monitor/point_in_time/segments\"\nFor domains with OpenSearch version 2.5 and above, you can use the built-in\npoint_in_time_full_access role. For more information, see Security model in the\nOpenSearch documentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1588,
+      "end": 1589
+    },
+    "content_stats": {
+      "char_count": 1266,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Point in time search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

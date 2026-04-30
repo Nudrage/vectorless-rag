@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_594",
+  "section_number": "2.9.7.1.2",
+  "header": "Additional resources",
+  "content": "Required permissions for manually created IAM roles\nWhen creating a data source, you choose an IAM role to manage access to your data. You have two\noptions:\n1. Create a new IAM role automatically\n2. Use an existing IAM role that you created manually\nIf you use a manually created role, you need to attach the correct permissions to the role. The\npermissions must allow access to the speciﬁc data source, and allow OpenSearch Service to assume\nthe role. This is required so that the OpenSearch Service can securely access and interact with your\ndata.\nThe following sample policy demonstrates the least-privilege permissions required to\ncreate and manage a data source. If you have broader permissions, such as logs:* or the\nAdminstratorAccess policy, these permissions encompasses the least-privilege permissions in\nthe sample policy.\nIn the following sample policy, replace the placeholder text with your own information.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\nCreating a CloudWatch Logs data source\n754\nAmazon OpenSearch Service\nDeveloper Guide\n\"Sid\": \"AmazonOpenSearchDirectQueryAllLogsAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"logs:DescribeLogGroups\",\n\"logs:StartQuery\",\n\"logs:GetLogGroupFields\"\n],\n\"Condition\": {\n\"StringEquals\": {\n\"aws:ResourceAccount\": \"111122223333\"\n}\n},\n\"Resource\": [\n\"arn:aws:logs:us-east-1:111122223333:log-group:*\"\n]\n}\n]\n}\nThe role must also have the following trust policy, which speciﬁes the target ID.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"TrustPolicyForAmazonOpenSearchDirectQueryService\",\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"directquery.opensearchservice.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRole\",\n\"Condition\": {\n\"ArnLike\": {\n\"aws:SourceArn\": \"arn:aws:opensearch:us-\neast-1:111122223333:datasource/rolename\"\n}\n}\n}\n]\nCreating a CloudWatch Logs data source\n755\nAmazon OpenSearch Service\nDeveloper Guide\n}\nFor instructions to create the role, see Creating a role using custom trust policies.\nBy default, the role has access to direct query data source indexes only. Although you can conﬁgure\nthe role to limit or grant access to your data source, it is recommended you not adjust the access of\nthis role. If you delete the data source, this role will be deleted. This will remove access for any\nother users if they are mapped to the role.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 783,
+      "end": 785
+    },
+    "content_stats": {
+      "char_count": 2306,
+      "word_count": 323
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon CloudWatch Logs data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

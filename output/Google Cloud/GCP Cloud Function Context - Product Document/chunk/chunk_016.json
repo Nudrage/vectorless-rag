@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_016",
+  "section_number": "14.1",
+  "header": "Configuration for a secret volume. It has the information necessary to fetch the secret value from",
+  "content": "secret manager and make it available as files mounted at the requested paths within the application\ncontainer.\nJSON representation\nFields\nmountPath\nstring\nThe path within the container to mount the secret volume. For example, setting the\nmountPath as /etc/secrets would mount the secret value files under the\n{\n\"key\": string,\n\"projectId\": string,\n\"secret\": string,\n\"version\": string\n}\n{\n\"mountPath\": string,\n\"projectId\": string,\n\"secret\": string,\n\"versions\": [\n{\nobject (SecretVersion (/functions/docs/reference/rest/v2/projects.locations.functions#SecretVersio\n}\n]\n}\nFields\n/etc/secrets directory. This directory will also be completely shadowed and\nunavailable to mount any other secrets. Recommended mount path: /etc/secrets\nprojectId\nstring\nProject identifier (preferably project number but can also be the project ID) of the\nproject that contains the secret. If not set, it is assumed that the secret is in the same\nproject as the function.\nsecret\nstring\nName of the secret in secret manager (not the full resource name).\nversions[]\nobject (SecretVersion\n(/functions/docs/reference/rest/v2/projects.locations.functions#SecretVersion))\nList of secret versions to mount for this secret. If empty, the latest version of the\nsecret will be made available in a file named after the secret under the mount point.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 11,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 13,
+      "end": 14
+    },
+    "content_stats": {
+      "char_count": 1311,
+      "word_count": 182
+    },
+    "hierarchy": {
+      "parent": "SecretVolume",
+      "children": []
+    }
+  }
+}

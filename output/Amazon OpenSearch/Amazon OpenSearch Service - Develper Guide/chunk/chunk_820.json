@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_820",
+  "section_number": "2.12.4.6.5",
+  "header": "OpenSearch Dashboards multi-tenancy",
+  "content": "Tenants are spaces for saving index patterns, visualizations, dashboards, and other Dashboards\nobjects. Dashboards multi-tenancy lets you safely share your work with other Dashboards users\n(or keep it private) and dynamically conﬁgure tenants. You can control which roles have access to a\ntenant and whether those roles have read or write access. The Global tenant is the default. To learn\nmore, see OpenSearch Dashboards multi-tenancy.\nTo view your current tenant or change tenants\n1.\nNavigate to OpenSearch Dashboards and sign in.\n2.\nSelect your user icon in the upper-right and choose Switch tenants.\n3.\nVerify your tenant before creating visualizations or dashboards. If you want to share your\nwork with all other Dashboards users, choose Global. To share your work with a subset of\nDashboards users, choose a diﬀerent shared tenant. Otherwise, choose Private.\nNote\nOpenSearch Dashboards maintains a separate index for each tenant, and creates an index\ntemplate called tenant_template. Do not delete or modify the tenant_template\nindex, as it could cause OpenSearch Dashboards to malfunction if the tenant index\nmapping is misconﬁgured.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1378,
+      "end": 1378
+    },
+    "content_stats": {
+      "char_count": 1140,
+      "word_count": 174
+    },
+    "hierarchy": {
+      "parent": "Managing permissions",
+      "children": []
+    }
+  }
+}

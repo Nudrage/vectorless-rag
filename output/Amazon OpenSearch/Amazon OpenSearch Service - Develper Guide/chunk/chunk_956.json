@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_956",
+  "section_number": "2.15.2.3",
+  "header": "Count API",
+  "content": "If you're not interested in the contents of your documents and just want to know the number of\nmatches, you can use the _count API instead of the _search API. The following request uses the\nquery_string query to identify romantic comedies:\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/movies/_count\n{\n\"query\": {\n\"query_string\": {\n\"default_field\": \"genres\",\n\"query\": \"romance AND comedy\"\n}\n}\n}\nCount API\n1471\nAmazon OpenSearch Service\nDeveloper Guide\nA sample response might look like the following:\n{\n\"count\": 564,\n\"_shards\": {\n\"total\": 5,\n\"successful\": 5,\n\"skipped\": 0,\n\"failed\": 0\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1500,
+      "end": 1501
+    },
+    "content_stats": {
+      "char_count": 598,
+      "word_count": 88
+    },
+    "hierarchy": {
+      "parent": "Request body searches",
+      "children": []
+    }
+  }
+}

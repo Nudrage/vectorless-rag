@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1204",
+  "section_number": "2.19.4.8.3",
+  "header": "Pagination",
+  "content": "You can paginate a list of cold indexes. Conﬁgure the number of indexes to be returned per page\nwith the page_size parameter (default is 10). Every _search request on your cold indexes\nreturns a pagination_id which you can use for subsequent calls.\nThe following request paginates the results of a _search request of your cold indexes and displays\nthe next 100 results:\nGET _cold/indices/_search?page_size=100\n{\n\"pagination_id\": \"je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1748,
+      "end": 1748
+    },
+    "content_stats": {
+      "char_count": 473,
+      "word_count": 68
+    },
+    "hierarchy": {
+      "parent": "Listing cold indexes",
+      "children": []
+    }
+  }
+}

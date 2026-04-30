@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_291",
+  "section_number": "2.7.3.3.2",
+  "header": "Creating data lifecycle policies",
+  "content": "To create a data lifecycle policy, you deﬁne rules that manage the retention and deletion of your\ndata based on speciﬁed criteria.\nConsole\nTo create a data lifecycle policy\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation pane, choose Data lifecycle policies.\n3.\nChoose Create data lifecycle policy.\n4.\nEnter a descriptive name for the policy.\n5.\nFor Data lifecycle, choose Add and select the collections and indexes for the policy.\nStart by choosing the collections to which the indexes belong. Then, either choose the index\nfrom the list or enter an index pattern. To select all collections as sources, enter an asterisk (*).\nUsing data lifecycle policies\n418\nAmazon OpenSearch Service\nDeveloper Guide\n6.\nFor Data retention, you can either choose to retain the data indeﬁnitely, or deselect Unlimited\n(never delete) and specify a time period after which OpenSearch Serverless automatically\ndeletes the data from Amazon S3.\n7.\nChoose Save, then Create.\nAWS CLI\nTo create a data lifecycle policy using the AWS CLI, use the create-lifecycle-policy command with\nthe following options:\n• --name – The name of the policy.\n• --type – The type of policy. Currently, the only available value is retention.\n• --policy – The data lifecycle policy. This parameter accepts both inline policies and .json ﬁles.\nYou must encode inline policies as a JSON escaped string. To provide the policy in a ﬁle, use the\nformat --policy file://my-policy.json.\nExample\naws opensearchserverless create-lifecycle-policy \\\n--name my-policy \\\n--type retention \\\n--policy \"{\\\"Rules\\\":[{\\\"ResourceType\\\":\\\"index\\\",\\\"Resource\\\":[\\\"index/autoparts-\ninventory/*\\\"],\\\"MinIndexRetention\\\": \\\"81d\\\"},{\\\"ResourceType\\\":\\\"index\\\",\\\"Resource\n\\\":[\\\"index/sales/orders*\\\"],\\\"NoMinIndexRetention\\\":true}]}\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 447,
+      "end": 448
+    },
+    "content_stats": {
+      "char_count": 1837,
+      "word_count": 258
+    },
+    "hierarchy": {
+      "parent": "Using data lifecycle policies with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

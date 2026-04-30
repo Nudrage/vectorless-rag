@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_141",
+  "section_number": "1.6.29",
+  "header": "Retrieve Verification Push Response",
+  "content": "Retrieves the verification push result for the user with ID user_id . Push response\ninformation will be available for 120 seconds after the push was sent, after which this\nendpoint will return a 404. If no success or failure response was returned by this\nendpoint during these 120 seconds, it can be assumed that the push has timed out.\nRequires \"Grant resource - Read\" API permission.\n{\n\"response\": {\n\"confirmation_code\": \"123456\",\n\"push_id\": \"123abc45-6def-789g-h012-34567ijk8901\"\n},\n\"stat\": \"OK\"\n}\nGET  /admin/v1/users/[user_id]/verification_push_response",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 52,
+      "end": 52
+    },
+    "content_stats": {
+      "char_count": 558,
+      "word_count": 79
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

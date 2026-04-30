@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1743",
+  "section_number": "155.1.1.241.2.2",
+  "header": "Get an access token using PowerShell",
+  "content": "# This code gets the application context token and saves it to a file named\n\"Latest-token.txt\" under the current directory.\n$tenantId = '' # Paste your directory (tenant) ID here\n$clientId = '' # Paste your application (client) ID here\n$appSecret = '' # Paste your own app secret here to test, then store it in a safe\nplace, such as the Azure Key Vault!\n$resourceAppIdUri = 'https://api.security.microsoft.com'\n$oAuthUri = \"https://login.windows.net/$tenantId/oauth2/token\"\n$authBody = [Ordered] @{\nresource = $resourceAppIdUri\nclient_id = $clientId\nclient_secret = $appSecret\ngrant_type = 'client_credentials'\n}\n$authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -\nErrorAction Stop\n$token = $authResponse.access_token\nOut-File -FilePath \"./Latest-token.txt\" -InputObject $token\nreturn $token\n1. Create a new console application.\n2. Install NuGet Microsoft.Identity.Client\n.\n3. Add the following line:\nC#\n4. Copy and paste the following code into your app (don't forget to update the three\nvariables: tenantId , clientId , appSecret ):\nC#",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1311,
+      "end": 1312
+    },
+    "content_stats": {
+      "char_count": 1065,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Get an access token",
+      "children": []
+    }
+  }
+}

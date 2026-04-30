@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_495",
+  "section_number": "2.8.9",
+  "header": "Conﬁguring a multi-AZ domain in Amazon OpenSearch Service",
+  "content": "To prevent data loss and minimize Amazon OpenSearch Service cluster downtime in the event of\na service disruption, you can distribute nodes across two or three Availability Zones in the same\nRegion, a conﬁguration known as Multi-AZ. Availability Zones are isolated locations within each\nAWS Region.\nSample EventBridge event\n664\nAmazon OpenSearch Service\nDeveloper Guide\nFor domains that run production workloads, we recommend the Multi-AZ with Standby\ndeployment option, which creates the following conﬁguration:\n• The domain deployed across three zones.\n• Current-generation instance types for dedicated master nodes and data nodes.\n• Three dedicated master nodes and three (or a multiple of three) data nodes.\n• At least two replicas for each index in your domain, or a multiple of three copies of data\n(including both primary nodes and replicas).\nThe rest of this section provides explanations for and context around these conﬁgurations.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 693,
+      "end": 694
+    },
+    "content_stats": {
+      "char_count": 940,
+      "word_count": 144
+    },
+    "hierarchy": {
+      "parent": "Creating and managing Amazon OpenSearch Service domains",
+      "children": [
+        "Multi-AZ with Standby",
+        "Multi-AZ without Standby",
+        "Availability zone disruptions"
+      ]
+    }
+  }
+}

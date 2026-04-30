@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_3073",
+  "section_number": "1.6.2.1",
+  "header": "IncidentSummaryEvent",
+  "content": "Falcon generates IncidentSummaryEvent for every incident and each time an adversary\nto new hosts as part of an incident. Lateral movement is when an adversary is\nmoving through multiple systems to reach their goal. IncidentSummaryEvent generates only when an incident’s score reaches certain thresholds, when the incident\nis closed, and each time an adversary\nto a new host as part of an incident.\nEach lateral movement event adds a new host to the array in IncidentSummaryEvent—to a maximum of 15 hosts. Because of this, you can expect more incident\nsummary events whenever lateral movement occurs.\nRead more about viewing incidents in the console in\n.\nRead more about OAuth2-based APIs in",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1130,
+      "end": 1130
+    },
+    "content_stats": {
+      "char_count": 690,
+      "word_count": 111
+    },
+    "hierarchy": {
+      "parent": "CrowdScore",
+      "children": [
+        "Event fields",
+        "Event metadata",
+        "Sample IncidentSummary event response"
+      ]
+    }
+  }
+}

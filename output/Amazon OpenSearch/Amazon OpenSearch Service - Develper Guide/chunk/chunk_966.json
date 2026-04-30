@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_966",
+  "section_number": "2.15.5.4.1",
+  "header": "Using custom dictionaries",
+  "content": "After you associate a ﬁle to a domain, you can use it in parameters such as synonyms_path,\nstopwords_path, and user_dictionary when you create tokenizers and token ﬁlters. The\nexact parameter varies by object. Several objects support synonyms_path and stopwords_path,\nbut user_dictionary is exclusive to the kuromoji plugin.\nFor the IK (Chinese) Analysis plugin, you can upload a custom dictionary ﬁle as a custom package\nand associate it to a domain, and the plugin automatically picks it up without requiring a\nuser_dictionary parameter. If your ﬁle is a synonyms ﬁle, use the synonyms_path parameter.\nThe following example adds a synonyms ﬁle to a new index:\nPUT my-index\n{\n\"settings\": {\n\"index\": {\n\"analysis\": {\n\"analyzer\": {\n\"my_analyzer\": {\n\"type\": \"custom\",\n\"tokenizer\": \"standard\",\n\"filter\": [\"my_filter\"]\n}\n},\n\"filter\": {\n\"my_filter\": {\n\"type\": \"synonym\",\n\"synonyms_path\": \"analyzers/F111111111\",\n\"updateable\": true\n}\n}\n}\n}\n},\n\"mappings\": {\n\"properties\": {\n\"description\": {\nUsing packages with OpenSearch\n1478\nAmazon OpenSearch Service\nDeveloper Guide\n\"type\": \"text\",\n\"analyzer\": \"standard\",\n\"search_analyzer\": \"my_analyzer\"\n}\n}\n}\n}\nThis request creates a custom analyzer for the index that uses the standard tokenizer and a\nsynonym token ﬁlter.\n• Tokenizers break streams of characters into tokens (typically words) based on some set of rules.\nThe simplest example is the whitespace tokenizer, which breaks the preceding characters into a\ntoken each time it encounters a whitespace character. A more complex example is the standard\ntokenizer, which uses a set of grammar-based rules to work across many languages.\n• Token ﬁlters add, modify, or delete tokens. For example, a synonym token ﬁlter adds tokens\nwhen it ﬁnds a word in the synonyms list. The stop token ﬁlter removes tokens when ﬁnds a\nword in the stop words list.\nThis request also adds a text ﬁeld (description) to the mapping and tells OpenSearch to use the\nnew analyzer as its search analyzer. You can see that it still uses the standard analyzer as its index\nanalyzer.\nFinally, note the line \"updateable\": true in the token ﬁlter. This ﬁeld only applies to search\nanalyzers, not index analyzers, and is critical if you later want to update the search analyzer\nautomatically.\nFor testing purposes, add some documents to the index:\nPOST _bulk\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"1\" } }\n{ \"description\": \"ice cream\" }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"2\" } }\n{ \"description\": \"croissant\" }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"3\" } }\n{ \"description\": \"tennis shoe\" }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"4\" } }\n{ \"description\": \"hightop\" }\nThen search them using a synonym:\nUsing packages with OpenSearch\n1479\nAmazon OpenSearch Service\nDeveloper Guide\nGET my-index/_search\n{\n\"query\": {\n\"match\": {\n\"description\": \"gelato\"\n}\n}\n}\nIn this case, OpenSearch returns the following response:\n{\n\"hits\": {\n\"total\": {\n\"value\": 1,\n\"relation\": \"eq\"\n},\n\"max_score\": 0.99463606,\n\"hits\": [{\n\"_index\": \"my-index\",\n\"_type\": \"_doc\",\n\"_id\": \"1\",\n\"_score\": 0.99463606,\n\"_source\": {\n\"description\": \"ice cream\"\n}\n}]\n}\n}\nTip\nDictionary ﬁles use Java heap space proportional to their size. For example, a 2 GiB\ndictionary ﬁle might consume 2 GiB of heap space on a node. If you use large ﬁles,\nensure that your nodes have enough heap space to accommodate them. Monitor the\nJVMMemoryPressure metric, and scale your cluster as necessary.\nUsing packages with OpenSearch\n1480\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1507,
+      "end": 1510
+    },
+    "content_stats": {
+      "char_count": 3489,
+      "word_count": 549
+    },
+    "hierarchy": {
+      "parent": "Using packages with OpenSearch",
+      "children": []
+    }
+  }
+}

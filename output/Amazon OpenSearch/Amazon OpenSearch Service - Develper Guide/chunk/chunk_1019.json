@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1019",
+  "section_number": "2.15.9",
+  "header": "Asynchronous search in Amazon OpenSearch Service",
+  "content": "With asynchronous search for Amazon OpenSearch Service you can submit a search query that gets\nexecuted in the background, monitor the progress of the request, and retrieve results at a later\nstage. You can retrieve partial results as they become available before the search has completed.\nAfter the search ﬁnishes, save the results for later retrieval and analysis.\nAsynchronous search requires OpenSearch 1.0 or later, or Elasticsearch 7.10 or later.\nThis documentation provides a brief overview of asynchronous search. It also discusses the\nlimitations of using asynchronous search with a managed Amazon OpenSearch Service domain\nrather than an open source OpenSearch cluster. For full documentation of asynchronous search,\nincluding available settings, permissions, and a complete API reference, see Asynchronous search in\nthe OpenSearch documentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1581,
+      "end": 1581
+    },
+    "content_stats": {
+      "char_count": 856,
+      "word_count": 124
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": [
+        "Sample search call",
+        "Asynchronous search permissions",
+        "Asynchronous search settings",
+        "Cross-cluster search",
+        "UltraWarm"
+      ]
+    }
+  }
+}

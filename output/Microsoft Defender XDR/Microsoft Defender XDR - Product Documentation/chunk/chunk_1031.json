@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1031",
+  "section_number": "155.1.1.131",
+  "header": "DeviceTvmSoftwareVulnerabilitiesKB",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmSoftwareVulnerabilitiesKB  table in the advanced hunting schema contains the\nlist of vulnerabilities Microsoft Defender Vulnerability Management assesses devices for. Use\nthis reference to construct queries that return information from the table.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nCveId\nstring\nUnique identifier assigned to the security vulnerability under\nthe Common Vulnerabilities and Exposures (CVE) system\nCvssScore\nstring\nSeverity score assigned to the security vulnerability under the\nCommon Vulnerability Scoring System (CVSS)\nIsExploitAvailable\nboolean\nIndicates whether exploit code for the vulnerability is publicly\navailable\nVulnerabilitySeverityLevel\nstring\nSeverity level assigned to the security vulnerability based on\nthe CVSS score and dynamic factors influenced by the threat\nlandscape\nLastModifiedTime\ndatetime\nDate and time the item or related metadata was last modified\nPublishedDate\ndatetime\nDate vulnerability was disclosed to the public\nVulnerabilityDescription\nstring\nDescription of the vulnerability and associated risks\nAffectedSoftware\ndynamic\nList of all software products affected by the vulnerability\nProactively hunt for threats\nLearn the query language\nﾉ\nExpand table",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 755,
+      "end": 755
+    },
+    "content_stats": {
+      "char_count": 1760,
+      "word_count": 238
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

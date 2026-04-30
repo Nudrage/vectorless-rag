@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1994",
+  "section_number": "155.1.1.262",
+  "header": "Alert classification for malicious Exchange connectors",
+  "content": "connectors\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThreat actors use compromised Microsoft Exchange connectors for sending out spam and\nphishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since\nthe connector is compromised, the emails would usually be trusted by the recipients. These\nkinds of phishing emails are common vectors for phishing campaigns, and business email\ncompromise (BEC) scenario. Hence, such emails need to be monitored heavily due to the\nlikelihood of successful recipients' compromises being high.\nThis playbook helps in investigating instances where malicious connectors are setup/deployed\nby malicious actors. Accordingly, they take necessary steps to remediate the attack and\nmitigate the security risks arising from it. The playbook helps in classifying the alerts as either\ntrue positive (TP) or false positive (FP). If alerts are TP, the playbook lists necessary\nrecommended actions for remediating the attack. This playbook is available for security teams\nwho review, handle/manage, and grade the alerts.\nFollowing are the results of using a playbook:\nDetermination of the alert as malicious (TP) or benign (FP).\nIf malicious, remediate/remove the malicious connector from the environment.\nExchange connectors are a collection of instructions that customize the way your email flows to\nand from your Microsoft 365 or Office 365 organization. Usually, most Microsoft 365 and Office\n365 organizations don't need connectors for regular mail flow.\nConnectors are used to route mail traffic between remote email systems and Office 365 (O365)\nor O365, and on-premises email systems.\nAttackers may compromise an existing Exchange connector or compromise an admin, and set\nup a new connector by sending phish or spam/bulk emails.\nThe typical indicators of a malicious connector can be found when looking at email traffic and\nits headers. For example, when email traffic is observed from a connector node with a\nmismatch in P1 (header sender) and P2 (envelope sender) sender addresses along with no\ninformation on Sender's AccountObjectId.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1478,
+      "end": 1478
+    },
+    "content_stats": {
+      "char_count": 2110,
+      "word_count": 316
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "What are Exchange connectors?",
+        "Playbook workflow",
+        "Investigate malicious connectors",
+        "Advanced hunting queries",
+        "Recommended actions",
+        "See also"
+      ]
+    }
+  }
+}

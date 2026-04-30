@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_038",
+  "section_number": "2.6.7.1.1",
+  "header": "Automating pipeline role creation",
+  "content": "You can choose to have OpenSearch Ingestion create the pipeline role for you. It automatically\nidentiﬁes which permissions the role requires based on the conﬁgured source and sinks. It creates\nan IAM role with the preﬁx OpenSearchIngestion-, and with the suﬃx that you enter. For\nexample, if you enter PipelineRole as the suﬃx, OpenSearch Ingestion creates a role named\nOpenSearchIngestion-PipelineRole.\nAutomatically creating the pipeline role simpliﬁes the setup process and reduces the\nlikelihood of conﬁguration errors. By automating the role creation, you can avoid manually\nassigning permissions, ensuring that the correct policies are applied without risking security\nmisconﬁgurations. This also saves time and enhances security compliance by enforcing best\npractices, while ensuring consistency across multiple pipeline deployments.\nYou can only have OpenSearch Ingestion automatically create the pipeline role in the AWS\nManagement Console. If you're using the AWS CLI, the OpenSearch Ingestion API, or one of the\nSDKs, you must specify a manually-created pipeline role.\nTo have OpenSearch Ingestion create the role for you, select Create and use a new service role.\nImportant\nYou still need to manually modify the domain or collection access policy to grant access to\nthe pipeline role. For domains that use ﬁne-grained access control, you must also map the\nPipeline role\n30\nAmazon OpenSearch Service\nDeveloper Guide\npipeline role to a backend role. You can perform these steps before or after you create the\npipeline.\nFor instructions, see the following topics:\n• Conﬁgure data access for the domain\n• Conﬁgure data and network access for the collection",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 59,
+      "end": 60
+    },
+    "content_stats": {
+      "char_count": 1664,
+      "word_count": 252
+    },
+    "hierarchy": {
+      "parent": "Pipeline role",
+      "children": []
+    }
+  }
+}

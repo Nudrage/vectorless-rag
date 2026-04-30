@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_559",
+  "section_number": "2.9.2.1",
+  "header": "General limitations",
+  "content": "The following limitations apply to OpenSearch Service direct queries.\n• Some data types aren't supported. Supported data types are limited to Parquet, CSV, and JSON.\n• If the structure of your data changes over time, you will need to update your indexed views or\nout-of-the-box integrations to account for the data structure changes.\n• AWS CloudFormation templates aren't supported yet.\n• OpenSearch SQL and OpenSearch PPL statements have diﬀerent limitations when working with\nOpenSearch indexes compared to using direct query. Direct query supports advanced commands\nsuch as JOINs, subqueries, and lookups, while support for these commands on OpenSearch\nindexes is limited or nonexistent. For more information, see the section called “Supported SQL\nand PPL commands”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 759,
+      "end": 759
+    },
+    "content_stats": {
+      "char_count": 769,
+      "word_count": 115
+    },
+    "hierarchy": {
+      "parent": "Direct query limitations",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1544",
+  "section_number": "155.1.1.211.1",
+  "header": "Review the requirements",
+  "content": "ﾉ\nExpand table\nRequirement\nDescription\n- Granular delegated admin privileges (GDAP)\n- Microsoft Entra B2B authentication\n- For Microsoft Sentinel data, you must have Azure Lighthouse to gain\naccess to Microsoft Sentinel in other tenants' workspaces. GDAP isn't\nsupported for Microsoft Sentinel data, so you must also have Microsoft\nEntra B2B authentication.\nTo learn more about how to synchronize multiple B2B users across\ntenants, see Configure cross-tenant synchronization.\nPermissions\nUsers must be assigned the correct roles and permissions at the\nindividual tenant level, in order to view and manage the associated\ndata in multitenant management. To learn more, see:\n- Manage access to Microsoft Defender XDR with Microsoft Entra\nglobal roles\n- Custom roles in role-based access control for Microsoft Defender\nXDR\nTo learn how to grant permissions for multiple users at scale, see What\nis entitlement management.\nSecurity information\nand event management\n(SIEM) data (Optional)\nTo include SIEM data with the extended detection and response (XDR)\ndata, one or more tenants must include a Microsoft Sentinel\nworkspace onboarded to the Microsoft unified security operations\nplatform. For more information, see Connect Microsoft Sentinel to\nMicrosoft Defender XDR.\nThe Defender portal allows you to connect to one primary workspace\nand multiple secondary workspaces for Microsoft Sentinel. For more\ninformation, see Multiple Microsoft Sentinel workspaces in the\nDefender portal\n.\nAccess to Microsoft Sentinel data is available through Microsoft Entra\nB2B authentication. Microsoft Sentinel doesn't support granular\ndelegated admin privileges (GDAP) at this time.\nWe recommend that you set up multifactor authentication trust for each tenant to avoid\nmissing data in Microsoft Defender multitenant management.\nIn order to view and manage the data you have access to in Microsoft Defender\nmultitenant management, you need to ensure you have the necessary permissions. For\neach tenant you want to view and manage, you need to either:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1155,
+      "end": 1156
+    },
+    "content_stats": {
+      "char_count": 2031,
+      "word_count": 302
+    },
+    "hierarchy": {
+      "parent": "Set up Microsoft Defender multitenant management",
+      "children": []
+    }
+  }
+}

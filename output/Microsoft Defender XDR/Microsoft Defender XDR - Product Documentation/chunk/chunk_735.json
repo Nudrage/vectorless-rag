@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_735",
+  "section_number": "155.1.1.70",
+  "header": "Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal",
+  "content": "data in Microsoft Defender portal\nApplies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nAdvanced hunting allows you to view and query all the data sources available within the\nunified Microsoft Defender portal, which include Microsoft Defender XDR and various\nMicrosoft security services. If you onboard Microsoft Sentinel to the Defender portal, you can\nalso access and use all your existing Microsoft Sentinel workspace content, including queries\nand functions.\nQuerying from a single portal across different data sets makes hunting more efficient and\nremoves the need for context-switching.\nYou can query data in any workload that you can currently access based on your roles and\npermissions.\nTo query across Microsoft Sentinel and Microsoft Defender XDR data in the unified advanced\nhunting page, you'll also need at least the Microsoft Sentinel Reader role. For more\ninformation, see Microsoft Sentinel-specific roles.\n） Important\nMicrosoft Sentinel is generally available in the Microsoft Defender portal, with or without\nMicrosoft Defender XDR or an E5 license. For more information, see Microsoft Sentinel in\nthe Microsoft Defender portal\n.\n７ Note\nAfter onboarding to the Microsoft Sentinel data lake, auxiliary log tables are no longer\navailable in Microsoft Defender advanced hunting. Instead, you can access them through\ndata lake exploration KQL queries in the Defender portal. For more information, see KQL\nqueries in the Microsoft Sentinel data lake.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 479,
+      "end": 479
+    },
+    "content_stats": {
+      "char_count": 1498,
+      "word_count": 225
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "How to access",
+        "What to expect for Defender XDR tables streamed to Microsoft Sentinel",
+        "Where to find your Microsoft Sentinel data",
+        "View schema information",
+        "Known issues",
+        "See also"
+      ]
+    }
+  }
+}

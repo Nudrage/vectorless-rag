@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1332",
+  "section_number": "155.1.1.187",
+  "header": "How Microsoft Defender Experts for XDR permissions work",
+  "content": "permissions work\n08/01/2025\nApplies to:\nMicrosoft Defender Experts for XDR\nMicrosoft Defender Experts for Servers\nFor Microsoft Defender Experts for XDR incident investigations, when our experts need access\nto your tenants, we follow the just-in-time and least privilege principles to provide the right\nlevel of access at the right time. To deliver on these requirements, we built the Microsoft\nDefender Experts permissions platform using the following capabilities in Microsoft Entra ID:\nGranular delegated admin privileges (GDAP): As part of onboarding, we provision the\nMicrosoft Experts tenant as a service provider on your tenant to use the GDAP capability\nand get the right access level to our experts. The roles granted to our experts are\nconfigured using cross-tenant role assignment to ensure that they only have permissions\nthat you have explicitly granted to them.\nMicrosoft Entra cross-tenant access policies: To enforce restrictions on our experts'\naccess to your tenant, we need to establish a cross-tenant trust between our experts and\nyour tenant. To enable this trust, we configure a cross-tenant access policy in your tenant\nas part of onboarding. These cross-tenant access policies are created with read-only\npermissions to avoid any disruption.\nConditional access for external users: We restrict our experts' access to your tenants\nfrom our secure environment by using compliant devices with strong multifactor\nauthentication (MFA). To enforce the trust settings configured in cross-tenant access\npolicy and block access otherwise, we configure these conditional access policies in your\ntenant.\nJust-in-time (JIT) access: Even after you have permitted our experts access to your\nenvironment, we limit their access based on JIT permissions for case investigation, with\nlimited duration for each role. Our experts must first request access and get approval in\nour internal system to gain the appropriate role in your tenant. Our experts' access to\nyour tenant is audited as part of Microsoft Entra sign-in logs for you to review",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1002,
+      "end": 1002
+    },
+    "content_stats": {
+      "char_count": 2046,
+      "word_count": 311
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Configuring permissions in customer tenants"
+      ]
+    }
+  }
+}

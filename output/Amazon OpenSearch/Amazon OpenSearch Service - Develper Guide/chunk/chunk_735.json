@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_735",
+  "section_number": "2.10.4.9.2",
+  "header": "Step 2: Register an event rule",
+  "content": "In this step, you create an EventBridge rule that captures events from your OpenSearch Service\ndomains. This rule captures all events within the account where it's deﬁned. The event messages\nthemselves contain information about the event source, including the domain from which it\noriginated. You can use this information to ﬁlter and sort events programmatically.\nTo create an EventBridge rule\n1.\nOpen the EventBridge console at https://console.aws.amazon.com/events/.\n2.\nChoose Create rule.\n3.\nName the rule event-rule.\n4.\nChoose Next.\n5.\nFor the event pattern, select AWS services, Amazon OpenSearch Service, and All Events.\nThis pattern applies across all of your OpenSearch Service domains and to every OpenSearch\nService event. Alternatively, you can create a more speciﬁc pattern to ﬁlter out some results.\n6.\nPress Next.\n7.\nFor the target, choose Lambda function. In the function dropdown, choose event-handler.\n8.\nPress Next.\n9.\nSkip the tags and press Next again.\n10. Review the conﬁguration and choose Create rule.\nTutorial: Listening for OpenSearch Service events\n1272\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1301,
+      "end": 1302
+    },
+    "content_stats": {
+      "char_count": 1122,
+      "word_count": 169
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Listening for Amazon OpenSearch Service EventBridge events",
+      "children": []
+    }
+  }
+}

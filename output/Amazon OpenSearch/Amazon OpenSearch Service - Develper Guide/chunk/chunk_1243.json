@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1243",
+  "section_number": "2.19.8.3",
+  "header": "Set up a cross-cluster connection",
+  "content": "To replicate indexes from one domain to another, you need to set up a cross-cluster connection\nbetween the domains. The easiest way to connect domains is through the Connections tab of the\ndomain dashboard. You can also use the conﬁguration API or the AWS CLI. Because cross-cluster\nreplication follows a \"pull\" model, you initate connections from the follower domain.\nNote\nIf you previously connected two domains to perform cross-cluster searches, you can't\nuse that same connection for replication. The connection is marked as SEARCH_ONLY in\nthe console. In order to perform replication between two previously connected domains,\nyou must delete the connection and recreate it. When you've done this, the connection is\navailable for both cross-cluster search and cross-cluster replication.\nTo set up a connection\n1.\nIn the Amazon OpenSearch Service console, select the follower domain, go to the Connections\ntab, and choose Request.\n2.\nFor Connection alias, enter a name for your connection.\n3.\nChoose between connecting to a domain in your AWS account and Region or in another\naccount or Region.\n• To connect to a domain in your AWS account and Region, select the domain and choose\nRequest.\n• To connect to a domain in another AWS account or Region, specify the ARN of the remote\ndomain and choose Request.\nOpenSearch Service validates the connection request. If the domains are incompatible, the\nconnection fails. If validation succeeds, it's sent to the destination domain for approval. When the\ndestination domain approves the request, you can begin replication.\nCross-cluster replication supports bidirectional replication. This means that you can create an\noutbound connection from domain A to domain B, and another outbound connection from domain\nB to domain A. You can then set up replication so that domain A follows an index in domain B, and\ndomain B follows an index in domain A.\nSet up a cross-cluster connection\n1742\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1771,
+      "end": 1772
+    },
+    "content_stats": {
+      "char_count": 1972,
+      "word_count": 315
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster replication for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

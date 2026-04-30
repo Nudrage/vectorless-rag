@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_506",
+  "section_number": "2.8.10.2",
+  "header": "Architecture",
+  "content": "To support VPCs, OpenSearch Service places an endpoint into one, two, or three subnets of your\nVPC. If you enable multiple Availability Zones for your domain, each subnet must be in a diﬀerent\nAvailability Zone in the same region. If you only use one Availability Zone, OpenSearch Service\nplaces an endpoint into only one subnet.\nThe following illustration shows the VPC architecture for one Availability Zone:\nThe following illustration shows the VPC architecture for two Availability Zones:\nArchitecture\n674\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch Service also places an elastic network interface (ENI) in the VPC for each of your data\nnodes. OpenSearch Service assigns each ENI a private IP address from the IPv4 address range\nof your subnet. The service also assigns a public DNS hostname (which is the domain endpoint)\nfor the IP addresses. You must use a public DNS service to resolve the endpoint (which is a DNS\nhostname) to the appropriate IP addresses for the data nodes:\n• If your VPC uses the Amazon-provided DNS server by setting the enableDnsSupport option to\ntrue (the default value), resolution for the OpenSearch Service endpoint will succeed.\n• If your VPC uses a private DNS server and the server can reach the public authoritative DNS\nservers to resolve DNS hostnames, resolution for the OpenSearch Service endpoint will also\nsucceed.\nArchitecture\n675\nAmazon OpenSearch Service\nDeveloper Guide\nBecause the IP addresses might change, you should resolve the domain endpoint periodically so\nthat you can always access the correct data nodes. We recommend that you set the DNS resolution\ninterval to one minute. If you’re using a client, you should also ensure that the DNS cache in the\nclient is cleared.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 703,
+      "end": 705
+    },
+    "content_stats": {
+      "char_count": 1734,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "Launching your Amazon OpenSearch Service domains within a VPC",
+      "children": [
+        "Migrating from public access to VPC access",
+        "About access policies on VPC domains",
+        "Before you begin: prerequisites for VPC access",
+        "Testing VPC domains",
+        "Reserving IP addresses in a VPC subnet",
+        "Service-linked role for VPC access"
+      ]
+    }
+  }
+}

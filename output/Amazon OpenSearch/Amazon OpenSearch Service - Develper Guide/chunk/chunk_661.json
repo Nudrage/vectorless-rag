@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_661",
+  "section_number": "2.10.3",
+  "header": "Monitoring audit logs in Amazon OpenSearch Service",
+  "content": "If your Amazon OpenSearch Service domain uses ﬁne-grained access control, you can enable\naudit logs for your data. Audit logs are highly customizable and let you track user activity on\nyour OpenSearch clusters, including authentication success and failures, requests to OpenSearch,\nindex changes, and incoming search queries. The default conﬁguration tracks a popular set of user\nactions, but we recommend tailoring the settings to your exact needs.\nJust like OpenSearch application logs and slow logs, OpenSearch Service publishes audit logs to\nCloudWatch Logs. If enabled, standard CloudWatch pricing applies.\nNote\nTo enable audit logs, your user role must be mapped to the security_manager role,\nwhich gives you access to the OpenSearch plugins/_security REST API. To learn more,\nsee the section called “Modifying the master user”.\nTopics\nViewing logs\n1223\nAmazon OpenSearch Service\nDeveloper Guide\n• Limitations\n• Enabling audit logs\n• Enable audit logging using the AWS CLI\n• Enable audit logging using the conﬁguration API\n• Audit log layers and categories\n• Audit log settings\n• Audit log example\n• Conﬁguring audit logs using the REST API",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1252,
+      "end": 1253
+    },
+    "content_stats": {
+      "char_count": 1146,
+      "word_count": 178
+    },
+    "hierarchy": {
+      "parent": "Monitoring Amazon OpenSearch Service domains",
+      "children": [
+        "Limitations",
+        "Enabling audit logs",
+        "Enable audit logging using the AWS CLI",
+        "Enable audit logging using the conﬁguration API",
+        "Audit log layers and categories",
+        "Audit log settings",
+        "Audit log example",
+        "Conﬁguring audit logs using the REST API"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_918",
+  "section_number": "2.13.2.1",
+  "header": "Enabling gzip compression",
+  "content": "Not to be confused with similar OpenSearch settings, http_compression.enabled is speciﬁc\nto OpenSearch Service and enables or disables gzip compression on a domain. Domains running\nOpenSearch or Elasticsearch 7.x have the gzip compression enabled by default, whereas domains\nrunning Elasticsearch 6.x have it disabled by default.\nTo enable gzip compression, send the following request:\nPUT _cluster/settings\n{\n\"persistent\" : {\n\"http_compression.enabled\": true\n}\n}\nRequests to _cluster/settings must be uncompressed, so you might need to use a separate\nclient or standard HTTP request to update cluster settings.\nTo conﬁrm that you successfully enabled gzip compression, send the following request:\nGET _cluster/settings?include_defaults=true\nMake sure you see the following setting in the response:\n...\n\"http_compression\": {\n\"enabled\": \"true\"\n}\n...\nCompressing HTTP requests\n1423\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1452,
+      "end": 1453
+    },
+    "content_stats": {
+      "char_count": 921,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Compressing HTTP requests in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

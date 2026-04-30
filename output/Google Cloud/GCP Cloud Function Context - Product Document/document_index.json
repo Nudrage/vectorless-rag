@@ -1,0 +1,285 @@
+{
+  "document_name": "Google Cloud\\GCP Cloud Function Context - Product Document",
+  "generated_at": "2026-02-17T22:03:46.989903",
+  "outline_text": "DOCUMENT INDEX: Google Cloud\\GCP Cloud Function Context - Product Document\n==========================================================================\n\n1. Resource: Function [Pages 1-3, 404 words]\n2. BuildConfig [Pages 3-5, 564 words]\n3. AutomaticUpdatePolicy [Page 5, 20 words]\n4. OnDeployUpdatePolicy [Pages 5-6, 28 words]\n5. Source [Page 6, 94 words]\n6. StorageSource [Pages 6-7, 145 words]\n7. RepoSource [Pages 7-8, 218 words]\n8. SourceProvenance [Pages 8-9, 85 words]\n9. DockerRegistry [Page 9, 72 words]\n10. ServiceConfig [Pages 9-12, 641 words]\n11. VpcConnectorEgressSettings [Page 12, 53 words]\n12. IngressSettings [Page 12, 51 words]\n13. SecretEnvVar [Page 12, 1 words]\n   13.1. Configuration for a secret environment variable. It has the information necessary to fetch the secret [Page 13, 111 words]\n14. SecretVolume [Page 13, 1 words]\n   14.1. Configuration for a secret volume. It has the information necessary to fetch the secret value from [Pages 13-14, 182 words]\n15. SecretVersion [Page 14, 80 words]\n16. SecurityLevel [Pages 14-15, 104 words]\n17. EventTrigger [Pages 15-16, 313 words]\n18. EventFilter [Pages 16-17, 78 words]\n19. RetryPolicy [Page 17, 46 words]\n20. State [Page 17, 84 words]\n21. StateMessage [Pages 17-18, 38 words]\n22. Severity [Page 18, 20 words]\n23. Environment [Page 18, 17 words]\n24. UpgradeInfo [Pages 18-19, 102 words]\n25. UpgradeState [Pages 19-21, 455 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Resource: Function",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 3,
+        "word_count": 404,
+        "summary": "Describes a Cloud Function that contains user computation executed in response to an event."
+      },
+      {
+        "number": "2",
+        "title": "BuildConfig",
+        "depth": 1,
+        "chunk_id": "chunk_002",
+        "page_start": 3,
+        "page_end": 5,
+        "word_count": 564,
+        "summary": "Describes the Build step of the function that builds a container from the given source."
+      },
+      {
+        "number": "3",
+        "title": "AutomaticUpdatePolicy",
+        "depth": 1,
+        "chunk_id": "chunk_003",
+        "page_start": 5,
+        "page_end": 5,
+        "word_count": 20,
+        "summary": "This type has no fields."
+      },
+      {
+        "number": "4",
+        "title": "OnDeployUpdatePolicy",
+        "depth": 1,
+        "chunk_id": "chunk_004",
+        "page_start": 5,
+        "page_end": 6,
+        "word_count": 28,
+        "summary": "Security patches are only applied when a function is redeployed."
+      },
+      {
+        "number": "5",
+        "title": "Source",
+        "depth": 1,
+        "chunk_id": "chunk_005",
+        "page_start": 6,
+        "page_end": 6,
+        "word_count": 94,
+        "summary": "The location of the function source code."
+      },
+      {
+        "number": "6",
+        "title": "StorageSource",
+        "depth": 1,
+        "chunk_id": "chunk_006",
+        "page_start": 6,
+        "page_end": 7,
+        "word_count": 145,
+        "summary": "Location of the source in an archive file in Google Cloud Storage."
+      },
+      {
+        "number": "7",
+        "title": "RepoSource",
+        "depth": 1,
+        "chunk_id": "chunk_007",
+        "page_start": 7,
+        "page_end": 8,
+        "word_count": 218,
+        "summary": "Location of the source in a Google Cloud Source Repository."
+      },
+      {
+        "number": "8",
+        "title": "SourceProvenance",
+        "depth": 1,
+        "chunk_id": "chunk_008",
+        "page_start": 8,
+        "page_end": 9,
+        "word_count": 85,
+        "summary": "Provenance of the source."
+      },
+      {
+        "number": "9",
+        "title": "DockerRegistry",
+        "depth": 1,
+        "chunk_id": "chunk_009",
+        "page_start": 9,
+        "page_end": 9,
+        "word_count": 72,
+        "summary": "Docker Registry to use for storing function Docker images."
+      },
+      {
+        "number": "10",
+        "title": "ServiceConfig",
+        "depth": 1,
+        "chunk_id": "chunk_010",
+        "page_start": 9,
+        "page_end": 12,
+        "word_count": 641,
+        "summary": "Describes the Service being deployed."
+      },
+      {
+        "number": "11",
+        "title": "VpcConnectorEgressSettings",
+        "depth": 1,
+        "chunk_id": "chunk_011",
+        "page_start": 12,
+        "page_end": 12,
+        "word_count": 53,
+        "summary": "Available egress settings."
+      },
+      {
+        "number": "12",
+        "title": "IngressSettings",
+        "depth": 1,
+        "chunk_id": "chunk_012",
+        "page_start": 12,
+        "page_end": 12,
+        "word_count": 51,
+        "summary": "Available ingress settings."
+      },
+      {
+        "number": "13",
+        "title": "SecretEnvVar",
+        "depth": 1,
+        "chunk_id": "chunk_013",
+        "page_start": 12,
+        "page_end": 12,
+        "word_count": 1,
+        "summary": "SecretEnvVar",
+        "children": [
+          {
+            "number": "13.1",
+            "title": "Configuration for a secret environment variable. It has the information necessary to fetch the secret",
+            "depth": 2,
+            "chunk_id": "chunk_014",
+            "page_start": 13,
+            "page_end": 13,
+            "word_count": 111,
+            "summary": "value from secret manager and expose it as an environment variable."
+          }
+        ]
+      },
+      {
+        "number": "14",
+        "title": "SecretVolume",
+        "depth": 1,
+        "chunk_id": "chunk_015",
+        "page_start": 13,
+        "page_end": 13,
+        "word_count": 1,
+        "summary": "SecretVolume",
+        "children": [
+          {
+            "number": "14.1",
+            "title": "Configuration for a secret volume. It has the information necessary to fetch the secret value from",
+            "depth": 2,
+            "chunk_id": "chunk_016",
+            "page_start": 13,
+            "page_end": 14,
+            "word_count": 182,
+            "summary": "secret manager and make it available as files mounted at the requested paths within the application\ncontainer."
+          }
+        ]
+      },
+      {
+        "number": "15",
+        "title": "SecretVersion",
+        "depth": 1,
+        "chunk_id": "chunk_017",
+        "page_start": 14,
+        "page_end": 14,
+        "word_count": 80,
+        "summary": "Configuration for a single version."
+      },
+      {
+        "number": "16",
+        "title": "SecurityLevel",
+        "depth": 1,
+        "chunk_id": "chunk_018",
+        "page_start": 14,
+        "page_end": 15,
+        "word_count": 104,
+        "summary": "Available security level settings."
+      },
+      {
+        "number": "17",
+        "title": "EventTrigger",
+        "depth": 1,
+        "chunk_id": "chunk_019",
+        "page_start": 15,
+        "page_end": 16,
+        "word_count": 313,
+        "summary": "Describes EventTrigger, used to request events to be sent from another service."
+      },
+      {
+        "number": "18",
+        "title": "EventFilter",
+        "depth": 1,
+        "chunk_id": "chunk_020",
+        "page_start": 16,
+        "page_end": 17,
+        "word_count": 78,
+        "summary": "Filters events based on exact matches on the CloudEvents attributes."
+      },
+      {
+        "number": "19",
+        "title": "RetryPolicy",
+        "depth": 1,
+        "chunk_id": "chunk_021",
+        "page_start": 17,
+        "page_end": 17,
+        "word_count": 46,
+        "summary": "Describes the retry policy in case of function's execution failure."
+      },
+      {
+        "number": "20",
+        "title": "State",
+        "depth": 1,
+        "chunk_id": "chunk_022",
+        "page_start": 17,
+        "page_end": 17,
+        "word_count": 84,
+        "summary": "Describes the current state of the function."
+      },
+      {
+        "number": "21",
+        "title": "StateMessage",
+        "depth": 1,
+        "chunk_id": "chunk_023",
+        "page_start": 17,
+        "page_end": 18,
+        "word_count": 38,
+        "summary": "Informational messages about the state of the Cloud Function or Operation."
+      },
+      {
+        "number": "22",
+        "title": "Severity",
+        "depth": 1,
+        "chunk_id": "chunk_024",
+        "page_start": 18,
+        "page_end": 18,
+        "word_count": 20,
+        "summary": "Severity of the state message."
+      },
+      {
+        "number": "23",
+        "title": "Environment",
+        "depth": 1,
+        "chunk_id": "chunk_025",
+        "page_start": 18,
+        "page_end": 18,
+        "word_count": 17,
+        "summary": "The environment the function is hosted on."
+      },
+      {
+        "number": "24",
+        "title": "UpgradeInfo",
+        "depth": 1,
+        "chunk_id": "chunk_026",
+        "page_start": 18,
+        "page_end": 19,
+        "word_count": 102,
+        "summary": "Information related to: * A function's eligibility for 1st Gen to 2nd Gen migration."
+      },
+      {
+        "number": "25",
+        "title": "UpgradeState",
+        "depth": 1,
+        "chunk_id": "chunk_027",
+        "page_start": 19,
+        "page_end": 21,
+        "word_count": 455,
+        "summary": "Enum representing the various upgrade state a function can have."
+      }
+    ],
+    "total_sections": 27,
+    "max_depth": 2
+  }
+}

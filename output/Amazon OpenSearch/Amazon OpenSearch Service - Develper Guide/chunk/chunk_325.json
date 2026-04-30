@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_325",
+  "section_number": "2.7.6.1",
+  "header": "Minimum required permissions",
+  "content": "In order to ingest data into an OpenSearch Serverless collection, the principal that is writing the\ndata must have the following minimum permissions assigned in a data access policy:\n[\n{\n\"Rules\":[\n{\n\"ResourceType\":\"index\",\n\"Resource\":[\n\"index/target-collection/logs\"\n],\n\"Permission\":[\n\"aoss:CreateIndex\",\n\"aoss:WriteDocument\",\n\"aoss:UpdateIndex\"\n]\n}\n],\n\"Principal\":[\n\"arn:aws:iam::123456789012:user/my-user\"\n]\n}\n]\nThe permissions can be more broad if you plan to write to additional indexes. For example, rather\nthan specifying a single target index, you can allow permission to all indexes (index/target-\ncollection/*), or a subset of indexes (index/target-collection/logs*).\nFor a reference of all available OpenSearch API operations and their associated permissions, see\nthe section called “Supported operations and plugins”.\nMinimum required permissions\n456\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 485,
+      "end": 486
+    },
+    "content_stats": {
+      "char_count": 903,
+      "word_count": 117
+    },
+    "hierarchy": {
+      "parent": "Ingesting data into Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

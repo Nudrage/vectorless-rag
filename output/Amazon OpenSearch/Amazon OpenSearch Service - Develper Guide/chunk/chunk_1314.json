@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1314",
+  "section_number": "2.27.3.1.6",
+  "header": "Map the ML role in OpenSearch Dashboards (if using ﬁne-grained access control)",
+  "content": "Fine-grained access control introduces an additional step when setting up a connector. Even if you\nuse HTTP basic authentication for all other purposes, you need to map the ml_full_access role\nto your IAM role that has iam:PassRole permissions to pass opensearch-sagemaker-role.\n1.\nNavigate to the OpenSearch Dashboards plugin for your OpenSearch Service domain. You can\nﬁnd the Dashboards endpoint on your domain dashboard on the OpenSearch Service console.\n2.\nFrom the main menu choose Security, Roles, and select the ml_full_access role.\n3.\nChoose Mapped users, Manage mapping.\n4.\nUnder Backend roles, add the ARN of the role that has permissions to pass opensearch-\nsagemaker-role.\narn:aws:iam::account-id:role/role-name\nPrerequisites\n1795\nAmazon OpenSearch Service\nDeveloper Guide\n5.\nSelect Map and conﬁrm the user or role shows up under Mapped users.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1824,
+      "end": 1825
+    },
+    "content_stats": {
+      "char_count": 856,
+      "word_count": 126
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

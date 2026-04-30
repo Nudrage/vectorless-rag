@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1420",
+  "section_number": "2.25.11",
+  "header": "Dedicated master nodes in Amazon OpenSearch Service",
+  "content": "Amazon OpenSearch Service uses dedicated master nodes to increase cluster stability. A dedicated\nmaster node performs cluster management tasks, but does not hold data or respond to data\nupload requests. This oﬄoading of cluster management tasks increases the stability of your\ndomain. Just like all other node types, you pay an hourly rate for each dedicated master node.\nDedicated master nodes\n1866\nAmazon OpenSearch Service\nDeveloper Guide\nDedicated master nodes perform the following cluster management tasks:\n• Track all nodes in the cluster.\n• Track the number of indexes in the cluster.\n• Track the number of shards belonging to each index.\n• Maintain routing information for nodes in the cluster.\n• Update the cluster state after state changes, such as creating an index and adding or removing\nnodes in the cluster.\n• Replicate changes to the cluster state across all nodes in the cluster.\n• Monitor the health of all cluster nodes by sending heartbeat signals, periodic signals that\nmonitor the availability of the data nodes in the cluster.\nThe following illustration shows an OpenSearch Service domain with 10 instances. Seven of the\ninstances are data nodes and three are dedicated master nodes. Only one of the dedicated master\nnodes is active. The two gray dedicated master nodes wait as backup in case the active dedicated\nmaster node fails. All data upload requests are served by the seven data nodes, and all cluster\nmanagement tasks are oﬄoaded to the active dedicated master node.\nDedicated master nodes\n1867\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1895,
+      "end": 1897
+    },
+    "content_stats": {
+      "char_count": 1568,
+      "word_count": 253
+    },
+    "hierarchy": {
+      "parent": "Operational best practices for Amazon OpenSearch Service",
+      "children": [
+        "Choosing the number of dedicated master nodes",
+        "Choosing instance types for dedicated master nodes"
+      ]
+    }
+  }
+}

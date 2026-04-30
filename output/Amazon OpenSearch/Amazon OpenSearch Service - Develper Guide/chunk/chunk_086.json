@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_086",
+  "section_number": "2.6.10.3",
+  "header": "Specifying the ingestion path",
+  "content": "For pull-based sources like OTel trace and OTel metrics, OpenSearch Ingestion requires the\nadditional path option in your source conﬁguration. The path is a string such as /log/ingest,\nwhich represents the URI path for ingestion. This path deﬁnes the URI that you use to send data to\nthe pipeline.\nFor example, say you specify the following path for a pipeline with an HTTP source:\nSpecifying the ingestion path\n73\nAmazon OpenSearch Service\nDeveloper Guide\nWhen you ingest data into the pipeline, you must specify the following\nendpoint in your client conﬁguration: https://pipeline-name-abc123.us-\nwest-2.osis.amazonaws.com/my/test_path.\nThe path must start with a slash (/) and can contain the special characters '-', '_', '.', and '/',\nas well as the ${pipelineName} placeholder. If you use ${pipelineName} (such as /\n${pipelineName}/test_path), OpenSearch Ingestion replaces the variable with the name of\nthe associated sub-pipeline.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 102,
+      "end": 103
+    },
+    "content_stats": {
+      "char_count": 937,
+      "word_count": 138
+    },
+    "hierarchy": {
+      "parent": "Creating Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

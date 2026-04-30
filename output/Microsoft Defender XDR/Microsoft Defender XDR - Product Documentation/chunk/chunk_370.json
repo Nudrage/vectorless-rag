@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_370",
+  "section_number": "155.1.1.35.1.1",
+  "header": "Alert correlation by Microsoft Sentinel workspace",
+  "content": "While Microsoft Defender already uses advanced correlation mechanisms, you might want to\ndecide differently whether a given alert belongs with a particular incident. In such a case, you\ncan unlink an alert from one incident and link it to another. Every alert must belong to an\nincident, so you can either link the alert to another existing incident, or to a new incident that\nyou create on the spot.\nFor more information on moving an alert from one incident to another, see Move alerts from\none incident to another in the Microsoft Defender portal.\nThe Defender portal's correlation activities don't stop when incidents are created. Defender\ncontinues to detect commonalities and relationships between incidents and alerts across\nincidents. When multiple incidents are determined to be sufficiently alike, Defender merges the\nincidents into a single incident.\nDefender's correlation engine merges incidents when it recognizes common elements between\nalerts in separate incidents, based on its deep knowledge of the data and the attack behavior.\nSome of these elements include:\nEntities—assets like users, devices, mailboxes, and others\nArtifacts—files, processes, email senders, and others\nTime frames\nSequences of events that point to multistage attacks—for example, a malicious email click\nevent that follows closely on a phishing email detection.\nWhen two or more incidents are merged, a new incident is not created to absorb them. Instead,\nthe contents of one incident (the \"source incident\") are migrated into the other incident (the\n\"target incident\"), and the source incident is automatically closed. The source incident is no\nlonger visible or available in the Defender portal, and any reference to it is redirected to the\ntarget incident. The source incident, though closed, remains accessible in Microsoft Sentinel in\nthe Azure portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 211,
+      "end": 212
+    },
+    "content_stats": {
+      "char_count": 1846,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "Incident creation and alert correlation",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_498",
+  "section_number": "2.8.9.2",
+  "header": "Multi-AZ without Standby",
+  "content": "OpenSearch Service still supports multi-AZ without Standby, which oﬀers 99.9% availability. Nodes\nare distributed across Availability Zone(s), and availability depends on the number of Availability\nMulti-AZ without Standby\n666\nAmazon OpenSearch Service\nDeveloper Guide\nZones and copies of data. Whereas with standby you have to conﬁgure your domain with best\npractices, without standby you can choose your own number of Availability Zones, nodes, and\nreplicas. We don't recommend this option unless you have existing workﬂows that would be\ndisrupted by creating domains with standby.\nIf you choose this option, we still recommend that you select three Availability Zones in order to\nremain resilient to node, disk, and single-AZ failures. When a failure occurs, the cluster redistributes\ndata across the remaining resources to maintain availability and redundancy. This data movement\nincreases resource usage on the cluster, and can have an impact on the performance. If the cluster\nisn't sized properly, it can experience degraded availability, which largely defeats the purpose of\nmulti-AZ.\nThe only way to conﬁgure a domain without standby on the AWS Management Console is to\nchoose the Standard create creation method, and select Domain without standby as your\ndeployment option.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 695,
+      "end": 696
+    },
+    "content_stats": {
+      "char_count": 1283,
+      "word_count": 192
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring a multi-AZ domain in Amazon OpenSearch Service",
+      "children": [
+        "Shard distribution",
+        "Dedicated master node distribution"
+      ]
+    }
+  }
+}

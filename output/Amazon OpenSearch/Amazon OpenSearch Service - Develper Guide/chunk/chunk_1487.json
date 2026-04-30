@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1487",
+  "section_number": "2.26.6.2",
+  "header": "Purchasing Reserved Instances (AWS CLI)",
+  "content": "The AWS CLI has commands for viewing oﬀerings, purchasing a reservation, and viewing your\nreservations. The following command and sample response show the oﬀerings for a given AWS\nRegion:\naws opensearch describe-reserved-instance-offerings --region us-east-1\n{\n\"ReservedInstanceOfferings\": [\n{\n\"FixedPrice\": x,\n\"ReservedInstanceOfferingId\": \"1a2a3a4a5-1a2a-3a4a-5a6a-1a2a3a4a5a6a\",\n\"RecurringCharges\": [\n{\n\"RecurringChargeAmount\": y,\n\"RecurringChargeFrequency\": \"Hourly\"\n}\n],\n\"UsagePrice\": 0.0,\n\"PaymentOption\": \"PARTIAL_UPFRONT\",\n\"Duration\": 31536000,\n\"InstanceType\": \"m4.2xlarge.search\",\n\"CurrencyCode\": \"USD\"\n}\n]\n}\nFor an explanation of each return value, see the following table.\nPurchasing Reserved Instances (AWS CLI)\n1992\nAmazon OpenSearch Service\nDeveloper Guide\nField\nDescription\nFixedPrice\nThe upfront cost of the reservation.\nReservedInstanceOfferingId\nThe oﬀering ID. Make note of this value if you\nwant to reserve the oﬀering.\nRecurringCharges\nThe hourly rate for the reservation.\nUsagePrice\nA legacy ﬁeld. For OpenSearch Service, this\nvalue is always 0.\nPaymentOption\nNo Upfront, Partial Upfront, or All Upfront.\nDuration\nLength of the term in seconds:\n• 31536000 seconds is one year.\n• 94608000 seconds is three years.\nInstanceType\nThe instance type for the reservation. For\ninformation about the hardware resources\nthat are allocated to each instance type, see\nAmazon OpenSearch Service pricing.\nCurrencyCode\nThe currency for FixedPrice  and\nRecurringChargeAmount\n.\nThis next example purchases a reservation:\naws opensearch purchase-reserved-instance-offering --reserved-instance-offering-\nid 1a2a3a4a5-1a2a-3a4a-5a6a-1a2a3a4a5a6a --reservation-name my-reservation --instance-\ncount 3 --region us-east-1\n{\n\"ReservationName\": \"my-reservation\",\n\"ReservedInstanceId\": \"9a8a7a6a-5a4a-3a2a-1a0a-9a8a7a6a5a4a\"\n}\nFinally, you can list your reservations for a given Region using the following example:\nPurchasing Reserved Instances (AWS CLI)\n1993\nAmazon OpenSearch Service\nDeveloper Guide\naws opensearch describe-reserved-instances --region us-east-1\n{\n\"ReservedInstances\": [\n{\n\"FixedPrice\": x,\n\"ReservedInstanceOfferingId\": \"1a2a3a4a5-1a2a-3a4a-5a6a-1a2a3a4a5a6a\",\n\"ReservationName\": \"my-reservation\",\n\"PaymentOption\": \"PARTIAL_UPFRONT\",\n\"UsagePrice\": 0.0,\n\"ReservedInstanceId\": \"9a8a7a6a-5a4a-3a2a-1a0a-9a8a7a6a5a4a\",\n\"RecurringCharges\": [\n{\n\"RecurringChargeAmount\": y,\n\"RecurringChargeFrequency\": \"Hourly\"\n}\n],\n\"State\": \"payment-pending\",\n\"StartTime\": 1522872571.229,\n\"InstanceCount\": 3,\n\"Duration\": 31536000,\n\"InstanceType\": \"m4.2xlarge.search\",\n\"CurrencyCode\": \"USD\"\n}\n]\n}\nNote\nStartTime is Unix epoch time, which is the number of seconds that have passed since\nmidnight UTC of 1 January 1970. For example, 1522872571 epoch time is 20:09:31 UTC of\n4 April 2018. You can use online converters.\nTo learn more about the commands used in the preceding examples, see the AWS CLI Command\nReference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2021,
+      "end": 2023
+    },
+    "content_stats": {
+      "char_count": 2905,
+      "word_count": 341
+    },
+    "hierarchy": {
+      "parent": "Reserved Instances in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

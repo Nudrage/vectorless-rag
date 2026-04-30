@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1156",
+  "section_number": "2.19.1.3",
+  "header": "How OpenSearch optimized instances diﬀer from UltraWarm instances",
+  "content": "OpenSearch Service provides UltraWarm instances that are a cost-eﬀective way to store large\namounts of read-only data. Both OpenSearch optimized and UltraWarm instances store data\nlocally in Amazon EBS and remotely in Amazon S3. However, OpenSearch optimized and\nUltraWarm instances diﬀer in several important ways:\n• OpenSearch optimized instances keep a copy of data in both your local and remote store. In\nUltraWarm instances, data is kept primarily in remote store to reduce storage costs. Depending\non your usage patterns, data can be moved to local storage.\n• OpenSearch optimized instances are active and can accept read and write operations, whereas\nthe data on UltraWarm instances is read-only until you manually move it back to hot storage.\n• UltraWarm relies on index snapshots for data durability. OpenSearch optimized instances,\nby comparison, perform replication and recovery behind the scenes. In the event of a red\nindex, OpenSearch optimized instances will automatically restore missing shards from your\nHow OpenSearch optimized instances diﬀer from other instances\n1684\nAmazon OpenSearch Service\nDeveloper Guide\nremote storage in Amazon S3. The recovery time varies depending on the volume of data to be\nrecovered.\nFor more information about UltraWarm storage, see ???.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1713,
+      "end": 1714
+    },
+    "content_stats": {
+      "char_count": 1287,
+      "word_count": 195
+    },
+    "hierarchy": {
+      "parent": "OpenSearch Optimized Instances for Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

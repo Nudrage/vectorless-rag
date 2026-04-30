@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_907",
+  "section_number": "155.1.1.91.1.1.1",
+  "header": "Alerts by severity",
+  "content": "AlertInfo\n| summarize Total = count() by Severity\nAlertInfo\n| summarize Total = count() by Severity\n| render columnchart\nIf you're dealing with a list of values that isn't finite, you can use the Top  operator to chart only\nthe values with the most instances. For example, to get the top 10 sender domains with the\nmost phishing emails, use the query below:\nKusto\nUse the pie chart view to effectively show distribution across the top domains:\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 600,
+      "end": 601
+    },
+    "content_stats": {
+      "char_count": 445,
+      "word_count": 78
+    },
+    "hierarchy": {
+      "parent": "Construct queries for effective charts",
+      "children": []
+    }
+  }
+}

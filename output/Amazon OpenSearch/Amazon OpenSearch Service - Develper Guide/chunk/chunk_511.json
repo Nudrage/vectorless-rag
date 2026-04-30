@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_511",
+  "section_number": "2.8.10.2.5",
+  "header": "Reserving IP addresses in a VPC subnet",
+  "content": "OpenSearch Service connects a domain to a VPC by placing network interfaces in a subnet of\nthe VPC (or multiple subnets of the VPC if you enable multiple Availability Zones). Each network\ninterface is associated with an IP address. Before you create your OpenSearch Service domain,\nyou must have a suﬃcient number of IP addresses available in each subnet to accommodate the\nnetwork interfaces.\nHere's the basic formula: The number of IP addresses that OpenSearch Service reserves in each\nsubnet is three times the number of data nodes, divided by the number of Availability Zones.\nExamples\n• If a domain has nine data nodes across three Availability Zones, the IP count per subnet is 9 * 3 /\n3 = 9.\n• If a domain has eight data nodes across two Availability Zones, the IP count per subnet is 8 * 3 /\n2 = 12.\n• If a domain has six data nodes in one Availability Zone, the IP count per subnet is 6 * 3 / 1 = 18.\nWhen you create the domain, OpenSearch Service reserves the IP addresses, uses some for the\ndomain, and reserves the rest for blue/green deployments. You can see the network interfaces and\ntheir associated IP addresses in the Network Interfaces section of the Amazon EC2 console. The\nDescription column shows which OpenSearch Service domain the network interface is associated\nwith.\nArchitecture\n679\nAmazon OpenSearch Service\nDeveloper Guide\nTip\nWe recommend that you create dedicated subnets for the OpenSearch Service reserved\nIP addresses. By using dedicated subnets, you avoid overlap with other applications and\nservices and ensure that you can reserve additional IP addresses if you need to scale your\ncluster in the future. To learn more, see Creating a subnet in your VPC.\nYou may also consider provisioning dedicated coordinator nodes to reduce the number of private\nIP address reservations required for your VPC domain. OpenSearch attaches an elastic network\ninterface (ENI) to your dedicated coordinator nodes instead of your data nodes. Dedicated\ncoordinator nodes usually represent around 10% of total data nodes. As a result, a smaller number\nof private IP addresses will be reserved for VPC domains.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 708,
+      "end": 709
+    },
+    "content_stats": {
+      "char_count": 2124,
+      "word_count": 358
+    },
+    "hierarchy": {
+      "parent": "Architecture",
+      "children": []
+    }
+  }
+}

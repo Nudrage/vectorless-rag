@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2372",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nImageFileVersion\nFile version from VERSIONINFO in PE internal metadata.\nProductVersion\nAppArchitecture\nImageCheckSum\nCompanyName\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n832/1226\nField\nDescription\nCreateTime\nFileDescription\nDescription of a file.\nAmFileId\nHex sequence representing the File Reference Keys under each volume GUID in Windows AmCache.hve file.\nSize\nSize of the egressing file in bytes.\nFileVersion\nAmFileVersionNumber\nProductVersion field in the StringFileInfo in PE version info metadata.\nAmGuessProgramId\nAmIsLocal\nIs the language/locale of binary match with the one referenced in the PE internal metadata.\nLanguageId\nLastFileRegWrite\nTime for which the registry key was most recently written. Can equate to First Run Time of the file.\nLastVolumeRegWrite\nLast time a volume registry was written to.\nImageCompilationDate Compilation date of binary from PE internal metadata.\nLinkerVersion\nModifyTime\nUnix modify time, indicating last file modification. NOTE: modifiable by users.\nPeHashData\nProductName\nProgramUUID\nHash of the windows program name, the version, the publisher and the language. This value is identical across different systems: the\nsame version of a software installed on two different machines results in the same value.\nSHA1HashData\nThe SHA1 hash of a file.  In most cases, the hash of the file referred to by the ImageFileName field.\nImageSize\nAmSwitchBackContext\nVolumeName\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 832,
+      "end": 833
+    },
+    "content_stats": {
+      "char_count": 1831,
+      "word_count": 244
+    },
+    "hierarchy": {
+      "parent": "AmcacheEntry",
+      "children": []
+    }
+  }
+}

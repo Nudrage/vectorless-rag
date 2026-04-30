@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_011",
+  "section_number": "1.5.4",
+  "header": "Authentication",
+  "content": "The API uses HTTP Basic Authentication to authenticate requests. Use your Duo\napplication's integration key as the HTTP Username.\nGenerate the HTTP Password as an HMAC signature of the request. This will be\ndifferent for each request and must be re-generated each time.\nTo construct the signature, first build an ASCII string from your request, using the\nfollowing components:\nComponent\nDescription\nExample\ndate\nThe current time,\nformatted as RFC\n2822. This must be\nthe same string as\nthe \"Date\" header.\nTue, 21 Aug 2012 17:29:18 -0000\nmethod\nThe HTTP method\n(uppercase)\nPOST\nhost\nYour API hostname\n(lowercase)\napi-xxxxxxxx.duosecurity.com\npath\nThe specific API\nmethod's path\n/admin/v1/users\nparams\nThe URL-encoded\nlist of key=value\npairs,\nlexicographically\nsorted by key. These\ncome from the\nrequest parameters\n(the URL query\nstring for GET and\nDELETE requests or\nthe request body for\nPOST requests).\nIf the request does\nnot have any\nparameters one\nmust still include a\nblank line in the\nstring that is signed.\nDo not encode\nunreserved\ncharacters. Use\nupper-case\nhexadecimal digits\nAn example params  list:\nrealname=First%20Last&username=root\nA through F in\nescape sequences.\nThen concatenate these components with (line feed) newlines. For example:\nGET requests also use this five-line format:\nLastly, compute the HMAC-SHA1 of this canonical representation, using your Duo\nAdmin API application's secret key as the HMAC key. Send this signature as\nhexadecimal ASCII (i.e. not raw binary data). Use HTTP Basic Authentication for the\nrequest, using your integration key as the username and the HMAC-SHA1 signature as\nthe password. Signature validation is case-insensitive, so the signature may be upper or\nlowercase.\nFor example, here are the headers for the above POST request to api-\nXXXXXXXX.duosecurity.com/admin/v1/users , using DIWJ8X6AEYOR5OMC6TQ1  as\nthe integration key and Zh5eGmUq9zpfQnyUIu5OL9iWoMMv5ZNmk3zLJ4Ep  as the secret\nkey:\nSeparate HTTP request header lines with CRLF newlines.\nThe following Python function can be used to construct the \"Authorization\" and \"Date\"\nheaders:\nTue, 21 Aug 2012 17:29:18 -0000\nPOST\napi-xxxxxxxx.duosecurity.com\n/admin/v1/users\nrealname=First%20Last&username=root\nTue, 21 Aug 2012 17:29:18 -0000\nGET\napi-xxxxxxxx.duosecurity.com\n/admin/v1/users\nusername=root\n\n\nDate: Tue, 21 Aug 2012 17:29:18 -0000\nAuthorization: Basic RElXSjhYNkFFWU9SNU9NQzZUUTE6YzFlZjQzNzY3YzNlY\nHost: api-XXXXXXXX.duosecurity.com\nContent-Length: 35\nContent-Type: application/x-www-form-urlencoded\nPython 3\nPython 2\nimport base64, email.utils, hmac, hashlib, urllib\n​ ​\nIf you receive 401 error responses to your API requests, check the following:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 8,
+      "end": 10
+    },
+    "content_stats": {
+      "char_count": 2667,
+      "word_count": 372
+    },
+    "hierarchy": {
+      "parent": "API Details",
+      "children": []
+    }
+  }
+}

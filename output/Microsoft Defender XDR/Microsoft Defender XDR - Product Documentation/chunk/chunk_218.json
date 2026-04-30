@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_218",
+  "section_number": "155.1.1.18.1.39.3.4",
+  "header": "Automated investigation and remediation",
+  "content": "７ Note\nBefore we walk you through this simulation, watch the following video to get\nfamiliar with what automated self-healing is, where to find it in the portal, and how\nit can help in your security operations:\nhttps://learn-video.azurefd.net/vod/player?id=340dee63-452a-4d4b-9ca3-\n562206a4bc23&locale=en-us&embedUrl=%2Fdefender-xdr%2Fpilot-deploy-\ninvestigate-respond\n\nSelect the alert that triggered an investigation to open the Investigation details page.\nYou'll see the following details:\nAlert(s) that triggered the automated investigation.\nImpacted users and devices. If indicators are found on other devices, these other\ndevices will be listed as well.\nList of evidence. The entities found and analyzed, such as files, processes, services,\ndrivers, and network addresses. These entities are analyzed for possible\nrelationships to the alert and rated as benign or malicious.\nThreats found. Known threats that are found during the investigation.\nDuring the automated investigation, Microsoft Defender for Endpoint identified the\nnotepad.exe process, which was injected as one of the artifacts requiring remediation.\nDefender for Endpoint automatically stops the suspicious process injection as part of the\nautomated remediation.\nYou can see notepad.exe disappear from the list of running processes on the test device.\n７ Note\nDepending on timing, the automated investigation might still be running. Wait a\nfew minutes for the process to complete before you collect and analyze the\nevidence and review the results. Refresh the Investigation details page to get the\nlatest findings.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 6,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 122,
+      "end": 123
+    },
+    "content_stats": {
+      "char_count": 1587,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "Investigate the incident for the simulated attack",
+      "children": []
+    }
+  }
+}

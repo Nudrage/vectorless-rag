@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_132",
+  "section_number": "2.6.16.4",
+  "header": "Using an OpenSearch Ingestion pipeline with Amazon Aurora",
+  "content": "You can use an OpenSearch Ingestion pipeline with Amazon Aurora to export existing data and\nstream changes (such as create, update, and delete) to Amazon OpenSearch Service domains\nand collections. The OpenSearch Ingestion pipeline incorporates change data capture (CDC)\ninfrastructure to provide a high-scale, low-latency way to continuously stream data from Amazon\nAurora. Aurora MySQL and Aurora PostgreSQL are supported.\nThere are two ways that you can use Amazon Aurora as a source to process data—with or without\na full initial snapshot. A full initial snapshot is a snapshot of speciﬁed tables and this snapshot is\nexported to Amazon S3. From there, an OpenSearch Ingestion pipeline sends it to one index in a\ndomain, or partitions it to multiple indexes in a domain. To keep the data in Amazon Aurora and\nOpenSearch consistent, the pipeline syncs all of the create, update, and delete events in the tables\nin Amazon Aurora clusters with the documents saved in the OpenSearch index or indexes.\nWhen you use a full initial snapshot, your OpenSearch Ingestion pipeline ﬁrst ingests the snapshot\nand then starts reading data from Amazon Aurora change streams. It eventually catches up and\nmaintains near real-time data consistency between Amazon Aurora and OpenSearch.\nYou can also use the OpenSearch Ingestion integration with Amazon Aurora to track change data\ncapture and ingest all updates in Aurora to OpenSearch. Choose this option if you already have a\nfull snapshot from some other mechanism, or if you just want to capture all changes to the data in\nAmazon Aurora cluster.\nWhen you choose this option you need to conﬁgure binary logging for Aurora MySQL or set up\nlogical replication for Aurora PostgreSQL on the cluster.\nTopics\n• Aurora MySQL\n• Aurora PostgreSQL",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 150,
+      "end": 150
+    },
+    "content_stats": {
+      "char_count": 1776,
+      "word_count": 287
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "Aurora MySQL",
+        "Aurora PostgreSQL"
+      ]
+    }
+  }
+}

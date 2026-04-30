@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2318",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nMacMruIndex\nThe index at which a record appeared in a Mac MRU file listing. This is significant for bookmark recordsfound in\nSharedFileLists, as it indicates the order in which listed resources have been accessed.\nVolumeUUID\nVolumeName\nVolumeMountPoint\nVolumeMediaSize\nVolumeIsRoot\nIndicates whether the associated volume is the root volume.\nVolumeCreationDate\nCreation time of a volume.\nCFUrlVolumePropertyFlags\nValues:\nVOLUME_PROPERTY_FLAGS_EMPTY (0x0)\nVOLUME_IS_LOCAL (0x1)\nVOLUME_IS_AUTOMOUNT (0x2)\nVOLUME_DONT_BROWSE (0x4)\nVOLUME_IS_READONLY (0x8)\nVOLUME_IS_QUARANTINED (0x10)\nVOLUME_IS_EJECTABLE (0x20)\nVOLUME_IS_REMOVABLE (0x40)\nVOLUME_IS_INTERNAL (0x80)\nVOLUME_IS_EXTERNAL (0x100)\nVOLUME_IS_DISK_IMAGE (0x200)\nVOLUME_IS_FILE_VAULT (0x400)\nVOLUME_IS_CD (0x4000)\nVOLUME_IS_DVD (0x8000)\nVOLUME_IS_DEVICE_FILESYSTEM (0x10000)\nVOLUME_SUPPORTS_PERSISTENT_IDS (0x100000000)\nVOLUME_SUPPORTS_SEARCHFS (0x200000000)\nVOLUME_SUPPORTS_EXCHANGE (0x400000000)\nVOLUME_SUPPORTS_SYMBOLIC_LINKS (0x1000000000)\nVOLUME_SUPPORTS_DENY_MODES (0x2000000000)\nVOLUME_SUPPORTS_COPY_FILE (0x4000000000)\nVOLUME_SUPPORTS_READ_DIR_ATTR (0x8000000000)\nVOLUME_SUPPORTS_JOURNALING (0x10000000000)\nVOLUME_SUPPORTS_RENAME (0x20000000000)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n815/1226\nField\nDescription\nVOLUME_SUPPORTS_FAST_STATFS (0x40000000000)\nVOLUME_SUPPORTS_CASE_SENSITIVE_NAMES (0x80000000000)\nVOLUME_SUPPORTS_CASE_PRESERVED_NAMES (0x100000000000)\nVOLUME_SUPPORTS_FLOCK (0x200000000000)\nVOLUME_HAS_NO_ROOT_DIRECTORY_TIMES (0x400000000000)\nVOLUME_SUPPORTS_EXTENDED_SECURITY (0x800000000000)\nVOLUME_SUPPORTS_2TB_FILE_SIZE (0x1000000000000)\nVOLUME_SUPPORTS_HARD_LINKS (0x2000000000000)\nVOLUME_SUPPORTS_MANDATORY_BYTE_RANGE_LOCKS (0x4000000000000)\nVOLUME_SUPPORTS_PATH_FROM_ID (0x8000000000000)\nVOLUME_IS_JOURNALING (0x20000000000000)\nVOLUME_SUPPORTS_SPARSE_FILES (0x40000000000000)\nVOLUME_SUPPORTS_ZERO_RUNS (0x80000000000000)\nVOLUME_SUPPORTS_VOLUME_SIZES (0x100000000000000)\nVOLUME_SUPPORTS_REMOTE_EVENTS (0x200000000000000)\nVOLUME_SUPPORTS_HIDDEN_FILES (0x400000000000000)\nVOLUME_SUPPORTS_DECMP_FS_COMPRESSION (0x800000000000000)\nVOLUME_HAS_64BIT_OBJECTIDS (0x1000000000000000)\nVOLUME_PROPERTY_FLAGS_A (0xffffffffffffffff)\nCFUrlResourcePropertyFlags\nCorresponds to Apple Core Foundation resource property flags defined in CFURLPriv.h.\nValues:\nRESOURCE_FLAGS_EMPTY (0)\nRESOURCE_IS_REGULARFILE (0x00000001)\nRESOURCE_IS_DIRECTORY (0x00000002)\nRESOURCE_IS_SYMBOLIC_LINK (0x00000004)\nRESOURCE_IS_VOLUME (0x00000008)\nRESOURCE_IS_PACKAGE (0x00000010)\nRESOURCE_IS_SYSTEM_IMMUTABLE (0x00000020)\nRESOURCE_IS_USER_IMMUTABLE (0x00000040)\nRESOURCE_IS_HIDDEN (0x00000080)\nRESOURCE_HAS_HIDDEN_EXTENSION (0x00000100)\nRESOURCE_IS_APPLICATION (0x00000200)\nRESOURCE_IS_COMPRESSED (0x00000400)\nCAN_SET_HIDDEN_EXTENSION (0x00000800)\nRESOURCE_IS_READABLE (0x00001000)\nRESOURCE_IS_WRITEABLE (0x00002000)\nRESOURCE_IS_EXECUTABLE (0x00004000)\nIS_ALIAS_FILE (0x00008000)\nIS_MOUNT_TRIGGER (0x00010000)\nMacBookmarkCreationDate\nCreation time of a bookmark record.\nMacBookmarkTargetFileName\nFile name of the bookmark target.\nMacBookmarkTargetURL\nURL of the bookmark target.\nMacBookmarkTargetPath\nPath of the bookmark target.\nMacBookmarkTargetCreationDate Creation timestamp of the bookmark target.\nMacBookmarkDisplayName\nDisplay name of the bookmark target.\nMacBookmarkCreatorUID\nUID of the user that created the bookmark.\nMacBookmarkCreatorUserName\nUsername of the user that created the bookmark.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 815,
+      "end": 816
+    },
+    "content_stats": {
+      "char_count": 3772,
+      "word_count": 293
+    },
+    "hierarchy": {
+      "parent": "MacMRU",
+      "children": []
+    }
+  }
+}

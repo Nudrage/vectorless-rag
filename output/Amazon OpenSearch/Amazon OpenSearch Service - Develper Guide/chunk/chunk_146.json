@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_146",
+  "section_number": "2.6.16.8.4",
+  "header": "Step 2: Create the pipeline",
+  "content": "You can then conﬁgure an OpenSearch Ingestion pipeline like the following, which speciﬁes\nAmazon DocumentDB as the source. Note that to populate the index name, the getMetadata\nAmazon DocumentDB\n167\nAmazon OpenSearch Service\nDeveloper Guide\nfunction uses documentdb_collection as a metadata key. If you want to use a diﬀerent\nindex name without the getMetadata method, you can use the conﬁguration index:\n\"my_index_name\".\nversion: \"2\"\ndocumentdb-pipeline:\nsource:\ndocumentdb:\nacknowledgments: true\nhost: \"https://docdb-cluster-id.us-east-1.docdb.amazonaws.com\"\nport: 27017\nauthentication:\nusername: ${aws_secrets:secret:username}\npassword: ${aws_secrets:secret:password}\naws:\ns3_bucket: \"bucket-name\"\ns3_region: \"bucket-region\"\ns3_prefix: \"path\" #optional path for storing the temporary data\ncollections:\n- collection: \"dbname.collection\"\nexport: true\nstream: true\nsink:\n- opensearch:\nhosts: [\"https://search-mydomain.us-east-1.es.amazonaws.com\"]\nindex: \"${getMetadata(\\\"documentdb_collection\\\")}\"\nindex_type: custom\ndocument_id: \"${getMetadata(\\\"primary_key\\\")}\"\naction: \"${getMetadata(\\\"opensearch_action\\\")}\"\ndocument_version: \"${getMetadata(\\\"document_version\\\")}\"\ndocument_version_type: \"external\"\nextension:\naws:\nsecrets:\nsecret:\nsecret_id: \"my-docdb-secret\"\nregion: \"us-east-1\"\nrefresh_interval: PT1H\nYou can use a preconﬁgured Amazon DocumentDB blueprint to create this pipeline. For more\ninformation, see the section called “Working with blueprints”.\nAmazon DocumentDB\n168\nAmazon OpenSearch Service\nDeveloper Guide\nIf you're using the AWS Management Console to create your pipeline, you must also attach your\npipeline to your VPC in order to use Amazon DocumentDB as a source. To do so, ﬁnd the Source\nnetwork options section, select the Attach to VPC checkbox, and choose your CIDR from one of\nthe provided default options. You can use any CIDR from a private address space as deﬁned in the\nRFC 1918 Best Current Practice.\nTo provide a custom CIDR, select Other from the dropdown menu. To avoid a collision in IP\naddresses between OpenSearch Ingestion and Amazon DocumentDB, ensure that the Amazon\nDocumentDB VPC CIDR is diﬀerent from the CIDR for OpenSearch Ingestion.\nFor more information, see Conﬁguring VPC access for a pipeline.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 196,
+      "end": 198
+    },
+    "content_stats": {
+      "char_count": 2243,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Amazon DocumentDB",
+      "children": []
+    }
+  }
+}

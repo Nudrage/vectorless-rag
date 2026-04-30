@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1056",
+  "section_number": "2.16.3.2",
+  "header": "k-NN diﬀerences, tuning, and limitations",
+  "content": "OpenSearch lets you modify all k-NN settings using the _cluster/settings API. On OpenSearch\nService, you can change all settings except knn.memory.circuit_breaker.enabled and\nknn.circuit_breaker.triggered. k-NN statistics are included as Amazon CloudWatch\nmetrics.\nIn particular, check the KNNGraphMemoryUsage metric on each data node against the\nknn.memory.circuit_breaker.limit statistic and the available RAM for the instance type.\nOpenSearch Service uses half of an instance's RAM for the Java heap (up to a heap size of 32 GiB).\nBy default, k-NN uses up to 50% of the remaining half, so an instance type with 32 GiB of RAM\nk-NN diﬀerences, tuning, and limitations\n1584\nAmazon OpenSearch Service\nDeveloper Guide\ncan accommodate 8 GiB of graphs (32 * 0.5 * 0.5). Performance can suﬀer if graph memory usage\nexceeds this value.\nYou can migrate a k-NN index created on version 2.x or later to UltraWarm or cold storage on a\ndomain with version 2.17 or later.\nClear cache api and warmup apis for k-NN indices are blocked for warm indices. When the ﬁrst\nquery is initiated for the index, it downloads the graph ﬁles from Amazon S3 and loads the graph\nto memory. Similarly, when TTL is expired for the graphs, the ﬁles are automatically evicted from\nmemory.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1613,
+      "end": 1614
+    },
+    "content_stats": {
+      "char_count": 1255,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "k-Nearest Neighbor (k-NN) search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

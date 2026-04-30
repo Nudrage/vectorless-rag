@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_909",
+  "section_number": "155.1.1.91.1.1.3",
+  "header": "File activities over time",
+  "content": "CloudAppEvents\n| union DeviceFileEvents\n| where FileName == \"invoice.doc\"\n| summarize FileCount = count() by bin(Timestamp, 30m)\nAfter running a query, select Export to save the results to local file. Your chosen view\ndetermines how the results are exported:\nTable view—The query results are exported in tabular form as a Microsoft Excel workbook\nAny chart—The query results are exported as a JPEG image of the rendered chart\nAfter running a query, select Filter to narrow down the results.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 602,
+      "end": 603
+    },
+    "content_stats": {
+      "char_count": 492,
+      "word_count": 79
+    },
+    "hierarchy": {
+      "parent": "Construct queries for effective charts",
+      "children": []
+    }
+  }
+}

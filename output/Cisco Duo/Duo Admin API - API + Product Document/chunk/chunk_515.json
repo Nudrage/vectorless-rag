@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_515",
+  "section_number": "1.17.21",
+  "header": "Duo Mobile App",
+  "content": "Section Name: duo_mobile_app\nCorresponds to: Duo Mobile App\nThis section is available in the Premier and Advantage editions.\nKey\nValue\nblock_policy\nIndicates when the user will be blocked from\nauthenticating. Value is one of:\nblock_remediation_days\nThe number of days before the user will be blocked.\nValue is one of 0  (default), 3 , 7 , 14 , 30 , 60 ,\n90 , 180 , or 365 . Applicable only if\nblock_policy  is less-than-latest .\nblock_version\nThe specific Duo Mobile app version (from the list\nin the edit policy UI) that is being blocked. The\ndefault is 3.8.0 . Applicable only if\nblock_policy  is less-than-version .\nrequire_updates\n(Deprecated) Is true  (default) if the Duo Mobile\napp must have up-to-date security patches.\nOtherwise false .\nno-remediation : No version checking;\nequivalent to “Never” when editing the policy\nin the UI.\n•\nless-than-latest : Duo Mobile app is not at\nthe most recently-released version.\n•\nless-than-version  (default): Duo Mobile\napp is older than the version specified in\nblock_version .\n•\nwarn_policy\nIndicates when the user should be warned that their\nDuo Mobile app is out of date. Value is one of:\nwarn_remediation_days\nThe number of days that the user will be warned.\nValue is one of 0 , 3 , 7 , 14 , 30 , 60 , 90 ,\n180 , or 365 . Applicable only if warn_policy  is\nless-than-latest .\nwarn_version\nThe specific Duo Mobile version (from the list in the\nedit policy UI) subject to the out-of-date warning.\nApplicable only if warn_policy  is less-than-\nversion .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 219,
+      "end": 220
+    },
+    "content_stats": {
+      "char_count": 1501,
+      "word_count": 257
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

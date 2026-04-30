@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_007",
+  "section_number": "7",
+  "header": "RepoSource",
+  "content": "Location of the source in a Google Cloud Source Repository.\nJSON representation\nFields\nprojectId\nstring\nID of the project that owns the Cloud Source Repository. If omitted, the project ID\nrequesting the build is assumed.\nrepoName\nstring\n{\n\"bucket\": string,\n\"object\": string,\n\"generation\": string,\n\"sourceUploadUrl\": string\n}\n{\n\"projectId\": string,\n\"repoName\": string,\n\"dir\": string,\n// Union field revision can be only one of the following:\n\"branchName\": string,\n\"tagName\": string,\n\"commitSha\": string\n// End of list of possible types for union field revision.\n}\nFields\nName of the Cloud Source Repository.\ndir\nstring\nDirectory, relative to the source root, in which to run the build.\nThis must be a relative path. If a step's dir is specified and is an absolute path, this\nvalue is ignored for that step's execution. eg. helloworld (no leading slash allowed)\nUnion field revision. A revision within the Cloud Source Repository must be specified in one of these ways.\nrevision can be only one of the following:\nbranchName\nstring\nRegex matching branches to build.\nThe syntax of the regular expressions accepted is the syntax accepted by RE2 and\ndescribed at https://github.com/google/re2/wiki/Syntax\n(https://github.com/google/re2/wiki/Syntax)\ntagName\nstring\nRegex matching tags to build.\nThe syntax of the regular expressions accepted is the syntax accepted by RE2 and\ndescribed at https://github.com/google/re2/wiki/Syntax\n(https://github.com/google/re2/wiki/Syntax)\ncommitSha\nstring\nExplicit commit SHA to build.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 17,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 7,
+      "end": 8
+    },
+    "content_stats": {
+      "char_count": 1514,
+      "word_count": 218
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

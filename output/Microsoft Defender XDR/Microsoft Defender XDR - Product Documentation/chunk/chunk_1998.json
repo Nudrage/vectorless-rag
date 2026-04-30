@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1998",
+  "section_number": "155.1.1.262.3",
+  "header": "Investigate malicious connectors",
+  "content": "You can use advanced hunting queries to gather information related to an alert and determine\nwhether the activity is suspicious.\nEnsure you have access to the following tables:\nTable Name\nDescription\nEmailEvents\nContains information related to email flow.\nCloudAppEvents\nContains audit log of user activities.\nIdentityLogonEvents\nContains login information for all users.\nRun this KQL to check new connector creation.\nKQL\nRun this KQL to check the volume of events from the alerted connector with time window\nof before and after the alerts.\nKQL",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1479,
+      "end": 1480
+    },
+    "content_stats": {
+      "char_count": 544,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Alert classification for malicious Exchange connectors",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1516",
+  "section_number": "2.27.3.5.1",
+  "header": "Conﬁgure Lambda execution role permissions",
+  "content": "In addition to conﬁguring the domain access policy, you must also ensure that the Lambda\nexecution role has the necessary IAM permissions to access your OpenSearch Service domain. The\nLambda function requires speciﬁc permissions depending on whether you're using a managed\ndomain or OpenSearch Service Serverless collection.\nFor managed OpenSearch Service domains:\nAttach the following IAM policy to your Lambda execution role to allow it to make requests to your\nOpenSearch Service domain:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\nStep 4: (Optional) Modify the domain access policy\n2021\nAmazon OpenSearch Service\nDeveloper Guide\n\"Action\": [\n\"es:ESHttpGet\",\n\"es:ESHttpPost\"\n],\n\"Resource\": \"arn:aws:es:us-west-1:123456789012:domain/domain-name/*\"\n}\n]\n}\nFor OpenSearch Service Serverless collections:\nIf you're using OpenSearch Service Serverless, attach the following IAM policy to your Lambda\nexecution role:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": \"aoss:*\",\n\"Resource\": \"arn:aws:aoss:us-west-1:123456789012:collection/collection-id\"\n}\n]\n}\nTo attach these policies to your Lambda execution role:\n1.\nNavigate to the IAM console at https://console.aws.amazon.com/iam/.\n2.\nChoose Roles and search for your Lambda execution role (typically named opensearch-\nlambda-role-xxxxxxxx).\n3.\nChoose Add permissions, then Create inline policy.\n4.\nChoose the JSON tab and paste the appropriate policy from above, replacing the placeholder\nvalues with your actual resource ARNs.\n5.\nChoose Review policy, provide a name like OpenSearchAccess, and choose Create policy.\nStep 4: (Optional) Modify the domain access policy\n2022\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nWithout these IAM permissions, your Lambda function will receive \"Access Denied\" errors\nwhen attempting to query your OpenSearch Service domain, even if the domain access\npolicy allows the requests.\nFor more information about access policies, see the section called “Conﬁguring access policies”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2050,
+      "end": 2052
+    },
+    "content_stats": {
+      "char_count": 2014,
+      "word_count": 271
+    },
+    "hierarchy": {
+      "parent": "Step 4: (Optional) Modify the domain access policy",
+      "children": []
+    }
+  }
+}

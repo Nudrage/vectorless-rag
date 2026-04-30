@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_518",
+  "section_number": "155.1.1.48.3.1",
+  "header": "Insights",
+  "content": "insights include data regarding sign-ins, group additions, anomalous events and more, and\ninclude advanced machine learning algorithms to detect anomalous behavior.\nThe following are some of the insights shown:\nUser peers based on security groups membership.\nActions by account.\nActions on account.\nEvent logs cleared by user.\nGroup additions.\nAnomalously high office operation count.\nResource access.\nAnomalously high Azure sign-in result count.\nUEBA insights.\nUser access permissions to Azure subscriptions.\nThreat indicators related to user.\nWatchlist insights (Preview).\nWindows sign-in activity.\nThe insights are based on the following data sources:\nSyslog (Linux)\nSecurityEvent (Windows)\nAuditLogs (Microsoft Entra ID)\nSigninLogs (Microsoft Entra ID)\nOfficeActivity (Office 365)\nBehaviorAnalytics (Microsoft Sentinel UEBA)\nHeartbeat (Azure Monitor Agent)\nCommonSecurityLog (Microsoft Sentinel)\nIf you want to further explore any of the insights in this panel, select the link accompanying the\ninsight. The link takes you to the Advanced hunting page, where it displays the query\nunderlying the insight, along with its raw results. You can modify the query or drill down into\nthe results to expand your investigation or just satisfy your curiosity.\nFrom the Overview page, you can perform these actions:\nEnable, disable, or suspend the user in Microsoft Entra ID\nDirect user to do certain actions such as require the user to sign in again or force\npassword reset\nView Microsoft Entra account settings, related governance, the user's owned files, or the\nuser's shared files",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 324,
+      "end": 327
+    },
+    "content_stats": {
+      "char_count": 1577,
+      "word_count": 231
+    },
+    "hierarchy": {
+      "parent": "Microsoft Sentinel events",
+      "children": []
+    }
+  }
+}

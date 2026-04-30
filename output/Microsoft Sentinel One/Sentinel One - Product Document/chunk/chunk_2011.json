@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2011",
+  "section_number": "44.32.1",
+  "header": "Parameters",
+  "content": "optional\nList of Account IDs to filter by. Example:\n\"4,2,6,4,1,8,0,3,0,2,1,2,0,7,3,7,6,2\".\noptional\nUnique ID of the uploaded indicators batch. Example:\n\"atmtn000000028a881bcf939dc6d92ab55443\".\noptional\nThe categories of the Threat Intelligence indicator, e.g.  the malware\ntype associated with the IOC\noptional\nIf true, only total number of items will be returned, without any of\nthe actual objects.\noptional\nCreation Time as set by the user greater than. Example:\n\"2021-07-12T20:33:29.007906Z\".\noptional\nCreation Time as set by the user greater or equal than. Example:\n\"2021-07-13T20:33:29.007906Z\".\noptional\nCreation Time as set by the user lesser than. Example:\n\"2021-07-13T20:33:29.007906Z\".\noptional\nCreation Time as set by the user lesser or equal than. Example:\n\"2021-07-11T20:33:29.007906Z\".\noptional\nFree-text filter by the user uploaded the Threat Intelligence indicator\n(supports multiple values). Example: \"admin@sentinelone.com\".\noptional\nCursor position returned by the last request. Should be used for\niterating over more than 1000 items. Example:\n\"YWdlbnRfaWQ6NTgwMjkzODE=\".\noptional\nFree-text filter by the description of the indicator (supports multiple\nvalues). Example: \"Malicious-activity\".\noptional\nThe unique identifier of the indicator as provided by the Threat\n1865\nIntelligence source. Example: \"e277603e-1060-5ad4-9937-\nc26c97f1ca68\".\noptional\nLimit number of returned items (1-1000). Example: \"10\".\noptional\nFree-text filter by the Indicator name (supports multiple values).\nExample: \"foo.dll\".\noptional\nSkip first number of items (0-1000). For iterating over more than a\n1000 items please use \"cursor\" instead. Example: \"150\".\noptional\nIf true, total number of items will not be calculated, which speeds up\nexecution time\noptional\nThe column to sort the results by. Example: \"id\".\noptional\nSort direction. Example: \"asc\".\noptional\nList of the sources of the identified Threat Intelligence indicator.\nExample: \"AlienVault\".\noptional\nThe type of the Threat Intelligence indicator. Example: \"IPv4\".\noptional\nThe time at which the indicator was last updated in SentinelOne DB\ngreater than. Example: \"2021-07-13T20:33:29.007906Z\".\noptional\nThe time at which the indicator was last updated in SentinelOne DB\ngreater or equal than. Example: \"2021-07-13T20:33:29.007906Z\".\noptional\nThe time at which the indicator was last updated in SentinelOne DB\nlesser than. Example: \"2021-07-13T20:33:29.007906Z\".\noptional\nThe time at which the indicator was last updated in SentinelOne DB\nlesser or equal than. Example: \"2021-07-13T20:33:29.007906Z\".\noptional\nThe time at which the Threat Intelligence indicator was uploaded to\nSentinelOne DB greater than. Example:\n\"2022-07-13T20:33:29.007906Z\".\noptional\nThe time at which the Threat Intelligence indicator was uploaded to\nSentinelOne DB greater or equal than. Example:\n\"2022-07-13T20:33:29.007906Z\".\noptional\nThe time at which the Threat Intelligence indicator was uploaded to\nSentinelOne DB lesser than. Example:\n\"2021-07-13T20:33:29.007906Z\".\noptional\nThe time at which the Threat Intelligence indicator was uploaded to\nSentinelOne DB lesser or equal than. Example:\n\"2022-07-13T20:33:29.007906Z\".\noptional\nA list of unique Ids of the parent process of the indicator of\n1866\ncompromise. Example:\n\"2,c,f,f,a,e,8,7,1,1,9,7,f,2,0,d,8,6,4,f,e,8,3,6,3,e,e,e,6,6,5,1\".\noptional\nThe value of the Threat Intelligence indicator. Example:\n\"175.45.176.1\".",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1865,
+      "end": 1867
+    },
+    "content_stats": {
+      "char_count": 3408,
+      "word_count": 445
+    },
+    "hierarchy": {
+      "parent": "Get IOCs",
+      "children": []
+    }
+  }
+}

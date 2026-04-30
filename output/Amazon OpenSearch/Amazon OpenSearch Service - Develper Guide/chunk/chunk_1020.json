@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1020",
+  "section_number": "2.15.9.1",
+  "header": "Sample search call",
+  "content": "To perform an asynchronous search, send HTTP requests to _plugins/_asynchronous_search\nusing the following format:\nPOST opensearch-domain/_plugins/_asynchronous_search\nNote\nIf you're using Elasticsearch 7.10 instead of an OpenSearch version, replace _plugins with\n_opendistro in all asynchronous search requests.\nYou can specify the following asynchronous search options:\nOptions\nDescription\nDefault\nvalue\nRequired\nwait_for_\ncompletio\nn_timeout\nSpeciﬁes the amount of time that you plan\nto wait for the results. You can see whatever\nresults you get within this time just like in a\nnormal search. You can poll the remaining\n1 second\nNo\nAsynchronous search\n1552\nAmazon OpenSearch Service\nDeveloper Guide\nOptions\nDescription\nDefault\nvalue\nRequired\nresults based on an ID. The maximum value is\n300 seconds.\nkeep_on_c\nompletion\nSpeciﬁes whether you want to save the results\nin the cluster after the search is complete. You\ncan examine the stored results at a later time.\nfalse\nNo\nkeep_aliv\ne\nSpeciﬁes the amount of time that the result\nis saved in the cluster. For example, 2d means\nthat the results are stored in the cluster for\n48 hours. The saved search results are deleted\nafter this period or if the search is canceled.\nNote that this includes the query runtime.\nIf the query overruns this time, the process\ncancels this query automatically.\n12 hours\nNo\nSample request\nPOST _plugins/_asynchronous_search/?\npretty&size=10&wait_for_completion_timeout=1ms&keep_on_completion=true&request_cache=false\n{\n\"aggs\": {\n\"city\": {\n\"terms\": {\n\"field\": \"city\",\n\"size\": 10\n}\n}\n}\n}\nSample search call\n1553\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nAll request parameters that apply to a standard _search query are supported. If you're\nusing Elasticsearch 7.10 instead of an OpenSearch version, replace _plugins with\n_opendistro.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1581,
+      "end": 1583
+    },
+    "content_stats": {
+      "char_count": 1817,
+      "word_count": 266
+    },
+    "hierarchy": {
+      "parent": "Asynchronous search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

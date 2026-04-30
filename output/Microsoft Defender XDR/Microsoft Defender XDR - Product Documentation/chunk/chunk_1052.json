@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1052",
+  "section_number": "155.1.1.141",
+  "header": "FileMaliciousContentInfo (Preview)",
+  "content": "Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe FileMaliciousContentInfo  table in the advanced hunting schema contains information\nabout files that were processed by Microsoft Defender for Office 365 in SharePoint Online,\nOneDrive, and Microsoft Teams. Use this reference to construct queries that return information\nfrom this table.\nThis advanced hunting table is populated by records from Defender for Office 365. If your\norganization didn't deploy the service in Microsoft Defender XDR, queries that use the table\naren’t going to work or return any results. For more information about how to deploy Defender\nfor Office 365 in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the event was generated\nWorkload\nstring\nInformation about the workload from which the URL originated\nfrom\nFileName\nstring\nName of the file that the recorded action was applied to\nFolderPath\nstring\nPath of the folder containing the file that the recorded action was\napplied to\n） Important\nSome information relates to prereleased product which might be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\n Tip\nFor detailed information about the events types ( ActionType  values) supported by a table,\nuse the built-in schema reference available in Microsoft Defender XDR.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nFileSize\nlong\nSize of the file in bytes\nSHA256\nstring\nSHA-256 of the file that the recorded action was applied to\nFileOwnerDisplayName\nstring\nAccount recorded as owner of the file\nFileOwnerUpn\nstring\nAccount recorded as owner of the file\nDocumentId\nstring\nUnique identifier of the file\nThreatTypes\ndynamic\nVerdict from the email filtering stack on whether the email\ncontains malware, phishing, or other threats\nThreatNames\nstring\nDetection name for malware or other threats found\nDetectionMethods\nstring\nMethods used to detect malware, phishing, or other threats\nfound in the email\nLastModifyingAccountUpn\nstring\nAccount that last modified this file\nLastModifiedTime\ndatetime\nDate and time the item or related metadata was last modified\nFileCreationTime\ndatetime\nTimestamp of the file creation\nReportId\nstring\nUnique identifier for the event\nAdvanced hunting overview\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\nLast updated on 12/04/2025",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 783,
+      "end": 784
+    },
+    "content_stats": {
+      "char_count": 2654,
+      "word_count": 395
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Read more"
+      ]
+    }
+  }
+}

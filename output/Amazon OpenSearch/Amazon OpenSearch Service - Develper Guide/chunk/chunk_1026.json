@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1026",
+  "section_number": "2.15.10.1",
+  "header": "Considerations",
+  "content": "Consider the following when you conﬁgure your PIT searches:\n• If you're upgrading from domain running OpenSearch version 2.3 and need ﬁne-grain access\ncontrol on PIT actions, you need to manually add those actions and roles.\n• There's no resiliency for PIT. Node reboot, node termination, blue/green deployments, and\nOpenSearch process restarts cause all PIT data to be lost.\n• If a shard relocates during blue/green deployment, only live data segments are transferred to\nthe new node. Segments of shards held by PIT (both exclusively and the one shared with lived\ndata) remain on the old node.\nPoint in time\n1557\nAmazon OpenSearch Service\nDeveloper Guide\n• PIT searches currently don't work with asynchronous search.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1586,
+      "end": 1587
+    },
+    "content_stats": {
+      "char_count": 717,
+      "word_count": 115
+    },
+    "hierarchy": {
+      "parent": "Point in time search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

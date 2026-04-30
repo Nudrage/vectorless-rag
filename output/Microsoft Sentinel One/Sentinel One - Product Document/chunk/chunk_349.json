@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_349",
+  "section_number": "3.32",
+  "header": "Shutdown",
+  "content": "POST    /web/api/v2.1/agents/actions/shutdown\nYou can shut down endpoints remotely for performance, maintenance, or security.\nThis command shuts down all endpoints that match the filter. Best Practice:  If an endpoint is infected, we recommend the \"disconnect\" command and not the \"shutdown\"\ncommand. The disconnect command secures the environment from infection while you analyze the cause and best response.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 696,
+      "end": 696
+    },
+    "content_stats": {
+      "char_count": 409,
+      "word_count": 56
+    },
+    "hierarchy": {
+      "parent": "Agent Actions",
+      "children": [
+        "If the endpoint is offline, the shutdown command is not available. BEST PRACTICE",
+        "If an endpoint is infected, we recommend the \"disconnect\" command and not the \"shutdown\" command. The disconnect command secures the environment from",
+        "Response Messages",
+        "Response Schema",
+        "Body Schema"
+      ]
+    }
+  }
+}

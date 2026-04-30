@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1862",
+  "section_number": "155.1.1.252.2",
+  "header": "Permissions",
+  "content": "ﾉ\nExpand table\n７ Note\nHTTP\nName\nType\nDescription\nAuthorization\nString\nBearer {token}. Required\nNone.\nIf successful, this method returns 200 OK , and a list of incidents in the response body.\nField name\nDescription\nExample value\nincidentId\nUnique identifier to represent the incident\n924565\nredirectIncidentId\nOnly populated in case an incident is being grouped together with another\nincident, as part of the incident processing logic.\n924569\nincidentName\nString value available for every incident.\nRansomware activity\ncreatedTime\nTime when incident was first created.\n2020-09-\n06T14:46:57.0733333Z\nlastUpdateTime\nTime when the incident was last updated on the backend.\nThis field can be used when you're setting the request parameter for the range of\ntime that incidents are retrieved.\n2020-09-06T14:46:57.29Z\nassignedTo\nOwner of the incident, or null if no owner is assigned.\nsecop2@contoso.com\nWhen obtaining a token using user credentials:\nThe user needs to have view permission for incidents in the portal.\nThe response will only include incidents that the user is exposed to.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 19,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1386,
+      "end": 1387
+    },
+    "content_stats": {
+      "char_count": 1080,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "List incidents API in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

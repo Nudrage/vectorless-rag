@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_1876",
+  "section_number": "155.1.1.251",
+  "header": "Update incidents API",
+  "content": "Article • 04/25/2025 • Applies to: Microsoft Defender XDR\nUpdates properties of existing incident. Updatable properties are: status , determination ,\nclassification , assignedTo , tags , and comments .\n1. You can make up to 50 calls per minute or 1,500 calls per hour before you hit the\nthrottling threshold.\n2. You can set the determination  property only if classification  is set to TruePositive.\nIf your request is throttled, it returns a 429  response code. The response body indicates the\ntime when you can begin making new calls.\nOne of the following permissions is required to call this API. To learn more, including how to\nchoose permissions, see Access the Microsoft Defender XDR APIs.\nPermission type\nPermission\nPermission display name\nApplication\nIncident.ReadWrite.All\nRead and write all incidents\n７ Note\nTry our new APIs using MS Graph security API. Find out more at: Use the Microsoft\nGraph security API - Microsoft Graph | Microsoft Learn. For information about the new\nupdate incident API using MS Graph security API, see Update incident.\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1401,
+      "end": 1401
+    },
+    "content_stats": {
+      "char_count": 1284,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "API description",
+        "Permissions",
+        "HTTP request",
+        "Request headers",
+        "Request body",
+        "Response",
+        "Example",
+        "Related articles"
+      ]
+    }
+  }
+}

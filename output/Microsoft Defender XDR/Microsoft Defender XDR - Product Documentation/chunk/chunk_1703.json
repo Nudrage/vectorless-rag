@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1703",
+  "section_number": "155.1.1.231.5.2.2",
+  "header": "Option 2: Provide admin consent by authenticating the application as an admin",
+  "content": "admin\nThen, admins review the permissions and make sure to select Consent on behalf of your\norganization, and then select Accept.\nAll users in the tenant can now use this application.\nIf neither of these options resolve the issue, try the following steps (as an admin):\n1. Remove previous configurations for the application. Go to Enterprise applications\nand\nselect delete.\n2. Capture TenantID  from Properties\n.\n3. Replace {tenant-id}  with the specific tenant that needs to grant consent to this\napplication in the URL below. Copy the following URL into browser:\nhttps://login.microsoftonline.com/{tenant-id}/v2.0/adminconsent?client_id=f0cf43e5-\n8a9b-451c-b2d5-\n7285c785684d&state=12345&redirect_uri=https%3a%2f%2fwww.microsoft.com%2fwdsi%2ffiles\nubmission&scope=openid+profile+email+offline_access\nThe rest of the parameters are already completed.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1272,
+      "end": 1274
+    },
+    "content_stats": {
+      "char_count": 851,
+      "word_count": 103
+    },
+    "hierarchy": {
+      "parent": "Implement required Enterprise Application permissions",
+      "children": []
+    }
+  }
+}

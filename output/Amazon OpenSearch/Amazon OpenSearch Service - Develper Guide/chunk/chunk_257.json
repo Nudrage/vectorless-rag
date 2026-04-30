@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_257",
+  "section_number": "2.7.1",
+  "header": "What is Amazon OpenSearch Serverless?",
+  "content": "Amazon OpenSearch Serverless is an on-demand, serverless option for Amazon OpenSearch\nService that eliminates the operational complexity of provisioning, conﬁguring, and tuning\nOpenSearch clusters. It’s ideal for organizations that prefer not to self-manage their clusters or\nBeneﬁts\n370\nAmazon OpenSearch Service\nDeveloper Guide\nlack the dedicated resources and expertise to operate large-scale deployments. With OpenSearch\nServerless, you can search and analyze large volumes of data without managing the underlying\ninfrastructure.\nAn OpenSearch Serverless collection is a group of OpenSearch indexes that work together to\nsupport a speciﬁc workload or use case. Collections simplify operations compared to self-managed\nOpenSearch clusters, which require manual provisioning.\nCollections use the same high-capacity, distributed, and highly available storage as provisioned\nOpenSearch Service domains, but further reduce complexity by eliminating manual conﬁguration\nand tuning. Data within a collection is encrypted in transit. OpenSearch Serverless also supports\nOpenSearch Dashboards, providing an interface for data analysis.\nCurrently, serverless collections run OpenSearch version 2.17.x. As new versions are released,\nOpenSearch Serverless automatically upgrades collections to incorporate new features, bug ﬁxes,\nand performance improvements.\nOpenSearch Serverless supports the same ingest and query API operations as the OpenSearch\nopen source suite, so you can continue to use your existing clients and applications. Your clients\nmust be compatible with OpenSearch 2.x in order to work with OpenSearch Serverless. For more\ninformation, see the section called “Ingesting data into collections”.\nTopics\n• Use cases for OpenSearch Serverless\n• How it works\n• Choosing a collection type\n• Pricing\n• Supported AWS Regions\n• Limitations\n• Comparing OpenSearch Service and OpenSearch Serverless",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 399,
+      "end": 400
+    },
+    "content_stats": {
+      "char_count": 1898,
+      "word_count": 258
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless",
+      "children": [
+        "Use cases for OpenSearch Serverless",
+        "How it works",
+        "Choosing a collection type",
+        "Pricing",
+        "Supported AWS Regions",
+        "Limitations",
+        "Comparing OpenSearch Service and OpenSearch Serverless"
+      ]
+    }
+  }
+}

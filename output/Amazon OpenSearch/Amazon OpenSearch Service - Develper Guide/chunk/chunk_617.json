@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_617",
+  "section_number": "2.9.10",
+  "header": "Supported SQL and PPL commands",
+  "content": "OpenSearch SQL and OpenSearch Pipeline Processing Language (PPL) are languages for querying,\nanalyzing, and processing data in OpenSearch, CloudWatch Logs Insights, and Security Lake.\nYou can use OpenSearch SQL and OpenSearch PPL in OpenSearch Discover to query data within\nCloudWatch Logs, Amazon S3, or Security Lake. CloudWatch Logs Insights also supports both\nOpenSearch PPL and OpenSearch SQL query languages, in addition to Logs Insights QL, a purpose-\nbuilt query language for analyzing CloudWatch Logs.\n• OpenSearch SQL: OpenSearch SQL provides a familiar option if you're used to working with\nrelational databases. OpenSearch SQL oﬀers a subset of SQL functionality, making it a good\nchoice for performing ad-hoc queries and data analysis tasks. With OpenSearch SQL, you can\nuse commands such as SELECT, FROM, WHERE, GROUP BY, HAVING, and various other SQL\ncommands and functions available in SQL. You can execute JOINs across tables (or log groups),\ncorrelate data across tables (or log groups) using subqueries, and use the rich set of JSON,\nmathematical, string, conditional, and other SQL functions to perform powerful analysis on log\nand security data.\nMaterialized views\n774\nAmazon OpenSearch Service\nDeveloper Guide\n• OpenSearch PPL (Piped Processing Language): With OpenSearch PPL, you can retrieve, query,\nand analyze data using piped-together commands, making it easier to understand and compose\ncomplex queries. Its syntax is based on Unix pipes, and enables chaining of commands to\ntransform and process data. With PPL, you can ﬁlter and aggregate data, and use commands\nsuch as JOINs, subqueries, LOOKUP, and a rich set of math, string, date, conditional, and other\nfunctions for analysis.\nAlthough most of the commands in OpenSearch PPL and OpenSearch SQL query languages are\ncommon across CloudWatch Logs and OpenSearch, there are some diﬀerences in which set of\ncommands and functions are supported in each of these services. For more details, see the tables\non the following pages.\n• the section called “Supported SQL commands”\n• the section called “CloudWatch Logs Insights”\n• the section called “General SQL restrictions”\n• the section called “Supported PPL commands”\n• the section called “Additional information for CloudWatch Logs Insights users using\nOpenSearch PPL”",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 803,
+      "end": 804
+    },
+    "content_stats": {
+      "char_count": 2297,
+      "word_count": 351
+    },
+    "hierarchy": {
+      "parent": "Working with Amazon OpenSearch Service direct queries",
+      "children": [
+        "Supported OpenSearch SQL commands and functions",
+        "Supported PPL commands"
+      ]
+    }
+  }
+}

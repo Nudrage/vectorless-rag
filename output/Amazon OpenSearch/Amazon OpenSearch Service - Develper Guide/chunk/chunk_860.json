@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_860",
+  "section_number": "2.12.9.3.4",
+  "header": "Step 4: Conﬁgure SAML ﬁelds",
+  "content": "After you input your IdP metadata, conﬁgure the following additional ﬁelds within the OpenSearch\nService console:\n• IdP entity ID – Copy the value of the entityID property from your metadata ﬁle and paste\nit into this ﬁeld. Many identity providers also display this value as part of a post-conﬁguration\nsummary. Some providers call it the \"issuer\".\n• SAML master username and SAML master backend role – The user and/or backend role that\nyou specify receive full permissions to the cluster, equivalent to a new master user, but can only\nuse those permissions within OpenSearch Dashboards.\nIn Okta, for example, you might have a user jdoe who belongs to the group admins. If you\nadd jdoe to the SAML master username ﬁeld, only that user receives full permissions. If you\nConﬁguring SP- or IdP-initiated authentication\n1383\nAmazon OpenSearch Service\nDeveloper Guide\nadd admins to the SAML master backend role ﬁeld, any user that belongs to the admins group\nreceives full permissions.\nNote\nThe contents of the SAML assertion must exactly match the strings that you use for the\nSAML master username and SAML master role. Some identity providers add a preﬁx\nbefore their usernames, which can cause a hard-to-diagnose mismatch. In the identity\nprovider user interface, you might see jdoe, but the SAML assertion might contain\nauth0|jdoe. Always use the string from the SAML assertion.\nMany identity providers let you view a sample assertion during the conﬁguration process, and tools\nlike SAML-tracer can help you examine and troubleshoot the contents of real assertions. Assertions\nlook something like this:\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<saml2:Assertion ID=\"id67229299299259351343340162\"\nIssueInstant=\"2020-09-22T22:03:08.633Z\" Version=\"2.0\"\nxmlns:saml2=\"urn:oasis:names:tc:SAML:2.0:assertion\">\n<saml2:Issuer Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:entity\">idp-issuer</\nsaml2:Issuer>\n<saml2:Subject>\n<saml2:NameID Format=\"urn:oasis:names:tc:SAML:1.1:nameid-\nformat:unspecified\">username</saml2:NameID>\n<saml2:SubjectConfirmation Method=\"urn:oasis:names:tc:SAML:2.0:cm:bearer\">\n<saml2:SubjectConfirmationData NotOnOrAfter=\"2020-09-22T22:08:08.816Z\"\nRecipient=\"domain-endpoint/_dashboards/_opendistro/_security/saml/acs\"/>\n</saml2:SubjectConfirmation>\n</saml2:Subject>\n<saml2:Conditions NotBefore=\"2020-09-22T21:58:08.816Z\"\nNotOnOrAfter=\"2020-09-22T22:08:08.816Z\">\n<saml2:AudienceRestriction>\n<saml2:Audience>domain-endpoint</saml2:Audience>\n</saml2:AudienceRestriction>\n</saml2:Conditions>\n<saml2:AuthnStatement AuthnInstant=\"2020-09-22T19:54:37.274Z\">\n<saml2:AuthnContext>\n<saml2:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport<\nsaml2:AuthnContextClassRef>\nConﬁguring SP- or IdP-initiated authentication\n1384\nAmazon OpenSearch Service\nDeveloper Guide\n</saml2:AuthnContext>\n</saml2:AuthnStatement>\n<saml2:AttributeStatement>\n<saml2:Attribute Name=\"role\" NameFormat=\"urn:oasis:names:tc:SAML:2.0:attrname-\nformat:unspecified\">\n<saml2:AttributeValue\nxmlns:xs=\"http://www.w3.org/2001/XMLSchema\"\nxmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\nxsi:type=\"xs:string\">GroupName Match Matches regex \".+\" (case-sensitive)\n</saml2:AttributeValue>\n</saml2:Attribute>\n</saml2:AttributeStatement>\n</saml2:Assertion>",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1412,
+      "end": 1414
+    },
+    "content_stats": {
+      "char_count": 3259,
+      "word_count": 323
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring SP- or IdP-initiated authentication",
+      "children": []
+    }
+  }
+}

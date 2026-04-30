@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_009",
+  "section_number": "1.4.3",
+  "header": "Key data fields",
+  "content": "These are some of the most commonly used data fields associated with events. Fields that begin with lowercase letters are present in all events.\nField Name\nDescription\nExample value\naid\nThe sensor ID. This value is unique to each installation of a Falcon\nsensor. When a sensor is reinstalled, the host gets a new aid. In those\nsituations, a single host could have multiple aid values over time.\n\"a26a23c103cb4c9s5c39aa09effa5662\"\naip\nThe sensor’s IP, as seen from the CrowdStrike cloud. This is typically\nthe public IP of the sensor. This helps determine the location of a\ncomputer, depending on your network.\n\"#.##.#.###\"\nComputerName\nThe name of the host.\n\"my-host-name\"\nContextProcessId\nThe unique ID of a process that was spawned by another process. For\nexample, if Process 1 spawns Process 2, the TargetProcessId of\nProcess 1 will match the ContextProcessId of Process 2.\n\"22603276734\"\nContextThreadId\nUTID of thread originating this event.\n\"395202677966\"\nContextTimeStamp\nThe time at which an event occurred on the system, as seen by the\nsensor. Not to be confused with timestamp which is the time the event\nwas received by the cloud.\n\"1309294523.160\"\nevent_platform\nThe platform on which the sensor is running.\n\"Win\"/\"Mac\"/\"Lin\"\nevent_simpleName\nThe name of the event.\n\"SuspiciousDnsRequest\"\nFileName\nThe name of the file.\n\"my_file.docx\"\nFilePath\nThe full path of the file, including the file name.\n\"\\Device\\HarddiskVolume1\\sds2\\1043\\asdj64.exe\"\nTargetProcessId\nThe unique ID of a target process. This field exists in almost all events,\nand it represents the ID of the process that is responsible for the\nactivity of the event in focus. For example, the TargetProcessId of a\nprocess that performed thread injection in an InjectedThread event.\n\"167558096500\"\ntimestamp\nTimestamp when the event was received by the CrowdStrike cloud. Not\nto be confused with the time the event was generated locally on the\nsystem. timestamp is epoch formatted. To make timestamps reader-\nfriendly, add the search parameter that corresponds to your\nenvironment.\n| ProcessStartTime:=ProcessStartTime*1000 |\nProcessStartTime:=formatTime(format=\"%F %T.%L\",\nfield=\"ProcessStartTime\")\n1508334994001\n_time\nTimestamp of the moment that the event was received by the\nCrowdStrike cloud. This is not to be confused with the time the event\nwas generated locally on the system. This is the timestamp of the\nevent from the cloud's point of view. This value can be converted to\nany time format and can be used for calculations.\n\"10/19/2017 18:10:29.396\"\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\n\"42958187116\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 16,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 2,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 2617,
+      "word_count": 400
+    },
+    "hierarchy": {
+      "parent": "Before you begin",
+      "children": []
+    }
+  }
+}

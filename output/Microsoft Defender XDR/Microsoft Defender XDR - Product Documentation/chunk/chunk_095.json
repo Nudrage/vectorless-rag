@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_095",
+  "section_number": "155.1.1.14.2",
+  "header": "Data retention",
+  "content": "exception and are not deleted.\nIn the Microsoft Defender portal's Advanced hunting page, data is accessible via queries for\nonly 30 days, unless it's streamed through Microsoft Sentinel, where retention periods may be\nlonger.\nData continues to be retained and visible, even when a license is under a grace period or in\nsuspended mode. At the end of any grace period or suspension, and no later than 180 days\nfrom a contract termination or expiration, data is deleted from Microsoft's systems and is\nunrecoverable.\nMost Defender services also have a default data retention period of 180 days. More\ninformation on data retention period per product is found in relevant service docs.\nMicrosoft Defender XDR shares data among the following Microsoft products, also licensed by\nthe customer. For customers in the Government Community Cloud (GCC), data sharing\nbetween government and commercial cloud environments may occur, depending on the\nlocation of the service offering.\nMicrosoft Defender for Cloud\nMicrosoft Defender for Identity\nMicrosoft Defender for Endpoint\nMicrosoft Defender for Cloud Apps\nMicrosoft Defender for Office 365\nMicrosoft Defender for IoT\nMicrosoft Sentinel\nMicrosoft Intune\nMicrosoft Purview\nMicrosoft Entra\nMicrosoft Defender Vulnerability Management\nMicrosoft Copilot for Security\nFor more information, see:\nDefender for Endpoint data storage and privacy\nDefender for Office 365 data retention information\nDefender for Identity data storage and privacy\nDefender for Cloud Apps data storage and privacy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 48,
+      "end": 49
+    },
+    "content_stats": {
+      "char_count": 1523,
+      "word_count": 227
+    },
+    "hierarchy": {
+      "parent": "Data security and retention in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

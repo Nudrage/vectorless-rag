@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1064",
+  "section_number": "2.16.4.4",
+  "header": "Import Amazon S3 vector namespace to OpenSearch Service vector engine",
+  "content": "engine\nAnalyzing your vector data with OpenSearch Service requires a one-time OpenSearch Service\ncollection and IAM permission setup.\nTo import Amazon S3 vector namespace to OpenSearch Service vector engine\n1.\nIn the Source section, conﬁgure the Amazon S3 vector index:\n•\nFor Amazon S3 vector index ARN, enter the ARN of your Amazon S3 vector index.\nNote\nMust be in format arn:aws:iam::account-id:vector-bucket-name/*:index\n2.\nIn the Service access section, conﬁgure OpenSearch Service authorization:\na.\nFor Choose a method to authorize OpenSearch Service, select one of the following:\n• Create and use a new service role\n• Use an existing service role\nb.\nFor Service role name, enter a name for the service role.\nNote\nService role name must be 1 to 64 characters. Valid characters are a-z, A-Z, 0-9,\nand periods (.).\nc.\nChoose View permission details to review the required permissions.\n3.\nExpand Additional settings - optional to conﬁgure advanced options if needed.\n4.\nIn the Import steps section, conﬁgure the following automation options:\n• Automate OpenSearch Service vector collection creation - OpenSearch Service collections\nare used to store vector data. Serverless compute capacity is measured in OpenSearch\nService Compute Units (OCUs), by default the Max OCU capacity is 50.\n• Automate IAM role creation for service access - This role is used by OpenSearch Service to\nread the Amazon S3 vector index and write to the OpenSearch Service collection.\nImport Amazon S3 vector namespace to OpenSearch Service vector engine\n1589\nAmazon OpenSearch Service\nDeveloper Guide\n• Automate OpenSearch Service ingestion pipeline creation - OpenSearch Service ingestion\npipelines are used to ingest data. An Amazon S3 bucket is created as a best practice to\ncapture and store failed events in an Amazon S3 bucket Dead Letter Queue (DLQ), enabling\neasy access for troubleshooting and analysis.\n5.\nChoose Import to start the import process, or choose Cancel to exit without importing.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1618,
+      "end": 1619
+    },
+    "content_stats": {
+      "char_count": 1979,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Vector ingestion",
+      "children": []
+    }
+  }
+}

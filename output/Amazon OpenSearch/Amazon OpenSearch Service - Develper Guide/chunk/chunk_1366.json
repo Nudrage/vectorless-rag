@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1366",
+  "section_number": "2.24.4.3.2",
+  "header": "Traces View",
+  "content": "The Traces view enables deep investigation of individual requests through your distributed system:\n• Trace grouping by HTTP method and path – Automatically organizes traces into logical\ngroups based on API endpoints, showing aggregate metrics like average latency, error rate, and\nperformance trends over time. This helps you identify which endpoints are experiencing issues\nand track performance improvements.\n• Trace ID and span ID search – Quickly locate speciﬁc traces using trace identiﬁers or span\nidentiﬁers. This is particularly useful when investigating issues reported by users or correlating\nwith error logs that contain trace context.\n• Waterfall charts – Visualize the complete timeline of a request as it ﬂows through your services.\nThe waterfall view shows span timing and duration, making it easy to identify slow operations,\nsequential vs. parallel processing, and where time is being spent in your distributed system.\n• Tree view with hierarchical span breakdown – Navigate the parent-child relationships between\nspans to understand the call hierarchy within a trace. This view helps you see how a request\nbranches across services and identify which service calls are contributing to overall latency.\n• Associated logs panel – View logs that occurred during the same timeframe as your trace,\nﬁltered by relevant service and trace context. This correlation between traces and logs\nKey Features\n1833\nAmazon OpenSearch Service\nDeveloper Guide\nsigniﬁcantly improves troubleshooting by providing both the request ﬂow and detailed\napplication logs in a single interface.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1862,
+      "end": 1863
+    },
+    "content_stats": {
+      "char_count": 1582,
+      "word_count": 238
+    },
+    "hierarchy": {
+      "parent": "Key Features",
+      "children": []
+    }
+  }
+}

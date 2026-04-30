@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_747",
+  "section_number": "155.1.1.71.1.2",
+  "header": "Use arg() operator for Azure Resource Graph queries",
+  "content": "７ Note\nThe arg()  operator isn't supported for analytics rules.\nFor example:\nYou can also, for instance, filter a query that searches over Microsoft Sentinel data based on the\nresults of an Azure Resource Graph query:\nKusto\nFor more information about creating custom functions in the Defender portal, see Custom\nfunctions in the advanced hunting schema.\nTo use a saved query from Microsoft Sentinel, go to the Queries tab and scroll until you find\nthe query that you want. Double-click the query name to load the query in the query editor.\nFor more options, select the vertical ellipses (\n) to the right of the query. From here, you can\nperform the following actions:\nRun query – Loads the query in the query editor and runs it automatically.\nOpen in query editor – Loads the query in the query editor.\n\narg(\"\").Resources\n| where type==\"microsoft.compute/virtualmachines\" | extend name = tolower(name)\n| join (\nBehaviorAnalytics\n| where isnotempty(SourceDevice) and InvestigationPriority > 2 | extend SourceDevice\n= tolower(SourceDevice)\n) on $left.name == $right.SourceDevice",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 485,
+      "end": 486
+    },
+    "content_stats": {
+      "char_count": 1077,
+      "word_count": 171
+    },
+    "hierarchy": {
+      "parent": "Use functions",
+      "children": []
+    }
+  }
+}

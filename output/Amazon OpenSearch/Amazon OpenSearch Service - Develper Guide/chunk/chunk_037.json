@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_037",
+  "section_number": "2.6.7.1",
+  "header": "Pipeline role",
+  "content": "A pipeline needs certain permissions to read from its source and write to its sink. These permissions\ndepend on the client application or AWS service that is writing to the pipeline, and whether the\nsink is an OpenSearch Service domain, an OpenSearch Serverless collection, or Amazon S3. In\naddition, a pipeline might need permissions to physically pull data from the source application (if\nthe source is a pull-based plugin), and permissions to write to an S3 dead letter queue, if enabled.\nWhen you create a pipeline, you have the option of specifying an existing IAM role that you\nmanually created, or having OpenSearch Ingestion automatically create the pipeline role based on\nthe source and the sink that you selected. The following image shows how to specify the pipeline\nrole in the AWS Management Console.\nPipeline role\n29\nAmazon OpenSearch Service\nDeveloper Guide\nTopics\n• Automating pipeline role creation\n• Manually creating the pipeline role",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 58,
+      "end": 59
+    },
+    "content_stats": {
+      "char_count": 953,
+      "word_count": 154
+    },
+    "hierarchy": {
+      "parent": "Setting up roles and users in Amazon OpenSearch Ingestion",
+      "children": [
+        "Automating pipeline role creation",
+        "Manually creating the pipeline role"
+      ]
+    }
+  }
+}

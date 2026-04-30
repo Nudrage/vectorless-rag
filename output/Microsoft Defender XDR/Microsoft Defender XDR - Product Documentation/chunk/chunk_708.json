@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_708",
+  "section_number": "155.1.1.67.2",
+  "header": "Quotas and usage parameters",
+  "content": "ﾉ\nExpand table\nQuota or\nparameter\nSize\nRefresh\ncycle\nDescription\nCPU\nresources\nBased on tenant size\nEvery 15\nminutes\nThe portal displays a warning whenever a query\nruns and the tenant consumes over 10% of\nallocated resources. Queries are blocked if the\ntenant reaches 100% until after the next 15-minute\ncycle.\nResults size\nlimit\n64 MB\nEvery\nquery\nThe limit for overall size of the results data, which\ndoesn't just refer to the number of records. Factors\nsuch as the number of columns, data types, and\nfield lengths also contribute to the result size.\nIn the unified Microsoft Defender portal, you can run queries over Microsoft Sentinel tables by\nonboarding a workspace. Log analytics workspace limits therefore also apply.\nFor advanced hunting in multitenant organizations, see Quotas in advanced hunting in\nmultitenant management.\nAdvanced hunting data uses the UTC (Universal Time Coordinated) timezone.\n７ Note\nA separate set of quotas and parameters apply to advanced hunting queries performed\nthrough the API. Read about advanced hunting APIs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 453,
+      "end": 454
+    },
+    "content_stats": {
+      "char_count": 1048,
+      "word_count": 166
+    },
+    "hierarchy": {
+      "parent": "Proactively hunt for threats with advanced hunting in Microsoft Defender",
+      "children": []
+    }
+  }
+}

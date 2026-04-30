@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_1949",
+  "section_number": "155.1.1.258",
+  "header": "Alert classification for suspicious email forwarding activity",
+  "content": "forwarding activity\nArticle • 04/18/2025 • Applies to: Microsoft Defender XDR\nThreat actors can use compromised user accounts for several malicious purposes, including\nreading emails in a user's inbox, forwarding emails to external recipients, and sending phishing\nmails, among others. The targeted user might be unaware that their emails are being\nforwarded. This is a common tactic that attackers use when user accounts are compromised.\nEmails can be forwarded either manually or automatically using forwarding rules. Automatic\nforwarding can be implemented in multiple ways like Inbox Rules, Exchange Transport Rule\n(ETR), and SMTP Forwarding. While manual forwarding requires direct action from users, they\nmight not be aware of all the autoforwarded emails. In Microsoft 365, an alert is raised when a\nuser autoforwards an email to a potentially malicious email address.\nThis playbook helps you investigate Suspicious Email Forwarding Activity alerts and quickly\ngrade them as either a true positive (TP) or a false positive (FP). You can then take\nrecommended actions for the TP alerts to remediate the attack.\nFor an overview of alert classifications for Microsoft Defender for Office 365 and Microsoft\nDefender for Cloud Apps, see the introduction article.\nThe results of using this playbook are:\nYou identify the alerts associated with autoforwarded emails as malicious (TP) or benign\n(FP) activities.\nIf malicious, you have stop email autoforwarding for the affected mailboxes.\nYou take the necessary action if emails were forwarded to a malicious email address.\nEmail forwarding rules allow users to create a rule to forward email messages sent to a user's\nmailbox to another user's mailbox inside or outside of the organization. Some email users,\nparticularly those with multiple mailboxes, configure forwarding rules to move employer emails\nto their private email accounts. Email forwarding is a useful feature but can also pose a security\nrisk because of the potential disclosure of information. Attackers might use this information to\nattack your organization or its partners.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1449,
+      "end": 1449
+    },
+    "content_stats": {
+      "char_count": 2091,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Email forwarding rules",
+        "Alert details",
+        "Investigation workflow",
+        "Using Threat Explorer",
+        "Advanced hunting queries",
+        "Recommended actions",
+        "See also"
+      ]
+    }
+  }
+}

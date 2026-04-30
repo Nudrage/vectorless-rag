@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_306",
+  "section_number": "2.7.4.1.2",
+  "header": "Valid capacity limit values",
+  "content": "When setting minimum and maximum OCU limits for a collection group, you can only use values\nfrom the following set: 1, 2, 4, 8, 16, and multiples of 16 (such as 32, 48, 64, 80, 96).\nBoth minimum and maximum OCU limits are optional when you create a collection group. If you\ndon't specify a maximum OCU limit, OpenSearch Serverless uses a default value of 96 OCUs.\nThe minimum OCU limit must be less than or equal to the maximum OCU limit. The sum of all\nmaximum OCU limits across your account-level settings and all collection groups cannot exceed\n1,700 OCUs per account.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 472,
+      "end": 472
+    },
+    "content_stats": {
+      "char_count": 571,
+      "word_count": 103
+    },
+    "hierarchy": {
+      "parent": "Collection group capacity limits",
+      "children": []
+    }
+  }
+}

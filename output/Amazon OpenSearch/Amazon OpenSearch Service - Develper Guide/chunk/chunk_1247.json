@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1247",
+  "section_number": "2.19.8.7",
+  "header": "Stop replication",
+  "content": "When you stop replication completely, the follower index unfollows the leader and becomes a\nstandard index. You can't restart replication after you stop it.\nStop replication from the follower domain. Make sure to include an empty request body:\nPOST _plugins/_replication/follower-01/_stop\n{}\nPause and resume replication\n1745\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1774,
+      "end": 1775
+    },
+    "content_stats": {
+      "char_count": 367,
+      "word_count": 51
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster replication for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

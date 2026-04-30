@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_466",
+  "section_number": "2.8.5.1",
+  "header": "Changes that usually cause blue/green deployments",
+  "content": "The following operations cause blue/green deployments:\n• Changing the instance type\nConﬁguration changes\n628\nAmazon OpenSearch Service\nDeveloper Guide\n• Enabling ﬁne-grained access control\n• Performing service software updates\n• Enabling or disabling dedicated master nodes\n• Enabling or disabling Multi-AZ without Standby\n• Changing the storage type, volume type, or volume size\n• Choosing diﬀerent VPC subnets\n• Adding or removing VPC security groups\n• Adding or removing dedicated coordinator nodes\n• Enabling or disabling Amazon Cognito authentication for OpenSearch Dashboards\n• Choosing a diﬀerent Amazon Cognito user pool or identity pool\n• Modifying advanced settings\n• Upgrading to a new OpenSearch version (OpenSearch Dashboards might be unavailable during\nsome or all of the upgrade)\n• Enabling encryption of data at rest or node-to-node encryption\n• Enabling or disabling UltraWarm or cold storage\n• Disabling Auto-Tune and rolling back its changes\n• Associating an optional plugin to a domain and dissociating an optional plugin from a domain\n• Increasing the dedicated master node count for Multi-AZ domains with two dedicated master\nnodes\n• Decreasing the EBS volume size\n• Changing EBS volume size, IOPS, or throughput, if the the last change you made is in progress or\noccurred less than 6 hours ago\n• Enabling the publication of audit logs to CloudWatch.\nFor Multi-AZ with Standby domains, you can only make one change request at a time. If a change\nis already in progress, the new request is rejected. You can check the status of the current change\nwith the DescribeDomainChangeProgress API.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 657,
+      "end": 658
+    },
+    "content_stats": {
+      "char_count": 1610,
+      "word_count": 253
+    },
+    "hierarchy": {
+      "parent": "Making conﬁguration changes in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

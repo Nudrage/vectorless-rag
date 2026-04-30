@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_817",
+  "section_number": "2.12.4.6.3",
+  "header": "Mapping roles to users",
+  "content": "Role mapping is the most critical aspect of ﬁne-grained access control. Fine-grained access control\nhas some predeﬁned roles to help you get started, but unless you map roles to users, every request\nto the cluster ends in a permissions error.\nBackend roles can help simplify the role mapping process. Rather than mapping the same role\nto 100 individual users, you can map the role to a single backend role that all 100 users share.\nBackend roles can be IAM roles or arbitrary strings.\n• Specify users, user ARNs, and Amazon Cognito user strings in the Users section. Cognito user\nstrings take the form of Cognito/user-pool-id/username.\n• Specify backend roles and IAM role ARNs in the Backend roles section.\nManaging permissions\n1347\nAmazon OpenSearch Service\nDeveloper Guide\nYou can map roles to users using OpenSearch Dashboards or the _plugins/_security operation\nin the REST API. For more information, see Map users to roles.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1376,
+      "end": 1377
+    },
+    "content_stats": {
+      "char_count": 929,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Managing permissions",
+      "children": []
+    }
+  }
+}

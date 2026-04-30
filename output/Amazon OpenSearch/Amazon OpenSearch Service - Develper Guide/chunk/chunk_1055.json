@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1055",
+  "section_number": "2.16.3.1",
+  "header": "Getting started with k-NN",
+  "content": "To use k-NN, you must create an index with the index.knn setting and add one or more ﬁelds of\nthe knn_vector data type.\nPUT my-index\n{\n\"settings\": {\n\"index.knn\": true\n},\n\"mappings\": {\n\"properties\": {\n\"my_vector1\": {\n\"type\": \"knn_vector\",\n\"dimension\": 2\n},\n\"my_vector2\": {\n\"type\": \"knn_vector\",\n\"dimension\": 4\n}\n}\n}\n}\nThe knn_vector data type supports a single list of up to 10,000 ﬂoats, with the number of ﬂoats\ndeﬁned by the required dimension parameter. After you create the index, add some data to it.\nPOST _bulk\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"1\" } }\n{ \"my_vector1\": [1.5, 2.5], \"price\": 12.2 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"2\" } }\n{ \"my_vector1\": [2.5, 3.5], \"price\": 7.1 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"3\" } }\nGetting started with k-NN\n1582\nAmazon OpenSearch Service\nDeveloper Guide\n{ \"my_vector1\": [3.5, 4.5], \"price\": 12.9 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"4\" } }\n{ \"my_vector1\": [5.5, 6.5], \"price\": 1.2 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"5\" } }\n{ \"my_vector1\": [4.5, 5.5], \"price\": 3.7 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"6\" } }\n{ \"my_vector2\": [1.5, 5.5, 4.5, 6.4], \"price\": 10.3 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"7\" } }\n{ \"my_vector2\": [2.5, 3.5, 5.6, 6.7], \"price\": 5.5 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"8\" } }\n{ \"my_vector2\": [4.5, 5.5, 6.7, 3.7], \"price\": 4.4 }\n{ \"index\": { \"_index\": \"my-index\", \"_id\": \"9\" } }\n{ \"my_vector2\": [1.5, 5.5, 4.5, 6.4], \"price\": 8.9 }\nThen you can search the data using the knn query type.\nGET my-index/_search\n{\n\"size\": 2,\n\"query\": {\n\"knn\": {\n\"my_vector2\": {\n\"vector\": [2, 3, 5, 6],\n\"k\": 2\n}\n}\n}\n}\nIn this case, k is the number of neighbors you want the query to return, but you must also include\nthe size option. Otherwise, you get k results for each shard (and each segment) rather than k\nresults for the entire query. k-NN supports a maximum k value of 10,000.\nIf you mix the knn query with other clauses, you might receive fewer than k results. In this\nexample, the post_filter clause reduces the number of results from 2 to 1.\nGET my-index/_search\n{\n\"size\": 2,\n\"query\": {\n\"knn\": {\nGetting started with k-NN\n1583\nAmazon OpenSearch Service\nDeveloper Guide\n\"my_vector2\": {\n\"vector\": [2, 3, 5, 6],\n\"k\": 2\n}\n}\n},\n\"post_filter\": {\n\"range\": {\n\"price\": {\n\"gte\": 6,\n\"lte\": 10\n}\n}\n}\n}\nIf you need to handle a large volume of queries while maintaining optimal performance, you can\nuse the _msearch API to construct a bulk search with JSON and send a single request to perform\nmultiple searches:\nGET _msearch\n{ \"index\": \"my-index\"}\n{ \"query\": { \"knn\": {\"my_vector2\":{\"vector\": [2, 3, 5, 6],\"k\":2 }} } }\n{ \"index\": \"my-index\", \"search_type\": \"dfs_query_then_fetch\"}\n{ \"query\": { \"knn\": {\"my_vector1\":{\"vector\": [2, 3],\"k\":2 }} } }\nThe following video demonstrates how to set up bulk vector searches for K-NN queries.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1611,
+      "end": 1613
+    },
+    "content_stats": {
+      "char_count": 2844,
+      "word_count": 491
+    },
+    "hierarchy": {
+      "parent": "k-Nearest Neighbor (k-NN) search in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

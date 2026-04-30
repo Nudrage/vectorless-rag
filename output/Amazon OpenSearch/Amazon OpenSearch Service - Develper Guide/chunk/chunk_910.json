@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_910",
+  "section_number": "2.12.12.3",
+  "header": "Using service-linked roles to create OpenSearch Ingestion pipelines",
+  "content": "Amazon OpenSearch Ingestion uses AWS Identity and Access Management (IAM) service-linked\nroles. A service-linked role is a unique type of IAM role that is linked directly to OpenSearch\nIngestion. Service-linked roles are predeﬁned by OpenSearch Ingestion and include all the\npermissions that the service requires to call other AWS services on your behalf.\nOpenSearch Ingestion uses the service-linked role named\nAWSServiceRoleForAmazonOpenSearchIngestionService, except when you\nuse a self-managed VPC, in which case it uses the service-linked role named\nAWSServiceRoleForOpensearchIngestionSelfManagedVpce. The attached policy provides the\npermissions necessary for the role to create a virtual private cloud (VPC) between your account and\nOpenSearch Ingestion, and to publish CloudWatch metrics to your account.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1448,
+      "end": 1448
+    },
+    "content_stats": {
+      "char_count": 813,
+      "word_count": 109
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles for Amazon OpenSearch Service",
+      "children": [
+        "Permissions",
+        "Creating the service-linked role for OpenSearch Ingestion",
+        "Editing the service-linked role for OpenSearch Ingestion",
+        "Deleting the service-linked role for OpenSearch Ingestion"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1658",
+  "section_number": "155.1.1.223.4",
+  "header": "Search for events using a PowerShell script",
+  "content": "$cred = Get-Credential\n$s = New-PSSession -ConfigurationName microsoft.exchange -ConnectionUri\nhttps://outlook.office365.com/powershell-liveid/ -Credential $cred -Authentication\nBasic -AllowRedirection\nImport-PSSession $s\nSearch-UnifiedAuditLog -StartDate 2023/03/12 -EndDate 2023/03/20 -RecordType <ID>\n７ Note\nSee the API column in Audit activities included for the record type values.\nFor more information, see Use a PowerShell script to search the audit log\nDetailed properties in the audit log\nExport, configure, and view audit log records\nOffice 365 Management Activity API reference",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1235,
+      "end": 1236
+    },
+    "content_stats": {
+      "char_count": 588,
+      "word_count": 71
+    },
+    "hierarchy": {
+      "parent": "Search the audit log for events in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

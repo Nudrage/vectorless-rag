@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2466",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nUID\nUnix User Identifier.\nRUID\nThe real UID for a unix style process.\nSVUID\nThe saved effective UID for a unix style process.\nGID\nUnix Group Identifier.\nRGID\nThe real GID for a unix style process.\nSVGID\nThe saved effective UID for a unix style process.\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nProcessStartTime\nThe time the process began in UNIX epoch time (in decimal, non-hex format).\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nEnvironmentVariables\nCurrentWorkingPath\nVirtualMemorySize\nSize, in KiB, of virtual address space allocated to a process.\nResidentSetSize\nSize, in KiB, of memory physically allocated to a process.\nProcessThreadCount\nNumber of threads belonging to a process.\nProcessPriority\nScheduling priority value of a process.\nProcessNiceValue\nNice value of a process.\nControllingTerminal\nName of the controlling terminal of a process.\nTtyName\nName of attached TTY/PTY.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 861,
+      "end": 861
+    },
+    "content_stats": {
+      "char_count": 1440,
+      "word_count": 208
+    },
+    "hierarchy": {
+      "parent": "ProcessState",
+      "children": []
+    }
+  }
+}

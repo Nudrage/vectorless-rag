@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_821",
+  "section_number": "155.1.1.79.2.3",
+  "header": "Check if files from a known malicious sender are on your devices",
+  "content": "devices\nEmailAttachmentInfo\n| where SenderFromAddress =~ \"MaliciousSender@example.com\"\n//Get emails with attachments identified by a SHA-256\n| where isnotempty(SHA256)\n| join (\n//Check devices for any activity involving the attachments\nDeviceFileEvents\n| project FileName, SHA256, DeviceName, DeviceId\n) on SHA256\n| project Timestamp, FileName , SHA256, DeviceName, DeviceId,  NetworkMessageId,\nSenderFromAddress, RecipientEmailAddress",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 541,
+      "end": 541
+    },
+    "content_stats": {
+      "char_count": 435,
+      "word_count": 50
+    },
+    "hierarchy": {
+      "parent": "Hunting scenarios",
+      "children": []
+    }
+  }
+}

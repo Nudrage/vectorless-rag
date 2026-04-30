@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2000",
+  "section_number": "155.1.1.263.2.3",
+  "header": "Sample queries",
+  "content": "//modify timeWindow to modify the lookback.\nlet timeWindow = now(-7d); let timeNow = now();\nCloudAppEvents\n| where Timestamp between (timeWindow .. timeNow)\n| where isnotempty(AccountObjectId)\n| where ActionType == \"New-InboundConnector\"\n| mvexpand property = RawEventData.Parameters\n| extend ConnectorName = iff(property.Name == \"Name\", property.Value, \"\"),\nIsEnabled = iff((property.Name == \"Enabled\" and property.Value == \"True\"),\ntrue, false)\n| where isnotempty( ConnectorName) or IsEnabled\n| project-reorder ConnectorName, IsEnabled\n//modify timeWindow to modify the lookback.\nlet timeWindow = now(-7d); let timeNow = now();\nlet connectorOperations = pack_array(\"Set-OutboundConnector\",\n\"New-OutboundConnector\", \"Set-InboundConnector\", \"New-InboundConnector\");\nlet mailThreshold = 100; //define threshold for inspection and filtering\nlet myConnector= //use this code block to specify relevant connector(s)\nCloudAppEvents\nRun this KQL to check whether emails are being sent to external domains.\nKQL\nIf sent to external domains, who else in the environment is sending similar emails\n(Could indicate compromised user if recipient is unknown domain).\nKQL\nCheck the mail content for bad behavior\n| where Timestamp between (timeWindow .. timeNow)\n| where ActionType has_any (connectorOperations)\n| mv-expand property = RawEventData.Parameters\n| where property.Name == \"Name\"\n| summarize by ConnectorName=tostring(property.Value)\n;\nEmailEvents\n| where isnotempty( toscalar (myConnector))\n| where Timestamp between (timeWindow .. timeNow)\n| where isnotempty( SenderObjectId) and isnotempty( Connectors)\n| where Connectors in (toscalar (myConnector))\n| summarize MailCount = dcount(NetworkMessageId) by Connectors,\nSenderObjectId, bin(Timestamp, 1h)\n| where MailCount >= mailThreshold\n//modify timeWindow to modify the lookback.\nlet timeWindow = now(-7d); let timeNow = now();\nEmailEvents\n| where Timestamp between (timeWindow .. timeNow)\n| where isnotempty( SenderObjectId)\n| extend RecipientDomain= split(RecipientEmailAddress, \"@\")[1]\n| where (SenderFromDomain != RecipientDomain) or (SenderMailFromDomain\n!= RecipientDomain)\n| where EmailDirection !in (\"Intra-org\" , \"Inbound\") //comment this line to\nlook across all mailflow directions\n//modify timeWindow to modify the lookback.\nlet timeWindow = now(-7d); let timeNow = now();\nlet countThreshold= 100; //modify count threshold accordingly\nEmailEvents\n| where Timestamp between (timeWindow .. timeNow)\n| where isnotempty( SenderObjectId)\n| extend RecipientDomain= split(RecipientEmailAddress, \"@\")[1]\n| where (SenderFromDomain != RecipientDomain) or (SenderMailFromDomain\n!= RecipientDomain)\n| where EmailDirection !in (\"Intra-org\" , \"Inbound\")\n| summarize MailCount= dcount(NetworkMessageId) by SenderObjectId,\nSenderFromAddress, SenderMailFromAddress , bin(Timestamp, 1h)\n| where MailCount > countThreshold\nLook at URLs in the email or email having attachments.\nFollowing are the query considerations for protecting the recipients from malicious attack.\nCheck for admin logins for those who frequently manage connectors from unusual\nlocations (generate stats and exclude locations from where most successful logins are\nobserved).\nLook for login failures from unusual locations.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1480,
+      "end": 1482
+    },
+    "content_stats": {
+      "char_count": 3230,
+      "word_count": 400
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting queries",
+      "children": []
+    }
+  }
+}

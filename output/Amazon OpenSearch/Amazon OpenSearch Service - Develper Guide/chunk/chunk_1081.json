@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1081",
+  "section_number": "2.16.5.5.5",
+  "header": "Building an index from recommendations",
+  "content": "After reviewing the optimization recommendations, you can either manually create an index\nusing the recommended conﬁguration or automatically build an index with the selected\nrecommendation.\nTo build an index automatically\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the navigation pane, choose Auto-Optimize.\n3.\nIn the Vector Ingestion Jobs table, choose a job with Completed status.\n4.\nReview the recommendations and select the one you want to use.\n5.\nChoose Build index.\n6.\nThe system automatically creates an index in your cluster using the selected recommendation\nand ingests the vector data from your Parquet dataset.\nTo build an index manually\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the navigation pane, choose Auto-Optimize.\n3.\nIn the Vector Ingestion Jobs table, choose a job with Completed status.\n4.\nReview the recommendations and note the index conﬁguration and search conﬁguration\nparameters for your chosen recommendation.\n5.\nUse the OpenSearch API or console to manually create an index with the recommended\nparameters.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1632,
+      "end": 1632
+    },
+    "content_stats": {
+      "char_count": 1157,
+      "word_count": 171
+    },
+    "hierarchy": {
+      "parent": "Using auto-optimize in the console",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_707",
+  "section_number": "155.1.1.67.1.1",
+  "header": "Event or activity data",
+  "content": "Event or activity data populates tables about alerts, security events, system events, and routine\nassessments. Advanced hunting receives this data almost immediately after the sensors that\ncollect them successfully transmit them to the corresponding cloud services. For example, you\ncan query event data from healthy sensors on workstations or domain controllers almost\nimmediately after they're available on Microsoft Defender for Endpoint and Microsoft Defender\nfor Identity.\nTo collect even more event properties, you can turn on aggregated reporting.\nEntity data populates tables with information about users and devices. This data comes from\nboth relatively static data sources and dynamic sources, such as Active Directory entries and\nevent logs. To provide fresh data, tables are updated every hour to insert a record that contains\nthe latest, most comprehensive data set about each entity, including other useful information\nsuch as health status and tags.\nTo keep the service performant and responsive, advanced hunting sets various quotas and\nusage parameters (also known as \"service limits\"). These quotas and parameters apply\nseparately to queries run manually and to queries run using custom detection rules. Be mindful\nof these limits if you regularly run multiple queries. Apply optimization best practices to\nminimize disruptions.\nRefer to the following table to understand existing quotas and usage parameters.\nQuota or\nparameter\nSize\nRefresh\ncycle\nDescription\nDate range\n30 days for Defender\nXDR data unless\nstreamed through\nMicrosoft Sentinel\nEvery\nquery\nEach query can look up Defender XDR data from\nup to the past 30 days, or longer if streamed\nthrough Microsoft Sentinel\nResult set\n100,000 rows\nEvery\nquery\nEach query can return up to 100,000 records.\nTimeout\n10 minutes\nEvery\nquery\nEach query can run for up to 10 minutes. If it\ndoesn't complete within 10 minutes, the service\ndisplays an error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 452,
+      "end": 453
+    },
+    "content_stats": {
+      "char_count": 1918,
+      "word_count": 294
+    },
+    "hierarchy": {
+      "parent": "Data freshness and update frequency",
+      "children": []
+    }
+  }
+}

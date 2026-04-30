@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_730",
+  "section_number": "2.10.4.7.2",
+  "header": "KMS key inaccessible",
+  "content": "OpenSearch Service sends this event when it can't access your AWS KMS key.\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Domain Error Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2016-11-01T13:12:22Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\":{\n\"event\":\"KMS Key Inaccessible\",\n\"status\":\"Error\",\n\"severity\":\"High\",\n\"description\":\"The KMS key associated with this domain is inaccessible. You are at\nrisk of losing access to your domain.\nFor more information, please refer to https://docs.aws.amazon.com/\nopensearch-service/latest/developerguide/encryption-at-rest.html#disabled-key.\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1299,
+      "end": 1299
+    },
+    "content_stats": {
+      "char_count": 755,
+      "word_count": 69
+    },
+    "hierarchy": {
+      "parent": "Domain error events",
+      "children": []
+    }
+  }
+}

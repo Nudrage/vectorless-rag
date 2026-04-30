@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_483",
+  "section_number": "155.1.1.222.9.7",
+  "header": "Manage alerts",
+  "content": "The Manage alert pane allows you to view or specify:\nThe alert status (New, Resolved, In progress).\nThe user account that has been assigned the alert.\nThe alert's classification:\nNot Set (default).\nTrue positive with a type of threat. Use this classification for alerts that accurately\nindicate a real threat. Specifying this threat type alerts your security team see threat\npatterns and act to defend your organization from them.\nInformational, expected activity with a type of activity. Use this option for alerts that\nare technically accurate, but represent normal behavior or simulated threat activity. You\ngenerally want to ignore these alerts but expect them for similar activities in the future\nwhere the activities are triggered by actual attackers or malware. Use the options in\nthis category to classify alerts for security tests, red team activity, and expected\nunusual behavior from trusted apps and users.\nFalse positive for types of alerts that were created even when there's no malicious\nactivity or for a false alarm. Use the options in this category to classify alerts that are\nmistakenly identified as normal events or activities as malicious or suspicious. Unlike\nalerts for 'Informational, expected activity', which can also be useful for catching real\nthreats, you generally don't want to see these alerts again. Classifying alerts as false\npositive helps Microsoft Defender XDR improve its detection quality.\nA comment on the alert.\n\nTo manage a set of alerts similar to a specific alert, select View similar alerts in the INSIGHT box\nin the summary details section of the alert page.\nFrom the Manage alerts pane, you can then classify all of the related alerts at the same time.\nHere's an example.\n７ Note\nIn August 2022, previously supported alert determination values ( Apt  and\nSecurityPersonnel ) were deprecated and are no longer available via the API.\nOne way of managing alerts it through the use of tags. The tagging capability for\nMicrosoft Defender for Office 365 is currently in preview, rolling out incrementally.\nCurrently, modified tag names are only applied to alerts created after the update. Alerts\nthat were generated before the modification will not reflect the updated tag name.\n\nIf similar alerts were already classified in the past, you can save time by using Microsoft\nDefender XDR recommendations to learn how the other alerts were resolved. From the\nsummary details section, select Recommendations.\nThe Recommendations tab provides next-step actions and advice for investigation,\nremediation, and prevention. Here's an example.\n\n\nAs a security operations center (SOC) analyst, one of the top issues is triaging the sheer\nnumber of alerts that are triggered daily. An analyst's time is valuable, wanting to focus only on\nhigh severity and high priority alerts. Meanwhile, analysts are also required to triage and\nresolve lower priority alerts, which tend to be a manual process.\nAlert tuning, previously known as alert suppression, provides the ability to tune and manage\nalerts in advance. This streamlines the alert queue and saves triage time by hiding or resolving\nalerts automatically, each time a certain expected organizational behavior occurs and rule\nconditions are met.\nAlert tuning rules support conditions based on evidence types such as files, processes,\nscheduled tasks, and other types of evidence that trigger alerts. After creating an alert tuning\nrule, apply it to the selected alert or any alert type that meets the defined conditions to tune\nthe alert.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 302,
+      "end": 306
+    },
+    "content_stats": {
+      "char_count": 3524,
+      "word_count": 562
+    },
+    "hierarchy": {
+      "parent": "Investigate alerts in Microsoft Defender XDR",
+      "children": []
+    }
+  }
+}

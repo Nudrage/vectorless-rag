@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_284",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "Vector search collections have the following limitations:\nWorking with vector search collections\n411\nAmazon OpenSearch Service\nDeveloper Guide\n• Vector search collections don't support the Apache Lucene ANN engine.\n• Vector search collections only support the HNSW algorithm with Faiss and do not support IVF\nand IVFQ.\n• Vector search collections don't support the warmup, stats, and model training API operations.\n• Vector search collections don't support inline or stored scripts.\n• Index count information isn't available in the AWS Management Console for vector search\ncollections.\n• The refresh interval for indexes on vector search collections is 60 seconds.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 440,
+      "end": 441
+    },
+    "content_stats": {
+      "char_count": 664,
+      "word_count": 99
+    },
+    "hierarchy": {
+      "parent": "Working with vector search collections",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_206",
+  "section_number": "155.1.1.18.1.38.2",
+  "header": "Defender for Endpoint attack tutorials & simulations",
+  "content": "In this optional incident response exercise, you'll simulate an attack on an isolated\nActive Directory Domain Services (AD DS) domain controller and Windows device using\na PowerShell script and then investigate, remediate, and resolve the incident.\nFirst, you need to add endpoints to your pilot environment.\nFirst, you need to add an isolated AD DS domain controller and a Windows device to\nyour pilot environment.\n1. Verify your pilot environment tenant has enabled Microsoft Defender XDR.\n2. Verify that your domain controller:\nRuns Windows Server 2008 R2 or a later version.\nReports to Microsoft Defender for Identity and has enabled remote\nmanagement.\nHas Microsoft Defender for Identity and Microsoft Defender for Cloud Apps\nintegration enabled.\nHas a test user is created in the test domain. Administrator-level permissions\naren't needed.\n3. Verify that your test device:\nRuns Windows 10 version 1903 or a later version.\nIs joined to the AD DS domain controller domain.\nHas Microsoft Defender Antivirus enabled. If you're having trouble enabling\nMicrosoft Defender Antivirus, see this troubleshooting topic.\nIs onboarded to Microsoft Defender for Endpoint.\nIf you use tenant and device groups, create a dedicated device group for the test device\nand push it to top level.\nOne alternative is to host your AD DS domain controller and test device as virtual\nmachines in Microsoft Azure infrastructure services. You can use the instructions in\nPhase 1 of the simulated enterprise Test Lab Guide, but skip the creation of the APP1\nvirtual machine.\nHere's the result.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 111,
+      "end": 112
+    },
+    "content_stats": {
+      "char_count": 1568,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "Step 2. Simulate attacks with the Microsoft Defender portal",
+      "children": []
+    }
+  }
+}

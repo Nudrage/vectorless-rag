@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_815",
+  "section_number": "2.12.4.6.1",
+  "header": "Creating roles",
+  "content": "You can create new roles for ﬁne-grained access control using OpenSearch Dashboards or the\n_plugins/_security operation in the REST API. For more information, see Create roles.\nFine-grained access control also includes a number of predeﬁned roles. Clients such as OpenSearch\nDashboards and Logstash make a wide variety of requests to OpenSearch, which can make\nit hard to manually create roles with the minimum set of permissions. For example, the\nopensearch_dashboards_user role includes the permissions that a user needs to work with\nindex patterns, visualizations, dashboards, and tenants. We recommend mapping it to any user\nManaging permissions\n1344\nAmazon OpenSearch Service\nDeveloper Guide\nor backend role that accesses Dashboards, along with additional roles that allow access to other\nindices.\nAmazon OpenSearch Service doesn't oﬀer the following OpenSearch roles:\n• observability_full_access\n• observability_read_access\n• reports_read_access\n• reports_full_access\nAmazon OpenSearch Service oﬀers several roles that aren't available with OpenSearch:\n• ultrawarm_manager\n• ml_full_access\n• cold_manager\n• notifications_full_access\n• notifications_read_access\nCluster-level security\nCluster-level permissions include the ability to make broad requests such as _mget, _msearch,\nand _bulk, monitor health, take snapshots, and more. Manage these permissions using the Cluster\nPermissions section when creating a role. For a full list of cluster-level permissions, see Cluster\npermissions.\nRather than individual permissions, you can often achieve your desired security posture using a\ncombination of the default action groups. For a list of cluster-level action groups, see Cluster-level.\nIndex-level security\nIndex-level permissions include the ability to create new indices, search indices, read and write\ndocuments, delete documents, manage aliases, and more. Manage these permissions using the\nIndex Permissions section when creating a role. For a full list of index-level permissions, see Index\npermissions.\nRather than individual permissions, you can often achieve your desired security posture using a\ncombination of the default action groups. For a list of index-level action groups, see Index-level.\nManaging permissions\n1345\nAmazon OpenSearch Service\nDeveloper Guide\nDocument-level security\nDocument-level security lets you restrict which documents in an index a user can see. When\ncreating a role, specify an index pattern and an OpenSearch query. Any users that you map to that\nrole can see only the documents that match the query. Document-level security aﬀects the number\nof hits that you receive when you search.\nFor more information, see Document-level security.\nField-level security\nField-level security lets you control which document ﬁelds a user can see. When creating a role, add\na list of ﬁelds to either include or exclude. If you include ﬁelds, any users you map to that role can\nsee only those ﬁelds. If you exclude ﬁelds, they can see all ﬁelds except the excluded ones. Field-\nlevel security aﬀects the number of ﬁelds included in hits when you search.\nFor more information, see Field-level security.\nField masking\nField masking is an alternative to ﬁeld-level security that lets you anonymize the data in a ﬁeld\nrather than remove it altogether. When creating a role, add a list of ﬁelds to mask. Field masking\naﬀects whether you can see the contents of a ﬁeld when you search.\nTip\nIf you apply the standard masking to a ﬁeld, OpenSearch Service uses a secure, random\nhash that can cause inaccurate aggregation results. To perform aggregations on masked\nﬁelds, use pattern-based masking instead.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1373,
+      "end": 1375
+    },
+    "content_stats": {
+      "char_count": 3627,
+      "word_count": 536
+    },
+    "hierarchy": {
+      "parent": "Managing permissions",
+      "children": []
+    }
+  }
+}

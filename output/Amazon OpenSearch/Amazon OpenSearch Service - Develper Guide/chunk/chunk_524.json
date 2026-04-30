@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_524",
+  "section_number": "2.23.3",
+  "header": "Conﬁgure permissions",
+  "content": "If you're upgrading to 2.5 from a previous OpenSearch Service domain version, the snapshot\nmanagement security permissions might not be deﬁned on the domain. Non-admin users must be\nmapped to this role in order to use snapshot management on domains using ﬁne-grained access\ncontrol. To manually create the snapshot management role, perform the following steps:\n1.\nIn OpenSearch Dashboards, go to Security and choose Permissions.\n2.\nChoose Create action group and conﬁgure the following groups:\nGroup name\nPermissions\nsnapshot_\nmanagemen\nt_full_ac\ncess\n• cluster:admin/opensearch/snapshot_management/*\n• cluster:admin/opensearch/notifications/featur\ne/publish\n• cluster:admin/repository/*\n• cluster:admin/snapshot/*\nsnapshot_\nmanagemen\nt_read_ac\ncess\n• cluster:admin/opensearch/snapshot_management/\npolicy/get\n• cluster:admin/opensearch/snapshot_management/\npolicy/search\nAutomating snapshots with Snapshot Management\n695\nAmazon OpenSearch Service\nDeveloper Guide\nGroup name\nPermissions\n• cluster:admin/opensearch/snapshot_management/\npolicy/explain\n• cluster:admin/repository/get\n• cluster:admin/snapshot/get\n3.\nChoose Roles and Create role.\n4.\nName the role snapshot_management_role.\n5.\nFor Cluster permissions, select snapshot_management_full_access or\nsnapshot_management_read_access.\n6.\nChoose Create.\n7.\nAfter you create the role, map it to any user or backend role that will manage snapshots.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 724,
+      "end": 725
+    },
+    "content_stats": {
+      "char_count": 1398,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Automating snapshots with Snapshot Management",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_101",
+  "section_number": "2.6.13.2",
+  "header": "Starting an Amazon OpenSearch Ingestion pipeline",
+  "content": "You always start an OpenSearch Ingestion pipeline beginning with a pipeline that's already in\nthe stopped state. The pipeline keeps its conﬁguration settings such as capacity limits, network\nsettings, and log publishing options.\nRestarting a pipeline usually takes several minutes.\nConsole\nTo start a pipeline\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the navigation pane, choose Pipelines, and then choose a pipeline. You can perform the\nstart operation from this page, or navigate to the details page for the pipeline that you want\nto start.\n3.\nFor Actions, choose Start pipeline.\nAWS CLI\nTo start a pipeline by using the AWS CLI, call the start-pipeline command with the following\nparameters:\n• --pipeline-name – the name of the pipeline.\nExample\naws osis start-pipeline --pipeline-name my-pipeline\nOpenSearch Ingestion API\nTo start an OpenSearch Ingestion pipeline using the OpenSearch Ingestion API, call the\nStartPipeline operation with the following parameter:\n• PipelineName – the name of the pipeline.\nStarting a pipeline\n90\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 119,
+      "end": 120
+    },
+    "content_stats": {
+      "char_count": 1136,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "Managing Amazon OpenSearch Ingestion pipeline costs",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "1.5",
+  "header": "Path parameters",
+  "content": "Parameters\nuserKey or all\nstring\nRepresents the profile ID or the user email for which the data should be filtered.\nCan be all for all information, or userKey for a user's unique Google\nWorkspace profile ID or their primary email address. Must not be a deleted user.\nFor a deleted user, call users.list in Directory API with showDeleted=true\n(https://developers.google.com/workspace/admin/directory/reference/rest/v1/\nusers/list#body.QUERY_PARAMETERS.show_deleted)\n, then use the returned ID as the userKey.\napplicationName\nenum (ApplicationName\n(/workspace/admin/reports/reference/rest/v1/activities/list#ApplicationName)\n)\nApplication name for which the events are to be retrieved.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 1
+    },
+    "content_stats": {
+      "char_count": 683,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Method: activities.list",
+      "children": []
+    }
+  }
+}

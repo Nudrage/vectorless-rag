@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_525",
+  "section_number": "1.17.31",
+  "header": "Trusted Endpoints",
+  "content": "Section Name: trusted_endpoints\nCorresponds to: Trusted Endpoints\nA trusted endpoint is an endpoint that exists in a management system such as your\nEAM or MDM. It can be matched to your management system using Duo certificates or\ninformation provided by the Duo Mobile app.\nKey\nValue\ntrusted_endpoint_checking\nValue is one of allow-all\n(default), require-trusted , or\nnot-configured . Value will be\nnot-configured  if Trusted\nEndpoints management systems\nhave not been configured. Trusted\nendpoints will still be checked for\nreporting purposes if allow-all  is\nset, but untrusted endpoints will be\nallowed.\ntrusted_endpoint_exception_ip_list\nComma-separated list of public IP\naddresses that bypass the trusted\ndevice check when\ntrusted_endpoint_checking  is\nset to require-trusted . IP\naddress lists can contain individual\nIPs, IP ranges and IP ranges in CIDR\nnotation. Example: [\"192.0.2.8\",\n\"198.51.100.0-198.51.100.20\",\n\"203.0.113.0/24\"]\ncisco_secure_endpoint_can_block\nIs true  if Cisco Secure Endpoint is\nallowed to block compromised\nendpoints. Otherwise false\n(default).\ntrusted_endpoint_checking_mobile\nAllowed values and default are the\nsame as\ntrusted_endpoint_checking .\nDuo recommends not setting this\nvalue separately from\ntrusted_endpoint_checking .\nSince the user-agent string is self-\nreported by the browser, it's\npossible to manipulate it from the\nclient side to change the value\nreported to Duo, with the potential\neffect of bypassing a policy intended\nto block access.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 227,
+      "end": 228
+    },
+    "content_stats": {
+      "char_count": 1487,
+      "word_count": 204
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

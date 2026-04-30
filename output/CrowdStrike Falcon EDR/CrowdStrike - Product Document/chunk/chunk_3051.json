@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3051",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nFileDescriptor\nTargetFileName\nThe resulting file name that was downloaded\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1121/1226\nField\nDescription\nFileOffset\nFlags\nMountNamespaceUniqueId\nFileDescriptorType\nValues:\nREGULAR (1)\nEVENTFD (2)\nEPOLL (3)\nSIGNALFD (4)\nFANOTIFY (5)\nTIMERFD (6)\nINOTIFY (7)\nEventFDCount\nSignalMask\nFanotifyFlagsArgument\nFanotifyEventFlagsArgument\nClockId\nTicks\nSettimeFlagsOctalString\nSecondsUntilNextTick\nNanosecondsUntilNextTick\nIntervalSeconds\nIntervalNanoseconds\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1121,
+      "end": 1122
+    },
+    "content_stats": {
+      "char_count": 882,
+      "word_count": 93
+    },
+    "hierarchy": {
+      "parent": "ProcessOpenedFileDescriptor",
+      "children": []
+    }
+  }
+}

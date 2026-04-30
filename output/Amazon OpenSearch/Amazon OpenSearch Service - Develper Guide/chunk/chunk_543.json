@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_543",
+  "section_number": "2.8.14.3",
+  "header": "Scheduling Auto-Tune enhancements",
+  "content": "Prior to February 16, 2023, Auto-Tune used maintenance windows to schedule changes that\nrequired a blue/green deployment. Maintenance windows are now deprecated in favor of the oﬀ-\npeak window, which is a daily 10-hour time block during which your domain typically experiences\nlow traﬃc. You can modify the default start time for the oﬀ-peak window, but you can't modify the\nlength.\nAny domains that had Auto-Tune maintenance windows enabled before the introduction of oﬀ-\npeak windows on February 16, 2023 can continue to use legacy maintenance windows with no\ninterruption. However, we recommend that you migrate your existing domains to use the oﬀ-peak\nwindow for domain maintenance instead. For instructions, see the section called “Migrating from\nAuto-Tune maintenance windows”.\nConsole\nTo schedule Auto-Tune actions the oﬀ-peak window\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nIn the navigation pane, under Domains, choose the domain name to open the cluster\nconﬁguration.\n3.\nGo to the Auto-Tune tab and choose Edit.\n4.\nChoose Turn on if Auto-Tune isn't already enabled.\n5.\nUnder Schedule optimizations during oﬀ-peak window, select Oﬀ-peak window.\n6.\nChoose Save changes.\nCLI\nTo conﬁgure your domain to schedule Auto-Tune actions during the conﬁgured oﬀ-peak window,\ninclude UseOffPeakWindow in the UpdateDomainConﬁg request:\nScheduling Auto-Tune enhancements\n720\nAmazon OpenSearch Service\nDeveloper Guide\naws opensearch update-domain-config \\\n--domain-name my-domain \\\n--auto-tune-options\nDesiredState=ENABLED,UseOffPeakWindow=true,MaintenanceSchedules=null",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 749,
+      "end": 750
+    },
+    "content_stats": {
+      "char_count": 1616,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "Auto-Tune for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

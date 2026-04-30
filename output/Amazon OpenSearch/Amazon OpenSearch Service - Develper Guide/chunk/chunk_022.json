@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_022",
+  "section_number": "2.5.2.1",
+  "header": "Option 1: Upload a single document",
+  "content": "Run the following command to add a single document to the movies domain:\ncurl -XPUT -u 'master-user:master-user-password' 'domain-endpoint/movies/_doc/1' -d\n'{\"director\": \"Burton, Tim\", \"genre\": [\"Comedy\",\"Sci-Fi\"], \"year\": 1996, \"actor\":\nUpload data for indexing\n17\nAmazon OpenSearch Service\nDeveloper Guide\n[\"Jack Nicholson\",\"Pierce Brosnan\",\"Sarah Jessica Parker\"], \"title\": \"Mars Attacks!\"}'\n-H 'Content-Type: application/json'\nIn the command, provide the username and password that you created in Step 1.\nFor a detailed explanation of this command and how to make signed requests to OpenSearch\nService, see Indexing data.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 46,
+      "end": 47
+    },
+    "content_stats": {
+      "char_count": 626,
+      "word_count": 81
+    },
+    "hierarchy": {
+      "parent": "Upload data to Amazon OpenSearch Service for indexing",
+      "children": []
+    }
+  }
+}

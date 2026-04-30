@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_267",
+  "section_number": "2.7.2.2",
+  "header": "Step 2: Create a collection",
+  "content": "A collection is a group of OpenSearch indexes that work together to support a speciﬁc workload or\nuse case.\nTo create an OpenSearch Serverless collection\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nChoose Collections in the left navigation pane and choose Create collection.\n3.\nName the collection movies.\n4.\nFor collection type, choose Search. For more information, see Choosing a collection type.\n5.\nFor Security, choose Standard create.\n6.\nUnder Encryption, select Use AWS owned key. This is the AWS KMS key that OpenSearch\nServerless will use to encrypt your data.\nStep 2: Create a collection\n382\nAmazon OpenSearch Service\nDeveloper Guide\n7.\nUnder Network, conﬁgure network settings for the collection.\n• For the access type, select Public.\n• For the resource type, choose both Enable access to OpenSearch endpoints and Enable\naccess to OpenSearch Dashboards. Since you'll upload and search data using OpenSearch\nDashboards, you need to enable both.\n8.\nChoose Next.\n9.\nFor Conﬁgure data access, set up access settings for the collection. Data access policies allow\nusers and roles to access the data within a collection. In this tutorial, we'll provide a single user\nthe permissions required to index and search data in the movies collection.\nCreate a single rule that provides access to the movies collection. Name the rule Movies\ncollection access.\n10. Choose Add principals, IAM users and roles and select the user or role that you'll use to sign\nin to OpenSearch Dashboards and index data. Choose Save.\n11. Under Index permissions, select all of the permissions.\n12. Choose Next.\n13. For the access policy settings, choose Create a new data access policy and name the policy\nmovies.\n14. Choose Next.\n15. Review your collection settings and choose Submit. Wait several minutes for the collection\nstatus to become Active.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 411,
+      "end": 412
+    },
+    "content_stats": {
+      "char_count": 1876,
+      "word_count": 298
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Getting started with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

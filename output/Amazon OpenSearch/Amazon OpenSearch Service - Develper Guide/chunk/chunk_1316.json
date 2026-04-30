@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1316",
+  "section_number": "2.22.2.1.1",
+  "header": "Sample Python client",
+  "content": "The Python client is simpler to automate than a HTTP request and has better re-usability. To create\nthe AI connector with the Python client, save the following sample code to a Python ﬁle. The client\nrequires the AWS SDK for Python (Boto3), requests, and requests-aws4auth packages.\nimport boto3\nimport requests\nfrom requests_aws4auth import AWS4Auth\nhost = 'domain-endpoint/'\nregion = 'region'\nservice = 'es'\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\npath = '_plugins/_ml/connectors/_create'\nurl = host + path\npayload = {\n\"name\": \"Cohere Connector: embedding\",\n\"description\": \"The connector to cohere embedding model\",\n\"version\": 1,\n\"protocol\": \"http\",\n\"credential\": {\n\"secretArn\": \"arn:aws:secretsmanager:region:account-id:secret:cohere-key-id\",\n\"roleArn\": \"arn:aws:iam::account-id:role/opensearch-secretmanager-role\"\n},\n\"actions\": [\n{\n\"action_type\": \"predict\",\n\"method\": \"POST\",\n\"url\": \"https://api.cohere.ai/v1/embed\",\n\"headers\": {\n\"Authorization\": \"Bearer ${credential.secretArn.cohere-key-used-in-\nsecrets-manager}\"\n},\n\"request_body\": \"{ \\\"texts\\\": ${parameters.texts}, \\\"truncate\\\": \\\"END\\\" }\"\n}\nCreate an OpenSearch Service connector\n1797\nAmazon OpenSearch Service\nDeveloper Guide\n]\n}\nheaders = {\"Content-Type\": \"application/json\"}\nr = requests.post(url, auth=awsauth, json=payload, headers=headers)\nprint(r.status_code)\nprint(r.text)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1826,
+      "end": 1827
+    },
+    "content_stats": {
+      "char_count": 1465,
+      "word_count": 155
+    },
+    "hierarchy": {
+      "parent": "Create an OpenSearch Service connector",
+      "children": []
+    }
+  }
+}

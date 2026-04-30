@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1137",
+  "section_number": "155.1.1.160",
+  "header": "Extend advanced hunting coverage with the right settings",
+  "content": "the right settings\n03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nAdvanced hunting relies on data coming from various sources, including your devices, your\nOffice 365 workspaces, Microsoft Entra ID, and Microsoft Defender for Identity. To get the most\ncomprehensive data possible, ensure that you have the correct settings in the corresponding\ndata sources.\nTurn on these advanced auditing settings to ensure you get data about activities on your\ndevices, including local account management, local security group management, and service\ncreation.\nData\nDescription\nSchema\ntable\nHow to configure\nAccount\nmanagement\nEvents captured as various ActionType\nvalues indicating local account creation,\ndeletion, and other account-related\nactivities\nDeviceEvents\n- Deploy an advanced\nsecurity audit policy: Audit\nUser Account\nManagement\n- Learn about advanced\nsecurity audit policies\nSecurity group\nmanagement\nEvents captured as various ActionType\nvalues indicating local security group\ncreation and other local group\nmanagement activities\nDeviceEvents\n- Deploy an advanced\nsecurity audit policy: Audit\nSecurity Group\nManagement\n- Learn about advanced\nsecurity audit policies\nService\ninstallation\nEvents captured with the ActionType\nvalue ServiceInstalled , indicating that a\nservice has been created\nDeviceEvents\n- Deploy an advanced\nsecurity audit policy: Audit\nSecurity System Extension\n- Learn about advanced\nsecurity audit policies",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 865,
+      "end": 865
+    },
+    "content_stats": {
+      "char_count": 1477,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Advanced security auditing on Windows devices",
+        "Microsoft Defender for Identity sensor on the domain controller",
+        "Related topics"
+      ]
+    }
+  }
+}

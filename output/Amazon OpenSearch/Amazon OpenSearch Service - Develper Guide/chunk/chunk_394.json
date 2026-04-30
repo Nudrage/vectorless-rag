@@ -1,0 +1,36 @@
+{
+  "chunk_id": "chunk_394",
+  "section_number": "2.7.10.10",
+  "header": "Data access control for Amazon OpenSearch Serverless",
+  "content": "With data access control in Amazon OpenSearch Serverless, you can allow users to access\ncollections and indexes, regardless of their access mechanism or network source. You can provide\naccess to IAM roles and SAML identities.\nYou manage access permissions through data access policies, which apply to collections and index\nresources. Data access policies help you manage collections at scale by automatically assigning\naccess permissions to collections and indexes that match a speciﬁc pattern. Multiple data access\npolicies can apply to a single resource. Note that you must have a data access policy for your\ncollection in order to access your OpenSearch Dashboards URL.\nTopics\n• Data access policies versus IAM policies\n• IAM permissions required to conﬁgure data access policies\n• Policy syntax\n• Supported policy permissions\n• Sample datasets on OpenSearch Dashboards\n• Creating data access policies (console)\n• Creating data access policies (AWS CLI)\n• Viewing data access policies\n• Updating data access policies\n• Deleting data access policies\n• Cross-account data access",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 575,
+      "end": 575
+    },
+    "content_stats": {
+      "char_count": 1079,
+      "word_count": 165
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": [
+        "Data access policies versus IAM policies",
+        "IAM permissions required to conﬁgure data access policies",
+        "Policy syntax",
+        "Supported policy permissions",
+        "Sample datasets on OpenSearch Dashboards",
+        "Creating data access policies (console)",
+        "Creating data access policies (AWS CLI)",
+        "Viewing data access policies",
+        "Updating data access policies",
+        "Deleting data access policies",
+        "Cross-account data access"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1843",
+  "section_number": "155.1.1.257.6.1.14",
+  "header": "Threat intelligence indicators (preview)",
+  "content": "７ Note\nThe tiIndicator entity is deprecated and will be removed by April 2026.\nYou can integrate the tiIndicator entity into your application or use one of the following integrated threat intelligence platforms (TIP):\nPalo Alto Networks MineMeld Threat Intelligence Sharing\nMISP Open Source Threat Intelligence Platform\navailable through the TI sample\nThreat indicators sent via the Microsoft Graph security API are available today in the following products:\nMicrosoft Defender for Endpoint – Enables you to alert and/or block threat indicators associated with malicious activity. You can also allow\nan indicator for ignoring the indicator from automated investigations. For details about the types of indicators supported and limits on\nindicator counts per tenant, see Manage indicators.\nMicrosoft Sentinel – For the most up-to-date, detailed instructions on how to send threat intelligent indicators to Microsoft Sentinel, see\nConnect your threat intelligence platform to Microsoft Sentinel.\nThe Microsoft Graph threat submission API helps organizations to submit a threat received by any user in a tenant. This empowers customers to\nreport spam or suspicious emails, phishing URLs, or malware attachments they receive to Microsoft. Microsoft checks the submission against\nthe organizational policies in effect and sends it to human graders for analysis. The result then helps tenant administrators understand the\nthreat scanning verdict and adjust their organizational policy. Admins can also use the results to report legitimate emails to prevent them from\ngetting blocked.\nNote: We recommend that you use the threat submission API instead of the deprecated Information Protection threat assessment API. The\nthreat submission API provides unified security threat submission functionality and adds unified result support, user submission query\nsupport, tenant-allow block list support, admin review support and app-only mode support.\nMicrosoft Defender for Office 365 is a cloud-based email filtering service that helps protect your organization against advanced threats to email\nand collaboration tools, like phishing, business email compromise, and malware attacks. You can use the Microsoft Graph analyzedemails and\nremediate APIs to retrieve email metadata and perform response actions (soft delete, hard delete, move to junk, move to Inbox) on analyzed\nmessages.\nNote: These APIs are only available for Defender for Office 365 Plan 2 or Microsoft 365 A5/E5/F5/G5 Security service plans. For the most\nup-to-date list of service plans, see Microsoft Defender for Office 365 service description.\nThe Defender for Identity sensors management API allows you to create detailed reports of the sensors in your workspace, including\ninformation about the server's name, sensor version, type, state, and health status. It also enables you to manage sensor settings, such as\nadding descriptions, enabling or disabling delayed updates, and specifying the domain controller that the sensor connects to to query Entra ID.\nThe identityAccounts resource and related APIs allows you to retrieve details of users that are flagged by Microsoft Defender for Identity alerts,\nand apply actions such as disabling accounts and resetting the user password for the compromised user.\nMicrosoft Purview unifies data governance and compliance across your organization's data estate. It provides centralized controls for data\ndiscovery, classification, and protection - integrating directly with Microsoft 365 and third-party data sources. Think of it as a command center\nfor managing sensitive information and ensuring regulatory compliance across all your data, whether it lives in databases, documents, or cloud\nstorage.\nThe data security and governance APIs allow developers to seamlessly incorporate Purview's protection, essential for RAG applications, LOB\napplications, and systems handling sensitive data. These APIs provide programmatic access to Purview's policy evaluation engine, ensuring\nconsistent data security and governance enforcement across various applications.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 17,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1377,
+      "end": 1378
+    },
+    "content_stats": {
+      "char_count": 4060,
+      "word_count": 584
+    },
+    "hierarchy": {
+      "parent": "Use the Microsoft Graph security API",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_599",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\nadmin_id\nThe administrator's ID.\nadmin_units\nThe list of administrative units (by\nadmin_unit_id ) to which the admin belongs.\nFor an unrestricted admin, this is an empty list.\ncreated\nThe administrator's creation date as a Unix\ntimestamp. No creation date shown for\nadministrators created before October 2021.\nemail\nThe administrator's email address.\nhardtoken\nInformation about hardware tokens attached to\nthe administrator, or null  if none attached.\nSee Retrieve Hardware Tokens for descriptions\nof the response values.\nlast_directory_sync\nAn integer indicating the last update to the\nadministrator via directory sync as a Unix\ntimestamp, or null  if the administrator has\nnever synced with an external directory or if the\ndirectory that originally created the user has\nbeen deleted from Duo.\nlast_login\nAn integer indicating the last time this\nadministrator logged in, as a Unix timestamp, or\nnull  if the administrator has not logged in.\nname\nThe administrator's full name.\npassword_change_required\nEither true  if the administrator must change\ntheir password at the next login, or false  if no\npassword change is required.\nphone\nThe phone number in E.164 format.\nphone_details\nA list of phones that this administrator can use.\nSee Retrieve Phones for descriptions of the\nphone response values. Note that under\ncapabilities , auto  is not a valid option.\nrestricted_by_admin_units\nIs this administrator restricted by an\nadministrative unit assignment? Either true  or\nfalse . Must be set to true  in order to add\nthe admin to an administrative unit using the\nAPI.\nrole\nThe administrator's role. One of: \"Owner\",\n\"Administrator\", \"Application Manager\", \"User\nManager\", \"Security Analyst\", \"Help Desk\",\n\"Billing\", or \"Read-only\". Only present in the\nresponse if the customer edition includes the\nAdministrative Roles feature.\nstatus\nThe administrator account's status. One of:\n\"Active\" (admin can log in to Duo), \"Disabled\"\n(admin prevented from access), \"Expired\"\n(admin blocked from access due to inactivity),\nor \"Pending Activation\" (new admin must\ncomplete activation to gain access).\nsubaccount_role\nThe administrator's role when accessing a\nsubaccount. One of: \"Owner\", \"Administrator\",\n\"Application Manager\", \"User Manager\",\n\"Security Analyst\", \"Help Desk\", \"Billing\", or\n\"Read-only\". Only present in the response if the\ncustomer edition includes the Administrative\nRoles feature and the customer is an MSP\ncustomer, has the Accounts API feature, or has\nexisting subaccounts.\nwebauthncredentials\nA list of WebAuthn authenticators that this\nadministrator can use.\nKey\nValue\ncredential_name\nFree-form label for\nthe WebAuthn\ncredential.\ndate_added\nThe date the\nWebAuthn\ncredential was\nregistered in Duo.\ndate_last_used\nThe date the\nWebAuthn\ncredential was last\nused.\nwebauthnkey\nThe WebAuthn\ncredential's\nregistration\nidentifier.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 253,
+      "end": 255
+    },
+    "content_stats": {
+      "char_count": 2846,
+      "word_count": 411
+    },
+    "hierarchy": {
+      "parent": "Administrators",
+      "children": []
+    }
+  }
+}

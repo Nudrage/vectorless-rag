@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2043",
+  "section_number": "155.1.1.267.1.1",
+  "header": "Step 1: Assess the scope of the incident",
+  "content": "Identify any network communication that is associated with the incident.\nWhich applications are affected?\nWhat payloads were spread?\nHow is the attacker communicating with the compromised devices? (Network protection\nmust be enabled):\nGo to the indicators page to add a block for the IP and URL (if you have that\ninformation).\nWhat was the payload delivery medium?\nRun through this list of tasks and questions to protect existing systems from attack:\nIf you have online backups, consider disconnecting the backup system from the network\nuntil you're confident that the attack is contained, see Backup and restore plan to protect\nagainst ransomware | Microsoft Docs.\nIf you're experiencing or expect an imminent and active ransomware deployment:\nSuspend privileged and local accounts that you suspect are part of the attack. You can\ndo this from the Users tab in the properties of the incident in the Microsoft Defender\nportal.\nStop all remote logon sessions.\nReset the compromised user account passwords and require the users of compromised\nuser accounts to sign in again.\nDo the same for user accounts that might be compromised.\nIf shared local accounts are compromised, have your IT admin help you to enforce a\npassword change across all exposed devices. Example Kusto query:\nKusto\nFor the devices that aren't yet isolated and aren't part of the critical infrastructure:\nIsolate compromised devices from the network but don't shut them off.\nIf you identify the originating or spreader devices, isolate those first.\nPreserve compromised systems for analysis.\nUse this list to keep the attack from spreading to additional entities.\nIf shared local accounts are being used in the attack, consider Blocking Remote Use of\nLocal Accounts\n.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1509,
+      "end": 1510
+    },
+    "content_stats": {
+      "char_count": 1735,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": "Containment",
+      "children": []
+    }
+  }
+}

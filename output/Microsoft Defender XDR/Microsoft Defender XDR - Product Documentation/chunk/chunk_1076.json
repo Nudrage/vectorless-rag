@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1076",
+  "section_number": "155.1.1.152",
+  "header": "OAuthAppInfo (Preview)",
+  "content": "Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe OAuthAppInfo  table in the advanced hunting schema contains information about Microsoft\n365-connected OAuth applications in the organization that are registered with Microsoft Entra\nID and available in the Microsoft Defender for Cloud Apps app governance capability.\nThe OAuthAppInfo  table might not include all the app or service principal-related properties\nthat are available on Entra ID. It also doesn't include data related to Microsoft first-party apps\nor apps without any OAuth consents. The coverage of the table is based on the existing scope\nof Microsoft 365-connected apps covered by app governance.\nThis advanced hunting table is populated by app governance records from Microsoft Defender\nfor Cloud Apps.\nYou need to turn on app governance to view the OAuthAppInfo  table in advanced hunting. To\nturn on app governance, follow the steps in Turn on app governance.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nReportId\nstring\nUnique identifier for the record\nTimestamp\ndatetime\nDate and time when the record was created\nOAuthAppId\nstring\nThe unique identifier for the app as assigned by Microsoft Entra ID\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 816,
+      "end": 816
+    },
+    "content_stats": {
+      "char_count": 1528,
+      "word_count": 229
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Prerequisites",
+        "Schema",
+        "Related topics"
+      ]
+    }
+  }
+}

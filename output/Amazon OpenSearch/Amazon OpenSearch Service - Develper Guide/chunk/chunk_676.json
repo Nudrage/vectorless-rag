@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_676",
+  "section_number": "2.10.3.6.3",
+  "header": "Step 3: Observe the logs",
+  "content": "1.\nOpen the CloudWatch console at https://console.aws.amazon.com/cloudwatch/.\n2.\nIn the navigation pane, choose Log groups.\n3.\nChoose the log group that you speciﬁed while enabling audit logs. Within the log group,\nOpenSearch Service creates a log stream for each node in your domain.\n4.\nIn Log streams, choose Search all.\n5.\nFor the read and write events, see the corresponding logs. You can expect a delay of 5 seconds\nbefore the log appears.\nSample write audit log\n{\n\"audit_compliance_operation\": \"CREATE\",\n\"audit_cluster_name\": \"824471164578:audit-test\",\n\"audit_node_name\": \"be217225a0b77c2bd76147d3ed3ff83c\",\n\"audit_category\": \"COMPLIANCE_DOC_WRITE\",\n\"audit_request_origin\": \"REST\",\n\"audit_compliance_doc_version\": 1,\n\"audit_node_id\": \"3xNJhm4XS_yTzEgDWcGRjA\",\n\"@timestamp\": \"2020-08-23T05:28:02.285+00:00\",\n\"audit_format_version\": 4,\n\"audit_request_remote_address\": \"3.236.145.227\",\n\"audit_trace_doc_id\": \"lxnJGXQBqZSlDB91r_uZ\",\n\"audit_request_effective_user\": \"admin\",\n\"audit_trace_shard_id\": 8,\n\"audit_trace_indices\": [\n\"accounts\"\n],\n\"audit_trace_resolved_indices\": [\n\"accounts\"\n]\n}\nSample read audit log\n{\n\"audit_cluster_name\": \"824471164578:audit-docs\",\n\"audit_node_name\": \"806f6050cb45437e2401b07534a1452f\",\n\"audit_category\": \"COMPLIANCE_DOC_READ\",\nAudit log example\n1234\nAmazon OpenSearch Service\nDeveloper Guide\n\"audit_request_origin\": \"REST\",\n\"audit_node_id\": \"saSevm9ASte0-pjAtYi2UA\",\n\"@timestamp\": \"2020-08-31T17:57:05.015+00:00\",\n\"audit_format_version\": 4,\n\"audit_request_remote_address\": \"54.240.197.228\",\n\"audit_trace_doc_id\": \"config:7.7.0\",\n\"audit_request_effective_user\": \"admin\",\n\"audit_trace_shard_id\": 0,\n\"audit_trace_indices\": [\n\"accounts\"\n],\n\"audit_trace_resolved_indices\": [\n\"accounts\"\n]\n}\nTo include the request body, return to Compliance settings in OpenSearch Dashboards and disable\nWrite metadata. To exclude events by a speciﬁc user, add the user to Ignored Users.\nFor a description of each audit log ﬁeld, see Audit log ﬁeld reference. For information on searching\nand analyzing your audit log data, see Analyzing Log Data with CloudWatch Logs Insights in the\nAmazon CloudWatch Logs User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1263,
+      "end": 1264
+    },
+    "content_stats": {
+      "char_count": 2128,
+      "word_count": 225
+    },
+    "hierarchy": {
+      "parent": "Audit log example",
+      "children": []
+    }
+  }
+}

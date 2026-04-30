@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_983",
+  "section_number": "155.1.1.107",
+  "header": "DeviceBaselineComplianceAssessment (Preview)",
+  "content": "(Preview)\n06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nApplies to:\nMicrosoft Defender XDR\nMicrosoft Defender for Endpoint\nThe DeviceBaselineComplianceAssessment  table in the advanced hunting schema contains\nbaseline compliance assessment snapshot, which indicates the status of various security\nconfigurations related to baseline profiles on devices.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData type\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\nOSPlatform\nstring\nPlatform of the operating system running on the device. This indicates\nspecific operating systems, including variations within the same family,\nsuch as Windows 11, Windows 10 and Windows 7.\nOSVersion\nstring\nVersion of the operating system running on the device\nConfigurationId\nstring\nUnique identifier for a specific configuration\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData type\nDescription\nProfileId\nstring\nUnique identifier for the profile\nIsCompliant\nnullable\nbool\nIndicates whether the device that initiated the event is compliant or not\nIsApplicable\nboolean\nIndicates whether the configuration or policy is applicable\nSource\ndynamic\nThe registry path or other location used to determine the current device\nsetting\nRecommendedValue\ndynamic\nSet of expected values for the current device setting to be compliant\nCurrentValue\ndynamic\nSet of detected values found on the device\nIsExempt\nboolean\nIndicates whether the device is exempt from having the baseline\nconfiguration\nProactively hunt for threats\nLearn the query language\nUnderstand the schema\nApply query best practices\nOverview of Microsoft Defender Vulnerability Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 675,
+      "end": 676
+    },
+    "content_stats": {
+      "char_count": 2386,
+      "word_count": 337
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

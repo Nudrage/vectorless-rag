@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1505",
+  "section_number": "2.27.2.3.1",
+  "header": "Map the snapshot role in OpenSearch Dashboards (if using ﬁne-grained access control)",
+  "content": "control)\nIf you enabled ﬁne-grained access control, even if you use HTTP basic authentication for all other\npurposes, you need to map the manage_snapshots role to your IAM role so you can work with\nsnapshots.\nTo give your identity permissions to work with snapshots\n1.\nLog in to Dashboards using the master user credentials you speciﬁed when you created the\nOpenSearch Service domain. You can ﬁnd the Dashboards URL in the OpenSearch Service\nconsole. It takes the form of https://domain-endpoint/_dashboards/.\n2.\nFrom the main menu choose Security, Roles, and select the manage_snapshots role.\n3.\nChoose Mapped users, Manage mapping.\n4.\nAdd the domain ARN of your personal IAM role in the appropriate ﬁeld. The ARN takes one of\nthe following formats:\narn:aws:iam::123456789123:user/user-name\narn:aws:iam::123456789123:role/role-name\n5.\nSelect Map and conﬁrm role shows up under Mapped users.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2039,
+      "end": 2039
+    },
+    "content_stats": {
+      "char_count": 891,
+      "word_count": 134
+    },
+    "hierarchy": {
+      "parent": "Provide permissions to the S3 bucket",
+      "children": []
+    }
+  }
+}

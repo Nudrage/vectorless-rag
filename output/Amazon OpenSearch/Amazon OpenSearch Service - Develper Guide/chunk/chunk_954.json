@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_954",
+  "section_number": "2.15.2.1",
+  "header": "Boosting ﬁelds",
+  "content": "You can improve search relevancy by \"boosting\" certain ﬁelds. Boosts are multipliers that weigh\nmatches in one ﬁeld more heavily than matches in other ﬁelds. In the following example, a match\nfor john in the title ﬁeld inﬂuences _score twice as much as a match in the plot ﬁeld and four\ntimes as much as a match in the actors or directors ﬁelds. The result is that ﬁlms like John\nWick and John Carter are near the top of the search results, and ﬁlms starring John Travolta are\nnear the bottom.\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/movies/_search\n{\n\"size\": 20,\n\"query\": {\n\"multi_match\": {\n\"query\": \"john\",\n\"fields\": [\"title^4\", \"plot^2\", \"actors\", \"directors\"]\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1498,
+      "end": 1498
+    },
+    "content_stats": {
+      "char_count": 685,
+      "word_count": 110
+    },
+    "hierarchy": {
+      "parent": "Request body searches",
+      "children": []
+    }
+  }
+}

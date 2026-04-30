@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_848",
+  "section_number": "2.12.8.1.2",
+  "header": "Provide access to a domain",
+  "content": "If the VPC that you want to access your domain is in another AWS account, you need to authorize it\nfrom the owner's account before you can create an interface VPC endpoint.\nTo allow a VPC in another AWS account to access your domain\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome/.\n2.\nIn the navigation pane, choose Domains and open the domain that you want to provide access\nto.\n3.\nGo to the VPC endpoints tab, which shows the accounts and corresponding VPCs that have\naccess to your domain.\n4.\nChoose Authorize principal.\n5.\nEnter the AWS account ID of the account that will access your domain. This step authorizes the\nspeciﬁed account to create VPC endpoints against the domain.\n6.\nChoose Authorize.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1404,
+      "end": 1404
+    },
+    "content_stats": {
+      "char_count": 746,
+      "word_count": 126
+    },
+    "hierarchy": {
+      "parent": "Access Amazon OpenSearch Service using an OpenSearch Service- managed VPC endpoint (AWS PrivateLink)",
+      "children": []
+    }
+  }
+}

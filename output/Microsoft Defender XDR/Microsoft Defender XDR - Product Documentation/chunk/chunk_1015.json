@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1015",
+  "section_number": "155.1.1.123",
+  "header": "DeviceTvmHardwareFirmware",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmHardwareFirmware  table in the advanced hunting schema contains hardware and\nfirmware information of devices as checked by Microsoft Defender Vulnerability Management.\nThe information includes the system model, processor, and BIOS, among others.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\nComponentType\nstring\nType of hardware or firmware component\nManufacturer\nstring\nManufacturer of hardware or firmware component\nComponentName\nstring\nName of hardware or firmware component\nComponentFamily\nstring\nComponent family or class, a grouping of components that have similar\nfeatures or characteristics as determined by the manufacturer\nComponentVersion\nstring\nComponent version (for example, BIOS version)\nAdditionalFields\ndynamic\nAdditional information about the components in JSON array format\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nYou can try the following sample queries to use the information available in the\nDeviceTvmHardwareFirmware  table:\nKusto\nKusto\nProactively hunt for threats\nLearn the query language\nUnderstand the schema\nApply query best practices\nOverview of Microsoft Defender Vulnerability Management\n// Count the number of Lenovo devices\nDeviceTvmHardwareFirmware\n| where ComponentType == \"Hardware\" and Manufacturer == \"lenovo\"\n| summarize count()\n// Find all devices with a specific BIOS version, replace ComponentVersion with\nwhat you are looking for\nDeviceTvmHardwareFirmware\n| where ComponentType == \"Bios\" and ComponentVersion contains \"N2VET29W\"\n|project DeviceId, DeviceName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 736,
+      "end": 737
+    },
+    "content_stats": {
+      "char_count": 2385,
+      "word_count": 326
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

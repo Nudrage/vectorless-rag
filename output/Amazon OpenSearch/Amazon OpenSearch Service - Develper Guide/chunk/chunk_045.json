@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_045",
+  "section_number": "2.6.8.1.1",
+  "header": "Step 1: Create the pipeline role",
+  "content": "The pipeline role must have an attached permissions policy that allows it to send data to the\ndomain sink. It must also have a trust relationship that allows OpenSearch Ingestion to assume the\nrole. For instructions on how to attach a policy to a role, see Adding IAM identity permissions in the\nIAM User Guide.\nThe following sample policy demonstrates the least privilege that you can provide in a pipeline role\nfor it to write to a single domain:\nGranting pipelines access to domains\n35\nAmazon OpenSearch Service\nDeveloper Guide\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": \"es:DescribeDomain\",\n\"Resource\": \"arn:aws:es:*:111122223333:domain/*\"\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:*:111122223333:domain/domain-name/*\"\n}\n]\n}\nIf you plan to reuse the role to write to multiple domains, you can make the policy more broad by\nreplacing the domain name with a wildcard character (*).\nThe role must have the following trust relationship, which allows OpenSearch Ingestion to assume\nthe pipeline role:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Effect\":\"Allow\",\n\"Principal\":{\n\"Service\":\"osis-pipelines.amazonaws.com\"\n},\n\"Action\":\"sts:AssumeRole\"\n}\n]\n}\nGranting pipelines access to domains\n36\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 64,
+      "end": 66
+    },
+    "content_stats": {
+      "char_count": 1300,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Granting Amazon OpenSearch Ingestion pipelines access to domains",
+      "children": []
+    }
+  }
+}

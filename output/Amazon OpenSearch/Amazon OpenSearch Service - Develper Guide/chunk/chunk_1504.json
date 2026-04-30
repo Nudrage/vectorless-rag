@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1504",
+  "section_number": "2.27.2.4",
+  "header": "Restore the snapshot",
+  "content": "At this point, you have two ways to access your OpenSearch Service domain: HTTP basic\nauthentication with your master user credentials or AWS authentication using your IAM credentials.\nBecause snapshots use Amazon S3, which has no concept of the master user, you must use your\nIAM credentials to register the snapshot repository with your OpenSearch Service domain.\nMost programming languages have libraries to assist with signing requests, but the simpler\napproach is to use a tool like Postman and put your IAM credentials into the Authorization section.\nRestore the snapshot\n2010\nAmazon OpenSearch Service\nDeveloper Guide\nTo restore the snapshot\n1.\nRegardless of how you choose to sign your requests, the ﬁrst step is to register the repository:\nPUT _snapshot/my-snapshot-repo-name\n{\n\"type\": \"s3\",\n\"settings\": {\n\"bucket\": \"amzn-s3-demo-bucket\",\n\"region\": \"us-west-2\",\n\"role_arn\": \"arn:aws:iam::123456789012:role/OpenSearchSnapshotRole\"\n}\n}\n2.\nThen list the snapshots in the repository, and ﬁnd the one you want to restore. At this point,\nyou can continue using Postman or switch to a tool like curl.\nShorthand\nGET _snapshot/my-snapshot-repo-name/_all\ncurl\nRestore the snapshot\n2011\nAmazon OpenSearch Service\nDeveloper Guide\ncurl -XGET -u 'master-user:master-user-password' https://domain-endpoint/\n_snapshot/my-snapshot-repo-name/_all\n3.\nRestore the snapshot.\nShorthand\nPOST _snapshot/my-snapshot-repo-name/my-snapshot-name/_restore\n{\n\"indices\": \"migration-index1,migration-index2,other-indices-*\",\n\"include_global_state\": false\n}\ncurl\ncurl -XPOST -u 'master-user:master-user-password' https://domain-endpoint/\n_snapshot/my-snapshot-repo-name/my-snapshot-name/_restore \\\n-H 'Content-Type: application/json' \\\n-d '{\"indices\":\"migration-index1,migration-index2,other-indices-\n*\",\"include_global_state\":false}'\n4.\nFinally, verify that your indexes restored as expected.\nShorthand\nGET _cat/indices?v\ncurl\ncurl -XGET -u 'master-user:master-user-password' https://domain-endpoint/_cat/\nindices?v\nAt this point, the migration is complete. You might conﬁgure your clients to use the new\nOpenSearch Service endpoint, resize the domain to suit your workload, check the shard count\nfor your indexes, switch to an IAM master user, or start building visualizations in OpenSearch\nDashboards.\nRestore the snapshot\n2012\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2039,
+      "end": 2042
+    },
+    "content_stats": {
+      "char_count": 2348,
+      "word_count": 285
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Migrating to Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

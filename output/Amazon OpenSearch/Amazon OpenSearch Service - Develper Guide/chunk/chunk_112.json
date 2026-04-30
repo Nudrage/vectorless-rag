@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_112",
+  "section_number": "2.6.15.3.1",
+  "header": "HTTP source",
+  "content": "The HTTP source plugin has the following requirements and constraints:\n• The path option is required. The path is a string such as /log/ingest, which represents the URI\npath for log ingestion. This path deﬁnes the URI that you use to send data to the pipeline. For\nexample, https://log-pipeline.us-west-2.osis.amazonaws.com/log/ingest. The\npath must start with a slash (/), and can contain the special characters '-', '_', '.', and '/', as well as\nthe ${pipelineName} placeholder.\n• The following HTTP source options are set by OpenSearch Ingestion and aren't supported in\npipeline conﬁgurations:\n• port\n• ssl\n• ssl_key_file\n• ssl_certificate_file\n• aws_region\nConﬁguration requirements and constraints\n96\nAmazon OpenSearch Service\nDeveloper Guide\n• authentication\n• unauthenticated_health_check\n• use_acm_certificate_for_ssl\n• thread_count\n• request_timeout\n• max_connection_count\n• max_pending_requests\n• health_check_service\n• acm_private_key_password\n• acm_certificate_timeout_millis\n• acm_certificate_arn",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 125,
+      "end": 126
+    },
+    "content_stats": {
+      "char_count": 1009,
+      "word_count": 133
+    },
+    "hierarchy": {
+      "parent": "Conﬁguration requirements and constraints",
+      "children": []
+    }
+  }
+}

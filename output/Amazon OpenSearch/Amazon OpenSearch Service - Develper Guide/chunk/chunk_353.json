@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_353",
+  "section_number": "2.23.3",
+  "header": "Conﬁgure permissions",
+  "content": "Before you create and provision a template, verify that you have the required permissions. If you\nneed assistance, contact your account administrator. OpenSearch Serverless Workﬂows require the\nfollowing permissions. You can scope permissions to a speciﬁc collection by deﬁning the collection\nresource ARN in your IAM policy.\nConﬁgure Workﬂows\n480\nAmazon OpenSearch Service\nDeveloper Guide\nExample : Workﬂows policy\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"NeuralSearch\",\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": [\n\"arn:aws:iam::111122223333:role/Cognito_identitypoolname/Auth_Role\"\n]\n},\n\"Action\": [\n\"aoss:CreateIndex\",\n\"aoss:CreateCollection\",\n\"aoss:UpdateCollection\",\n\"aoss:DeleteIndex\",\n\"aoss:DeleteCollection\"\n],\n\"Resource\": \"arn:aws:aoss:us-east-1:111122223333:collection/your-\ncollection-name\"\n}\n]\n}\n• aoss:*CollectionItems – Grants permission to create and manage templates, and provision\nsearch and ingest pipelines.\n• aoss:*Index – Grants permission to create and delete indices using OpenSearch API operations.\n• aoss:*MLResource – Grants permission to provision workﬂow steps that use the Conﬁgure\nMachine Learning.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 509,
+      "end": 510
+    },
+    "content_stats": {
+      "char_count": 1141,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "Conﬁgure Workﬂows on Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

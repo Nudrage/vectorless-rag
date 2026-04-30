@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_546",
+  "section_number": "13.2",
+  "header": "Overview",
+  "content": "ﾉ\nExpand table\nSection\nDetails\nLatitude and longitude\nPostal code\nThe left side also has a panel showing Log activity (time first seen/last seen, data source)\ncollected from several log sources, and another panel showing a list of logged hosts\ncollected from Azure Monitoring Agent heartbeat tables.\nThe main body of the Overview page contains dashboard cards showing a count of\nincidents and alerts (grouped by severity) containing the IP address, and a chart of the\nprevalence of the IP address in the organization over the indicated time period.\nThe Incidents and alerts page shows a list of incidents and alerts that include the IP\naddress as part of their story. These incidents and alerts come from any of a number of\nMicrosoft Defender detection sources, including, if onboarded, Microsoft Sentinel. This\nlist is a filtered version of the incidents queue, and shows a short description of the\nincident or alert, its severity (high, medium, low, informational), its status in the queue\n(new, in progress, resolved), its classification (not set, false alert, true alert), investigation\nstate, category, who is assigned to address it, and last activity observed.\nYou can customize which columns are displayed for each item. You can also filter the\nalerts by severity, status, or any other column in the display.\nThe impacted assets column refers to all the user, application, and other entities\nreferenced in the incident or alert.\nWhen an incident or alert is selected, a fly-out appears. From this panel you can manage\nthe incident or alert and view more details such as incident/alert number and related\ndevices. Multiple alerts can be selected at a time.\nTo see a full page view of an incident or alert, select its title.\nThe Observed in organization section provides a list of devices that have a connection\nwith this IP and the last event details for each device (the list is limited to 100 devices).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 348,
+      "end": 349
+    },
+    "content_stats": {
+      "char_count": 1910,
+      "word_count": 317
+    },
+    "hierarchy": {
+      "parent": "IP address entity page in Microsoft Defender",
+      "children": []
+    }
+  }
+}

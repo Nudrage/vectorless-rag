@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_875",
+  "section_number": "2.12.10.5",
+  "header": "Disabling IAM Identity Center authentication on the domain",
+  "content": "To disable IAM Identity Center on your OpenSearch domain:\n1.\nChoose the domain, Actions, and Edit security conﬁguration.\nConﬁguring ﬁne-grained access control\n1394\nAmazon OpenSearch Service\nDeveloper Guide\n2.\nUncheck Enable API access authenticated with IAM Identity Center.\n3.\nChoose Save changes.\n4.\nAfter the domain ﬁnishes processing, remove role mappings added for IdC principals\nTo disable IAM Identity Center through CLI, you can use following\naws opensearch update-domain-config \\\n--domain-name my-domain \\\n--identity-center-options '{\"EnabledAPIAccess\": false}'",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1423,
+      "end": 1424
+    },
+    "content_stats": {
+      "char_count": 570,
+      "word_count": 76
+    },
+    "hierarchy": {
+      "parent": "IAM Identity Center Trusted Identity Propagation Support for OpenSearch",
+      "children": []
+    }
+  }
+}

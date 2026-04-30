@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_698",
+  "section_number": "155.1.1.66.2.1",
+  "header": "Enriched data example",
+  "content": "Both Microsoft Defender for Endpoint and Microsoft Defender for Identity are enabled in\nthe environment.\nAn attacker gained a foothold on a jump box and conducted malicious activities that led\nto compromising a workstation (WSA).\nThe enriched data reveals suspicious PowerShell activities on WSA, indicating the\nattacker's intent to perform remote credential harvesting on WSB.\nThis enrichment adds predictive data on the incident, and indicates intent for further\ncompromise.\nYou can use specific queries in advanced hunting to track policy modifications in your\nenvironment.\nThis sample query retrieves events related to changes in predictive shielding hardening\npolicies, and allows you to monitor when policies are enabled or disabled for specific domains.\nThe query uses the DisruptionAndResponseEvents table.\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 447,
+      "end": 448
+    },
+    "content_stats": {
+      "char_count": 820,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "Enrich predictive shielding data",
+      "children": []
+    }
+  }
+}

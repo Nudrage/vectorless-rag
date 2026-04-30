@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1901",
+  "section_number": "155.1.1.253.1.1",
+  "header": "Step 1: Create an application in Microsoft Entra ID",
+  "content": "4. Specify the following values:\nName: <Tenant_name> SIEM MSSP Connector (replace Tenant_name with the\ntenant display name)\nSupported account types: Account in this organizational directory only\nRedirect URI: Select Web and type\nhttps://<domain_name>/SiemMsspConnector (replace <domain_name> with the\ntenant name)\n5. Click Register. The application is displayed in the list of applications you own.\n6. Select the application, then click Overview.\n7. Copy the value from the Application (client) ID field to a safe place, you will need\nthis in the next step.\n8. Select Certificate & secrets in the new application panel.\n9. Click New client secret.\nDescription: Enter a description for the key.\nExpires: Select In 1 year\n10. Click Add, copy the value of the client secret to a safe place, you will need this in\nthe next step.\nThis section guides you on how to use a PowerShell script to get the tokens from your\ncustomer's tenant. This script uses the application from the previous step to get the\naccess and refresh tokens using the OAuth Authorization Code Flow.\nAfter providing your credentials, you'll need to grant consent to the application so that\nthe application is provisioned in the customer's tenant.\n1. Create a new folder and name it: MsspTokensAcquisition .\n2. Download the LoginBrowser.psm1 module\nand save it in the\nMsspTokensAcquisition  folder.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1408,
+      "end": 1409
+    },
+    "content_stats": {
+      "char_count": 1361,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Fetch incidents into your SIEM",
+      "children": []
+    }
+  }
+}

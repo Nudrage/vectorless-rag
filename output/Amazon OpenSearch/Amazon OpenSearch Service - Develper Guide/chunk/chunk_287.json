@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_287",
+  "section_number": "2.7.3.3.1",
+  "header": "Data lifecycle policies",
+  "content": "In a data lifecycle policy, you specify a series of rules. The data lifecycle policy lets you manage the\nretention period of data associated to indexes or collections that match these rules. These rules\ndeﬁne the retention period for data in an index or group of indexes. Each rule consists of a resource\ntype (index), a retention period, and a list of resources (indexes) that the retention period applies\nto.\nYou deﬁne the retention period with one of the following formats:\n• \"MinIndexRetention\": \"24h\" – OpenSearch Serverless retains index data for the speciﬁed\nperiod in hours or days. You can set this period to be from 24h to 3650d.\n• \"NoMinIndexRetention\": true – OpenSearch Serverless retains index data indeﬁnitely.\nIn the following sample policy, the ﬁrst rule speciﬁes a retention period of 15 days for all indexes\nwithin the collection marketing. The second rule speciﬁes that all index names that begin with\nlog in the finance collection have no retention period set and will be retained indeﬁnitely.\n{\n\"lifeCyclePolicyDetail\": {\n\"type\": \"retention\",\n\"name\": \"my-policy\",\n\"policyVersion\": \"MTY4ODI0NTM2OTk1N18x\",\n\"policy\": {\n\"Rules\": [\n{\n\"ResourceType\":\"index\",\n\"Resource\":[\nUsing data lifecycle policies\n413\nAmazon OpenSearch Service\nDeveloper Guide\n\"index/marketing/*\"\n],\n\"MinIndexRetention\": \"15d\"\n},\n{\n\"ResourceType\":\"index\",\n\"Resource\":[\n\"index/finance/log*\"\n],\n\"NoMinIndexRetention\": true\n}\n]\n},\n\"createdDate\": 1688245369957,\n\"lastModifiedDate\": 1688245369957\n}\n}\nIn the following sample policy rule, OpenSearch Serverless indeﬁnitely retains the data in all\nindexes for all collections within the account.\n{\n\"Rules\": [\n{\n\"ResourceType\": \"index\",\n\"Resource\": [\n\"index/*/*\"\n]\n}\n],\n\"NoMinIndexRetention\": true\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 442,
+      "end": 443
+    },
+    "content_stats": {
+      "char_count": 1729,
+      "word_count": 250
+    },
+    "hierarchy": {
+      "parent": "Using data lifecycle policies with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

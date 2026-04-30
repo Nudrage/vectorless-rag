@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_259",
+  "section_number": "2.16.6.1",
+  "header": "How it works",
+  "content": "Traditional OpenSearch clusters have a single set of instances that perform both indexing and\nsearch operations, and index storage is tightly coupled with compute capacity. By contrast,\nOpenSearch Serverless uses a cloud-native architecture that separates the indexing (ingest)\ncomponents from the search (query) components, with Amazon S3 as the primary data storage for\nindexes.\nThis decoupled architecture lets you scale search and indexing functions independently of each\nother, and independently of the indexed data in S3. The architecture also provides isolation for\ningest and query operations so that they can run concurrently without resource contention.\nWhen you write data to a collection, OpenSearch Serverless distributes it to the indexing compute\nunits. The indexing compute units ingest the incoming data and move the indexes to S3. When\nyou perform a search on the collection data, OpenSearch Serverless routes requests to the search\ncompute units that hold the data being queried. The search compute units download the indexed\ndata directly from S3 (if it's not already cached locally), run search operations, and perform\naggregations.\nThe following image illustrates this decoupled architecture:\nHow it works\n372\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch Serverless compute capacity for data ingestion, searching, and querying are measured\nin OpenSearch Compute Units (OCUs). Each OCU is a combination of 6 GiB of memory and\ncorresponding virtual CPU (vCPU), as well as data transfer to Amazon S3. Each OCU includes\nenough hot ephemeral storage for 120 GiB of index data.\nWhen you create your ﬁrst collection, OpenSearch Serverless instantiates two OCUs—one\nfor indexing and one for search. To ensure high availability, it also launches a standby set of\nnodes in another Availability Zone. For development and testing purposes, you can disable the\nEnable redundancy setting for a collection, which eliminates the two standby replicas and only\nHow it works\n373\nAmazon OpenSearch Service\nDeveloper Guide\ninstantiates two OCUs. By default, the redundant active replicas are enabled, which means that a\ntotal of four OCUs are instantiated for the ﬁrst collection in an account.\nThese OCUs exist even when there's no activity on any collection endpoints. All subsequent\ncollections share these OCUs. When you create additional collections in the same account,\nOpenSearch Serverless only adds additional OCUs for search and ingest as needed to support the\ncollections, according to the capacity limits that you specify. Capacity scales back down as your\ncompute usage decreases.\nFor information about how you're billed for these OCUs, see the section called “Pricing”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 401,
+      "end": 403
+    },
+    "content_stats": {
+      "char_count": 2692,
+      "word_count": 408
+    },
+    "hierarchy": {
+      "parent": "What is Amazon OpenSearch Serverless?",
+      "children": []
+    }
+  }
+}

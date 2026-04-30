@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_315",
+  "section_number": "2.7.4.3.2",
+  "header": "Add a new collection to a collection group",
+  "content": "When creating a new collection, specify an existing collection group name to associate the\ncollection with. Use the following procedures to add a new collection to a collection group.\nConsole\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/.\n2.\nIn the left navigation pane, choose Serverless, then choose Collections\n3.\nChoose Create collection.\nCreate collection groups\n447\nAmazon OpenSearch Service\nDeveloper Guide\n4.\nFor Collection name, enter a name for your collection. The name must be 3-28 characters\nlong, start with a lowercase letter, and contain only lowercase letters, numbers, and\nhyphens.\n5.\n(Optional) For Description, enter a description for your collection.\n6.\nIn the Collection group section, select the collection group you want the collection to be\nassigned to. A collection can only belong to one collection group at a time.\n(Optional) You can also choose to Create a new group. This will navigate you to the Create\ncollection group workﬂow. After you ﬁnish creating the collection group, return to the step\n1 of this procedure to begin creating your new collection.\n7.\nContinue through the workﬂow to create the collection.\nImportant\nDo not navigate away from the Create collection workﬂow. Doing so will stop the\ncollection setup. The Collection details page appears after setup completes.\nAWS CLI\n•\nUse the create-collection command to create a new collection and add it to an existing\ncollection group. In the command, replace the example content with your own speciﬁc\ninformation.\naws opensearchserverless create-collection \\\n--name my-collection \\\n--type SEARCH \\\n--collection-group-name my-collection-group \\\n--description \"Collection for search workloads\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 476,
+      "end": 477
+    },
+    "content_stats": {
+      "char_count": 1720,
+      "word_count": 258
+    },
+    "hierarchy": {
+      "parent": "Create collection groups",
+      "children": []
+    }
+  }
+}

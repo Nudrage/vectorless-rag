@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1043",
+  "section_number": "2.16.1.2",
+  "header": "Required IAM permissions",
+  "content": "The integration requires careful conﬁguration of IAM permissions to enable secure communication\nbetween services. OpenSearch Ingestion needs permissions to read from Amazon S3 vector\nindexes, write to OpenSearch Service vector collections, and manage associated security policies.\nRequired IAM permissions\n1568\nAmazon OpenSearch Service\nDeveloper Guide\nWhen you enable integration using the procedure later in this topic, you can choose one of the\nfollowing options for permissions management:\n• Allow the system to automatically create a service role with the necessary permissions\n• Provide an existing role that meets the requirements\nThe automatically created role includes policies for:\n• Accessing Amazon S3 vector index APIs\n• Managing OpenSearch Service collection operations\n• Handling dead letter queue operations for failed ingestion attempts\nIf you choose to specify an existing role, verify that the role has the following IAM permissions:\n(Required): Data pipeline permissions between OpenSearch Ingestion and OpenSearch Serverless\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"allowAPIs\",\n\"Effect\": \"Allow\",\n\"Action\": [ \"aoss:APIAccessAll\", \"aoss:BatchGetCollection\" ],\n\"Resource\": [ \"arn:aws:aoss:*:111122223333:collection/collection-\nid\" ]\n},\n{\n\"Sid\": \"allowSecurityPolicy\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:CreateSecurityPolicy\",\n\"aoss:UpdateSecurityPolicy\",\n\"aoss:GetSecurityPolicy\"\n],\n\"Resource\": \"*\",\n\"Condition\":{\n\"StringLike\":{\n\"aoss:collection\": [ \"collection-name\" ]\nRequired IAM permissions\n1569\nAmazon OpenSearch Service\nDeveloper Guide\n},\n\"StringEquals\": {\n\"aws:ResourceAccount\": [ \"111122223333\" ]\n}\n}\n}\n]\n}\n(Required): Data ingestion permissions between OpenSearch Ingestion and Amazon S3 dead-letter\nqueue\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"s3Access\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"s3:PutObject\"\n],\n\"Resource\": [ \"arn:aws:s3:::bucket/*\" ]\n}\n]\n}\n(Required): Data ingestion permissions between OpenSearch Ingestion and Amazon S3 Vectors\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"AllowS3VectorIndexAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\nRequired IAM permissions\n1570\nAmazon OpenSearch Service\nDeveloper Guide\n\"s3vectors:ListVectors\",\n\"s3vectors:GetVectors\"\n],\n\"Resource\": [\n\"arn:aws:s3vectors:us-east-1:111122223333:bucket/bucket-name/\nindex/index-name\"\n]\n}\n]\n}\n(Required if AWS KMS encryption is enabled): Decryption permissions for communication\nbetween OpenSearch Ingestion and Amazon S3 Vectors\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"allowS3VectorDecryptionOfCustomManagedKey\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"kms:Decrypt\"\n],\n\"Resource\": [ \"arn:aws:kms:us-east-1:111122223333:key/key-id\" ],\n\"Condition\": {\n\"StringEquals\": {\n\"kms:ViaService\": \"s3vectors.us-east-1.amazonaws.com\",\n\"kms:EncryptionContext:aws:s3vectors:arn\": [\n\"arn:aws:s3vectors:us-east-1:111122223333:bucket/example-\nbucket\",\n\"arn:aws:s3vectors:us-east-1:111122223333:bucket/example-\nbucket/index/example-index\"\n]\n}\n}\n}\n]\n}\nRequired IAM permissions\n1571\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1597,
+      "end": 1601
+    },
+    "content_stats": {
+      "char_count": 3061,
+      "word_count": 347
+    },
+    "hierarchy": {
+      "parent": "Import from Amazon S3 Vectors to OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

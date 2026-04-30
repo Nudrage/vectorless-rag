@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_156",
+  "section_number": "155.1.1.18.1.19",
+  "header": "Defender for Endpoint architecture",
+  "content": "This table describes the illustration.\nCall-\nout\nDescription\n1\nDevices are on-boarded through one of the supported management tools.\n2\nOn-boarded devices provide and respond to Microsoft Defender for Endpoint signal data.\n3\nManaged devices are joined and/or enrolled in Microsoft Entra ID.\n4\nDomain-joined Windows devices are synchronized to Microsoft Entra ID using Microsoft Entra\nConnect.\n5\nMicrosoft Defender for Endpoint alerts, investigations, and responses are managed in Microsoft\nDefender XDR.\nMicrosoft Defender XDR\nShared signals\nMicrosoft Defender for Endpoint\nThreat & Vulnerability Management\nAttack surface reduction\nEndpoint detection and response\nInvestigation and remediation\nMicrosoft Entra ID\nAccount provisioning\nMicrosoft Entra ID\nenrollment\nOn-boarding\nMicrosoft Endpoint Manager (Intune)\nSystem Center Configuration Manager\nGroup Policy, scripts, etc.\n1\n2\nOrganization devices\nOn-premises integration\nMicrosoft Entra Connect\n3\n4\n5\n\nﾉ\nExpand table\n Tip\nYou'll first need to check the license state to verify that it was properly provisioned. You can do\nthis through the admin center or through the Microsoft Azure portal.\n1. To view your licenses, go to the Microsoft Azure portal and navigate to the Microsoft\nAzure portal license section\n.\n2. Alternately, in the admin center, navigate to Billing > Subscriptions.\nOn the screen, you'll see all the provisioned licenses and their current Status.\nMicrosoft Defender for Endpoint also comes with an in-product evaluation lab where you\ncan add pre-configured devices and run simulations to evaluate the capabilities of the\nplatform. The lab comes with a simplified set-up experience that can help quickly\ndemonstrate the value of Microsoft Defender for Endpoint including guidance for many\nfeatures like advanced hunting and threat analytics. For more information, see Evaluate\ncapabilities. The main difference between the guidance provided in this article and the\nevaluation lab is the evaluation environment uses production devices whereas the\nevaluation lab uses non-production devices.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 88,
+      "end": 90
+    },
+    "content_stats": {
+      "char_count": 2063,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "A B C",
+      "children": []
+    }
+  }
+}

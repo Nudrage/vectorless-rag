@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_764",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\naction\nThe offline enrollment operation. One of\n\"o2fa_user_provisioned\", \"o2fa_user_deprovisioned\", or\n\"o2fa_user_reenrolled\".\ndescription\nInformation about the Duo Windows Logon client system as\nreported by the application.\nuser_agent\nThe Duo Windows Logon application\nversion information and the Windows OS\nversion and platform information.\nhostname\nThe host name of the system where Duo\nWindows Logon is installed.\nfactor\nThe type of authenticator used for offline\naccess. One of \"duo_otp\" or \"security_key\".\nisotimestamp\nISO8601 timestamp of the event.\nobject\nThe Duo Windows Logon integration's name .\ntimestamp\nAn integer indicating the Unix timestamp of the event.\nusername\nThe Duo username.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 359,
+      "end": 359
+    },
+    "content_stats": {
+      "char_count": 708,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "Logs",
+      "children": []
+    }
+  }
+}

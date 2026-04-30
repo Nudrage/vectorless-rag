@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1278",
+  "section_number": "155.1.1.176.1",
+  "header": "Using Defender Experts scoped coverage",
+  "content": "The devices and users you add to these groups are then considered as the set of assets that\nare in scope for this service.\nCurrently, the service doesn't offer support to rename these predefined groups, so we\nrecommend that you don't rename the created device or user group. It also doesn't support\nnested groups. The devices and users would have to be added individually to the groups\ncreated.\nThe following section lists down questions that you or your SOC team might have regarding\nscoped coverage:\n1. What aspects of the XDR service remain consistent with Defender Experts scoped\ncoverage?\n\n\n７ Note\nYou need Security admin permissions to create the device and user groups. Learn more\nabout granting permissions to our experts.\n Tip\nThe device group should be in the highest order of priority for the devices under it, to be\nconsidered in scope. This is a known product limitation.\nThis service doesn't change our pricing structure. You still pay for Defender Experts\nservice based on E5 and Microsoft Defender for Endpoint for Servers for your\ndesired user base.\nThis service doesn't scope according to individual Microsoft Defender products and\nservices (such as Microsoft Defender for Endpoint, Microsoft Defender for Office\n365, or Microsoft Defender for Cloud). That is, the minimum baseline for scoped\ncoverage is still the E5 license.\nThere's no change in permissions for analysts in Defender Experts for XDR. Defender\nExperts analysts will still have access to your entire tenant and not just the scoped\nassets.\n2. Can I change the scoped assets later?\nYou're allowed to change the scoped assets based on your needs. Keep in mind that the\nchanges you make might take some time to take effect in our service. We recommend\nthat you take into account your organization's rhythm of business for incidents before\nand after the changes are made.\n3. What type of response actions does this service provide?\nThere are no changes to existing response actions that are in scope. Read our FAQs\nrelated to Microsoft Defender Experts for XDR Managed response to learn more.\nGet started with Microsoft Defender Experts for XDR service\nUnderstanding and managing Defender Experts for XDR incident updates",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 964,
+      "end": 966
+    },
+    "content_stats": {
+      "char_count": 2203,
+      "word_count": 364
+    },
+    "hierarchy": {
+      "parent": "Scoped coverage in Microsoft Defender Experts for XDR",
+      "children": [
+        "See also"
+      ]
+    }
+  }
+}

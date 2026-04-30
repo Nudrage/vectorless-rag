@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_491",
+  "section_number": "2.8.7.7",
+  "header": "Migrating from Auto-Tune maintenance windows",
+  "content": "If a domain was created before February 16, 2023, it could use maintenance windows to schedule\nAuto-Tune optimizations that require a blue/green deployment. You can migrate your existing\nAuto-Tune domains to use the oﬀ-peak window instead.\nNote\nYou can't revert back to using maintenance windows after you migrate your domain to use\noﬀ-peak windows.\nConsole\nTo migrate a domain to use the oﬀ-peak window\n1.\nWithin the Amazon OpenSearch Service console, select the name of the domain to open its\nconﬁguration.\n2.\nGo to the Auto-Tune tab and choose Edit.\n3.\nSelect Migrate to oﬀ-peak window.\n4.\nFor Start time (UTC), provide a daily start time for the oﬀ-peak window in Universal\nCoordinated Time (UTC).\n5.\nChoose Save changes.\nCLI\nTo migrate from a Auto-Tune maintenance window to the oﬀ-peak window using the AWS CLI,\nsend an UpdateDomainConﬁg request:\naws opensearch update-domain-config \\\n--domain-name my-domain \\\nMigrating from Auto-Tune maintenance windows\n661\nAmazon OpenSearch Service\nDeveloper Guide\n--auto-tune-options\nDesiredState=ENABLED,UseOffPeakWindow=true,MaintenanceSchedules=[]\nThe oﬀ-peak window must be turned on in order for you to migrate a domain from the Auto-Tune\nmaintenance window to the oﬀ-peak window. You can enable the oﬀ-peak window in a separate\nrequest or in the same request. For instructions, see the section called “Enabling the oﬀ-peak\nwindow”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 690,
+      "end": 691
+    },
+    "content_stats": {
+      "char_count": 1381,
+      "word_count": 208
+    },
+    "hierarchy": {
+      "parent": "Deﬁning oﬀ-peak windows for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

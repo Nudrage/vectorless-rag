@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1352",
+  "section_number": "2.24.3",
+  "header": "Logs",
+  "content": "OpenSearch Ingestion can transform unstructured log data into a structured format during\ningestion. OpenSearch Ingestion provides processors that normalize and enrich your data before it\nis indexed. Examples of helpful processors are:\n• grok – Parses and structures unstructured text data such as web server access logs, into distinct\nﬁelds.\n• date – Parses a date from a log ﬁeld and sets it as the event's timestamp.\n• parse_json – Parses a string ﬁeld that contains a JSON object.\nNote – To make getting started easier, we’ve created a new Get Started workﬂow for logs in the\nAmazon OpenSearch Service console which will set up a new Otel tailored ingestion pipeline,\npoint it to an existing OpenSearch cluster, and create a new OpenSearch UI application with an\nobservability workspace created. All you have to do is point your Otel agents to the new ingestion\nendpoint.\nLogs\n1827\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1856,
+      "end": 1857
+    },
+    "content_stats": {
+      "char_count": 926,
+      "word_count": 152
+    },
+    "hierarchy": {
+      "parent": "Observability in Amazon OpenSearch Service",
+      "children": [
+        "OpenSearch UI and observability workspace",
+        "Querying your logs using PPL",
+        "Querying your logs using AI",
+        "Querying your logs using SQL",
+        "Querying your logs using DQL",
+        "Dashboards and alerts for logs"
+      ]
+    }
+  }
+}

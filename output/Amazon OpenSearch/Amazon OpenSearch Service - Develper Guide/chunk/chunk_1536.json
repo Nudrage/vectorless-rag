@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1536",
+  "section_number": "2.28.7",
+  "header": "Billing and Cost Management console changes",
+  "content": "Historic data in the Billing and Cost Management console and in Cost and Usage Reports\nwill continue to use the old service name, so you need to start using ﬁlters for both Amazon\nBilling and Cost Management console changes\n2044\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch Service and the legacy Elasticsearch name when searching for data. If you have\nexisting saved reports, update the ﬁlters to make sure they also include OpenSearch Service.\nYou might initially receive an alert when your usage decreases for Elasticsearch and increases for\nOpenSearch, but it disappears within several days.\nIn addition to the service name, the following ﬁelds will change for all reports, bills, and price list\nAPI operations:\nField\nOld format\nNew format\nInstance type\nm5.large.elasticse\narch\nm5.large.search\nProduct family\nElasticsearch Instance\nElasticsearch Volume\nAmazon OpenSearch Service\nInstance\nAmazon OpenSearch Service\nVolume\nPricing description\n$5.098 per c5.18xlarge.elasti\ncsearch instance hour (or\npartial hour) - EU\n$5.098 per c5.18xlarge.search\ninstance hour (or partial hour)\n- EU\nInstance family\nultrawarm.elastics\nearch\nultrawarm.search",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2073,
+      "end": 2074
+    },
+    "content_stats": {
+      "char_count": 1152,
+      "word_count": 167
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service rename - Summary of changes",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_010",
+  "section_number": "1.2.7",
+  "header": "Update an SSH public key",
+  "content": "User updated an SSH public key.\nEvent details\nEvent name\nUPDATE_SSH_PUBLIC_KEY\nParameters\nUSER_EMAIL\nstring\nThe email address of the acting user.\nSample request\nAdmin Console message format\n{USER_EMAIL} retrieved an SSH public key.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/gcp?\neventName=GET_LOGIN_PROFILE&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{USER_EMAIL} retrieved the profile information\nused for logging in to a virtual machine on\nGoogle Compute Engine.\nGET https://admin.googleapis.com/admin/reports\n/v1/activity/users/all/applications/gcp?\neventName=UPDATE_SSH_PUBLIC_KEY&maxResults=10\n&access_token=YOUR_ACCESS_TOKEN\n{USER_EMAIL} updated an SSH public key.\nExcept as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License\n(https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the Apache 2.0 License\n(https://www.apache.org/licenses/LICENSE-2.0). For details, see the Google Developers Site Policies\n(https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.\nLast updated 2025-03-25 UTC.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 3,
+      "end": 4
+    },
+    "content_stats": {
+      "char_count": 1175,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "Cloud OS Login",
+      "children": []
+    }
+  }
+}

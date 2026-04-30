@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "1.4.3",
+  "header": "Responses",
+  "content": "200\nReturns an Introspection object\n400\nBad request\n401\nUnauthorized access\n500\nInternal server error\nA successful 200 response returns an Introspection object with information about the\ntoken.\nbase_url/api/v2/auth/introspect\ncurl --request GET \\\n--url base_url/api/v2/auth/introspect \\\n--header 'Authorization: Bearer YOUR_BEARER_TOKEN'\n$\nExample introspection response\nIntrospectionV2 object schema\nName\nType\nDescription\nuuid\nstring\nThe UUID of the Events Reporting integration.\nissued_at\nstring\nThe date and time the token was issued. Uses the\nRFC 3339 standard.\nfeatures\narray of\nstrings\nA list of event features the integration has access\nto. Possible values are one or more of:\nauditevents\nitemusages\nsigninattempts\naccount_uuid\nstring\nThe UUID of the account where the bearer token\nwas issued.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 16,
+    "font_name": "SegoeUI-Bold",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 800,
+      "word_count": 111
+    },
+    "hierarchy": {
+      "parent": "GET /api/v2/auth/introspect",
+      "children": []
+    }
+  }
+}

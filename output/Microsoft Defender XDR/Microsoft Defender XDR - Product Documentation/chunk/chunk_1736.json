@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1736",
+  "section_number": "155.1.1.238.1.2",
+  "header": "Get a token using the app and use the token to access the API",
+  "content": "） Important\nAlthough the example in this demo app encourages you to paste in your secret value for\ntesting purposes, you should never hardcode secrets into an application running in\nproduction. A third party could use your secret to access resources. You can help keep\nyour app's secrets secure by using Azure Key Vault. For a practical example of how you\ncan protect your app, see Manage secrets in your server apps with Azure Key Vault.\n# This script gets the app context token and saves it to a file named\n\"Latest-token.txt\" under the current directory.\n# Paste in your tenant ID, client ID and app secret (App key).\n$tenantId = '' # Paste your directory (tenant) ID here\n$clientId = '' # Paste your application (client) ID here\n$appSecret = '' # # Paste your own app secret here to test, then store it in\na safe place!\n$resourceAppIdUri = 'https://api.security.microsoft.com'\n1. Copy and paste the token you received into JWT\nto decode it.\n2. JWT stands for JSON Web Token. The decoded token contains several of JSON-formatted\nitems or claims. Make sure that the roles claim within the decoded token contains the\ndesired permissions.\nIn the following image, you can see a decoded token acquired from an app, with\nIncidents.Read.All , Incidents.ReadWrite.All , and AdvancedHunting.Read.All\npermissions:\n$oAuthUri = \"https://login.windows.net/$tenantId/oauth2/token\"\n$authBody = [Ordered] @{\nresource = $resourceAppIdUri\nclient_id = $clientId\nclient_secret = $appSecret\ngrant_type = 'client_credentials'\n}\n$authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody\n-ErrorAction Stop\n$token = $authResponse.access_token\nOut-File -FilePath \"./Latest-token.txt\" -InputObject $token\nreturn $token",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1302,
+      "end": 1303
+    },
+    "content_stats": {
+      "char_count": 1713,
+      "word_count": 259
+    },
+    "hierarchy": {
+      "parent": "Get incidents using a simple PowerShell script",
+      "children": [
+        "Validate the token"
+      ]
+    }
+  }
+}

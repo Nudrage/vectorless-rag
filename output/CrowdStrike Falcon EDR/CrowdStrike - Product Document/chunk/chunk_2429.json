@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2429",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n849/1226\nField\nDescription\nContextTimeStamp\nSystem time of event creation.\nCloudRequestId\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a\nsystem.\nValues:\nSELF_RID (0x01010000000000050A000000)\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nFileSystemContainmentBlockSource\nValues:\nCONTAINMENT_SERVER (0x1)\nCONTAINMENT_LOCAL (0x2)\nFileSystemContainmentBlockPolicy\nValues:\nCONTAINMENT_READ (0x1)\nCONTAINMENT_WRITE (0x2)\nCONTAINMENT_EXECUTE (0x4)\nCONTAINMENT_DESTRUCT (0x6)\nCONTAINMENT_ALL (0x7)\nFileSystemContainmentBlockState\nValues:\nCONTAINMENT_ACTIVE (0)\nCONTAINMENT_DISABLED (1)\nCONTAINMENT_ERROR (2)\nFileSystemContainmentBlockStatus\nValues:\nCONTAINMENT_SUCCESS (0)\nCONTAINMENT_SUCCESS_OVERWRITTEN (1)\nCONTAINMENT_INVALUD_LUID (2)\nCONTAINMENT_SYSTEM_LUID (3)\nCONTAINMENT_MAX_ENTRIES (4)\nCONTAINMENT_INVALID_POLICY (5)\nCONTAINMENT_INVALID_REQUEST_PARAMS (6)\nCONTAINMENT_INVALID_SID (7)\nCONTAINMENT_ERROR_REMOVE (8)\nCONTAINMENT_POLICY_DISABLED (9)\nUserName\nOperating system username.\nLogonDomain\nLogonType\nValues:\nINTERACTIVE (2)\nNETWORK (3)\nBATCH (4)\nSERVICE (5)\nPROXY (6)\nUNLOCK (7)\nNETWORK_CLEARTEXT (8)\nNEW_CREDENTIALS (9)\nREMOTE_INTERACTIVE (10)\nCACHED_INTERACTIVE (11)\nCACHED_REMOTE_INTERACTIVE (12)\nCACHED_UNLOCK (13)\nNumDenyFile\nNumDenyFolder\nNumDowngradeFile\nNumDowngradeFolder\nNumDenyUnknown\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n850/1226\nField\nDescription\nNumDowngradeUnknown\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 849,
+      "end": 851
+    },
+    "content_stats": {
+      "char_count": 1976,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "FileSystemContainmentStatus",
+      "children": []
+    }
+  }
+}

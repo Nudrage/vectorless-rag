@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1321",
+  "section_number": "2.22.3.2",
+  "header": "Amazon Bedrock templates",
+  "content": "The Amazon Bedrock CloudFormation templates provision the AWS resources needed to create\nconnectors between OpenSearch Service and Amazon Bedrock.\nFirst, the template creates an IAM role that allows the future Lambda function to access your\nOpenSearch Service domain. The template then creates the Lambda function, which has the\ndomain create a connector using the ML Commons plugin. After OpenSearch Service creates the\nconnector, the remote inference set up is ﬁnished and you can run semantic searches using the\nAmazon Bedrock API operations.\nNote\nSince Amazon Bedrock hosts its own ML models, you don’t need to deploy a model to\nSageMaker Runtime. Instead, the template uses a predetermined endpoint for Amazon\nBedrock and skips the endpoint provision steps.\nTo use the Amazon Bedrock CloudFormation template\n1.\nOpen the Amazon OpenSearch Service console.\n2.\nIn the left navigation pane, choose Integrations.\n3.\nUnder Integrate with Amazon Titan Text Embeddings model through Amazon Bedrock,\nchoose Conﬁgure domain, Conﬁgure public domain.\n4.\nFollow the prompt to set up your model.\nAmazon Bedrock templates\n1801\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nOpenSearch Service also provides a separate template to conﬁgure an Amazon VPC\ndomain. If you use this template, you need to provide the Amazon VPC ID for the Lambda\nfunction.\nIn addition, OpenSearch Service provides the following Amazon Bedrock templates to connect to\nthe Cohere model and the Amazon Titan Multimodal Embeddings model:\n• Integration with Cohere Embed through Amazon Bedrock\n• Integrate with Amazon Bedrock Titan Multi-modal",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1830,
+      "end": 1831
+    },
+    "content_stats": {
+      "char_count": 1605,
+      "word_count": 244
+    },
+    "hierarchy": {
+      "parent": "Using CloudFormation to set up remote inference for semantic search",
+      "children": []
+    }
+  }
+}

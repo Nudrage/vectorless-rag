@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_2064",
+  "section_number": "155.1.1.269",
+  "header": "Understand threat intelligence concepts",
+  "content": "09/29/2025Applies to: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2\nMultiple complex malicious events, attributes, and contextual information comprise advanced\ncybersecurity attacks. Identifying and deciding which of these activities qualify as suspicious\ncan be a challenging task. Your knowledge of known attributes and abnormal activities specific\nto your industry is fundamental in knowing when to call an observed behavior as suspicious.\nWith Microsoft Defender XDR, you can create custom threat alerts that can help you keep track\nof possible attack activities in your organization. You can flag suspicious events to piece\ntogether clues and possibly stop an attack chain. These custom threat alerts will only appear in\nyour organization and will flag events that you set it to track.\nBefore creating custom threat alerts, it's important to know the concepts behind alert\ndefinitions and indicators of compromise (IOCs) and the relationship between them.\nAlert definitions are contextual attributes that can be used collectively to identify early clues on\na possible cybersecurity attack. These indicators are typically a combination of activities,\ncharacteristics, and actions taken by an attacker to successfully achieve the objective of an\nattack. Monitoring these combinations of attributes is critical in gaining a vantage point against\nattacks and possibly interfering with the chain of events before an attacker's objective is\nreached.\nIOCs are individually known malicious events that indicate that a network or device has already\nbeen breached. Unlike alert definitions, these indicators are considered as evidence of a\nbreach. They're often seen after an attack has already been carried out and the objective has\nbeen reached, such as exfiltration. Keeping track of IOCs is also important during forensic\ninvestigations. Although it might not be able to intervene with an attack chain, gathering these\nindicators can be useful in creating better defenses for possible future attacks.\n７ Note\nTry our new APIs using MS Graph security API. Find out more at: Use the Microsoft\nGraph security API - Microsoft Graph | Microsoft Learn.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1528,
+      "end": 1528
+    },
+    "content_stats": {
+      "char_count": 2177,
+      "word_count": 329
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Alert definitions",
+        "Indicators of compromise (IOC)",
+        "Relationship between alert definitions and IOCs",
+        "Related topics"
+      ]
+    }
+  }
+}

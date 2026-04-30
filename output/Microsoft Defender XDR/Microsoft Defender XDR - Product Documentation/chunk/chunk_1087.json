@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1087",
+  "section_number": "155.1.1",
+  "header": "Microsoft Defender XDR",
+  "content": "Security Operator - Users with this Microsoft Entra role can manage alerts and have\nglobal read-only access to security-related features, including all information in the\nMicrosoft Defender portal. This role is sufficient for managing custom detections only if\nrole-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you\nhave RBAC configured, you also need the Manage Security Settings permission for\nDefender for Endpoint.\nYou can manage custom detections that apply to data from specific Defender XDR solutions if\nyou have the right permissions for them. For example, if you only have manage permissions for\nMicrosoft Defender for Office 365, you can create custom detections using Email*  tables but\nnot Identity*  tables.\nLikewise, since the IdentityLogonEvents  table holds authentication activity information from\nboth Microsoft Defender for Cloud Apps and Defender for Identity, you need to have manage\npermissions for both services to manage custom detections querying the said table.\nTo manage custom detections on Microsoft Sentinel data, you need to be assigned the\nMicrosoft Sentinel Contributor role. Users with this Azure role can manage Microsoft Sentinel\nSIEM workspace data, including alerts and detections. You can assign this role on a specific\nprimary workspace, Azure resource group, or an entire subscription.\nTo manage required permissions, a Global Administrator can:\nAssign the Security Administrator or Security Operator role in Microsoft 365 admin\ncenter\nunder Roles > Security Administrator.\nCheck RBAC settings for Microsoft Defender for Endpoint in Microsoft Defender XDR\nunder Settings > Permissions > Roles. Select the corresponding role to assign the\nmanage security settings permission.\n７ Note\nTo manage custom detections, Security Operators must have the Manage Security\nSettings permission in Microsoft Defender for Endpoint if RBAC is turned on.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 823,
+      "end": 824
+    },
+    "content_stats": {
+      "char_count": 1912,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "Required permissions for managing custom detections",
+      "children": []
+    }
+  }
+}

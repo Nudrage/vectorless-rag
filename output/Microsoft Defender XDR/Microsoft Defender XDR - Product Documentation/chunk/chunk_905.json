@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_905",
+  "section_number": "155.1.1.91.1",
+  "header": "View query results as a table or chart",
+  "content": "ﾉ\nExpand table\nView type\nDescription\nStacked area\nchart\nPlots numeric values for a series of unique items and stacks the filled sections below\nthe plotted values\nTime chart\nPlots values by count on a linear time scale\nWhen rendering charts, advanced hunting automatically identifies columns of interest and the\nnumeric values to aggregate. To get meaningful charts, construct your queries to return the\nspecific values you want to see visualized. Here are some sample queries and the resulting\ncharts.\nUse the summarize  operator to obtain a numeric count of the values you want to chart. The\nquery below uses the summarize  operator to get the number of alerts by severity.\nKusto\nWhen rendering the results, a column chart displays each severity value as a separate column:\nKusto\n） Important\nMicrosoft Defender portal displays up to 100,000 advanced hunting query results only.\nLearn more about advanced hunting quotas and usage parameters",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 599,
+      "end": 600
+    },
+    "content_stats": {
+      "char_count": 940,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Work with advanced hunting query results",
+      "children": [
+        "Construct queries for effective charts"
+      ]
+    }
+  }
+}

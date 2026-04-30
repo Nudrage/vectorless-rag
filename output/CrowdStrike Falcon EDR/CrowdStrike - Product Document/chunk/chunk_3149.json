@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3149",
+  "section_number": "1.6.10.7.8",
+  "header": "revokeUserRoles",
+  "content": "{\n\"metadata\": {\n\"customerIDString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"offset\": 1238834,\n\"eventType\": \"AuthActivityAuditEvent\",\n\"eventCreationTime\": 1494713166787,\n\"version\": \"1.0\"\n},\n\"event\": {\n\"UserId\": \"user@example.com\",\n\"UserIp\": \"192.0.2.100\",\n\"OperationName\": \"revokeUserRoles\",\n\"ServiceName\": \"Crowdstrike Authentication\",\n\"Success\": true,\n\"AuditKeyValues\": [\n{\n\"Key\": \"actor_user\",\n\"ValueString\": \"user@example.com\"\n},\n{\n\"Key\": \"actor_cid\",\n\"ValueString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\"\n},\n{\n\"Key\": \"actor_user_uuid\",\n\"ValueString\": \"456b382d-b2f6-4eed-bcc4-111d89d6789\"\n},\n{\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1178/1226\n\"Key\": \"target_name\",\n\"ValueString\": \"user@example.com\"\n},\n{\n\"Key\": \"target_user_uuid\",\n\"ValueString\": \"95a0a15d-12ed-41e1-ae6b-faad66034567\"\n},\n{\n\"Key\": \"target_cid\",\n\"ValueString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\"\n},\n{\n\"Key\": \"roles\",\n\"ValueString\": \"test_admin\"\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1178,
+      "end": 1179
+    },
+    "content_stats": {
+      "char_count": 1107,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

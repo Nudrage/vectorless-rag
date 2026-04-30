@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_660",
+  "section_number": "2.10.2.7",
+  "header": "Testing slow logs",
+  "content": "To test that both search request and shard slow logs are publishing successfully, consider starting\nwith very low values to verify that logs appear in CloudWatch, and then increase the thresholds to\nmore useful levels.\nIf the logs don't appear, check the following:\n• Does the CloudWatch log group exist? Check the CloudWatch console.\n• Does OpenSearch Service have permissions to write to the log group? Check the OpenSearch\nService console.\n• Is the OpenSearch Service domain conﬁgured to publish to the log group? Check the\nOpenSearch Service console, use the AWS CLI describe-domain-config option, or call\nDescribeDomainConfig using one of the SDKs.\n• Are the OpenSearch logging thresholds low enough that your requests are exceeding them?\nTo review your search request slow log thresholds for a domain, use the following command:\nGET domain-endpoint/_cluster/settings?flat_settings\nTo review your shard slow log thresholds for an index, use the following command:\nGET domain-endpoint/index/_settings?pretty\nSetting shard slow log thresholds\n1222\nAmazon OpenSearch Service\nDeveloper Guide\nIf you want to disable slow logs for an index, return any thresholds that you changed to their\ndefault values of -1.\nDisabling publishing to CloudWatch using the OpenSearch Service console or AWS CLI does not\nstop OpenSearch from generating logs; it only stops the publishing of those logs. Be sure to check\nyour index settings if you no longer need the shard slow logs, and your domain settings if you no\nlonger need the search request slow logs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1251,
+      "end": 1252
+    },
+    "content_stats": {
+      "char_count": 1540,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch logs with Amazon CloudWatch Logs",
+      "children": []
+    }
+  }
+}

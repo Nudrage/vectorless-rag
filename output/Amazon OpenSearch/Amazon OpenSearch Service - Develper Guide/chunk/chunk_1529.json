@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1529",
+  "section_number": "2.28.2",
+  "header": "Renamed instance types",
+  "content": "Instance types in Amazon OpenSearch Service are now in the format <type>.<size>.search—\nfor example, m6g.large.search rather than m6g.large.elasticsearch. You don't need to\nNew API version\n2040\nAmazon OpenSearch Service\nDeveloper Guide\ntake any action. Existing domains will start automatically referring to the new instance types within\nthe API and in the Billing and Cost Management console.\nIf you have Reserved Instances (RIs), your contract won't be impacted by the change. The old\nconﬁguration API version is still compatible with the old naming format, but if you want to use the\nnew API version, you need to use the new format.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2069,
+      "end": 2070
+    },
+    "content_stats": {
+      "char_count": 635,
+      "word_count": 100
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service rename - Summary of changes",
+      "children": []
+    }
+  }
+}

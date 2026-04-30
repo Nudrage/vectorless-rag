@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_2046",
+  "section_number": "155.1.1.267.2",
+  "header": "Investigation",
+  "content": "What initially made you aware of the ransomware attack?\nIf IT staff identified the initial threat—such as noticing backups being deleted, antivirus\nalerts, endpoint detection and response (EDR) alerts, or suspicious system changes—\nit's often possible to take quick decisive measures to thwart the attack, typically by the\ncontainment actions described in this article.\nWhat date and time did you first learn of the incident?\nWhat system and security updates weren't installed on devices on that date? This is\nimportant to understand what vulnerabilities might have been leveraged so they can\nbe addressed on other devices.\nWhat user accounts were used on that date?\nWhat new user accounts were created since that date?\nWhat programs were added to automatically start around the time that the incident\noccurred?\nIs there any indication that the attacker is currently accessing systems?\nAre there any suspected compromised systems that are experiencing unusual activity?\nAre there any suspected compromised accounts that appear to be actively used by the\nadversary?\nIs there any evidence of active command-and-control (C2) servers in EDR, firewall,\nVPN, web proxy, and other logs?\nUsing advanced hunting, search for the identified process in the process creation events\non other devices.\nFor user accounts whose credentials were potentially compromised, reset the account\npasswords, and require the users to sign in again.\nThe following IOAs might indicate lateral movement:\nClick to expand\nSuspiciousExploratoryCommands\nMLFileBasedAlert\nIfeoDebuggerPersistence\nSuspiciousRemoteFileDropAndExecution\nExploratoryWindowsCommands\nIoaStickyKeys",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1511,
+      "end": 1512
+    },
+    "content_stats": {
+      "char_count": 1638,
+      "word_count": 234
+    },
+    "hierarchy": {
+      "parent": "Responding to ransomware attacks",
+      "children": [
+        "Assess your current situation",
+        "Identify the ransomware process",
+        "Look for exposed credentials in the infected devices",
+        "Identify the line of business (LOB) apps that are unavailable due to the incident"
+      ]
+    }
+  }
+}

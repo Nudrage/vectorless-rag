@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1525",
+  "section_number": "2.27.4.4",
+  "header": "Step 4: Analyze and visualize your data",
+  "content": "Now that you have some data in OpenSearch Service, you can visualize it using OpenSearch\nDashboards.\n1.\nNavigate to https://search-domain.region.es.amazonaws.com/_dashboards.\n2.\nBefore you can use OpenSearch Dashboards, you need an index pattern. Dashboards uses\nindex patterns to narrow your analysis to one or more indices. To match the support-calls\nindex that call-center.py created, go to Stack Management, Index Patterns, and deﬁne\nan index pattern of support*, and then choose Next step.\n3.\nFor Time Filter ﬁeld name, choose timestamp.\n4.\nNow you can start creating visualizations. Choose Visualize, and then add a new visualization.\n5.\nChoose the pie chart and the support* index pattern.\n6.\nThe default visualization is basic, so choose Split Slices to create a more interesting\nvisualization.\nFor Aggregation, choose Terms. For Field, choose sentiment.keyword. Then choose Apply\nchanges and Save.\nStep 4: Analyze and visualize your data\n2034\nAmazon OpenSearch Service\nDeveloper Guide\n7.\nReturn to the Visualize page, and add another visualization. This time, choose the horizontal\nbar chart.\n8.\nChoose Split Series.\nFor Aggregation, choose Terms. For Field, choose keywords.keyword and change Size to 20.\nThen choose Apply Changes and Save.\nStep 4: Analyze and visualize your data\n2035\nAmazon OpenSearch Service\nDeveloper Guide\n9.\nReturn to the Visualize page and add one ﬁnal visualization, a vertical bar chart.\n10. Choose Split Series. For Aggregation, choose Date Histogram. For Field, choose timestamp\nand change Interval to Daily.\n11. Choose Metrics & Axes and change Mode to normal.\n12. Choose Apply Changes and Save.\nStep 4: Analyze and visualize your data\n2036\nAmazon OpenSearch Service\nDeveloper Guide\n13. Now that you have three visualizations, you can add them to a Dashboards visualization.\nChoose Dashboard, create a dashboard, and add your visualizations.\nStep 4: Analyze and visualize your data\n2037\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2063,
+      "end": 2067
+    },
+    "content_stats": {
+      "char_count": 1967,
+      "word_count": 299
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Visualizing customer support calls with OpenSearch Service and OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

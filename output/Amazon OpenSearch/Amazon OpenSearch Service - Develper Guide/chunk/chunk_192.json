@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_192",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "The following limitations apply when you designate OpenSearch Service domains or OpenSearch\nServerless collections as sinks:\n• A pipeline can't write to more than one VPC domain.\n• You can only migrate data to or from OpenSearch Serverless collections that use VPC access.\nPublic collections aren't supported.\n• You can't specify a combination of VPC and public domains in a single pipeline conﬁguration.\n• You can have a maximum of 20 non-pipeline sinks within a single pipeline conﬁguration.\n• You can specify sinks from a maximum of three diﬀerent AWS Regions in a single pipeline\nconﬁguration.\n• A pipeline with multiple sinks might experience a reduction in processing speed over time if\nany of the sinks are down for too long, or are not provisioned with enough capacity to receive\nincoming data.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 324,
+      "end": 324
+    },
+    "content_stats": {
+      "char_count": 802,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "Migrating data between domains and collections using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

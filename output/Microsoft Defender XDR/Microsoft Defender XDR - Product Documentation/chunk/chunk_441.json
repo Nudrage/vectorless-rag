@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_441",
+  "section_number": "155.1.1.41.2.2",
+  "header": "Blast radius analysis",
+  "content": "７ Note\nBlast radius analysis extends and replaces Attack path analysis.\nreduce the likelihood of widespread damage. Blast radius analysis helps analysts better assess\nthe risk to highly regarded targets, and understand the business impact.\nThe following prerequisites are required to use the blast radius graph:\nYou must be onboarded to Microsoft Sentinel data lake. For more information, see\nOnboarding to Microsoft Sentinel data lake and graph.\nExposure management (read) permission or higher. For more information, see Manage\npermissions with Microsoft Defender XDR Unified role-based access control (RBAC).\nThe following table summarizes the blast radius analysis use cases for different user roles:\nUser role\nUse case\nSecurity analyst\nUse blast radius analysis to investigate an incident. Instantly see the compromised\ncomponent at the center of the graph and the paths to potentially compromised\ntargets. The graph provides an intuitive visual understanding of the incident and helps\nyou quickly learn the potential scope of a breach. Based on the target and paths, you\ncan escalate, and trigger actions to disrupt, isolate, and contain the incident on nodes\nalong the paths to the target.\nIT administrators\nand SOC\nengineers\nUse blast radius analysis to mobilize resource based on business impact and potential\ndamage estimation. Engineers can prioritize the most critical vulnerabilities that\nrequire immediate attention. The engineer can proactively allocate the required\nresources based on the blast radius reach to critical targets in the organization by\nexamining multiple nodes marked with vulnerabilities on the map. The engineer can\nclearly communicate what was protected and what was impacted and plan and\nprioritize additional defenses and network segmentations required to reduce further\nimpact of future potential attacks.\nIncident\nresponse team\nQuickly determine the scope of incident, with a dynamic visual incident map enabling\nthem to take targeted action on the systems indicated on the graph.\nCISO or security\nleaders\nUse the blast radius feature to indicate current status, set goals and metrics indicators,\nand use this to report and audit for compliance reasons. The feature can be used to\ntrack progress of defending actions and protection measures investments.\n） Important\nAttack paths and blast radius features are calculated based on the organization’s available\nenvironment data. The value in the graph increases as more data is available for its\ncalculation. If no further workloads are enabled or critical assets aren't fully defined, blast\nradius graphs won't fully represent your environmental risks. For more information on\ndefining critical assets, see Review and classify critical assets.\nﾉ\nExpand table\nAfter selecting an incident from the list in the Incidents page, a graph view is displayed\nshowing the entities and assets involved in the incident.\nSelect a node to open the context menu, then select View blast radius. To view the blast radius\nof a single node in a group, use the ungroup toggle above the grid to present all nodes.\nA new graph view loads showing the 8 top-rated attack paths. A full list of the paths is visible\non the right side panel when selecting View full blast radius list above the graph. From the list\nof reachable targets, you can further explore the path by selecting one of the listed targets. The\nright panel shows the potential path from the entry point to this target. Some nodes may not\nhave paths associated with them.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 264,
+      "end": 266
+    },
+    "content_stats": {
+      "char_count": 3497,
+      "word_count": 549
+    },
+    "hierarchy": {
+      "parent": "Attack story",
+      "children": [
+        "View blast radius graphs",
+        "Limitations"
+      ]
+    }
+  }
+}

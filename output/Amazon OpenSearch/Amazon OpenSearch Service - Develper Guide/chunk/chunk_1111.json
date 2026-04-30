@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1111",
+  "section_number": "2.18.2.2.3",
+  "header": "Creating an OpenSearch UI application that uses AWS IAM Identity Center authentication using the AWS CLI",
+  "content": "authentication using the AWS CLI\nTo create an OpenSearch UI application that uses AWS IAM Identity Center authentication using\nthe AWS CLI, use the create-application command with the following options:\n• --name – The name of the application.\n• --iam-identity-center-options – (Optional) The IAM Identity Center instance and the IAM\nrole that OpenSearch will use for authentication and access control.\nReplace the placeholder values with your own information.\naws opensearch create-application \\\n--name application-name \\\n--iam-identity-center-options \"\n{\n\\\"enabled\\\":true,\n\\\"iamIdentityCenterInstanceArn\\\":\\\"arn:aws:sso:::instance/sso-instance\\\",\n\\\"iamRoleForIdentityCenterApplicationArn\\\":\\\"arn:aws:iam::account-\nid:role/role-name\\\"\n}\n\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1665,
+      "end": 1665
+    },
+    "content_stats": {
+      "char_count": 738,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Creating an OpenSearch UI application",
+      "children": []
+    }
+  }
+}

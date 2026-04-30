@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1042",
+  "section_number": "2.16.1.1",
+  "header": "Integration architecture",
+  "content": "The integration uses Amazon OpenSearch Ingestion (OSI) as the data pipeline between Amazon\nS3 vector indexes and Amazon OpenSearch Serverless vector collections. OpenSearch Ingestion\nautomatically exports vector data from your speciﬁed vector index and ingests it into OpenSearch\nServerless vector collections for high-performance search operations.\nNote\nAfter export, your data is still present in the S3 vector index. You have two copies of the\ndata.\nEach vector index maps to a corresponding index in the OpenSearch Serverless collection. The\nintegration:\nIntegration architecture\n1567\nAmazon OpenSearch Service\nDeveloper Guide\n• Preserves vector dimensions\n• Retains metadata\n• Optimizes data structure for OpenSearch's vector search capabilities\nAfter conﬁguration, OpenSearch Ingestion begins the data export process by consuming vectors\nfrom the speciﬁed vector index using the Amazon S3 ListVectors API. The service processes vectors\nin parallel to optimize ingestion speed while respecting the scaling limits of both OpenSearch\nIngestion and Amazon OpenSearch Serverless.\nDuring ingestion, the service:\n• Transforms vector data to match the expected format for OpenSearch Service\n• Preserves essential information including vector values, metadata, and distance metrics\n• Handles failure scenarios through intelligent retry mechanisms\n• Places problematic records in an Amazon S3 bucket used as a dead letter queue for later analysis\nThe integration handles massive datasets eﬃciently, with performance depending on vector\ndimensions, dataset size, and conﬁgured scaling limits. OSI can scale up to 16 workers per pipeline,\nwhile OpenSearch Serverless automatically adjusts capacity based on ingestion demands. By\ndefault, OpenSearch increases the maxSearch OpenSearch Computational Unit (OCU) on the\nOpenSearch Serverless side to 100.\nNote\nThe integration prioritizes cost eﬃciency through:\n• Automatic pipeline shutdown after export completion\n• OpenSearch Serverless collection scaling\n• Pay-per-use resource model",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1596,
+      "end": 1597
+    },
+    "content_stats": {
+      "char_count": 2026,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "Import from Amazon S3 Vectors to OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

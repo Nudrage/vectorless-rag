@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1131",
+  "section_number": "2.18.4.3.1",
+  "header": "Conﬁguring access to OpenSearch Serverless collections in a VPC (console)",
+  "content": "To conﬁgure access to OpenSearch Serverless collections in a VPC using the console\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation, choose Network policies, choose the name of the network policy, and\nthen choose Edit.\n-or-\nChoose Create network policy, and then conﬁgure the details for the policy.\n3.\nIn the Access type area, choose Private (recommended), and then select AWS service private\naccess.\nConﬁguring access to OpenSearch Serverless collections in a VPC\n1659\nAmazon OpenSearch Service\nDeveloper Guide\n4.\nIn the search ﬁeld, choose Service, and then choose\napplication.opensearchservice.amazonaws.com.\n5.\nIn the Resource type area, select the Enable access to OpenSearch endpoint box.\n6.\nFor Search collection(s), or input speciﬁc preﬁx term(s), in the search ﬁeld, select Collection\nName, and then enter or select the name of the collections to associate with the network\npolicy.\n7.\nChoose Create for a new network policy or Update for an existing network policy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1688,
+      "end": 1689
+    },
+    "content_stats": {
+      "char_count": 1049,
+      "word_count": 160
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring access to OpenSearch Serverless collections in a VPC",
+      "children": []
+    }
+  }
+}

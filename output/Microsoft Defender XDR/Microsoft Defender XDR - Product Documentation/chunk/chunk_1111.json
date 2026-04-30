@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1111",
+  "section_number": "1.1.155.2.6.1",
+  "header": "How custom detections handle duplicate alerts",
+  "content": "An important consideration when creating and reviewing custom detection rules is alert noise\nand fatigue. Custom detections group and deduplicate events into a single alert. If a custom\ndetection fires twice on an event that contains the same entities, custom details, and dynamic\ndetails, it creates only one alert for both of these events. If the detection recognizes that the\nevents are identical, it logs only one of the events on the created alert and then takes care of\nthe duplicates, which could occur when the lookback period is longer than the frequency. If the\nevents are different, the custom detection logs both events on the alert.\nCustom detections overview\nManage custom detections\nAdvanced hunting overview\nLearn the advanced hunting query language\nMigrate advanced hunting queries from Microsoft Defender for Endpoint\nMicrosoft Graph security API for custom detections\nLast updated on 12/02/2025",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 841,
+      "end": 842
+    },
+    "content_stats": {
+      "char_count": 913,
+      "word_count": 142
+    },
+    "hierarchy": {
+      "parent": "6. Review and turn on the rule",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_001",
+  "section_number": "1",
+  "header": "Resource: Function",
+  "content": "Describes a Cloud Function that contains user computation executed in response to an event. It\nencapsulates function and trigger configurations.\nJSON representation\nFields\nname\nstring\nA user-defined name of the function. Function names must be unique globally and\nmatch pattern projects/*/locations/*/functions/*\n{\n\"name\": string,\n\"description\": string,\n\"buildConfig\": {\nobject (BuildConfig (/functions/docs/reference/rest/v2/projects.locations.functions#BuildConfig))\n},\n\"serviceConfig\": {\nobject (ServiceConfig (/functions/docs/reference/rest/v2/projects.locations.functions#ServiceConfig)\n},\n\"eventTrigger\": {\nobject (EventTrigger (/functions/docs/reference/rest/v2/projects.locations.functions#EventTrigger))\n},\n\"state\": enum (State (/functions/docs/reference/rest/v2/projects.locations.functions#State)),\n\"updateTime\": string,\n\"labels\": {\nstring: string,\n...\n},\n\"stateMessages\": [\n{\nobject (StateMessage (/functions/docs/reference/rest/v2/projects.locations.functions#StateMessag\n}\n],\n\"environment\": enum (Environment (/functions/docs/reference/rest/v2/projects.locations.functions#En\n\"upgradeInfo\": {\nobject (UpgradeInfo (/functions/docs/reference/rest/v2/projects.locations.functions#UpgradeInfo))\n},\n\"url\": string,\n\"kmsKeyName\": string,\n\"satisfiesPzs\": boolean,\n\"createTime\": string,\n\"satisfiesPzi\": boolean\n}\nFields\ndescription\nstring\nUser-provided description of a function.\nbuildConfig\nobject (BuildConfig\n(/functions/docs/reference/rest/v2/projects.locations.functions#BuildConfig))\nDescribes the Build step of the function that builds a container from the given source.\nserviceConfig\nobject (ServiceConfig\n(/functions/docs/reference/rest/v2/projects.locations.functions#ServiceConfig))\nDescribes the Service being deployed. Currently deploys services to Cloud Run (fully\nmanaged).\neventTrigger\nobject (EventTrigger\n(/functions/docs/reference/rest/v2/projects.locations.functions#EventTrigger))\nAn Eventarc trigger managed by Google Cloud Functions that fires events in response\nto a condition in another service.\nstate\nenum (State\n(/functions/docs/reference/rest/v2/projects.locations.functions#State))\nOutput only. State of the function.\nupdateTime\nstring (Timestamp\n(https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp) format)\nOutput only. The last update timestamp of a Cloud Function.\nUses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or\n9 fractional digits. Offsets other than \"Z\" are also accepted. Examples: \"2014-10-\n02T15:01:23Z\", \"2014-10-02T15:01:23.045123456Z\" or \"2014-10-\n02T15:01:23+05:30\".\nlabels\nmap (key: string, value: string)\nLabels associated with this Cloud Function.\nAn object containing a list of \"key\": value pairs. Example: { \"name\":\n\"wrench\", \"mass\": \"1.3kg\", \"count\": \"3\" }.\nstateMessages[]\nobject (StateMessage\n(/functions/docs/reference/rest/v2/projects.locations.functions#StateMessage))\nOutput only. State Messages for this Cloud Function.\nenvironment\nenum (Environment\n(/functions/docs/reference/rest/v2/projects.locations.functions#Environment))\nDescribe whether the function is 1st Gen or 2nd Gen.\nupgradeInfo\nobject (UpgradeInfo\n(/functions/docs/reference/rest/v2/projects.locations.functions#UpgradeInfo))\nOutput only. UpgradeInfo for this Cloud Function\nurl\nstring\nOutput only. The deployed url for the function.\nkmsKeyName\nstring\nFields\nResource name of a KMS crypto key (managed by the user) used to encrypt/decrypt\nfunction resources.\nIt must match the pattern\nprojects/{project}/locations/{location}/keyRings/{key_ring}/cry\nptoKeys/{crypto_key}.\nsatisfiesPzs\nboolean\nOutput only. Reserved for future use.\ncreateTime\nstring (Timestamp\n(https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp) format)\nOutput only. The create timestamp of a Cloud Function. This is only applicable to 2nd\nGen functions.\nUses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or\n9 fractional digits. Offsets other than \"Z\" are also accepted. Examples: \"2014-10-\n02T15:01:23Z\", \"2014-10-02T15:01:23.045123456Z\" or \"2014-10-\n02T15:01:23+05:30\".\nsatisfiesPzi\nboolean\nOutput only. Reserved for future use.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 17,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 3
+    },
+    "content_stats": {
+      "char_count": 4122,
+      "word_count": 404
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

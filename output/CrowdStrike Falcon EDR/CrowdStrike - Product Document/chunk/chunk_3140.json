@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3140",
+  "section_number": "1.6.10.18.1",
+  "header": "Event fields section",
+  "content": "Field\nDescription\nAuditKeyValues.Key and\nAuditKeyValues.ValueString\nAuditKeyValues come in pairs (Key & ValueString). Possible values for AuditKeyValues.Key include:\nactorUser: Name of the user carrying out the operation.\nactorCID: Home CID of the user carrying out the operation.\nactorUserUUID: UUID of the user carrying out the operation.products: When granting or revoking\nsubscriptions, the name of the product that was granted or revoked.\nroles: When granting or revoking roles, the name of the role that was granted or revoked.\ntargetCID: Target CID of the operation.target\nUsername: Name of the target user.targetUserUUID: UUID of the target user.\nOperationName\nThis field describes the Authentication operation:\nactivateUser: User account was (successfully/not successfully) activated.\nchangePassword: User password was (successfully/not successfully) changed.\nconfirmResetPassword: User password was (successfully/not successfully) reset.\ncreateUser: New user account (successfully/not successfully) created.\ndeactivateUser: User account was (successfully/not successfully) deactivated.\ndeleteUser: User account was (successfully/not successfully) removed\ngrantUserRoles: User account was granted a new role.\ngrantCustomerSubscriptions: User was granted a new subscription.\nrequestResetPassword: User requested password reset.\nresetAuthSecret: User requested Auth Secret reset.\nrevokeUserRoles: User has a role revoked.\nrevokeCustomerSubscriptions: User had a subscription revoked.\nselfAcceptEula: User accepted Eula.\ntwoFactorAuthenticate: User account was (successfully/not successfully) authenticated using two-factor\nauthentication.\nupdateUser: User details (for example, the user's name) was (successfully/not successfully) updated.\nupdateUserRoles: User's role was (successfully/not successfully) updated.\nuserAuthenticate: User account was (successfully/not successfully) authenticated.\nServiceName\nCrowdStrike Authentication\nUserId\nUser that performed the operation, for example person that performed the operation to create a new user\naccount.\nUserIp\nIP address of user that performs the operation.\nUTCTimestamp\nTime when the operation took place in Unix epoch time.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1174,
+      "end": 1174
+    },
+    "content_stats": {
+      "char_count": 2184,
+      "word_count": 262
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

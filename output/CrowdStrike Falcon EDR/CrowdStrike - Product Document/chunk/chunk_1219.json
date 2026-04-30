@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1219",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nUserName\nOperating system username.\nUID\nUnix User Identifier.\nGID\nUnix Group Identifier.\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\nObjectName\nThe file or registry path.\nObjectType\nThe basic object type (file, folder, value, or key).\nValues:\nFILE (1)\nFOLDER (2)\nVALUE (3)\nKEY (4)\nObjectAccessOperationType\nThe change made to an object (create, write, delete, set, or rename).\nValues:\nCREATE (1)\nWRITE (2)\nDELETE (3)\nSET (4)\nRENAME (5)\nATTRIBUTES_CHANGED (6)\nPERMISSIONS_CHANGED (7)\nOPEN_WRITE (8)\nObjectNameNew\nThe new name of an object that was renamed.\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING (0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nPolicyIdentifier\nID of Data Protection Policy matched to the egress event.\nRuleModifiedTimeStamp\nThe time the rule was modified.\nPolicyRuleGroupID\nThe ID of the policy rule group.\nPolicyRuleID\nThe ID of the policy rule.\nPolicyRuleSeverity\nThe severity of the policy rule.\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n327/1226\nField\nDescription\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nParentImageFileName\nGrandparentImageFileName\nTags\nField used for Falcon diagnostic information.\nContentMonitoringEnabled\nFimDiffError\nValues:\nNO_ERROR (0)\nNOT_TEXT (1)\nTOO_BIG (2)\nNO_BASELINE (3)\nFimDiffData\nFimDiffCorrelationId\nFimPrevDiffCorrelationId\nSecurityInformationMac\nValues:\nMAC_SECINFO_PERMISSION (1)\nMAC_SECINFO_OWNER_GROUP (2)\nMAC_SECINFO_ACL (3)\nMAC_SECINFO_ATTRLIST (4)\nPreviousUnixPermissions\nNewUnixPermissions\nPreviousUnixOwner\nNewUnixOwner\nPreviousUnixGroup\nNewUnixGroup\nPreviousFileFlag\nFileFlag\nCommonAttributes",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 327,
+      "end": 328
+    },
+    "content_stats": {
+      "char_count": 2754,
+      "word_count": 329
+    },
+    "hierarchy": {
+      "parent": "FileIntegrityMonitorRuleMatched",
+      "children": []
+    }
+  }
+}

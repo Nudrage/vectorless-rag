@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_738",
+  "section_number": "155.1.1.70.1.1",
+  "header": "Connect a workspace",
+  "content": "In Microsoft Defender, you can connect workspaces by selecting Connect a workspace in the\ntop banner. This button appears if you're eligible to onboard a Microsoft Sentinel workspace\nonto the unified Microsoft Defender portal. Follow the steps in: Onboarding a workspace\n.\nAfter connecting your Microsoft Sentinel workspace and Microsoft Defender XDR advanced\nhunting data, you can start querying Microsoft Sentinel data from the advanced hunting page.\nFor an overview of advanced hunting features, read Proactively hunt for threats with advanced\nhunting.\nUse tables with longer data retention period in queries – Advanced hunting follows the\nmaximum data retention period configured for the Defender XDR tables (see Understand\nquotas). If you stream Defender XDR tables to Microsoft Sentinel and have a data\nretention period longer than 30 days for said tables, you can query for the longer period\nin advanced hunting.\nUse Kusto operators you've used in Microsoft Sentinel – In general, queries from\nMicrosoft Sentinel work in advanced hunting, including queries that use the adx()\noperator. There might be cases where IntelliSense warns you that the operators in your\nquery don't match the schema, however, you can still run the query and it should still be\nexecuted successfully.\nUse the time filter dropdown instead of setting the time span in the query – If you're\nfiltering ingestion of Defender XDR tables to Sentinel instead of streaming the tables as\nis, don't filter the time in the query as this might generate incomplete results. If you set\nthe time in the query, the streamed, filtered data from Sentinel is used because it usually\nhas the longer data retention period. If you would like to make sure you're querying all\nDefender XDR data for up to 30 days, use the time filter dropdown provided in the query\neditor instead.\nView SourceSystem  and MachineGroup  columns for Defender XDR data that have been\nstreamed from Microsoft Sentinel – Since the columns SourceSystem  and MachineGroup\nare added to Defender XDR tables once they're streamed to Microsoft Sentinel, they also\nappear in results in advanced hunting in Defender. However, they remain blank for\nDefender XDR tables that weren't streamed (tables that follow the default 30-day data\nretention period).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 479,
+      "end": 480
+    },
+    "content_stats": {
+      "char_count": 2278,
+      "word_count": 363
+    },
+    "hierarchy": {
+      "parent": "How to access",
+      "children": []
+    }
+  }
+}

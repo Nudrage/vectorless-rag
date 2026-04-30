@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_488",
+  "section_number": "2.8.7.4",
+  "header": "Conﬁguring a custom oﬀ-peak window",
+  "content": "You specify a custom oﬀ-peak window for your domain in Coordinated Universal Time (UTC). For\nexample, if your want the oﬀ-peak window to start at 11:00 P.M. for a domain in the US East (N.\nVirginia) Region, you'd specify 04:00 UTC.\nEnabling the oﬀ-peak window\n656\nAmazon OpenSearch Service\nDeveloper Guide\nConsole\nTo modify the oﬀ-peak window for a domain\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nSelect the name of the domain to open its conﬁguration.\n3.\nNavigate to the Oﬀ-peak window tab. You can view the conﬁgured oﬀ-peak window and a list\nof upcoming scheduled actions for the domain.\n4.\nChoose Edit and specify a new start time in UTC. For example, to conﬁgure a start time of 9:00\nPM in the US East (N. Virginia) Region, specify 02:00 UCT.\n5.\nChoose Save changes.\nCLI\nTo conﬁgure a custom oﬀ-peak window using the AWS CLI, send an UpdateDomainConﬁg request\nand specify the hour and minute in 24-hour time format.\nFor example, the following request changes the window start time to 2:00 A.M. UTC:\naws opensearch update-domain-config \\\n--domain-name my-domain \\\n--off-peak-window-options 'OffPeakWindow={WindowStartTime={Hours=02,Minutes=00}}'\nIf you don't specify a window start time, it defaults to 10:00 P.M. local time for the AWS Region\nthat the domain is created in.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 685,
+      "end": 686
+    },
+    "content_stats": {
+      "char_count": 1330,
+      "word_count": 212
+    },
+    "hierarchy": {
+      "parent": "Deﬁning oﬀ-peak windows for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

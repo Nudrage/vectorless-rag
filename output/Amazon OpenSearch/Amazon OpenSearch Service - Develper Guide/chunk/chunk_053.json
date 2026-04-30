@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_053",
+  "section_number": "2.6.8.1.1",
+  "header": "Step 1: Create the pipeline role",
+  "content": "First, create a role that the pipeline will assume in order to access the OpenSearch Service domain\nsink. You'll include this role within the pipeline conﬁguration later in this tutorial.\nTo create the pipeline role\n1.\nOpen the AWS Identity and Access Management console at https://console.aws.amazon.com/\niamv2/.\n2.\nChoose Policies, and then choose Create policy.\n3.\nIn this tutorial, you'll ingest data into a domain called ingestion-domain, which you'll create\nin the next step. Select JSON and paste the following policy into the editor. Replace your-\naccount-id with your account ID, and modify the Region if necessary.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": \"es:DescribeDomain\",\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/ingestion-\ndomain\"\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/ingestion-\ndomain/*\"\n}\n]\n}\nTutorial: Ingest data into a domain\n46\nAmazon OpenSearch Service\nDeveloper Guide\nIf you want to write data to an existing domain, replace ingestion-domain with the name of\nyour domain.\nNote\nFor simplicity in this tutorial, we use a broad access policy. In production environments,\nhowever, we recommend that you apply a more restrictive access policy to your\npipeline role. For an example policy that provides the minimum required permissions,\nsee the section called “Granting pipelines access to domains”.\n4.\nChoose Next, choose Next, and name your policy pipeline-policy.\n5.\nChoose Create policy.\n6.\nNext, create a role and attach the policy to it. Choose Roles, and then choose Create role.\n7.\nChoose Custom trust policy and paste the following policy into the editor:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Effect\":\"Allow\",\n\"Principal\":{\n\"Service\":\"osis-pipelines.amazonaws.com\"\n},\n\"Action\":\"sts:AssumeRole\"\n}\n]\n}\n8.\nChoose Next. Then search for and select pipeline-policy (which you just created).\n9.\nChoose Next and name the role PipelineRole.\n10. Choose Create role.\nRemember the Amazon Resource Name (ARN) of the role (for example, arn:aws:iam::your-\naccount-id:role/PipelineRole). You'll need it when you create your pipeline.\nTutorial: Ingest data into a domain\n47\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 75,
+      "end": 77
+    },
+    "content_stats": {
+      "char_count": 2250,
+      "word_count": 317
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Ingesting data into a domain using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

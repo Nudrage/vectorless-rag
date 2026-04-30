@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1761",
+  "section_number": "155.1.1.241.2.3",
+  "header": "Get an access token using C#",
+  "content": "７ Note\nThe following code was tested with Nuget Microsoft.Identity.Client 3.19.8.\n1. Create a new console application.\n2. Install NuGet Microsoft.Identity.Client\n.\n3. Add the following line:\nC#\n4. Copy and paste the following code into your app (don't forget to update the three\nvariables: tenantId , clientId , appSecret ):\nC#\nPython\n） Important\nThe Microsoft.IdentityModel.Clients.ActiveDirectory\nNuGet package and Azure AD\nAuthentication Library (ADAL) have been deprecated. No new features have been added\nsince June 30, 2020. We strongly encourage you to upgrade, see the migration guide for\nmore details.\nusing Microsoft.Identity.Client;\nstring tenantId = \"00000000-0000-0000-0000-000000000000\"; // Paste your own\ntenant ID here\nstring appId = \"11111111-1111-1111-1111-111111111111\"; // Paste your own app\nID here\nstring appSecret = \"22222222-2222-2222-2222-222222222222\"; // Paste your own\napp secret here for a test, and then store it in a safe place!\nconst string authority = https://login.microsoftonline.com;\nconst string audience = https://api.securitycenter.microsoft.com;\nIConfidentialClientApplication myApp =\nConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret\n).WithAuthority($\"{authority}/{tenantId}\").Build();\nList<string> scopes = new List<string>() { $\"{audience}/.default\" };\nAuthenticationResult authResult =\nmyApp.AcquireTokenForClient(scopes).ExecuteAsync().GetAwaiter().GetResult();\nstring token = authResult.AccessToken;",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1332,
+      "end": 1333
+    },
+    "content_stats": {
+      "char_count": 1473,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "Get an access token",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1061",
+  "section_number": "2.16.4.2",
+  "header": "Create vector database",
+  "content": "Use the vector ingestion job creation workﬂow to set up automated vector index tuning and\naccelerate large-scale index builds.\nNote\nThe procedural content in this section is subject to change as the user interface is ﬁnalized.\nThe workﬂow may be updated in future releases to reﬂect the latest console experience.\nTo create a vector injection job\n1.\nIn the Vector ingestion job details section, for Name, enter a name for your ingestion job.\n2.\nIn the Data source section, conﬁgure the following:\na.\nFor Amazon S3 URI, enter the Amazon S3 bucket location containing your OpenSearch\nService JSON documents.\nb.\nChoose Browse Amazon S3 to select from available buckets, or choose View to preview\nthe bucket contents.\nc.\nFor Content type, select one of the following:\n• Vectors - Documents already contain vectors and doesn't require further vector\nembedding generation.\n• Text, image, or audio - Documents contain content such as text, images or audio bytes\nthat need to be encoded into vector embeddings.\n3.\nIn the Data source permissions section, conﬁgure access permissions:\nPrerequisites\n1586\nAmazon OpenSearch Service\nDeveloper Guide\na.\nFor IAM role, choose one of the following:\n• Create a new role\n• Use an existing role\nb.\nFor IAM role name, enter a name for the role.\n4.\nIn the Destination section, conﬁgure the OpenSearch Service endpoint:\na.\nFor Endpoint, choose Choose an option to select from your compatible domains or\ncollections in the current region.\nb.\nChoose Next to proceed with the selected endpoint.\n5.\nChoose Next to continue to the next step, or choose Cancel to exit without saving.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1615,
+      "end": 1616
+    },
+    "content_stats": {
+      "char_count": 1604,
+      "word_count": 265
+    },
+    "hierarchy": {
+      "parent": "Vector ingestion",
+      "children": []
+    }
+  }
+}

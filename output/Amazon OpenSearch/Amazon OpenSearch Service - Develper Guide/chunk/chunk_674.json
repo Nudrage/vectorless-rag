@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_674",
+  "section_number": "2.10.3.6.1",
+  "header": "Step 1: Conﬁgure audit logs",
+  "content": "After you enable the publishing of audit logs to a CloudWatch Logs group, navigate to the\nOpenSearch Dashboards audit logging page and choose Enable audit logging.\n1.\nIn General Settings, choose Conﬁgure and make sure that the REST layer is enabled.\n2.\nIn Compliance Settings, choose Conﬁgure.\n3.\nUnder Write, in Watched Fields, add accounts for all write events to this index.\n4.\nUnder Read, in Watched Fields, add ssn and id- ﬁelds of the accounts index:\n{\n\"accounts-\": [\n\"ssn\",\n\"id-\"\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1262,
+      "end": 1262
+    },
+    "content_stats": {
+      "char_count": 490,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Audit log example",
+      "children": []
+    }
+  }
+}

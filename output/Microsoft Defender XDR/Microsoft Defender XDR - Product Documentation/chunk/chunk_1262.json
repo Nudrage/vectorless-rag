@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1262",
+  "section_number": "155.1.1.174.2",
+  "header": "Exclude devices and users from remediation",
+  "content": "７ Note\nThis page only lists existing device groups. If you wish to create a new device group,\nyou first need to go to the Defender for Endpoint settings in your Microsoft\nDefender portal. Then, refresh this page to search for and choose the newly created\ngroup. Learn more about creating device groups\nTo exclude user groups:\n1. In the same Defender Experts settings setup, under Exclusions, go to the User groups tab.\n2. Select + Add user groups, then search for and choose one or more user groups that you\nwish to exclude.\n3. Select Add user groups.\n4. Back on the User groups tab, review the list of excluded user groups. If you wish to\nremove a user group from the exclusion list, choose it then select Remove user group.\n5. Select Next to confirm your exclusion list and proceed to adding contact persons or\ngroups. Otherwise, select Skip, and all your added exclusions are discarded.\n\n７ Note\nThis page only lists existing user groups. If you wish to create a new user group, you\nfirst need to sign into the Microsoft Entra ID admin center as a Global Administrator.\nThen, refresh this page to search for and choose the newly created group. Learn\nmore about creating user groups\nTo edit or update exclusions after the initial setup, go to Settings > Defender Experts >\nExclusions, then go to the Device groups or User groups tab.\nDefender Experts for XDR lets you determine the individuals or groups within your organization\nthat need to be notified if there are critical incidents, service updates, occasional queries, and\nother recommendations:\nIncident notification contacts – These contacts are persons or teams that we can notify\nfor managed response actions or any communication that requires immediate response.\nGiven the urgent nature of the communications, we recommended that these contacts\nare always available.\nService review contacts – These contacts are persons or teams that will be engaged with\nfor service updates and, if your service includes a service delivery manager, service\nbriefings.\nOnce identified, the individuals or groups will receive an email notifying them that they were as\na contact for incident notification or service review purposes.\n\n７ Note\nYou can only exclude users by adding them to a Microsoft Entra ID security group. On-\npremises Microsoft Entra ID users can't be excluded at this time.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 944,
+      "end": 946
+    },
+    "content_stats": {
+      "char_count": 2336,
+      "word_count": 394
+    },
+    "hierarchy": {
+      "parent": "Get started with Microsoft Defender Experts for XDR",
+      "children": []
+    }
+  }
+}

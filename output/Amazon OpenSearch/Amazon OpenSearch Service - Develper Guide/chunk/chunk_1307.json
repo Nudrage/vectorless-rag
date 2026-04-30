@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1307",
+  "section_number": "2.22.2.1",
+  "header": "Create an OpenSearch Service connector",
+  "content": "To create a connector, send a POST request to the OpenSearch Service domain endpoint. You can\nuse curl, the sample Python client, Postman, or another method to send a signed request. Note\nthat you can't use a POST request in the Kibana console. The request takes the following format:\nPOST domain-endpoint/_plugins/_ml/connectors/_create\n{\n\"name\": \"sagemaker: embedding\",\n\"description\": \"Test connector for Sagemaker embedding model\",\n\"version\": 1,\n\"protocol\": \"aws_sigv4\",\n\"credential\": {\n\"roleArn\": \"arn:aws:iam::account-id:role/opensearch-sagemaker-role\"\n},\n\"parameters\": {\n\"region\": \"region\",\n\"service_name\": \"sagemaker\"\n},\n\"actions\": [\n{\n\"action_type\": \"predict\",\n\"method\": \"POST\",\n\"headers\": {\n\"content-type\": \"application/json\"\n},\n\"url\": \"https://runtime.sagemaker.region.amazonaws.com/endpoints/endpoint-id/\ninvocations\",\n\"request_body\": \"{ \\\"inputs\\\": { \\\"question\\\": \\\"${parameters.question}\\\",\n\\\"context\\\": \\\"${parameters.context}\\\" } }\"\n}\n]\n}\nCreate an OpenSearch Service connector\n1790\nAmazon OpenSearch Service\nDeveloper Guide\nIf your domain resides within a virtual private cloud (VPC), your computer must be connected\nto the VPC for the request to successfully create the AI connector. Accessing a VPC varies by\nnetwork conﬁguration, but usually involves connecting to a VPN or corporate network. To\ncheck that you can reach your OpenSearch Service domain, navigate to https://your-vpc-\ndomain.region.es.amazonaws.com in a web browser and verify that you receive the default\nJSON response.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1819,
+      "end": 1820
+    },
+    "content_stats": {
+      "char_count": 1505,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service ML connectors for AWS services",
+      "children": [
+        "Sample Python client"
+      ]
+    }
+  }
+}

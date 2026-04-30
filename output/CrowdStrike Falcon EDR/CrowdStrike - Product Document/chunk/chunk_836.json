@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_836",
+  "section_number": "1.5.239.3",
+  "header": "Understanding ParentProcessId",
+  "content": "As previously mentioned, every process that executes on a host has a corresponding ProcessRollup2 event. This means that when a process spawns another\nprocess, a brand new ProcessRollup2 event will be generated for that new ProcessRollup2event. This new event will contain a field called\nParentProcessId. The ParentProcessId of the child PR2 will match the TargetProcessId of the parent PR2, as shown below :\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n220/1226\nBy searching for events that have matching values for ParentProcessId and TargetProcessId, you can determine the parent-child relationship of multiple\nProcessRollup2 events.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "CalibreWeb",
+    "page_range": {
+      "start": 220,
+      "end": 221
+    },
+    "content_stats": {
+      "char_count": 823,
+      "word_count": 109
+    },
+    "hierarchy": {
+      "parent": "ProcessRollup2",
+      "children": []
+    }
+  }
+}

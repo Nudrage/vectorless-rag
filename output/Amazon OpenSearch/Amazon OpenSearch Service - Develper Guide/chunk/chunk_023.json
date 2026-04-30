@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_023",
+  "section_number": "2.5.2.2",
+  "header": "Option 2: Upload multiple documents",
+  "content": "To upload a JSON ﬁle that contains multiple documents to an OpenSearch Service domain\n1.\nCreate a local ﬁle called bulk_movies.json. Paste the following content into the ﬁle and\nadd a trailing newline:\n{ \"index\" : { \"_index\": \"movies\", \"_id\" : \"2\" } }\n{\"director\": \"Frankenheimer, John\", \"genre\": [\"Drama\", \"Mystery\", \"Thriller\",\n\"Crime\"], \"year\": 1962, \"actor\": [\"Lansbury, Angela\", \"Sinatra, Frank\", \"Leigh,\nJanet\", \"Harvey, Laurence\", \"Silva, Henry\", \"Frees, Paul\", \"Gregory, James\",\n\"Bissell, Whit\", \"McGiver, John\", \"Parrish, Leslie\", \"Edwards, James\", \"Flowers,\nBess\", \"Dhiegh, Khigh\", \"Payne, Julie\", \"Kleeb, Helen\", \"Gray, Joe\", \"Nalder,\nReggie\", \"Stevens, Bert\", \"Masters, Michael\", \"Lowell, Tom\"], \"title\": \"The\nManchurian Candidate\"}\n{ \"index\" : { \"_index\": \"movies\", \"_id\" : \"3\" } }\n{\"director\": \"Baird, Stuart\", \"genre\": [\"Action\", \"Crime\", \"Thriller\"], \"year\":\n1998, \"actor\": [\"Downey Jr., Robert\", \"Jones, Tommy Lee\", \"Snipes, Wesley\",\n\"Pantoliano, Joe\", \"Jacob, Ir\\u00e8ne\", \"Nelligan, Kate\", \"Roebuck, Daniel\",\n\"Malahide, Patrick\", \"Richardson, LaTanya\", \"Wood, Tom\", \"Kosik, Thomas\",\n\"Stellate, Nick\", \"Minkoff, Robert\", \"Brown, Spitfire\", \"Foster, Reese\",\n\"Spielbauer, Bruce\", \"Mukherji, Kevin\", \"Cray, Ed\", \"Fordham, David\", \"Jett,\nCharlie\"], \"title\": \"U.S. Marshals\"}\n{ \"index\" : { \"_index\": \"movies\", \"_id\" : \"4\" } }\n{\"director\": \"Ray, Nicholas\", \"genre\": [\"Drama\", \"Romance\"], \"year\": 1955, \"actor\":\n[\"Hopper, Dennis\", \"Wood, Natalie\", \"Dean, James\", \"Mineo, Sal\", \"Backus, Jim\",\n\"Platt, Edward\", \"Ray, Nicholas\", \"Hopper, William\", \"Allen, Corey\", \"Birch,\nPaul\", \"Hudson, Rochelle\", \"Doran, Ann\", \"Hicks, Chuck\", \"Leigh, Nelson\",\n\"Williams, Robert\", \"Wessel, Dick\", \"Bryar, Paul\", \"Sessions, Almira\", \"McMahon,\nDavid\", \"Peters Jr., House\"], \"title\": \"Rebel Without a Cause\"}\n2.\nRun the following command in the local directory where the ﬁle is stored to upload it to the\nmovies domain:\nOption 2: Upload multiple documents\n18\nAmazon OpenSearch Service\nDeveloper Guide\ncurl -XPOST -u 'master-user:master-user-password' 'domain-endpoint/movies/_bulk' --\ndata-binary @bulk_movies.json -H 'Content-Type: application/x-ndjson'\nFor more information about the bulk ﬁle format, see Indexing data.\nNext: Search documents",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 47,
+      "end": 48
+    },
+    "content_stats": {
+      "char_count": 2234,
+      "word_count": 288
+    },
+    "hierarchy": {
+      "parent": "Upload data to Amazon OpenSearch Service for indexing",
+      "children": []
+    }
+  }
+}

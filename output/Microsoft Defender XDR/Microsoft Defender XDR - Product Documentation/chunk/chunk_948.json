@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_948",
+  "section_number": "155.1.1.263.2.3.4",
+  "header": "Sending email to AI controlled input values",
+  "content": "AIAgentsInfo\n//Find agents with email sending tool via microsoft 365 connector, where the input\n//parameters of the inputs are populated by generative orchestrator\n| summarize arg_max(Timestamp, *) by AIAgentId\n| where AgentStatus != \"Deleted\"\n| extend IsGenAIOrchestrator =\ntostring(todynamic(RawAgentInfo).Bot.Attributes.configuration) has\n'\"GenerativeActionsEnabled\": true'\n| where IsGenAIOrchestrator\n| mvexpand Action = AgentToolsDetails\n| extend  OperationId = tostring(Action.action.operationId), ActionName =\ntostring(Action.modelDisplayName), Action\n| where OperationId == \"SendEmailV2\"\n| where isempty(Action.inputs) //All inputs are populated by Orchestrator\n| project-reorder AgentCreationTime ,AIAgentId, AIAgentName, AgentStatus,\nCreatorAccountUpn, OwnerAccountUpns, ActionName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 639,
+      "end": 639
+    },
+    "content_stats": {
+      "char_count": 791,
+      "word_count": 82
+    },
+    "hierarchy": {
+      "parent": "Sample queries",
+      "children": []
+    }
+  }
+}

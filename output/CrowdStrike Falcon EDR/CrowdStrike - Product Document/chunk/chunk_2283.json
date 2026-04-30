@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2283",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nFileEntrySourceType\nThis enum exists to provide a rough categorization of filesexamined during forensic analysis.\nValues:\nFILE_UNKNOWN (0)\nFILE_SSH_CONFIG (1)\nFILE_SHELL_HISTORY (2)\nFILE_SHELL_CONFIG (3)\nFILE_KNOWN_HOSTS (4)\nFILE_AUTHORIZED_KEYS (5)\nFILE_SCHEDULED (6)\nFILE_SYSTEM_START (7)\nFILE_SYSTEM_CONFIG (8)\nFILE_SYSTEM_STOP (9)\nFILE_KERN_MODULES (10)\nFILE_DARWIN_PLIST (11)\nFILE_DARWIN_MRU (12)\nFILE_SYSTEM_AUTH (13)\nFILE_WINDOWS_LOGFILE (14)\nFILE_SHELL_START (15)\nFILE_RUNNING_STATE (16)\nForensicsText\nA unit of forensically intersting text read from a system logor some other text file of interest, such as shell history, ssh config, startup\nscripts, etc.\nLine\nLength\nFfcLogFilterTag\nTag indicating which directive in the collector configuration file captured an event. Useful as a quick filter for events.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 808,
+      "end": 808
+    },
+    "content_stats": {
+      "char_count": 951,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "FileEntry",
+      "children": []
+    }
+  }
+}

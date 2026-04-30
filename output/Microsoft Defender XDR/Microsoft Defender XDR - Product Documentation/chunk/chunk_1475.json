@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1475",
+  "section_number": "155.1.1.202.4",
+  "header": "Teach the agent your organization’s context through feedback",
+  "content": "through feedback\n3. In the Manage alert pane, select the new classification from the Classification dropdown\nmenu. Then, provide your reason for the change by filling out the Why did you change\nthis classification field. This step records your input on the feedback management page\nfor auditing purposes only. The agent won't use this feedback to improve its decision-\nmaking until you explicitly select Use this feedback to teach the agent. If you choose not\nto use this feedback for teaching the agent, you can select Save, which will only audit the\nfeedback without inserting it into the agent’s memory.\n\n4. To apply your feedback, select Use this feedback to teach the agent. You can use the\nguide to writing feedback to help you craft effective input, and then choose Evaluate\nfeedback to allow you to preview how the agent translates your feedback into a lesson\nand assess whether the outcome aligns with your intent. Additionally, the feedback\nevaluation performs basic safety checks to ensure that the applied feedback is relevant\nfor the agent to use and doesn’t conflict with previous feedback.\n\n７ Note\nYou can only provide feedback to the agent once per alert, and it can only be used to\nteach the agent how to classify phishing alerts, specifically by selecting either True\nPositive (phishing) or False Positive (not malicious). Always review your feedback and\nverify the AI-generated response before saving the lesson.\n5. If the result meets your expectations, you can choose to insert the lesson into the agent’s\nmemory to influence its future decisions. Select Save to save the lesson and store it as a\nlesson in the agent’s memory if applicable. All feedback recorded for audit purposes, and\nlessons added to the agent’s memory, can be later reviewed in the feedback management\npage.\nThe agent utilizes stored feedback to triage and classify similar alerts in the future. When a\nrelevant alert that matches the feedback characteristics is received, the agent applies this\nfeedback to determine its classification, incorporating it as supporting evidence in its decision-\nmaking process.\nLessons provide systematic guidelines that help the agent determine whether an alert is a\ngenuine phishing threat or a false alarm. To ensure the agent effectively incorporates your\nfeedback, Microsoft recommends following these best practices when providing input to the\nPhishing Triage Agent:\n1. Ensure feedback is relevant and contextual. Feedback should pertain only to the email\ncurrently under review. It must also align with the updated classification you’ve assigned.\n2. Be descriptive and specific. Clearly explain the characteristics of the email. Provide\nrelevant details like the email subject, message body, sender, or recipients to help the\nagent understand the context. Specific feedback with multiple details enhances\neffectiveness.\n3. Ensure clarity and decisiveness. Avoid vague or universal statements. Give feedback that\nis clear and actionable. Use decisive and clear identification terms.\n4. Be consistent with previous feedback. Ensure that new feedback aligns with what was\npreviously provided to avoid contradictions that could confuse the agent or reduce the\naccuracy of its decisions. You can review all previously submitted input on the Feedback\nmanagement page.\n5. Review the agent’s interpretation of your feedback. After submitting it, always verify that\nthe feedback is accurately translated into a lesson. Confirm that it reflects your intent and\nmaintains consistency with your original input. Checking the validity of AI-generated\nresponses ensures these are applicable to the scenario.\nHere are examples of how you can write your feedback to the agent.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1100,
+      "end": 1103
+    },
+    "content_stats": {
+      "char_count": 3693,
+      "word_count": 579
+    },
+    "hierarchy": {
+      "parent": "Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)",
+      "children": [
+        "Best practices for writing feedback",
+        "Resolve feedback failures"
+      ]
+    }
+  }
+}

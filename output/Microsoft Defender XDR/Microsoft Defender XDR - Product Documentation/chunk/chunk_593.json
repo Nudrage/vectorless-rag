@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_593",
+  "section_number": "155.1.1.52.3",
+  "header": "Integrate insider risk management data with Microsoft Graph security API",
+  "content": "Microsoft Graph security API\nﾉ\nExpand table\nTable name\nDescription\nMode\nIncidents\nIncludes all insider risk incidents in the Defender XDR unified\nincident queue\nRead/Write\nAlerts\nIncludes all insider risk alerts shared with Defender XDR unified\nalert queue\nRead/Write\nAdvanced\nhunting\nIncludes all insider risk management data in advanced hunting\nincluding Alerts, Behaviors, and Events\nRead\nThe insider risk alert metadata is part of the alert resource type in Microsoft Graph\nsecurity API. See the complete information in alert resource type.\nFor customers using Office 365 Management Activity API, we recommend migrating to\nMicrosoft Security Graph API to ensure richer metadata and bi-directional support for\nIRM data.\nWe recommend Microsoft Sentinel customers to use the Microsoft Purview Insider Risk\nManagement – Microsoft Sentinel data connector to get insider risk management alerts\nin Microsoft Sentinel.\nIf you are using automation on Microsoft Sentinel incidents, note that automation risks\nfailure due to insider risk management incidents having no alert content. To mitigate\nthis, turn off data sharing in insider risk management settings.\nAfter investigating an insider risk incident or alert, you can do any of the following:\nContinue to respond to the alert in the Microsoft Purview portal.\n７ Note\nInsider risk alert information can be accessed in both the Alerts and Advanced\nhunting graph namespace. The alerts namespace provides more metadata.\nInsider risk behaviors and events in advanced hunting can be accessed in the Graph\nAPI by passing KQL queries in the API. Use this method to pull supporting data for\nspecific alerts or investigations.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 377,
+      "end": 378
+    },
+    "content_stats": {
+      "char_count": 1664,
+      "word_count": 254
+    },
+    "hierarchy": {
+      "parent": "Investigate insider risk threats in the Microsoft Defender portal",
+      "children": []
+    }
+  }
+}

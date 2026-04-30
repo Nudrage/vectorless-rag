@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_985",
+  "section_number": "2.15.7",
+  "header": "Cross-cluster search in Amazon OpenSearch Service",
+  "content": "Cross-cluster search in Amazon OpenSearch Service lets you perform queries and aggregations\nacross multiple connected domains. It often makes more sense to use multiple smaller domains\ninstead of a single large domain, especially when you're running diﬀerent types of workloads.\nWorkload-speciﬁc domains enable you to perform the following tasks:\n• Optimize each domain by choosing instance types for speciﬁc workloads.\n• Establish fault-isolation boundaries across workloads. This means that if one of your workloads\nfails, the fault is contained within that speciﬁc domain and doesn't impact your other workloads.\n• Scale more easily across domains.\nSQL Workbench\n1512\nAmazon OpenSearch Service\nDeveloper Guide\nCross-cluster search supports OpenSearch Dashboards, so you can create visualizations and\ndashboards across all your domains. You pay standard AWS data transfer charges for search results\ntransferred between domains.\nNote\nOpen source OpenSearch also has documentation for cross-cluster search. Setup diﬀers\nsigniﬁcantly for open source clusters compared to managed Amazon OpenSearch\nService domains. Most notably, in OpenSearch Service, you conﬁgure cross-cluster\nconnections using the AWS Management Console rather than through cURL. In addition,\nthe managed service uses AWS Identity and Access Management (IAM) for cross-cluster\nauthentication in addition to ﬁne-grained access control. Therefore, we recommend using\nthis documentation, rather than the open source OpenSearch documentation, to conﬁgure\ncross-cluster search for your domains.\nTopics\n• Limitations\n• Cross-cluster search prerequisites\n• Cross-cluster search pricing\n• Setting up a connection\n• Removing a connection\n• Setting up security and sample walkthrough\n• OpenSearch Dashboards",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1541,
+      "end": 1542
+    },
+    "content_stats": {
+      "char_count": 1765,
+      "word_count": 245
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": [
+        "Limitations",
+        "Cross-cluster search prerequisites",
+        "Cross-cluster search pricing",
+        "Setting up a connection",
+        "Removing a connection",
+        "Setting up security and sample walkthrough",
+        "OpenSearch Dashboards"
+      ]
+    }
+  }
+}

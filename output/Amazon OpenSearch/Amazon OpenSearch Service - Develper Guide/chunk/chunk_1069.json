@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1069",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "• Dataset format and permissions - You must have dataset available as a set (one or many)\nparquet ﬁles in an Amazon S3 bucket folder. For instance, if the dataset is split into two ﬁles\ncalled s3://dataset-bucket-us-east-1/dataset_folder/first_half.parquet and\ns3://dataset-bucket-us-east-1/dataset_folder/second_half.parquet, then you\nshould place s3://dataset-bucket-us-east-1/dataset_folder/ here. This dataset will\nHow it works\n1592\nAmazon OpenSearch Service\nDeveloper Guide\nbe used to generate the recommendations. Ensure that your federated role has the following\nAmazon S3 permissions on that resource: \"s3:Get*\", \"s3:List*\", \"s3:Describe*\".\n• Specify correct dataset metadata - The provided parquet dataset must contain rows of\nﬂoat values. The name of each column and dimensionality of each vector must match the\noptions provided in the console. For example, if the dataset contains vectors that are named\ntrain_data which are each 768 dimension, these values must match the auto-optimize\nconsole.\n• (If using vector ingestion feature) - If you plan to utilize the ingestion feature (taking auto-\noptimize recommendations to automatically create index and ingest data), you must conﬁgure\nyour OpenSearch cluster to give auto-optimize permission to ingest your parquet dataset into\nthe OpenSearch cluster. For OpenSearch domains with a domain access policy, grant the newly\ncreated role access through that policy. For OpenSearch domains with ﬁne-grained access\ncontrol, add the pipeline role as a backend role. For OpenSearch Serverless collections, add the\npipeline role to the data access policy.\n• IAM permissions - You need the following IAM permissions to use auto-optimize:\n• opensearch:SubmitAutoOptimizeJob\n• opensearch:GetAutoOptimizeJob\n• opensearch:DeleteAutoOptimizeJob\n• opensearch:CancelAutoOptimizeJob\n• opensearch:ListAutoOptimizeJobs\nNote\nThese are identity-based policies. Auto-optimize does not support resource-based\npolicies.\n• Credential expiry - Conﬁgure your federated user session to have a minimum credential expiry\nof at least 1 hour. For very large datasets or high dimensions, consider increasing the expiration\nduration up to 3 hours.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1621,
+      "end": 1622
+    },
+    "content_stats": {
+      "char_count": 2173,
+      "word_count": 297
+    },
+    "hierarchy": {
+      "parent": "Auto-optimize",
+      "children": []
+    }
+  }
+}

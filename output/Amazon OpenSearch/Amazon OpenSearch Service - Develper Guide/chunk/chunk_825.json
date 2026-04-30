@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_825",
+  "section_number": "2.12.4.11",
+  "header": "Integrations",
+  "content": "If you use other AWS services with OpenSearch Service, you must provide the IAM roles for those\nservices with appropriate permissions. For example, Firehose delivery streams often use an IAM\nrole called firehose_delivery_role. In Dashboards, create a role for ﬁne-grained access\ncontrol, and map the IAM role to it. In this case, the new role needs the following permissions:\n{\n\"cluster_permissions\": [\n\"cluster_composite_ops\",\n\"cluster_monitor\"\n],\n\"index_permissions\": [{\n\"index_patterns\": [\nManual snapshots\n1356\nAmazon OpenSearch Service\nDeveloper Guide\n\"firehose-index*\"\n],\n\"allowed_actions\": [\n\"create_index\",\n\"manage\",\n\"crud\"\n]\n}]\n}\nPermissions vary based on the actions each service performs. An AWS IoT rule or AWS Lambda\nfunction that indexes data likely needs similar permissions to Firehose, while a Lambda function\nthat only performs searches can use a more limited set.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1385,
+      "end": 1386
+    },
+    "content_stats": {
+      "char_count": 882,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

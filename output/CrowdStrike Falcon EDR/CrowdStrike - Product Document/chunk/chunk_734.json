@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_734",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp System time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\nUserName\nOperating system username.\nLogonTime\nPasswordLastSet\nUserLogonFlags\nValues:\nNONE (0x00000000)\nLOGON_IS_SYNTHETIC (0x00000001)\nUSER_IS_ADMIN (0x00000002)\nUSER_IS_LOCAL (0x00000004)\nUSER_IS_BUILT_IN (0x00000008)\nUSER_IDENTITY_MISSING (0x00000010)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 183,
+      "end": 183
+    },
+    "content_stats": {
+      "char_count": 699,
+      "word_count": 86
+    },
+    "hierarchy": {
+      "parent": "UserLogonFailed",
+      "children": []
+    }
+  }
+}

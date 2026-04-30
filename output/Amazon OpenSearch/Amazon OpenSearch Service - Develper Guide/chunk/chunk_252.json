@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_252",
+  "section_number": "2.6.22.2",
+  "header": "General best practices",
+  "content": "The following general best practices apply to creating and managing pipelines.\n• To ensure high availability, conﬁgure VPC pipelines with two or three subnets. If you only deploy\na pipeline in one subnet and the Availability Zone goes down, you won't be able to ingest data.\n• Within each pipeline, we recommend limiting the number of sub-pipelines to 5 or fewer.\n• If you're using the S3 source plugin, use evenly-sized S3 ﬁles for optimal performance.\n• If you're using the S3 source plugin, add 30 seconds of additional visibility timeout for every 0.25\nGB of ﬁle size in the S3 bucket for optimal performance.\n• Include a dead-letter queue (DLQ) in your pipeline conﬁguration so that you can oﬄoad failed\nevents and make them accessible for analysis. If your sinks reject data due to incorrect mappings\nor other issues, you can route the data to the DLQ in order to troubleshoot and ﬁx the issue.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 393,
+      "end": 393
+    },
+    "content_stats": {
+      "char_count": 900,
+      "word_count": 156
+    },
+    "hierarchy": {
+      "parent": "Best practices for Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

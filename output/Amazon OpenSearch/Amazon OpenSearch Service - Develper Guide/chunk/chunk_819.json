@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_819",
+  "section_number": "2.12.4.7",
+  "header": "Recommended conﬁgurations",
+  "content": "Due to how ﬁne-grained access control interacts with other security features, we recommend\nseveral ﬁne-grained access control conﬁgurations that work well for most use cases.\nDescription\nMaster\nuser\nDomain access policy\nUse IAM credentials for\ncalls to the OpenSearc\nh APIs, and use SAML\nauthentication to access\nDashboards. Manage\nIAM role\nor user\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\nRecommended conﬁgurations\n1349\nAmazon OpenSearch Service\nDeveloper Guide\nDescription\nMaster\nuser\nDomain access policy\nﬁne-grained access\ncontrol roles using\nDashboards or the REST\nAPI.\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:\nus-\neast-1 :111122223333 :domain/domain-na\nme /*\"\n}\n]\n}\nUse IAM credentials or\nbasic authentication for\ncalls to the OpenSearc\nh APIs. Manage ﬁne-grai\nned access control roles\nusing Dashboards or the\nREST API.\nThis conﬁguration\noﬀers a lot of ﬂexiblit\ny, especially if you have\nOpenSearch clients\nthat only support basic\nauthentication.\nIf you have an existing\nidentity provider, use\nSAML authentication\nto access Dashboard\ns. Otherwise, manage\nDashboards users in the\ninternal user database.\nUsername\nand\npassword\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:\nus-\neast-1 :111122223333 :domain/domain-na\nme /*\"\n}\n]\n}\nRecommended conﬁgurations\n1350\nAmazon OpenSearch Service\nDeveloper Guide\nDescription\nMaster\nuser\nDomain access policy\nUse IAM credentials for\ncalls to the OpenSearc\nh APIs, and use Amazon\nCognito to access\nDashboards. Manage\nﬁne-grained access\ncontrol roles using\nDashboards or the REST\nAPI.\nIAM role\nor user\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:\nus-\neast-1 :111122223333 :domain/domain-na\nme /*\"\n}\n]\n}\nRecommended conﬁgurations\n1351\nAmazon OpenSearch Service\nDeveloper Guide\nDescription\nMaster\nuser\nDomain access policy\nUse IAM credentials for\ncalls to the OpenSearc\nh APIs, and block most\naccess to Dashboards.\nManage ﬁne-grained\naccess control roles using\nthe REST API.\nIAM role\nor user\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:\nus-\neast-1 :111122223333 :domain/domain-na\nme /*\"\n},\n{\n\"Effect\": \"Deny\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:ESHttp*\",\n\"Resource\": \"arn:aws:es:\nus-\neast-1 :111122223333 :domain/domain-na\nme /_dashboards*\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1378,
+      "end": 1381
+    },
+    "content_stats": {
+      "char_count": 2554,
+      "word_count": 359
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

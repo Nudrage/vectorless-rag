@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1050",
+  "section_number": "155.1.1.140",
+  "header": "ExposureGraphNodes",
+  "content": "06/20/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nApplies to:\nMicrosoft Defender XDR\nMicrosoft Security Exposure Management (public preview)\nThe ExposureGraphNodes  table in the advanced hunting schema contains organizational entities\nand their properties. These include entities like devices, identities, user groups, and cloud\nassets such as virtual machines (VMs), storage, and containers. Each node corresponds to an\nindividual entity and encapsulates information about its characteristics, attributes, and security\nrelated insights within the organizational structure. Use this reference to construct queries that\nreturn information from this table.\nThis advanced hunting table is populated by records from various Microsoft Defender services,\nincluding Defender for Endpoint, Defender for Identity, Defender for Cloud, Entra ID, and\nothers. The table also gets populated by third-party data through the various Security Exposure\nManagement data connectors. The more security products you deploy, the richer the graph\nbecomes with more meaningful data. If your organization hasn’t deployed any service in\nMicrosoft Defender XDR, queries that use the table aren’t going to work or return any results.\nFor more information about how to deploy services in Defender XDR, read Deploy supported\nservices.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nNodeId\nstring\nUnique node identifier\nNodeLabel\nstring\nNode label\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nNodeName\nstring\nNode display name\nCategories\ndynamic\nCategories of the node in JSON format\nNodeProperties\ndynamic\nProperties of the node, including insights related to the resource, such as\nwhether the resource is exposed to the internet, or vulnerable to remote\ncode execution. Values are JSON formatted raw data (unstructured).\nEntityIds\ndynamic\nAll known node identifiers in JSON format\nAdvanced hunting overview\nLearn the query language\nUse shared queries\nQuery the enterprise exposure graph\nUnderstand the schema\nApply query best practices",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 781,
+      "end": 782
+    },
+    "content_stats": {
+      "char_count": 2373,
+      "word_count": 335
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related articles"
+      ]
+    }
+  }
+}

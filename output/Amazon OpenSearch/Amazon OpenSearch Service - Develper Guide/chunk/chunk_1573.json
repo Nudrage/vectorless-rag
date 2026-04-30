@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1573",
+  "section_number": "2.29.27",
+  "header": "Index shard and storage skew",
+  "content": "Index shard skew is when one or more nodes hold more of an index's shards than the other nodes.\nIndex storage skew is when one or more nodes hold a disproportionately large amount of an index's\ntotal storage.\nNode shard and storage skew\n2063\nAmazon OpenSearch Service\nDeveloper Guide\nIndex skew is harder to identify than node skew because it requires some manipulation of the _cat/\nshards API output. Investigate index skew if there's some indication of skew in the cluster or node\nmetrics. The following are common indications of index skew:\n• HTTP 429 errors occurring on a subset of data nodes\n• Uneven index or search operation queueing across data nodes\n• Uneven JVM heap and/or CPU utilization across data nodes\nRemediation: Use shard counts that are multiples of the data node count to ensure that each index\nis distributed evenly across data nodes. If you still see index storage or shard skew, you might need\nto force a shard reallocation, which occurs with every blue/green deployment of your OpenSearch\nService domain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2092,
+      "end": 2093
+    },
+    "content_stats": {
+      "char_count": 1030,
+      "word_count": 174
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

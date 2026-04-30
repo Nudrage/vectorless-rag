@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_288",
+  "section_number": "2.15.5.1",
+  "header": "Required permissions",
+  "content": "Lifecycle policies for OpenSearch Serverless use the following AWS Identity and Access\nManagement (IAM) permissions. You can specify IAM conditions to restrict users to data lifecycle\npolicies associated with speciﬁc collections and indexes.\n• aoss:CreateLifecyclePolicy – Create a data lifecycle policy.\n• aoss:ListLifecyclePolicies – List all data lifecycle policies in the current account.\nUsing data lifecycle policies\n414\nAmazon OpenSearch Service\nDeveloper Guide\n• aoss:BatchGetLifecyclePolicy – View a data lifecycle policy associated with an account or\npolicy name.\n• aoss:BatchGetEffectiveLifecyclePolicy – View a data lifecycle policy for a given\nresource (index is the only supported resource).\n• aoss:UpdateLifecyclePolicy – Modify a given data lifecycle policy, and change its retention\nsetting or resource.\n• aoss:DeleteLifecyclePolicy – Delete a data lifecycle policy.\nThe following identity-based access policy allows a user to view all data lifecycle policies, and\nupdate policies with the resource pattern index/application-logs:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:UpdateLifecyclePolicy\"\n],\n\"Resource\": \"*\",\n\"Condition\": {\n\"StringEquals\": {\n\"aoss:collection\": \"application-logs\"\n}\n}\n},\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"aoss:ListLifecyclePolicies\",\n\"aoss:BatchGetLifecyclePolicy\"\n],\n\"Resource\": \"*\"\n}\n]\n}\nUsing data lifecycle policies\n415\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 443,
+      "end": 445
+    },
+    "content_stats": {
+      "char_count": 1448,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "Using data lifecycle policies with Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

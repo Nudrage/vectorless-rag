@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_001",
+  "section_number": "1",
+  "header": "Firewall Rules Logging",
+  "content": "Firewall Rules Logging lets you audit, verify, and analyze the effects of your firewall rules. For\nexample, you can determine whether a firewall rule designed to deny traffic is functioning as\nintended. Firewall Rules Logging is also useful if you need to determine how many connections\nare affected by a given firewall rule.\nYou enable Firewall Rules Logging individually for each firewall rule whose connections you\nneed to log. Firewall Rules Logging is an option for any firewall rule, regardless of the action\n(allow or deny) or direction (ingress or egress) of the rule.\nFirewall Rules Logging logs traffic to and from Compute Engine virtual machine (VM)\ninstances (/compute/docs/instances). This includes Google Cloud products built on Compute\nEngine VMs, such as Google Kubernetes Engine (GKE) clusters\n(/kubernetes-engine/docs/concepts/cluster-architecture) and App Engine flexible environment\n(/appengine/docs/flexible) instances.\nWhen you enable logging for a firewall rule, Google Cloud creates an entry called a connection\nrecord each time the rule allows or denies traffic. You can view these records in Cloud Logging\n(/logging), and you can export logs to any destination that Cloud Logging export supports.\nEach connection record contains the source and destination IP addresses, the protocol and\nports, date and time, and a reference to the firewall rule that applied to the traffic.\nFirewall Rules Logging is available for both VPC firewall rules and hierarchical firewall policies.\nNote: After you create a firewall rule or enable logging on an existing rule, you might observe some delay\nbefore log entries appear. Logging data takes time to synchronize and fully propagate. Initial log entries\nmight be missing some rule details.\nFor information about viewing logs, see Use Firewall Rules Logging\n(/firewall/docs/using-firewall-rules-logging).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 27,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 1
+    },
+    "content_stats": {
+      "char_count": 1864,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Specifications",
+        "Limitations",
+        "Logging examples",
+        "Firewall log format",
+        "What's next"
+      ]
+    }
+  }
+}

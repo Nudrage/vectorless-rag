@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "1.3.1",
+  "header": "Gmail audit event",
+  "content": "Note: For Gmail requests, startTime and endTime must be provided and the difference must not be greater\nthan 30 days.\n.\nEvent details\nEvent name\ndelivery\nParameters\nevent_info\nmessage\nGeneral information about the event. Th\nusing the full parameter name.\nevent_info.mail_event_type (\nLogged event type. Since eventNam\naudit logs, this field helps determine\nPossible values are:\n0: Unknown mail event type. T\nthe Security Investigation Too\nmessage_info.action_ty\n(https://support.google.com/\n.\n1: Message sent\n2: Message received\n3: A Gmail user manually appl\nexample, the user marked the\n4: Gmail flagged the message\ncause this, including poor sen\n5: Message quarantined\n6: Message released from qua\n7: Message opened for the firs\nEvent details\n8: Message marked as unread\n9: Message replied to for the fi\n10: Message forwarded for th\n11: Message autoforwarded w\n12: Message moved to Inbox\n13: Message moved to Trash\n14: Message removed from Tr\n15: Link in message body was\n16: Link in message attachme\n17: One or more message atta\n18: One or more message atta\n19: One or more Google Drive\nrecipient's Google Drive\n20: Classification label applied\n21: Message classification lab\n22: Classification label remov\n23: Classification label applied\n24: Classification label change\n25: Classification label remov\n26: Message archived\n27: Message permanently del\n28: One or more message atta\n29: Message saved as draft\n30: Message couldn't be deliv\n31: Message viewed, including\nknown iOS issue, go to Google\n32: Message downloaded\n33: An application accessed a\n34: Delegate Granted\n.\nSample request\nAdmin Console message format\nGET https://admin.googleapis.com/admin/reports/v1/ac\n/gmail?eventName=delivery&maxResults=10&access_token\nAn event happened during mail delivery\nExcept as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License\n(https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the Apache 2.0 License\n(https://www.apache.org/licenses/LICENSE-2.0). For details, see the Google Developers Site Policies\n(https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.\nLast updated 2026-01-14 UTC.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 3
+    },
+    "content_stats": {
+      "char_count": 2227,
+      "word_count": 317
+    },
+    "hierarchy": {
+      "parent": "Gmail audit event type",
+      "children": []
+    }
+  }
+}

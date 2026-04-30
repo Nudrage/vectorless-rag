@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_002",
+  "section_number": "1.1",
+  "header": "Use Cloud DNS logging",
+  "content": "Cloud DNS logging tracks queries that name servers resolve for your Virtual Private Cloud\n(VPC) networks, as well as queries from an external entity directly to a public zone.\nLogged queries can come from Compute Engine virtual machine (VM) instances, Google\nKubernetes Engine containers in the same VPC network, peering zones\n(/dns/docs/zones/zones-overview#peering_zones), or on-premises clients that use inbound DNS\nforwarding (/dns/docs/server-policies-overview#dns-server-policy-in). Private DNS zones, forwarding\nDNS zones, alternative name servers, internal Google Cloud DNS zones, or external DNS zones\nmight eventually resolve the queries.\nLog records belong to the project that owns the network or public zone that carried the\nrequest. In the case of Shared VPC (/vpc/docs/shared-vpc), the log records belong to the host\nproject because the host project owns the network.\nNote: Cloud DNS might respond to queries using cached responses. By default, cached responses are not\nlogged. However, if logging is enabled, at least one prior response is logged before any subsequent cached\nresponse is served without logging.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 1
+    },
+    "content_stats": {
+      "char_count": 1126,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "Use logging and monitoring",
+      "children": [
+        "Enable and disable logging for private managed zones",
+        "Enable and disable logging for managed public zones",
+        "View logs"
+      ]
+    }
+  }
+}

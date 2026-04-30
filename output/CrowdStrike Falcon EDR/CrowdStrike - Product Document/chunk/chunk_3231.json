@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3231",
+  "section_number": "1.7.1.2.2",
+  "header": "userinfo",
+  "content": "The following table describes the fields for the userinfo event.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1225/1226\n\n\nField name\nDescription\nExample value\nAccountType\nThe type of account set for the user.\n\"Domain User\"\n\"Domain Administrator\"\n\"Local User\"\ncid\nThe customer ID.\n0123456789ABCDEFGHIJKLMNOPQRSTUV-WX\nDomainUser\nIndicates if the user's credentials are part of a domain controller.\n\"Yes\"\n\"No\"\nLastLoggedOnHost\nThe host that was last logged into the system.\n\"hostname\"\nLoggedOnHostCount\nThe number of hosts logged in at _time.\n\"0\"\nLogonTime\nThe last login time by this user in epoch format.\n\"1538648887.051\"\nLogonType\nValues defined as follows:\nINTERACTIVE: The security principal is logging on\ninteractively.\nNETWORK: The security principal is logging on using a\nnetwork.\nTERMINAL SERVER: The security principal has logged in\nusing a terminal server.\n\"Interactive\"\nmonthsincereset\nThe number of months since this user's password was last reset.\n\"1\"\nPasswordLastSet\nThe last time in epoch format that this user's password in the\nsystem was set.\n\"1538648887.051\"\n_time\nThe host's local time in epoch format.\n\"1538648887.051\"\nUser\nA system username with domain.\n\"domain\\username\"\nUserIsAdmin\nIndicates whether the user account has administrator privileges.\n0: User is not an admin\n1: User is an admin\nUserName\nThe username of the system.\n\"username\"\nUserSid\nThe user SID associated with this process.\n\"S-X-XX-X-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-\nXXXXXXXXXX\"\nNon-Sensor Events Reference[/documentation/page/d88d9ed6/streaming-api-event-dictionary]\nSensor Events Index\n[/documentation/page/qd3eb00a/sensor-events-index]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1226/1226",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1225,
+      "end": 1226
+    },
+    "content_stats": {
+      "char_count": 2057,
+      "word_count": 258
+    },
+    "hierarchy": {
+      "parent": "Secondary events from Falcon Discover and Falcon Exposure Management",
+      "children": []
+    }
+  }
+}

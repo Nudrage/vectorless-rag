@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_602",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Parameter\nRequired?\nDescription\nemail\nRequired\nValid email address for the new\nadministrator.\nname\nRequired\nName for the new administrator.\npassword\nDeprecated\nLegacy parameter; ignored if\nspecified. Formerly the\npassword value for the new\nadministrator.\npassword_change_required\nDeprecated\nThis parameter may not be used\nwhen creating a new\nadministrator, as the new admin\ndoes not have a password at\ncreation.\nphone\nOptional\nPhone number for the new\nadministrator; E.164 format\nrecommended (i.e.\n\"+17345551212\"). If no leading\n\"number\": \"+17345551000\",\n\"os_version\": \"18.4.1\",\n\"phone_id\": \"DPXQNQ1ZCQP02lD3D2YM\",\n\"platform\": \"Apple iOS\",\n\"postdelay\": \"\",\n\"predelay\": \"\",\n\"screenlock\": \"Locked\",\n\"sms_passcodes_sent\": false,\n\"tampered\": \"Not tampered\",\n\"type\": \"Mobile\"\n}\n],\n\"restricted_by_admin_units\": false,\n\"role\": \"Administrator\",\n\"status\": \"Active\"\n}\n]\n}\nPOST  /admin/v1/admins\nplus sign is provided then it is\nassumed to be a United States\nnumber and an implicit \"+1\"\ncountry code is prepended.\nDashes and spaces are ignored.\nIf this parameter is specified it\ncannot be empty.\nrole\nOptional\nThe administrator's role. One of:\n\"Owner\", \"Administrator\",\n\"Application Manager\", \"User\nManager\", \"Security Analyst\",\n\"Help Desk\", \"Billing\", or \"Read-\nonly\". The role names are case-\nsensitive. Defaults to \"Owner\" if\nnot specified.\nRoles other than \"Owner\" are\neffective only if the customer\nedition includes the\nAdministrative Roles feature.\nrestricted_by_admin_units\nOptional\nIs this administrator restricted by\nan administrative unit\nassignment? Either true  or\nfalse . Defaults to false  if\nnot specified. Must be set to\ntrue  in order to add the admin\nto an administrative unit using\nthe API. Note that attempting to\nset to true  for admins with the\n\"Owner\" role results in a failure\nresponse.\nsend_email\nOptional\nIf set to 1 , the activation link\nand an introductory message\nwill be emailed to the new\nadministrator. If set to 0 , no\nemail is sent, and the link is\nreturned to the API method's\ncaller only. Default: 0 .\nsubaccount_role\nOptional\nThe administrator's role when\naccessing a subaccount. One of:\n\"Owner\", \"Administrator\",\n\"Application Manager\", \"User\nManager\", \"Security Analyst\",\n\"Help Desk\", \"Billing\", or \"Read-\nonly\". The role names are case-\nsensitive. Only able to be set if\nthe customer edition includes\nthe Administrative Roles feature\nand the customer is an MSP\ncustomer, has the Accounts API\nfeature, or has existing\nsubaccounts. Defaults to the\nrole value if not specified. If the\nrole value is the “Owner” role,\nthe subaccount role must also\nbe the “Owner” role. When\nspecifying a subaccount role,\nthe Role parameter becomes\nrequired.\ntoken_id\nOptional\nThe token_id  of the hardware\ntoken to associate with the\nadministrator.\nvalid_days\nOptional\nNumber of days before the\nactivation link expires. Default:\n7  Maximum:: 31",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 257,
+      "end": 259
+    },
+    "content_stats": {
+      "char_count": 2851,
+      "word_count": 419
+    },
+    "hierarchy": {
+      "parent": "Administrators",
+      "children": []
+    }
+  }
+}

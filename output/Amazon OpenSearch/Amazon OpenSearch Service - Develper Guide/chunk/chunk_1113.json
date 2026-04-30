@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1113",
+  "section_number": "2.18.2.3.2",
+  "header": "Managing OpenSearch UI administrators using the AWS CLI",
+  "content": "You can create and update OpenSearch UI application administrators using the AWS CLI.\nCreating OpenSearch UI administrators using the AWS CLI\nThe following are examples of adding IAM principals and IAM Identity Center users as\nadministrators when creating an OpenSearch UI application.\nExample 1: Create an OpenSearch UI application that adds an IAM user as an administrator\nRun the following command to create an OpenSearch UI application that adds an IAM user as an\nadministrator. Replace the placeholder values with your own information.\naws opensearch create-application \\\nManaging application administrators\n1637\nAmazon OpenSearch Service\nDeveloper Guide\n--name application-name \\\n--app-configs \"\n{\n\\\"key\\\":\\\"opensearchDashboards.dashboardAdmin.users\\\",\n\\\"value\\\":\\\"arn:aws:iam::account-id:user/user-id\\\"\n}\n\"\nExample 2: Create an OpenSearch UI application that enables IAM Identity Center and adds an\nIAM Identity Center user ID as an OpenSearch UI application administrator\nRun the following command to create an OpenSearch UI application that enables IAM Identity\nCenter and adds an IAM Identity Center user ID as an OpenSearch UI application administrator.\nReplace the placeholder values with your own information.\nkey speciﬁes the conﬁguration item to set, such as the administrator role for the OpenSearch\nUI application. Valid values include opensearchDashboards.dashboardAdmin.users and\nopensearchDashboards.dashboardAdmin.groups.\nxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx represents the value assigned to the key, such as\nthe Amazon Resource Name (ARN) of an IAM user.\naws opensearch create-application \\\n--name myapplication \\\n--iam-identity-center-options \"\n{\n\\\"enabled\\\":true,\n\\\"iamIdentityCenterInstanceArn\\\":\\\"arn:aws:sso:::instance/ssoins-instance-id\\\",\n\\\"iamRoleForIdentityCenterApplicationArn\\\":\\\"arn:aws:iam::account-id:role/role-\nname\\\"\n}\n\" \\\n--app-configs \"\n{\n\\\"key\\\":\\\"opensearchDashboards.dashboardAdmin.users\\\",\n\\\"value\\\":\\\"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\\\"\n}\n\"\nManaging application administrators\n1638\nAmazon OpenSearch Service\nDeveloper Guide\nUpdating OpenSearch UI administrators using the AWS CLI\nThe following are examples of updating the IAM principals and IAM Identity Center users assigned\nas administrators for an existing OpenSearch application.\nExample 1: Add an IAM user as an administrator for an existing OpenSearch application\nRun the following command to update an OpenSearch UI application to add an IAM user as an\nadministrator. Replace the placeholder values with your own information.\naws opensearch update-application \\\n--id myapplication \\\n--app-configs \"\n{\n\\\"key\\\":\\\"opensearchDashboards.dashboardAdmin.users\\\",\n\\\"value\\\":\\\"arn:aws:iam::account-id:user/user-id\\\"\n}\n\"\nExample 2: Update an OpenSearch UI application to add an IAM Identity Center user ID as an\nOpenSearch UI application administrator\nRun the following command to update an OpenSearch UI application to add an IAM Identity Center\nuser ID as an OpenSearch UI application administrator. Replace the placeholder values with\nyour own information.\nkey speciﬁes the conﬁguration item to set, such as the administrator role for the OpenSearch\nUI application. Valid values include opensearchDashboards.dashboardAdmin.users and\nopensearchDashboards.dashboardAdmin.groups.\nxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx represents the value assigned to the key, such as\nthe Amazon Resource Name (ARN) of an IAM user.\naws opensearch update-application \\\n--id myapplication \\\n--app-configs \"\n{\n\\\"key\\\":\\\"opensearchDashboards.dashboardAdmin.users\\\",\n\\\"value\\\":\\\"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\\\"\n}\n\"\nManaging application administrators\n1639\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1666,
+      "end": 1669
+    },
+    "content_stats": {
+      "char_count": 3677,
+      "word_count": 446
+    },
+    "hierarchy": {
+      "parent": "Managing application administrators",
+      "children": []
+    }
+  }
+}

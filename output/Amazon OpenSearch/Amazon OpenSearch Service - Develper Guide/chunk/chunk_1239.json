@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1239",
+  "section_number": "2.19.7.1.3",
+  "header": "Step 5: Search the target index",
+  "content": "After the job ﬁnishes, you can use the standard _search API to search the target index.\nFor example, after running a transform job that transforms the ﬂight data based on the\nDestAirportID ﬁeld, you can run the following request to return all ﬁelds that have a value of\nSFO:\nGET target_index/_search\n{\n\"query\": {\n\"match\": {\n\"DestAirportID_terms\" : \"SFO\"\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1767,
+      "end": 1767
+    },
+    "content_stats": {
+      "char_count": 359,
+      "word_count": 62
+    },
+    "hierarchy": {
+      "parent": "Creating an index transform job",
+      "children": []
+    }
+  }
+}

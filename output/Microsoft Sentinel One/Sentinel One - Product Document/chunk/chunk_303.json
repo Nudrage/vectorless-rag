@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_303",
+  "section_number": "3.26",
+  "header": "Fetch Logs",
+  "content": "POST    /web/api/v2.1/agents/actions/fetch-logs\nGet the Agent and Endpoint logs from Agents that match the filter.\nThe Agent logs are encrypted and only Support can read them.\nThe Endpoint logs, for operations on the computers, laptops, or servers that have the Agent installed, are readable. The Endpoint logs are available for Windows endpoints\nonly and require Agent version 3.6 or later. After you run this command, download the fetched logs. You can download the logs from the Console GUI or collect them.\nOn Windows: C:\\ProgramData\\Sentinel\\logs.\nOn macOS: Run sudo sentinelctl logreport and get the log files on the desktop.\nOn Linux: Run sudo /opt/sentinelone/bin/sentinelctl log generate.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 582,
+      "end": 582
+    },
+    "content_stats": {
+      "char_count": 697,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Agent Actions",
+      "children": [
+        "Response Messages",
+        "Response Schema",
+        "Body Schema"
+      ]
+    }
+  }
+}

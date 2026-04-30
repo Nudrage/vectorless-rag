@@ -1,0 +1,367 @@
+{
+  "document_name": "Google Workspace\\Applications\\Google Meet Audit Activity Events - Product Document",
+  "generated_at": "2026-02-17T22:03:59.655705",
+  "outline_text": "DOCUMENT INDEX: Google Workspace\\Applications\\Google Meet Audit Activity Events - Product Document\n==================================================================================================\n\n1. Google Meet Audit Activity Events [Page 1, 5 words]\n   1.1. This document lists the events and parameters for various types of Google Meet Audit activity [Page 1, 12 words]\n   1.2. Call event [Page 1, 2 words]\n      1.2.1. A record describing a single meeting endpoint. Events of this type are returned with [Page 1, 1 words]\n      1.2.2. Abuse report submitted [Pages 1-4, 384 words]\n      1.2.3. Broadcast activity [Pages 4-5, 110 words]\n      1.2.4. Endpoint left [Pages 5-12, 908 words]\n      1.2.5. Livestream watched [Pages 12-18, 890 words]\n   1.3. Conference action [Page 18, 2 words]\n      1.3.1. A record describing a conference action. Events of this type are returned with [Page 18, 1 words]\n      1.3.2. Dialed out [Pages 18-19, 153 words]\n      1.3.3. Everyone can send in-call messages [Pages 19-20, 159 words]\n      1.3.4. In meet broadcast activity [Page 21, 73 words]\n      1.3.5. In-call messages visible to all [Pages 21-22, 151 words]\n      1.3.6. In-call messages visible to participants [Pages 22-23, 176 words]\n      1.3.7. Invitation sent [Pages 24-25, 143 words]\n      1.3.8. Knocking accepted [Pages 25-26, 152 words]\n      1.3.9. Knocking denied [Pages 26-27, 155 words]\n      1.3.10. Only contributors can send in-call messages [Pages 27-28, 161 words]\n      1.3.11. Only hosts can send in-call messages [Pages 28-29, 158 words]\n      1.3.12. Poll answered [Pages 29-30, 161 words]\n      1.3.13. Poll created [Pages 31-32, 138 words]\n      1.3.14. Presentation started [Pages 32-33, 143 words]\n      1.3.15. Presentation stopped [Pages 33-34, 148 words]\n      1.3.16. Question created [Pages 34-35, 148 words]\n      1.3.17. Question responded [Pages 35-36, 149 words]\n      1.3.18. Recording activity [Pages 36-37, 91 words]\n      1.3.19. Ring answered [Pages 37-38, 154 words]\n      1.3.20. Ring missed [Pages 38-39, 154 words]\n      1.3.21. Ring sent [Pages 39-40, 154 words]\n      1.3.22. Transcription activity [Pages 40-41, 89 words]\n      1.3.23. Watermarking active [Pages 41-42, 146 words]\n      1.3.24. Watermarking starting [Pages 42-43, 146 words]\n      1.3.25. Watermarking stopped [Pages 43-44, 154 words]\n      1.3.26. Whiteboard started [Pages 45-46, 201 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Google Meet Audit Activity Events",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 5,
+        "summary": "Google Meet Audit Activity Events",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "This document lists the events and parameters for various types of Google Meet Audit activity",
+            "depth": 2,
+            "chunk_id": "chunk_002",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 12,
+            "summary": "events."
+          },
+          {
+            "number": "1.2",
+            "title": "Call event",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 2,
+            "summary": "Call event",
+            "children": [
+              {
+                "number": "1.2.1",
+                "title": "A record describing a single meeting endpoint. Events of this type are returned with",
+                "depth": 3,
+                "chunk_id": "chunk_004",
+                "page_start": 1,
+                "page_end": 1,
+                "word_count": 1,
+                "summary": "type=call."
+              },
+              {
+                "number": "1.2.2",
+                "title": "Abuse report submitted",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 1,
+                "page_end": 4,
+                "word_count": 384,
+                "summary": "An event indicating that an abuse report was submitted in Meet."
+              },
+              {
+                "number": "1.2.3",
+                "title": "Broadcast activity",
+                "depth": 3,
+                "chunk_id": "chunk_006",
+                "page_start": 4,
+                "page_end": 5,
+                "word_count": 110,
+                "summary": "An event indicating that there was broadcast activity in Meet."
+              },
+              {
+                "number": "1.2.4",
+                "title": "Endpoint left",
+                "depth": 3,
+                "chunk_id": "chunk_007",
+                "page_start": 5,
+                "page_end": 12,
+                "word_count": 908,
+                "summary": "An event indicating that an endpoint left a meeting."
+              },
+              {
+                "number": "1.2.5",
+                "title": "Livestream watched",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 12,
+                "page_end": 18,
+                "word_count": 890,
+                "summary": "An event indicating that a viewer watched a livestream in Meet."
+              }
+            ]
+          },
+          {
+            "number": "1.3",
+            "title": "Conference action",
+            "depth": 2,
+            "chunk_id": "chunk_009",
+            "page_start": 18,
+            "page_end": 18,
+            "word_count": 2,
+            "summary": "Conference action",
+            "children": [
+              {
+                "number": "1.3.1",
+                "title": "A record describing a conference action. Events of this type are returned with",
+                "depth": 3,
+                "chunk_id": "chunk_010",
+                "page_start": 18,
+                "page_end": 18,
+                "word_count": 1,
+                "summary": "type=conference_action."
+              },
+              {
+                "number": "1.3.2",
+                "title": "Dialed out",
+                "depth": 3,
+                "chunk_id": "chunk_011",
+                "page_start": 18,
+                "page_end": 19,
+                "word_count": 153,
+                "summary": "An event indicating that an endpoint dialed out."
+              },
+              {
+                "number": "1.3.3",
+                "title": "Everyone can send in-call messages",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 19,
+                "page_end": 20,
+                "word_count": 159,
+                "summary": "GET https://admin."
+              },
+              {
+                "number": "1.3.4",
+                "title": "In meet broadcast activity",
+                "depth": 3,
+                "chunk_id": "chunk_013",
+                "page_start": 21,
+                "page_end": 21,
+                "word_count": 73,
+                "summary": "An event indicating that there was an in-meet broadcast activity."
+              },
+              {
+                "number": "1.3.5",
+                "title": "In-call messages visible to all",
+                "depth": 3,
+                "chunk_id": "chunk_014",
+                "page_start": 21,
+                "page_end": 22,
+                "word_count": 151,
+                "summary": "An event indicating that everyone in the call can see chat messages."
+              },
+              {
+                "number": "1.3.6",
+                "title": "In-call messages visible to participants",
+                "depth": 3,
+                "chunk_id": "chunk_015",
+                "page_start": 22,
+                "page_end": 23,
+                "word_count": 176,
+                "summary": "An event indicating that in-call participants can see chat messages."
+              },
+              {
+                "number": "1.3.7",
+                "title": "Invitation sent",
+                "depth": 3,
+                "chunk_id": "chunk_016",
+                "page_start": 24,
+                "page_end": 25,
+                "word_count": 143,
+                "summary": "An event indicating that an endpoint invited users to the meeting."
+              },
+              {
+                "number": "1.3.8",
+                "title": "Knocking accepted",
+                "depth": 3,
+                "chunk_id": "chunk_017",
+                "page_start": 25,
+                "page_end": 26,
+                "word_count": 152,
+                "summary": "An event indicating that an endpoint accepted knocking of other users."
+              },
+              {
+                "number": "1.3.9",
+                "title": "Knocking denied",
+                "depth": 3,
+                "chunk_id": "chunk_018",
+                "page_start": 26,
+                "page_end": 27,
+                "word_count": 155,
+                "summary": "An event indicating that an endpoint denied knocking of other users."
+              },
+              {
+                "number": "1.3.10",
+                "title": "Only contributors can send in-call messages",
+                "depth": 3,
+                "chunk_id": "chunk_019",
+                "page_start": 27,
+                "page_end": 28,
+                "word_count": 161,
+                "summary": "An event indicating that sending chat messages is restricted to contributors, hosts, and co-\nhosts."
+              },
+              {
+                "number": "1.3.11",
+                "title": "Only hosts can send in-call messages",
+                "depth": 3,
+                "chunk_id": "chunk_020",
+                "page_start": 28,
+                "page_end": 29,
+                "word_count": 158,
+                "summary": "An event indicating that sending chat messages is restricted to hosts and co-hosts."
+              },
+              {
+                "number": "1.3.12",
+                "title": "Poll answered",
+                "depth": 3,
+                "chunk_id": "chunk_021",
+                "page_start": 29,
+                "page_end": 30,
+                "word_count": 161,
+                "summary": "An event indicating that an endpoint answered a poll."
+              },
+              {
+                "number": "1.3.13",
+                "title": "Poll created",
+                "depth": 3,
+                "chunk_id": "chunk_022",
+                "page_start": 31,
+                "page_end": 32,
+                "word_count": 138,
+                "summary": "An event indicating that an endpoint created a poll."
+              },
+              {
+                "number": "1.3.14",
+                "title": "Presentation started",
+                "depth": 3,
+                "chunk_id": "chunk_023",
+                "page_start": 32,
+                "page_end": 33,
+                "word_count": 143,
+                "summary": "An event indicating that an endpoint started a presentation."
+              },
+              {
+                "number": "1.3.15",
+                "title": "Presentation stopped",
+                "depth": 3,
+                "chunk_id": "chunk_024",
+                "page_start": 33,
+                "page_end": 34,
+                "word_count": 148,
+                "summary": "An event indicating that an endpoint stopped a presentation."
+              },
+              {
+                "number": "1.3.16",
+                "title": "Question created",
+                "depth": 3,
+                "chunk_id": "chunk_025",
+                "page_start": 34,
+                "page_end": 35,
+                "word_count": 148,
+                "summary": "An event indicating that an endpoint created a question."
+              },
+              {
+                "number": "1.3.17",
+                "title": "Question responded",
+                "depth": 3,
+                "chunk_id": "chunk_026",
+                "page_start": 35,
+                "page_end": 36,
+                "word_count": 149,
+                "summary": "An event indicating that an endpoint responded to a question."
+              },
+              {
+                "number": "1.3.18",
+                "title": "Recording activity",
+                "depth": 3,
+                "chunk_id": "chunk_027",
+                "page_start": 36,
+                "page_end": 37,
+                "word_count": 91,
+                "summary": "An event indicating that there was recording activity in Meet."
+              },
+              {
+                "number": "1.3.19",
+                "title": "Ring answered",
+                "depth": 3,
+                "chunk_id": "chunk_028",
+                "page_start": 37,
+                "page_end": 38,
+                "word_count": 154,
+                "summary": "An event indicating that an endpoint answered a ring invitation."
+              },
+              {
+                "number": "1.3.20",
+                "title": "Ring missed",
+                "depth": 3,
+                "chunk_id": "chunk_029",
+                "page_start": 38,
+                "page_end": 39,
+                "word_count": 154,
+                "summary": "An event indicating that an endpoint missed a ring invitation."
+              },
+              {
+                "number": "1.3.21",
+                "title": "Ring sent",
+                "depth": 3,
+                "chunk_id": "chunk_030",
+                "page_start": 39,
+                "page_end": 40,
+                "word_count": 154,
+                "summary": "An event indicating that an endpoint sent a ring invitation."
+              },
+              {
+                "number": "1.3.22",
+                "title": "Transcription activity",
+                "depth": 3,
+                "chunk_id": "chunk_031",
+                "page_start": 40,
+                "page_end": 41,
+                "word_count": 89,
+                "summary": "GET https://admin."
+              },
+              {
+                "number": "1.3.23",
+                "title": "Watermarking active",
+                "depth": 3,
+                "chunk_id": "chunk_032",
+                "page_start": 41,
+                "page_end": 42,
+                "word_count": 146,
+                "summary": "An event indicating that watermarking is active."
+              },
+              {
+                "number": "1.3.24",
+                "title": "Watermarking starting",
+                "depth": 3,
+                "chunk_id": "chunk_033",
+                "page_start": 42,
+                "page_end": 43,
+                "word_count": 146,
+                "summary": "An event indicating that watermarking is starting."
+              },
+              {
+                "number": "1.3.25",
+                "title": "Watermarking stopped",
+                "depth": 3,
+                "chunk_id": "chunk_034",
+                "page_start": 43,
+                "page_end": 44,
+                "word_count": 154,
+                "summary": "An event indicating that watermarking is stopped."
+              },
+              {
+                "number": "1.3.26",
+                "title": "Whiteboard started",
+                "depth": 3,
+                "chunk_id": "chunk_035",
+                "page_start": 45,
+                "page_end": 46,
+                "word_count": 201,
+                "summary": "An event indicating that an endpoint started a whiteboard."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 35,
+    "max_depth": 3
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1011",
+  "section_number": "155.1.1.121",
+  "header": "DeviceTvmBrowserExtensionsKB (Preview)",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmBrowserExtensionsKB  table in the advanced hunting schema contains information\nabout browser extension details and permission information used in Microsoft Defender\nVulnerability Management browser extensions page.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nBrowserName\nstring\nName of the web browser with the extension\nExtensionId\nstring\nUnique identifier for the browser extension\nExtensionName\nstring\nName of the extension\nExtensionDescription\nstring\nDescription from the publisher about the extension\nExtensionVersion\ndynamic\nVersion number of the extension\nExtensionRisk\nstring\nRisk level for the extension based on the permissions it has\nrequested\nPermissionId\nstring\nUnique identifier for the permission\nPermissionName\nstring\nName given to each permission based on what the extension is\nasking for\nPermissionDescription\nstring\nExplanation of what the permission is supposed to do\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nPermissionRisk\nstring\nRisk level for the permission based on the type of access it would\nallow\nIsPermissionRequired\nstring\nWhether the permission is required for the extension to run, or\noptional\nProactively hunt for threats\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\nOverview of Microsoft Defender Vulnerability Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 732,
+      "end": 733
+    },
+    "content_stats": {
+      "char_count": 2139,
+      "word_count": 299
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1406",
+  "section_number": "2.25.8.1",
+  "header": "Calculating storage requirements",
+  "content": "Most OpenSearch workloads fall into one of two broad categories:\n• Long-lived index: You write code that processes data into one or more OpenSearch indexes and\nthen updates those indexes periodically as the source data changes. Some common examples are\nwebsite, document, and ecommerce search.\n• Rolling indexes: Data continuously ﬂows into a set of temporary indexes, with an indexing\nperiod and retention window (such as a set of daily indexes that is retained for two weeks). Some\ncommon examples are log analytics, time-series processing, and clickstream analytics.\nFor long-lived index workloads, you can examine the source data on disk and easily determine how\nmuch storage space it consumes. If the data comes from multiple sources, just add those sources\ntogether.\nSizing domains\n1856\nAmazon OpenSearch Service\nDeveloper Guide\nFor rolling indexes, you can multiply the amount of data generated during a representative time\nperiod by the retention period. For example, if you generate 200 MiB of log data per hour, that's\n4.7 GiB per day, which is 66 GiB of data at any given time if you have a two-week retention period.\nThe size of your source data, however, is just one aspect of your storage requirements. You also\nhave to consider the following:\n• Number of replicas: Each replica is a full copy of the primary shard, the store size of the index\nshows the size taken by the primary and replica shard. By default, each OpenSearch index has\none replica. We recommend at least one to prevent data loss. Replicas also improve search\nperformance, so you might want more if you have a read-heavy workload. Use PUT /my-\nindex/_settings to update the number_of_replicas setting for your index.\n• OpenSearch indexing overhead: The on-disk size of an index varies. The total size of the source\ndata plus the index is often 110% of the source, with the index up to 10% of the source data.\nAfter you index your data, you can use the _cat/indices?v API and pri.store.size value\nto calculate the exact overhead. _cat/allocation?v also provides a useful summary.\n• Operating system reserved space: By default, Linux reserves 5% of the ﬁle system for the\nroot user for critical processes, system recovery, and to safeguard against disk fragmentation\nproblems.\n• OpenSearch Service overhead: OpenSearch Service reserves 20% of the storage space of each\ninstance (up to 20 GiB) for segment merges, logs, and other internal operations.\nBecause of this 20 GiB maximum, the total amount of reserved space can vary dramatically\ndepending on the number of instances in your domain. For example, a domain might have\nthree m6g.xlarge.search instances, each with 500 GiB of storage space, for a total of\n1.46 TiB. In this case, the total reserved space is only 60 GiB. Another domain might have 10\nm3.medium.search instances, each with 100 GiB of storage space, for a total of 0.98 TiB. Here,\nthe total reserved space is 200 GiB, even though the ﬁrst domain is 50% larger.\nIn the following formula, we apply a \"worst-case\" estimate for overhead. This estimate includes\nadditional free space to help minimize the impact of node failures and Availability Zone outages.\nIn summary, if you have 66 GiB of data at any given time and want one replica, your minimum\nstorage requirement is closer to 66 * 2 * 1.1 / 0.95 / 0.8 = 191 GiB. You can generalize this\ncalculation as follows:\nCalculating storage requirements\n1857\nAmazon OpenSearch Service\nDeveloper Guide\nSource data * (1 + number of replicas) * (1 + indexing overhead) / (1 - Linux reserved space) / (1\n- OpenSearch Service overhead) = minimum storage requirement\nOr you can use this simpliﬁed version:\nSource data * (1 + number of replicas) * 1.45 = minimum storage requirement\nInsuﬃcient storage space is one of the most common causes of cluster instability. So you should\ncross-check the numbers when you choose instance types, instance counts, and storage volumes.\nOther storage considerations exist:\n• If your minimum storage requirement exceeds 1 PB, see the section called “Petabyte scale”.\n• If you have rolling indexes and want to use a hot-warm architecture, see the section called\n“UltraWarm storage”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1885,
+      "end": 1887
+    },
+    "content_stats": {
+      "char_count": 4151,
+      "word_count": 690
+    },
+    "hierarchy": {
+      "parent": "Sizing Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

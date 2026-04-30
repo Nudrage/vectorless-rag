@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_645",
+  "section_number": "2.10.1.15",
+  "header": "Multi-AZ with Standby metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for Multi-AZ with Standby.\nNode-level metrics for data nodes in active Availability Zones\nMetric\nDescription\nCPUUtilization\nThe percentage of CPU usage for data nodes in the cluster. Maximum\nshows the node with the highest CPU usage. Average represents all\nnodes in the cluster. This metric is also available for individual nodes.\nFreeStora\ngeSpace\nThe free space for data nodes in the cluster. Sum shows total free space\nfor the cluster, but you must leave the period at one minute to get\nan accurate value. Minimum and Maximum show the nodes with the\nleast and most free space, respectively. This metric is also available\nfor individual nodes. OpenSearch Service throws a ClusterBl\nockException\nwhen this metric reaches 0. To recover, you must\neither delete indexes, add larger instances, or add EBS-based storage\nto existing instances. To learn more, see the section called “Lack of\navailable storage space”.\nThe OpenSearch Service console displays this value in GiB. The Amazon\nCloudWatch console displays it in MiB.\nMulti-AZ with Standby metrics\n1202\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nJVMMemory\nPressure\nThe maximum percentage of the Java heap used for all data nodes in\nthe cluster. OpenSearch Service uses half of an instance's RAM for the\nJava heap, up to a heap size of 32 GiB. You can scale instances verticall\ny up to 64 GiB of RAM, at which point you can scale horizontally by\nadding instances. See the section called “Recommended CloudWatch\nalarms”.\nSysMemory\nUtilization\nThe percentage of the instance's memory that is in use. High values\nfor this metric are normal and usually do not represent a problem\nwith your cluster. For a better indicator of potential performance and\nstability issues, see the JVMMemoryPressure  metric.\nIndexingLatency\nThe diﬀerence in total time, in milliseconds, taken by all indexing\noperations in a node between minute N and minute (N-1).\nIndexingRate\nThe number of indexing operations per minute.\nSearchLatency\nThe diﬀerence in total time, in milliseconds, taken by all searches in a\nnode between minute N and minute (N-1).\nSearchRate\nThe total number of search requests per minute for all shards on a data\nnode.\nThreadpoo\nlSearchQueue\nThe number of queued tasks in the search thread pool. If the queue size\nis consistently high, consider scaling your cluster. The maximum search\nqueue size is 1,000.\nThreadpoo\nlWriteQueue\nThe number of queued tasks in the write thread pool.\nThreadpoo\nlSearchRe\njected\nThe number of rejected tasks in the search thread pool. If this number\ncontinually grows, consider scaling your cluster.\nThreadpoo\nlWriteRejected\nThe number of rejected tasks in the write thread pool.\nMulti-AZ with Standby metrics\n1203\nAmazon OpenSearch Service\nDeveloper Guide\nCluster-level metrics for clusters in active Availability Zones\nMetric\nDescription\nDataNodes\nThe total number of active and standby shards.\nDataNodes\nShards.active\nThe total number of active primary and replica shards.\nDataNodes\nShards.un\nassigned\nThe number of shards that are not allocated to nodes in the cluster.\nDataNodes\nShards.in\nitializing\nThe number of shards that are under initialization.\nDataNodes\nShards.re\nlocating\nThe number of shards that are under relocation.\nAvailability Zone rotation metrics\nIf ActiveReads.Availability-Zone = 1, then the zone is active. If\nActiveReads.Availability-Zone = 0, then the zone is in standby.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1231,
+      "end": 1233
+    },
+    "content_stats": {
+      "char_count": 3451,
+      "word_count": 535
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

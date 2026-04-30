@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_975",
+  "section_number": "2.15.5.8.2",
+  "header": "Installing a custom plugin using the console",
+  "content": "To associate a third-party plugin to a domain, ﬁrst import the plugin license and conﬁguration as\npackages.\nTo install a custom plugin\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nIn the left navigation pane, choose Packages.\n3.\nChoose Import package.\n4.\nFor Name, enter a unique, easily identiﬁable name for the plugin.\n5.\n(Optional) For Description, provide any useful details about the package or its purpose.\n6.\nFor Package type, choose Plugin.\nCustom plugins\n1491\nAmazon OpenSearch Service\nDeveloper Guide\n7.\nFor Package source, enter the path or browse to the plugin ZIP ﬁle in Amazon S3.\n8.\nFor OpenSearch engine version, choose the version of OpenSearch that the plugin supports.\n9.\nFor Package encryption, choose whether to customize the encryption key for the package. By\ndefault, OpenSearch Service encrypts the plugin package with an AWS owned key. You can use\na customer managed key instead.\n10. Choose Import.\nAfter you import the plugin package, associate it with a domain. For instructions, see the section\ncalled “Import and associate a package to a domain”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1520,
+      "end": 1521
+    },
+    "content_stats": {
+      "char_count": 1130,
+      "word_count": 180
+    },
+    "hierarchy": {
+      "parent": "Managing custom plugins in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

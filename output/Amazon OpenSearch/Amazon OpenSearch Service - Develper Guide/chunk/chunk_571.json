@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_571",
+  "section_number": "2.9.4.3",
+  "header": "Quotas for Security Lake",
+  "content": "Description\nValue\nSoft\nlimit?\nNotes\nAccount-level TPS limit\nacross direct query\nAPIs\n3\nTPS\nYes\nQuotas for Security Lake\n736\nAmazon OpenSearch Service\nDeveloper Guide\nDescription\nValue\nSoft\nlimit?\nNotes\nMaximum number of\ndata sources\n20\nYes\nLimit is per AWS account.\nMaximum auto-refr\neshing indexes or\nmaterialized views\n30\nYes\nLimit applies per data source.\nOnly includes indices and materialized views\n(MVs) with auto-refresh set to true.\nMaximum concurrent\nqueries\n30\nYes\nLimit applies to queries in pending or running\nstate.\nIncludes interactive queries (for example,\ndata retrieval commands like SELECT) and\nindex queries (for example, operations like\nCREATE/ALTER/DROP).\nMaximum concurrent\nOCU per query\n512\nYes\nOpenSearch Compute Units (OCU). Limit based\non 15 executors and 1 driver, each with 16 vCPU\nand 32 GB memory. Represents concurrent\nprocessing power.\nMaximum query\nexecution time in\nminutes\n30\nNo\nApplies only to interactive queries (for example,\ndata retrieval commands like SELECT). For\nREFRESH queries, the limit is 6 hours.\nPeriod for purging\nstale query IDs\n90\ndays\nYes\nThis is the time period after which OpenSearch\nService purges query metadata for older entries.\nFor example, calling GetDirectQuery or GetDirect\nQueryResult fails for queries older than 90 days.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 765,
+      "end": 766
+    },
+    "content_stats": {
+      "char_count": 1286,
+      "word_count": 197
+    },
+    "hierarchy": {
+      "parent": "Direct query quotas",
+      "children": []
+    }
+  }
+}

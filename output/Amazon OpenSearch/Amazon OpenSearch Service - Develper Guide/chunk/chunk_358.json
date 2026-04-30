@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_358",
+  "section_number": "2.7.10.3",
+  "header": "IAM and SAML authentication",
+  "content": "IAM principals and SAML identities are one of the building blocks of a data access policy. Within the\nprincipal statement of an access policy, you can include IAM roles, users, and SAML identities.\nThese principals are then granted the permissions that you specify in the associated policy rules.\n[\n{\n\"Rules\":[\n{\n\"ResourceType\":\"index\",\n\"Resource\":[\n\"index/marketing/orders*\"\n],\n\"Permission\":[\n\"aoss:*\"\n]\n}\n],\n\"Principal\":[\n\"arn:aws:iam::123456789012:user/Dale\",\n\"arn:aws:iam::123456789012:role/RegulatoryCompliance\",\n\"saml/123456789012/myprovider/user/Annie\"\n]\n}\n]\nYou conﬁgure SAML authentication directly within OpenSearch Serverless. For more information,\nsee the section called “SAML authentication”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 515,
+      "end": 515
+    },
+    "content_stats": {
+      "char_count": 705,
+      "word_count": 85
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

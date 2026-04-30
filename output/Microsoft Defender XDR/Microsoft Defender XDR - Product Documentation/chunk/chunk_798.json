@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_798",
+  "section_number": "155.1.1.77.1",
+  "header": "How to use the CSL file",
+  "content": "// DeviceLogonEvents\n// A table containing a row for each logon a device enrolled in Microsoft Defender\nfor Endpoint\n// Contains\n// - Account information associated with the logon\n// - The device which the account logged onto\n// - The process which performed the logon\n// - Network information (for network logons)\n// - Timestamp\nDeviceLogonEvents\n| count\n// DeviceLogonEvents\n// A table containing a row for each logon a device enrolled in Microsoft Defender\nfor Endpoint\nTitle\nDescription\nWatch\nJoining tables in\nKQL\nLearn the power of joining tables in creating meaningful results.\nYouTube\n(4:17)\nOptimizing tables in\nKQL\nLearn how to avoid timeouts when running complex queries by\noptimizing your queries.\nYouTube\n(5:38)\nAdvanced hunting overview\nLearn the advanced hunting query language\nWork with query results\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\n// Contains\n// - Account information associated with the logon\n// - The device which the account logged onto\n// - The process which performed the logon\n// - Network information (for network logons)\n// - Timestamp\nCloudAppEvents\n| take 100\n| sort by Timestamp desc",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 530,
+      "end": 531
+    },
+    "content_stats": {
+      "char_count": 1198,
+      "word_count": 192
+    },
+    "hierarchy": {
+      "parent": "Get expert training on advanced hunting",
+      "children": []
+    }
+  }
+}

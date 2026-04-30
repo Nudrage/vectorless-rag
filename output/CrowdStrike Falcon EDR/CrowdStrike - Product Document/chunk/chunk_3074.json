@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3074",
+  "section_number": "1.6.17.3.1",
+  "header": "Event fields",
+  "content": "Field Name\nDescription\nIncidentStartTime\nTime of the first activity in the incident\nIncidentEndTime\nTime of the latest activity in the incident\nFalconHostLink\nURL to view the incident in Falcon console\nState\nShows if the incident is still active\nValues:\nopen = the incident is still active\nclosed = the incident is not active\nFineScore\nThe highest incident score reached as of the time the event was sent\nThe value is a decimal value in the range of 0.1 to 10\nThe value can only go up over time, and it signifies the maximum severity of the incident over its entire lifetime.\nLateralMovement\nGives info about lateral movement in the incident\nValues:\n0 = No lateral movement detected in incident\n1 = Lateral movement detected in incident\nIncidentType\nGives info about the type of incident\nValues:\n1 = Normal incident from the CrowdScore engine\n2 = Overwatch incident\nIncidentID\nThe incident ID of the incident\nThis value in IncidentSummaryEvent is the same as the one found using /incidents/queries/incidents/v1.\nHostID\nThe host ID that's associated with the incident\nThis value shows exactly one host.\nUse the host_ids in the full incident available in the\nto see all hosts\nwhere the incident occurred.\nAbout Endpoint Monitoring [/documentation/page/cb33b866/incident-and-detection-monitoring]\nmoves laterally [https://www.crowdstrike.com/cybersecurity-101/lateral-movement/]\nmoves laterally [https://www.crowdstrike.com/cybersecurity-101/lateral-movement/]\nIncident and Detection Monitoring [/documentation/page/cb33b866/incident-and-detection-monitoring]\nIncident and Detection Monitoring APIs. [/documentation/page/adf2fd07/incident-detection-and-alert-monitoring-apis]\nIncident and Detection Monitoring APIs [/documentation/page/adf2fd07/incident-detection-and-alert-monitoring-apis]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1130/1226\n\n\n\n\nField Name\nDescription\nLMHostIDs\nArray of host IDs seen to have experienced lateral movement because of the incident\nThis field is added to IncidentSummaryEvent only when LateralMovement = 1\nThis single LMHostIDs field includes the data from the two fields lm_host_ids and lmra_host_ids in the full incident document available\nin the\n.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1130,
+      "end": 1131
+    },
+    "content_stats": {
+      "char_count": 2373,
+      "word_count": 307
+    },
+    "hierarchy": {
+      "parent": "IncidentSummaryEvent",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "1.2",
+  "header": "POST /api/v2/auditevents",
+  "content": "A POST call to this endpoint returns information about actions performed by team\nmembers within a 1Password account. Events include when an action was performed and\nby whom, along with details about the type and object of the action and any other\ninformation about the activity. MSP accounts include additional information about the\nactor's account and type. Learn more about audit events.\nThis endpoint requires a bearer token with the auditevents feature. You can make an\nintrospection call to the API to verify if your token is authorized to access audit events.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 21,
+    "font_name": "SegoeUI-Bold",
+    "page_range": {
+      "start": 2,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 565,
+      "word_count": 92
+    },
+    "hierarchy": {
+      "parent": "1Password Events API reference",
+      "children": [
+        "Parameters",
+        "Requests",
+        "Responses"
+      ]
+    }
+  }
+}

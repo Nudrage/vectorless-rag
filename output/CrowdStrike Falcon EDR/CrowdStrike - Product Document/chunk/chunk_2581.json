@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2581",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nSyscacheFileInUse\nFile referenced in Syscache record is in use, i.e., has not been deleted.\nMftRecordId\nIndex number in sector header area of Windows Master File Table record.\nMftSequenceNumber Windows Master File Table (MFT) sequence number.\nSHA1HashData\nThe SHA1 hash of a file.  In most cases, the hash of the file referred to by the ImageFileName field.\nUSN\nUsnJournalId\nUpdate Sequence Number (USN) Journal identifier for each change record in Windows NTFS volume. Each record in the Change Journal\ncontains the USN, the name of the file, and information about what the change was.\nTargetFileName\nThe resulting file name that was downloaded\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nProgramUUID\nHash of the windows program name, the version, the publisher and the language. This value is identical across different systems: the\nsame version of a software installed on two different machines results in the same value.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 893,
+      "end": 893
+    },
+    "content_stats": {
+      "char_count": 1053,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "SyscacheEntry",
+      "children": []
+    }
+  }
+}

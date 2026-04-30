@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_125",
+  "section_number": "2.6.16.3.1",
+  "header": "Conﬁgure a pipeline role",
+  "content": "The role passed in the pipeline must have the following policy attached to read and write to the\nsecret created in the prerequisites section.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"SecretReadWrite\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"secretsmanager:GetResourcePolicy\",\n\"secretsmanager:GetSecretValue\",\n\"secretsmanager:DescribeSecret\",\n\"secretsmanager:PutSecretValue\",\n\"secretsmanager:ListSecretVersionIds\"\n],\n\"Resource\": \"arn:aws:secretsmanager:us-\neast-1:111122223333:secret:secret-name-random-6-characters\"\n}\n]\n}\nThe role should also have a policy attached to access and write to your chosen sink. For example, if\nyou choose OpenSearch as your sink, the policy looks similar to the following:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\nAtlassian Services\n106\nAmazon OpenSearch Service\nDeveloper Guide\n\"Sid\": \"OpenSearchWritePolicy\",\n\"Effect\": \"Allow\",\n\"Action\": \"aoss:*\",\n\"Resource\": \"arn:aws:aoss:us-\neast-1:111122223333:collection/collection-id\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 135,
+      "end": 136
+    },
+    "content_stats": {
+      "char_count": 974,
+      "word_count": 106
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with Atlassian Services",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_636",
+  "section_number": "2.10.1.6",
+  "header": "EBS volume metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for EBS volumes.\nMetric\nDescription\nReadLatency\nThe latency, in seconds, for read operations on EBS volumes. This\nmetric is also available for individual nodes.\nRelevant statistics: Minimum, Maximum, Average\nWriteLatency\nThe latency, in seconds, for write operations on EBS volumes. This\nmetric is also available for individual nodes.\nRelevant statistics: Minimum, Maximum, Average\nReadThroughput\nThe throughput, in bytes per second, for read operations on EBS\nvolumes. This metric is also available for individual nodes.\nRelevant statistics: Minimum, Maximum, Average\nReadThrou\nghputMicr\noBursting\nThe throughput, in bytes per second, for read operations on EBS\nvolumes when micro-bursting is taken into consideration. This metric is\nalso available for individual nodes. Micro-bursting occurs when an EBS\nvolume bursts high IOPS or throughput for signiﬁcantly shorter periods\nof time (less than one minute).\nRelevant statistics: Minimum, Maximum, Average\nEBS volume metrics\n1174\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nWriteThroughput\nThe throughput, in bytes per second, for write operations on EBS\nvolumes. This metric is also available for individual nodes.\nRelevant statistics: Minimum, Maximum, Average\nWriteThro\nughputMic\nroBursting\nThe throughput, in bytes per second, for write operations on EBS\nvolumes when micro-bursting is taken into consideration. This metric is\nalso available for individual nodes. Micro-bursting occurs when an EBS\nvolume bursts high IOPS or throughput for signiﬁcantly shorter periods\nof time (less than one minute).\nRelevant statistics: Minimum, Maximum, Average\nDiskQueueDepth\nThe number of pending input and output (I/O) requests for an EBS\nvolume.\nRelevant statistics: Minimum, Maximum, Average\nReadIOPS\nThe number of input and output (I/O) operations per second for read\noperations on EBS volumes. This metric is also available for individual\nnodes.\nRelevant statistics: Minimum, Maximum, Average\nReadIOPSM\nicroBursting\nThe number of input and output (I/O) operations per second for\nread operations on EBS volumes when micro-bursting is taken into\nconsideration. This metric is also available for individual nodes. Micro-\nbursting occurs when an EBS volume bursts high IOPS or throughput\nfor signiﬁcantly shorter periods of time (less than one minute).\nRelevant statistics: Minimum, Maximum, Average\nWriteIOPS\nThe number of input and output (I/O) operations per second for write\noperations on EBS volumes. This metric is also available for individual\nnodes.\nRelevant statistics: Minimum, Maximum, Average\nEBS volume metrics\n1175\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nWriteIOPS\nMicroBursting\nThe number of input and output (I/O) operations per second for\nwrite operations on EBS volumes when micro-bursting is taken into\nconsideration. This metric is also available for individual nodes. Micro-\nbursting occurs when an EBS volume bursts high IOPS or throughput\nfor signiﬁcantly shorter periods of time (less than one minute).\nRelevant statistics: Minimum, Maximum, Average\nBurstBalance\nThe percentage of input and output (I/O) credits remaining in the burst\nbucket for an EBS volume. A value of 100 means that the volume has\naccumulated the maximum number of credits. If this percentage falls\nbelow 70%, see the section called “Low EBS burst balance”. The burst\nbalance stays at 0 for domains with gp3 volumes types, and domains\nwith gp2 volumes that have a volume size above 1000 GiB.\nRelevant statistics: Minimum, Maximum, Average\nVolumeSta\nlledIOcheck\nThe status of your EBS volumes to determine when they are impaired.\nThe metrics is a binary value that returns a 0 (pass) or a 1 (fail) status\nbased on whether the EBS volume can complete input and output\noperations. VolumeStalledIOcheck\nis also available for individual\nnodes.\nRelevant statistics: Minimum, Maximum, Average",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1203,
+      "end": 1205
+    },
+    "content_stats": {
+      "char_count": 3918,
+      "word_count": 572
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

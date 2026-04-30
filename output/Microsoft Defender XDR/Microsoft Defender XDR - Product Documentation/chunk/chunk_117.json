@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_117",
+  "section_number": "155.1.1.18.1.3",
+  "header": "Defender for Identity architecture",
+  "content": "In this illustration:\nSensors installed on AD DS domain controllers and AD CS servers parse logs and\nnetwork traffic and send them to Microsoft Defender for Identity for analysis and\nreporting.\nSensors can also parse AD FS authentications for third-party identity providers and\nwhen Microsoft Entra ID is configured to use federated authentication (the dotted\nlines in the illustration).\nMicrosoft Defender for Identity shares signals to Microsoft Defender XDR.\nDefender for Identity sensors can be directly installed on the following servers:\nAD DS domain controllers. The sensor directly monitors domain controller traffic,\nwithout the need for a dedicated server or the configuration of port mirroring.\nAD FS servers / AD CS servers. The sensor directly monitors network traffic and\nauthentication events.\nFor a deeper look into the architecture of Defender for Identity, see Microsoft Defender\nfor Identity architecture.\nMicrosoft Defender XDR\nShared signals\nMicrosoft Defender for Identity\nAD DS entities\nParsed authentication traffic\nWindows ETW logs\nMicrosoft Entra ID\nUser\nsign-ins\nAccount provisioning\nAuthentication\nAuthorization\nAD DS\nAD FS\nAD CS\nThird-party\nidentity\nproviders\nOn-premises integration\nFederated authentications\n\nSign in to the Defender portal to start deploying supported services, including Microsoft\nDefender for Identity. For more information, see Start using Microsoft Defender XDR.\nDefender for Identity requires some prerequisite work to ensure that your on-premises\nidentity and networking components meet minimum requirements for you to install the\nDefender for Identity sensor in your environment.\nOnce you're sure of your environment's readiness, plan your capacity, and verify\nconnectivity to Defender for Identity. Then when you're ready, download, install, and\nconfigure the Defender for Identity sensor on the domain controllers, AD FS, and AD CS\nservers in your on-premises environment.\nStep\nDescription\nMore information\n1\nConfirm that your environment meets Defender\nfor Identity prerequisites.\nMicrosoft Defender for Identity\nprerequisites\n2\nDetermine how many Microsoft Defender for\nIdentity sensors you need.\nPlan capacity for Microsoft Defender\nfor Identity\n3\nVerify connectivity to the Defender for Identity\nservice\nCheck network activity\n4\nDownload and install the Defender for Identity\nsensor\nInstall Defender for Identity\n5\nConfigure the sensor\nConfigure Microsoft Defender for\nIdentity sensor settings\nOn the machines that you installed the sensor on, configure Windows event log\ncollection to enable and enhance detection capabilities.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 63,
+      "end": 65
+    },
+    "content_stats": {
+      "char_count": 2590,
+      "word_count": 372
+    },
+    "hierarchy": {
+      "parent": "A B C",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_717",
+  "section_number": "2.10.4.4.1",
+  "header": "VPC endpoint creation failed",
+  "content": "OpenSearch Service sends this event when it's unable to create a requested VPC endpoint. This\nerror might occur because you've reached the limit on the number of VPC endoints allowed within\na Region. You will also see this error if a speciﬁed subnet or security group doesn't exist.\nVPC endpoint events\n1262\nAmazon OpenSearch Service\nDeveloper Guide\nExample\nThe following is an example event of this type:\n{\n\"version\":\"0\",\n\"id\":\"01234567-0123-0123-0123-012345678901\",\n\"detail-type\":\"Amazon OpenSearch Service VPC Endpoint Notification\",\n\"source\":\"aws.es\",\n\"account\":\"123456789012\",\n\"time\":\"2016-11-01T13:12:22Z\",\n\"region\":\"us-east-1\",\n\"resources\":[\n\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"\n],\n\"detail\":{\n\"event\":\"VPC Endpoint Create Validation\",\n\"status\":\"Failed\",\n\"severity\":\"High\",\n\"description\":\"Unable to create VPC endpoint aos-0d4c74c0342343 for domain\narn:aws:es:eu-south-1:123456789012:domain/my-domain due to the\nfollowing validation failures: You've reached the limit on the\nnumber of VPC endpoints that you can create in the AWS Region.\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1291,
+      "end": 1292
+    },
+    "content_stats": {
+      "char_count": 1066,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "VPC endpoint events",
+      "children": []
+    }
+  }
+}

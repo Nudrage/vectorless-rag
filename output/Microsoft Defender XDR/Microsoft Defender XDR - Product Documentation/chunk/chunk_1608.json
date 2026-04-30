@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1608",
+  "section_number": "155.1.1.219.3",
+  "header": "Export roles",
+  "content": "） Important\nStarting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be\nthe default permissions model for new Microsoft Defender Endpoint tenants. These\nnew tenants won't have the capability to export roles and permissions from the\ncurrent model. Defender for Endpoint tenants with roles and permissions assigned\nThe Export feature enables you to export the following roles data:\nRole name\nRole description\nPermissions included in the role\nThe assignment name\nThe assigned data sources\nThe assigned users or user groups\nWhen a role has multiple assignments, each assignment is represented as a separate\nrow in the CSV file.\nThe CSV also includes a snapshot of the Defender XDR Unified RBAC activation status\nfor each workload available on the tenant.\nThe following steps guide you on how to export roles in Microsoft Defender XDR\nUnified RBAC:\n1. Sign in to the Microsoft Defender portal\nwith the required roles or permissions.\n2. In the navigation pane, select Permissions.\n3. Select Roles under Microsoft Defender XDR to get to the Permissions and roles\npage.\n4. Select the Export button.\nor exported prior to this date will maintain their current roles and permissions\nconfiguration.\nStarting March 2, 2025, new Microsoft Defender for Identity tenants will also have\nthe Unified RBAC model as their default permissions model. They won't be able to\nexport roles and permissions from the current model. Existing Defender for Identity\ntenants will maintain their current roles and permissions configuration.\n７ Note\nTo export roles, you must be a Global Administrator or Security Administrator in\nMicrosoft Entra ID, or have the Authorization (manage) permission assigned for all\ndata sources in Microsoft Defender XDR Unified RBAC and have at least one\nworkload activated for Defender XDR Unified RBAC.\nFor more information on permissions, see Permission prerequisites.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1190,
+      "end": 1191
+    },
+    "content_stats": {
+      "char_count": 1891,
+      "word_count": 296
+    },
+    "hierarchy": {
+      "parent": "Edit, delete, and export roles in Microsoft Defender XDR Unified role- based access control (RBAC)",
+      "children": [
+        "Feedback"
+      ]
+    }
+  }
+}

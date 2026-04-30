@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_766",
+  "section_number": "2.11.4",
+  "header": "Insights Catalog",
+  "content": "Cluster Insights delivers the following actionable insights on impacted Clusters\nInsights Catalog\n1289\nAmazon OpenSearch Service\nDeveloper Guide\nInsights\nDescription\nLow Disk\nA High severity insight is generated when the cluster’s FreeStora\nge drops below 25% of total capacity or 25GB, whichever\nthreshold is reached ﬁrst.\nCluster Write Blocked\nA Critical severity insight is generated when the cluster’s\nFreeStorage drops below 20% of total capacity or 20GB,\nwhichever threshold is reached ﬁrst.\nLarge Shard\nAn insight with Low severity is generated when the shard size\nis between 50GB and 100GB. The severity escalates to Medium\nwhen the shard size is between 100GB and 200GB, and further\nescalates to High when the shard size exceeds 200GB.\nShard Count\nA High severity insight is generated when the cluster exceeds\n25 shards per GB of conﬁgured Heap, or when the number of\nshards per node reaches or exceeds 900. For OpenSearch version\n2.17 and above, this insight will be generated based on cluster\nmanager conﬁguration as detailed in this documentation.\nCluster Status Red\nA Critical severity insight is generated when the replacement of a\ndegraded node on the OpenSearch cluster results in a Red cluster\nstatus. This requires immediate action to restore the cluster to a\nGreen state.\nCluster Status Yellow\nA Medium severity insight is generated when the replacement of\na degraded node on the OpenSearch cluster results in a Yellow\ncluster status.\nMisconﬁgured Replica\nA Medium severity insight is generated when the cluster has no\nreplicas conﬁgured, or when the number of replicas exceeds the\ntotal number of data nodes.\nKMS Key Inaccessible\nA Critical severity insight is generated when the OpenSearch\ncluster loses access to the KMS key used for encryption at rest.\nThis prevents the cluster from accessing encrypted data and\nInsights Catalog\n1290\nAmazon OpenSearch Service\nDeveloper Guide\nInsights\nDescription\nimpacts cluster operations, requiring immediate action to restore\naccess.\nMisconﬁgured Index\nSettings\nA Medium severity insight is generated when the index setting\n\"index.routing.allocation.require/include/exclude.<attribute>\"\nexists on any index in the OpenSearch cluster. This setting\ncan prevent successful blue-green deployments during cluster\nupdates.\nIncorrect Cluster Manager\nConﬁguration\nA Critical severity insight is generated when the OpenSearc\nh cluster has either 2 data nodes without dedicated cluster\nmanager nodes, or 2 dedicated cluster manager nodes. These\nconﬁgurations create a risk of quorum loss and cluster instability.\nInsights Catalog\n1291\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1318,
+      "end": 1321
+    },
+    "content_stats": {
+      "char_count": 2627,
+      "word_count": 393
+    },
+    "hierarchy": {
+      "parent": "Uniﬁed operational monitoring with Cluster Insights",
+      "children": []
+    }
+  }
+}

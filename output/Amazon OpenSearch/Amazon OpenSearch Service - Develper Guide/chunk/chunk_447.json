@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_447",
+  "section_number": "2.8.1.2.1",
+  "header": "Example commands",
+  "content": "This ﬁrst example demonstrates the following OpenSearch Service domain conﬁguration:\n• Creates an OpenSearch Service domain named mylogs with OpenSearch version 1.2\n• Populates the domain with two instances of the r6g.large.search instance type\n• Uses a 100 GiB General Purpose (SSD) gp3 EBS volume for storage for each data node\n• Allows anonymous access, but only from a single IP address: 192.0.2.0/32\naws opensearch create-domain \\\n--domain-name mylogs \\\n--engine-version OpenSearch_1.2 \\\n--cluster-config  InstanceType=r6g.large.search,InstanceCount=2 \\\n--ebs-options\nEBSEnabled=true,VolumeType=gp3,VolumeSize=100,Iops=3500,Throughput=125 \\\n--access-policies '{\"Version\": \"2012-10-17\",        \"Statement\": [{\"Action\":\n\"es:*\", \"Principal\":\"*\",\"Effect\": \"Allow\", \"Condition\": {\"IpAddress\":{\"aws:SourceIp\":\n[\"192.0.2.0/32\"]}}}]}'\nThe next example demonstrates the following OpenSearch Service domain conﬁguration:\n• Creates an OpenSearch Service domain named mylogs with Elasticsearch version 7.10\n• Populates the domain with six instances of the r6g.large.search instance type\n• Uses a 100 GiB General Purpose (SSD) gp2 EBS volume for storage for each data node\n• Restricts access to the service to a single user, identiﬁed by the user's AWS account ID:\n555555555555\n• Distributes instances across three Availability Zones\naws opensearch create-domain \\\n--domain-name mylogs \\\n--engine-version Elasticsearch_7.10 \\\nCreating OpenSearch Service domains (AWS CLI)\n615\nAmazon OpenSearch Service\nDeveloper Guide\n--cluster-config\nInstanceType=r6g.large.search,InstanceCount=6,ZoneAwarenessEnabled=true,ZoneAwarenessConfig={A\n\\\n--ebs-options EBSEnabled=true,VolumeType=gp2,VolumeSize=100 \\\n--access-policies '{\"Version\": \"2012-10-17\",        \"Statement\": [ { \"Effect\":\n\"Allow\", \"Principal\": {\"AWS\": \"arn:aws:iam::555555555555:root\" }, \"Action\":\"es:*\",\n\"Resource\": \"arn:aws:es:us-east-1:555555555555:domain/mylogs/*\" } ] }'\nThe next example demonstrates the following OpenSearch Service domain conﬁguration:\n• Creates an OpenSearch Service domain named mylogs with OpenSearch version 1.0\n• Populates the domain with ten instances of the r6g.xlarge.search instance type\n• Populates the domain with three instances of the r6g.large.search instance type to serve as\ndedicated master nodes\n• Uses a 100 GiB Provisioned IOPS EBS volume for storage, conﬁgured with a baseline\nperformance of 1000 IOPS for each data node\n• Restricts access to a single user and to a single subresource, the _search API\naws opensearch create-domain \\\n--domain-name mylogs \\\n--engine-version OpenSearch_1.0 \\\n--cluster-config\nInstanceType=r6g.xlarge.search,InstanceCount=10,DedicatedMasterEnabled=true,DedicatedMasterTyp\n\\\n--ebs-options EBSEnabled=true,VolumeType=io1,VolumeSize=100,Iops=1000 \\\n--access-policies '{\"Version\": \"2012-10-17\",        \"Statement\": [ { \"Effect\":\n\"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::555555555555:root\" }, \"Action\": \"es:*\",\n\"Resource\": \"arn:aws:es:us-east-1:555555555555:domain/mylogs/_search\" } ] }'\nNote\nIf you attempt to create an OpenSearch Service domain and a domain with the same name\nalready exists, the CLI does not report an error. Instead, it returns details for the existing\ndomain.\nCreating OpenSearch Service domains (AWS CLI)\n616\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 644,
+      "end": 646
+    },
+    "content_stats": {
+      "char_count": 3290,
+      "word_count": 384
+    },
+    "hierarchy": {
+      "parent": "Creating OpenSearch Service domains (AWS CLI)",
+      "children": []
+    }
+  }
+}

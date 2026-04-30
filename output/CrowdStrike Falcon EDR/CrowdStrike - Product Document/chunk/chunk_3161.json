@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3161",
+  "section_number": "1.6.10.18.2.1",
+  "header": "Event section",
+  "content": "Field Name\nDescription\nUserId\nThis is the Falcon user name of the analyst manipulating the detect.\nUserIp\nThis is the IP address or gateway from which this action was initiated.\nOperationName\ndetection_update\nServiceName\ndetections\nAuditKeyValues.Key &\nAuditKeyValues.ValueString\nAuditKeyValues.Key and AuditKeyValues.ValueString always come in pair (key/value). If the\nAuditKeyValues.Key=detection_id, the ValueString is the Detect Id. If the AuditKeyValues.Key=new_state or\nupdate_status, the ValueString is the new status for that Detect Id.\nUTCTimestamp\nTime when the operation took place in Unix epoch time.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1183,
+      "end": 1183
+    },
+    "content_stats": {
+      "char_count": 612,
+      "word_count": 80
+    },
+    "hierarchy": {
+      "parent": "Detection status update",
+      "children": []
+    }
+  }
+}

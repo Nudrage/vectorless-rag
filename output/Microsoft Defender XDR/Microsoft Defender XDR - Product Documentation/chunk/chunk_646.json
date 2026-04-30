@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_646",
+  "section_number": "155.1.1.61",
+  "header": "Automatic attack disruption in Microsoft Defender XDR",
+  "content": "Defender XDR\n06/23/2025Applies to: Microsoft Defender XDR\nMicrosoft Defender XDR correlates millions of individual signals to identify active ransomware\ncampaigns or other sophisticated attacks in the environment with high confidence. While an\nattack is in progress, Defender XDR disrupts the attack by automatically containing\ncompromised assets that the attacker is using through automatic attack disruption.\nAutomatic attack disruption limits lateral movement early on and reduces the overall impact of\nan attack, from associated costs to loss of productivity. At the same time, it leaves security\noperations teams in complete control of investigating, remediating, and bringing assets back\nonline.\nThis article provides an overview of automated attack disruption and includes links to the next\nsteps and other resources.\nAutomatic attack disruption is designed to contain attacks in progress, limit the impact on an\norganization's assets, and provide more time for security teams to remediate the attack fully.\nAttack disruption uses the full breadth of our extended detection and response (XDR) signals,\ntaking the entire attack into account to act at the incident level. This capability is unlike known\nprotection methods such as prevention and blocking based on a single indicator of\ncompromise.\nWhile many XDR and security orchestration, automation, and response (SOAR) platforms allow\nyou to create your automatic response actions, automatic attack disruption is built in and uses\ninsights from Microsoft security researchers and advanced AI models to counteract the\ncomplexities of advanced attacks. Automatic attack disruption considers the entire context of\nsignals from different sources to determine compromised assets.\nAutomatic attack disruption operates in three key stages:\nIt uses Defender XDR's ability to correlate signals from many different sources into a\nsingle, high-confidence incident through insights from endpoints, identities, email and\ncollaboration tools, and SaaS apps.\nIt identifies assets controlled by the attacker and used to spread the attack.\nIt automatically takes response actions across relevant Microsoft Defender products to\ncontain the attack in real-time by containing and disabling affected assets.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 416,
+      "end": 416
+    },
+    "content_stats": {
+      "char_count": 2245,
+      "word_count": 322
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "How automatic attack disruption works",
+        "Establishing high confidence when taking automatic action",
+        "Automated response actions",
+        "Identify when an attack disruption happens in your environment",
+        "Next steps"
+      ]
+    }
+  }
+}

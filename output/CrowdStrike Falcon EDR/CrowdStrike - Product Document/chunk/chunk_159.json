@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_159",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Windows, Public Cloud\nThis event provides key metadata regarding subnets configured in AWS. CrowdStrike retrieves this information by processing the response from AWS's\nDescribeSubnets API [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html] on your behalf. Subnets represent a level of\nnetwork segmentation and are created within a VPC to control and manage routing configurations.\nThis event is only generated for Discover for AWS [/support/documentation/10/falcon-discover-feature-guide] customers. It's generated either when Discover\nfor AWS observes new or related activity via CloudTrail or during Discover for AWS's weekly full scan.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 43,
+      "end": 43
+    },
+    "content_stats": {
+      "char_count": 680,
+      "word_count": 82
+    },
+    "hierarchy": {
+      "parent": "AwsEc2Subnet",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2020",
+  "section_number": "1.5.837.1",
+  "header": "Fields: macOS, Windows, Linux",
+  "content": "Field\nDescription\nDeviceTimeStamp\nThe time stamp the device action (e.g., connect or disconnect) occurred, not the time the corresponding sensor event\nwas generated.\nDeviceUserAuthenticationId\nDeviceInstanceId\nDeviceUsbVersion\nDeviceUsbClass\nThe USB specification class of the device.\nDeviceUsbSubclass\nThe USB specification subclass of the device.\nDeviceProtocol\nThe USB specification protocol of the device.\nDeviceVendorId\nDeviceProductId\nDeviceVersion\nDeviceManufacturer\nDeviceProduct\nDeviceSerialNumber\nDeviceActiveConfigurationNumber\nDeviceConnectionStatus\nValues:\nCONNECTED (1)\nFAILED_ENUMERATION (2)\nGENERAL_FAILURE (3)\nCAUSED_OVER_CURRENT (4)\nNOT_ENOUGH_POWER (5)\nNOT_ENOUGH_BANDWIDTH (6)\nHUB_NESTED_TOO_DEEPLY (7)\nIN_LEGACY_HUB (8)\nENUMERATING (9)\nRESET (10)\nParentHubInstanceId\nParentHubPort\nDevicePropertyClassGuid\nDevicePropertyClassName\nDevicePropertyDeviceDescription\nDevicePropertyFriendlyName\nDevicePropertyLocationInformation\nDevicePropertyManufacturer\nDeviceDescriptorSetHash\nThe SHA-256 hash of all hardware descriptors located in a device's firmware.\nDeviceUserSid\nDcPolicyId\nDcPolicyGroupId\nDcPolicyAction\nValues:\nALLOW (0)\nBLOCK (1)\nMASSSTORAGE (2)\nDcPolicyFlags\nValues:\nNONE (0)\nSHOW_IN_UI (1)\nINVASIVE_BLOCK (2)\nREPORT_ONLY (4)\nMTP_PTP_RULE (8)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n669/1226\nField\nDescription\nDcPolicyMassStorageBlockPermissions\nValues:\nNONE (0)\nREAD (1)\nWRITE (2)\nEXECUTE (4)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 669,
+      "end": 670
+    },
+    "content_stats": {
+      "char_count": 1622,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "DcUsbDeviceConnected",
+      "children": []
+    }
+  }
+}

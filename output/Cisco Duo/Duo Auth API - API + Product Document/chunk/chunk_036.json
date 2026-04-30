@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_036",
+  "section_number": "1.5.8",
+  "header": "/auth",
+  "content": "The /auth  endpoint performs second-factor authentication for a user by sending a\npush notification to the user's smartphone app, verifying a passcode, or placing a phone\ncall. It is also used to send the user a new batch of passcodes via SMS.\n\"type\": \"phone\"\n},\n{\n\"device\": \"DHEKH0JJIYC1LX3AZWO4\",\n\"name\": \"0\",\n\"type\": \"token\"\n}\n],\n\"expiration\": 1710428517,\n\"result\": \"auth\",\n\"status_msg\": \"Account is active\",\n\"txid\": \"7b333558-f3ff-4fe9-8200-f43a8d2d2f29\",\n\"verification_code\": \"867\"\n}\n}\n\n\n{\n\"stat\": \"OK\",\n\"response\": {\n\"enroll_portal_url\": \"https://api-abcd1234.duosecurity.com/por\n\"result\": \"enroll\",\n\"status_msg\": \"Enroll an authentication device to proceed\"\n}\n}\n{\n\"stat\": \"OK\",\n\"response\": {\n\"result\": \"allow\",\n\"status_msg\": \"Device is trusted.\"\n},\n}\nPOST  /auth/v2/auth",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 15,
+      "end": 15
+    },
+    "content_stats": {
+      "char_count": 779,
+      "word_count": 103
+    },
+    "hierarchy": {
+      "parent": "Endpoints",
+      "children": []
+    }
+  }
+}

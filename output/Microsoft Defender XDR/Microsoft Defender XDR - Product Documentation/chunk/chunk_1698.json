@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1698",
+  "section_number": "155.1.1.231.4",
+  "header": "My ServiceNow tickets are no longer available in the Microsoft Defender portal",
+  "content": "the Microsoft Defender portal\nThe Microsoft Defender XDR-ServiceNow connector is no longer available in the Microsoft\nDefender portal. However, you can still integrate Microsoft Defender XDR with ServiceNow by\nusing the Microsoft Security Graph API. For more information, see Security solution\nintegrations using the Microsoft Graph Security API.\nThe Microsoft Defender XDR-ServiceNow integration was previously available in the Microsoft\nDefender portal for preview and feedback. This integration allowed you to create ServiceNow\nincidents from Microsoft Defender XDR incidents.\nIn some instances, an administrator block might cause submission issues when you try to\nsubmit a potentially infected file to the Microsoft Security intelligence website\nfor analysis.\nThe following process shows how to resolve this problem.\nOpen your Azure Enterprise application settings\n. Under Enterprise Applications > Users can\nconsent to apps accessing company data on their behalf, check whether Yes or No is selected.\nIf No is selected, a Microsoft Entra administrator for the customer tenant needs to\nprovide consent for the organization. Depending on the configuration with Microsoft\nEntra ID, users might be able to submit a request right from the same dialog box. If\nthere's no option to ask for admin consent, users need to request for these permissions\nto be added to their Microsoft Entra admin. Go to the following section for more\ninformation.\nIf Yes is selected, ensure the Windows Defender Security Intelligence app setting Enabled\nfor users to sign in? is set to Yes in Azure\n. If No is selected, you need to request a\nMicrosoft Entra admin enable it.\nThis process requires a Global Administrator or Application Administrator in the tenant.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1269,
+      "end": 1270
+    },
+    "content_stats": {
+      "char_count": 1740,
+      "word_count": 267
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot Microsoft Defender XDR service issues",
+      "children": []
+    }
+  }
+}

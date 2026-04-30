@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1587",
+  "section_number": "155.1.1.216",
+  "header": "Create custom roles with Microsoft Defender XDR Unified RBAC",
+  "content": "Defender XDR Unified RBAC\nApplies to: Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR, Microsoft Defender for Identity,\nMicrosoft Defender for Office 365 P2, Microsoft Defender Vulnerability Management, Microsoft Defender for\nCloud, Microsoft Security Exposure Management, Microsoft Defender for Cloud Apps, Microsoft Sentinel\ndata lake\nThis article describes how to create custom roles in Microsoft Defender XDR Unified role-based\naccess control (RBAC). Microsoft Defender XDR Unified RBAC enables you to create custom\nroles with specific permissions and assign them to users or groups, allowing for granular\ncontrol over access to Microsoft Defender portal experiences.\nCreating custom roles for Microsoft Sentinel data lake\nis supported in Preview.\nTo create custom roles in Microsoft Defender XDR Unified RBAC, you must be assigned one of\nthe following roles or permissions:\nGlobal Administrator or Security Administrator in Microsoft Entra ID.\nAll Authorization permissions assigned in Microsoft Defender XDR Unified RBAC.\nFor more information on permissions, see Permission prerequisites.\nTo create custom roles for the Microsoft Sentinel data lake using the Security Operations or\nData operations permission group, you must have a Log Analytics workspace enabled for\nMicrosoft Sentinel and onboarded to the Defender portal.\nOnboard Microsoft Sentinel\nConnect Microsoft Sentinel to the Microsoft Defender portal\nThe following steps describe how to create custom roles in the Microsoft Defender portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1175,
+      "end": 1175
+    },
+    "content_stats": {
+      "char_count": 1522,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Prerequisites",
+        "Create a custom role",
+        "Create a role to access and manage roles and permissions",
+        "Configure scoped roles for Microsoft Defender for Identity",
+        "Configure scoped roles for Microsoft Defender for Cloud",
+        "Next steps"
+      ]
+    }
+  }
+}

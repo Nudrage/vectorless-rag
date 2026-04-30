@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_911",
+  "section_number": "2.12.12.3.1",
+  "header": "Permissions",
+  "content": "The AWSServiceRoleForAmazonOpenSearchIngestionService service-linked role trusts the\nfollowing services to assume the role:\n• osis.amazon.com\nThe role permissions policy named AmazonOpenSearchIngestionServiceRolePolicy allows\nOpenSearch Ingestion to complete the following actions on the speciﬁed resources:\n• Action: cloudwatch:PutMetricData on cloudwatch:namespace\": \"AWS/OSIS\"\n• Action: ec2:CreateTags on arn:aws:ec2:*:*:network-interface/*\n• Action: ec2:CreateVpcEndpoint on *\n• Action: ec2:DeleteVpcEndpoints on *\n• Action: ec2:DescribeSecurityGroups on *\n• Action: ec2:DescribeSubnets on *\n• Action: ec2:DescribeVpcEndpoints on *\n• Action: ec2:ModifyVpcEndpoint on *\nThe AWSServiceRoleForOpensearchIngestionSelfManagedVpce service-linked role trusts\nthe following services to assume the role:\nPipeline creation role\n1419\nAmazon OpenSearch Service\nDeveloper Guide\n• self-managed-vpce.osis.amazon.com\nThe role permissions policy named OpenSearchIngestionSelfManagedVpcePolicy allows\nOpenSearch Ingestion to complete the following actions on the speciﬁed resources:\n• Action: ec2:DescribeSubnets on *\n• Action: ec2:DescribeSecurityGroups on *\n• Action: ec2:DescribeVpcEndpoints on *\n• Action: cloudwatch:PutMetricData on cloudwatch:namespace\": \"AWS/OSIS\"\nYou must conﬁgure permissions to allow an IAM entity (such as a user, group, or role) to create,\nedit, or delete a service-linked role. For more information, see Service-linked role permissions in\nthe IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1448,
+      "end": 1449
+    },
+    "content_stats": {
+      "char_count": 1474,
+      "word_count": 171
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles to create OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

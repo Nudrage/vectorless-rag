@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2152",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nDcBlockedStatus\nValues:\nBLOCKED (1)\nALLOWED (2)\nBLOCK_FAILED (3)\nDcPolicyAction\nValues:\nALLOW (0)\nBLOCK (1)\nMASSSTORAGE (2)\nDcPolicyFlags\nValues:\nNONE (0)\nSHOW_IN_UI (1)\nINVASIVE_BLOCK (2)\nREPORT_ONLY (4)\nMTP_PTP_RULE (8)\nDcPolicyDeviceVendorId\nDcPolicyDeviceProductId\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n758/1226\nField\nDescription\nDcPolicyDeviceClass\nDcPolicyDeviceMinorClass\nBluetoothDeviceAddress\nBluetooth MAC address, gathered when the device is discovered, paired, or connected.\nDcPolicyId\nDcPolicyGroupId\nDcPolicyPrecedence\nDcPolicyMatchMethod\nValues:\nDEVICECLASS (1)\nDEVICECLASS_VID (2)\nDEVICECLASS_VID_PID (3)\nDEVICECLASS_VID_PID_SERIAL (4)\nDEVICECLASS_SUBCLASS_PROTOCOL (5)\nANYCLASS_VID (6)\nANYCLASS_VID_PID (7)\nANYCLASS_VID_PID_SERIAL (8)\nDEVICECLASS_MINOR (9)\nDEVICECLASS_MINOR_VID (10)\nDEVICECLASS_MINOR_VID_PID (11)\nDcPolicyDeviceVendorIdSource\nValues:\nBTH_SIG (0x01)\nUSB_IMPL (0x02)\nNONE (0x00)\nBluetoothVendorIdSource\nThe source for vendor ID, gathered when the device is discovered, paired, or connected.\nValues:\nBTH_SIG (0x01)\nUSB_IMPL (0x02)\nNONE (0x00)\nDeviceVendorId\nDeviceProductId\nDeviceManufacturer\nBluetoothDeviceName\nThe Bluetooth device name, gathered when the device is discovered, paired, or connected.\nBluetoothDeviceModelNumber\nThe Bluetooth device model version, gathered when the device is discovered, paired, or connected.\nBluetoothClassOfDeviceValue\nThe Class of Device defines the representation of the external appearance of the device for Bluetooth Classic (BR/EDR)\ndevices. The value is gathered when the device is discovered, paired, or connected.\nDeviceUserAuthenticationId\nDeviceUserSid\nDeviceInstanceId\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 758,
+      "end": 759
+    },
+    "content_stats": {
+      "char_count": 1918,
+      "word_count": 205
+    },
+    "hierarchy": {
+      "parent": "DcBluetoothDeviceBlocked",
+      "children": []
+    }
+  }
+}

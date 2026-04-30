@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_685",
+  "section_number": "2.10.4.1.6",
+  "header": "Service software update cancelled",
+  "content": "OpenSearch Service sends this event when a service software update has been cancelled.\nExample\nThe following is an example event of this type:\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"Amazon OpenSearch Service Software Update Notification\",\n\"source\": \"aws.es\",\n\"account\": \"123456789012\",\n\"time\": \"2016-11-01T13:12:22Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"event\": \"Service Software Update\",\n\"status\": \"Cancelled\",\n\"severity\": \"Informational\",\nService software update events\n1241\nAmazon OpenSearch Service\nDeveloper Guide\n\"description\": \"The scheduled service software update [R20200330-p1] has been\ncancelled as a\nnewer update is available. Please schedule the latest update.\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1270,
+      "end": 1271
+    },
+    "content_stats": {
+      "char_count": 790,
+      "word_count": 88
+    },
+    "hierarchy": {
+      "parent": "Service software update events",
+      "children": []
+    }
+  }
+}

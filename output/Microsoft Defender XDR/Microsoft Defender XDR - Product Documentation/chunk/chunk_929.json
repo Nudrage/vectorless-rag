@@ -1,0 +1,34 @@
+{
+  "chunk_id": "chunk_929",
+  "section_number": "155.1.1.94",
+  "header": "Advanced hunting schema - Naming changes",
+  "content": "changes\nApplies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe advanced hunting schema is updated regularly to add new tables and columns. In some\ncases, existing columns names are renamed or replaced to improve the user experience. Refer\nto this article to review naming changes that could impact your queries.\nNaming changes are automatically applied to queries that are saved in Microsoft Defender\nXDR, including queries used by custom detection rules. You don't need to update these queries\nmanually. However, you will need to update the following queries:\nQueries that are run using the API\nQueries that are saved elsewhere outside Microsoft Defender XDR\nThe Boolean field values in advanced hunting results will change from numeric ( 1  and 0 )\nto textual ( True  and False ) on February 25, 2026. While your queries and custom\ndetection rules won't be affected by this change, you might want to update your\nautomated processes (for example, scripts, playbooks, or integrations) parsing these\nvalues.\nThe AADSignInEventsBeta and AADSpnSignInEventsBeta tables are being replaced by\nEntraIdSignInEvents and EntraIdSpnSignInEvents, respectively. These changes are being\nmade to remove the former tables' preview status and to align them with the existing\nproduct branding.\nThe EntraIdSignInEvents  and EntraIdSpnSignInEvents  tables are now available. The\nlegacy AADSignInEventsBeta and AADSpnSignInEventsBeta  tables will remain in the schema\nfor 30 days to allow time for updating your queries. Your custom detections will be\nupdated automatically and won't require any changes. On December 9, 2025,\nAADSignInEventsBeta and AADSpnSignInEventsBeta  will be removed from the schema.\n） Important\nSome information in this article relates to a prereleased product which may be\nsubstantially modified before it's commercially released. Microsoft makes no warranties,\nexpressed or implied, with respect to the information provided here.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 623,
+      "end": 623
+    },
+    "content_stats": {
+      "char_count": 1971,
+      "word_count": 289
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "November 2025",
+        "September 2025",
+        "May 2025",
+        "May 2021",
+        "March 2021",
+        "February 2021",
+        "January 2021",
+        "December 2020",
+        "Related topics"
+      ]
+    }
+  }
+}

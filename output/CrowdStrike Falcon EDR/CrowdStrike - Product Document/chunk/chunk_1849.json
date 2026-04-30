@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1849",
+  "section_number": "1.5.914.1",
+  "header": "Fields: Linux",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n599/1226\nField\nDescription\nContextTimeStamp System time of event creation.\nContextProcessId\nUPID of process originating this event.\nFtpCommand\nValues:\nFTP_COMMAND_UNKNOWN (100)\nFTP_COMMAND_USER (101)\nFTP_COMMAND_STOR (102)\nFTP_COMMAND_STOU (103)\nFTP_COMMAND_APPE (104)\nFtpArgs\nRemoteAddressIP4\nRemoteAddressIP6\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2 events,\nthis is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nOciContainerId\nAn OCI Container Id.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 599,
+      "end": 600
+    },
+    "content_stats": {
+      "char_count": 1023,
+      "word_count": 121
+    },
+    "hierarchy": {
+      "parent": "FtpCommand",
+      "children": []
+    }
+  }
+}

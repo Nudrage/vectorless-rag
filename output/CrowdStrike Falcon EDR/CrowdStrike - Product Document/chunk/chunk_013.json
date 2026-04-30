@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_013",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Windows, macOS, Linux\nThis event is generated when a Falcon sensor is uninstalled from a host.\nImportant: The Falcon sensor stores events locally in a cache, which enables you to maintain data integrity even if connection to the cloud is\ninterrupted. The cache holds a maximum of 20,000 events and sends them after a host re-establishes a connection with the cloud. However, if you\nreboot, the cache is lost. This means that if you uninstall a sensor off network and reboot, the cache storing those events is lost, including any\nAcUninstallConfirmation events.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 3,
+      "end": 3
+    },
+    "content_stats": {
+      "char_count": 571,
+      "word_count": 93
+    },
+    "hierarchy": {
+      "parent": "AcUninstallConfirmation",
+      "children": []
+    }
+  }
+}

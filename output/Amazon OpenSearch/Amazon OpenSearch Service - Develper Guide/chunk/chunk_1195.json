@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1195",
+  "section_number": "2.19.4.3.2",
+  "header": "Sample conﬁguration API request",
+  "content": "The following request to the conﬁguration API creates a domain with three data nodes, three\ndedicated master nodes, cold storage enabled, and ﬁne-grained access control enabled:\nEnabling cold storage\n1711\nAmazon OpenSearch Service\nDeveloper Guide\nPOST https://es.us-east-2.amazonaws.com/2021-01-01/opensearch/domain\n{\n\"ClusterConfig\": {\n\"InstanceCount\": 3,\n\"InstanceType\": \"r6g.large.search\",\n\"DedicatedMasterEnabled\": true,\n\"DedicatedMasterType\": \"r6g.large.search\",\n\"DedicatedMasterCount\": 3,\n\"ZoneAwarenessEnabled\": true,\n\"ZoneAwarenessConfig\": {\n\"AvailabilityZoneCount\": 3\n},\n\"WarmEnabled\": true,\n\"WarmCount\": 4,\n\"WarmType\": \"ultrawarm1.medium.search\",\n\"ColdStorageOptions\": {\n\"Enabled\": true\n}\n},\n\"EBSOptions\": {\n\"EBSEnabled\": true,\n\"VolumeType\": \"gp2\",\n\"VolumeSize\": 11\n},\n\"EncryptionAtRestOptions\": {\n\"Enabled\": true\n},\n\"NodeToNodeEncryptionOptions\": {\n\"Enabled\": true\n},\n\"DomainEndpointOptions\": {\n\"EnforceHTTPS\": true,\n\"TLSSecurityPolicy\": \"Policy-Min-TLS-1-2-2019-07\"\n},\n\"AdvancedSecurityOptions\": {\n\"Enabled\": true,\n\"InternalUserDatabaseEnabled\": true,\n\"MasterUserOptions\": {\n\"MasterUserName\": \"master-user\",\n\"MasterUserPassword\": \"master-password\"\n}\n},\n\"EngineVersion\": \"Opensearch_1.0\",\nEnabling cold storage\n1712\nAmazon OpenSearch Service\nDeveloper Guide\n\"DomainName\": \"my-domain\"\n}\nFor detailed information, see the Amazon OpenSearch Service API Reference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1740,
+      "end": 1742
+    },
+    "content_stats": {
+      "char_count": 1371,
+      "word_count": 133
+    },
+    "hierarchy": {
+      "parent": "Enabling cold storage",
+      "children": []
+    }
+  }
+}

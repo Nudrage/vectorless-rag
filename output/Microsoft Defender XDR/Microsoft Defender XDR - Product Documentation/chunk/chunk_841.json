@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_841",
+  "section_number": "155.1.1.82",
+  "header": "Migrate advanced hunting queries from Microsoft Defender for Endpoint",
+  "content": "Microsoft Defender for Endpoint\n03/28/2025\nMove your advanced hunting workflows from Microsoft Defender for Endpoint to proactively\nhunt for threats using a broader set of data. In Microsoft Defender XDR, you get access to data\nfrom other Microsoft 365 security solutions, including:\nMicrosoft Defender for Endpoint\nMicrosoft Defender for Office 365\nMicrosoft Defender for Cloud Apps\nMicrosoft Defender for Identity\nYou can transition without affecting your existing Defender for Endpoint workflows. Saved\nqueries remain intact, and custom detection rules continue to run and generate alerts. They\nwill, however, be visible in Microsoft Defender XDR.\nThe Microsoft Defender XDR advanced hunting schema provides additional tables containing\ndata from various Microsoft 365 security solutions. The following tables are available only in\nMicrosoft Defender XDR:\nTable name\nDescription\nAlertEvidence\nFiles, IP addresses, URLs, users, or devices associated with alerts\nAlertInfo\nAlerts from Microsoft Defender for Endpoint, Microsoft Defender for Office\n365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity,\nincluding severity information and threat categories\nEmailAttachmentInfo\nInformation about files attached to emails\n７ Note\nMost Microsoft Defender for Endpoint customers can use Microsoft Defender XDR\nwithout additional licenses. To start transitioning your advanced hunting workflows from\nDefender for Endpoint, turn on Microsoft Defender XDR.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 555,
+      "end": 555
+    },
+    "content_stats": {
+      "char_count": 1470,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Schema tables in Microsoft Defender XDR only",
+        "Map DeviceAlertEvents table",
+        "Adjust existing Microsoft Defender for Endpoint queries",
+        "Migrate custom detection rules",
+        "Write queries without DeviceAlertEvents",
+        "See also"
+      ]
+    }
+  }
+}

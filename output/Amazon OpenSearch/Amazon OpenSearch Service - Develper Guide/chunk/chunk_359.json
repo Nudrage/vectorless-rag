@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_359",
+  "section_number": "2.7.10.4",
+  "header": "Infrastructure security",
+  "content": "Amazon OpenSearch Serverless is protected by AWS global network security. For information\nabout AWS security services and how AWS protects infrastructure, see AWS Cloud Security. To\ndesign your AWS environment using the best practices for infrastructure security, see Infrastructure\nProtection in Security Pillar AWS Well‐Architected Framework.\nYou use AWS published API calls to access Amazon OpenSearch Serverless through the network.\nClients must support Transport Layer Security (TLS). We require TLS 1.2 and recommend TLS 1.3.\nFor a list of supported ciphers for TLS 1.3, see TLS protocols and ciphers in the ELB documentation.\nIAM and SAML authentication\n486\nAmazon OpenSearch Service\nDeveloper Guide\nAdditionally, you must sign requests using an access key ID and a secret access key that is\nassociated with an IAM principal. Or you can use the AWS Security Token Service (AWS STS) to\ngenerate temporary security credentials to sign requests.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 515,
+      "end": 516
+    },
+    "content_stats": {
+      "char_count": 949,
+      "word_count": 144
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

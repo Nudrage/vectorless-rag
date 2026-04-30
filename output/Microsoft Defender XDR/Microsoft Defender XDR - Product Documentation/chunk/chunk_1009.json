@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1009",
+  "section_number": "155.1.1.120",
+  "header": "DeviceTvmBrowserExtensions (Preview)",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nEach row in the DeviceTvmBrowserExtensions  table contains information about browser\nextension installations found on devices from Microsoft Defender Vulnerability Management.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nDeviceId\nstring\nUnique identifier for the device in the service\nBrowserName\nstring\nName of the web browser with the extension\nExtensionId\nstring\nUnique identifier for the browser extension\nExtensionName\nstring\nName of the extension\nExtensionDescription\nstring\nDescription from the publisher about the extension\nExtensionVersion\nstring\nVersion number of the extension\nExtensionRisk\nstring\nRisk level for the extension based on the permissions it has\nrequested\nExtensionVendor\nstring\nName of the vendor offering the extension\nIsActivated\nstring\nWhether the extension is turned on or off on the devices\nInstallationTime\ndatetime\nDate and time when the browser extension was first installed\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nProactively hunt for threats\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\nOverview of Microsoft Defender Vulnerability Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 730,
+      "end": 731
+    },
+    "content_stats": {
+      "char_count": 1915,
+      "word_count": 269
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

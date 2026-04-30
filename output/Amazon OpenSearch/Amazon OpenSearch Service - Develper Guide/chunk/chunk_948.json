@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_948",
+  "section_number": "2.14.5.1",
+  "header": "Conﬁguration",
+  "content": "Logstash conﬁguration varies based on the type of authentication your domain uses.\nNo matter which authentication method you use, you must set ecs_compatibility to\ndisabled in the output section of the conﬁguration ﬁle. Logstash 8.0 introduced a breaking\nchange where all plugins are run in ECS compatibility mode by default. You must override the\ndefault value to maintain legacy behavior.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1491,
+      "end": 1491
+    },
+    "content_stats": {
+      "char_count": 390,
+      "word_count": 60
+    },
+    "hierarchy": {
+      "parent": "Loading data into Amazon OpenSearch Service with Logstash",
+      "children": [
+        "Fine-grained access control conﬁguration",
+        "IAM conﬁguration"
+      ]
+    }
+  }
+}

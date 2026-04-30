@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_905",
+  "section_number": "2.12.12.2.1",
+  "header": "Service-linked role permissions for OpenSearch Serverless",
+  "content": "OpenSearch Serverless uses the service-linked role named\nAWSServiceRoleForAmazonOpenSearchServerless, which allows OpenSearch Serverless to call AWS\nservices on your behalf.\nThe AWSServiceRoleForAmazonOpenSearchServerless service-linked role trusts the following\nservices to assume the role:\n• observability.aoss.amazonaws.com\nCollection creation role\n1416\nAmazon OpenSearch Service\nDeveloper Guide\nThe role permissions policy named AmazonOpenSearchServerlessServiceRolePolicy allows\nOpenSearch Serverless to complete the following actions on the speciﬁed resources:\n• Action: cloudwatch:PutMetricData on all AWS resources\nNote\nThe policy includes the condition key {\"StringEquals\":\n{\"cloudwatch:namespace\": \"AWS/AOSS\"}}, which means that the service-linked role\ncan only send metric data to the AWS/AOSS CloudWatch namespace.\nYou must conﬁgure permissions to allow an IAM entity (such as a user, group, or role) to create,\nedit, or delete a service-linked role. For more information, see Service-linked role permissions in\nthe IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1445,
+      "end": 1446
+    },
+    "content_stats": {
+      "char_count": 1043,
+      "word_count": 129
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles to create OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

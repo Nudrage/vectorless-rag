@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_734",
+  "section_number": "2.10.4.8.1",
+  "header": "Step 1: Create the Lambda function",
+  "content": "In this procedure, you create a simple Lambda function to serve as a target for OpenSearch Service\nevent messages.\nTo create a target Lambda function\n1.\nOpen the AWS Lambda console at https://console.aws.amazon.com/lambda/.\n2.\nChoose Create function  and Author from scratch.\n3.\nFor Function name, enter event-handler.\n4.\nFor Runtime, choose Python 3.8.\n5.\nChoose Create function.\n6.\nIn the Function code section, edit the sample code to match the following example:\nimport json\nTutorial: Listening for OpenSearch Service events\n1271\nAmazon OpenSearch Service\nDeveloper Guide\ndef lambda_handler(event, context):\nif event[\"source\"] != \"aws.es\":\nraise ValueError(\"Function only supports input from events with a source\ntype of: aws.es\")\nprint(json.dumps(event))\nThis is a simple Python 3.8 function that prints the events sent by OpenSearch Service. If\neverything is conﬁgured correctly, at the end of this tutorial, the event details appear in the\nCloudWatch Logs log stream that's associated with this Lambda function.\n7.\nChoose Deploy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1300,
+      "end": 1301
+    },
+    "content_stats": {
+      "char_count": 1036,
+      "word_count": 152
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Listening for Amazon OpenSearch Service EventBridge events",
+      "children": []
+    }
+  }
+}

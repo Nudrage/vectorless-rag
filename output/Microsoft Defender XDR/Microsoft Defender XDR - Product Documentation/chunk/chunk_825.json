@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_825",
+  "section_number": "155.1.1.80",
+  "header": "Hunt for ransomware",
+  "content": "03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nRansomware evolved rapidly from being simple commodity malware affecting individual\ncomputer users to an enterprise threat that is severely impacting industries and government\ninstitutions. While Microsoft Defender XDR provides many capabilities that detect and block\nransomware and associated intrusion activities, performing proactive checks for signs of\ncompromise can help keep your network protected.\nRead about human-operated ransomware\nWith advanced hunting in Microsoft Defender XDR, you can create queries that locate\nindividual artifacts associated with ransomware activity. You can also run more sophisticated\nqueries that can look for signs of activity and weigh those signs to find devices that require\nimmediate attention.\nMicrosoft security researchers have observed various common yet subtle artifacts in many\nransomware campaigns launched by sophisticated intruders. These signs mostly involve use of\nsystem tools to prepare for encryption, prevent detection, and clear forensic evidence.\nRansomware\nactivity\nCommon tools\nIntent\nStop processes\ntaskkill.exe, net stop\nEnsure files targeted for encryption aren't locked by various\napplications.\nTurn off services\nsc.exe\n- Ensure files targeted for encryption aren't locked by\nvarious applications.\n- Prevent security software from disrupting encryption and\nother ransomware activity.\n- Stop backup software from creating recoverable copies.\nDelete logs and\nfiles\ncipher.exe, wevtutil,\nfsutil.exe\nRemove forensic evidence.\nDelete shadow\ncopies\nvsadmin.exe,\nwmic.exe\nRemove drive shadow copies that can be used to recover\nencrypted files.\nDelete and stop\nbackups\nwbadmin.exe\nDelete existing backups and stop scheduled backup tasks,\npreventing recovery after encryption.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 544,
+      "end": 544
+    },
+    "content_stats": {
+      "char_count": 1830,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Signs of ransomware activity",
+        "Check for individual signs of ransomware activity",
+        "Check for multiple signs of ransomware activity",
+        "More ransomware resources",
+        "Related articles"
+      ]
+    }
+  }
+}

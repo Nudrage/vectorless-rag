@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_826",
+  "section_number": "155.1.1.80.1",
+  "header": "Signs of ransomware activity",
+  "content": "ﾉ\nExpand table\nRansomware\nactivity\nCommon tools\nIntent\nModify boot\nsettings\nbcdedit.exe\nTurn off warnings and automatic repairs after boot failures\nthat can be caused by the encryption process.\nTurn off recovery\ntools\nschtasks.exe,\nregedit.exe,\nTurn off System Restore and other system recovery options.\nMany activities that constitute ransomware behavior, including the activities described in the\npreceding section, can be benign. When using the following queries to locate ransomware, run\nmore than one query to check whether the same devices are exhibiting various signs of\npossible ransomware activity.\nThis query checks for attempts to stop at least 10 separate processes using the taskkill.exe\nutility. Run query\nKusto\nThis query checks for attempts to stop at least 10 separate processes using the net stop\ncommand. Run query\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 544,
+      "end": 545
+    },
+    "content_stats": {
+      "char_count": 839,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Hunt for ransomware",
+      "children": []
+    }
+  }
+}

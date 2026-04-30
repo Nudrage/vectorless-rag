@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_527",
+  "section_number": "2.8.11.7",
+  "header": "Using Curator for snapshots",
+  "content": "If ISM doesn't work for index and snapshot management, you can use Curator instead. It oﬀers\nadvanced ﬁltering functionality that can help simplify management tasks on complex clusters. Use\npip to install Curator:\npip install elasticsearch-curator\nYou can use Curator as a command line interface (CLI) or Python API. If you use the Python API,\nyou must use version 7.13.4 or earlier of the legacy elasticsearch-py client. It doesn't support the\nopensearch-py client.\nIf you use the CLI, export your credentials at the command line and conﬁgure curator.yml as\nfollows:\nclient:\nhosts: search-my-domain.us-west-1.es.amazonaws.com\nport: 443\nuse_ssl: True\naws_region: us-west-1\naws_sign_request: True\nssl_no_validate: False\ntimeout: 60\nlogging:\nloglevel: INFO\nAutomating snapshots with Index State Management\n697\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 726,
+      "end": 727
+    },
+    "content_stats": {
+      "char_count": 849,
+      "word_count": 120
+    },
+    "hierarchy": {
+      "parent": "Creating index snapshots in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

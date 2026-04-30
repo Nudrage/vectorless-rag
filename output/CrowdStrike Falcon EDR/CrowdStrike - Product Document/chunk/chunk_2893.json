@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2893",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nPatternId\nThe ID of the pattern\nTemplateInstanceId\nContextProcessId\nUPID of process originating this event.\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nOriginalFilename\nThe OriginalFilename of the PE, extracted from VersionInfo resource.\nWmiQuery\nWmiNamespaceName\nUserName\nOperating system username.\nClientComputerName\nTags\nField used for Falcon diagnostic information.\nPatternIdList\nTemplateDisposition\nValues:\nTEMPLATE_DISPOSITION_NOACTION (0)\nTEMPLATE_DISPOSITION_ANALYSIS (3)\nTEMPLATE_DISPOSITION_SENSOR_ONLY (4)\nTEMPLATE_DISPOSITION_INDICATOR (10)\nTEMPLATE_DISPOSITION_DETECT (20)\nTEMPLATE_DISPOSITION_OPERATION_BLOCK (25)\nTEMPLATE_DISPOSITION_PREVENT (30)\nTEMPLATE_DISPOSITION_PREVENT_KILLPARENT (60)\nTEMPLATE_DISPOSITION_PREVENT_KILLSOURCE (61)\nTEMPLATE_DISPOSITION_CONTAINMENT_FS_SERVER (70)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1041,
+      "end": 1041
+    },
+    "content_stats": {
+      "char_count": 1218,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "WmiQueryDetectInfo",
+      "children": []
+    }
+  }
+}

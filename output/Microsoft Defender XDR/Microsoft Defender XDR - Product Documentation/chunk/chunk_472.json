@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_472",
+  "section_number": "155.1.1.44",
+  "header": "Merge incidents manually in the Microsoft Defender portal (Preview)",
+  "content": "Defender portal (Preview)\n07/01/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nIncidents are automatically created in the Microsoft Defender portal when suspicious activities\nare detected. When two incidents describe parts of the same attack story, Defender usually\nmerges those incidents into a single incident automatically to help you investigate incidents\nmore efficiently and effectively and resolve them more quickly and accurately.\nSometimes, however, the automatic merging doesn't happen, due to certain conditions that\nprevent it. To learn more about when incidents are or aren't merged, see Incident correlation\nand merging. In these circumstances, or if you decide independently that two (unmerged)\nincidents are related and should be investigated as a single unit, you can merge them\nmanually. This article explains how to do so.\nUsers must have permissions to view the incidents queue.\nUsers must have read and write permissions on all the incidents they wish to merge.\nIncidents from different sources have different RBAC roles defined.\nIncidents that are candidates for merging must have either the same values as each other,\nor null values, for the Assigned to, Classification, and Determination fields.\n1. Open the incident queue. Select Investigation & response > Incidents & alerts >\nIncidents from the quick launch menu in the Microsoft Defender portal.\n2. Select the two incidents you want to merge by marking the checkboxes at the beginning\nof their rows in the queue. When two incidents are marked, the Merge incidents button\nappears on the toolbar.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 290,
+      "end": 290
+    },
+    "content_stats": {
+      "char_count": 1617,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Prerequisites",
+        "Merge incidents from the incident queue page",
+        "Merge incidents from within the incident page",
+        "Notes",
+        "See also"
+      ]
+    }
+  }
+}

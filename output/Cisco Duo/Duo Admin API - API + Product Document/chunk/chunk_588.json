@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_588",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\ncustom_supported_browsers\nLists of custom browsers for macOS and Windows\nthat are supported by Passport. These are in\naddition to the default browsers and applications\nsupported by Passport.\nKey\nValue\nmacos\nList of custom browsers for\nmacOS that are supported by\nPassport.\nKey\nValue\nteam_id\nTeam IDs used\nto sign the\nbrowser. This is\nassigned to a\nbrowser vendor\nby Apple. See\nKB article 9293\nGET  /admin/v2/passport/config\nfor more\ninformation.\nwindows\nList of custom browsers for\nWindows that are supported by\nPassport.\nKey\nValue\ncommon_name\nCommon\nname of the\nbrowser\nvendor\nfrom the\nbrowser's\ncode\nsigning\ncertificate.\nSee KB\narticle 9293\nfor more\ninformation.\ndisabled_groups\nDeprecated. List of groups that have Passport\ndisabled.\nKey\nValue\ngroup_id\nThe group's ID.\ngroup_name\nThe group's name.\nenabled_groups\nList of groups that have Passport enabled.\nKey\nValue\ngroup_id\nThe group's ID.\ngroup_name\nThe group's name.\nenabled_status\nThe enabled status. One of:\nStatus\nValue\ndisabled\nPassport is disabled for all\nusers.\nenabled\nPassport is enabled for all\nusers.\nenabled-for-\ngroups\nPassport is enabled for\nselected groups.\nenabled-with-\nexceptions\nDeprecated. Passport is\nenabled for all users\nexcept for selected\ngroups.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 247,
+      "end": 249
+    },
+    "content_stats": {
+      "char_count": 1236,
+      "word_count": 185
+    },
+    "hierarchy": {
+      "parent": "Passport",
+      "children": []
+    }
+  }
+}

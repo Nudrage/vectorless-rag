@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_592",
+  "section_number": "2.9.7.1.1",
+  "header": "Procedure",
+  "content": "You can set up a collection-level query data source with the AWS Management Console.\nTo set up a collection-level data source using the AWS Management Console\n1.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/\naos/.\n2.\nIn the left navigation pane, go to Central management and choose Connected data sources.\n3.\nChoose Connect.\n4.\nChoose CloudWatch as the data source type.\n5.\nChoose Next.\n6.\nUnder Data connection details, enter a name and an optional description.\n7.\nUnder IAM roles, choose how to manage access to the log groups.\na.\nIf you want to automatically create a role for this data source, follow these steps:\ni.\nSelect Create a new role.\nii.\nEnter a name for the IAM role.\niii.\nSelect one or more log groups to deﬁne which data can be queried.\nb.\nIf you want to use an existing role that you manage yourself, follow these steps:\ni.\nSelect Use an existing role.\nCreating a CloudWatch Logs data source\n752\nAmazon OpenSearch Service\nDeveloper Guide\nii.\nSelect an existing role from the drop-down menu.\nNote\nWhen using your own role, you must ensure it has all necessary permissions by\nattaching required policies from the IAM console. For more information, see the section\ncalled “Required permissions for manually created IAM roles”.\n8.\n(Optional) Under Tags, add tags to your data source.\n9.\nChoose Next.\n10. Under Set up OpenSearch, choose how to set up OpenSearch.\na.\nUse the default settings:\n•\nReview the default resource names and data retention settings. We suggest you use\ncustom names.\nWhen you use the default settings, a new OpenSearch application and Essentials\nworkspace is created for you at no additional cost. OpenSearch enables you to\nanalyze multiple data sources. It includes workspaces, which provide a tailored\nexperiences for popular use cases. Workspaces support access control, enabling you to\ncreate private spaces for your use cases and share them only with your collaborators.\nb.\nUse customized settings:\ni.\nChoose Customize.\nii.\nEdit the collection name and the data retention settings as needed.\niii.\nSelect the OpenSearch application and workspace that you want to use.\n11. Choose Next.\n12. Review your choices and choose Edit if you need to make any changes.\n13. Choose Connect to set up the data source. Stay on this page while your data source is created.\nWhen it’s ready, you’ll be taken to the data source details page.\nCreating a CloudWatch Logs data source\n753\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 781,
+      "end": 783
+    },
+    "content_stats": {
+      "char_count": 2485,
+      "word_count": 412
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon CloudWatch Logs data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

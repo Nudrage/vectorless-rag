@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_903",
+  "section_number": "2.12.12.1.4",
+  "header": "Deleting the service-linked role",
+  "content": "If you no longer need to use a feature or service that requires a service-linked role, we recommend\nthat you delete that role. That way you don’t have an unused entity that is not actively monitored\nor maintained. However, you must clean up your service-linked role before you can manually delete\nit.\nCleaning up the service-linked role\nBefore you can use IAM to delete a service-linked role, you must ﬁrst conﬁrm that the role has no\nactive sessions and remove any resources used by the role.\nTo check whether the service-linked role has an active session in the IAM console\n1.\nSign in to the AWS Management Console and open the IAM console at https://\nconsole.aws.amazon.com/iam/.\n2.\nIn the navigation pane of the IAM console, choose Roles. Then choose the name (not the check\nbox) of the AWSServiceRoleForAmazonOpenSearchService role.\n3.\nOn the Summary page for the selected role, choose the Access Advisor tab.\n4.\nOn the Access Advisor tab, review recent activity for the service-linked role.\nVPC domain and data source creation role\n1415\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nIf you're unsure whether OpenSearch Service is using the\nAWSServiceRoleForAmazonOpenSearchService role, you can try to delete\nthe role. If the service is using the role, then the deletion fails and you can view the\nresources using the role. If the role is being used, then you must wait for the session\nto end before you can delete the role, and/or delete the resources using the role. You\ncannot revoke the session for a service-linked role.\nManually deleting a service-linked role\nDelete service-linked roles from the IAM console, API, or AWS CLI. For instructions, see Deleting a\nservice-linked role in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1444,
+      "end": 1445
+    },
+    "content_stats": {
+      "char_count": 1715,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles to create VPC domains and direct query data sources",
+      "children": []
+    }
+  }
+}

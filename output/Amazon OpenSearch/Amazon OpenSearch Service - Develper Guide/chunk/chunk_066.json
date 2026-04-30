@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_066",
+  "section_number": "2.6.9.1",
+  "header": "Persistent buﬀering",
+  "content": "A persistent buﬀer stores your data in a disk-based buﬀer across multiple Availability Zones\nto enhance data durability. You can use persistent buﬀering to ingest data from all supported\npush-based sources without setting up a standalone buﬀer. These sources include HTTP and\nOpenTelemetry for logs, traces, and metrics. To enable persistent buﬀering, choose Enable\npersistent buﬀer when you create or update a pipeline. For more information, see the section\ncalled “Creating pipelines”.\nPipeline features\n59\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch Ingestion dynamically determines the number of OCUs to use for persistent buﬀering,\nfactoring in the data source, streaming transformations, and sink destination. Because it allocates\nsome OCUs to buﬀering, you might need to increase the minimum and maximum OCUs to\nmaintain the same ingestion throughput. Pipelines retain data in the buﬀer for up to 72 hours.\nIf you enable persistent buﬀering for a pipeline, the default maximum request payload sizes are as\nfollows:\n• HTTP sources – 10 MB\n• OpenTelemetry sources – 4 MB\nFor HTTP sources, you can increase the maximum payload size to 20 MB. The request payload size\nincludes the entire HTTP request, which typically contains multiple events. Each event can't exceed\n3.5 MB.\nPipelines with persistent buﬀering split the conﬁgured pipeline units between compute and buﬀer\nunits. If a pipeline uses a CPU-intensive processor like grok, key-value, or split string, it allocates\nthe units in a 1:1 buﬀer-to-compute ratio. Otherwise, it allocates them in a 3:1 ratio, always\nfavoring compute units.\nFor example:\n• Pipeline with grok and 2 max units – 1 compute unit and 1 buﬀer units\n• Pipeline with grok and 5 max units – 3 compute units and 2 buﬀer units\n• Pipeline with no processors and 2 max units – 1 compute unit and 1 buﬀer units\n• Pipeline with no processors and 4 max units – 1 compute unit and 3 buﬀer units\n• Pipeline with grok and 5 max units – 2 compute units and 3 buﬀer units\nBy default, pipelines use an AWS owned key to encrypt buﬀer data. These pipelines don't need any\nadditional permissions for the pipeline role.\nAlternately, you can specify a customer managed key and add the following IAM permissions to the\npipeline role:\nJSON\n{\nPersistent buﬀering\n60\nAmazon OpenSearch Service\nDeveloper Guide\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Sid\": \"KeyAccess\",\n\"Effect\": \"Allow\",\n\"Action\": [\n\"kms:Decrypt\",\n\"kms:GenerateDataKeyWithoutPlaintext\"\n],\n\"Resource\": \"arn:aws:kms:us-\neast-1:111122223333:key/ASIAIOSFODNN7EXAMPLE\"\n}\n]\n}\nFor more information, see Customer managed keys in the AWS Key Management Service Developer\nGuide.\nNote\nIf you disable persistent buﬀering, your pipeline starts running entirely on in-memory\nbuﬀering.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 88,
+      "end": 90
+    },
+    "content_stats": {
+      "char_count": 2756,
+      "word_count": 430
+    },
+    "hierarchy": {
+      "parent": "Overview of pipeline features in Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

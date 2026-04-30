@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_443",
+  "section_number": "155.1.1.252.1",
+  "header": "Limitations",
+  "content": "Data freshness: Latencies may exist between a change in the organization's environment\nand the reflection of that change in the blast radius graph. During this time, the model\nmight be incomplete.\nPossible paths: The blast radius graph shows possible paths. It doesn't guarantee that an\nattacker would take every path shown.\nKnown attack vectors: The graph relies on known attack vectors. If attackers find a new\nlateral movement or new technique that has yet to be modeled, it won't be shown in the\nblast radius graph.\nUser scopes: The graph displayed is based on the allowed scopes for the viewing user.\nOnly nodes and edges that are scoped for the user based on the defined RBAC and\nscoping settings are visible on the graph. Paths containing out of scope nodes or edges\naren't visible.\nIsland nodes: Nonconnected nodes may appear on the graph due to changes that may\noccur between the time the data is collected and the calculation of the blast radius.\nYou can view an incident's details on the right pane of an incident page. The incident details\ninclude incident assignment, ID, classification, categories, and first and last activity date and\ntime. It also includes a description of the incident, impacted assets, active alerts, and where\napplicable, the related threats, recommendations, and disruption summary and impact. Here's\nan example of the incident details where the incident description is highlighted.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 268,
+      "end": 269
+    },
+    "content_stats": {
+      "char_count": 1419,
+      "word_count": 231
+    },
+    "hierarchy": {
+      "parent": "Blast radius analysis",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_845",
+  "section_number": "2.12.8",
+  "header": "Infrastructure security in Amazon OpenSearch Service",
+  "content": "As a managed service, Amazon OpenSearch Service is protected by AWS global network security.\nFor information about AWS security services and how AWS protects infrastructure, see AWS Cloud\nSecurity. To design your AWS environment using the best practices for infrastructure security, see\nInfrastructure Protection in Security Pillar AWS Well‐Architected Framework.\nYou use AWS published API calls to access OpenSearch Service through the network. Clients must\nsupport the following:\n• Transport Layer Security (TLS). We require TLS 1.2 and recommend TLS 1.3.\n• Cipher suites with perfect forward secrecy (PFS) such as DHE (Ephemeral Diﬃe-Hellman) or\nECDHE (Elliptic Curve Ephemeral Diﬃe-Hellman). Most modern systems such as Java 7 and later\nsupport these modes.\nInfrastructure security\n1371\nAmazon OpenSearch Service\nDeveloper Guide\nYou use AWS published API calls to access the OpenSearch Service conﬁguration API\nthrough the network. To conﬁgure the minimum required TLS version to accept, specify the\nTLSSecurityPolicy value in the domain endpoint options:\naws opensearch update-domain-config --domain-name my-domain --domain-endpoint-options\n'{\"TLSSecurityPolicy\": \"Policy-Min-TLS-1-2-2019-07\"}'\nFor details, see the AWS CLI command reference.\nDepending on your domain conﬁguration, you might also need to sign requests to the OpenSearch\nAPIs. For more information, see the section called “Making and signing OpenSearch Service\nrequests”.\nOpenSearch Service supports public access domains, which can receive requests from any internet-\nconnected device, and VPC access domains, which are isolated from the public internet.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1400,
+      "end": 1401
+    },
+    "content_stats": {
+      "char_count": 1626,
+      "word_count": 225
+    },
+    "hierarchy": {
+      "parent": "Security in Amazon OpenSearch Service",
+      "children": [
+        "Access Amazon OpenSearch Service using an OpenSearch Service- managed VPC endpoint (AWS PrivateLink)"
+      ]
+    }
+  }
+}

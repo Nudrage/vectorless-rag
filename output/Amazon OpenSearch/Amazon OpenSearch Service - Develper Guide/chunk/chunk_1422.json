@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1422",
+  "section_number": "2.25.11.1",
+  "header": "Choosing the number of dedicated master nodes",
+  "content": "We recommend that you use Multi-AZ with Standby, which adds three dedicated master nodes\nto each production OpenSearch Service domain. If you deploy with Multi-AZ without Standby or\nsingle-AZ, we still recommend three dedicated master nodes. Never choose an even number of\ndedicated master nodes. Consider the following when choosing the number of dedicated master\nnodes:\n• One dedicated master node is explicitly prohibited by OpenSearch Service because you have no\nbackup in the event of a failure. You receive a validation exception if you try to create a domain\nwith only one dedicated master node.\n• If you have two dedicated master nodes, your cluster doesn't have the necessary quorum of\nnodes to elect a new master node in the event of a failure.\nChoosing the number of dedicated master nodes\n1868\nAmazon OpenSearch Service\nDeveloper Guide\nA quorum is the number of dedicated master nodes / 2 + 1 (rounded down to the nearest whole\nnumber). In this case, 2 / 2 + 1 = 2. Because one dedicated master node has failed and only one\nbackup exists, the cluster doesn't have a quorum and can't elect a new master.\n• Three dedicated master nodes, the recommended number, provides two backup nodes in the\nevent of a master node failure and the necessary quorum (2) to elect a new master.\n• Four dedicated master nodes are not better than three and can cause issues if you use multiple\nAvailability Zones.\n• If one master node fails, you have the quorum (3) to elect a new master. If two nodes fail, you\nlose that quorum, just as you do with three dedicated master nodes.\n• In a three Availability Zone conﬁguration, two AZs have one dedicated master node, and\none AZ has two. If that AZ experiences a disruption, the remaining two AZs don't have the\nnecessary quorum (3) to elect a new master.\n• Having ﬁve dedicated master nodes works as well as three and allows you to lose two nodes\nwhile maintaining a quorum. But because only one dedicated master node is active at any given\ntime, this conﬁguration means that you pay for four idle nodes. Many users ﬁnd this level of\nfailover protection excessive.\nIf a cluster has an even number of master-eligible nodes, OpenSearch and Elasticsearch versions\n7.x and later ignore one node so that the voting conﬁguration is always an odd number. In this\ncase, four dedicated master nodes are essentially equivalent to three (and two to one).\nNote\nIf your cluster doesn't have the necessary quorum to elect a new master node, write and\nread requests to the cluster both fail. This behavior diﬀers from the OpenSearch default.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1897,
+      "end": 1898
+    },
+    "content_stats": {
+      "char_count": 2564,
+      "word_count": 446
+    },
+    "hierarchy": {
+      "parent": "Dedicated master nodes in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

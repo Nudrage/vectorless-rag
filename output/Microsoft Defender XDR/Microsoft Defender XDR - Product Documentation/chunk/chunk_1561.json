@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1561",
+  "section_number": "155.1.1.214",
+  "header": "Microsoft Defender XDR Unified role-based access control (RBAC)",
+  "content": "access control (RBAC)\n07/22/2025\nApplies to:\nMicrosoft Defender for Endpoint Plan 2\nMicrosoft Defender XDR\nMicrosoft Defender for Identity\nMicrosoft Defender for Office 365 P2\nMicrosoft Defender Vulnerability Management\nMicrosoft Defender for Cloud\nMicrosoft Security Exposure Management\nMicrosoft Defender for Cloud Apps\nMicrosoft Sentinel data lake\nMicrosoft Defender XDR provides integrated threat protection, detection, and response across\nendpoints, email, identities, applications, and data within a single portal. Controlling a user's\npermissions around their access to view data or complete tasks is essential for organizations to\nminimize the risks associated with unauthorized access.\nThe Microsoft Defender XDR Unified role-based access control (RBAC) model provides a single\npermissions management experience that provides one central location for administrators to\ncontrol user permissions across different security solutions.\n） Important\nStarting February 16, 2025, the Microsoft Defender XDR Unified RBAC model will be the\ndefault permissions model for new Microsoft Defender Endpoint tenants. These new\ntenants won't have the capability to export roles and permissions from the current model.\nDefender for Endpoint tenants with roles and permissions assigned or exported prior to\nthis date will maintain their current roles and permissions configuration.\nStarting March 2, 2025, new Microsoft Defender for Identity tenants will also have the\nUnified RBAC model as their default permissions model. They won't be able to export\nroles and permissions from the current model. Existing Defender for Identity tenants will\nmaintain their current roles and permissions configuration.\nCentralized permissions management is supported for the following services:\nService name\nUnified RBAC support\nMicrosoft Defender\nXDR\nCentralized permissions management for Microsoft Defender XDR experiences.\nMicrosoft Defender\nfor Endpoint\nFull support for all endpoint data and actions. All roles are compatible with the\ndevice group's scope as defined on the device groups page. Limiting permissions\nto different device groups is accomplished in the Devices Groups page.\nMicrosoft Defender\nVulnerability\nManagement\nCentralized permissions management for all Defender Vulnerability Management\ncapabilities.\nMicrosoft Defender\nfor Office 365\nFull support for all data and actions.\nNote:\nInitially, the Microsoft Defender XDR RBAC model is available only for\norganizations with Microsoft Defender for Office 365 Plan 2 licenses (trial\nlicenses aren't supported).\nGranular delegated admin privileges (GDAP) aren't supported.\nExchange Online PowerShell and Security & Compliance PowerShell\ncontinue to use Exchange Online roles and Email & Collaboration roles.\nMicrosoft Defender XDR Unified RBAC doesn't affect Exchange Online\nPowerShell or Security & Compliance PowerShell.\nAzure B2B invited guests aren't supported by all experiences that were\npreviously under Exchange Online RBAC.\nMicrosoft Defender\nfor Identity\nFull support for all identity data and actions. All roles are compatible with\nMicrosoft Defender for Identity scoped access.\nNote: Defender for Identity experiences also adhere to permissions granted from\nMicrosoft Defender for Cloud Apps\n. For more information, see Microsoft\nDefender for Identity role groups\n.\nMicrosoft Defender\nfor Cloud\nSupport access management for all Defender for Cloud data that is available in\nMicrosoft Defender portal.\nMicrosoft Security\nExposure\nManagement\nFull support for all Exposure Management data and actions, including Microsoft\nSecure Score data.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1165,
+      "end": 1166
+    },
+    "content_stats": {
+      "char_count": 3591,
+      "word_count": 498
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "What's supported by the Microsoft Defender XDR Unified RBAC model",
+        "Before you start",
+        "Start using Microsoft Defender XDR Unified RBAC model"
+      ]
+    }
+  }
+}

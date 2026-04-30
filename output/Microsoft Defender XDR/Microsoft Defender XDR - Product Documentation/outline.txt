@@ -1,0 +1,2118 @@
+DOCUMENT INDEX: Microsoft Defender XDR\Microsoft Defender XDR - Product Documentation
+=====================================================================================
+
+1. Microsoft Defender XDR
+   1.1. Microsoft Defender XDR
+   1.2. Evaluate capabilities
+   1.3. Get started
+   1.4. Unified security operations in the Defender portal
+   1.5. Microsoft Defender XDR services
+   1.6. Manage incidents and alerts
+   1.7. Reference
+   1.8. What is Microsoft Defender XDR?
+      1.8.1. Microsoft Defender XDR protection
+         1.8.1.1. Feedback
+      1.8.2. Get started
+   1.9. What's new in Microsoft Defender XDR
+      1.9.1. December 2025
+      1.9.2. November 2025
+      1.9.3. October 2025
+      1.9.4. September 2025
+      1.9.5. August 2025
+      1.9.6. July 2025
+      1.9.7. June 2025
+      1.9.8. May 2025
+      1.9.9. April 2025
+      1.9.10. March 2025
+   1.10. Microsoft Defender XDR preview features
+      1.10.1. What you need to know
+      1.10.2. Required permissions
+      1.10.3. Turn on preview features
+   1.11. Zero Trust with Microsoft Defender XDR
+      1.11.1. Next steps
+         1.11.1.1. Feedback
+   1.12. Microsoft Security Copilot in Microsoft Defender
+      1.12.1. Know before you begin
+      1.12.2. Microsoft Security Copilot integration in Microsoft Defender
+      1.12.3. Key features
+         1.12.3.1. Investigate and respond to incidents like an expert
+            1.12.3.1.1. Summarize incidents quickly
+            1.12.3.1.2. Take action on incidents through guided responses
+            1.12.3.1.3. Run script analysis with ease
+            1.12.3.1.4. Generate device summaries
+            1.12.3.1.5. Analyze files promptly
+            1.12.3.1.6. Investigate identities immediately
+            1.12.3.1.7. Write incident reports efficiently
+         1.12.3.2. Hunt like a pro
+            1.12.3.2.1. Hunt for threats from natural-language input
+            1.12.3.2.2. Generate KQL queries from natural-language input
+         1.12.3.3. Protect your organization with relevant threat intelligence
+            1.12.3.3.1. Monitor threat intelligence
+      1.12.4. Access Copilot in Defender
+      1.12.5. Sample prompts in Copilot
+      1.12.6. Provide feedback
+      1.12.7. Privacy and data security
+      1.12.8. Plugins in Security Copilot
+      1.12.9. Next steps
+      1.12.10. See also
+   1.13. Microsoft Defender XDR for US Government customers
+      1.13.1. Licensing requirements
+         1.13.1.1. Desktop licensing
+         1.13.1.2. Server licensing
+      1.13.2. Portal URLs
+      1.13.3. API
+      1.13.4. Feature parity with commercial
+      1.13.5. More details
+   1.14. Top scoring in industry tests
+      1.14.1. Microsoft Defender XDR
+         1.14.1.1. MITRE: Demonstrated real-world detection, response, and protection from advanced attacks
+      1.14.2. Next generation protection
+         1.14.2.1. AV-Comparatives: Protection rating of 99.8% in the latest test
+         1.14.2.2. SE Labs: AAA award in the latest test
+      1.14.3. Endpoint detection & response
+      1.14.4. To what extent are tests representative of protection in the real world?
+         1.14.4.1. Feedback
+   1.15. Microsoft Defender XDR in the Microsoft Defender portal
+      1.15.1. What to expect
+      1.15.2. Incident and alert investigations
+      1.15.3. Hunting
+      1.15.4. Actions and submissions
+      1.15.5. Threat analytics
+      1.15.6. Microsoft Defender XDR settings
+      1.15.7. Unified search and notifications
+         1.15.7.1. Global search
+         1.15.7.2. Notifications
+      1.15.8. Training for security analysts
+      1.15.9. See also
+   1.16. Microsoft Defender XDR prerequisites
+      1.16.1. Licensing requirements
+         1.16.1.1. Check your existing licenses
+      1.16.2. Required permissions
+      1.16.3. Browser requirements
+      1.16.4. Availability to US GCC, GCC High, and other US government institutions
+         1.16.4.1. Feedback
+      1.16.5. Related articles
+   1.17. Data security and retention in Microsoft Defender XDR
+      1.17.1. Collected data
+      1.17.2. Data storage location
+      1.17.3. Data retention
+      1.17.4. Data sharing
+      1.17.5. Related content
+   1.18. Pilot and deploy Microsoft Defender XDR
+      1.18.1. Microsoft Defender XDR components and architecture
+         1.18.1.1. Microsoft Defender XDR components and SIEM integration
+      1.18.2. Microsoft Defender XDR and an example cyber security attack
+      1.18.3. The pilot and deploy process for Microsoft Defender XDR
+         1.18.3.1. Pilot and deploy Microsoft Defender XDR
+      1.18.4. A B C
+         1.18.4.1. Start the pilot
+            1.18.4.1.1. Using Microsoft 365 E5 trial licenses
+         1.18.4.2. Next step
+            1.18.4.2.1. Pilot and deploy Microsoft Defender XDR
+      1.18.5. A B C
+         1.18.5.1. Feedback
+   1.19. Pilot and deploy Microsoft Defender for Identity
+      1.19.1. End-to-end deployment for Microsoft Defender XDR
+         1.19.1.1. Pilot and deploy Microsoft Defender XDR
+      1.19.2. A B C
+         1.19.2.1. Pilot and deploy workflow for Defender for Identity
+            1.19.2.1.1. Protecting your organization from hackers
+         1.19.2.2. Defender for Identity architecture
+         1.19.2.3. Step 1: Set up the Defender for Identity instance
+         1.19.2.4. Step 2: Install your sensors
+         1.19.2.5. Step 3: Configure event log and proxy settings on machines with the sensor
+         1.19.2.6. Step 4: Allow Defender for Identity to identify local admins on other computers
+         1.19.2.7. Step 5: Try out capabilities
+         1.19.2.8. SIEM integration
+         1.19.2.9. Next step
+         1.19.2.10. Next step for the end-to-end deployment of Microsoft Defender XDR
+            1.19.2.10.1. Feedback
+               1.19.2.10.1.1. Pilot and deploy Microsoft Defender XDR
+      1.19.3. A B C
+   1.20. Pilot and deploy Defender for Office 365
+      1.20.1. End-to-end deployment for Microsoft Defender XDR
+         1.20.1.1. Pilot and deploy Microsoft Defender XDR
+   1.21. A B C
+      1.21.1. Pilot and deploy workflow for Defender for Office 365
+         1.21.1.1. Pilot and deploy Defender for Office 365
+      1.21.2. Defender for Office 365 architecture and requirements
+      1.21.3. Step 1: Audit and verify the public MX record
+      1.21.4. Step 2: Audit accepted domains
+      1.21.5. Step 3: Audit inbound connectors
+      1.21.6. Step 4: Activate the evaluation
+      1.21.7. Step 5: Create pilot groups
+      1.21.8. Step 6: Configure protection
+         1.21.8.1. Assign preset security policies
+         1.21.8.2. Configure custom protection policies
+      1.21.9. Step 7: Try out capabilities
+      1.21.10. SIEM integration
+      1.21.11. Next step
+      1.21.12. Next step for the end-to-end deployment of Microsoft Defender XDR
+         1.21.12.1. Pilot and deploy Microsoft Defender XDR
+   1.22. A B C
+   1.23. Pilot and deploy Microsoft Defender for Endpoint
+      1.23.1. End-to-end deployment for Microsoft Defender XDR
+         1.23.1.1. Pilot and deploy Microsoft Defender XDR
+   1.24. A B C
+      1.24.1. Pilot and deploy workflow for Defender for Endpoint
+         1.24.1.1. Pilot and deploy Defender for Endpoint
+         1.24.1.2. Protecting your organization from hackers
+      1.24.2. Defender for Endpoint architecture
+      1.24.3. Step 1: Check license state
+      1.24.4. Step 2: Onboard endpoints using any of the supported management tools
+         1.24.4.1. Onboarding tool options
+      1.24.5. Step 3: Verify pilot group
+      1.24.6. Step 4: Try out capabilities
+         1.24.6.1. View the device inventory
+         1.24.6.2. View the Microsoft Defender Vulnerability Management dashboard
+         1.24.6.3. Run a simulation
+      1.24.7. SIEM integration
+      1.24.8. Next step
+      1.24.9. Next step for the end-to-end deployment of Microsoft Defender XDR
+         1.24.9.1. Pilot and deploy Microsoft Defender XDR
+   1.25. A B C
+   1.26. Pilot and deploy Microsoft Defender for Cloud Apps
+      1.26.1. End-to-end deployment for Microsoft Defender XDR
+         1.26.1.1. Pilot and deploy Microsoft Defender XDR
+      1.26.2. A B C
+         1.26.2.1. Pilot and deploy workflow for Defender for Cloud Apps
+            1.26.2.1.1. Pilot and deploy Defender for Cloud Apps
+            1.26.2.1.2. Protecting your organization from hackers
+            1.26.2.1.3. Defender for Cloud Apps role as a CASB and more
+         1.26.2.2. Cloud app discovery methods
+         1.26.2.3. Step 1. Connect to Defender for Cloud Apps
+         1.26.2.4. Step 2: Integrate with Microsoft Defender for Endpoint
+         1.26.2.5. Step 3: Deploy the Defender for Cloud Apps log collector on your firewalls and other proxies
+         1.26.2.6. Step 4. Create a pilot group — Scope your pilot deployment to certain user groups
+         1.26.2.7. Step 5. Discover and manage cloud apps
+            1.26.2.7.1. Discover cloud apps
+            1.26.2.7.2. View the Cloud Discovery dashboard to see what apps are being used in your organization
+            1.26.2.7.3. Manage cloud apps
+         1.26.2.8. Step 6. Configure conditional access app control
+         1.26.2.9. Step 7. Apply session policies to cloud apps
+         1.26.2.10. Step 8. Try out additional capabilities
+         1.26.2.11. SIEM integration
+            1.26.2.11.1. Feedback
+         1.26.2.12. Next step
+         1.26.2.13. Next step for the end-to-end deployment of Microsoft Defender XDR
+            1.26.2.13.1. Pilot and deploy Microsoft Defender XDR
+      1.26.3. A B C
+   1.27. Investigate and respond using Microsoft Defender XDR
+      1.27.1. End-to-end deployment for Microsoft Defender XDR
+         1.27.1.1. Pilot and deploy Microsoft Defender XDR
+      1.27.2. A B C
+         1.27.2.1. Workflow for incident investigation and response using Microsoft Defender XDR
+            1.27.2.1.1. Investigate and respond to threats
+         1.27.2.2. Step 1. Gather threat intelligence to identify adversaries and their infrastructure
+         1.27.2.3. Step 2. Simulate attacks with the Microsoft Defender portal
+            1.27.2.3.1. Defender for Office 365 attack simulation training
+            1.27.2.3.2. Defender for Endpoint attack tutorials & simulations
+         1.27.2.4. Simulate an attack with an isolated domain controller and client device (optional)
+            1.27.2.4.1. Add pilot environment endpoints
+            1.27.2.4.2. Run the isolated AD DS domain controller attack simulation
+            1.27.2.4.3. Investigate the incident for the simulated attack
+               1.27.2.4.3.1. Investigate the attack as a single incident
+               1.27.2.4.3.2. Review generated alerts
+                  1.27.2.4.3.2.1. Alert: Suspicious process injection observed (Source: Microsoft Defender for Endpoint)
+                  1.27.2.4.3.2.2. Alert: Unexpected behavior observed by a process run with no command-line arguments (Source: Microsoft Defender for Endpoint)
+                  1.27.2.4.3.2.3. Alert: User and IP address reconnaissance (SMB) (Source: Microsoft Defender for Identity)
+               1.27.2.4.3.3. Review the device timeline with Microsoft Defender for Endpoint
+               1.27.2.4.3.4. Review the user information with Microsoft Defender for Cloud Apps
+               1.27.2.4.3.5. Automated investigation and remediation
+               1.27.2.4.3.6. Resolve the incident
+         1.27.2.5. Step 3. Prioritize incidents
+         1.27.2.6. Step 4. Manage incidents
+         1.27.2.7. Step 5. Examine automated investigation and response with the Action center
+         1.27.2.8. Step 6. Use advanced hunting
+            1.27.2.8.1. Hunting environment requirements
+            1.27.2.8.2. Run the simulation
+               1.27.2.8.2.1. Go hunting
+               1.27.2.8.2.2. Create a detection
+            1.27.2.8.3. Feedback
+               1.27.2.8.3.1. Expert training on advanced hunting
+         1.27.2.9. Next step
+   1.28. Get started with Microsoft Defender XDR
+      1.28.1. Feedback
+      1.28.2. Key capabilities
+   1.29. Turn on Microsoft Defender XDR
+      1.29.1. Check license eligibility and required permissions
+         1.29.1.1. Check your role
+      1.29.2. Configure your network firewall
+      1.29.3. Supported services
+      1.29.4. Onboard to the service
+         1.29.4.1. Data center location
+         1.29.4.2. Confirm that the service is on
+         1.29.4.3. Getting Microsoft Defender for Identity data
+         1.29.4.4. Feedback
+      1.29.5. Get assistance
+      1.29.6. Related topics
+   1.30. Deploy supported services
+      1.30.1. Supported services
+      1.30.2. Deployed services and functionality
+         1.30.2.1. Benefits of full deployment
+         1.30.2.2. Limited deployment scenarios
+      1.30.3. Deploy the services
+      1.30.4. Related articles
+   1.31. Train your security staff for Microsoft Defender XDR
+      1.31.1. Microsoft Defender XDR Ninja training
+      1.31.2. Learning paths
+      1.31.3. Learning paths in the Microsoft Defender portal learning hub
+         1.31.3.1. Feedback
+      1.31.4. Hands-on with a trial environment
+      1.31.5. Simulating an attack
+   1.32. Setup guides for Microsoft Defender XDR
+      1.32.1. Setup guides
+      1.32.2. Related topics
+   1.33. Microsoft Defender for Endpoint
+      1.33.1. Operating systems
+      1.33.2. Licensing
+      1.33.3. Defender for Endpoint capabilities
+      1.33.4. Privacy and compliance
+   1.34. What is Microsoft Defender for Identity?
+      1.34.1. Protect user identities and reduce the attack surface
+         1.34.1.1. Proactively assess your identity posture
+         1.34.1.2. Detect threats across modern identity environments
+      1.34.2. Identify suspicious activities across the cyber- attack kill-chain
+      1.34.3. Investigate alerts and user activities
+      1.34.4. Related content
+         1.34.4.1. Feedback
+   1.35. Microsoft Defender for Office 365 overview
+      1.35.1. The Defender for Office 365 security ladder
+         1.35.1.1. Default email protection capabilities
+         1.35.1.2. Defender for Office 365 Plan 1 capabilities
+         1.35.1.3. Defender for Office 365 Plan 2 capabilities
+      1.35.2. Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet
+      1.35.3. Where to go next
+   1.36. Microsoft Defender for Cloud Apps overview
+      1.36.1. Discover SaaS applications
+      1.36.2. SaaS Security Posture Management (SSPM)
+      1.36.3. Information protection
+      1.36.4. Continuous threat protection in eXtended detection and response (XDR)
+         1.36.4.1. Feedback
+      1.36.5. App to app protection with app governance
+      1.36.6. Next steps
+   1.37. IoT/OT security - protect enterprise IoT and OT assets
+      1.37.1. Enterprise IoT security challenges
+      1.37.2. Enterprise IoT device protection in Defender for Endpoint and Defender XDR
+         1.37.2.1. Supported devices
+         1.37.2.2. Main features
+      1.37.3. Extend protection to OT devices
+         1.37.3.1. Feedback
+   1.38. Protect your AI agents (Preview)
+      1.38.1. AI agent protection features
+      1.38.2. Prerequisites
+      1.38.3. Discover your AI agents with the AI agent inventory in the Defender portal (Preview)
+      1.38.4. The AI agent inventory page
+      1.38.5. AI agent details
+      1.38.6. See also
+   1.39. Microsoft Secure Score
+      1.39.1. How it works
+         1.39.1.1. Key scenarios
+         1.39.1.2. How recommended actions are scored
+         1.39.1.3. Products included in Secure Score
+         1.39.1.4. Security defaults
+      1.39.2. Secure Score permissions
+         1.39.2.1. Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)
+         1.39.2.2. Microsoft Entra global roles permissions
+      1.39.3. Risk awareness
+      1.39.4. We want to hear from you
+      1.39.5. Related resources
+   1.40. What's new in Microsoft Secure Score
+      1.40.1. February 2024
+      1.40.2. January 2024
+         1.40.2.1. Defender for Cloud Apps support for multiple instances of an app
+      1.40.3. December 2023
+      1.40.4. October 2023:
+      1.40.5. September 2023:
+      1.40.6. August 2023
+         1.40.6.1. Microsoft Secure Score integration with Microsoft Lighthouse 365
+         1.40.6.2. Microsoft Secure Score permissions integration with Microsoft Defender XDR Unified role-based access control (RBAC) is now in Public Preview
+      1.40.7. July 2023
+      1.40.8. May 2023
+      1.40.9. April 2023
+      1.40.10. September 2022
+      1.40.11. August 2022
+      1.40.12. June 2022
+      1.40.13. April 2022
+         1.40.13.1. Feedback
+      1.40.14. December 2021
+      1.40.15. We want to hear from you
+      1.40.16. Related resources
+   1.41. Assess your security posture with Microsoft Secure Score
+      1.41.1. Check your current score
+      1.41.2. Take action to improve your score
+         1.41.2.1. Ranking
+         1.41.2.2. View recommended action details
+         1.41.2.3. Choose a recommended action status
+            1.41.2.3.1. Recommended action status for devices
+            1.41.2.3.2. Completed recommended actions
+         1.41.2.4. Assess information and review user impact
+         1.41.2.5. Implement the recommended action
+      1.41.3. We want to hear from you
+      1.41.4. Related resources
+   1.42. Track your Microsoft Secure Score history and meet goals
+      1.42.1. Gain insights into activity that has affected your score
+      1.42.2. Discover trends and set goals
+         1.42.2.1. Compare your score to organizations like yours
+            1.42.2.1.1. Comparison bar chart
+            1.42.2.1.2. Comparison trend
+      1.42.3. We want to hear from you
+      1.42.4. Related resources
+   1.43. Microsoft Secure Score data storage and privacy
+      1.43.1. Data storage location
+      1.43.2. How long does Microsoft store my data? What is Microsoft's data retention policy?
+         1.43.2.1. At service onboarding
+         1.43.2.2. At contract termination or expiration
+   1.44. Incidents and alerts in the Microsoft Defender portal
+      1.44.1. Incidents for correlation and investigation
+      1.44.2. Alert sources and threat detection
+      1.44.3. Tools and methods for investigation and response
+      1.44.4. Related items
+   1.45. Alert correlation and incident merging in the Microsoft Defender portal
+      1.45.1. Incident creation and alert correlation
+         1.45.1.1. Alert correlation by Microsoft Sentinel workspace
+         1.45.1.2. Manual correlation of alerts
+      1.45.2. Incident correlation and merging
+         1.45.2.1. Criteria for merging incidents
+         1.45.2.2. Details of the merge process
+            1.45.2.2.1. Merge direction
+            1.45.2.2.2. Incident contents
+         1.45.2.3. When incidents aren't merged
+         1.45.2.4. Manual merging of incidents (Preview)
+      1.45.3. Next steps
+      1.45.4. See also
+   1.46. Exclude analytics rules from correlation in Microsoft Defender XDR (preview)
+      1.46.1. Overview
+      1.46.2. Prerequisites
+      1.46.3. How exclusion works
+      1.46.4. Exclude a rule from correlation using the UI
+      1.46.5. Exclude a rule from correlation manually
+         1.46.5.1. Add the tag manually
+      1.46.6. Control correlation exclusion via API
+      1.46.7. Important considerations
+      1.46.8. Next steps
+   1.47. Prioritize incidents in the Microsoft Defender portal
+      1.47.1. Incident queue
+         1.47.1.1. Incident names
+      1.47.2. Filters
+         1.47.2.1. Save custom filters as URLs
+      1.47.3. Search
+         1.47.3.1. Search by incident name or ID
+         1.47.3.2. Search by impacted assets
+      1.47.4. Specify a time range
+      1.47.5. Next steps
+         1.47.5.1. Defender Boxed
+      1.47.6. See also
+   1.48. Manage incidents in Microsoft Defender
+      1.48.1. Access the Manage incident pane
+         1.48.1.1. From the incident queue
+         1.48.1.2. From the incident page
+      1.48.2. Incident triage
+         1.48.2.1. Assign an incident to an owner
+            1.48.2.1.1. Assign an owner
+            1.48.2.1.2. View incidents assigned to a particular owner
+         1.48.2.2. Assign or change incident severity
+         1.48.2.3. Add incident tags
+         1.48.2.4. Change the incident status
+      1.48.3. Incident investigation and resolution
+         1.48.3.1. Resolve an incident
+         1.48.3.2. Specify the incident's classification
+         1.48.3.3. Add comments to an incident
+      1.48.4. Incident logging and reporting
+         1.48.4.1. Edit the incident name
+         1.48.4.2. View the activity log of an incident
+      1.48.5. Export incident data to PDF
+      1.48.6. Next steps
+      1.48.7. See also
+         1.48.7.1. Feedback
+   1.49. Streamline incident response using tasks in the Microsoft Defender portal (Preview)
+      1.49.1. How tasks work
+      1.49.2. Permissions required
+      1.49.3. View and manage tasks
+      1.49.4. Automate and synchronize tasks created in Microsoft Sentinel using the Azure portal
+      1.49.5. Related content
+   1.50. Plan an incident response workflow in the Microsoft Defender portal
+      1.50.1. Incident response workflow example in the Microsoft Defender portal
+      1.50.2. Plan initial incident management tasks
+         1.50.2.1. Experience level
+         1.50.2.2. Security team role
+      1.50.3. Related items
+   1.51. Investigate incidents in the Microsoft Defender portal
+      1.51.1. Initial investigation
+      1.51.2. Attack story
+         1.51.2.1. Go hunt
+         1.51.2.2. Blast radius analysis
+            1.51.2.2.1. View blast radius graphs
+            1.51.2.2.2. Limitations
+         1.51.2.3. Incident details
+      1.51.3. Alerts
+      1.51.4. Assets
+         1.51.4.1. Devices
+         1.51.4.2. Users
+         1.51.4.3. Mailboxes
+         1.51.4.4. Apps
+         1.51.4.5. Cloud resources
+      1.51.5. Investigations
+      1.51.6. Evidence and Response
+         1.51.6.1. Approve or reject remediation actions
+      1.51.7. Summary
+      1.51.8. Similar incidents
+      1.51.9. Next steps
+      1.51.10. See also
+   1.52. Understanding graphs and visualizations in Microsoft Defender
+      1.52.1. Nodes
+      1.52.2. Edges
+      1.52.3. See also
+   1.53. Move alerts from one incident to another in the Microsoft Defender portal
+      1.53.1. Prerequisites
+      1.53.2. Access the panel to move alerts
+      1.53.3. Select the alert or alerts to move
+         1.53.3.1. Move alert or alerts to an existing incident
+         1.53.3.2. Move alert or alerts to a new incident
+      1.53.4. Activity log
+      1.53.5. See also
+         1.53.5.1. Feedback
+   1.54. Merge incidents manually in the Microsoft Defender portal (Preview)
+      1.54.1. Prerequisites
+      1.54.2. Merge incidents from the incident queue page
+      1.54.3. Merge incidents from within the incident page
+      1.54.4. Notes
+      1.54.5. See also
+   1.55. Investigate alerts in Microsoft Defender XDR
+      1.55.1. Required roles for Defender for Office 365 alerts
+      1.55.2. Analyze an alert
+         1.55.2.1. Alert sources
+         1.55.2.2. Configure Microsoft Entra IP alert service
+         1.55.2.3. Analyze affected assets
+         1.55.2.4. Trace an alert's role in the alert story
+         1.55.2.5. View more alert information on the details page
+      1.55.3. Manage alerts
+      1.55.4. Tune an alert
+         1.55.4.1. Create rule conditions to tune alerts
+      1.55.5. Resolve an alert
+      1.55.6. Use Power Automate to triage alerts
+         1.55.6.1. Criteria for resolving alerts
+         1.55.6.2. Connect Power Automate to Microsoft Defender for Cloud Apps
+         1.55.6.3. Create an automated flow
+      1.55.7. Next steps
+      1.55.8. See also
+   1.56. Microsoft Security Copilot Dynamic Threat Detection Agent (preview)
+      1.56.1. Overview
+         1.56.1.1. Key benefits
+      1.56.2. Get access
+      1.56.3. Start using the Dynamic Threat Detection Agent
+      1.56.4. Next steps
+      1.56.5. See also
+   1.57. User entity page in Microsoft Defender
+      1.57.1. Overview
+         1.57.1.1. Entity details
+         1.57.1.2. Active directory account controls
+         1.57.1.3. Organization tree
+         1.57.1.4. Account tags
+      1.57.2. Incidents and alerts
+      1.57.3. Observed in organization
+      1.57.4. Timeline
+         1.57.4.1. What data types are available?
+         1.57.4.2. What information is displayed?
+      1.57.5. Security recommendations
+      1.57.6. Attack paths
+      1.57.7. Microsoft Sentinel events
+         1.57.7.1. Microsoft Sentinel timeline
+         1.57.7.2. Insights
+      1.57.8. Remediation actions
+      1.57.9. Next steps
+      1.57.10. See also
+   1.58. Device entity page in Microsoft Defender
+      1.58.1. Entity page header
+      1.58.2. Overview tab
+         1.58.2.1. Device details
+         1.58.2.2. Dashboard
+      1.58.3. Incidents and alerts tab
+      1.58.4. Timeline tab
+         1.58.4.1. Unified timeline (Preview)
+         1.58.4.2. Event details
+      1.58.5. Security recommendations tab
+      1.58.6. Inventories tab
+         1.58.6.1. Software inventory
+         1.58.6.2. Vulnerable components
+         1.58.6.3. Browser extensions
+         1.58.6.4. Certificates
+      1.58.7. Discovered vulnerabilities tab
+      1.58.8. Missing KBs tab
+      1.58.9. Sentinel events tab
+         1.58.9.1. Sentinel timeline
+         1.58.9.2. Insights
+      1.58.10. Response actions
+         1.58.10.1. Feedback
+      1.58.11. Related topics
+   1.59. IP address entity page in Microsoft Defender
+      1.59.1. Overview
+      1.59.2. Incidents and alerts
+      1.59.3. Observed in organization
+      1.59.4. Sentinel events
+         1.59.4.1. Sentinel timeline
+         1.59.4.2. Insights
+      1.59.5. Response actions
+      1.59.6. Related topics
+         1.59.6.1. Feedback
+   1.60. Investigate data loss prevention alerts with Microsoft Defender XDR
+      1.60.1. Prerequisites
+         1.60.1.1. Licensing requirements
+         1.60.1.2. Roles
+      1.60.2. Before you start
+      1.60.3. Investigate DLP alerts in the Microsoft Defender portal
+         1.60.3.1. Extend DLP alert investigation with advanced hunting
+            1.60.3.1.1. Before you begin
+            1.60.3.1.2. Using built in queries
+      1.60.4. Related articles
+   1.61. Investigate data loss prevention alerts with Microsoft Sentinel
+      1.61.1. Before you start
+      1.61.2. DLP investigation experience in Microsoft Sentinel
+         1.61.2.1. Feedback
+      1.61.3. Related articles
+   1.62. Investigate and respond to container threats in the Microsoft Defender portal
+      1.62.1. Prerequisites
+         1.62.1.1. Network policy requirement
+      1.62.2. Permissions
+      1.62.3. Investigate container threats
+      1.62.4. Respond to container threats
+      1.62.5. Hunt for container-related activities
+      1.62.6. Troubleshoot issues
+         1.62.6.1. The isolate pod or restrict pod access response action is not available
+         1.62.6.2. The isolate pod or restrict pod access action failed
+         1.62.6.3. The terminate pod action failed
+      1.62.7. See also
+   1.63. Investigate insider risk threats in the Microsoft Defender portal
+      1.63.1. Know before you begin
+      1.63.2. Prerequisites
+      1.63.3. Permissions and roles
+         1.63.3.1. Microsoft Defender XDR roles
+         1.63.3.2. Microsoft Purview Insider Risk Management roles
+         1.63.3.3. Microsoft Graph API roles
+      1.63.4. Investigation experience in the Microsoft Defender portal
+         1.63.4.1. Incidents
+         1.63.4.2. Alerts
+         1.63.4.3. Advanced hunting
+      1.63.5. Integrate insider risk management data with Microsoft Graph security API
+      1.63.6. Impact to Microsoft Sentinel users
+      1.63.7. Next steps
+         1.63.7.1. Feedback
+   1.64. Create investigations in Data Security Investigations (preview) from the Microsoft Defender portal
+      1.64.1. Prerequisites
+      1.64.2. Create a data security investigation
+      1.64.3. Next step
+   1.65. Automated investigation and response in Microsoft Defender XDR
+      1.65.1. How automated investigation and self-healing works
+      1.65.2. Your own virtual analyst
+      1.65.3. The automated investigation process
+      1.65.4. Viewing a list of investigations
+      1.65.5. Automated investigation & response card
+      1.65.6. Next steps
+   1.66. Configure automated investigation and response capabilities in Microsoft Defender XDR
+      1.66.1. Prerequisites for automated investigation and response in Microsoft Defender XDR
+      1.66.2. Review or change the automation level for device groups
+      1.66.3. Review your security and alert policies in Office 365
+      1.66.4. Need to make changes to automated investigation settings?
+      1.66.5. Next steps
+   1.67. Get notified about remediation actions
+      1.67.1. Remediation actions that follow automated investigations
+      1.67.2. Remediation actions that are taken manually
+      1.67.3. Next steps
+   1.68. The Action center
+      1.68.1. The unified Action center
+      1.68.2. Using the Action center
+      1.68.3. Actions tracked in the Action center
+      1.68.4. Viewing action source details
+      1.68.5. Required permissions for Action center tasks
+      1.68.6. Next step
+   1.69. View and manage actions in the Action center
+      1.69.1. Review pending actions in the Action center
+      1.69.2. Undo completed actions
+         1.69.2.1. Undo one remediation action
+         1.69.2.2. Undo multiple remediation actions
+         1.69.2.3. To remove a file from quarantine across multiple devices
+      1.69.3. Next steps
+   1.70. Details and results of an automated investigation
+      1.70.1. Unified investigation page
+      1.70.2. Open the investigation details view
+         1.70.2.1. Select an item in the Action center
+         1.70.2.2. Open an investigation from an incident page
+      1.70.3. Investigation details
+      1.70.4. Investigation states
+      1.70.5. Next steps
+   1.71. Address false positives or false negatives in Microsoft Defender XDR
+      1.71.1. Report a false positive/negative to Microsoft for analysis
+      1.71.2. Adjust an alert to prevent false positives from recurring
+         1.71.2.1. Feedback
+      1.71.3. Undo a remediation action that was taken on a device
+      1.71.4. See also
+   1.72. Automatic attack disruption in Microsoft Defender XDR
+      1.72.1. How automatic attack disruption works
+      1.72.2. Establishing high confidence when taking automatic action
+      1.72.3. Automated response actions
+      1.72.4. Identify when an attack disruption happens in your environment
+      1.72.5. Next steps
+   1.73. Configure automatic attack disruption in Microsoft Defender XDR
+      1.73.1. Prerequisites
+         1.73.1.1. Microsoft Defender for Endpoint prerequisites
+            1.73.1.1.1. Minimum Sense Client version (MDE client)
+            1.73.1.1.2. Automation setting for your organizations devices
+         1.73.1.2. Microsoft Defender for Identity prerequisites
+            1.73.1.2.1. Set up auditing in domain controllers
+            1.73.1.2.2. Validate action accounts
+         1.73.1.3. Microsoft Defender for Cloud Apps prerequisites
+            1.73.1.3.1. Microsoft Office 365 connector
+            1.73.1.3.2. App Governance
+         1.73.1.4. Microsoft Defender for Office 365 prerequisites
+            1.73.1.4.1. Mailboxes location
+            1.73.1.4.2. Mailbox audit logging
+            1.73.1.4.3. Safelinks policy needs to be present
+      1.73.2. Next steps
+      1.73.3. Related content
+   1.74. Details and results of an automatic attack disruption action
+      1.74.1. Review the incident graph
+      1.74.2. Track the actions in the Action center
+      1.74.3. Track the actions in advanced hunting
+         1.74.3.1. Containment-related events in advanced hunting
+         1.74.3.2. Hunt for disable user account actions
+      1.74.4. Related content
+   1.75. Exclude assets from automated responses in automatic attack disruption
+      1.75.1. Prerequisites
+      1.75.2. Review or change automated response exclusions for assets
+         1.75.2.1. Exclude user accounts
+         1.75.2.2. Exclude device groups
+         1.75.2.3. Exclude IPs
+         1.75.2.4. Remove exclusions
+         1.75.2.5. Opting out of automatic attack disruption
+      1.75.3. See also
+   1.76. Predictive shielding in Microsoft Defender (Preview)
+      1.76.1. How predictive shielding expands on automatic attack disruption
+      1.76.2. How predictive shielding works
+         1.76.2.1. Prediction logic
+         1.76.2.2. Graph-based logic
+      1.76.3. Predictive shielding actions
+      1.76.4. Next steps
+   1.77. Manage predictive shielding in Microsoft Defender (Preview)
+      1.77.1. Review predictive shielding details and results
+         1.77.1.1. Review the incident information
+         1.77.1.2. Review the activity information
+         1.77.1.3. Review the triggering alert information
+      1.77.2. Enrich predictive shielding data
+         1.77.2.1. Enriched data example
+      1.77.3. Track policy modifications in advanced hunting
+         1.77.3.1. Track enabled predictive shielding hardening policies
+         1.77.3.2. Track policy modification events in the environment
+         1.77.3.3. Track blocked events related to predictive shielding hardening policies
+      1.77.4. Undo actions triggered by predictive shielding
+   1.78. Proactively hunt for threats with advanced hunting in Microsoft Defender
+      1.78.1. Get access
+      1.78.2. Data freshness and update frequency
+         1.78.2.1. Event or activity data
+         1.78.2.2. Entity data
+      1.78.3. Quotas and usage parameters
+      1.78.4. Time zone
+         1.78.4.1. Queries
+         1.78.4.2. Results
+      1.78.5. To extend the 30 days retention for Advanced Hunting, use Streaming APIs
+      1.78.6. Related content
+   1.79. Choose between guided and advanced modes to hunt in Microsoft Defender XDR
+      1.79.1. Get started with guided hunting mode
+      1.79.2. Get started with advanced hunting mode
+      1.79.3. See also
+   1.80. Microsoft Security Copilot in advanced hunting
+      1.80.1. Get access
+      1.80.2. Scope of Security Copilot in advanced hunting
+         1.80.2.1. Use case support
+         1.80.2.2. Best practices
+         1.80.2.3. Supported tables
+   1.81. Microsoft Security Copilot Threat Hunting Agent in advanced hunting (preview)
+      1.81.1. Key capabilities
+      1.81.2. Try your first request
+      1.81.3. Understand the response
+      1.81.4. Continue your investigation
+      1.81.5. Start a new session
+      1.81.6. Provide feedback
+   1.82. Microsoft Security Copilot advanced hunting query assistant
+      1.82.1. Try your first request
+      1.82.2. Modify settings
+   1.83. Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
+      1.83.1. How to access
+         1.83.1.1. Required roles and permissions
+         1.83.1.2. Connect a workspace
+      1.83.2. What to expect for Defender XDR tables streamed to Microsoft Sentinel
+      1.83.3. Where to find your Microsoft Sentinel data
+      1.83.4. View schema information
+      1.83.5. Known issues
+      1.83.6. See also
+   1.84. Use Microsoft Sentinel functions, saved queries, and custom rules
+      1.84.1. Use functions
+         1.84.1.1. Use adx() operator for Azure Data Explorer queries
+         1.84.1.2. Use arg() operator for Azure Resource Graph queries
+         1.84.1.3. Create custom functions
+      1.84.2. Use saved queries
+      1.84.3. Create custom analytics and detection rules
+         1.84.3.1. Analytics rules
+         1.84.3.2. Custom detection rules
+      1.84.4. Manage custom analytics and detection rules
+   1.85. Work with advanced hunting results containing Microsoft Sentinel data
+      1.85.1. Explore results
+      1.85.2. Link query results to an incident
+         1.85.2.1. Link results to new or existing incidents
+         1.85.2.2. View linked records in the incident
+         1.85.2.3. Filter for events added using advanced hunting
+   1.86. Build hunting queries using guided mode in Microsoft Defender
+      1.86.1. Open Query in builder
+      1.86.2. Specify the data domain to hunt in
+      1.86.3. Use basic filters
+      1.86.4. Load sample queries
+      1.86.5. Use more filters
+         1.86.5.1. Create conditions
+      1.86.6. Try sample query walk-throughs
+      1.86.7. Try some queries
+         1.86.7.1. Hunt for successful connections to specific IP
+         1.86.7.2. Hunt for high confidence phish or spam emails delivered to inbox
+      1.86.8. See also
+   1.87. Refine your query in guided mode
+      1.87.1. Use different data types
+      1.87.2. Use subgroups
+      1.87.3. Use smart auto-complete for search
+         1.87.3.1. Use EventType
+      1.87.4. Test your query with a smaller sample size
+      1.87.5. Switch to advanced mode after building a query
+      1.87.6. See also
+   1.88. Work with query results in guided mode
+      1.88.1. View more columns
+      1.88.2. See also
+   1.89. Learn the advanced hunting query language
+      1.89.1. Try your first query
+         1.89.1.1. Describe the query and specify the tables to search
+         1.89.1.2. Set the time range
+         1.89.1.3. Check specific processes
+         1.89.1.4. Search for specific command strings
+         1.89.1.5. Customize result columns and length
+      1.89.2. Learn common query operators
+      1.89.3. Understand data types
+      1.89.4. Get help as you write queries
+      1.89.5. Work with multiple queries in the editor
+      1.89.6. Use sample queries
+      1.89.7. Access query language documentation
+      1.89.8. Related topics
+   1.90. Get expert training on advanced hunting
+      1.90.1. How to use the CSL file
+      1.90.2. Other resources
+      1.90.3. Related topics
+   1.91. Use shared queries in advanced hunting
+      1.91.1. Save, modify, and share a query
+      1.91.2. Delete or rename a query
+      1.91.3. Create a direct link to a query
+      1.91.4. Access community queries in the GitHub repo
+         1.91.4.1. Feedback
+      1.91.5. Related topics
+   1.92. Hunt for threats across devices, emails, apps, and identities
+      1.92.1. Get entity info
+         1.92.1.1. Obtain user accounts from email addresses
+         1.92.1.2. Merge the IdentityInfo table
+         1.92.1.3. Get device information
+         1.92.1.4. Get file event information
+         1.92.1.5. Get network event information
+         1.92.1.6. Get device agent version information
+         1.92.1.7. Example query for macOS devices
+         1.92.1.8. Get device status info
+      1.92.2. Hunting scenarios
+         1.92.2.1. List logon activities of users that received emails that were not zapped successfully
+         1.92.2.2. Get logon attempts by domain accounts targeted by credential theft
+         1.92.2.3. Check if files from a known malicious sender are on your devices
+         1.92.2.4. Review logon attempts after receipt of malicious emails
+         1.92.2.5. Review PowerShell activities after receipt of emails from known malicious sender
+      1.92.3. Related topics
+   1.93. Hunt for ransomware
+      1.93.1. Signs of ransomware activity
+      1.93.2. Check for individual signs of ransomware activity
+         1.93.2.1. Stopping multiple processes using taskkill.exe
+         1.93.2.2. Stopping processes using net stop
+         1.93.2.3. Deletion of data on multiple drives using cipher.exe
+         1.93.2.4. Clearing of forensic evidence from event logs using wevtutil
+         1.93.2.5. Turning off services using sc.exe
+         1.93.2.6. Turning off System Restore
+         1.93.2.7. Backup deletion
+      1.93.3. Check for multiple signs of ransomware activity
+         1.93.3.1. Understand and tweak the query results
+      1.93.4. More ransomware resources
+      1.93.5. Related articles
+   1.94. Advanced hunting example for Microsoft Defender for Office 365
+      1.94.1. Related information
+   1.95. Migrate advanced hunting queries from Microsoft Defender for Endpoint
+      1.95.1. Schema tables in Microsoft Defender XDR only
+      1.95.2. Map DeviceAlertEvents table
+      1.95.3. Adjust existing Microsoft Defender for Endpoint queries
+         1.95.3.1. Original query
+         1.95.3.2. Modified query
+      1.95.4. Migrate custom detection rules
+      1.95.5. Write queries without DeviceAlertEvents
+      1.95.6. See also
+   1.96. Quickly hunt for entity or event information with go hunt
+      1.96.1. Query for entity information
+         1.96.1.1. Supported entity types
+      1.96.2. Query for event information
+      1.96.3. Adjust the query
+      1.96.4. Related topics
+   1.97. Use custom functions
+      1.97.1. Types of functions
+         1.97.1.1. Custom functions imported from Microsoft Sentinel log analytics
+      1.97.2. Write your own custom function
+         1.97.2.1. Add parameters to your custom function
+         1.97.2.2. Create custom functions with tabular parameters
+      1.97.3. Use a custom function
+      1.97.4. Work with function codes
+      1.97.5. Edit a custom function
+      1.97.6. Delete a custom function
+      1.97.7. See also
+   1.98. AssignedIPAddresses()
+      1.98.1. Syntax
+      1.98.2. Arguments
+      1.98.3. Examples
+         1.98.3.1. Get the list of IP addresses used by a device 24 hours ago
+         1.98.3.2. Get IP addresses used by a device and find devices communicating with it
+      1.98.4. Related topics
+   1.99. DeviceFromIP()
+      1.99.1. Syntax
+      1.99.2. Arguments
+      1.99.3. Example
+         1.99.3.1. Get the latest devices that have been assigned specific IP addresses
+      1.99.4. Related topics
+   1.100. FileProfile()
+      1.100.1. Syntax
+      1.100.2. Arguments
+      1.100.3. Examples
+         1.100.3.1. Project only the SHA1 column and enrich it
+         1.100.3.2. Enrich the first 500 records and list low-prevalence files
+      1.100.4. Related topics
+   1.101. SeenBy()
+      1.101.1. Syntax
+         1.101.1.1. Example: Obtain list of onboarded devices that have seen a device
+      1.101.2. Related articles
+   1.102. Advanced hunting query best practices
+      1.102.1. Understand CPU resource quotas
+      1.102.2. General optimization tips
+      1.102.3. Optimize the join  operator
+      1.102.4. Optimize the summarize  operator
+      1.102.5. Query scenarios
+         1.102.5.1. Identify unique processes with process IDs
+         1.102.5.2. Query command lines
+         1.102.5.3. Ingest data from external sources
+         1.102.5.4. Parse strings
+      1.102.6. Related topics
+   1.103. Handle advanced hunting errors
+      1.103.1. Related topics
+   1.104. Work with advanced hunting query results
+      1.104.1. View query results as a table or chart
+         1.104.1.1. Construct queries for effective charts
+            1.104.1.1.1. Alerts by severity
+            1.104.1.1.2. Phishing emails across top ten sender domains
+            1.104.1.1.3. File activities over time
+      1.104.2. Export tables and charts
+      1.104.3. Filter results
+      1.104.4. Drill down from query results
+      1.104.5. Tweak your queries from the results
+      1.104.6. Add items to Favorites
+      1.104.7. Automatic timeline rendering (preview)
+         1.104.7.1. Filter the timeline results
+         1.104.7.2. Split the timeline by values
+         1.104.7.3. Change chart type
+         1.104.7.4. Rendering conditions
+      1.104.8. Related topics
+   1.105. Rerun queries in query history
+      1.105.1. View the query history tab
+      1.105.2. Rerun queries from query history
+   1.106. Understand the advanced hunting schema
+      1.106.1. Get schema information
+         1.106.1.1. Access the schema reference
+      1.106.2. Learn the schema tables
+      1.106.3. Related topics
+   1.107. Advanced hunting schema - Naming changes
+      1.107.1. November 2025
+      1.107.2. September 2025
+      1.107.3. May 2025
+      1.107.4. May 2021
+      1.107.5. March 2021
+      1.107.6. February 2021
+      1.107.7. January 2021
+      1.107.8. December 2020
+      1.107.9. Related topics
+   1.108. AADSignInEventsBeta
+      1.108.1. Related articles
+   1.109. AADSpnSignInEventsBeta
+      1.109.1. Related articles
+   1.110. AIAgentsInfo (Preview)
+      1.110.1. Sample queries
+         1.110.1.1. Agent with no authentication
+         1.110.1.2. Suspicious HTTP request to nonstandard port
+         1.110.1.3. Suspicious HTTP request to connector endpoint
+         1.110.1.4. Sending email to AI controlled input values
+         1.110.1.5. Hard-coded credentials in Topics or Actions
+         1.110.1.6. Agents with a configured MCP tool
+      1.110.2. Related topics
+   1.111. AlertEvidence
+      1.111.1. Related topics
+   1.112. AlertInfo
+      1.112.1. Get access
+      1.112.2. AlertInfo
+      1.112.3. Related topics
+   1.113. BehaviorEntities (Preview)
+      1.113.1. Related topics
+   1.114. BehaviorInfo (Preview)
+      1.114.1. Related topics
+   1.115. CampaignInfo (Preview)
+      1.115.1. Read more
+      1.115.2. CloudAppEvents
+         1.115.2.1. Prerequisites
+         1.115.2.2. Apps and services covered
+         1.115.2.3. Related articles
+   1.116. CloudAuditEvents (Preview)
+      1.116.1. Sample query
+      1.116.2. Related topics
+   1.117. CloudProcessEvents (Preview)
+      1.117.1. Sample queries
+         1.117.1.1. Process events by command-line arguments
+         1.117.1.2. Rare process events for a pod in a Kubernetes cluster
+      1.117.2. Related topics
+   1.118. CloudStorageAggregatedEvents (Preview)
+      1.118.1. Sample queries
+      1.118.2. Related topics
+   1.119. DataSecurityBehaviors (Preview)
+      1.119.1. Related articles
+   1.120. DataSecurityEvents (Preview)
+      1.120.1. Related articles
+   1.121. DeviceBaselineComplianceAssessment (Preview)
+      1.121.1. Related topics
+   1.122. DeviceBaselineComplianceAssessmentKB (Preview)
+      1.122.1. Related topics
+   1.123. DeviceBaselineComplianceProfiles (Preview)
+      1.123.1. Related topics
+   1.124. DeviceEvents
+      1.124.1. Related topics
+   1.125. DeviceFileCertificateInfo
+      1.125.1. Related topics
+   1.126. DeviceFileEvents
+      1.126.1. Related topics
+   1.127. DeviceImageLoadEvents
+      1.127.1. Related topics
+   1.128. DeviceInfo
+      1.128.1. Related topics
+   1.129. DeviceLogonEvents
+      1.129.1. Related topics
+   1.130. DeviceNetworkEvents
+      1.130.1. Related topics
+   1.131. DeviceNetworkInfo
+      1.131.1. Related topics
+   1.132. DeviceProcessEvents
+      1.132.1. Related topics
+   1.133. DeviceRegistryEvents
+      1.133.1. Related topics
+   1.134. DeviceTvmBrowserExtensions (Preview)
+      1.134.1. Related topics
+   1.135. DeviceTvmBrowserExtensionsKB (Preview)
+      1.135.1. Related topics
+   1.136. DeviceTvmCertificateInfo (Preview)
+      1.136.1. Related topics
+   1.137. DeviceTvmHardwareFirmware
+      1.137.1. Related topics
+   1.138. DeviceTvmInfoGathering
+      1.138.1. Related topics
+   1.139. DeviceTvmInfoGatheringKB
+      1.139.1. Related topics
+   1.140. DeviceTvmSecureConfigurationAssessment
+      1.140.1. Related topics
+   1.141. DeviceTvmSecureConfigurationAssessment KB
+      1.141.1. Related topics
+   1.142. DeviceTvmSoftwareEvidenceBeta
+      1.142.1. Read more
+   1.143. DeviceTvmSoftwareInventory
+      1.143.1. Read more
+   1.144. DeviceTvmSoftwareVulnerabilities
+      1.144.1. Related topics
+   1.145. DeviceTvmSoftwareVulnerabilitiesKB
+      1.145.1. Related topics
+   1.146. DisruptionAndResponseEvents (Preview)
+      1.146.1. Related topics
+   1.147. EmailAttachmentInfo
+      1.147.1. Related topics
+   1.148. EmailEvents
+      1.148.1. Related topics
+   1.149. EmailPostDeliveryEvents
+      1.149.1. Supported event types
+      1.149.2. Related topics
+   1.150. EmailUrlInfo
+      1.150.1. Related topics
+   1.151. EntraIdSignInEvents (Preview)
+      1.151.1. Related articles
+   1.152. EntraIdSpnSignInEvents (Preview)
+      1.152.1. Related articles
+   1.153. ExposureGraphEdges
+      1.153.1. Related articles
+   1.154. ExposureGraphNodes
+      1.154.1. Related articles
+   1.155. FileMaliciousContentInfo (Preview)
+      1.155.1. Read more
+   1.156. GraphApiAuditEvents (Preview)
+      1.156.1. Related articles
+   1.157. IdentityAccountInfo (Preview)
+      1.157.1. Related articles
+   1.158. IdentityDirectoryEvents
+      1.158.1. Related topics
+   1.159. IdentityEvents (Preview)
+      1.159.1. Related topics
+   1.160. IdentityInfo
+      1.160.1. UEBA-specific columns
+      1.160.2. Related articles
+   1.161. IdentityLogonEvents
+      1.161.1. Supported logon types
+      1.161.2. Related topics
+   1.162. IdentityQueryEvents
+      1.162.1. Related topics
+   1.163. MessageEvents
+      1.163.1. Related topics
+   1.164. MessagePostDeliveryEvents
+      1.164.1. Related topics
+   1.165. MessageUrlInfo
+      1.165.1. Related topics
+   1.166. OAuthAppInfo (Preview)
+      1.166.1. Prerequisites
+      1.166.2. Schema
+      1.166.3. Related topics
+   1.167. UrlClickEvents
+      1.167.1. Related articles
+         1.167.1.1. Feedback
+   1.168. Custom detections overview
+      1.168.1. See also
+   1.169. Create custom detection rules
+      1.169.1. Required permissions for managing custom detections
+         1.169.1.1. Microsoft Defender XDR
+         1.169.1.2. Microsoft Sentinel
+         1.169.1.3. Managing required permissions
+      1.169.2. Create a custom detection rule
+         1.169.2.1. 1. Prepare the query
+            1.169.2.1.1. Required columns in the query results
+         1.169.2.2. 2. Create new rule and provide alert details
+            1.169.2.2.1. Rule frequency
+               1.169.2.2.1.1. Continuous (NRT) frequency
+                  1.169.2.2.1.1.1. Queries you can run continuously
+                  1.169.2.2.1.1.2. Tables that support Continuous (NRT) frequency
+                  1.169.2.2.1.1.3. Custom frequency for Microsoft Sentinel data (Preview)
+         1.169.2.3. 3. Define alert enrichment details
+            1.169.2.3.1. Create a dynamic alert title and description (Preview)
+            1.169.2.3.2. Add custom details (Preview)
+            1.169.2.3.3. Link entities
+               1.169.2.3.3.1. Expanded entity mapping (Preview)
+         1.169.2.4. 4. Specify actions
+            1.169.2.4.1. Actions on devices
+            1.169.2.4.2. Actions on files
+            1.169.2.4.3. Actions on users
+            1.169.2.4.4. Actions on emails
+         1.169.2.5. 5. Set the rule scope
+         1.169.2.6. 6. Review and turn on the rule
+            1.169.2.6.1. How custom detections handle duplicate alerts
+      1.169.3. See also
+   1.170. Manage existing custom detection rules
+      1.170.1. View existing rules
+      1.170.2. View rule details, modify rule, and run rule
+         1.170.2.1. View and manage triggered alerts
+         1.170.2.2. Review actions
+      1.170.3. See also
+   1.171. Take action on advanced hunting query results
+      1.171.1. Required permissions
+      1.171.2. Take various actions on devices
+         1.171.2.1. Quarantine files
+      1.171.3. Take various actions on emails
+      1.171.4. Review actions taken
+      1.171.5. Related articles
+   1.172. Link query results to an incident
+      1.172.1. Required permissions for linking incidents
+      1.172.2. Link results to new or existing incidents
+      1.172.3. View linked records in the incident
+      1.172.4. Filter for events added using advanced hunting
+   1.173. Use the advanced hunting query resource report
+      1.173.1. Understand advanced hunting quotas and usage parameters
+      1.173.2. Access the query resources report
+      1.173.3. Query resource report contents
+      1.173.4. Find resource-heavy queries
+      1.173.5. Related articles
+   1.174. Extend advanced hunting coverage with the right settings
+      1.174.1. Advanced security auditing on Windows devices
+      1.174.2. Microsoft Defender for Identity sensor on the domain controller
+      1.174.3. Related topics
+   1.175. Hunt for threats using the hunting graph
+      1.175.1. Get access
+      1.175.2. Where to find the hunting graph
+      1.175.3. Hunting graph features
+      1.175.4. Get started with hunting graph
+         1.175.4.1. Use predefined scenarios in the hunting graph
+            1.175.4.1.1. Step 1: Select a scenario and enter scenario inputs
+            1.175.4.1.2. Step 2: Apply filters
+               1.175.4.1.2.1. Advanced filters
+            1.175.4.1.3. Step 3: Render the graph
+      1.175.5. See also
+   1.176. Threat analytics in Microsoft Defender
+      1.176.1. Required roles and permissions
+      1.176.2. View the threat analytics dashboard
+         1.176.2.1. View reports by category
+      1.176.3. View a threat analytics report
+         1.176.3.1. Overview: Quickly understand the threat, assess its impact, and review defenses
+            1.176.3.1.1. Understand the threat and its tactics, techniques, and procedures
+            1.176.3.1.2. Assess impact on your organization
+            1.176.3.1.3. Review security resilience and posture
+         1.176.3.2. Analyst report: Get expert insight from Microsoft security researchers
+         1.176.3.3. Related incidents: View and manage related incidents
+         1.176.3.4. Impacted assets: Get list of impacted devices, users, mailboxes, apps, and cloud resources
+         1.176.3.5. Endpoints exposure: Know the deployment status of security updates
+         1.176.3.6. Recommended actions: Review list of mitigations and the status of your devices
+         1.176.3.7. Indicators: View specific infrastructure and evidence behind the threat (preview)
+      1.176.4. Stay updated with the latest reports and threat intelligence
+         1.176.4.1. Set up the Threat Intelligence Briefing Agent
+         1.176.4.2. Set up custom detections and link them to Threat analytics reports
+         1.176.4.3. Set up email notifications for report updates
+      1.176.5. Other report details and limitations
+      1.176.6. See also
+   1.177. Understand the analyst report in threat analytics in Microsoft Defender
+      1.177.1. Know the different analyst report types
+      1.177.2. Scan the analyst report
+      1.177.3. Understand how each threat can be detected
+         1.177.3.1. Microsoft Defender Antivirus
+         1.177.3.2. Microsoft Defender for Endpoint
+         1.177.3.3. Microsoft Defender for Office 365
+         1.177.3.4. Microsoft Defender for Identity
+         1.177.3.5. Microsoft Defender for Cloud Apps
+         1.177.3.6. Microsoft Defender for Cloud
+      1.177.4. Find subtle threat artifacts using advanced hunting
+         1.177.4.1. Microsoft Defender XDR advanced hunting queries
+         1.177.4.2. Microsoft Sentinel queries
+      1.177.5. Apply additional mitigations
+      1.177.6. See also
+   1.178. Get access to IOCs in threat analytics in Microsoft Defender (preview)
+      1.178.1. View IOCs in threat analytics
+      1.178.2. Unlock access to indicators
+      1.178.3. See also
+   1.179. Microsoft Defender Threat Intelligence in Microsoft Defender XDR
+      1.179.1. Feedback
+   1.180. Microsoft Defender Experts for Hunting
+      1.180.1. Next step
+   1.181. Before you begin using Defender Experts for Hunting
+      1.181.1. Eligibility and licensing
+         1.181.1.1. Defender Experts for Hunting coverage
+         1.181.1.2. Ask Defender Experts
+      1.181.2. Access requirements
+      1.181.3. Service availability and data protection
+         1.181.3.1. Data collection, usage, and retention
+         1.181.3.2. Security and compliance
+         1.181.3.3. Availability
+         1.181.3.4. Languages
+      1.181.4. Apply for Microsoft Defender Experts for Hunting service
+         1.181.4.1. Next step
+   1.182. Start using Microsoft Defender Experts for Hunting
+      1.182.1. Onboarding
+      1.182.2. Receive Defender Experts Notifications
+         1.182.2.1. Where to find Defender Experts Notifications
+         1.182.2.2. Filter to view just the Defender Experts Notifications
+         1.182.2.3. Set up Defender Experts email notifications
+         1.182.2.4. Generate sample Defender Experts Notifications
+         1.182.2.5. Next step
+         1.182.2.6. Feedback
+   1.183. Access incident notifications using Graph API
+      1.183.1. Feedback
+         1.183.1.1. Next step
+   1.184. Collaborate with experts on demand
+      1.184.1. Required permissions for using Ask Defender Experts
+      1.184.2. Where to submit inquiries to Ask Defender Experts
+      1.184.3. Where to view responses from Defender Experts
+         1.184.3.1. In portal
+         1.184.3.2. Email
+      1.184.4. Sample questions you can ask from Defender Experts
+         1.184.4.1. Alert information
+         1.184.4.2. Possible device compromise
+         1.184.4.3. Threat intelligence details
+         1.184.4.4. Microsoft Defender Experts for Hunting alert communications
+      1.184.5. Services that aren't in scope for Defender Experts
+         1.184.5.1. Feedback
+            1.184.5.1.1. Next step
+   1.185. Understand the Defender Experts for Hunting report in Microsoft Defender
+      1.185.1. Identify prevalent threats and other potential attack entry points
+         1.185.1.1. Hunt trend
+         1.185.1.2. Emerging threats
+         1.185.1.3. Hunts by threat category
+         1.185.1.4. Hunting summaries
+      1.185.2. Know and understand the security weak spots in your environment
+   1.186. General information on Microsoft Defender Experts for Hunting service
+      1.186.1. See also
+   1.187. Understanding Defender Experts coverage for servers and cloud workloads
+      1.187.1. See also
+   1.188. Microsoft Defender Experts for XDR
+      1.188.1. Next step
+   1.189. Before you begin using Defender Experts for XDR
+      1.189.1. Prerequisites and licensing
+         1.189.1.1. Product Eligibility
+         1.189.1.2. Product configuration and service coverage
+         1.189.1.3. Ask Defender Experts
+      1.189.2. Access requirements
+      1.189.3. Service availability and data protection
+         1.189.3.1. Data collection, usage, and retention
+         1.189.3.2. Security and compliance
+         1.189.3.3. Availability
+         1.189.3.4. Language
+         1.189.3.5. Next step
+         1.189.3.6. See also
+   1.190. Get started with Microsoft Defender Experts for XDR
+      1.190.1. Grant permissions to our experts
+      1.190.2. Exclude devices and users from remediation
+      1.190.3. Tell us who to contact for important matters
+      1.190.4. Receive managed response notifications and updates in Microsoft Teams
+      1.190.5. Prepare your environment for the Defender Experts service
+         1.190.5.1. Next step
+         1.190.5.2. See also
+   1.191. Managed detection and response
+      1.191.1. Incident updates
+      1.191.2. How to use managed response in Microsoft Defender XDR
+         1.191.2.1. Investigation summary
+         1.191.2.2. Actions
+      1.191.3. Get visibility to Defender Experts investigations in your SIEM or ITSM application
+         1.191.3.1. Microsoft Sentinel
+         1.191.3.2. Other applications
+         1.191.3.3. See also
+   1.192. Scoped coverage in Microsoft Defender Experts for XDR
+      1.192.1. Using Defender Experts scoped coverage
+         1.192.1.1. See also
+   1.193. Communicating with experts in the Microsoft Defender Experts for XDR service
+      1.193.1. Incident and managed response notifications
+         1.193.1.1. In-portal chat
+         1.193.1.2. Teams chat
+         1.193.1.3. Email
+         1.193.1.4. Phone call
+      1.193.2. Ask Defender Experts
+      1.193.3. Collaborating with your service delivery manager
+         1.193.3.1. See also
+   1.194. Get real-time visibility with Defender Experts for XDR reports
+      1.194.1. Report overview: Quickly understand the investigated incidents
+         1.194.1.1. Resolved incidents
+         1.194.1.2. Average time to resolve incidents
+         1.194.1.3. Incidents by severity, category, and service source
+         1.194.1.4. Most impacted assets
+         1.194.1.5. Incidents resolved by MITRE tactics
+         1.194.1.6. Incidents resolved by severity and category
+         1.194.1.7. Incidents that required your action
+      1.194.2. Trends: See incident patterns and response efficiency to make informed decisions
+      1.194.3. See also
+   1.195. Enriching Defender Experts for XDR with third-party network signals
+      1.195.1. How Defender Experts analysts use third-party network data to monitor customer tenants
+      1.195.2. Example scenario
+      1.195.3. Ingesting third-party network signals for enrichment
+         1.195.3.1. Prerequisites
+      1.195.4. Frequently asked questions
+         1.195.4.1. See also
+   1.196. Microsoft Defender Experts for Hunting
+      1.196.1. Next step
+   1.197. Auditing
+      1.197.1. Search the audit logs for actions performed by Defender Experts
+      1.197.2. Search the audit logs for actions performed by your administrators in the Defender Experts settings
+      1.197.3. Search the audit logs using a PowerShell script
+         1.197.3.1. See also
+   1.198. General information on Defender Experts for XDR service
+      1.198.1. See also
+   1.199. Understanding and managing Defender Experts for XDR incident updates
+      1.199.1. In Microsoft Defender portal and Graph Security API
+      1.199.2. In Microsoft Sentinel
+      1.199.3. In third-party SIEM, SOAR, or ITSM apps
+      1.199.4. In other communication services
+         1.199.4.1. Feedback
+            1.199.4.1.1. See also
+   1.200. Understanding Managed response
+      1.200.1. Feedback
+         1.200.1.1. See also
+   1.201. Understanding Defender Experts coverage for servers and cloud workloads
+      1.201.1. See also
+   1.202. Important considerations for Microsoft Defender Experts for XDR
+      1.202.1. Note about incident response
+      1.202.2. Feedback
+         1.202.2.1. See also
+   1.203. How Microsoft Defender Experts for XDR permissions work
+      1.203.1. Configuring permissions in customer tenants
+         1.203.1.1. See also
+   1.204. Troubleshooting issues with Microsoft Defender Experts app in Microsoft Teams
+      1.204.1. App policy permissions
+         1.204.1.1. Check the Teams app permission policies
+         1.204.1.2. Fix the Teams app permission policies
+            1.204.1.2.1. Change the policy that blocks the Defender Experts app from running
+            1.204.1.2.2. Add a new policy that lets the Defender Experts app run
+      1.204.2. Teams channel unavailable
+         1.204.2.1. Feedback
+            1.204.2.1.1. See also
+   1.205. Microsoft Security Copilot in Microsoft Defender
+      1.205.1. Know before you begin
+      1.205.2. Microsoft Security Copilot integration in Microsoft Defender
+      1.205.3. Key features
+         1.205.3.1. Investigate and respond to incidents like an expert
+            1.205.3.1.1. Summarize incidents quickly
+            1.205.3.1.2. Take action on incidents through guided responses
+            1.205.3.1.3. Run script analysis with ease
+            1.205.3.1.4. Generate device summaries
+            1.205.3.1.5. Analyze files promptly
+            1.205.3.1.6. Investigate identities immediately
+            1.205.3.1.7. Write incident reports efficiently
+         1.205.3.2. Hunt like a pro
+            1.205.3.2.1. Hunt for threats from natural-language input
+            1.205.3.2.2. Generate KQL queries from natural-language input
+         1.205.3.3. Protect your organization with relevant threat intelligence
+            1.205.3.3.1. Monitor threat intelligence
+      1.205.4. Access Copilot in Defender
+      1.205.5. Sample prompts in Copilot
+      1.205.6. Provide feedback
+      1.205.7. Privacy and data security
+      1.205.8. Plugins in Security Copilot
+      1.205.9. Next steps
+      1.205.10. See also
+   1.206. Summarize an incident with Microsoft Copilot in Microsoft Defender
+      1.206.1. Know before you begin
+      1.206.2. Security Copilot integration in Microsoft Defender
+      1.206.3. Key features
+         1.206.3.1. Manage Copilot incident summaries settings (preview)
+      1.206.4. Sample incident summary prompt
+      1.206.5. Provide feedback
+      1.206.6. See also
+   1.207. Microsoft Security Copilot Dynamic Threat Detection Agent (preview)
+      1.207.1. Overview
+         1.207.1.1. Key benefits
+      1.207.2. Get access
+      1.207.3. Start using the Dynamic Threat Detection Agent
+      1.207.4. Next steps
+      1.207.5. See also
+   1.208. Script analysis with Microsoft Copilot in Microsoft Defender
+      1.208.1. Know before you begin
+      1.208.2. Security Copilot integration in Microsoft Defender
+      1.208.3. Key features
+      1.208.4. Sample script analysis prompt
+         1.208.4.1. Feedback
+      1.208.5. Provide feedback
+      1.208.6. See also
+   1.209. File analysis with Microsoft Copilot in Microsoft Defender
+      1.209.1. Know before you begin
+      1.209.2. Security Copilot integration in Microsoft Defender
+      1.209.3. Key features
+      1.209.4. Sample file analysis prompt
+      1.209.5. Provide feedback
+      1.209.6. Related content
+   1.210. Summarize device information with Microsoft Copilot in Microsoft Defender
+      1.210.1. Know before you begin
+      1.210.2. Security Copilot integration in Microsoft Defender
+      1.210.3. Key features
+      1.210.4. Sample device summary prompt
+      1.210.5. Provide feedback
+      1.210.6. Related content
+   1.211. Summarize identity information with Microsoft Copilot in Microsoft Defender
+      1.211.1. Know before you begin
+      1.211.2. Security Copilot integration in Microsoft Defender
+      1.211.3. Key features
+      1.211.4. Sample identity summary prompt
+      1.211.5. Provide feedback
+      1.211.6. See also
+         1.211.6.1. Feedback
+   1.212. Triage and investigate incidents with guided responses from Microsoft Copilot in Microsoft Defender
+      1.212.1. Know before you begin
+      1.212.2. Security Copilot integration in Microsoft Defender
+      1.212.3. Key features
+         1.212.3.1. Feedback
+      1.212.4. Sample guided responses prompt
+      1.212.5. Provide feedback
+      1.212.6. See also
+   1.213. Microsoft Security Copilot Threat Hunting Agent in advanced hunting (preview)
+      1.213.1. Key capabilities
+      1.213.2. Try your first request
+      1.213.3. Understand the response
+      1.213.4. Continue your investigation
+      1.213.5. Start a new session
+      1.213.6. Provide feedback
+   1.214. Microsoft Security Copilot advanced hunting query assistant
+      1.214.1. Try your first request
+      1.214.2. Modify settings
+   1.215. Create an incident report with Microsoft Copilot in Microsoft Defender
+      1.215.1. Know before you begin
+      1.215.2. Security Copilot integration in Microsoft Defender
+      1.215.3. Key features
+         1.215.3.1. Create an incident report
+         1.215.3.2. Export incident data to PDF
+         1.215.3.3. Recommendations for incident report creation
+      1.215.4. Sample prompt for incident report creation
+      1.215.5. Provide feedback
+         1.215.5.1. Feedback
+      1.215.6. See also
+   1.216. Responsible AI FAQs for Microsoft Copilot in Microsoft Defender
+      1.216.1. Overview
+      1.216.2. Responsible AI FAQs
+         1.216.2.1. What is Microsoft Copilot in Microsoft Defender?
+         1.216.2.2. What can Copilot in Defender do?
+         1.216.2.3. What is Copilot in Defender's intended use?
+         1.216.2.4. How was Copilot in Defender evaluated? What metrics are used to measure performance?
+         1.216.2.5. What are the limitations of Copilot in Defender? How can users minimize the impact of Copilot in Defender’s limitations when using the system?
+         1.216.2.6. How is Microsoft approaching responsible AI for Copilot in Defender?
+         1.216.2.7. Do you comply with the EU AI Act?
+   1.217. Deploy AI agents in Microsoft Defender
+      1.217.1. Prerequisites
+      1.217.2. Discover and deploy agents in the Microsoft Defender portal
+      1.217.3. Microsoft Security Copilot agents in Microsoft Defender
+         1.217.3.1. Phishing Triage Agent
+         1.217.3.2. Threat Intelligence Briefing Agent
+   1.218. Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender (Preview)
+      1.218.1. Overview
+      1.218.2. Permissions required
+      1.218.3. Prerequisites
+         1.218.3.1. Activate URBAC settings
+         1.218.3.2. Configure user reported settings
+         1.218.3.3. Add alert policy
+      1.218.4. Set up the Phishing Triage Agent
+         1.218.4.1. Create the agent’s identity and assign permissions
+            1.218.4.1.1. Identity
+            1.218.4.1.2. Permissions
+            1.218.4.1.3. Conditional access policies
+         1.218.4.2. Begin the setup
+      1.218.5. Enhance incident response with the Phishing Triage Agent
+         1.218.5.1. Agent trigger and flow
+         1.218.5.2. Collaborate with the agent
+         1.218.5.3. Transparency and explainability in phishing triage
+      1.218.6. Teach the agent your organization’s context through feedback
+         1.218.6.1. Best practices for writing feedback
+         1.218.6.2. Resolve feedback failures
+      1.218.7. Manage the Phishing Triage Agent
+         1.218.7.1. View agent’s previous activity
+         1.218.7.2. View and manage feedback to the agent
+         1.218.7.3. Change the agent’s identity and role
+         1.218.7.4. Pause or resume the agent
+         1.218.7.5. Remove the agent
+      1.218.8. Frequently asked questions
+         1.218.8.1. When is the agent triggered?
+         1.218.8.2. Why is the Phishing Triage Agent important?
+         1.218.8.3. Can the Phishing Triage Agent be trusted?
+         1.218.8.4. How does the agent differ from a standard SOAR solution?
+         1.218.8.5. What level of visibility and control do I have over the agent?
+      1.218.9. Related content
+   1.219. Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender
+      1.219.1. Where to find the Threat Intelligence Briefing Agent
+      1.219.2. Prerequisites
+         1.219.2.1. Products
+         1.219.2.2. Security Copilot Plugins
+         1.219.2.3. User account permissions
+         1.219.2.4. Trigger
+      1.219.3. Set up the agent
+      1.219.4. View briefing and manage the agent
+      1.219.5. Assess and provide feedback on the agent’s output
+      1.219.6. See also
+   1.220. Integrating Microsoft Defender XDR into your security operations
+      1.220.1. Target audience
+         1.220.1.1. Feedback
+      1.220.2. Next steps
+   1.221. Step 1. Plan for Microsoft Defender XDR operations readiness
+      1.221.1. Provide situational awareness of modern threats
+      1.221.2. Provide first, second, and potentially third level responses to cyber incidents and events
+      1.221.3. Centralize monitoring and logging of your organization's security sources
+         1.221.3.1. Feedback
+      1.221.4. Establish Red, Blue, and Purple team operational readiness
+      1.221.5. Next step
+   1.222. Step 2. Perform a SOC integration readiness assessment using the Zero Trust Framework
+      1.222.1. Feedback
+      1.222.2. Next step
+   1.223. Step 3. Plan for Microsoft Defender XDR integration with your SOC catalog of services
+      1.223.1. Next step
+         1.223.1.1. Feedback
+   1.224. Step 4. Define Microsoft Defender XDR roles, responsibilities, and oversight
+      1.224.1. Feedback
+      1.224.2. Next step
+      1.224.3. Step 5. Develop and test use cases
+         1.224.3.1. Develop and formalize use case process
+         1.224.3.2. Use case example 1: New phishing variant
+            1.224.3.2.1. Invoke the use case workflow for example 1
+         1.224.3.3. Use case example 2: Threat and vulnerability scanning
+            1.224.3.3.1. Invoke the use case workflow for example 2
+            1.224.3.3.2. Analyze the use case output and lessons learned
+         1.224.3.4. Update production runbooks and playbooks
+         1.224.3.5. Use a standard framework for escalation
+            1.224.3.5.1. Example: Tracking preparation phase activity
+         1.224.3.6. Next step
+            1.224.3.6.1. Feedback
+   1.225. Step 6. Identify SOC maintenance tasks
+      1.225.1. Feedback
+      1.225.2. Next steps
+   1.226. Microsoft Defender multitenant management
+      1.226.1. Microsoft Sentinel support
+      1.226.2. Feature availability
+      1.226.3. Benefits of multitenant management
+      1.226.4. What's included in multitenant management
+      1.226.5. Next steps
+   1.227. Set up Microsoft Defender multitenant management
+      1.227.1. Review the requirements
+      1.227.2. Verify your tenant access
+         1.227.2.1. Verify your tenant access with Microsoft Entra B2B
+         1.227.2.2. Verify your tenant access with GDAP
+      1.227.3. Set up multitenant management
+      1.227.4. Next step
+         1.227.4.1. Feedback
+   1.228. Manage access to Microsoft Defender XDR with Microsoft Entra global roles
+      1.228.1. Access to functionality
+         1.228.1.1. Approve pending automated tasks
+      1.228.2. Access to data
+         1.228.2.1. Microsoft Defender for Cloud Apps access controls
+         1.228.2.2. Feedback
+      1.228.3. Related articles
+   1.229. Custom roles in role-based access control for Microsoft Defender portal services
+      1.229.1. Locate custom role management settings in the Microsoft Defender portal
+      1.229.2. Reference of Defender portal service content
+   1.230. Microsoft Defender XDR Unified role-based access control (RBAC)
+      1.230.1. What's supported by the Microsoft Defender XDR Unified RBAC model
+      1.230.2. Before you start
+         1.230.2.1. Permissions prerequisites
+         1.230.2.2. Migration of existing roles and permissions
+         1.230.2.3. Activation of the Microsoft Defender XDR Unified RBAC model
+      1.230.3. Start using Microsoft Defender XDR Unified RBAC model
+   1.231. What's new in Microsoft Defender XDR Unified role-based access control (RBAC)
+      1.231.1. July 2025
+         1.231.1.1. Microsoft Sentinel data lake permissions integrated with Microsoft Defender XDR unified RBAC (Preview)
+      1.231.2. March 2025
+      1.231.3. February 2025
+      1.231.4. November 2024
+         1.231.4.1. Microsoft Defender for Cloud Apps permissions are now integrated with Microsoft Defender XDR Unified role-based access control (RBAC)
+      1.231.5. May 2024
+      1.231.6. January 2024
+      1.231.7. December 2023
+         1.231.7.1. Microsoft Defender XDR Unified RBAC is now generally available
+      1.231.8. October 2023
+      1.231.9. September 2023
+         1.231.9.1. Export roles for Microsoft Defender XDR Unified role-based access control (RBAC)
+      1.231.10. August 2023
+         1.231.10.1. Detection tuning and Security settings permissions
+         1.231.10.2. Microsoft Defender Vulnerability Management permissions are now integrated with Microsoft Defender XDR Unified role- based access control (RBAC)
+         1.231.10.3. Microsoft Secure Score permissions integration with Microsoft Defender XDR Unified role-based access control (RBAC) is now in Public Preview
+         1.231.10.4. A new file collection permission in Microsoft Defender XDR Unified RBAC is now in Public Preview
+   1.232. Create custom roles with Microsoft Defender XDR Unified RBAC
+      1.232.1. Prerequisites
+      1.232.2. Create a custom role
+      1.232.3. Create a role to access and manage roles and permissions
+      1.232.4. Configure scoped roles for Microsoft Defender for Identity
+      1.232.5. Configure scoped roles for Microsoft Defender for Cloud
+      1.232.6. Next steps
+   1.233. Import roles to Microsoft Defender XDR Unified role-based access control (RBAC)
+      1.233.1. Import roles to Microsoft Defender XDR Unified RBAC from individual RBAC models
+         1.233.1.1. Feedback
+      1.233.2. Next steps
+   1.234. Activate Microsoft Defender XDR Unified role-based access control (RBAC)
+      1.234.1. Activate Microsoft Defender XDR Unified RBAC
+         1.234.1.1. Activate from the Permissions and roles page
+         1.234.1.2. Activate in Microsoft Defender XDR settings
+      1.234.2. Deactivate Microsoft Defender XDR Unified RBAC
+         1.234.2.1. Feedback
+      1.234.3. Next steps
+   1.235. Edit, delete, and export roles in Microsoft Defender XDR Unified role- based access control (RBAC)
+      1.235.1. Edit roles
+      1.235.2. Delete roles
+      1.235.3. Export roles
+         1.235.3.1. Feedback
+      1.235.4. Next steps
+   1.236. Map Microsoft Defender XDR Unified role- based access control (RBAC) permissions
+      1.236.1. Map Microsoft Defender XDR Unified RBAC permissions to existing RBAC permissions
+         1.236.1.1. Map Defender for Endpoint and Defender Vulnerability Management permissions to the Microsoft Defender XDR RBAC permissions
+         1.236.1.2. Map Defender for Office 365 permissions to the Microsoft Defender XDR Unified RBAC permissions
+            1.236.1.2.1. Email & collaboration permissions mapping
+            1.236.1.2.2. Exchange Online permissions mapping
+         1.236.1.3. Map Microsoft Defender for Identity permissions to the Microsoft Defender XDR Unified RBAC
+         1.236.1.4. Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender XDR Unified RBAC permissions
+         1.236.1.5. Unified RBAC roles in Microsoft Defender for Cloud
+         1.236.1.6. Microsoft Entra Global roles access
+      1.236.2. Next steps
+   1.237. Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
+      1.237.1. Security operations – Security data
+      1.237.2. Security operations – Raw data (Email & collaboration)
+      1.237.3. Security posture – Posture management
+      1.237.4. Authorization and settings
+      1.237.5. Data operations (Preview)
+      1.237.6. Next steps
+   1.238. Microsoft Defender XDR frequently asked questions
+      1.238.1. I don't have a Microsoft 365 E5 license. Can I still use Microsoft Defender XDR?
+      1.238.2. Do I need to install or deploy anything to start using Microsoft Defender XDR?
+      1.238.3. Where does Microsoft Defender XDR process and store my data?
+      1.238.4. Where can I access Microsoft Defender XDR?
+      1.238.5. What permissions do I need to access Microsoft Defender XDR?
+      1.238.6. What time zone does Microsoft Defender XDR default to?
+      1.238.7. How can I learn about new Microsoft Defender XDR feature and UI updates?
+      1.238.8. How can I provide feedback or suggestions for Microsoft Defender XDR?
+         1.238.8.1. Feedback
+      1.238.9. Related topics
+      1.238.10. Alert policies in the Microsoft Defender portal
+         1.238.10.1. How alert policies work
+         1.238.10.2. Alert policy settings
+         1.238.10.3. Default alert policies
+            1.238.10.3.1. Information governance alert policies
+            1.238.10.3.2. Mail flow alert policies
+            1.238.10.3.3. Permissions alert policies
+            1.238.10.3.4. Threat management alert policies
+         1.238.10.4. View alerts
+         1.238.10.5. Alert aggregation
+         1.238.10.6. RBAC permissions required to view alerts
+         1.238.10.7. Manage alerts
+            1.238.10.7.1. Feedback
+   1.239. Search the audit log for events in Microsoft Defender XDR
+      1.239.1. Prerequisites
+      1.239.2. Search the audit log
+      1.239.3. Microsoft Defender XDR activities
+      1.239.4. Microsoft Defender for Endpoint activities
+      1.239.5. Search for events using a PowerShell script
+      1.239.6. See also
+   1.240. Get incident notifications by email
+      1.240.1. Create a rule for email notifications
+         1.240.1.1. Feedback
+      1.240.2. Next steps
+   1.241. Get email notifications for response actions
+      1.241.1. Create a rule for email notifications
+         1.241.1.1. Feedback
+      1.241.2. Next steps
+      1.241.3. See also
+   1.242. Get email notifications for Threat analytics updates
+      1.242.1. Set up email notifications for report updates
+         1.242.1.1. Feedback
+      1.242.2. Next steps
+   1.243. Configure alert notifications
+      1.243.1. Create rules for alert notifications
+      1.243.2. Edit a notification rule
+      1.243.3. Delete notification rule
+      1.243.4. Troubleshoot email notifications for alerts
+      1.243.5. Related topics
+   1.244. Contact Microsoft Defender support
+      1.244.1. Prerequisites
+      1.244.2. Access the widget
+      1.244.3. View insights and suggested support articles
+      1.244.4. Submit a support request
+      1.244.5. Related content
+   1.245. Create dynamic rules for devices in asset rule management
+      1.245.1. Create a new dynamic rule
+         1.245.1.1. Dynamic tags in the Device Inventory
+         1.245.1.2. Updating rules
+   1.246. Provide managed security service provider (MSSP) access
+      1.246.1. Enable role-based access controls in Microsoft Defender for Endpoint in Microsoft Defender portal
+      1.246.2. Configure Governance Access Packages
+      1.246.3. Manage access
+         1.246.3.1. Feedback
+   1.247. Troubleshoot Microsoft Defender XDR service issues
+      1.247.1. I don't see Microsoft Defender XDR content
+      1.247.2. Microsoft Defender for Identity alerts are not showing up in the Microsoft Defender XDR incidents
+      1.247.3. My legitimate file/URL is being detected as malicious
+      1.247.4. My ServiceNow tickets are no longer available in the Microsoft Defender portal
+      1.247.5. I can't submit files
+         1.247.5.1. Review your settings
+         1.247.5.2. Implement required Enterprise Application permissions
+            1.247.5.2.1. Option 1: Approve enterprise application permissions by user request
+            1.247.5.2.2. Option 2: Provide admin consent by authenticating the application as an admin
+            1.247.5.2.3. Option 3: Delete and readd app permissions
+   1.248. Create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI
+      1.248.1. Importing data into Power BI
+      1.248.2. Filtering data
+      1.248.3. Introducing parameters
+      1.248.4. Reviewing the report
+      1.248.5. Power BI dashboard samples
+      1.248.6. Related articles
+   1.249. Highlight security impact and achievements with the unified security summary
+      1.249.1. Prerequisites
+      1.249.2. View the unified security summary
+      1.249.3. Related content
+   1.250. Overview of Microsoft Defender XDR APIs
+      1.250.1. Learn more
+   1.251. Supported Microsoft Defender XDR APIs
+      1.251.1. List of available APIs
+         1.251.1.1. Endpoint URIs
+      1.251.2. Related articles
+   1.252. Microsoft Defender XDR APIs license and terms of use
+      1.252.1. Official terms
+      1.252.2. Legal Notices
+      1.252.3. Other restrictions
+         1.252.3.1. Quotas and resource allocation
+      1.252.4. Related articles
+   1.253. Access the Microsoft Defender XDR APIs
+      1.253.1. Application context (Recommended)
+      1.253.2. User context
+      1.253.3. Partner context
+      1.253.4. Related articles
+   1.254. Hello World for Microsoft Defender XDR REST API
+      1.254.1. Get incidents using a simple PowerShell script
+         1.254.1.1. Register an app in Microsoft Entra ID
+         1.254.1.2. Get a token using the app and use the token to access the API
+            1.254.1.2.1. Validate the token
+         1.254.1.3. Get a list of recent incidents
+      1.254.2. Related articles
+   1.255. Create an app to access Microsoft Defender XDR without a user
+      1.255.1. Create an app
+      1.255.2. Get an access token
+         1.255.2.1. Get an access token using PowerShell
+         1.255.2.2. Get an access token using C#
+         1.255.2.3. Get an access token using Python
+         1.255.2.4. Get an access token using curl
+      1.255.3. Validate the token
+      1.255.4. Use the token to access the Microsoft Defender XDR API
+      1.255.5. Related articles
+   1.256. Create an app to access Microsoft Defender XDR APIs on behalf of a user
+      1.256.1. Create an app
+      1.256.2. Get an access token
+         1.256.2.1. Get an access token on behalf of a user using PowerShell
+      1.256.3. Validate the token
+      1.256.4. Use the token to access the Microsoft Defender XDR API
+      1.256.5. Related articles
+   1.257. Create an app with partner access to Microsoft Defender XDR APIs
+      1.257.1. Create the multi-tenant app
+      1.257.2. Get an access token
+         1.257.2.1. Get an access token using PowerShell
+         1.257.2.2. Get an access token using C#
+         1.257.2.3. Get an access token using Python
+         1.257.2.4. Get an access token using curl
+      1.257.3. Validate the token
+      1.257.4. Use the token to access the Microsoft Defender XDR API
+      1.257.5. Related articles
+   1.258. Other security and threat protection APIs
+   1.259. Common Microsoft Defender XDR REST API error codes
+      1.259.1. Error codes
+      1.259.2. Examples
+      1.259.3. Body parameters
+      1.259.4. Tracking ID
+      1.259.5. Related articles
+   1.260. Streaming API
+      1.260.1. Stream Advanced Hunting events to Event Hubs and/or Azure storage account
+      1.260.2. In this section
+         1.260.2.1. Feedback
+      1.260.3. Related topics
+   1.261. Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub
+      1.261.1. Prerequisites
+      1.261.2. Enable raw data streaming
+      1.261.3. The schema of the events in Azure Event Hub
+      1.261.4. Data types mapping
+      1.261.5. Estimating initial Event Hub capacity
+         1.261.5.1. Feedback
+      1.261.6. Monitoring created resources
+      1.261.7. Related topics
+   1.262. Stream Microsoft Defender XDR events to your storage account
+      1.262.1. Before you begin
+         1.262.1.1. Add contributor permissions
+      1.262.2. Enable raw data streaming
+      1.262.3. The schema of the events in the Storage account
+      1.262.4. Data types mapping
+      1.262.5. Monitoring created resources
+         1.262.5.1. Feedback
+      1.262.6. Related articles
+   1.263. Supported Microsoft Defender XDR streaming event types in event streaming API
+      1.263.1. Hunting tables support status in Event Streaming API
+      1.263.2. Related topics
+         1.263.2.1. Feedback
+   1.264. Configure your Event Hubs
+      1.264.1. Set up the required Resource Provider in the Event Hubs subscription
+      1.264.2. Set up Microsoft Entra App Registration
+      1.264.3. Set up Event Hubs namespace
+         1.264.3.1. Add permissions
+      1.264.4. Set up Event Hubs
+      1.264.5. Configure Microsoft Defender XDR to send email tables
+         1.264.5.1. Set up Microsoft Defender XDR send Email tables to Splunk via Event Hubs
+         1.264.5.2. Verify that the events are being exported to the Event Hubs
+      1.264.6. Related topics
+   1.265. Microsoft Defender XDR Advanced hunting API
+      1.265.1. Quotas and resource allocation
+      1.265.2. Permissions
+      1.265.3. HTTP request
+      1.265.4. Request headers
+      1.265.5. Request body
+      1.265.6. Response
+      1.265.7. Example
+         1.265.7.1. Query
+         1.265.7.2. Response object
+      1.265.8. Related articles
+         1.265.8.1. Use the Microsoft Graph security API
+            1.265.8.1.1. Actions (preview)
+            1.265.8.1.2. Advanced hunting
+               1.265.8.1.2.1. Quotas and resource allocation
+            1.265.8.1.3. Custom detections
+               1.265.8.1.3.1. Quotas
+            1.265.8.1.4. Alerts
+               1.265.8.1.4.1. Alerts and incidents
+               1.265.8.1.4.2. Legacy alerts
+            1.265.8.1.5. Attack simulation and training
+            1.265.8.1.6. eDiscovery
+            1.265.8.1.7. Audit log query (preview)
+            1.265.8.1.8. Identities
+               1.265.8.1.8.1. Health issues
+               1.265.8.1.8.2. Sensors
+            1.265.8.1.9. Incidents
+            1.265.8.1.10. Information protection
+            1.265.8.1.11. Security Copilot (Preview)
+            1.265.8.1.12. Records management
+            1.265.8.1.13. Secure Score
+            1.265.8.1.14. Threat intelligence (preview)
+            1.265.8.1.15. Threat intelligence indicators (preview)
+            1.265.8.1.16. Threat submission
+            1.265.8.1.17. Email and collaboration protection
+               1.265.8.1.17.1. Sensors
+               1.265.8.1.17.2. identityAccounts
+            1.265.8.1.18. Data security and governance (preview)
+            1.265.8.1.19. Common use cases
+            1.265.8.1.20. Next steps
+            1.265.8.1.21. Related content
+   1.266. Microsoft Defender XDR incidents API and the incidents resource type
+      1.266.1. Quotas and resource allocation
+      1.266.2. Permissions
+      1.266.3. Methods
+      1.266.4. Request body, response, and examples
+      1.266.5. Common properties
+      1.266.6. Related articles
+      1.266.7. List incidents API in Microsoft Defender XDR
+         1.266.7.1. API description
+         1.266.7.2. Limitations
+         1.266.7.3. Permissions
+         1.266.7.4. HTTP request
+         1.266.7.5. Request headers
+         1.266.7.6. Request body
+         1.266.7.7. Response
+         1.266.7.8. Schema mapping
+            1.266.7.8.1. Incident metadata
+            1.266.7.8.2. Alerts metadata
+            1.266.7.8.3. Device format
+            1.266.7.8.4. Entity Format
+         1.266.7.9. Example
+            1.266.7.9.1. Request example
+            1.266.7.9.2. Response example
+         1.266.7.10. Related articles
+   1.267. Update incidents API
+      1.267.1. API description
+         1.267.1.1. Quotas, resource allocation, and other constraints
+      1.267.2. Permissions
+      1.267.3. HTTP request
+      1.267.4. Request headers
+      1.267.5. Request body
+      1.267.6. Response
+      1.267.7. Example
+         1.267.7.1. Request example
+         1.267.7.2. Request data example
+      1.267.8. Related articles
+   1.268. Get incident information API
+      1.268.1. API description
+      1.268.2. Limitations
+      1.268.3. Permissions
+      1.268.4. HTTP request
+      1.268.5. Request headers
+      1.268.6. Request body
+      1.268.7. Response
+      1.268.8. Example
+         1.268.8.1. Request
+      1.268.9. Related content
+   1.269. Fetch Microsoft Defender XDR incidents
+      1.269.1. Fetch incidents into your SIEM
+         1.269.1.1. Step 1: Create an application in Microsoft Entra ID
+         1.269.1.2. Step 2: Get access and refresh tokens from your customer's tenant
+         1.269.1.3. Step 3: Allow your application on Microsoft Defender XDR
+         1.269.1.4. Feedback
+      1.269.2. Fetch alerts from MSSP customer's tenant using APIs
+      1.269.3. Related topics
+   1.270. Integrate your SIEM tools with Microsoft Defender XDR
+      1.270.1. Pull Microsoft Defender XDR incidents and streaming event data using security information and events management (SIEM) tools
+      1.270.2. Ingesting incidents from the incidents REST API
+         1.270.2.1. Incident schema
+         1.270.2.2. Splunk
+         1.270.2.3. Micro Focus ArcSight
+         1.270.2.4. Elastic
+      1.270.3. Ingesting streaming event data via Event Hubs
+         1.270.3.1. Splunk
+         1.270.3.2. IBM QRadar
+         1.270.3.3. Elastic
+      1.270.4. Related content
+   1.271. Troubleshoot SIEM tool integration issues
+      1.271.1. Learn how to get a new client secret
+      1.271.2. Error when getting a refresh access token
+      1.271.3. Error while enabling the SIEM connector application
+      1.271.4. Related topics
+   1.272. Technological partners of Microsoft Defender XDR
+      1.272.1. Supported integrations and partners
+         1.272.1.1. Security information and event management (SIEM)
+         1.272.1.2. Security orchestration, automation, and response (SOAR)
+         1.272.1.3. Breach and attack simulation (BAS)
+         1.272.1.4. Threat intelligence
+         1.272.1.5. Network security/ DNS security
+         1.272.1.6. Identity security
+         1.272.1.7. Cross platform
+         1.272.1.8. Business cloud applications
+         1.272.1.9. Threat and vulnerability management
+         1.272.1.10. Secure service edge
+         1.272.1.11. Additional integrations
+      1.272.2. Recommended content
+   1.273. Professional services supported by Microsoft Defender XDR
+      1.273.1. Manage
+      1.273.2. Respond
+      1.273.3. Protect
+      1.273.4. Evolve
+      1.273.5. Educate
+      1.273.6. Related articles
+   1.274. Alert classification playbooks
+      1.274.1. Microsoft Defender for Office 365
+      1.274.2. Microsoft Defender for Cloud Apps
+      1.274.3. Alert classification playbooks
+   1.275. Alert classification for suspicious email forwarding activity
+      1.275.1. Email forwarding rules
+         1.275.1.1. Suspicious email forwarding activity
+      1.275.2. Alert details
+      1.275.3. Investigation workflow
+         1.275.3.1. Is the user account and its mailbox compromised?
+         1.275.3.2. Are the activities malicious?
+      1.275.4. Using Threat Explorer
+      1.275.5. Advanced hunting queries
+         1.275.5.1. Investigating forwarding rules
+         1.275.5.2. Additional investigation
+      1.275.6. Recommended actions
+      1.275.7. See also
+   1.276. Alert classification for suspicious inbox forwarding rules
+      1.276.1. Inbox forwarding rules
+         1.276.1.1. Suspicious inbox forwarding rules
+      1.276.2. Workflow
+      1.276.3. Investigation steps
+         1.276.3.1. Review generated alerts
+         1.276.3.2. Investigate rule parameters
+         1.276.3.3. Investigate IP address
+         1.276.3.4. Investigate any suspicious activity with the user inbox before creating rules
+      1.276.4. Advanced hunting queries
+      1.276.5. Recommended actions
+      1.276.6. See also
+   1.277. Alert classification for suspicious inbox manipulation rules
+      1.277.1. Inbox manipulation rules
+         1.277.1.1. Malicious inbox manipulation rules
+      1.277.2. Workflow
+      1.277.3. Investigation steps
+         1.277.3.1. 1. Review the alerts
+         1.277.3.2. 2. Investigate inbox manipulation rule parameters
+         1.277.3.3. 3. Investigate the IP address
+         1.277.3.4. 4. Investigate suspicious activity by the user prior to creating the rules
+      1.277.4. Advanced hunting queries
+      1.277.5. Recommended actions
+      1.277.6. See also
+   1.278. Alert classification for suspicious IP addresses related to password spray attacks
+      1.278.1. Investigate the alert
+         1.278.1.1. 1. Review the alert
+         1.278.1.2. 2. Investigate the IP address
+         1.278.1.3. 3. Investigate suspicious user activity after signing in
+      1.278.2. Advanced hunting queries
+      1.278.3. Recommended Actions
+      1.278.4. See also
+   1.279. Alert classification for malicious Exchange connectors
+      1.279.1. What are Exchange connectors?
+         1.279.1.1. Malicious Exchange connectors
+      1.279.2. Playbook workflow
+      1.279.3. Investigate malicious connectors
+      1.279.4. Advanced hunting queries
+         1.279.4.1. Sample queries
+         1.279.4.2. Query considerations
+      1.279.5. Recommended actions
+      1.279.6. See also
+   1.280. Alert classification for password spray attacks
+      1.280.1. Investigation steps
+         1.280.1.1. 1. Investigate the security alerts
+         1.280.1.2. 2. Investigate suspicious user activity
+         1.280.1.3. 3. Investigate possible follow-on attacks
+      1.280.2. Advanced hunting queries
+      1.280.3. Recommended actions
+      1.280.4. See also
+   1.281. Incident response playbooks
+      1.281.1. Incident response resources
+         1.281.1.1. Feedback
+   1.282. Customize incident responses for your organization
+      1.282.1. Prerequisites
+      1.282.2. Steps to customize Copilot's guided response using your organization's guidebook
+      1.282.3. Best practices for creating effective guidebooks
+   1.283. Detecting human-operated ransomware attacks with Microsoft Defender XDR
+      1.283.1. The importance of proactive detection
+         1.283.1.1. Proactive detection via common malware tools and techniques
+      1.283.2. Human-operated ransomware attack tactics
+         1.283.2.1. Attack tactics and methods
+         1.283.2.2. What to look for
+            1.283.2.2.1. Initial attacks to gain entry
+            1.283.2.2.2. Recent spike in otherwise typical behavior
+            1.283.2.2.3. New activity
+            1.283.2.2.4. Suspicious behavior
+      1.283.3. Detect ransomware attacks with the Microsoft Defender portal
+         1.283.3.1. Incident and alert sources
+         1.283.3.2. Filtering ransomware-identified incidents
+         1.283.3.3. Filtering ransomware-identified threat analytics reports
+         1.283.3.4. Microsoft Defender XDR APIs
+         1.283.3.5. Microsoft Defender XDR Sentinel Integration
+         1.283.3.6. Proactive scanning with advanced hunting
+         1.283.3.7. Automated hunting
+      1.283.4. Prepare your SecOps Team for focused ransomware detection
+         1.283.4.1. Pre-work for your SecOps team and organization
+         1.283.4.2. Security analyst training
+         1.283.4.3. Ongoing work based on operational learning and new threats
+   1.284. Responding to ransomware attacks
+      1.284.1. Containment
+         1.284.1.1. Step 1: Assess the scope of the incident
+         1.284.1.2. Step 2: Preserve existing systems
+         1.284.1.3. Step 3: Prevent the spread
+      1.284.2. Investigation
+         1.284.2.1. Assess your current situation
+         1.284.2.2. Identify the ransomware process
+         1.284.2.3. Look for exposed credentials in the infected devices
+         1.284.2.4. Identify the line of business (LOB) apps that are unavailable due to the incident
+      1.284.3. Eradication and recovery
+         1.284.3.1. Step 1: Verify your backups
+         1.284.3.2. Step 2: Add indicators
+         1.284.3.3. Step 3: Reset compromised users
+         1.284.3.4. Step 4: Isolate attacker control points
+         1.284.3.5. Step 5: Remove malware
+         1.284.3.6. Step 6: Recover files on a cleaned device
+         1.284.3.7. Step 7: Recover files in OneDrive for Business
+         1.284.3.8. Step 8: Recover deleted email
+         1.284.3.9. Step 9: Re-enable Exchange ActiveSync and OneDrive sync
+   1.285. How Microsoft names threat actors
+      1.285.1. Putting intelligence into the hands of security professionals
+      1.285.2. Resources
+   1.286. Understand threat intelligence concepts
+      1.286.1. Alert definitions
+      1.286.2. Indicators of compromise (IOC)
+      1.286.3. Relationship between alert definitions and IOCs
+      1.286.4. Related topics
+   1.287. Software developer FAQ
+2. Does Microsoft accept files for a known list or false-positive prevention program?
+3. How do I dispute the detection of my program?
+4. Why is Microsoft asking for a copy of my program?
+   4.1. Feedback
+5. Why does Microsoft classify my installer as a software bundler?
+6. Why is the Windows Firewall blocking my program?
+7. Why does the Microsoft Defender SmartScreen say my program isn't commonly downloaded?
+8. Microsoft Defender for Office 365 documentation
+   8.1. Microsoft Defender for Office 365
+   8.2. Get started with Defender for Office 365
+   8.3. Evaluate Defender for Office 365
+   8.4. Configure email authentication
+   8.5. Investigate and respond
+9. Microsoft Defender for Endpoint documentation
+   9.1. Microsoft Defender for Endpoint
+   9.2. Evaluate & deploy the service
+   9.3. Security operations
+   9.4. Reference
+   9.5. Security administration
+10. Microsoft Defender for Identity documentation
+   10.1. About Microsoft Defender for Identity
+   10.2. Check out Defender for Identity alerts
+   10.3. Explore different ways to use Defender for Identity
+   10.4. Investigate threats
+   10.5. Resources and support
+11. Microsoft Defender for Cloud Apps documentation
+   11.1. About Defender for Cloud Apps
+   11.2. Get started
+   11.3. Cloud discovery and security posture
+   11.4. Threat protection
+   11.5. Information protection
+   11.6. App governance for OAuth apps
+12. Microsoft Defender for Business
+   12.1. Overview
+   12.2. Resources for partners
+   12.3. Get started
+   12.4. Setup information
+   12.5. Operations and maintenance
+   12.6. Help and more resources
+13. Microsoft Defender Vulnerability Management
+   13.1. Overview
+   13.2. Get started
+   13.3. Discover and explore inventories
+   13.4. Detect and assess threats
+   13.5. Identify risk and prioritize remediation
+   13.6. Track and mitigate remediation activities

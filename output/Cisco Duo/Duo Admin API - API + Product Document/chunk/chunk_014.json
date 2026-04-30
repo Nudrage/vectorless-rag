@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_014",
+  "section_number": "1.27.5",
+  "header": "Parameters",
+  "content": "Use the paging parameters to change the number of results shown in a response or to\nretrieve additional results. See Response Paging for details.\nPaging\nParameter\nRequired?\nDescription\nlimit\nOptional\nThe maximum number of records returned.\nDefault: 100 ; Max: 300\noffset\nOptional\nThe offset from 0  at which to start record retriev\nWhen used with \"limit\", the handler will return \"lim\nrecord, where n is the offset.\nDefault: 0\nusernames\nDeprecated\nRetrieve specific users by specifying up to 100 us\nList format:\nusernames=cjones&usernames=mwong&...etc\nIgnores other paging parameters when used.\nuser_ids\nDeprecated\nRetrieve specific users by specifying up to 100 us\nList format:\nuser_ids=DUAAAAAAAAAAAAAAAAAA&user_ids=D\nIgnores other paging parameters when used.\nuser_id_list\nOptional\nA list of user ids used to fetch multiple users by u\nuser_id  values.\nIf you provide this parameter, you must not provid\nusername_list  parameters. The limit  and of\nMust be a JSON serialized array.\nusername_list\nOptional\nA list of usernames used to fetch multiple users by\n100 usernames .\nIf you provide this parameter, you must not provid\nuser_id_list  parameters. The limit  and off\nGET  /admin/v1/users\n\n\nMust be a JSON serialized array.\nParameter\nRequired?\nDescription\nusername\nOptional\nSpecify a user name (or username alias) to look up a\nsingle user.\nemail\nOptional\nSpecify an email address to look up a single user.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 11,
+      "end": 12
+    },
+    "content_stats": {
+      "char_count": 1410,
+      "word_count": 217
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

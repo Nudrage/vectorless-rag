@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_847",
+  "section_number": "155.1.1.82.3.2",
+  "header": "Modified query",
+  "content": "AlertInfo\n| where Timestamp > ago(7d)\n| where AttackTechniques has \"PowerShell (T1086)\"\n| join AlertEvidence on AlertId\n| where FileName == \"powershell.exe\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 558,
+      "end": 558
+    },
+    "content_stats": {
+      "char_count": 156,
+      "word_count": 22
+    },
+    "hierarchy": {
+      "parent": "Adjust existing Microsoft Defender for Endpoint queries",
+      "children": []
+    }
+  }
+}

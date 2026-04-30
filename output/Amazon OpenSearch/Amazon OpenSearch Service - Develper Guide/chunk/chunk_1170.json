@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1170",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "UltraWarm has a few important prerequisites:\n• UltraWarm requires OpenSearch or Elasticsearch 6.8 or higher.\n• To use warm storage, domains must have dedicated master nodes.\n• When using a Multi-AZ with Standby domain, the number of warm nodes must be a multiple of\nthe number of Availability Zones being used.\n• If your domain uses a T2 or T3 instance type for your data nodes, you can't use warm storage.\n• If your index uses approximate k-NN (\"index.knn\":true), you can move it to warm storage\nfrom version 2.17 and later. Domains on versions earlier than 2.17 can upgrade to 2.17 to\nuse this functionality, but KNN indices created on versions earlier than 2.x can't migrate to\nUltraWarm.\nPrerequisites\n1694\nAmazon OpenSearch Service\nDeveloper Guide\n• If the domain uses ﬁne-grained access control, users must be mapped to the\nultrawarm_manager role in OpenSearch Dashboards to make UltraWarm API calls.\nNote\nThe ultrawarm_manager role might not be deﬁned on some preexisting OpenSearch\nService domains. If you don't see the role in Dashboards, you need to manually create it.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1723,
+      "end": 1724
+    },
+    "content_stats": {
+      "char_count": 1079,
+      "word_count": 177
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": [
+        "Conﬁgure permissions"
+      ]
+    }
+  }
+}

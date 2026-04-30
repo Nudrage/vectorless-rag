@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1400",
+  "section_number": "2.25.6.2",
+  "header": "Use the latest Amazon EBS gp3 volumes",
+  "content": "OpenSearch data nodes require low latency and high throughput storage to provide fast indexing\nand query. By using Amazon EBS gp3 volumes, you get higher baseline performance (IOPS and\nthroughput) at a 9.6% lower cost than with the previously-oﬀered Amazon EBS gp2 volume type.\nYou can provision additional IOPS and throughput independent of volume size using gp3. These\nvolumes are also more stable than previous generation volumes as they do not use burst credits.\nThe gp3 volume type also doubles the per-data-node volume size limits of the gp2 volume type.\nWith these larger volumes, you can reduce the cost of passive data by increasing the amount of\nstorage per data node.\nMonitor with AWS Security Hub CSPM\n1847\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1876,
+      "end": 1877
+    },
+    "content_stats": {
+      "char_count": 760,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": "Cost optimization",
+      "children": []
+    }
+  }
+}

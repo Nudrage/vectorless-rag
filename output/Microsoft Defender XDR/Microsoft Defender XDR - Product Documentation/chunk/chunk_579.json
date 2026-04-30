@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_579",
+  "section_number": "155.1.1.51.4.2",
+  "header": "The isolate pod or restrict pod access action failed",
+  "content": "The results should mention any of the specified plugins in the network policy requirement. An\nempty line means that the supported plugin is not installed.\nOn Google Cloud Platform\n1. Navigate your cluster in Google Cloud Portal.\n2. Select Connect above the name of the cluster. In the small window that appears, copy the\nfollowing command and run it in your local terminal.\nkubectl get pods --all-namespaces -o json | jq -r '.items[].metadata.labels[\"k8s-app\"]' |\nuniq | grep -E 'azure-npm|calico-node|cilium|aws-node' | head -n 1\n3. You can also choose Run in Cloud Shell to run a shell session that opens at the bottom of\nyour browser. You can copy the command in the interface to check your network plugins.\nThe results should mention any of the specified plugins in the network policy requirement. An\nempty line means that the supported plugin is not installed.\nOn Amazon Web Services\n1. Navigate to your cluster in AWS Cloud Portal.\n2. Select CloudShell on the top-right corner. A Cloud Shell session opens at the bottom of\nyour browser, which provides a command-line interface to manage your AWS resources.\n3. Connect to your cluster by running the following command:\naws eks --region <cluster region> update-kubeconfig --name <cluster name>**\nYou need to confirm that the target pod's state is active or valid. To check if the pod is active,\nrun the following command in the Cloud Shell:\nkubectl get pod <pod-name>\n７ Note\nEnsure that the aws-node is deleted or disabled for the Calico and Cilium plugins.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 367,
+      "end": 368
+    },
+    "content_stats": {
+      "char_count": 1511,
+      "word_count": 251
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot issues",
+      "children": []
+    }
+  }
+}

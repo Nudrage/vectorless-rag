@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_488",
+  "section_number": "155.1.1.45.3.1",
+  "header": "Create rule conditions to tune alerts",
+  "content": "Settings page\n\n4. In the Conditions area, add a condition for the alert's triggers. For example, if you\nwant to prevent an alert from being triggered when a specific file is created, define a\ncondition for the File:Custom trigger, and define the file details:\nListed triggers differ, depending on the service sources you selected. Triggers\nare all indicators of compromise (IOCs), such as files, processes, scheduled\ntasks, and other evidence types that might trigger an alert, including\nAntiMalware Scan Interface (AMSI) scripts, Windows Management\nInstrumentation (WMI) events, or scheduled tasks.\nTo set multiple rule conditions, select Add filter and use AND, OR, and\ngrouping options to define the relationships between the multiple evidence\ntypes that trigger the alert. Further evidence properties are automatically\npopulated as a new subgroup, where you can define your condition values.\nCondition values aren't case sensitive, and some properties support wildcards.\n5. In the Action area of the Tune alert pane, select the relevant action you want the rule\nto take, either Hide alert or Resolve alert.\n\n\n6. Enter a meaningful name for your alert and a comment to describe the alert, and\nthen select Save.\nAfter creating your alert tuning rule from an alert details page, in the Successful rule creation\npage that appears, add any of the alert-related IOCs as indicators to an allow list to prevent\nthem from being blocked in the future. IOCs that are configured as part of the alert tuning rule\nare selected by default. For example:\n1. Add a file to the Select evidence (IOC) to allow list. By default, the file that triggered the\nalert is already selected.\n2. Define a scope for the Select scope to apply to value. By default, the scope that applies\nto your alert is selected.\n3. Select Save to add the file to an allow list and prevent it from being blocked. -->\nOnce you're done analyzing an alert and it can be resolved, go to the Manage alert pane for\nthe alert or similar alerts and mark the status as Resolved and then classify it as a True positive\nwith a type of threat, an Informational, expected activity with a type of activity, or a False\npositive.\nClassifying alerts helps Microsoft Defender XDR improve its detection quality.\nModern security operations (SecOps) teams need automation to work effectively. To focus on\nhunting and investigating real threats, SecOps teams use Power Automate to triage through\nthe list of alerts and eliminate the ones that aren't threats.\nUser has Out-of-office message turned on\nUser isn't tagged as high risk\n７ Note\nThe alert title (Name) is based on the alert type (IoaDefinitionId), which decides the alert\ntitle. Two alerts that have the same alert type can change to a different alert title. The Hide\nalert feature is only available in Defender for Endpoint alerts.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 307,
+      "end": 309
+    },
+    "content_stats": {
+      "char_count": 2829,
+      "word_count": 473
+    },
+    "hierarchy": {
+      "parent": "Tune an alert",
+      "children": []
+    }
+  }
+}

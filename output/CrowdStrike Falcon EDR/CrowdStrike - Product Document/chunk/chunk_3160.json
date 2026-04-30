@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3160",
+  "section_number": "1.6.10.9",
+  "header": "Sample UserActivityAuditEvent response",
+  "content": "{\n\"metadata\": {\n\"customerIDString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"offset\": 11049003,\n\"eventType\": \"UserActivityAuditEvent\",\n\"eventCreationTime\": 1479770848\n},\n\"event\": {\n\"UserId\": \"user@example.com\",\n\"UserIp\": \"\",\n\"OperationName\": \"detection_update\",\n\"ServiceName\": \"detections\",\n\"AuditKeyValues\": [\n{\n\"Key\": \"detection_id\",\n\"ValueString\": \"ldt:b60f82cf1aa342f47363bf3b6bfb6b7d:123456356541\"\n},\n{\n\"Key\": \"new_state\",\n\"ValueString\": \"in_progress\"\n},\n{\n\"Key\": \"assigned_to\",\n\"ValueString\": \"Knightley\"\n},\n{\n\"Key\": \"assigned_to_uid\",\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1183/1226\n\n\n\n\n\"ValueString\": \"user@example.com\"\n}\n],\n\"UTCTimestamp\": 1479770848\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1183,
+      "end": 1184
+    },
+    "content_stats": {
+      "char_count": 857,
+      "word_count": 81
+    },
+    "hierarchy": {
+      "parent": "General detection and audit events",
+      "children": []
+    }
+  }
+}

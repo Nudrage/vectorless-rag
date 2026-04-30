@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_880",
+  "section_number": "2.27.3.1.3",
+  "header": "About the CognitoAccessForAmazonOpenSearch role",
+  "content": "OpenSearch Service needs permissions to conﬁgure the Amazon Cognito user and identity pools\nand use them for authentication. You can use AmazonOpenSearchServiceCognitoAccess,\nwhich is an AWS managed policy, for this purpose. AmazonESCognitoAccess is a legacy\npolicy that was replaced by AmazonOpenSearchServiceCognitoAccess when the service\nwas renamed to Amazon OpenSearch Service. Both policies provide the minimum Amazon\nCognito permissions necessary to enable Amazon Cognito authentication. For policy details, see\nAmazonOpenSearchServiceCognitoAccess in the AWS Managed Policy Reference Guide.\nIf you use the console to create or conﬁgure your OpenSearch Service domain, it creates an IAM\nrole for you and attaches the AmazonOpenSearchServiceCognitoAccess policy (or the\nAmazonESCognitoAccess policy if it's an Elasticsearch domain) to the role. The default name for\nthis role is CognitoAccessForAmazonOpenSearch.\nThe role permissions policies AmazonOpenSearchServiceCognitoAccess and\nAmazonESCognitoAccess both allow OpenSearch Service to complete the following actions on\nall identity and user pools:\n• Action: cognito-idp:DescribeUserPool\n• Action: cognito-idp:CreateUserPoolClient\n• Action: cognito-idp:DeleteUserPoolClient\n• Action: cognito-idp:UpdateUserPoolClient\n• Action: cognito-idp:DescribeUserPoolClient\n• Action: cognito-idp:AdminInitiateAuth\n• Action: cognito-idp:AdminUserGlobalSignOut\n• Action: cognito-idp:ListUserPoolClients\n• Action: cognito-identity:DescribeIdentityPool\n• Action: cognito-identity:SetIdentityPoolRoles\nPrerequisites\n1398\nAmazon OpenSearch Service\nDeveloper Guide\n• Action: cognito-identity:GetIdentityPoolRoles\nIf you use the AWS CLI or one of the AWS SDKs, you must create your own role, attach the policy,\nand specify the ARN for this role when you conﬁgure your OpenSearch Service domain. The role\nmust have the following trust relationship:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"opensearchservice.amazonaws.com\"\n},\n\"Action\": \"sts:AssumeRole\"\n}\n]\n}\nFor instructions, see Create a role to delegate permissions to an AWS service and Adding and\nremoving IAM identity permissions in the IAM User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1427,
+      "end": 1428
+    },
+    "content_stats": {
+      "char_count": 2199,
+      "word_count": 269
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1508",
+  "section_number": "2.27.3.2",
+  "header": "Step 1: Index sample data",
+  "content": "Download sample-movies.zip, unzip it, and then use the _bulk API operation to add the 5,000\ndocuments to the movies index:\nPOST https://search-my-domain.us-west-1.es.amazonaws.com/_bulk\n{ \"index\": { \"_index\": \"movies\", \"_id\": \"tt1979320\" } }\n{\"directors\":[\"Ron\nHoward\"],\"release_date\":\"2013-09-02T00:00:00Z\",\"rating\":8.3,\"genres\":\n[\"Action\",\"Biography\",\"Drama\",\"Sport\"],\"image_url\":\"http://ia.media-imdb.com/images/\nM/MV5BMTQyMDE0MTY0OV5BMl5BanBnXkFtZTcwMjI2OTI0OQ@@._V1_SX400_.jpg\",\"plot\":\"A re-\ncreation of the merciless 1970s rivalry between Formula One rivals James Hunt and\nNiki Lauda.\",\"title\":\"Rush\",\"rank\":2,\"running_time_secs\":7380,\"actors\":[\"Daniel\nBrühl\",\"Chris Hemsworth\",\"Olivia Wilde\"],\"year\":2013,\"id\":\"tt1979320\",\"type\":\"add\"}\n{ \"index\": { \"_index\": \"movies\", \"_id\": \"tt1951264\" } }\n{\"directors\":[\"Francis Lawrence\"],\"release_date\":\"2013-11-11T00:00:00Z\",\"genres\":\n[\"Action\",\"Adventure\",\"Sci-Fi\",\"Thriller\"],\"image_url\":\"http://ia.media-imdb.com/\nimages/M/\nMV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_SX400_.jpg\",\"plot\":\"Katniss\nEverdeen and Peeta Mellark become targets of the Capitol after\ntheir victory in the 74th Hunger Games sparks a rebellion in\nthe Districts of Panem.\",\"title\":\"The Hunger Games: Catching\nFire\",\"rank\":4,\"running_time_secs\":8760,\"actors\":[\"Jennifer Lawrence\",\"Josh\nHutcherson\",\"Liam Hemsworth\"],\"year\":2013,\"id\":\"tt1951264\",\"type\":\"add\"}\n...\nNote that the above is an example command with a small subset of the available data. To perform\nthe _bulk operation, you need to copy and paste the entire contents of the sample-movies ﬁle.\nFor further instructions, see the section called “Option 2: Upload multiple documents”.\nYou can also use the following curl command to achieve the same result:\ncurl -XPOST -u 'master-user:master-user-password' 'domain-endpoint/_bulk' --data-binary\n@bulk_movies.json -H 'Content-Type: application/json'\nPrerequisites\n2014\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2043,
+      "end": 2044
+    },
+    "content_stats": {
+      "char_count": 1944,
+      "word_count": 177
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Creating a search application with Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

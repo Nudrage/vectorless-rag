@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_578",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Before you get started, make sure that you have reviewed the following documentation:\n• the section called “Limitations for Amazon S3”\n• the section called “Amazon S3 recommendations”\n• the section called “Quotas for Amazon S3”\nBefore you can create a data source, you must have the following resources in your AWS account:\n• An OpenSearch domain with version 2.13 or later. This is the foundation for setting up the\ndirect query integration. For instructions on setting this up, see the section called “ Creating\nOpenSearch Service domains”.\nCreating an S3 data source\n740\nAmazon OpenSearch Service\nDeveloper Guide\n• One or more S3 buckets. You’ll need to specify the buckets containing data that you want to\nquery, and a bucket to store your query checkpoints in. For instructions on creating an S3 bucket,\nsee Creating a bucket in the Amazon S3 user guide.\n• (Optional) One or more AWS Glue tables. Querying data on Amazon S3 requires that you have\ntables setup in AWS Glue Data Catalog to point to the S3 data. You must create the tables using\nOpenSearch Query Workbench. Existing Hive tables are not compatible.\nIf this is the ﬁrst time you're setting up an Amazon S3 data source, you must create an admin\ndata source to conﬁgure all of your AWS Glue Data Catalog tables. You can do this by installing\nOpenSearch out-of-the-box integrations or by using OpenSearch Query Workbench to create\ncustom SQL tables for advanced use cases. For examples on creating tables for VPC, CloudTrail,\nand AWS WAF logs, see the documentation on GitHub for VPC, CloudTrail, and AWS WAF. After\nyou create your tables, you can create new Amazon S3 data sources and restrict access to limited\ntables.\n• (Optional) A manually created IAM role. You can use this role to manage access to your data\nsource. Alternatively, you can have OpenSearch Service create a role for you automatically with\nthe required permissions. If you choose to use a manually created IAM role, follow the guidance\nin the section called “Required permissions for manually created IAM roles”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 769,
+      "end": 770
+    },
+    "content_stats": {
+      "char_count": 2047,
+      "word_count": 345
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon S3 data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

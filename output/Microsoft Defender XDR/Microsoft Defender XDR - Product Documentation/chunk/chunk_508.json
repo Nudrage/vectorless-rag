@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_508",
+  "section_number": "13.2.4",
+  "header": "Account tags",
+  "content": "ﾉ\nExpand table\nName\nDescription\nExpired\nIndicates that the entity is expired in Active Directory. When a user account is expired, the\nuser is no longer able to log in to the domain or access any network resources. The\nexpired account is treated as if it were disabled, but with an explicit expiration date set.\nAny services or applications that the user was authorized to access might also be affected,\ndepending on how they're configured.\nHoneytoken\nIndicates that the entity is manually tagged as a honeytoken.\nLocked\nIndicates that the entity supplied the wrong password too many times, and is now locked.\nPartial\nIndicates that the user, device, or group isn't in synch with the domain, and is partially\nresolved via a global catalog. In this case, some attributes aren't available.\nUnresolved\nIndicates that the device doesn't resolve to a valid identity in the Active Directory forest.\nNo directory information is available.\nSensitive\nIndicates that the entity is considered as sensitive.\nFor more information, see Defender for Identity entity tags in Microsoft Defender XDR.\n７ Note\nThe organization tree section and the account tags are available when a Microsoft\nDefender for Identity license is available.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 316,
+      "end": 317
+    },
+    "content_stats": {
+      "char_count": 1214,
+      "word_count": 195
+    },
+    "hierarchy": {
+      "parent": "Overview",
+      "children": []
+    }
+  }
+}

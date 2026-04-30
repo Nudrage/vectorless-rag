@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1240",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "Cross-cluster replication has the following limitations:\n• You can't replicate data between Amazon OpenSearch Service domains and self-managed\nOpenSearch or Elasticsearch clusters.\nLimitations\n1739\nAmazon OpenSearch Service\nDeveloper Guide\n• You can't replicate an index from a follower domain to another follower domain. If you want to\nreplicate an index to multiple follower domains, you can only replicate it from the single leader\ndomain.\n• A domain can be connected, through a combination of inbound and outbound connections, to a\nmaximum of 20 other domains.\n• When you initially set up a cross-cluster connection, the leader domain must be on the same or a\nhigher version than the follower domain.\n• You can't use CloudFormation to connect domains.\n• You can't use cross-cluster replication on M3 or burstable (T2 and T3) instances.\n• You can't replicate data between UltraWarm or cold indexes. Both indexes must be in hot\nstorage.\n• When you delete an index from the leader domain, the corresponding index on the follower\ndomain isn't automatically deleted.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1768,
+      "end": 1769
+    },
+    "content_stats": {
+      "char_count": 1065,
+      "word_count": 169
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster replication for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

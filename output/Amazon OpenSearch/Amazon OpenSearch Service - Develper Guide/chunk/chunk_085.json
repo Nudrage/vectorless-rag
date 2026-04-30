@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_085",
+  "section_number": "2.6.10.2",
+  "header": "Specifying the pipeline version",
+  "content": "When you create a pipeline using the conﬁguration editor, you must specify the major version of\nData Prepper that the pipeline will run. To specify the version, include the version option in your\npipeline conﬁguration:\nSpecifying the pipeline version\n72\nAmazon OpenSearch Service\nDeveloper Guide\nversion: \"2\"\nlog-pipeline:\nsource:\n...\nWhen you choose Create, OpenSearch Ingestion determines the latest available minor version of\nthe major version that you specify, and provisions the pipeline with that version. For example, if\nyou specify version: \"2\", and the latest supported version of Data Prepper is 2.1.1, OpenSearch\nIngestion provisions your pipeline with version 2.1.1. We don't publicly display the minor version\nthat your pipeline is running.\nIn order to upgrade your pipeline when a new major version of Data Prepper is available, edit the\npipeline conﬁguration and specify the new version. You can't downgrade a pipeline to an earlier\nversion.\nNote\nOpenSearch Ingestion doesn't immediately support new versions of Data Prepper as soon\nas they're released. There will be some lag between when a new version is publicly available\nand when it's supported in OpenSearch Ingestion. In addition, OpenSearch Ingestion might\nexplicitly not support certain major or minor versions altogether. For a comprehensive list,\nsee the section called “Supported Data Prepper versions”.\nAny time you make a change to your pipeline that initiates a blue/green deployment, OpenSearch\nIngestion can upgrade it to the latest minor version of the major version that's currently conﬁgured\nfor the pipeline. For more information, see the section called “Blue/green deployments for pipeline\nupdates”. OpenSearch Ingestion can't change the major version of your pipeline unless you\nexplicitly update the version option within the pipeline conﬁguration.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 101,
+      "end": 102
+    },
+    "content_stats": {
+      "char_count": 1837,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": "Creating Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

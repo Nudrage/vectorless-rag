@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1410",
+  "section_number": "2.25.8.3.2",
+  "header": "Step 2: Calculate storage requirements per node",
+  "content": "If you have a 184-GiB storage requirement and the recommended minimum number of three\nnodes, use the equation 184 / 3 = 61 GiB to ﬁnd the amount of storage that each node needs.\nIn this example, you might select three m6g.large.search instances, where each uses a 90-\nGiB EBS storage volume, so that you have a safety net and some room for growth over time. This\nconﬁguration provides 6 vCPU cores and 24 GiB of memory, so it's suited to lighter workloads.\nFor a more substantial example, consider a 14 TiB (14,336 GiB) storage requirement and a heavy\nworkload. In this case, you might choose to begin testing with 2 * 144 = 288 vCPU cores and 8 *\n144 = 1152 GiB of memory. These numbers work out to approximately 18 i3.4xlarge.search\ninstances. If you don't need the fast, local storage, you could also test 18 r6g.4xlarge.search\ninstances, each using a 1-TiB EBS storage volume.\nIf your cluster includes hundreds of terabytes of data, see the section called “Petabyte scale”.\nChoosing instance types and testing\n1860\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1889,
+      "end": 1890
+    },
+    "content_stats": {
+      "char_count": 1060,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Choosing instance types and testing",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1274",
+  "section_number": "2.20.1.3.4",
+  "header": "Alerting settings",
+  "content": "OpenSearch Service lets you modify the following alerting settings:\n• plugins.scheduled_jobs.enabled\n• plugins.alerting.alert_history_enabled\n• plugins.alerting.alert_history_max_age\n• plugins.alerting.alert_history_max_docs\n• plugins.alerting.alert_history_retention_period\n• plugins.alerting.alert_history_rollover_period\n• plugins.alerting.filter_by_backend_roles\nAll other settings use the default values which you can't change.\nTo disable alerting, send the following request:\nPUT _cluster/settings\n{\n\"persistent\" : {\n\"plugins.scheduled_jobs.enabled\" : false\n}\n}\nThe following request conﬁgures alerting to automatically delete history indexes after seven days,\nrather than the default 30 days:\nPUT _cluster/settings\n{\n\"persistent\": {\n\"plugins.alerting.alert_history_retention_period\": \"7d\"\n}\n}\nIf you previously created monitors and want to stop the creation of daily alerting indexes, delete all\nalert history indexes:\nDELETE .plugins-alerting-alert-history-*\nDiﬀerences\n1764\nAmazon OpenSearch Service\nDeveloper Guide\nTo reduce shard count for history indexes, create an index template. The following request sets\nhistory indexes for alerting to one shard and one replica:\nPUT _index_template/template-name\n{\n\"index_patterns\": [\".opendistro-alerting-alert-history-*\"],\n\"template\": {\n\"settings\": {\n\"number_of_shards\": 1,\n\"number_of_replicas\": 1\n}\n}\n}\nDepending on your tolerance for data loss, you might even consider using zero replicas. For more\ninformation about creating and managing index templates, see Index templates in the OpenSearch\ndocumentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1793,
+      "end": 1794
+    },
+    "content_stats": {
+      "char_count": 1563,
+      "word_count": 180
+    },
+    "hierarchy": {
+      "parent": "Diﬀerences",
+      "children": []
+    }
+  }
+}

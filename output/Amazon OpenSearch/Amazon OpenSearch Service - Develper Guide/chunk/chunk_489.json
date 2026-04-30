@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_489",
+  "section_number": "2.8.7.5",
+  "header": "Viewing scheduled actions",
+  "content": "You can view all actions that are currently scheduled, in progress, or pending for each of your\ndomains. Actions can have a severity of HIGH, MEDIUM, and LOW.\nActions can have the following statuses:\n• Pending update – The action is in the queue to be processed.\n• In progress – The action is currently in progress.\n• Failed – The action failed to complete.\n• Completed – The action has completed successfully.\nViewing scheduled actions\n657\nAmazon OpenSearch Service\nDeveloper Guide\n• Not eligible – Only for service software updates. The update can't proceed because the\ncluster is in an unhealthy state.\n• Eligible – Only for service software updates. The domain is eligible for an update.\nConsole\nThe OpenSearch Service console displays all scheduled actions within the domain conﬁguration,\nalong with each action's severity and current status.\nTo view scheduled actions for a domain\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\n2.\nSelect the name of the domain to open its conﬁguration.\n3.\nNavigate to the Oﬀ-peak window tab.\n4.\nUnder Scheduled actions, view all actions that are currently scheduled, in progress, or pending\nfor the domain.\nCLI\nTo view scheduled actions using the AWS CLI, send a ListScheduledActions request:\naws opensearch list-scheduled-actions \\\n--domain-name my-domain\nResponse:\n{\n\"ScheduledActions\": [\n{\n\"Cancellable\": true,\n\"Description\": \"The Deployment type is : BLUE_GREEN.\",\n\"ID\": \"R20220721-P13\",\n\"Mandatory\": false,\n\"Severity\": \"HIGH\",\n\"ScheduledBy\": \"CUSTOMER\",\n\"ScheduledTime\": 1.673871601E9,\n\"Status\": \"PENDING_UPDATE\",\n\"Type\": \"SERVICE_SOFTWARE_UPDATE\",\n},\nViewing scheduled actions\n658\nAmazon OpenSearch Service\nDeveloper Guide\n{\n\"Cancellable\": true,\n\"Description\": \"Amazon Opensearch will adjust the young generation JVM\narguments on your domain to improve performance\",\n\"ID\": \"Auto-Tune\",\n\"Mandatory\": true,\n\"Severity\": \"MEDIUM\",\n\"ScheduledBy\": \"SYSTEM\",\n\"ScheduledTime\": 1.673871601E9,\n\"Status\": \"PENDING_UPDATE\",\n\"Type\": \"JVM_HEAP_SIZE_TUNING\",\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 686,
+      "end": 688
+    },
+    "content_stats": {
+      "char_count": 2038,
+      "word_count": 284
+    },
+    "hierarchy": {
+      "parent": "Deﬁning oﬀ-peak windows for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

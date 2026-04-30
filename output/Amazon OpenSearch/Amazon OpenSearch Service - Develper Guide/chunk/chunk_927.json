@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_927",
+  "section_number": "2.14.2",
+  "header": "Reducing response size",
+  "content": "Responses from the _index and _bulk APIs contain quite a bit of information. This information\ncan be useful for troubleshooting requests or for implementing retry logic, but can use\nconsiderable bandwidth. In this example, indexing a 32 byte document results in a 339 byte\nresponse (including headers):\nPUT opensearch-domain/more-movies/_doc/1\n{\"title\": \"Back to the Future\"}\nResponse\n{\n\"_index\": \"more-movies\",\n\"_type\": \"_doc\",\n\"_id\": \"1\",\n\"_version\": 4,\n\"result\": \"updated\",\n\"_shards\": {\n\"total\": 2,\n\"successful\": 2,\n\"failed\": 0\n},\n\"_seq_no\": 3,\n\"_primary_term\": 1\n}\nThis response size might seem minimal, but if you index 1,000,000 documents per day—\napproximately 11.5 documents per second—339 bytes per response works out to 10.17 GB of\ndownload traﬃc per month.\nIf data transfer costs are a concern, use the filter_path parameter to reduce the size of the\nOpenSearch Service response, but be careful not to ﬁlter out ﬁelds that you need in order to\nidentify or retry failed requests. These ﬁelds vary by client. The filter_path parameter works for\nall OpenSearch Service REST APIs, but is especially useful with APIs that you call frequently, such as\nthe _index and _bulk APIs:\nReducing response size\n1444\nAmazon OpenSearch Service\nDeveloper Guide\nPUT opensearch-domain/more-movies/_doc/1?filter_path=result,_shards.total\n{\"title\": \"Back to the Future\"}\nResponse\n{\n\"result\": \"updated\",\n\"_shards\": {\n\"total\": 2\n}\n}\nInstead of including ﬁelds, you can exclude ﬁelds with a - preﬁx. filter_path also supports\nwildcards:\nPOST opensearch-domain/_bulk?filter_path=-took,-items.index._*\n{ \"index\": { \"_index\": \"more-movies\", \"_id\": \"1\" } }\n{\"title\": \"Back to the Future\"}\n{ \"index\": { \"_index\": \"more-movies\", \"_id\": \"2\" } }\n{\"title\": \"Spirited Away\"}\nResponse\n{\n\"errors\": false,\n\"items\": [\n{\n\"index\": {\n\"result\": \"updated\",\n\"status\": 200\n}\n},\n{\n\"index\": {\n\"result\": \"updated\",\n\"status\": 200\n}\n}\n]\n}\nReducing response size\n1445\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1473,
+      "end": 1475
+    },
+    "content_stats": {
+      "char_count": 1968,
+      "word_count": 288
+    },
+    "hierarchy": {
+      "parent": "Indexing data in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

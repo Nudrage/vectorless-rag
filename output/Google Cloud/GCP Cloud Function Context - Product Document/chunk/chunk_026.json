@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_026",
+  "section_number": "24",
+  "header": "UpgradeInfo",
+  "content": "Information related to: * A function's eligibility for 1st Gen to 2nd Gen migration. * Current state of\nmigration for function undergoing migration.\n{\n\"severity\": enum (Severity (/functions/docs/reference/rest/v2/projects.locations.functions#Severity)),\n\"type\": string,\n\"message\": string\n}\nJSON representation\nFields\nupgradeState\nenum (UpgradeState\n(/functions/docs/reference/rest/v2/projects.locations.functions#UpgradeState))\nUpgradeState of the function\nserviceConfig\nobject (ServiceConfig\n(/functions/docs/reference/rest/v2/projects.locations.functions#ServiceConfig))\nDescribes the Cloud Run service which has been setup to prepare for 2nd gen\nupgrade.\neventTrigger\nobject (EventTrigger\n(/functions/docs/reference/rest/v2/projects.locations.functions#EventTrigger))\nDescribes the Event trigger which has been setup to prepare for 2nd gen upgrade.\nbuildConfig\nobject (BuildConfig\n(/functions/docs/reference/rest/v2/projects.locations.functions#BuildConfig))\nDescribes the Build step of the function that builds a container to prepare for 2nd gen\nupgrade.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 17,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 18,
+      "end": 19
+    },
+    "content_stats": {
+      "char_count": 1058,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

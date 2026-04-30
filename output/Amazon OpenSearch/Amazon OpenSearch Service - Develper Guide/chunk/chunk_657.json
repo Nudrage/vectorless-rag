@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_657",
+  "section_number": "2.10.2.4",
+  "header": "Enabling log publishing (CloudFormation)",
+  "content": "In this example, we use CloudFormation to create a log group called opensearch-logs, assign\nthe appropriate permissions, and then create a domain with log publishing enabled for application\nlogs, search shard slow logs, and indexing slow logs.\nBefore you can enable log publishing, you need to create a CloudWatch log group:\nResources:\nOpenSearchLogGroup:\nType: AWS::Logs::LogGroup\nProperties:\nLogGroupName: opensearch-logs\nOutputs:\nArn:\nValue:\n'Fn::GetAtt':\n- OpenSearchLogGroup\n- Arn\nEnabling log publishing (AWS SDKs)\n1219\nAmazon OpenSearch Service\nDeveloper Guide\nThe template outputs the ARN of the log group. In this case, the ARN is arn:aws:logs:us-\neast-1:123456789012:log-group:opensearch-logs.\nUsing the ARN, create a resource policy that gives OpenSearch Service permissions to write to the\nlog group:\nResources:\nOpenSearchLogPolicy:\nType: AWS::Logs::ResourcePolicy\nProperties:\nPolicyName: my-policy\nPolicyDocument: \"{ \\\"Version\\\": \\\"2012-10-17\\\", \\\"Statement\\\": [{ \\\"Sid\\\": \\\"\\\",\n\\\"Effect\\\": \\\"Allow\\\", \\\"Principal\\\": { \\\"Service\\\": \\\"es.amazonaws.com\\\"}, \\\"Action\n\\\":[ \\\"logs:PutLogEvents\\\",\\\"logs:CreateLogStream\\\"],\\\"Resource\\\": \\\"arn:aws:logs:us-\neast-1:123456789012:log-group:opensearch-logs:*\\\"}]}\"\nFinally, create the following CloudFormation stack, which generates an OpenSearch Service domain\nwith log publishing. The access policy permits the user for the AWS account to make all HTTP\nrequests to the domain.\nResources:\nOpenSearchServiceDomain:\nType: \"AWS::OpenSearchService::Domain\"\nProperties:\nDomainName: my-domain\nEngineVersion: \"OpenSearch_1.0\"\nClusterConfig:\nInstanceCount: 2\nInstanceType: \"r6g.xlarge.search\"\nDedicatedMasterEnabled: true\nDedicatedMasterCount: 3\nDedicatedMasterType: \"r6g.xlarge.search\"\nEBSOptions:\nEBSEnabled: true\nVolumeSize: 10\nVolumeType: \"gp2\"\nAccessPolicies:\nVersion: \"2012-10-17\"\nStatement:\nEffect: \"Allow\"\nPrincipal:\nAWS: \"arn:aws:iam::123456789012:user/es-user\"\nEnabling log publishing (CloudFormation)\n1220\nAmazon OpenSearch Service\nDeveloper Guide\nAction: \"es:*\"\nResource: \"arn:aws:es:us-east-1:123456789012:domain/my-domain/*\"\nLogPublishingOptions:\nES_APPLICATION_LOGS:\nCloudWatchLogsLogGroupArn: \"arn:aws:logs:us-east-1:123456789012:log-\ngroup:opensearch-logs\"\nEnabled: true\nSEARCH_SLOW_LOGS:\nCloudWatchLogsLogGroupArn: \"arn:aws:logs:us-east-1:123456789012:log-\ngroup:opensearch-logs\"\nEnabled: true\nINDEX_SLOW_LOGS:\nCloudWatchLogsLogGroupArn: \"arn:aws:logs:us-east-1:123456789012:log-\ngroup:opensearch-logs\"\nEnabled: true\nFor detailed syntax information, see the log publishing options in the CloudFormation User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1248,
+      "end": 1250
+    },
+    "content_stats": {
+      "char_count": 2577,
+      "word_count": 254
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch logs with Amazon CloudWatch Logs",
+      "children": []
+    }
+  }
+}

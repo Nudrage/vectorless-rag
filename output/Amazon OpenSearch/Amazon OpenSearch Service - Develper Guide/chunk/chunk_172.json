@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_172",
+  "section_number": "2.6.16.14",
+  "header": "Using an OpenSearch Ingestion pipeline with machine learning oﬄine batch inference",
+  "content": "batch inference\nAmazon OpenSearch Ingestion (OSI) pipelines support machine learning (ML) oﬄine batch\ninference processing to eﬃciently enrich large volumes of data at low cost. Use oﬄine batch\ninference whenever you have large datasets that can be processed asynchronously. Oﬄine batch\ninference works with Amazon Bedrock and SageMaker models. This feature is available in all AWS\nRegions that support OpenSearch Ingestion with OpenSearch Service 2.17+ domains.\nML oﬄine batch inference\n244\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nFor real-time inference processing, use Amazon OpenSearch Service ML connectors for\nthird-party platforms.\nOﬄine batch inference processing leverages a feature of OpenSearch called ML Commons. ML\nCommons provides ML algorithms through transport and REST API calls. Those calls choose the\nright nodes and resources for each ML request and monitor ML tasks to ensure uptime. In this way,\nML Commons allows you to leverage existing open-source ML algorithms and reduce the eﬀort\nrequired to develop new ML features. For more information about ML Commons, see Machine\nlearning in the OpenSearch.org documentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 273,
+      "end": 274
+    },
+    "content_stats": {
+      "char_count": 1148,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": [
+        "How it works",
+        "About the ml_inference processor",
+        "Conﬁgure the ml_inference processor to ingest data requests for a semantic search"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_174",
+  "section_number": "2.6.16.14.1",
+  "header": "About the ml_inference processor",
+  "content": "OpenSearch Ingestion uses a specialized integration between the S3 Scan source and ML inference\nprocessor for batch processing. The S3 Scan operates in metadata-only mode to eﬃciently collect\nS3 ﬁle information without reading the actual ﬁle contents. The ml_inference processor uses the\nS3 ﬁle URLs to coordinate with ML Commons for batch processing. This design optimizes the batch\ninference workﬂow by minimizing unnecessary data transfer during the scanning phase. You deﬁne\nthe ml_inference processor using parameters. Here is an example:\nprocessor:\n- ml_inference:\n# The endpoint URL of your OpenSearch domain\nML oﬄine batch inference\n247\nAmazon OpenSearch Service\nDeveloper Guide\nhost: \"https://AWStest-offlinebatch-123456789abcdefg.us-\nwest-2.es.amazonaws.com\"\n# Type of inference operation:\n# - batch_predict: for batch processing\n# - predict: for real-time inference\naction_type: \"batch_predict\"\n# Remote ML model service provider (Amazon Bedrock or SageMaker)\nservice_name: \"bedrock\"\n# Unique identifier for the ML model\nmodel_id: \"AWSTestModelID123456789abcde\"\n# S3 path where batch inference results will be stored\noutput_path: \"s3://amzn-s3-demo-bucket/\"\n# Supports ISO_8601 notation strings like PT20.345S or PT15M\n# These settings control how long to keep your inputs in the processor for\nretry on throttling errors\nretry_time_window: \"PT9M\"\n# AWS configuration settings\naws:\n# AWS Region where the Lambda function is deployed\nregion: \"us-west-2\"\n# IAM role ARN for Lambda function execution\nsts_role_arn: \"arn:aws::iam::account_id:role/Admin\"\n# Dead-letter queue settings for storing errors\ndlq:\ns3:\nregion: us-west-2\nbucket: batch-inference-dlq\nkey_path_prefix: bedrock-dlq\nsts_role_arn: arn:aws:iam::account_id:role/OSI-invoke-ml\n# Conditional expression that determines when to trigger the processor\n# In this case, only process when bucket matches \"amzn-s3-demo-bucket\"\nml_when: /bucket == \"amzn-s3-demo-bucket\"\nML oﬄine batch inference\n248\nAmazon OpenSearch Service\nDeveloper Guide\nIngestion performance improvements using the ml_inference processor\nThe OpenSearch Ingestion ml_inference processor signiﬁcantly enhances data ingestion\nperformance for ML-enabled search. The processor is ideally suited for use cases requiring\nmachine learning model-generated data, including semantic search, multimodal search, document\nenrichment, and query understanding. In semantic search, the processor can accelerate the creation\nand ingestion of large-volume, high-dimensional vectors by an order of magnitude.\nThe processor's oﬄine batch inference capability oﬀers distinct advantages over real-time model\ninvocation. While real-time processing requires a live model server with capacity limitations, batch\ninference dynamically scales compute resources on demand and processes data in parallel. For\nexample, when the OpenSearch Ingestion pipeline receives one billion source data requests, it\ncreates 100 S3 ﬁles for ML batch inference input. The ml_inference processor then initiates a\nSageMaker batch job using 100 ml.m4.xlarge Amazon Elastic Compute Cloud (Amazon EC2)\ninstances, completing the vectorization of one billion requests in 14 hours—a task that would be\nvirtually impossible to accomplish in real-time mode.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 276,
+      "end": 278
+    },
+    "content_stats": {
+      "char_count": 3236,
+      "word_count": 425
+    },
+    "hierarchy": {
+      "parent": "Using an OpenSearch Ingestion pipeline with machine learning oﬄine batch inference",
+      "children": []
+    }
+  }
+}

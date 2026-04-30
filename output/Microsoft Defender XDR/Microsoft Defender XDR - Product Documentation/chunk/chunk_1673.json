@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1673",
+  "section_number": "155.1.1.227",
+  "header": "Configure alert notifications",
+  "content": "Article • 04/25/2025 •\nApplies to: Microsoft Defender XDR, Microsoft Defender for Endpoint Plan 1, Microsoft Defender for\nEndpoint Plan 2, Microsoft Defender for Business\nYou can configure Microsoft Defender XDR to send email notifications to specified recipients\nfor new alerts. This feature enables you to identify a group of individuals who will immediately\nbe informed and can act on alerts based on their severity.\nIf you're using Defender for Business, you can set up email notifications for specific users (not\nroles or groups).\nYou can set the alert severity levels that trigger notifications. You can also add or remove\nrecipients of the email notification. New recipients get notified about alerts triggered after\nthey're added. For more information about alerts, see View and organize the Alerts queue.\nIf you're using role-based access control (RBAC), recipients will only receive notifications based\non the device groups that were configured in the notification rule. Users with the proper\npermission can only create, edit, or delete notifications that are limited to their device group\nmanagement scope. Only users assigned to the Global administrator role can manage\nnotification rules that are configured for all device groups.\nThe email notification includes basic information about the alert and a link to the portal where\nyou can do further investigation.\n７ Note\nOnly users with 'Manage security settings' permissions can configure email\nnotifications. If you've chosen to use basic permissions management, users with\nSecurity Administrator or Global Administrator roles can configure email\nnotifications.\nDevice group creation is supported in Defender for Endpoint Plan 1 and Plan 2.\n７ Note\nMicrosoft recommends using roles with fewer permissions for better security. The Global\nAdministrator role, which has many permissions, should only be used in emergencies\nwhen no other role fits.\nYou can create rules that determine the devices and alert severities to send email notifications\nfor and the notification recipients.\n1. Go to the Microsoft Defender portal\nand sign in using an account with the Security\nadministrator or Global administrator role assigned.\n2. In the navigation pane, select Settings > Endpoints > General > Email notifications.\n3. Click Add item.\n4. Specify the General information:\nRule name - Specify a name for the notification rule.\nInclude organization name - Specify the customer name that appears on the email\nnotification.\nInclude tenant-specific portal link - Adds a link with the tenant ID to allow access to\na specific tenant.\nInclude device information - Includes the device name in the email alert body.\nDevices - Choose whether to notify recipients for alerts on all devices (Global\nadministrator role only) or on selected device groups. For more information, see\nCreate and manage device groups. (If you're using Defender for Business, device\ngroups do not apply.)\nAlert severity - Choose the alert severity level.\n5. Click Next.\n6. Enter the recipient's email address then click Add recipient. You can add multiple email\naddresses.\n7. Check that email recipients can receive the email notifications by selecting Send test\nemail.\n8. Click Save notification rule.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1251,
+      "end": 1252
+    },
+    "content_stats": {
+      "char_count": 3217,
+      "word_count": 499
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Create rules for alert notifications",
+        "Edit a notification rule",
+        "Delete notification rule",
+        "Troubleshoot email notifications for alerts",
+        "Related topics"
+      ]
+    }
+  }
+}

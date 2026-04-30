@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_648",
+  "section_number": "2.10.1.18",
+  "header": "k-NN metrics",
+  "content": "Amazon OpenSearch Service includes the following metrics for the k-nearest neighbor (k-NN)\nplugin.\nMetric\nDescription\nKNNCacheCapacityRe\nached\nPer-node metric for whether cache capacity has been reached.\nThis metric is only relevant to approximate k-NN search.\nRelevant statistics: Maximum\nKNNCircuitBreakerT\nriggered\nPer-cluster metric for whether the circuit breaker is triggered\n. If any nodes return a value of 1 for KNNCacheCapacityRe\nached , this value will also return 1. This metric is only\nrelevant to approximate k-NN search.\nRelevant statistics: Maximum\nKNNEvictionCount\nPer-node metric for the number of graphs that have been\nevicted from the cache due to memory constraints or idle time.\nExplicit evictions that occur because of index deletion are not\ncounted. This metric is only relevant to approximate k-NN\nsearch.\nRelevant statistics: Sum\nKNNGraphIndexErrors\nPer-node metric for the number of requests to add the\nknn_vector  ﬁeld of a document to a graph that produced\nan error.\nk-NN metrics\n1206\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nRelevant statistics: Sum\nKNNGraphIndexRequests\nPer-node metric for the number of requests to add the\nknn_vector  ﬁeld of a document to a graph.\nRelevant statistics: Sum\nKNNGraphMemoryUsage\nPer-node metric for the current cache size (total size of all\ngraphs in memory) in kilobytes. This metric is only relevant to\napproximate k-NN search.\nRelevant statistics: Average\nKNNGraphQueryErrors\nPer-node metric for the number of graph queries that\nproduced an error.\nRelevant statistics: Sum\nKNNGraphQueryRequests\nPer-node metric for the number of graph queries.\nRelevant statistics: Sum\nKNNHitCount\nPer-node metric for the number of cache hits. A cache hit\noccurs when a user queries a graph that is already loaded into\nmemory. This metric is only relevant to approximate k-NN\nsearch.\nRelevant statistics: Sum\nKNNLoadExceptionCount\nPer-node metric for the number of times an exception\noccurred while trying to load a graph into the cache. This\nmetric is only relevant to approximate k-NN search.\nRelevant statistics: Sum\nk-NN metrics\n1207\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nKNNLoadSuccessCount\nPer-node metric for the number of times the plugin successfu\nlly loaded a graph into the cache. This metric is only relevant\nto approximate k-NN search.\nRelevant statistics: Sum\nKNNMissCount\nPer-node metric for the number of cache misses. A cache miss\noccurs when a user queries a graph that is not yet loaded into\nmemory. This metric is only relevant to approximate k-NN\nsearch.\nRelevant statistics: Sum\nKNNQueryRequests\nPer-node metric for the number of query requests the k-NN\nplugin received.\nRelevant statistics: Sum\nKNNRemoteBuildEnabled\nBinary value that speciﬁes whether the feature is enabled.\nRelevant statistics: Binary\nKNNRemoteIndexBuil\ndFailureCount\nTotal number of build failures.\nRelevant statistics: Sum\nKNNRemoteIndexBuil\ndSuccessCount\nTotal number of successful builds.\nRelevant statistics: Sum\nKNNScriptCompilati\nonErrors\nPer-node metric for the number of errors during script\ncompilation. This statistic is only relevant to k-NN score script\nsearch.\nRelevant statistics: Sum\nk-NN metrics\n1208\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nKNNScriptCompilations\nPer-node metric for the number of times the k-NN script has\nbeen compiled. This value should usually be 1 or 0, but if the\ncache containing the compiled scripts is ﬁlled, the k-NN script\nmight be recompiled. This statistic is only relevant to k-NN\nscore script search.\nRelevant statistics: Sum\nKNNScriptQueryErrors\nPer-node metric for the number of errors during script queries.\nThis statistic is only relevant to k-NN score script search.\nRelevant statistics: Sum\nKNNScriptQueryRequ\nests\nPer-node metric for the total number of script queries. This\nstatistic is only relevant to k-NN score script search.\nRelevant statistics: Sum\nKNNTotalLoadTime\nThe time in nanoseconds that k-NN has taken to load graphs\ninto the cache. This metric is only relevant to approximate k-\nNN search.\nRelevant statistics: Sum\nVectorIndexBuildAc\ncelerationOCU\nThe number of OpenSearch Compute Units (OCUs) used to\naccelerate vector indexing.\nRelevant statistics: Sum",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1235,
+      "end": 1238
+    },
+    "content_stats": {
+      "char_count": 4232,
+      "word_count": 615
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

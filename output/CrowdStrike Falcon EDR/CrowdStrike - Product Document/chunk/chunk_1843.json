@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1843",
+  "section_number": "1.5.914.2",
+  "header": "Fields: macOS",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nTlsVersion\nThe TLS version that was used for encryption.\nValues:\nV1_0 (0)\nV1_1 (1)\nV1_2 (2)\nV1_3 (3)\nLocalPort\nRemotePort\nDomainName\nThe actual domain name being queried in this request.\nRemoteAddressIP4\nRemoteAddressIP6\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nConnectionDirection\nValues:\nDIRECTION_OUTBOUND (0)\nDIRECTION_INBOUND (1)\nDIRECTION_NEITHER (2)\nDIRECTION_BOTH (3)\nDIRECTION_UNKNOWN (4)\nTrafficDirection\nValues:\nINBOUND (1)\nOUTBOUND (2)\nProxyingProcessId\nUrl\nTlsClientFingerprintJa3\nTlsClientFingerprintJa4\nTlsApplicationLayerProtocols\nTlsServerName\nEffectiveDomainName\nEffectiveRemotePort\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n598/1226\nField\nDescription\nEffectiveRemoteAddressIP4\nEffectiveRemoteAddressIP6\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 598,
+      "end": 599
+    },
+    "content_stats": {
+      "char_count": 1438,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "TlsClientHello",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_807",
+  "section_number": "2.12.4.2",
+  "header": "Key concepts",
+  "content": "As you get started with ﬁne-grained access control, consider the following concepts:\n• Roles – The core way of using ﬁne-grained access control. In this case, roles are distinct from IAM\nroles. Roles contain any combination of permissions: cluster-wide, index-speciﬁc, document level,\nand ﬁeld level.\n• Mapping – After you conﬁgure a role, you map it to one or more users. For example, you might\nmap three roles to a single user: one role that provides access to Dashboards, one that provides\nread-only access to index1, and one that provides write access to index2. Or you could include\nall of those permissions in a single role.\n• Users – People or applications that make requests to the OpenSearch cluster. Users have\ncredentials—either IAM access keys or a username and password—that they specify when they\nmake requests.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1365,
+      "end": 1365
+    },
+    "content_stats": {
+      "char_count": 825,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

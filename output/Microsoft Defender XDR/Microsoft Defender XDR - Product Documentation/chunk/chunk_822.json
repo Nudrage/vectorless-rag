@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_822",
+  "section_number": "155.1.1.79.2.4",
+  "header": "Review logon attempts after receipt of malicious emails",
+  "content": "Malicious emails often contain documents and other specially crafted attachments that run\nPowerShell commands to deliver additional payloads. If you are aware of emails coming from a\nknown malicious sender ( MaliciousSender@example.com ), you can use this query to list and\nreview PowerShell activities that occurred within 30 minutes after an email was received from\nthe sender.\nKusto\n//Define new table for malicious emails\nlet MaliciousEmails=EmailEvents\n//List emails detected as malware, getting only pertinent columns\n| where ThreatTypes has \"Malware\"\n| project TimeEmail = Timestamp, Subject, SenderFromAddress, AccountName =\ntostring(split(RecipientEmailAddress, \"@\")[0]);\nMaliciousEmails\n| join (\n//Merge malicious emails with logon events to find logons by recipients\nIdentityLogonEvents\n| project LogonTime = Timestamp, AccountName, DeviceName\n) on AccountName\n//Check only logons within 30 minutes of receipt of an email\n| where (LogonTime - TimeEmail) between (0min.. 30min)\n| take 10",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 541,
+      "end": 542
+    },
+    "content_stats": {
+      "char_count": 997,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "Hunting scenarios",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_739",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nPatternId\nThe ID of the pattern\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [\nhttp://msdn.microsoft.com/en- us/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nRegOperationType\nValues:\nREG_SET_VALUE_KEY (1)\nREG_DELETE_VALUE_KEY (2)\nREG_CREATE_KEY (3)\nREG_DELETE_KEY (4)\nREG_SET_KEY_SECURITY (5)\nREG_LOAD_KEY (6)\nREG_RENAME_KEY (7)\nREG_OPEN_KEY (8)\nREG_QUERY_NAME_KEY (9)\nREG_SET_VALUE_KEY_ANTI_TAMPER (101)\nREG_DELETE_VALUE_KEY_ANTI_TAMPER (102)\nRegObjectName\nRegValueName\nRegConfigValueType\nValues:\nUNKNOWN (0)\nRegConfigClass\nValues:\nBOOT_CONFIGURATION_DATA (0)\nCROWDSTRIKE_KEY (1)\nRegConfigFlags\nValues:\nGLOBAL (0x0001)\nNEEDS_SOURCE_SIGNED (0x0004)\nNEEDS_SOURCE_MS_SIGNED (0x0010)\nSUSPICIOUS (0x0040)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n184/1226\nField\nDescription\nRegConfigIndex\nRegType\nValues:\nREG_NONE (0)\nREG_SZ (1)\nREG_EXPAND_SZ (2)\nREG_BINARY (3)\nREG_DWORD (4)\nREG_DWORD_BIG_ENDIAN (5)\nREG_LINK (6)\nREG_MULTI_SZ (7)\nREG_RESOURCE_LIST (8)\nREG_FULL_RESOURCE_DESCRIPTOR (9)\nREG_RESOURCE_REQUIREMENTS_LIST (10)\nREG_QWORD (11)\nRegNumericValue\nRegStringValue\nRegBinaryValue\nRegKeyName\nTargetFileName\nThe resulting file name that was downloaded\nTargetCommandLineParameters\nTargetSHA256HashData\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 184,
+      "end": 185
+    },
+    "content_stats": {
+      "char_count": 1960,
+      "word_count": 220
+    },
+    "hierarchy": {
+      "parent": "SuspiciousRegAsepUpdate",
+      "children": []
+    }
+  }
+}

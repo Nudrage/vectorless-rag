@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1214",
+  "section_number": "2.19.5.2.2",
+  "header": "Reduce replica count",
+  "content": "This sample policy reduces replica count to zero after seven days to conserve disk space and\nthen deletes the index after 21 days. This policy assumes your index is non-critical and no longer\nreceiving write requests; having zero replicas carries some risk of data loss.\n{\n\"policy\": {\n\"description\": \"Changes replica count and deletes.\",\n\"schema_version\": 1,\n\"default_state\": \"current\",\n\"states\": [{\n\"name\": \"current\",\n\"actions\": [],\n\"transitions\": [{\n\"state_name\": \"old\",\n\"conditions\": {\n\"min_index_age\": \"7d\"\n}\n}]\n},\n{\nSample policies\n1726\nAmazon OpenSearch Service\nDeveloper Guide\n\"name\": \"old\",\n\"actions\": [{\n\"replica_count\": {\n\"number_of_replicas\": 0\n}\n}],\n\"transitions\": [{\n\"state_name\": \"delete\",\n\"conditions\": {\n\"min_index_age\": \"21d\"\n}\n}]\n},\n{\n\"name\": \"delete\",\n\"actions\": [{\n\"delete\": {}\n}],\n\"transitions\": []\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1755,
+      "end": 1756
+    },
+    "content_stats": {
+      "char_count": 827,
+      "word_count": 119
+    },
+    "hierarchy": {
+      "parent": "Sample policies",
+      "children": []
+    }
+  }
+}

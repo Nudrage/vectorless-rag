@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_623",
+  "section_number": "2.9.10.1.1",
+  "header": "General SQL restrictions",
+  "content": "The following restrictions apply when using OpenSearch SQL with CloudWatch Logs, Amazon S3,\nand Security Lake.\n1. You can only use one JOIN operation in a SELECT statement.\n2. Only one level of nested subqueries is supported.\n3. Multiple statement queries separated by semi-colons aren't supported.\n4. Queries containing ﬁeld names that are identical but diﬀer only in case (such as ﬁeld1 and\nFIELD1) are not supported.\nSupported SQL commands\n797\nAmazon OpenSearch Service\nDeveloper Guide\nFor example, the following queries are not supported:\nSelect AWSAccountId, awsaccountid from LogGroup\nHowever, the following query is because the ﬁeld name (@logStream) is identical in both log\ngroups:\nSelect a.`@logStream`, b.`@logStream` from Table A INNER Join Table B on a.id = b.id\n5. Functions and expressions must operate on ﬁeld names and be part of a SELECT statement with\na log group speciﬁed in the FROM clause.\nFor example, this query is not supported:\nSELECT cos(10) FROM LogGroup\nThis query is supported:\nSELECT cos(field1) FROM LogGroup",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 826,
+      "end": 827
+    },
+    "content_stats": {
+      "char_count": 1040,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "Supported OpenSearch SQL commands and functions",
+      "children": []
+    }
+  }
+}

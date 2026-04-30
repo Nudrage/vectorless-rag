@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_100",
+  "section_number": "155.1.1.18.2.1.1.1",
+  "header": "Microsoft Defender XDR components and SIEM integration",
+  "content": "integration\nMicrosoft\nDefender for\nCloud Apps\nMicrosoft\nDefender for\nIdentity\nMicrosoft\nDefender for\nEndpoint\nMicrosoft Defender XDR\nMicrosoft\nDefender for\nOffice 365\nMicrosoft\nEntra ID\nProtection\nSIEM data\nMicrosoft Sentinel\nMicrosoft Sentinel\nconnectors\nGeneric SIEM service\n\nThis diagram shows a common cyber-attack and the components of Microsoft Defender\nXDR that help detect and remediate it.\nThe cyber-attack starts with a phishing email that arrives at the Inbox of an employee in\nyour organization, who unknowingly opens the email attachment. This attachment\ninstalls malware, which can lead to a chain of attack attempts that can result in the theft\nof sensitive data.\nIn the illustration:\nExchange Online Protection, part of Microsoft Defender for Office 365, can detect\nthe phishing email and use mail flow rules (also known as transport rules) to make\ncertain it never arrives in a user's Inbox.\nDefender for Office 365 uses Safe Attachments to test the attachment and\ndetermine that it's harmful, so the mail that arrives either isn't actionable by the\nuser, or policies prevent the mail from arriving at all.\nDefender for Endpoint detects device and network vulnerabilities that might\notherwise be exploited for devices managed by your organization.\nDefender for Identity takes note of sudden on-premises user account changes like\nprivilege escalation or high-risk lateral movement. It also reports on easily\nexploited identity issues like unconstrained Kerberos delegation, for correction by\nyour security team.\nMicrosoft Defender for Cloud Apps detects anomalous behavior such as\nimpossible-travel, credential access, and unusual downloading, file sharing, or mail\nforwarding activity and reports these to your security team.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 54,
+      "end": 55
+    },
+    "content_stats": {
+      "char_count": 1743,
+      "word_count": 260
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR components and architecture",
+      "children": []
+    }
+  }
+}

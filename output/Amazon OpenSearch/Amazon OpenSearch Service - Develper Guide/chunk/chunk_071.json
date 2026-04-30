@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_071",
+  "section_number": "2.12.4.1.1",
+  "header": "Example",
+  "content": "Consider the following example DLQ ﬁle:\ndlq-v2-apache-log-pipeline-opensearch-2023-04-05T15:26:19.152938Z-e7eb675a-\nf558-4048-8566-dac15a4f8343\nHere's an example of data that failed to be written to the sink, and is sent to the DLQ S3 bucket for\nfurther analysis:\nRecord_0\npluginId            \"opensearch\"\npluginName          \"opensearch\"\npipelineName        \"apache-log-pipeline\"\nfailedData\nindex    \"logs\"\nindexId   null\nstatus    0\nmessage  \"Number of retries reached the limit of max retries (configured value 15)\"\ndocument\nlog      \"sample log\"\ntimestamp     \"2023-04-14T10:36:01.070Z\"\nDead-letter queues\n64\nAmazon OpenSearch Service\nDeveloper Guide\nRecord_1\npluginId            \"opensearch\"\npluginName          \"opensearch\"\npipelineName        \"apache-log-pipeline\"\nfailedData\nindex               \"logs\"\nindexId   null\nstatus    0\nmessage  \"Number of retries reached the limit of max retries (configured value 15)\"\ndocument\nlog                 \"another sample log\"\ntimestamp           \"2023-04-14T10:36:01.071Z\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 93,
+      "end": 94
+    },
+    "content_stats": {
+      "char_count": 1017,
+      "word_count": 107
+    },
+    "hierarchy": {
+      "parent": "Dead-letter queues",
+      "children": []
+    }
+  }
+}

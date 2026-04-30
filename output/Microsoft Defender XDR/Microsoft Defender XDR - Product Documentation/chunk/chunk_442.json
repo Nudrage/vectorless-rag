@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_442",
+  "section_number": "155.1.1.41.2.2.1",
+  "header": "View blast radius graphs",
+  "content": "\nFor an explanation of the icons used for nodes and edges in the blast radius graph, see\nUnderstanding graphs and visualizations in Microsoft Defender.\nSelect View blast radius list to see a list of target assets. Select a target asset from the list to\nview its details and potential attack paths. Selecting the badges in connections shows more\ndetails about the connection.\nWhen paths lead to grouped targets of the same types, to view discrete paths to targets, select\nthe grouped icons. A right-side panel opens showing all the targets in the group. Selecting the\ncheck box on the left and selecting the Expand button on top displays each target and its\npaths separately.\n\nHide the blast radius graph and return to the original incident graph by selecting the node and\nchoosing Hide blast radius.\nThe following limitations apply to the blast radius graph:\nPath length limitations (scope of analysis): Blast radius graph length calculations are\nbounded up to 7 hops from the source node. The blast radius is an approximation of the\nfull attack reach. The maximum number of hops depends on the environment:\n5 hops for cloud\n5 hops for on-premises\n3 hops for hybrid\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 266,
+      "end": 268
+    },
+    "content_stats": {
+      "char_count": 1169,
+      "word_count": 200
+    },
+    "hierarchy": {
+      "parent": "Blast radius analysis",
+      "children": []
+    }
+  }
+}

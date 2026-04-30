@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1416",
+  "section_number": "2.25.10.2",
+  "header": "Architecture and behavior",
+  "content": "In an OpenSearch cluster, dedicated coordinator nodes handle two key responsibilities.\n• Request handling – These nodes receive incoming search requests and forward them to the\nappropriate data nodes, which store the relevant data. They then consolidate the results from\nmultiple data nodes into a single global result set, which is returned to the client.\n• Dashboards hosting – Coordinator nodes manage OpenSearch Dashboards, which relieves data\nnodes from the additional burden of hosting OpenSearch Dashboards and handling related\ntraﬃc.\nDedicated coordinator nodes\n1863\nAmazon OpenSearch Service\nDeveloper Guide\nIn VPC domains, dedicated coordinator nodes are assigned Elastic Network Interfaces (ENIs) rather\nthan data nodes. This arrangement helps reduce the number of private IP addresses required for\nVPCs, which improves network eﬃciency. Typically, dedicated coordinator nodes make up around\n10% of the total data nodes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1892,
+      "end": 1893
+    },
+    "content_stats": {
+      "char_count": 931,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "Dedicated coordinator nodes in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

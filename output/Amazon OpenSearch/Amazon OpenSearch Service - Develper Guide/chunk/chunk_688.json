@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_688",
+  "section_number": "2.10.4.1.9",
+  "header": "Service software update failed",
+  "content": "OpenSearch Service sends this event when a service software update fails.\nExample\nThe following is an example event of this type:\n{\n\"version\": \"0\",\n\"id\": \"01234567-0123-0123-0123-012345678901\",\n\"detail-type\": \"Amazon OpenSearch Service Software Update Notification\",\n\"source\": \"aws.es\",\n\"account\": \"123456789012\",\n\"time\": \"2016-11-01T13:12:22Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"event\": \"Service Software Update\",\n\"status\": \"Failed\",\n\"severity\": \"High\",\n\"description\": \"Installation of service software update [R20200330-p1] failed.\n[reason].\n}\n}\nService software update events\n1243\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1272,
+      "end": 1273
+    },
+    "content_stats": {
+      "char_count": 698,
+      "word_count": 74
+    },
+    "hierarchy": {
+      "parent": "Service software update events",
+      "children": []
+    }
+  }
+}

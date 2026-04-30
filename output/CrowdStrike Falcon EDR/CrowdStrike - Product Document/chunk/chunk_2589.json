@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2589",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nUserName\nOperating system username.\nBrowserArtifactType\nType of forensic browser artifact.\nValues:\nHISTORY (1)\nDOWNLOADS (2)\nEXTENSIONS (3)\nCOOKIES (4)\nPREFERENCES (5)\nId\nUrl\nSize\nSize of the egressing file in bytes.\nTargetFileName\nThe resulting file name that was downloaded\nSourceFileName\nThe file's original name\nBrowserDownloadLastAccessed\nWhen a downloaded file was last accessed by the browser in 100ns resolution since 1601-01-01.\nBrowserDownloadFileDangerType\nBrowser specified danger type of downloaded file.\nValues:\nNOT_DANGEROUS (0)\nDANGEROUS_FILE (1)\nDANGEROUS_URL (2)\nDANGEROUS_CONTENT (3)\nCONTENT_MIGHT_BE_MALICIOUS (4)\nUNCOMMON_CONTENT (5)\nDANGEROUS_BUT_USER_VALIDATED (6)\nDANGEROUS_HOST (7)\nPOTENTIALLY_UNWANTED (8)\nALLOWLISTED_BY_POLICY (9)\nASYNC_SCANNING (10)\nBLOCKED_PASSWORD_PROTECTED (11)\nBLOCKED_TOO_LARGE (12)\nSENSITIVE_CONTENT_WARNING (13)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n896/1226\nField\nDescription\nSENSITIVE_CONTENT_BLOCK (14)\nDEEP_SCANNED_SAFE (15)\nDEEP_SCANNED_OPENED_DANGEROUS (16)\nPROMPT_FOR_SCANNING (17)\nBLOCKED_UNSUPPORTED_FILETYPE (18)\nDANGEROUS_ACCOUNT_COMPROMISE (19)\nBrowserDownloadFileInterruptReason\nReason file being downloaded by browser was interrupted.\nValues:\nNO_INTERRUPT (0)\nFILE_ERROR (1)\nACCESS_DENIED (2)\nDISK_FULL (3)\nPATH_TOO_LONG (5)\nPATH_TOO_LARGE (6)\nVIRUS (7)\nTEMP_PROBLEM (10)\nBLOCKED (11)\nSECURITY_CHECK_FAILED (12)\nRESUME_ERROR (13)\nNETWORK_ERROR (20)\nOPERATION_TIMED_OUT (21)\nCONNECTION_LOST (22)\nSERVER_DOWN (23)\nSERVER_ERROR (30)\nRANGE_REQUEST_ERROR (31)\nSERVER_PRECONDITION_ERROR (32)\nUNABLE_TO_GET_FILE (33)\nSERVER_UNAUTHORIZED (34)\nSERVER_CERTIFICATE_PROBLEM (35)\nSERVER_ACCESS_FORBIDDEN (36)\nSERVER_UNREACHABLE (37)\nCONTENT_LENGTH_MISMATCH (38)\nCROSS_ORIGIN_REDIRECT (39)\nCANCELLED (40)\nBROWSER_SHUTDOWN (41)\nBROWSER_CRASHED (50)\nMimeType\nBrowserDownloadFileState\nState of file attempted to be downloaded by browser.\nValues:\nIN_PROGRESS (0)\nCOMPLETE (1)\nCANCELLED (2)\nINTERRUPTED (3)\nSTOPPED (4)\nPAUSED (5)\nBrowserDownloadFileOpened\nWas the file opened through the browser downloaded file interface by the user.\nBrowserDownloadSiteUrl\nThe site URL for the site instance that initiated the download. See\nhttps://chromium.googlesource.com/chromium/src/+/a9356359aea4a6895b01f9d1f270b6d211054d1a/components/history/core\n[https://chromium.googlesource.com/chromium/src/+/a9356359aea4a6895b01f9d1f270b6d211054d1a/components/history/cor\nBrowserTabDownLoadLinkUrl\nThe URL of the tab that initiated the download, the download link.\nBrowserTabDownLoadOriginalReferrerUrl The referrer of the tab that initialized the download, i.e., the original web URL that the download link was found on.\nReferrerUrl\nThe referrer url from a file's mark of the web.\nSourceAccountDomain\nThe domain that the account bound with this activity is a member of.\nBrowserName\nName of internet browser application.\nValues:\nUNKNOWN (0)\nFIREFOX (1)\nSAFARI (2)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n897/1226\nField\nDescription\nCHROME (3)\nEDGE (4)\nEDGE_CHROMIUM (5)\nINTERNET_EXPLORER (6)\nEDGE_LEGACY (7)\nIE_TYPED_URL (8)\nFIREFOX_APP (9)\nCHROME_BETA (10)\nCHROME_DEV (11)\nEDGE_BETA (12)\nEDGE_DEV (13)\nSAFARI_TECH (14)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 896,
+      "end": 898
+    },
+    "content_stats": {
+      "char_count": 3610,
+      "word_count": 387
+    },
+    "hierarchy": {
+      "parent": "BrowserDownloadEnded",
+      "children": []
+    }
+  }
+}

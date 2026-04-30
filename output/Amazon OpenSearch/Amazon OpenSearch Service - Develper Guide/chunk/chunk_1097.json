@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1097",
+  "section_number": "2.17.2",
+  "header": "Conﬁguring Dashboards to use a WMS map server",
+  "content": "The default installation of Dashboards for OpenSearch Service includes a map service, except for\ndomains in the India and China Regions. The map service supports up to 10 zoom levels.\nRegardless of your Region, you can conﬁgure Dashboards to use a diﬀerent Web Map Service\n(WMS) server for coordinate map visualizations. Region map visualizations only support the default\nmap service.\nTo conﬁgure Dashboards to use a WMS map server:\n1.\nOpen Dashboards.\n2.\nChoose Stack Management.\n3.\nChoose Advanced Settings.\n4.\nLocate visualization:tileMap:WMSdefaults.\n5.\nChange enabled to true and url to the URL of a valid WMS map server:\n{\n\"enabled\": true,\n\"url\": \"wms-server-url\",\n\"options\": {\n\"format\": \"image/png\",\n\"transparent\": true\n}\n}\n6.\nChoose Save changes.\nConﬁguring Dashboards to use a WMS map server\n1618\nAmazon OpenSearch Service\nDeveloper Guide\nTo apply the new default value to visualizations, you might need to reload Dashboards. If you have\nsaved visualizations, choose Options after opening the visualization. Verify that WMS map server\nis enabled and WMS url contains your preferred map server, and then choose Apply changes.\nNote\nMap services often have licensing fees or restrictions. You are responsible for all such\nconsiderations on any map server that you specify. You might ﬁnd the map services from\nthe U.S. Geological Survey useful for testing.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1647,
+      "end": 1648
+    },
+    "content_stats": {
+      "char_count": 1361,
+      "word_count": 212
+    },
+    "hierarchy": {
+      "parent": "Using OpenSearch Dashboards with Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

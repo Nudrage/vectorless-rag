@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_019",
+  "section_number": "17",
+  "header": "EventTrigger",
+  "content": "Describes EventTrigger, used to request events to be sent from another service.\nJSON representation\nFields\ntrigger\nstring\nOutput only. The resource name of the Eventarc trigger. The format of this field is\nprojects/{project}/locations/{region}/triggers/{trigger}.\ntriggerRegion\nstring\nThe region that the trigger will be in. The trigger will only receive events originating in\nthis region. It can be the same region as the function, a different region or multi-\nregion, or the global region. If not provided, defaults to the same region as the\nfunction.\neventType\nstring\nRequired. The type of event to observe. For example:\ngoogle.cloud.audit.log.v1.written or\ngoogle.cloud.pubsub.topic.v1.messagePublished.\neventFilters[]\nobject (EventFilter\n(/functions/docs/reference/rest/v2/projects.locations.functions#EventFilter))\nCriteria used to filter events.\n{\n\"trigger\": string,\n\"triggerRegion\": string,\n\"eventType\": string,\n\"eventFilters\": [\n{\nobject (EventFilter (/functions/docs/reference/rest/v2/projects.locations.functions#EventFilter))\n}\n],\n\"pubsubTopic\": string,\n\"serviceAccountEmail\": string,\n\"retryPolicy\": enum (RetryPolicy (/functions/docs/reference/rest/v2/projects.locations.functions#Re\n\"channel\": string,\n\"service\": string\n}\nFields\npubsubTopic\nstring\nOptional. The name of a Pub/Sub topic in the same project that will be used as the\ntransport topic for the event delivery. Format:\nprojects/{project}/topics/{topic}.\nThis is only valid for events of type\ngoogle.cloud.pubsub.topic.v1.messagePublished. The topic provided here\nwill not be deleted at function deletion.\nserviceAccountEmail\nstring\nOptional. The email of the trigger's service account. The service account must have\npermission to invoke Cloud Run services, the permission is run.routes.invoke. If\nempty, defaults to the Compute Engine default service account:\n{project_number}-compute@developer.gserviceaccount.com.\nretryPolicy\nenum (RetryPolicy\n(/functions/docs/reference/rest/v2/projects.locations.functions#RetryPolicy))\nOptional. If unset, then defaults to ignoring failures (i.e. not retrying them).\nchannel\nstring\nOptional. The name of the channel associated with the trigger in\nprojects/{project}/locations/{location}/channels/{channel}\nformat. You must provide a channel to receive events from Eventarc SaaS partners.\nservice\nstring\nOptional. The hostname of the service that 1st Gen function should be observed.\nIf no string is provided, the default service implementing the API will be used. For\nexample, storage.googleapis.com is the default for all event types in the\ngoogle.storage namespace.\nThe field is only applicable to 1st Gen functions.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 17,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 15,
+      "end": 16
+    },
+    "content_stats": {
+      "char_count": 2630,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

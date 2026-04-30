@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1468",
+  "section_number": "155.1.1.252.2",
+  "header": "Permissions",
+  "content": "Email & collaboration content (read): Used to read the content of user reported emails\nneeded to do the analysis.\nThe required permissions are under the Security operations permissions group:\nTo assign the appropriate permissions to the agent:\n1. Ensure that the relevant Defender workloads are activated to allow the agent to\neffectively analyze alerts with comprehensive context. Follow the steps in Activate URBAC\nsettings.\n2. Create a role with the required permissions or assign an existing role with these\npermissions to the agent.\n3. Assign the role to the agent. Make sure to grant the agent access to the Microsoft\nDefender for Office 365 data source.\n\nAfter assigning the agent its permissions, ensure the user group monitoring the agent has\nequal or higher permissions to oversee its activity and output. To do this, compare the\npermissions of the user group to the agent in the Permissions page in the Microsoft Defender\nportal.\nSet conditional access policies for Security Copilot to enable the agent to function based on\nthe user account created for it. For more information, see Troubleshoot Conditional Access\npolicies for Microsoft Security Copilot.\nYou can access the Phishing Triage Agent setup in two ways:\n\n Tip\nMicrosoft advises assigning a role to the agent's identity that includes only the\nminimum permissions necessary.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1091,
+      "end": 1093
+    },
+    "content_stats": {
+      "char_count": 1348,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Create the agent’s identity and assign permissions",
+      "children": []
+    }
+  }
+}

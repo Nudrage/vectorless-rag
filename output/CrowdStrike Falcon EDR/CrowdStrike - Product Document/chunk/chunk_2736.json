@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2736",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed\nthread injection in an InjectedThread event\nTargetThreadId\nThe primary thread associated with this service.\nTargetAddress\nTargetFileName\nThe resulting file name that was downloaded\nApcContextAddress\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n965/1226\nField\nDescription\nApcContextFileName\nApcArgument1\nApcArgument2\nUmppcResponseContext\nPatternId\nThe ID of the pattern\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nIsExFunction\nApiVersion\nValues:\nNTAPCAPI_BASE (0)\nNTAPCAPI_EX (1)\nNTAPCAPI_EX2 (2)\nApcFlags\nValues:\nQUEUE_USER_APC_FLAGS_NONE (0x0)\nQUEUE_USER_APC_FLAGS_SPECIAL_USER_APC (0x1)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 965,
+      "end": 966
+    },
+    "content_stats": {
+      "char_count": 1711,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "SuspiciousUserRemoteAPCAttempt",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_400",
+  "section_number": "2.7.10.10.6",
+  "header": "Creating data access policies (console)",
+  "content": "You can create a data access policy using the visual editor, or in JSON format. Any new collections\nthat match one of the patterns deﬁned in the policy will be assigned the corresponding\npermissions when you create the collection.\nTo create an OpenSearch Serverless data access policy\n1.\nOpen the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/home.\nData access control\n552\nAmazon OpenSearch Service\nDeveloper Guide\n2.\nIn the left navigation pane, expand Serverless and under Security, choose Data access\npolicies.\n3.\nChoose Create access policy.\n4.\nProvide a name and description for the policy.\n5.\nProvide a name for the ﬁrst rule in your policy. For example, \"Logs collection access\".\n6.\nChoose Add principals and select one or more IAM roles or SAML users and groups to provide\ndata access to.\nNote\nIn order to select principals from the dropdown menus, you must have the\niam:ListUsers and iam:ListRoles permissions (for IAM principals) and\naoss:ListSecurityConfigs permission (for SAML identities).\n7.\nChoose Grant and select the alias, template, and index permissions to grant the associated\nprincipals. For a full list of permissions and the access they allow, see the section called\n“Supported OpenSearch API operations and permissions”.\n8.\n(Optional) Conﬁgure additional rules for the policy.\n9.\nChoose Create. There might be about a minute of lag time between when you create the\npolicy and when the permissions are enforced. If it takes more than 5 minutes, contact\nSupport.\nImportant\nIf your policy only includes index permissions (and no collection permissions), you might\nstill see a message for matching collections stating Collection cannot be accessed\nyet. Configure data access policies so that users can access the data\nwithin this collection. You can ignore this warning. Allowed principals can still\nperform their assigned index-related operations on the collection.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 581,
+      "end": 582
+    },
+    "content_stats": {
+      "char_count": 1912,
+      "word_count": 294
+    },
+    "hierarchy": {
+      "parent": "Data access control for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

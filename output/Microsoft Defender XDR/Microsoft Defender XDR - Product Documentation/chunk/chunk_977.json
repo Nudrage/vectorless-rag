@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_977",
+  "section_number": "155.1.1.263.2.3",
+  "header": "Sample queries",
+  "content": "To list unusual authentication methods used:\nKusto\nTo find storage accounts with a high number of failed operations:\nKusto\nTo monitor anonymous successful operations:\nKusto\nTo detect access to sensitive containers or file shares:\nKusto\nCloudStorageAggregatedEvents\n| where FailedOperationsCount > 0\n| where AuthenticationType == \"Anonymous\"\n| project StorageAccount, FailedOperationsCount, OperationNamesList,\nAdditionalFields\n// Define a list of expected authentication types\nlet ExpectedAuthTypes = dynamic([\"AccountKey\", \"SAS\", \"Oauth\"]);\nCloudStorageAggregatedEvents\n| where DataAggregationEndTime >= ago(7d)\n| where not(AuthenticationType in (ExpectedAuthTypes))\n| summarize TotalOperations = sum(OperationsCount) by StorageAccount,\nAuthenticationType\nCloudStorageAggregatedEvents\n| where DataAggregationEndTime >= ago(7d)\n| summarize TotalFailedOperations = sum(FailedOperationsCount) by StorageAccount\n| where TotalFailedOperations > 100\n| order by TotalFailedOperations desc\nCloudStorageAggregatedEvents\n| where DataAggregationEndTime >= ago(7d)\n| where AuthenticationType == \"Anonymous\" and SuccessfulOperationsCount > 0\n| project StorageAccount, SuccessfulOperationsCount, OperationNamesList,\nAdditionalFields\nCloudStorageAggregatedEvents\n| where DataAggregationEndTime >= ago(7d)\n| where AuthenticationType == \"Anonymous\" and SuccessfulOperationsCount > 0\n| project StorageAccount, SuccessfulOperationsCount, OperationNamesList,\nAdditionalFields\nTo detect suspicious file uploads with known malicious hashes:\nKusto\nAdvanced hunting overview\nLearn the query language\nUse shared queries\nHunt across devices, emails, apps, and identities\nUnderstand the schema\nApply query best practices\nCloudStorageAggregatedEvents\n| where DataAggregationEndTime >= ago(7d)\n| where isnotempty(Md5Hashes)\n| mv-expand HashReputation = Md5Hashes\n| extend HashDetails = parse_json(HashReputation)\n| project StorageAccount, AccountUpn, OperationNamesList, HashMd5 =\nHashDetails.md5Hash, ResourcePath = HashDetails.resourcePath, OperationType =\nHashDetails.operationType, ETag = HashDetails.etag",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 664,
+      "end": 666
+    },
+    "content_stats": {
+      "char_count": 2081,
+      "word_count": 220
+    },
+    "hierarchy": {
+      "parent": "CloudStorageAggregatedEvents (Preview)",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1249",
+  "section_number": "1.5.924.1",
+  "header": "Description",
+  "content": "Platforms: Linux, Falcon Container\nImportant: This event is generated on Mac and Linux Sensors only. The Falcon sensor for Windows only generates ProcessRollup2 events.\nWhen a process finishes running, the sensor generates and sends a ProcessRollup2 event. Linux sensors send far more ProcessRollup2 events than\nWindows (roughly 20x as many), so rather than send events for every process on those hosts, the sensor sends an initial ProcessRollup2 event, followed 60\nminutes later by a ProcessRollup2Stats event with a SHA256 hash and the count of how many times the hash executed in the last 60 minutes.\nPlatforms: macOS\nImportant: This event is generated on Mac and Linux Sensors only. The Falcon sensor for Windows only generates ProcessRollup2 events.\nWhen a process finishes running, the sensor generates and sends a ProcessRollup2 event. Mac sensors send far more ProcessRollup2 events than Windows\n(roughly 20x as many), so rather than send events for every process on those hosts, the sensor sends an initial ProcessRollup2 event, followed 10 minutes\nlater by a ProcessRollup2Stats event with a SHA256 hash and the count of how many times the hash executed in the last 10 minutes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 339,
+      "end": 339
+    },
+    "content_stats": {
+      "char_count": 1187,
+      "word_count": 188
+    },
+    "hierarchy": {
+      "parent": "ProcessRollup2Stats",
+      "children": []
+    }
+  }
+}

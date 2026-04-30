@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_1506",
+  "section_number": "2.27.3",
+  "header": "Tutorial: Creating a search application with Amazon OpenSearch Service",
+  "content": "OpenSearch Service\nA common way to create a search application with Amazon OpenSearch Service is to use web\nforms to send user queries to a server. Then you can authorize the server to call the OpenSearch\nAPIs directly and have the server send requests to OpenSearch Service. However, if you want to\nwrite client-side code that doesn't rely on a server, you should compensate for the security and\nperformance risks. Allowing unsigned, public access to the OpenSearch APIs is inadvisable. Users\nmight access unsecured endpoints or impact cluster performance through overly broad queries (or\ntoo many queries).\nThis chapter presents a solution: use Amazon API Gateway to restrict users to a subset of the\nOpenSearch APIs and AWS Lambda to sign requests from API Gateway to OpenSearch Service.\nNote\nStandard API Gateway and Lambda pricing applies, but within the limited usage of this\ntutorial, costs should be negligible.\nCreating a search application\n2013\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2042,
+      "end": 2043
+    },
+    "content_stats": {
+      "char_count": 996,
+      "word_count": 158
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service tutorials",
+      "children": [
+        "Prerequisites",
+        "Step 1: Index sample data",
+        "Step 2: Create and deploy the Lambda function",
+        "Step 3: Create the API in API Gateway",
+        "Step 4: (Optional) Modify the domain access policy",
+        "Map the Lambda role (if using ﬁne-grained access control)",
+        "Step 5: Test the web application",
+        "Next steps"
+      ]
+    }
+  }
+}

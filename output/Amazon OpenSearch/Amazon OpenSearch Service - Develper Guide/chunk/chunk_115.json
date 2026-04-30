@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_115",
+  "section_number": "2.6.15.3.6",
+  "header": "OTel trace group processor",
+  "content": "The OTel trace group processor has the following requirements and limitations:\n• The aws option is required, and must contain the following options:\n• sts_role_arn\n• region\n• hosts\n• The sts_role_arn option specify the same role as the pipeline role that you specify in the\nOpenSearch sink conﬁguration.\n• The username, password, cert, and insecure options aren't supported.\n• The aws_sigv4 option is required and must be set to true.\n• The serverless option within the OpenSearch sink plugin isn't supported. The Otel trace\ngroup processor doesn't currently work with OpenSearch Serverless collections.\n• The number of otel_trace_group processors within the pipeline conﬁguration body can't\nexceed 8.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 128,
+      "end": 128
+    },
+    "content_stats": {
+      "char_count": 701,
+      "word_count": 108
+    },
+    "hierarchy": {
+      "parent": "Conﬁguration requirements and constraints",
+      "children": []
+    }
+  }
+}

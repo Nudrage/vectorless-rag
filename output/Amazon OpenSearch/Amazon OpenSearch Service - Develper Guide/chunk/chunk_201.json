@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_201",
+  "section_number": "2.6.19.1",
+  "header": "Conﬁguring VPC access for Amazon OpenSearch Ingestion pipelines",
+  "content": "You can access your Amazon OpenSearch Ingestion pipelines using an interface VPC endpoint. A\nVPC is a virtual network that's dedicated to your AWS account. It's logically isolated from other\nvirtual networks in the AWS Cloud. Accessing a pipeline through a VPC endpoint enables secure\ncommunication between OpenSearch Ingestion and other services within the VPC without the need\nfor an internet gateway, NAT device, or VPN connection. All traﬃc remains securely within the AWS\nCloud.\nOpenSearch Ingestion establishes this private connection by creating an interface endpoint,\npowered by AWS PrivateLink. We create an endpoint network interface in each subnet that you\nspecify during pipeline creation. These are requester-managed network interfaces that serve as\nthe entry point for traﬃc destined for the OpenSearch Ingestion pipeline. You can also choose to\ncreate and manage the interface endpoints yourself.\nUsing a VPC allows you to enforce data ﬂow through your OpenSearch Ingestion pipelines within\nthe boundaries of the VPC, rather than over the public internet. Pipelines that aren't within a VPC\nsend and receive data over public-facing endpoints and the internet.\nA pipeline with VPC access can write to public or VPC OpenSearch Service domains, and to public\nor VPC OpenSearch Serverless collections.\nConﬁguring VPC access for pipelines\n304\nAmazon OpenSearch Service\nDeveloper Guide\nTopics\n• Considerations\n• Limitations\n• Prerequisites\n• Conﬁguring VPC access for a pipeline\n• Self-managed VPC endpoints\n• Service-linked role for VPC access",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 333,
+      "end": 334
+    },
+    "content_stats": {
+      "char_count": 1553,
+      "word_count": 235
+    },
+    "hierarchy": {
+      "parent": "Security in Amazon OpenSearch Ingestion",
+      "children": [
+        "Considerations",
+        "Limitations",
+        "Prerequisites",
+        "Conﬁguring VPC access for a pipeline",
+        "Self-managed VPC endpoints",
+        "Service-linked role for VPC access"
+      ]
+    }
+  }
+}

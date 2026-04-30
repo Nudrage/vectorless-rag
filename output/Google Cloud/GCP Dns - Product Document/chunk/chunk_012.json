@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_012",
+  "section_number": "1.5.2",
+  "header": "Verify DNS propagation",
+  "content": "To monitor and verify that the DNS name server has picked up your changes, you can use the\nwatch and dig commands. The following example demonstrates how to look up your name\ngcloud\n(#gcloud)\ngcloud dns record-sets changes list --zone=ZONE edit\nserver and check to see when one of your managed zone's name servers has picked up a\nchange to an MX record.\nNote: The commands watch and dig are provided by the Linux operating system and are not gcloud\ncommands. As such, they don't require the gcloud prefix to run. For other operating systems, you might have\nto install the commands.\nTo look up your zone's name servers, run the dns managed-zones describe\n(/sdk/gcloud/reference/dns/managed-zones/describe) command:\nReplace ZONE_NAME with the name of your Cloud DNS zone.\nTo check if the records are available yet on your authoritative name server, run the following\ndig command:\nReplace ZONE_NAME_SERVER with one of the name servers from the managed zone.\nThe watch command runs the dig command every 2 seconds by default. You can use this\ncommand to determine when your authoritative name server picks up your change, which\nshould happen within 120 seconds. After your authoritative name server has the change, DNS\nresolvers can start to pick up the new record. Resolvers that already have the previous record\ncached wait for the previous TTL value of the record to expire.\nTo run dig against your system's name server, you can remove the @<address> from the dig\ncommand. If you would like to monitor propagation to other name servers, you can change the\naddress to point to other name servers.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 6,
+      "end": 7
+    },
+    "content_stats": {
+      "char_count": 1594,
+      "word_count": 266
+    },
+    "hierarchy": {
+      "parent": "Monitor DNS propagation",
+      "children": []
+    }
+  }
+}

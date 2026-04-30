@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_852",
+  "section_number": "2.12.9.1",
+  "header": "SAML conﬁguration overview",
+  "content": "This documentation assumes that you have an existing identity provider and some familiarity with\nit. We can't provide detailed conﬁguration steps for your exact provider, only for your OpenSearch\nService domain.\nThe OpenSearch Dashboards login ﬂow can take one of two forms:\n• Service provider (SP) initiated: You navigate to Dashboards (for example, https://my-\ndomain.us-east-1.es.amazonaws.com/_dashboards), which redirects you to the login\nscreen. After you log in, the identity provider redirects you to Dashboards.\n• Identity provider (IdP) initiated: You navigate to your identity provider, log in, and choose\nOpenSearch Dashboards from an application directory.\nOpenSearch Service provides two single sign-on URLs, SP-initiated and IdP-initiated, but you only\nneed the one that matches your desired OpenSearch Dashboards login ﬂow.\nRegardless of which authentication type you use, the goal is to log in through your identity\nprovider and receive a SAML assertion that contains your username (required) and any backend\nroles (optional, but recommended). This information allows ﬁne-grained access control to assign\npermissions to SAML users. In external identity providers, backend roles are typically called \"roles\"\nor \"groups.\"\nSAML authentication for OpenSearch Dashboards\n1377\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1406,
+      "end": 1407
+    },
+    "content_stats": {
+      "char_count": 1329,
+      "word_count": 187
+    },
+    "hierarchy": {
+      "parent": "SAML authentication for OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1245",
+  "section_number": "2.19.8.5",
+  "header": "Conﬁrm replication",
+  "content": "To conﬁrm that replication is happening, get the replication status:\nGET _plugins/_replication/follower-01/_status\n{\n\"status\" : \"SYNCING\",\n\"reason\" : \"User initiated\",\n\"leader_alias\" : \"connection-alias\",\n\"leader_index\" : \"leader-01\",\n\"follower_index\" : \"follower-01\",\nStart replication\n1743\nAmazon OpenSearch Service\nDeveloper Guide\n\"syncing_details\" : {\n\"leader_checkpoint\" : -5,\n\"follower_checkpoint\" : -5,\n\"seq_no\" : 0\n}\n}\nThe leader and follower checkpoint values begin as negative integers and reﬂect the number of\nshards you have (-1 for one shard, -5 for ﬁve shards, and so on). The values increment to positive\nintegers with each change that you make. If the values are the same, it means that the indexes\nare fully synced. You can use these checkpoint values to measure replication latency across your\ndomains.\nTo further validate replication, add a document to the leader index:\nPUT leader-01/_doc/1\n{\n\"Doctor Sleep\":\"Stephen King\"\n}\nAnd conﬁrm that it shows up on the follower index:\nGET follower-01/_search\n{\n...\n\"max_score\" : 1.0,\n\"hits\" : [\n{\n\"_index\" : \"follower-01\",\n\"_type\" : \"_doc\",\n\"_id\" : \"1\",\n\"_score\" : 1.0,\n\"_source\" : {\n\"Doctor Sleep\" : \"Stephen King\"\n}\n}\n]\n}\n}\nConﬁrm replication\n1744\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1772,
+      "end": 1774
+    },
+    "content_stats": {
+      "char_count": 1252,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster replication for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

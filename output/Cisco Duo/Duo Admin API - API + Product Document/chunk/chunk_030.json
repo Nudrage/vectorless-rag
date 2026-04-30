@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_030",
+  "section_number": "1.6.6",
+  "header": "Restore Multiple Users from Trash",
+  "content": "Restore multiple users from the Trash at once. If one user fails to restore, the entire\noperation fails. You can restore a maximum of 100 users per request at a rate limit of 50\ncalls per minute. Restoring users from the Trash doesn't change the user's status.\nRestored users still have a \"disabled\" status and can't log in. Refer to Restoring Users\nfrom Trash for more information. Requires \"Grant resource - Write\" API permission.\n'is_enrolled': False,\n'last_directory_sync': None,\n'last_login': None,\n'lastname': None,\n'lockout_reason': \"null\",\n'notes': '',\n'phones': [],\n'realname': '',\n'status': 'active',\n'tokens': [],\n'u2ftokens': [],\n'user_id': 'DUVI0UT8SKB5P70WG42Z',\n'username': 'example_username_1',\n'webauthncredentials': []},\n{'alias1': None,\n'alias2': None,\n'alias3': None,\n'alias4': None,\n'aliases': {},\n'created': 1677770740,\n'email': '',\n'firstname': None,\n'groups': [],\n'is_enrolled': False,\n'last_directory_sync': None,\n'last_login': None,\n'lastname': None,\n'notes': '',\n'phones': [],\n'realname': '',\n'status': 'disabled',\n'tokens': [],\n'u2ftokens': [],\n'user_id': 'DU2X1VOO31O10F2ZNF43',\n'username': 'example_username_2',\n'webauthncredentials': []}]\n}\n}\nPOST  /admin/v1/users/bulk_restore",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 25,
+      "end": 25
+    },
+    "content_stats": {
+      "char_count": 1208,
+      "word_count": 150
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

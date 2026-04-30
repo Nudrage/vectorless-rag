@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_235",
+  "section_number": "2.6.21.2.2",
+  "header": "Buﬀer metrics",
+  "content": "The following metrics apply to the default Bounded blocking buﬀer that OpenSearch Ingestion\nautomatically conﬁgures for all pipelines.\nEach metric is preﬁxed by the sub-pipeline name and buﬀer name, in the format\n<sub_pipeline_name><buffer_name><metric_name>. For example, the full name of\nthe recordsWritten.count metric for a sub-pipeline named my-pipeline would be my-\npipeline.BlockingBuffer.recordsWritten.count.\nMetric suﬃx\nDescription\nrecordsWritten.count\nThe number of records written to a buﬀer.\nRelevant statistics: Sum\nDimension: PipelineName\nrecordsRead.count\nThe number of records read from a buﬀer.\nRelevant statistics: Sum\nDimension: PipelineName\nrecordsInFlight.value\nThe number of unchecked records read from a buﬀer.\nRelevant statistics: Average\nDimension: PipelineName\nrecordsInBuffer.value\nThe number of records currently in a buﬀer.\nRelevant statistics: Average\nMonitoring pipeline metrics\n334\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nDimension: PipelineName\nrecordsProcessed.count\nThe number of records read from a buﬀer and processed\nby a pipeline.\nRelevant statistics: Sum\nDimension: PipelineName\nrecordsWriteFailed.count\nThe number of records that the pipeline failed to write to\nthe sink.\nRelevant statistics: Sum\nDimension: PipelineName\nwriteTimeElapsed.count\nA count of data points recorded while writing to a buﬀer.\nRelevant statistics: Sum\nDimension: PipelineName\nwriteTimeElapsed.sum\nThe total time elapsed while writing to a buﬀer, in\nmilliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\nwriteTimeElapsed.max\nThe maximum time elapsed while writing to a buﬀer, in\nmilliseconds.\nRelevant statistics: Max\nDimension: PipelineName\nMonitoring pipeline metrics\n335\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\nwriteTimeouts.count\nThe count of write timeouts to a buﬀer.\nRelevant statistics: Sum\nDimension: PipelineName\nreadTimeElapsed.count\nA count of data points recorded while reading from a\nbuﬀer.\nRelevant statistics: Sum\nDimension: PipelineName\nreadTimeElapsed.sum\nThe total time elapsed while reading from a buﬀer, in\nmilliseconds.\nRelevant statistics: Sum\nDimension: PipelineName\nreadTimeElapsed.max\nThe maximum time elapsed while reading from a buﬀer,\nin milliseconds.\nRelevant statistics: Max\nDimension: PipelineName\ncheckpointTimeElap\nsed.count\nA count of data points recorded while checkpointing.\nRelevant statistics: Sum\nDimension: PipelineName\ncheckpointTimeElapsed.sum\nThe total time elapsed while checkpointing, in milliseco\nnds.\nRelevant statistics: Sum\nDimension: PipelineName\nMonitoring pipeline metrics\n336\nAmazon OpenSearch Service\nDeveloper Guide\nMetric suﬃx\nDescription\ncheckpointTimeElapsed.max\nThe maximum time elapsed while checkpointing, in\nmilliseconds.\nRelevant statistics: Max\nDimension: PipelineName",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 363,
+      "end": 366
+    },
+    "content_stats": {
+      "char_count": 2810,
+      "word_count": 345
+    },
+    "hierarchy": {
+      "parent": "Monitoring pipeline metrics",
+      "children": []
+    }
+  }
+}

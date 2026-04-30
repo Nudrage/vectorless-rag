@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1748",
+  "section_number": "155.1.1.241.4",
+  "header": "Use the token to access the Microsoft Defender XDR API",
+  "content": "XDR API\n1. Choose the API you want to use (incidents, or advanced hunting). For more information,\nsee Supported Microsoft Defender XDR APIs.\n2. In the HTTP-based request you're about to send, set the authorization header to \"Bearer\"\n<token> , Bearer being the authorization scheme, and token being your validated token.\n3. The token expires within one hour. You can send more than one request during this time\nwith the same token.\nThe following example shows how to send a request to get a list of incidents using C#.\nC#\nMicrosoft Defender XDR APIs overview\nAccess the Microsoft Defender XDR APIs\nCreate a 'Hello world' application\nCreate an app to access Microsoft Defender XDR APIs on behalf of a user\nCreate an app with multitenant partner access to Microsoft Defender XDR APIs\nLearn about API limits and licensing\nUnderstand error codes\nManage secrets in your server apps with Azure Key Vault\nOAuth 2.0 authorization for user sign in and API access\nvar httpClient = new HttpClient();\nvar request = new HttpRequestMessage(HttpMethod.Get,\n\"https://api.security.microsoft.com/api/incidents\");\nrequest.Headers.Authorization = new AuthenticationHeaderValue(\"Bearer\",\ntoken);\nvar response = httpClient.SendAsync(request).GetAwaiter().GetResult();",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1315,
+      "end": 1316
+    },
+    "content_stats": {
+      "char_count": 1244,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": "Create an app to access Microsoft Defender XDR without a user",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_004",
+  "section_number": "1.3",
+  "header": "First Steps",
+  "content": "Role required: Owner\nNote that only administrators with the Owner role can create or modify\nan Admin API application in the Duo Admin Panel.\nSign up for a Duo account if you aren't already a customer. Your free 30-day Duo\nAdvantage trial includes Admin API access.\n1.\nLog in to the Duo Admin Panel and navigate to Applications → Application\nCatalog.\n2.\nLocate the entry for Admin API in the catalog. Click the + Add button to create the\napplication, and get your integration key, secret key, and API hostname. You'll\nneed this information to complete your setup. See Protecting Applications for more\ninformation about protecting applications with Duo and additional application\noptions.\nTreat your secret key like a password\nThe security of your Duo application is tied to the security of your\nsecret key (skey). Secure it as you would any sensitive credential.\nDon't share it with unauthorized individuals or email it to anyone\nunder any circumstances!\n3.\nDetermine the permissions you want to grant to this Admin API application. Refer\nto the API endpoint descriptions throughout this document for information about\nrequired permissions for operations.\nPermission\nDetails\nGrant\nadministrators -\nRead\nThe Admin API application can read information about\nDuo administrators and administrative units.\nGrant\nadministrators -\nWrite\nThe Admin API application can read, add, modify, and\ndelete information about Duo administrators and\nadministrative units.\nGrant read\ninformation\nThe Admin API application can read information about\nthe Duo customer account's utilization.\nGrant\napplications\nThe Admin API application can add, modify, and delete\napplications (referred to as \"integrations\" in the API),\nincluding permissions on itself or other Admin API\napplications.\nGrant settings\nThe Admin API application can read and change global\nDuo account settings.\nGrant read log\nThe Admin API application can read authentication,\noffline access, telephony, and administrator action log\ninformation.\nGrant resource -\nRead\nThe Admin API application can read information about\nresource objects such as end users, policies, and\ndevices.\nGrant resource -\nWrite\nThe Admin API application can create, update, and\ndelete resource objects such as end users, policies, and\ndevices.\nGrant set Admin\nAPI permissions\nThe Admin API application can add or remove the\npermissions listed above via API for other Admin API\napplications. When this permission is not granted,\npermissions for an Admin API application must be set\nfrom the Duo Admin Panel.\n4.\nOptionally specify which IP addresses or ranges are allowed to use this Admin API\napplication in Networks for API Access. If you do not specify any IP addresses or\nranges, this Admin API application may be accessed from any network.\nThe Admin API performs the IP check after verifying the authentication signature in\na request. If you restrict the allowed networks for API access and see logged\nevents for blocked Admin API requests from unrecognized IP addresses, this may\nindicate compromise of your Admin API application's secret key.\n5.\nConnectivity Requirements\nThis application communicates with Duo's service on SSL TCP port 443.\nFirewall configurations that restrict outbound access to Duo's service\nwith rules using destination IP addresses or IP address ranges aren't\nrecommended, since these may change over time to maintain our\nservice's high availability. If your organization requires IP-based rules,\nplease review Duo Knowledge Base article 1337.\nEffective June 30, 2023, Duo no longer supports TLS 1.0 or 1.1\nconnections or insecure TLS/SSL cipher suites. See Duo Knowledge Base\narticle 7546 for additional guidance.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 2,
+      "end": 4
+    },
+    "content_stats": {
+      "char_count": 3659,
+      "word_count": 566
+    },
+    "hierarchy": {
+      "parent": "Duo Admin API",
+      "children": []
+    }
+  }
+}

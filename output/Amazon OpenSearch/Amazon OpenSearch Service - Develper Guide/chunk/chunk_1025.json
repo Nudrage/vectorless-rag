@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1025",
+  "section_number": "2.15.10",
+  "header": "Point in time search in Amazon OpenSearch Service",
+  "content": "Point in Time (PIT) is a type of search that lets you run diﬀerent queries against a dataset that's\nﬁxed in time. Typically, when you run the same query on the same index at diﬀerent points in time,\nyou receive diﬀerent results because documents are constantly indexed, updated, and deleted.\nWith PIT, you can query against a constant state of your dataset.\nThe main use of PIT search is to couple it with search_after functionality. This is the preferred\npagination method in OpenSearch, especially for deep pagination, because it operates on a dataset\nthat is frozen in time, it is not bound to a query, and it supports consistent pagination going\nforward and backward. You can use PIT with a domain running OpenSearch version 2.5.\nNote\nThis topic provides an overview of PIT and some things to consider when using it on a\nmanaged Amazon OpenSearch Service domain rather than a self-managed OpenSearch\ncluster. For full documentation of PIT, including a comprehensive API reference, see Point in\nTime in the open source OpenSearch documentation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1586,
+      "end": 1586
+    },
+    "content_stats": {
+      "char_count": 1047,
+      "word_count": 174
+    },
+    "hierarchy": {
+      "parent": "Searching data in Amazon OpenSearch Service",
+      "children": [
+        "Considerations",
+        "Create a PIT",
+        "Point in time permissions",
+        "PIT settings",
+        "Cross-cluster search",
+        "UltraWarm"
+      ]
+    }
+  }
+}

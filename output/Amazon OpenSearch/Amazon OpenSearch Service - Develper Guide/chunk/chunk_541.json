@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_541",
+  "section_number": "2.8.14.1",
+  "header": "Types of changes",
+  "content": "Auto-Tune has two broad categories of changes:\n• Nondisruptive changes that it applies as the cluster runs.\n• Changes that require a blue/green deployment, which it applies during the domain's oﬀ-peak\nwindow.\nBased on your domain's performance metrics, Auto-Tune can suggest adjustments to the following\nsettings:\nChange\ntype\nCategory\nDescription\nJVM heap\nsize\nBlue/green\nBy default, OpenSearch Service uses 50% of an instance's RAM for\nthe JVM heap, up to a heap size of 32 GiB.\nIncreasing this percentage gives OpenSearch more memory, but\nleaves less for the operating system and other processes. Larger\nvalues can decrease the number of garbage collection pauses, but\nincrease the length of those pauses.\nJVM young\ngeneration\nsettings\nBlue/green\nJVM \"young generation\" settings aﬀect the frequency of minor\ngarbage collections. More frequent minor collections can decrease\nthe number of major collections and pauses.\nQueue size\nNondisrup\ntive\nBy default, the search queue size is 1000 and the write queue size\nis 10000. Auto-Tune automatically scales the search and write\nqueues if additional heap is available to handle requests.\nCache size\nNondisrup\ntive\nThe ﬁeld cache monitors on-heap data structures, so it's important\nto monitor the cache's use. Auto-Tune scales the ﬁeld data cache\nsize to avoid out of memory and circuit breaker issues.\nThe shard request cache is managed at the node level and has a\ndefault maximum size of 1% of the heap. Auto-Tune scales the\nTypes of changes\n718\nAmazon OpenSearch Service\nDeveloper Guide\nChange\ntype\nCategory\nDescription\nshard request cache size to accept more search and index requests\nthan what the conﬁgured cluster can handle.\nRequest\nsize\nNondisrup\ntive\nBy default, when the aggregated size of in-ﬂight requests\nsurpasses 10% of total JVM (2% for t2 instance types and 1% for\nt3.small), OpenSearch throttles all new _search and _bulk\nrequests until the existing requests complete.\nAuto-Tune automatically tunes this threshold, typically between\n5-15%, based on the amount of JVM that is currently occupied on\nthe system. For example, if JVM memory pressure is high, Auto-\nTune might reduce the threshold to 5%, at which point you might\nsee more rejections until the cluster stabilizes and the threshold\nincreases.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 747,
+      "end": 748
+    },
+    "content_stats": {
+      "char_count": 2265,
+      "word_count": 357
+    },
+    "hierarchy": {
+      "parent": "Auto-Tune for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_025",
+  "section_number": "2.5.3.1",
+  "header": "Search documents from the command line",
+  "content": "Run the following command to search the movies domain for the word mars:\ncurl -XGET -u 'master-user:master-user-password' 'domain-endpoint/movies/_search?\nq=mars&pretty=true'\nIf you used the bulk data on the previous page, try searching for rebel instead.\nYou should see a response similar to the following:\n{\n\"took\" : 5,\n\"timed_out\" : false,\n\"_shards\" : {\n\"total\" : 5,\n\"successful\" : 5,\n\"skipped\" : 0,\n\"failed\" : 0\n},\n\"hits\" : {\n\"total\" : {\n\"value\" : 1,\n\"relation\" : \"eq\"\n},\n\"max_score\" : 0.2876821,\nSearch documents\n19\nAmazon OpenSearch Service\nDeveloper Guide\n\"hits\" : [\n{\n\"_index\" : \"movies\",\n\"_type\" : \"_doc\",\n\"_id\" : \"1\",\n\"_score\" : 0.2876821,\n\"_source\" : {\n\"director\" : \"Burton, Tim\",\n\"genre\" : [\n\"Comedy\",\n\"Sci-Fi\"\n],\n\"year\" : 1996,\n\"actor\" : [\n\"Jack Nicholson\",\n\"Pierce Brosnan\",\n\"Sarah Jessica Parker\"\n],\n\"title\" : \"Mars Attacks!\"\n}\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 48,
+      "end": 49
+    },
+    "content_stats": {
+      "char_count": 850,
+      "word_count": 142
+    },
+    "hierarchy": {
+      "parent": "Search documents in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

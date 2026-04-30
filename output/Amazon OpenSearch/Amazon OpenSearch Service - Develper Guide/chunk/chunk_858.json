@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_858",
+  "section_number": "2.12.9.3.2",
+  "header": "Step 2: Conﬁgure your identity provider",
+  "content": "Perform the following steps depending on when you're conﬁguring SAML authentication.\nIf you're creating a new domain\nIf you're in the process of creating a new domain, OpenSearch Service can't yet generate a service\nprovider entity ID or SSO URLs. Your identity provider requires these values in order to properly\nenable SAML authentication, but they can only be generated after the domain is created. To work\naround this interdependency during domain creation, you can provide temporary values into your\nIdP conﬁguration to generate the required metadata and then update them once your domain is\nactive.\nConﬁguring SP- or IdP-initiated authentication\n1380\nAmazon OpenSearch Service\nDeveloper Guide\nIf you're using a custom endpoint, you can infer what the URLs will be. For example, if your custom\nendpoint is www.custom-endpoint.com, the service provider entity ID will be www.custom-\nendpoint.com, the IdP-initiated SSO URL will be www.custom-endpoint.com/_dashboards/\n_opendistro/_security/saml/acs/idpinitiated, and the SP-initiated SSO URL will be\nwww.custom-endpoint.com/_dashboards/_opendistro/_security/saml/acs. You\ncan use the values to conﬁgure your identity provider before the domain is created. See the next\nsection for examples.\nNote\nYou can not sign in with a dual stack endpoint because the FQDN of a HTTP request is\ndiﬀerent than the FQDN of a SAML request. An OpenSearch administrator will need to set\nup a custom endpoint and set the CNAME value to dual stack endpoint if you would like to\nsign in using a dual stack endpoint.\nIf you're not using a custom endpoint, you can enter temporary values into your IdP to generate the\nrequired metadata, and then update them later after the domain is active.\nFor example, within Okta, you can enter https://temp-endpoint.amazonaws.com into the\nSingle sign on URL and Audience URI (SP Entity ID) ﬁelds, which enables you to generate the\nmetadata. Then, after the domain is active, you can retrieve the correct values from OpenSearch\nService and update them in Okta. For instructions, see the section called “Step 6: Update your IdP\nURLs”.\nIf you're editing an existing domain\nIf you're enabling SAML authentication on an existing domain, copy the service provider entity\nID and one of the SSO URLs. For guidance on which URL to use, see the section called “SAML\nconﬁguration overview”.\nConﬁguring SP- or IdP-initiated authentication\n1381\nAmazon OpenSearch Service\nDeveloper Guide\nUse the values to conﬁgure your identity provider. This is the most complex part of the process,\nand unfortunately, terminology and steps vary wildly by provider. Consult your provider's\ndocumentation.\nIn Okta, for example, you create a SAML 2.0 web application. For Single sign on URL, specify the\nSSO URL. For Audience URI (SP Entity ID), specify the SP entity ID.\nRather than users and backend roles, Okta has users and groups. For Group Attribute Statements,\nwe recommend that you add role to the Name ﬁeld and the regular expression .+ to the Filter\nﬁeld. This statement tells the Okta identity provider to include all user groups under the role ﬁeld\nof the SAML assertion after a user authenticates.\nIn IAM Identity Center, you specify the SP entity ID as the Application SAML\naudience. You also need to specify the following attribute mappings: Subject=\n${user:subject}:format=unspecified and Role=${user:groups}:format=uri.\nIn Auth0, you create a regular web application and enable the SAML 2.0 add-on. In Keycloak, you\ncreate a client.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1409,
+      "end": 1411
+    },
+    "content_stats": {
+      "char_count": 3486,
+      "word_count": 542
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring SP- or IdP-initiated authentication",
+      "children": []
+    }
+  }
+}

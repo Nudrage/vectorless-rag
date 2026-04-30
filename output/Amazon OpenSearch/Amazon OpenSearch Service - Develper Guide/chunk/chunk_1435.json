@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1435",
+  "section_number": "2.26.4.1.5",
+  "header": "Changes to existing APIs",
+  "content": "To support large clusters, we have added support in the _cluster/stats API to add additional\nmetric ﬁlters to support retrieving only relevant stats responses, for example _cluster/stats/\nSupported operations\n1910\nAmazon OpenSearch Service\nDeveloper Guide\n<metric>/nodes/<node-filters> and _cluster/stats/<metric>/<index_metric>/\nnodes/<node-filters>. For details, see _cluster/stats.\nWe have added support in _cat/shards API for task cancellation by specifying a\ncancel_after_time_interval request parameter. For details, see _cat/shards.\nLimiting the response size for _cat API\nTo support large clusters with total instance count of more than 200 across data and warm nodes,\nwe have a 10K limit on the number of indexes returned by the _cat/segments API. If the\nnumber of indexes in the response exceeds this limit, the API returns a 429 error. To avoid this, you\ncan specify an index pattern ﬁlter in your query, such as _cat/segments/<index-pattern>.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1939,
+      "end": 1940
+    },
+    "content_stats": {
+      "char_count": 954,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "Notable API diﬀerences",
+      "children": []
+    }
+  }
+}

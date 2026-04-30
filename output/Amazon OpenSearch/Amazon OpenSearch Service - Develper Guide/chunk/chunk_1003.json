@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1003",
+  "section_number": "2.15.8.1.5",
+  "header": "Step 5: Create a training dataset",
+  "content": "Note\nYou must perform this step outside of OpenSearch Service.\nThe next step is to combine the judgment list and feature values to create a training dataset. If\nyour original judgment list looks like this:\n4 qid:1 # 7555 Rambo\n3 qid:1 # 1370 Rambo III\n3 qid:1 # 1369 Rambo: First Blood Part II\n3 qid:1 # 1368 First Blood\nConvert it into the ﬁnal training dataset, which looks like this:\n4 qid:1 1:12.318474 2:10.573917 # 7555 rambo\n3 qid:1 1:10.357875 2:11.950391 # 1370 rambo\n3 qid:1 1:7.010513 2:11.220095 # 1369 rambo\n3 qid:1 1:0.0 2:11.220095 # 1368 rambo\nYou can perform this step manually or write a program to automate it.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1561,
+      "end": 1561
+    },
+    "content_stats": {
+      "char_count": 629,
+      "word_count": 113
+    },
+    "hierarchy": {
+      "parent": "Getting started with Learning to Rank",
+      "children": []
+    }
+  }
+}

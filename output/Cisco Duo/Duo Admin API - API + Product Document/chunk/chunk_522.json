@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_522",
+  "section_number": "1.17.28",
+  "header": "Risk-Based Factor Selection",
+  "content": "Section Name: risk_based_factor_selection\nCorresponds to: Risk-Based Factor Selection\nThis section is available in the Premier and Advantage editions.\nTo enable these policy settings, applications must have the Universal Prompt activated\nor use the named \"Duo Auth API\" application. Learn more about requirements for these\npolicy settings.\nKey\nValue\nlimit_to_risk_based_auth_methods\nIs true  (default) if the user is limited\nto risk-based authentication methods\nwhen Duo detects a higher-risk\nauthentication. Otherwise false .\nrbfs_low_risk_ips\nComma separated list of public IP\naddresses where Duo will suppress\nunrealistic travel and country code\nmismatch detectors when an\nauthentication is from one of these IP\naddresses. May contain individual IPs,\nIP ranges, and IP ranges in CIDR\nnotation.\nExample:\n[192.0.2.8,198.51.100.0-\n198.51.100.20,203.0.113.0/24]\nrisk_based_verified_push_digits\nThe number of digits a verified push\nrequires the user logging in to enter. An\ninteger between 3  and 6 , inclusive.\nDefaults to 6 .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 226,
+      "end": 226
+    },
+    "content_stats": {
+      "char_count": 1025,
+      "word_count": 141
+    },
+    "hierarchy": {
+      "parent": "Policies",
+      "children": []
+    }
+  }
+}

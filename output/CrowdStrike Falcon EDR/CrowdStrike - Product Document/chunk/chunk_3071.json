@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3071",
+  "section_number": "1.6.14.2.1",
+  "header": "Sample event",
+  "content": "Support [https://supportportal.crowdstrike.com/]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1128/1226\n{\n\"metadata\": {\n\"customerIDString\": \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\",\n\"offset\": 54712611,\n\"eventType\": \"CSPMSearchStreamingEvent\",\n\"eventCreationTime\": 1663009688832,\n\"version\": \"1.0\"\n},\n\"event\": {\n\"AccountId\": \"XXXXXXXXXXXX\",\n\"Region\": \"us-west-2\",\n\"ResourceId\": \"i-0108fce80eXXXXXXX\",\n\"ResourceIdType\": \"Instance Id\",\n\"ResourceName\": \"\",\n\"ResourceCreateTime\": 0,\n\"PolicyStatement\": \"EC2 NACL configured for global ingress\",\n\"PolicyId\": 26,\n\"Severity\": 1,\n\"SeverityName\": \"High\",\n\"CloudPlatform\": \"AWS\",\n\"CloudService\": \"EC2\",\n\"Disposition\": \"Failed\",\n\"ResourceUrl\": \"https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-\n2#InstanceDetails:instanceId=i-0108fce80eXXXXXXX\",\n\"Finding\": \"Instance ID: i-0108fce80e5ab5129|VPC ID: vpc-0e886040c27d9f526|Network ACL ID: acl-\n005e6bb98e75ac17e|Rule Number: 100|CIDR Block: 0.0.0.0/0|Protocol: All\",\n\"ResourceAttributes\": \"{\\\"ACL ID\\\": \\\"acl-005e6bb98e75ac17e\\\", \\\"VPC ID\\\": \\\"vpc-0e886040c27d9f526\\\",\n\\\"Platform\\\": \\\"Linux\\\", \\\"Instance ID\\\": \\\"i-0108fce80eXXXXXXX\\\", \\\"Launch Time\\\": \\\"2022-09-12\n17:11:06+00\\\", \\\"Instance State\\\": \\\"running\\\"}\",\n\"Tags\": [\n{\n\"Key\": \"cstag-business\",\n\"ValueString\": \"Sales\"\n},\n{\n\"Key\": \"cstag-accounting\",\n\"ValueString\": \"dev\"\n},\n{\n\"Key\": \"cstag-department\",\n\"ValueString\": \"Sales - 310000\"\n},\n{\n\"Key\": \"Slackbot Env UUID\",\n\"ValueString\": \"C68EC25E-32BD-11ED-AE4B-0EBCA3237C75\"\n},\n{\n\"Key\": \"Name\",\n\"ValueString\": \"CS-SE-Demo-KALI-ROBERT.WILSON\"\n},\n{\n\"Key\": \"Slack_User\",\n\"ValueString\": \"bob.smith\"\n},\n{\n\"Key\": \"cstag-owner\",\n\"ValueString\": \"jane.doe\"\n}\n],\n\"ReportUrl\": \"https://falcon.crowdstrike.com/cloud-security/cspm/assessment-drilldown?event-\ntype=cspm_policy_26\\u0026policy_id=26\\u0026scan_id=1a8adc1c36aa7d83e90e5c06\\u0026service=EC2\",\n\"Timestamp\": 1663009688832\n}\n}\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1129/1226",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1128,
+      "end": 1129
+    },
+    "content_stats": {
+      "char_count": 2302,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "CSPMSearchStreamingEvent",
+      "children": []
+    }
+  }
+}

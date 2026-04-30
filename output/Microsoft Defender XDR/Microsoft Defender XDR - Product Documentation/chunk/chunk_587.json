@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_587",
+  "section_number": "155.1.1.52.1.2",
+  "header": "Microsoft Purview Insider Risk Management roles",
+  "content": "For more information on these role groups, see Enable permissions for insider risk\nmanagement.\nCustomers integrating insider risk management alerts with other security information\nand events management (SIEM) tools using the Microsoft Graph security API must have\nthe following permissions to successfully access the relevant Microsoft Defender data\nthrough APIs:\nApp permissions\nIncidents\nAlerts\nBehaviors &\nevents\nAdvanced\nhunting\nSecurityIncident.Read.All\nRead\nRead\nRead\nSecurityIncident.ReadWrite.All\nRead/Write\nRead/Write\nRead\nSecurityIAlert.Read.All\nRead\nRead\nSecurityAlert.ReadWrite.All\nRead/Write\nRead\nSecurityEvents.Read.All\nRead\nSecurityEvents.ReadWrite.All\nRead\nThreatHunting.Read.All\nRead\nMore information about integrating data using the Microsoft Graph security API in\nIntegrate insider risk management data with Microsoft Graph security API.\nInsider risk management alerts related to a user are correlated to a single incident to\nensure a holistic approach to incident response. This correlation allows SOC analysts to\nhave a unified view of all alerts about a user coming from Microsoft Purview Insider Risk\nManagement and various Defender products. Unifying all alerts also allows SOC analysts\nto view the details of devices involved in the alerts.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 372,
+      "end": 373
+    },
+    "content_stats": {
+      "char_count": 1265,
+      "word_count": 167
+    },
+    "hierarchy": {
+      "parent": "Permissions and roles",
+      "children": []
+    }
+  }
+}

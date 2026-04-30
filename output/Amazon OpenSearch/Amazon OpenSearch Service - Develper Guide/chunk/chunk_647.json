@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_647",
+  "section_number": "2.10.1.17",
+  "header": "SQL metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for SQL support.\nMetric\nDescription\nSQLFailed\nRequestCo\nuntByCusErr\nThe number of requests to the _sql API that failed due to a client\nissue. For example, a request might return HTTP status code 400 due\nto an IndexNotFoundException\n.\nRelevant statistics: Sum\nSQLFailed\nRequestCo\nuntBySysErr\nThe number of requests to the _sql API that failed due to a server\nproblem or feature limitation. For example, a request might return\nHTTP status code 503 due to a VerificationException\n.\nRelevant statistics: Sum\nSQLRequestCount\nThe number of requests to the _sql API.\nRelevant statistics: Sum\nSQLDefaul\ntCursorRe\nquestCount\nSimilar to SQLRequestCount , but only counts pagination requests.\nRelevant statistics: Sum\nSQLUnhealthy\nA value of 1 indicates that, in response to certain requests, the SQL\nplugin is returning 5xx response codes or passing invalid query DSL\nSQL metrics\n1205\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nto OpenSearch. Other requests should continue to succeed. A value\nof 0 indicates no recent failures. If you see a sustained value of 1,\ntroubleshoot the requests your clients are making to the plugin.\nRelevant statistics: Maximum",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1234,
+      "end": 1235
+    },
+    "content_stats": {
+      "char_count": 1222,
+      "word_count": 186
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

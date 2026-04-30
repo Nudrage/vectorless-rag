@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_176",
+  "section_number": "2.6.16.15",
+  "header": "Using an OpenSearch Ingestion pipeline with OpenTelemetry Collector",
+  "content": "This sample OpenTelemetry conﬁguration ﬁle exports trace data from the OpenTelemetry\nCollector and sends it to an OpenSearch Ingestion pipeline. For more information about ingesting\ntrace data, see Trace Analytics in the Data Prepper documentation.\nNote the following:\n• The endpoint value must include your pipeline endpoint. For example, https://pipeline-\nendpoint.us-east-1osis.amazonaws.com.\n• The service value must be osis.\n• The compression option for the OTLP/HTTP Exporter must match the compression option on\nthe pipeline's OpenTelemetry source.\nextensions:\nsigv4auth:\nregion: \"region\"\nservice: \"osis\"\nreceivers:\njaeger:\nprotocols:\ngrpc:\nexporters:\notlphttp:\ntraces_endpoint: \"https://pipeline-endpoint.us-east-1.osis.amazonaws.com/v1/traces\"\nauth:\nauthenticator: sigv4auth\nOpenTelemetry Collector\n261\nAmazon OpenSearch Service\nDeveloper Guide\ncompression: none\nservice:\nextensions: [sigv4auth]\npipelines:\ntraces:\nreceivers: [jaeger]\nexporters: [otlphttp]\nYou can then conﬁgure an OpenSearch Ingestion pipeline like the following, which speciﬁes the\nOTel trace plugin as the source:\nversion: \"2\"\notel-trace-pipeline:\nsource:\notel_trace_source:\npath: \"/v1/traces\"\nprocessor:\n- trace_peer_forwarder:\nsink:\n- pipeline:\nname: \"trace-pipeline\"\n- pipeline:\nname: \"service-map-pipeline\"\ntrace-pipeline:\nsource:\npipeline:\nname: \"otel-trace-pipeline\"\nprocessor:\n- otel_traces:\nsink:\n- opensearch:\nhosts: [\"https://search-domain-endpoint.us-east-1.es.amazonaws.com\"]\nindex_type: trace-analytics-raw\naws:\nregion: \"region\"\nservice-map-pipeline:\nsource:\npipeline:\nname: \"otel-trace-pipeline\"\nprocessor:\n- service_map:\nsink:\nOpenTelemetry Collector\n262\nAmazon OpenSearch Service\nDeveloper Guide\n- opensearch:\nhosts: [\"https://search-domain-endpoint.us-east-1.es.amazonaws.com\"]\nindex_type: trace-analytics-service-map\naws:\nregion: \"region\"\nFor another example pipeline, see the preconﬁgured trace analytics blueprint. For more\ninformation, see the section called “Working with blueprints”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 290,
+      "end": 292
+    },
+    "content_stats": {
+      "char_count": 1985,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "Integrating Amazon OpenSearch Ingestion pipelines with other services and applications",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2084",
+  "section_number": "1.5.864.1",
+  "header": "Fields: Android",
+  "content": "Field\nDescription\nAndroidManagementMode\nThe management mode of the device according to Android Enterprise definitions.\nValues:\nMANAGEMENT_MODE_UNSPECIFIED (0)\nDEVICE_OWNER (1)\nPROFILE_OWNER (2)\nUNMANAGED (3)\nAndroidDeviceOwnership\nOwnership of the managed device according to Android Enterprise definitions.\nValues:\nOWNERSHIP_UNSPECIFIED (0)\nCOMPANY_OWNED (1)\nPERSONALLY_OWNED (2)\nAndroidUpdateStatus\nIndication of whether an update is available for the device and, if so, the type of update.\nFor Android versions 14 and earlier, this value is always UPDATE_STATUS_UNKNOWN (0).\nValues:\nUPDATE_STATUS_UNKNOWN (0)\nUP_TO_DATE (1)\nUNKNOWN_UPDATE_AVAILABLE (2)\nSECURITY_UPDATE_AVAILABLE (3)\nOS_UPDATE_AVAILABLE (4)\nAndroidManagementAppPackageName\nThe package name of the app that manages the device. This value is empty if no app is managing the device.\nFor MDMs that have migrated to AMAPI from Custom DPC, this value is com.google.android.apps.work.clouddpc.\nAndroidSystemSecurityPatchLevel\nThe security patch level of the system component. This value is empty if its value could not be determined.\nAndroidVendorSecurityPatchLevel\nThe security patch level of the vendor component. This value might be empty.\nAndroidKernelVersion\nThe kernel version on the device. This value might be empty.\nAndroidSystemModulesSecurityPatchLevel The security patch level of the system modules component. This value might be empty.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 713,
+      "end": 713
+    },
+    "content_stats": {
+      "char_count": 1421,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": "AndroidEnterpriseInfo",
+      "children": []
+    }
+  }
+}

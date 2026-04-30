@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_926",
+  "section_number": "2.14.1",
+  "header": "Naming restrictions for indexes",
+  "content": "OpenSearch Service indexes have the following naming restrictions:\n• All letters must be lowercase.\n• Index names cannot begin with _ or -.\n• Index names can't contain spaces, commas, :, \", *, +, /, \\, |, ?, #, >, or <.\nDon't include sensitive information in index, type, or document ID names. OpenSearch Service uses\nthese names in its Uniform Resource Identiﬁers (URIs). Servers and applications often log HTTP\nrequests, which can lead to unnecessary data exposure if URIs contain sensitive information:\n2018-10-03T23:39:43 198.51.100.14 200 \"GET https://opensearch-domain/dr-jane-doe/flu-\npatients-2018/202-555-0100/ HTTP/1.1\"\nEven if you don't have permissions to view the associated JSON document, you could infer from\nthis fake log line that one of Dr. Doe's patients with a phone number of 202-555-0100 had the ﬂu\nin 2018.\nIf OpenSearch Service detects a real or percieved IP address in an index name (for example, my-\nindex-12.34.56.78.91), it masks the IP address. A call to _cat/indices yields the following\nresponse:\nNaming restrictions for indexes\n1443\nAmazon OpenSearch Service\nDeveloper Guide\ngreen open my-index-x.x.x.x.91    soY19tBERoKo71WcEScidw 5 1 0 0   2kb  1kb\nTo prevent unnecessary confusion, avoid including IP addresses in index names.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1472,
+      "end": 1473
+    },
+    "content_stats": {
+      "char_count": 1261,
+      "word_count": 189
+    },
+    "hierarchy": {
+      "parent": "Indexing data in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

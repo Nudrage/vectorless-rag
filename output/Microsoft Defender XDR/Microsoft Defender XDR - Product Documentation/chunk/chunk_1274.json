@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1274",
+  "section_number": "155.1.1.175.3.1",
+  "header": "Microsoft Sentinel",
+  "content": "７ Note\nThe status of incidents investigated by Defender Experts in Microsoft Defender XDR\ntypically transitions from Active to In progress to Awaiting Customer Action to Resolved,\nwhile in Sentinel, it follows the New to Active to Resolved path. The Microsoft Defender\nXDR Status Awaiting Customer Action doesn't have an equivalent field in Sentinel;\ninstead, it's displayed as a tag in an incident in Sentinel.\n2. An incident that our experts have confirmed as a True Positive has a managed response\nposted in Microsoft Defender XDR, and a Tag Awaiting Customer Action and the Owner is\nlisted as Customer. You need to act on the incident based on using the provided managed\nresponse in the Defender portal.\n3. An incident that our experts have confirmed as a True Positive, with all remediation\nactions taken by Defender Experts, has the incident's Status updated to Resolved and the\nOwner is listed as Customer. You can review the actions completed on the incident using\nthe provided managed response in the Defender portal.\n4. Once our experts have concluded their investigation and closed an incident as False\nPositive or Informational, Expected Activity, the incident's Status is updated to Resolved,\nthe Owner is updated to Unassigned, and a Reason for closing is provided.\nYou could obtain visibility into incidents in your SIEM or ITSM application by using the\nMicrosoft Defender XDR API or connectors in Sentinel.\nAfter configuring a connector, the updates by Defender Experts to an incident's Status,\nAssigned to, Classification, and Determination fields in Microsoft Defender XDR can be\nsynchronized with the third-party SIEM or ITSM applications, depending on how the field\nmapping has been implemented. To illustrate, you can take a look at the connector available\nfrom Sentinel to ServiceNow\n.\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 961,
+      "end": 962
+    },
+    "content_stats": {
+      "char_count": 1809,
+      "word_count": 290
+    },
+    "hierarchy": {
+      "parent": "Get visibility to Defender Experts investigations in your SIEM or ITSM application",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_788",
+  "section_number": "155.1.1.76.1.4",
+  "header": "Search for specific command strings",
+  "content": "Afterwards, the query looks for strings in command lines that are typically used to download\nfiles using PowerShell.\nKusto\nNow that your query clearly identifies the data you want to locate, you can define what the\nresults look like. project  returns specific columns, and top  limits the number of results. These\noperators help ensure the results are well-formatted and reasonably large and easy to process.\nKusto\nSelect Run query to see the results.\nYou've just run your first query and have a general idea of its components. It's time to\nbacktrack slightly and learn some basics. The Kusto query language used by advanced hunting\nsupports a range of operators, including the following common ones.\n// Suspicious commands\n| where ProcessCommandLine has_any(\"WebClient\",\n\"DownloadFile\",\n\"DownloadData\",\n\"DownloadString\",\n\"WebRequest\",\n\"Shellcode\",\n\"http\",\n\"https\")",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 522,
+      "end": 523
+    },
+    "content_stats": {
+      "char_count": 865,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Try your first query",
+      "children": []
+    }
+  }
+}

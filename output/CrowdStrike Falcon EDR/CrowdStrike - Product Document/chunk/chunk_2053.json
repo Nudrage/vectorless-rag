@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2053",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nServiceAccessActivityId\nRpcOpActivityId\nSourceAccountType\nThe type of the Active Directory bound with this activity.\nValues:\nUSER (0)\nCOMPUTER (1)\nGROUP (2)\nCLOUD_SERVICE (3)\nSourceAccountSamAccountName\nThe sAMAccountName value of the account bound with this activity.\nOnly set if available as part of the raw, sniffed data, and usually set alongside the SourceAccountDomain field.\nFor stronger identification, the SourceAccountObjectSid or SourceAccountObjectGuid fields are better foreign keys -\nalthough they may not be available in some cases, such as authentication failures.\nSourceAccountDomain\nThe domain that the account bound with this activity is a member of.\nSourceAccountUserPrincipal\nThe UserPrincipalName value of the account bound with this activity.\nOnly set if available as part of the raw, sniffed data.\nFor stronger identification, the SourceAccountObjectSid or SourceAccountObjectGuid fields are better foreign keys -\nalthough they may not be available in some cases, such as authentication failures.\nSourceAccountObjectSid\nThe objectSid value of the account bound with this activity.\nSourceAccountObjectGuid\nThe objectGUID value of the account bound with this activity.\nSourceEndpointAddressIP4\nThe IP address of the endpoint from which this activity originates.\nMutually exclusive with the SourceEndpointAddressIP6 field.\nSourceEndpointAddressIP6\nThe IP address of the endpoint from which this activity originates.\nMutually exclusive with the SourceEndpointAddressIP4 field.\nSourceEndpointNetworkType\nThe network type to which the SourceEndpointAddressIP4 or SourceEndpointAddressIP6 value belongs, depending\non customer configuration.\nValues:\nINTERNAL (0x1)\nVPN (0x2)\nWIRELESS (0x4)\nNAT (0x8)\nPUBLIC (0x10)\nUNKNOWN (0x20)\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n689/1226\nField\nDescription\nSourceEndpointNetworkTag\nThe network tag to which the SourceEndpointAddressIP4 or SourceEndpointAddressIP6 value belongs, depending\non customer configuration.\nSourceEndpointHostName\nThe hostname of the source endpoint. Might originate either directly from the raw event data or from one of the host\nassociation resolution methods.\nWhen available, either the SourceEndpointAccountObjectSid or SourceEndpointAccountObjectGuid fields are\nsuperior for use as foreign keys.\nSourceEndpointAccountObjectSid\nThe objectSid value of the source endpoint account.\nSourceEndpointAccountObjectGuid\nThe objectGUID value of the source endpoint account.\nTargetDomainControllerObjectSid\nThe objectSid of the domain controller (DC) account that handled the request.\nTargetDomainControllerObjectGuid\nThe objectGUID of the domain controller (DC) account that handled the request.\nKerberosRequestTicketHashSample\nA hashed version of the Kerberos ticket (either TGT or TGS) associated with the first activity in the activity aggregation\nwindow.\nUse this field to correlate ticket-generation activity with successful ticket usage.\nNote: As tickets cannot be part of the aggregation-key tuple, correlating activities this way is inherently\nopportunistic and isn't guaranteed to succeed.\nActivityId\nA globally-unique identifier for the activity event.\nTargetAccountObjectGuid\nThe objectGUID value of the Active Directory account providing the service, as identified by the\nTargetServiceAccessIdentifier field.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 689,
+      "end": 690
+    },
+    "content_stats": {
+      "char_count": 3564,
+      "word_count": 443
+    },
+    "hierarchy": {
+      "parent": "ActiveDirectoryIncomingPsExecExecution2",
+      "children": []
+    }
+  }
+}

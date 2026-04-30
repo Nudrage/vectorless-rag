@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_646",
+  "section_number": "1.21.11",
+  "header": "Create Administrator Activation Link",
+  "content": "Create a link to the activation form for a new administrator with email address email .\nThe administrator will not actually be created until the activation form is completed with\nfurther information (like the administrator's name and phone number). Requires \"Grant\nadministrators - Write\" API permission.\n\n\n{\n\"stat\": \"OK\",\n\"response\": {\n\"activation_url\": \"https://admin-abcd1234.duosecurity.com/admi\n\"admin_id\": \"DEVKWVBJA7LO95OIBIS3\",\n\"admin_units\": [],\n\"created\": 1648143942,\n\"email\": \"rscott@example.com\",\n\"hardtoken\": null,\n\"last_directory_sync\": null,\n\"last_login\": null,\n\"name\": \"Rachael Scott\",\n\"password_change_required\": false,\n\"phone\": null,\n\"phone_details\": [],\n\"restricted_by_admin_units\": false,\n\"role\": \"Owner\",\n\"status\": \"Pending Activation\"\n}\n}\nPOST  /admin/v1/admins/activations",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 269,
+      "end": 269
+    },
+    "content_stats": {
+      "char_count": 797,
+      "word_count": 89
+    },
+    "hierarchy": {
+      "parent": "Administrators",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_883",
+  "section_number": "2.12.11.1.2",
+  "header": "Conﬁguring Amazon Cognito authentication (AWS CLI)",
+  "content": "Use the --cognito-options parameter to conﬁgure your OpenSearch Service domain. The\nfollowing syntax is used by both the create-domain and update-domain-config commands:\n--cognito-options Enabled=true,UserPoolId=\"user-pool-id\",IdentityPoolId=\"identity-pool-\nid\",RoleArn=\"arn:aws:iam::123456789012:role/CognitoAccessForAmazonOpenSearch\"\nExample\nThe following example creates a domain in the us-east-1 Region that enables Amazon Cognito\nauthentication for Dashboards using the CognitoAccessForAmazonOpenSearch role and\nprovides domain access to Cognito_Auth_Role:\naws opensearch create-domain --domain-name my-domain --\nregion us-east-1 --access-policies '{ \"Version\": \"2012-10-17\",\n\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\n[\"arn:aws:iam::123456789012:role/\nCognito_Auth_Role\"]},\"Action\":\"es:ESHttp*\",\"Resource\":\"arn:aws:es:us-\neast-1:123456789012:domain/*\" }]}' --engine-version \"OpenSearch_1.0\"\n--cluster-config InstanceType=m4.xlarge.search,InstanceCount=1\n--ebs-options EBSEnabled=true,VolumeSize=10 --cognito-options\nEnabled=true,UserPoolId=\"us-east-1_123456789\",IdentityPoolId=\"us-\nConﬁguring a domain to use Amazon Cognito authentication\n1402\nAmazon OpenSearch Service\nDeveloper Guide\neast-1:12345678-1234-1234-1234-123456789012\",RoleArn=\"arn:aws:iam::123456789012:role/\nCognitoAccessForAmazonOpenSearch\"\nAfter your domain ﬁnishes processing, see the section called “Allowing the authenticated role” and\nthe section called “Conﬁguring identity providers” for additional conﬁguration steps.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1431,
+      "end": 1432
+    },
+    "content_stats": {
+      "char_count": 1504,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring a domain to use Amazon Cognito authentication",
+      "children": []
+    }
+  }
+}

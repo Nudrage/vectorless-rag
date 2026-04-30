@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1271",
+  "section_number": "2.20.1.2",
+  "header": "Getting started with alerting",
+  "content": "To create an alert, you conﬁgure a monitor, which is a job that runs on a deﬁned schedule and\nqueries OpenSearch indexes. You also conﬁgure one or more triggers, which deﬁne the conditions\nthat generate events. Finally, you conﬁgure actions, which is what happens after an alert is\ntriggered.\nTo get started with alerting\n1.\nChoose Alerting from the OpenSearch Dashboards main menu and choose Create monitor.\n2.\nCreate a per-query, per-bucket, per-cluster metrics, or per-document monitor. For instructions,\nsee Create a monitor.\n3.\nFor Triggers, create one or more triggers. For instructions, see Create triggers.\n4.\nFor Actions, set up a notiﬁcation channel for the alert. Choose between Slack, Amazon Chime,\na custom webhook, or Amazon SNS. As you might imagine, notiﬁcations require connectivity\nto the channel. For example, to notify a Slack channel or send a custom webhook to a third-\nparty server, your OpenSearch Service domain needs appropriate network connectivity. The\ncustom webhook must have a public IP address in order for an OpenSearch Service domain to\nsend alerts to it.\nTip\nAfter an action successfully sends a message, securing access to that message (for\nexample, access to a Slack channel) is your responsibility. If your domain contains\nsensitive data, consider using triggers without actions and periodically checking\nDashboards for alerts.\nAlerting permissions\n1762\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1791,
+      "end": 1792
+    },
+    "content_stats": {
+      "char_count": 1433,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring alerts in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

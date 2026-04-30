@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_523",
+  "section_number": "2.8.11.5",
+  "header": "Automating snapshots with Snapshot Management",
+  "content": "You can set up a Snapshot Management (SM) policy in OpenSearch Dashboards to automate\nperiodic snapshot creation and deletion. SM can snapshot of a group of indices, whereas Index\nState Management can only take one snapshot per index. To use SM in OpenSearch Service, you\nDeleting manual snapshots\n694\nAmazon OpenSearch Service\nDeveloper Guide\nneed to register your own Amazon S3 repository. For instructions to register your repository, see\nRegistering a manual snapshot repository.\nPrior to SM, OpenSearch Service oﬀered a free, automated snapshot feature that's still turned on\nby default. This feature sends snapshots into the service-maintained cs-* repository. To deactivate\nthe feature, reach out to Support.\nFor more information on the SM feature, see Snapshot management in the OpenSearch\ndocumentation.\nSM doesn't currently support snapshot creation on multiple index types. For example, if you try\nto create snapshot on multiple indices with * and some indices are in the warm tier, the snapshot\ncreation will fail. If you need your snapshot to contain multiple index types, use the ISM snapshot\naction until SM supports this option.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 723,
+      "end": 724
+    },
+    "content_stats": {
+      "char_count": 1144,
+      "word_count": 178
+    },
+    "hierarchy": {
+      "parent": "Creating index snapshots in Amazon OpenSearch Service",
+      "children": [
+        "Conﬁgure permissions",
+        "Considerations"
+      ]
+    }
+  }
+}

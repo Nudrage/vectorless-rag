@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_914",
+  "section_number": "2.12.12.3.4",
+  "header": "Deleting the service-linked role for OpenSearch Ingestion",
+  "content": "If you no longer need to use a feature or service that requires a service-linked role, we recommend\nthat you delete that role. That way you don't have an unused entity that is not actively monitored\nor maintained. However, you must clean up the resources for your service-linked role before you\ncan manually delete it.\nPipeline creation role\n1420\nAmazon OpenSearch Service\nDeveloper Guide\nCleaning up a service-linked role\nBefore you can use IAM to delete a service-linked role, you must ﬁrst delete any resources used by\nthe role.\nNote\nIf OpenSearch Ingestion is using the role when you try to delete the resources, then the\ndeletion might fail. If that happens, wait for a few minutes and try the operation again.\nTo delete OpenSearch Ingestion resources used by the\nAWSServiceRoleForAmazonOpenSearchIngestionService or\nAWSServiceRoleForOpensearchIngestionSelfManagedVpce role\n1.\nNavigate to the Amazon OpenSearch Service console and choose Ingestion.\n2.\nDelete all pipelines. For instructions, see the section called “Deleting pipelines”.\nDelete the service-linked role for OpenSearch Ingestion\nYou can use the OpenSearch Ingestion console to delete a service-linked role.\nTo delete a service-linked role (console)\n1.\nNavigate to the IAM console.\n2.\nChoose Roles and search for the AWSServiceRoleForAmazonOpenSearchIngestionService or\nAWSServiceRoleForOpensearchIngestionSelfManagedVpce role.\n3.\nSelect the role and choose Delete.\nPipeline creation role\n1421\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1449,
+      "end": 1451
+    },
+    "content_stats": {
+      "char_count": 1503,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "Using service-linked roles to create OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

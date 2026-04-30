@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1217",
+  "section_number": "155.1.1.168",
+  "header": "Access incident notifications using Graph API",
+  "content": "Graph API\nArticle • 10/30/2024\nApplies to:\nMicrosoft Defender XDR\nDefender Experts Notifications are incidents that have been generated from hunting\nconducted by Defender Experts in your environment. They contain information\nregarding the hunting investigation and recommended actions provided by Defender\nExperts. You can now access DENs using the Microsoft Graph security API.\nThe following Defender Experts Notification details are available in the Microsoft\nDefender portal:\nIncident title - starts with Defender Experts to distinguish Defender Experts\nNotifications from other incidents\nExecutive summary - provides an overview of the investigation summary\nRecommendation summary - lists the recommended actions from Defender\nExperts\nAdvanced hunting queries - lists the converted KQL hunting queries used for the\ninvestigation\nIn Microsoft Graph security API, the following fields are also available:\nGraph endpoint - https://graph.microsoft.com/beta/security/incidents\nThe following field names that correspond to the details mentioned earlier:\ndisplayName\ndescription\nrecommendedActions\nrecommendedHuntingQueries\n７ Note\nAny incident in the Microsoft Defender portal is a collection of correlated alerts.\nLearn more\n７ Note",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 914,
+      "end": 914
+    },
+    "content_stats": {
+      "char_count": 1229,
+      "word_count": 164
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Feedback"
+      ]
+    }
+  }
+}

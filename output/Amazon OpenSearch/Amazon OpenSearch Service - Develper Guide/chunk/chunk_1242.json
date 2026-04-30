@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1242",
+  "section_number": "2.19.8.2",
+  "header": "Permissions requirements",
+  "content": "In order to start replication, you must include the es:ESCrossClusterGet permission on\nthe remote (leader) domain. We recommend the following IAM policy on the remote domain.\nThis policy also lets you perform other operations, such as indexing documents and performing\nstandard searches:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\nPrerequisites\n1740\nAmazon OpenSearch Service\nDeveloper Guide\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": [\n\"*\"\n]\n},\n\"Action\": [\n\"es:ESHttp*\"\n],\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/leader-domain/*\"\n},\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:ESCrossClusterGet\",\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/leader-domain\"\n}\n]\n}\nMake sure that the es:ESCrossClusterGet permission is applied for /leader-domain and not\n/leader-domain/*.\nIn order for non-admin users to perform replication activities, they also need to be mapped to\nthe appropriate permissions. Most permissions correspond to speciﬁc REST API operations. For\nexample, the indices:admin/plugins/replication/index/_resume permission lets you\nresume replication of an index. For a full list of permissions, see Replication permissions in the\nOpenSearch documentation.\nNote\nThe commands to start replication and create a replication rule are special cases. Because\nthey invoke background processes on the leader and follower domains, you must pass a\nleader_cluster_role and follower_cluster_role in the request. OpenSearch\nService uses these roles in all backend replication tasks. For information about mapping\nand using these roles, see Map the leader and follower cluster roles in the OpenSearch\ndocumentation.\nPermissions requirements\n1741\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1769,
+      "end": 1771
+    },
+    "content_stats": {
+      "char_count": 1727,
+      "word_count": 224
+    },
+    "hierarchy": {
+      "parent": "Cross-cluster replication for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

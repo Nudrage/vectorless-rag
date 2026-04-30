@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1319",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nExceptionCode\nValues:\nSTATUS_SUCCESS (0)\nEXCEPTION_ACCESS_VIOLATION (0xC0000005)\nSTATUS_ILLEGAL_INSTRUCTION (0xC000001D)\nSTATUS_PRIVILEGED_INSTRUCTION (0xC0000096)\nSTATUS_SINGLE_STEP (0x80000004)\nSTATUS_UMPP_DELAY_HOOK (0x600F0013)\nSTATUS_UMPP_NO_HOOK_ACG (0xE00F003B)\nSTATUS_UMPP_INJECTION_UWP_ABORTED (0xE00F004C)\nSTATUS_UMPP_INJECTION_SECUREPROCESS_ABORTED (0xE00F0060)\nSTATUS_UMPP_INJECTION_PROTECTEDPROCESS_ABORTED (0xE00F0061)\nSTATUS_UMPP_INJECTION_MITIGATIONS_ABORTED (0xE00F0062)\nSTATUS_UMPP_INJECTION_AVCOMPAT_ABORTED (0xE00F0063)\nSTATUS_UMPP_API_HOOKED (0xE00F002F)\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nExceptionAddress\nModuleBaseAddress\nModuleSize\nThe size of a module loaded in memory.\nExceptionInformation0\nValues:\nINVALID_READ (0x0)\nINVALID_WRITE (0x1)\nINVALID_EXECUTE (0x8)\nTargetAddress\nSourceFileName\nThe file's original name\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 359,
+      "end": 359
+    },
+    "content_stats": {
+      "char_count": 1294,
+      "word_count": 131
+    },
+    "hierarchy": {
+      "parent": "ASLRBypassAttempt",
+      "children": []
+    }
+  }
+}

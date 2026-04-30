@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1650",
+  "section_number": "155.1.1.222.9.6",
+  "header": "RBAC permissions required to view alerts",
+  "content": " Tip\nFor information about permissions in Microsoft Defender XDR Unified role based access\ncontrol (RBAC), see Alert policies in the Microsoft Defender portal.\nﾉ\nExpand table\nRole\nInformation\ngovernance\nData loss\nprevention\nMail\nflow\nPermissions\nThreat\nmanagement\nOthers\nOrganization Configuration\n✔\nPrivacy Management\nQuarantine\nRecord Management\n✔\nRetention Management\n✔\nRole Management\n✔\nSecurity Administrator\n✔\n✔\n✔\n✔\nSecurity Reader\n✔\n✔\n✔\n✔\nTransport Hygiene\nView-Only DLP Compliance\nManagement\n✔\nView-Only Configuration\nView-Only Manage Alerts\n✔\nView-Only Recipients\n✔\nView-Only Record Management\n✔\nView-Only Retention Management\n✔\nAfter alerts are generated and displayed on the Alerts page in the Microsoft Defender portal, you can\ntriage, investigate, and resolve them. The same RBAC permissions that give users access to alerts also\ngive them the ability to manage alerts.\n Tip\nTo view the roles that are assigned to each of the default role groups, run the following\ncommands in Security & Compliance PowerShell:\nPowerShell\nYou can also view the roles assigned to a role group in the Microsoft Defender portal. Go to the\nPermissions page, and select a role group. The assigned roles are listed on the flyout page.\n$RoleGroups = Get-RoleGroup\n$RoleGroups | foreach {Write-Output -InputObject `r`n,$_.Name,(\"-\"*25); Get-\nRoleGroup $_.Identity | Select-Object -ExpandProperty Roles}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 20,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1230,
+      "end": 1231
+    },
+    "content_stats": {
+      "char_count": 1392,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Alert policies in the Microsoft Defender portal",
+      "children": []
+    }
+  }
+}

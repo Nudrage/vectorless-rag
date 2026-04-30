@@ -1,0 +1,46 @@
+{
+  "chunk_id": "chunk_1822",
+  "section_number": "155.1.1.257.6.1",
+  "header": "Use the Microsoft Graph security API",
+  "content": "The Microsoft Graph security API provides a unified interface and schema to integrate with security solutions from Microsoft and ecosystem\npartners. It empowers customers to streamline security operations and better defend against increasing cyber threats. The Microsoft Graph\nsecurity API federates queries to all onboarded security providers and aggregates responses. Use the Microsoft Graph security API to build\napplications that:\nConsolidate and correlate security alerts from multiple sources.\nPull and investigate all incidents and alerts from services that are part of or integrated with Microsoft 365 Defender.\nUnlock contextual data to inform investigations.\nAutomate security tasks, business processes, workflows, and reporting.\nSend threat indicators to Microsoft products for customized detections.\nInvoke actions in response to new threats.\nProvide visibility into security data to enable proactive risk management.\nThe Microsoft Graph security API provides key features as described in the following sections.\nTake immediate action to defend against threats using the securityAction entity. When a security analyst discovers a new indicator, such as a\nmalicious file, URL, domain, or IP address, protection can be instantly enabled in your Microsoft security solutions. Invoke an action for a specific\nprovider, see all actions taken, and cancel an action if needed. Try security actions with Microsoft Defender for Endpoint (formerly Microsoft\nDefender ATP) to block malicious activity on your Windows endpoints using properties seen in alerts or identified during investigations.\nNote: Currently security actions only support application permissions.\nAdvanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data. You can proactively inspect events in\nyour network to locate threat indicators and entities. The flexible access to data enables unconstrained hunting for both known and potential\nthreats.\nUse runHuntingQuery to run a Kusto Query Language (KQL) query on data stored in Microsoft 365 Defender. Leverage the returned result set\nto enrich an existing investigation or uncover undetected threats in your network.\n1. You can run a query on data from only the last 30 days.\n2. The results include a maximum of 100,000 rows.\n3. The number of executions is limited per tenant:\nAPI calls: Up to 45 requests per minute, and up to 1500 requests per hour.\nExecution time: 10 minutes of running time every hour and 3 hours of running time a day.\n4. The maximal execution time of a single request is 200 seconds.\n5. A response code of HTTP 429 means you have reached the quota for either the number of API calls or execution time. Refer to the\nresponse body to confirm the limit you have reached.\n6. The maximum query result size of a single request cannot exceed 124 MB. Exceeding the size limit results in HTTP 400 Bad Request with\nthe message \"Query execution has exceeded the allowed result size. Optimize your query by limiting the number of results and try again.\"\n） Important\nAPIs under the /beta  version in Microsoft Graph are subject to change. Use of these APIs in production applications is not supported. To\ndetermine whether an API is available in v1.0, use the Version selector.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 20,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1373,
+      "end": 1373
+    },
+    "content_stats": {
+      "char_count": 3250,
+      "word_count": 509
+    },
+    "hierarchy": {
+      "parent": "Related articles",
+      "children": [
+        "Actions (preview)",
+        "Advanced hunting",
+        "Custom detections",
+        "Alerts",
+        "Attack simulation and training",
+        "eDiscovery",
+        "Audit log query (preview)",
+        "Identities",
+        "Incidents",
+        "Information protection",
+        "Security Copilot (Preview)",
+        "Records management",
+        "Secure Score",
+        "Threat intelligence (preview)",
+        "Threat intelligence indicators (preview)",
+        "Threat submission",
+        "Email and collaboration protection",
+        "Data security and governance (preview)",
+        "Common use cases",
+        "Next steps",
+        "Related content"
+      ]
+    }
+  }
+}

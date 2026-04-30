@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_392",
+  "section_number": "155.1.1.37.1",
+  "header": "Incident queue",
+  "content": "\ndetections, or third-party signals. The algorithm is trained on real-world anonymized data and\nconsiders, among other things, the following data points when calculating the priority score:\nAttack disruption signals\nThreat analytics\nSeverity\nSnR\nMITRE techniques\nAsset criticality\nAlert types and rarity\nHigh profile threats such as ransomware and nation-state attacks.\nIncidents are automatically assigned a priority score from 0 to 100, with 100 being the highest\npriority. Score ranges are color-coded as follows:\nRed: Top priority (score > 85)\nOrange: Medium priority (15–85)\nGray: Low priority (<15)\nSelect the incident row anywhere except the incident name, to display a summary pane with\nkey information about the incident. The pane includes the priority assessment, the factors\ninfluencing the priority score, the incident's details, recommended actions, and related threats.\nUse the up and down arrows at the top of the pane to navigate to the previous or next incident\nin the incident queue. For more information on investigating the incident, see Investigate\nincidents.\n\nBy default, the incident queue show incidents created in the last week. Choose a different time\nframe by selecting time selector drop-down above the queue.\nThe total number of incidents in the queue is displayed next to the time selector. The number\nof incidents varies depending on the filters in use. You can search for incidents by name or\nincident ID\nSelect Customize columns to select columns displayed in the queue. Check or uncheck the\ncolumns you want to see in the incident queue. Arrange the order of the columns by dragging\nthem up and down.\n\n\n\nThe Export button allows you to export the filtered data in the incident queue to a CSV file.\nThe maximum number of records you can export to a CSV file is 10,000.\nFor more visibility at a glance, Microsoft Defender XDR generates incident names\nautomatically, based on alert attributes such as the number of endpoints affected, users\naffected, detection sources, or categories. This specific naming allows you to quickly\nunderstand the scope of the incident.\nFor example: Multi-stage incident on multiple endpoints reported by multiple sources.\nIf you onboarded Microsoft Sentinel to the Defender portal, then any alerts and incidents\ncoming from Microsoft Sentinel are likely to have their names changed (regardless of whether\nthey were created before or since the onboarding).\nWe recommend that you avoid using the incident name as a condition for triggering\nautomation rules. If the incident name is a condition, and the incident name changes, the rule\nwill not be triggered.\nThe incident queue also provides multiple filtering options, that when applied, enable you to\nperform a broad sweep of all existing incidents in your environment, or decide to focus on a\nspecific scenario or threat. Applying filters on the incident queue can help determine which\nincident requires immediate attention.\nThe Filters list above the incident queue shows the current filters currently applied to the\nqueue. Select Add filter to apply more filters to limit the set of incidents shown.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 220,
+      "end": 223
+    },
+    "content_stats": {
+      "char_count": 3117,
+      "word_count": 497
+    },
+    "hierarchy": {
+      "parent": "Prioritize incidents in the Microsoft Defender portal",
+      "children": [
+        "Incident names"
+      ]
+    }
+  }
+}

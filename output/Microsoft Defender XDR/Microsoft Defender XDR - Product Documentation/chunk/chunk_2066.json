@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2066",
+  "section_number": "155.1.1.269.2",
+  "header": "Indicators of compromise (IOC)",
+  "content": "In the context of Microsoft Defender XDR and Microsoft Defender for Endpoint, alert\ndefinitions are containers for IOCs and defines the alert, including the metadata that is raised\nfor a specific IOC match. Various metadata is provided as part of the alert definitions. Metadata\nsuch as alert definition name of attack, severity, and description is provided along with other\noptions.\nEach IOC defines the concrete detection logic based on its type, value, and action, which\ndetermines how it's matched. It's bound to a specific alert definition that defines how a\ndetection is displayed as an alert on the Microsoft Defender XDR console.\nHere's an example of an IOC:\nType: Sha1\nValue: 92cfceb39d57d914ed8b14d0e37643de0797ae56\nAction: Equals\nIOCs have a many-to-one relationship with alert definitions such that an alert definition can\nhave many IOCs that correspond to it.\nUse the Microsoft Graph security API - Microsoft Graph | Microsoft Learn\nOverview of indicators",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1528,
+      "end": 1529
+    },
+    "content_stats": {
+      "char_count": 968,
+      "word_count": 150
+    },
+    "hierarchy": {
+      "parent": "Understand threat intelligence concepts",
+      "children": []
+    }
+  }
+}

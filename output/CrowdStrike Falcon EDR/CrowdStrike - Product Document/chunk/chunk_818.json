@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_818",
+  "section_number": "1.5.632.1",
+  "header": "Fields: Windows Legacy",
+  "content": "Field\nDescription\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed\nthread injection in an InjectedThread event\nSourceProcessId\nUPID of creating process.\nNote that in Windows [http://msdn.microsoft.com/en- us/library/windows/hardware/ff559960%28v=vs.85%29.aspx] , the\nParentProcessId does not have to be the same as SourceProcessId since a different parent can be specified for creation. On\nMac, SourceProcessId is the responsible_pid which is used by XPC to note the process requesting this XPC process.\nSourceThreadId\nUTID of thread from creating process. See the description for the SourceProcessId field for more details.\nParentProcessId\nThe decimal representation of the parent process.\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For ProcessRollup2\nevents, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nSHA256HashData\nThe SHA256 hash of a file. In most cases, the hash of the file referred to by the ImageFileName field.\nValues:\nSTATIC_SHA256_DOPPELGANGING (0x56f3097c4d5bf4c7cffef168ee732e1c78f2ee62bc1c1ba61c219226bef619f8)\nSTATIC_SHA256_SYSTEM (0x03312a19baa7ab137c09127c6feb58c05216a7880d3c9e6ae54a8bcda460f92a)\nProcessStartTime\nThe time the process began in UNIX epoch time (in decimal, non-hex format).\nProcessEndTime\nThe time the process finished (in decimal, non-hex format).\nSHA1HashData\nThe SHA1 hash of a file.  In most cases, the hash of the file referred to by the ImageFileName field.\nMD5HashData\nThe MD5 hash of a file\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nSessionId\nValue that indicates the Terminal Services session identifier associated with the token.\nTags\nField used for Falcon diagnostic information.\nParentBaseFileName\nThe base ImageFileName of the parent process.\nGrandParentBaseFileName The base ImageFileName of the grand parent process.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 216,
+      "end": 216
+    },
+    "content_stats": {
+      "char_count": 2494,
+      "word_count": 343
+    },
+    "hierarchy": {
+      "parent": "ProcessBlocked",
+      "children": []
+    }
+  }
+}

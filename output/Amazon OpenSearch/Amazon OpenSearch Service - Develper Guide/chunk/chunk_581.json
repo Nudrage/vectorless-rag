@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_581",
+  "section_number": "2.9.5.1.1",
+  "header": "Map the AWS Glue Data Catalog role",
+  "content": "If you have enabled ﬁne-grained access control after creating a data source, you must map non-\nadmin users to an IAM role with AWS Glue Data Catalog access in order to run direct queries. To\nmanually create a back-end glue_access role that you can map to the IAM role, perform the\nfollowing steps:\nNote\nIndexes are used for any queries against the data source. A user with read access to the\nrequest index for a given data source can read all queries against that data source. A user\nwith read access to the result index can read results for all queries against that data source.\n1.\nFrom the main menu in OpenSearch Dashboards, choose Security, Roles, and Create roles.\n2.\nName the role glue_access.\n3.\nFor Cluster permissions, select indices:data/write/bulk*, indices:data/read/\nscroll, indices:data/read/scroll/clear.\n4.\nFor Index, enter the following indexes you want to grant the user with the role access to:\n• .query_execution_request_<name of data source>\n• query_execution_result_<name of data source>\n• .async-query-scheduler\n• flint_*\nCreating an S3 data source\n743\nAmazon OpenSearch Service\nDeveloper Guide\n5.\nFor Index permissions, select indices_all.\n6.\nChoose Create.\n7.\nChoose Mapped users, Manage mapping.\n8.\nUnder Backend roles, add the ARN of the AWS Glue role that needs permission to call your\ndomain.\narn:aws:iam::account-id:role/role-name\n9.\nSelect Map and conﬁrm the role shows up under Mapped users.\nFor more information on mapping roles, see the section called “Mapping roles to users”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 772,
+      "end": 773
+    },
+    "content_stats": {
+      "char_count": 1511,
+      "word_count": 237
+    },
+    "hierarchy": {
+      "parent": "Creating an Amazon S3 data source integration in OpenSearch Service",
+      "children": []
+    }
+  }
+}

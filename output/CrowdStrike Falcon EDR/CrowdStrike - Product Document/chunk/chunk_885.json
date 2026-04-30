@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_885",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nEtwRawProcessId\nEtwRawThreadId\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nEventMin\nEventMax\nRawProcessId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nRawThreadId\nThe operating system’s internal PID. For matching, use the UPID fields which guarantee a unique process identifier\nSourceProcessId\nUPID of creating process.\nNote that in Windows [http://msdn.microsoft.com/en- us/library/windows/hardware/ff559960%28v=vs.85%29.aspx] , the\nParentProcessId does not have to be the same as SourceProcessId since a different parent can be specified for creation. On Mac,\nSourceProcessId is the responsible_pid which is used by XPC to note the process requesting this XPC process.\nSourceThreadId\nUTID of thread from creating process. See the description for the SourceProcessId field for more details.\nFlags\nProcessStartKey\nPerformanceCounter\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 242,
+      "end": 242
+    },
+    "content_stats": {
+      "char_count": 1046,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "SetWinEventHookEtw",
+      "children": []
+    }
+  }
+}

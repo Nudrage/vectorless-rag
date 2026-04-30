@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1254",
+  "section_number": "2.19.9.1",
+  "header": "Reindex data between OpenSearch Service internet domains",
+  "content": "The most basic scenario is that the remote index is in the same AWS Region as your local domain\nwith a publicly accessible endpoint and you have signed IAM credentials.\nFrom the remote domain, specify the remote index to reindex from and the local index to reindex\nto:\nPOST _reindex\n{\n\"source\": {\n\"remote\": {\n\"host\": \"https://remote-domain-endpoint:443\"\n},\n\"index\": \"remote_index\"\n},\n\"dest\": {\n\"index\": \"local_index\"\n}\n}\nYou must add 443 at the end of the remote domain endpoint for a validation check.\nTo verify that the index is copied over to the local domain, send this request to the local domain:\nGET local_index/_search\nIf the remote index is in a Region diﬀerent from your local domain, pass in its Region name, such as\nin this sample request:\nPOST _reindex\n{\n\"source\": {\n\"remote\": {\n\"host\": \"https://remote-domain-endpoint:443\",\n\"region\": \"eu-west-1\"\n},\n\"index\": \"remote_index\"\n},\nReindex data between OpenSearch Service internet domains\n1749\nAmazon OpenSearch Service\nDeveloper Guide\n\"dest\": {\n\"index\": \"local_index\"\n}\n}\nIn case of isolated Region like AWS GovCloud (US) or China Regions, the endpoint might not be\naccessible because your IAM user is not recognized in those Regions.\nIf the remote domain is secured with basic authentication, specify the username and password:\nPOST _reindex\n{\n\"source\": {\n\"remote\": {\n\"host\": \"https://remote-domain-endpoint:443\",\n\"username\": \"username\",\n\"password\": \"password\"\n},\n\"index\": \"remote_index\"\n},\n\"dest\": {\n\"index\": \"local_index\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1778,
+      "end": 1779
+    },
+    "content_stats": {
+      "char_count": 1487,
+      "word_count": 227
+    },
+    "hierarchy": {
+      "parent": "Migrating Amazon OpenSearch Service indexes using remote reindex",
+      "children": []
+    }
+  }
+}

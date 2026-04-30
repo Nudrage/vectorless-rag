@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3141",
+  "section_number": "1.6.10.18.2",
+  "header": "Metadata section",
+  "content": "Field\nDescription\ncustomerIDString\nUnique ID assigned by CrowdStrike for each customer.\neventType\nAuthActivityAuditEvent\noffset\nStarts at offset: 0. Each new event (AuthActivityAuditEvent, DetectionSummaryEvent, UserActivityAuditEvent) would increase the\noffset counter by one. When reconnecting to the Falcon Streaming API, you can specify the offset value to tell the API the starting\npoint where you’d like to receive the events. If omitted, the API would return all previous detection Summary or authentication events\nstarting with offset=0.\neventCreationTime\nTime when this event was generated in Unix epoch time.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1174/1226",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1174,
+      "end": 1174
+    },
+    "content_stats": {
+      "char_count": 860,
+      "word_count": 109
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

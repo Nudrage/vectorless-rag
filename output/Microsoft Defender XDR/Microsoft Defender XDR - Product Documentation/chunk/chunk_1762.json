@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1762",
+  "section_number": "155.1.1.241.2.4",
+  "header": "Get an access token using Python",
+  "content": "1. Open a command prompt, and set CLIENT_ID to your Azure application ID.\n2. Set CLIENT_SECRET to your Azure application secret.\n3. Set TENANT_ID to the Azure tenant ID of the user that wants to use your app to access\nMicrosoft Defender XDR.\n4. Run the following command:\nBash\nimport json\nimport urllib.request\nimport urllib.parse\ntenantId = '' # Paste your directory (tenant) ID here\nclientId = '' # Paste your application (client) ID here\nappSecret = '' # Paste your own app secret here to test, then store it in a safe\nplace, such as the Azure Key Vault!\nurl = \"https://login.windows.net/%s/oauth2/token\" % (tenantId)\nresourceAppIdUri = 'https://api.security.microsoft.com'\nbody = {\n'resource' : resourceAppIdUri,\n'client_id' : clientId,\n'client_secret' : appSecret,\n'grant_type' : 'client_credentials'\n}\ndata = urllib.parse.urlencode(body).encode(\"utf-8\")\nreq = urllib.request.Request(url, data)\nresponse = urllib.request.urlopen(req)\njsonResponse = json.loads(response.read())\naadToken = jsonResponse[\"access_token\"]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1333,
+      "end": 1334
+    },
+    "content_stats": {
+      "char_count": 1021,
+      "word_count": 140
+    },
+    "hierarchy": {
+      "parent": "Get an access token",
+      "children": []
+    }
+  }
+}

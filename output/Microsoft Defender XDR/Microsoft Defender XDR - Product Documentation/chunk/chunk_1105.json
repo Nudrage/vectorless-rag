@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1105",
+  "section_number": "1.1.155.2.4.1",
+  "header": "Actions on devices",
+  "content": "Microsoft Defender for Endpoint machine isolation.\nCollect investigation package - Collects device information in a ZIP file. Learn more\nabout the Microsoft Defender for Endpoint investigation package.\nRun antivirus scan - Performs a full Microsoft Defender Antivirus scan on the device.\nInitiate investigation - Initiates an automated investigation on the device.\nRestrict app execution - Sets restrictions on device to allow only files that are signed with\na Microsoft-issued certificate to run. Learn more about app restrictions with Microsoft\nDefender for Endpoint.\nWhen selected, the Allow/Block action can be applied to the file. Blocking files are only\nallowed if you have Remediate permissions for files and if the query results have identified\na file ID, such as an SHA1. Once a file is blocked, other instances of the same file in all\ndevices are also blocked. You can control which device group the blocking is applied to,\nbut not specific devices.\nWhen selected, the Quarantine file action can be applied to files in the SHA1 ,\nInitiatingProcessSHA1 , SHA256 , or InitiatingProcessSHA256  column of the query results.\nThis action deletes the file from its current location and places a copy in quarantine.\nWhen selected, the Mark user as compromised action is taken on users in the\nAccountObjectId , InitiatingProcessAccountObjectId , or RecipientObjectId  column of the\nquery results. This action sets the users risk level to \"high\" in Microsoft Entra ID, triggering\ncorresponding identity protection policies.\nSelect Disable user to temporarily prevent a user from logging in.\nSelect Force password reset to prompt the user to change their password on the next\nsign in session.\nBoth the Disable user  and Force password reset  options require the user SID, which are\nin the columns AccountSid , InitiatingProcessAccountSid , RequestAccountSid , and\nOnPremSid .\nFor more information on user actions, see Remediation actions in Microsoft Defender for\nIdentity.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 837,
+      "end": 838
+    },
+    "content_stats": {
+      "char_count": 1972,
+      "word_count": 305
+    },
+    "hierarchy": {
+      "parent": "4. Specify actions",
+      "children": []
+    }
+  }
+}

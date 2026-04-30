@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_332",
+  "section_number": "2.7.6.7",
+  "header": "Logstash",
+  "content": "You can use the Logstash OpenSearch plugin  to publish logs to OpenSearch Serverless collections.\nTo use Logstash to send data to OpenSearch Serverless\n1.\nInstall version 2.0.0 or later of the logstash-output-opensearch plugin using Docker or Linux.\nDocker\nDocker hosts the Logstash OSS software with the OpenSearch output plugin preinstalled:\nopensearchproject/logstash-oss-with-opensearch-output-plugin. You can pull the image\njust like any other image:\ndocker pull opensearchproject/logstash-oss-with-opensearch-output-plugin:latest\nLinux\nFirst, install the latest version of Logstash if you haven't already. Then, install version 2.0.0\nof the output plugin:\ncd logstash-8.5.0/\nbin/logstash-plugin install --version 2.0.0 logstash-output-opensearch\nIf the plugin is already installed, update it to the latest version:\nbin/logstash-plugin update logstash-output-opensearch\nStarting with version 2.0.0 of the plugin, the AWS SDK uses version 3. If you're using a\nLogstash version earlier than 8.4.0, you must remove any pre-installed AWS plugins and\ninstall the logstash-integration-aws plugin:\n/usr/share/logstash/bin/logstash-plugin remove logstash-input-s3\n/usr/share/logstash/bin/logstash-plugin remove logstash-input-sqs\n/usr/share/logstash/bin/logstash-plugin remove logstash-output-s3\n/usr/share/logstash/bin/logstash-plugin remove logstash-output-sns\n/usr/share/logstash/bin/logstash-plugin remove logstash-output-sqs\n/usr/share/logstash/bin/logstash-plugin remove logstash-output-cloudwatch\nLogstash\n465\nAmazon OpenSearch Service\nDeveloper Guide\n/usr/share/logstash/bin/logstash-plugin install --version 0.1.0.pre logstash-\nintegration-aws\n2.\nIn order for the OpenSearch output plugin to work with OpenSearch Serverless, you must\nmake the following modiﬁcations to the opensearch output section of logstash.conf:\n• Specify aoss as the service_name under auth_type.\n• Specify your collection endpoint for hosts.\n• Add the parameters default_server_major_version and legacy_template. These\nparameters are required for the plugin to work with OpenSearch Serverless.\noutput {\nopensearch {\nhosts => \"collection-endpoint:443\"\nauth_type => {\n...\nservice_name => 'aoss'\n}\ndefault_server_major_version => 2\nlegacy_template => false\n}\n}\nThis example conﬁguration ﬁle takes its input from ﬁles in an S3 bucket and sends them to an\nOpenSearch Serverless collection:\ninput {\ns3  {\nbucket => \"my-s3-bucket\"\nregion => \"us-east-1\"\n}\n}\noutput {\nopensearch {\necs_compatibility => disabled\nhosts => \"https://my-collection-endpoint.us-east-1.aoss.amazonaws.com:443\"\nindex => my-index\nauth_type => {\ntype => 'aws_iam'\nLogstash\n466\nAmazon OpenSearch Service\nDeveloper Guide\naws_access_key_id => 'your-access-key'\naws_secret_access_key => 'your-secret-key'\nregion => 'us-east-1'\nservice_name => 'aoss'\n}\ndefault_server_major_version => 2\nlegacy_template => false\n}\n}\n3.\nThen, run Logstash with the new conﬁguration to test the plugin:\nbin/logstash -f config/test-plugin.conf",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 494,
+      "end": 496
+    },
+    "content_stats": {
+      "char_count": 2961,
+      "word_count": 349
+    },
+    "hierarchy": {
+      "parent": "Ingesting data into Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

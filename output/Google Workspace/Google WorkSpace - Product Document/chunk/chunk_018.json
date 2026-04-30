@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_018",
+  "section_number": "1.15",
+  "header": "FieldValue",
+  "content": "Details of the field value set by the user for the particular label.\n{\n\"id\": string,\n\"title\": string,\n\"fieldValues\": [\n{\nobject (FieldValue (/workspace/admin/reports/reference/rest/v1/activities/list#FieldValue))\n}\n],\n\"reason\": {\nobject (Reason (/workspace/admin/reports/reference/rest/v1/activities/list#Reason))\n}\n}\nJSON representation\nFields\nid\nstring\nIdentifier of the field\ndisplayName\nstring\nDisplay name of the field\ntype\nstring\nType of the field\nreason\nobject (Reason\n(/workspace/admin/reports/reference/rest/v1/activities/list#Reason))\nThe reason why the field was applied to the label.\nUnion field value. Stores the values stored in the field value can be only one of the following:\n{\n\"id\": string,\n\"displayName\": string,\n\"type\": string,\n\"reason\": {\nobject (Reason (/workspace/admin/reports/reference/rest/v1/activities/list#Reason))\n},\n// Union field value can be only one of the following:\n\"unsetValue\": boolean,\n\"longTextValue\": string,\n\"textValue\": string,\n\"textListValue\": {\nobject (TextListValue (/workspace/admin/reports/reference/rest/v1/activities/list#TextListValu\n},\n\"selectionValue\": {\nobject (SelectionValue (/workspace/admin/reports/reference/rest/v1/activities/list#SelectionVa\n},\n\"selectionListValue\": {\nobject (SelectionListValue (/workspace/admin/reports/reference/rest/v1/activities/list#Selec\n},\n\"integerValue\": string,\n\"userValue\": {\nobject (UserValue (/workspace/admin/reports/reference/rest/v1/activities/list#UserValue))\n},\n\"userListValue\": {\nobject (UserListValue (/workspace/admin/reports/reference/rest/v1/activities/list#UserListValu\n},\n\"dateValue\": {\nobject (Date (/workspace/admin/reports/reference/rest/v1/activities/list#Date))\n}\n// End of list of possible types for union field value.\n}\nFields\nunsetValue\nboolean\nIf the field is unset, this will be true.\nlongTextValue\nstring\nSetting a long text value.\ntextValue\nstring\nSetting a text value.\ntextListValue\nobject (TextListValue\n(/workspace/admin/reports/reference/rest/v1/activities/list#TextListValue))\nSetting a text list value.\nselectionValue\nobject (SelectionValue\n(/workspace/admin/reports/reference/rest/v1/activities/list#SelectionValue))\nSetting a selection value by selecting a single value from a dropdown.\nselectionListValue\nobject (SelectionListValue\n(/workspace/admin/reports/reference/rest/v1/activities/list#SelectionListValue\n)\n)\nSetting a selection list value by selecting multiple values from a dropdown.\nintegerValue\nstring (int64 (https://developers.google.com/discovery/v1/type-format)\nformat)\nSetting an integer value.\nuserValue\nobject (UserValue\n(/workspace/admin/reports/reference/rest/v1/activities/list#UserValue))\nSetting a user value by selecting a single user.\nuserListValue\nobject (UserListValue\n(/workspace/admin/reports/reference/rest/v1/activities/list#UserListValue))\nSetting a user list value by selecting multiple users.\ndateValue\nobject (Date\n(/workspace/admin/reports/reference/rest/v1/activities/list#Date))\nSetting a date value.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 14,
+      "end": 16
+    },
+    "content_stats": {
+      "char_count": 2961,
+      "word_count": 278
+    },
+    "hierarchy": {
+      "parent": "Method: activities.list",
+      "children": []
+    }
+  }
+}

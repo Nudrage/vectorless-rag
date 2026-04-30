@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_898",
+  "section_number": "155.1.1.89.5.2",
+  "header": "Query command lines",
+  "content": "There are numerous ways to construct a command line to accomplish a task. For example, an\nattacker could reference an image file without a path, without a file extension, using\n// Step 1: Select a specific parent process instance (for instance,\npowershell.exe).\nlet parentProcess =\nDeviceProcessEvents\n| where FileName =~ \"powershell.exe\" // For your specific use case, consider\nmodifying the FileName and adding more identifying properties to specify your\nquery.\n| where isnotempty(ProcessUniqueId)\n| top 1 by Timestamp asc\n| project DeviceId, DeviceName, ParentProcessUniqueId = ProcessUniqueId,\nParentFileName = FileName;\n// Step 2: Find all child processes started by this unique parent.\nDeviceProcessEvents\n| where isnotempty(InitiatingProcessUniqueId)\n| join kind=inner (\nparentProcess\n) on DeviceId\n| where InitiatingProcessUniqueId == ParentProcessUniqueId\n| project\nDeviceName,\nParentProcessUniqueId,\nParentFileName,\nChildProcessName = FileName,\nChildProcessId = ProcessId,\nChildProcessUniqueId = ProcessUniqueId,\nTimestamp\nenvironment variables, or with quotes. The attacker could also change the order of parameters\nor add multiple quotes and spaces.\nTo create more durable queries around command lines, apply the following practices:\nIdentify the known processes (such as net.exe or psexec.exe) by matching on the file name\nfields, instead of filtering on the command-line itself.\nParse command-line sections using the parse_command_line() function\nWhen querying for command-line arguments, don't look for an exact match on multiple\nunrelated arguments in a certain order. Instead, use regular expressions or use multiple\nseparate contains operators.\nUse case insensitive matches. For example, use =~ , in~ , and contains  instead of == , in ,\nand contains_cs .\nTo mitigate command-line obfuscation techniques, consider removing quotes, replacing\ncommas with spaces, and replacing multiple consecutive spaces with a single space. There\nare more complex obfuscation techniques that require other approaches, but these\ntweaks can help address common ones.\nThe following examples show various ways to construct a query that looks for the file net.exe to\nstop the firewall service \"MpsSvc\":\nKusto",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 592,
+      "end": 593
+    },
+    "content_stats": {
+      "char_count": 2204,
+      "word_count": 308
+    },
+    "hierarchy": {
+      "parent": "Query scenarios",
+      "children": []
+    }
+  }
+}

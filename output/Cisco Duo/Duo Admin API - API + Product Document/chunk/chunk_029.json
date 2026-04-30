@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_029",
+  "section_number": "1.27.8",
+  "header": "Example Response",
+  "content": "Here’s the output from running the above script. Note that the shape of the user objects\nreturned here is consistent with the shape returned from other Admin API user\noperations (e.g. creating a single user). The returned users will be in the same order that\nthey were received.\nimport sys\nimport json\nimport duo_client\nfrom six.moves import input\n# Configuration and information about objects to create.\nadmin_api = duo_client.Admin(\nikey='DIWJ8X6AEYOR5OMC6TQ1',\nskey='Zh5eGmUq9zpfQnyUIu5OL9iWoMMv5ZNmk3zLJ4Ep',\nhost='api-XXXXXXXX.duosecurity.com',\nca_certs='DISABLE'\n)\nresponse = admin_api.json_api_call(\n'POST',\n'/admin/v1/users/bulk_create',\n{\n'users': json.dumps([\n{\n'username': 'example_username_1',\n'email': 'example_user_1@example.com'\n},\n{\n'username': 'example_username_2',\n'status': 'disabled'\n}\n])\n}\n)\npprint.pprint(response)\n}\n{\n\"[{'alias1': None,\n'alias2': None,\n'alias3': None,\n'alias4': None,\n'aliases': {},\n'created': 1677770740,\n'email': 'example_user_1@example.com',\n'firstname': None,\n'groups': [],",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 24,
+      "end": 24
+    },
+    "content_stats": {
+      "char_count": 1017,
+      "word_count": 118
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1102",
+  "section_number": "1.1.155.2.3.3",
+  "header": "Link entities",
+  "content": "Identify the columns in your query results where you expect to find the main affected or\nimpacted entity. For example, a query might return sender ( SenderFromAddress  or\nSenderMailFromAddress ) and recipient ( RecipientEmailAddress ) addresses. Identifying which of\nthese columns represent the main impacted entity helps the service aggregate relevant alerts,\ncorrelate incidents, and target response actions.\nYou can select only one column for each entity type (mailbox, user, or device). You can't select\ncolumns that aren't returned by your query.\nYou can link a wide range of entity types to your alerts. Linking more entities helps our\ncorrelation engine group alerts to the same incidents and to correlate incidents together. If\nyou're a Microsoft Sentinel customer, this also means that you can map any entity from your\nthird-party data sources that are ingested into Microsoft Sentinel.\nFor Microsoft Defender XDR data, the entities are automatically selected. If the data is from\nMicrosoft Sentinel, you need to select the entities manually.\nThere are two sections under the expanded Entity mapping section for which you can select\nentities:\nImpacted assets – Add impacted assets that appear in the selected events. The following\ntypes of assets can be added:\nAccount\nDevice\nMailbox\nCloud application\nAzure resource\nAmazon Web Services resource\nGoogle Cloud Platform resource\nRelated evidence – Add nonassets that appear in the selected events. The supported\nentity types are:\nProcess\nFile",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 834,
+      "end": 835
+    },
+    "content_stats": {
+      "char_count": 1499,
+      "word_count": 231
+    },
+    "hierarchy": {
+      "parent": "3. Define alert enrichment details",
+      "children": [
+        "Expanded entity mapping (Preview)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1019",
+  "section_number": "155.1.1.125",
+  "header": "DeviceTvmInfoGatheringKB",
+  "content": "06/11/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe DeviceTvmInfoGatheringKB  table in the advanced hunting schema contains metadata for\nMicrosoft Defender Vulnerability Management assessment events data collected in the\nDeviceTvmInfoGathering  table. The DeviceTvmInfoGatheringKB  table contains the list of various\nconfiguration and attack surface area assessments used by Defender Vulnerability\nManagement information gathering to assess devices. Use this reference to construct queries\nthat return information from the table.\nThis advanced hunting table is populated by records from Microsoft Defender for Endpoint. If\nyour organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the\ntable aren’t going to work or return any results. For more information about how to deploy\nDefender for Endpoint in Defender XDR, read Deploy supported services.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn\nname\nData\ntype\nDescription\nIgId\nstring\nUnique identifier for the piece of information gathered\nFieldName\nstring\nName of the field where this information appears in the AdditionalFields\ncolumn of the DeviceTvmInfoGathering table\nDescription\nstring\nDescription of the information gathered\nCategories\ndynamic\nList of categories that the information belongs to, in JSON array format\nDataStructure\nstring\nThe data structure of the information gathered\nYou can use this table to explore the kinds of information available in DeviceTvmInfoGathering\nso you can later fine-tune your hunting query.\n） Important\nSome information relates to prereleased product which may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nﾉ\nExpand table\nFor instance, to see the list of information being collected, you can try the following query:\nKusto\nFrom the results, say you become interested in the available categories, you can use the\nfollowing query:\nKusto\nThen, let's say you want to see the assessment categories involving the TLS protocol:\nKusto\nUsing the resulting fields, you can then use the DeviceTvmInfoGathering  table to get a list of\ndevices using TLS client version 1.0.\nKusto\nDeviceTvmInfoGathering\nUnderstand the schema\nApply query best practices\nOverview Defender Vulnerability Management\n// Check out what is being collected\nDeviceTvmInfoGatheringKB\n// Return all available categories\nDeviceTvmInfoGatheringKB\n| mv-expand Categories to typeof(string)\n| distinct Categories\n// Return all findings for a specified category\nDeviceTvmInfoGatheringKB\n| where Categories contains \"tls\"\n// Return all devices on which the TLS version 1.0 is enabled\nDeviceTvmInfoGathering\n| where AdditionalFields.TlsClient10 == \"Enabled\" or AdditionalFields.TlsServer10\n== \"Enabled\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 740,
+      "end": 741
+    },
+    "content_stats": {
+      "char_count": 2900,
+      "word_count": 402
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

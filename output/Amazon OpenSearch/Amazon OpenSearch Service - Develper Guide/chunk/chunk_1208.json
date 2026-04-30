@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1208",
+  "section_number": "2.19.5",
+  "header": "Index State Management in Amazon OpenSearch Service",
+  "content": "Index State Management (ISM) in Amazon OpenSearch Service lets you deﬁne custom\nmanagement policies that automate routine tasks, and apply them to indexes and index patterns.\nYou no longer need to set up and manage external processes to run your index operations.\nA policy contains a default state and a list of states for the index to transition between. Within each\nstate, you can deﬁne a list of actions to perform and conditions that trigger these transitions. A\ntypical use case is to periodically delete old indexes after a certain period of time. For example,\nyou can deﬁne a policy that moves your index into a read_only state after 30 days and then\nultimately deletes it after 90 days.\nDeleting cold indexes\n1722\nAmazon OpenSearch Service\nDeveloper Guide\nAfter you attach a policy to an index, ISM creates a job that runs every 5 to 8 minutes (or 30 to 48\nminutes for pre-1.3 clusters) to perform policy actions, check conditions, and transition the index\ninto diﬀerent states. The base time for this job to run is every 5 minutes, plus a random 0-60%\njitter is added to it to make sure you do not see a surge of activity from all your indexes at the\nsame time. ISM doesn't run jobs if the cluster state is red.\nISM requires OpenSearch or Elasticsearch 6.8 or later.\nNote\nThis documentation provides a brief overview of ISM and several sample policies. It also\nexplains how ISM for Amazon OpenSearch Service domains diﬀers from ISM on self-\nmanaged OpenSearch clusters. For full documentation of ISM, including a comprehensive\nparameter reference, descriptions of each setting, and an API reference, see Index State\nManagement in the OpenSearch documentation.\nImportant\nYou can no longer use index templates to apply ISM policies to newly created indexes. You\ncan continue to automatically manage newly created indexes with the ISM template ﬁeld.\nThis update introduces a breaking change that aﬀects existing CloudFormation templates\nusing this setting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1751,
+      "end": 1752
+    },
+    "content_stats": {
+      "char_count": 1962,
+      "word_count": 327
+    },
+    "hierarchy": {
+      "parent": "Managing indexes in Amazon OpenSearch Service",
+      "children": [
+        "Create an ISM policy",
+        "Sample policies",
+        "ISM templates",
+        "Diﬀerences",
+        "Tutorial: Automating Index State Management processes"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_812",
+  "section_number": "2.12.4.4.3",
+  "header": "Migration scenarios",
+  "content": "The following table describes the behavior for each authentication method before and after\nenabling ﬁne-grained access control on an existing domain, and the steps administrators must take\nto properly map their users to roles:\nAuthentic\nation\nmethod\nBefore\nenabling\nﬁne-grai\nned access\ncontrol\nAfter enabling\nﬁne-grained access\ncontrol\nAdministrator tasks\nIdentity-\nbased\npolicies\nAll users\nsatisfying the\nIAM policy\ncan access\nthe domain.\nYou don't need to\nenable the migration\nperiod.\nOpenSearch Service\nautomatically maps\nall users that satisfy\nthe IAM policy to the\ndefault_role so that\nthey can continue to\naccess the domain.\n1. Create custom role mappings on\nthe domain.\n2. Delete the default_role.\nIP-based\npolicies\nAll users\nfrom the\nallowed IP\naddresses or\nCIDR blocks\ncan access\nthe domain.\nDuring the 30-day\nmigration period,\nall users from the\nallowed IP addresses\nor CIDR blocks can\ncontinue to access the\ndomain.\n1. Create custom role mappings on\nthe domain.\n2. Update your clients to either\nprovide basic authentication\ncredentials or IAM credentials,\ndepending on your role mapping\nconﬁguration.\n3. Disable the migration period. Users\nfrom the allowed IP addresses\nor CIDR blocks sending requests\nEnabling ﬁne-grained access control\n1340\nAmazon OpenSearch Service\nDeveloper Guide\nAuthentic\nation\nmethod\nBefore\nenabling\nﬁne-grai\nned access\ncontrol\nAfter enabling\nﬁne-grained access\ncontrol\nAdministrator tasks\nwithout basic authentication or IAM\ncredentials will lose access to the\ndomain.\nOpen access\npolicies\nAll users over\nthe internet\ncan access\nthe domain.\nDuring the 30-day\nmigration period,\nall users over the\ninternet can continue\nto access to domain.\n1. Create role mappings on the\ndomain.\n2. Update your clients to either\nprovide basic authentication\ncredentials or IAM credentials,\ndepending on your role mapping\nconﬁguration.\n3. Disable the migration period. Users\nsending requests without basic\nauthentication or IAM credentials\nwill lose access to the domain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1369,
+      "end": 1370
+    },
+    "content_stats": {
+      "char_count": 1988,
+      "word_count": 298
+    },
+    "hierarchy": {
+      "parent": "Enabling ﬁne-grained access control",
+      "children": []
+    }
+  }
+}

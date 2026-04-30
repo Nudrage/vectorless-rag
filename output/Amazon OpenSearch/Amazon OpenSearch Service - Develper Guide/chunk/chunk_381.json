@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_381",
+  "section_number": "2.7.10.8.3",
+  "header": "Policy precedence",
+  "content": "There can be situations where network policy rules overlap, within or across policies. When this\nhappens, a rule that speciﬁes public access overrides a rule that speciﬁes private access for any\ncollections that are common to both rules.\nFor example, in the following policy, both rules assign network access to the finance collection,\nbut one rule speciﬁes VPC access while the other speciﬁes public access. In this situation, public\naccess overrides VPC access only for the ﬁnance collection (because it exists in both rules), so the\nﬁnance collection will be accessible from public networks. The sales collection will have VPC access\nfrom the speciﬁed endpoint.\n[\n{\n\"Description\":\"Rule 1\",\n\"Rules\":[\n{\n\"ResourceType\":\"collection\",\n\"Resource\":[\n\"collection/sales\",\n\"collection/finance\"\n]\n}\n],\n\"AllowFromPublic\":false,\n\"SourceVPCEs\":[\n\"vpce-050f79086ee71ac05\"\n]\n},\n{\n\"Description\":\"Rule 2\",\n\"Rules\":[\n{\n\"ResourceType\":\"collection\",\nNetwork access\n534\nAmazon OpenSearch Service\nDeveloper Guide\n\"Resource\":[\n\"collection/finance\"\n]\n}\n],\n\"AllowFromPublic\":true\n}\n]\nIf multiple VPC endpoints from diﬀerent rules apply to a collection, the rules are additive and the\ncollection will be accessible from all speciﬁed endpoints. If you set AllowFromPublic to true but\nalso provide one or more SourceVPCEs or SourceServices, OpenSearch Serverless ignores the\nVPC endpoints and service identiﬁers, and the associated collections will have public access.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 563,
+      "end": 564
+    },
+    "content_stats": {
+      "char_count": 1443,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "Network access for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

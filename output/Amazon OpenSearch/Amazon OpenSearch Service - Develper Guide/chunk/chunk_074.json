@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_074",
+  "section_number": "2.6.9.5.2",
+  "header": "Generating index names and patterns",
+  "content": "You can generate dynamic index names by using variables from the ﬁelds of incoming events.\nIn the sink conﬁguration, use the format string${} to signal string interpolation, and use\na JSON pointer to extract ﬁelds from events. The options for index_type are custom or\nmanagement_disabled. Because index_type defaults to custom for OpenSearch domains and\nmanagement_disabled for OpenSearch Serverless collections, it can be left unset.\nIndex management\n65\nAmazon OpenSearch Service\nDeveloper Guide\nFor example, the following pipeline selects the metadataType ﬁeld from incoming events to\ngenerate index names.\npipeline:\n...\nsink:\nopensearch:\nindex: \"metadata-${metadataType}\"\nThe following conﬁguration continues to generate a new index every day or every hour.\npipeline:\n...\nsink:\nopensearch:\nindex: \"metadata-${metadataType}-%{yyyy.MM.dd}\"\npipeline:\n...\nsink:\nopensearch:\nindex: \"metadata-${metadataType}-%{yyyy.MM.dd.HH}\"\nThe index name can also be a plain string with a date-time pattern as a suﬃx, such as my-index-\n%{yyyy.MM.dd}. When the sink sends data to OpenSearch, it replaces the date-time pattern\nwith UTC time and creates a new index for each day, such as my-index-2022.01.25. For more\ninformation, see the DateTimeFormatter class.\nThis index name can also be a formatted string (with or without a date-time pattern suﬃx), such\nas my-${index}-name. When the sink sends data to OpenSearch, it replaces the \"${index}\"\nportion with the value in the event being processed. If the format is \"${index1/index2/\nindex3}\", it replaces the ﬁeld index1/index2/index3 with its value in the event.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 94,
+      "end": 95
+    },
+    "content_stats": {
+      "char_count": 1597,
+      "word_count": 229
+    },
+    "hierarchy": {
+      "parent": "Index management",
+      "children": []
+    }
+  }
+}

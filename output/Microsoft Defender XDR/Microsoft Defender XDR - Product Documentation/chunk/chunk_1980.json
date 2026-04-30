@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1980",
+  "section_number": "155.1.1.263.1.6",
+  "header": "2. Investigate inbox manipulation rule parameters",
+  "content": "Here's an example of a \"delete all incoming emails\" rule configuration (as seen on\nRawEventData.Parameters) of the relevant event log.\nReview the attributes of the IP address that performed the relevant event of rule creation:\nSearch for other suspicious cloud activities that originated from the same IP in the tenant.\nFor instance, suspicious activity might be multiple failed login attempts.\nIs the ISP common and reasonable for this user?\nIs the location common and reasonable for this user?\nYou can review all user activities before rules were created, check for indicators of compromise,\nand investigate user actions that seem suspicious.\nFor instance, for multiple failed logins, examine:\nLogin activity\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1467,
+      "end": 1468
+    },
+    "content_stats": {
+      "char_count": 712,
+      "word_count": 110
+    },
+    "hierarchy": {
+      "parent": "Investigation steps",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_204",
+  "section_number": "1.10.2",
+  "header": "Retrieve Phones",
+  "content": "Returns a paged list of phones. To fetch all results, call repeatedly with the offset\nparameter as long as the result metadata has a next_offset  value. If no number  or\nextension  parameters are provided, the list will contain all phones. Otherwise, the list\n}\n}\nPOST  /admin/v2/identity_verification/[user_id]/cancel\n{\n\"response\": {}\n\"stat\": \"OK\",\n}\nwill contain either single phone (if a match was found), or no phones. Requires \"Grant\nresource - Read\" API permission.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 71,
+      "end": 72
+    },
+    "content_stats": {
+      "char_count": 471,
+      "word_count": 73
+    },
+    "hierarchy": {
+      "parent": "Phones",
+      "children": []
+    }
+  }
+}

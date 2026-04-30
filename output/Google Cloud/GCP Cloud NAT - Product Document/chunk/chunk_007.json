@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_007",
+  "section_number": "1.1.5",
+  "header": "Examples",
+  "content": "Example 1: NAT-ed TCP connection record from a VM instance in a Shared VPC\n(/vpc/docs/shared-vpc) network going to an external server in France.\n{\ninsertId: \"1the8juf6vab1t\"\njsonPayload: {\nconnection: {\nSrc_ip: \"10.0.0.1\"\nSrc_port: 45047\nNat_ip: \"203.0.113.17\"\nNat_port: 34889\ndest_ip : \"198.51.100.142\"\nDest_port: 80\nProtocol: \"tcp\"\n}\nallocation_status: \"OK\"\nGateway_identifiers: {\nGateway_name: \"my-nat-1\"\nrouter_name: \"my-router-1\"\nRegion: \"europe-west1\"\n}\nEndpoint: {\nProject_id: \"service-project-1\"\nVm_name: \"vm-1\"\nRegion: \"europe-west1\"\nZone: \"europe-west1-b\"\n}\nVpc: {\nProject_id: \"host-project\"\nVpc_name: \"network-1\"\nSubnetwork_name: \"subnetwork-1\"\n}\nExample 2: Record for a packet dropped because there were no available ports. Sending VM\nwas trying to reach the external IP address of another VM in the same project.\nDestination: {\nGeo_location: {\nContinent: \"Europe\"\nCountry: \"France\"\nRegion: \"Nouvelle-Aquitaine\"\nCity: \"Bordeaux\"\n}\n}\n}\nlogName: \"projects/host-project/logs/compute.googleapis.com%2Fnat_flows\"\nreceiveTimestamp: \"2018-06-28T10:46:08.123456789Z\"\nresource: {\nlabels: {\nregion: \"europe-west1-d\"\nproject_id: \"host-project\"\nrouter_id: \"987654321123456\"\ngateway_name: \"my-nat-1\"\n}\ntype: \"nat_gateway\"\n}\nlabels: {\nnat.googleapis.com/instance_name: \"vm-1\"\nnat.googleapis.com/instance_zone: \"europe-west1-b\"\nnat.googleapis.com/nat_ip: \"203.0.113.17\"\nnat.googleapis.com/network_name: \"network-1\"\nnat.googleapis.com/router_name: \"my-router-1\"\nnat.googleapis.com/subnetwork_name: \"subnetwork-1\"\n}\ntimestamp: \"2018-06-28T10:46:00.602240572Z\"\n}\n{\ninsertId: \"1the8juf6vab1l\"\njsonPayload: {\nconnection: {\nSrc_ip: \"10.0.128.1\"\nSrc_port: 45047\ndest_ip : \"192.0.2.87\"\nDest_port: 80\nProtocol: \"tcp\"\n}\nallocation_status: \"DROPPED\"\nGateway_identifiers: {\nGateway_name: \"my-nat-2\"\nCloud_router: \"my-router-1\"\nRegion: \"europe-west1\"\n}\nEndpoint: {\nProject_id: \"service-project-1\"\nVm_name: \"vm-1\"\nRegion: \"europe-west1\"\nZone: \"europe-west1-b\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 6,
+      "end": 7
+    },
+    "content_stats": {
+      "char_count": 1944,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "Logging",
+      "children": []
+    }
+  }
+}

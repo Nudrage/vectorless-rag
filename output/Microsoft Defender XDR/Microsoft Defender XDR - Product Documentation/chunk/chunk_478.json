@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_478",
+  "section_number": "155.1.1.45",
+  "header": "Investigate alerts in Microsoft Defender XDR",
+  "content": "XDR\n06/04/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nAlerts are signals that result from various threat detection activities. These signals are produced\nby the many security services that reside in the Microsoft Defender portal, and they indicate\nthe occurrence of malicious or suspicious events in your environment.\nThese suspicious events are typically part of a broader attack story. In the Microsoft Defender\nportal, alerts represent individual pieces of evidence that Defender XDR correlates together to\nform incidents. Incidents tell the whole attack story; however, analyzing alerts can be valuable\nwhen deeper analysis is required.\nThe Alerts queue shows the current set of alerts. You can view the entire alerts queue from\nIncidents & alerts > Alerts on the quick launch of the Microsoft Defender portal\n. You can\nalso see the alerts for each incident on the incidents queue, and on each individual incident's\npage, on the Alerts tab.\nAlerts from different Microsoft security solutions like Microsoft Defender for Endpoint,\nDefender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity,\nDefender for Cloud Apps, Defender XDR, App Governance, Microsoft Entra ID Protection, and\nMicrosoft Data Loss Prevention appear here.\n７ Note\nThis article describes security alerts in Microsoft Defender XDR. However, you can use alert\npolicies to send email notifications to yourself or other admins when users perform\nspecific activities in Microsoft 365. For more information, see Alert policies in the\nMicrosoft Defender portal.\n\nBy default, the alerts queue in the Microsoft Defender portal displays the new and in progress\nalerts from the last seven days. The most recent alert is at the top of the list so you can see it\nfirst. You can also find the total number of alerts in the queue indicated beside the Search bar.\nThe total number of alerts varies depending on the filters used in the queue.\nFrom the default alerts queue, you can select Filter to see all available filters from which you\ncan specify a subset of the alerts. Here's an example.\nYou can filter alerts according to these criteria:\nSeverity\nStatus\nCategories\nService/detection sources\nTags\nPolicy/Policy rule\nAlert type\nProduct name\nAlert subscription ID\nEntities (the impacted assets)\nAutomated investigation state\nWorkspace\nData stream (workload or location)\nSensitivity label\n\nAn alert can have system tags and/or custom tags with certain color backgrounds. Custom tags\nuse the white background while system tags typically use red or black background colors.\nSystem tags identify the following in an incident:\nA type of attack, like ransomware or credential phishing\nAutomatic actions, like automatic investigation and response and automatic attack\ndisruption\nDefender Experts handling an incident\nCritical assets involved in the incident\nYou can search for alerts using a custom date and time range or by using the search bar to\nsearch for specific alerts. To search for alerts within a specific date or time range, select Custom\nrange in the date picker and then specify the start and end dates and times.\n７ Note\nMicrosoft Defender XDR customers can now filter incidents with alerts where a\ncompromised device communicated with operational technology (OT) devices connected\nto the enterprise network through the device discovery integration of Microsoft\nDefender for IoT and Microsoft Defender for Endpoint. To filter these incidents, select\nAny in the Service/detection sources, then select Microsoft Defender for IoT in the\nProduct name or see Investigate incidents and alerts in Microsoft Defender for IoT in\nthe Defender portal. You can also use device groups to filter for site-specific alerts. For\nmore information about Defender for IoT prerequisites, see Get started with enterprise\nIoT monitoring in Microsoft Defender XDR.\n Tip\nMicrosoft's Security Exposure Management, based on predefined classifications,\nautomatically tags devices, identities, and cloud resources as a critical asset. This out-of-\nthe-box capability ensures the protection of an organization's valuable and most\nimportant assets. It also helps security operations teams to prioritize investigation and\nremediation. Know more about critical asset management.\n） Important\nSome information in this article relates to a prereleased product, which may be\nsubstantially modified before it’s commercially released. Microsoft makes no warranties\nexpressed or implied, with respect to the information provided here.\nTo search for specific alerts, enter the search term in the search bar. You can search for alerts\nbased on the alert title or alert ID.\nYou'll need to have any of the following roles to access Microsoft Defender for Office 365\nalerts:\nFor Microsoft Entra global roles:\nGlobal Administrator\nSecurity Administrator\nSecurity Operator\nGlobal Reader\nSecurity Reader\nOffice 365 Security & Compliance Role Groups\nCompliance Administrator\nOrganization Management\nA custom role\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 295,
+      "end": 298
+    },
+    "content_stats": {
+      "char_count": 5008,
+      "word_count": 765
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Required roles for Defender for Office 365 alerts",
+        "Analyze an alert",
+        "Manage alerts",
+        "Tune an alert",
+        "Resolve an alert",
+        "Use Power Automate to triage alerts",
+        "Next steps",
+        "See also"
+      ]
+    }
+  }
+}

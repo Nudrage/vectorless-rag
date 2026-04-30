@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1189",
+  "section_number": "2.27.3.1",
+  "header": "Prerequisites",
+  "content": "Cold storage has the following prerequisites:\n• Cold storage requires OpenSearch or Elasticsearch version 7.9 or later.\n• To enable cold storage on an OpenSearch Service domain, you must also enable warm storage\non the same domain.\n• To use cold storage, domains must have dedicated master nodes.\n• If your domain uses a T2 or T3 instance type for your data nodes, you can't use cold storage.\n• If your index uses approximate k-NN (\"index.knn\":true), you can move it to cold storage\nfrom version 2.17 and later. Domains on versions earlier than 2.17 can upgrade to 2.17 to use\nthis functionality, but KNN indices created on versions earlier than 2.x can't migrate to Cold.\n• If the domain uses ﬁne-grained access control, non-admin users must be mapped to the\ncold_manager role in OpenSearch Dashboards in order to manage cold indexes.\nNote\nThe cold_manager role might not exist on some preexisting OpenSearch Service domains.\nIf you don't see the role in Dashboards, you need to manually create it.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1738,
+      "end": 1738
+    },
+    "content_stats": {
+      "char_count": 999,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "Cold storage for Amazon OpenSearch Service",
+      "children": [
+        "Conﬁgure permissions"
+      ]
+    }
+  }
+}

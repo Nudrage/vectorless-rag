@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2032",
+  "section_number": "155.1.1.266.3.3",
+  "header": "Filtering ransomware-identified threat analytics reports",
+  "content": "You can also click this link.\nFrom the Detection details section of many threat analytics reports, you can see a list of alert\nnames created for the threat.\nYou can also use the Microsoft Defender XDR APIs to query the Microsoft Defender XDR\nincidents and alerts data in your tenant. A custom app can filter the data, filter it based on\ncustom settings, and then provide a filtered list of links to alerts and incidents that you can\neasily select to go right to that alert or incident. See List incidents API in Microsoft Defender\nXDR| Microsoft Docs. You can also integrate your SIEM with Microsoft Defender, see Integrate\nyour SIEM tools with Microsoft Defender XDR.\nMicrosoft Sentinel's Microsoft Defender XDR incident integration allows you to stream all\nMicrosoft Defender XDR incidents into Microsoft Sentinel and keep them synchronized\nbetween both portals. Incidents include all associated alerts, entities, and relevant information.\nOnce in Sentinel, incidents will remain bi-directionally synced with Microsoft Defender XDR,\nallowing you to take advantage of the benefits of both portals in your incident investigation.\nSee, Microsoft Defender XDR integration with Microsoft Sentinel.\nAdvanced hunting is a query-based threat hunting tool that lets you explore and inspect\nevents in your network to locate threat indicators and entities. This flexible and customizable\nanalysis tool enables unconstrained hunting for both known and potential threats. Microsoft\nDefender XDR also supports using a custom query to create custom detection rules, which\ncreate alerts based on a query can be and scheduled to run automatically.\nFor proactive scanning of ransomware activities, you should assemble a catalog of advanced\nhunting queries for commonly used ransomware attack methods for identities, endpoints,\napps, and data. Here are some key sources for ready-to-use advanced hunting queries:\nThe Hunt for ransomware article\nGitHub repository for advanced hunting queries:\nRansomware-specific\nqueries\nAll categories\nof queries\nThreat analytics reports",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1504,
+      "end": 1505
+    },
+    "content_stats": {
+      "char_count": 2054,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Detect ransomware attacks with the Microsoft Defender portal",
+      "children": []
+    }
+  }
+}

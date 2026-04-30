@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_893",
+  "section_number": "155.1.1.89.2",
+  "header": "General optimization tips",
+  "content": "\nSize new queries—If you suspect that a query will return a large result set, assess it first\nusing the count operator. Use limit or its synonym take  to avoid large result sets.\nApply filters early—Apply time filters and other filters to reduce the data set, especially\nbefore using transformation and parsing functions, such as substring(), replace(), trim(),\ntoupper(), or parse_json(). In the example below, the parsing function extractjson() is used\nafter filtering operators have reduced the number of records.\nKusto\nHas beats contains—To avoid searching substrings within words unnecessarily, use the\nhas  operator instead of contains . Learn about string operators\nLook in specific columns—Look in a specific column rather than running full text\nsearches across all columns. Don't use *  to check all columns.\nCase-sensitive for speed—Case-sensitive searches are more specific and generally more\nperformant. Names of case-sensitive string operators, such as has_cs  and contains_cs ,\ngenerally end with _cs . You can also use the case-sensitive equals operator ==  instead of\n=~ .\nParse, don't extract—Whenever possible, use the parse operator or a parsing function\nlike parse_json(). Avoid the matches regex  string operator or the extract() function, both\nof which use regular expression. Reserve the use of regular expression for more complex\nscenarios. Read more about parsing functions\nFilter tables not expressions—Don't filter on a calculated column if you can filter on a\ntable column.\nNo three-character terms—Avoid comparing or filtering using terms with three\ncharacters or fewer. These terms are not indexed and matching them will require more\nresources.\nProject selectively—Make your results easier to understand by projecting only the\ncolumns you need. Projecting specific columns prior to running join or similar operations\nalso helps improve performance.\nDeviceEvents\n| where Timestamp > ago(1d)\n| where ActionType == \"UsbDriveMount\"\n| where DeviceName == \"user-desktop.domain.com\"\n| extend DriveLetter = extractjson(\"$.DriveLetter\", AdditionalFields)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 586,
+      "end": 587
+    },
+    "content_stats": {
+      "char_count": 2076,
+      "word_count": 303
+    },
+    "hierarchy": {
+      "parent": "Advanced hunting query best practices",
+      "children": []
+    }
+  }
+}

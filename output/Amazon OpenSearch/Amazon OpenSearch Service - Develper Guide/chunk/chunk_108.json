@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_108",
+  "section_number": "2.6.15.2",
+  "header": "Stateless versus stateful processors",
+  "content": "Stateless processors perform operations like transformations and ﬁltering, while stateful processors\nperform operations like aggregations, which remember the result of the previous run. OpenSearch\nIngestion supports the stateful processors Aggregate and Service-map. All other supported\nprocessors are stateless.\nFor pipelines that contain only stateless processors, the maximum capacity limit is 96 Ingestion\nOCUs. If a pipeline contains any stateful processors, the maximum capacity limit is 48 Ingestion\nStateless versus stateful processors\n94\nAmazon OpenSearch Service\nDeveloper Guide\nOCUs. However, if a pipeline has persistent buﬀering enabled, it can have a maximum of 384\nIngestion OCUs with only stateless processors, or 192 Ingestion OCUs if it contains any stateful\nprocessors. For more information, see the section called “Scaling pipelines”.\nEnd-to-end acknowledgment is only supported for stateless processors. For more information, see\nthe section called “End-to-end acknowledgement”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 123,
+      "end": 124
+    },
+    "content_stats": {
+      "char_count": 999,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "Supported plugins and options for Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

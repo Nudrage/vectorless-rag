@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1177",
+  "section_number": "2.19.3.4",
+  "header": "Migrating indexes to UltraWarm storage",
+  "content": "If you ﬁnished writing to an index and no longer need the fastest possible search performance,\nmigrate it from hot to UltraWarm:\nPOST _ultrawarm/migration/my-index/_warm\nThen check the status of the migration:\nGET _ultrawarm/migration/my-index/_status\n{\nMigrating indexes to UltraWarm storage\n1699\nAmazon OpenSearch Service\nDeveloper Guide\n\"migration_status\": {\n\"index\": \"my-index\",\n\"state\": \"RUNNING_SHARD_RELOCATION\",\n\"migration_type\": \"HOT_TO_WARM\",\n\"shard_level_status\": {\n\"running\": 0,\n\"total\": 5,\n\"pending\": 3,\n\"failed\": 0,\n\"succeeded\": 2\n}\n}\n}\nIndex health must be green to perform a migration. If you migrate several indexes in quick\nsuccession, you can get a summary of all migrations in plaintext, similar to the _cat API:\nGET _ultrawarm/migration/_status?v\nindex    migration_type state\nmy-index HOT_TO_WARM    RUNNING_SHARD_RELOCATION\nOpenSearch Service migrates one index at a time to UltraWarm. You can have up to 200 migrations\nin the queue. Any request that exceeds the limit will be rejected. To check the current number of\nmigrations in the queue, monitor the HotToWarmMigrationQueueSize metric. Indexes remain\navailable throughout the migration process—no downtime.\nThe migration process has the following states:\nPENDING_INCREMENTAL_SNAPSHOT\nRUNNING_INCREMENTAL_SNAPSHOT\nFAILED_INCREMENTAL_SNAPSHOT\nPENDING_FORCE_MERGE\nRUNNING_FORCE_MERGE\nFAILED_FORCE_MERGE\nPENDING_FULL_SNAPSHOT\nRUNNING_FULL_SNAPSHOT\nFAILED_FULL_SNAPSHOT\nPENDING_SHARD_RELOCATION\nRUNNING_SHARD_RELOCATION\nFINISHED_SHARD_RELOCATION\nMigrating indexes to UltraWarm storage\n1700\nAmazon OpenSearch Service\nDeveloper Guide\nAs these states indicate, migrations might fail during snapshots, shard relocations, or force merges.\nFailures during snapshots or shard relocation are typically due to node failures or S3 connectivity\nissues. Lack of disk space is usually the underlying cause of force merge failures.\nAfter a migration ﬁnishes, the same _status request returns an error. If you check the index at\nthat time, you can see some settings that are unique to warm indexes:\nGET my-index/_settings\n{\n\"my-index\": {\n\"settings\": {\n\"index\": {\n\"refresh_interval\": \"-1\",\n\"auto_expand_replicas\": \"false\",\n\"provided_name\": \"my-index\",\n\"creation_date\": \"1599241458998\",\n\"unassigned\": {\n\"node_left\": {\n\"delayed_timeout\": \"5m\"\n}\n},\n\"number_of_replicas\": \"1\",\n\"uuid\": \"GswyCdR0RSq0SJYmzsIpiw\",\n\"version\": {\n\"created\": \"7070099\"\n},\n\"routing\": {\n\"allocation\": {\n\"require\": {\n\"box_type\": \"warm\"\n}\n}\n},\n\"number_of_shards\": \"5\",\n\"merge\": {\n\"policy\": {\n\"max_merge_at_once_explicit\": \"50\"\n}\n}\n}\n}\n}\nMigrating indexes to UltraWarm storage\n1701\nAmazon OpenSearch Service\nDeveloper Guide\n}\n• number_of_replicas, in this case, is the number of passive replicas, which don't consume disk\nspace.\n• routing.allocation.require.box_type speciﬁes that the index should use warm nodes\nrather than standard data nodes.\n• merge.policy.max_merge_at_once_explicit speciﬁes the number of segments to\nsimultaneously merge during the migration.\nIndexes in warm storage are read-only unless you return them to hot storage, which makes\nUltraWarm best-suited to immutable data, such as logs. You can query the indexes and delete\nthem, but you can't add, update, or delete individual documents. If you try, you might encounter\nthe following error:\n{\n\"error\" : {\n\"root_cause\" : [\n{\n\"type\" : \"cluster_block_exception\",\n\"reason\" : \"index [indexname] blocked by: [TOO_MANY_REQUESTS/12/disk usage\nexceeded flood-stage watermark, index has read-only-allow-delete block];\"\n}\n],\n\"type\" : \"cluster_block_exception\",\n\"reason\" : \"index [indexname] blocked by: [TOO_MANY_REQUESTS/12/disk usage exceeded\nflood-stage watermark, index has read-only-allow-delete block];\"\n},\n\"status\" : 429\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1728,
+      "end": 1731
+    },
+    "content_stats": {
+      "char_count": 3716,
+      "word_count": 476
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

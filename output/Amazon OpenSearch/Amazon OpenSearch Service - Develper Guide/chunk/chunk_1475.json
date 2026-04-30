@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1475",
+  "section_number": "2.26.5.1",
+  "header": "Warm node storage quotas",
+  "content": "The following table lists the warm node instance types and the maximum amount of storage that\neach type can use. For OpenSearch Optimized OI2 instances, 80% of the local storage is available\nas cache, and the maximum addressable warm storage is 5 times the cache storage size.\nFor example, if an OI2 instance has 468 GB of local storage:\n• Cache storage = 375 GB (80% of local storage)\n• Maximum addressable warm storage = 1875 GB (5 x 375 GB cache)\nInstance Type\nInstance Storage\n(GB)\nCache Size (GB)\nMax Addressable\nWarm Storage (GB)\noi2.large.search\n468\n375\n1875\noi2.xlarge.search\n937\n750\n3750\noi2.2xlarge.search\n1875\n1500\n7500\noi2.4xlarge.search\n3750\n3000\n15000\noi2.8xlarge.search\n7500\n6000\n30000\nQuotas\n1965\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1994,
+      "end": 1995
+    },
+    "content_stats": {
+      "char_count": 754,
+      "word_count": 122
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service quotas",
+      "children": [
+        "UltraWarm storage quotas"
+      ]
+    }
+  }
+}

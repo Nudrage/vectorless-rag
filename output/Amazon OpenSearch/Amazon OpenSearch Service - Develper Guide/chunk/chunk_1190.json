@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1190",
+  "section_number": "2.23.3",
+  "header": "Conﬁgure permissions",
+  "content": "If you enable cold storage on a preexisting OpenSearch Service domain, the cold_manager\nrole might not be deﬁned on the domain. If the domain uses ﬁne-grained access control, non-\nadmin users must be mapped to this role in order to manage cold indexes. To manually create the\ncold_manager role, perform the following steps:\n1.\nIn OpenSearch Dashboards, go to Security and choose Permissions.\n2.\nChoose Create action group and conﬁgure the following groups:\nPrerequisites\n1709\nAmazon OpenSearch Service\nDeveloper Guide\nGroup name\nPermissions\ncold_cluster\n• cluster:monitor/nodes/stats\n• cluster:admin/ultrawarm*\n• cluster:admin/cold/*\ncold_index\n• indices:monitor/stats\n• indices:data/read/minmax\n• indices:admin/ultrawarm/migration/get\n• indices:admin/ultrawarm/migration/cancel\n3.\nChoose Roles and Create role.\n4.\nName the role cold_manager.\n5.\nFor Cluster permissions, choose the cold_cluster group you created.\n6.\nFor Index, enter *.\n7.\nFor Index permissions, choose the cold_index group you created.\n8.\nChoose Create.\n9.\nAfter you create the role, map it to any user or backend role that manages cold indexes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1738,
+      "end": 1739
+    },
+    "content_stats": {
+      "char_count": 1113,
+      "word_count": 156
+    },
+    "hierarchy": {
+      "parent": "Prerequisites",
+      "children": []
+    }
+  }
+}

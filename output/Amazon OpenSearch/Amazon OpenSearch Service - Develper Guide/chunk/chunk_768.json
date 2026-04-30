@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_768",
+  "section_number": "2.12.1",
+  "header": "Data protection in Amazon OpenSearch Service",
+  "content": "The AWS shared responsibility model applies to data protection in Amazon OpenSearch Service.\nAs described in this model, AWS is responsible for protecting the global infrastructure that runs all\nof the AWS Cloud. You are responsible for maintaining control over your content that is hosted on\nthis infrastructure. You are also responsible for the security conﬁguration and management tasks\nfor the AWS services that you use. For more information about data privacy, see the Data Privacy\nFAQ. For information about data protection in Europe, see the AWS Shared Responsibility Model\nand GDPR blog post on the AWS Security Blog.\nFor data protection purposes, we recommend that you protect AWS account credentials and set\nup individual users with AWS IAM Identity Center or AWS Identity and Access Management (IAM).\nThat way, each user is given only the permissions necessary to fulﬁll their job duties. We also\nrecommend that you secure your data in the following ways:\n• Use multi-factor authentication (MFA) with each account.\n• Use SSL/TLS to communicate with AWS resources. We require TLS 1.2 and recommend TLS 1.3.\n• Set up API and user activity logging with AWS CloudTrail. For information about using CloudTrail\ntrails to capture AWS activities, see Working with CloudTrail trails in the AWS CloudTrail User\nGuide.\n• Use AWS encryption solutions, along with all default security controls within AWS services.\n• Use advanced managed security services such as Amazon Macie, which assists in discovering and\nsecuring sensitive data that is stored in Amazon S3.\n• If you require FIPS 140-3 validated cryptographic modules when accessing AWS through a\ncommand line interface or an API, use a FIPS endpoint. For more information about the available\nFIPS endpoints, see Federal Information Processing Standard (FIPS) 140-3.\nWe strongly recommend that you never put conﬁdential or sensitive information, such as your\ncustomers' email addresses, into tags or free-form text ﬁelds such as a Name ﬁeld. This includes\nwhen you work with OpenSearch Service or other AWS services using the console, API, AWS CLI, or\nAWS SDKs. Any data that you enter into tags or free-form text ﬁelds used for names may be used\nData protection\n1293\nAmazon OpenSearch Service\nDeveloper Guide\nfor billing or diagnostic logs. If you provide a URL to an external server, we strongly recommend\nthat you do not include credentials information in the URL to validate your request to that server.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1322,
+      "end": 1323
+    },
+    "content_stats": {
+      "char_count": 2461,
+      "word_count": 396
+    },
+    "hierarchy": {
+      "parent": "Security in Amazon OpenSearch Service",
+      "children": [
+        "Encryption of data at rest for Amazon OpenSearch Service",
+        "Node-to-node encryption for Amazon OpenSearch Service"
+      ]
+    }
+  }
+}

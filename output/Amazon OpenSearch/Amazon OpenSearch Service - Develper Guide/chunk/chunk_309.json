@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_309",
+  "section_number": "2.7.4.1.5",
+  "header": "How capacity limits are enforced",
+  "content": "OpenSearch Serverless enforces collection group capacity limits during scaling operations. When\nyour collections need additional resources, OpenSearch Serverless scales up to the maximum OCU\nlimit. When demand decreases, OpenSearch Serverless scales down but maintains at least the\nminimum OCU limit to ensure consistent performance.\nCapacity limits are enforced only when the collection group contains at least one collection. Empty\ncollection groups do not consume OCUs or enforce capacity limits.\nCollection group capacity limits\n444\nAmazon OpenSearch Service\nDeveloper Guide\nIf a scaling operation would exceed the maximum OCU limit or violate the minimum OCU\nrequirement, OpenSearch Serverless rejects the operation to maintain compliance with your\nconﬁgured limits.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 473,
+      "end": 474
+    },
+    "content_stats": {
+      "char_count": 771,
+      "word_count": 107
+    },
+    "hierarchy": {
+      "parent": "Collection group capacity limits",
+      "children": []
+    }
+  }
+}

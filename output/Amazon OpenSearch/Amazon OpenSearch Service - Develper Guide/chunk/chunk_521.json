@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_521",
+  "section_number": "2.8.11.3",
+  "header": "Restoring snapshots",
+  "content": "Before you restore a snapshot, make sure that the destination domain does not use Multi-AZ with\nStandby. Having standby enabled causes the restore operation to fail.\nWarning\nIf you use index aliases, you should either cease write requests to an alias or switch the alias\nto another index prior to deleting its index. Halting write requests helps avoid the following\nscenario:\n1. You delete an index, which also deletes its alias.\n2. An errant write request to the now-deleted alias creates a new index with the same\nname as the alias.\n3. You can no longer use the alias due to a naming conﬂict with the new index. If you\nswitched the alias to another index, specify \"include_aliases\": false when you\nrestore from a snapshot.\nTo restore a snapshot\n1.\nIdentify the snapshot you want to restore. Ensure that all settings for this index, such as\ncustom analyzer packages or allocation requirement settings, are compatible with the domain.\nTo see all snapshot repositories, run the following command:\ncurl -XGET 'domain-endpoint/_snapshot?pretty'\nAfter you identify the repository, run the following command to see all snapshots:\ncurl -XGET 'domain-endpoint/_snapshot/repository-name/_all?pretty'\nRestoring snapshots\n692\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nMost automated snapshots are stored in the cs-automated repository. If your domain\nencrypts data at rest, they're stored in the cs-automated-enc repository. If you don't\nsee the manual snapshot repository you're looking for, make sure you registered it to\nthe domain.\n2.\n(Optional) Delete or rename one or more indexes in the OpenSearch Service domain if you\nhave naming conﬂicts between indexes on the cluster and indexes in the snapshot. You can't\nrestore a snapshot of your indexes to an OpenSearch cluster that already contains indexes with\nthe same names.\nYou have the following options if you have index naming conﬂicts:\n• Delete the indexes on the existing OpenSearch Service domain and then restore the\nsnapshot.\n• Rename the indexes as you restore them from the snapshot and reindex them later. To learn\nhow to rename indexes, see this example request in the OpenSearch documentation.\n• Restore the snapshot to a diﬀerent OpenSearch Service domain (only possible with manual\nsnapshots).\nThe following command deletes all existing indexes in a domain:\ncurl -XDELETE 'domain-endpoint/_all'\nHowever, if you don't plan to restore all indexes, you can just delete one:\ncurl -XDELETE 'domain-endpoint/index-name'\n3.\nTo restore a snapshot, run the following command:\ncurl -XPOST 'domain-endpoint/_snapshot/repository-name/snapshot-name/_restore'\nDue to special permissions on the OpenSearch Dashboards and ﬁne-grained access control\nindexes, attempts to restore all indexes might fail, especially if you try to restore from an\nRestoring snapshots\n693\nAmazon OpenSearch Service\nDeveloper Guide\nautomated snapshot. The following example restores just one index, my-index, from 2020-\nsnapshot in the cs-automated snapshot repository:\ncurl -XPOST 'domain-endpoint/_snapshot/cs-automated/2020-snapshot/_restore' \\\n-d '{\"indices\": \"my-index\"}' \\\n-H 'Content-Type: application/json'\nAlternately, you might want to restore all indexes except the Dashboards and ﬁne-grained\naccess control indexes:\ncurl -XPOST 'domain-endpoint/_snapshot/cs-automated/2020-snapshot/_restore' \\\n-d '{\"indices\": \"-.kibana*,-.opendistro*\"}' \\\n-H 'Content-Type: application/json'\nYou can restore a snapshot without deleting its data by using the rename_pattern and\nrename_replacement parameters. For more information on these parameters, see the\nRestore Snapshot API request ﬁelds and example request in the OpenSearch documentation.\nNote\nIf not all primary shards were available for the indexes involved, a snapshot might have a\nstate of PARTIAL. This value indicates that data from at least one shard wasn't stored\nsuccessfully. You can still restore from a partial snapshot, but you might need to use older\nsnapshots to restore any missing indexes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 721,
+      "end": 723
+    },
+    "content_stats": {
+      "char_count": 3985,
+      "word_count": 579
+    },
+    "hierarchy": {
+      "parent": "Creating index snapshots in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

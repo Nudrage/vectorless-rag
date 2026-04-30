@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_054",
+  "section_number": "2.6.8.1.2",
+  "header": "Step 2: Create a domain",
+  "content": "First, create a domain named ingestion-domain to ingest data into.\nNavigate to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome and create a domain that meets the following requirements:\n• Is running OpenSearch 1.0 or later, or Elasticsearch 7.4 or later\n• Uses public access\n• Does not use ﬁne-grained access control\nNote\nThese requirements are meant to ensure simplicity in this tutorial. In production\nenvironments, you can conﬁgure a domain with VPC access and/or use ﬁne-grained access\ncontrol. To use ﬁne-grained access control, see Map the pipeline role.\nThe domain must have an access policy that grants permission to the OpenSearchIngestion-\nPipelineRole IAM role, which OpenSearch Service will create for you in the next step. The\npipeline will assume this role in order to send data to the domain sink.\nMake sure that the domain has the following domain-level access policy, which grants the pipeline\nrole access to the domain. Replace the Region and account ID with your own:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::111122223333:role/OpenSearchIngestion-PipelineRole\"\n},\n\"Action\": \"es:*\",\n\"Resource\": \"arn:aws:es:us-east-1:111122223333:domain/ingestion-domain/*\"\n}\n]\nTutorial: Ingest data into a domain\n48\nAmazon OpenSearch Service\nDeveloper Guide\n}\nFor more information about creating domain-level access policies, see the section called “Resource-\nbased policies”.\nIf you already have a domain created, modify its existing access policy to provide the above\npermissions to OpenSearchIngestion-PipelineRole.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 77,
+      "end": 78
+    },
+    "content_stats": {
+      "char_count": 1616,
+      "word_count": 226
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Ingesting data into a domain using Amazon OpenSearch Ingestion",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_186",
+  "section_number": "155.1.1.18.1.31",
+  "header": "Step 6. Configure conditional access app control",
+  "content": "control\nYou might already have SaaS apps added to your Microsoft Entra tenant to enforce\nmultifactor authentication and other conditional access policies. Microsoft Defender for\nCloud Apps natively integrates with Microsoft Entra ID. All you must do is configure a\npolicy in Microsoft Entra ID to use conditional access app control in Defender for Cloud\nApps. This routes network traffic for these managed SaaS apps through Defender for\nCloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and\nto apply session controls.\nIn this illustration:\nSaaS apps are integrated with the Microsoft Entra tenant. This integration allows\nMicrosoft Entra ID to enforce conditional access policies, including multifactor\nauthentication.\nA policy is added to Microsoft Entra ID to direct traffic for SaaS apps to Defender\nfor Cloud Apps. The policy specifies which SaaS apps to apply this policy to. After\nMicrosoft Entra ID enforces any conditional access policies that apply to these SaaS\napps, Microsoft Entra ID then directs (proxies) the session traffic through Defender\nfor Cloud Apps.\nDefender for Cloud Apps monitors this traffic and applies any session control\npolicies that have been configured by administrators.\nYou might have discovered and sanctioned cloud apps using Defender for Cloud Apps\nthat have not been added to Microsoft Entra ID. You can take advantage of conditional\naccess app control by adding these cloud apps to your Microsoft Entra tenant and the\nscope of your conditional access rules.\nThe first step in using Microsoft Defender for Cloud Apps to manage SaaS apps is to\ndiscover these apps and then add them to your Microsoft Entra tenant. If you need help\nMicrosoft Defender XDR\nShared signals\nMicrosoft Defender for Cloud Apps\nSaaS apps\nSession policies\nMicrosoft Entra ID\nConditional Access\napp controls\nCloud app\ntraffic\n\nwith discovery, see Discover and manage SaaS apps in your network. After you've\ndiscovered apps, add these apps to your Microsoft Entra tenant.\nYou can begin to manage these apps with the following tasks:\n1. In Microsoft Entra ID, create a new conditional access policy and configure it to\nUse conditional access app control. This configuration helps to redirect the\nrequest to Defender for Cloud Apps. You can create one policy and add all SaaS\napps to this policy.\n2. Next, in Defender for Cloud Apps, create session policies. Create one policy for\neach control you want to apply. For more information, including supported apps\nand clients, see Create Microsoft Defender for Cloud Apps session policies.\nFor sample policies, see Recommended Microsoft Defender for Cloud Apps policies for\nSaaS apps. These policies build on a set of common identity and device access policies\nthat are recommended as a starting point for all customers.\nOnce you have session policies configured, apply them to your cloud apps to provide\ncontrolled access to those apps.\nIn the illustration:\nAccess to sanctioned cloud apps from users and devices in your organization is\nrouted through Defender for Cloud Apps where session policies can be applied to\nspecific apps.\nCloud apps that you have not sanctioned or explicitly unsanctioned are not\naffected.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 103,
+      "end": 105
+    },
+    "content_stats": {
+      "char_count": 3206,
+      "word_count": 514
+    },
+    "hierarchy": {
+      "parent": "A B C",
+      "children": []
+    }
+  }
+}

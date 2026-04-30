@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1049",
+  "section_number": "2.16.2.4",
+  "header": "Indexing documents",
+  "content": "After creating an index with S3 vector engine, you can ingest documents using the standard _bulk\nAPI. OpenSearch automatically oﬄoads vector data of knn_vector ﬁelds using the s3vector\nengine to the S3 vector index in real time. Data belonging to other ﬁelds or knn_vector ﬁelds\nusing diﬀerent engines will be persisted by OpenSearch in its own storage layer.\nFor all bulk requests that are acknowledged, OpenSearch guarantees that all data (vector and non-\nvector) is durable. If a request receives a negative acknowledgment, there are no guarantees on the\ndurability of the documents in that bulk request. You should retry such requests preferably after\ndeleting the previous failed request using the document id to avoid duplicate documents in these\nrare cases.\nExample bulk indexing\nPOST _bulk\n{ \"index\": { \"_index\": \"my-first-s3vector-index\", \"_id\": \"1\" } }\n{ \"my_vector_1\": [1.5, 2.5], \"price\": 12.2 }\n{ \"index\": { \"_index\": \"my-first-s3vector-index\", \"_id\": \"2\" } }\n{ \"my_vector_1\": [2.5, 3.5], \"price\": 7.1 }\n{ \"index\": { \"_index\": \"my-first-s3vector-index\", \"_id\": \"3\" } }\n{ \"my_vector_1\": [3.5, 4.5], \"price\": 12.9 }\n{ \"index\": { \"_index\": \"my-first-s3vector-index\", \"_id\": \"4\" } }\n{ \"my_vector_1\": [5.5, 6.5], \"price\": 1.2 }\n{ \"index\": { \"_index\": \"my-first-s3vector-index\", \"_id\": \"5\" } }\n{ \"my_vector_1\": [4.5, 5.5], \"price\": 3.7 }",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1607,
+      "end": 1607
+    },
+    "content_stats": {
+      "char_count": 1344,
+      "word_count": 206
+    },
+    "hierarchy": {
+      "parent": "Advanced search capabilities with an Amazon S3 vector engine",
+      "children": []
+    }
+  }
+}

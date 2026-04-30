@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_949",
+  "section_number": "2.14.5.1.1",
+  "header": "Fine-grained access control conﬁguration",
+  "content": "If your OpenSearch Service domain uses ﬁne-grained access control with HTTP basic\nauthentication, conﬁguration is similar to any other OpenSearch cluster. This example\nconﬁguration ﬁle takes its input from the open source version of Filebeat (Filebeat OSS):\ninput {\nbeats  {\nport => 5044\n}\n}\noutput {\nopensearch {\nhosts       => \"https://domain-endpoint:443\"\nuser        => \"my-username\"\npassword    => \"my-password\"\nindex       => \"logstash-logs-%{+YYYY.MM.dd}\"\nLoading streaming data from AWS IoT\n1462\nAmazon OpenSearch Service\nDeveloper Guide\necs_compatibility => disabled\nssl_certificate_verification => false\n}\n}\nConﬁguration varies by Beats application and use case, but your Filebeat OSS conﬁguration might\nlook like this:\nfilebeat.inputs:\n- type: log\nenabled: true\npaths:\n- /path/to/logs/dir/*.log\nfilebeat.config.modules:\npath: ${path.config}/modules.d/*.yml\nreload.enabled: false\nsetup.ilm.enabled: false\nsetup.ilm.check_exists: false\nsetup.template.settings:\nindex.number_of_shards: 1\noutput.logstash:\nhosts: [\"logstash-host:5044\"]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1491,
+      "end": 1492
+    },
+    "content_stats": {
+      "char_count": 1042,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": "Conﬁguration",
+      "children": []
+    }
+  }
+}

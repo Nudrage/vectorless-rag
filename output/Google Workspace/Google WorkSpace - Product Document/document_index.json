@@ -1,0 +1,299 @@
+{
+  "document_name": "Google Workspace\\Google WorkSpace - Product Document",
+  "generated_at": "2026-02-17T22:03:49.689497",
+  "outline_text": "DOCUMENT INDEX: Google Workspace\\Google WorkSpace - Product Document\n====================================================================\n\n1. Method: activities.list [Page 1, 2 words]\n   1.1. Retrieves a list of activities for a specific customer's account and application such as the [Page 1, 15 words]\n   1.2. Admin console application or the Google Drive application. For more information, see the [Page 1, 15 words]\n   1.3. activity report's parameters, see the activity parameters [Page 1, 3 words]\n   1.4. HTTP request [Page 1, 11 words]\n   1.5. Path parameters [Page 1, 84 words]\n   1.6. Query parameters [Pages 1-5, 1196 words]\n   1.7. Request body [Page 5, 6 words]\n   1.8. Response body [Page 5, 2 words]\n      1.8.1. JSON template for a collection of activities. If successful, the response body contains data with the following structure: [Pages 5-6, 91 words]\n   1.9. Authorization scopes [Page 6, 2 words]\n      1.9.1. Requires the following OAuth scope: [Page 6, 9 words]\n   1.10. ApplicationName [Pages 6-8, 458 words]\n   1.11. Activity [Pages 8-12, 789 words]\n   1.12. NetworkInfo [Pages 12-13, 56 words]\n   1.13. ResourceDetails [Pages 13-14, 109 words]\n   1.14. AppliedLabel [Page 14, 88 words]\n   1.15. FieldValue [Pages 14-16, 278 words]\n   1.16. TextListValue [Pages 16-17, 19 words]\n   1.17. SelectionValue [Page 17, 35 words]\n   1.18. SelectionListValue [Pages 17-18, 43 words]\n   1.19. UserValue [Page 18, 18 words]\n   1.20. UserListValue [Page 18, 19 words]\n   1.21. Date [Page 18, 1 words]\n      1.21.1. Represents a whole or partial calendar date, such as a birthday. The time of day and time zone [Page 18, 18 words]\n      1.21.2. are either specified elsewhere or are insignificant. The date is relative to the Gregorian [Page 18, 14 words]\n      1.21.3. Calendar. This can represent one of the following: [Pages 18-19, 154 words]\n   1.22. Reason [Pages 19-20, 82 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Method: activities.list",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 2,
+        "summary": "Method: activities.",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "Retrieves a list of activities for a specific customer's account and application such as the",
+            "depth": 2,
+            "chunk_id": "chunk_002",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 15,
+            "summary": "Retrieves a list of activities for a specific customer's account and application such as the"
+          },
+          {
+            "number": "1.2",
+            "title": "Admin console application or the Google Drive application. For more information, see the",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 15,
+            "summary": "guides for administrator (/admin-sdk/reports/v1/guides/manage-audit-admin) and Google Drive\n(/admin-..."
+          },
+          {
+            "number": "1.3",
+            "title": "activity report's parameters, see the activity parameters",
+            "depth": 2,
+            "chunk_id": "chunk_004",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 3,
+            "summary": "(/admin-sdk/reports/v1/reference/activity-ref-appendix-a/admin-event-names) reference guides."
+          },
+          {
+            "number": "1.4",
+            "title": "HTTP request",
+            "depth": 2,
+            "chunk_id": "chunk_005",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 11,
+            "summary": "GET https://admin."
+          },
+          {
+            "number": "1.5",
+            "title": "Path parameters",
+            "depth": 2,
+            "chunk_id": "chunk_006",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 84,
+            "summary": "Parameters\nuserKey or all\nstring\nRepresents the profile ID or the user email for which the data should be filtered."
+          },
+          {
+            "number": "1.6",
+            "title": "Query parameters",
+            "depth": 2,
+            "chunk_id": "chunk_007",
+            "page_start": 1,
+            "page_end": 5,
+            "word_count": 1196,
+            "summary": "Parameters\nactorIpAddress\nstring\nThe Internet Protocol (IP) Address of host where the event was performed."
+          },
+          {
+            "number": "1.7",
+            "title": "Request body",
+            "depth": 2,
+            "chunk_id": "chunk_008",
+            "page_start": 5,
+            "page_end": 5,
+            "word_count": 6,
+            "summary": "The request body must be empty."
+          },
+          {
+            "number": "1.8",
+            "title": "Response body",
+            "depth": 2,
+            "chunk_id": "chunk_009",
+            "page_start": 5,
+            "page_end": 5,
+            "word_count": 2,
+            "summary": "Response body",
+            "children": [
+              {
+                "number": "1.8.1",
+                "title": "JSON template for a collection of activities. If successful, the response body contains data with the following structure:",
+                "depth": 3,
+                "chunk_id": "chunk_010",
+                "page_start": 5,
+                "page_end": 6,
+                "word_count": 91,
+                "summary": "If successful, the response body contains data with the following structure:\nJSON representation\nresourceDetails."
+              }
+            ]
+          },
+          {
+            "number": "1.9",
+            "title": "Authorization scopes",
+            "depth": 2,
+            "chunk_id": "chunk_011",
+            "page_start": 6,
+            "page_end": 6,
+            "word_count": 2,
+            "summary": "Authorization scopes",
+            "children": [
+              {
+                "number": "1.9.1",
+                "title": "Requires the following OAuth scope:",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 6,
+                "page_end": 6,
+                "word_count": 9,
+                "summary": "https://www."
+              }
+            ]
+          },
+          {
+            "number": "1.10",
+            "title": "ApplicationName",
+            "depth": 2,
+            "chunk_id": "chunk_013",
+            "page_start": 6,
+            "page_end": 8,
+            "word_count": 458,
+            "summary": "Enums\naccess_transparency The Google Workspace Access Transparency activity reports return informati..."
+          },
+          {
+            "number": "1.11",
+            "title": "Activity",
+            "depth": 2,
+            "chunk_id": "chunk_014",
+            "page_start": 8,
+            "page_end": 12,
+            "word_count": 789,
+            "summary": "JSON template for the activity resource."
+          },
+          {
+            "number": "1.12",
+            "title": "NetworkInfo",
+            "depth": 2,
+            "chunk_id": "chunk_015",
+            "page_start": 12,
+            "page_end": 13,
+            "word_count": 56,
+            "summary": "Network information of the user doing the action."
+          },
+          {
+            "number": "1.13",
+            "title": "ResourceDetails",
+            "depth": 2,
+            "chunk_id": "chunk_016",
+            "page_start": 13,
+            "page_end": 14,
+            "word_count": 109,
+            "summary": "Details of the resource on which the action was performed."
+          },
+          {
+            "number": "1.14",
+            "title": "AppliedLabel",
+            "depth": 2,
+            "chunk_id": "chunk_017",
+            "page_start": 14,
+            "page_end": 14,
+            "word_count": 88,
+            "summary": "Details of the label applied on the resource."
+          },
+          {
+            "number": "1.15",
+            "title": "FieldValue",
+            "depth": 2,
+            "chunk_id": "chunk_018",
+            "page_start": 14,
+            "page_end": 16,
+            "word_count": 278,
+            "summary": "Details of the field value set by the user for the particular label."
+          },
+          {
+            "number": "1.16",
+            "title": "TextListValue",
+            "depth": 2,
+            "chunk_id": "chunk_019",
+            "page_start": 16,
+            "page_end": 17,
+            "word_count": 19,
+            "summary": "Setting a text list value."
+          },
+          {
+            "number": "1.17",
+            "title": "SelectionValue",
+            "depth": 2,
+            "chunk_id": "chunk_020",
+            "page_start": 17,
+            "page_end": 17,
+            "word_count": 35,
+            "summary": "Setting a selection value by selecting a single value from a dropdown."
+          },
+          {
+            "number": "1.18",
+            "title": "SelectionListValue",
+            "depth": 2,
+            "chunk_id": "chunk_021",
+            "page_start": 17,
+            "page_end": 18,
+            "word_count": 43,
+            "summary": "Setting a selection list value by selecting multiple values from a dropdown."
+          },
+          {
+            "number": "1.19",
+            "title": "UserValue",
+            "depth": 2,
+            "chunk_id": "chunk_022",
+            "page_start": 18,
+            "page_end": 18,
+            "word_count": 18,
+            "summary": "Setting a user value by selecting a single user."
+          },
+          {
+            "number": "1.20",
+            "title": "UserListValue",
+            "depth": 2,
+            "chunk_id": "chunk_023",
+            "page_start": 18,
+            "page_end": 18,
+            "word_count": 19,
+            "summary": "Setting a user list value by selecting multiple users."
+          },
+          {
+            "number": "1.21",
+            "title": "Date",
+            "depth": 2,
+            "chunk_id": "chunk_024",
+            "page_start": 18,
+            "page_end": 18,
+            "word_count": 1,
+            "summary": "Date",
+            "children": [
+              {
+                "number": "1.21.1",
+                "title": "Represents a whole or partial calendar date, such as a birthday. The time of day and time zone",
+                "depth": 3,
+                "chunk_id": "chunk_025",
+                "page_start": 18,
+                "page_end": 18,
+                "word_count": 18,
+                "summary": "Represents a whole or partial calendar date, such as a birthday."
+              },
+              {
+                "number": "1.21.2",
+                "title": "are either specified elsewhere or are insignificant. The date is relative to the Gregorian",
+                "depth": 3,
+                "chunk_id": "chunk_026",
+                "page_start": 18,
+                "page_end": 18,
+                "word_count": 14,
+                "summary": "are either specified elsewhere or are insignificant."
+              },
+              {
+                "number": "1.21.3",
+                "title": "Calendar. This can represent one of the following:",
+                "depth": 3,
+                "chunk_id": "chunk_027",
+                "page_start": 18,
+                "page_end": 19,
+                "word_count": 154,
+                "summary": "{\n\"email\": string\n}\n{\n\"values\": [\n{\nobject (UserValue (/workspace/admin/reports/reference/rest/v1/ac..."
+              }
+            ]
+          },
+          {
+            "number": "1.22",
+            "title": "Reason",
+            "depth": 2,
+            "chunk_id": "chunk_028",
+            "page_start": 19,
+            "page_end": 20,
+            "word_count": 82,
+            "summary": "The reason why the label/field was applied."
+          }
+        ]
+      }
+    ],
+    "total_sections": 28,
+    "max_depth": 3
+  }
+}

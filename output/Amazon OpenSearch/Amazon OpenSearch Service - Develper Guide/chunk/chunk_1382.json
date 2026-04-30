@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1382",
+  "section_number": "2.25.3.7",
+  "header": "Use index templates",
+  "content": "You can use an index template as a way to tell OpenSearch how to conﬁgure an index when it's\ncreated. Conﬁgure index templates before creating indexes. Then, when you create an index, it\ninherits the settings and mappings from the template. You can apply more than one template to\na single index, so you can specify settings in one template and mappings in another. This strategy\nallows one template for common settings across multiple indexes, and separate templates for\nmore speciﬁc settings and mappings.\nThe following settings are helpful to conﬁgure in templates:\n• Number of primary and replica shards\n• Refresh interval (how often to refresh and make recent changes to the index available to search)\n• Dynamic mapping control\n• Explicit ﬁeld mappings\nThe following example template contains each of these settings:\n{\n\"index_patterns\":[\n\"index-*\"\n],\n\"order\": 0,\n\"settings\": {\n\"index\": {\n\"number_of_shards\": 3,\n\"number_of_replicas\": 1,\n\"refresh_interval\": \"60s\"\n}\nUse index templates\n1842\nAmazon OpenSearch Service\nDeveloper Guide\n},\n\"mappings\": {\n\"dynamic\": false,\n\"properties\": {\n\"field_name1\": {\n\"type\": \"keyword\"\n}\n}\n}\n}\nEven if they rarely change, having settings and mappings deﬁned centrally in OpenSearch is\nsimpler to manage than updating multiple upstream clients.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1871,
+      "end": 1872
+    },
+    "content_stats": {
+      "char_count": 1279,
+      "word_count": 197
+    },
+    "hierarchy": {
+      "parent": "Stability",
+      "children": []
+    }
+  }
+}

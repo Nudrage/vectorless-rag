@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1522",
+  "section_number": "2.27.4.1",
+  "header": "Step 1: Conﬁgure prerequisites",
+  "content": "Before proceeding, you must have the following resources.\nPrerequisite\nDescription\nAmazon S3 bucket\nFor more information, see Creating a Bucket in the Amazon Simple\nStorage Service User Guide.\nOpenSearch Service\ndomain\nThe destination for data. For more information, see Creating\nOpenSearch Service domains.\nIf you don't already have these resources, you can create them using the following AWS CLI\ncommands:\naws s3 mb s3://my-transcribe-test --region us-west-2\naws opensearch create-domain --domain-name my-transcribe-test --engine-version\nOpenSearch_1.0 --cluster-config  InstanceType=t2.medium.search,InstanceCount=1\n--ebs-options EBSEnabled=true,VolumeType=standard,VolumeSize=10 --access-policies\n'{\"Version\": \"2012-10-17\",       \"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\n{\"AWS\":\"arn:aws:iam::123456789012:root\"},\"Action\":\"es:*\",\"Resource\":\"arn:aws:es:us-\nwest-2:123456789012:domain/my-transcribe-test/*\"}]}' --region us-west-2\nStep 1: Conﬁgure prerequisites\n2027\nAmazon OpenSearch Service\nDeveloper Guide\nNote\nThese commands use the us-west-2 Region, but you can use any Region that Amazon\nComprehend supports. To learn more, see the AWS General Reference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2056,
+      "end": 2057
+    },
+    "content_stats": {
+      "char_count": 1164,
+      "word_count": 120
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Visualizing customer support calls with OpenSearch Service and OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

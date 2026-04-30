@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1660",
+  "section_number": "155.1.1.224",
+  "header": "Get incident notifications by email",
+  "content": "Article • 01/17/2025 • Applies to: Microsoft Defender XDR\nYou can set up email notifications for your staff to get notified about new incidents or\nupdates to existing incidents. You can choose to get notifications based on:\nAlert severity\nAlert sources\nDevice group\nChoose to receive email notifications only for specific service source: You can easily\nselect specific service sources that you want to get email notifications for.\nGet more granularity with specific detection sources: You can get notifications only for\na specific detection source.\nSet the severity per detection or service source: You can choose to get email\nnotifications only on specific severities per source. For example, you can get notified for\nMedium and High alerts for EDR and all severities for Microsoft Defender Experts.\nThe email notification contains important details about the incident like the incident\nname, severity, and categories, among others. You can also go directly to the incident\nand start your analysis right away. For more information, see Investigate incidents.\nYou can add or remove recipients in the email notifications. New recipients get notified\nabout incidents after they're added.\n） Important\nSome information in this article relates to a prereleased product which may be\nsubstantially modified before it's commercially released. Microsoft makes no\nwarranties, expressed or implied, with respect to the information provided here.\n７ Note\nYou need the Manage security settings permission to configure email notification\nsettings. If you've chosen to use basic permissions management, users with Security\nAdministrator or Global Administrator roles can configure email notifications.\nLikewise, if your organization is using role-based access control (RBAC), you can\nFollow these steps to create a new rule and customize email notification settings.\n1. Go to the Microsoft Defender portal\n. In the navigation pane, select Settings >\nMicrosoft Defender XDR, then select Email notifications under General.\n2. In the Incidents tab, select Add incident notification rule.\n3. On the Basics page, type the rule name and a description, and then select Next.\n4. On the Notification settings page, configure:\nAlert severity - Choose the alert severities that triggers an incident\nnotification. For example, if you only want to be informed about high-severity\nincidents, select High.\nDevice group scope - You can specify all device groups or select from the list\nof device groups in your tenant.\nSend only one notification per incident - Select if you want one notification\nper incident.\nInclude organization name in the email - Select if you want your\norganization name to appear in the email notification.\nInclude tenant-specific portal link - Select if you want to add a link with the\ntenant ID in the email notification for access to a specific Microsoft 365\ntenant.\nonly create, edit, delete, and receive notifications based on device groups that you\nare allowed to manage.\n７ Note\nMicrosoft recommends using roles with fewer permissions for better security. The\nGlobal Administrator role, which has many permissions, should only be used in\nemergencies when no other role fits.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1237,
+      "end": 1238
+    },
+    "content_stats": {
+      "char_count": 3172,
+      "word_count": 493
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Create a rule for email notifications",
+        "Next steps"
+      ]
+    }
+  }
+}

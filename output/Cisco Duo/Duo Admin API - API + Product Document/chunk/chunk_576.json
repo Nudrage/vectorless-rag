@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_576",
+  "section_number": "1.27.6",
+  "header": "Response Codes",
+  "content": "Response\nMeaning\n200\nSuccess. Returns a list of blocked devices that were unblocked.\n400\nThe values within registered_device_key_list  were either\nincorrect or missing.\n\n\n{\n\"response\": {\n\"blocked\": \"BLOCKED_REGISTRATION\",\n\"compkey\": \"CABCDE1FGHIJKLMNO234\",\n\"device_name\": \"CJONES-M-A1BC\",\n\"device_os\": \"Mac OS X\",\n\"identifier\": \"123456abcde7533644465b4f16637adf5870773b571f6d5\n},\n\"stat\": \"OK\"\n}\nDELETE  /admin/v1/registered_devices/blocked\n404\nNo blocked devices were found with the given\nregistered_device_key_list .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 245,
+      "end": 246
+    },
+    "content_stats": {
+      "char_count": 519,
+      "word_count": 57
+    },
+    "hierarchy": {
+      "parent": "Registered Devices",
+      "children": []
+    }
+  }
+}

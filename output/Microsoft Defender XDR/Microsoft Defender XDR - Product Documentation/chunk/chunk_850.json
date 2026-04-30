@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_850",
+  "section_number": "155.1.1.83",
+  "header": "Quickly hunt for entity or event information with go hunt",
+  "content": "information with go hunt\n03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nWith the go hunt action, you can quickly investigate events and various entity types using\npowerful query-based advanced hunting capabilities. This action automatically runs an\nadvanced hunting query to find relevant information about the selected event or entity.\nThe go hunt action is available in various sections of Microsoft Defender XDR. This action is\navailable to view once event or entity details are displayed. For example, you can use the go\nhunt option from the following sections:\nIn the incident page, you can review details about users, devices, and many other entities\nassociated with an incident. As you select an entity, you get additional information and\nthe various actions you could take on that entity. In the example below, a mailbox is\nselected, showing details about the mailbox and the option to hunt for more information\nabout the mailbox.\nIn the incident page, you can also access a list of entities under the Evidence tab.\nSelecting one of those entities provides an option to quickly hunt for information about\nthat entity.\n\nWhen viewing the timeline for a device, you can select an event in the timeline to view\nadditional information about that event. Once an event is selected, you get the option to\nhunt for other relevant events in advanced hunting.\nSelecting Go hunt or Hunt for related events passes different queries, depending on whether\nyou've selected an entity or an event.\nYou can use go hunt to query for information about a user, device, or any other type of entity;\nthe query checks all relevant schema tables for any events involving that entity to return\ninformation. To keep the results manageable, the query is:\nscoped to around the same time period as the earliest activity in the past 30 days that\ninvolves the entity\nassociated with the incident.\nHere is an example of the go hunt query for a device:\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 562,
+      "end": 563
+    },
+    "content_stats": {
+      "char_count": 1981,
+      "word_count": 330
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Query for entity information",
+        "Query for event information",
+        "Adjust the query",
+        "Related topics"
+      ]
+    }
+  }
+}

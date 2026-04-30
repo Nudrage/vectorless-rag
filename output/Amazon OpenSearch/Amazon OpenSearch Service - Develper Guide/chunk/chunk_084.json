@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_084",
+  "section_number": "2.16.1.2",
+  "header": "Required IAM permissions",
+  "content": "OpenSearch Ingestion uses the following IAM permissions for creating pipelines:\n• osis:CreatePipeline – Create a pipeline.\n• osis:ValidatePipeline – Check whether a pipeline conﬁguration is valid.\n• iam:CreateRole and iam:AttachPolicy – Have OpenSearch Ingestion automatically create\nthe pipeline role for you.\n• iam:PassRole – Pass the pipeline role to OpenSearch Ingestion so that it can write data to the\ndomain. This permission must be on the pipeline role resource, or simply * if you plan to use\ndiﬀerent roles in each pipeline.\nFor example, the following policy grants permission to create a pipeline:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Effect\":\"Allow\",\nRequired IAM permissions\n71\nAmazon OpenSearch Service\nDeveloper Guide\n\"Resource\":\"*\",\n\"Action\":[\n\"osis:CreatePipeline\",\n\"osis:ListPipelineBlueprints\",\n\"osis:ValidatePipeline\"\n]\n},\n{\n\"Resource\":[\n\"arn:aws:iam::111122223333:role/pipeline-role\"\n],\n\"Effect\":\"Allow\",\n\"Action\":[\n\"iam:CreateRole\",\n\"iam:AttachRolePolicy\",\n\"iam:PassRole\"\n]\n}\n]\n}\nOpenSearch Ingestion also includes a permission called osis:Ingest, which is required in order\nto send signed requests to the pipeline using Signature Version 4. For more information, see the\nsection called “Creating an ingestion role”.\nNote\nIn addition, the ﬁrst user to create a pipeline in an account must have permissions for\nthe iam:CreateServiceLinkedRole action. For more information, see pipeline role\nresource.\nFor more information about each permission, see Actions, resources, and condition keys for\nOpenSearch Ingestion in the Service Authorization Reference.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 100,
+      "end": 101
+    },
+    "content_stats": {
+      "char_count": 1584,
+      "word_count": 210
+    },
+    "hierarchy": {
+      "parent": "Creating Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

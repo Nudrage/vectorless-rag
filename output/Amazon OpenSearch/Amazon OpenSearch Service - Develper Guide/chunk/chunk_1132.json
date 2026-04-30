@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1132",
+  "section_number": "2.18.4.3.2",
+  "header": "Conﬁguring access to OpenSearch Serverless collections in a VPC (AWS CLI)",
+  "content": "To conﬁgure access to OpenSearch Serverless collections in a VPC using the AWS CLI\n1.\nCreate a .json ﬁle similar to the following. Replace the placeholder values with your own\ninformation.\n{\n\"Description\" : \"policy-description\",\n\"Rules\": [{\n\"ResourceType\" : \"collection\",\n\"Resource\" : [\"collection/collection_name\"]\n}],\n\"SourceServices\" : [\n\"application.opensearchservice.amazonaws.com\"\n],\n\"AllowFromPublic\" : false\n}\n2.\nCreate or update a network policy for a collection in a VPC to work with OpenSearch UI\napplications.\nCreate a network policy\nRun the following command. Replace the placeholder values with your own\ninformation.\naws opensearchserverless create-security-policy \\\n--type network  \\\n--region region \\\n--endpoint-url endpoint-url \\\n--name network-policy-name \\\nConﬁguring access to OpenSearch Serverless collections in a VPC\n1660\nAmazon OpenSearch Service\nDeveloper Guide\n--policy file:/path_to_network_policy_json_file\nThe command returns information similar to the following:\n{\n\"securityPolicyDetail\": {\n\"createdDate\": ******,\n\"lastModifiedDate\": ******,\n\"name\": \"network-policy-name\",\n\"policy\": [\n{\n\"SourceVPCEs\": [],\n\"AllowFromPublic\": false,\n\"Description\": \"\",\n\"Rules\": [\n{\n\"Resource\": [\n\"collection/network-policy-name\"\n],\n\"ResourceType\": \"collection\"\n}\n],\n\"SourceServices\": [\n\"application.opensearchservice.amazonaws.com\"\n]\n}\n],\n\"policyVersion\": \"******\",\n\"type\": \"network\"\n}\n}\nUpdate a network policy\nRun the following command. Replace the placeholder values with your own\ninformation.\naws opensearchserverless update-security-policy \\\n--type network  \\\n--region region \\\n--endpoint-url endpoint-url \\\n--name network-policy-name \\\nConﬁguring access to OpenSearch Serverless collections in a VPC\n1661\nAmazon OpenSearch Service\nDeveloper Guide\n--policy-version \"policy_version_from_output_of_network_policy_creation\" \\\n--policy file:/path_to_network_policy_json_file\nThe command returns information similar to the following:\n{\n\"securityPolicyDetail\": {\n\"createdDate\": ******,\n\"lastModifiedDate\": ******,\n\"name\": \"network-policy-name\",\n\"policy\": [\n{\n\"SourceVPCEs\": [],\n\"AllowFromPublic\": false,\n\"Description\": \"\",\n\"Rules\": [\n{\n\"Resource\": [\n\"collection/network-policy-name\"\n],\n\"ResourceType\": \"collection\"\n}\n],\n\"SourceServices\": [\n\"application.opensearchservice.amazonaws.com\"\n]\n}\n],\n\"policyVersion\": \"******\",\n\"type\": \"network\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1689,
+      "end": 1691
+    },
+    "content_stats": {
+      "char_count": 2352,
+      "word_count": 271
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring access to OpenSearch Serverless collections in a VPC",
+      "children": []
+    }
+  }
+}

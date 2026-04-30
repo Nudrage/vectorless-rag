@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_839",
+  "section_number": "155.1.1.81",
+  "header": "Advanced hunting example for Microsoft Defender for Office 365",
+  "content": "Defender for Office 365\n03/28/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nWant to get started searching for email threats using advanced hunting? Try these steps:\nThe Microsoft Defender for Office 365 deployment guide explains how to jump right in and get\nconfiguration going on Day 1.\nDepending on your preset security policy vs. custom policy choices, Zero-Hour auto purge\n(ZAP) settings are important to know if a malicious message was removed from a mailbox after\ndelivery.\nQuickly navigating to Kusto query language to hunt for issues is an advantage of converging\nthese two security centers. Security teams can monitor ZAP misses by taking their next steps in\nthe Microsoft Defender portal at https://security.microsoft.com\n> Hunting > Advanced\nHunting.\n1. On the Advanced Hunting page at https://security.microsoft.com/v2/advanced-\nhunting\n, verify the New Query tab is selected.\n2. Copy the following query into the Query box:\nKusto\n3. Select Run query.\nEmailPostDeliveryEvents\n| where Timestamp > ago(7d)\n//List malicious emails that were not zapped successfully\n| where ActionType has \"ZAP\" and ActionResult == \"Error\"\n| project ZapTime = Timestamp, ActionType, NetworkMessageId ,\nRecipientEmailAddress\n//Get logon activity of recipients using RecipientEmailAddress and AccountUpn\n| join kind=inner IdentityLogonEvents on $left.RecipientEmailAddress ==\n$right.AccountUpn\n| where Timestamp between ((ZapTime-24h) .. (ZapTime+24h))\n//Show only pertinent info, such as account name, the app or service,\nprotocol, the target device, and type of logon\n| project ZapTime, ActionType, NetworkMessageId , RecipientEmailAddress,\nAccountUpn,\nLogonTime = Timestamp, AccountDisplayName, Application, Protocol, DeviceName,\nLogonType\nThe data from this query appears in the Results panel below the query itself. Results\ninclude information like DeviceName , AccountDisplayName , and ZapTime  in a customizable\nresult set. Results can also be exported for your records. To save the query for reuse,\nselect Save > Save As to add the query to your list of queries, shared, or community\nqueries.\nAdvanced hunting best practices\nOverview - Advanced hunting\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 553,
+      "end": 554
+    },
+    "content_stats": {
+      "char_count": 2197,
+      "word_count": 316
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related information"
+      ]
+    }
+  }
+}

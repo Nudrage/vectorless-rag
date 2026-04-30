@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_302",
+  "section_number": "2.7.4",
+  "header": "Amazon OpenSearch Serverless collection groups",
+  "content": "Collection groups in Amazon OpenSearch Serverless organize multiple collections and enable\ncompute resource sharing across collections with diﬀerent KMS keys. This shared compute model\nreduces costs by eliminating the need for separate OpenSearch Compute Units (OCUs) for each\nKMS key.\nEach OpenSearch Serverless collection you create is protected with encryption of data at rest using\nAWS KMS to store and manage your encryption keys. Collections within the same collection group\nshare compute resources and OCU memory space, even when they use diﬀerent KMS keys for\nencryption.\nCollection groups provide isolation for security and performance requirements. You can group\ncollections with the same KMS key into a single collection group for security isolation, or combine\ncollections with diﬀerent KMS keys in the same group for cost optimization. This ﬂexibility lets you\nbalance security requirements with resource eﬃciency.\nWhen you add a collection to a collection group, OpenSearch Serverless assigns it to the group's\nshared compute resources. The system automatically manages the distribution of workloads\nacross these resources while maintaining security by encrypting each collection's data with its\nCollection groups\n441\nAmazon OpenSearch Service\nDeveloper Guide\ndesignated KMS key. Access controls continue to apply at the collection level, and the shared\ncompute resources access multiple KMS keys as needed to serve the collections in the group.\nYou control resource allocation by setting minimum and maximum OCU limits at the collection\ngroup level. These limits apply to all collections in the group and help you manage costs while\nensuring consistent performance.\nBy default, there is a service quota (limit) for the number of collections in a collection group,\nthe number of indexes in a collection, and the number of OCUs in a collection group. For more\ninformation, see OpenSearch Serverless quotas.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 470,
+      "end": 471
+    },
+    "content_stats": {
+      "char_count": 1919,
+      "word_count": 288
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless",
+      "children": [
+        "Key concepts",
+        "Collection group capacity limits",
+        "Encryption and KMS keys in collection groups",
+        "Create collection groups",
+        "Manage Amazon OpenSearch Serverless collection groups"
+      ]
+    }
+  }
+}

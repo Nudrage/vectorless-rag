@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_679",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n167/1226\nField\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\nServiceStart\nValues:\nSERVICE_BOOT_START (0)\nSERVICE_SYSTEM_START (1)\nSERVICE_AUTO_START (2)\nSERVICE_DEMAND_START (3)\nSERVICE_DISABLED (4)\nServiceErrorControl\nValues:\nSERVICE_ERROR_IGNORE (0)\nSERVICE_ERROR_NORMAL (1)\nSERVICE_ERROR_SEVERE (2)\nSERVICE_ERROR_CRITICAL (3)\nServiceType\nValues:\nSERVICE_KERNEL_DRIVER (1)\nSERVICE_FILE_SYSTEM_DRIVER (2)\nSERVICE_ADAPTER (4)\nSERVICE_RECOGNIZER_DRIVER (8)\nSERVICE_WIN32_OWN_PROCESS (16)\nSERVICE_WIN32_SHARE_PROCESS (32)\nSERVICE_INTERACTIVE_PROCESS (256)\nServiceGroup\nServiceImagePath\nServiceDependOnGroup\nServiceDependOnService\nServiceObjectName\nServiceDisplayName\nServiceDescription\nServiceFailureActions\nServiceFailureCommand\nServiceDelayedAutoStart\nServicePreshutdownTimeout\nServiceServiceSidType\nValues:\nSERVICE_SID_TYPE_NONE (0)\nSERVICE_SID_TYPE_UNRESTRICTED (1)\nSERVICE_TYPE_RESTRICTED (3)\nServiceRequiredPrivileges\nServiceSecurity\nServiceServiceDll\nRpcClientProcessId\nThe ProcessId corresponding to the RPC client of this request.\nRpcClientThreadId\nRemoteAddressIP4\nRemoteAddressIP6\nClientComputerName\nAuthenticationId\nValues:\nINVALID_LUID (0)\nNETWORK_SERVICE (996)\nLOCAL_SERVICE (997)\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n168/1226\nField\nDescription\nSYSTEM (999)\nRESERVED_LUID_MAX (1000)\nTokenType\nValues:\nINVALID_TOKEN (0)\nPRIMARY_TOKEN (1)\nIMPERSONATION_TOKEN (2)\nUserName\nOperating system username.\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 167,
+      "end": 169
+    },
+    "content_stats": {
+      "char_count": 2048,
+      "word_count": 190
+    },
+    "hierarchy": {
+      "parent": "CreateService",
+      "children": []
+    }
+  }
+}

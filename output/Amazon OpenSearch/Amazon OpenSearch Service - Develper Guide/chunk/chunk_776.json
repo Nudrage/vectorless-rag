@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_776",
+  "section_number": "2.12.1.2",
+  "header": "Node-to-node encryption for Amazon OpenSearch Service",
+  "content": "Node-to-node encryption provides an additional layer of security on top of the default features of\nAmazon OpenSearch Service.\nEach OpenSearch Service domain—regardless of whether the domain uses VPC access—resides\nwithin its own, dedicated VPC. This architecture prevents potential attackers from intercepting\ntraﬃc between OpenSearch nodes and keeps the cluster secure. By default, however, traﬃc\nwithin the VPC is unencrypted. Node-to-node encryption enables TLS 1.2 encryption for all\ncommunications within the VPC.\nIf you send data to OpenSearch Service over HTTPS, node-to-node encryption helps ensure that\nyour data remains encrypted as OpenSearch distributes (and redistributes) it throughout the\ncluster. If data arrives unencrypted over HTTP, OpenSearch Service encrypts it after it reaches the\ncluster. You can require that all traﬃc to the domain arrive over HTTPS using the console, AWS CLI,\nor conﬁguration API.\nNode-to-node encryption is required if you enable ﬁne-grained access control.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1327,
+      "end": 1327
+    },
+    "content_stats": {
+      "char_count": 1002,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Data protection in Amazon OpenSearch Service",
+      "children": [
+        "Enabling node-to-node encryption",
+        "Disabling node-to-node encryption"
+      ]
+    }
+  }
+}

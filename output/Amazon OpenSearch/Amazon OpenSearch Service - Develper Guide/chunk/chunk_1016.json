@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1016",
+  "section_number": "2.15.8.2.9",
+  "header": "Get stats",
+  "content": "Provides information about how the plugin is behaving.\nGET _ltr/_stats\nYou can also use ﬁlters to retrieve a single stat:\nGET _ltr/_stats/<stat>\nFutthermore, you can limit the information to a single node in the cluster:\nGET _ltr/_stats/<stat>/nodes/<nodeId>\n{\n\"_nodes\" : {\n\"total\" : 1,\n\"successful\" : 1,\n\"failed\" : 0\n},\n\"cluster_name\" : \"873043598401:ltr-77\",\n\"stores\" : {\n\".ltrstore\" : {\n\"model_count\" : 1,\n\"featureset_count\" : 1,\n\"feature_count\" : 2,\n\"status\" : \"green\"\n}\n},\n\"status\" : \"green\",\n\"nodes\" : {\n\"DjelK-_ZSfyzstO5dhGGQA\" : {\n\"cache\" : {\n\"feature\" : {\n\"eviction_count\" : 0,\n\"miss_count\" : 0,\nLearning to Rank API\n1547\nAmazon OpenSearch Service\nDeveloper Guide\n\"entry_count\" : 0,\n\"memory_usage_in_bytes\" : 0,\n\"hit_count\" : 0\n},\n\"featureset\" : {\n\"eviction_count\" : 2,\n\"miss_count\" : 2,\n\"entry_count\" : 0,\n\"memory_usage_in_bytes\" : 0,\n\"hit_count\" : 0\n},\n\"model\" : {\n\"eviction_count\" : 2,\n\"miss_count\" : 3,\n\"entry_count\" : 1,\n\"memory_usage_in_bytes\" : 3204,\n\"hit_count\" : 1\n}\n},\n\"request_total_count\" : 6,\n\"request_error_count\" : 0\n}\n}\n}\nThe statistics are provided at two levels, node and cluster, as speciﬁed in the following tables:\nNode-level stats\nField name\nDescription\nrequest_total_count\nTotal count of ranking requests.\nrequest_error_count\nTotal count of unsuccessful requests.\ncache\nStatistics across all caches (features, featurese\nts, models). A cache hit occurs when a user\nqueries the plugin and the model is already\nloaded into memory.\ncache.eviction_count\nNumber of cache evictions.\ncache.hit_count\nNumber of cache hits.\nLearning to Rank API\n1548\nAmazon OpenSearch Service\nDeveloper Guide\nField name\nDescription\ncache.miss_count\nNumber of cache misses. A cache miss occurs\nwhen a user queries the plugin and the model\nhas not yet been loaded into memory.\ncache.entry_count\nNumber of entries in the cache.\ncache.memory_usage_in_bytes\nTotal memory used in bytes.\ncache.cache_capacity_reached\nIndicates if the cache limit is reached.\nCluster-level stats\nField name\nDescription\nstores\nIndicates where the feature sets and model\nmetadata are stored. (The default is “.ltrstore”.\nOtherwise, it's preﬁxed with “.ltrstore_”, with a\nuser supplied name).\nstores.status\nStatus of the index.\nstores.feature_sets\nNumber of feature sets.\nstores.features_count\nNumber of features.\nstores.model_count\nNumber of models.\nstatus\nThe plugin status based on the status of the\nfeature store indices (red, yellow, or green)\nand circuit breaker state (open or closed).\ncache.cache_capacity_reached\nIndicates if the cache limit is reached.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1576,
+      "end": 1578
+    },
+    "content_stats": {
+      "char_count": 2539,
+      "word_count": 372
+    },
+    "hierarchy": {
+      "parent": "Learning to Rank API",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_298",
+  "section_number": "2.7.3.6",
+  "header": "Backing up collections using snapshots",
+  "content": "Snapshots are point-in-time backups of your Amazon OpenSearch Serverless collections that\nprovide disaster recovery capabilities. OpenSearch Serverless automatically creates and manages\nsnapshots of your collections, ensuring business continuity and data protection. Each snapshot\ncontains index metadata (settings and mappings for your indexes), cluster metadata (index\ntemplates and aliases), and index data (all documents and data stored in your indexes).\nBacking up collections using snapshots\n434\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearch Serverless provides automatic hourly backups with no manual conﬁguration, zero\nmaintenance overhead, no additional storage costs, quick recovery from accidental data loss, and\nthe ability to restore speciﬁc indexes from a snapshot.\nBefore working with snapshots, understand these important considerations. Creating a snapshot\ntakes time to complete and isn't instantaneous. New documents or updates during snapshot\ncreation will not be included in the snapshot. You can restore snapshots only to their original\ncollection and not to a new one. When restored, indexes receive new UUIDs that diﬀer from their\noriginal versions. You can run only one restore operation at a time, and you can't start multiple\nrestore operations on the same collection simultaneously. Attempting to restore indexes during an\nactive restore operation causes the operation to fail. During a restore operation, your requests to\nthe indexes fail.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 463,
+      "end": 464
+    },
+    "content_stats": {
+      "char_count": 1475,
+      "word_count": 208
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Serverless collections",
+      "children": [
+        "Required permissions",
+        "Working with snapshots",
+        "Restoring from a snapshot"
+      ]
+    }
+  }
+}

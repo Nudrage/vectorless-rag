@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1394",
+  "section_number": "2.25.5.3",
+  "header": "Apply a restrictive access policy",
+  "content": "Even if your domain is deployed within a VPC, it's a best practice to implement security in layers.\nMake sure to check the conﬁguration of your current access policies.\nApply a restrictive resource-based access policy to your domains and follow the principle of least\nprivilege when granting access to the conﬁguration API and the OpenSearch API operations. As a\ngeneral rule, avoid using the anonymous user principal \"Principal\": {\"AWS\": \"*\" } in your\naccess policies.\nThere are some situations, however, where it's acceptable to use an open access policy, such as\nwhen you enable ﬁne-grained access control. An open access policy can enable you to access the\ndomain in cases where request signing is diﬃcult or impossible, such as from certain clients and\ntools.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1875,
+      "end": 1875
+    },
+    "content_stats": {
+      "char_count": 764,
+      "word_count": 124
+    },
+    "hierarchy": {
+      "parent": "Security",
+      "children": []
+    }
+  }
+}

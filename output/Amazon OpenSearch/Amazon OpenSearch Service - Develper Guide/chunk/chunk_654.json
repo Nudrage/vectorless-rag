@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_654",
+  "section_number": "2.10.2.1",
+  "header": "Enabling log publishing (console)",
+  "content": "The OpenSearch Service console is the simplest way to enable the publishing of logs to\nCloudWatch.\nTo enable log publishing to CloudWatch (console)\n1.\nGo to aws.amazon.com, and then choose Sign In and provide your credentials.\n2.\nUnder Analytics, choose Amazon OpenSearch Service.\n3.\nSelect the domain you want to update.\n4.\nOn the Logs tab, select a log type and choose Enable.\n5.\nCreate a new CloudWatch log group or choose an existing one.\nNote\nIf you plan to enable multiple logs, we recommend publishing each to its own log\ngroup. This separation makes the logs easier to scan.\n6.\nChoose an access policy that contains the appropriate permissions, or create a policy using the\nJSON that the console provides:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"Service\": \"es.amazonaws.com\"\n},\nEnabling log publishing (console)\n1215\nAmazon OpenSearch Service\nDeveloper Guide\n\"Action\": [\n\"logs:PutLogEvents\",\n\"logs:CreateLogStream\"\n],\n\"Resource\": \"arn:aws:logs:us-east-1:111122223333:log-\ngroup:cw_log_group_name:*\"\n}\n]\n}\nWe recommend that you add the aws:SourceAccount and aws:SourceArn condition keys\nto the policy to protect yourself against the confused deputy problem. The source account is\nthe owner of the domain and the source ARN is the ARN of the domain. Your domain must be\non service software R20211203 or later in order to add these condition keys.\nFor example, you could add the following condition block to the policy:\n\"Condition\": {\n\"StringEquals\": {\n\"aws:SourceAccount\": \"account-id\"\n},\n\"ArnLike\": {\n\"aws:SourceArn\": \"arn:aws:es:region:account-id:domain/domain-name\"\n}\n}\nImportant\nCloudWatch Logs supports 10 resource policies per Region. If you plan to enable logs\nfor several OpenSearch Service domains, you should create and reuse a broader policy\nthat includes multiple log groups to avoid reaching this limit. For steps on updating\nyour policy, see the section called “Enabling log publishing (AWS CLI)”.\n7.\nChoose Enable.\nThe status of your domain changes from Active to Processing. The status must return to\nActive before log publishing is enabled. This change typically takes 30 minutes, but can take\nlonger depending on your domain conﬁguration.\nEnabling log publishing (console)\n1216\nAmazon OpenSearch Service\nDeveloper Guide\nIf you enabled one of the shard slow logs, see the section called “Setting shard slow log\nthresholds”. If you enabled audit logs, see the section called “Step 2: Turn on audit logs in\nOpenSearch Dashboards”. If you enabled only error logs, you don't need to perform any additional\nconﬁguration steps.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1244,
+      "end": 1246
+    },
+    "content_stats": {
+      "char_count": 2587,
+      "word_count": 391
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch logs with Amazon CloudWatch Logs",
+      "children": []
+    }
+  }
+}

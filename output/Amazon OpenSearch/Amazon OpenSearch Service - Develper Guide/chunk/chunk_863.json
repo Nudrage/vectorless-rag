@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_863",
+  "section_number": "2.12.9.3.7",
+  "header": "Step 7: Map SAML users to roles",
+  "content": "Once your domain status is Active and your IdP is conﬁgured correctly, navigate to OpenSearch\nDashboards.\n• If you chose the SP-initiated URL, navigate to domain-endpoint/_dashboards. To log in to a\nspeciﬁc tenant directly, you can append ?security_tenant=tenant-name to the URL.\n• If you chose the IdP-initiated URL, navigate to your identity provider's application directory.\nIn both cases, log in as either the SAML master user or a user who belongs to the SAML master\nbackend role. To continue the example from step 7, log in as either jdoe or a member of the\nadmins group.\nAfter OpenSearch Dashboards loads, choose Security, Roles. Then, map roles to allow other users\nto access OpenSearch Dashboards.\nFor example, you might map your trusted colleague jroe to the all_access and\nsecurity_manager roles. You might also map the backend role analysts to the readall and\nopensearch_dashboards_user roles.\nIf you prefer to use the API rather than OpenSearch Dashboards, see the following sample request:\nPATCH _plugins/_security/api/rolesmapping\n[\n{\n\"op\": \"add\", \"path\": \"/security_manager\", \"value\": { \"users\": [\"master-user\",\n\"jdoe\", \"jroe\"], \"backend_roles\": [\"admins\"] }\n},\n{\n\"op\": \"add\", \"path\": \"/all_access\", \"value\": { \"users\": [\"master-user\", \"jdoe\",\n\"jroe\"], \"backend_roles\": [\"admins\"] }\n},\n{\n\"op\": \"add\", \"path\": \"/readall\", \"value\": { \"backend_roles\": [\"analysts\"] }\n},\n{\n\"op\": \"add\", \"path\": \"/opensearch_dashboards_user\", \"value\": { \"backend_roles\":\n[\"analysts\"] }\n}\n]\nConﬁguring SP- or IdP-initiated authentication\n1386\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1415,
+      "end": 1416
+    },
+    "content_stats": {
+      "char_count": 1577,
+      "word_count": 226
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring SP- or IdP-initiated authentication",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1882",
+  "section_number": "155.1.1.252.6",
+  "header": "Request body",
+  "content": "ﾉ\nExpand table\nProperty\nType\nDescription\nclassification\nEnum\nSpecification of the incident. Possible values are: TruePositive  (True positive),\nInformationalExpectedActivity  (Informational, expected activity), and\nFalsePositive  (False Positive).\ndetermination\nEnum\nSpecifies the determination of the incident.\nPossible determination values for each classification are:\nTrue positive: MultiStagedAttack  (Multi staged attack),\nMaliciousUserActivity  (Malicious user activity), CompromisedAccount\n(Compromised account) – consider changing the enum name in public api\naccordingly, Malware  (Malware), Phishing  (Phishing), UnwantedSoftware\n(Unwanted software), and Other  (Other).\nInformational, expected activity: SecurityTesting  (Security test),\nLineOfBusinessApplication  (Line-of-business application), ConfirmedActivity\n(Confirmed activity) - consider changing the enum name in public api\naccordingly, and Other  (Other).\nFalse positive: Clean  (Not malicious) - consider changing the enum name in\npublic api accordingly, NoEnoughDataToValidate  (Not enough data to validate),\nand Other  (Other).\ntags\nstring\nlist\nList of Incident tags.\ncomment\nstring\nComment to be added to the incident.\nIf successful, this method returns 200 OK . The response body contains the incident entity with\nupdated properties. If an incident with the specified ID wasn't found, the method returns 404\nNot Found .\nHere's an example of the request.\n７ Note\nAround August 29, 2022, previously supported alert determination values ('Apt' and\n'SecurityPersonnel') will be deprecated and no longer available via the API.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1402,
+      "end": 1403
+    },
+    "content_stats": {
+      "char_count": 1596,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "Update incidents API",
+      "children": []
+    }
+  }
+}

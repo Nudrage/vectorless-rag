@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_530",
+  "section_number": "2.8.12.2",
+  "header": "Upgrading a domain (console)",
+  "content": "The upgrade process is irreversible and can't be paused or cancelled. During an upgrade, you can't\nmake conﬁguration changes to the domain. Before starting an upgrade, double-check that you\nUpgrading a domain (console)\n702\nAmazon OpenSearch Service\nDeveloper Guide\nwant to proceed. You can use these same steps to perform the pre-upgrade check without actually\nstarting an upgrade.\nIf the cluster has dedicated master nodes, OpenSearch upgrades complete without downtime.\nOtherwise, the cluster might be unresponsive for several seconds post-upgrade while it elects a\nmaster node.\nTo upgrade a domain to a later version of OpenSearch or Elasticsearch\n1.\nTake a manual snapshot of your domain. This snapshot serves as a backup that you can restore\non a new domain if you want to return to using the prior OpenSearch version.\n2.\nGo to https://aws.amazon.com and choose Sign In to the Console.\n3.\nUnder Analytics, choose Amazon OpenSearch Service.\n4.\nIn the navigation pane, under Domains, choose the domain that you want to upgrade.\n5.\nChoose Actions and Upgrade.\n6.\nSelect the version to upgrade to. If you're upgrading to an OpenSearch version, the Enable\ncompatibility mode option appears. If you enable this setting, OpenSearch reports its version\nas 7.10 to allow Elasticsearch OSS clients and plugins like Logstash to continue working with\nAmazon OpenSearch Service. You can disable this setting later\n7.\nChoose Upgrade.\n8.\nCheck the Status on the domain dashboard to monitor the status of the upgrade.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 731,
+      "end": 732
+    },
+    "content_stats": {
+      "char_count": 1506,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "Upgrading Amazon OpenSearch Service domains",
+      "children": []
+    }
+  }
+}

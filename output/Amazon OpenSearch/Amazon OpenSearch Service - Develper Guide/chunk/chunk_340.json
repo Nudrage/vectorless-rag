@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_340",
+  "section_number": "2.7.7.2",
+  "header": "Connectors",
+  "content": "Connectors facilitate access to models hosted on third-party ML platforms. They serve as the\ngateway between your OpenSearch cluster and a remote model. For more information, see the\nfollowing documentation:\nConﬁgure Machine Learning\n471\nAmazon OpenSearch Service\nDeveloper Guide\n• Creating connectors for third-party ML platforms on the OpenSearch Documentation website\n• Connectors for external platforms\n• Connectors for AWS services\nImportant\n• When you create a trust policy, add ml.opensearchservice.amazonaws.com as\nthe OpenSearch Service principle.\n• Skip the steps on the Connectors page that display how to conﬁgure a domain in the\npolicy.\n• Add the iam:PassRole statement in the Conﬁgure permissions step.\n• Skip the Map the ML role step in OpenSearch Dashboards. Backend role conﬁguration\nis not required. This applies to Connectors for AWS services, and to Connectors for\nexternal platforms.\n• In your SigV4 request to the collection endpoint, set the service name to aoss instead\nof es.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 500,
+      "end": 501
+    },
+    "content_stats": {
+      "char_count": 1000,
+      "word_count": 152
+    },
+    "hierarchy": {
+      "parent": "Conﬁgure Machine Learning on Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

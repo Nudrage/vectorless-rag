@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1068",
+  "section_number": "155.1.1.148",
+  "header": "IdentityQueryEvents",
+  "content": "06/20/2025Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe IdentityQueryEvents  table in the advanced hunting schema contains information about\nqueries performed against Active Directory objects, such as users, groups, devices, and\ndomains. Use this reference to construct queries that return information from this table.\nThis advanced hunting table is populated by records from Microsoft Defender for Identity or\nMicrosoft Sentinel and Mirosoft Entra ID. If your organization hasn’t deployed the service in\nMicrosoft Defender XDR, queries that use the table aren’t going to work or return any results.\nFor more information about how to deploy Defender for Identity in Defender XDR, read Deploy\nsupported services. For information on other tables in the advanced hunting schema, see the\nadvanced hunting reference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the event was recorded\nActionType\nstring\nType of activity that triggered the event. See the in-portal\nschema reference for details\nApplication\nstring\nApplication that performed the recorded action\nQueryType\nstring\nType of query, such as QueryGroup, QueryUser, or\nEnumerateUsers\nQueryTarget\nstring\nName of user, group, device, domain, or any other entity type\nbeing queried\nQuery\nstring\nString used to run the query\nProtocol\nstring\nProtocol used during the communication\nAccountName\nstring\nUser name of the account\nAccountDomain\nstring\nDomain of the account\n Tip\nFor detailed information about the events types ( ActionType  values) supported by a table,\nuse the built-in schema reference available in Microsoft Defender XDR.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nAccountUpn\nstring\nUser principal name (UPN) of the account\nAccountSid\nstring\nSecurity Identifier (SID) of the account\nAccountObjectId\nstring\nUnique identifier for the account in Microsoft Entra ID\nAccountDisplayName\nstring\nName of the account user displayed in the address book.\nTypically a combination of a given or first name, a middle initial,\nand a last name or surname.\nDeviceName\nstring\nFully qualified domain name (FQDN) of the device\nIPAddress\nstring\nIP address assigned to the endpoint and used during related\nnetwork communications\nPort\nint\nTCP port used during communication\nDestinationDeviceName\nstring\nName of the device running the server application that\nprocessed the recorded action\nDestinationIPAddress\nstring\nIP address of the device running the server application that\nprocessed the recorded action\nDestinationPort\nint\nDestination port of related network communications\nTargetDeviceName\nstring\nFully qualified domain name (FQDN) of the device that the\nrecorded action was applied to\nTargetAccountUpn\nstring\nUser principal name (UPN) of the account that the recorded\naction was applied to\nTargetAccountDisplayName\nstring\nDisplay name of the account that the recorded action was\napplied to\nLocation\nstring\nCity, country/region, or other geographic location associated\nwith the event\nReportId\nstring\nUnique identifier for the event\nAdditionalFields\ndynamic\nAdditional information about the entity or event\nAdvanced hunting overview\nLearn the query language\nUse shared queries",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 806,
+      "end": 807
+    },
+    "content_stats": {
+      "char_count": 3197,
+      "word_count": 464
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related topics"
+      ]
+    }
+  }
+}

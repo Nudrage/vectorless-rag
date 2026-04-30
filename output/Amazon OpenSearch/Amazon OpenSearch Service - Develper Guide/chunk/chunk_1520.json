@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1520",
+  "section_number": "2.27.3.7.1",
+  "header": "Troubleshoot CORS errors",
+  "content": "Even though the Lambda function includes content in the response to support CORS, you still\nmight see the following error:\nAccess to XMLHttpRequest at '<api-gateway-endpoint>' from origin 'null' has been\nblocked by CORS policy: No 'Access-Control-Allow-Origin' header is present in the\nrequested resource.\nIf this happens, try the following:\n1.\nEnable CORS on the GET resource. Under Advanced, set Access-Control-Allow-Credentials to\n'true'.\n2.\nRedeploy your API in API Gateway (Actions, Deploy API).\n3.\nDelete and re-add your Lambda function trigger. Add re-add it, choose Add trigger and\ncreate the HTTP endpoint that invokes your function. The trigger must have the following\nconﬁguration:\nTrigger\nAPI\nDeployment Stage\nSecurity\nAPI Gateway\nopensearch-api\nopensearch-api-test\nOpen",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2054,
+      "end": 2054
+    },
+    "content_stats": {
+      "char_count": 782,
+      "word_count": 112
+    },
+    "hierarchy": {
+      "parent": "Step 5: Test the web application",
+      "children": []
+    }
+  }
+}

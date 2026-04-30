@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1308",
+  "section_number": "2.22.2.1.1",
+  "header": "Sample Python client",
+  "content": "The Python client is simpler to automate than a HTTP request and has better re-usability. To create\nthe AI connector with the Python client, save the following sample code to a Python ﬁle. The client\nrequires the AWS SDK for Python (Boto3), requests, and requests-aws4auth packages.\nimport boto3\nimport requests\nfrom requests_aws4auth import AWS4Auth\nhost = 'domain-endpoint/'\nregion = 'region'\nservice = 'es'\ncredentials = boto3.Session().get_credentials()\nawsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service,\nsession_token=credentials.token)\n# Register repository\npath = '_plugins/_ml/connectors/_create'\nurl = host + path\npayload = {\n\"name\": \"sagemaker: embedding\",\n\"description\": \"Test connector for Sagemaker embedding model\",\n\"version\": 1,\n\"protocol\": \"aws_sigv4\",\n\"credential\": {\n\"roleArn\": \"arn:aws:iam::account-id:role/opensearch-sagemaker-role\"\n},\n\"parameters\": {\n\"region\": \"region\",\n\"service_name\": \"sagemaker\"\n},\n\"actions\": [\n{\nCreate an OpenSearch Service connector\n1791\nAmazon OpenSearch Service\nDeveloper Guide\n\"action_type\": \"predict\",\n\"method\": \"POST\",\n\"headers\": {\n\"content-type\": \"application/json\"\n},\n\"url\": \"https://runtime.sagemaker.region.amazonaws.com/endpoints/endpoint-id/\ninvocations\",\n\"request_body\": \"{ \\\"inputs\\\": { \\\"question\\\": \\\"${parameters.question}\\\",\n\\\"context\\\": \\\"${parameters.context}\\\" } }\"\n}\n]\n}\nheaders = {\"Content-Type\": \"application/json\"}\nr = requests.post(url, auth=awsauth, json=payload, headers=headers)\nprint(r.status_code)\nprint(r.text)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1820,
+      "end": 1821
+    },
+    "content_stats": {
+      "char_count": 1518,
+      "word_count": 164
+    },
+    "hierarchy": {
+      "parent": "Create an OpenSearch Service connector",
+      "children": []
+    }
+  }
+}

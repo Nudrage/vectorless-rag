@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_1643",
+  "section_number": "155.1.1.222.9.3",
+  "header": "Default alert policies",
+  "content": "Microsoft provides built-in alert policies that help identify Exchange admin permissions abuse,\nmalware activity, potential external and internal threats, and information governance risks. On the\nAlert policies page, the names of these built-in policies are in bold and the policy type is defined as\nSystem. These policies are turned on by default. You can turn off these policies (or back on again), set\nup a list of recipients to send email notifications to, and set a daily notification limit. The other\nsettings for these policies can't be edited.\nThe following tables list and describe the available default alert policies and the category each policy\nis assigned to. The category is used to determine which alerts a user can view on the Alerts page. For\nmore information, see RBAC permissions required to view alerts.\nThe tables also indicate the Office 365 Enterprise and Office 365 US Government plan required for\neach one. Some default alert policies are available if your organization has the appropriate add-on\nsubscription in addition to an E1/F1/G1 or E3/F3/G3 subscription.\nName\nDescription\nSeverity\nAutomated\ninvestigation\nSubscription\nUnusual\nvolume of\nexternal file\nsharing\nGenerates an alert when an unusually\nlarge number of files in SharePoint or\nOneDrive are shared with users outside\nof your organization.\nMedium\nNo\nE5/G5 or Defender for\nOffice 365 Plan 2 add-\non subscription.\n７ Note\nThe unusual activity monitored by some of the built-in policies is based on the same process as\nthe alert threshold setting that was previously described. Microsoft establishes a baseline value\nthat defines the normal frequency for \"usual\" activity. Alerts are then triggered when the\nfrequency of activities tracked by the built-in alert policy greatly exceeds the baseline value.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 20,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1217,
+      "end": 1218
+    },
+    "content_stats": {
+      "char_count": 1788,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "Alert policies in the Microsoft Defender portal",
+      "children": [
+        "Information governance alert policies",
+        "Mail flow alert policies",
+        "Permissions alert policies",
+        "Threat management alert policies"
+      ]
+    }
+  }
+}

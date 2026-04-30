@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_007",
+  "section_number": "1.3.3",
+  "header": "Internet ingress example",
+  "content": "In this example:\nTraffic from a system outside the example-net VPC network to a VM instance in that\nnetwork is considered. The network is in the example-proj project.\nThe system on the internet has IP address 203.0.113.114.\nVM1 in zone us-west1-a has IP address 10.10.0.99 in the west-subnet (us-west1\nregion).\nRule C: An ingress allow firewall rule has a target of all instances in the network, a source\nof any IP address (0.0.0.0/0), and applies to TCP port 80.\nLogging is enabled for this rule.\nRule D: An egress deny firewall rule has a target of all instances in the network, a\ndestination of any IP address (0.0.0.0/0), and applies to all protocols.\nLogging is also enabled for this rule.\nThe following gcloud commands can be used to create the firewall rules:\nRule C: ingress allow rule for TCP port 80, applicable to all instances, any source:\ngcloud compute firewall-rules create rule-c \\\n--network example-net \\\n--action allow \\\n--direction INGRESS \\\n--rules tcp:80 \\\n--source-ranges 0.0.0.0/0 \\\n--priority 10 \\\n--enable-logging\nRule D: egress deny rule for all protocols, applicable to all instances, any destination:\n(/static/firewall/images/firewall-rules-logs/firewall-rules-logging-3.svg)\nInternet to VM connection (click to enlarge).\nSuppose the system with IP address 203.0.113.114 attempts to connect to VM1 on TCP port\n80. The following happens:\nA log entry for rule C from the perspective of VM1 is generated while VM1 accepts traffic\nfrom 203.0.113.114.\nDespite rule D, VM1 is allowed to reply to the incoming request because Google Cloud\nfirewall rules are stateful. If the incoming request is allowed, established responses\ncannot be blocked by any kind of egress rule.\nBecause rule D doesn't apply, it isn't considered, so there is no log entry for rule D.\nThe following firewall log record is reported.\ngcloud compute firewall-rules create rule-d \\\n--network example-net \\\n--action deny \\\n--direction EGRESS \\\n--rules all \\\n--destination-ranges 0.0.0.0/0 \\\n--priority 10 \\\n--enable-logging\nField\nValues\nconnection\nsrc_ip=203.0.113.114\nsrc_port=[EPHEMERAL_PORT]\ndest_ip=10.10.0.99\ndest_port=80\nprotocol=6\ndisposition\nALLOWED\nrule_details\nreference = \"network:my-vpc/firewall:rule-c\"\npriority = 10\naction = ALLOW\nsource_range = 0.0.0.0/0\nip_port_info = tcp:80\ndirection = ingress\ninstance\nproject_id=\"example-proj\"\ninstance_name=VM1\nregion=us-west1\nzone=us-west1-a\nvpc\nproject_id=\"example-proj\"\nvpc_name=example-net\nsubnetwork_name=west-subnet\nremote_location\ncontinent\ncountry\nregion\ncity",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 8,
+      "end": 10
+    },
+    "content_stats": {
+      "char_count": 2512,
+      "word_count": 360
+    },
+    "hierarchy": {
+      "parent": "Logging examples",
+      "children": []
+    }
+  }
+}

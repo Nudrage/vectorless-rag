@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_136",
+  "section_number": "155.1.1.18.1.11",
+  "header": "Step 1: Audit and verify the public MX record",
+  "content": "tenant.\n1. In the M365 Admin Portal at https://admin.microsoft.com\n, expand ...Show all if\nnecessary, expand Settings, and then select Domains. Or, to go directly to the Domains\npage, use https://admin.microsoft.com/Adminportal/Home#/Domains\n.\n2. On the Domains page, select your verified email domain by clicking anywhere on the\nentry other than the check box.\n3. In the domain details flyout that opens, select the DNS records tab. Make note of the MX\nrecord that's generated and assigned to your EOP tenant.\n4. Access your external (public) DNS zone and check the primary MX record associated with\nyour email domain:\nIf your public MX record currently matches the assigned EOP address (for example,\ncontoso-com.mail.protection.outlook.com) then no further routing changes should be\nrequired.\nIf your public MX record currently resolves to a third-party or on-premises SMTP\ngateway, then additional routing configurations may be required.\nIf your public MX record currently resolves to on-premises Exchange, then you may\nstill be in a hybrid model where some recipient mailboxes haven't yet been migrated\nto EXO.\n1. In the Exchange admin center (EAC) at https://admin.exchange.microsoft.com\n, expand\nMail flow, and then click Accepted domains. Or, to go directly to the Accepted domains\npage, use https://admin.exchange.microsoft.com/#/accepteddomains\n.\n2. On the Accepted domains page, make note of the Domain type value for your primary\nemail domain.\nIf the domain type is set to Authoritative, then it's assumed all recipient mailboxes\nfor your organization currently reside in Exchange Online.\nIf the domain type is set to InternalRelay, then you may still be in a hybrid model\nwhere some recipient mailboxes still reside on-premises.\n1. In the Exchange admin center (EAC) at https://admin.exchange.microsoft.com\n, expand\nMail flow, and then click Connectors. Or, to go directly to the Connectors page, use\nhttps://admin.exchange.microsoft.com/#/connectors\n.\n2. On the Connectors page, make note of any connectors with the following settings:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 74,
+      "end": 75
+    },
+    "content_stats": {
+      "char_count": 2048,
+      "word_count": 306
+    },
+    "hierarchy": {
+      "parent": "A B C",
+      "children": []
+    }
+  }
+}

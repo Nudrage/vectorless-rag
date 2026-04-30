@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_008",
+  "section_number": "1.2",
+  "header": "Monitoring",
+  "content": "Cloud NAT exposes key metrics to Cloud Monitoring that give you insights into your fleet's\nusage of NAT gateways.\nMetrics are sent automatically to Cloud Monitoring. There, you can create custom dashboards,\nset up alerts, and query the metrics.\nFollowing are the required Identity and Access Management (IAM) roles:\nFor Shared VPC users with VMs and NAT gateways defined in different projects, access\nto the VM level metrics requires the roles/monitoring.viewer\n(/monitoring/access-control#predefined_roles) IAM role for the project of each VM.\nFor the NAT gateway resource, access to the gateway metrics requires the\nroles/monitoring.viewer IAM role for the project that contains the gateway.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 18,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 8,
+      "end": 8
+    },
+    "content_stats": {
+      "char_count": 693,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Logs and metrics",
+      "children": [
+        "View predefined dashboards",
+        "Define custom dashboards",
+        "Define alerting policies",
+        "Metric reporting frequency and retention",
+        "VM instance metrics",
+        "NAT gateway metrics",
+        "Query metrics using the Monitoring API",
+        "Pricing for Cloud NAT monitoring"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_007",
+  "section_number": "1.4.2",
+  "header": "Sample queries",
+  "content": "For some sample queries, you must insert your own data. For example, you can use a query to show a list of EndOfProcess events on a specific host that you\nspecify.\nGo to Investigate > Search > Advanced event search and run this query:\n#event_simpleName=EndOfProcess ComputerName=my-host-name\n| groupBy(ComputerName, function=(sum(\"MaxThreadCount\", as=MaxThreadCount)))\nFor more sample queries, see\n.\nAbout Events [/documentation/page/he24b63c/about-events]\nSensor Events Search [/documentation/page/ic497590/searchable-event-reference]\nNon-Sensor Events Reference [/documentation/page/d88d9ed6/streaming-api-event-dictionary]\nSensor Events Index [/documentation/page/qd3eb00a/sensor-events-index]\nInvestigate > Search > Event search [/investigate/event-search]\nInvestigate > Search > Advanced event search [/investigate/search]\nSearching Events [/documentation/category/ic53d1e6/event-investigation/searching-events]\nHunting Queries: CrowdStrike Query Language [/documentation/category/y907ff6d/event-investigation/hunting-queries]\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1/1226\n\n",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 16,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 1274,
+      "word_count": 121
+    },
+    "hierarchy": {
+      "parent": "Before you begin",
+      "children": []
+    }
+  }
+}

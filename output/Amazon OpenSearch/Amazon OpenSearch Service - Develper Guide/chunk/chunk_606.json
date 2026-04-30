@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_606",
+  "section_number": "2.9.7.2.1",
+  "header": "Query Security Lake tables from Discover",
+  "content": "If you have created tables based on your Security Lake logs, you can now query those tables\ndirectly from OpenSearch Discover. This enables you to seamlessly access and analyze data stored\nin Security Lake, directly from the familiar Discover interface. By querying Security Lake directly\nConﬁguring a Security Lake data source\n764\nAmazon OpenSearch Service\nDeveloper Guide\nfrom Discover, you can avoid the need to manually extract, transform, and load the data into a\nseparate search index. To quickly get started analyzing your logs, Discover includes a set of PPL and\nSQL saved queries.\nStart by selecting the data source that you conﬁgured. Select the associated database and table\nyou want to query, then use the search bar to write queries against your tables. To understand\nwhat statements, commands, and limitations are supported for the Security Lake integration, see\nthe section called “Supported SQL and PPL commands”.\nTo take advantage of the pre-built queries that are available for Security Lake, go to ... on the top\nright hand side of Discover, choose Open Query and then choose Templates. There are many pre-\nbuilt queries available for log sources supported in Security Lake. Search for the templates that\nmatch your use case, copy the query to use in the search bar, and replace templated ﬁelds (such as\nRegion and action) with your own information.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 793,
+      "end": 794
+    },
+    "content_stats": {
+      "char_count": 1368,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring and querying a Security Lake data source in OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

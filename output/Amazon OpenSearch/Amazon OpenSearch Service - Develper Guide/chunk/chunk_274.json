@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_274",
+  "section_number": "2.7.3.1.1",
+  "header": "Conﬁguring permissions for collections",
+  "content": "OpenSearch Serverless uses the following AWS Identity and Access Management (IAM) permissions\nfor creating and managing collections. You can specify IAM conditions to restrict users to speciﬁc\ncollections.\n• aoss:CreateCollection – Create a collection.\nCollections\n386\nAmazon OpenSearch Service\nDeveloper Guide\n• aoss:ListCollections – List collections in the current account.\n• aoss:BatchGetCollection – Get details about one or more collections.\n• aoss:UpdateCollection – Modify a collection.\n• aoss:DeleteCollection – Delete a collection.\nThe following sample identity-based access policy provides the minimum permissions necessary for\na user to manage a single collection named Logs:\n[\n{\n\"Sid\":\"Allows managing logs collections\",\n\"Effect\":\"Allow\",\n\"Action\":[\n\"aoss:CreateCollection\",\n\"aoss:ListCollections\",\n\"aoss:BatchGetCollection\",\n\"aoss:UpdateCollection\",\n\"aoss:DeleteCollection\",\n\"aoss:CreateAccessPolicy\",\n\"aoss:CreateSecurityPolicy\"\n],\n\"Resource\":\"*\",\n\"Condition\":{\n\"StringEquals\":{\n\"aoss:collection\":\"Logs\"\n}\n}\n}\n]\naoss:CreateAccessPolicy and aoss:CreateSecurityPolicy are included because\nencryption, network, and data access policies are required in order for a collection to function\nproperly. For more information, see the section called “Identity and Access Management”.\nNote\nIf you're creating the ﬁrst collection in your account, you also need the\niam:CreateServiceLinkedRole permission. For more information, see the section\ncalled “Collection creation role”.\nManaging collections\n387\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 415,
+      "end": 417
+    },
+    "content_stats": {
+      "char_count": 1546,
+      "word_count": 184
+    },
+    "hierarchy": {
+      "parent": "Managing Amazon OpenSearch Serverless collections",
+      "children": []
+    }
+  }
+}

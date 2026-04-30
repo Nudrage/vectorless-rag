@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_568",
+  "section_number": "2.9.3.4",
+  "header": "Security Lake recommendations",
+  "content": "If you’re using Amazon OpenSearch Service to direct query data in Security Lake, we also\nrecommend the following:\n• Check your Security Lake status and ensure that it's running smoothly without any problems.\nFor detailed troubleshooting steps, see Troubleshooting data lake status in the Amazon Security\nLake User Guide.\n• Verify your query access:\n• If you're querying Security Lake from a diﬀerent account than the Security Lake delegated\nadministrator account, set up a subscriber with query access in Security Lake.\n• If you're querying Security Lake from the same account, check for any messages in Security\nLake about registering your managed S3 buckets with LakeFormation.\n• Explore the query templates and pre-built dashboards to jumpstart your analysis.\n• Familiarize yourself with Open Cybersecurity Schema Framework (OCSF) and Security Lake:\n• Review schema mapping examples for AWS sources in the OCSF GitHub repository\n• Learn how to query Security Lake eﬀectively by visiting Security Lake queries for AWS source\nversion 2 (OCSF 1.1.0)\n• Improve query performance by using partitions: accountid, region, and time_dt\n• Get comfortable with SQL syntax, which Security Lake supports for querying. For more\ninformation, see the section called “Supported SQL commands”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 763,
+      "end": 763
+    },
+    "content_stats": {
+      "char_count": 1278,
+      "word_count": 196
+    },
+    "hierarchy": {
+      "parent": "Recommendations for using direct queries in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

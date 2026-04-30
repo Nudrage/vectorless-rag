@@ -1,0 +1,34 @@
+{
+  "chunk_id": "chunk_415",
+  "section_number": "2.7.10.12",
+  "header": "SAML authentication for Amazon OpenSearch Serverless",
+  "content": "With SAML authentication for Amazon OpenSearch Serverless, you can use your existing identity\nprovider to oﬀer single sign-on (SSO) for the OpenSearch Dashboards endpoints of serverless\ncollections.\nSAML authentication lets you use third-party identity providers to sign in to OpenSearch\nDashboards to index and search data. OpenSearch Serverless supports providers that use the SAML\n2.0 standard, such as IAM Identity Center, Okta, Keycloak, Active Directory Federation Services (AD\nFS), and Auth0. You can conﬁgure IAM Identity Center to synchronize users and groups from other\nidentity sources like Okta, OneLogin, and Microsoft Entra ID. For a list of identity sources supported\nby IAM Identity Center and steps to conﬁgure them, see Getting started tutorials in the IAM Identity\nCenter User Guide.\nNote\nSAML authentication is only for accessing OpenSearch Dashboards through a web browser.\nAuthenticated users can only make requests to the OpenSearch API operations through\nDev Tools in OpenSearch Dashboards. Your SAML credentials do not let you make direct\nHTTP requests to the OpenSearch API operations.\nTo set up SAML authentication, you ﬁrst conﬁgure a SAML identity provider (IdP). You then include\none or more users from that IdP in a data access policy. This policy grants it certain permissions\nto collections and/or indexes. A user can then sign in to OpenSearch Dashboards and perform the\nactions that are allowed in the data access policy.\nTopics\n• Considerations\n• Permissions required\nSAML authentication\n570\nAmazon OpenSearch Service\nDeveloper Guide\n• Creating SAML providers (console)\n• Accessing OpenSearch Dashboards\n• Granting SAML identities access to collection data\n• Creating SAML providers (AWS CLI)\n• Viewing SAML providers\n• Updating SAML providers\n• Deleting SAML providers",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 599,
+      "end": 600
+    },
+    "content_stats": {
+      "char_count": 1805,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "Overview of security in Amazon OpenSearch Serverless",
+      "children": [
+        "Considerations",
+        "Permissions required",
+        "Creating SAML providers (console)",
+        "Accessing OpenSearch Dashboards",
+        "Granting SAML identities access to collection data",
+        "Creating SAML providers (AWS CLI)",
+        "Viewing SAML providers",
+        "Updating SAML providers",
+        "Deleting SAML providers"
+      ]
+    }
+  }
+}

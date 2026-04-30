@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_935",
+  "section_number": "2.14.4.2.2",
+  "header": "Testing the Lambda Function",
+  "content": "After you create the function, you can test it by uploading a ﬁle to the Amazon S3 bucket. Create a\nﬁle named sample.log using following sample log lines:\n12.345.678.90 - [10/Oct/2000:13:55:36 -0700] \"PUT /some-file.jpg\"\n12.345.678.91 - [10/Oct/2000:14:56:14 -0700] \"GET /some-file.jpg\"\nUpload the ﬁle to the logs folder of your S3 bucket. For instructions, see Upload an object to your\nbucket in the Amazon Simple Storage Service User Guide.\nThen use the OpenSearch Service console or OpenSearch Dashboards to verify that the lambda-\ns3-index index contains two documents. You can also make a standard search request:\nGET https://domain-name/lambda-s3-index/_search?pretty\n{\n\"hits\" : {\n\"total\" : 2,\n\"max_score\" : 1.0,\n\"hits\" : [\n{\n\"_index\" : \"lambda-s3-index\",\n\"_type\" : \"_doc\",\n\"_id\" : \"vTYXaWIBJWV_TTkEuSDg\",\n\"_score\" : 1.0,\n\"_source\" : {\n\"ip\" : \"12.345.678.91\",\n\"message\" : \"GET /some-file.jpg\",\nLoading streaming data from Amazon S3\n1451\nAmazon OpenSearch Service\nDeveloper Guide\n\"timestamp\" : \"10/Oct/2000:14:56:14 -0700\"\n}\n},\n{\n\"_index\" : \"lambda-s3-index\",\n\"_type\" : \"_doc\",\n\"_id\" : \"vjYmaWIBJWV_TTkEuCAB\",\n\"_score\" : 1.0,\n\"_source\" : {\n\"ip\" : \"12.345.678.90\",\n\"message\" : \"PUT /some-file.jpg\",\n\"timestamp\" : \"10/Oct/2000:13:55:36 -0700\"\n}\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1480,
+      "end": 1481
+    },
+    "content_stats": {
+      "char_count": 1255,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Loading streaming data from Amazon S3",
+      "children": []
+    }
+  }
+}

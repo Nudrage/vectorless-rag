@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1046",
+  "section_number": "155.1.1.138",
+  "header": "EntraIdSpnSignInEvents (Preview)",
+  "content": "Applies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe EntraIdSpnSignInEvents  table in the advanced hunting schema contains information about\nMicrosoft Entra service principal and managed identity sign-ins. You can learn more about the\ndifferent kinds of sign-ins in Microsoft Entra sign-in activity reports - preview.\nUse this reference to construct queries that return information from the table.\nFor information on other tables in the advanced hunting schema, see the advanced hunting\nreference.\nColumn name\nData\ntype\nDescription\nTimestamp\ndatetime\nDate and time when the record was generated\nApplication\nstring\nApplication that performed the recorded action\n） Important\nOn December 9, 2025, the EntraIdSpnSignInEvents  table will replace\nAADSpnSignInEventsBeta. This change will be made to remove the latter's preview status\nand to align it with the existing product branding. Both tables will coexist until\nAADSpnSignInEventsBeta  is deprecated after the said date.\nTo ensure a smooth transition, make sure that you update your queries that use the\nAADSpnSignInEventsBeta  table to use EntraIdSpnSignInEvents  before the previously\nmentioned date. Your custom detections will be updated automatically and won't require\nany changes.\n） Important\nSome information relates to prereleased product that may be substantially modified\nbefore it's commercially released. Microsoft makes no warranties, express or implied, with\nrespect to the information provided here.\nCustomers need to have a Microsoft Entra ID P2 license to collect and view activities for\nthis table.\nﾉ\nExpand table\nColumn name\nData\ntype\nDescription\nApplicationId\nstring\nUnique identifier for the application\nIsManagedIdentity\nboolean\nIndicates whether the sign-in was initiated by a managed identity\nErrorCode\nint\nContains the error code if a sign-in error occurs. To find a description\nof a specific error code, visit https://aka.ms/AADsigninsErrorCodes\n.\nCorrelationId\nstring\nUnique identifier of the sign-in event\nServicePrincipalName\nstring\nName of the service principal that initiated the sign-in\nServicePrincipalId\nstring\nUnique identifier of the service principal that initiated the sign-in\nResourceDisplayName\nstring\nDisplay name of the resource accessed. The display name can\ncontain any character.\nResourceId\nstring\nUnique identifier of the resource accessed\nResourceTenantId\nstring\nUnique identifier of the tenant of the resource accessed\nIPAddress\nstring\nIP address assigned to the endpoint and used during related network\ncommunications\nCountry\nstring\nTwo-letter code indicating the country/region where the client IP\naddress is geolocated\nState\nstring\nState where the sign-in occurred, if available\nCity\nstring\nCity where the account user is located\nLatitude\nstring\nThe north to south coordinates of the sign-in location\nLongitude\nstring\nThe east to west coordinates of the sign-in location\nRequestId\nstring\nUnique identifier of the request\nReportId\nstring\nUnique identifier for the event\nEntraIdSignInEvents\nAdvanced hunting overview\nLearn the query language\nUnderstand the schema",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 776,
+      "end": 777
+    },
+    "content_stats": {
+      "char_count": 3100,
+      "word_count": 437
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Related articles"
+      ]
+    }
+  }
+}

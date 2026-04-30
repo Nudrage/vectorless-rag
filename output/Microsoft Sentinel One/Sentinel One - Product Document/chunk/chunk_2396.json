@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2396",
+  "section_number": "44.40.3.1",
+  "header": "Name Description Required Value",
+  "content": "Description\nRequired\nValue\npagination\nPagination\ninformation\ntrue\nName\nDescription\nRequired\nValue\ntotalItems\nTotal number\nof items\nfound\nmatching\nyour query\ntrue\ninteger\nnextCursor\nPass this\nvalue as\n\"cursor\" on\nyour next\nrequest, to\nget the next\npage of\nresults (Will\nbe \"null\"\nwhen last\npage\nreached)\nfalse\nstring\ndata\nResponse\nfalse\n2131\ndata\nName\nDescription\nRequired\nValue\nscope\nUser Scope\ntrue\nenum\nagreedEula\nTrue if EULA\nwas agreed\nfor user's\nsites\nfalse\nboolean\nagreementUrl\nLink to EULA\nagreement if\nit was not\nagreed yet\nfalse\nstring\nallowRemoteS\nhell\n[DEPRECATE\nD] Unused\nfield. The\nuser's role\nwill\ndetermine if\nit is allowed\nto use\nremote_shell.\nfalse\nboolean\napiToken\nApi token\nfalse\nName\nDescription\nRequired\nValue\ncreatedAt\nCreated at\nfalse\nstring\nexpiresAt\nExpires at\nfalse\nstring\ncanGenerateA\npiToken\nCan generate\napi token\nfalse\nboolean\ndateJoined\nDate joined\nfalse\nstring\nemail\nEmail\nfalse\nstring\nemailReadOnl\ny\nTrue if email\ncannot be\nmodified\nfalse\nboolean\nemailVerified\nTrue if user\nverification\ncompleted\nsuccessfully\nfalse\nboolean\nfirstLogin\nFirst login\nfalse\nstring\nfullName\nFull name\nfalse\nstring\nfullNameRea\ndOnly\nTrue if full\nname cannot\nbe modified\nfalse\nboolean\n2132\ngroupsReadO\nnly\n[Deprecated]\nfalse\nboolean\nid\nId\nfalse\nstring\nisSystem\nfalse\nboolean\nlastLogin\nLast login\nfalse\nstring\nlowestRole\n[DEPRECATE\nD] in RBAC\nthere's no\n'lowest' role.\nReturns\nAdmin if user\nhas admin\npermission\non all sites,\notherwise a\ndifferent role.\nfalse\nstring\nprimaryTwoF\naMethod\nPrimary two\nfa method\nfalse\nstring\nscopeRoles\nRoles of the\nscope user\nfalse\nName\nDescription\nRequired\nValue\naccountName\nScope name\ntrue\nstring\nname\nScope name\ntrue\nstring\nid\nScope ID\nfalse\nstring\nroleId\nID of the\nwanted role\nfalse\nstring\nroleName\n[DEPRECATE\nD] Name of\nthe role, will\nwork only for\npredefined\nroles\nfalse\nstring\nroles\n[DEPRECATE\nD] List\ncontaining\nthe desired\nrole name in\nthis scope.\nUse role_id or\nrole_name\ninstead.\nfalse\nstring []\n2133\nsiteRoles\n[DEPRECATE\nD] Role and\nsite ids for\nthe user.\nUsing\nscopeRoles is\nmore\nconsistent.\nfalse\nName\nDescription\nRequired\nValue\nid\nSite ID\ntrue\nstring\nname\nSite name\ntrue\nstring\nroleId\nID of the\nwanted role\nfalse\nstring\nroleName\n[DEPRECATE\nD] Name of\nthe role, will\nwork only for\npredefined\nroles\nfalse\nstring\nroles\n[DEPRECATE\nD] List\ncontaining\nthe desired\nrole name in\nthis scope.\nUse role_id\ninstead.\nfalse\nstring []\nsource\nSource\nfalse\nstring\ntenantRoles\n[DEPRECATE\nD] Role ids\nfor the tenant\nuser. Using\nscopeRoles is\nmore\nconsistent.\nfalse\nundefined []\ntwoFaConfigu\nred\nUser 2FA\nAuth is\nconfigured\nfalse\nboolean\ntwoFaEnable\nd\nTwo fa\nenabled\nfalse\nboolean\ntwoFaEnable\ndReadOnly\nTrue if two fa\noption\ncannot be\nmodified\nfalse\nboolean\nerrors\nErrors\nfalse\narray\n2134",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 2131,
+      "end": 2134
+    },
+    "content_stats": {
+      "char_count": 2722,
+      "word_count": 427
+    },
+    "hierarchy": {
+      "parent": "Response Schema",
+      "children": []
+    }
+  }
+}

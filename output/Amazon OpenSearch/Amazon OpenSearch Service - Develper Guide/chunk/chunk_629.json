@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_629",
+  "section_number": "2.10",
+  "header": "Monitoring Amazon OpenSearch Service domains",
+  "content": "Monitoring is an important part of maintaining the reliability, availability, and performance of\nAmazon OpenSearch Service and your other AWS solutions. AWS provides the following tools\nto monitor your OpenSearch Service resources, report issues, and take automatic actions when\nappropriate:\nAmazon CloudWatch\nAmazon CloudWatch monitors your OpenSearch Service resources in real time. You can collect\nand track metrics, create customized dashboards, and set alarms that notify you or take actions\nwhen a metric reaches a certain threshold. For more information, see the Amazon CloudWatch\nUser Guide.\nAmazon CloudWatch Logs\nAmazon CloudWatch Logs lets you monitor, store, and access your OpenSearch log ﬁles.\nCloudWatch Logs monitors the information in log ﬁles and can notify you when certain\nthresholds are met. For more information, see the Amazon CloudWatch Logs User Guide.\nAmazon EventBridge\nAmazon EventBridge delivers a near real-time stream of system events that describe changes\nin your OpenSearch Service domains. You can create rules that watch for certain events,\nand trigger automated actions in other AWS services when these events occur. For more\ninformation, see the Amazon EventBridge User Guide.\nAWS CloudTrail\nAWS CloudTrail captures conﬁguration API calls made to OpenSearch Service as events. It can\ndeliver these events to an Amazon S3 bucket that you specify. Using this information, you can\nidentify which users and accounts made requests, the source IP address from which the requests\nwere made, and when the requests occurred. For more information, see the AWS CloudTrail\nUser Guide.\nTopics\n• Monitoring OpenSearch cluster metrics with Amazon CloudWatch\n• Monitoring OpenSearch logs with Amazon CloudWatch Logs\n• Monitoring audit logs in Amazon OpenSearch Service\n1161\nAmazon OpenSearch Service\nDeveloper Guide\n• Monitoring OpenSearch Service events with Amazon EventBridge\n• Monitoring Amazon OpenSearch Service API calls with AWS CloudTrail",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 20,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1190,
+      "end": 1191
+    },
+    "content_stats": {
+      "char_count": 1968,
+      "word_count": 291
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service",
+      "children": [
+        "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+        "Monitoring OpenSearch logs with Amazon CloudWatch Logs",
+        "Monitoring audit logs in Amazon OpenSearch Service",
+        "Monitoring OpenSearch Service events with Amazon EventBridge",
+        "Monitoring Amazon OpenSearch Service API calls with AWS CloudTrail"
+      ]
+    }
+  }
+}

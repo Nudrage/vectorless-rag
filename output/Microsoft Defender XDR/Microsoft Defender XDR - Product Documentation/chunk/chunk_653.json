@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_653",
+  "section_number": "155.1.1.265.1",
+  "header": "Prerequisites",
+  "content": "ﾉ\nExpand table\nRequirement\nDetails\nautomatically contain a device.\nMicrosoft Defender for Endpoint's device discovery is set to 'standard discovery'\n(prerequisite for the automatic initiation of the \"Contain Device\" action)\nPermissions\nTo configure automatic attack disruption capabilities, you must have one of the\nfollowing roles assigned in either Microsoft Entra ID (https://portal.azure.com\n) or in\nthe Microsoft 365 admin center (https://admin.microsoft.com\n):\nGlobal Administrator\nSecurity Administrator\nTo work with automated investigation and response capabilities, such as by reviewing,\napproving, or rejecting pending actions, see Required permissions for Action center\ntasks.\nThe Minimum Sense Agent version required for the Contain User action to work is v10.8470.\nYou can identify the Sense Agent version on a device by running the following PowerShell\ncommand:\nGet-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\nAdvanced Threat Protection' -Name \"InstallLocation\" or Get-ItemProperty -Path\n'Registry::HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Advanced Threat\nProtection\\Status' -Name \"MsSenseDllVersion\"\nReview the configured automation level for your device group policies, whether automated\ninvestigations run, and whether remediation actions are taken automatically or only upon\napproval for your devices depend on certain settings. You must be a global administrator or\nsecurity administrator to perform the following procedure:\n1. Go to the Microsoft Defender portal (https://security.microsoft.com\n) and sign in.\n2. Go to System > Settings > Endpoints > Device groups under Permissions.\n3. Review your device group policies and look at the Remediation level column. We\nrecommend using Full - remediate threats automatically.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 421,
+      "end": 422
+    },
+    "content_stats": {
+      "char_count": 1778,
+      "word_count": 230
+    },
+    "hierarchy": {
+      "parent": "Configure automatic attack disruption in Microsoft Defender XDR",
+      "children": [
+        "Microsoft Defender for Endpoint prerequisites",
+        "Microsoft Defender for Identity prerequisites",
+        "Microsoft Defender for Cloud Apps prerequisites",
+        "Microsoft Defender for Office 365 prerequisites"
+      ]
+    }
+  }
+}

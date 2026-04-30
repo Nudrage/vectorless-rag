@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1303",
+  "section_number": "155.1.1.179.3",
+  "header": "Ingesting third-party network signals for enrichment",
+  "content": "enrichment\nTo enable third-party network signals enrichment, you must have a Microsoft Sentinel instance\nonboarded to Microsoft Defender. Learn more about Defender XDR integration with Microsoft\nSentinel\nYour Sentinel instance must also have the following settings and configurations:\nData ingestion is enabled, and at least one of the following supported network signals is\ningested:\nPalo Alto Networks (PAN-OS firewall)\nZscaler (Zscaler Internet Access and Zscaler Private Access)\nFortinet Firewall\nSentinel built-in data connectors are used to ingest the third-party network signals into\nthe CommonSecurityLog table.\nSentinel's General Data Collection & Opt-in is turned on. It's turned on by default on all\nSentinel instances but if it's turned off, in your Azure portal go to Microsoft Sentinel >\nConfiguration > Settings > How do we use your data? to turn it on.\nAzure Lighthouse is configured on the tenant to allow Defender Experts analysts to access\nthe customer’s Sentinel instance.\nThis feature is currently supported in the following regions only:\nContinent\nCountry/Region\nAzure Region\nNorth America\nUnited States\n• Central US\n• East US\n• East US 2\n• West US\n• West US 2\nEurope\n• North Europe\n• West Europe\nUK\n• UK South\nFor more information, read Geographical availability and data residency in Microsoft Sentinel\nor contact your service delivery manager.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 980,
+      "end": 981
+    },
+    "content_stats": {
+      "char_count": 1368,
+      "word_count": 213
+    },
+    "hierarchy": {
+      "parent": "Enriching Defender Experts for XDR with third-party network signals",
+      "children": [
+        "Prerequisites"
+      ]
+    }
+  }
+}

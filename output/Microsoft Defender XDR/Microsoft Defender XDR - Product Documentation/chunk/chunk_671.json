@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_671",
+  "section_number": "155.1.1.63.2",
+  "header": "Track the actions in the Action center",
+  "content": " Tip\nYou can use specific queries in advanced hunting to track contain device or user, and disable\nuser account actions.\nContainment in Microsoft Defender for Endpoint prevents further threat actor activity by\nblocking communication from contained entities. In advanced hunting, the DeviceEvents table\nlogs block actions that result from containment, not the initial containment action itself:\nDevice-derived block actions - These events indicate activity (such as network\ncommunication) that was blocked because the device was contained:\nKusto\nUser-derived block actions - These events indicate activity (such as sign-in or resource\naccess attempts) that was blocked because the user was contained:\nKusto\nAttack disruption uses the remediation action capability of Microsoft Defender for Identity to\ndisable accounts. By default, Microsoft Defender for Identity uses the LocalSystem account of\nthe domain controller for all remediation actions.\nThe following query looks for events where a domain controller disabled user accounts. This\nquery also returns user accounts disabled by automatic attack disruption by triggering account\ndisable in Microsoft Defender XDR manually:\nKusto\nDo you want to learn more? Engage with the Microsoft Security community in our Tech\nCommunity: Microsoft Defender XDR Tech Community\n.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 22,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 426,
+      "end": 427
+    },
+    "content_stats": {
+      "char_count": 1318,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Details and results of an automatic attack disruption action",
+      "children": []
+    }
+  }
+}

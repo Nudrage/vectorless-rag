@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_821",
+  "section_number": "2.19.8.1",
+  "header": "Limitations",
+  "content": "Fine-grained access control has several important limitations:\n• The hosts aspect of role mappings, which maps roles to hostnames or IP addresses, doesn't\nwork if the domain is within a VPC. You can still map roles to users and backend roles.\n• If you choose IAM for the master user and don't enable Amazon Cognito or SAML authentication,\nDashboards displays a nonfunctional sign-in page.\nLimitations\n1352\nAmazon OpenSearch Service\nDeveloper Guide\n• If you choose IAM for the master user, you can still create users in the internal user database.\nBecause HTTP basic authentication is not enabled under this conﬁguration, however, any\nrequests signed with those user credentials are rejected.\n• If you use SQL to query an index that you don't have access to, you receive a \"no permissions\"\nerror. If the index doesn't exist, you receive a \"no such index\" error. This diﬀerence in error\nmessages means that you can conﬁrm the existence of an index if you happen to guess its name.\nTo minimize the issue, don't include sensitive information in index names. To deny all access to\nSQL, add the following element to your domain access policy:\n{\n\"Effect\": \"Deny\",\n\"Principal\": {\n\"AWS\": [\n\"*\"\n]\n},\n\"Action\": [\n\"es:*\"\n],\n\"Resource\": \"arn:aws:es:us-east-1:123456789012:domain/my-domain/_plugins/_sql\"\n}\n• If your domain version is 2.3 or higher and you have ﬁne-grained access control enabled, setting\nmax_clause_count to 1 causes issues with your domain. We recommend setting this account\nto a higher number.\n• If you are enabling ﬁne-grained access control in a domain where ﬁne-grained access control\nis not set up, for data sources created for direct query, you need to setup ﬁne-grained access\ncontrol roles yourself. For more information on how to set up ﬁne-grained access roles, see\nCreating Amazon OpenSearch Service data source integrations with Amazon S3.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1381,
+      "end": 1382
+    },
+    "content_stats": {
+      "char_count": 1856,
+      "word_count": 299
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

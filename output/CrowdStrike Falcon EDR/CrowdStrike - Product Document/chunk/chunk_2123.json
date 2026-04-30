@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2123",
+  "section_number": "1.5.924.2",
+  "header": "Fields: Windows",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nContextProcessId\nUPID of process originating this event.\nContextThreadId\nUTID of thread originating this event\nTreeId\nIf this event is part of a detection tree, the tree ID it is part of.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n732/1226\nField\nDescription\nHookProcedure\nHookId\nValues:\nWH_MSGFILTER (0xffffffff)\nWH_JOURNALRECORD (0)\nWH_JOURNALPLAYBACK (1)\nWH_KEYBOARD (2)\nWH_GETMESSAGE (3)\nWH_CALLWNDPROC (4)\nWH_CBT (5)\nWH_SYSMSGFILTER (6)\nWH_MOUSE (7)\nWH_HARDWARE (8)\nWH_DEBUG (9)\nWH_SHELL (10)\nWH_FOREGROUNDIDLE (11)\nWH_CALLWNDPROCRET (12)\nWH_KEYBOARD_LL (13)\nWH_MOUSE_LL (14)\nModuleName\nPatternId\nThe ID of the pattern\nImageFileName\nThe full path to an executable (PE) file. The context of this field provides more information as to its meaning. For\nProcessRollup2 events, this is the full path to the main executable for the created process.\nCommandLine\nThe command line used to create this process. May be empty in some circumstances, visit here [ http://msdn.microsoft.com/en-\nus/library/windows/desktop/ms682425(v=vs.85).aspx] for more information.\nUserModeHookSource\nValues:\nUMPPC (0x01)\nETW (0x02)\nEtwRawProcessId\nEtwRawThreadId\nApiReturnValue\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed\nthread injection in an InjectedThread event\nMemoryDescriptionFlags\nImageDirectoryClassification\nValues:\nUNKNOWN (0)\nAPPLICATION_DIRECTORY (1)\nCURRENT_DIRECTORY (2)\nWINDOWS_DIRECTORY (3)\nSYSTEM_DIRECTORY (4)\nAPPLICATION_SUB_DIRECTORY (5)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 732,
+      "end": 733
+    },
+    "content_stats": {
+      "char_count": 1937,
+      "word_count": 246
+    },
+    "hierarchy": {
+      "parent": "SetWindowsHook",
+      "children": []
+    }
+  }
+}

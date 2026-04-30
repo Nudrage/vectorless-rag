@@ -1,0 +1,40 @@
+{
+  "chunk_id": "chunk_1187",
+  "section_number": "2.19.4",
+  "header": "Cold storage for Amazon OpenSearch Service",
+  "content": "Cold storage lets you store any amount of infrequently accessed or historical data on your Amazon\nOpenSearch Service domain and analyze it on demand, at a lower cost than other storage tiers.\nCold storage is appropriate if you need to do periodic research or forensic analysis on your older\ndata. Practical examples of data suitable for cold storage include infrequently accessed logs, data\nthat must be preserved to meet compliance requirements, or logs that have historical value.\nSimilar to UltraWarm storage, cold storage is backed by Amazon S3. When you need to query cold\ndata, you can selectively attach it to existing UltraWarm nodes. You can manage the migration and\nlifecycle of your cold data manually or with Index State Management policies.\nTopics\n• Prerequisites\n• Cold storage requirements and performance considerations\n• Cold storage pricing\n• Enabling cold storage\n• Managing cold indexes in OpenSearch Dashboards\n• Migrating indexes to cold storage\n• Automating migrations to cold storage\n• Canceling migrations to cold storage\n• Listing cold indexes\n• Migrating cold indexes to warm storage\n• Restoring cold indexes from snapshots\nDisabling UltraWarm\n1708\nAmazon OpenSearch Service\nDeveloper Guide\n• Canceling migrations from cold to warm storage\n• Updating cold index metadata\n• Deleting cold indexes\n• Disabling cold storage",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1737,
+      "end": 1738
+    },
+    "content_stats": {
+      "char_count": 1346,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "Managing indexes in Amazon OpenSearch Service",
+      "children": [
+        "Prerequisites",
+        "Cold storage requirements and performance considerations",
+        "Cold storage pricing",
+        "Enabling cold storage",
+        "Managing cold indexes in OpenSearch Dashboards",
+        "Migrating indexes to cold storage",
+        "Automating migrations to cold storage",
+        "Canceling migrations to cold storage",
+        "Listing cold indexes",
+        "Migrating cold indexes to warm storage",
+        "Restoring cold indexes from snapshots",
+        "Canceling migrations from cold to warm storage",
+        "Updating cold index metadata",
+        "Deleting cold indexes",
+        "Disabling cold storage"
+      ]
+    }
+  }
+}

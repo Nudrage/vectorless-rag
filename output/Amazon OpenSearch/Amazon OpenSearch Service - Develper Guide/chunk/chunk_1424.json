@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1424",
+  "section_number": "2.25.11.2.1",
+  "header": "OpenSearch Service domain and instance quotas",
+  "content": "Although dedicated master nodes don't process search and query requests, their size is highly\ncorrelated with the instance size and number of instances, indexes, and shards that they can\nmanage. For production clusters, we recommend, at a minimum, the following instance types for\ndedicated master nodes.\nChoosing instance types for dedicated master nodes\n1869\nAmazon OpenSearch Service\nDeveloper Guide\nThese recommendations are based on typical workloads and can vary based on your needs.\nClusters with many shards or ﬁeld mappings can beneﬁt from larger instance types. For more\ninformation, see Recommended CloudWatch alarms for Amazon OpenSearch Service to determine\nif you need to use a larger instance type.\nRAM\nMax Node\nSupport for\nElasticsearch\nand OpenSearc\nh Service 1.x to\n2.15\nMax Shard\nSupport for\nElasticsearch\nand OpenSearc\nh Service 1.x to\n2.15\nMax Node\nSupport for\nOpenSearch\nService 2.17\nand above\nMax Shard\nSupport for\nOpenSearch\nService 2.17\nand above\n2 GB\nNot applicable\nNot applicable\n10\n1K\n4 GB\nNot applicable\nNot applicable\n10\n5K\n8 GB\n10\n10K\n30\n15K\n16 GB\n30\n30K\n60\n30K\n32 GB\n75\n40K\n120\n60K\n64 GB\n125\n75K\n240\n120K\n128 GB\n200\n75K\n480\n240K\n256 GB\nNot applicable\nNot applicable\n1002\n500K\nChoosing instance types for dedicated master nodes\n1870\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1898,
+      "end": 1900
+    },
+    "content_stats": {
+      "char_count": 1305,
+      "word_count": 218
+    },
+    "hierarchy": {
+      "parent": "Choosing instance types for dedicated master nodes",
+      "children": []
+    }
+  }
+}

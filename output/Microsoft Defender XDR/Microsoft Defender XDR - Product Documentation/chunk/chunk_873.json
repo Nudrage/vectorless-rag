@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_873",
+  "section_number": "155.1.1.243.2.2",
+  "header": "Get IP addresses used by a device and find devices communicating with it",
+  "content": "communicating with it\nlet Date = datetime(example-date);\nlet DeviceName = \"example-device-name\";\n// List IP addresses used on or before the specified date\nAssignedIPAddresses(DeviceName, Date)\n| project DeviceName, IPAddress, AssignedTime = Timestamp\n// Get all network events on devices with the assigned IP addresses as the\ndestination addresses\n| join kind=inner DeviceNetworkEvents on $left.IPAddress == $right.RemoteIP\n// Get only network events around the time the IP address was assigned\n| where Timestamp between ((AssignedTime - 1h) .. (AssignedTime + 1h))",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 578,
+      "end": 578
+    },
+    "content_stats": {
+      "char_count": 565,
+      "word_count": 79
+    },
+    "hierarchy": {
+      "parent": "Examples",
+      "children": []
+    }
+  }
+}

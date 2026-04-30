@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1532",
+  "section_number": "2.28.3.2",
+  "header": "SCP policies",
+  "content": "Service control policies (SCPs) introduce an additional layer of complexity compared to standard\nIAM. To prevent your SCP policies from breaking, you need to add both the old and the new API\noperations to each of your SCP policies. For example, if a user currently has allow permissions\nfor CreateElasticsearchDomain, you also need to grant them allow permissions for\nCreateDomain so they can retain the ability to create domains. The same applies to explicit\ndenies.\nFor example:\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Action\": [\n\"es:CreateElasticsearchDomain\",\n\"es:CreateDomain\"\n...\nAccess policy changes\n2041\nAmazon OpenSearch Service\nDeveloper Guide\n],\n},\n\"Effect\": \"Deny\",\n\"Action:\" [\n\"es:DeleteElasticsearchDomain\",\n\"es:DeleteDomain\"\n...",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2070,
+      "end": 2071
+    },
+    "content_stats": {
+      "char_count": 741,
+      "word_count": 105
+    },
+    "hierarchy": {
+      "parent": "Access policy changes",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_614",
+  "section_number": "155.1.1.56",
+  "header": "Get notified about remediation actions",
+  "content": "Article • 04/28/2025 • Applies to: Microsoft Defender XDR\nDuring and after an automated investigation, remediation actions are identified for malicious\nor suspicious items. Some kinds of remediation actions are taken on devices, also referred to as\nendpoints. Other remediation actions are taken on identities, accounts, and email content. In\naddition, some types of remediation actions can occur automatically, whereas other types of\nremediation actions are taken manually by your organization's security team. When an\nautomated investigation results in one or more remediation actions, the investigation\ncompletes only when the remediation actions are taken, approved, or rejected.\nThe following table summarizes remediation actions that are currently supported in Microsoft\nDefender XDR.\nDevice (endpoint) remediation actions\nEmail remediation actions\nUsers (accounts)\n- Collect investigation package\n- Isolate device (this action can be\nundone)\n- Offboard machine\n- Release code execution\n- Release from quarantine\n- Request sample\n- Restrict code execution (this action can\nbe undone)\n- Run antivirus scan\n- Stop and quarantine\n- Contain devices from the network\n- Block URL (time-of-click)\n- Soft delete email messages or\nclusters\n- Quarantine email\n- Quarantine an email\nattachment\n- Turn off external mail\nforwarding\n- Disable user\n- Reset user password\n- Confirm user as\ncompromised\n） Important\nWhether remediation actions are taken automatically or only upon approval depends on\ncertain settings, such as automation levels. To learn more, see the following articles:\nConfigure your automated investigation and response capabilities in Microsoft\nDefender XDR\nConfigure action accounts in Microsoft Defender for Identity\nHow threats are remediated on devices\nThreats and remediation actions on email & collaboration content\nﾉ\nExpand table\nRemediation actions, whether pending approval or already complete, can be viewed in the\nAction center.\nWhen an automated investigation completes, a verdict is reached for every piece of evidence\ninvolved. Depending on the verdict, remediation actions are identified. In some cases,\nremediation actions are taken automatically; in other cases, remediation actions await approval.\nIt all depends on how automated investigation and response is configured.\nThe following table lists possible verdicts and outcomes:\nVerdict\nAffected entities\nOutcomes\nMalicious\nDevices (endpoints)\nRemediation actions are taken automatically (assuming your\norganization's device groups are set to Full - remediate threats\nautomatically)\nCompromised\nUsers\nRemediation actions are taken automatically\nMalicious\nEmail content (URLs\nor attachments)\nRecommended remediation actions are pending approval\nSuspicious\nDevices or email\ncontent\nRecommended remediation actions are pending approval\nNo threats\nfound\nDevices or email\ncontent\nNo remediation actions are needed\nIn addition to remediation actions that follow automated investigations, your security\noperations team can take certain remediation actions manually. These actions include:\nManual device action, such as device isolation or file quarantine\nManual email action, such as soft-deleting email messages\nManual user action, such as disable user or reset user password\nAdvanced hunting action on devices, users, or email\nExplorer action on email content, such as moving email to junk, soft-deleting email, or\nhard-deleting email",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 393,
+      "end": 394
+    },
+    "content_stats": {
+      "char_count": 3408,
+      "word_count": 484
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Remediation actions that follow automated investigations",
+        "Remediation actions that are taken manually",
+        "Next steps"
+      ]
+    }
+  }
+}

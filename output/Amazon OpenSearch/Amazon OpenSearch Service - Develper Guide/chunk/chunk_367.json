@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_367",
+  "section_number": "2.7.10.6.4",
+  "header": "Policy condition keys for Amazon OpenSearch Serverless",
+  "content": "Supports service-speciﬁc policy condition keys: Yes\nAdministrators can use AWS JSON policies to specify who has access to what. That is, which\nprincipal can perform actions on what resources, and under what conditions.\nThe Condition element speciﬁes when statements execute based on deﬁned criteria. You can\ncreate conditional expressions that use condition operators, such as equals or less than, to match\nthe condition in the policy with values in the request. To see all AWS global condition keys, see\nAWS global condition context keys in the IAM User Guide.\nIn addition to attribute-based access control (ABAC), OpenSearch Serverless supports the following\ncondition keys:\nIdentity and Access Management\n503\nAmazon OpenSearch Service\nDeveloper Guide\n• aoss:collection\n• aoss:CollectionId\n• aoss:index\nYou can use these condition keys even when providing permissions for access policies and security\npolicies. For example:\n[\n{\n\"Effect\":\"Allow\",\n\"Action\":[\n\"aoss:CreateAccessPolicy\",\n\"aoss:CreateSecurityPolicy\"\n],\n\"Resource\":\"*\",\n\"Condition\":{\n\"StringLike\":{\n\"aoss:collection\":\"log\"\n}\n}\n}\n]\nIn this example, the condition applies to policies that contain rules that match a collection name or\npattern. The conditions have the following behavior:\n• StringEquals - Applies to policies with rules that contain the exact resource string \"log\" (i.e.\ncollection/log).\n• StringLike - Applies to policies with rules that contain a resource string that includes the string\n\"log\" (i.e. collection/log but also collection/logs-application or collection/\napplogs123).\nNote\nCollection condition keys don't apply at the index level. For example, in the policy above,\nthe condition wouldn't apply to an access or security policy containing the resource string\nindex/logs-application/*.\nIdentity and Access Management\n504\nAmazon OpenSearch Service\nDeveloper Guide\nTo see a list of OpenSearch Serverless condition keys, see Condition keys for Amazon OpenSearch\nServerless in the Service Authorization Reference. To learn with which actions and resources you can\nuse a condition key, see Actions deﬁned by Amazon OpenSearch Serverless.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 532,
+      "end": 534
+    },
+    "content_stats": {
+      "char_count": 2120,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "Identity and Access Management for Amazon OpenSearch Serverless",
+      "children": []
+    }
+  }
+}

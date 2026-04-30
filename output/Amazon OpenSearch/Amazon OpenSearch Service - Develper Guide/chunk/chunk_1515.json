@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_1515",
+  "section_number": "2.27.3.5",
+  "header": "Step 4: (Optional) Modify the domain access policy",
+  "content": "Your OpenSearch Service domain must allow the Lambda function to make GET requests to the\nmovies index. If your domain has an open access policy with ﬁne-grained access control enabled,\nyou can leave it as-is:\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"*\"\n},\n\"Action\": \"es:*\",\n\"Resource\": \"arn:aws:es:us-west-1:123456789012:domain/domain-name/*\"\n}\n]\n}\nAlternatively, you can choose to make your domain access policy more granular. For example,\nthe following minimum policy provides opensearch-lambda-role (created through Lambda)\nread access to the movies index. To get the exact name of the role that Lambda automatically\ncreates, go to the AWS Identity and Access Management (IAM) console, choose Roles, and search\nfor \"lambda\".\nJSON\n{\nStep 4: (Optional) Modify the domain access policy\n2020\nAmazon OpenSearch Service\nDeveloper Guide\n\"Version\":\"2012-10-17\",\n\"Statement\": [\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::123456789012:role/service-role/opensearch-lambda-\nrole-1abcdefg\"\n},\n\"Action\": \"es:ESHttpGet\",\n\"Resource\": \"arn:aws:es:us-west-1:123456789012:domain/domain-name/movies/\n_search\"\n}\n]\n}\nImportant\nIf you have ﬁne-grained access control enabled for the domain, you also need to map the\nrole to a user in OpenSearch Dashboards, otherwise you'll see permissions errors.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2049,
+      "end": 2050
+    },
+    "content_stats": {
+      "char_count": 1341,
+      "word_count": 177
+    },
+    "hierarchy": {
+      "parent": "Tutorial: Creating a search application with Amazon OpenSearch Service",
+      "children": [
+        "Conﬁgure Lambda execution role permissions"
+      ]
+    }
+  }
+}

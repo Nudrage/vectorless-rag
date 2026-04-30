@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1147",
+  "section_number": "2.18.7.3",
+  "header": "Revoking access to OpenSearch UI in a VPC endpoint policy",
+  "content": "OpenSearch UI requires explicit permission in the VPC endpoint policy to allow users to access the\napplication from the VPC. If you no longer want users to access OpenSearch UI from the VPC, you\ncan remove the permission in the endpoint policy. After this, users encounter a 403 forbidden\nerror message when attempting to access OpenSearch UI.\nFor information about updating a VPC endpoint policy, see Update a VPC endpoint policy in the\nAWS PrivateLink Guide.\nThe following is an example of VPC endpoint policy that denies access to the UI applications from\nthe VPC:\n{\n\"Statement\": [{\n\"Action\": [\"opensearch:*\"],\n\"Effect\": \"Allow\",\n\"Principal\": \"*\",\n\"Resource\": \"*\",\n\"Condition\": {\n\"StringEquals\": {\n\"opensearch:ApplicationId\": [\"\"]\n}\n}\nRevoking access to OpenSearch UI in a VPC endpoint policy\n1677\nAmazon OpenSearch Service\nDeveloper Guide\n}]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1706,
+      "end": 1707
+    },
+    "content_stats": {
+      "char_count": 847,
+      "word_count": 132
+    },
+    "hierarchy": {
+      "parent": "Managing access to the OpenSearch UI from a VPC endpoint",
+      "children": []
+    }
+  }
+}

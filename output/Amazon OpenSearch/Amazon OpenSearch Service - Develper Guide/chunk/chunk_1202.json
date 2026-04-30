@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1202",
+  "section_number": "2.19.4.8.2",
+  "header": "Sorting",
+  "content": "You can sort cold indexes by metadata ﬁelds such as index name or size. The following request lists\nall indexes sorted by size in descending order:\nGET _cold/indices/_search\n{\n\"sort_key\": \"size:desc\"\n}\nSample response\n{\n\"pagination_id\" : \"je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY\",\n\"total_results\" : 5,\n\"indices\" : [\n{\n\"index\" : \"my-index-6\",\n\"index_cold_uuid\" : \"4eFiab7rRfSvp3slrIsIKA\",\n\"size\" : 32263273,\n\"creation_date\" : \"2021-08-18T18:25:31.845Z\",\n\"start_time\" : \"2020-03-09T00:00Z\",\n\"end_time\" : \"2020-03-09T23:00Z\"\n},\n{\n\"index\" : \"my-index-9\",\n\"index_cold_uuid\" : \"mbD3ZRVDRI6ONqgEOsJyUA\",\n\"size\" : 57922,\n\"creation_date\" : \"2021-07-07T23:41:35.640Z\",\n\"start_time\" : \"2020-03-09T00:00Z\",\n\"end_time\" : \"2020-03-09T23:00Z\"\n},\n{\n\"index\" : \"my-index-5\",\n\"index_cold_uuid\" : \"EaeXOBodTLiDYcivKsXVLQ\",\n\"size\" : 32403,\n\"creation_date\" : \"2021-07-08T00:12:01.523Z\",\n\"start_time\" : \"2020-03-09T00:00Z\",\n\"end_time\" : \"2020-03-09T23:00Z\"\n}\n]\n}\nListing cold indexes\n1718\nAmazon OpenSearch Service\nDeveloper Guide\nOther valid sort keys are start_time:asc/desc, end_time:asc/desc, and index_name:asc/\ndesc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1747,
+      "end": 1748
+    },
+    "content_stats": {
+      "char_count": 1100,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "Listing cold indexes",
+      "children": []
+    }
+  }
+}

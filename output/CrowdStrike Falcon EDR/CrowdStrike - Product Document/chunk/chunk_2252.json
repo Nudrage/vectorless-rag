@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_2252",
+  "section_number": "1.5.920.1",
+  "header": "Fields: Forensics",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nTargetFileName\nThe resulting file name that was downloaded\nSrudbTableName\nName of the table in system resource utilization database from which event data was read.\nSrudbTableIdString\nIdentifier of the table in system resource utilization database from which event data was read.\nAppName\nFfcFileIdentifier\n24-byte concatenation of a filesystem volume's UUID and a file's inode value.\nAppAudioInSec\nApplication audio input duration in seconds.\nAppAudioInTimeline\nStart time of application audio input.\nAppAudioOutSec\nApplication audio output duration in seconds.\nAppAudioOutTimeline\nStart time of application audio output.\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n802/1226\nField\nDescription\nAppCpuTimeline\nTime of application running on CPU.\nAppDiskRaw\nAppDiskTimeline\nStart time of application accessing disk.\nAppDisplayRequiredSec\nNumber of seconds application required the display.\nAppDisplayRequiredTimeline Start time of application required the display.\nAppDurationMilliSec\nApplication run time in milli-seconds.\nAppEndTime\nApplication end time.\nAppFlags\nApplication flags.\nAppInFocusSec\nApplication in focus duration in seconds.\nAppInFocusTimeline\nStart time of application in focus.\nAppKeyboardInputSec\nApplication keyboard input duration in seconds.\nAppKeyboardInputTimeline\nStart time of application keyboard input.\nAppMouseInputSec\nApplication mouse input duration in seconds.\nAppMBBBytesRaw\nApplication transmitted/received bytes over Mobile BroadBand (MBB) raw socket.\nAppMBBTailRaw\nAppMBBTimeline\nApplication start time of Mobile BroadBand (MBB) transmission.\nAppNetworkBytesRaw\nApplication transmitted/received bytes over raw socket.\nAppNetworkTailRaw\nAppNetworkTimeline\nApplication start time of network transmission.\nAppUserInputSec\nApplication user input duration in seconds.\nAppUserInputTimeline\nStart time of application user input.\nAppTimelineEnd\nThe end of application time line.\nUserSid\nThe User Security Identifier (UserSID) of the user who executed the command. A UserSID uniquely identifies a user in a system.\nValues:\nSELF_RID (0x01010000000000050A000000)\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 802,
+      "end": 803
+    },
+    "content_stats": {
+      "char_count": 2348,
+      "word_count": 278
+    },
+    "hierarchy": {
+      "parent": "SruApplicationTimelineProvider",
+      "children": []
+    }
+  }
+}

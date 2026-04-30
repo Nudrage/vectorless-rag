@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_016",
+  "section_number": "1.27.4",
+  "header": "Response Format",
+  "content": "Key\nValue\nalias1...4\nThe user's username alias(es). Values included for\nbackwards compatibility and reflect the same\ninformation as aliases .\naliases\nMap of the user's username alias(es). Up to eight\naliases may exist.\ncreated\nThe user's creation date as a Unix timestamp.\ncustom_attributes\nA dictionary containing a mapping of attribute\nnames (as defined in the User Attributes section)\nto values.\ndate_of_birth\nThe user's birthdate.\ndesktop_authenticators\nDesktop authenticators associated with the user.\ndirectory_key\nThe key for the directory sync that manages the\nuser. Only returned for users managed by a\ndirectory sync.\nemail\nThe user's email address.\nentra_federated_user_id\nUsed with Microsoft 365 Duo SSO applications.\nenable_auto_prompt\nIf true , the user is automatically prompted to\nuse their last-used authentication method when\nauthenticating. If false , the user is shown a list\nof authentication methods to initiate\nauthentication. Only effective in the Universal\nPrompt.\nexternal_id\nThe user's unique identifier imported by a\ndirectory sync. This is the id  if the user is synced\nfrom Entra ID or object_guid  if the user is\nsynced from Active Directory. Not returned for\nusers managed by OpenLDAP sync or users not\nmanaged by a directory sync.\nfirstname\nThe user's first name/given name.\ngroups\nList of groups to which this user belongs. See\nRetrieve Groups for response info.\nis_enrolled\nIs true  if the user has a phone, hardware token,\nU2F token, WebAuthn security key, or other\nWebAuthn method available for authentication.\nOtherwise, false .\nlast_directory_sync\nAn integer indicating the last update to the user\nvia directory sync as a Unix timestamp, or null  if\nthe user has never synced with an external\ndirectory or if the directory that originally created\nthe user has been deleted from Duo.\nlast_login\nAn integer indicating the last time this user logged\nin, as a Unix timestamp, or null  if the user has\nnot logged in.\nlastname\nThe user's last name/family name.\nlockout_reason\nThe user's lockout_reason. One of:\nReason\nDescription\n\"Failed\nAttempts\"\nThe user was locked out due to\nexcessive authentication\nattempts.\n\"Not\nenrolled\"\nThe user was locked out due to\nbeing not enrolled for a given\nperiod of time after the user\nwas created.\n\"Admin\ndisabled\"\nThe user was locked out by an\nadmin from Duo Trust Monitor.\n\"Admin API\ndisabled\"\nThe user's status was set to\n\"locked out\" by Admin API.\nnotes\nNotes about this user. Viewable in the Duo Admin\nPanel.\nphones\nA list of phones that this user can use. See\nRetrieve Phones for descriptions of the phone\nresponse values.\nrealname\nThe user's real name (or full name). This is the\n\"Display Name\" shown in the Admin Panel.\nstatus\nThe user's status. One of:\nStatus\nDescription\n\"active\"\nThe user must complete\nsecondary\nauthentication.\n\"bypass\"\nThe user will bypass\nsecondary\nauthentication after\ncompleting primary\nauthentication.\n\"disabled\"\nThe user will not be able\nto log in.\n\"locked out\"\nThe user has been\nlocked out due to a\nspecific reason stored in\nthe “lockout_reason”\nfield.\n\"pending deletion\"\nThe user was marked for\ndeletion by a Duo admin\nfrom the Admin Panel,\nby the system for\ninactivity, or by directory\nsync. If not restored\nwithin seven days the\nuser is permanently\ndeleted.\nNote that when a user is a member of a group, the\ngroup status may override the individual user's\nstatus. Group status is not shown in the user\nresponse.\ntokens\nA list of tokens that this user can use. See Retrieve\nHardware Tokens for descriptions of the response\nvalues.\nu2f_tokens\nA list of U2F tokens that this user can use. U2F\ntokens were deprecated in Duo in February 2022.\nKey\nValue\ndate_added\nThe date the U2F\ntoken was registered in\nDuo.\nregistration_id\nThe U2F token's\nregistration identifier.\nUse with GET token by\nID.\nuser_id\nThe user's ID.\nusername\nThe user's username.\nwebauthncredentials\nA list of WebAuthn authenticators that this user\ncan use. See Retrieve WebAuthn Credentials by\nUser ID for descriptions of the response values.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 15,
+    "font_name": "å½¿",
+    "page_range": {
+      "start": 12,
+      "end": 16
+    },
+    "content_stats": {
+      "char_count": 4011,
+      "word_count": 645
+    },
+    "hierarchy": {
+      "parent": "Users",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1532",
+  "section_number": "30.4",
+  "header": "Get Specific Role Definition",
+  "content": "GET    /web/api/v2.1/rbac/role/{role_id}\nWith the ID of a role (see Get All Roles) you can see the permissions of that role.\nThe definition of a role can change in different scopes and SKUs. For example, an Admin role with the scope access of a Site does not have Ranger permissions, but an IT\nrole with the scope access of an Account with a Ranger license does have permissions on Ranger.\nThe Response shows role permissions to see views in the WebUI and to use Console features.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1588,
+      "end": 1588
+    },
+    "content_stats": {
+      "char_count": 480,
+      "word_count": 85
+    },
+    "hierarchy": {
+      "parent": "RBAC",
+      "children": [
+        "Parameters",
+        "Response Messages",
+        "Response Schema"
+      ]
+    }
+  }
+}

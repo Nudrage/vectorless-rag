@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1653",
+  "section_number": "155.1.1.223",
+  "header": "Search the audit log for events in Microsoft Defender XDR",
+  "content": "Defender XDR\nArticle • 04/10/2025 • Applies to: Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR\nThe audit log helps you investigate specific activities across Microsoft 365 services. In the\nMicrosoft Defender portal, Microsoft Defender XDR and Microsoft Defender for Endpoint\nactivities are audited. Some of the activities audited are:\nChanges to data retention settings\nChanges to advanced features\nCreation of indicators of compromise\nIsolation of devices\nAdd\\edit\\deletion of security roles\nCreate\\edit custom detection rules\nAssign user to an incidents\nFor a complete list of Microsoft Defender XDR activities that are audited, see Microsoft\nDefender XDR activities and Microsoft Defender for Endpoint activities.\nAuditing is automatically turned on for Microsoft Defender XDR. Features that are audited are\nlogged in the audit log automatically. Auditing can also collect audit logs from GCC\nenvironments.\nTo access the audit log, you need to have the View-Only Audit Logs or Audit Logs role in\nExchange Online. By default, those roles are assigned to the Compliance Management and\nOrganization Management role groups.\nMicrosoft Defender XDR uses the Microsoft Purview auditing solution. Before you can look at\nthe audit data in the Microsoft Defender portal, you need to turn on auditing in the Microsoft\nPurview portal. For more information, see Turn auditing on or off.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 1233,
+      "end": 1233
+    },
+    "content_stats": {
+      "char_count": 1392,
+      "word_count": 210
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Prerequisites",
+        "Search the audit log",
+        "Microsoft Defender XDR activities",
+        "Microsoft Defender for Endpoint activities",
+        "Search for events using a PowerShell script",
+        "See also"
+      ]
+    }
+  }
+}

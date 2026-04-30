@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_884",
+  "section_number": "2.12.11.2",
+  "header": "Allowing the authenticated role",
+  "content": "By default, the authenticated IAM role that you conﬁgured by following the guidelines in\nthe section called “About the identity pool” does not have the necessary privileges to access\nOpenSearch Dashboards. You must provide the role with additional permissions.\nNote\nIf you conﬁgured ﬁne-grained access control and use an open or IP-based access policy, you\ncan skip this step.\nYou can include these permissions in an identity-based policy, but unless you want authenticated\nusers to have access to all OpenSearch Service domains, a resource-based policy attached to a\nsingle domain is the better approach.\nFor the Principal, specify the ARN of the Cognito authenticated role that you conﬁgured with\nthe guidelines in the section called “About the identity pool”.\nJSON\n{\nAllowing the authenticated role\n1403\nAmazon OpenSearch Service\nDeveloper Guide\n\"Version\":\"2012-10-17\",\n\"Statement\":[\n{\n\"Effect\":\"Allow\",\n\"Principal\":{\n\"AWS\":[\n\"arn:aws:iam::111122223333:role/Cognito_identitypoolname/\nAuth_Role\"\n]\n},\n\"Action\":[\n\"es:ESHttp*\"\n],\n\"Resource\":\"arn:aws:es:us-east-1:111122223333:domain/domain-name/*\"\n}\n]\n}\nFor instructions about adding a resource-based policy to an OpenSearch Service domain, see the\nsection called “Conﬁguring access policies”.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1432,
+      "end": 1433
+    },
+    "content_stats": {
+      "char_count": 1243,
+      "word_count": 167
+    },
+    "hierarchy": {
+      "parent": "Conﬁguring Amazon Cognito authentication for OpenSearch Dashboards",
+      "children": []
+    }
+  }
+}

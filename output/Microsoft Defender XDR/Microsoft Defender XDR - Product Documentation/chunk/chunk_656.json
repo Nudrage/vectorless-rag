@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_656",
+  "section_number": "155.1.1.265.1.4.2",
+  "header": "Automation setting for your organizations devices",
+  "content": "You can also create or edit your device groups to set the appropriate remediation level for each\ngroup. Selecting the Semi automation level allows triggering of automatic attack disruption\nwithout the need for manual approval. To exclude a device group from automated\ncontainment, you can set its automation level to no automated response. Note that this\nsetting is not highly recommended and should only be done for a limited number of devices.\nLearn how to set up auditing in domain controllers in Configure audit policies for Windows\nevent logs to ensure that required audit events are configured on the domain controllers\nwhere the Defender for Identity sensor is deployed.\nDefender for Identity allows you to take remediation actions targeting on-premises Active\nDirectory accounts in the event that an identity is compromised. To take these actions,\nDefender for Identity needs to have the required permissions to do so. By default, the Defender\nfor Identity sensor impersonates the LocalSystem account of the domain controller and\nperforms the actions. Since the default can be changed, validate that Defender for Identity has\nthe required permissions or uses the default LocalSystem account.\nYou can find more information on the action accounts in Configure Microsoft Defender for\nIdentity action accounts\nThe Defender for Identity sensor needs to be deployed on the domain controller where the\nActive Directory account is to be turned off.\n７ Note\nAttack disruption can act on devices independent of a device's Microsoft Defender\nAntivirus operating state. The operating state can be in Active, Passive, or EDR Block\nMode.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 15,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 422,
+      "end": 423
+    },
+    "content_stats": {
+      "char_count": 1630,
+      "word_count": 256
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender for Endpoint prerequisites",
+      "children": []
+    }
+  }
+}

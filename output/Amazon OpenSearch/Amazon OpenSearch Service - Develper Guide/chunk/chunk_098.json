@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_098",
+  "section_number": "2.6.12.2",
+  "header": "Blue/green deployments for pipeline updates",
+  "content": "OpenSearch Ingestion initiates a blue/green deployment process when you update a pipeline\nconﬁguration.\nBlue/green refers to the practice of creating a new environment for pipeline updates and routing\ntraﬃc to the new environment after those updates are complete. The practice minimizes downtime\nand maintains the original environment in the event that deployment to the new environment\nis unsuccessful. Blue/green deployments themselves don't have any performance impact, but\nperformance might change if your pipeline conﬁguration changes in a way that alters performance.\nOpenSearch Ingestion blocks auto-scaling during blue/green deployments. You continue to be\ncharged only for traﬃc to the old pipeline until it's redirected to the new pipeline. Once traﬃc has\nbeen redirected, you're only charged for the new pipeline. You're never charged for two pipelines\nsimultaneously.\nWhen you update a pipeline's source, processor, or sink conﬁguration, OpenSearch Ingestion\ncan automatically upgrade your pipeline to the latest supported minor version of the major\nversion that the pipeline is running. For example, you might have version: \"2\" in your pipeline\nconﬁguration, and OpenSearch Ingestion initially provisioned the pipeline with version 2.1.0.\nWhen support for version 2.1.1 is added, and you make a change to your pipeline conﬁguration,\nOpenSearch Ingestion upgrades your pipeline to version 2.1.1.\nBlue/green deployments for pipeline updates\n87\nAmazon OpenSearch Service\nDeveloper Guide\nThis process keeps your pipeline up to date with the latest bug ﬁxes and performance\nimprovements. OpenSearch Ingestion can't update the major version of your pipeline unless you\nmanually change the version option within the pipeline conﬁguration.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 116,
+      "end": 117
+    },
+    "content_stats": {
+      "char_count": 1744,
+      "word_count": 251
+    },
+    "hierarchy": {
+      "parent": "Updating Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

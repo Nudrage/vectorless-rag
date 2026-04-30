@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1521",
+  "section_number": "2.27.4",
+  "header": "Tutorial: Visualizing customer support calls with OpenSearch Service and OpenSearch Dashboards",
+  "content": "Service and OpenSearch Dashboards\nThis chapter is a full walkthrough of the following situation: a business receives some number of\ncustomer support calls and wants to analyze them. What is the subject of each call? How many\nwere positive? How many were negative? How can managers search or review the the transcripts of\nthese calls?\nA manual workﬂow might involve employees listening to recordings, noting the subject of each\ncall, and deciding whether or not the customer interaction was positive.\nSuch a process would be extremely labor-intensive. Assuming an average time of 10 minutes\nper call, each employee could listen to only 48 calls per day. Barring human bias, the data they\ngenerate would be highly accurate, but the amount of data would be minimal: just the subject of\nthe call and a boolean for whether or not the customer was satisﬁed. Anything more involved, such\nas a full transcript, would take a huge amount of time.\nUsing Amazon S3, Amazon Transcribe, Amazon Comprehend, and Amazon OpenSearch Service,\nyou can automate a similar process with very little code and end up with much more data. For\nexample, you can get a full transcript of the call, keywords from the transcript, and an overall\n\"sentiment\" of the call (positive, negative, neutral, or mixed). Then you can use OpenSearch and\nOpenSearch Dashboards to search and visualize the data.\nWhile you can use this walkthrough as-is, the intent is to spark ideas about how to enrich your\nJSON documents before you index them in OpenSearch Service.\nEstimated Costs\nIn general, performing the steps in this walkthrough should cost less than $2. The walkthrough\nuses the following resources:\n• S3 bucket with less than 100 MB transferred and stored\nTo learn more, see Amazon S3 Pricing.\n• OpenSearch Service domain with one t2.medium instance and 10 GiB of EBS storage for several\nhours\nTo learn more, see Amazon OpenSearch Service Pricing.\n• Several calls to Amazon Transcribe\nVisualizing support calls\n2026\nAmazon OpenSearch Service\nDeveloper Guide\nTo learn more, see Amazon Transcribe Pricing.\n• Several natural language processing calls to Amazon Comprehend\nTo learn more, see Amazon Comprehend Pricing.\nTopics\n• Step 1: Conﬁgure prerequisites\n• Step 2: Copy sample code\n• (Optional) Step 3: Index sample data\n• Step 4: Analyze and visualize your data\n• Step 5: Clean up resources and next steps",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2055,
+      "end": 2056
+    },
+    "content_stats": {
+      "char_count": 2370,
+      "word_count": 391
+    },
+    "hierarchy": {
+      "parent": "Amazon OpenSearch Service tutorials",
+      "children": [
+        "Step 1: Conﬁgure prerequisites",
+        "Step 2: Copy sample code",
+        "(Optional) Step 3: Index sample data",
+        "Step 4: Analyze and visualize your data",
+        "Step 5: Clean up resources and next steps"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_805",
+  "section_number": "2.12.4.1",
+  "header": "The bigger picture: ﬁne-grained access control and OpenSearch Service security",
+  "content": "security\nAmazon OpenSearch Service security has three main layers:\nNetwork\nThe ﬁrst security layer is the network, which determines whether requests reach an OpenSearch\nService domain. If you choose Public access when you create a domain, requests from any\ninternet-connected client can reach the domain endpoint. If you choose VPC access, clients\nThe bigger picture: ﬁne-grained access control and OpenSearch Service security\n1332\nAmazon OpenSearch Service\nDeveloper Guide\nmust connect to the VPC (and the associated security groups must permit it) for a request to\nreach the endpoint. For more information, see the section called “VPC support”.\nDomain access policy\nThe second security layer is the domain access policy. After a request reaches a domain\nendpoint, the resource-based access policy allows or denies the request access to a given URI.\nThe access policy accepts or rejects requests at the \"edge\" of the domain, before they reach\nOpenSearch itself.\nFine-grained access control\nThe third and ﬁnal security layer is ﬁne-grained access control. After a resource-based access\npolicy allows a request to reach a domain endpoint, ﬁne-grained access control evaluates the\nuser credentials and either authenticates the user or denies the request. If ﬁne-grained access\ncontrol authenticates the user, it fetches all roles mapped to that user and uses the complete\nset of permissions to determine how to handle the request.\nNote\nIf a resource-based access policy contains IAM roles or users, clients must send signed\nrequests using AWS Signature Version 4. As such, access policies can conﬂict with\nﬁne-grained access control, especially if you use the internal user database and HTTP\nbasic authentication. You can't sign a request with a username and password and IAM\ncredentials. In general, if you enable ﬁne-grained access control, we recommend using a\ndomain access policy that doesn't require signed requests.\nThe following diagram illustrates a common conﬁguration: a VPC access domain with ﬁne-grained\naccess control enabled, an IAM-based access policy, and an IAM master user.\nThe bigger picture: ﬁne-grained access control and OpenSearch Service security\n1333\nAmazon OpenSearch Service\nDeveloper Guide\nThe following diagram illustrates another common conﬁguration: a public access domain with ﬁne-\ngrained access control enabled, an access policy that doesn't use IAM principals, and a master user\nin the internal user database.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1361,
+      "end": 1363
+    },
+    "content_stats": {
+      "char_count": 2443,
+      "word_count": 370
+    },
+    "hierarchy": {
+      "parent": "Fine-grained access control in Amazon OpenSearch Service",
+      "children": [
+        "Example"
+      ]
+    }
+  }
+}

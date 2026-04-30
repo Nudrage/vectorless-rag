@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_691",
+  "section_number": "2.10.4.2.1",
+  "header": "Auto-Tune pending",
+  "content": "OpenSearch Service sends this event when Auto-Tune has identiﬁed tuning recommendations for\nimproved cluster performance and availability. You'll only see this event for domains with Auto-\nTune disabled.\nAuto-Tune events\n1244\nAmazon OpenSearch Service\nDeveloper Guide\nExample\nThe following is an example event of this type:\n{\n\"version\": \"0\",\n\"id\": \"3acb26c8-397c-4c89-a80a-ce672a864c55\",\n\"detail-type\": \"Amazon OpenSearch Service Auto-Tune Notification\",\n\"source\": \"aws.es\",\n\"account\": \"123456789012\",\n\"time\": \"2020-10-30T22:06:31Z\",\n\"region\": \"us-east-1\",\n\"resources\": [\"arn:aws:es:us-east-1:123456789012:domain/test-domain\"],\n\"detail\": {\n\"event\": \"Auto-Tune Event\",\n\"severity\": \"Informational\",\n\"status\": \"Pending\",\n\"description\": \"Auto-Tune recommends the following new settings for your\ndomain: { JVM Heap size : 60%}. Enable Auto-Tune to improve cluster stability and\nperformance.\",\n\"scheduleTime\": \"{iso8601-timestamp}\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 14,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1273,
+      "end": 1274
+    },
+    "content_stats": {
+      "char_count": 929,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Auto-Tune events",
+      "children": []
+    }
+  }
+}

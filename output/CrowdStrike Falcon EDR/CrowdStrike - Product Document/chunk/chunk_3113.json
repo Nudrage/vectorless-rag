@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3113",
+  "section_number": "1.6.17.3.1",
+  "header": "Event fields",
+  "content": "Field Name\nDescription\ncid\nCID\nduration\nDuration in seconds\nevent_id\nEvent ID\nFalcon Privileged Access JIT for Entra ID roles [/documentation/page/n3d4ff6d/falcon-privileged-access-jit-for-entra-id-roles]\n7/29/25, 11:56 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n1142/1226\n\n\nField Name\nDescription\nintegration_name\nSpecifies the identity provider system (such as Microsoft Entra ID or Active Directory) where user permissions will be\nelevated Just-In-Time.\nmessage\nMessage\npermission_assignment_type_name\nIndicates the type of permission assignment being performed, such as Entra Role assignments or Active Directory\ngroup memberships.\npermission_name\nSpecifies the exact permission being assigned, such as \"Global Administrator\" for Entra roles.\npolicy_id\nPolicy ID\npolicy_name\nPolicy name\nrelated_request\nReferences the original request ID that initiated the permission change. E.g for revocation events, this links back to the\ncorresponding grant event.\nrequested_method\nIndicates how the end user initiated the elevation request, such as through Microsoft Teams or during the login\nprocess.\nscope_name\nDefines the boundary or context within which the permission is being granted.\ntenan_tid\nTenant or Domain ID\ntenant_name\nTenant or Domain name\nuser_id\nUser ID\nuser_justification\nContains the reason provided by the user when requesting elevated permissions.\nuser_name\nUser name",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1142,
+      "end": 1143
+    },
+    "content_stats": {
+      "char_count": 1557,
+      "word_count": 196
+    },
+    "hierarchy": {
+      "parent": "Falcon Privileged Access",
+      "children": []
+    }
+  }
+}

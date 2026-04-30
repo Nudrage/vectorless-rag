@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_3152",
+  "section_number": "1.6.10.7.11",
+  "header": "grantCustomerSubscriptions",
+  "content": "{\n\"metadata\": {\n\"customerIDString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\",\n\"offset\": 1238645,\n\"eventType\": \"AuthActivityAuditEvent\",\n\"eventCreationTime\": 1494701329876,\n\"version\": \"1.0\"\n},\n\"event\": {\n\"UserId\": \"user@example.com\",\n\"UserIp\": \"192.0.2.100\",\n\"OperationName\": \"grantCustomerSubscriptions\",\n\"ServiceName\": \"Crowdstrike Authentication\",\n\"Success\": true,\n\"AuditKeyValues\": [\n{\n\"Key\": \"actor_user\",\n\"ValueString\": \"user@example.com\"\n},\n{\n\"Key\": \"actor_user_uuid\",\n\"ValueString\": \"456b382d-b2f6-4eed-bcc4-111d89d45678\"\n},\n{\n\"Key\": \"actor_cid\",\n\"ValueString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\"\n},\n{\n\"Key\": \"target_cid\",\n\"ValueString\": \"0123456789ABCDEFGHIJKLMNOPQRSTUV\"\n},\n{\n\"Key\": \"subscriptions\",\n\"ValueString\": \"test_subscription\"\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 1180,
+      "end": 1180
+    },
+    "content_stats": {
+      "char_count": 745,
+      "word_count": 62
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

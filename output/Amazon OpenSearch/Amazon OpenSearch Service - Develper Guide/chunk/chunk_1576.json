@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1576",
+  "section_number": "2.29.30",
+  "header": "Denied requests to the OpenSearch API",
+  "content": "With the introduction of tag-based access control for the OpenSearch API, you might start seeing\naccess denied errors where you didn't before. This might be because one or more of your access\npolicies contains Deny using the ResourceTag condition, and those conditions are now being\nhonored.\nFor example, the following policy used to only deny access to the CreateDomain action from the\nconﬁguration API, if the domain had the tag environment=production. Even though the action\nlist also includes ESHttpPut, the deny statement didn't apply to that action or any other ESHttp*\nactions.\nJSON\n{\n\"Version\":\"2012-10-17\",\n\"Statement\": [{\n\"Action\": [\n\"es:CreateDomain\",\n\"es:ESHttpPut\"\n],\n\"Effect\": \"Deny\",\n\"Resource\": \"*\",\n\"Condition\": {\n\"ForAnyValue:StringEquals\": {\n\"aws:ResourceTag/environment\": [\n\"production\"\n]\n}\n}\n}]\n}\nWith the added support of tags for OpenSearch HTTP methods, an IAM identity-based policy\nlike the above will result in the attached user being denied access to the ESHttpPut action.\nPreviously, in the absence of tags validation, the attached user would have still been able to send\nPUT requests.\nDenied requests to the OpenSearch API\n2065\nAmazon OpenSearch Service\nDeveloper Guide\nIf you start seeing access denied errors after updating your domains to service software\nR20220323 or later, check your identity-based access policies to see if this is the case and update\nthem if necessary to allow access.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 2094,
+      "end": 2095
+    },
+    "content_stats": {
+      "char_count": 1422,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Troubleshooting Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

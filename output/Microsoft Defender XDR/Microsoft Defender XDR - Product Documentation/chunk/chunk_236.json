@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_236",
+  "section_number": "155.1.1.20.1.1",
+  "header": "Check your role",
+  "content": "Configuring your network firewall ensures a smooth experience while navigating the\nMicrosoft Defender portal https://security.microsoft.com\n.\nAdd to your firewall's allow list the outbound IP addresses in the following page:\nIP addresses used by Azure Monitor\nIn addition, ensure that other Defender services are properly configured. You can refer\nto the following pages for configuration information:\nEnable access to Microsoft Defender for Endpoint service in the proxy server\nGet started with Microsoft Defender for Office 365\nConfigure endpoint proxy and internet connectivity settings for Microsoft\nDefender for Identity\nEnsure portal access for Microsoft Defender for Cloud Apps\nMicrosoft Defender XDR aggregates data from the various supported services that\nyou've already deployed. It will process and store data centrally to identify new insights\nand make centralized response workflows possible. It does this without affecting\nexisting deployments, settings, or data associated with the integrated services.\nTo get the best protection and optimize Microsoft Defender XDR, we recommend\ndeploying all applicable supported services on your network. For more information, read\nabout deploying supported services.\nOnboarding to Microsoft Defender XDR is simple. From the navigation menu, select any\nitem, such as Incidents & alerts, Hunting, Action center, or Threat analytics to initiate\nthe onboarding process.\nMicrosoft Defender XDR will store and process data in the same location used by\nMicrosoft Defender for Endpoint. If you don't have Microsoft Defender for Endpoint, a\nnew data center location is automatically selected based on the location of active\nMicrosoft 365 security services. The selected data center location is shown in the screen.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 140,
+      "end": 141
+    },
+    "content_stats": {
+      "char_count": 1757,
+      "word_count": 255
+    },
+    "hierarchy": {
+      "parent": "Check license eligibility and required permissions",
+      "children": []
+    }
+  }
+}

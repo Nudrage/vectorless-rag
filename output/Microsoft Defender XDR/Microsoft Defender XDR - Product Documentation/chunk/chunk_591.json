@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_591",
+  "section_number": "155.1.1.257.6.1.4",
+  "header": "Alerts",
+  "content": "\nMicrosoft Defender XDR and Microsoft Purview Insider Risk Management follow\ndifferent alert status and classification frameworks. The following alert mapping is used\nto sync alert statuses between the two solutions:\nMicrosoft Defender\nalert status\nMicrosoft Purview Insider Risk Management alert status\nNew\nNeeds review\nIn progress\nNeeds review\nResolved\nClassification dependent. If classification is not available, the alert\nstatus is set to Dismissed by default.\nThe following alert classification mapping is used to sync the alert classification between\nthe two solutions:\nMicrosoft Defender alert classification\nMicrosoft Purview Insider Risk Management\nalert classification\nTrue positive\nIncludes multi-staged attack, phishing, etc.\nConfirmed\nInformation, expected activity (benign\npositive)\nIncludes Ssecurity testing, confirmed\nactivity, etc.\nDismissed\nFalse positive\nIncludes not malicious, not enough data to\nvalidate, etc.\nDismissed\nFor more information about alert statuses and classifications in Microsoft Defender XDR,\nsee Manage alerts in Microsoft Defender.\nAny updates made to an insider risk management alert in the Microsoft Purview or the\nMicrosoft Defender portals are automatically reflected in both portals. These updates\nmight include:\nAlert status\nSeverity\nActivity that generated the alert\nTrigger information\nﾉ\nExpand table\nﾉ\nExpand table\nClassification\nThe updates are reflected in both portals within 30 minutes of the alert generation or\nupdate.\nThe following insider risk management data are not yet available in this integration:\nExfiltration through email events\nRisky AI usage events\nThird-party cloud apps events\nEvents that occurred before an alert was generated\nExclusions to events defined by the administrator\nInsider risk management incidents don't contain alerts currently, impacting\nMicrosoft Sentinel users. For more information, see Impact to Microsoft Sentinel\nusers.\nUse advanced hunting to further investigate insider risk events and behaviors. Refer to\nthe table below for a summary of insider risk management data available in advanced\nhunting.\nTable name\nDescription\nAlertInfo\nInsider risk management alerts are available as part the AlertInfo table,\nwhich contains information about alerts from various Microsoft security\nsolutions.\nAlertEvidence\nInsider risk management alerts are available as part of the AlertEvidence\ntable, which contains information about entities associated with alerts\nfrom various Microsoft security solutions.\nDataSecurityBehaviors\nThis table contains insights into potentially suspicious user behavior that\nviolates the default or customer-defined policies in Microsoft Purview.\nDataSecurityEvents\nThis table contains enriched events about user activities that violate the\ndefault or customer-defined policies in Microsoft Purview.\n７ Note\nAlerts created from custom detections or link query results to incidents are not\navailable in the Microsoft Purview portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 18,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 374,
+      "end": 376
+    },
+    "content_stats": {
+      "char_count": 2941,
+      "word_count": 404
+    },
+    "hierarchy": {
+      "parent": "Investigation experience in the Microsoft Defender portal",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1428",
+  "section_number": "2.26.1.2",
+  "header": "Previous generation instance types",
+  "content": "OpenSearch Service oﬀers previous generation instance types for users who have optimized their\napplications around them and have yet to upgrade. We encourage you to use current generation\ninstance types to get the best performance, but we continue to support the following previous\ngeneration instance types.\nPrevious generation instance types\n1896\nAmazon OpenSearch Service\nDeveloper Guide\nInstance\ntype\nInstances\nRestrictions\nC4\nc4.large.\nsearch\nc4.xlarge\n.search\nc4.2xlarg\ne.search\nc4.4xlarg\ne.search\nc4.8xlarg\ne.search\nI2\ni2.xlarge\n.search\ni2.2xlarg\ne.search\nM3\nm3.medium\n.search\nm3.large.\nsearch\nm3.xlarge\n.search\nm3.2xlarg\ne.search\n• The M3 instance types do not support encryption of data at\nrest, ﬁne-grained access control, or cross-cluster search.\n• The M3 instance types have additional restrictions by\nOpenSearch version. To learn more, see the section called\n“Invalid M3 instance type”.\nM4\nm4.large.\nsearch\nPrevious generation instance types\n1897\nAmazon OpenSearch Service\nDeveloper Guide\nInstance\ntype\nInstances\nRestrictions\nm4.xlarge\n.search\nm4.2xlarg\ne.search\nm4.4xlarg\ne.search\nm4.10xlar\nge.search\nR3\nr3.large.\nsearch\nr3.xlarge\n.search\nr3.2xlarg\ne.search\nr3.4xlarg\ne.search\nr3.8xlarg\ne.search\nThe R3 instance types do not support encryption of data at rest or\nﬁne-grained access control.\nPrevious generation instance types\n1898\nAmazon OpenSearch Service\nDeveloper Guide\nInstance\ntype\nInstances\nRestrictions\nR4\nr4.large.\nsearch\nr4.xlarge\n.search\nr4.2xlarg\ne.search\nr4.4xlarg\ne.search\nr4.8xlarg\ne.search\nr4.16xlar\nge.search\nT2\nt2.micro.\nsearch\nt2.small.\nsearch\nt2.medium\n.search\n• You can use the T2 instance types only if the instance count for\nyour domain is 10 or fewer.\n• The t2.micro.search  instance type supports only Elasticse\narch 1.5 and 2.3.\n• The T2 instance types do not support encryption of data at rest,\nﬁne-grained access control, UltraWarm storage, cold storage,\ncross-cluster search, or Auto-Tune.\nTip\nWe often recommend diﬀerent instance types for dedicated master nodes and data nodes.\nPrevious generation instance types\n1899\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1925,
+      "end": 1929
+    },
+    "content_stats": {
+      "char_count": 2103,
+      "word_count": 292
+    },
+    "hierarchy": {
+      "parent": "Supported instance types in Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

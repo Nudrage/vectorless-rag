@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1189",
+  "section_number": "1.5.914.1",
+  "header": "Fields: Linux",
+  "content": "Field\nDescription\nContextTimeStamp\nSystem time of event creation.\nSourceProcessId\nUPID of creating process.\nNote that in Windows [http://msdn.microsoft.com/en- us/library/windows/hardware/ff559960%28v=vs.85%29.aspx] , the\nParentProcessId does not have to be the same as SourceProcessId since a different parent can be specified for creation. On Mac,\nSourceProcessId is the responsible_pid which is used by XPC to note the process requesting this XPC process.\nTamperingAction\nA string representing the tampering action.\nTampering Action\nDefinition\nbpf\nA BPF resource, such as a BPF map, was tampered with.\ncreate_file\nA file was created within a protected directory.\nlink_file\nA file link was created to or from a protected file or directory.\nmkdir\nA directory was created within a protected directory.\nmknod\nA node was created within a protected directory.\nmodify_file\nA protected file as modified.\nopen_write\nA protected file was opened with write access.\naccess_process\nA protected process was tampered with either through memory or debugging.\nrename_file\nA protected file was renamed.\nrmdir\nA protected directory was removed.\nsignal_process\nA signal was sent to a protected process.\n7/29/25, 11:55 AM\nEvents Full Reference (Events Data Dictionary) | Events | Event Investigation | Documentation | Support and resources | Falcon\nhttps://falcon.us-2.crowdstrike.com/documentation/page/e3ce0b24/events-data-dictionary\n314/1226\n\n\nField\nDescription\nTampering Action\nDefinition\nunlink_file\nA protected file was removed.\nActionBlocked\nWhether the sensor blocked the process or not.\n\"0\" - The action was not blocked.\n\"1\" - The action was blocked.\nValues:\nNOT_BLOCKED (0)\nBLOCKED (1)\nResourceName\nThe name of the tampered with resource.  For file-related operations, this is the full path of the file.  For process-related operations, this\nis the process' name.\nTargetProcessId\nThe unique ID of a target process (in decimal, non-hex format). This field exists in almost all events, and it represents the ID of the\nprocess that is responsible for the activity of the event in focus. For example, the TargetProcessId of a process that performed thread\ninjection in an InjectedThread event\nSourceImageFileName\nSourceCommandLine\ntop [#top]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 10,
+    "font_name": "Calibre-Medium",
+    "page_range": {
+      "start": 314,
+      "end": 315
+    },
+    "content_stats": {
+      "char_count": 2231,
+      "word_count": 318
+    },
+    "hierarchy": {
+      "parent": "SensorTampering",
+      "children": []
+    }
+  }
+}

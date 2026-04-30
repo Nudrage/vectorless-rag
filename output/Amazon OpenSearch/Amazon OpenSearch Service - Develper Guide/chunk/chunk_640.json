@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_640",
+  "section_number": "2.10.1.10",
+  "header": "OpenSearch Optimized Instances (OR1) metrics",
+  "content": "Amazon OpenSearch Service provides the following metrics for OR1 instances.\nOpenSearch Optimized Instances (OR1) metrics\n1195\nAmazon OpenSearch Service\nDeveloper Guide\nMetric\nDescription\nRemoteStorageUsedS\npace\nThe total amount of Amazon S3 space, in MiB, that the cluster\nis using.\nRelevant statistics: Sum\nRemoteStorageWrite\nRejected\nThe total number of requests rejected on primary shards due\nto remote storage and replication pressure. This is calculated\nstarting from the last OpenSearch Service process startup.\nRelevant statistics: Sum\nReplicationLagMaxT\nime\nThe amount of time, in milliseconds, that replica shards are\nbehind the primary shards.\nRelevant statistics: Maximum",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1224,
+      "end": 1225
+    },
+    "content_stats": {
+      "char_count": 682,
+      "word_count": 93
+    },
+    "hierarchy": {
+      "parent": "Monitoring OpenSearch cluster metrics with Amazon CloudWatch",
+      "children": []
+    }
+  }
+}

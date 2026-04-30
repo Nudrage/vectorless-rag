@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1180",
+  "section_number": "2.19.3.7",
+  "header": "Cancelling migrations",
+  "content": "UltraWarm handles migrations sequentially, in a queue. If a migration is in the queue, but has not\nyet started, you can remove it from the queue using the following request:\nPOST _ultrawarm/migration/_cancel/my-index\nIf your domain uses ﬁne-grained access control, you must have the indices:admin/ultrawarm/\nmigration/cancel permission to make this request.\nMigration tuning\n1703\nAmazon OpenSearch Service\nDeveloper Guide",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1732,
+      "end": 1733
+    },
+    "content_stats": {
+      "char_count": 421,
+      "word_count": 58
+    },
+    "hierarchy": {
+      "parent": "UltraWarm storage for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}

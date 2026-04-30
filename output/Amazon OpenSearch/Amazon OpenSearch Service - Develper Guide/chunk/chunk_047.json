@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_047",
+  "section_number": "2.6.7.4",
+  "header": "Granting Amazon OpenSearch Ingestion pipelines access to collections",
+  "content": "An Amazon OpenSearch Ingestion pipeline can write to an OpenSearch Serverless public collection\nor VPC collection. To provide access to the collection, you conﬁgure an AWS Identity and Access\nManagement (IAM) pipeline role with a permissions policy that grants access to the collection. The\npipeline assumes this role in order to sign requests to the OpenSearch Serverless collection sink.\nImportant\nYou can choose to manually create the pipeline role, or you can have OpenSearch\nIngestion create it for you during pipeline creation. If you choose automatic role creation,\nOpenSearch Ingestion adds all required permissions to the pipeline role access policy based\non the source and sink that you choose. It creates a pipeline role in IAM with the preﬁx\nGranting pipelines access to collections\n38\nAmazon OpenSearch Service\nDeveloper Guide\nOpenSearchIngestion- and the suﬃx that you enter. For more information, see the\nsection called “Pipeline role”.\nIf you have OpenSearch Ingestion create the pipeline role for you, you still need to include\nthe role in the collection's data access policy, either before or after you create the pipeline.\nSee step 2 for instructions.\nDuring pipeline creation, OpenSearch Ingestion creates an AWS PrivateLink connection between\nthe pipeline and the OpenSearch Serverless collection. All traﬃc from the pipeline goes through\nthis VPC endpoint and is routed to the collection. In order to reach the collection, the endpoint\nmust be granted access to the collection through a network access policy.\nTopics\n• Step 1: Create the pipeline role\n• Step 2: Conﬁgure data and network access for the collection",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 67,
+      "end": 68
+    },
+    "content_stats": {
+      "char_count": 1635,
+      "word_count": 256
+    },
+    "hierarchy": {
+      "parent": "Setting up roles and users in Amazon OpenSearch Ingestion",
+      "children": [
+        "Step 1: Create the pipeline role",
+        "Step 2: Conﬁgure data and network access for the collection"
+      ]
+    }
+  }
+}

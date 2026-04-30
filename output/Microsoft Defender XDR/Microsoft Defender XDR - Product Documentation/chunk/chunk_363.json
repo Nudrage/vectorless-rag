@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_363",
+  "section_number": "155.1.1.34",
+  "header": "Incidents and alerts in the Microsoft Defender portal",
+  "content": "Defender portal\nApplies to: Microsoft Defender XDR, Microsoft Sentinel in the Microsoft Defender portal\nThe Microsoft Defender portal brings together a unified set of security services to reduce your\nexposure to security threats, improve your organizational security posture, detect security\nthreats, and investigate and respond to breaches. These services collect and produce signals\nthat are displayed in the portal. The two main kinds of signals are:\nAlerts: Signals that result from various threat detection activities. These signals indicate the\noccurrence of malicious or suspicious events in your environment.\nIncidents: Containers that include collections of related alerts and tell the full story of an attack.\nThe alerts in a single incident might come from all Microsoft security and compliance solutions,\nas well as from vast numbers of external solutions collected through Microsoft Sentinel and\nMicrosoft Defender for Cloud.\nWhile you can investigate and mitigate the threats that individual alerts bring to your attention,\nby themselves these threats are isolated occurrences that don't tell you anything about a\nbroader, complex attack story. You could search for, research, investigate, and correlate groups\nof alerts that belong together in a single attack story, but that will cost you lots of time, effort,\nand energy.\nInstead, the correlation engines and algorithms in the Microsoft Defender portal automatically\naggregate and correlate related alerts together to form incidents that represent these larger\nattack stories. Defender identifies multiple signals as belonging to the same attack story, using\nAI to continually monitor its telemetry sources and add more evidence to already open\nincidents. Incidents contain all the alerts deemed to be related to each other and to the overall\nattack story, and present the story in various forms:\nTimelines of alerts and the raw events on which they're based\nA list of the tactics that were used\nLists of all the involved and impacted users, devices, and other resources\nA visual representation of how all the players in the story interact\nLogs of automatic investigation and response processes that Defender XDR initiated and\ncompleted\nCollections of evidence supporting the attack story: bad actors' user accounts and device\ninformation and address, malicious files and processes, relevant threat intelligence, and so",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 25,
+    "font_name": "SegoeUI-Semibold",
+    "page_range": {
+      "start": 207,
+      "end": 207
+    },
+    "content_stats": {
+      "char_count": 2386,
+      "word_count": 360
+    },
+    "hierarchy": {
+      "parent": "Microsoft Defender XDR",
+      "children": [
+        "Incidents for correlation and investigation",
+        "Alert sources and threat detection",
+        "Tools and methods for investigation and response",
+        "Related items"
+      ]
+    }
+  }
+}

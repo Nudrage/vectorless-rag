@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_097",
+  "section_number": "2.6.12.1",
+  "header": "Updating pipelines",
+  "content": "You can update Amazon OpenSearch Ingestion pipelines using the AWS Management Console, the\nAWS CLI, or the OpenSearch Ingestion API.\nConsole\nTo update a pipeline\n1.\nSign in to the Amazon OpenSearch Service console at https://console.aws.amazon.com/aos/\nhome.\n2.\nChoose Pipelines in the left navigation pane.\n3.\nChoose a pipeline to open its settings. Then, choose one of the Edit options.\n4.\nWhen you're done making changes, choose Save.\nUpdating pipelines\n86\nAmazon OpenSearch Service\nDeveloper Guide\nCLI\nTo update a pipeline using the AWS CLI, send an update-pipeline request. The following sample\nrequest uploads a new conﬁguration ﬁle and updates the minimum and maximum capacity values:\naws osis update-pipeline \\\n--pipeline-name \"my-pipeline\" \\\n--pipline-configuration-body \"file://new-pipeline-config.yaml\" \\\n--min-units 11 \\\n--max-units 18\nOpenSearch Ingestion API\nTo update an OpenSearch Ingestion pipeline using the OpenSearch Ingestion API, call the\nUpdatePipeline operation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 16,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 115,
+      "end": 116
+    },
+    "content_stats": {
+      "char_count": 986,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "Updating Amazon OpenSearch Ingestion pipelines",
+      "children": []
+    }
+  }
+}

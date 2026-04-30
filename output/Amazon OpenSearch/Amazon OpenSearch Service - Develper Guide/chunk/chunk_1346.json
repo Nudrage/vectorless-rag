@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1346",
+  "section_number": "2.23.3",
+  "header": "Conﬁgure permissions",
+  "content": "If you enable Security Analytics on a preexisting OpenSearch Service domain, the\nsecurity_analytics_manager role might not be deﬁned on the domain. Non-admin users\nmust be mapped to this role in order to manage warm indexes on domains using ﬁne-grained\naccess control. To manually create the security_analytics_manager role, perform the\nfollowing steps:\n1.\nIn OpenSearch Dashboards, go to Security and choose Permissions.\nConﬁgure permissions\n1821\nAmazon OpenSearch Service\nDeveloper Guide\n2.\nChoose Create action group and conﬁgure the following groups:\nGroup name\nPermissions\nsecurity_\nanalytics\n_full_access\n• cluster:admin/opensearch/securityanalytics/al\nerts/*\n• cluster:admin/opensearch/securityanalytics/de\ntector/*\n• cluster:admin/opensearch/securityanalytics/fi\nndings/*\n• cluster:admin/opensearch/securityanalytics/ma\npping/*\n• cluster:admin/opensearch/securityanalytics/ru\nle/*\nsecurity_\nanalytics\n_read_access\n• cluster:admin/opensearch/securityanalytics/al\nerts/get\n• cluster:admin/opensearch/securityanalytics/de\ntector/get\n• cluster:admin/opensearch/securityanalytics/de\ntector/search\n• cluster:admin/opensearch/securityanalytics/fi\nndings/get\n• cluster:admin/opensearch/securityanalytics/ma\npping/get\n• cluster:admin/opensearch/securityanalytics/ma\npping/view/get\n• cluster:admin/opensearch/securityanalytics/ru\nle/get\n• cluster:admin/opensearch/securityanalytics/ru\nle/search\n3.\nChoose Roles and Create role.\n4.\nName the role security_analytics_manager.\nConﬁgure permissions\n1822\nAmazon OpenSearch Service\nDeveloper Guide\n5.\nFor Cluster permissions, select security_analytics_full_access and\nsecurity_analytics_read_access.\n6.\nFor Index, type *.\n7.\nFor Index permissions, select indices:admin/mapping/put and indices:admin/\nmappings/get.\n8.\nChoose Create.\n9.\nAfter you create the role, map it to any user or backend role that will manage Security\nAnalytics indexes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "AmazonEmber-Bold",
+    "page_range": {
+      "start": 1850,
+      "end": 1852
+    },
+    "content_stats": {
+      "char_count": 1882,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Security Analytics for Amazon OpenSearch Service",
+      "children": []
+    }
+  }
+}
