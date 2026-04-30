@@ -1,0 +1,13 @@
+{
+  "name": "openapi-pdf-export",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Export OpenAPI specs to PDF via ReDoc",
+  "scripts": {
+    "export": "node export.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0",
+    "@redocly/cli": "^1.10.0"
+  }
+}

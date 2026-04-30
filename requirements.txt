@@ -1,0 +1,18 @@
+# Combined dependencies for parent (Chunker + Agent)
+# For Chunker-only: pip install -r chunker/requirements.txt
+# For Agent-only: pip install -r agent/requirements.txt
+
+# Chunker - PDF processing
+# PyMuPDF
+# tqdm
+
+# Shared
+python-dotenv
+
+# Agent - DeepAgentic RAG
+# google-genai
+# langgraph
+# langchain
+# langchain-core
+# langchain-google-genai
+# deepagents
