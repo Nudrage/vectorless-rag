@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_283",
+  "section_number": "1.11.5.2",
+  "header": "Disable Hardware Offload",
+  "content": "Packet captures for traffic passing through the network data ports on a Palo Alto Networks\nfirewall are performed by the dataplane CPU. To capture traffic that passes through the\nmanagement interface, you must Take a Packet Capture on the Management Interface, in which\ncase the packet capture is performed on the management plane.\nWhen a packet capture is performed on the dataplane, the packet capture filter is used differently\nby the ingress stage, compared to the firewall, drop, and egress capture stages. The ingress stage\nuses the packet capture filter to copy individual packets that match the filter to the capture file.\nPackets that fail packet-parsing checks are dropped before being captured. The firewall, drop, and\negress capture stages use the same packet capture filter to mark all new sessions that match the\nfilter. Because each session, as recorded in the session tables, identifies both client-to-server and\nserver-to-client connections, any traffic, in either direction, that matches to the flagged session\nwill be copied to the firewall-stage and transmit-stage capture files. Likewise, any dropped traffic\n(post receive stage) in either direction that matches to a flagged session will be copied to the\ndrop-stage capture file.\nOn firewall models that include a network processor, traffic that meets certain pre-determined\ncriteria by Palo Alto Networks may be offloaded for handling by the network processor. Such\noffloaded traffic will not reach the dataplane CPU and will, therefore, not be captured. To capture\noffloaded traffic, you must use the CLI to turn off the hardware offload feature.\nCommon types of traffic that may be offloaded include non-decrypted SSL and SSH traffic (which\nbeing encrypted cannot be usefully inspected beyond the initial SSL/SSH session setup), network\nprotocols (such as OSPF, BGP, RIP), and traffic that matches an application-override policy. Some\ntypes of traffic will never be offloaded, such as ARP, all non-IP traffic, IPSec, and VPN sessions.\nIndividual SYN, FIN, and RST packets, even for session traffic that has been offloaded, will never\nbe offloaded, and will always be passed through to the dataplane CPU, once recognized as such\nby the network processor.\nHardware offload is supported on the following firewalls: PA-3200 Series, PA-5200\nSeries, and PA-7000 Series firewall.\nDisabling hardware offload may increase the dataplane CPU usage. If dataplane CPU\nusage is already high, you may want to schedule a maintenance window before disabling\nhardware offload.\nSTEP 1 |\nDisable hardware offload by running the following CLI command:\nadmin@PA-7050>set session offload no\nSTEP 2 |\nAfter the firewall captures the required traffic, enable hardware offload by running the\nfollowing CLI command:\nadmin@PA-7050>set session offload yes\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n505\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 505,
+      "end": 506
+    },
+    "content_stats": {
+      "char_count": 2888,
+      "word_count": 442
+    },
+    "hierarchy": {
+      "parent": "Take Packet Captures",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_002",
+  "section_number": "2",
+  "header": "List attestations",
+  "content": "Returns a list of PCI attestations in PCI ASV.\nNote: You need to request access to this endpoint through Tenable support even if you have a valid\nPCI ASV license.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nArray of strings\nItems Enum: \"IN_PROGRESS\"\n\"NEEDS_WORK\"\n\"IN_REVIEW\"\n\"INFO_REQUESTED\"\n\"INFO_PROVIDED\"\n\"FAILED\"\n\"PASSED\"\n\"CLOSED\"\nstatus_type\nFilters the list of PCI attestations by status.\nTo retrieve attestations that are currently in progress but have yet to be\nsubmitted for review, you can use the following status types:\nIN_PROGRESS —Attestations that are in progress.\nNEEDS_WORK —Attestations that require additional work.\nTo retrieve attestations that are currently in review, you can use the\nfollowing status types:\nIN_REVIEW —Attestations that are currently under review.\nINFO_REQUESTED —Attestations that require additional information\nfor one or more disputes.\nINFO_PROVIDED —Attestations where you have provided additional\ninformation but the information is yet to be reviewed.\nTo retrieve attestations that have completed the review process, you can\nuse the following status types:\nFAILED —Attestations that have failed review.\nPASSED —Attestations that have passed review.\nCLOSED —Attestations that are no longer active.\nstring\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nsecond ( asc  or desc ). For example, name:desc  would sort results by\nthe name  field in descending order.\nIf you specify multiple fields, the fields must be separated by commas. For\nexample, name:desc,started_at:asc  would first sort results by the\nname  field in descending order and then by the started_at  field in\nascending order.\ninteger <int32>\nThe number of records to retrieve.\ninteger <int32>\nThe starting record to retrieve. If this parameter is omitted, Tenable PCI ASV\nuses the default value of 0 .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 1963,
+      "word_count": 298
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

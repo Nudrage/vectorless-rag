@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_810",
+  "section_number": "1.21.11.7",
+  "header": "Configure an Interface as a DHCP Client",
+  "content": "Before configuring a firewall interface as a DHCP client, make sure you have configured a Layer\n3 interface (Ethernet, Ethernet subinterface, VLAN, VLAN subinterface, aggregate, or aggregate\nsubinterface) and the interface is assigned to a virtual router and a zone. Configure an interface as\na DHCP client if you need to use DHCP to request an IPv4 address for the interface.\nYou can also Configure the Management Interface as a DHCP Client.\nSTEP 1 |\nConfigure an interface as a DHCP client.\n1.\nSelect Network > Interfaces.\n2.\nOn the Ethernet tab or the VLAN tab, Add a Layer 3 interface or select a configured\nLayer 3 interface that you want to be a DHCP client.\n3.\nSelect the IPv4 tab and, for Type, select DHCP Client.\n4.\nSelect Enable.\n5.\n(Optional) Enable the option to Automatically create default route pointing to default\ngateway provided by server enabled by default). Enabling this option causes the firewall\nto create a static route to the default gateway, which is useful when clients try to access\nmany destinations that do not need to have routes maintained in a route table on the\nfirewall.\n6.\n(Optional) Enable the option to Send Hostname to assign a hostname to the DHCP\nclient interface and send that hostname (Option 12) to a DHCP server, which can then\nregister the hostname with the DNS server. The DNS server can then automatically\nmanage hostname-to-dynamic IP address resolutions. External hosts can identify the\ninterface by its hostname. The default value indicates system-hostname, which is the\nfirewall hostname that you set in Device > Setup > Management > General Settings.\nAlternatively, enter a hostname for the interface, which can be a maximum of 64\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1447\n©2025 Palo Alto Networks, Inc.\nNetworking\ncharacters, including uppercase and lowercase letters, numbers, period (.), hyphen (-), and\nunderscore (_).\n7.\n(Optional) Enter a Default Route Metric (priority level) for the route between the firewall\nand the DHCP server (range is 1 to 65,535; default is 10). A route with a lower number\nhas higher priority during route selection. For example, a route with a metric of 10 is\nused before a route with a metric of 100.\nThe Default Route Metric for the route between the firewall and the DHCP\nserver is 10 by default. If the static default route 0.0.0.0/0 uses the DHCP\ninterface as its egress interface, that route’s default Metric is also 10. Therefore,\nthere are two routes with a metric of 10 and the firewall can randomly choose\none of the routes one time and the other route another time.\nSuppose you enable the option to Automatically create default route pointing\nto default gateway provided by server, select a virtual router, add a static\nroute for a Layer 3 interface, change the Metric (which defaults to 10) to a\nvalue greater than 10 (for this example, 100) and Commit your changes. In\nthe route table, the route’s metric will not indicate 100. Instead, it will indicate\nthe default value of 10, as expected, because 10 takes precedence over the\nconfigured value of 100. However, if you change the static route’s Metric to a\nvalue less than 10 (such as 6), the route in the route table is updated to indicate\nthe configured metric of 6.\n8.\n(Optional) Enable the option to Show DHCP Client Runtime Info to see all of the settings\nthe client inherited from its DHCP server.\nSTEP 2 |\nCommit your changes.\nClick OK and Commit.\nThe Ethernet interface should now indicate Dynamic-DHCP Client as its IP Address on the\nEthernet tab.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1448\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 3 |\n(Optional) See which interfaces on the firewall are configured as DHCP clients.\n1.\nSelect Network > Interfaces > Ethernet and check the IP Address to see which\ninterfaces indicate DHCP Client.\n2.\nSelect Network > Interfaces > VLAN and check the IP Address to see which interfaces\nindicate DHCP Client.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1447,
+      "end": 1449
+    },
+    "content_stats": {
+      "char_count": 3910,
+      "word_count": 664
+    },
+    "hierarchy": {
+      "parent": "DHCP",
+      "children": []
+    }
+  }
+}

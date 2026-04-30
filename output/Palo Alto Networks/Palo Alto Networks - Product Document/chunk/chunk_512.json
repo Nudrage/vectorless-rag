@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_512",
+  "section_number": "1.15.11",
+  "header": "Monitor Blocked IP Addresses",
+  "content": "The firewall maintains a block list of source IP addresses that it’s blocking. When the firewall\nblocks a source IP address, such as when you configure either of the following policy rules, the\nfirewall blocks that traffic in hardware before those packets use CPU or packet buffer resources:\n• A classified DoS Protection policy rule with the action to Protect (a classified DoS Protection\npolicy specifies that incoming connections match a source IP address, destination IP address,\nor source and destination IP address pair, and is associated with a Classified DoS Protection\nprofile, as described in DoS Protection Against Flooding of New Sessions).\n• A Security Policy rule that uses a Vulnerability Protection profile\nHardware IP address blocking is supported on PA-3200 Series, PA-5200 Series, and PA-7000\nSeries firewalls.\nYou can view the block list, get detailed information about an IP address on the block list, or view\ncounts of addresses that hardware and software are blocking. You can delete an IP address from\nthe list if you think it shouldn’t be blocked. You can change the source of detailed information\nabout addresses on the list. You can also change how long hardware blocks IP addresses.\nView block list entries.\n1.\nSelect Monitor > Block IP List.\nEntries on the block list indicate in the Type column whether they were blocked by\nhardware (hw) or software (sw).\n2.\nView at the bottom of the screen:\n• Count of Total Blocked IPs out of the number of blocked IP addresses the firewall\nsupports.\n• Percentage of the block list the firewall has used.\n3.\nTo filter the entries displayed, select a value in a column (which creates a filter in the\nFilters field) and Apply Filter (\n). Otherwise, the firewall displays the first 1,000 entries.\n4.\nEnter a Page number or click the arrows at the bottom of the screen to advance through\npages of entries.\n5.\nTo view details about an address on the block list, hover over a Source IP address and\nclick the down arrow link. Click the Who Is link, which displays Network Solutions Who\nIs information about the address.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n943\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nDelete block list entries.\nDelete an entry if you determine the IP address shouldn’t be blocked. Then revise the\npolicy rule that caused the firewall to block the address.\n1.\nSelect Monitor > Block IP List.\n2.\nSelect one or more entries and click Delete.\n3.\n(Optional) Select Clear All to remove all entries from the list.\nDisable or re-enable hardware IP address blocking for troubleshooting purposes.\nWhile hardware IP address blocking is disabled, the firewall still performs any software\nIP address blocking you have configured.\n> set system setting hardware-acl-blocking [enable | disable]\nTo conserve CPU and packet buffer resources, leave hardware IP address blocking\nenabled unless Palo Alto Networks technical support asks you to disable it, for\nexample, if they are debugging a traffic flow.\nTune the number of seconds that IP addresses blocked by hardware remain on the block list\n(range is 1-3,600; default is 1).\n> set system setting hardware-acl-blocking duration <seconds>\nMaintain a shorter duration for hardware block list entries than software block list\nentries to reduce the likelihood of exceeding the blocking capacity of the hardware.\nChange the default website for finding more information about an IP address from Network\nSolutions Who Is to a different website.\n# set deviceconfig system ip-address-lookup-url <url>\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n944\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nView counts of source IP addresses blocked by hardware and software, for example to see the\nrate of an attack.\nView the total sum of IP address entries on the hardware block table and block list (blocked by\nhardware and software):\n> show counter global name flow_dos_blk_num_entries\nView the count of IP address entries on the hardware block table that were blocked by\nhardware:\n> show counter global name flow_dos_blk_hw_entries\nView the count of IP address entries on the block list that were blocked by software:\n> show counter global name flow_dos_blk_sw_entries\nView block list information per slot on a PA-7000 Series firewall.\n> show dos-block-table software filter slot <slot-number>\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n945\n©2025 Palo Alto Networks, Inc.\nThreat Prevention",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 943,
+      "end": 946
+    },
+    "content_stats": {
+      "char_count": 4394,
+      "word_count": 712
+    },
+    "hierarchy": {
+      "parent": "Threat Prevention",
+      "children": []
+    }
+  }
+}

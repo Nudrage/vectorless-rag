@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_581",
+  "section_number": "1.16.15.5.4",
+  "header": "Identify Untrusted CA Certificates",
+  "content": "Blocking access to sites with untrusted CA certificates and certificates self-signed by an untrusted\nroot CA is a best practice because sites with untrusted CAs may indicate a man-in-the-middle\nattack, a replay attack, or other malicious activity.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1084\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 1 |\nEnsure that you Block sessions with untrusted issuers in the Forward Proxy Decryption\nprofile (Objects > Decryption > Decryption Profiles) to block sites with untrusted CAs.\nWhen you block sessions with untrusted issuers in the Decryption profile, the Decryption log\n(Monitor > Logs > Decryption) logs the error.\nSTEP 2 |\nFilter the log to identify sessions that failed due to revoked certificates using the query\n(error eq ‘Untrusted issuer CA’).\nSTEP 3 |\n(Optional) Double-check the certificate expiration date at the Qualys SSL Labs site.\nEnter the hostname of the server (Server Name Identification column of the Decryption log) in\nthe Hostname field and Submit it to view certificate information for the host.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1084,
+      "end": 1085
+    },
+    "content_stats": {
+      "char_count": 1059,
+      "word_count": 166
+    },
+    "hierarchy": {
+      "parent": "Decryption Troubleshooting Workflow Examples",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_022",
+  "section_number": "9",
+  "header": "Search findings",
+  "content": "Returns a list of findings in your organization that match the specified search criteria.\nCaution: This endpoint is available for use but is currently in beta. The response structure is subject\nto change as we continue to enhance the data model.\nRequires the Basic [16] user role or the ASSET_INVENTORY.CYBER_ASSET_MANAGEMENT.READ  and\nAD.TOGGLE_AD.USE  custom role privileges. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring ^[a-zA-Z0-9_]+(,[a-zA-Z0-9_]+)*$\nExample: extra_properties=prop1,prop2,prop3\nSpecifies extra findings properties to include in the search results. You can\nprovide multiple properties as a comma-separated list.\nUse the List finding properties endpoint to retrieve a list of valid properties\nfor this parameter. For example, you might include asset_name ,\nsolution , and vpr_score  as extra properties.\ninteger\nDefault: 0\nThe starting record to retrieve. If omitted, the default value is 0 .\ninteger\n<= 10000\nDefault: 1000\nThe number of records to retrieve. If omitted, the default value is 1000 .\nThe maximum value is 10000 .\nextra_properties\noffset\nlimit\nstring ^[a-zA-Z0-9_]+:(asc|desc)$\nDefault: \"severity:desc\"\nExample: sort=severity:desc\nThe property and direction to sort the results by, in the format\nproperty:direction . For example: finding_name:asc  or\nseverity:desc\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nobject\nFilter the search results by query. A query consists of search mode and\nquery text.\nArray of objects\nA set of finding properties used to filter the search results.\nUse the List finding properties endpoint to view available finding properties\nthat can be used as filters.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 57,
+      "end": 58
+    },
+    "content_stats": {
+      "char_count": 1635,
+      "word_count": 235
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

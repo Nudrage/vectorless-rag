@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_223",
+  "section_number": "1.10.2.7",
+  "header": "ARP Load-Sharing",
+  "content": "In a Layer 3 interface deployment and active/active HA configuration, ARP load-sharing allows\nthe firewalls to share an IP address and provide gateway services. Use ARP load-sharing only\nwhen no Layer 3 device exists between the firewall and end hosts, that is, when end hosts use the\nfirewall as their default gateway.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n391\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nIn such a scenario, all hosts are configured with a single gateway IP address. One of the firewalls\nresponds to ARP requests for the gateway IP address with its virtual MAC address. Each firewall\nhas a unique virtual MAC address generated for the shared IP address. The load-sharing algorithm\nthat controls which firewall will respond to the ARP request is configurable; it is determined by\ncomputing the hash or modulo of the source IP address of the ARP request.\nAfter the end host receives the ARP response from the gateway, it caches the MAC address and\nall traffic from the host is routed via the firewall that responded with the virtual MAC address for\nthe lifetime of the ARP cache. The lifetime of the ARP cache depends on the end host operating\nsystem.\nIf a link or firewall fails, the floating IP address and virtual MAC address move over to the\nfunctional firewall. The functional firewall sends gratuitous ARPs to update the MAC table of the\nconnected switches to redirect traffic from the failed firewall to itself. See Use Case: Configure\nActive/Active HA with ARP Load-Sharing.\nYou can configure interfaces on the WAN side of the HA firewalls with floating IP addresses, and\nconfigure interfaces on the LAN side of the HA firewalls with a shared IP address for ARP load-\nsharing. For example, the figure below illustrates floating IP addresses for the upstream WAN\nedge routers and an ARP load-sharing address for the hosts on the LAN segment.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n392\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 391,
+      "end": 393
+    },
+    "content_stats": {
+      "char_count": 1966,
+      "word_count": 327
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

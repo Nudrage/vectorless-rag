@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_027",
+  "section_number": "1.18.15",
+  "header": "Groups",
+  "content": "The groups API can retrieve a listing of groups that are defined on the system.\nVersion 3.4 of groups API supports GET, PATCH, POST, and DELETE to not only query the list of\naccount/IP/host/domain groups, but also create, modify, or delete them.\nThe URL to retrieve account groups is https://<vectra_portal_url>/api/v3.4/groups and\nuses OAuth2 authentication.\nThe following table lists the top-level fields and descriptions present in the response for a bulk GET\nrequest to the v3.4 API for Groups.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nresults\nA list of group objects.\nlist\nnext\nURL to the next page of\ngroups.\nstring\nprevious\nURL to the previous page\nof groups.\nstring\ncount\nThe total number of groups\nmatching the query\nparameters.\ninteger\nThe following table lists the fields and descriptions present in a Group object.\nElement\nDescription\nType\nNotes\nid\nGroup ID.\ninteger\nname\nThe group name.\nstring\ntype\nThe group type.\nstring\ncognito_managed\nIndication of whether group is\nmanaged by Cognito\nBoolean\nOnly present when type is\n“domain” or “ip”\ndescription\nUser defined description of the\ngroup.\nstring\nimportance\nUser defined group importance.\nstring\nOne\nof \"high\", \"medium\", \"low\",\nor \"never_prioritize\".\nlast_modified_timestamp Filter for all groups modified on or\nafter the given timestamp (GTE).\nstring\nTimestamp format:\nYYYY-MM-DD HH-MM-SS\nGMT\nlast_modified_by\nThe last user that modified the\ngroup.\nstring\n© July 2024 Vectra AI, Inc. | 45\nElement\nDescription\nType\nNotes\nmembers\nList of member account names.\nlist of\nstrings\nrules\nList of triage rules that the group\nis attached to.\nlist of\nobjects\nThe rules objects have the\nfollowing key names “id”,\n“description”,\n“triage_category” which all\nhave string values.\nThe available query parameters to filter for Groups are listed below.\nQUERY PARAMETER\nDESCRIPTION\naccount_names\nOnly valid when the type parameter is set to “account”. Provide\na comma-delimited (,) list of strings to filter groups associated\nwith accounts having one of the given names.\ndomains\nOnly valid when the type parameter is set to “domain”. Provide\na comma-delimited (,) list of strings to filter groups associated\nwith domains having one of the given domains.\nhost_ids\nOnly valid when the type parameter is set to “host”. Provide a\ncomma-delimited (,) list of integers to filter groups associated\nwith hosts having one of the given ids.\nhost_names\nOnly valid when the type parameter is set to “host”. Provide a\ncomma-delimited (,) list of strings to filter groups associated\nwith hosts having one of the given names.\nimportance\nOne of \"high\", \"medium\", \"low\", or \"never_prioritize\". Will\nreturn an empty response otherwise.\nips\nOnly valid when the type parameter is set to “ip”. Provide a\ncomma-delimited (,) list of strings to filter groups associated\nwith ips having one of the given ips.\ndescription\nFilter by group description (case insensitive match).\nlast_modified_timestamp\nFilters for all groups modified on or after the given timestamp\n(GTE), formatted in ISO-8601.\nlast_modified_by\nFilters groups by the user who made the most recent\nmodification.\nname\nFilters by group name (case insensitive match).\ntype\nFilter by group type. Valid options: account, host, ip, domain\nmembership_action\nExclusive parameter for PATCH requests. This will accept the\nvalues “append”, “remove”, and “replace”. Members passed in\nthe request body will be used to perform the corresponding\nmembership update. Appendix A covers this in more detail.\nAn example of using the GET, POST,PATCH, and DELETE methods for Groups can be found in\nAppendix A.\n© July 2024 Vectra AI, Inc. | 46",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 44,
+      "end": 46
+    },
+    "content_stats": {
+      "char_count": 3594,
+      "word_count": 563
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

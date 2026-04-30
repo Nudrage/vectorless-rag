@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_208",
+  "section_number": "1.9.16.2",
+  "header": "Encrypt a Master Key Using an HSM",
+  "content": "A master key encrypts all private keys and passwords on the firewall and Panorama. If you have\nsecurity requirements to store your private keys in a secure location, you can encrypt the master\nkey using an encryption key that is stored on an HSM. The firewall or Panorama then requests the\nHSM to decrypt the master key whenever it is required to decrypt a password or private key on\nthe firewall. Typically, the HSM is in a highly secure location that is separate from the firewall or\nPanorama for greater security.\nThe HSM encrypts the master key using a wrapping key. To maintain security, you must\noccasionally change (refresh) this wrapping key.\nThe following topics describe how to encrypt the master key initially and how to refresh the\nmaster key encryption:\n• Encrypt the Master Key\n• Refresh the Master Key Encryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 375,
+      "end": 375
+    },
+    "content_stats": {
+      "char_count": 827,
+      "word_count": 142
+    },
+    "hierarchy": {
+      "parent": "Secure Keys with a Hardware Security Module",
+      "children": [
+        "Encrypt the Master Key",
+        "Refresh the Master Key Encryption"
+      ]
+    }
+  }
+}

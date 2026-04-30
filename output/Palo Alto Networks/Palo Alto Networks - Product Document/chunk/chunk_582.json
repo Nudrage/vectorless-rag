@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_582",
+  "section_number": "1.16.15.5.5",
+  "header": "Troubleshoot Expired Certificates",
+  "content": "If you follow Decryption best practices and Block sessions with expired certificates in the\nForward Proxy Decryption profile or in the No Decryption profile, then if a server presents an\nexpired certificate, the firewall blocks the session. However, if site that you need to access for\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1085\n©2025 Palo Alto Networks, Inc.\nDecryption\nbusiness reasons allows its certificate to expire, connections to that site may be blocked and you\nmay not know why.\nYou can use the Decryption log to check for expired certificates and to check for certificates that\nwill expire soon so you can be aware of the situation and take appropriate action.\nSTEP 1 |\nFilter the Decryption log for expired certificates using the query (error eq ‘Expired\nserver certificate’).\nThis query identifies servers that generate Expired server certificate errors. The\nfirewall blocks access to these servers because of the expired certificate.\nSTEP 2 |\n(Optional) Double-check the certificate expiration date at the Qualys SSL Labs site.\nEnter the hostname of the server (Server Name Identification column of the Decryption log) in\nthe Hostname field and Submit it to view certificate information for the host.\nSTEP 3 |\nFilter the Decryption log (Monitor > Logs > Decryption) for certificates that will expire soon\nusing a query that identifies upcoming certificate end dates.\nFor example, if today’s date is February 1, 2020 and you want to give yourself two months to\nevaluate and prepare in case sites don’t update their certificates, query the Decryption log for\ncertificates that expire April 1 2020 or earlier (notafter leq ‘2020/4/01’)):\nThe Certificate End Date column shows the eact date on which the certificate expires.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1086\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 4 |\nDetermine the action to take for sites with expired certificates.\n• If you don’t need to access the site for business purposes, the safest action is to continue to\nblock access to the site.\n• If you need to access the site for business purposes, take one of the following actions:\n• Contact the administrator of the site with the expired certificate and notify them that\nthey need to update or renew their certificate.\n• Create a Decryption policy that applies only to the sites with expired certificates that\nyou need for business purposes and a Decryption profile that allows sites with expired\ncertificates. Do not apply the policy to any sites that you don’t need for business\npurposes. When a site updates its certificate, remove it from the policy.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1085,
+      "end": 1087
+    },
+    "content_stats": {
+      "char_count": 2588,
+      "word_count": 423
+    },
+    "hierarchy": {
+      "parent": "Decryption Troubleshooting Workflow Examples",
+      "children": []
+    }
+  }
+}

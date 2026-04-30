@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_407",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the Tenable Vulnerability Management successfully generated the linking key.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe linking key for the OT connector. You can generate the required\nlinking key with the Create linking key endpoint.\nstring\nThe target site for the OT connector. The target site value is returned\nwhen you generate a linking key with the Create linking key endpoint.\n— 400 Returned if the provided type is invalid or missing.\n— 403 Returned if you do not have permission to create a linking key.\n500\nReturned if Tenable Vulnerability Management encountered an error while attempting to create the\nlinking key.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code.\nstring\nThe HTTP status text.\nstring\nA brief message describing the error Tenable Vulnerability Management\nencountered.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 385,
+      "end": 385
+    },
+    "content_stats": {
+      "char_count": 826,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Generate linking key",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

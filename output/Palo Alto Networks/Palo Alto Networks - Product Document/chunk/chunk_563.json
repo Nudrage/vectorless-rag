@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_563",
+  "section_number": "1.16.10.3",
+  "header": "Import a Private Key for IKE Gateway and Block It",
+  "content": "Block the export of a private key to prevent its misuse after generating a certificate for IKE\nGateway authentication.\nSTEP 1 |\nSelect Network > Network Profiles > IKE Gateways.\nSTEP 2 |\nAdd a new IKE Gateway.\nSTEP 3 |\nOn the General tab, for Authentication, select Certificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1032\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 4 |\nFor Local Certificate select Import or Generate depending on whether you want to import\nan existing certificate or create a certificate.\nSTEP 5 |\nEnter the certificate information. If you are importing the certificate, select Import Private\nKey to activate the Block Private Key Export checkbox.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1033\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 6 |\nSelect Block Private Key Export to prevent anyone from exporting the key.\nFor importing a certificate, enter and confirm the Passphrase and then click OK\nFor generating a certificate, click Generate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1034\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 7 |\nEnter the Passphrase, confirm it, and then click OK.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1032,
+      "end": 1035
+    },
+    "content_stats": {
+      "char_count": 1118,
+      "word_count": 180
+    },
+    "hierarchy": {
+      "parent": "Block Private Key Export",
+      "children": []
+    }
+  }
+}

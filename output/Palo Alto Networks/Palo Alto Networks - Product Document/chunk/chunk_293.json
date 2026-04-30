@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_293",
+  "section_number": "1.11.7.1.1",
+  "header": "Traffic Logs",
+  "content": "Traffic logs display an entry for the start and end of each session. Each entry includes the\nfollowing information: date and time; source and destination zones, source and destination\ndynamic address groups, addresses and ports; application name; security rule applied to the traffic\nflow; rule action (allow, deny, or drop); ingress and egress interface; number of bytes; and session\nend reason.\nA dynamic address group only appears in a log if the rule the traffic matches includes a\ndynamic address group. If an IP address appears in more than one dynamic address group,\nthe firewall displays up to five dynamic address groups in logs along with the source IP\naddress\nThe Type column indicates whether the entry is for the start or end of the session. The Action\ncolumn indicates whether the firewall allowed, denied, or dropped the session. A drop indicates\nthe security rule that blocked the traffic specified any application, while a deny indicates the rule\nidentified a specific application. If the firewall drops traffic before identifying the application,\nsuch as when a rule drops all traffic for a specific service, the Application column displays not-\napplicable.\nClick\nbeside an entry to view additional details about the session, such as whether an ICMP\nentry aggregates multiple sessions between the same source and destination (in which case the\nCount column value is greater than one).\nWhen the Decryption log introduced in PAN-OS 10.0 is disabled, the firewall sends\nHTTP/2 logs as Traffic logs. However, when the Decryption logs are enabled, the firewall\nsends HTTP/2 logs as Tunnel Inspection logs (when Decryption logs are disabled, HTTP/2\nlogs are sent as Traffic logs), so you need to check the Tunnel Inspection logs instead of\nthe Traffic logs for HTTP/2 events.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 520,
+      "end": 520
+    },
+    "content_stats": {
+      "char_count": 1787,
+      "word_count": 289
+    },
+    "hierarchy": {
+      "parent": "Log Types and Severity Levels",
+      "children": []
+    }
+  }
+}

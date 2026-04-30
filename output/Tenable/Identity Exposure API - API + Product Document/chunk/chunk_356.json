@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_356",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nPATCH\n/api/users/{id}\napplication/json\nCopy\n{\n\"surname\": \"string\",\n\"name\": \"string\",\n\"password\": \"^(?=\\\\d)(?=a)(?=A)(?=\\\\W).{12,}$\",\n\"email\": \"string\",\n\"department\": \"string\",\n\"biography\": \"string\",\n\"active\": true,\n\"lockedOut\": false\n}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"surname\": \"string\",\n\"name\": \"string\",\n\"email\": \"string\",\nContent type\nContent type\n\"lockedOut\": true,\n\"department\": \"string\",\n\"biography\": \"string\",\n\"active\": true,\n\"roles\":\n-\n[\n0\n],\n\"identifier\": \"string\",\n\"provider\": \"tenable\",\n\"eulaVersion\": 0\n}\nDelete user instance.\nRequired license type: none\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 209,
+      "end": 210
+    },
+    "content_stats": {
+      "char_count": 726,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

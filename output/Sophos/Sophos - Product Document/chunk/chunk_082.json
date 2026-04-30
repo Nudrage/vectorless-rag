@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_082",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is mail_as_log_fmt.\nSyslog field name\nName\nLog viewer -\nDetail view field\nname\nData\ntype\nLength Format/Description\nPossible\nvalues\nNotes/Examples\nlog_type\nlog_type\nlog_type\nu_int8_t\nLog type\nAnti-Spam\nlog_component\nlog_component log_component\nu_int8_t\nComponent of log\nSMTP\nSMTPS\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 80\nlog_subtype\nlog_subtype\nlog_subtype\nu_int8_t\nType of spam\nSpam\nProbable\nSpam\nClean\nOutbound\nSpam\nOutbound\nProbable\nSpam\nOutbound\nClean\nDLP\nSPX\nDos\nAllowed\nDenied\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 81\npriority\nseverity\nu_int8_t\nSeverity of mail\nspam\nInformation\nWarning\nNotification\nError\nfw_rule_id\nfw_rule_id\nNumber\nint32\nuser_name\nuser\nString\n384\nav_policy_name\navaspolicy\npolicy_name\nString\n32\nPolicy name\nfrom_email_address sender\nsender\nString\n1024\nEmail address of\nsender\ne.g. sender=\"test@test.local\"\nto_email_address\nrcpts\nrecipient\nString\n1024\nEmail address of\nrecipient\neg. rcpts=\"test1@test.local\"\nemail_subject\nsubject\nsubject\nString\n1024\nSubject of mail\neg. subject=\"test\"\nmailid\nmessageid\nmessage_id\nString\n64\nMessage id\neg. messageid=\"10001\"\nmailsize\nmail_size\nemail_size\nu_int32_t int32\nMessage size\neg. mail_size=\"1111\"\nspamaction\naction\nString\n32\nDrop\nQuarantine\nReject\nTmpreject\nAccept\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 82\nreason\nreason\nString\n256\nMail detected\nas SPAM\nMail detected\nas\nPROBABLE\nSPAM\nMail is Clean\nSender IP\naddress is\nblacklisted\nMail detected\nas\nOUTBOUND\nSPAM\nMail detected\nas\nOUTBOUND\nPROBABLE\nSPAM\nEmail\ncontaining\nconfidential\ndata detected.\nRelevant\nData\nProtection\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 83\nPolicy\napplied.\nSMTP DoS\nsrc_domainname\nhost\nString\n64\ndst_domainname\ndomain\nString\n64\nsrc_ip\nsrc_ip\nsrc_ip\nipaddr_t\n32\nSource IP address\neg. src_ip=\"1.1.1.1\"\nsrc_ip=\"345::12\"\nsrc_country_code\nsrc_country\nString\n64\nSource country code\neg. \"IND\"\n\"USA\"\ndst_ip\ndst_ip\ndst_ip\nipaddr_t\n32\nDestination IP\naddress\neg. dst_ip=\"1.1.1.2\"\ndst_ip=\"345::11\"\ndst_country_code\ndst_country\nString\n64\nDestination country\ncode\neg. \"IND\"\n\"USA\"\nsrc_port\nsrc_port\nsrc_port\nu_int16_t 16\nSource port\neg. src_port=\"1234\"\ndst_port\ndst_port\ndst_port\nu_int16_t 16\nDestination port\neg. dst_port=\"12345\"\nsent_bytes\nbytes_sent\nNumber\nint32\nrecv_bytes\nbytes_received\nNumber\nint32\nquarantine_reason\nreason\nquarantine_reason u_int32_t 32\nReason for mail\nquarantine\neg.\nquarantine_reason=\"Infected\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 80,
+      "end": 84
+    },
+    "content_stats": {
+      "char_count": 2504,
+      "word_count": 332
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (Legacy)",
+      "children": []
+    }
+  }
+}

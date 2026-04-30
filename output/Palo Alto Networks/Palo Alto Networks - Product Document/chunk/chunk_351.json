@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_351",
+  "section_number": "1.11.14.2.13",
+  "header": "Config Log Fields",
+  "content": "Format: FUTURE_USE, Receive Time, Serial Number, Type, Subtype, FUTURE_USE, Generated\nTime, Host, Virtual System, Command, Admin, Client, Result, Configuration Path, Before Change\nDetail, After Change Detail, Sequence Number, Action Flags, Device Group Hierarchy Level 1,\nDevice Group Hierarchy Level 2, Device Group Hierarchy Level 3, Device Group Hierarchy\nLevel 4, Virtual System Name, Device Name, Device Group, Audit Comment\nField Name\nDescription\nReceive Time\n(receive_time or\ncef-formatted-\nreceive_time)\nTime the log was received at the management plane.\nSerial Number\n(serial)\nSerial number of the device that generated the log.\nType (type)\nSpecifies the type of log; value is CONFIG.\nThreat/Content\nType (subtype)\nSubtype of the configuration log; unused.\nGenerated Time\n(time_generated\nor cef-formatted-\ntime_generated)\nTime the log was generated on the dataplane.\nHost (host)\nHostname or IP address of the client machine\nVirtual System (vsys)\nVirtual System associated with the configuration log\nCommand (cmd)\nCommand performed by the Admin; values are add, clone, commit,\ndelete, edit, move, rename, set.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n644\n©2025 Palo Alto Networks, Inc.\nMonitoring\nField Name\nDescription\nAdmin (admin)\nUsername of the Administrator performing the configuration\nClient (client)\nClient used by the Administrator; values are Web and CLI\nResult (result)\nResult of the configuration action; values are Submitted, Succeeded,\nFailed, and Unauthorized\nConfiguration Path\n(path)\nThe path of the configuration command issued; up to 512 bytes in\nlength\nBefore Change\nDetail (before-\nchange-detail)\nThis field is in custom logs only; it is not in the default format.\nIt contains the full xpath before the configuration change.\nAfter Change Detail\n(after-change-detail)\nThis field is in custom logs only; it is not in the default format.\nIt contains the full xpath after the configuration change.\nSequence Number\n(seqno)\nA 64bit log entry identifier incremented sequentially; each log type has\na unique number space.\nAction Flags\n(actionflags)\nA bit field indicating if the log was forwarded to Panorama.\nDevice Group\nHierarchy\n(dg_hier_level_1 to\ndg_hier_level_4)\nA sequence of identification numbers that indicate the device group’s\nlocation within a device group hierarchy. The firewall (or virtual system)\ngenerating the log includes the identification number of each ancestor\nin its device group hierarchy. The shared device group (level 0) is not\nincluded in this structure.\nIf the log values are 12, 34, 45, 0, it means that the log was generated\nby a firewall (or virtual system) that belongs to device group 45, and\nits ancestors are 34, and 12. To view the device group names that\ncorrespond to the value 12, 34 or 45, use one of the following methods:\nAPI query:\n/api/?type=op&cmd=<show><dg-hierarchy></dg-\nhierarchy></show>\nVirtual System\nName (vsys_name)\nThe name of the virtual system associated with the session; only valid\non firewalls enabled for multiple virtual systems.\nDevice Name\n(device_name)\nThe hostname of the firewall on which the session was logged.\nDevice Group\n(dg_id)\nThe device group the firewall belongs to if managed by a Panorama™\nmanagement server.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n645\n©2025 Palo Alto Networks, Inc.\nMonitoring\nField Name\nDescription\nAudit Comment\n(comment)\nThe audit comment entered in a policy rule configuration change.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 644,
+      "end": 646
+    },
+    "content_stats": {
+      "char_count": 3410,
+      "word_count": 508
+    },
+    "hierarchy": {
+      "parent": "Syslog Field Descriptions",
+      "children": []
+    }
+  }
+}

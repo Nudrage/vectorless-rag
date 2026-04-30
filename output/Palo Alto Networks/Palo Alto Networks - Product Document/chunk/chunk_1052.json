@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1052",
+  "section_number": "1.24.4.4",
+  "header": "Configure Packet Buffer Protection",
+  "content": "You can configure Packet Buffer Protection at two levels: the device level (global) and if enabled\nglobally, you can also enable it at the zone level. Global packet buffer protection (Device > Setup\n> Session) is to protect firewall resources and ensure that malicious traffic does not cause the\nfirewall to become non-responsive.\nPacket buffer protection per ingress zone (Network > Zones) is a second layer of protection that\nstarts blocking the offending IP address if it continues to exceed the packet buffer protection\nthresholds. The firewall can block all traffic from the offending source IP address. Keep in mind\nthat if the source IP address is a translated NAT IP address, many users can be using the same\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1752\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nIP address. If one abusive user triggers packet buffer protection and the ingress zone has packet\nbuffer protection enabled, all traffic from that offending source IP address (even from non-\nabusive users) can be blocked when the firewall puts the IP address on its block list.\nThe most effective way to block DoS attacks against a service behind the firewall is to configure\npacket buffer protection globally and per ingress zone.\nYou can Enable Packet Buffer Protection for a zone, but it is not active until you enable packet\nbuffer protection globally and specify the settings.\nSTEP 1 |\nEnable packet buffer protection globally.\n1.\nSelect Device > Setup > Session and edit the Session Settings.\n2.\nSelect Packet Buffer Protection.\n3.\nDefine the packet buffer protection behavior:\n• Alert (%)—When packet buffer utilization exceeds this threshold for more than 10\nseconds, the firewall creates a log event every minute. Range s 0% to 99%; default is\n50%. If the value is 0%, the firewall does not create a log event.\n• Activate (%)—When packet buffer utilization reaches this threshold, the firewall\nbegins to mitigate the most abusive sessions by applying random early drop (RED).\nRange is 0% to 99%; default is 50%. If the value is 0%, the firewall does not apply\nRED. If the abuser is ingressing a zone that has Packet Buffer Protection enabled, the\nfirewall can also discard the abusive session or block the offending source IP address.\nStart with the default threshold and adjust it if necessary.\nThe firewall records alert events in the System log, and records events for\ndropped traffic, discarded sessions, and blocked IP address in the Threat log.\n• Block Hold Time (sec)—Number of seconds a RED-mitigated session is allowed to\ncontinue before the firewall discards it. Range is 0 to 65,535; default is 60. If the\nvalue is 0, the firewall does not discard sessions based on packet buffer protection.\n• Block Duration (sec)—Number of seconds a session remains discarded or an IP\naddress remains blocked. Range is 1 to 15,999,999; default is 3,600.\n4.\nClick OK.\n5.\nCommit your changes.\nSTEP 2 |\nEnable additional packet buffer protection on an ingress zone.\n1.\nSelect Network > Zones.\n2.\nChoose an ingress zone and click on its name.\n3.\nEnable Packet Buffer Protection in the Zone Protection section.\n4.\nClick OK.\n5.\nCommit your changes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1752,
+      "end": 1753
+    },
+    "content_stats": {
+      "char_count": 3176,
+      "word_count": 530
+    },
+    "hierarchy": {
+      "parent": "Configure Zone Protection to Increase Network Security",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_872",
+  "section_number": "1.21.16.4.1",
+  "header": "The ND Cache in NPTv6 Example",
+  "content": "In the above example, multiple peers connect to the firewall though a switch, with ND occurring\nbetween the peers and the switch, between the switch and the firewall, and between the firewall\nand the devices on the trust side.\nAs the firewall learns of peers, it saves their addresses to its ND cache. Trusted peers\nFDDA:7A3E::1, FDDA:7A3E::2, and FDDA:7A3E::3 are connected to the firewall on the trust\nside. FDDA:7A3E::99 is the untranslated address of the firewall itself; its public-facing address is\n2001:DB8::99. The addresses of the peers on the untrust side have been discovered and appear\nin the ND cache: 2001:DB8::1, 2001:DB8::2, and 2001:DB8::3.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1512,
+      "end": 1512
+    },
+    "content_stats": {
+      "char_count": 657,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "NPTv6 and NDP Proxy Example",
+      "children": []
+    }
+  }
+}

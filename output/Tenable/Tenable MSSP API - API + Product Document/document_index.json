@@ -1,0 +1,1387 @@
+{
+  "document_name": "Tenable\\Tenable MSSP API - API + Product Document",
+  "generated_at": "2026-02-17T22:06:10.858853",
+  "outline_text": "DOCUMENT INDEX: Tenable\\Tenable MSSP API - API + Product Document\n=================================================================\n\n1. Accounts [Page 1, 61 words]\n2. Create evaluation account v1 [Pages 1-2, 98 words]\n   2.1. Responses [Pages 2-3, 159 words]\n      2.1.1. Request samples [Page 3, 1 words]\n      2.1.2. Response samples [Page 3, 33 words]\n3. Create evaluation account v2 [Pages 3-4, 166 words]\n   3.1. Responses [Pages 4-5, 160 words]\n      3.1.1. Request samples [Page 5, 10 words]\n      3.1.2. Response samples [Page 6, 43 words]\n4. Create quote [Pages 6-7, 123 words]\n   4.1. Responses [Pages 7-8, 166 words]\n      4.1.1. Request samples [Pages 8-9, 92 words]\n      4.1.2. Response samples [Page 10, 18 words]\n5. List child accounts [Pages 10-11, 317 words]\n   5.1. Responses [Pages 11-12, 76 words]\n      5.1.1. Response samples [Pages 12-15, 136 words]\n6. Get child account details [Page 15, 35 words]\n   6.1. Responses [Pages 15-17, 351 words]\n      6.1.1. Response samples [Pages 17-18, 69 words]\n7. List domains [Page 18, 38 words]\n   7.1. Responses [Pages 18-19, 82 words]\n      7.1.1. Response samples [Page 19, 14 words]\n8. Account Groups [Page 20, 119 words]\n9. Create account group [Pages 20-21, 57 words]\n   9.1. Responses [Page 21, 117 words]\n      9.1.1. Request samples [Pages 21-22, 7 words]\n      9.1.2. Response samples [Page 22, 25 words]\n10. List account groups [Page 22, 15 words]\n   10.1. Responses [Pages 22-23, 156 words]\n      10.1.1. Response samples [Pages 23-24, 89 words]\n11. Get account group details [Page 25, 33 words]\n   11.1. Responses [Pages 25-26, 174 words]\n      11.1.1. Response samples [Page 26, 37 words]\n12. Update account group [Page 27, 71 words]\n   12.1. Responses [Pages 27-28, 89 words]\n      12.1.1. Request samples [Page 28, 1 words]\n      12.1.2. Response samples [Page 28, 25 words]\n13. Delete account group [Pages 28-29, 35 words]\n   13.1. Responses [Page 29, 83 words]\n      13.1.1. Response samples [Page 29, 14 words]\n14. Child Containers [Page 30, 61 words]\n15. Generate auth keys for child container [Page 30, 79 words]\n   15.1. Responses [Pages 30-31, 238 words]\n      15.1.1. Request samples [Page 32, 1 words]\n      15.1.2. Response samples [Page 32, 42 words]\n16. List child containers [Page 33, 54 words]\n   16.1. Responses [Pages 33-34, 105 words]\n      16.1.1. Response samples [Page 34, 36 words]\n17. Get child container history [Pages 34-35, 45 words]\n   17.1. Responses [Page 35, 83 words]\n      17.1.1. Response samples [Page 35, 17 words]\n18. Dashboards [Page 36, 103 words]\n19. Get widget details [Pages 36-37, 72 words]\n   19.1. Responses [Page 37, 72 words]\n      19.1.1. Response samples [Pages 37-38, 89 words]\n20. Domains [Page 39, 70 words]\n21. Add domain [Page 39, 59 words]\n   21.1. Responses [Pages 39-40, 83 words]\n      21.1.1. Request samples [Page 40, 1 words]\n      21.1.2. Response samples [Pages 40-41, 39 words]\n22. List domains [Page 41, 20 words]\n   22.1. Responses [Page 41, 65 words]\n      22.1.1. Response samples [Pages 41-42, 45 words]\n23. Get domain details [Page 42, 45 words]\n   23.1. Responses [Page 43, 91 words]\n      23.1.1. Response samples [Pages 43-44, 78 words]\n24. Update domain [Pages 44-45, 77 words]\n   24.1. Responses [Pages 45-46, 105 words]\n      24.1.1. Request samples [Page 46, 1 words]\n      24.1.2. Response samples [Page 46, 20 words]\n25. Send activation code [Pages 46-47, 102 words]\n   25.1. Responses [Page 47, 79 words]\n26. Filters [Page 48, 66 words]\n   26.1. Request samples [Page 48, 1 words]\n   26.2. Response samples [Page 48, 27 words]\n27. List account filters [Pages 48-49, 24 words]\n   27.1. Responses [Page 49, 58 words]\n      27.1.1. Response samples [Pages 49-51, 197 words]\n28. License [Page 52, 115 words]\n29. Get license details [Page 53, 22 words]\n   29.1. Responses [Page 53, 83 words]\n      29.1.1. Response samples [Page 53, 8 words]\n30. Logos [Page 54, 93 words]\n31. Add logo [Page 54, 79 words]\n   31.1. Responses [Page 55, 96 words]\n      31.1.1. Response samples [Pages 55-56, 18 words]\n32. List logos [Page 56, 23 words]\n   32.1. Responses [Page 56, 45 words]\n      32.1.1. Response samples [Pages 56-59, 137 words]\n33. Get logo details [Page 59, 37 words]\n   33.1. Responses [Pages 59-60, 100 words]\n      33.1.1. Response samples [Page 60, 21 words]\n34. Update logo [Pages 60-61, 69 words]\n   34.1. Responses [Pages 61-62, 116 words]\n      34.1.1. Response samples [Page 62, 16 words]\n35. Delete logo [Page 62, 34 words]\n   35.1. Responses [Page 63, 101 words]\n      35.1.1. Response samples [Pages 63-64, 16 words]\n36. Assign logo [Page 64, 53 words]\n   36.1. Responses [Page 64, 65 words]\n      36.1.1. Request samples [Pages 64-65, 7 words]\n      36.1.2. Response samples [Page 65, 23 words]\n37. Download logo (PNG) [Page 65, 28 words]\n   37.1. Responses [Pages 65-66, 51 words]\n      37.1.1. Response samples [Page 66, 8 words]\n38. Download logo (Base64) [Page 66, 28 words]\n   38.1. Responses [Page 66, 4 words]\n39. Partners [Page 67, 103 words]\n   39.1. Response samples [Page 67, 14 words]\n40. Get partner details [Pages 67-68, 23 words]\n   40.1. Responses [Page 68, 47 words]\n      40.1.1. Response samples [Pages 68-71, 160 words]\n41. Resource Links [Page 72, 87 words]\n42. Bulk add resource links [Pages 72-73, 79 words]\n   42.1. Responses [Page 73, 46 words]\n      42.1.1. Request samples [Page 73, 35 words]\n      42.1.2. Response samples [Page 74, 8 words]\n43. Add resource links [Page 74, 59 words]\n   43.1. Responses [Pages 74-75, 51 words]\n      43.1.1. Request samples [Page 75, 1 words]\n      43.1.2. Response samples [Pages 75-76, 49 words]\n44. List resource links [Page 76, 37 words]\n   44.1. Responses [Page 76, 67 words]\n      44.1.1. Response samples [Pages 76-77, 58 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Accounts",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 61,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "2",
+        "title": "Create evaluation account v1",
+        "depth": 1,
+        "chunk_id": "chunk_002",
+        "page_start": 1,
+        "page_end": 2,
+        "word_count": 98,
+        "summary": "Deprecated\nCreates an evaluation account.",
+        "children": [
+          {
+            "number": "2.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 2,
+            "page_end": 3,
+            "word_count": 159,
+            "summary": "200 Returned if the Tenable MSSP Platform successfully created the evaluation account.",
+            "children": [
+              {
+                "number": "2.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_004",
+                "page_start": 3,
+                "page_end": 3,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "2.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 3,
+                "page_end": 3,
+                "word_count": 33,
+                "summary": "200\n429\n500\nmessage\nPOST\n/mssp/accounts/eval\napplication/json\nCopy\n{\n\"email\": \"string\",\n\"country\": \"..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "title": "Create evaluation account v2",
+        "depth": 1,
+        "chunk_id": "chunk_006",
+        "page_start": 3,
+        "page_end": 4,
+        "word_count": 166,
+        "summary": "Content type\nContent type\nCreates an evaluation account.",
+        "children": [
+          {
+            "number": "3.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_007",
+            "page_start": 4,
+            "page_end": 5,
+            "word_count": 160,
+            "summary": "200 Returned if the Tenable MSSP Platform successfully created the evaluation account.",
+            "children": [
+              {
+                "number": "3.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 5,
+                "page_end": 5,
+                "word_count": 10,
+                "summary": "Payload\nsuccess\nmessage\nname\nuuid\nstatusCode\nerror\nmessage\nPOST\n/mssp/accounts/v2/eval"
+              },
+              {
+                "number": "3.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 6,
+                "page_end": 6,
+                "word_count": 43,
+                "summary": "200\n429\n500\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"customer_name\": \"string\",\n\"licensed_app..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "title": "Create quote",
+        "depth": 1,
+        "chunk_id": "chunk_010",
+        "page_start": 6,
+        "page_end": 7,
+        "word_count": 123,
+        "summary": "Creates a quote for a customer.",
+        "children": [
+          {
+            "number": "4.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_011",
+            "page_start": 7,
+            "page_end": 8,
+            "word_count": 166,
+            "summary": "200 Returned if the Tenable MSSP Platform successfully created the quote.",
+            "children": [
+              {
+                "number": "4.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 8,
+                "page_end": 9,
+                "word_count": 92,
+                "summary": "Payload\nname\nuuid\nerror\nstatusCode\nerror\nmessage\nPOST\n/mssp/accounts/quote\napplication/json\nExpand a..."
+              },
+              {
+                "number": "4.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_013",
+                "page_start": 10,
+                "page_end": 10,
+                "word_count": 18,
+                "summary": "200\n400\n429\n500\napplication/json\nCopy\n{\n\"success\": \"true\",\n\"message\": \"Quote created successfully."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "title": "List child accounts",
+        "depth": 1,
+        "chunk_id": "chunk_014",
+        "page_start": 10,
+        "page_end": 11,
+        "word_count": 317,
+        "summary": "Returns a list of child accounts in the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "5.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_015",
+            "page_start": 11,
+            "page_end": 12,
+            "word_count": 76,
+            "summary": "200 Returned if the Tenable MSSP Portal successfully retrieved the list of child accounts.",
+            "children": [
+              {
+                "number": "5.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_016",
+                "page_start": 12,
+                "page_end": 15,
+                "word_count": 136,
+                "summary": "200\n429\n500\nGET\n/mssp/accounts\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"account..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "title": "Get child account details",
+        "depth": 1,
+        "chunk_id": "chunk_017",
+        "page_start": 15,
+        "page_end": 15,
+        "word_count": 35,
+        "summary": "Returns details for the specified child account.",
+        "children": [
+          {
+            "number": "6.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_018",
+            "page_start": 15,
+            "page_end": 17,
+            "word_count": 351,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully retrieved the details for the specified child\naccount.",
+            "children": [
+              {
+                "number": "6.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_019",
+                "page_start": 17,
+                "page_end": 18,
+                "word_count": 69,
+                "summary": "200\n429\n500\nlogo_uuid\ndomains\ncreated\nmodified\nGET\n/mssp/accounts/{account_uuid}\napplication/json\nEx..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "title": "List domains",
+        "depth": 1,
+        "chunk_id": "chunk_020",
+        "page_start": 18,
+        "page_end": 18,
+        "word_count": 38,
+        "summary": "Returns a list of domains for the specified child account.",
+        "children": [
+          {
+            "number": "7.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_021",
+            "page_start": 18,
+            "page_end": 19,
+            "word_count": 82,
+            "summary": "account_uuid\nrequired\n200\nReturned if the Tenable MSSP Platform successfully retrieved the list of domains for the specified child\naccount.",
+            "children": [
+              {
+                "number": "7.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_022",
+                "page_start": 19,
+                "page_end": 19,
+                "word_count": 14,
+                "summary": "200\n429\n500\ndomains\nGET\n/mssp/accounts/{account_uuid}/domains\napplication/json\nExpand all\nCollapse a..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "8",
+        "title": "Account Groups",
+        "depth": 1,
+        "chunk_id": "chunk_023",
+        "page_start": 20,
+        "page_end": 20,
+        "word_count": 119,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "9",
+        "title": "Create account group",
+        "depth": 1,
+        "chunk_id": "chunk_024",
+        "page_start": 20,
+        "page_end": 21,
+        "word_count": 57,
+        "summary": "Creates a new account group.",
+        "children": [
+          {
+            "number": "9.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_025",
+            "page_start": 21,
+            "page_end": 21,
+            "word_count": 117,
+            "summary": "200 Returned if the Tenable MSSP Platform successfully created the account group.",
+            "children": [
+              {
+                "number": "9.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_026",
+                "page_start": 21,
+                "page_end": 22,
+                "word_count": 7,
+                "summary": "name\nrequired\naccountUuids\naccount_group_uuid\nPOST\n/mssp/accountGroup\nPayload"
+              },
+              {
+                "number": "9.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_027",
+                "page_start": 22,
+                "page_end": 22,
+                "word_count": 25,
+                "summary": "200\n400\n429\n500\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"name\": \"string\",\n\"accountUuids\":\n-\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "10",
+        "title": "List account groups",
+        "depth": 1,
+        "chunk_id": "chunk_028",
+        "page_start": 22,
+        "page_end": 22,
+        "word_count": 15,
+        "summary": "Returns a list of account groups.",
+        "children": [
+          {
+            "number": "10.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_029",
+            "page_start": 22,
+            "page_end": 23,
+            "word_count": 156,
+            "summary": "200 Returned if the Tenable MSSP Portal successfully retrieved the list of account groups.",
+            "children": [
+              {
+                "number": "10.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_030",
+                "page_start": 23,
+                "page_end": 24,
+                "word_count": 89,
+                "summary": "200\n429\n500\naccountGroupUuid\nparentContainerUuid\nname\nlastModified\ncount\naccountUuids\nGET\n/mssp/acco..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "11",
+        "title": "Get account group details",
+        "depth": 1,
+        "chunk_id": "chunk_031",
+        "page_start": 25,
+        "page_end": 25,
+        "word_count": 33,
+        "summary": "Returns the details for the specified account group.",
+        "children": [
+          {
+            "number": "11.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_032",
+            "page_start": 25,
+            "page_end": 26,
+            "word_count": 174,
+            "summary": "200\nReturned if the Tenable MSSP Portal successfully retrieved the details for the specified account group.",
+            "children": [
+              {
+                "number": "11.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_033",
+                "page_start": 26,
+                "page_end": 26,
+                "word_count": 37,
+                "summary": "200\n404\n429\n500\naccountUuids\nGET\n/mssp/accountGroup/{account_group_uuid}\napplication/json\nExpand all..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "12",
+        "title": "Update account group",
+        "depth": 1,
+        "chunk_id": "chunk_034",
+        "page_start": 27,
+        "page_end": 27,
+        "word_count": 71,
+        "summary": "Updates the specified account group.",
+        "children": [
+          {
+            "number": "12.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_035",
+            "page_start": 27,
+            "page_end": 28,
+            "word_count": 89,
+            "summary": "— 200 Returned if the Tenable MSSP Portal successfully updated the specified account group.",
+            "children": [
+              {
+                "number": "12.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_036",
+                "page_start": 28,
+                "page_end": 28,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "12.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_037",
+                "page_start": 28,
+                "page_end": 28,
+                "word_count": 25,
+                "summary": "200\n404\n429\n500\nPUT\n/mssp/accountGroup/{account_group_uuid}\napplication/json\nExpand all\nCollapse all..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "13",
+        "title": "Delete account group",
+        "depth": 1,
+        "chunk_id": "chunk_038",
+        "page_start": 28,
+        "page_end": 29,
+        "word_count": 35,
+        "summary": "Deletes the specified account group in the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "13.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_039",
+            "page_start": 29,
+            "page_end": 29,
+            "word_count": 83,
+            "summary": "— 200 Returned if Tenable MSSP Portal successfully deleted the specified account group.",
+            "children": [
+              {
+                "number": "13.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_040",
+                "page_start": 29,
+                "page_end": 29,
+                "word_count": 14,
+                "summary": "200\n404\n429\n500\naccount_group_uuid\nrequired\nDELETE\n/mssp/accountGroup/{account_group_uuid}\napplicati..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "14",
+        "title": "Child Containers",
+        "depth": 1,
+        "chunk_id": "chunk_041",
+        "page_start": 30,
+        "page_end": 30,
+        "word_count": 61,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "15",
+        "title": "Generate auth keys for child container",
+        "depth": 1,
+        "chunk_id": "chunk_042",
+        "page_start": 30,
+        "page_end": 30,
+        "word_count": 79,
+        "summary": "Generates authorization keys for the specified child container.",
+        "children": [
+          {
+            "number": "15.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_043",
+            "page_start": 30,
+            "page_end": 31,
+            "word_count": 238,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully generated authorization keys for the specified\nchild container.",
+            "children": [
+              {
+                "number": "15.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_044",
+                "page_start": 32,
+                "page_end": 32,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "15.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_045",
+                "page_start": 32,
+                "page_end": 32,
+                "word_count": 42,
+                "summary": "200\n429\n500\nPOST\n/mssp/accounts/mssp-child-keys\napplication/json\nCopy\n{\n\"child_container_uuid\": \"str..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "16",
+        "title": "List child containers",
+        "depth": 1,
+        "chunk_id": "chunk_046",
+        "page_start": 33,
+        "page_end": 33,
+        "word_count": 54,
+        "summary": "Returns a list of child containers associated with the specified user.",
+        "children": [
+          {
+            "number": "16.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_047",
+            "page_start": 33,
+            "page_end": 34,
+            "word_count": 105,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully retrieved the list of child containers for the\nspecified user UUID.",
+            "children": [
+              {
+                "number": "16.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_048",
+                "page_start": 34,
+                "page_end": 34,
+                "word_count": 36,
+                "summary": "200\n429\n500\nGET\n/mssp/accounts/childContainers/{user_uuid}\napplication/json\nExpand all\nCollapse all\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "17",
+        "title": "Get child container history",
+        "depth": 1,
+        "chunk_id": "chunk_049",
+        "page_start": 34,
+        "page_end": 35,
+        "word_count": 45,
+        "summary": "Returns the history for child containers associated with the specified parent account UUID.",
+        "children": [
+          {
+            "number": "17.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_050",
+            "page_start": 35,
+            "page_end": 35,
+            "word_count": 83,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully retrieved the child container history for the\nspecified parent account UUID.",
+            "children": [
+              {
+                "number": "17.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_051",
+                "page_start": 35,
+                "page_end": 35,
+                "word_count": 17,
+                "summary": "200\n429\n500\naccount_uuid\nrequired\nhistory\nrequired\nGET\n/mssp/accounts/childContainers/{account_uuid}..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "18",
+        "title": "Dashboards",
+        "depth": 1,
+        "chunk_id": "chunk_052",
+        "page_start": 36,
+        "page_end": 36,
+        "word_count": 103,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "19",
+        "title": "Get widget details",
+        "depth": 1,
+        "chunk_id": "chunk_053",
+        "page_start": 36,
+        "page_end": 37,
+        "word_count": 72,
+        "summary": "Returns the data for the specified dashboard widget.",
+        "children": [
+          {
+            "number": "19.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_054",
+            "page_start": 37,
+            "page_end": 37,
+            "word_count": 72,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully retrieved the request dashboard widget data.",
+            "children": [
+              {
+                "number": "19.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_055",
+                "page_start": 37,
+                "page_end": 38,
+                "word_count": 89,
+                "summary": "200\n429\n500\nwidget\nrequired\ncustomer_licensing_data\nGET\n/mssp/dashboard\napplication/json\nContent typ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "20",
+        "title": "Domains",
+        "depth": 1,
+        "chunk_id": "chunk_056",
+        "page_start": 39,
+        "page_end": 39,
+        "word_count": 70,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "21",
+        "title": "Add domain",
+        "depth": 1,
+        "chunk_id": "chunk_057",
+        "page_start": 39,
+        "page_end": 39,
+        "word_count": 59,
+        "summary": "Adds a new domain to the specified container.",
+        "children": [
+          {
+            "number": "21.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_058",
+            "page_start": 39,
+            "page_end": 40,
+            "word_count": 83,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully added the domain to the specified container.",
+            "children": [
+              {
+                "number": "21.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_059",
+                "page_start": 40,
+                "page_end": 40,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "21.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_060",
+                "page_start": 40,
+                "page_end": 41,
+                "word_count": 39,
+                "summary": "200\n500\ncontainer_uuid\ndomains\nmessage\nPOST\n/mssp/domains\napplication/json\nCopy\n{\n\"container_uuid\": ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "22",
+        "title": "List domains",
+        "depth": 1,
+        "chunk_id": "chunk_061",
+        "page_start": 41,
+        "page_end": 41,
+        "word_count": 20,
+        "summary": "Returns a list of all child containers and their domains.",
+        "children": [
+          {
+            "number": "22.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_062",
+            "page_start": 41,
+            "page_end": 41,
+            "word_count": 65,
+            "summary": "200\nReturned if the Tenable MSSP Portal successfully retrieved the list of child containers and their\ndomains.",
+            "children": [
+              {
+                "number": "22.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_063",
+                "page_start": 41,
+                "page_end": 42,
+                "word_count": 45,
+                "summary": "domains_list\nGET\n/mssp/domains\n200\n429\n500\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"domain_l..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "23",
+        "title": "Get domain details",
+        "depth": 1,
+        "chunk_id": "chunk_064",
+        "page_start": 42,
+        "page_end": 42,
+        "word_count": 45,
+        "summary": "Returns a list of domains and their details for the specified account UUID.",
+        "children": [
+          {
+            "number": "23.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_065",
+            "page_start": 43,
+            "page_end": 43,
+            "word_count": 91,
+            "summary": "200\nReturned if the Tenable MSSP Portal successfully retrieved the list of domains and their details for the\nspecified account UUID.",
+            "children": [
+              {
+                "number": "23.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_066",
+                "page_start": 43,
+                "page_end": 44,
+                "word_count": 78,
+                "summary": "200\n429\n500\ncontainer_uuid\ndomains\nGET\n/mssp/domains/account/{account_uuid}\napplication/json\nExpand ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "24",
+        "title": "Update domain",
+        "depth": 1,
+        "chunk_id": "chunk_067",
+        "page_start": 44,
+        "page_end": 45,
+        "word_count": 77,
+        "summary": "Updates a domain associated with the specified account UUID.",
+        "children": [
+          {
+            "number": "24.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_068",
+            "page_start": 45,
+            "page_end": 46,
+            "word_count": 105,
+            "summary": "— 200\nReturned if the Tenable MSSP Portal successfully updated the domain for the specified account UUID.",
+            "children": [
+              {
+                "number": "24.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_069",
+                "page_start": 46,
+                "page_end": 46,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "24.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_070",
+                "page_start": 46,
+                "page_end": 46,
+                "word_count": 20,
+                "summary": "200\n429\n500\nmessage\nPUT\n/mssp/domains/account/{account_uuid}\napplication/json\nCopy\n{\n\"domain_name\": \"example."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "25",
+        "title": "Send activation code",
+        "depth": 1,
+        "chunk_id": "chunk_071",
+        "page_start": 46,
+        "page_end": 47,
+        "word_count": 102,
+        "summary": "Sends a verification code to add a domain to a container.",
+        "children": [
+          {
+            "number": "25.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_072",
+            "page_start": 47,
+            "page_end": 47,
+            "word_count": 79,
+            "summary": "200 Returned if the Tenable MSSP Portal successfully sent the activation code."
+          }
+        ]
+      },
+      {
+        "number": "26",
+        "title": "Filters",
+        "depth": 1,
+        "chunk_id": "chunk_073",
+        "page_start": 48,
+        "page_end": 48,
+        "word_count": 66,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway...",
+        "children": [
+          {
+            "number": "26.1",
+            "title": "Request samples",
+            "depth": 2,
+            "chunk_id": "chunk_074",
+            "page_start": 48,
+            "page_end": 48,
+            "word_count": 1,
+            "summary": "Payload"
+          },
+          {
+            "number": "26.2",
+            "title": "Response samples",
+            "depth": 2,
+            "chunk_id": "chunk_075",
+            "page_start": 48,
+            "page_end": 48,
+            "word_count": 27,
+            "summary": "200\n500\napplication/json\nCopy\n{\n\"container_uuid\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n\"domain_na..."
+          }
+        ]
+      },
+      {
+        "number": "27",
+        "title": "List account filters",
+        "depth": 1,
+        "chunk_id": "chunk_076",
+        "page_start": 48,
+        "page_end": 49,
+        "word_count": 24,
+        "summary": "Content type\nContent type\nLists the filtering capabilities for account endpoints that support filtering.",
+        "children": [
+          {
+            "number": "27.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_077",
+            "page_start": 49,
+            "page_end": 49,
+            "word_count": 58,
+            "summary": "200 Returned if the Tenable MSSP Portal successfully retrieved the list of account filters.",
+            "children": [
+              {
+                "number": "27.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_078",
+                "page_start": 49,
+                "page_end": 51,
+                "word_count": 197,
+                "summary": "200\n429\n500\nGET\n/filters/mssp/accounts\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"wildcard_fie..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "28",
+        "title": "License",
+        "depth": 1,
+        "chunk_id": "chunk_079",
+        "page_start": 52,
+        "page_end": 52,
+        "word_count": 115,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "29",
+        "title": "Get license details",
+        "depth": 1,
+        "chunk_id": "chunk_080",
+        "page_start": 53,
+        "page_end": 53,
+        "word_count": 22,
+        "summary": "Returns license details for the account associated with the user's API credentials.",
+        "children": [
+          {
+            "number": "29.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_081",
+            "page_start": 53,
+            "page_end": 53,
+            "word_count": 83,
+            "summary": "200 Returned if the Tenable MSSP Portal successfully retrieved the license details.",
+            "children": [
+              {
+                "number": "29.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_082",
+                "page_start": 53,
+                "page_end": 53,
+                "word_count": 8,
+                "summary": "200\n429\n500\nstatusCode\nerror\nmessage\nGET\n/mssp/license"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "30",
+        "title": "Logos",
+        "depth": 1,
+        "chunk_id": "chunk_083",
+        "page_start": 54,
+        "page_end": 54,
+        "word_count": 93,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "31",
+        "title": "Add logo",
+        "depth": 1,
+        "chunk_id": "chunk_084",
+        "page_start": 54,
+        "page_end": 54,
+        "word_count": 79,
+        "summary": "Adds a logo to the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "31.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_085",
+            "page_start": 55,
+            "page_end": 55,
+            "word_count": 96,
+            "summary": "200 Returned if Tenable MSSP Portal successfully added the logo.",
+            "children": [
+              {
+                "number": "31.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_086",
+                "page_start": 55,
+                "page_end": 56,
+                "word_count": 18,
+                "summary": "200\n400\n429\n500\nerror\nstatusCode\nerror\nmessage\nPOST\n/mssp/logos\napplication/json\nContent type\nCopy\n{..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "32",
+        "title": "List logos",
+        "depth": 1,
+        "chunk_id": "chunk_087",
+        "page_start": 56,
+        "page_end": 56,
+        "word_count": 23,
+        "summary": "Returns a list of logos you have uploaded to the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "32.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_088",
+            "page_start": 56,
+            "page_end": 56,
+            "word_count": 45,
+            "summary": "200 A list of logos in the Tenable MSSP Portal.",
+            "children": [
+              {
+                "number": "32.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_089",
+                "page_start": 56,
+                "page_end": 59,
+                "word_count": 137,
+                "summary": "200\n429\n500\nGET\n/mssp/logos\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"logos\":\n-\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "33",
+        "title": "Get logo details",
+        "depth": 1,
+        "chunk_id": "chunk_090",
+        "page_start": 59,
+        "page_end": 59,
+        "word_count": 37,
+        "summary": "Returns details for the specified logo in the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "33.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_091",
+            "page_start": 59,
+            "page_end": 60,
+            "word_count": 100,
+            "summary": "200 Returns logo details for the requested logo.",
+            "children": [
+              {
+                "number": "33.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_092",
+                "page_start": 60,
+                "page_end": 60,
+                "word_count": 21,
+                "summary": "200\n404\n429\n500\nstatusCode\nerror\nmessage\nGET\n/mssp/logos/{logo_uuid}\napplication/json\nCopy\n{\n\"uuid\":..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "34",
+        "title": "Update logo",
+        "depth": 1,
+        "chunk_id": "chunk_093",
+        "page_start": 60,
+        "page_end": 61,
+        "word_count": 69,
+        "summary": "Content type\nUpdates a logo in the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "34.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_094",
+            "page_start": 61,
+            "page_end": 62,
+            "word_count": 116,
+            "summary": "200 Returned if Tenable MSSP Portal successfully updated the logo.",
+            "children": [
+              {
+                "number": "34.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_095",
+                "page_start": 62,
+                "page_end": 62,
+                "word_count": 16,
+                "summary": "200\n400\n404\n429\n500\nstatusCode\nerror\nmessage\nPATCH\n/mssp/logos/{logo_uuid}\napplication/json\nCopy\n{\n\"..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "35",
+        "title": "Delete logo",
+        "depth": 1,
+        "chunk_id": "chunk_096",
+        "page_start": 62,
+        "page_end": 62,
+        "word_count": 34,
+        "summary": "Deletes the specified logo in the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "35.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_097",
+            "page_start": 63,
+            "page_end": 63,
+            "word_count": 101,
+            "summary": "— 200 Returned if Tenable MSSP Portal successfully deletes the specified logo.",
+            "children": [
+              {
+                "number": "35.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_098",
+                "page_start": 63,
+                "page_end": 64,
+                "word_count": 16,
+                "summary": "200\n404\n429\n500\nerror\nstatusCode\nerror\nmessage\nDELETE\n/mssp/logos/{logo_uuid}\napplication/json\nCopy\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "36",
+        "title": "Assign logo",
+        "depth": 1,
+        "chunk_id": "chunk_099",
+        "page_start": 64,
+        "page_end": 64,
+        "word_count": 53,
+        "summary": "Assigns a logo to one or more customer accounts in the Tenable MSSP Portal.",
+        "children": [
+          {
+            "number": "36.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_100",
+            "page_start": 64,
+            "page_end": 64,
+            "word_count": 65,
+            "summary": "— 200\nReturned if Tenable MSSP Portal successfully assigns the specified logo to the specified account(s).",
+            "children": [
+              {
+                "number": "36.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_101",
+                "page_start": 64,
+                "page_end": 65,
+                "word_count": 7,
+                "summary": "logo_uuid\nrequired\naccount_uuids\nrequired\nPUT\n/mssp/accounts/logos\nPayload"
+              },
+              {
+                "number": "36.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_102",
+                "page_start": 65,
+                "page_end": 65,
+                "word_count": 23,
+                "summary": "200\n400\n429\n500\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"logo_uuid\": \"string\",\n\"account_uuid..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "37",
+        "title": "Download logo (PNG)",
+        "depth": 1,
+        "chunk_id": "chunk_103",
+        "page_start": 65,
+        "page_end": 65,
+        "word_count": 28,
+        "summary": "Returns a logo file in PNG format.",
+        "children": [
+          {
+            "number": "37.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_104",
+            "page_start": 65,
+            "page_end": 66,
+            "word_count": 51,
+            "summary": "logo_uuid\nrequired\nContent type\nContent type\n— 200 Returned if the PNG file is downloaded successfully.",
+            "children": [
+              {
+                "number": "37.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_105",
+                "page_start": 66,
+                "page_end": 66,
+                "word_count": 8,
+                "summary": "200\n429\n500\nGET\n/mssp/logos/{logo_uuid}/logo."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "38",
+        "title": "Download logo (Base64)",
+        "depth": 1,
+        "chunk_id": "chunk_106",
+        "page_start": 66,
+        "page_end": 66,
+        "word_count": 28,
+        "summary": "Returns a logo file in Base64 format.",
+        "children": [
+          {
+            "number": "38.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_107",
+            "page_start": 66,
+            "page_end": 66,
+            "word_count": 4,
+            "summary": "logo_uuid\nrequired\nContent type"
+          }
+        ]
+      },
+      {
+        "number": "39",
+        "title": "Partners",
+        "depth": 1,
+        "chunk_id": "chunk_108",
+        "page_start": 67,
+        "page_end": 67,
+        "word_count": 103,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway...",
+        "children": [
+          {
+            "number": "39.1",
+            "title": "Response samples",
+            "depth": 2,
+            "chunk_id": "chunk_109",
+            "page_start": 67,
+            "page_end": 67,
+            "word_count": 14,
+            "summary": "200\n429\n500\ndata image/png base64 iVBORw0KGgoAAAANSUhEUgAAAPYAAAA0CAIAAAA2UFIgAAAAAXNSR0IArs4c6\nGET\n/mssp/logos/{logo_uuid}/logo."
+          }
+        ]
+      },
+      {
+        "number": "40",
+        "title": "Get partner details",
+        "depth": 1,
+        "chunk_id": "chunk_110",
+        "page_start": 67,
+        "page_end": 68,
+        "word_count": 23,
+        "summary": "Content type\nReturns partner details for the account associated with the user's API credentials.",
+        "children": [
+          {
+            "number": "40.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_111",
+            "page_start": 68,
+            "page_end": 68,
+            "word_count": 47,
+            "summary": "200 Returned if the Tenable MSSP Portal successfully retrieved the partner details.",
+            "children": [
+              {
+                "number": "40.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_112",
+                "page_start": 68,
+                "page_end": 71,
+                "word_count": 160,
+                "summary": "200\n429\n500\nGET\n/mssp/partner/details\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"partner\":\n-\n{..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "41",
+        "title": "Resource Links",
+        "depth": 1,
+        "chunk_id": "chunk_113",
+        "page_start": 72,
+        "page_end": 72,
+        "word_count": 87,
+        "summary": "The Tenable Managed Security Service Provider (MSSP) Portal API provides a secure and accessible\nway..."
+      },
+      {
+        "number": "42",
+        "title": "Bulk add resource links",
+        "depth": 1,
+        "chunk_id": "chunk_114",
+        "page_start": 72,
+        "page_end": 73,
+        "word_count": 79,
+        "summary": "Adds or updates resource links for multiple customer accounts.",
+        "children": [
+          {
+            "number": "42.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_115",
+            "page_start": 73,
+            "page_end": 73,
+            "word_count": 46,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully bulk added the resource links for the specified\ncustomer accounts.",
+            "children": [
+              {
+                "number": "42.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_116",
+                "page_start": 73,
+                "page_end": 73,
+                "word_count": 35,
+                "summary": "Payload\nresource_links\nrequired\nPOST\n/mssp/resourcelink/addBulk\napplication/json\nExpand all\nCollapse..."
+              },
+              {
+                "number": "42.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_117",
+                "page_start": 74,
+                "page_end": 74,
+                "word_count": 8,
+                "summary": "200\n500\napplication/json\nCopy\n{\n\"status\": \"SUCCESS\"\n}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "43",
+        "title": "Add resource links",
+        "depth": 1,
+        "chunk_id": "chunk_118",
+        "page_start": 74,
+        "page_end": 74,
+        "word_count": 59,
+        "summary": "Adds or updates resource links for the specified customer account.",
+        "children": [
+          {
+            "number": "43.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_119",
+            "page_start": 74,
+            "page_end": 75,
+            "word_count": 51,
+            "summary": "account_uuid\nrequired\nname\nurl\nContent type\n200\nReturned if the Tenable MSSP Platform successfully a...",
+            "children": [
+              {
+                "number": "43.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_120",
+                "page_start": 75,
+                "page_end": 75,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "43.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_121",
+                "page_start": 75,
+                "page_end": 76,
+                "word_count": 49,
+                "summary": "200\n500\nPOST\n/mssp/resourcelink/account/{account_uuid}\napplication/json\nExpand all\nCollapse all\nCopy..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "44",
+        "title": "List resource links",
+        "depth": 1,
+        "chunk_id": "chunk_122",
+        "page_start": 76,
+        "page_end": 76,
+        "word_count": 37,
+        "summary": "Returns the resource links for the specified account.",
+        "children": [
+          {
+            "number": "44.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_123",
+            "page_start": 76,
+            "page_end": 76,
+            "word_count": 67,
+            "summary": "200\nReturned if the Tenable MSSP Platform successfully retrieved the resource links for the specified\ncustomer account.",
+            "children": [
+              {
+                "number": "44.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_124",
+                "page_start": 76,
+                "page_end": 77,
+                "word_count": 58,
+                "summary": "200\n429\n500\naccount_uuid\nrequired\nGET\n/mssp/resourcelink/account/{account_uuid}\napplication/json\nExp..."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 124,
+    "max_depth": 3
+  }
+}

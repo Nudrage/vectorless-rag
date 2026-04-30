@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1017",
+  "section_number": "1.23.6",
+  "header": "Configure a Shared Gateway",
+  "content": "Perform this task if you need multiple virtual systems to share an interface (a Shared Gateway) to\nthe Internet. This task presumes:\n• You configured an interface with a globally-routable IP address, which will be the shared\ngateway.\n• You completed the prior task, Configure Virtual Systems. For the interface, you chose the\nexternal-facing interface with the globally-routable IP address.\n• When configuring the virtual systems, in the Visible Virtual System field, you checked the\nboxes of all virtual systems that must communicate to be visible to each other.\nSTEP 1 |\nConfigure a Shared Gateway.\n1.\nSelect Device > Shared Gateway, click Add and enter an ID.\n2.\nEnter a helpful Name, preferably including the ID of the gateway.\n3.\nIn the DNS Proxy field, select a DNS proxy object if you want to apply DNS proxy rules\nto the interface.\n4.\nAdd an Interface that connects to the outside world.\n5.\nClick OK.\nSTEP 2 |\nConfigure the zone for the shared gateway.\nWhen adding objects such as zones or interfaces to a shared gateway, the shared\ngateway itself will be listed as an available vsys in the VSYS menu.\n1.\nSelect Network > Zones and Add a new zone by Name.\n2.\nFor Location, select the shared gateway for which you are creating a zone.\n3.\nFor Type, select Layer3.\n4.\n(Optional) Select a Zone Protection Profile (or configure one later) that provides flood,\nreconnaissance, or packet-based attack protection.\n5.\n(Optional) In Log Setting, select a log forwarding profile for forwarding zone protection\nlogs to an external system.\n6.\n(Optional) Select Enable User Identification to enable User-ID for the shared gateway.\n7.\nClick OK.\nSTEP 3 |\nCommit your changes.\nClick Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1717\n©2025 Palo Alto Networks, Inc.\nVirtual Systems",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1717,
+      "end": 1718
+    },
+    "content_stats": {
+      "char_count": 1774,
+      "word_count": 298
+    },
+    "hierarchy": {
+      "parent": "Virtual Systems",
+      "children": []
+    }
+  }
+}

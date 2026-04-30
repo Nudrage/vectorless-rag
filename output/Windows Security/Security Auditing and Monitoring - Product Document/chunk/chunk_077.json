@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_077",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4931(S, F): An Active Directory replica destination naming context was modified.\n\nThis event is typically used for Active Directory replication troubleshooting.\n4934(S): Attributes of an Active Directory object were replicated.\nThis event generates when attributes of an Active Directory object were replicated.\nThere is no example of this event in this document.\nEvent Schema:\nAttributes of an Active Directory object were replicated.\nSession ID:%1\nObject:%2\nAttribute:%3\nType of change:%4\nNew Value:%5\nUSN:%6\nStatus Code:%7\nRequired Server Roles: Active Directory domain controller.\nMinimum OS Version: Windows Server 2008.\nEvent Versions: 0.\nSecurity Monitoring Recommendations:\n\nThis event is typically used for Active Directory replication troubleshooting.\n4935(F): Replication failure begins.\nEvent Description:\nThis event generates when Active Directory replication failure begins.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\n© 2016 Microsoft. All rights reserved.\n243\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4935</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>14083</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8010000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-08-27T18:54:48.758149800Z\" />\n<EventRecordID>1552</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"504\" ThreadID=\"524\" />\n<Channel>Security</Channel>\n<Computer>Win2012r2.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"ReplicationEvent\">1</Data>\n<Data Name=\"AuditStatusCode\">8419</Data>\n</EventData>\n</Event>\nRequired Server Roles: Active Directory domain controller.\nMinimum OS Version: Windows Server 2008.\nEvent Versions: 0.\nField Descriptions:\nReplication Event [Type = UInt32]: there is no detailed information about this field in this document.\nAudit Status Code [Type = UInt32]: there is no detailed information about this field in this document.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 243,
+      "end": 244
+    },
+    "content_stats": {
+      "char_count": 2071,
+      "word_count": 229
+    },
+    "hierarchy": {
+      "parent": "Audit Detailed Directory Service Replication",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_168",
+  "section_number": "1.8.15",
+  "header": "Troubleshoot Authentication Issues",
+  "content": "When users fail to authenticate to a Palo Alto Networks firewall or Panorama, or the\nAuthentication process takes longer than expected, analyzing authentication-related information\ncan help you determine whether the failure or delay resulted from:\n• User behavior—For example, users are locked out after entering the wrong credentials or a\nhigh volume of users are simultaneously attempting access.\n• System or network issues—For example, an authentication server is inaccessible.\n• Configuration issues—For example, the Allow List of an authentication profile doesn’t have all\nthe users it should have.\nThe following CLI commands display information that can help you troubleshoot these issues:\nTask\nCommand\nDisplay the number of locked user accounts\nassociated with the authentication profile\n(auth-profile), authentication sequence\n(is-seq), or virtual system (vsys).\nTo unlock users, use the following\noperational command:\n> request\nauthentication [unlock-admin | u\nnlock-user]\nPA-220> show authentication lock\ned-users\n{\nvsys <value> |\nauth-profile <value> |\nis-seq\n{yes | no}\n{auth-profile | vsys} <val\nue>\n}\nUse the debug authentication command\nto troubleshoot authentication events.\nUse the show options to display\nauthentication request statistics and the\ncurrent debugging level:\n• show displays the current debugging level\nfor the authentication service (authd).\n• show-active-requests displays the\nnumber of active checks for authentication\nrequests, allow lists, locked user accounts,\nand Multi-Factor Authentication (MFA)\nrequests.\n• show-pending-requests displays\nthe number of pending checks for\nauthentication requests, allow lists, locked\nuser accounts, and MFA requests.\nPA-220> debug authentication\n{\non {debug | dump | error | in\nfo | warn} |\nshow |\nshow-active-requests |\nshow-pending-requests |\nconnection-show |\n{\nconnection-id |\nprotocol-type\n{\nKerberos connection-id\n<value> |\nLDAP connection-id <val\nue> |\nRADIUS connection-id <v\nalue> |\nTACACS+ connection-id <\nvalue> |\n}\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n312\n©2025 Palo Alto Networks, Inc.\nAuthentication\nTask\nCommand\n• connection-show displays\nauthentication request and response\nstatistics for all authentication servers or\nfor a specific protocol type.\nUse the connection-debug options to\nenable or disable authentication debugging:\n• Use the on option to enable or the off\noption to disable debugging for authd.\n• Use the connection-debug-on option\nto enable or the connection-debug-\noff option to disable debugging for all\nauthentication servers or for a specific\nprotocol type.\nconnection-debug-on |\n{\nconnection-id |\ndebug-prefix |\nprotocol-type\n{\nKerberos connection-id\n<value> |\nLDAP connection-id <val\nue> |\nRADIUS connection-id <v\nalue> |\nTACACS+ connection-id <\nvalue> |\n}\nconnection-debug-off |\n{\nconnection-id |\nprotocol-type\n{\nKerberos connection-id\n<value> |\nLDAP connection-id <val\nue> |\nRADIUS connection-id <v\nalue> |\nTACACS+ connection-id <\nvalue> |\n}\nconnection-debug-on\n}\nTest the connection and validity of the\ncertificate profile.\nPA-220> test authentication auth\nentication-profile auth-profile\nusername <username>password <pas\nsword>\nTroubleshoot a specific authentication using\nthe Authentication ID displayed in Monitor >\nLogs > Authentication.\nPA-220> grep <Authentication ID>\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n313\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 312,
+      "end": 313
+    },
+    "content_stats": {
+      "char_count": 3367,
+      "word_count": 474
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

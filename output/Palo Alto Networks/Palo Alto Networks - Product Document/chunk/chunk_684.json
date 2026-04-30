@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_684",
+  "section_number": "1.19.3.4.3",
+  "header": "Methods of Securing IPSec VPN Tunnels (IKE Phase 2)",
+  "content": "IPSec VPN tunnels can be secured using manual keys or auto keys. In addition, IPSec\nconfiguration options include Diffie-Hellman Group for key agreement, and/or an encryption\nalgorithm and a hash for message authentication.\n• Manual Key—Manual key is typically used if the Palo Alto Networks firewall is establishing a\nVPN tunnel with a legacy device, or if you want to reduce the overhead of generating session\nkeys. If using manual keys, the same key must be configured on both peers.\nManual keys are not recommended for establishing a VPN tunnel because the session keys\ncan be compromised when relaying the key information between the peers; if the keys are\ncompromised, the data transfer is no longer secure.\n• Auto Key— Auto Key allows you to automatically generate keys for setting up and maintaining\nthe IPSec tunnel based on the algorithms defined in the IPSec Crypto profile.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1253,
+      "end": 1253
+    },
+    "content_stats": {
+      "char_count": 885,
+      "word_count": 146
+    },
+    "hierarchy": {
+      "parent": "Internet Key Exchange (IKE) for VPN",
+      "children": []
+    }
+  }
+}

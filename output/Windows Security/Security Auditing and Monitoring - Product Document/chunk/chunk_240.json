@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_240",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the current policy.\n\nThis event can be a sign of software or operating system issues, Windows Firewall registry errors or corruption, or Group Policy setting misconfigurations. We recommend\nmonitoring this event and investigating the reason for the condition. Typically this event indicates configuration issues, not security issues.\n5028(F): The Windows Firewall Service was unable to parse the new security policy. The service will continue with currently enforced policy.\nEvent Description:\nThis error indicates one of two situations, low memory resources or Windows Firewall group policy registry corruption.\nTypically if this event occurs it indicates that Windows Firewall service was not able to start.\nIt typically occurs with “5027(S): The Windows Firewall Service was unable to retrieve the security policy from the local\nstorage. The service will continue enforcing the current policy.”\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>5028</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12292</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8010000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-13T23:10:05.318922900Z\" />\n<EventRecordID>1101849</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"500\" ThreadID=\"2000\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"ErrorCode\">2147942413</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\n© 2016 Microsoft. All rights reserved.\n679\nEvent Versions: 0.\nField Descriptions:\nError Code [Type = UInt32]: unique error code. For information about error codes meanings for this event use https://technet.microsoft.com/ or other informational resources.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 679,
+      "end": 680
+    },
+    "content_stats": {
+      "char_count": 2133,
+      "word_count": 249
+    },
+    "hierarchy": {
+      "parent": "5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the",
+      "children": []
+    }
+  }
+}

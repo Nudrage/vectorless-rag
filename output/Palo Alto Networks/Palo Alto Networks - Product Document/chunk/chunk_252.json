@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_252",
+  "section_number": "1.10.9",
+  "header": "HA Firewall States",
+  "content": "An HA firewall can be in one of the following states:\nHA Firewall\nState\nOccurs In\nDescription\nInitial\nA/P or A/\nA\nTransient state of a firewall when it joins the HA pair. The\nfirewall remains in this state after boot-up until it discovers\na peer and negotiations begins. After a timeout, the firewall\nbecomes active if HA negotiation has not started.\nActive\nA/P\nState of the active firewall in an active/passive configuration.\nPassive\nA/P\nState of the passive firewall in an active/passive configuration.\nThe passive firewall is ready to become the active firewall with\nno disruption to the network. Although the passive firewall is not\nprocessing other traffic:\n• If passive link state auto is configured, the passive firewall is\nrunning routing protocols, monitoring link and path state, and\nthe passive firewall will pre-negotiate LACP and LLDP if LACP\nand LLDP pre-negotiation are configured, respectively.\n• The passive firewall is synchronizing flow state, runtime\nobjects, and configuration.\n• The passive firewall is monitoring the status of the active\nfirewall using the hello protocol.\nActive-Primary\nA/A\nIn an active/active configuration, state of the firewall that\nconnects to User-ID agents, runs DHCP server and DHCP relay,\nand matches NAT and PBF rules with the Device ID of the\nactive-primary firewall. A firewall in this state can own sessions\nand set up sessions.\nActive-\nSecondary\nA/A\nIn an active/active configuration, state of the firewall that\nconnects to User-ID agents, runs DHCP server, and matches\nNAT and PBF rules with the Device ID of the active-secondary\nfirewall. A firewall in active-secondary state does not support\nDHCP relay. A firewall in this state can own sessions and set up\nsessions.\nTentative\nA/A\nState of a firewall (in an active/active configuration) caused by\none of the following:\n• Failure of a firewall.\n• Failure of a monitored object (a link or path).\n• The firewall leaves suspended or non-functional state.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n454\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nHA Firewall\nState\nOccurs In\nDescription\nA firewall in tentative state synchronizes sessions and\nconfigurations from the peer.\n• In a virtual wire deployment, when a firewall enters tentative\nstate due to a path failure and receives a packet to forward,\nit sends the packet to the peer firewall over the HA3 link for\nprocessing. The peer firewall processes the packet and sends\nit back over the HA3 link to the firewall to be sent out the\negress interface. This behavior preserves the forwarding path\nin a virtual wire deployment.\n• In a Layer 3 deployment, when a firewall in tentative state\nreceives a packet, it sends that packet over the HA3 link for\nthe peer firewall to own or set up the session. Depending on\nthe network topology, this firewall either sends the packet\nout to the destination or sends it back to the peer in tentative\nstate for forwarding.\nAfter the failed path or link clears or as a failed firewall\ntransitions from tentative state to active-secondary state, the\nTentative Hold Time is triggered and routing convergence\noccurs. The firewall attempts to build routing adjacencies and\npopulate its route table before processing any packets. Without\nthis timer, the recovering firewall would enter active-secondary\nstate immediately and would silently discard packets because it\nwould not have the necessary routes.\nWhen a firewall leaves suspended state, it goes into tentative\nstate for the Tentative Hold Time after links are up and able to\nprocess incoming packets.\nTentative Hold Time range (sec) can be disabled (which is 0\nseconds) or in the range 10-600; default is 60.\nNon-\nfunctional\nA/P or A/\nA\nError state due to a dataplane failure or a configuration\nmismatch, such as only one firewall configured for packet\nforwarding, VR sync or QoS sync.\nIn active/passive mode, all of the causes listed for Tentative\nstate cause non-functional state.\nSuspended\nA/P or A/\nA\nThe device is disabled so won’t pass data traffic and although\nHA communications still occur, the device doesn’t participate in\nthe HA election process. It can’t move to an HA functional state\nwithout user intervention.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n455\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 454,
+      "end": 456
+    },
+    "content_stats": {
+      "char_count": 4260,
+      "word_count": 692
+    },
+    "hierarchy": {
+      "parent": "High Availability",
+      "children": []
+    }
+  }
+}

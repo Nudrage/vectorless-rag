@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_175",
+  "section_number": "1.9.4",
+  "header": "Certificate Deployment",
+  "content": "The basic approaches to deploy certificates for Palo Alto Networks firewalls or Panorama are:\n• Obtain certificates from a trusted third-party CA—The benefit of obtaining a certificate\nfrom a trusted third-party certificate authority (CA) such as VeriSign or GoDaddy is that end\nclients will already trust the certificate because common browsers include root CA certificates\nfrom well-known CAs in their trusted root certificate stores. Therefore, for applications\nthat require end clients to establish secure connections with the firewall or Panorama,\npurchase a certificate from a CA that the end clients trust to avoid having to pre-deploy\nroot CA certificates to the end clients. (Some such applications are a GlobalProtect portal or\nGlobalProtect Mobile Security Manager.) However, most third-party CAs cannot issue signing\ncertificates. Therefore, this type of certificate is not appropriate for applications (for example,\nSSL/TLS decryption and large-scale VPN) that require the firewall to issue certificates. See\nObtain a Certificate from an External CA.\n• Obtain certificates from an enterprise CA—Enterprises that have their own internal CA can use\nit to issue certificates for firewall applications and import them onto the firewall. The benefit is\nthat end clients probably already trust the enterprise CA. You can either generate the needed\ncertificates and import them onto the firewall, or generate a certificate signing request (CSR)\non the firewall and send it to the enterprise CA for signing. The benefit of this method is that\nthe private key does not leave the firewall. An enterprise CA can also issue a signing certificate,\nwhich the firewall uses to automatically generate certificates (for example, for GlobalProtect\nlarge-scale VPN or sites requiring SSL/TLS decryption). See Import a Certificate and Private\nKey.\n• Generate self-signed certificates—You can Create a Self-Signed Root CA Certificate on the\nfirewall and use it to automatically issue certificates for other firewall applications.\nIf you use this method to generate certificates for an application that requires an end\nclient to trust the certificate, end users will see a certificate error because the root\nCA certificate is not in their trusted root certificate store. To prevent this, deploy the\nself-signed root CA certificate to all end user systems. You can deploy the certificates\nmanually or use a centralized deployment method such as an Active Directory Group\nPolicy Object (GPO).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n321\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 321,
+      "end": 322
+    },
+    "content_stats": {
+      "char_count": 2580,
+      "word_count": 390
+    },
+    "hierarchy": {
+      "parent": "Certificate Management",
+      "children": []
+    }
+  }
+}

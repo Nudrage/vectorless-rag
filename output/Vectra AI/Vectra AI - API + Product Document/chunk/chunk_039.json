@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_039",
+  "section_number": "1.18.26",
+  "header": "Vectra Match Available Devices",
+  "content": "Version 3.4 of Vectra Match available devices API supports GET.  Use of the available devices endpoint\nfor Vectra Match does not require a valid license. The available devices endpoint will return information\nabout all currently paired sensors and, in the case of a mixed mode headend, information about the\nheadend itself. The API endpoint for accessing version 3.4 is\nhttps://<vectra_management_ip>/api/v3.4/vectra-match/available-devices\nThe following table lists the top-level fields present in the response for a GET request to the v3.4 API for\nVectra Match available devices\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ndevices\nList of json objects, each\nof which represents\ninformation about a\npaired device\nlist object\nAn example response can be\nfound in Appendix A\ndetails\nError output\nstring\nOnly present with an unsuccessful\nreturn code\nExamples of the GET method on the vectra-match/available-devices endpoint is shown in Appendix A.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 60,
+      "end": 60
+    },
+    "content_stats": {
+      "char_count": 931,
+      "word_count": 138
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

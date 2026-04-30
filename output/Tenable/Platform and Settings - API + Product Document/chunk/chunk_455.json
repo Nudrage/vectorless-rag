@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_455",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the specified recast rule was updated successfully.\nRESPONSE SCHEMA:\napplication/json\nobject\nDetails of the rule action and its settings.\nstring\nThe name assigned to the rule.\nstring <uuid>\nThe unique identifier (UUID) of the rule.\nstring <uuid>\nThe unique identifier (UUID) of the container.\nstring <uuid>\nThe unique identifier (UUID) of the user who created the rule.\nstring <uuid>\nThe unique identifier (UUID) of the user who last updated the rule.\nstring <date-time>\nAn ISO timestamp indicating the date and time when the rule was\ncreated.\nrule_value\nrequired\nfilter\nrequired\nexpires_at\ndisabled_details\nrule_value\nrule_name\nrule_id\ncontainer_id\ncreated_by\nupdated_by\ncreated_at\nstring <date-time>\nAn ISO timestamp indicating the date and time when the rule was\nlast updated.\nstring <date-time>\nAn ISO timestamp indicating the date and time when the rule was\nlast processed.\nstring\nThe description of the rule.\nstring\nEnum: \"HOST\"\n\"HOST_AUDIT\"\n\"WEBAPP\"\nThe type of findings the rule targets.\nAND (OPTION 1) (object) or OR (OPTION 2) (object)\nFilter rules based on the targeted vulnerabilities. Use the and  array\nto combine multiple conditions that all must be true. Use the or\narray to combine multiple conditions where at least one must be true.\nstring <date-time>\nOptional date and time indicating when the rule will expire. It has to\nbe an ISO timestamp. If no expiry date is specified, the rule is set to\nnever expire.\nobject\nDetails about a rule when it is disabled.\n— 400\nReturned if your request specified invalid parameters, if your request was improperly formatted, or if\nyou attempted to create a duplicate rule.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\nupdated_at\nlast_processed_at\ndescription\nresource_type\nfilter\nexpires_at\ndisabled_details\nstatusCode\nerror\nmessage\n— 403 Returned if you do not have permission to update recast rules.\n— 404 Returned if the specified recast rule was not found.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 442,
+      "end": 444
+    },
+    "content_stats": {
+      "char_count": 2461,
+      "word_count": 391
+    },
+    "hierarchy": {
+      "parent": "Update recast rule",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

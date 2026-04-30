@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_498",
+  "section_number": "1.15.4.1",
+  "header": "How DNS Sinkholing Works",
+  "content": "DNS sinkholing helps you to identify infected hosts on the protected network using DNS traffic\nin situations where the firewall cannot see the infected client's DNS query (that is, the firewall\ncannot see the originator of the DNS query). In a typical deployment where the firewall is north of\nthe local DNS server, the threat log will identify the local DNS resolver as the source of the traffic\nrather than the actual infected host. Sinkholing malware DNS queries solves this visibility problem\nby forging responses to the client host queries directed at malicious domains, so that clients\nattempting to connect to malicious domains (for command-and-control, for example) will instead\nattempt to connect to a default Palo Alto Networks sinkhole IP address (or to IP address that you\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n913\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\ndefine if you choose to Configure DNS Sinkholing for a List of Custom Domains). Infected hosts\ncan then be easily identified in the traffic logs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 913,
+      "end": 914
+    },
+    "content_stats": {
+      "char_count": 1024,
+      "word_count": 165
+    },
+    "hierarchy": {
+      "parent": "Use DNS Queries to Identify Infected Hosts on the Network",
+      "children": []
+    }
+  }
+}

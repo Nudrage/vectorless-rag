@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_056",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "\nThere is no recommendation for this event in this document.\n\nThis event is typically an informational event and it is difficult to detect any malicious activity using this event. It’s mainly used for DPAPI troubleshooting.\n4695(S, F): Unprotection of auditable protected data was attempted.\nThis event generates if DPAPI CryptUnprotectData() function was used to unprotect “auditable” data that was encrypted using CryptProtectData() function with CRYPTPROTECT_AUDIT\nflag (dwFlags) enabled.\nThere is no example of this event in this document.\nEvent Schema:\nUnprotection of auditable protected data was attempted.\nSubject:\nSecurity ID:%1\nAccount Name:%2\nAccount Domain:%3\nLogon ID:%4\nProtected Data:\nData Description:%6\nKey Identifier:%5\nProtected Data Flags:%7\nProtection Algorithms:%8\nStatus Information:\nStatus Code:%9\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 185,
+      "end": 185
+    },
+    "content_stats": {
+      "char_count": 927,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Audit DPAPI Activity",
+      "children": []
+    }
+  }
+}

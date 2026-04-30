@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_249",
+  "section_number": "1.10.6",
+  "header": "HA Clustering Best Practices and Provisioning",
+  "content": "These are the provisioning requirements and best practices for HA clustering.\n• Provisioning Requirements and Best Practices\n• HA cluster members must be the same firewall model and run the same PAN-OS\n® version.\nWhen upgrading, firewall members will continue to synchronize sessions with one\nmember at a different version.\n• It is highly recommended and a best practice to use Panorama to provision HA cluster\nmembers to keep all configuration and policies synchronized among all cluster members.\n• HA cluster members must be licensed for the same components to ensure consistent policy\nenforcement and content inspection capabilities.\n• The licenses must expire at the same time to prevent mismatched licenses and loss of\nfunctionality.\n• All cluster members should be running with the same version of dynamic Content Updates\nfor consistent security enforcement.\n• HA cluster members must share the same zone names in order for sessions to successfully\nfail over to another cluster member. For example, suppose sessions going to an ingress zone\nnamed internal are dropped because the link is down. For those sessions to fail over to\nan HA firewall peer in the cluster, that peer must also have a zone named internal.\n• Client-to-server and server-to-client flows must go back to the same firewall under normal\n(non-failure) conditions in order for security content scanning to occur. Asymmetric traffic\nwon’t be dropped, but it cannot be scanned for security purposes.\n• Session Synchronization Best Practices\n• Dedicated HA communication interfaces should be used over dataplane interfaces. HSCI\ninterfaces aren’t used for HA4. This allows separation of HA pair and cluster session\nsynchronization to ensure maximum bandwidth and reliability for session syncing.\n• HA4 should be adequately sized if you use dataplane interfaces. This ensures best effort\nsession state synchronizing between cluster members.\n• Best practice is to have a dedicated cluster network for the HA4 communications link to\nensure adequate bandwidth and non-congested, low-latency connections between cluster\nmembers.\n• Architect your networks and perform traffic engineering to avoid possible race conditions,\nin which a network steers traffic from the session owner to a cluster member before the\nsession is successfully synced between the firewalls. Layer2 HA4 connections must have\nsufficient bandwidth and low latency to allow timely synchronization between HA members.\nThe HA4 latency must be lower than the latency incurred when the peering devices switch\ntraffic between cluster members.\n• Architect your networks to minimize asymmetric flows. Session setup requires one cluster\nmember to see the complete TCP three-way handshake.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n440\n©2025 Palo Alto Networks, Inc.\nHigh Availability\n• Health Check Best Practices\n• On HA pairs in a cluster, configure an Active/Passive pair with HA backup communication\nlinks for HA1, HA2, and HA4. Configure an Active/Active pair with HA backup\ncommunications links for HA1, HA2, HA3, and HA4.\n• Configure HA4 backup links on all cluster members.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n441\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 440,
+      "end": 442
+    },
+    "content_stats": {
+      "char_count": 3200,
+      "word_count": 491
+    },
+    "hierarchy": {
+      "parent": "High Availability",
+      "children": []
+    }
+  }
+}

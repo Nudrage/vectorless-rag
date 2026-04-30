@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_048",
+  "section_number": "1.3.8.4",
+  "header": "Manage Administrator Access",
+  "content": "The firewall is preconfigured with a default administrative account (admin) that provides\nfull read-write access (also known as superuser access) to the firewall. You must change the\ndefault admin account password (Device > Administrators > admin) immediately upon initial\nconfiguration.\nIf compliance, audit, or security requirements stipulate that the default administrative account\nmust be removed from your devices, you can remove it after you create at least one other\nsuperuser administrative account. You cannot remove the default administrative account until\nyou configure at least one other superuser administrative account on the device.\nConfigure a Firewall Administrator Account for each individual who needs access to the\nadministrative or reporting functions of the firewall. This allows you to better protect the\nfirewall from unauthorized configuration (or modification) and to enable logging of the actions\nof each individual administrator.\nAssign each administrator account to an admin role profile that limits management privileges to\nonly those functions the individual administrator needs.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n68\n©2025 Palo Alto Networks, Inc.\nGetting Started\nFor administrators with change privileges, require MFA using external authentication and\nauthorization using RADIUS or SAML. See Configure Local or External Authentication for\nFirewall Administrators for details on how to configure external authentication with MFA.\nIf you have a strong authentication infrastructure using smart cards, Configure\nCertificate-Based Administrator Authentication to the Web Interface and\nConfigure SSH Key-Based Administrator Authentication to the CLI.\nIf available, use privileged account management (PAM) and/or privileged identity\nmanagement (PIM) solutions to secure administrator credentials externally.\nMonitor the System logs to identify abnormal account activity on any of your administrator\naccounts. For example, if the logs show excessive login attempts or repeated logins at certain\ntimes of day, this may indicate that an administrative account has been compromised. Also,\neducate all administrators about how to Use the Administrator Login Activity Indicators to\nDetect Account Misuse.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 68,
+      "end": 69
+    },
+    "content_stats": {
+      "char_count": 2231,
+      "word_count": 309
+    },
+    "hierarchy": {
+      "parent": "Best Practices for Securing Administrative Access",
+      "children": []
+    }
+  }
+}

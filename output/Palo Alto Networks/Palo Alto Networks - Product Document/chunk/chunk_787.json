@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_787",
+  "section_number": "1.21.8.1",
+  "header": "IGMP",
+  "content": "Internet Group Management Protocol (IGMP) is an IPv4 protocol that a multicast receiver uses\nto communicate with an interface on a Palo Alto Networks® firewall and that the firewall uses\nto track the membership of multicast groups. When a host wants to receive multicast traffic, its\nimplementation of IGMP sends an IGMP Membership report message and the receiving router, in\nturn, sends a PIM Join message to the multicast group address of the group that the host wants to\njoin. An IGMP-enabled router on the same physical network (such as an Ethernet segment) then\nuses PIM to communicate with other PIM-enabled routers to determine a path from the source to\ninterested receivers.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1411\n©2025 Palo Alto Networks, Inc.\nNetworking\nEnable IGMP only on interfaces that face a multicast receiver. The receivers can be only one Layer\n3 hop away from the virtual router. IGMP messages are Layer 2 messages that have a TTL value\nof one and, therefore, cannot go outside the LAN.\nWhen you Configure IP Multicast, specify whether an interface uses IGMP Version 1, IGMP\nVersion 2, or IGMP Version 3. You can enforce the IP Router Alert option, RFC 2113, so that\nincoming IGMP packets that use IGMPv2 or IGMPv3 have the IP Router Alert option.\nBy default, an interface accepts IGMP Membership reports for all multicast groups. You can\nconfigure multicast group permissions to control the groups for which the virtual router accepts\nMembership reports from any source (Any-Source Multicast, or ASM), which is basically PIM\nSparse Mode (PIM-SM). You can also specify the groups for which the virtual router accepts\nMembership reports from a specific source (PIM Source-Specific Multicast [PIM-SSM]). If you\nspecify permissions for either ASM or SSM groups, the virtual router denies Membership reports\nfrom other groups. The interface must use IGMPv3 to pass PIM-SSM traffic.\nYou can specify the maximum number of sources and the maximum number of multicast groups\nthat IGMP can process simultaneously for an interface.\nThe virtual router multicasts an IGMP Query at regular intervals to all receivers of a multicast\ngroup. A receiver responds to an IGMP Query with an IGMP Membership report that confirms the\nreceiver still wants to receive multicast traffic for that group. The virtual router maintains a table\nof the multicast groups that have receivers; the virtual router forwards a multicast packet out the\ninterface to the next hop only if there is still a receiver down that multicast distribution tree that\nis joined to the group. The virtual router does not track exactly which receivers are joined to a\ngroup. Only one router on a subnet responds to IGMP Queries and that is the IGMP Querier—the\nrouter with the lowest IP address.\nYou can configure an interface with an IGMP Query interval and the amount of time allowed for\na receiver to respond to a query (the Max Query Response Time). When a virtual router receives\nan IGMP Leave message from a receiver to leave a group, the virtual router checks that the\ninterface that received the Leave message is not configured with the Immediate Leave option.\nIn the absence of the Immediate Leave option, the virtual router sends a Query to determine\nwhether there are still receiver members for the group. The Last Member Query Interval specifies\nhow many seconds are allowed for any remaining receivers for that group to respond and confirm\nthat they still want multicast traffic for that group.\nAn interface supports the IGMP robustness variable, which you can adjust so that the firewall\nthen tunes the Group Membership Interval, Other Querier Present Interval, Startup Query Count,\nand Last Member Query Count. A higher robustness variable can accommodate a subnet that is\nlikely to drop packets.\nView IP Multicast Information to see IGMP-enabled interfaces, the IGMP version, Querier\naddress, robustness setting, limits on the number of multicast groups and sources, and whether\nthe interface is configured for Immediate Leave. You can also see the multicast groups to which\ninterfaces belong and other IGMP membership information.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1411,
+      "end": 1412
+    },
+    "content_stats": {
+      "char_count": 4121,
+      "word_count": 671
+    },
+    "hierarchy": {
+      "parent": "IP Multicast",
+      "children": []
+    }
+  }
+}

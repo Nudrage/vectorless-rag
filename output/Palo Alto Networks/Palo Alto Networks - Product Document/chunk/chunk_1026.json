@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1026",
+  "section_number": "1.24.1",
+  "header": "Network Segmentation Using Zones",
+  "content": "The larger the network, the more difficult it is to protect. A large, unsegmented network presents\na large attack surface that can be difficult to manage and protect. Because traffic and applications\nhave access to the entire network, once an attacker gains entry to a network, the attacker can\nmove laterally through the network to access critical data. A large network is also more difficult\nto monitor and control. Segmenting the network limits an attacker’s ability to move through the\nnetwork by preventing lateral movement between zones.\nA security zone is a group of one or more physical or virtual firewall interfaces and the network\nsegments connected to the zone’s interfaces. You control protection for each zone individually\nso that each zone receives the specific protections it needs. For example, a zone for the finance\ndepartment may not need to allow all of the applications that a zone for IT allows.\nTo fully protect your network, all traffic must flow through the firewall. Configure Interfaces\nand Zones to create separate zones for different functional areas such as the internet gateway,\nsensitive data storage, and business applications, and for different organizational groups such\nas finance, IT, marketing, and engineering. Wherever there is a logical division of functionality,\napplication usage, or user access privileges, you can create a separate zone to isolate and protect\nthe area and apply the appropriate security policy rules to prevent unnecessary access to data\nand applications that only one or some groups need to access. The more granular the zones, the\ngreater the visibility and control you have over network traffic. Dividing your network into zones\nhelps to create a Zero Trust architecture that executes a security philosophy of trusting no users,\ndevices, applications, or packets, and verifying everything. The end goal is to create a network\nthat allows access only to the users, devices, and applications that have legitimate business needs,\nand to deny all other traffic.\nHow to appropriately restrict and permit access to zones depends on the network environment.\nFor example, environments such as semiconductor manufacturing floors or robotic assembly\nplants, where the workstations control sensitive manufacturing equipment, or highly restricted\naccess areas, may require physical segmentation that permits no access from outside devices (no\nmobile device access).\nIn environments where users can access the network with mobile devices, enabling User-ID\nand App-ID in conjunction with segmenting the network into zones ensures that users receive\nthe appropriate access privileges regardless of where they access the network, because access\nprivileges are tied to a user or a user group instead of to a device in one particular zone.\nThe protection requirements for different functional areas and groups may also differ. For\nexample, a zone that handles a large amount of traffic may require different flood protection\nthresholds than a zone that normally handles less traffic. The ability to define the appropriate\nprotection for each zone is another reason to segment the network. What appropriate protection\nis depends on your network architecture, what you want to protect, and what traffic you want to\npermit and deny.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1726\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1726,
+      "end": 1727
+    },
+    "content_stats": {
+      "char_count": 3389,
+      "word_count": 526
+    },
+    "hierarchy": {
+      "parent": "Zone Protection and DoS Protection",
+      "children": []
+    }
+  }
+}

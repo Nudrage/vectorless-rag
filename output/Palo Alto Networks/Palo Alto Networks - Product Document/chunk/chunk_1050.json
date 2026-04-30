@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1050",
+  "section_number": "1.24.4.3.1",
+  "header": "Use Case: Non-IP Protocol Protection Between Security Zones on Layer 2 Interfaces",
+  "content": "In this use case, the firewall is in a Layer 2 VLAN divided into two subinterfaces. VLAN 100 is\n192.168.100.1/24, subinterface .6. VLAN 200 is 192.168.100.1/24, subinterface .7. Non-IP\nprotocol protection applies to ingress zones. In this use case, if the Internet zone is the ingress\nzone, the firewall blocks the Generic Object Oriented Substation Event (GOOSE) protocol. If\nthe User zone is the ingress zone, the firewall allows the GOOSE protocol. The firewall implicitly\nallows IPv4, IPv6, ARP, and VLAN-tagged frames in both zones.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1748\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 1 |\nConfigure two VLAN subinterfaces.\n1.\nSelect Network > Interfaces > VLAN and Add an interface.\n2.\nInterface Name defaults to vlan. After the period, enter 7.\n3.\nOn the Config tab, Assign Interface To the VLAN 200.\n4.\nClick OK.\n5.\nSelect Network > Interfaces > VLAN and Add an interface.\n6.\nInterface Name defaults to vlan. After the period, enter 6.\n7.\nOn the Config tab, Assign Interface To the VLAN 100.\n8.\nClick OK.\nSTEP 2 |\nConfigure protocol protection in a Zone Protection profile to block GOOSE protocol packets.\n1.\nSelect Network > Network Profiles > Zone Protection and Add a profile.\n2.\nEnter the Name Block GOOSE.\n3.\nSelect Protocol Protection.\n4.\nChoose Rule Type of Exclude List.\n5.\nEnter the Protocol Name, GOOSE, to easily identify the Ethertype on the list. The\nfirewall doesn’t verify that the name you enter matches the Ethertype code; it uses only\nthe Ethertype code to filter.\n6.\nEnter Ethertype code 0x88B8. The Ethertype must be preceded by 0x to indicate a\nhexadecimal value. Range is 0x0000 to 0xFFFF.\n7.\nSelect Enable to enforce the protocol protection. You can disable a protocol on the list,\nfor example, for testing.\n8.\nClick OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1749\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 3 |\nApply the Zone Protection profile to the Internet zone.\n1.\nSelect Network > Zones and Add a zone.\n2.\nEnter the Name of the zone, Internet.\n3.\nFor Location, select the virtual system where the zone applies.\n4.\nFor Type, select Layer2.\n5.\nAdd the Interface that belongs to the zone, vlan.7.\n6.\nFor Zone Protection Profile, select the profile Block GOOSE.\n7.\nClick OK.\nSTEP 4 |\nConfigure protocol protection to allow GOOSE protocol packets.\nCreate another Zone protection profile named Allow GOOSE, and choose Rule Type of Include\nList.\nWhen configuring an Include list, include all required non-IP protocols; an incomplete\nlist can result in legitimate non-IP traffic being blocked.\nSTEP 5 |\nApply the Zone Protection profile to the User zone.\n1.\nSelect Network > Zones and Add a zone.\n2.\nEnter the Name of the zone, User.\n3.\nFor Location, select the virtual system where the zone applies.\n4.\nFor Type, select Layer2.\n5.\nAdd the Interface that belongs to the zone, vlan.6.\n6.\nFor Zone Protection Profile, select the profile Allow GOOSE.\n7.\nClick OK.\nSTEP 6 |\nCommit.\nClick Commit.\nSTEP 7 |\nView the number of non-IP packets the firewall has dropped based on protocol protection.\nAccess the CLI.\n> show counter global name pkt_nonip_pkt_drop\n> show counter global name pkt_nonip_pkt_drop delta yes",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1748,
+      "end": 1750
+    },
+    "content_stats": {
+      "char_count": 3231,
+      "word_count": 545
+    },
+    "hierarchy": {
+      "parent": "Configure Protocol Protection",
+      "children": []
+    }
+  }
+}

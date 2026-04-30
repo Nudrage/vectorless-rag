@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_619",
+  "section_number": "1.17.12.1",
+  "header": "Monitor Web Activity of Network Users",
+  "content": "You can use the ACC, URL filtering reports, and logs that are generated on the firewall to track\nuser activity.\nFor a quick view of the most common categories users access in your environment, check\nthe ACC widgets. Most Network Activity widgets allow you to sort on URLs. For example, in\nthe Application Usage widget, you can see that the networking category is the most accessed\ncategory, followed by encrypted tunnel, and ssl. You can also view the list of Threat Activity\nand Blocked Activity sorted on URLs.\nView logs and configure log options:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1142\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nFrom the ACC, you can jump directly to the logs (\n) or select Monitor > Logs > URL Filtering.\nThe log action for each entry depends on the Site Access setting you defined for the\ncorresponding category:\n• Alert log—In this example, the computer-and-internet-info category is set to alert.\n• Block log—In this example, the insufficient-content category is set to continue. If the\ncategory had been set to block instead, the log Action would be block-url.\n• Alert log on encrypted website—In this example, the category is private-ip-addresses and\nthe application is web-browsing. This log also indicates that the firewall decrypted this\ntraffic.\nYou can also add several other columns to your URL Filtering log view, such as: to and from\nzone, content type, and whether or not a packet capture was performed. To modify what\ncolumns to display, click the down arrow in any column and select the attribute to display.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1143\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nTo view the complete log details and/or request a category change for the given URL that was\naccessed, click the log details icon in the first column of the log.\nGenerate predefined URL filtering reports on URL categories, URL users, Websites accessed,\nBlocked categories, and more.\nSelect Monitor > Reports and under the URL Filtering Reports section, select one of the\nreports. The reports cover the 24-hour period of the date you select on the calendar. You can\nalso export the report to PDF, CSV, or XML.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1142,
+      "end": 1144
+    },
+    "content_stats": {
+      "char_count": 2154,
+      "word_count": 360
+    },
+    "hierarchy": {
+      "parent": "Monitor Web Activity",
+      "children": []
+    }
+  }
+}

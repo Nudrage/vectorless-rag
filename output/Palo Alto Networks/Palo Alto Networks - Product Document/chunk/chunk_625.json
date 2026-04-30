@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_625",
+  "section_number": "1.17.15.1",
+  "header": "Basic Guidelines For URL Category Exception Lists",
+  "content": "Consider the potential matches an entry might have before adding it to a URL category exception\nlist. The following guidelines specify how to create an entry that blocks or allows the websites and\npages you intend. Create and evaluate existing entries against these guidelines to ensure you do\nnot block or allow access to more URLs than anticipated.\nThe firewall assumes an implicit asterisk at the end of domain entries that do not end in a trailing\nslash (/) or asterisk (*). For example, if you add example.com to a URL list of allowed websites,\nthe firewall interprets that entry as example.com.*. As a result, the firewall allows access to\nsites such as example.com.domain.xyz.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1154\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nTo prevent the firewall from assuming the implicit asterisk, you can append a trailing slash\nto domain entries that do not end in a / or *. The addition of the trailing slash changes the\nURLs that the firewall considers a match and for which it enforces policy. In non-wildcard\ndomain entries, the trailing slash limits matches to the given domain and its subdirectories.\nFor example, example.com (example.com/ after processing) matches itself and\nexample.com/search.\nIn wildcard domain entries (entries with asterisks or carets), the trailing slash limits\nmatches to URLs that conform to the specified pattern. For example, to match the\nentry *.example.com, a URL must include at least one subdomain and end with\nthe root domain, example.com. The pattern is: <subdomain>.example.com;\nnews.example.com is a match, but example.com is not because it lacks a\nsubdomain.\nYou can enable the firewall to automatically append a trailing slash to applicable entries\nusing the following command line interface (CLI) commands:\nadmin@PA-850> debug device-server append-end-token on\nadmin@PA-850> configure\nadmin@PA-850# commit\nWe recommend manually adding trailing slashes to clarify the intended matching behavior\nof an entry for anyone who inspects it. The trailing slash is invisible if added by the\nfirewall. To disable this feature:\nadmin@PA-850> debug device-server append-end-token off\nadmin@PA-850> configure\nadmin@PA-850# commit\nPanorama™ management servers running PAN-OS\n® 10.2 cannot enable this feature for\nfirewalls running PAN-OS 10.1 or earlier. You have to enable this feature on each firewall\nrunning PAN-OS 10.1 or earlier.\n• List entries are case-insensitive.\n• Omit http and https from URL entries.\n• Each URL entry can be up to 255 characters in length.\n• Every domain that does not end in a / or an * has an implicit asterisk to its end. The firewall\nprocesses the entry as if you entered: <domain>.*.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1155\n©2025 Palo Alto Networks, Inc.\nURL Filtering\n• Enter an exact match to the website you want to block or allow or use wildcards to create a\npattern match.\nDifferent entries result in different exact matches. If you enter the URL for a specific\nweb page (example.com/contact), the firewall limits matches to that page alone.\nExact matching for a domain with a trailing slash restricts matches to the domain\nitself and its subdirectories. If you enter a domain (without a trailing slash), the firewall\nmatches additional URLs due to the implicit asterisk.\n• Consider adding the URLs most commonly used to access a website or page to your exception\nlist (for example, blog.paloaltonetworks.com and paloaltonetworks.com/blog) if\nthe original entry is accessible from more than URL.\n• The entry example.com is distinct from www.example.com. The domain name is the same,\nbut the second entry contains the www subdomain.\nPalo Alto Networks does not support regular expression use in custom URL category or\nexternal dynamic list entries. You must know the specific URLs or be able to construct the\nURL patterns you want to match using wildcards and the following characters: . / ? &\n= ; +.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1154,
+      "end": 1156
+    },
+    "content_stats": {
+      "char_count": 3915,
+      "word_count": 625
+    },
+    "hierarchy": {
+      "parent": "URL Category Exceptions",
+      "children": []
+    }
+  }
+}

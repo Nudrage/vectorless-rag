@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_425",
+  "section_number": "1.12.5.7",
+  "header": "Configure User Mapping for Terminal Server Users",
+  "content": "Individual terminal server users appear to have the same IP address and therefore an IP address-\nto-username mapping is not sufficient to identify a specific user. To identify specific users on\nWindows-based terminal servers, the Palo Alto Networks Terminal Server agent (TS agent)\nallocates a port range to each user. The TS agent then notifies every connected firewall about\nthe allocated port range, which allows the firewall to create an IP address-port-user mapping\ntable and enable user- and group-based security policy enforcement. For non-Windows terminal\nservers, configure the PAN-OS XML API to extract user mapping information. The following\nvalues apply for both methods:\n• Default port range: 1025 to 65534\n• Per user block size: 200\n• Maximum number of multi-user systems: 2,500\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n768\n©2025 Palo Alto Networks, Inc.\nUser-ID\nFor information about the terminal servers supported by the TS agent and the number of TS\nagents supported on each firewall model, refer to the Palo Alto Networks Compatibility Matrix\nand the Product Comparison Tool.\nThe following sections describe how to configure user mapping for terminal server users:\n• Configure the Palo Alto Networks Terminal Server (TS) Agent for User Mapping\n• Retrieve User Mappings from a Terminal Server Using the PAN-OS XML API",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 768,
+      "end": 769
+    },
+    "content_stats": {
+      "char_count": 1334,
+      "word_count": 209
+    },
+    "hierarchy": {
+      "parent": "Map IP Addresses to Users",
+      "children": [
+        "Configure the Palo Alto Networks Terminal Server (TS) Agent for User Mapping",
+        "Retrieve User Mappings from a Terminal Server Using the PAN-OS XML API"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_374",
+  "section_number": "1.11.15.6.7",
+  "header": "IEEE 802.3 LAG MIB",
+  "content": "Use the IEEE 802.3 LAG MIB to monitor the status of aggregate groups that have Link\nAggregation Control Protocol (LACP) enabled. When the firewall logs LACP events, it also\ngenerates traps that are useful for troubleshooting. For example, the traps can tell you whether\ntraffic interruptions between the firewall and an LACP peer resulted from lost connectivity or\nfrom mismatched interface speed and duplex values.\nPAN-OS implements the following SNMP tables for LACP.\nThe dot3adTablesLastChanged object indicates the time of the most recent change to\ndot3adAggTable, dot3adAggPortListTable, and dot3adAggPortTable.\nTable\nDescription\nAggregator\nConfiguration Table\n(dot3adAggTable)\nThis table contains information about every aggregate group that is\nassociated with a firewall. Each aggregate group has one entry.\nSome table objects have restrictions, which the dot3adAggIndex\nobject describes. This index is the unique identifier that the local\nsystem assigns to the aggregate group. It identifies an aggregate\ngroup instance among the subordinate managed objects of the\ncontaining object. The identifier is read-only.\nThe ifTable MIB (a list of interface entries) does not\nsupport logical interfaces and therefore does not have an\nentry for the aggregate group.\nAggregation\nPort List Table\n(dot3adAggPortListTable)\nThis table lists the ports associated with each aggregate group in a\nfirewall. Each aggregate group has one entry.\nThe dot3adAggPortListPorts attribute lists the complete set of ports\nassociated with an aggregate group. Each bit set in the list represents\na port member. For non-chassis platforms, this is a 64-bit value. For\nchassis platforms, the value is an array of eight 64-bit entries.\nAggregation\nPort Table\n(dot3adAggPortTable)\nThis table contains LACP configuration information about every port\nassociated with an aggregate group in a firewall. Each port has one\nentry. The table has no entries for ports that are not associated with\nan aggregate group.\nLACP Statistics Table\n(dot3adAggPortStatsTable)\nThis table contains link aggregation information about every port\nassociated with an aggregate group in a firewall. Each port has one\nrow. The table has no entries for ports that are not associated with an\naggregate group.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n668\n©2025 Palo Alto Networks, Inc.\nMonitoring\nThe IEEE 802.3 LAG MIB includes the following LACP-related traps:\nTrap Name\nDescription\npanLACPLostConnectivityTrap\nThe peer lost connectivity to the firewall.\npanLACPUnresponsiveTrap The peer does not respond to the firewall.\npanLACPNegoFailTrap\nLACP negotiation with the peer failed.\npanLACPSpeedDuplexTrap The link speed and duplex settings on the firewall and peer do not\nmatch.\npanLACPLinkDownTrap\nAn interface in the aggregate group is down.\npanLACPLacpDownTrap\nAn interface was removed from the aggregate group.\npanLACPLacpUpTrap\nAn interface was added to the aggregate group.\nFor the MIB definitions, refer to IEEE 802.3 LAG MIB.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 668,
+      "end": 669
+    },
+    "content_stats": {
+      "char_count": 2976,
+      "word_count": 434
+    },
+    "hierarchy": {
+      "parent": "Supported MIBs",
+      "children": []
+    }
+  }
+}

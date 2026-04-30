@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_196",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Syslog field\nname\nName\nLog viewer -\nDetail view field\nname\nData\ntype Length\nFormat/Description\nPossible\nvalues\nNotes/Examples\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 225\nlog_type\nN/A\nlog_type\nString\nContent\nFiltering\nlog_component N/A\nlog_component\nString\nWeb\nContent\nPolicy\nlog_subtype\nN/A\nlog_subtype\nString\nThe action taken for the\nlogged transaction\nAlert\npriority\nN/A\nN/A\nString\nuser_name\nUsername\nuser\nString 384\nThe end-user associated\nwith the item being\nscanned\nuserid\nString\nsrc_ip\nN/A\nsrc_ip\nThe IP address of the\nuser trying to\ndownload/upload\ncontent\ntransactionid\nTransaction\nID\ntransaction_id\nString 64\nIndicates the\ntransaction_id of the AV\nscan. The same\ntransaction_id appears\nin the Web Filter logs\nallowing the admin to\nview the Web policy\ndecision associated with\na particular transaction\neg.\ntransaction_id=\"e4a127f7-\na850-477c-920e-\na471b38727c1\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 226\ndictionaryname Content\nFilter\ncontent_filter_key String 128\nThe name of the custom/\npredefined content filter\nmatched during content\nscanning\neg. EthnicitytermsCA\nsitecategory\nSite\nCategory\nsite_category\nString 64\nThe web category of the\nwebsite accessed\nwebsite\nWebsite\nwebsite\nString 512\nThe domainname of\nlocation where content\nis being downloaded\nfrom or uploaded to\ndirection\nDirection\ndirection\nString 64\nThe direction of the\ncontent being scanned\nin\nout\n•\n\"in\" when content is\nbeing downloaded\n•\n\"out\" when content\nis being uploaded\naction\nAction\naction\nString 64\nThe web policy action\ntaken on the content\n,based on the web policy\nrule\nDeny\nLog\n•\n\"Deny\" when\nwebsite is blocked\ndue to content match\n•\n\"Log\" when content\nmatches are logged\nand acl system\ncontinues with\npolicy rules to make\nhe final decision\nfilename\nFilename\nfile_name\nString 1024\nname of the file being\ndownloaded or uploaded\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 227\ncontextmatch\nContext\ncontext_match\nString 128\nThe string(context) of\nthe file that matches the\nexact word/words\ndefined in the content\nFilter\neg. context_match=\"far\"\ncontextprefix\nContext\ncontext_prefix\nString 64\nThe string (context) of\nthe file that precedes the\nmatched content\neg. context_prefix=\"This\nplace is  \"\ncontextsuffix\nContext\ncontext_suffix\nString 64\nThe string (context) of\nthe file that succeeds the\nmatched content\neg. context_suffix=\" from\nhome! \"\nlog_id\nN/A\nString\neg. \"010101600001\"\ndevice\nN/A\nString\neg \"SFW\"\ndevice_name\nN/A\nString\neg \"SF01V\"\ndevice_id\nN/A\nString\neg \"SFDemo-ff94e90\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 225,
+      "end": 228
+    },
+    "content_stats": {
+      "char_count": 2550,
+      "word_count": 380
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (legacy)",
+      "children": []
+    }
+  }
+}

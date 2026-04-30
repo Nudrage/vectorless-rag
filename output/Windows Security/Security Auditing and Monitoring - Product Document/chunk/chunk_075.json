@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_075",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4929(S, F): An Active Directory replica source naming context was removed.\n\nMonitor for Source Address field, because the source of the request must be authorized for this action. If you find\nany unauthorized DRA you should trigger an event.\n\nThis event is typically used for Active Directory replication troubleshooting.\n4930(S, F): An Active Directory replica source naming context was modified.\nEvent Description:\nThis event generates every time Active Directory replica source naming context was modified.\nFailure event generates if an error occurs (Status Code != 0).\nIt is not possible to understand what exactly was modified from this event.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n© 2016 Microsoft. All rights reserved.\n239\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4930</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>14083</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-08-27T18:56:51.474057400Z\" />\n<EventRecordID>1564</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"504\" ThreadID=\"1280\" />\n<Channel>Security</Channel>\n<Computer>Win2012r2.corp.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"DestinationDRA\">CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local</Data>\n<Data Name=\"SourceDRA\">-</Data>\n<Data Name=\"SourceAddr\">edf0bef9-1f73-4df3-8991-f6ec2d4ef3ae</Data>\n<Data Name=\"NamingContext\">CN=Schema,CN=Configuration,DC=contoso,DC=local</Data>\n<Data Name=\"Options\">0</Data>\n<Data Name=\"StatusCode\">0</Data>\n</EventData>\n</Event>\nRequired Server Roles: Active Directory domain controller.\nMinimum OS Version: Windows Server 2008.\nEvent Versions: 0.\nField Descriptions:\n\nDestination DRA [Type = UnicodeString]: destination directory replication agent distinguished name.\nThe Directory Replication Agent (DRA) handles replication between domain controllers. The Directory Replication Agent uses the connection objects in the topology map to\nfind out those partners that are relevant when replicating changes to directory partitions. The DRA sends a replication request to the partners of a domain controller when\nthe domain controller needs to update its copy of Active Directory.\n\nSource DRA [Type = UnicodeString]: source directory replication agent distinguished name. Typically equals “-“ for this event.\nThe LDAP API references an LDAP object by its distinguished name (DN). A DN is a sequence of relative distinguished names (RDN) connected by commas.\nAn RDN is an attribute with an associated value in the form attribute=value; . These are examples of RDNs attributes:\n© 2016 Microsoft. All rights reserved.\n240\n\nDC - domainComponent\n\nCN - commonName\n\nOU - organizationalUnitName\n\nO - organizationName\n\nSource Address [Type = UnicodeString]: DNS record of computer from which the modification request was received.\n\nNaming Context [Type = UnicodeString]: naming context which was modified.\nThe Directory Tree of Active Directory tree is partitioned to allow sections to be distributed (replicated) to domain controllers in different domains within the forest. Each\ndomain controller stores a copy of a specific part of the directory tree, called a Naming Context also known as Directory Partition. Naming Context is replicated as a unit to\nother domain controllers in the forest that contain a replica of the same sub tree. A Naming Context is also called a Directory Partition.\n\nOptions [Type = UInt32]: decimal value of DRS Options.\n\nStatus Code [Type = UInt32]: if there are no issues or errors, the status code will be 0. If an error happened, you will receive Failure event and Status Code will not be equal to “0”.\nYou can check error code meaning here: https://msdn.microsoft.com/en-us/library/windows/desktop/ms681381(v=vs.85).aspx",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 239,
+      "end": 241
+    },
+    "content_stats": {
+      "char_count": 4030,
+      "word_count": 508
+    },
+    "hierarchy": {
+      "parent": "Audit Detailed Directory Service Replication",
+      "children": []
+    }
+  }
+}

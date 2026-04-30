@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_306",
+  "section_number": "1.11.7.1.14",
+  "header": "Decryption Logs",
+  "content": "Decryption Logs display entries for unsuccessful TLS handshakes by default and can display\nentries for successful TLS handshakes if you enable them in Decryption policy. If you enable\nentries for successful handshakes, ensure that you have the system resources (log space) for the\nlogs.\nDecryption logs include a vast amount of information to help you Troubleshoot and Monitor\nDecryption and then resolve issues. There are 62 columns of different types of information you\ncan enable in the logs, and you can select any individual log (\n, the magnifying glass) and see\nthe details in a single Detail view. You can view certificate, cipher suite, and error information\nsuch as: subject common name, issuer common name, root common name, root status, certificate\nkey type and size, certificate start and end date, certificate serial number, certificate fingerprint,\nTLS version, key exchange algorithm, encryption algorithm, negotiated EC curve, authentication\nalgorithm, SNI, proxy type, errors information (cipher, HSM, resource, resume, protocol, feature,\ncertificate, version), and error indexes (codes that you can look up to get more error information).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 525,
+      "end": 525
+    },
+    "content_stats": {
+      "char_count": 1156,
+      "word_count": 175
+    },
+    "hierarchy": {
+      "parent": "Log Types and Severity Levels",
+      "children": []
+    }
+  }
+}

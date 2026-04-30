@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_009",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4771(F): Kerberos pre-authentication failed.\nType of monitoring required\nRecommendation\nHigh-value accounts: You might have high-value domain or local accounts for which you\nneed to monitor each action.\nExamples of high-value accounts are database administrators, built-in local administrator\naccount, domain administrators, service accounts, domain controller accounts and so on.\nMonitor this event with the “Security ID” that corresponds to the high-value account or\naccounts.\nAnomalies or malicious actions: You might have specific requirements for detecting\nanomalies or monitoring potential malicious actions. For example, you might need to\nmonitor for use of an account outside of working hours.\nWhen you monitor for anomalies or malicious actions, use the “Security ID” (with other\ninformation) to monitor how or when a particular account is being used.\nNon-active accounts: You might have non-active, disabled, or guest accounts, or other\naccounts that should never be used.\nMonitor this event with the “Security ID” that corresponds to the accounts that should\nnever be used.\nAccount whitelist: You might have a specific whitelist of accounts that are the only ones\nallowed to perform actions corresponding to particular events.\nIf this event corresponds to a “whitelist-only” action, review the “Security ID” for accounts\nthat are outside the whitelist.\n© 2016 Microsoft. All rights reserved.\n46\nAccount naming conventions: Your organization might have specific naming conventions\nfor account names.\nMonitor “Subject\\Account Name” for names that don’t comply with naming conventions.\n\nYou can track all 4771 events where the Client Address is not from your internal IP range or not from private IP ranges.\n\nIf you know that Account Name should be used only from known list of IP addresses, track all Client Address values for this Account Name in 4771 events. If Client Address is not\nfrom the whitelist, generate the alert.\n\nAll Client Address = ::1 means local authentication. If you know the list of accounts which should log on to the domain controllers, then you need to monitor for all possible\nviolations, where Client Address = ::1 and Account Name is not allowed to log on to any domain controller.\n\nAll 4771 events with Client Port field value > 0 and < 1024 should be examined, because a well-known port was used for outbound connection.\n\nAlso monitor the fields shown in the following table, to discover the issues listed:\nField\nIssue to discover\nPre-Authentication Type\nValue is not 15 when account must use a smart card for authentication. For more information, see Table 5. Kerberos Pre-Authentication types.\nPre-Authentication Type\nValue is not 2 when only standard password authentication is in use in the organization. For more information, see Table 5. Kerberos Pre-\nAuthentication types.\nPre-Authentication Type\nValue is not 138 when Kerberos Armoring is enabled for all Kerberos communications in the organization. For more information, see Table 5.\nKerberos Pre-Authentication types.\nResult Code\n0x10 (KDC has no support for PADATA type (pre-authentication data)). This error can help you to more quickly identify smart-card related\nproblems with Kerberos authentication.\nResult Code\n0x18 ((Pre-authentication information was invalid), if you see, for example N events in last N minutes. This can be an indicator of brute-force\nattack on the account password, especially for highly critical accounts.\n4772(F): A Kerberos authentication ticket request failed.\nCurrently this event doesn’t generate. It is a defined event, but it is never invoked by the operating system. 4768 failure event is generated instead.\n© 2016 Microsoft. All rights reserved.\n47",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 46,
+      "end": 48
+    },
+    "content_stats": {
+      "char_count": 3693,
+      "word_count": 570
+    },
+    "hierarchy": {
+      "parent": "Audit Kerberos Authentication Service",
+      "children": []
+    }
+  }
+}

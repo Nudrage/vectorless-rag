@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_708",
+  "section_number": "1.19.4.6",
+  "header": "Test VPN Connectivity",
+  "content": "Perform this task to test VPN connectivity.\nSTEP 1 |\nInitiate IKE phase 1 by either pinging a host across the tunnel or using the following CLI\ncommand:\ntest vpn ike-sa gateway <gateway_name>\nSTEP 2 |\nEnter the following command to test if IKE phase 1 is set up:\nshow vpn ike-sa gateway <gateway_name>\nIn the output, check whether the Security Association displays. If it doesn’t, review the system\nlog messages to interpret the reason for failure.\nSTEP 3 |\nInitiate IKE phase 2 by either pinging a host from across the tunnel or using the following CLI\ncommand:\ntest vpn ipsec-sa tunnel <tunnel_name>\nSTEP 4 |\nEnter the following command to test if IKE phase 2 is set up:\nshow vpn ipsec-sa tunnel <tunnel_name>\nIn the output, check whether the Security Association displays. If it doesn’t, review the system\nlog messages to interpret the reason for failure.\nSTEP 5 |\nTo view the VPN traffic flow information, use the following command:\nshow vpn flow\ntotal tunnels configured:               1\nfilter - type IPSec, state any\ntotal IPSec tunnel configured:        1\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1274\n©2025 Palo Alto Networks, Inc.\nVPNs\ntotal IPSec tunnel shown:                1\nname                    id      state      local-ip       peer-ip\ntunnel-i/f\n-----------------------------------------------------------------------------\nvpn-to-siteB       5       active\n100.1.1.1     200.1.1.1     tunnel.41",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1274,
+      "end": 1275
+    },
+    "content_stats": {
+      "char_count": 1415,
+      "word_count": 210
+    },
+    "hierarchy": {
+      "parent": "Set Up Site-to-Site VPN",
+      "children": []
+    }
+  }
+}

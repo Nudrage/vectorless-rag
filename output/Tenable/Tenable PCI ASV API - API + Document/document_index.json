@@ -1,0 +1,245 @@
+{
+  "document_name": "Tenable\\Tenable PCI ASV API - API + Document",
+  "generated_at": "2026-02-17T22:06:13.468089",
+  "outline_text": "DOCUMENT INDEX: Tenable\\Tenable PCI ASV API - API + Document\n============================================================\n\n1. Attestations [Page 1, 47 words]\n2. List attestations [Pages 1-2, 298 words]\n   2.1. Responses [Pages 2-3, 146 words]\n      2.1.1. Response samples [Pages 3-6, 224 words]\n3. Get attestation details [Page 7, 55 words]\n   3.1. Responses [Pages 7-8, 128 words]\n      3.1.1. Response samples [Pages 8-9, 104 words]\n4. List attestation disputes [Pages 9-10, 174 words]\n   4.1. Responses [Pages 10-11, 146 words]\n      4.1.1. Response samples [Pages 11-13, 138 words]\n5. List undisputed failures [Page 13, 176 words]\n   5.1. Responses [Pages 13-14, 102 words]\n      5.1.1. Response samples [Pages 14-15, 80 words]\n6. List attestation assets [Pages 15-16, 181 words]\n   6.1. Responses [Page 16, 96 words]\n      6.1.1. Response samples [Page 16, 11 words]\n7. PCI Scans [Pages 17-18, 147 words]\n8. Scans [Page 18, 1 words]\n9. List PCI scans [Page 18, 157 words]\n   9.1. Responses [Pages 18-19, 94 words]\n      9.1.1. Response samples [Pages 19-20, 102 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Attestations",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 47,
+        "summary": "After you submit a scan to Tenable for ASV review, you can use the Tenable PCI ASV API to retrieve a..."
+      },
+      {
+        "number": "2",
+        "title": "List attestations",
+        "depth": 1,
+        "chunk_id": "chunk_002",
+        "page_start": 1,
+        "page_end": 2,
+        "word_count": 298,
+        "summary": "Returns a list of PCI attestations in PCI ASV.",
+        "children": [
+          {
+            "number": "2.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 2,
+            "page_end": 3,
+            "word_count": 146,
+            "summary": "200 Returned if Tenable PCI ASV successfully retrieved the list of PCI attestations.",
+            "children": [
+              {
+                "number": "2.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_004",
+                "page_start": 3,
+                "page_end": 6,
+                "word_count": 224,
+                "summary": "200\n400\n429\n500\npagination\nrequired\nattestations\nstatusCode\nerror\nmessage\nGET\n/pci-asv/attestations/..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "title": "Get attestation details",
+        "depth": 1,
+        "chunk_id": "chunk_005",
+        "page_start": 7,
+        "page_end": 7,
+        "word_count": 55,
+        "summary": "Returns the details for the specified PCI attestation.",
+        "children": [
+          {
+            "number": "3.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_006",
+            "page_start": 7,
+            "page_end": 8,
+            "word_count": 128,
+            "summary": "200 Returned if Tenable PCI ASV successfully retrieved the details for the specified PCI attestation.",
+            "children": [
+              {
+                "number": "3.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_007",
+                "page_start": 8,
+                "page_end": 9,
+                "word_count": 104,
+                "summary": "200\n400\n429\n500\nstatusCode\nerror\nmessage\nGET\n/pci-asv/attestations/details/{attestation_uuid}\napplic..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "title": "List attestation disputes",
+        "depth": 1,
+        "chunk_id": "chunk_008",
+        "page_start": 9,
+        "page_end": 10,
+        "word_count": 174,
+        "summary": "Returns a list of disputes for the specified PCI attestation.",
+        "children": [
+          {
+            "number": "4.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_009",
+            "page_start": 10,
+            "page_end": 11,
+            "word_count": 146,
+            "summary": "200\nReturned if Tenable PCI ASV successfully retrieved the disputes for the specified PCI attestation.",
+            "children": [
+              {
+                "number": "4.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_010",
+                "page_start": 11,
+                "page_end": 13,
+                "word_count": 138,
+                "summary": "200\n400\n429\n500\nstatusCode\nerror\nmessage\nGET\n/pci-asv/attestations/details/{attestation_uuid}/disput..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "title": "List undisputed failures",
+        "depth": 1,
+        "chunk_id": "chunk_011",
+        "page_start": 13,
+        "page_end": 13,
+        "word_count": 176,
+        "summary": "Returns a list of undisputed failures of the specified PCI attestation.",
+        "children": [
+          {
+            "number": "5.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_012",
+            "page_start": 13,
+            "page_end": 14,
+            "word_count": 102,
+            "summary": "attestation_uuid\nrequired\nsort\nlimit\noffset\n200\nReturned if Tenable PCI ASV successfully retrieved t...",
+            "children": [
+              {
+                "number": "5.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_013",
+                "page_start": 14,
+                "page_end": 15,
+                "word_count": 80,
+                "summary": "200\n400\n429\n500\nGET\n/pci-asv/attestations/{attestation_uuid}/failures/undisputed/list\napplication/js..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "title": "List attestation assets",
+        "depth": 1,
+        "chunk_id": "chunk_014",
+        "page_start": 15,
+        "page_end": 16,
+        "word_count": 181,
+        "summary": "Returns a list of PCI assets attested in the specified attestation in PCI ASV.",
+        "children": [
+          {
+            "number": "6.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_015",
+            "page_start": 16,
+            "page_end": 16,
+            "word_count": 96,
+            "summary": "200 Returned if Tenable PCI ASV successfully retrieved the list of assets for the PCI attestation.",
+            "children": [
+              {
+                "number": "6.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_016",
+                "page_start": 16,
+                "page_end": 16,
+                "word_count": 11,
+                "summary": "200\n400\n429\n500\nlimit\noffset\nGET\n/pci-asv/attestations/{attestation_uuid}/assets/list\napplication/js..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "title": "PCI Scans",
+        "depth": 1,
+        "chunk_id": "chunk_017",
+        "page_start": 17,
+        "page_end": 18,
+        "word_count": 147,
+        "summary": "Tenable's PCI ASV streamlines the quarterly external vulnerability scan submission and dispute\nprocess as required by PCI 11."
+      },
+      {
+        "number": "8",
+        "title": "Scans",
+        "depth": 1,
+        "chunk_id": "chunk_018",
+        "page_start": 18,
+        "page_end": 18,
+        "word_count": 1,
+        "summary": "Scans"
+      },
+      {
+        "number": "9",
+        "title": "List PCI scans",
+        "depth": 1,
+        "chunk_id": "chunk_019",
+        "page_start": 18,
+        "page_end": 18,
+        "word_count": 157,
+        "summary": "Returns a list of PCI scans in PCI ASV.",
+        "children": [
+          {
+            "number": "9.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_020",
+            "page_start": 18,
+            "page_end": 19,
+            "word_count": 94,
+            "summary": "200 Returned if Tenable PCI ASV successfully retrieved the list of PCI scans.",
+            "children": [
+              {
+                "number": "9.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_021",
+                "page_start": 19,
+                "page_end": 20,
+                "word_count": 102,
+                "summary": "200\n400\n429\n500\nGET\n/pci-asv/scans/list\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"pagination\"..."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 21,
+    "max_depth": 3
+  }
+}

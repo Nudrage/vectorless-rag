@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_037",
+  "section_number": "1.3.3",
+  "header": "Segment Your Network Using Interfaces and Zones",
+  "content": "Traffic must pass through the firewall in order for the firewall to manage and control it. Physically,\ntraffic enters and exits the firewall through interfaces. The firewall determines how to act on\na packet based on whether the packet matches a Security policy rule. At the most basic level,\neach Security policy rule must identify where the traffic came from and where it is going. On a\nPalo Alto Networks next-generation firewall, Security policy rules are applied between zones. A\nzone is a grouping of interfaces (physical or virtual) that represents a segment of your network\nthat is connected to, and controlled by, the firewall. Because traffic can only flow between\nzones if there is a Security policy rule to allow it, this is your first line of defense. The more\ngranular the zones you create, the greater control you have over access to sensitive applications\nand data and the more protection you have against malware moving laterally throughout your\nnetwork. For example, you might want to segment access to the database servers that store your\ncustomer data into a zone called Customer Data. You can then define security policies that only\npermit certain users or groups of users to access the Customer Data zone, thereby preventing\nunauthorized internal or external access to the data stored in that segment.\n• Network Segmentation for a Reduced Attack Surface\n• Configure Interfaces and Zones",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 48,
+      "end": 48
+    },
+    "content_stats": {
+      "char_count": 1408,
+      "word_count": 232
+    },
+    "hierarchy": {
+      "parent": "Getting Started",
+      "children": [
+        "Network Segmentation for a Reduced Attack Surface",
+        "Configure Interfaces and Zones"
+      ]
+    }
+  }
+}

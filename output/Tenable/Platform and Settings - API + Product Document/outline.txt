@@ -1,0 +1,636 @@
+DOCUMENT INDEX: Tenable\Platform and Settings - API + Product Document
+======================================================================
+
+1. Access Control (API)
+   1.1. List allowed IP addresses
+      1.1.1. Responses
+         1.1.1.1. Response samples
+   1.2. Update allowed IP addresses
+      1.2.1. Responses
+2. Access Control (Groups)
+   2.1. Request samples
+   2.2. Response samples
+   2.3. Create group
+      2.3.1. Responses
+         2.3.1.1. Request samples
+         2.3.1.2. Response samples
+   2.4. List groups
+      2.4.1. Responses
+         2.4.1.1. Response samples
+   2.5. Update group
+      2.5.1. Responses
+         2.5.1.1. Request samples
+         2.5.1.2. Response samples
+   2.6. Delete group
+      2.6.1. Responses
+         2.6.1.1. Response samples
+   2.7. List users in group
+      2.7.1. Responses
+         2.7.1.1. Response samples
+   2.8. Add user to group
+      2.8.1. Responses
+         2.8.1.1. Response samples
+   2.9. Delete user from group
+      2.9.1. Responses
+3. Access Control (Permissions)
+   3.1. Response samples
+   3.2. Create permission
+      3.2.1. Responses
+         3.2.1.1. Request samples
+         3.2.1.2. Response samples
+   3.3. List permissions
+      3.3.1. Responses
+         3.3.1.1. Response samples
+   3.4. Get permission details
+      3.4.1. Responses
+         3.4.1.1. Response samples
+   3.5. Update permission
+      3.5.1. Responses
+         3.5.1.1. Request samples
+   3.6. Delete permission
+      3.6.1. Responses
+   3.7. List user permissions
+      3.7.1. Responses
+         3.7.1.1. Response samples
+   3.8. List user group permissions
+      3.8.1. Responses
+         3.8.1.1. Response samples
+   3.9. Get current user permissions
+      3.9.1. Responses
+         3.9.1.1. Response samples
+4. Access Control (Users)
+   4.1. Create user
+      4.1.1. Responses
+         4.1.1.1. Request samples
+         4.1.1.2. Response samples
+   4.2. List users
+      4.2.1. Responses
+         4.2.1.1. Response samples
+   4.3. Get user details
+      4.3.1. Responses
+         4.3.1.1. Response samples
+   4.4. Update user
+      4.4.1. Responses
+         4.4.1.1. Request samples
+         4.4.1.2. Response samples
+   4.5. Delete user
+      4.5.1. Responses
+         4.5.1.1. Response samples
+   4.6. Get user role
+      4.6.1. Responses
+         4.6.1.1. Response samples
+   4.7. Change user role
+      4.7.1. Responses
+         4.7.1.1. Request samples
+         4.7.1.2. Response samples
+   4.8. Change password
+      4.8.1. Responses
+         4.8.1.1. Request samples
+         4.8.1.2. Response samples
+   4.9. Enable user account
+      4.9.1. Responses
+         4.9.1.1. Request samples
+         4.9.1.2. Response samples
+   4.10. Get user authorizations
+      4.10.1. Responses
+         4.10.1.1. Response samples
+   4.11. Update user authorizations
+      4.11.1. Responses
+         4.11.1.1. Request samples
+         4.11.1.2. Response samples
+   4.12. Generate API keys
+      4.12.1. Responses
+         4.12.1.1. Response samples
+   4.13. Impersonate user
+      4.13.1. Responses
+         4.13.1.1. Response samples
+   4.14. Send verification code
+      4.14.1. Responses
+         4.14.1.1. Request samples
+         4.14.1.2. Response samples
+   4.15. Validate verification code
+      4.15.1. Responses
+         4.15.1.1. Request samples
+         4.15.1.2. Response samples
+   4.16. Configure two-factor authentication
+      4.16.1. Responses
+         4.16.1.1. Request samples
+5. Access Groups v1
+   5.1. Response samples
+   5.2. Create access group
+      5.2.1. Responses
+         5.2.1.1. Request samples
+         5.2.1.2. Response samples
+   5.3. List access groups
+      5.3.1. Responses
+         5.3.1.1. Response samples
+   5.4. Update access group
+      5.4.1. Responses
+         5.4.1.1. Request samples
+         5.4.1.2. Response samples
+   5.5. Delete access group
+      5.5.1. Responses
+         5.5.1.1. Response samples
+   5.6. Get access group details
+      5.6.1. Responses
+         5.6.1.1. Response samples
+   5.7. List access group filters
+      5.7.1. Responses
+         5.7.1.1. Response samples
+   5.8. List asset rule filters
+      5.8.1. Responses
+         5.8.1.1. Response samples
+6. Access Groups v2
+   6.1. Create access group
+      6.1.1. Responses
+         6.1.1.1. Request samples
+         6.1.1.2. Response samples
+   6.2. List access groups
+      6.2.1. Responses
+         6.2.1.1. Response samples
+   6.3. Update access group
+      6.3.1. Responses
+         6.3.1.1. Request samples
+         6.3.1.2. Response samples
+   6.4. Delete access group
+      6.4.1. Responses
+         6.4.1.1. Response samples
+   6.5. Get access group details
+      6.5.1. Responses
+         6.5.1.1. Response samples
+   6.6. List access group filters
+      6.6.1. Responses
+         6.6.1.1. Response samples
+   6.7. List asset rule filters
+      6.7.1. Responses
+         6.7.1.1. Response samples
+7. Activity Log
+   7.1. View activity log
+      7.1.1. Responses
+         7.1.1.1. Response samples
+8. Agents
+   8.1. List agents
+      8.1.1. Responses
+         8.1.1.1. Response samples
+   8.2. List agents by group
+      8.2.1. Responses
+         8.2.1.1. Response samples
+   8.3. Get agent safe mode summary
+      8.3.1. Responses
+         8.3.1.1. Response samples
+   8.4. Get agent details
+      8.4.1. Responses
+         8.4.1.1. Response samples
+   8.5. Rename agent
+      8.5.1. Responses
+         8.5.1.1. Request samples
+         8.5.1.2. Response samples
+   8.6. Unlink agent
+      8.6.1. Responses
+         8.6.1.1. Response samples
+9. Agent Config
+   9.1. Get agent configuration
+      9.1.1. Responses
+         9.1.1.1. Response samples
+   9.2. Update agent configuration
+      9.2.1. Responses
+         9.2.1.1. Request samples
+         9.2.1.2. Response samples
+10. Agent Exclusions
+   10.1. Create agent exclusion
+      10.1.1. Responses
+         10.1.1.1. Request samples
+         10.1.1.2. Response samples
+   10.2. List agent exclusions
+      10.2.1. Responses
+         10.2.1.1. Response samples
+   10.3. Get agent exclusion details
+      10.3.1. Responses
+         10.3.1.1. Response samples
+   10.4. Update agent exclusion
+      10.4.1. Responses
+         10.4.1.1. Request samples
+         10.4.1.2. Response samples
+   10.5. Delete agent exclusion
+      10.5.1. Responses
+11. Agent Groups
+   11.1. Response samples
+   11.2. Create agent group
+      11.2.1. Responses
+         11.2.1.1. Request samples
+         11.2.1.2. Response samples
+   11.3. List agent groups
+      11.3.1. Responses
+         11.3.1.1. Response samples
+   11.4. Get agent group details
+      11.4.1. Responses
+         11.4.1.1. Response samples
+   11.5. Update agent group name
+      11.5.1. Responses
+         11.5.1.1. Request samples
+         11.5.1.2. Response samples
+   11.6. Delete agent group
+      11.6.1. Responses
+         11.6.1.1. Response samples
+   11.7. Add agent to group
+      11.7.1. Responses
+         11.7.1.1. Response samples
+   11.8. Remove agent from group
+      11.8.1. Responses
+         11.8.1.1. Response samples
+12. Agent Tasks
+   12.1. Get agent task status
+      12.1.1. Responses
+         12.1.1.1. Response samples
+   12.2. Check agent group operation status
+      12.2.1. Responses
+         12.2.1.1. Response samples
+   12.3. Add agents to a group
+      12.3.1. Responses
+         12.3.1.1. Request samples
+         12.3.1.2. Response samples
+   12.4. Remove agents from group
+      12.4.1. Responses
+         12.4.1.1. Request samples
+         12.4.1.2. Response samples
+   12.5. Add agents to a network
+      12.5.1. Responses
+         12.5.1.1. Request samples
+         12.5.1.2. Response samples
+   12.6. Remove agents from network
+      12.6.1. Responses
+         12.6.1.1. Request samples
+         12.6.1.2. Response samples
+   12.7. Assign or remove profile
+      12.7.1. Responses
+         12.7.1.1. Request samples
+         12.7.1.2. Response samples
+   12.8. Send instructions to agents
+      12.8.1. Responses
+         12.8.1.1. Request samples
+         12.8.1.2. Response samples
+   12.9. Send instructions to agents group
+      12.9.1. Responses
+         12.9.1.1. Request samples
+         12.9.1.2. Response samples
+   12.10. Unlink agents
+      12.10.1. Responses
+         12.10.1.1. Request samples
+13. Cloud Connectors
+   13.1. Response samples
+   13.2. Create connector
+      13.2.1. Responses
+         13.2.1.1. Request samples
+         13.2.1.2. Response samples
+   13.3. List connectors
+      13.3.1. Responses
+         13.3.1.1. Response samples
+   13.4. Get connector details
+      13.4.1. Responses
+         13.4.1.1. Response samples
+   13.5. Update connector
+      13.5.1. Responses
+         13.5.1.1. Request samples
+         13.5.1.2. Response samples
+   13.6. Delete connector
+      13.6.1. Responses
+         13.6.1.1. Response samples
+   13.7. Download ARM Template
+      13.7.1. Responses
+         13.7.1.1. Response samples
+   13.8. Download CFT Template
+      13.8.1. Responses
+         13.8.1.1. Request samples
+         13.8.1.2. Response samples
+   13.9. List AWS cloudtrails
+      13.9.1. Responses
+         13.9.1.1. Request samples
+         13.9.1.2. Response samples
+   13.10. Import data
+      13.10.1. Responses
+         13.10.1.1. Response samples
+14. Credentials
+   14.1. Create managed credential
+      14.1.1. Responses
+         14.1.1.1. Request samples
+         14.1.1.2. Response samples
+   14.2. List managed credentials
+      14.2.1. Responses
+         14.2.1.1. Response samples
+   14.3. Get managed credential details
+      14.3.1. Responses
+         14.3.1.1. Response samples
+   14.4. Update managed credential
+      14.4.1. Responses
+         14.4.1.1. Request samples
+         14.4.1.2. Response samples
+   14.5. Delete managed credential
+      14.5.1. Responses
+         14.5.1.1. Response samples
+   14.6. List credential types
+      14.6.1. Responses
+         14.6.1.1. Response samples
+   14.7. Upload credentials file
+      14.7.1. Responses
+15. Exclusions
+   15.1. Response samples
+   15.2. Create exclusion
+      15.2.1. Responses
+         15.2.1.1. Request samples
+         15.2.1.2. Response samples
+   15.3. List exclusions
+      15.3.1. Responses
+         15.3.1.1. Response samples
+   15.4. Import exclusion
+      15.4.1. Responses
+         15.4.1.1. Response samples
+   15.5. Get exclusion details
+      15.5.1. Responses
+         15.5.1.1. Response samples
+   15.6. Update exclusion
+      15.6.1. Responses
+         15.6.1.1. Request samples
+         15.6.1.2. Response samples
+   15.7. Delete exclusion
+      15.7.1. Responses
+         15.7.1.1. Response samples
+16. Networks
+   16.1. Create network
+      16.1.1. Responses
+         16.1.1.1. Request samples
+         16.1.1.2. Response samples
+   16.2. List networks
+      16.2.1. Responses
+         16.2.1.1. Response samples
+   16.3. Get network details
+      16.3.1. Responses
+         16.3.1.1. Response samples
+   16.4. Update network
+      16.4.1. Responses
+         16.4.1.1. Request samples
+         16.4.1.2. Response samples
+   16.5. Delete network
+      16.5.1. Responses
+         16.5.1.1. Response samples
+   16.6. Get network asset count
+      16.6.1. Responses
+         16.6.1.1. Response samples
+   16.7. Assign scanners
+      16.7.1. Responses
+         16.7.1.1. Response samples
+   16.8. List network scanners
+      16.8.1. Responses
+         16.8.1.1. Response samples
+   16.9. Bulk assign scanners
+      16.9.1. Responses
+         16.9.1.1. Request samples
+         16.9.1.2. Response samples
+   16.10. List assignable scanners
+      16.10.1. Responses
+         16.10.1.1. Response samples
+17. OT Connectors
+   17.1. Create OT connector
+      17.1.1. Responses
+         17.1.1.1. Request samples
+         17.1.1.2. Response samples
+   17.2. List OT connectors
+      17.2.1. Responses
+         17.2.1.1. Response samples
+   17.3. Get OT connector details
+      17.3.1. Responses
+         17.3.1.1. Response samples
+   17.4. Update OT connector
+      17.4.1. Responses
+         17.4.1.1. Request samples
+         17.4.1.2. Response samples
+   17.5. Delete OT connector
+      17.5.1. Responses
+         17.5.1.1. Response samples
+   17.6. Generate linking key
+      17.6.1. Responses
+         17.6.1.1. Response samples
+18. Permissions
+   18.1. Get object permissions
+      18.1.1. Responses
+         18.1.1.1. Response samples
+   18.2. Update object permissions
+      18.2.1. Responses
+         18.2.1.1. Request samples
+19. Profiles
+   19.1. Response samples
+   19.2. Create profile
+      19.2.1. Responses
+         19.2.1.1. Request samples
+         19.2.1.2. Response samples
+   19.3. List profiles
+      19.3.1. Responses
+         19.3.1.1. Response samples
+   19.4. Get profile details
+      19.4.1. Responses
+         19.4.1.1. Response samples
+   19.5. Update profile
+      19.5.1. Responses
+         19.5.1.1. Request samples
+         19.5.1.2. Response samples
+   19.6. Delete profile
+      19.6.1. Responses
+         19.6.1.1. Response samples
+   19.7. Clone profile
+      19.7.1. Responses
+         19.7.1.1. Request samples
+         19.7.1.2. Response samples
+   19.8. List available plugin sets
+      19.8.1. Responses
+         19.8.1.1. Response samples
+20. Recast Rules
+   20.1. Create recast rule
+      20.1.1. Responses
+         20.1.1.1. Request samples
+         20.1.1.2. Response samples
+   20.2. Search recast rules
+      20.2.1. Responses
+         20.2.1.1. Request samples
+         20.2.1.2. Response samples
+   20.3. Get recast rule details
+      20.3.1. Responses
+         20.3.1.1. Response samples
+   20.4. Update recast rule
+      20.4.1. Responses
+         20.4.1.1. Request samples
+         20.4.1.2. Response samples
+   20.5. Delete recast rule
+      20.5.1. Responses
+         20.5.1.1. Response samples
+   20.6. List recast rule filters
+      20.6.1. Responses
+         20.6.1.1. Response samples
+21. Scanners
+   21.1. List scanners
+      21.1.1. Responses
+         21.1.1.1. Response samples
+   21.2. Get scanner details
+      21.2.1. Responses
+         21.2.1.1. Response samples
+   21.3. Update scanner
+      21.3.1. Responses
+         21.3.1.1. Request samples
+         21.3.1.2. Response samples
+   21.4. Delete scanner
+      21.4.1. Responses
+         21.4.1.1. Response samples
+   21.5. Get scanner key
+      21.5.1. Responses
+         21.5.1.1. Response samples
+   21.6. List AWS scan targets
+      21.6.1. Responses
+         21.6.1.1. Response samples
+   21.7. List running scans
+      21.7.1. Responses
+22. Scanner Config
+   22.1. Response samples
+   22.2. Get scanner configuration
+      22.2.1. Responses
+         22.2.1.1. Response samples
+   22.3. Update scanner configuration
+      22.3.1. Responses
+         22.3.1.1. Request samples
+         22.3.1.2. Response samples
+23. Scanner Tasks
+   23.1. Get scanner task status
+      23.1.1. Responses
+         23.1.1.1. Response samples
+   23.2. Send instructions to scanner
+      23.2.1. Responses
+         23.2.1.1. Request samples
+         23.2.1.2. Response samples
+   23.3. Send instructions to multiple scanners
+      23.3.1. Responses
+         23.3.1.1. Request samples
+         23.3.1.2. Response samples
+   23.4. Assign to scanner profile
+      23.4.1. Responses
+         23.4.1.1. Request samples
+         23.4.1.2. Response samples
+   23.5. Remove from scanner profile
+      23.5.1. Responses
+         23.5.1.1. Request samples
+         23.5.1.2. Response samples
+   23.6. Allow control of running scans
+      23.6.1. Responses
+         23.6.1.1. Request samples
+         23.6.1.2. Response samples
+   23.7. Toggle scanner link state
+      23.7.1. Responses
+24. Scanner Groups
+   24.1. Request samples
+   24.2. Response samples
+   24.3. Create scanner group
+      24.3.1. Responses
+         24.3.1.1. Request samples
+         24.3.1.2. Response samples
+   24.4. List scanner groups
+      24.4.1. Responses
+         24.4.1.1. Response samples
+   24.5. List scanner group details
+      24.5.1. Responses
+         24.5.1.1. Response samples
+   24.6. Update scanner group
+      24.6.1. Responses
+         24.6.1.1. Request samples
+         24.6.1.2. Response samples
+   24.7. Delete a scanner group
+      24.7.1. Responses
+         24.7.1.1. Response samples
+   24.8. List scanners within scanner group
+      24.8.1. Responses
+         24.8.1.1. Response samples
+   24.9. Add scanner to scanner group
+      24.9.1. Responses
+         24.9.1.1. Response samples
+   24.10. Remove scanner from scanner group
+      24.10.1. Responses
+         24.10.1.1. Response samples
+   24.11. List scan routes
+      24.11.1. Responses
+         24.11.1.1. Response samples
+   24.12. Update scan routes
+      24.12.1. Responses
+         24.12.1.1. Request samples
+25. Server
+   25.1. Response samples
+   25.2. Get server status
+      25.2.1. Responses
+         25.2.1.1. Response samples
+   25.3. List server properties
+      25.3.1. Responses
+         25.3.1.1. Response samples
+26. Tags
+   26.1. Create tag category
+      26.1.1. Responses
+         26.1.1.1. Request samples
+         26.1.1.2. Response samples
+   26.2. List tag categories
+      26.2.1. Responses
+         26.2.1.1. Response samples
+   26.3. Get category details
+      26.3.1. Responses
+         26.3.1.1. Response samples
+   26.4. Update tag category
+      26.4.1. Responses
+         26.4.1.1. Request samples
+         26.4.1.2. Response samples
+   26.5. Delete tag category
+      26.5.1. Responses
+         26.5.1.1. Response samples
+   26.6. Create tag value
+      26.6.1. Responses
+         26.6.1.1. Request samples
+         26.6.1.2. Response samples
+   26.7. List tag values
+      26.7.1. Responses
+         26.7.1.1. Response samples
+   26.8. Get tag value details
+      26.8.1. Responses
+         26.8.1.1. Response samples
+   26.9. Update tag value
+      26.9.1. Responses
+         26.9.1.1. Request samples
+         26.9.1.2. Response samples
+   26.10. Delete tag value
+      26.10.1. Responses
+         26.10.1.1. Response samples
+   26.11. Bulk delete tag values
+      26.11.1. Responses
+         26.11.1.1. Request samples
+         26.11.1.2. Response samples
+   26.12. Add or remove asset tags
+      26.12.1. Responses
+         26.12.1.1. Request samples
+         26.12.1.2. Response samples
+   26.13. List tags for an asset
+      26.13.1. Responses
+         26.13.1.1. Response samples
+   26.14. List tag exclusions
+      26.14.1. Responses
+         26.14.1.1. Response samples
+   26.15. List asset tag filters
+      26.15.1. Responses
+         26.15.1.1. Response samples
+27. Target Groups
+   27.1. Create target group
+      27.1.1. Responses
+         27.1.1.1. Request samples
+         27.1.1.2. Response samples
+   27.2. List target groups
+      27.2.1. Responses
+         27.2.1.1. Response samples
+   27.3. Get target group details
+      27.3.1. Responses
+         27.3.1.1. Response samples
+   27.4. Update target group
+      27.4.1. Responses
+         27.4.1.1. Request samples
+         27.4.1.2. Response samples
+   27.5. Delete target group
+      27.5.1. Responses
+         27.5.1.1. Response samples

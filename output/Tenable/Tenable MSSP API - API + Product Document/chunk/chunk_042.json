@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_042",
+  "section_number": "14",
+  "header": "Generate auth keys for child container",
+  "content": "Generates authorization keys for the specified child container. An access_key  and a\nsecret_key  is included in the response.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nstring\nThe UUID of the child container you want to generate\nauthorization keys for.\ninteger\nThe number of seconds that the authorization keys should\nremain valid. The maximum value is 3600 . If this\nparameter is omitted, Tenable MSSP uses the default\nvalue of 1800  seconds.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 30,
+      "end": 30
+    },
+    "content_stats": {
+      "char_count": 523,
+      "word_count": 79
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

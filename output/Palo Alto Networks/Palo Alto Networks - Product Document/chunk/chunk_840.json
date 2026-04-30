@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_840",
+  "section_number": "1.21.15.3",
+  "header": "NAT Rule Capacities",
+  "content": "The number of NAT rules allowed is based on the firewall model. Individual rule limits are set for\nstatic, Dynamic IP (DIP), and Dynamic IP and Port (DIPP) NAT. The sum of the number of rules\nused for these NAT types cannot exceed the total NAT rule capacity. For DIPP, the rule limit is\nbased on the oversubscription setting (8, 4, 2, or 1) of the firewall and the assumption of one\ntranslated IP address per rule. To see model-specific NAT rule limits and translated IP address\nlimits, use the Compare Firewalls tool.\nConsider the following when working with NAT rules:\n• If you run out of pool resources, you cannot create more NAT rules, even if the model’s\nmaximum rule count has not been reached.\n• If you consolidate NAT rules, the logging and reporting will also be consolidated. The statistics\nare provided per the rule, not per all of the addresses within the rule. If you need granular\nlogging and reporting, do not combine the rules.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1488,
+      "end": 1488
+    },
+    "content_stats": {
+      "char_count": 945,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "NAT",
+      "children": []
+    }
+  }
+}

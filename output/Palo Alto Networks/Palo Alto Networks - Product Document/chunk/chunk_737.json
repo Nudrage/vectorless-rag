@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_737",
+  "section_number": "1.21.1.2.1",
+  "header": "Layer 2 and Layer 3 Packets over a Virtual Wire",
+  "content": "A virtual wire interface will allow Layer 2 and Layer 3 packets from connected devices to pass\ntransparently as long as the policies applied to the zone or interface allow the traffic. The virtual\nwire interfaces themselves don’t participate in routing or switching.\nFor example, the firewall doesn’t decrement the TTL in a traceroute packet going over the virtual\nlink because the link is transparent and doesn’t count as a hop. Packets such as Operations,\nAdministration and Maintenance (OAM) protocol data units (PDUs), for example, don’t terminate\nat the firewall. Thus, the virtual wire allows the firewall to maintain a transparent presence acting\nas a pass-through link, while still providing security, NAT, and QoS services.\nIn order for bridge protocol data units (BPDUs) and other Layer 2 control packets (which are\ntypically untagged) to pass through a virtual wire, the interfaces must be attached to a virtual wire\nobject that allows untagged traffic, and that is the default. If the virtual wire object Tag Allowed\nfield is empty, the virtual wire allows untagged traffic. (Security policy rules don’t apply to Layer 2\npackets.)\nIn order for routing (Layer 3) control packets to pass through a virtual wire, you must apply a\nsecurity policy rule that allows the traffic to pass through. For example, apply a security policy rule\nthat allows an application such as BGP or OSPF.\nIf you want to be able to apply security policy rules to a zone for IPv6 traffic arriving at a virtual\nwire interface on the firewall, enable IPv6 firewalling. Otherwise, IPv6 traffic is forwarded\ntransparently across the wire.\nIf you enable multicast firewalling for a virtual wire object and apply it to a virtual wire interface,\nthe firewall inspects multicast traffic and forwards it or not, based on security policy rules. If you\ndon’t enable multicast firewalling, the firewall simply forwards multicast traffic transparently.\nFragmentation on a virtual wire occurs the same as in other interface deployment modes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1335,
+      "end": 1335
+    },
+    "content_stats": {
+      "char_count": 2011,
+      "word_count": 325
+    },
+    "hierarchy": {
+      "parent": "Virtual Wire Interfaces",
+      "children": []
+    }
+  }
+}

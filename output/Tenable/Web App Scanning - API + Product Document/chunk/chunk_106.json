@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_106",
+  "section_number": "38",
+  "header": "Update scan status",
+  "content": "Update the requested_action  attribute for a scan. The requested action must be valid for the\nscan's current status. For example, you can pause or stop a scan if it has a status of running  or\nresume a scan if it has a status of paused . Otherwise, Tenable Web App Scanning returns a 409\nresponse code. This request creates an asynchronous update job.\nRequires the Scan Operator [24] user role or the WAS.SCAN_WAS.MANAGE  custom role privilege.\nAdditionally, requires the Can Execute [32] scan permission. See Roles and Permissions.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe UUID of the scan for which you want to update status.\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nstring\nEnum: \"pause\"\n\"resume\"\n\"stop\"\nThe action to apply to the scan.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 131,
+      "end": 131
+    },
+    "content_stats": {
+      "char_count": 759,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

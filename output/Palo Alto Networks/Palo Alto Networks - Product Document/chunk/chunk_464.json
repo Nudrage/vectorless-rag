@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_464",
+  "section_number": "1.13.9",
+  "header": "Security Policy Rule Optimization",
+  "content": "Policy Optimizer provides a simple workflow to migrate your legacy Security policy rulebase\nto an App-ID based rulebase, which improves your security by reducing the attack surface and\ngaining visibility into applications so you can safely enable them. Policy Optimizer identifies\nport-based rules so you can convert them to application-based allow rules or add applications\nfrom a port-based rule to an existing application-based rule without compromising application\navailability. It also identifies over-provisioned App-ID based rules (App-ID rules configured with\nunused applications). Policy Optimizer helps you prioritize which port-based rules to migrate\nfirst, identify application-based rules that allow applications you don’t use, and analyze rule usage\ncharacteristics such as hit count.\nConverting port-based rules to application-based rules improves your security posture because\nyou select the applications you want to allow and deny all other applications, so you eliminate\nunwanted and potentially malicious traffic from your network. Combined with restricting\napplication traffic to its default ports (set the Service to application-default), converting to\napplication-based rules also prevents evasive applications from running on non-standard ports.\nYou can use this feature on:\n• Firewalls that run PAN-OS version 9.0 or later and have App-ID enabled.\n• Panorama running PAN-OS version 9.0 or later. You don’t have to upgrade firewalls that\nPanorama manages to use the Policy Optimizer capabilities. However, to use the Rule Usage\ncapabilities (Monitor Policy Rule Usage), managed firewalls must run PAN-OS 8.1 or later.\nIf managed firewalls connect to Log Collectors, those Log Collectors must also run PAN-OS\nversion 9.0. Managed PA-7000 Series firewalls that have a Log Processing Card (LPC) can also\nrun PAN-OS 8.1 (or later).\n• For Cortex Data Lake compatibility, Panorama running PAN-OS 10.0.3 or later with the Cloud\nServices plugin 2.0 Innovation or later installed.\nPA-7000 Series Firewalls support two logging cards, the PA-7000 Series Firewall Log\nProcessing Card (LPC) and the high-performance PA-7000 Series Firewall Log Forwarding\nCard (LFC). Unlike the LPC, the LFC does not have disks to store logs locally. Instead, the\nLFC forwards all logs to one or more external logging systems, such as Panorama or a\nsyslog server. If you use the LFC, the application usage information for Policy Optimizer\ndoes not display on the firewall because traffic logs aren’t stored locally. If you use the\nLPC, the traffic logs are stored locally on the firewall, so the application usage information\nfor Policy Optimizer displays on the firewall.\nUse this feature to:\n• Migrate port-based rules to application-based rules—Instead of combing through traffic\nlogs and manually mapping applications to port-based rules, use Policy Optimizer to identify\nport-based rules and list the applications that matched each rule, so you can select the\napplications you want to allow and safely enable them. Converting your legacy port-based\nrules to application-based allow rules supports your business applications and enables you to\nblock any applications associated with malicious activity.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n829\n©2025 Palo Alto Networks, Inc.\nApp-ID\n• Identify over-provisioned application-based rules—Rules that are too broad allow applications\nyou don’t use on your network, which increases the attack surface and the risk of inadvertently\nallowing malicious traffic.\nRemove unused applications from Security policy rules to reduce the attack surface\nand keep the rulebase clean. Don’t allow applications that nobody uses on your\nnetwork.\nTo migrate a configuration from a legacy firewall to a Palo Alto Networks device, see Best\nPractices for Migrating to Application-Based Policy.\nYou can’t sort Security policy rules in Security > Policies because sorting would change the rule\norder in the rulebase. However, under Polices > Security > Policy Optimizer, Policy Optimizer\nprovides sorting options that don’t affect the rule order to help you prioritize which rules to\nconvert or clean up first. You can sort rules by the amount of traffic during the past 30 days, the\nnumber of applications seen on the rule, the number of days with no new applications, and the\nnumber of applications allowed (for over-provisioned rules).\nYou can use Policy Optimizer in other ways as well, including validating pre-production rules and\ntroubleshooting existing rules. Note that Policy Optimizer honors only Log at Session End and\nignores Log at Session Start to avoid counting transient applications on rules.\nDue to resource constraints, VM-50 Lite virtual firewalls don’t support Policy Optimizer.\n• Policy Optimizer Concepts\n• Migrate Port-Based to App-ID Based Security Policy Rules\n• Rule Cloning Migration Use Case: Web Browsing and SSL Traffic\n• Add Applications to an Existing Rule\n• Identify Security Policy Rules with Unused Applications\n• High Availability for Application Usage Statistics\n• How to Disable Policy Optimizer",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 829,
+      "end": 830
+    },
+    "content_stats": {
+      "char_count": 5057,
+      "word_count": 758
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": [
+        "Policy Optimizer Concepts",
+        "Migrate Port-Based to App-ID Based Security Policy Rules",
+        "Rule Cloning Migration Use Case: Web Browsing and SSL Traffic",
+        "Add Applications to an Existing Rule",
+        "Identify Security Policy Rules with Unused Applications",
+        "High Availability for Application Usage Statistics",
+        "How to Disable Policy Optimizer"
+      ]
+    }
+  }
+}

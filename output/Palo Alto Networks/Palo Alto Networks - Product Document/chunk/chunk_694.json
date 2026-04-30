@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_694",
+  "section_number": "1.19.4.1.3",
+  "header": "Change the Key Lifetime or Authentication Interval for IKEv2",
+  "content": "This task is optional; the default setting of the IKEv2 IKE SA re-key lifetime is 8 hours. The\ndefault setting of the IKEv2 Authentication Multiple is 0, meaning the re-authentication feature is\ndisabled. For more information, see SA Key Lifetime and Re-Authentication Interval.\nTo change the default values, perform the following task. A prerequisite is that an IKE crypto\nprofile already exists.\nSTEP 1 |\nChange the SA key lifetime or authentication interval for an IKE Crypto profile.\n1.\nSelect Network > Network Profiles > IKE Crypto and select the IKE Crypto profile that\napplies to the local gateway.\n2.\nFor the Key Lifetime, select a unit (Seconds, Minutes, Hours, or Days) and enter a value.\nThe minimum is three minutes.\n3.\nFor IKE Authentication Multiple, enter a value, which is multiplied by the lifetime to\ndetermine the re-authentication interval.\nSTEP 2 |\nCommit your changes.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1263,
+      "end": 1263
+    },
+    "content_stats": {
+      "char_count": 912,
+      "word_count": 150
+    },
+    "hierarchy": {
+      "parent": "Set Up an IKE Gateway",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_949",
+  "section_number": "1.22.8.2",
+  "header": "Create an Address Object",
+  "content": "Create Address Objects to represent one or more IP addresses and then reference the address\nobjects in one or more policy rules, filters, or other firewall functions. If you want to change the\nset of addresses, you change an address object once rather than change multiple policy rules or\nfilters, which reduces your operational overhead.\nSTEP 1 |\nCreate an address object.\n1.\nSelect Objects > Addresses and Add an address object by Name. The name is case-\nsensitive, must be unique, and can be up to 63 characters (letters, numbers, spaces,\nhyphens, and underscores).\n2.\nSelect the Type of address object:\n• IP Netmask—Specify a single IPv4 or IPv6 address, an IPv4 network with slash\nnotation, or an IPv6 address and prefix. For example, 192.168.80.0/24 or\n2001:db8:123:1::/64. Optionally, click Resolve to see the associated FQDN (based\non the DNS configuration of the firewall or Panorama). To change the address object\ntype from IP Netmask to FQDN, select the FQDN and click Use this FQDN. The Type\nchanges to FQDN and the FQDN you select appears in the text field.\n• IP Range—Specify a range of IPv4 addresses or IPv6 addresses\nseparated by a hyphen. For example, 192.168.40.1-192.168.40.255 or\n2001:db8:123:1::1-2001:db8:123:1::22.\n• IP Wildcard Mask—Specify an IP wildcard address (IPv4 address followed by a slash\nand a mask, which must begin with a 0). For example, 10.5.1.1/0.127.248.2. A zero\n(0) in the mask indicates the bit being compared must match the bit in the IP address\nthat is covered by the zero. A one (1) in the mask (wildcard bit) indicates the bit being\ncompared need not match the bit in the IP address covered by the one.\n• FQDN—Specify the domain name. The FQDN initially resolves at commit time. The\nfirewall subsequently refreshes the FQDN based on the time-to-live (TTL) of the\nFQDN in DNS, as long as the TTL is greater than or equal to the Minimum FQDN\nRefresh Time you configure (or the default of 30 seconds). The FQDN is resolved\nby the system DNS server or a DNS proxy object, if a proxy is configured. Click\nResolve to see the associated IP address (based on the DNS configuration of the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1624\n©2025 Palo Alto Networks, Inc.\nPolicy\nfirewall or Panorama). To change the address object type from FQDN to IP Netmask,\nselect an IP Netmask and click Use this address. The Type changes to IP Netmask and\nthe IP address you select appears in the text field.\n3.\n(Optional) Enter one or more Use Tags to Group and Visually Distinguish Objects to\napply to the address object.\n4.\nClick OK.\nSTEP 2 |\nCommit your changes.\nSTEP 3 |\nView logs filtered by address object, address group, or wildcard address.\n1.\nFor example, select Monitor > Logs > Traffic to view traffic logs.\n2.\nSelect\nto add a log filter.\n3.\nSelect the Address attribute, the in Operator, and enter the name of the address object\nfor which you want to view logs. Alternatively, enter an address group name or a\nwildcard address, such as 10.155.3.4/0.0.240.255.\n4.\nClick Apply.\nSTEP 4 |\nView a custom report based on an address object.\n1.\nSelect Monitor > Manage Custom Reports and select a report that uses a Database such\nas Traffic Log.\n2.\nSelect Filter Builder.\n3.\nSelect an Attribute such as Address, Destination Address or Source Address, select an\nOperator, and enter the name of the address object for which you want to view the\nreport.\nSTEP 5 |\nUse a filter in the ACC to view network activity based on a source IP address or destination\nIP address that uses an address object.\n1.\nSelect ACC > Network Activity.\n2.\nView the Source IP Activity—For Global Filters, click\nto add a filter and select one\nof the following: Address or Source > Source Address or Destination > Destination\nAddress and select an address object.\n3.\nView the Destination IP Activity—For Global Filters, click the\nto add a filter and select\none of the following: Address or Source > Source Address or Destination > Destination\nAddress and select an address object.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1625\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1624,
+      "end": 1626
+    },
+    "content_stats": {
+      "char_count": 4062,
+      "word_count": 700
+    },
+    "hierarchy": {
+      "parent": "Use an Address Object to Represent IP Addresses",
+      "children": []
+    }
+  }
+}

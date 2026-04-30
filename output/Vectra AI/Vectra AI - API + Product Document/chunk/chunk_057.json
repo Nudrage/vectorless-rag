@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_057",
+  "section_number": "1.18.6",
+  "header": "Triage Rules",
+  "content": "GET\nURL: https://<vectra_portal_url>/api/v3.4/rules/<id>\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"id\": 68,\n\"url\": \"https://1.1.1.1/api/v3.4/rules/68\",\n\"description\": \"Expected behavior from these devices\",\n\"enabled\": true,\n\"created_timestamp\": \"2019-08-27T20:55:29Z\",\n\"last_timestamp\": null,\n\"is_whitelist\": false,\n\"priority\": null,\n\"active_detections\": 2,\n\"total_detections\":3,\n\"template\": true,\n\"additional_conditions\": {\n\"OR\": [\n{\n\"AND\": [\n{\n\"ANY_OF\": {\n\"field\": \"remote1_port\",\n\"values\": [\n{\n© July 2024 Vectra AI, Inc. | 86\n\"url\": null,\n\"value\": \"135\",\n\"label\": \"135\"\n}\n],\n\"groups\": [],\n\"label\": \"Port\"\n}\n}\n]\n}\n]\n},\n\"source_conditions\": {\n\"OR\": [\n{\n\"AND\": [\n{\n\"ANY_OF\": {\n\"field\": \"host\",\n\"values\": [],\n\"groups\": [\n{\n\"url\": \"https://192.168.51.36/api/v3.4/groups/8\",\n\"value\": 8,\n\"label\": \"Cognito - IPAM\"\n}\n],\n\"label\": \"Host\"\n}\n}\n]\n}\n]\n},\n\"detection_category\": \"RECONNAISSANCE\",\n\"triage_category\": \"Expected IPAM Behavior\",\n\"detection\": \"Internal Darknet Scan\"\n}\nPOST\nURL: https://<vectra_portal_url>/api/v3.4/rules\nHeaders:\n© July 2024 Vectra AI, Inc. | 87\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nBody:\n{\n\"description\": \"Peer to peer triage rule\",\n\"detection_category\": \"COMMAND & CONTROL\",\n\"triage_category\": \"Miscategorization\",\n\"detection\": \"Peer-to-Peer\",\n\"is_whitelist\": false,\n\"additional_conditions\": {\n\"OR\": [\n{\n\"AND\": [\n{\n\"ANY_OF\": {\n\"field\": \"remote1_ip\",\n\"values\": [],\n\"groups\": [\n{\n\"value\": 2\n}\n]\n}\n},\n{\n\"ANY_OF\": {\n\"field\": \"remote1_dns\",\n\"values\": [\n{\n\"value\": \"test.server.com\"\n}\n],\n\"groups\": [\n{\n\"value\": 11\n}\n]\n}\n}\n]\n}\n]\n},\n\"source_conditions\": {\n\"OR\": [\n{\n\"AND\": [\n© July 2024 Vectra AI, Inc. | 88\n{\n\"ANY_OF\": {\n\"field\": \"host\",\n\"values\": [\n{\n\"value\": 1\n}\n],\n\"groups\": [\n{\n\"value\": 8\n}\n]\n}\n}\n]\n}\n]\n}\n}\nThe following fields are mandatory:\n“detection_category”: Must be set to the category of the detection – LATERAL MOVEMENT,\nRECONNAISSANCE, COMMAND & CONTROL, EXFILTRATION, BOTNET, INFO\n“detection”: The detection that must be triaged. Use the detection name as seen in the UI or the\n“Understanding Vectra Detections” guide.\n“triage_category”: The name that will be used for the triaged detection. Only applies if “is_whitelist” is\nset to 0.\n“description”: User defined description for the rule.\n“is_whitelist”: A Boolean flag indicating whether to create a “whitelist” or a “track without scores” rule\nsource_conditions: conditions that can be applied to the source of a detection. Can be NULL.\nadditional_conditions: other conditions that are different on a per-detection-type basis. Can be NULL.\nResponse:\nSuccess\nThe response contains the id of the triage rule if successful:\n{\n© July 2024 Vectra AI, Inc. | 89\n\"_meta\": {\n\"message\": \"Successfully created triage filter\",\n\"level\": \"success\"\n},\n\"id\": 11\n}\nFailure\nFailure will result in an error message along with an indication of what was incorrect\n{\n\"_meta\": {\n\"message\": \"Invalid field(s) found\",\n\"level\": \"error\"\n},\n\"host\": [\n\"Invalid host: 5 does not map to a real host\"\n]\n}\nPUT\nURL: https://<vectra_portal_url>/api/v3.4/rules/<id>\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nBody:\n{\n\"detection_category\": \"LATERAL MOVEMENT\",\n\"triage_category\": \"Susp Rmt Exec - Test\",\n\"detection\": \"Suspicious Remote Execution\",\n\"is_whitelist\": 0,\n\"description\": \"put test\",\n\"additional_conditions\": {\n\"OR\": [\n{\n\"AND\": [\n{\n\"ANY_OF\": {\n\"field\": \"remote1_ip\",\n\"values\": [\n{\n\"value\": \"1.1.1.1\"\n}\n],\n© July 2024 Vectra AI, Inc. | 90\n\"groups\": [],\n}\n}\n]\n}\n]\n},\n\"source_conditions\": {\n\"OR\": [\n{\n\"AND\": [\n{\n\"ANY_OF\": {\n\"field\": \"ip\",\n\"values\": [\n{\"value\": \"1.1.1.1\"},\n{\"value\": \"1.2.1.1\"},\n{\"value\": \"1.1.3.1\"}\n],\n\"groups\": []\n}\n}\n]\n}\n]\n}\n}\nDELETE\nURL: https://<vectra_portal_url>/api/v3.4/rules/<id>\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nBody:\n{\n\"detectionIdLIst\": [<detection_id1>, <detection_id2>, …]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 85,
+      "end": 90
+    },
+    "content_stats": {
+      "char_count": 3913,
+      "word_count": 547
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

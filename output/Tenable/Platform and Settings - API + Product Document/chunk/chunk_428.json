@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_428",
+  "section_number": "19.4",
+  "header": "Update profile",
+  "content": "Updates the specified profile. The type of profile to update depends on the sensor_type  path\nparameter, which can be set to either agent  or scanners .\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nEnum: \"agent\"\n\"scanners\"\nThe type of sensor. Use agent  for agent profiles or scanners  for\nscanner profiles.\nstring <uuid>\nThe unique identifier (UUID) of the profile.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nA name for the profile.\nstring\nA short description explaining the purpose or targets of the profile.\nAgent Profile Config (object) or Scanner Profile Config (object)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 402,
+      "end": 403
+    },
+    "content_stats": {
+      "char_count": 630,
+      "word_count": 97
+    },
+    "hierarchy": {
+      "parent": "Profiles",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

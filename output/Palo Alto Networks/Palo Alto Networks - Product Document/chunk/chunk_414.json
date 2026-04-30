@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_414",
+  "section_number": "1.12.5.4",
+  "header": "Configure Server Monitoring Using WinRM",
+  "content": "You can configure the PAN-OS integrated User-ID agent to monitor servers using Windows\nRemote Management (WinRM). Using the WinRM protocol improves speed, efficiency, and\nsecurity when monitoring server events to map user events to IP addresses. The PAN-OS\nintegrated User-ID agent supports the WinRM protocol on Windows Server 2012 Active\nDirectory and Microsoft Exchange Server 2012 or later versions of both.\nThere are three ways to configure server monitoring using WinRM:\n• Configure WinRM over HTTPS with Basic Authentication—The firewall authenticates to the\nmonitored server using the username and password of the service account for the User-ID\nagent and the firewall authenticates the monitored server using the User-ID certificate profile.\n• Configure WinRM over HTTP with Kerberos—The firewall and the monitored servers use\nKerberos for mutual authentication and the monitored server encrypts the communication with\nthe firewall using a negotiated Kerberos session key.\n• Configure WinRM over HTTPS with Kerberos—The firewall and the monitored server use\nHTTPS to communicate and use Kerberos for mutual authentication.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 744,
+      "end": 744
+    },
+    "content_stats": {
+      "char_count": 1131,
+      "word_count": 165
+    },
+    "hierarchy": {
+      "parent": "Map IP Addresses to Users",
+      "children": [
+        "Configure WinRM over HTTPS with Basic Authentication",
+        "Configure WinRM over HTTP with Kerberos",
+        "Configure WinRM over HTTPS with Kerberos"
+      ]
+    }
+  }
+}

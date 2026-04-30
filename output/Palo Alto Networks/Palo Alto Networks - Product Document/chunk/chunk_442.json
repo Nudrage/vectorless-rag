@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_442",
+  "section_number": "1.12.9.4",
+  "header": "Share User-ID Mappings Across Virtual Systems",
+  "content": "To simplify User-ID™ source configuration when you have multiple virtual systems, configure\nthe User-ID sources on a single virtual system to share IP address-to-username mappings with all\nother virtual systems on the firewall.\nConfiguring a single virtual system as a User-ID hub simplifies user mapping by eliminating the\nneed to configure the sources on multiple virtual systems, especially if a user’s traffic will pass\nthrough multiple virtual systems based on the resources the user is trying to access (for example,\nin an academic networking environment where a student will be accessing different departments\nwhose traffic is managed by different virtual systems).\nTo map the user, the firewall uses the mapping table on the local virtual system and applies the\npolicy for that user. If the firewall does not find the mapping for a user on the virtual system\nwhere that user’s traffic originated, the firewall queries the hub to fetch the IP address-to-\nusername information for that user. If the firewall locates the mapping on both the User-ID hub\nand the local virtual system, the firewall uses the mapping it learns locally.\nAfter you configure the User-ID hub, the virtual system can use the mapping table on the User-ID\nhub when it needs to identify a user for user-based policy enforcement or to display the username\nin a log or report but the source is not available locally. When you select a hub, the firewall retains\nthe mappings on other virtual systems so we recommend consolidating the User-ID sources on\nthe hub. However, if you don’t want to share mappings from a specific source, you can configure\nan individual virtual system to perform user mapping.\nSTEP 1 |\nAssign the virtual system as a User-ID hub.\n1.\nSelect Device > Virtual Systems and then select the virtual system where you\nconsolidated your User-ID sources.\n2.\nOn the Resource tab, Make this vsys a User-ID data hub and click Yes to confirm. Then\nclick OK.\nSTEP 2 |\nConsolidate your User-ID sources and migrate them to the virtual system that you want to\nuse as a User-ID hub.\nThis consolidates the User-ID configuration for operational simplicity. By configuring the hub\nto monitor servers and connect to agents that were previously monitored by other virtual\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n798\n©2025 Palo Alto Networks, Inc.\nUser-ID\nsystems, the hub collects the user mapping information instead of having each virtual system\ncollect it independently. If you don’t want to share mappings from specific virtual systems,\nconfigure those mappings on a virtual system that will not be used as the hub.\n1.\nRemove any sources that are unnecessary or outdated.\n2.\nIdentify all configurations for your Windows-based or integrated agents and any sources\nthat send user mappings using the XML API and copy them to the virtual system you\nwant to use as a User-ID hub.\nOn the hub, you can configure any User-ID source that is currently configured\non a virtual system. However, IP address-and-port-to-username mapping\ninformation from Terminal Server agents and group mappings are not shared\nbetween the User-ID hub and the connected virtual systems.\n3.\nSpecify the subnetworks that User-ID should include in or exclude from mapping.\n4.\nDefine the Ignore User List.\n5.\nOn all other virtual systems, remove any sources that are on the User-ID hub.\nSTEP 3 |\nCommit the changes to enable the User-ID hub and begin collecting mappings for the\nconsolidated sources.\nSTEP 4 |\nConfirm the User-ID hub is mapping the users.\n1.\nUse the show user ip-user-mapping all command to show the IP address-to-\nusername mappings and which virtual system provides the mappings.\n2.\nUse the show user user-id-agent statistics command to show which virtual\nsystem is serving as the User-ID hub.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n799\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 798,
+      "end": 799
+    },
+    "content_stats": {
+      "char_count": 3833,
+      "word_count": 630
+    },
+    "hierarchy": {
+      "parent": "Deploy User-ID in a Large-Scale Network",
+      "children": []
+    }
+  }
+}

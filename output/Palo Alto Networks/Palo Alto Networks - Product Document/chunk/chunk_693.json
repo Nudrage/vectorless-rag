@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_693",
+  "section_number": "1.19.4.1.2",
+  "header": "Import a Certificate for IKEv2 Gateway Authentication",
+  "content": "Perform this task if you are authenticating a peer for an IKEv2 gateway and you did not use a local\ncertificate already on the firewall; you want to import a certificate from elsewhere.\nThis task presumes that you selected Network > IKE Gateways, added a gateway, and for Local\nCertificate, you clicked Import.\nSTEP 1 |\nImport a certificate.\n1.\nSelect Network > IKE Gateways, Add a gateway, and on the General tab, for\nAuthentication, select Certificate. For Local Certificate, click Import.\n2.\nIn the Import Certificate window, enter a Certificate Name for the certificate you are\nimporting.\n3.\nSelect Shared if this certificate is to be shared among multiple virtual systems.\n4.\nFor Certificate File, Browse to the certificate file. Click on the file name and click Open,\nwhich populates the Certificate File field.\n5.\nFor File Format, select one of the following:\n• Base64 Encoded Certificate (PEM)—Contains the certificate, but not the key. It is\ncleartext.\n• Encrypted Private Key and Certificate (PKCS12)—Contains both the certificate and\nthe key.\n6.\nSelect Import private key if the key is in a different file from the certificate file. The key\nis optional, with the following exception:\n• You must import a key if you set the File Format to PEM. Enter a Key file by clicking\nBrowse and navigating to the key file to import.\n• Enter a Passphrase and Confirm Passphrase.\n7.\nClick OK.\nSTEP 2 |\nContinue to the next task.\nStep Configure certificate-based authentication.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1262\n©2025 Palo Alto Networks, Inc.\nVPNs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1262,
+      "end": 1263
+    },
+    "content_stats": {
+      "char_count": 1556,
+      "word_count": 259
+    },
+    "hierarchy": {
+      "parent": "Set Up an IKE Gateway",
+      "children": []
+    }
+  }
+}

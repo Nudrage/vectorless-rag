@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_173",
+  "section_number": "1.9.3.1",
+  "header": "Certificate Revocation List (CRL)",
+  "content": "Each certificate authority (CA) periodically issues a certificate revocation list (CRL) to a public\nrepository. The CRL identifies revoked certificates by serial number. After the CA revokes a\ncertificate, the next CRL update will include the serial number of that certificate. The firewall\nsupports CRLs in Distinguished Encoding Rules (DER) and Privacy Enhanced Mail (PEM) formats.\nThe Palo Alto Networks firewall downloads and caches the last-issued CRL for every CA listed\nin the trusted CA list of the firewall. Caching only applies to validated certificates; if a firewall\nnever validated a certificate, the firewall cache does not store the CRL for the issuing CA. Also,\nthe cache only stores a CRL until it expires.\nIf you configure multiple CRL distribution points (CDPs) and the firewall cannot reach\nthe first CDP, the firewall does not check the remaining CDPs. To redirect invalid CRL\nrequests, configure a DNS proxy as an alternate server.\nTo use CRLs for verifying the revocation status of certificates used for the decryption of inbound\nand outbound SSL/TLS traffic, see Configure Revocation Status Verification of Certificates Used\nfor SSL/TLS Decryption.\nTo use CRLs for verifying the revocation status of certificates that authenticate users and devices,\nconfigure a certificate profile and assign it to the interfaces that are specific to the application:\nAuthentication Portal, GlobalProtect (remote user-to-site or large scale), site-to-site IPSec VPN,\nor web interface access to Palo Alto Networks firewalls or Panorama. For details, see Configure\nRevocation Status Verification of Certificates.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n319\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 319,
+      "end": 320
+    },
+    "content_stats": {
+      "char_count": 1717,
+      "word_count": 257
+    },
+    "hierarchy": {
+      "parent": "Certificate Revocation",
+      "children": []
+    }
+  }
+}

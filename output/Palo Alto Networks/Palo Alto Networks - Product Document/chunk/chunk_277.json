@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_277",
+  "section_number": "1.11.4.2",
+  "header": "View the Correlated Objects",
+  "content": "You can view the correlation objects that are currently available on the firewall.\nSTEP 1 |\nSelect Monitor > Automated Correlation Engine > Correlation Objects. All the objects in the\nlist are enabled by default.\nSTEP 2 |\nView the details on each correlation object. Each object provides the following information:\n• Name and Title—The name and title indicate the type of activity that the correlation object\ndetects. The name column is hidden from view, by default. To view the definition of the\nobject, unhide the column and click the name link.\n• ID— A unique number that identifies the correlation object; this column is also hidden by\ndefault. The IDs are in the 6000 series.\n• Category—A classification of the kind of threat or harm posed to the network, user, or host.\nFor now, all the objects identify compromised hosts on the network.\n• State—Indicates whether the correlation object is enabled (active) or disabled (inactive). All\nthe objects in the list are enabled by default, and are hence active. Because these objects\nare based on threat intelligence data and are defined by the Palo Alto Networks Threat\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n500\n©2025 Palo Alto Networks, Inc.\nMonitoring\nResearch team, keep the objects active in order to track and detect malicious activity on\nyour network.\n• Description—Specifies the match conditions for which the firewall or Panorama will analyze\nlogs. It describes the sequence of conditions that are matched on to identify acceleration or\nescalation of malicious activity or suspicious host behavior. For example, the Compromise\nLifecycle object detects a host involved in a complete attack lifecycle in a three-step\nescalation that starts with scanning or probing activity, progressing to exploitation, and\nconcluding with network contact to a known malicious domain.\nFor more information, see Automated Correlation Engine Concepts and Use the Automated\nCorrelation Engine.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 500,
+      "end": 501
+    },
+    "content_stats": {
+      "char_count": 1933,
+      "word_count": 306
+    },
+    "hierarchy": {
+      "parent": "Use the Automated Correlation Engine",
+      "children": []
+    }
+  }
+}

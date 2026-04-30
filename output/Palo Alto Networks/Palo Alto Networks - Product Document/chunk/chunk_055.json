@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_055",
+  "section_number": "1.4.2",
+  "header": "Activate Subscription Licenses",
+  "content": "Follow these steps to activate a new license on the firewall.\nCertain decryption features like Decryption Mirroring and Decryption Broker require you to\nactivate a free license to unlock feature functionality. For those features, you should instead\nfollow the steps to Activate Free Licenses for Decryption Features.\nSTEP 1 |\nLocate the activation codes for the licenses you purchased.\nWhen you purchased your subscriptions you should have received an email from Palo Alto\nNetworks customer service listing the activation code associated with each subscription. If you\ncannot locate this email, contact Customer Support to obtain your activation codes before you\nproceed.\nSTEP 2 |\nActivate your Support license.\nYou will not be able to update your PAN-OS software if you do not have a valid Support\nlicense.\n1.\nLog in to the web interface and then select Device > Support.\n2.\nClick Activate support using authorization code.\n3.\nEnter your Authorization Code and then click OK.\nSTEP 3 |\nActivate each license you purchased.\nSelect Device > Licenses and then activate your licenses and subscriptions in one of the\nfollowing ways:\n• Retrieve license keys from license server—Use this option if you activated your license on\nthe Customer Support portal.\n• Activate feature using authorization code—Use this option to enable purchased\nsubscriptions using an authorization code for licenses that have not been previously\nactivated on the support portal. When prompted, enter the Authorization Code and then\nclick OK.\n• Manually upload license key—Use this option if your firewall does not have connectivity to\nthe Palo Alto Networks Customer Support Portal. In this case, you must download a license\nkey file from the support site on an internet-connected computer and then upload to the\nfirewall.\nTo automate activation using the Customer Support Portal API, see the process to\nActivate Licenses. This process works for both the hardware and VM-Series firewalls.\nSTEP 4 |\nVerify that the license is successfully activated\nOn the Device > Licenses page, verify that the license is successfully activated. For example,\nafter activating the WildFire license, you should see that the license is valid:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n77\n©2025 Palo Alto Networks, Inc.\nSubscriptions\nSTEP 5 |\n(WildFire, Advanced URL Filtering, and DNS Security subscriptions only) Commit\nconfiguration changes to complete subscription activation.\nAfter activating a WildFire, Advanced URL Filtering, or DNS Security subscription license, a\ncommit is required for the firewall to begin processing their corresponding traffic and data\ntypes based on the security profile configurations. You should:\n• Commit any pending changes. If you do not have pending changes, which prevents you\nfrom committing any configuration updates, you can: issue a #commit force command\nthrough the CLI or make an update that writes to the candidate configuration, which\nenables the commit option.\nA commit force bypasses some of the validation checks that normally occur with a\nnormal commit operation. Make sure your configuration is valid and is semantically\nand syntactically correct before issuing a commit force update.\n• WildFire only Check that the WildFire Analysis profile rules include the advanced file types\nthat are now supported with the WildFire subscription. If no change to any of the rules is\nrequired, make a minor edit to a rule description and perform a commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n78\n©2025 Palo Alto Networks, Inc.\nSubscriptions",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 77,
+      "end": 79
+    },
+    "content_stats": {
+      "char_count": 3531,
+      "word_count": 551
+    },
+    "hierarchy": {
+      "parent": "Subscriptions",
+      "children": []
+    }
+  }
+}

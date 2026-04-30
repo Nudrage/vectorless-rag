@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_325",
+  "section_number": "1.11.9.7.2",
+  "header": "Interpret Botnet Report Output",
+  "content": "The botnet report displays a line for each host that is associated with traffic you defined as\nsuspicious when configuring the report. For each host, the report displays a confidence score of\n1 to 5 to indicate the likelihood of botnet infection, where 5 indicates the highest likelihood. The\nscores correspond to threat severity levels: 1 is informational, 2 is low, 3 is medium, 4 is high, and\n5 is critical. The firewall bases the scores on:\n• Traffic type—Certain HTTP traffic types are more likely to involve botnet activity. For example,\nthe report assigns a higher confidence to hosts that visit known malware URLs than to hosts\nthat browse to IP domains instead of URLs, assuming you defined both those activities as\nsuspicious.\n• Number of events—Hosts that are associated with a higher number of suspicious events will\nhave higher confidence scores based on the thresholds (Count values) you define when you\nConfigure a Botnet Report.\n• Executable downloads—The report assigns a higher confidence to hosts that download\nexecutable files. Executable files are a part of many infections and, when combined with the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n541\n©2025 Palo Alto Networks, Inc.\nMonitoring\nother types of suspicious traffic, can help you prioritize your investigations of compromised\nhosts.\nWhen reviewing the report output, you might find that the sources the firewall uses to evaluate\nbotnet activity (for example, the list of malware URLs in PAN-DB) have gaps. You might also find\nthat these sources identify traffic that you consider safe. To compensate in both cases, you can\nadd query filters when you Configure a Botnet Report.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 541,
+      "end": 542
+    },
+    "content_stats": {
+      "char_count": 1654,
+      "word_count": 268
+    },
+    "hierarchy": {
+      "parent": "Generate Botnet Reports",
+      "children": []
+    }
+  }
+}

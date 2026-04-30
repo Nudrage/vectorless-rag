@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_059",
+  "section_number": "4.1",
+  "header": "Create user",
+  "content": "Creates a new user.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe login name for the user. A valid username must be in the format,\nname@domain , where domain  corresponds to a domain approved for\nyour Tenable Vulnerability Management instance.\nNote: During initial setup, Tenable configures approved domains for your\nVulnerability Management instance. To add domains to your instance,\ncontact Tenable Support.\nstring <password>\nThe initial password for the user. Passwords must be at least 12 characters\nlong and contain at least one uppercase letter, one lowercase letter, one\nnumber, and one special character symbol.\ninteger <int32>\nTThe user role represented as an integer value, as described in User Roles.\nIf omitted, the Basic [16] user role is applied by default.\nstring\nThe name of the user (for example, first and last name).\nstring\nThe email address of the user. A valid email address must be in the format,\nname@domain , where domain  corresponds to a domain approved for\nyour Tenable Vulnerability Management instance. Administrators can\ncreate users with an email address that has a domain outside of the\napproved domains.\nThis email address overrides the email address set in username . If your\nrequest omits this parameter, Tenable Vulnerability Management uses the\nusername  value as the user's email address.\nNote: During initial setup, Tenable configures approved domains for your\nVulnerability Management instance. To add domains to your instance,\ncontact Tenable Support.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 38,
+      "end": 39
+    },
+    "content_stats": {
+      "char_count": 1571,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "Access Control (Users)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

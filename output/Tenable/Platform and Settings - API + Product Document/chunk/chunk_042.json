@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_042",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully retrieved the specified permission details.\nRESPONSE SCHEMA:\napplication/json\nArray of strings\nItems Enum: \"CanScan\"\n\"CanView\"\n\"CanEdit\"\n\"CanUse\"\nA list of actions to applied to the tags or the assets grouped by tags.\nPossible actions are CanScan , CanView , CanEdit , and CanUse .\nstring\nThe name of the permission.\nNote: The name must be unique, 255 characters or less, and\nalphanumeric. The following special characters are allowed: underscore,\ndash, parenthesis, brackets, and colon.\nArray of objects\nA list of objects (tags or assets) that will have the specified permission\napplied to them.\nstring\nThe UUID of the permission.\nArray of objects\nA list of users or user groups that you want the permission applied to.\ninteger <int64>\nA Unix timestamp indicating the date and time on which the permissions\nwas created.\nstring\nThe name of the user who created the permission.\ninteger <int64>\nA Unix timestamp indicating the date and time on which the permissions\nwas updated.\npermission_uuid\nrequired\nactions\nname\nobjects\npermission_uuid\nsubjects\ncreated_at\ncreated_by\nupdated_at\nstring\nThe name of the user who last updated the permission.\n— 403 Returned if you are not allowed to view the permission details.\n— 404 Returned if Tenable Vulnerability Management could not find the specified permission.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 25,
+      "end": 26
+    },
+    "content_stats": {
+      "char_count": 1365,
+      "word_count": 212
+    },
+    "hierarchy": {
+      "parent": "Get permission details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

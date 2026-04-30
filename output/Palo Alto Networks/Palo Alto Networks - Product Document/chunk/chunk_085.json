@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_085",
+  "section_number": "1.6.4.2",
+  "header": "Configure an Admin Role Profile",
+  "content": "Admin Role profiles enable you to define granular administrative access privileges to ensure\nprotection for sensitive company information and privacy for end users.\nAs a best practice, create Admin Role profiles that allow administrators to access only the\nareas of the management interfaces that they need to access to perform their jobs.\nSTEP 1 |\nSelect Device > Admin Roles and click Add.\nSTEP 2 |\nEnter a Name to identify the role.\nSTEP 3 |\nFor the scope of the Role, select Device or Virtual System.\nSTEP 4 |\nIn the Web UI and REST API tabs, click the icon for each functional area to toggle it to the\ndesired setting: Enable, Read Only or Disable. For the XML API tab select, Enable or Disable.\nFor details on the Web UI options, see Web Interface Access Privileges.\nSTEP 5 |\nSelect the Command Line tab and select a CLI access option. The Role scope controls the\navailable options:\n• Device role—superuser, superreader, deviceadmin, devicereader, or None\n• Virtual System role—vsysadmin, vsysreader, or None\nSTEP 6 |\nClick OK to save the profile.\nSTEP 7 |\nAssign the role to an administrator. See Configure a Firewall Administrator Account.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n128\n©2025 Palo Alto Networks, Inc.\nFirewall Administration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 128,
+      "end": 129
+    },
+    "content_stats": {
+      "char_count": 1247,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "Manage Firewall Administrators",
+      "children": []
+    }
+  }
+}

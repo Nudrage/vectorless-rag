@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "5.1",
+  "header": "Responses",
+  "content": "200 Returned if the list of product pages is retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nArray [\nstring\nThe name of the product.\nstring\nProduct page slug, for example, nessus .\nstring\nThe description of a product.\nstring\nThe URL to list the product files available for download.\n]\n500 Returned if an internal error occurred while processing the request.\nRESPONSE SCHEMA:\napplication/json\ntitle\npage_slug\ndescription\nfiles_index_url\nboolean\nIndicates whether the server successfully processed the request or not.\ninteger\nThe HTTP response status code of request.\nstring\nThe error that corresponds to the HTTP response status code.\nstring\nAdditional details about the error.\nobject",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 2,
+      "end": 3
+    },
+    "content_stats": {
+      "char_count": 693,
+      "word_count": 103
+    },
+    "hierarchy": {
+      "parent": "List product pages",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_314",
+  "section_number": "1.11.7.6",
+  "header": "Schedule Log Exports to an SCP or FTP Server",
+  "content": "You can schedule exports of Traffic, Threat, URL Filtering, Data Filtering, HIP Match, and WildFire\nSubmission logs to a Secure Copy (SCP) server or File Transfer Protocol (FTP) server. Perform this\ntask for each log type you want to export.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n529\n©2025 Palo Alto Networks, Inc.\nMonitoring\nYou can use Secure Copy (SCP) commands from the CLI to export the entire log\ndatabase to an SCP server and import it to another firewall. Because the log database is\ntoo large for an export or import to be practical on the following platforms, they do not\nsupport these options: PA-7000 Series firewalls (all PAN-OS releases), Panorama virtual\nappliance running Panorama 6.0 or later releases, and Panorama M-Series appliances (all\nPanorama releases).\nSTEP 1 |\nSelect Device > Scheduled Log Export and click Add.\nSTEP 2 |\nEnter a Name for the scheduled log export and Enable it.\nSTEP 3 |\nSelect the Log Type to export.\nSTEP 4 |\nSelect the daily Scheduled Export Start Time. The options are in 15-minute increments for a\n24-hour clock (00:00 - 23:59).\nSTEP 5 |\nSelect the Protocol to export the logs: SCP (secure) or FTP.\nSTEP 6 |\nEnter the Hostname or IP address of the server.\nSTEP 7 |\nEnter the Port number. By default, FTP uses port 21 and SCP uses port 22.\nSTEP 8 |\nEnter the Path or directory in which to save the exported logs.\nSTEP 9 |\nEnter the Username and, if necessary, the Password (and Confirm Password) to access the\nserver.\nSTEP 10 | (FTP only) Select Enable FTP Passive Mode if you want to use FTP passive mode, in which\nthe firewall initiates a data connection with the FTP server. By default, the firewall uses FTP\nactive mode, in which the FTP server initiates a data connection with the firewall. Choose\nthe mode based on what your FTP server supports and on your network requirements.\nSTEP 11 | (SCP only) Click Test SCP server connection. Before establishing a connection, the firewall\nmust accept the host key for the SCP server.\nIf you use a Panorama template to configure the log export schedule, you must\nperform this step after committing the template configuration to the firewalls. After\nthe template commit, log in to each firewall, open the log export schedule, and click\nTest SCP server connection.\nSTEP 12 | Click OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n530\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 529,
+      "end": 531
+    },
+    "content_stats": {
+      "char_count": 2377,
+      "word_count": 414
+    },
+    "hierarchy": {
+      "parent": "View and Manage Logs",
+      "children": []
+    }
+  }
+}

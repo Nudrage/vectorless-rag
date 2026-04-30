@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_628",
+  "section_number": "1.17.16",
+  "header": "Use an External Dynamic List in a URL Filtering Profile",
+  "content": "To protect your network from newly-discovered threats and malware, you can use external\ndynamic lists in URL Filtering profiles. External dynamic lists give you the ability to update the list\nwithout a configuration change or commit on the firewall. An external dynamic list is a text file\nthat is hosted on an external web server. You can use this list to import URLs and enforce policy\non these URLs. When the list is updated on the web server, the firewall retrieves the changes and\napplies policy to the modified list without requiring a commit on the firewall.\nThe firewall dynamically imports the list at the configured interval and enforces policy for the\nURLs (IP addresses or domains are ignored) in the list. For URL formatting guidelines, see URL\nCategory Exceptions.\nFor more information, see External Dynamic List.\nSTEP 1 |\nConfigure the firewall to access an external dynamic list.\n• Ensure that the list does not include IP addresses or domain names; the firewall skips non-\nURL entries.\n• Verify the formatting of the list (see custom URL list guidelines).\n• Select URL List from the Type drop-down.\nSTEP 2 |\nUse the external dynamic list in a URL Filtering profile.\n1.\nSelect Objects > Security Profiles > URL Filtering.\n2.\nAdd or modify an existing URL Filtering profile.\n3.\nName the profile and, in the Categories tab, select the external dynamic list from the\nCategory list.\n4.\nClick Action to select a more granular action for the URLs in the external dynamic list.\nIf a URL that is included in an external dynamic list is also included in a custom\nURL category, or block and allow list, the action specified in the custom\ncategory or the block and allow list will take precedence over the external\ndynamic list.\n5.\nClick OK.\n6.\nAttach the URL Filtering profile to a Security policy rule.\n1. Select Policies > Security.\n2. Select the Actions tab and, in the Profile Setting section, select the new profile in the\nURL Filtering drop-down.\n3. Click OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1161\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 3 |\nTest that the policy action is enforced.\n1.\nView the external dynamic list entries, and attempt to access a URL from the list.\n2.\nVerify that the action you defined is enforced in the browser.\n3.\nTo monitor the activity on the firewall:\n1. Select ACC and add a URL Domain as a global filter to view the Network Activity and\nBlocked Activity for the URL you accessed.\n2. Select Monitor > Logs > URL Filtering to access the detailed log view.\nSTEP 4 |\nVerify whether entries in the external dynamic list were ignored or skipped.\nIn a list of type URL, the firewall skips non-URL entries as invalid and ignores entries that\nexceed the maximum limit for the firewall model.\nTo check whether you have reached the limit for an external dynamic list type, select\nObjects > External Dynamic Lists and click List Capacities.\nUse the following CLI command on a firewall to review the details for a list.\nrequest system external-list show type url name <list_name>\nFor example:\nrequest system external-list show type url name My_URL_List\nvsys5/My_URL_List:\nNext update at: Tue Jan 3 14:00:00 2017\nSource: http://example.com/My_URL_List.txt\nReferenced: Yes\nValid: Yes\nAuth-Valid: Yes\nTotal valid entries: 3\nTotal invalid entries: 0\nValid urls:\nwww.URL1.com\nwww.URL2.com\nwww.URL3.com\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1162\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1161,
+      "end": 1163
+    },
+    "content_stats": {
+      "char_count": 3444,
+      "word_count": 581
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": []
+    }
+  }
+}

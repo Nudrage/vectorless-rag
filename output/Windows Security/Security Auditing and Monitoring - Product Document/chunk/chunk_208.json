@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_208",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4954(S): Windows Firewall Group Policy settings have changed. The new settings have been applied.\n\nUnfortunately this event generates every time local Group Policy is refreshed and does not indicate that settings really were modified. Typically this event can be ignored.\n4956(S): Windows Firewall has changed the active profile.\nEvent Description:\nThis event generates when Windows Firewall has changed the active profile.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4956</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13571</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-03T00:14:56.676017600Z\" />\n<EventRecordID>1050811</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"500\" ThreadID=\"2216\" />\n© 2016 Microsoft. All rights reserved.\n630\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"ActiveProfile\">Domain</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nNew Active Profile [Type = UnicodeString]: the name of the new active profile. Possible values are:\no\nDomain\no\nPublic\no\nPrivate",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 630,
+      "end": 631
+    },
+    "content_stats": {
+      "char_count": 1472,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "4952(F): Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the",
+      "children": []
+    }
+  }
+}

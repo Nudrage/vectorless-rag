@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_152",
+  "section_number": "8.9",
+  "header": "Audit Kernel Object",
+  "content": "Audit Kernel Object determines whether the operating system generates audit events when users attempt to access the system kernel, which includes mutexes and semaphores.\nOnly kernel objects with a matching system access control list (SACL) generate security audit events. The audits generated are usually useful only to developers.\nTypically, kernel objects are given SACLs only if the AuditBaseObjects or AuditBaseDirectories auditing options are enabled.\nThe “Audit: Audit the access of global system objects” policy setting controls the default SACL of kernel objects.\nEvent volume: High.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nNo\nNo\nNo\nNo\nTypically Kernel object auditing events have little to no security relevance and are hard to parse or analyze.\nAlso, the volume of these events is typically very high.\nThere is no recommendation to enable this subcategory, unless you know exactly what you need to monitor at\nthe Kernel objects level.\nMember Server\nNo\nNo\nNo\nNo\nTypically Kernel object auditing events have little to no security relevance and are hard to parse or analyze.\nAlso, the volume of these events is typically very high.\nThere is no recommendation to enable this subcategory, unless you know exactly what you need to monitor at\nthe Kernel objects level.\nWorkstation\nNo\nNo\nNo\nNo\nTypically Kernel object auditing events have little to no security relevance and are hard to parse or analyze.\nAlso, the volume of these events is typically very high.\nThere is no recommendation to enable this subcategory, unless you know exactly what you need to monitor at\nthe Kernel objects level.\nEvents List:\n\n4656\n(S, F): A handle to an object was requested.\n\n4658\n(S): The handle to an object was closed.\n\n4660\n(S): An object was deleted.\n\n4663\n(S): An attempt was made to access an object.\n4656(S, F): A handle to an object was requested.\nThis event also belongs in the Audit File System subcategory, and is described there. See “4656(S, F): A handle to an object was requested.”\n4658(S): The handle to an object was closed.\nThis event also belongs in the Audit File System subcategory, and is described there. See “4658(S): The handle to an object was closed.”\n4660(S): An object was deleted.\nThis event also belongs in the Audit File System subcategory, and is described there. See “4660(S): An object was deleted.”\n© 2016 Microsoft. All rights reserved.\n455\n4663(S): An attempt was made to access an object.\nThis event also belongs in the Audit File System subcategory, and is described there. See “4663(S): An attempt was made to access an object.”\n© 2016 Microsoft. All rights reserved.\n456",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 455,
+      "end": 457
+    },
+    "content_stats": {
+      "char_count": 2653,
+      "word_count": 438
+    },
+    "hierarchy": {
+      "parent": "Object Access",
+      "children": []
+    }
+  }
+}

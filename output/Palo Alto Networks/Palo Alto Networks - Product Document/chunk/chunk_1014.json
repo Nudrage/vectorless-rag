@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1014",
+  "section_number": "1.23.3.2",
+  "header": "Networking Considerations for a Shared Gateway",
+  "content": "Keep the following in mind while you are configuring a shared gateway.\n• The virtual systems in a shared gateway scenario access the Internet through the shared\ngateway’s physical interface, using a single IP address. If the IP addresses of the virtual systems\nare not globally routable, configure source NAT to translate those addresses to globally-\nroutable IP addresses.\n• A virtual router routes the traffic for all of the virtual systems through the shared gateway.\n• The default route for the virtual systems should point to the shared gateway.\n• Security policies must be configured for each virtual system to allow the traffic between the\ninternal zone and external zone, which is visible to the shared gateway.\n• A firewall administrator should control the virtual router, so that no member of a virtual system\ncan affect the traffic of other virtual systems.\n• Within a Palo Alto Networks firewall, a packet may hop from one virtual system to another\nvirtual system or a shared gateway. A packet may not traverse more than two virtual systems\nor shared gateways. For example, a packet cannot go from vsys1 to vsys2 to vsys3, or similarly\nfrom vsys1 to vsys2 to shared gateway1. Both examples involve more than two virtual\nsystems, which is not permitted.\nTo save configuration time and effort, consider the following advantages of a shared gateway:\n• Rather than configure NAT for multiple virtual systems associated with a shared gateway, you\ncan configure NAT for the shared gateway.\n• Rather than configure policy-based routing (PBR) for multiple virtual systems associated with a\nshared gateway, you can configure PBR for the shared gateway.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1709\n©2025 Palo Alto Networks, Inc.\nVirtual Systems",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1709,
+      "end": 1710
+    },
+    "content_stats": {
+      "char_count": 1748,
+      "word_count": 285
+    },
+    "hierarchy": {
+      "parent": "Shared Gateway",
+      "children": []
+    }
+  }
+}

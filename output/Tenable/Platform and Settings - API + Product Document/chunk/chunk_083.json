@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_083",
+  "section_number": "4.8",
+  "header": "Change password",
+  "content": "Changes the password for the specified user.\nIf you reset a user's password, Tenable Vulnerability Management automatically resets the user's\nlogin_fail_count  and lockout  attributes to 0 . If you specify that the password is temporary,\nthe user will be forced to reset their password upon next login.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe unique ID of the user whose password you want to change.\nREQUEST BODY SCHEMA:\napplication/json\nstring <password>\nThe new password for the user.\nboolean\nIndicates whether the password is temporary ( true ) or not ( false ). If\nthis parameter is not specified, Tenable Vulnerability Management defaults\nto false .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 60,
+      "end": 60
+    },
+    "content_stats": {
+      "char_count": 724,
+      "word_count": 113
+    },
+    "hierarchy": {
+      "parent": "Access Control (Users)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

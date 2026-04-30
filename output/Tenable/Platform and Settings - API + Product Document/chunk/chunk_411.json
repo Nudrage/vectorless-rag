@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_411",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returns the object permissions.\nRESPONSE SCHEMA:\napplication/json\nArray [\nstring\nEnum: \"default\"\n\"user\"\n\"group\"\nThe type of permission (default, user, group).\ninteger\nThe unique ID of the user or group.\nstring\nThe UUID of the owner of the object.\nstring\nThe name of the user or group.\nstring\nThe display-friendly name of the user or group.\ninteger <int32>\nThe permission value to grant access as described in Permissions.\ninteger\nThe ID of the owner of the object.\n]\n— 403 Returned if you do not have permission to view the object.\n— 404 Returned if Tenable Vulnerability Management cannot find the specified object.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 387,
+      "end": 387
+    },
+    "content_stats": {
+      "char_count": 747,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Get object permissions",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

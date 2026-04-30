@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_608",
+  "section_number": "1.17.5.3",
+  "header": "Verified URL Categories",
+  "content": "Palo Alto Networks verifies the URL categories to which a requested site belongs. If PAN-DB\ndetermines that a URL belongs to malicious URL categories, it does not assign the site a security-\nfocused URL category (high-risk, medium-risk, low-risk). The firewall automatically blocks sites\nin these categories because they pose an unacceptable level of risk for most environments.\nRisk levels are reserved only for URLs that have not been classified as malicious or are no longer\nclassified as malicious due to a lack of evidence.\nThe following table lists the categories that PAN-DB considers malicious and blocks by default,\nwith the exception of Private IP Addresses. Private IP addresses (and hosts) are unique\nto the host environment and are invisible to PAN-DB. As a result, Palo Alto Networks does not\nassign a risk rating to sites in this category.\nCategory\nDefault Action\nMalware\nPhishing\nCommand and Control\nGrayware\nBlock\nPrivate IP Addresses\nAllowed (no default action)\nFor more information about current URL categories, refer to: Complete List of PAN-DB\nURL Filtering Categories\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1121\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1121,
+      "end": 1122
+    },
+    "content_stats": {
+      "char_count": 1180,
+      "word_count": 184
+    },
+    "hierarchy": {
+      "parent": "URL Categories",
+      "children": []
+    }
+  }
+}

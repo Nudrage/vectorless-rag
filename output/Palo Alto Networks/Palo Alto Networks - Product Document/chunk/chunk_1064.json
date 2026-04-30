@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1064",
+  "section_number": "1.25.1.1",
+  "header": "Access the Maintenance Recovery Tool (MRT)",
+  "content": "The Maintenance Recovery Tool (MRT) enables you to perform several tasks on Palo Alto\nNetworks firewalls and appliances. For example, you can revert the firewall or appliance to factory\ndefault settings, revert PAN-OS or a content update to a previous version, run diagnostics on the\nfile system, gather system information, and extract logs. Additionally, you can use the MRT to\nChange the Operational Mode to FIPS-CC Mode or from FIPS-CC mode to normal mode.\nThe following procedures describe how to access the Maintenance Recovery Tool (MRT) on\nvarious Palo Alto Networks products.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1769\n©2025 Palo Alto Networks, Inc.\nCertifications\nAccess the MRT on hardware firewalls and appliances (such as PA-220 firewalls, PA-7000\nSeries firewalls, or M-Series appliances).\n1.\nEstablish a serial console session to the firewall or appliance.\n1. Connect a serial cable from the serial port on your computer to the console port on\nthe firewall or appliance.\nIf your computer does not have a 9-pin serial port but does have a USB port,\nuse a serial-to-USB converter to establish the connection. If the firewall has a\nmicro USB console port, connect to the port using a standard Type-A USB\nto micro USB cable.\n2. Open terminal emulation software on your computer and set to 9600-8-N-1 and then\nconnect to the appropriate COM port.\nOn a Windows system, you can go to the Control Panel to view the COM\nport settings for Device and Printers to determine which COM port is\nassigned to the console.\n3. Log in using an administrator account. (The default username/password is admin/\nadmin.)\n2.\nEnter the following CLI command and press y to confirm:\ndebug system maintenance-mode\n3.\nAfter the firewall or appliance boots to the MRT welcome screen (in approximately 2 to\n3 minutes), press Enter on Continue to access the MRT main menu.\nYou can also access the MRT by rebooting the firewall or appliance and entering\nmaint at the maintenance mode prompt. A direct serial console connection is\nrequired.\nAfter the firewall or appliance boots into the MRT, you can access the MRT remotely by\nestablishing an SSH connection to the management (MGT) interface IP address. At the\nlogin prompt, enter maint as the username and the firewall or appliance serial number\nas the password.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1770\n©2025 Palo Alto Networks, Inc.\nCertifications\nAccess the MRT on VM-Series firewalls deployed in a private cloud (such as on a VMware ESXi\nor KVM hypervisor).\n1.\nEstablish an SSH session to the management IP address of the firewall and log in using\nan administrator account.\n2.\nEnter the following CLI command and press y to confirm:\ndebug system maintenance-mode\nIt will take approximately 2 to 3 minutes for the firewall to boot to the MRT.\nDuring this time, your SSH session will disconnect.\n3.\nAfter the firewall boots to the MRT welcome screen, log in based on the operational\nmode:\n• Normal mode—Establish an SSH session to the management IP address of the firewall\nand log in using maint as the username and the firewall or appliance serial number as\nthe password.\n• FIPS-CC mode—Access the virtual machine management utility (such as the vSphere\nclient) and connect to the virtual machine console.\n4.\nFrom the MRT welcome screen, press Enter on Continue to access the MRT main\nmenu.\nAccess the MRT on VM-Series firewalls deployed in the public cloud (such as AWS or Azure).\n1.\nEstablish an SSH session to the management IP address of the firewall and log in using\nan administrator account.\n2.\nEnter the following CLI command and press y to confirm:\ndebug system maintenance-mode\nIt will take approximately 2 to 3 minutes for the firewall to boot to the MRT.\nDuring this time, your SSH session will disconnect.\n3.\nAfter the firewall boots to the MRT welcome screen, log in based on the virtual machine\ntype:\n• AWS—Log in as ec2-user and select the SSH public key associated with the virtual\nmachine when you deployed it.\n• Azure—Enter the credentials you created when you deployed the VM-Series firewall.\n• GCP—Log in as gcp-user and select the SSH public key associated with the virtual\nmachine when you deployed it.\n4.\nFrom the MRT welcome screen, press Enter on Continue to access the MRT main\nmenu.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1769,
+      "end": 1771
+    },
+    "content_stats": {
+      "char_count": 4251,
+      "word_count": 714
+    },
+    "hierarchy": {
+      "parent": "Enable FIPS and Common Criteria Support",
+      "children": []
+    }
+  }
+}

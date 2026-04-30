@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1051",
+  "section_number": "1.24.4.3.2",
+  "header": "Use Case: Non-IP Protocol Protection Within a Security Zone on Layer 2 Interfaces",
+  "content": "If you don’t implement a Zone Protection profile with non-IP protocol protection, the firewall\nallows non-IP protocols in a single zone to go from one Layer 2 interface to another. In this use\ncase, blocking LLDP packets ensures that LLDP for one network doesn’t discover a network\nreachable through another interface in the zone.\nIn the following figure, the Layer 2 VLAN named Datacenter is divided into two subinterfaces:\n192.168.1.1/24, subinterface .7 and 192.168.1.2/24, subinterface .8. The VLAN belongs to the\nUser zone. By applying a Zone Protection profile that blocks LLDP to the User zone:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1750\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\n• Subinterface .7 blocks LLDP from its switch to the firewall at the red X on the left, preventing\nthat traffic from reaching subinterface .8.\n• Subinterface .8 blocks LLDP from its switch to the firewall at the red X on the right, preventing\nthat traffic from reaching subinterface .7.\nSTEP 1 |\nCreate a subinterface for an Ethernet interface.\n1.\nSelect Network > Interfaces > Ethernet and select a Layer 2 interface, in this example,\nethernet1/1.\n2.\nSelect Add Subinterfaces.\n3.\nThe Interface Name defaults to the interface (ethernet 1/1). After the period, enter 7.\n4.\nFor Tag, enter 300.\n5.\nFor Security Zone, select User.\n6.\nClick OK.\nSTEP 2 |\nCreate a second subinterface for the Ethernet interface.\n1.\nSelect Network > Interfaces > Ethernet and select the Layer 2 interface: ethernet1/1.\n2.\nSelect Add Subinterfaces.\n3.\nThe Interface Name defaults to the interface (ethernet 1/1). After the period, enter 8.\n4.\nFor Tag, enter 400.\n5.\nFor Security Zone, select User.\n6.\nClick OK.\nSTEP 3 |\nCreate a VLAN for the Layer2 interface and two subinterfaces.\n1.\nSelect Network > VLANs and Add a VLAN.\n2.\nEnter the Name of the VLAN; for this example, enter Datacenter.\n3.\nFor VLAN Interface, select None.\n4.\nFor Interfaces, click Add and select the Layer 2 interface: ethernet1/1, and two\nsubinterfaces: ethernet1/1.7 and ethernet1/1.8.\n5.\nClick OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1751\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 4 |\nBlock non-IP protocol packets in a Zone Protection profile.\n1.\nSelect Network > Network Profiles > Zone Protection and Add a profile.\n2.\nEnter the Name, in this example, Block LLDP.\n3.\nEnter a profile Description—Block LLDP packets from an LLDP network to other\ninterfaces in the zone (intrazone).\n4.\nSelect Protocol Protection.\n5.\nChoose Rule Type of Exclude List.\n6.\nEnter Protocol Name LLDP.\n7.\nEnter Ethertype code 0x88cc. The Ethertype must be preceded by 0x to indicate a\nhexadecimal value.\n8.\nSelect Enable.\n9.\nClick OK.\nSTEP 5 |\nApply the Zone Protection profile to the security zone to which Layer 2 VLAN belongs.\n1.\nSelect Network > Zones.\n2.\nAdd a zone.\n3.\nEnter the Name of the zone, User.\n4.\nFor Location, select the virtual system where the zone applies.\n5.\nFor Type, select Layer2.\n6.\nAdd an Interface that belongs to the zone, ethernet1/1.7\n7.\nAdd an Interface that belongs to the zone, ethernet1/1.8.\n8.\nFor Zone Protection Profile, select the profile Block LLDP.\n9.\nClick OK.\nSTEP 6 |\nCommit.\nClick Commit.\nSTEP 7 |\nView the number of non-IP packets the firewall has dropped based on protocol protection.\nAccess the CLI.\n> show counter global name pkt_nonip_pkt_drop\n> show counter global name pkt_nonip_pkt_drop delta yes",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1750,
+      "end": 1752
+    },
+    "content_stats": {
+      "char_count": 3422,
+      "word_count": 572
+    },
+    "hierarchy": {
+      "parent": "Configure Protocol Protection",
+      "children": []
+    }
+  }
+}

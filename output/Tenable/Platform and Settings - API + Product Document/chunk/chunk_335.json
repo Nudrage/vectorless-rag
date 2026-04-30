@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_335",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Vulnerability Management successfully created the exclusion.\nname\nrequired\ndescription\nmembers\nrequired\nschedule\nnetwork_id\nRESPONSE SCHEMA:\napplication/json\nstring\nThe UUID of the exclusion.\nstring\nThe targets that you want excluded from scans. Specify multiple\ntargets as a comma-separated string. Targets can be in the\nfollowing formats:\nAn individual IPv4 address ( 192.0.2.1 )\nA range of IPv4 addresses ( 192.0.2.1-192.0.2.255 )\nCIDR notation ( 192.0.2.0/24 )\nA fully-qualified domain name (FQDN)\n( host.domain.com )\nstring\nThe name of the exclusion.\nstring\nThe description of the exclusion.\ninteger\nThe unique ID of the exclusion.\nobject\nThe schedule parameters for the exclusion.\ninteger\nThe creation date of the exclusion in Unix time.\ninteger\nThe last modification date for the exclusion in Unix time.\nstring\nThe ID of the network object associated with scanners where\nTenable Vulnerability Management applies the exclusion. The\ndefault network ID is 00000000-0000-0000-0000-\n000000000000 . To determine the ID of a custom network, use\nthe GET /networks endpoint. For more information about\nnetwork objects, see Manage Networks.\n— 400\nReturned if your request message contained invalid parameters or if your request was improperly\nformatted.\nuuid\nmembers\nname\ndescription\nid\nschedule\ncreation_date\nlast_modification_date\nnetwork_id\n— 403 Returned if you do not have permission to create an exclusion.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500 Returned if Tenable Vulnerability Management failed to create the exclusion.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 327,
+      "end": 329
+    },
+    "content_stats": {
+      "char_count": 1643,
+      "word_count": 245
+    },
+    "hierarchy": {
+      "parent": "Create exclusion",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

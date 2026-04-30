@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_160",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n429\nsort\nGET\n/v2/access-groups/filters\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"wildcard_fields\":\n-\n[\n\"name\",\n\"created_by_name\",\n\"updated_by_name\"\n],\nContent type\n\"filters\":\n-\n[\n,\n- {\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\"\n},\n\"name\": \"name\",\n\"readable_name\": \"Access Group Name\"\n}\n,\n- {\n\"operators\":\n-\n[\n\"date-lte\",\n\"date-gte\",\n\"date-eq\"\n],\n\"control\":\n-\n{\n\"type\": \"datefield\"\n},\n\"name\": \"updated_at\",\n\"readable_name\": \"Last Modified\"\n}\n,\n- {\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\"\n},\n\"name\": \"updated_by_name\",\n\"readable_name\": \"Last Modified By\"\n}\n- {\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\"\n},\n\"name\": \"created_by_name\",\n\"readable_name\": \"Owner\"\n,\n}\n,\n- {\n\"operators\":\n-\n[\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\"\n},\n\"name\": \"rule.aws_account\",\n\"readable_name\": \"Rule - AWS Account ID\"\n}\n,\n- {\n\"operators\":\n-\n[\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\"\n},\n\"name\": \"rule.fqdn\",\n\"readable_name\": \"Rule - FQDN\"\n}\n,\n- {\n\"operators\":\n-\n[\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\"\n},\n\"name\": \"rule.ipv4\",\n\"readable_name\": \"Rule - IPv4\"\n}\n,\n- {\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": \"(^[\\\\w\\\\W\\\\s]+$)\"\n},\n\"name\": \"rule.operating_system\",\n\"readable_name\": \"Rule - Operating System\"\n}\n- {\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\"\n},\n\"name\": \"principal.name\",\n\"readable_name\": \"User / User Group\"\n}\n],\n\"sort\":\n-\n{\n\"sortable_fields\":\n-\n[\n\"name\",\n\"created_at\",\n\"created_by_name\",\n\"updated_at\",\n\"updated_by_name\"\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 134,
+      "end": 138
+    },
+    "content_stats": {
+      "char_count": 1549,
+      "word_count": 237
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

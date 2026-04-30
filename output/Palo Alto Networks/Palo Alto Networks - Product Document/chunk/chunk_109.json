@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_109",
+  "section_number": "1.6.6.2",
+  "header": "Ports Used for HA",
+  "content": "Firewalls configured as High Availability (HA) peers must be able to communicate with each\nother to maintain state information (HA1 control link) and synchronize data (HA2 data link). In\nActive/Active HA deployments the peer firewalls must also forward packets to the HA peer that\nowns the session. The HA3 link is a Layer 2 (MAC-in-MAC) link and it does not support Layer 3\naddressing or encryption.\nDestination\nPort\nProtocol\nDescription\n28769\n28260\nTCP\nTCP\nUsed for the HA1 control link for clear text communication\nbetween the HA peer firewalls. The HA1 link is a Layer 3 link and\nrequires an IP address.\n28\nTCP\nUsed for the HA1 control link for encrypted communication (SSH\nover TCP) between the HA peer firewalls.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n216\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nDestination\nPort\nProtocol\nDescription\n28770\nTCP\nListening port for HA1 backup links.\n28771\nTCP\nUsed for heartbeat backups. Palo Alto Networks recommends\nenabling heartbeat backup on the MGT interface if you use an in-\nband port for the HA1 or the HA1 backup links.\n99\n29281\nIP\nUDP\nUsed for the HA2 link to synchronize sessions, forwarding tables,\nIPSec security associations and ARP tables between firewalls in\nan HA pair. Data flow on the HA2 link is always unidirectional\n(except for the HA2 keep-alive); it flows from the active firewall\n(Active/Passive) or active-primary (Active/Active) to the passive\nfirewall (Active/Passive) or active-secondary (Active/Active).\nThe HA2 link is a Layer 2 link, and it uses ether type 0x7261 by\ndefault.\nThe HA data link can also be configured to use either IP (protocol\nnumber 99) or UDP (port 29281) as the transport, and thereby\nallow the HA data link to span subnets.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 216,
+      "end": 217
+    },
+    "content_stats": {
+      "char_count": 1730,
+      "word_count": 284
+    },
+    "hierarchy": {
+      "parent": "Reference: Port Number Usage",
+      "children": []
+    }
+  }
+}

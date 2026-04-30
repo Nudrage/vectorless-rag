@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_536",
+  "section_number": "1.16.2.9",
+  "header": "Profile for No Decryption",
+  "content": "No Decryption profiles (Objects > Decryption Profile > No Decryption) perform server\nverification checks for traffic that you choose not to decrypt. You attach a No Decryption profile\nto a “No Decryption” Decryption policy that defines the traffic to exclude from decryption. (Don’t\nuse policy to exclude traffic that you can’t decrypt because a site breaks decryption for technical\nreasons such as a pinned certificate or mutual authentication. Instead, add the hostname to the\nDecryption Exclusion List.) The following figure shows the general best practice recommendations\nfor the No Decryption profile settings, but the settings you use also depend on your company’s\nsecurity compliance rules and local laws and regulations.\n• Block sessions with expired certificates—Check this box to block sessions with servers that\nhave expired certificates and prevent access to potentially insecure sites. If you don’t check\nthis box, users can connect with and transact with potentially malicious sites and see warning\nmessages when they attempt to connect, but the connection is not prevented.\n• Block sessions with untrusted issuers—Check this box to block sessions with servers that have\nuntrusted certificate issuers. An untrusted issuer may indicate a man-in-the-middle attack, a\nreplay attack, or other attack.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n989\n©2025 Palo Alto Networks, Inc.\nDecryption\nDo not attach a No Decryption profile to Decryption policies for TLSv1.3 traffic that\nyou don’t decrypt. Unlike previous versions, TLSv1.3 encrypts certificate information,\nso the firewall has no visibility into certificate data and therefore cannot block sessions\nwith expired certificates or untrusted issuers, so the profile has no effect. (The firewall\ncan perform certificate checks with TLSv1.2 and earlier because those protocols do not\nencrypt certificate information and you should apply a No Decryption profile to their\ntraffic.) However, you should create a Decryption policy for TLSv1.3 traffic that you don’t\ndecrypt because the firewall doesn’t log undecrypted traffic unless a Decryption policy\ncontrols that traffic.\n(Applies to TLSv1.2 and earlier) If you choose to allow sessions with untrusted issuers (not\nrecommended) and only Block sessions with expired certificates, there is a scenario in\nwhich a session with a trusted, expired issuer may be blocked inadvertently. When the\nfirewall’s certificate store contains a valid, self-signed Trusted CA and the server sends\nan expired CA in the certificate chain, the firewall does not check its certificate store.\nInstead, the firewall blocks the session based on the expired CA when it should find the\ntrusted, valid alternative trust anchor and allow the session based on that trusted self-\nsigned certificate.\nTo avoid this scenario, in addition to Block sessions with expired certificates, enable Block\nsessions with untrusted issuers. This forces the firewall to check its certificate store, find\nthe self-signed Trusted CA, and allow the session.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 989,
+      "end": 990
+    },
+    "content_stats": {
+      "char_count": 3017,
+      "word_count": 454
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

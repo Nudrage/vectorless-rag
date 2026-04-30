@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_837",
+  "section_number": "1.21.15.2.1",
+  "header": "Source NAT",
+  "content": "Source NAT is typically used by internal users to access the Internet; the source address is\ntranslated and thereby kept private. There are three types of source NAT:\n• Dynamic IP and Port (DIPP)—Allows multiple hosts to have their source IP addresses translated\nto the same public IP address with different port numbers. The dynamic translation is to the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1480\n©2025 Palo Alto Networks, Inc.\nNetworking\nnext available address in the NAT address pool, which you configure as a Translated Address\npool be to an IP address, range of addresses, a subnet, or a combination of these.\nAs an alternative to using the next address in the NAT address pool, DIPP allows you to specify\nthe address of the Interface itself. The advantage of specifying the interface in the NAT rule is\nthat the NAT rule will be automatically updated to use any address subsequently acquired by\nthe interface. DIPP is sometimes referred to as interface-based NAT or network address port\ntranslation (NAPT).\nDIPP has a default NAT oversubscription rate, which is the number of times that the same\ntranslated IP address and port pair can be used concurrently. For more information, see\nDynamic IP and Port NAT Oversubscription and Modify the Oversubscription Rate for DIPP\nNAT.\n(Affects only PA-7000 Series firewalls that do not use second-generation PA-7050-\nSMC-B or PA-7080-SMC-B Switch Management Cards) When you use Point-to-Point\nTunnel Protocol (PPTP) with DIPP NAT, the firewall is limited to using a translated IP\naddress-and-port pair for only one connection; the firewall does not support DIPP NAT.\nThe workaround is to upgrade the PA-7000 Series firewall to a second-generation\nSMC-B card.\n• Dynamic IP—Allows the one-to-one, dynamic translation of a source IP address only (no port\nnumber) to the next available address in the NAT address pool. The size of the NAT pool\nshould be equal to the number of internal hosts that require address translations. By default,\nif the source address pool is larger than the NAT address pool and eventually all of the NAT\naddresses are allocated, new connections that need address translation are dropped. To\noverride this default behavior, use Advanced (Dynamic IP/Port Fallback) to enable use of DIPP\naddresses when necessary. In either event, as sessions terminate and the addresses in the pool\nbecome available, they can be allocated to translate new connections.\nDynamic IP NAT supports the option for you to Reserve Dynamic IP NAT Addresses.\n• Static IP—Allows the 1-to-1, static translation of a source IP address, but leaves the source\nport unchanged. A common scenario for a static IP translation is an internal server that must be\navailable to the Internet.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1480,
+      "end": 1481
+    },
+    "content_stats": {
+      "char_count": 2724,
+      "word_count": 442
+    },
+    "hierarchy": {
+      "parent": "Source NAT and Destination NAT",
+      "children": []
+    }
+  }
+}

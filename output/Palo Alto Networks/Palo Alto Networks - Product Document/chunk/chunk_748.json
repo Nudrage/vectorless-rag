@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_748",
+  "section_number": "1.21.1.3.2",
+  "header": "Layer 2 Interfaces with VLANs",
+  "content": "When your organization wants to divide a LAN into separate virtual LANs (VLANs) to keep traffic\nand policies for different departments separate, you can logically group Layer 2 hosts into VLANs\nand thus divide a Layer 2 network segment into broadcast domains. For example, you can create\nVLANs for the Finance and Engineering departments. To do so, Configure a Layer 2 Interface,\nSubinterface, and VLAN.\nThe firewall acts as a switch to forward a frame with an Ethernet header containing a VLAN ID,\nand the destination interface must have a subinterface with that VLAN ID in order to receive that\nframe and forward it to the host. You configure a Layer 2 interface on the firewall and configure\none or more logical subinterfaces for the interface, each with a VLAN tag (ID).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1342\n©2025 Palo Alto Networks, Inc.\nNetworking\nIn the following figure, the firewall has four Layer 2 interfaces that connect to Layer 2 hosts\nbelonging to different departments within an organization. Ethernet interface 1/3 is configured\nwith subinterface .1 (tagged with VLAN 10) and subinterface .2 (tagged with VLAN 20), thus there\nare two broadcast domains on that segment. Hosts in VLAN 10 belong to Finance; hosts in VLAN\n20 belong to Engineering.\nIn this example, the host at MAC address 0A-76-F2-60-EA-83 sends a frame with VLAN ID 10\nto the firewall, which the firewall broadcasts to its other L2 interfaces. Ethernet interface 1/3\naccepts the frame because it’s connected to the host with destination 0C-71-D4-E6-13-44 and\nits subinterface .1 is assigned VLAN 10. Ethernet interface 1/3 forwards the frame to the Finance\nhost.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1342,
+      "end": 1343
+    },
+    "content_stats": {
+      "char_count": 1653,
+      "word_count": 271
+    },
+    "hierarchy": {
+      "parent": "Layer 2 Interfaces",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_808",
+  "section_number": "1.21.11.5.3",
+  "header": "DHCP Options 43, 55, and 60 and Other Customized Options",
+  "content": "The following table describes the option behavior for several options described in RFC 2132.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1442\n©2025 Palo Alto Networks, Inc.\nNetworking\nOption\nCode\nOption Name\nOption Description/Behavior\n43\nVendor Specific\nInformation\nSent from server to client. Vendor-specific information that the\nDHCP server has been configured to offer to the client. The\ninformation is sent to the client only if the server has a Vendor\nClass Identifier (VCI) in its table that matches the VCI in the\nclient’s DHCPREQUEST.\nAn Option 43 packet can contain multiple vendor-specific\npieces of information. It can also include encapsulated, vendor-\nspecific extensions of data.\n55\nParameter Request\nList\nSent from client to server. List of configuration parameters\n(option codes) that a DHCP client is requesting, possibly in\norder of the client’s preference. The server tries to respond\nwith options in the same order.\n60\nVendor Class\nIdentifier (VCI)\nSent from client to server. Vendor type and configuration\nof a DHCP client. The DHCP client sends option code 60\nin a DHCPREQUEST to the DHCP server. When the server\nreceives option 60, it sees the VCI, finds the matching VCI\nin its own table, and then it returns option 43 with the value\n(that corresponds to the VCI), thereby relaying vendor-specific\ninformation to the correct client. Both the client and server\nhave knowledge of the VCI.\nYou can send custom, vendor-specific option codes that are not defined in RFC 2132. The option\ncodes can be in the range 1-254 and of fixed or variable length.\nCustom DHCP options are not validated by the DHCP Server; you must ensure that you\nenter correct values for the options you create.\nFor ASCII and hexadecimal DHCP option types, the option value can be a maximum of 255 octets.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1442,
+      "end": 1443
+    },
+    "content_stats": {
+      "char_count": 1794,
+      "word_count": 294
+    },
+    "hierarchy": {
+      "parent": "DHCP Options",
+      "children": []
+    }
+  }
+}

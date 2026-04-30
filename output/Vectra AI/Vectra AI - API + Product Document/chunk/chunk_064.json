@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_064",
+  "section_number": "1.18.13",
+  "header": "Entity Scoring Events",
+  "content": "GET\nURL:\nhttps://<vectra_portal_url>/api/v3.4/events/entity_scoring?type=account&from=100&limit\n=2\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"events\": [\n{\n\"entity_id\": 100,\n\"name\": \"AWS:None/us-1-east/config:AWSConfig-Describe\",\n\"importance\": 0,\n\"type\": \"account\",\n\"is_prioritized\": false,\n\"severity\": \"Low\",\n\"urgency_reason\": “Ransomware: This entity was prioritized because it was\nimplicated in an active ransomware detection”,\n\"urgency_score\": 0,\n\"url\": \"https://200888808432.uw2.devportal.vectra.ai/accounts/8\",\n\"category\": \"ACCOUNT SCORING\",\n© July 2024 Vectra AI, Inc. | 108\n\"last_detection\": {\n\"id\": 103,\n\"type\": \" AWS S3 Enumeration\",\n\"url\": \" https://200888808432.uw2.devportal.vectra.ai/detections/103\"\n},\n\"active_detection_types\": [\n\"AWS S3 Enumeration\"\n],\n\"event_timestamp\": \"2022-08-07T00:14:31Z\",\n\"breadth_contrib\": 0,\n\"velocity_contrib\": 0\n},\n{\n\"entity_id\": 101,\n\"name\": \"AWS:884414556547/solus-cgid-domryder-ucw\",\n\"importance\": 0,\n\"type\": \"account\",\n\"is_prioritized\": false,\n\"severity\": \"Low\",\n\"urgency_reason\": “Ransomware: This entity was prioritized because it was\nimplicated in an active ransomware detection”,,\n\"urgency_score\": 0,\n\"url\": \"https://200888808432.uw2.devportal.vectra.ai/accounts/2\",\n\"category\": \"ACCOUNT SCORING\",\n\"last_detection\": {\n\"id\": 80,\n\"type\": \" AWS attack Tools\",\n\"url\": \" https://200888808432.uw2.devportal.vectra.ai/detections/80\"\n},\n\"active_detection_types\": [\n\"AWS Attack Tools\"\n],\n\"event_timestamp\": \"2022-08-07T06:15:04Z\",\n\"breadth_contrib\": 0,\n\"velocity_contrib\": 0\n}\n],\n\"next_checkpoint\": 102,\n\"remaining_count\": 659\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 107,
+      "end": 108
+    },
+    "content_stats": {
+      "char_count": 1590,
+      "word_count": 148
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

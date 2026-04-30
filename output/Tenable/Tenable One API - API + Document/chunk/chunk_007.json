@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_007",
+  "section_number": "23.1",
+  "header": "Responses",
+  "content": "200 Returned if the attack technique search results were retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nArray of objects (AttackTechniqueSearchResult)\nArray of attack techniques\nproperty\noperator\nvalue\ndata\nrequired\nobject (AttackTechniquePaginationInfo)\nPagination information for attack techniques search\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n403 Returned if you do not have permission to search attack techniques.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\npagination\nrequired\nstatusCode\nerror\nmessage\nstatusCode\nerror\nmessage\nstatusCode\nerror\nmessage\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 9,
+      "end": 11
+    },
+    "content_stats": {
+      "char_count": 1494,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Search attack techniques",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_960",
+  "section_number": "1.22.10.3",
+  "header": "Built-in External Dynamic Lists",
+  "content": "With an active Threat Prevention license, Palo Alto Networks provides built-in IP address EDLs\nthat you can use to protect against malicious hosts.\n• Palo Alto Networks Bulletproof IP Addresses—Contains IP addresses provided by bulletproof\nhosting providers. Because bulletproof hosting providers place few, if any, restrictions on\ncontent, attackers frequently use these services to host and distribute malicious, illegal, and\nunethical material.\n• Palo Alto Networks High-Risk IP Addresses—Contains malicious IP addresses from threat\nadvisories issued by trusted third-party organizations. Palo Alto Networks compiles the list of\nthreat advisories, but does not have direct evidence of the maliciousness of the IP addresses.\n• Palo Alto Networks Known Malicious IP Addresses—Contains IP addresses that are verified\nmalicious based on WildFire analysis, Unit 42 research, and data gathered from telemetry\n(Share Threat Intelligence with Palo Alto Networks). Attackers use these IP addresses almost\nexclusively to distribute malware, initiate command-and-control activity, and launch attacks.\n• Palo Alto Networks Tor Exit IP Addresses—Contains IP addresses supplied by multiple\nproviders and validated with Palo Alto Networks threat intelligence data as active Tor\nexit nodes. Traffic from Tor exit nodes can serve a legitimate purpose, however, is\ndisproportionately associated with malicious activity, especially in enterprise environments.\nThe firewall receives updates for these feeds in content updates, allowing the firewall to\nautomatically enforce policy based on the latest threat intelligence from Palo Alto Networks. You\ncannot modify the contents of the built-in lists. Use them as-is (see Enforce Policy on an External\nDynamic List), or create a custom external dynamic list that uses one of the lists as a source (see\nConfigure the Firewall to Access an External Dynamic List) and exclude entries from the list as\nneeded.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1636,
+      "end": 1636
+    },
+    "content_stats": {
+      "char_count": 1936,
+      "word_count": 281
+    },
+    "hierarchy": {
+      "parent": "Use an External Dynamic List in Policy",
+      "children": []
+    }
+  }
+}

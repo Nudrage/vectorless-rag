@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_135",
+  "section_number": "1.38.2",
+  "header": "Central Reporting Format Field descriptions",
+  "content": "Field descriptions\nLog format name under crformatter.conf is CR_red_log_fmt.\nSyslog field\nname\nData type Length\nFormat/Description\nPossible\nvalues\nNotes/Examples\ntimestamp\nTimestamp\nISO 8601\neg. timestamp=\"2018-12-\n07T10:03:48+0000\"\ndevice_name\nString\neg. device_name=\"SFW\"\ndevice_model\nString\neg. device_model=\"XG135\"\ndevice_serial_id String\neg. device_serial_id=\"C44313350024-\nP29PUA\"\nlog_id\nString\neg. log_id=\"086320518009\"\nlog_type\nString\n8\nLog Type\nEvent\nlog_component String\n8\nLog Component\nRED\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 150\nlog_subtype\nString\n8\nStatus of log\nSystem\nlog_version\nNumber\n1\nlog version\nseverity\nString\n8\nseverity of log\nInformation\nreported_id\nString\nRED10:     A32XXXXXXXXXXXX\nRED15:     A35XXXXXXXXXXXX\nRED15W: A36XXXXXXXXXXXX\nRED50:     A34XXXXXXXXXXXX\nServer:     XXXXXXXXXXXXXXX\nThis is the ID of the RED. The first 3\ndigits describes the type of the RED,\nand the last 12 digits are alphanumeric\ndigits.\nFor red server there are 15\nalphanumeric digits.\ncon_name\nString\nbranch name of red device in the\nredconfig.\nbytes_received\nNumber\nint32\nreceived Bytes\nBytes recevied by the device\nduration\nNumber\nint32\nDescribes the time in ms between a\ndisconnect and a reconnect of the\nmachine. Only for connect messages\nelse zero.\nbytes_sent\nNumber\nint32\nsent Bytes\nBytes send from the device\nstart\nTimestamp\nmessage\nString\nString\nMessage from the device with either the\nRX/TX or the a connect/disconnect\nmessage",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 150,
+      "end": 151
+    },
+    "content_stats": {
+      "char_count": 1471,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "RED",
+      "children": []
+    }
+  }
+}

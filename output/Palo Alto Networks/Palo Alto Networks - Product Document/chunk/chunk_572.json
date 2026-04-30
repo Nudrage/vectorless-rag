@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_572",
+  "section_number": "1.16.15.2.1",
+  "header": "Configure Decryption Logging",
+  "content": "The firewall generates Decryption logs for sessions governed by a Decryption policy, including\nsessions with a No Decrypt policy. Configure Decryption logging in the Decryption policy that\ncontrols the traffic that you want to log.\nSTEP 1 |\nConfigure the Decryption traffic you want to log in Decryption policy (Policies >\nDecryption).\nBy default, the firewall logs only unsuccessful TLS handshakes:\nLog successful handshakes as well as unsuccessful handshakes to gain visibility into\nas much decrypted traffic as your device’s available resources permit (don’t decrypt\nprivate or sensitive traffic; follow decryption best practices and decrypt as much\ntraffic as you can).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1054\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 2 |\nCreate a Log Forwarding profle to forward Decryption logs to Log Collectors, other storage\ndevices, or specific administrators and then specify the profile in the Log Forwarding field of\nthe Decryption policy Options tab.\nTo forward Decryption logs, you must configure a Log Forwarding profile (Objects > Log\nForwarding) to specify the Decryption Log Type and the method of forwarding the logs.\nIf you forward Decryption logs, be sure that the logs are stored securely because they contain\nsensitive information.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1055\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 3 |\nIf you log successful TLS handshakes in addition to unsuccessful TLS handshakes, configure\na larger log storage space quota (Device > Setup > Management > Logging and Reporting\nSettings > Log Storage) for Decryption logs on the firewall.\nThe default quota (allocation) is one percent of the device’s log storage capacity for Decryption\nlogs and one percent for the general decryption summary. There is no default allocation for\nhourly, daily, or weekly decryption summaries.\nMany factors determine the amount of storage you may need for Decryption logs and they\ndepend on your deployment. For example, take these factors into account:\n• The amount of TLS traffic that passes through the firewall.\n• The amount of TLS traffic that you decrypt.\n• Your usage of other logs (evaluate from which logs you should take capacity to allocate to\nDecryption logs).\n• If you log both successful and unsuccessful TLS handshakes, you probably need significantly\nmore capacity than you need if you only log unsuccessful TLS handshakes. Depending on\nthe amount of traffic you decrypt, Decryption logs could consume as much capacity as\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1056\n©2025 Palo Alto Networks, Inc.\nDecryption\nTraffic logs or Threat logs and may require a tradeoff among them if the device’s capacity is\nalready fully subscribed.\nThe total combined allocation of log quotas cannot exceed 100% of the available\nfirewall log resources.\nYou may need to experiment to find the right quota for each log category in your particular\ndeployment. If you only log unsuccessful handshakes, you could start with the default or\nincrease the allocation to two or three percent. If you log both successful and unsuccessful\nhandshakes, you could start by allocating about half of the space to Decryption logs that you\nallocate to Traffic logs. The logs from which you take the space to allocate to Decryption logs\ndepends on your traffic, your business, and your monitoring requirements.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1054,
+      "end": 1057
+    },
+    "content_stats": {
+      "char_count": 3349,
+      "word_count": 529
+    },
+    "hierarchy": {
+      "parent": "Decryption Log",
+      "children": []
+    }
+  }
+}

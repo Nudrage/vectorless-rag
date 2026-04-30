@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_865",
+  "section_number": "1.21.16.1.4",
+  "header": "Reasons to Use NPTv6",
+  "content": "Although there is no shortage of public, globally routable IPv6 addresses, there are reasons you\nmight want to translate IPv6 addresses. NPTv6:\n• Prevents asymmetrical routing—Asymmetric routing can occur if a Provider Independent\naddress space (/48, for example) is advertised by multiple data centers to the global Internet.\nBy using NPTv6, you can advertise more specific routes from regional firewalls, and the return\ntraffic will arrive at the same firewall where the source IP address was translated by the\ntranslator.\n• Provides address independence—You need not change the IPv6 prefixes used inside your local\nnetwork if the global prefixes are changed (for example, by an ISP or as a result of merging\norganizations). Conversely, you can change the inside addresses at will without disrupting the\naddresses that are used to access services in the private network from the Internet. In either\ncase, you update a NAT rule rather than reassign network addresses.\n• Translates ULAs for routing—You can have Unique Local Addresses assigned within your\nprivate network, and have the firewall translate them to globally routable addresses. Thus,\nyou have the convenience of private addressing and the functionality of translated, routable\naddresses.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1508\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Reduces exposure to IPv6 prefixes—IPv6 prefixes are less exposed than if you didn’t translate\nnetwork prefixes, however, NPTv6 is not a security measure. The interface identifier portion of\neach IPv6 address is not translated; it remains the same on each side of the firewall and visible\nto anyone who can see the packet header. Additionally, the prefixes are not secure; they can\nbe determined by others.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1508,
+      "end": 1509
+    },
+    "content_stats": {
+      "char_count": 1747,
+      "word_count": 271
+    },
+    "hierarchy": {
+      "parent": "NPTv6 Overview",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_013",
+  "section_number": "9.1.1",
+  "header": "Response samples",
+  "content": "200\n400\n429\n500\nGET\n/pci-asv/attestations/{attestation_uuid}/failures/undisputed/list\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"pagination\":\n-\n{\n\"total\": 1,\n\"offset\": 0,\n\"limit\": 200,\n\"sort\":\n-\n[\n- {\n\"name\": \"plugin_id\",\n\"order\": \"desc\"\n}\n]\n},\nContent type\n\"failures\":\n-\n[\n- {\n\"severity\": 3,\n\"plugin_id\": 173384,\n\"cvss_score\": 9.8,\n\"address\": \"127.0.0.1\",\n\"scan_uuid\": \"2693c579-0ab0-40c9-8eef-d8f1e18167ef\",\n\"duplicate\": false,\n\"rerank_type\": \"not-reranked\",\n\"plugin_name\": \"OpenSSH < 9.3 Multiple Vulnerabilities\",\n\"uuid\": \"a3382dad-b0a8-4919-846d-1ec504d1e05f\",\n\"protocol\": \"tcp\",\n\"asset_name\": \"Asset Name\",\n\"port\": 22,\n\"attestation_uuid\": \"dd39c320-ee0f-4a8d-9a7b-4cd334425fd7\",\n\"scan_name\": \"Scan Name\",\n\"scan_date\": \"2023-06-08T17:05:04Z\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 14,
+      "end": 15
+    },
+    "content_stats": {
+      "char_count": 758,
+      "word_count": 80
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

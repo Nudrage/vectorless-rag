@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_554",
+  "section_number": "1.16.8",
+  "header": "Configure Server Certificate Verification for Undecrypted Traffic",
+  "content": "Undecrypted Traffic\nYou create no-decryption policies for traffic that you choose not to decrypt because the traffic is\npersonal, sensitive, or subject to local laws and regulations. For example, you may choose not to\ndecrypt the traffic of certain executives or traffic between finance users and finance servers that\ncontain personal information. (Don’t exclude traffic that you can’t decrypt because a site breaks\ndecryption for technical reasons such as a pinned certificate or mutual authentication by policy.\nInstead, add the hostname to the Decryption Exclusion List.)\nHowever, just because you don’t decrypt the traffic doesn’t mean you should let any and all\nundecrypted traffic on your network. It is a best practice to apply a No Decryption profile to\nundecrypted traffic to block sessions with expired certificates and untrusted issuers.\nSTEP 1 |\nCreate a Decryption Policy Rule to identify the undecrypted traffic and Create a Decryption\nProfile to block bad sessions.\n1.\nSelect Policies > Decryption and Add or modify an existing rule to identify the\nundecrypted traffic.\n2.\nSelect Options and:\n• Set the rule Action to No Decrypt so that the firewall doesn’t decrypt traffic that\nmatches the rule.\n• Ignore the rule Type because the traffic is not decrypted.\n• (Optional but a best practice) Configure or select an existing Decryption profile\nfor undecrypted traffic to block sessions with expired certificates and untrusted\ncertificate issuers.\nDo not attach a No Decryption profile to Decryption policies for TLSv1.3\ntraffic that you don’t decrypt because the firewall can’t read the encrypted\ncertificate information so it can’t perform certificate checks. However, you\nshould still create a Decryption policy for TLSv1.3 traffic that you don’t\ndecrypt because undecrypted traffic isn’t logged unless a Decryption policy\ncontrols that traffic.\nSTEP 2 |\nCommit the configuration.\nSTEP 3 |\nChoose your next step:\n• Enable Users to Opt Out of SSL Decryption.\n• Configure Decryption Exclusions to disable decryption for certain types of traffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1020\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1020,
+      "end": 1021
+    },
+    "content_stats": {
+      "char_count": 2146,
+      "word_count": 334
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": []
+    }
+  }
+}

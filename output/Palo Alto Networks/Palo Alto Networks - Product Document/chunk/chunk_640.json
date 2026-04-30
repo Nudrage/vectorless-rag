@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_640",
+  "section_number": "1.17.22",
+  "header": "HTTP Header Logging",
+  "content": "URL filtering provides visibility and control over web traffic on your network. For improved\nvisibility into web content, you can configure the URL Filtering profile to log HTTP header\nattributes included in a web request. When a client requests a web page, the HTTP header\nincludes the user agent, referer, and x-forwarded-for fields as attribute-value pairs and forwards\nthem to the web server. When enabled for logging HTTP headers, the firewall logs the following\nattribute-value pairs in the URL Filtering logs.\nYou can also use HTTP headers to manage access to SaaS applications. You don’t need\na URL Filtering license to do this, but you must use a URL Filtering profile to turn this\nfeature on.\nAttribute\nDescription\nUser-Agent\nThe web browser that the user used to access the URL, for\nexample, Internet Explorer. This information is sent in the\nHTTP request to the server.\nThe HTTP header does not contain the full string for the User\nAgent. The maximum logged bytes from the packet preceding\nthe packet containing the header-end is 36 bytes.\nReferer\nThe URL of the web page that linked the user to another web\npage; it is the source that redirected (referred) the user to the\nweb page that is being requested.\nX-Forwarded-For (XFF)\nThe option in the HTTP request header field that preserves\nthe IP address of the user who requested the web page. If\nyou have a proxy server on your network, the XFF allows\nyou to identify the IP address of the user who requested\nthe content, instead of only recording the proxy server’s IP\naddress as source IP address that requested the web page.\nHeaders Inserted\nThe type of header and the text of the header that the\nfirewall inserts.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1193\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1193,
+      "end": 1194
+    },
+    "content_stats": {
+      "char_count": 1771,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": []
+    }
+  }
+}

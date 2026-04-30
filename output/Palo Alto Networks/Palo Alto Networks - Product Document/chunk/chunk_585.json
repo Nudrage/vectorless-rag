@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_585",
+  "section_number": "1.16.16",
+  "header": "Decryption Broker",
+  "content": "Decryption broker allows you to offload SSL decryption to the Palo Alto Networks next-\ngeneration firewall and decrypt traffic only once. A firewall enabled as a decryption broker\nforwards clear text traffic to security chains (sets of inline, third-party appliances) for additional\nenforcement.\nThis allows you to consolidate security functions on the firewall and to simplify your network\nsecurity deployment: decryption broker eliminates the need for a third-party SSL decryption\nsolution and allows you to reduce the number of third-party devices performing traffic analysis\nand enforcement. For networks without a dedicated SSL decryption appliance, decryption broker\nreduces latency because the traffic flow is decrypted only once.\nDecryption broker is supported for PA-7000 Series, PA-5200 Series, PA-3200 Series devices and\nVM-300, VM-500, and VM-700 models. It requires SSL Forward Proxy decryption to be enabled,\nwhere the firewall is established as a trusted third party (or man-in-the-middle) to session traffic.\nA firewall interface cannot be both a decryption broker and a GRE tunnel endpoint.\n• How Decryption Broker Works\n• Decryption Broker Concepts\n• Layer 3 Security Chain Guidelines\n• Configure Decryption Broker with One or More Layer 3 Security Chain\n• Transparent Bridge Security Chain Guidelines\n• Configure Decryption Broker with a Single Transparent Bridge Security Chain\n• Configure Decryption Broker with Multiple Transparent Bridge Security Chains",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1090,
+      "end": 1090
+    },
+    "content_stats": {
+      "char_count": 1476,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": [
+        "How Decryption Broker Works",
+        "Decryption Broker Concepts",
+        "Layer 3 Security Chain Guidelines",
+        "Configure Decryption Broker with One or More Layer 3 Security Chain",
+        "Transparent Bridge Security Chain Guidelines",
+        "Configure Decryption Broker with a Single Transparent Bridge Security Chain",
+        "Configure Decryption Broker with Multiple Transparent Bridge Security Chains"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_311",
+  "section_number": "1.11.7.3",
+  "header": "Filter Logs",
+  "content": "Each log has a filter area that allows you to set a criteria for which log entries to display. The\nability to filter logs is useful for focusing on events on your firewall that possess particular\nproperties or attributes. Filter logs by artifacts that are associated with individual log entries.\nFor example, filtering by the rule UUID makes it easier to pinpoint the specific rule you want to\nlocate, even among many similarly-named rules. If your ruleset is very large and contains many\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n527\n©2025 Palo Alto Networks, Inc.\nMonitoring\nrules, using the rule’s UUID as a filter spotlights the particular rule you need to find without\nhaving to navigate through pages of results.\nSTEP 1 |\n(Unified logs only) Select the log types to include in the Unified log display.\n1.\nClick Effective Queries (\n).\n2.\nSelect one or more log types from the list (traffic, threat, url, data, and wildfire).\n3.\nClick OK. The Unified log updates to show only entries from the log types you have\nselected.\nSTEP 2 |\nAdd a filter to the filter field.\nIf the value of the artifact matches the operator (such as has or in), enclose the value\nin quotation marks to avoid a syntax error. For example, if you filter by destination\ncountry and use IN as a value to specify INDIA, enter the filter as ( dstloc eq\n“IN” ).\n• Click one or more artifacts (such as the application type associated with traffic and the\nIP address of an attacker) in a log entry. For example, click the Source 10.0.0.25 and\nApplication web-browsing of a log entry to display only entries that contain both artifacts in\nthe log (AND search).\n• To specify artifacts to add to the filter field, click Add Filter (\n).\n• To add a previously saved filter, click Load Filter (\n).\nSTEP 3 |\nApply the filter to the log.\nClick Apply Filter (\n). The log will refresh to display only log entries that match the current\nfilter.\nSTEP 4 |\n(Optional) Save frequently used filters.\n1.\nClick Save Filter (\n).\n2.\nEnter a Name for the filter.\n3.\nClick OK. You can view your saved filters by clicking Load Filter (\n).\nNext Steps...\n• View Logs.\n• Export Logs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 527,
+      "end": 528
+    },
+    "content_stats": {
+      "char_count": 2124,
+      "word_count": 387
+    },
+    "hierarchy": {
+      "parent": "View and Manage Logs",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_683",
+  "section_number": "1.19.3.5",
+  "header": "IKEv2",
+  "content": "An IPSec VPN gateway uses IKEv1 or IKEv2 to negotiate the IKE security association (SA) and\nIPSec tunnel. IKEv2 is defined in RFC 5996.\nUnlike IKEv1, which uses Phase 1 SA and Phase 2 SA, IKEv2 uses a child SA for Encapsulating\nSecurity Payload (ESP) or Authentication Header (AH), which is set up with an IKE SA.\nNAT traversal (NAT-T) must be enabled on both gateways if you have NAT occurring on a device\nthat sits between the two gateways. A gateway can see only the public (globally routable) IP\naddress of the NAT device.\nIKEv2 provides the following benefits over IKEv1:\n• Tunnel endpoints exchange fewer messages to establish a tunnel. IKEv2 uses four messages;\nIKEv1 uses either nine messages (in main mode) or six messages (in aggressive mode).\n• Built-in NAT-T functionality improves compatibility between vendors.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1253\n©2025 Palo Alto Networks, Inc.\nVPNs\n• Built-in health check automatically re-establishes a tunnel if it goes down. The liveness check\nreplaces the Dead Peer Detection used in IKEv1.\n• Supports traffic selectors (one per exchange). The traffic selectors are used in IKE negotiations\nto control what traffic can access the tunnel.\n• Supports Hash and URL certificate exchange to reduce fragmentation.\n• Resiliency against DoS attacks with improved peer validation. An excessive number of half-\nopen SAs can trigger cookie validation.\nBefore configuring IKEv2, you should be familiar with the following concepts:\n• Liveness Check\n• Cookie Activation Threshold and Strict Cookie Validation\n• Traffic Selectors\n• Hash and URL Certificate Exchange\n• SA Key Lifetime and Re-Authentication Interval\nAfter you Set Up an IKE Gateway, if you chose IKEv2, perform the following optional tasks related\nto IKEv2 as required by your environment:\n• Export a Certificate for a Peer to Access Using Hash and URL\n• Import a Certificate for IKEv2 Gateway Authentication\n• Change the Key Lifetime or Authentication Interval for IKEv2\n• Change the Cookie Activation Threshold for IKEv2\n• Configure IKEv2 Traffic Selectors",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1253,
+      "end": 1254
+    },
+    "content_stats": {
+      "char_count": 2070,
+      "word_count": 332
+    },
+    "hierarchy": {
+      "parent": "Site-to-Site VPN Concepts",
+      "children": [
+        "Liveness Check",
+        "Cookie Activation Threshold and Strict Cookie Validation",
+        "Traffic Selectors",
+        "Hash and URL Certificate Exchange",
+        "SA Key Lifetime and Re-Authentication Interval"
+      ]
+    }
+  }
+}

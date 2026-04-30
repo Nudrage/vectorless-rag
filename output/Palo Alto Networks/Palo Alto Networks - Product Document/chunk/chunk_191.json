@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_191",
+  "section_number": "1.9.8.5",
+  "header": "Install a Device Certificate",
+  "content": "Your next-generation firewall can leverage cloud services such as Device Telemetry and IoT.\nTo do this, you must install a device certificate to successfully authenticate the firewall with\nthe Palo Alto Networks Customer Support Portal (CSP) to leverage these cloud services. The\ncircumstances under which a device certificate is required will differ from feature to feature, so\ninstall a device certificate only if the feature's setup documentation tells you that this needs to be\ndone.\nYou only need to install a device certificate once. Every feature that uses device certificates will\nuse the certificate installed on your firewall if it already exists.\nYou can install a device certificate to firewalls that are managed by Panorama. If you want to\ninstall a device certificate directly to a single next-generation firewall (that is, you are not using\nPanorama):\nSTEP 1 |\nGenerate the One Time Password (OTP).\n1.\nLog in to the Customer Support Portal.\n2.\nSelect Assets > Device Certificates and Generate OTP.\n3.\nFor the Device Type, select Generate OTP for Next-Gen Firewalls.\n4.\nSelect your PAN OS Device serial number.\n5.\nGenerate OTP and copy the OTP.\nSTEP 2 |\nLog in to your next-generation firewall as an admin user.\nSTEP 3 |\nSelect Device > Setup > Management > Device Certificate and Get certificate.\nSTEP 4 |\nPaste the One-time Password you generated and click OK.\nSTEP 5 |\nYour next-generation firewall successfully retrieves and installs the certificate.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 337,
+      "end": 337
+    },
+    "content_stats": {
+      "char_count": 1468,
+      "word_count": 240
+    },
+    "hierarchy": {
+      "parent": "Obtain Certificates",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_084",
+  "section_number": "1.6.4.1",
+  "header": "Administrative Role Types",
+  "content": "A role defines the type of access that an administrator has to the firewall. The Administrator Types\nare:\n• Role Based—Custom roles you can configure for more granular access control over the\nfunctional areas of the web interface, CLI, and XML API. For example, you can create an\nAdmin Role profile for your operations staff that provides access to the firewall and network\nconfiguration areas of the web interface and a separate profile for your security administrators\nthat provides access to security policy definitions, logs, and reports. On a firewall with multiple\nvirtual systems, you can select whether the role defines access for all virtual systems or\nspecific virtual systems. When new features are added to the product, you must update\nthe roles with corresponding access privileges: the firewall does not automatically add new\nfeatures to custom role definitions. For details on the privileges you can configure for custom\nadministrator roles, see Reference: Web Interface Administrator Access.\n• Dynamic—Built-in roles that provide access to the firewall. When new features are added, the\nfirewall automatically updates the definitions of dynamic roles; you never need to manually\nupdate them. The following table lists the access privileges associated with dynamic roles.\nDynamic Role\nPrivileges\nSuperuser\nFull access to the firewall, including defining new\nadministrator accounts and virtual systems. You must have\nSuperuser privileges to create an administrative user with\nSuperuser privileges.\nSuperuser (read-only)\nRead-only access to the firewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n127\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nDynamic Role\nPrivileges\nDevice administrator\nFull access to all firewall settings except for defining new\naccounts or virtual systems.\nDevice administrator (read-\nonly)\nRead-only access to all firewall settings except password\nprofiles (no access) and administrator accounts (only the\nlogged in account is visible).\nVirtual system administrator\nAccess to selected virtual systems on the firewall to create\nand manage specific aspects of virtual systems. A virtual\nsystem administrator doesn’t have access to network\ninterfaces, VLANs, virtual wires, virtual routers, IPSec\ntunnels, GRE tunnels, DHCP, DNS Proxy, QoS, LLDP, or\nnetwork profiles.\nVirtual system administrator\n(read-only)\nRead-only access to selected virtual systems on the firewall\nand specific aspects of virtual systems. A virtual system\nadministrator with read-only access doesn’t have access to\nnetwork interfaces, VLANs, virtual wires, virtual routers,\nIPSec tunnels, GRE tunnels, DHCP, DNS Proxy, QoS, LLDP,\nor network profiles.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 127,
+      "end": 128
+    },
+    "content_stats": {
+      "char_count": 2666,
+      "word_count": 388
+    },
+    "hierarchy": {
+      "parent": "Manage Firewall Administrators",
+      "children": []
+    }
+  }
+}

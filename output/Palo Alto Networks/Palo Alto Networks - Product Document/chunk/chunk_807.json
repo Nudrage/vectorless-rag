@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_807",
+  "section_number": "1.21.11.5.2",
+  "header": "Multiple Values for a DHCP Option",
+  "content": "You can enter multiple option values for an Option Code with the same Option Name, but all\nvalues for a particular code and name combination must be the same type (IP address, ASCII, or\nhexadecimal). If one type is inherited or entered, and later a different type is entered for the same\ncode and name combination, the second type will overwrite the first type.\nYou can enter an Option Code more than once by using a different Option Name. In this case,\nthe Option Type for the Option Code can differ among the multiple option names. For example,\nif option Coastal Server (option code 6) is configured with IP address type, option Server XYZ\n(option code 6) with ASCII type is also allowed.\nThe firewall sends multiple values for an option (strung together) to a client in order from top\nto bottom. Therefore, when entering multiple values for an option, enter the values in the order\nof preference, or else move the options to achieve your preferred order in the list. The order of\noptions in the firewall configuration determines the order that the options appear in DHCPOFFER\nand DHCPACK messages.\nYou can enter an option code that already exists as a predefined option code, and the customized\noption code will override the predefined DHCP option; the firewall issues a warning.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1442,
+      "end": 1442
+    },
+    "content_stats": {
+      "char_count": 1282,
+      "word_count": 221
+    },
+    "hierarchy": {
+      "parent": "DHCP Options",
+      "children": []
+    }
+  }
+}

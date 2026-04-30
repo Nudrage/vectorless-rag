@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_241",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5028(F): The Windows Firewall Service was unable to parse the new security policy. The service will continue with currently enforced policy.\n\nThis event can be a sign of software or operating system issues, Windows Firewall registry errors or corruption, or Group Policy setting misconfigurations. We recommend\nmonitoring this event and investigating the reason for the condition. Typically this event indicates configuration issues, not security issues.\n5029(F): The Windows Firewall Service failed to initialize the driver. The service will continue to enforce the current policy.\nWindows logs an error if either the Windows Firewall service or its driver fails to start, or if they unexpectedly terminate. The error message indicates the cause of the service failure by\nincluding an error code in the text of the message.\nThere is no example of this event in this document.\nEvent Schema:\nThe Windows Firewall service failed to initialize the driver. Windows Firewall will continue to enforce the current policy.\nError Code:%1\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 680,
+      "end": 680
+    },
+    "content_stats": {
+      "char_count": 1137,
+      "word_count": 175
+    },
+    "hierarchy": {
+      "parent": "5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the",
+      "children": []
+    }
+  }
+}

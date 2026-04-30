@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_061",
+  "section_number": "1.18.10",
+  "header": "Detection Events",
+  "content": "GET\nURL: https://<vectra_portal_url>/api/v3.4/events/detections?from=222\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"events\": [\n{\n\"id\": 28538,\n\"category\": \"command_and_control\",\n\"threat\": 50,\n\"certainty\": 50,\n\"triaged\": false,\n\"detection_type\": \"Azure AD Redundant Access Creation\",\n\"d_type_vname\": \"Azure AD Redundant Access Creation\",\n\"detection_id\": 959,\n\"detection_href\":\n\"https://207031206993.uw2.devportal.vectra.ai/detections/959?detail_id=94341\",\n\"entity_id\": 1,\n\"type\": \"account\",\n\"entity_href\": \"https://207031206993.uw2.devportal.vectra.ai/accounts/1\",\n\"entity_uid\": \"O365:ServicePrincipal_3fb87dda-882a-49e1-88b9-\n67d2499b2fd4\",\n\"src_entity\": \"O365:ServicePrincipal_3fb87dda-882a-49e1-88b9-\n67d2499b2fd4\",\n\"event_timestamp\": \"2022-09-12T16:31:35Z\",\n\"detail\": {\n\"operation\": \"Add member to role.\",\n\"target\": \"dmahoney.a@vectra.ai\",\n\"change\": \"Application Administrator\",\n\"results\": \"Success\",\n\"last_timestamp\": \"2022-09-09T08:13:58Z\"\n},\n\"severity\": 5\n}\n],\n\"next_checkpoint\": 28539,\n\"remaining_count\": 9797\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 104,
+      "end": 104
+    },
+    "content_stats": {
+      "char_count": 1037,
+      "word_count": 78
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

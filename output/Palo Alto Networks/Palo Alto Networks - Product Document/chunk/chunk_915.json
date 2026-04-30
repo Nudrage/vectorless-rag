@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_915",
+  "section_number": "1.21.21.4",
+  "header": "ICMP",
+  "content": "Internet Control Message Protocol (ICMP) (RFC 792) is another one of the main protocols of\nthe Internet Protocol suite; it operates at the Network layer of the OSI model. ICMP is used for\ndiagnostic and control purposes, to send error messages about IP operations, or messages about\nrequested services or the reachability of a host or router. Network utilities such as traceroute and\nping are implemented by using various ICMP messages.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1559\n©2025 Palo Alto Networks, Inc.\nNetworking\nICMP is a connectionless protocol that does not open or maintain actual sessions. However, the\nICMP messages between two devices can be considered a session.\nPalo Alto Networks firewalls support ICMPv4 and ICMPv6. You can control ICMPv4 and ICMPv6\npackets in several ways:\n• Create Security Policy Rules Based on ICMP and ICMPv6 Packets and select the icmp or ipv6-\nicmp application in the rule.\n• Control ICMPv6 Rate Limiting when you Configure Session Settings.\n• Use Zone Protection Profiles to configure flood protection, specifying the rate of ICMP or\nICMPv6 connections per second (not matching an existing session) that trigger an alarm, trigger\nthe firewall to randomly drop ICMP or ICMPv6 packets, and cause the firewall to drop ICMP or\nICMPv6 packets that exceed the maximum rate.\n• Use Zone Protection Profiles to configure packet based attack protection:\n• For ICMP, you can drop certain types of packets or suppress the sending of certain packets.\n• For ICMPv6 packets (Types 1, 2, 3, 4, and 137), you can specify that the firewall use the\nICMP session key to match a security policy rule, which determines whether the ICMPv6\npacket is allowed or not. (The firewall uses the security policy rule, overriding the default\nbehavior of using the embedded packet to determine a session match.) When the firewall\ndrops ICMPv6 packets that match a security policy rule, the firewall logs the details in\nTraffic logs.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1559,
+      "end": 1560
+    },
+    "content_stats": {
+      "char_count": 1947,
+      "word_count": 318
+    },
+    "hierarchy": {
+      "parent": "Session Settings and Timeouts",
+      "children": [
+        "Security Policy Rules Based on ICMP and ICMPv6 Packets",
+        "ICMPv6 Rate Limiting"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_677",
+  "section_number": "1.19.3.1",
+  "header": "IKE Gateway",
+  "content": "The Palo Alto Networks firewalls or a firewall and another security device that initiate and\nterminate VPN connections across the two networks are called the IKE Gateways. To set up\nthe VPN tunnel and send traffic between the IKE Gateways, each peer must have an IP address\n—static or dynamic—or FQDN. The VPN peers use preshared keys or certificates to mutually\nauthenticate each other.\nThe peers must also negotiate the mode—main or aggressive—for setting up the VPN tunnel\nand the SA lifetime in IKE Phase 1. Main mode protects the identity of the peers and is more\nsecure because more packets are exchanged when setting up the tunnel. Main mode is the\nrecommended mode for IKE negotiation if both peers support it. Aggressive mode uses fewer\npackets to set up the VPN tunnel and is hence faster but a less secure option for setting up the\nVPN tunnel.\nSee Set Up an IKE Gateway for configuration details.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1249,
+      "end": 1249
+    },
+    "content_stats": {
+      "char_count": 907,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "Site-to-Site VPN Concepts",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_002",
+  "section_number": "1.1",
+  "header": "Revision History",
+  "content": "DATE\nCOMMENT\nSeptember 2024\nNew endpoints for querying unique host counts and records by given\ntimespan:\no\n/v3.4/unique_host_count\no\n/v3.4/unique_host_count/audit\nRename of exisiting unique_host_count endpoints from V3.3 to new\nnames and urls:\no\n/v3.4/unique_host_count_monthly\no\n/v3.4/unique_host_count_monthly/audit\nAdds support for downloading the curated ruleset for Vectra Match\no\n/api/v3.4/vectra-match/download-vectra-ruleset\nNew endpoint for monitoring health of detection models has been\nadded:\no\n/api/v3.4/health/detection\nJuly 2024\nNew endpoints for health monitoring of external connectors and\nEDR’s have been added:\no\n/v3.4/health/external_connectors\no\n/v3.4/health/external_connectors/details\no\n/v3.4/health/edr\no\n/v3.4/health/edr/details\no\n/v3.4/health/network_brain/ping\n© July 2024 Vectra AI, Inc. | 3\nDATE\nCOMMENT\nJuly 2024\nRemoval of the following endpoints:\n• /api/v3.4/events/account_scoring/\n• /api/v3.4/events/account_detection/\nRemoval of the following response fields and query parameters:\n• /api/v3.4/entities/<id>/notes/:\n• /api/v3.4/entities/<id>/notes/<id>/:\n• /api/v3.4/tagging/entity/<id>/:\n• /api/v3.4/tagging/entity/:\no\n‘entity_type’ parameter\n• /api/v3.4/detections/:\n• /api/v3.4/detections/<id>/:\no\n‘c_score’ parameter/field\no\n‘t_score’ parameter/field\no\n‘targets_key_asset’ parameter/field\no\n‘category’ parameter/field\no\n‘c_score_gte’ parameter\no\n‘t_score_gte’ parameter\n• /api/v3.4/entities/:\n• /api/v3.4/entities/<id>/:\no\n‘entity_type’ parameter/field\no\n‘entity_importance’ field\n• /api/v3.4/events/entity_scoring/:\no\n‘entity_type’ parameter/field\no\n‘entity_importance’ field\no\n‘last_detection_id’ field\no\n‘last_detection_type’ field\no\n‘last_detection_url’ field\n• /api/v3.4/events/detections/:\n• /api/v3.4/lockdown/:\no\n‘entity_type’ parameter/field\nJune 2024\nAdds support for uploading large rules files to Vectra Match:\n/api/v3.4/vectra-match/rules/upload\n© July 2024 Vectra AI, Inc. | 4\nDATE\nCOMMENT\nApril 2024\nInitial Release\n• The following new endpoints have been added:\no\n/api/v3.4/users/\no\n/api/v3.4/users/<id>/\no\n/api/v3.4/users/roles/\n• Updates tagging to rename the ‘tag_id’ key to ‘entity_id’ in the\nresponse object. The value of this key and the path for this\nendpoint is unchanged.\n• Rename the ‘subaccounts’ response field to ‘associated_accounts’\nfor the following endpoints:\no\n/api/v3.4/accounts/\no\n/api/v3.4/accounts/<id>/\n© July 2024 Vectra AI, Inc. | 5",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 2,
+      "end": 5
+    },
+    "content_stats": {
+      "char_count": 2410,
+      "word_count": 275
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

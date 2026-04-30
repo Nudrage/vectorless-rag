@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_182",
+  "section_number": "1.9.7.1",
+  "header": "Configure Master Key Encryption Level",
+  "content": "You configure the master key encryption algorithm level and whether to re-encrypt all currently\nencrypted data with a new encryption algorithm level using the CLI. Depending on the order of\nthe keywords, you can change the encryption level or you can change the encryption level and\nalso specify whether to re-encrypt previously encrypted data.\nThe following operational CLI command changes the encryption level and automatically re-\nencrypts all currently encrypted data with the specified encryption level:\nadmin@PA-NGFW>request encryption-level level <0|1|2>\nThe following operational CLI command changes the encryption level and specifies whether to re-\nencrypt all currently encrypted data with the new encryption level:\nadmin@PA-NGFW>request encryption-level re-encrypt <yes|no> level <0|\n1|2>\nKeyword\nOptions\nlevel\n0 = Use the default algorithm (AES-256-CBC) to\nencrypt data\n1 = Use the AES-256-CBC algorithm to encrypt data\n2 = Use the AES-256-GCM algorithm to encrypt data\nThe firewall re-encrypts all currently encrypted data\nand encrypts new sensitive data using the specified\nalgorithm. If you don’t want to re-encrypt existing\nencrypted data with the new algorithm, specify re-\nencrypt no in the command string. This prevents the\nfirewall from automatically re-encrypting data that the\nfirewall has already encrypted.\nOnly use AES-256-GCM when Panorama\nand all of its managed devices (or both\ndevices in an HA pair) run PAN-OS 10.0\nor greater and configure all of the devices\nto use AES-256-GCM. Managed or paired\ndevices that use different encryption levels\nmay become out of sync.\nre-encrypt\nno = Do not re-encrypt currently encrypted data.\nThe firewall does not re-encrypt currently encrypted\ndata. Currently encrypted data remains encrypted\nwith whichever algorithm the firewall originally used\nto encrypt the data. The firewall uses the specified\nalgorithm only to encrypt sensitive data in the future.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n329\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nKeyword\nOptions\nyes = Re-encrypt currently encrypted data with the\nspecified algorithm and use that algorithm to encrypt\nsensitive data in the future.\nUse the operational CLI command show system masterkey-properties to verify the\nencryption algorithm (level) currently configured on the device, for example:\nadmin@PA-NGFW>show system masterkey-properties\nMaster key expires at: unspecified\nReminders will begin at: unspecified\nMaster key on hsm: no\nAutomatically renew master key lifetime: 0\nEncryption Level: 1\nThe output shows that the current encryption level is 1, which is AES-256-CBC.\nIf you downgrade to an earlier version of PAN-OS, the device automatically reverts the encryption\nalgorithm to a level that the downgraded PAN-OS version supports and automatically re-encrypts\nencrypted data using that level so that the device can decrypt and use the data as needed. For\nexample, if your device is on PAN-OS 10.0 and uses AES-256-GCM as the encryption algorithm\n(which is not supported on earlier versions of PAN-OS), and you downgrade to PAN-OS 9.1, then\nthe device re-encrypts the encrypted data to AES-256-CBC, which is supported in PAN-OS 9.1.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 329,
+      "end": 330
+    },
+    "content_stats": {
+      "char_count": 3175,
+      "word_count": 474
+    },
+    "hierarchy": {
+      "parent": "Master Key Encryption",
+      "children": []
+    }
+  }
+}

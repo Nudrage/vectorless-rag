@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_913",
+  "section_number": "1.21.21.2.4",
+  "header": "Maximum Segment Size (MSS)",
+  "content": "The maximum transmission unit (MTU) is a value indicating the largest number of bytes that\ncan be transmitted in a single TCP packet. The MTU includes the length of headers, so the MTU\nminus the number of bytes in the headers equals the maximum segment size (MSS), which is the\nmaximum number of data bytes that can be transmitted in a single packet.\nA configurable MSS adjustment size (shown below) allows your firewall to pass traffic that has\nlonger headers than the default setting allows. Encapsulation adds length to headers, so you\nwould increase the MSS adjustment size to allow bytes, for example, to accommodate an MPLS\nheader or tunneled traffic that has a VLAN tag.\nIf the DF (don’t fragment) bit is set for a packet, it is especially helpful to have a larger MSS\nadjustment size and smaller MSS so that longer headers do not result in a packet length that\nexceeds the allowed MTU. If the DF bit were set and the MTU were exceeded, the larger packets\nwould be dropped.\nYou can configure the firewall globally to fragment IPv4 packets that exceed the egress\ninterface MTU, even when the DF bit is set in the packet. Enable this for Layer 3 physical\ninterfaces and IPSec tunnel interfaces using the CLI command debug dataplane set\nip4-df-ignore yes. Restore the firewall to the default behavior by using the CLI\ncommand debug dataplane set ipv4-df-ignore no.\nThe firewall supports a configurable MSS adjustment size for IPv4 and IPv6 addresses on the\nfollowing Layer 3 interface types: Ethernet, subinterfaces, Aggregated Ethernet (AE), VLAN, and\nloopback. The IPv6 MSS adjustment size applies only if IPv6 is enabled on the interface.\nIf IPv4 and IPv6 are enabled on an interface and the MSS Adjustment Size differs between\nthe two IP address formats, the proper MSS value corresponding to the IP type is used for\nTCP traffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1558\n©2025 Palo Alto Networks, Inc.\nNetworking\nFor IPv4 and IPv6 addresses, the firewall accommodates larger-than-expected TCP header\nlengths. In the case where a TCP packet has a larger header length than you planned for, the\nfirewall chooses as the MSS adjustment size the larger of the following two values:\n• The configured MSS adjustment size\n• The sum of the length of the TCP header (20) + the length of IP headers in the TCP SYN\nThis behavior means that the firewall overrides the configured MSS adjustment size if necessary.\nFor example, if you configure an MSS adjustment size of 42, you expect the MSS to equal 1458\n(the default MTU size minus the adjustment size [1500 - 42]). However, the TCP packet has 4\nextra bytes of IP options in the header, so the MSS adjustment size (20+20+4) equals 44, which is\nlarger than the configured MSS adjustment size of 42. The resulting MSS is 1500-44=1456 bytes,\nsmaller than you expected.\nTo configure the MSS adjustment size, see Configure Session Settings.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1558,
+      "end": 1559
+    },
+    "content_stats": {
+      "char_count": 2887,
+      "word_count": 492
+    },
+    "hierarchy": {
+      "parent": "TCP",
+      "children": []
+    }
+  }
+}

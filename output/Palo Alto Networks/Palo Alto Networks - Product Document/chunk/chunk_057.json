@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_057",
+  "section_number": "1.4.4",
+  "header": "Enhanced Application Logs for Palo Alto Networks Cloud Services",
+  "content": "Cloud Services\nThe firewall can collect data that increases visibility into network activity for Palo Alto Networks\napps and services, like Cortex XDR. These enhanced application logs are designed strictly for Palo\nAlto Networks apps and services to consume and process; you cannot view enhanced application\nlogs on the firewall or Panorama. Only firewalls sending logs to Cortex Data Lake can generate\nenhanced application logs.\nExamples of the types of data that enhanced application logs gather includes records of DNS\nqueries, the HTTP header User Agent field that specifies the web browser or tool used to access\na URL, and information about DHCP automatic IP address assignment. With DHCP information,\nfor example, Cortex XDR™ can alert on unusual activity based on hostname instead of IP address.\nThis allows the security analyst using Cortex XDR to meaningfully assess whether the user’s\nactivity is within the scope of his or her role, and if not, to more quickly take action to stop the\nactivity.\nTo benefit from the most comprehensive set of enhanced application logs, you should enable\nUser-ID; deployments for the Windows-based User-ID agent and the PAN-OS integrated User-\nID agent both collect some data that is not reflected in the firewall User-ID logs but that is useful\ntowards associating network activity with specific users.\nTo start forwarding enhanced application logs to Cortex Data Lake, turn on enhanced application\nlogging globally, and then enable it on a per-security rule basis (using a Log Forwarding profile).\nThe global setting is required and captures data for traffic that is not session-based (ARP requests,\nfor example). The per-security policy rule setting is strongly recommended; the majority of\nenhanced application logs are gathered from the session-based traffic that your security policy\nrules enforce.\nSTEP 1 |\nEnhanced application logging requires a Cortex Data Lake subscription and User-ID is also\nrecommended. Here are steps to get started with Cortex Data Lake and enable User-ID.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n82\n©2025 Palo Alto Networks, Inc.\nSubscriptions\nSTEP 2 |\nTo Enable Enhanced Application Logging on the firewall, select Device > Setup >\nManagement > Cortex Data Lake and edit Cortex Data Lake Settings.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n83\n©2025 Palo Alto Networks, Inc.\nSubscriptions\nSTEP 3 |\nContinue to enable enhanced application logging for the security policy rules that control the\ntraffic into which you want extended visibility.\n1.\nSelect Objects > Log Forwarding and Add or modify a log forwarding profile.\n2.\nUpdate the profile to Enable enhanced application logging to Cortex Data Lake\n(including traffic and url logs).\nNotice that when you enable enhanced application logging in a Log Forwarding profile,\nmatch lists that specify the log types required for enhanced application logging are\nautomatically added to the profile.\n3.\nClick OK to save the profile and continue to update as many profiles as needed.\n4.\nEnsure that the Log Forwarding profile that you’ve updated is attached to a security\npolicy rule, to trigger log generation and forwarding for the traffic matched to the rule.\n1. Select Policies > Security to view the profiles attached to each security policy rule.\n2. To update the log forwarding profile attached to a rule, Add or edit a rule and select\nPolicies > Security > Actions > Log Forwarding and select the Log Forwarding profile\nenabled with enhanced application logging.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n84\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 82,
+      "end": 84
+    },
+    "content_stats": {
+      "char_count": 3563,
+      "word_count": 565
+    },
+    "hierarchy": {
+      "parent": "Subscriptions",
+      "children": []
+    }
+  }
+}

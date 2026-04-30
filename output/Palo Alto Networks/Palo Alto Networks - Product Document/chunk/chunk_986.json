@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_986",
+  "section_number": "1.22.16.2.1",
+  "header": "Use XFF Values in Policy",
+  "content": "Complete the following procedure to enforce security policy using the client IP address in the XFF\nheader.\nIn Microsoft Azure, by default, an application gateway inserts the original source IP\naddress and port in the XFF header. To use XFF headers in policy on your firewall, you\nmust configure the application gateway to omit the port from the XFF header. For more\ninformation, see Azure documentation.\nSTEP 1 |\nLog in to your firewall.\nSTEP 2 |\nSelect Device > Setup > Content-ID > X-Forwarded-For Headers.\nSTEP 3 |\nClick the edit icon.\nSTEP 4 |\nSelect Enabled for Security Policy from the Use X-Forwarded-For Header drop-down.\nYou cannot enable Use X-Forwarded-For Header for security policy and User-ID at the\nsame time.\nSTEP 5 |\n(Optional) Select Strip X-Forwarded-For Header to remove the XFF field from outgoing\nHTTP requests.\nSelecting this option does not disable the use of XFF headers. The firewall strips the XFF field\nfrom client requests after using it to enforce policy and log IP addresses.\nSTEP 6 |\nClick OK.\nSTEP 7 |\nCommit your changes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1679,
+      "end": 1679
+    },
+    "content_stats": {
+      "char_count": 1055,
+      "word_count": 180
+    },
+    "hierarchy": {
+      "parent": "Use XFF IP Address Values in Security Policy and Logging",
+      "children": []
+    }
+  }
+}

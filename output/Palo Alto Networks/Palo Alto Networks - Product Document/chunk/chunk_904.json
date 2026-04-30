@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_904",
+  "section_number": "1.21.20.1.4",
+  "header": "BFD for Dynamic Routing Protocols",
+  "content": "In addition to BFD for static routes, the firewall supports BFD for the BGP, OSPF, and RIP routing\nprotocols.\nThe Palo Alto Networks implementation of multihop BFD follows the encapsulation\nportion of RFC 5883, Bidirectional Forwarding Detection (BFD) for Multihop Paths\nbut does not support authentication. A workaround is to configure BFD in a VPN tunnel\nfor BGP. The VPN tunnel can provide authentication without the duplication of BFD\nauthentication.\nWhen you enable BFD for OSPFv2 or OSPFv3 broadcast interfaces, OSPF establishes a BFD\nsession only with its Designated Router (DR) and Backup Designated Router (BDR). On point-to-\npoint interfaces, OSPF establishes a BFD session with the direct neighbor. On point-to-multipoint\ninterfaces, OSPF establishes a BFD session with each peer.\nThe firewall does not support BFD on an OSPF or OSPFv3 virtual link.\nEach routing protocol can have independent BFD sessions on an interface. Alternatively, two or\nmore routing protocols (BGP, OSPF, and RIP) can share a common BFD session for an interface.\nWhen you enable BFD for multiple protocols on the same interface, and the source IP address\nand destination IP address for the protocols are also the same, the protocols share a single BFD\nsession, thus reducing both dataplane overhead (CPU) and traffic load on the interface. If you\nconfigure different BFD profiles for these protocols, only one BFD profile is used: the one that\nhas the lowest Desired Minimum Tx Interval. If the profiles have the same Desired Minimum Tx\nInterval, the profile used by the first created session takes effect. In the case where a static route\nand OSPF share the same session, because a static session is created right after a commit, while\nOSPF waits until an adjacency is up, the profile of the static route takes effect.\nThe benefit of using a single BFD session in these cases is that this behavior uses resources more\nefficiently. The firewall can use the saved resources to support more BFD sessions on different\ninterfaces or support BFD for different source IP and destination IP address pairs.\nIPv4 and IPv6 on the same interface always create different BFD sessions, even though they can\nuse the same BFD profile.\nIf you implement both BFD for BGP and HA path monitoring, Palo Alto Networks\nrecommends you not implement BGP Graceful Restart. When the BFD peer’s interface\nfails and path monitoring fails, BFD can remove the affected routes from the routing table\nand synchronize this change to the passive HA firewall before Graceful Restart can take\neffect. If you decide to implement BFD for BGP, Graceful Restart for BGP, and HA path\nmonitoring, you should configure BFD with a larger Desired Minimum Tx Interval and\nlarger Detection Time Multiplier than the default values.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1543\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1543,
+      "end": 1544
+    },
+    "content_stats": {
+      "char_count": 2857,
+      "word_count": 464
+    },
+    "hierarchy": {
+      "parent": "BFD Overview",
+      "children": []
+    }
+  }
+}

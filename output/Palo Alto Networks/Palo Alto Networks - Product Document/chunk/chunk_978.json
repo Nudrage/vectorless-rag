@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_978",
+  "section_number": "1.22.14.2.2",
+  "header": "Amazon Web Services (AWS)",
+  "content": "As you provision or modify virtual machines in your AWS VPCs, you have two ways of monitoring\nthese instances and retrieving the tags for use as match criteria in dynamic address groups.\n• VM Information Source—On a next-gen firewall, you can monitor up to a total of 32 tags—14\npre-defined and 18 user-defined key-value pairs (tags). The following attributes (or tag names)\nare available as match criteria for dynamic address groups.\n• AWS Plugin on Panorama—The Panorama plugin for AWS allows you to connect Panorama to\nyour AWS VPCs and retrieve the IP address-to-tag mapping for your AWS virtual machines.\nPanorama then registers the VM information to the managed Palo Alto Networks® firewall(s)\nthat you have configured for notification. With the plugin, Panorama can retrieve a total of 32\ntags for each virtual machine, 11 predefined tags and up to 21 user-defined tags.\nAttributes\nMonitored on the\nAWS-VPC\nVM Information Source on the\nFirewall\nAWS Plugin on Panorama\nArchitecture\nYes\nNo\nGuest OS\nYes\nNo\nAMI ID\nYes\nYes\nIAM Instance\nProfile\nNo\nYes\nInstance ID\nYes\nNo\nInstance State\nYes\nNo\nInstance Type\nYes\nNo\nKey Name\nYes\nYes\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1667\n©2025 Palo Alto Networks, Inc.\nPolicy\nAttributes\nMonitored on the\nAWS-VPC\nVM Information Source on the\nFirewall\nAWS Plugin on Panorama\nOwner ID\nNo\nYes\nPlacement—\nTenancy\nYes\nYes\nPlacement—Group\nName\nYes\nYes\nPlacement—\nAvailability Zone\nYes\nYes\nPrivate DNS Name\nYes\nNo\nPublic DNS Name\nYes\nYes\nSubnet ID\nYes\nYes\nSecurity Group ID\nNo\nYes\nSecurity Group\nName\nNo\nYes\nVPC ID\nYes\nYes\nTag (key, value)\nYes;\nUp to a maximum of 18 user\ndefined tags are supported.\nThe user-defined tags are\nsorted alphabetically, and the\nfirst 18 tags are available for\nuse on the firewalls.\nYes;\nUp to a maximum of 21 user defined\ntags are supported. The user-defined\ntags are sorted alphabetically, and the\nfirst 21 tags are available for use on\nPanorama and the firewalls.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1667,
+      "end": 1668
+    },
+    "content_stats": {
+      "char_count": 1927,
+      "word_count": 327
+    },
+    "hierarchy": {
+      "parent": "Attributes Monitored on Virtual Machines in Cloud Platforms",
+      "children": []
+    }
+  }
+}

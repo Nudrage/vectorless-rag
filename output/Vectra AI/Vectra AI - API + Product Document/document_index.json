@@ -1,0 +1,911 @@
+{
+  "document_name": "Vectra AI\\Vectra AI - API + Product Document",
+  "generated_at": "2026-02-17T22:06:26.107489",
+  "outline_text": "DOCUMENT INDEX: Vectra AI\\Vectra AI - API + Product Document\n============================================================\n\n1. Vectra Platform API Guide [Page 1, 3 words]\n   1.1. Revision History [Pages 2-5, 275 words]\n   1.2. API Version 3.4 Changelog [Pages 5-6, 375 words]\n   1.3. Overview [Pages 6-7, 167 words]\n   1.4. Security Detection Data [Page 7, 52 words]\n   1.5. Accessing REST API v3.4 [Pages 7-9, 301 words]\n   1.6. API Clients [Page 9, 76 words]\n      1.6.1. Creating a new API Client [Pages 9-11, 188 words]\n      1.6.2. Authenticating as an API Client [Pages 11-15, 582 words]\n      1.6.3. Make API request as a client [Pages 15-16, 101 words]\n   1.7. API Rate Limits [Pages 16-17, 82 words]\n   1.8. Detections [Pages 17-22, 1151 words]\n   1.9. Mark/Unmark Detections as Fixed [Pages 22-23, 89 words]\n      1.9.1. Detection PCAP API [Page 23, 63 words]\n   1.10. Accounts [Pages 23-26, 740 words]\n   1.11. Tagging [Pages 26-27, 264 words]\n   1.12. Triage [Pages 27-30, 728 words]\n   1.13. Assignments [Page 30, 80 words]\n   1.14. Assignment Resolution [Pages 30-32, 423 words]\n   1.15. Users [Pages 32-34, 320 words]\n   1.16. Event-based endpoints [Page 34, 83 words]\n   1.17. Detection Events [Pages 34-36, 459 words]\n   1.18. Audit Log Events [Pages 36-38, 488 words]\n   1.19. Entity Scoring Events [Pages 38-40, 526 words]\n   1.20. Entities [Pages 40-42, 654 words]\n   1.21. Entity Notes [Pages 42-44, 267 words]\n   1.22. Groups [Pages 44-46, 563 words]\n   1.23. Lockdown [Pages 46-47, 200 words]\n   1.24. Hosts [Pages 47-50, 718 words]\n   1.25. Health [Pages 50-53, 521 words]\n   1.26. Health – External Connectors [Pages 53-54, 271 words]\n   1.27. Health – External Connector Details [Pages 54-55, 201 words]\n   1.28. Health – EDR [Pages 55-56, 260 words]\n   1.29. Health – EDR Details [Pages 56-57, 190 words]\n   1.30. Health – Network Brain Ping [Pages 57-58, 65 words]\n   1.31. Vectra Match Enablement [Pages 58-59, 261 words]\n   1.32. Vectra Match Stats [Page 59, 151 words]\n   1.33. Vectra Match Status [Pages 59-60, 159 words]\n   1.34. Vectra Match Available Devices [Page 60, 138 words]\n   1.35. Vectra Match Rules [Pages 60-61, 275 words]\n   1.36. Vectra Match Rules Upload [Pages 61-65, 758 words]\n   1.37. Vectra Match Assignment [Pages 65-66, 344 words]\n   1.38. Vectra Match Alert Stats [Pages 66-67, 162 words]\n   1.39. Threat Feeds [Pages 67-68, 393 words]\n   1.40. Vectra Match Curated Ruleset Download [Pages 68-69, 50 words]\n   1.41. Unique Hosts Observed Monthly [Page 69, 212 words]\n   1.42. Unique Hosts Observed Monthly – Audit [Pages 69-70, 257 words]\n   1.43. Unique Hosts Observed [Pages 70-71, 187 words]\n   1.44. Unique Hosts Observed – Audit [Pages 71-72, 319 words]\n   1.45. Appendix A [Page 72, 71 words]\n      1.45.1. Detections [Pages 72-76, 386 words]\n      1.45.2. Detections (Notes) [Pages 76-78, 151 words]\n      1.45.3. Mark as Fixed [Pages 78-79, 43 words]\n      1.45.4. Tagging [Pages 79-81, 150 words]\n      1.45.5. Accounts [Pages 81-83, 224 words]\n      1.45.6. Account (Notes) [Pages 83-85, 148 words]\n      1.45.7. Triage Rules [Pages 85-90, 547 words]\n      1.45.8. Users [Pages 90-94, 405 words]\n      1.45.9. Assignments [Pages 94-101, 642 words]\n      1.45.10. Assignment Outcomes [Pages 101-104, 205 words]\n      1.45.11. Detection Events [Page 104, 78 words]\n      1.45.12. Audit Log Events [Pages 104-106, 141 words]\n      1.45.13. Entities [Pages 106-107, 107 words]\n      1.45.14. Entity Scoring Events [Pages 107-108, 148 words]\n      1.45.15. Entity (Notes) [Pages 108-111, 178 words]\n      1.45.16. Groups [Pages 111-113, 353 words]\n      1.45.17. Lockdown [Pages 113-114, 36 words]\n      1.45.18. Hosts [Pages 114-116, 213 words]\n      1.45.19. Health – External Connectors [Pages 116-117, 120 words]\n      1.45.20. Health – External Connectors Details [Pages 117-119, 152 words]\n      1.45.21. Health – EDR [Pages 119-120, 97 words]\n      1.45.22. Health – EDR Details [Pages 120-122, 136 words]\n      1.45.23. Health – Network Brain Ping [Page 122, 18 words]\n      1.45.24. Vectra Match Enablement [Pages 122-123, 106 words]\n      1.45.25. Vectra Match Stats [Pages 123-139, 1574 words]\n      1.45.26. Vectra Match Status [Pages 139-140, 131 words]\n      1.45.27. Vectra Match Available Devices [Pages 140-141, 214 words]\n      1.45.28. Vectra Match Rules [Pages 141-142, 81 words]\n      1.45.29. Vectra Match Rules Upload [Pages 142-145, 284 words]\n      1.45.30. Vectra Match Assignment [Pages 145-147, 181 words]\n      1.45.31. Vectra Match Alert Stats [Pages 147-148, 257 words]\n      1.45.32. Threat [Page 148, 28 words]\n      1.45.33. Threat Feeds [Pages 148-151, 301 words]\n      1.45.34. Unique Hosts Observed Monthly [Pages 151-153, 136 words]\n      1.45.35. Unique Hosts Observed Monthly - Audit [Pages 153-154, 160 words]\n      1.45.36. Unique Hosts Observed [Pages 154-155, 36 words]\n      1.45.37. Unique Hosts Observed - Audit [Pages 155-156, 130 words]\n   1.46. Appendix B [Page 156, 2 words]\n      1.46.1. Detections [Pages 156-158, 299 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Vectra Platform API Guide",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 3,
+        "summary": "REST API v3.",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "Revision History",
+            "depth": 2,
+            "chunk_id": "chunk_002",
+            "page_start": 2,
+            "page_end": 5,
+            "word_count": 275,
+            "summary": "DATE\nCOMMENT\nSeptember 2024\nNew endpoints for querying unique host counts and records by given\ntimespan:\no\n/v3."
+          },
+          {
+            "number": "1.2",
+            "title": "API Version 3.4 Changelog",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 5,
+            "page_end": 6,
+            "word_count": 375,
+            "summary": "Accounts\n•\nThe ‘subaccounts’ field is deprecated in v3."
+          },
+          {
+            "number": "1.3",
+            "title": "Overview",
+            "depth": 2,
+            "chunk_id": "chunk_004",
+            "page_start": 6,
+            "page_end": 7,
+            "word_count": 167,
+            "summary": "A REST API is available for administrators and developers to integrate Vectra’s breach detection data\ninto their applications."
+          },
+          {
+            "number": "1.4",
+            "title": "Security Detection Data",
+            "depth": 2,
+            "chunk_id": "chunk_005",
+            "page_start": 7,
+            "page_end": 7,
+            "word_count": 52,
+            "summary": "The \"Detections” and “Accounts” elements retrieve security events that can be inserted into external\napplications."
+          },
+          {
+            "number": "1.5",
+            "title": "Accessing REST API v3.4",
+            "depth": 2,
+            "chunk_id": "chunk_006",
+            "page_start": 7,
+            "page_end": 9,
+            "word_count": 301,
+            "summary": "The REST API v 3."
+          },
+          {
+            "number": "1.6",
+            "title": "API Clients",
+            "depth": 2,
+            "chunk_id": "chunk_007",
+            "page_start": 9,
+            "page_end": 9,
+            "word_count": 76,
+            "summary": "Getting access to the Vectra Platform API is done through the creation of an API Client.",
+            "children": [
+              {
+                "number": "1.6.1",
+                "title": "Creating a new API Client",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 9,
+                "page_end": 11,
+                "word_count": 188,
+                "summary": "From the API Clients page, select ‘Add API Client’ to create a new client."
+              },
+              {
+                "number": "1.6.2",
+                "title": "Authenticating as an API Client",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 11,
+                "page_end": 15,
+                "word_count": 582,
+                "summary": "Many REST API tools and libraries can programmatically manage access tokens for you once provided\nthe OAuth 2."
+              },
+              {
+                "number": "1.6.3",
+                "title": "Make API request as a client",
+                "depth": 3,
+                "chunk_id": "chunk_010",
+                "page_start": 15,
+                "page_end": 16,
+                "word_count": 101,
+                "summary": "Now that you have obtained an access_token, you will use that token to make API requests as an API\nClient to all the Vectra Platform API endpoints."
+              }
+            ]
+          },
+          {
+            "number": "1.7",
+            "title": "API Rate Limits",
+            "depth": 2,
+            "chunk_id": "chunk_011",
+            "page_start": 16,
+            "page_end": 17,
+            "word_count": 82,
+            "summary": "Rate limits define the frequency of requests that can be made to the v3."
+          },
+          {
+            "number": "1.8",
+            "title": "Detections",
+            "depth": 2,
+            "chunk_id": "chunk_012",
+            "page_start": 17,
+            "page_end": 22,
+            "word_count": 1151,
+            "summary": "Detection objects contain all the information related to security events detected in the environment."
+          },
+          {
+            "number": "1.9",
+            "title": "Mark/Unmark Detections as Fixed",
+            "depth": 2,
+            "chunk_id": "chunk_013",
+            "page_start": 22,
+            "page_end": 23,
+            "word_count": 89,
+            "summary": "Marking a detection as Fixed indicates that some remedial action was taken based upon the detection.",
+            "children": [
+              {
+                "number": "1.9.1",
+                "title": "Detection PCAP API",
+                "depth": 3,
+                "chunk_id": "chunk_014",
+                "page_start": 23,
+                "page_end": 23,
+                "word_count": 63,
+                "summary": "Version 3."
+              }
+            ]
+          },
+          {
+            "number": "1.10",
+            "title": "Accounts",
+            "depth": 2,
+            "chunk_id": "chunk_015",
+            "page_start": 23,
+            "page_end": 26,
+            "word_count": 740,
+            "summary": "Account objects contain information related to accounts observed in the environment."
+          },
+          {
+            "number": "1.11",
+            "title": "Tagging",
+            "depth": 2,
+            "chunk_id": "chunk_016",
+            "page_start": 26,
+            "page_end": 27,
+            "word_count": 264,
+            "summary": "The tagging API can be used to manage tags for accounts and detections."
+          },
+          {
+            "number": "1.12",
+            "title": "Triage",
+            "depth": 2,
+            "chunk_id": "chunk_017",
+            "page_start": 27,
+            "page_end": 30,
+            "word_count": 728,
+            "summary": "Version 3 of triage API supports GET, POST, PUT, and DELETE."
+          },
+          {
+            "number": "1.13",
+            "title": "Assignments",
+            "depth": 2,
+            "chunk_id": "chunk_018",
+            "page_start": 30,
+            "page_end": 30,
+            "word_count": 80,
+            "summary": "Assignments are used to assign account objects to analysts for investigation."
+          },
+          {
+            "number": "1.14",
+            "title": "Assignment Resolution",
+            "depth": 2,
+            "chunk_id": "chunk_019",
+            "page_start": 30,
+            "page_end": 32,
+            "word_count": 423,
+            "summary": "Once completed, assignments can be resolved."
+          },
+          {
+            "number": "1.15",
+            "title": "Users",
+            "depth": 2,
+            "chunk_id": "chunk_020",
+            "page_start": 32,
+            "page_end": 34,
+            "word_count": 320,
+            "summary": "User objects contain information about users that have access to the Vectra system."
+          },
+          {
+            "number": "1.16",
+            "title": "Event-based endpoints",
+            "depth": 2,
+            "chunk_id": "chunk_021",
+            "page_start": 34,
+            "page_end": 34,
+            "word_count": 83,
+            "summary": "Event-based endpoints provide a mechanism for API clients to poll Detect for system events."
+          },
+          {
+            "number": "1.17",
+            "title": "Detection Events",
+            "depth": 2,
+            "chunk_id": "chunk_022",
+            "page_start": 34,
+            "page_end": 36,
+            "word_count": 459,
+            "summary": "Detection Events are generated upon initial detection and for each update of the detection."
+          },
+          {
+            "number": "1.18",
+            "title": "Audit Log Events",
+            "depth": 2,
+            "chunk_id": "chunk_023",
+            "page_start": 36,
+            "page_end": 38,
+            "word_count": 488,
+            "summary": "Audit Log Events are generated when a user action is performed on the system."
+          },
+          {
+            "number": "1.19",
+            "title": "Entity Scoring Events",
+            "depth": 2,
+            "chunk_id": "chunk_024",
+            "page_start": 38,
+            "page_end": 40,
+            "word_count": 526,
+            "summary": "Entity Scoring Events are generated when an entity score is changed, which occurs upon initial threa..."
+          },
+          {
+            "number": "1.20",
+            "title": "Entities",
+            "depth": 2,
+            "chunk_id": "chunk_025",
+            "page_start": 40,
+            "page_end": 42,
+            "word_count": 654,
+            "summary": "Entities is an overarching term to cover various types of models, including Accounts and Hosts."
+          },
+          {
+            "number": "1.21",
+            "title": "Entity Notes",
+            "depth": 2,
+            "chunk_id": "chunk_026",
+            "page_start": 42,
+            "page_end": 44,
+            "word_count": 267,
+            "summary": "The Entity Notes API can retrieve a list of all notes associated with an entity (Account, Host)."
+          },
+          {
+            "number": "1.22",
+            "title": "Groups",
+            "depth": 2,
+            "chunk_id": "chunk_027",
+            "page_start": 44,
+            "page_end": 46,
+            "word_count": 563,
+            "summary": "The groups API can retrieve a listing of groups that are defined on the system."
+          },
+          {
+            "number": "1.23",
+            "title": "Lockdown",
+            "depth": 2,
+            "chunk_id": "chunk_028",
+            "page_start": 46,
+            "page_end": 47,
+            "word_count": 200,
+            "summary": "This is a new endpoint for to retrieve a list of entities (Accounts."
+          },
+          {
+            "number": "1.24",
+            "title": "Hosts",
+            "depth": 2,
+            "chunk_id": "chunk_029",
+            "page_start": 47,
+            "page_end": 50,
+            "word_count": 718,
+            "summary": "API responses may vary depending on product subscriptions (Network, AWS, M365)."
+          },
+          {
+            "number": "1.25",
+            "title": "Health",
+            "depth": 2,
+            "chunk_id": "chunk_030",
+            "page_start": 50,
+            "page_end": 53,
+            "word_count": 521,
+            "summary": "API responses may vary depending on product subscriptions (Network, AWS, M365)."
+          },
+          {
+            "number": "1.26",
+            "title": "Health – External Connectors",
+            "depth": 2,
+            "chunk_id": "chunk_031",
+            "page_start": 53,
+            "page_end": 54,
+            "word_count": 271,
+            "summary": "The URL to retrieve health data is\nhttps://<vectra_portal_url>/api/v3."
+          },
+          {
+            "number": "1.27",
+            "title": "Health – External Connector Details",
+            "depth": 2,
+            "chunk_id": "chunk_032",
+            "page_start": 54,
+            "page_end": 55,
+            "word_count": 201,
+            "summary": "The URL to retrieve health data is\nhttps://<vectra_portal_url>/api/v3."
+          },
+          {
+            "number": "1.28",
+            "title": "Health – EDR",
+            "depth": 2,
+            "chunk_id": "chunk_033",
+            "page_start": 55,
+            "page_end": 56,
+            "word_count": 260,
+            "summary": "The URL to retrieve health data is https://<vectra_portal_url>/api/v3."
+          },
+          {
+            "number": "1.29",
+            "title": "Health – EDR Details",
+            "depth": 2,
+            "chunk_id": "chunk_034",
+            "page_start": 56,
+            "page_end": 57,
+            "word_count": 190,
+            "summary": "The URL to retrieve health data is\nhttps://<vectra_portal_url>/api/v3."
+          },
+          {
+            "number": "1.30",
+            "title": "Health – Network Brain Ping",
+            "depth": 2,
+            "chunk_id": "chunk_035",
+            "page_start": 57,
+            "page_end": 58,
+            "word_count": 65,
+            "summary": "The URL to retrieve health network brain data is\nhttps://<vectra_portal_url>/api/v3."
+          },
+          {
+            "number": "1.31",
+            "title": "Vectra Match Enablement",
+            "depth": 2,
+            "chunk_id": "chunk_036",
+            "page_start": 58,
+            "page_end": 59,
+            "word_count": 261,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.32",
+            "title": "Vectra Match Stats",
+            "depth": 2,
+            "chunk_id": "chunk_037",
+            "page_start": 59,
+            "page_end": 59,
+            "word_count": 151,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.33",
+            "title": "Vectra Match Status",
+            "depth": 2,
+            "chunk_id": "chunk_038",
+            "page_start": 59,
+            "page_end": 60,
+            "word_count": 159,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.34",
+            "title": "Vectra Match Available Devices",
+            "depth": 2,
+            "chunk_id": "chunk_039",
+            "page_start": 60,
+            "page_end": 60,
+            "word_count": 138,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.35",
+            "title": "Vectra Match Rules",
+            "depth": 2,
+            "chunk_id": "chunk_040",
+            "page_start": 60,
+            "page_end": 61,
+            "word_count": 275,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.36",
+            "title": "Vectra Match Rules Upload",
+            "depth": 2,
+            "chunk_id": "chunk_041",
+            "page_start": 61,
+            "page_end": 65,
+            "word_count": 758,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.37",
+            "title": "Vectra Match Assignment",
+            "depth": 2,
+            "chunk_id": "chunk_042",
+            "page_start": 65,
+            "page_end": 66,
+            "word_count": 344,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.38",
+            "title": "Vectra Match Alert Stats",
+            "depth": 2,
+            "chunk_id": "chunk_043",
+            "page_start": 66,
+            "page_end": 67,
+            "word_count": 162,
+            "summary": "Version 3."
+          },
+          {
+            "number": "1.39",
+            "title": "Threat Feeds",
+            "depth": 2,
+            "chunk_id": "chunk_044",
+            "page_start": 67,
+            "page_end": 68,
+            "word_count": 393,
+            "summary": "API responses may vary depending on product subscriptions (Network, AWS, M365)."
+          },
+          {
+            "number": "1.40",
+            "title": "Vectra Match Curated Ruleset Download",
+            "depth": 2,
+            "chunk_id": "chunk_045",
+            "page_start": 68,
+            "page_end": 69,
+            "word_count": 50,
+            "summary": "The Vectra Match Curated Ruleset can now be downloaded via the API via GET."
+          },
+          {
+            "number": "1.41",
+            "title": "Unique Hosts Observed Monthly",
+            "depth": 2,
+            "chunk_id": "chunk_046",
+            "page_start": 69,
+            "page_end": 69,
+            "word_count": 212,
+            "summary": "API responses may vary depending on product subscriptions (Network, AWS, M365)."
+          },
+          {
+            "number": "1.42",
+            "title": "Unique Hosts Observed Monthly – Audit",
+            "depth": 2,
+            "chunk_id": "chunk_047",
+            "page_start": 69,
+            "page_end": 70,
+            "word_count": 257,
+            "summary": "API responses may vary depending on product subscriptions (Network, AWS, M365)."
+          },
+          {
+            "number": "1.43",
+            "title": "Unique Hosts Observed",
+            "depth": 2,
+            "chunk_id": "chunk_048",
+            "page_start": 70,
+            "page_end": 71,
+            "word_count": 187,
+            "summary": "API responses may vary depending on product subscriptions (Network, AWS, M365)."
+          },
+          {
+            "number": "1.44",
+            "title": "Unique Hosts Observed – Audit",
+            "depth": 2,
+            "chunk_id": "chunk_049",
+            "page_start": 71,
+            "page_end": 72,
+            "word_count": 319,
+            "summary": "API responses may vary depending on product subscriptions (Network, AWS, M365)."
+          },
+          {
+            "number": "1.45",
+            "title": "Appendix A",
+            "depth": 2,
+            "chunk_id": "chunk_050",
+            "page_start": 72,
+            "page_end": 72,
+            "word_count": 71,
+            "summary": "This section will include examples of data retrieved from the REST API 3.",
+            "children": [
+              {
+                "number": "1.45.1",
+                "title": "Detections",
+                "depth": 3,
+                "chunk_id": "chunk_051",
+                "page_start": 72,
+                "page_end": 76,
+                "word_count": 386,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.2",
+                "title": "Detections (Notes)",
+                "depth": 3,
+                "chunk_id": "chunk_052",
+                "page_start": 76,
+                "page_end": 78,
+                "word_count": 151,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.3",
+                "title": "Mark as Fixed",
+                "depth": 3,
+                "chunk_id": "chunk_053",
+                "page_start": 78,
+                "page_end": 79,
+                "word_count": 43,
+                "summary": "PATCH to mark/unmark a detection as fixed."
+              },
+              {
+                "number": "1.45.4",
+                "title": "Tagging",
+                "depth": 3,
+                "chunk_id": "chunk_054",
+                "page_start": 79,
+                "page_end": 81,
+                "word_count": 150,
+                "summary": "GET to list tags on an account or detection."
+              },
+              {
+                "number": "1.45.5",
+                "title": "Accounts",
+                "depth": 3,
+                "chunk_id": "chunk_055",
+                "page_start": 81,
+                "page_end": 83,
+                "word_count": 224,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.6",
+                "title": "Account (Notes)",
+                "depth": 3,
+                "chunk_id": "chunk_056",
+                "page_start": 83,
+                "page_end": 85,
+                "word_count": 148,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.7",
+                "title": "Triage Rules",
+                "depth": 3,
+                "chunk_id": "chunk_057",
+                "page_start": 85,
+                "page_end": 90,
+                "word_count": 547,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.8",
+                "title": "Users",
+                "depth": 3,
+                "chunk_id": "chunk_058",
+                "page_start": 90,
+                "page_end": 94,
+                "word_count": 405,
+                "summary": "GET\n© July 2024 Vectra AI, Inc."
+              },
+              {
+                "number": "1.45.9",
+                "title": "Assignments",
+                "depth": 3,
+                "chunk_id": "chunk_059",
+                "page_start": 94,
+                "page_end": 101,
+                "word_count": 642,
+                "summary": "GET used to retrieve assignments\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.10",
+                "title": "Assignment Outcomes",
+                "depth": 3,
+                "chunk_id": "chunk_060",
+                "page_start": 101,
+                "page_end": 104,
+                "word_count": 205,
+                "summary": "GET used to list assignment outcomes."
+              },
+              {
+                "number": "1.45.11",
+                "title": "Detection Events",
+                "depth": 3,
+                "chunk_id": "chunk_061",
+                "page_start": 104,
+                "page_end": 104,
+                "word_count": 78,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.12",
+                "title": "Audit Log Events",
+                "depth": 3,
+                "chunk_id": "chunk_062",
+                "page_start": 104,
+                "page_end": 106,
+                "word_count": 141,
+                "summary": "GET\n© July 2024 Vectra AI, Inc."
+              },
+              {
+                "number": "1.45.13",
+                "title": "Entities",
+                "depth": 3,
+                "chunk_id": "chunk_063",
+                "page_start": 106,
+                "page_end": 107,
+                "word_count": 107,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.14",
+                "title": "Entity Scoring Events",
+                "depth": 3,
+                "chunk_id": "chunk_064",
+                "page_start": 107,
+                "page_end": 108,
+                "word_count": 148,
+                "summary": "GET\nURL:\nhttps://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.15",
+                "title": "Entity (Notes)",
+                "depth": 3,
+                "chunk_id": "chunk_065",
+                "page_start": 108,
+                "page_end": 111,
+                "word_count": 178,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.16",
+                "title": "Groups",
+                "depth": 3,
+                "chunk_id": "chunk_066",
+                "page_start": 111,
+                "page_end": 113,
+                "word_count": 353,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.17",
+                "title": "Lockdown",
+                "depth": 3,
+                "chunk_id": "chunk_067",
+                "page_start": 113,
+                "page_end": 114,
+                "word_count": 36,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.18",
+                "title": "Hosts",
+                "depth": 3,
+                "chunk_id": "chunk_068",
+                "page_start": 114,
+                "page_end": 116,
+                "word_count": 213,
+                "summary": "GET (multiple)\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.19",
+                "title": "Health – External Connectors",
+                "depth": 3,
+                "chunk_id": "chunk_069",
+                "page_start": 116,
+                "page_end": 117,
+                "word_count": 120,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.20",
+                "title": "Health – External Connectors Details",
+                "depth": 3,
+                "chunk_id": "chunk_070",
+                "page_start": 117,
+                "page_end": 119,
+                "word_count": 152,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.21",
+                "title": "Health – EDR",
+                "depth": 3,
+                "chunk_id": "chunk_071",
+                "page_start": 119,
+                "page_end": 120,
+                "word_count": 97,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.22",
+                "title": "Health – EDR Details",
+                "depth": 3,
+                "chunk_id": "chunk_072",
+                "page_start": 120,
+                "page_end": 122,
+                "word_count": 136,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.23",
+                "title": "Health – Network Brain Ping",
+                "depth": 3,
+                "chunk_id": "chunk_073",
+                "page_start": 122,
+                "page_end": 122,
+                "word_count": 18,
+                "summary": "GET\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.24",
+                "title": "Vectra Match Enablement",
+                "depth": 3,
+                "chunk_id": "chunk_074",
+                "page_start": 122,
+                "page_end": 123,
+                "word_count": 106,
+                "summary": "GET\nUsed to retrieve whether Vectra Match is enabled on a given device\nURL: https://<vectra_management_ip>/api/v3."
+              },
+              {
+                "number": "1.45.25",
+                "title": "Vectra Match Stats",
+                "depth": 3,
+                "chunk_id": "chunk_075",
+                "page_start": 123,
+                "page_end": 139,
+                "word_count": 1574,
+                "summary": "GET\nUsed to retrieve Vectra Match stats."
+              },
+              {
+                "number": "1.45.26",
+                "title": "Vectra Match Status",
+                "depth": 3,
+                "chunk_id": "chunk_076",
+                "page_start": 139,
+                "page_end": 140,
+                "word_count": 131,
+                "summary": "GET\nUsed to retrieve Vectra Match status."
+              },
+              {
+                "number": "1.45.27",
+                "title": "Vectra Match Available Devices",
+                "depth": 3,
+                "chunk_id": "chunk_077",
+                "page_start": 140,
+                "page_end": 141,
+                "word_count": 214,
+                "summary": "GET\nUsed to retrieve devices on which Vectra Match can be enabled."
+              },
+              {
+                "number": "1.45.28",
+                "title": "Vectra Match Rules",
+                "depth": 3,
+                "chunk_id": "chunk_078",
+                "page_start": 141,
+                "page_end": 142,
+                "word_count": 81,
+                "summary": "GET\nUsed to retrieve information about a Vectra Match ruleset, given its UUID\nURL: https://<vectra_management_ip>/api/v3."
+              },
+              {
+                "number": "1.45.29",
+                "title": "Vectra Match Rules Upload",
+                "depth": 3,
+                "chunk_id": "chunk_079",
+                "page_start": 142,
+                "page_end": 145,
+                "word_count": 284,
+                "summary": "POST\nUsed to upload a new Vectra Match ruleset."
+              },
+              {
+                "number": "1.45.30",
+                "title": "Vectra Match Assignment",
+                "depth": 3,
+                "chunk_id": "chunk_080",
+                "page_start": 145,
+                "page_end": 147,
+                "word_count": 181,
+                "summary": "GET\nUsed to retrieve information about current Vectra Match ruleset assignments."
+              },
+              {
+                "number": "1.45.31",
+                "title": "Vectra Match Alert Stats",
+                "depth": 3,
+                "chunk_id": "chunk_081",
+                "page_start": 147,
+                "page_end": 148,
+                "word_count": 257,
+                "summary": "GET\nUsed to retrieve Vectra Match alert stats."
+              },
+              {
+                "number": "1.45.32",
+                "title": "Threat",
+                "depth": 3,
+                "chunk_id": "chunk_082",
+                "page_start": 148,
+                "page_end": 148,
+                "word_count": 28,
+                "summary": "GET\n-\nUsed to retrieve a download url for the Vectra Match Curated Ruleset file\n-\nDownload url expir..."
+              },
+              {
+                "number": "1.45.33",
+                "title": "Threat Feeds",
+                "depth": 3,
+                "chunk_id": "chunk_083",
+                "page_start": 148,
+                "page_end": 151,
+                "word_count": 301,
+                "summary": "GET\nURL: https://<vectra_management_ip>/api/v3."
+              },
+              {
+                "number": "1.45.34",
+                "title": "Unique Hosts Observed Monthly",
+                "depth": 3,
+                "chunk_id": "chunk_084",
+                "page_start": 151,
+                "page_end": 153,
+                "word_count": 136,
+                "summary": "GET used to list unique hosts observed."
+              },
+              {
+                "number": "1.45.35",
+                "title": "Unique Hosts Observed Monthly - Audit",
+                "depth": 3,
+                "chunk_id": "chunk_085",
+                "page_start": 153,
+                "page_end": 154,
+                "word_count": 160,
+                "summary": "GET used to list information on unique hosts observed."
+              },
+              {
+                "number": "1.45.36",
+                "title": "Unique Hosts Observed",
+                "depth": 3,
+                "chunk_id": "chunk_086",
+                "page_start": 154,
+                "page_end": 155,
+                "word_count": 36,
+                "summary": "GET used to list unique hosts observed in a given timespan\nURL: https://<vectra_portal_url>/api/v3."
+              },
+              {
+                "number": "1.45.37",
+                "title": "Unique Hosts Observed - Audit",
+                "depth": 3,
+                "chunk_id": "chunk_087",
+                "page_start": 155,
+                "page_end": 156,
+                "word_count": 130,
+                "summary": "GET used to list information on unique hosts observed."
+              }
+            ]
+          },
+          {
+            "number": "1.46",
+            "title": "Appendix B",
+            "depth": 2,
+            "chunk_id": "chunk_088",
+            "page_start": 156,
+            "page_end": 156,
+            "word_count": 2,
+            "summary": "Appendix B",
+            "children": [
+              {
+                "number": "1.46.1",
+                "title": "Detections",
+                "depth": 3,
+                "chunk_id": "chunk_089",
+                "page_start": 156,
+                "page_end": 158,
+                "word_count": 299,
+                "summary": "Predefined categories and vnames\nCATEGORY\nVNAME\nCommand and Control\nAzure AD Admin Account Creation\n..."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 89,
+    "max_depth": 3
+  }
+}

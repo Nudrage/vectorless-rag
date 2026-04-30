@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_025",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4753(S): A security-disabled global group was deleted.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.If you have a list of critical distribution groups in the organization,\nand need to specifically monitor these groups for any change, especially group deletion, monitor events with the “Group\\Group Name” values that correspond to the critical\ndistribution groups.\n\nIf you need to monitor each time a distribution group is deleted, to see who deleted it and when, monitor this event. Typically, this event is used as an informational event, to be\nreviewed if needed.\n4759(S): A security-disabled universal group was created.\nSee event “4749: A security-disabled global group was created.” Event 4759 is the same, but it is generated for a universal distribution group instead of a global distribution group. All\nevent fields, XML, and recommendations are the same. The type of group is the only difference.\n4760(S): A security-disabled universal group was changed.\nSee event “4750: A security-disabled global group was changed.” Event 4760 is the same, but it is generated for a universal distribution group instead of a global distribution group. All\nevent fields, XML, and recommendations are the same. The type of group is the only difference.\n4761(S): A member was added to a security-disabled universal group.\nSee event “4751: A member was added to a security-disabled global group.” Event 4761 is the same, but it is generated for a universal distribution group instead of a global distribution\ngroup. All event fields, XML, and recommendations are the same. The type of group is the only difference.\n4762(S): A member was removed from a security-disabled universal group.\nSee event “4752: A member was removed from a security-disabled global group.” Event 4762 is the same, but it is generated for a universal distribution group instead of a global\ndistribution group. All event fields, XML, and recommendations are the same. The type of group is the only difference.\n4763(S): A security-disabled universal group was deleted.\nSee event “4753: A security-disabled global group was deleted.” Event 4763 is the same, but it is generated for a universal distribution group instead of a global distribution group. All\nevent fields, XML, and recommendations are the same. The type of group is the only difference.\n© 2016 Microsoft. All rights reserved.\n104\n4744(S): A security-disabled local group was created.\nSee event “4749: A security-disabled global group was created.” Event 4744 is the same, but it is generated for a local distribution group instead of a global distribution group. All event\nfields, XML, and recommendations are the same. The type of group is the only difference.\n4745(S): A security-disabled local group was changed.\nSee event “4750: A security-disabled global group was changed.” Event 4745 is the same, but it is generated for a local distribution group instead of a global distribution group. All event\nfields, XML, and recommendations are the same. The type of group is the only difference.\n4746(S): A member was added to a security-disabled local group.\nSee event “4751: A member was added to a security-disabled global group.” Event 4746 is the same, but it is generated for a local distribution group instead of a global distribution group.\nAll event fields, XML, and recommendations are the same. The type of group is the only difference.\n4747(S): A member was removed from a security-disabled local group.\nSee event “4752: A member was removed from a security-disabled global group.” Event 4747 is the same, but it is generated for a local distribution group instead of a global distribution\ngroup. All event fields, XML, and recommendations are the same. The type of group is the only difference.\n4748(S): A security-disabled local group was deleted.\nSee event “4753: A security-disabled global group was deleted.” Event 4748 is the same, but it is generated for a local distribution group instead of a global distribution group. All event\nfields, XML, and recommendations are the same. The type of group is the only difference.\n© 2016 Microsoft. All rights reserved.\n105",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 104,
+      "end": 106
+    },
+    "content_stats": {
+      "char_count": 4246,
+      "word_count": 676
+    },
+    "hierarchy": {
+      "parent": "Audit Distribution Group Management",
+      "children": []
+    }
+  }
+}

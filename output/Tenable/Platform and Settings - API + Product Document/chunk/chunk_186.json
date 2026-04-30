@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_186",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Vulnerability Management successfully unlinked the agent.\nRESPONSE SCHEMA:\napplication/json\nany\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\nRESPONSE SCHEMA:\napplication/json\nstring\nA brief description of the cause of the error.\n— 403 Returned if you do not have permission to unlink agents.\n— 404 Returned if Tenable Vulnerability Management cannot find the specified agent.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500\nReturned if Tenable Vulnerability Management encountered an internal server error. Wait a moment,\nand try your request again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 194,
+      "end": 194
+    },
+    "content_stats": {
+      "char_count": 716,
+      "word_count": 109
+    },
+    "hierarchy": {
+      "parent": "Unlink agent",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

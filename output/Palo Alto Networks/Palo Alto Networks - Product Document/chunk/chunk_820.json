@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_820",
+  "section_number": "1.21.12.2",
+  "header": "DNS Proxy Object",
+  "content": "When configured as a DNS proxy, the firewall is an intermediary between DNS clients and\nservers; it acts as a DNS server itself by resolving queries from its DNS proxy cache. If it doesn’t\nfind the domain name in its DNS proxy cache, the firewall searches for a match to the domain\nname among the entries in the specific DNS proxy object (on the interface on which the DNS\nquery arrived). The firewall forwards the query to the appropriate DNS server based on the match\nresults. If no match is found, the firewall uses default DNS servers.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1456\n©2025 Palo Alto Networks, Inc.\nNetworking\nA DNS proxy object is where you configure the settings that determine how the firewall functions\nas a DNS proxy. You can assign a DNS proxy object to a single virtual system or it can be shared\namong all virtual systems.\n• If the DNS proxy object is for a virtual system, you can specify a DNS Server Profile, which\nspecifies the primary and secondary DNS server addresses, along with other information. The\nDNS server profile simplifies configuration.\n• If the DNS proxy object is shared, you must specify at least the primary address of a DNS\nserver.\nWhen configuring multiple tenants (ISP subscribers) with DNS services, each tenant\nshould have its own DNS proxy defined, which keeps the tenant’s DNS service separate\nfrom other tenants’ services.\nIn the proxy object, you specify the interfaces for which the firewall is acting as DNS proxy. The\nDNS proxy for the interface does not use the service route; responses to the DNS requests are\nalways sent to the interface assigned to the virtual router where the DNS request arrived.\nWhen you Configure a DNS Proxy Object, you can supply the DNS proxy with static FQDN-to-\naddress mappings. You can also create DNS proxy rules that control to which DNS server the\ndomain name queries (that match the proxy rules) are directed. You can configure a maximum of\n256 DNS proxy objects on a firewall. You must enable Cache and Cache EDNS Responses (under\nNetwork > DNS Proxy > Advanced) if this DNS proxy object is assigned to Device > Setup >\nServices > DNS or Device > Virtual Systems > vsys > General > DNS Proxy. Furthermore, if this\nDNS proxy object has DNS proxy rules configured, those rules also need to have cache enabled\n(Turn on caching of domains resolved by this mapping).\nWhen the firewall receives an FQDN query (and the domain name is not in the DNS proxy cache),\nthe firewall compares the domain name from the FQDN query to the domain names in DNS Proxy\nrules of the DNS Proxy object. If you specify multiple domain names in a single DNS Proxy rule, a\nquery that matches any one of the domain names in the rule means the query matches the rule.\nDNS Proxy Rule and FQDN Matching describes how the firewall determines whether an FQDN\nmatches a domain name in a DNS proxy rule. A DNS query that matches a rule is sent to the\nprimary DNS server configured for the proxy object to be resolved.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1456,
+      "end": 1457
+    },
+    "content_stats": {
+      "char_count": 2978,
+      "word_count": 528
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

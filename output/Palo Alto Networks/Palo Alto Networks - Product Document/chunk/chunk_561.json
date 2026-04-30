@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_561",
+  "section_number": "1.16.10.1",
+  "header": "Generate a Private Key and Block It",
+  "content": "Block the export of a private key to prevent its misuse after generating a certificate.\nSTEP 1 |\nSelect Device > Certificate Management > Certificates > Device Certificates.\nIf there is more than one virtual system, select a Location or Shared for the certificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1030\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 2 |\nGenerate the certificate.\nSTEP 3 |\nSelect Block Private Key Export to prevent anyone from exporting the certificate.\nSee Generate a Certificate for information about the other certificate fields.\nSTEP 4 |\nClick Generate to generate the new certificate.\nYou can also generate a certificate and block its private key from export using the\noperational CLI command:\nadmin@pa-220> request certificate generate block-private-\nkeys yes\nThe preceding CLI command can also include the certificate and other parameters that\nare not shown.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1030,
+      "end": 1031
+    },
+    "content_stats": {
+      "char_count": 890,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "Block Private Key Export",
+      "children": []
+    }
+  }
+}

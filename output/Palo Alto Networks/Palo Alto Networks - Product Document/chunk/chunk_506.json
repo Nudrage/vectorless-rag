@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_506",
+  "section_number": "1.15.6",
+  "header": "WildFire Inline ML",
+  "content": "The WildFire inline ML option present in the Antivirus profile enables the firewall dataplane\nto apply machine learning on PE (portable executable), ELF (executable and linked format) and\nMS Office files, and PowerShell and shell scripts in real-time. This layer of antivirus protection\ncomplements the WildFire-based signatures to provide extended coverage for files of which\nsignatures do not already exist. Each inline ML model dynamically detects malicious files of\na specific type by evaluating file details, including decoder fields and patterns, to formulate a\nhigh probability classification of a file. This protection extends to currently unknown as well as\nfuture variants of threats that match characteristics that Palo Alto Networks has identified as\nmalicious. To keep up with the latest changes in the threat landscape, inline ML models are added\nor updated via content releases. Before you can enable WildFire inline ML, you must possess an\nactive WildFire subscription.\nInline ML-based protection can also be enabled to detect malicious URLs in real-time as part of\nyour URL Filtering configuration. For more information, refer to: URL Filtering Inline ML\nWildFire inline ML is not supported on the VM-50 or VM50L virtual appliance.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 930,
+      "end": 930
+    },
+    "content_stats": {
+      "char_count": 1248,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "Threat Prevention",
+      "children": [
+        "Configure WildFire Inline ML"
+      ]
+    }
+  }
+}

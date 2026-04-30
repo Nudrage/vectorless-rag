@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_786",
+  "section_number": "1.21.8",
+  "header": "IP Multicast",
+  "content": "IP multicast is a set of protocols that network appliances use to send multicast IP datagrams to a\ngroup of interested receivers using one transmission rather than unicasting the traffic to multiple\nreceivers, thereby saving bandwidth. IP multicast is suitable for communication from one source\n(or many sources) to many receivers, such as audio or video streaming, IPTV, video conferencing,\nand distribution of other communication, such as news and financial data.\nA multicast address identifies a group of receivers that want to receive the traffic going to that\naddress. You should not use the multicast addresses reserved for special uses, such as the range\n224.0.0.0 through 224.0.0.255 or 239.0.0.0 through 239.255.255.255. Multicast traffic uses\nUDP, which does not resend missed packets.\nPalo Alto Networks® firewalls support IP multicast and Protocol Independent Multicast (PIM) on a\nLayer 3 interface that you configure for a virtual router on the firewall.\nFor multicast routing, the Layer 3 interface type can be Ethernet, Aggregate Ethernet (AE), VLAN,\nloopback, or tunnel. Interface groups allow you to configure more than one firewall interface at a\ntime with the same Internet Group Management Protocol (IGMP) and PIM parameters, and with\nthe same group permissions (multicast groups allowed to accept traffic from any source or from\nonly a specific source). An interface can belong to only one interface group.\nThe firewall supports IPv4 multicast—it does not support IPv6 multicast. The firewall also does\nnot support PIM Dense Mode (PIM-DM), IGMP proxy, IGMP static joins, Anycast RP, GRE, or\nmulticast configurations on a Layer 2 or virtual wire interface type. However, a virtual wire\ninterface can pass multicast packets. Also, a Layer 2 interface can switch Layer 3 IPv4 multicast\npackets between different VLANs and the firewall will retag the VLAN ID using the VLAN ID of\nthe egress interface.\nYou must enable multicast for a virtual router and enable PIM for an ingress and an egress\ninterface in order for the interfaces to receive or forward multicast packets. In addition to PIM,\nyou must also enable IGMP on egress interfaces that face receivers. You must configure a\nSecurity policy rule to allow IP multicast traffic to a predefined Layer 3 destination zone named\nmulticast or to any destination zone.\n• IGMP\n• PIM\n• Configure IP Multicast\n• View IP Multicast Information",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1411,
+      "end": 1411
+    },
+    "content_stats": {
+      "char_count": 2403,
+      "word_count": 384
+    },
+    "hierarchy": {
+      "parent": "Networking",
+      "children": [
+        "IGMP",
+        "PIM",
+        "Configure IP Multicast",
+        "View IP Multicast Information"
+      ]
+    }
+  }
+}

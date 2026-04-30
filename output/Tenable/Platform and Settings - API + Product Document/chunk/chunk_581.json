@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_581",
+  "section_number": "26.6",
+  "header": "Create tag value",
+  "content": "Creates a tag value. The tag category can be specified by UUID or name. If Tenable Vulnerability\nManagement cannot find a category you specify by name, the system creates a new category with\nthe specified name. To automatically apply the tag to assets, specify the rules using the filters\nproperty.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the tag category to associate with the new value.\nSpecify the name of a new category if you want to add both a new\ncategory and tag value.\ncategory_name\nContent type\nSpecify the name of an existing category if you want to add the tag\nvalue to the existing category.\nThe category_name  can result in the following responses:\nIf the category_name  you specify exists, and the tag value you\nspecify already exists for that category, Tenable Vulnerability\nManagement returns a 400 response code instead of adding the\ntag.\nIf the category_name  you specify exists, but the tag value you\nspecify does not yet exist for that category, Tenable Vulnerability\nManagement adds the tag value to the existing category.\nIf the category_name  you specify does not exist, Tenable\nVulnerability Management creates a new tag category and adds\nthe new tag value to that category.\nThis parameter is required if category_uuid  is not present in the\nrequest message.\nstring\nThe unique identifier (UUID) of the tag category to associate with the\nnew value. For more information on determining this value, see\nDetermine Tag Identifiers.\nUse this parameter only if you want to add the tag value to an existing\ncategory. If the UUID you specify does not exist, Tenable Vulnerability\nManagement does not create a new catgory. Instead, it returns a 400\n(Bad Request) response code.\nThis parameter is required if category_name is not present in the\nrequest message.\nstring\nThe description for the new tag category that Tenable Vulnerability\nManagement creates if the category specified by name does not exist.\nOtherwise, Tenable Vulnerability Management ignores the description.\nstring\nThe new tag value. Note that tag values cannot exceed 50 characters\nin length and must not contain commas.\nstring\nThe new tag value description.\nobject\nDetermines what the user can do with the tag value.\nCaution: Most customers have been migrated to role-based access\ncontrol and should use the POST /api/v3/access-control/permissions\ncategory_uuid\ncategory_description\nvalue\nrequired\ndescription\naccess_control\nendpoint to assign permissions to tag objects. The\naccess_control  body parameter object only works for customers\nwhose containers have not yet been migrated to role-based access\ncontrol.\nobject\nThe filters (conditional sets of rules) for automatically applying the tag\nto assets. For more information, see Apply Dynamic Tags.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 571,
+      "end": 573
+    },
+    "content_stats": {
+      "char_count": 2826,
+      "word_count": 442
+    },
+    "hierarchy": {
+      "parent": "Tags",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

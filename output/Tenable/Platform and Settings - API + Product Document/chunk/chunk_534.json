@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_534",
+  "section_number": "24.4",
+  "header": "Update scanner group",
+  "content": "Updates a scanner group. You cannot use this endpoint to:\nAssign a scanner group to a network object. Instead, use the POST\n/networks/{network_id}/scanners/{scanner_uuid} endpoint.\nUpdate scan routes configured for the scanner group. Instead, use the PUT /scanner-\ngroups/group_id/routes endpoint.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nContent type\ninteger <int32>\nThe ID of the scanner group.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe new name for the scanner group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 535,
+      "end": 536
+    },
+    "content_stats": {
+      "char_count": 527,
+      "word_count": 74
+    },
+    "hierarchy": {
+      "parent": "Scanner Groups",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

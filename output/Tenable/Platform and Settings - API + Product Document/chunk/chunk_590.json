@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_590",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the details for the specified tag value was retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe unique identifier (UUID) of the tag value. Use this value to\nassign the tag to assets.\nstring\ntag_value_uuid\nrequired\nuuid\ncreated_at\nAn ISO timestamp indicating the date and time on which the tag\nvalue was created, for example, 2018-12-31T13:51:17.243Z .\nstring\nThe name of the user who created the tag value.\nstring\nAn ISO timestamp indicating the date and time on which the tag\nvalue was last updated, for example, 2018-12-\n31T13:51:17.243Z . When you create a tag value, this date\nmatches the created_at  date.\nstring\nThe name of the user who last updated the tag value. When you\ncreate a tag value, this name matches the created_by  name.\nstring <uuid>\nThe unique identifier (UUID) of the category associated with the\ntag value. Use this value to create future tags in the same category.\nstring\nThe tag value. Must be unique within the category.\nstring\nThe description of the tag value.\nstring\nThe tag type:\nstatic—A user must manually apply the tag to assets.\ndynamic—Tenable Vulnerability Management automatically\napplies the tag based on asset attribute rules.\nstring\nThe name of the category associated with the tag value.\nstring\nThe description of the category associated with the tag value.\nobject\nDetermines what the user can do with the tag value.\nCaution: Most customers have been migrated to role-based access\ncontrol and should use the POST /api/v3/access-\ncontrol/permissions endpoint to assign permissions to tag objects.\nThe access_control  body parameter object only works for\ncreated_by\nupdated_at\nupdated_by\ncategory_uuid\nvalue\ndescription\ntype\ncategory_name\ncategory_description\naccess_control\ncustomers whose containers have not yet been migrated to role-\nbased access control.\nobject\nFor dynamic tags, asset selection rules.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 404 Returned i the specified tag value was not found.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\nfilters\nstatusCode\nerror\nmessage\nstatusCode\nerror\nmessage\nGET\n/tags/values/{tag_value_uuid}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 586,
+      "end": 588
+    },
+    "content_stats": {
+      "char_count": 2601,
+      "word_count": 405
+    },
+    "hierarchy": {
+      "parent": "Get tag value details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

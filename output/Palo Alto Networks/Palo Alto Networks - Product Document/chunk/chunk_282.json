@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_282",
+  "section_number": "1.11.5.1",
+  "header": "Types of Packet Captures",
+  "content": "There are different types of packet captures you can enable, depending on what you need to do:\n• Custom Packet Capture—The firewall captures packets for all traffic or for specific traffic\nbased on filters that you define. For example, you can configure the firewall to only capture\npackets to and from a specific source and destination IP address or port. You then use the\npacket captures for troubleshooting network#related issues or for gathering application\nattributes to enable you to write custom application signatures or to request an application\nsignature from Palo Alto Networks. See Take a Custom Packet Capture.\n• Threat Packet Capture—The firewall captures packets when it detects a virus, spyware, or\nvulnerability. You enable this feature in Antivirus, Anti-Spyware, and Vulnerability Protection\nsecurity profiles. A link to view or export the packet captures will appear in the second\ncolumn of the Threat log. These packet captures provide context around a threat to help you\ndetermine if an attack is successful or to learn more about the methods used by an attacker.\nYou can also submit this type of pcap to Palo Alto Networks to have a threat re-analyzed if you\nfeel it’s a false-positive or false-negative. See Take a Threat Packet Capture.\n• Application Packet Capture—The firewall captures packets based on a specific application\nand filters that you define. A link to view or export the packet captures will appear in the\nsecond column of the Traffic logs for traffic that matches the packet capture rule. See Take an\nApplication Packet Capture.\n• Management Interface Packet Capture—The firewall captures packets on the management\ninterface (MGT). The packet captures are useful when troubleshooting services that traverse\nthe interface, such as firewall management authentication to External Authentication Services,\nsoftware and content updates, log forwarding, communication with SNMP servers, and\nauthentication requests for GlobalProtect and Authentication Portal. See Take a Packet\nCapture on the Management Interface.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n504\n©2025 Palo Alto Networks, Inc.\nMonitoring\n• GTP Event Packet Capture—The firewall captures a single GTP event, such as GTP-in-GTP,\nend user IP spoofing, and abnormal GTP messages, to make GTP troubleshooting easier for\nmobile network operators. Enable packet capture in a Mobile Network Protection profile.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 504,
+      "end": 505
+    },
+    "content_stats": {
+      "char_count": 2401,
+      "word_count": 367
+    },
+    "hierarchy": {
+      "parent": "Take Packet Captures",
+      "children": []
+    }
+  }
+}

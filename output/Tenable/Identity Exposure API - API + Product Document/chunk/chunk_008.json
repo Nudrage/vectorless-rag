@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_008",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\n_embedded\n_links\nGET\n/api/ad-objects\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"_embedded\":\n-\n{\n\"ad-object\":\n-\n[\n- {\n\"id\": 0,\n\"directoryId\": 0,\n\"objectId\": \"string\",\n\"type\": \"LDAP\",\n\"objectAttributes\":\n-\n[\n- {\n\"name\": \"string\",\n\"value\": \"string\",\n\"valueType\": \"boolean\"\n}\n]\n}\n]\n},\n\"_links\":\n-\n{\n\"next\": \"string\"\n}\n}\nGet ad-object instance by id.\nRequired license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\ndirectoryId\nrequired\nid\nrequired\nx-api-key\nrequired",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 3,
+      "end": 4
+    },
+    "content_stats": {
+      "char_count": 610,
+      "word_count": 87
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

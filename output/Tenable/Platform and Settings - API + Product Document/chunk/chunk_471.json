@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_471",
+  "section_number": "21.3",
+  "header": "Update scanner",
+  "content": "Updates the specified scanner.\nYou cannot use this endpoint to assign the scanner to a network object. Instead, use the POST\n/networks/{network_id}/scanners/{scanner_uuid} endpoint.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\ninteger <int32>\nThe ID of the scanner.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe new name for the scanner.\ninteger <int32>\nPass 1 to force a plugin update.\ninteger <int32>\nPass 1 to force a UI update.\ninteger <int32>\nPass 1 to reboot the scanner and run the latest software update (only\nvalid if automatic updates are disabled).\nscanner_id\nrequired\nname\nforce_plugin_update\nforce_ui_update\nfinish_update\nstring\nSets the registration code for the scanner.\ninteger <int32>\nSpecifies how often, in minutes, the scanner checks in with Tenable\nVulnerability Management (Amazon Web Services scanners only).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 490,
+      "end": 491
+    },
+    "content_stats": {
+      "char_count": 880,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Scanners",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

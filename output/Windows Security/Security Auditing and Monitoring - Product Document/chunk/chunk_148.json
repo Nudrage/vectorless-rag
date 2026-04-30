@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_148",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5152(F): The Windows Filtering Platform blocked a packet.\n\nIf you have a pre-defined application which should be used to perform the operation that was reported by this event, monitor events with “Application” not equal to your\ndefined application.\n\nYou can monitor to see if “Application” is not in a standard folder (for example, not in System32 or Program Files) or is in a restricted folder (for example, Temporary Internet\nFiles).\n\nIf you have a pre-defined list of restricted substrings or words in application names (for example, “mimikatz” or “cain.exe”), check for these substrings in “Application.”\n\nCheck that Source Address is one of the addresses assigned to the computer.\n\nIf the computer or device should not have access to the Internet, or contains only applications that don’t connect to the Internet, monitor for 5152 events where Destination\nAddress is an IP address from the Internet (not from private IP ranges).\n\nIf you know that the computer should never contact or be contacted by certain network IP addresses, monitor for these addresses in “Destination Address.”\n\nIf you have a “whitelist” of IP addresses that the computer or device is expected to contact or be contacted by, monitor for IP addresses in “Destination Address” that are not in\nthe whitelist.\n\nIf you need to monitor all inbound connections to a specific local port, monitor for 5152 events with that “Source Port.”\n© 2016 Microsoft. All rights reserved.\n449\n\nMonitor for all connections with a “Protocol Number” that is not typical for this device or compter, for example, anything other than 1, 6, or 17.\n\nIf the computer’s communication with “Destination Address” should always use a specific “Destination Port,” monitor for any other “Destination Port.”\n5153(S): A more restrictive Windows Filtering Platform filter has blocked a packet.\nThis event is logged if a more restrictive Windows Filtering Platform filter has blocked a packet.\nThere is no example of this event in this document.\nEvent Schema:\nA more restrictive Windows Filtering Platform filter has blocked a packet.\nApplication Information:\nProcess ID:%1\nApplication Name:%2\nNetwork Information:\nSource Address:%3\nSource Port:%4\nProtocol:%5\nFilter Information:\nFilter Run-Time ID:%6\nLayer Name:%7\nLayer Run-Time ID:%8\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 449,
+      "end": 450
+    },
+    "content_stats": {
+      "char_count": 2392,
+      "word_count": 381
+    },
+    "hierarchy": {
+      "parent": "Audit Filtering Platform Packet Drop",
+      "children": []
+    }
+  }
+}

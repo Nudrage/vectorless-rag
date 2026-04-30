@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1021",
+  "section_number": "1.23.7.2.1",
+  "header": "Configure a PA-7000 Series LPC for Logging per Virtual System",
+  "content": "If you have enabled multi-vsys capability on a PA-7000 Series firewall with a Log Processing\nCard (LPC) installed, you can configure logging for different virtual systems as described in the\nfollowing workflow.\nSTEP 1 |\nCreate a Log Card subinterface.\n1.\nSelect Network > Interfaces > Ethernet and select the interface to be the Log Card\ninterface.\n2.\nEnter the Interface Name.\n3.\nFor Interface Type, select Log Card.\n4.\nClick OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1720\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nSTEP 2 |\nAdd a subinterface for each tenant on the LPCs physical interface.\n1.\nHighlight the Ethernet interface that is a Log Card interface type and click Add\nSubinterface.\n2.\nFor Interface Name, after the period, enter the subinterface assigned to the tenant’s\nvirtual system.\n3.\nFor Tag, enter a VLAN tag value.\nMake the tag the same as the subinterface number for ease of use, but it could\nbe a different number.\n4.\n(Optional) Enter a Comment.\n5.\nOn the Config tab, in the Assign Interface to Virtual System field, select the virtual\nsystem to which the LPC subinterface is assigned. Alternatively, you can click Virtual\nSystems to add a new virtual system.\n6.\nClick OK.\nSTEP 3 |\nEnter the addresses assigned to the subinterface, and configure the default gateway.\n1.\nSelect the Log Card Forwarding tab, and do one or both of the following:\n• For the IPv4 section, enter the IP Address and Netmask assigned to the subinterface.\nEnter the Default Gateway (the next hop where packets will be sent that have no\nknown next hop address in the Routing Information Base [RIB]).\n• For the IPv6 section, enter the IPv6 Address assigned to the subinterface. Enter the\nIPv6 Default Gateway.\n2.\nClick OK.\nSTEP 4 |\nCommit your changes.\nClick OK and Commit.\nSTEP 5 |\nIf you haven’t already done so, configure the remaining service routes for the virtual system.\nCustomize Service Routes for a Virtual System.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1720,
+      "end": 1721
+    },
+    "content_stats": {
+      "char_count": 1922,
+      "word_count": 329
+    },
+    "hierarchy": {
+      "parent": "Configure a PA-7000 Series Firewall for Logging Per Virtual System",
+      "children": []
+    }
+  }
+}

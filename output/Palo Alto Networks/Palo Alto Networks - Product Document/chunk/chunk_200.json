@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_200",
+  "section_number": "1.9.14",
+  "header": "Configure the Key Size for SSL Forward Proxy Server Certificates",
+  "content": "Certificates\nWhen responding to a client in an SSL Forward Proxy session, the firewall creates a copy of the\ncertificate that the destination server presents and uses the copy to establish a connection with\nthe client. By default, the firewall generates certificates with the same key size as the certificate\nthat the destination server presented. However, you can change the key size for the firewall-\ngenerated certificate as follows:\nSTEP 1 |\nSelect Device > Setup > Session and, in the Decryption Settings section, click SSL Forward\nProxy Settings.\nSTEP 2 |\nSelect a Key Size:\n• Defined by destination host—The firewall determines the key size and the hashing\nalgorithm for the certificates it generates to establish SSL proxy sessions with clients based\non the destination server certificate. If the destination server uses a 1,024-bit RSA key, the\nfirewall generates a certificate with a 1,024-bit RSA key. If the destination server uses a key\nsize larger than 1,024 bits (for example, 2,048 bits or 4,096 bits), the firewall generates a\ncertificate that uses a 2,048-bit RSA key. If the destination server uses the SHA-1 hashing\nalgorithm, the firewall generates a certificate with the SHA-1 hashing algorithm. If the\ndestination server uses a hashing algorithm stronger than SHA-1, the firewall generates a\ncertificate with the SHA-256 algorithm. This is the default setting.\n• 1024-bit RSA—The firewall generates certificates that use a 1,024-bit RSA key and\nSHA-256 hashing algorithm regardless of the key size of the destination server certificates.\nAs of December 31, 2013, public certificate authorities (CAs) and popular browsers have\nlimited support for X.509 certificates that use keys of fewer than 2,048 bits. In the future,\ndepending on security settings, when presented with such keys the browser might warn the\nuser or block the SSL/TLS session entirely.\n• 2048-bit RSA—The firewall generates certificates that use a 2,048-bit RSA key and\nSHA-256 hashing algorithm regardless of the key size of the destination server certificates.\nPublic CAs and popular browsers support 2,048-bit keys, which provide better security than\nthe 1,024-bit keys.\nChanging the key size setting clears the current certificate cache.\nSTEP 3 |\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n367\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 367,
+      "end": 368
+    },
+    "content_stats": {
+      "char_count": 2360,
+      "word_count": 369
+    },
+    "hierarchy": {
+      "parent": "Certificate Management",
+      "children": []
+    }
+  }
+}

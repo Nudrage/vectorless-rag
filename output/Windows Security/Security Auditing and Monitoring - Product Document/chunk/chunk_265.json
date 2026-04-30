@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_265",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4610(S): An authentication package has been loaded by the Local Security Authority.\n\nReport all “Authentication Package Name” not equals “C:\\Windows\\system32\\msv1_0.DLL : MICROSOFT_AUTHENTICATION_PACKAGE_V1_0”, because by default this is the only\nAuthentication Package loaded by Windows 10.\n\nTypically this event has an informational purpose. If you have a pre-defined list of allowed Authentication Packages in the system, then you can check whether “Authentication\nPackage Name” is in your defined list.\n4611(S): A trusted logon process has been registered with the Local Security Authority.\nEvent Description:\nThis event indicates that a logon process has registered with the Local Security Authority (LSA). Also, logon requests will now\nbe accepted from this source.\nAt the technical level, the event does not come from the registration of a trusted logon process, but from a confirmation that\nthe process is a trusted logon process. If it is a trusted logon process, the event generates.\nA logon process is a trusted part of the operating system that handles the overall logon function for different logon methods\n(network, interactive, etc.).\nYou typically see these events during operating system startup or user logon and authentication actions.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4611</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12289</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n© 2016 Microsoft. All rights reserved.\n703\n<TimeCreated SystemTime=\"2015-10-14T03:43:29.604031000Z\" />\n<EventRecordID>1048175</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"516\" ThreadID=\"548\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"SubjectUserSid\">S-1-5-18</Data>\n<Data Name=\"SubjectUserName\">DC01$</Data>\n<Data Name=\"SubjectDomainName\">CONTOSO</Data>\n<Data Name=\"SubjectLogonId\">0x3e7</Data>\n<Data Name=\"LogonProcessName\">Winlogon</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nSubject:\n\nSecurity ID [Type = SID]: SID of account that registered the trusted logon process. Event Viewer automatically tries to resolve SIDs and show the account name. If the SID cannot\nbe resolved, you will see the source data in the event.\nA security identifier (SID) is a unique value of variable length used to identify a trustee (security principal). Each account has a unique SID that is issued by an authority, such\nas an Active Directory domain controller, and stored in a security database. Each time a user logs on, the system retrieves the SID for that user from the database and places it\nin the access token for that user. The system uses the SID in the access token to identify the user in all subsequent interactions with Windows security. When a SID has been\nused as the unique identifier for a user or group, it cannot ever be used again to identify another user or group. For more information about SIDs, see Security Identifiers.\n\nAccount Name [Type = UnicodeString]: the name of the account that registered the trusted logon process.\n\nAccount Domain [Type = UnicodeString]: subject’s domain or computer name. Formats vary, and include the following:\no\nDomain NETBIOS name example: CONTOSO\no\nLowercase full domain name: contoso.local\no\nUppercase full domain name: CONTOSO.LOCAL\no\nFor some well-known security principals, such as LOCAL SERVICE or ANONYMOUS LOGON, the value of this field is “NT AUTHORITY”.\no\nFor local user accounts, this field will contain the name of the computer or device that this account belongs to, for example: “Win81”.\n\nLogon ID [Type = HexInt64]: hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID, for example, “4624: An account\nwas successfully logged on.”\nLogon Process Name [Type = UnicodeString]: the name of registered logon process.\n© 2016 Microsoft. All rights reserved.\n704",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 703,
+      "end": 705
+    },
+    "content_stats": {
+      "char_count": 4249,
+      "word_count": 587
+    },
+    "hierarchy": {
+      "parent": "Audit Security System Extension",
+      "children": []
+    }
+  }
+}

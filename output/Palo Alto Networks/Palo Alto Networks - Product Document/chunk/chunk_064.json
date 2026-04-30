@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_064",
+  "section_number": "1.5.4.2",
+  "header": "Tips for Content Updates",
+  "content": "Palo Alto Networks application and threat content releases undergo rigorous performance\nand quality assurance. However, because there are so many possible variables in a customer\nenvironment, there are rare occasions where a content release might impact a network in an\nunexpected way. Follow these tips to mitigate or troubleshoot an issue with a content release, so\nthat there is as little impact to your network as possible.\nFollow the best practices for Application and Threat Content Updates.\nReview and implement the Best Practices for Applications and Threats Content Updates. How\nyou choose to deploy content updates might depend on your network security and application\navailability requirements.\nEnsure that you’re running the latest content.\nGet the latest content update, if you haven’t configured the firewall to download and install it\nautomatically.\nThe firewall validates that downloaded content updates are still Palo Alto Networks-\nrecommended at the time of installation. This check, which the firewall performs by default, is\nhelpful in cases where content updates are downloaded from the Palo Alto Networks update\nserver (either manually or on a schedule) ahead of installation. Because there are rare instances\nwhere Palo Alto Networks removes a content update from availability, this option prevents\nthe firewall from installing a content update that Palo Alto Networks has removed, even if the\nfirewall has already downloaded it. If you see an error message that the content update you’re\nattempting to install is no longer valid, Check Now to get the most recent content update and\ninstall that version instead (Device > Dynamic Updates).\nTurn on threat intelligence telemetry.\nTurn on the threat intelligence telemetry that the firewall sends to Palo Alto Networks. We use\ntelemetry data to identify and troubleshoot issues with content updates.\nTelemetry data helps us to quickly recognize a content update that is impacting firewall\nperformance or security policy enforcement in unexpected ways, across the Palo Alto\nNetworks customer base. The more quickly we can identify an issue, the more quickly we can\nhelp you to avoid the issue altogether or mitigate impact to your network.\nTo enable the firewall to collect and share telemetry data with Palo Alto Networks:\n1. Select Device > Setup > Telemetry.\n2. Edit the Telemetry settings and Select All.\n3. Click OK and Commit to save your changes.\nForward Palo Alto Networks content update alerts to the right people.\nEnable log forwarding for Palo Alto Networks critical content alerts, so that important\nmessages about content release issues go directly to the appropriate personnel.\nPalo Alto Networks can now issue alerts about content update issues directly to the firewall\nweb interface or—if you have log forwarding enabled—to the external service you use for\nmonitoring. Critical content alerts describe the issue so that you can understand how it affects\nyou, and include steps to take action if needed.\nIn the firewall web interface, critical alerts about content issues are displayed similarly to the\nMessage of the Day. When Palo Alto Networks issues a critical alert about a content update,\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n95\n©2025 Palo Alto Networks, Inc.\nSoftware and Content Updates\nthe alert is displayed by default when you log into the firewall web interface. If you’re already\nlogged into the firewall web interface, you will notice an exclamation appear over the message\nicon on the menu bar located at the bottom of the web interface—click on the message icon to\nview the alert.\nCritical content update alerts are also logged as system log entries with the Type dynamic-\nupdates and the Event palo-alto-networks-message. Use the following filter to view these log\nentries: ( subtype eq dynamic-updates) and ( eventid eq palo-alto-networks-message).\nIf needed, use Panorama to rollback to an earlier content release.\nAfter being notified about an issue with a content update, you can use Panorama to quickly\nrevert managed firewalls to the last content update version, instead of manually reverting the\ncontent version for individual firewalls: Revert Content Updates on Managed Firewalls.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n96\n©2025 Palo Alto Networks, Inc.\nSoftware and Content Updates",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 95,
+      "end": 97
+    },
+    "content_stats": {
+      "char_count": 4300,
+      "word_count": 672
+    },
+    "hierarchy": {
+      "parent": "Applications and Threats Content Updates",
+      "children": []
+    }
+  }
+}

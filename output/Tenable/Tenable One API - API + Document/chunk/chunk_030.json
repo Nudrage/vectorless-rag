@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_030",
+  "section_number": "11",
+  "header": "List asset properties",
+  "content": "Returns a list of asset properties that can be used as filters on endpoints that support them. For\nexample, the properties that are returned by this endpoint can be used as filters for the Search assets\nor Export assets endpoints.\nIn addition to the asset properties, the results list includes the logical operators you can use with the\nasset properties along with the supported values.\nCaution: This endpoint is available for use but is currently in beta. The response structure is subject\nto change as we continue to enhance the data model.\nRequires the Basic [16] user role or the ASSET_INVENTORY.CYBER_ASSET_MANAGEMENT.READ  and\nAD.TOGGLE_AD.USE  custom role privileges. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nArray of strings\nItems Enum: \"ACCOUNT\"\n\"APPLICATION\"\n\"CONTAINER\"\n\"DEVICE\"\n\"GENERAL\"\n\"GROUP\"\n\"IAC\"\n\"IDENTITY\"\n\"RESOURCE\"\n\"ROLE\"\n\"STORAGE\"\n\"UNKNOWN\"\nThe asset classes you want to retrieve property filters for. If this parameter\nis omitted, Tenable One returns property filters for all asset classes.\nAsset classes enable users to easily separate asset data based on its type.\nFor more information about asset classes, see Asset Classes in the Tenable\nExposure Management User Guide.\nasset_classes",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 70,
+      "end": 70
+    },
+    "content_stats": {
+      "char_count": 1219,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

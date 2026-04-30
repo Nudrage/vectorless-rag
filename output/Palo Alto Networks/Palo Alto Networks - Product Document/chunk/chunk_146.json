@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_146",
+  "section_number": "1.8.3.2.2",
+  "header": "Configure the firewall to integrate with Okta",
+  "content": "As a prerequisite, confirm that you have mapped all users that you want to authenticate using\nOkta.\nSTEP 1 |\nImport all certificates in the certificate chain on the firewall and add the imported CA\ncertificates (root and intermediate) to a Certificate Profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n267\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 2 |\nAdd a Multi Factor Authentication Server Profile for Okta.\n1.\nSelect Device > Server Profiles > Multi Factor Authentication.\n2.\nAdd an MFA server profile.\n3.\nEnter a Profile Name.\n4.\nSelect the Certificate Profile you created in Step 1 in Configure the firewall to integrate\nwith Okta.\n5.\nSelect Okta Adaptive as the MFA Vendor.\n6.\nEnter the API Host, Token, and Organization from Step 4 in Configure the firewall to\nintegrate with Okta.\nSTEP 3 |\nConfigure Authentication Portal using Redirect Mode to redirect users to the MFA vendor’s\nchallenge.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n268\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 4 |\nEnable response pages on the Interface Management Profile to redirect users to the\nresponse page challenge.\nSTEP 5 |\nCreate an Authentication Profile and add the MFA vendor as a Factor (see Configure Multi-\nFactor Authentication, Step 3.)\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n269\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 6 |\nEnable User-ID on the source zone to require identified users to respond to the challenge\nusing your MFA vendor.\nSTEP 7 |\nCreate an Authentication Enforcement Object to use the MFA vendor and create an\nAuthentication policy rule (see Configure Authentication Policy, Steps 4 and 5).\nSTEP 8 |\nCommit your changes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 267,
+      "end": 270
+    },
+    "content_stats": {
+      "char_count": 1660,
+      "word_count": 270
+    },
+    "hierarchy": {
+      "parent": "Configure MFA Between Okta and the Firewall",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_958",
+  "section_number": "1.22.10.2.2",
+  "header": "Domain List",
+  "content": "You can use placeholder characters in domain lists to configure a single entry to match against\nmultiple website subdomains, pages, including entire top-level domains, as well as matches to\nspecific web pages.\nFollow these guidelines when creating domain list entries:\n• Enter each domain name in a new line; URLs or IP addresses are not supported in this list.\n• Do not prefix the domain name with the protocol, http:// or https://.\n• You can use an asterisk (*) to indicate a wildcard value.\n• You can use a caret (^) to indicate an exact match value.\n• The following characters are considered token separators: . / ? & = ; +\nEvery string separated by one or two of these characters is a token. Use wildcard characters as\ntoken placeholders, indicating that a specific token can contain any value.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1634\n©2025 Palo Alto Networks, Inc.\nPolicy\n• Wildcard characters must be the only character within a token; however, an entry can contain\nmultiple wildcards.\n• Each domain entry can be up to 255 characters in length.\nWhen to use the asterisk (*) wildcard:\nUse an asterisk (*) wildcard to indicate one or multiple variable subdomains. For example,\nto specify enforcement for Palo Alto Network’s website regardless of the domain extension\nused, which might be one or two subdomains depending on location, you would add the entry:\n*.paloaltonetworks.com. This entry would match to both docs.paloaltonetworks.com and\nsupport.paloaltonetworks.com.\nYou can also use this wildcard to indicate entire top-level domains. For example, to specify\nenforcement of a TLD named .work, you would add the entry *.work. This matches all websites\nending with .work.\nThe (*) wildcard can only be prepended in domain entries.\nAsterisk (*) examples\nEDL Domain List Entry\nMatching Sites\n*.company.com\neng.tools.company.com\nsupport.tools.company.com\ntools.company.com\ndocs.company.com\n*.click\nall websites ending with a top-level domain\nof .click.\nWhen to use a caret (^) character:\nUse carets (^) to indicate an exact match of a subdomain. For example,\n^paloaltonetworks.com matches only paloaltonetworks.com. This entry does not match to\nany other site.\nCaret (^) examples\nEDL Domain List Entry\nMatching Site\n^company.com\ncompany.com\n^eng.company.com\neng.company.com",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1634,
+      "end": 1635
+    },
+    "content_stats": {
+      "char_count": 2285,
+      "word_count": 356
+    },
+    "hierarchy": {
+      "parent": "Formatting Guidelines for an External Dynamic List",
+      "children": []
+    }
+  }
+}

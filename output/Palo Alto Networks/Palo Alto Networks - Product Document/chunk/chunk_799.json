@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_799",
+  "section_number": "1.21.11.1",
+  "header": "DHCP Overview",
+  "content": "DHCP is a standardized protocol defined in RFC 2131, Dynamic Host Configuration Protocol.\nDHCP has two main purposes: to provide TCP/IP and link-layer configuration parameters and to\nprovide network addresses to dynamically configured hosts on a TCP/IP network.\nDHCP uses a client-server model of communication. This model consists of three roles that the\ndevice can fulfill: DHCP client, DHCP server, and DHCP relay agent.\n• A device acting as a DHCP client (host) can request an IP address and other configuration\nsettings from a DHCP server. Users on client devices save configuration time and effort,\nand need not know the network’s addressing plan or other resources and options they are\ninheriting from the DHCP server.\n• A device acting as a DHCP server can service clients. By using any of three DHCP Addressing\nmechanisms, the network administrator saves configuration time and has the benefit of reusing\na limited number of IP addresses when a client no longer needs network connectivity. The\nserver can deliver IP addressing and many DHCP options to many clients.\n• A device acting as a DHCP relay agent transmits DHCP messages between DHCP clients and\nservers.\nDHCP uses User Datagram Protocol (UDP), RFC 768, as its transport protocol. DHCP messages\nthat a client sends to a server are sent to well-known port 67 (UDP—Bootstrap Protocol and\nDHCP). DHCP Messages that a server sends to a client are sent to port 68.\nAn interface on a Palo Alto Networks firewall can perform the role of a DHCP server, client,\nor relay agent. The interface of a DHCP server or relay agent must be a Layer 3 Ethernet,\nAggregated Ethernet, or Layer 3 VLAN interface. You configure the firewall interfaces with the\nappropriate settings for any combination of roles. The behavior of each role is summarized in\nFirewall as a DHCP Server and Client.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1437\n©2025 Palo Alto Networks, Inc.\nNetworking\nThe firewall supports DHCPv4 Server and DHCPv6 Relay.\nThe Palo Alto Networks implementations of DHCP server and DHCP client support IPv4\naddresses only. Its DHCP relay implementation supports IPv4 and IPv6. DHCP client is not\nsupported in High Availability active/active mode.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1437,
+      "end": 1438
+    },
+    "content_stats": {
+      "char_count": 2202,
+      "word_count": 359
+    },
+    "hierarchy": {
+      "parent": "DHCP",
+      "children": []
+    }
+  }
+}

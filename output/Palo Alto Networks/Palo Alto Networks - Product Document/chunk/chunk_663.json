@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_663",
+  "section_number": "1.18.2.5",
+  "header": "QoS Priority Queuing",
+  "content": "One of four priorities can be enforced for a QoS class: real-time, high, medium, and low. Traffic\nmatching a QoS policy rule is assigned the QoS class associated with that rule, and the firewall\ntreats the matching traffic based on the QoS class priority. Packets in the outgoing traffic flow are\nqueued based on their priority until the network is ready to process the packets. Priority queuing\nallows you to ensure that important traffic, applications, and users take precedence. Real-time\npriority is typically used for applications that are particularly sensitive to latency, such as voice and\nvideo applications.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1220,
+      "end": 1220
+    },
+    "content_stats": {
+      "char_count": 617,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "QoS Concepts",
+      "children": []
+    }
+  }
+}

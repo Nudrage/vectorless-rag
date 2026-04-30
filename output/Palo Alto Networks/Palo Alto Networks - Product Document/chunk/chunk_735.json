@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_735",
+  "section_number": "1.21.1.1",
+  "header": "Tap Interfaces",
+  "content": "A network tap is a device that provides a way to access data flowing across a computer network.\nTap mode deployment allows you to passively monitor traffic flows across a network by way of a\nswitch SPAN or mirror port.\nThe SPAN or mirror port permits the copying of traffic from other ports on the switch. By\ndedicating an interface on the firewall as a tap mode interface and connecting it with a switch\nSPAN port, the switch SPAN port provides the firewall with the mirrored traffic. This provides\napplication visibility within the network without being in the flow of network traffic.\nBy deploying the firewall in tap mode, you can get visibility into what applications are running on\nyour network without having to make any changes to your network design. In addition, when in\ntap mode, the firewall can also identify threats on your network. Keep in mind, however, because\nthe traffic is not running through the firewall when in tap mode it cannot take any action on the\ntraffic, such as blocking traffic with threats or applying QoS traffic control.\nTo configure a tap interface and begin monitoring the applications and threats on your network:\nSTEP 1 |\nDecide which port you want to use as your tap interface and connect it to a switch\nconfigured with SPAN/RSPAN or port mirroring.\nYou will send your network traffic from the SPAN destination port through the firewall so you\ncan have visibility into the applications and threats on your network.\nSTEP 2 |\nFrom the firewall web interface, configure the interface you want to use as your network\ntap.\n1.\nSelect Network > Interfaces and select the interface that corresponds to the port you\njust cabled.\n2.\nSelect Tap as the Interface Type.\n3.\nOn the Config tab, expand the Security Zone and select New Zone.\n4.\nIn the Zone dialog, enter a Name for new zone, for example TapZone, and then click OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1332\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 3 |\n(Optional) Create any forwarding profiles you want to use.\n• Configure a Log Forwarding profile\n• Configure Syslog Monitoring\nSTEP 4 |\nCreate Security Profiles to scan your network traffic for threats:\n1.\nSelect Objects > Security Profiles.\n2.\nFor each security profile type, Add a new profile and set the action to alert.\nBecause the firewall is not inline with the traffic you cannot use any block or reset\nactions. By setting the action to alert, you will be able to see any threats the firewall\ndetects in the logs and ACC.\nSTEP 5 |\nCreate a security policy rule to allow the traffic through the tap interface.\nWhen creating a security policy rule for tap mode, both the source zone and destination zone\nmust be the same.\n1.\nSelect Policies > Security and click Add.\n2.\nIn the Source tab, set the Source Zone to the TapZone you just created.\n3.\nIn the Destination tab, set the Destination Zone to the TapZone also.\n4.\nSet the all of the rule match criteria (Applications, User, Service, Address) to any.\n5.\nIn the Actions tab, set the Action Setting to Allow.\n6.\nSet Profile Type to Profiles and select each of the security profiles you created to alert\nyou of threats.\n7.\nVerify that Log at Session End is enabled.\n8.\nClick OK.\n9.\nPlace the rule at the top of your rulebase.\nSTEP 6 |\nCommit the configuration.\nSTEP 7 |\nMonitor the firewall logs (Monitor > Logs) and the ACC for insight into the applications and\nthreats on your network.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1332,
+      "end": 1333
+    },
+    "content_stats": {
+      "char_count": 3393,
+      "word_count": 601
+    },
+    "hierarchy": {
+      "parent": "Configure Interfaces",
+      "children": []
+    }
+  }
+}

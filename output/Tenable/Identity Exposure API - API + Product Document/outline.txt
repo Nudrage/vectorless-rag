@@ -1,0 +1,398 @@
+DOCUMENT INDEX: Tenable\Identity Exposure API - API + Product Document
+======================================================================
+
+1. Identity Exposure (production)
+   1.1. About
+      1.1.1. Responses
+   1.2. AD object
+      1.2.1. Response samples
+   1.3. Return the last state of every ad-object at the provided timestampBy default, the timestamp is now. Objects out of scope are included
+      1.3.1. Responses
+         1.3.1.1. Response samples
+      1.3.2. Responses
+         1.3.2.1. Response samples
+      1.3.3. Responses
+         1.3.3.1. Response samples
+   1.4. Retrieve an AD object by id that have deviances for a specific profile and checker
+      1.4.1. Responses
+         1.4.1.1. Response samples
+   1.5. Get one ad-object by event and by id
+      1.5.1. Responses
+         1.5.1.1. Response samples
+   1.6. Get one ad-object changes between a given event and the event which precedes it
+      1.6.1. Responses
+         1.6.1.1. Response samples
+   1.7. Search all AD objects having deviances by profile by checker
+      1.7.1. Responses
+         1.7.1.1. Request samples
+         1.7.1.2. Response samples
+   1.8. Alert
+      1.8.1. Responses
+         1.8.1.1. Response samples
+      1.8.2. Responses
+         1.8.2.1. Request samples
+         1.8.2.2. Response samples
+      1.8.3. Responses
+         1.8.3.1. Response samples
+   1.9. Update alerts for one profile
+      1.9.1. Responses
+   1.10. API key
+      1.10.1. Request samples
+      1.10.2. Response samples
+   1.11. Get the API key of the current user
+      1.11.1. Responses
+         1.11.1.1. Response samples
+   1.12. Create or renew an API key for the current user
+      1.12.1. Responses
+         1.12.1.1. Response samples
+   1.13. Application setting
+   1.14. Get the application settings
+      1.14.1. Responses
+         1.14.1.1. Response samples
+   1.15. Update the application settings
+      1.15.1. Responses
+         1.15.1.1. Request samples
+   1.16. Attack
+      1.16.1. Response samples
+   1.17. Get all attacks
+      1.17.1. Responses
+         1.17.1.1. Response samples
+   1.18. Get all attacks in CSV rows format
+      1.18.1. Responses
+         1.18.1.1. Response samples
+   1.19. Attack type
+   1.20. Get attack types
+      1.20.1. Responses
+         1.20.1.1. Response samples
+   1.21. Attack type configuration
+   1.22. Get the attack type configuration
+      1.22.1. Responses
+         1.22.1.1. Response samples
+   1.23. Update the attack type configuration
+      1.23.1. Responses
+   1.24. Attack type option
+      1.24.1. Request samples
+      1.24.2. Response samples
+      1.24.3. Responses
+         1.24.3.1. Response samples
+      1.24.4. Responses
+         1.24.4.1. Request samples
+   1.25. Category
+      1.25.1. Response samples
+      1.25.2. Responses
+         1.25.2.1. Response samples
+      1.25.3. Responses
+   1.26. Checker
+      1.26.1. Response samples
+      1.26.2. Responses
+         1.26.2.1. Response samples
+      1.26.3. Responses
+         1.26.3.1. Response samples
+   1.27. Checker option
+      1.27.1. Responses
+         1.27.1.1. Response samples
+      1.27.2. Responses
+         1.27.2.1. Request samples
+         1.27.2.2. Response samples
+   1.28. Cloud statistics
+      1.28.1. Responses
+         1.28.1.1. Response samples
+   1.29. Dashboard
+      1.29.1. Responses
+         1.29.1.1. Response samples
+      1.29.2. Responses
+         1.29.2.1. Request samples
+         1.29.2.2. Response samples
+      1.29.3. Responses
+         1.29.3.1. Response samples
+      1.29.4. Responses
+         1.29.4.1. Request samples
+         1.29.4.2. Response samples
+   1.30. Delete dashboard instance with it's associated widgets
+      1.30.1. Responses
+         1.30.1.1. Response samples
+   1.31. Deviance
+   1.32. Get all deviances that has been created or resolved since an event
+      1.32.1. Responses
+         1.32.1.1. Response samples
+      1.32.2. Responses
+         1.32.2.1. Response samples
+   1.33. Get all ad objects of a deviance in CSV rows format
+      1.33.1. Responses
+         1.33.1.1. Response samples
+      1.33.2. Responses
+         1.33.2.1. Response samples
+      1.33.3. Responses
+         1.33.3.1. Response samples
+      1.33.4. Responses
+         1.33.4.1. Request samples
+         1.33.4.2. Response samples
+      1.33.5. Responses
+         1.33.5.1. Response samples
+      1.33.6. Responses
+         1.33.6.1. Request samples
+         1.33.6.2. Response samples
+      1.33.7. Responses
+         1.33.7.1. Request samples
+         1.33.7.2. Response samples
+      1.33.8. Responses
+         1.33.8.1. Request samples
+         1.33.8.2. Response samples
+   1.34. Search all deviances by profile by checker by AD object
+      1.34.1. Responses
+         1.34.1.1. Request samples
+         1.34.1.2. Response samples
+      1.34.2. Responses
+         1.34.2.1. Request samples
+         1.34.2.2. Response samples
+   1.35. Directory
+      1.35.1. Responses
+         1.35.1.1. Response samples
+      1.35.2. Responses
+         1.35.2.1. Request samples
+         1.35.2.2. Response samples
+      1.35.3. Responses
+         1.35.3.1. Response samples
+   1.36. Get all directories for a given infrastructure
+      1.36.1. Responses
+         1.36.1.1. Response samples
+      1.36.2. Responses
+         1.36.2.1. Response samples
+      1.36.3. Responses
+         1.36.3.1. Request samples
+         1.36.3.2. Response samples
+      1.36.4. Responses
+   1.37. Email notifier
+      1.37.1. Response samples
+      1.37.2. Responses
+         1.37.2.1. Response samples
+      1.37.3. Responses
+         1.37.3.1. Request samples
+         1.37.3.2. Response samples
+      1.37.4. Responses
+         1.37.4.1. Response samples
+      1.37.5. Responses
+         1.37.5.1. Request samples
+         1.37.5.2. Response samples
+      1.37.6. Responses
+         1.37.6.1. Response samples
+   1.38. Send a test email notification by id
+      1.38.1. Responses
+         1.38.1.1. Response samples
+   1.39. Send a test email notification
+      1.39.1. Responses
+         1.39.1.1. Request samples
+         1.39.1.2. Response samples
+   1.40. Event
+      1.40.1. Responses
+         1.40.1.1. Response samples
+      1.40.2. Responses
+         1.40.2.1. Response samples
+   1.41. Search events instances
+      1.41.1. Responses
+         1.41.1.1. Request samples
+         1.41.1.2. Response samples
+   1.42. Infrastructure
+      1.42.1. Responses
+         1.42.1.1. Response samples
+      1.42.2. Responses
+         1.42.2.1. Request samples
+         1.42.2.2. Response samples
+      1.42.3. Responses
+         1.42.3.1. Response samples
+      1.42.4. Responses
+         1.42.4.1. Request samples
+         1.42.4.2. Response samples
+      1.42.5. Responses
+   1.43. LDAP configuration
+      1.43.1. Response samples
+      1.43.2. Responses
+         1.43.2.1. Response samples
+      1.43.3. Responses
+         1.43.3.1. Request samples
+         1.43.3.2. Response samples
+   1.44. License
+      1.44.1. Responses
+         1.44.1.1. Response samples
+   1.45. Create new license singleton
+      1.45.1. Responses
+         1.45.1.1. Request samples
+         1.45.1.2. Response samples
+   1.46. Lockout policy Get product association in the License
+      1.46.1. Responses
+         1.46.1.1. Response samples
+   1.47. Get the lockout policy
+      1.47.1. Responses
+         1.47.1.1. Response samples
+   1.48. Update the lockout policy
+      1.48.1. Responses
+         1.48.1.1. Request samples
+         1.48.1.2. Response samples
+   1.49. Metrics
+      1.49.1. Responses
+         1.49.1.1. Response samples
+   1.50. Preference
+   1.51. Get a user's preferences
+      1.51.1. Responses
+         1.51.1.1. Response samples
+   1.52. Update a user's preferences
+      1.52.1. Responses
+   1.53. Profile
+      1.53.1. Request samples
+      1.53.2. Response samples
+      1.53.3. Responses
+         1.53.3.1. Response samples
+      1.53.4. Responses
+         1.53.4.1. Request samples
+         1.53.4.2. Response samples
+      1.53.5. Responses
+         1.53.5.1. Response samples
+      1.53.6. Responses
+         1.53.6.1. Request samples
+         1.53.6.2. Response samples
+      1.53.7. Responses
+         1.53.7.1. Response samples
+   1.54. Creates a new profile from another one
+      1.54.1. Responses
+         1.54.1.1. Request samples
+         1.54.1.2. Response samples
+   1.55. Unstages change of the related profile
+      1.55.1. Responses
+         1.55.1.1. Response samples
+   1.56. Commits change of the related profile
+      1.56.1. Responses
+   1.57. Reason
+      1.57.1. Response samples
+      1.57.2. Responses
+         1.57.2.1. Response samples
+      1.57.3. Responses
+         1.57.3.1. Response samples
+      1.57.4. Responses
+         1.57.4.1. Response samples
+      1.57.5. Responses
+         1.57.5.1. Response samples
+   1.58. Relay
+   1.59. Get current linking key for relay setup
+      1.59.1. Responses
+   1.60. Report access token
+      1.60.1. Response samples
+   1.61. Returns the authentication token required to pull data from Tenable Cloud
+      1.61.1. Responses
+         1.61.1.1. Response samples
+   1.62. Updates the authentication token required to pull data from Tenable Cloud
+      1.62.1. Responses
+         1.62.1.1. Response samples
+   1.63. Role
+      1.63.1. Responses
+         1.63.1.1. Response samples
+      1.63.2. Responses
+         1.63.2.1. Request samples
+         1.63.2.2. Response samples
+   1.64. Return the default roles for user creation
+      1.64.1. Responses
+         1.64.1.1. Response samples
+      1.64.2. Responses
+         1.64.2.1. Response samples
+      1.64.3. Responses
+         1.64.3.1. Request samples
+         1.64.3.2. Response samples
+      1.64.4. Responses
+         1.64.4.1. Response samples
+   1.65. Creates a new role from another one
+      1.65.1. Responses
+         1.65.1.1. Request samples
+         1.65.1.2. Response samples
+   1.66. Replace permission list for a role
+      1.66.1. Responses
+         1.66.1.1. Request samples
+         1.66.1.2. Response samples
+   1.67. SAML configuration
+      1.67.1. Responses
+         1.67.1.1. Response samples
+      1.67.2. Responses
+         1.67.2.1. Request samples
+         1.67.2.2. Response samples
+   1.68. Generates SAML certificate
+      1.68.1. Responses
+         1.68.1.1. Response samples
+   1.69. Score
+   1.70. Get the directories score by profile
+   1.71. Syslog
+      1.71.1. Responses
+         1.71.1.1. Response samples
+      1.71.2. Responses
+         1.71.2.1. Response samples
+      1.71.3. Responses
+         1.71.3.1. Request samples
+         1.71.3.2. Response samples
+      1.71.4. Responses
+         1.71.4.1. Response samples
+      1.71.5. Responses
+         1.71.5.1. Request samples
+         1.71.5.2. Response samples
+      1.71.6. Responses
+         1.71.6.1. Response samples
+   1.72. Send a test syslog notification by id
+      1.72.1. Responses
+         1.72.1.1. Response samples
+   1.73. Send a test syslog notification
+      1.73.1. Responses
+   1.74. Topology
+      1.74.1. Request samples
+      1.74.2. Response samples
+      1.74.3. Responses
+         1.74.3.1. Response samples
+   1.75. User
+   1.76. Get all users
+      1.76.1. Responses
+         1.76.1.1. Response samples
+      1.76.2. Responses
+         1.76.2.1. Request samples
+         1.76.2.2. Response samples
+   1.77. Get a user's information
+      1.77.1. Responses
+         1.77.1.1. Response samples
+      1.77.2. Responses
+         1.77.2.1. Response samples
+      1.77.3. Responses
+         1.77.3.1. Request samples
+         1.77.3.2. Response samples
+      1.77.4. Responses
+         1.77.4.1. Response samples
+   1.78. Update a user's password
+      1.78.1. Responses
+         1.78.1.1. Request samples
+         1.78.1.2. Response samples
+   1.79. Logs in a user
+      1.79.1. Responses
+         1.79.1.1. Request samples
+         1.79.1.2. Response samples
+   1.80. Logs out a user
+      1.80.1. Responses
+         1.80.1.1. Response samples
+   1.81. Replace role list for a user
+      1.81.1. Responses
+   1.82. Widget
+      1.82.1. Request samples
+      1.82.2. Response samples
+   1.83. Get all widgets by dashboard id
+      1.83.1. Responses
+         1.83.1.1. Response samples
+   1.84. Create a new widget in dashboard by dashboard id
+      1.84.1. Responses
+         1.84.1.1. Request samples
+         1.84.1.2. Response samples
+      1.84.2. Responses
+         1.84.2.1. Response samples
+      1.84.3. Responses
+         1.84.3.1. Request samples
+         1.84.3.2. Response samples
+      1.84.4. Responses
+         1.84.4.1. Response samples
+   1.85. Get a widget's options by id
+      1.85.1. Responses
+         1.85.1.1. Response samples
+   1.86. Define widget's options by id
+      1.86.1. Responses
+         1.86.1.1. Request samples
+         1.86.1.2. Response samples

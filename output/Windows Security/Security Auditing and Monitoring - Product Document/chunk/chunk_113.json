@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_113",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4649(S): A replay attack was detected.\n\nThis event can be a sign of Kerberos replay attack or, among other things, network device configuration or routing problems. In both cases, we recommend triggering an alert and\ninvestigating the reason the event was generated.\n4778(S): A session was reconnected to a Window Station.\nEvent Description:\nThis event is generated when a user reconnects to an existing Terminal Services session, or when a user switches to an\nexisting desktop using Fast User Switching.\nThis event also generates when user reconnects to virtual host Hyper-V Enhanced Session, for example.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4778</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12551</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-09-10T23:05:29.743867200Z\" />\n<EventRecordID>237651</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"504\" ThreadID=\"2212\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"AccountName\">ladmin</Data>\n<Data Name=\"AccountDomain\">CONTOSO</Data>\n<Data Name=\"LogonID\">0x1e01f6</Data>\n© 2016 Microsoft. All rights reserved.\n326\n<Data Name=\"SessionName\">RDP-Tcp#6</Data>\n<Data Name=\"ClientName\">WIN81</Data>\n<Data Name=\"ClientAddress\">10.0.0.100</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nSubject:\n\nAccount Name [Type = UnicodeString]: the name of the account for which the session was reconnected.\n\nAccount Domain [Type = UnicodeString]: subject’s domain or computer name. Formats vary, and include the following:\no\nDomain NETBIOS name example: CONTOSO\no\nLowercase full domain name: contoso.local\no\nUppercase full domain name: CONTOSO.LOCAL\no\nFor some well-known security principals, such as LOCAL SERVICE or ANONYMOUS LOGON, the value of this field is “NT AUTHORITY”.\no\nFor local user accounts, this field will contain the name of the computer or device that this account belongs to, for example: “Win81”.\n\nLogon ID [Type = HexInt64]: hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID, for example, “4624: An account\nwas successfully logged on.”\nSession:\n\nSession Name [Type = UnicodeString]: the name of the session to which the user was reconnected. Examples:\no\nRDP-Rcp#N, where N is a number of session – typical RDP session name.\no\nConsole – console session, typical for Fast User Switching.\no\n31C5CE94259D4006A9E4#3 – example of “Hyper-V Enhanced Session” session name.\nYou can see the list of current session’s using “query session” command in command prompt. Example of output (see SESSIONNAME column):\nAdditional Information:\n\nClient Name [Type = UnicodeString]: computer name from which the user was reconnected. Has “Unknown” value for console session.\n\nClient Address [Type = UnicodeString]: IP address of the computer from which the user was reconnected.\no\nIPv6 address or ::ffff:IPv4 address of a client.\no\n::1 or 127.0.0.1 means localhost.\no\nHas “LOCAL” value for console session.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 326,
+      "end": 327
+    },
+    "content_stats": {
+      "char_count": 3404,
+      "word_count": 446
+    },
+    "hierarchy": {
+      "parent": "Audit Other Logon/Logoff Events",
+      "children": []
+    }
+  }
+}

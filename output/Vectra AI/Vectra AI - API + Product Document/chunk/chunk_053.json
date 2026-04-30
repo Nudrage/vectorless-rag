@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_053",
+  "section_number": "1.18.2",
+  "header": "Mark as Fixed",
+  "content": "PATCH to mark/unmark a detection as fixed.\nURL: https://<vectra_portal_url>/api/v3.4/detections\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\n© July 2024 Vectra AI, Inc. | 79\nBody:\n{\n\"detectionIdList\": [128, 129],\n\"mark_as_fixed\": \"True\"\n}\nResponse:\n{\n\"_meta\": {\n\"level\": \"Success\",\n\"message\": \"Successfully marked detections\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 78,
+      "end": 79
+    },
+    "content_stats": {
+      "char_count": 370,
+      "word_count": 43
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

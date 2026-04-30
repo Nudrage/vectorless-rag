@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_136",
+  "section_number": "1.8.1.6",
+  "header": "RADIUS",
+  "content": "Remote Authentication Dial-In User Service (RADIUS) is a broadly supported networking\nprotocol that provides centralized authentication and authorization. You can configure RADIUS\nauthentication for end users or administrators on the firewall and for administrators on Panorama.\nOptionally, you can use RADIUS Vendor-Specific Attributes (VSAs) to manage administrator\nauthorization. RADIUS VSAs enable you to quickly change the roles, access domains, and user\ngroups of administrators through your directory service instead of reconfiguring settings on the\nfirewall and Panorama. You can also configure the firewall to use a RADIUS server for:\n• Collecting VSAs from GlobalProtect endpoints.\n• Implementing Multi-Factor Authentication.\nWhen sending authentication requests to a RADIUS server, the firewall and Panorama use the\nauthentication profile name as the network access server (NAS) identifier, even if the profile is\nassigned to an authentication sequence for the service (such as administrative access to the web\ninterface) that initiates the authentication process.\nThe firewall and Panorama support the following RADIUS VSAs. To define VSAs on a RADIUS\nserver, you must specify the vendor code (25461 for Palo Alto Networks firewalls or Panorama)\nand the VSA name and number. Some VSAs also require a value. Refer to your RADIUS server\ndocumentation for the steps to define these VSAs.\nAlternatively, you can download the Palo Alto Networks RADIUS dictionary, which defines\nthe authentication attributes that the Palo Alto Networks firewall and a RADIUS server use to\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n243\n©2025 Palo Alto Networks, Inc.\nAuthentication\ncommunicate with each other, and install it on your RADIUS server to map the attributes to the\nRADIUS binary data.\nWhen you predefine dynamic administrator roles for users on the server, use lower-case to\nspecify the role (for example, enter superuser, not SuperUser).\nWhen configuring the advanced vendor options on a Cisco Secure Access Control Server\n(ACS), you must set both the Vendor Length Field Size and Vendor Type Field Size to 1.\nOtherwise, authentication will fail.\nName\nNumber Value\nVSAs for administrator account management and authentication\nPaloAlto-Admin-Role\n1\nA default (dynamic) administrative role name or a\ncustom administrative role name on the firewall.\nPaloAlto-Admin-Access-Domain\n2\nThe name of an access domain for firewall\nadministrators (configured in the Device >\nAccess Domains page). Define this VSA if the\nfirewall has multiple virtual systems.\nPaloAlto-Panorama-Admin-Role\n3\nA default (dynamic) administrative role name or a\ncustom administrative role name on Panorama.\nPaloAlto-Panorama-Admin-\nAccess-Domain\n4\nThe name of an access domain for Device Group\nand Template administrators (configured in the\nPanorama > Access Domains page).\nPaloAlto-User-Group\n5\nThe name of a user group that an authentication\nprofile references.\nVSAs forwarded from GlobalProtect endpoints to the RADIUS server\nPaloAlto-User-Domain\n6\nPaloAlto-Client-Source-IP\n7\nPaloAlto-Client-OS\n8\nPaloAlto-Client-Hostname\n9\nPaloAlto-GlobalProtect-Client-\nVersion\n10\nDon’t specify a value when you define these\nVSAs.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n244\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 243,
+      "end": 245
+    },
+    "content_stats": {
+      "char_count": 3277,
+      "word_count": 469
+    },
+    "hierarchy": {
+      "parent": "Authentication Types",
+      "children": []
+    }
+  }
+}

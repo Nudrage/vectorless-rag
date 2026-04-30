@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_018",
+  "section_number": "1.18.8",
+  "header": "Assignments",
+  "content": "Assignments are used to assign account objects to analysts for investigation. This information includes\nbut is not limited to:\n•\nAssigned to user\n•\nAssigned by user\n•\nDate assigned\n•\nDate resolved\n•\nEvents\n•\nOutcome\n•\nAccount ID\n•\nTriaged detections\nURL to retrieve assignment information is\nhttps://<vectra_portal_url>/api/v3.4/assignments\nAn example of using curl to retrieve all assignments using token authentication:\ncurl 'https://<vectra_portal_url>/api/v3.4/assignments/' \\\n-X 'GET' \\\n-H \"Content-Type: application/json\" \\\n--header \"Authorization: Bearer <access_token>” \\\n--compressed \\\n--insecure",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 30,
+      "end": 30
+    },
+    "content_stats": {
+      "char_count": 605,
+      "word_count": 80
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

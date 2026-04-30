@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_068",
+  "section_number": "1.18.17",
+  "header": "Hosts",
+  "content": "GET (multiple)\nURL: https://<vectra_portal_url>/api/v3.4/hosts\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"count\": 1,\n\"next\": null,\n\"previous\": null,\n\"results\": [\n{\n\"id\": 1,\n\"name\": \"bar.mbpro\",\n\"has_active_traffic\": false,\n\"threat\": 60,\n\"certainty\": 96,\n\"t_score\" : 60,\n\"c_score\": 96,\n\"severity\": \"critical\",\n\"last_source\": \"9.0.0.1\",\n\"ip\": \"9.0.0.1\",\n\"previous_ips\": [],\n\"last_detection_timestamp\": \"2023-03-06T22:30:06Z\",\n\"is_key_asset\": false,\n\"state\": \"active\",\n\"is_targeting_key_asset\": false,\n\"detection_set\": [\n\"https://202079170575.uw2.devportal.vectra.ai/api/v3.4/detections/1\",\n\"https://202079170575.uw2.devportal.vectra.ai/api/v3.4/detections/44\"\n],\n\"host_artifact_set\": [],\n\"sensor\": null,\n\"sensor_name\": null,\n\"tags\": [],\n\"note\": null,\n\"notes\": [],\n\"note_modified_by\": null,\n\"note_modified_timestamp\": null,\n\"url\": \"\"https://202079170575.uw2.devportal.vectra.ai/api/v3.4/hosts/1\",\n\"last_modified\": \"2023-03-06T21:44:23Z\",\n\"assigned_to\": null,\n\"assigned_date\": null,\n\"groups\": [],\n© July 2024 Vectra AI, Inc. | 115\n\"has_custom_model\": false,\n\"privilege_level\": null,\n\"privilege_category\": null,\n\"probable_owner\": null,\n\"detection_profile\": \"Botnet\",\n\"assignment\": null,\n\"past_assignments\": [],\n\"host_session_luids\": [\n\"5CIdU065\"\n],\n\"host_luid\": null\n}\n]\n}\nGET (single)\nURL: https://<vectra_portal_url>/api/v3.4/hosts/1\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"id\": 1,\n\"name\": \"bar.mbpro\",\n\"has_active_traffic\": false,\n\"threat\": 60,\n\"certainty\": 96,\n\"t_score\" : 60,\n\"c_score\": 96,\n\"severity\": \"critical\",\n\"last_source\": \"9.0.0.1\",\n\"ip\": \"9.0.0.1\",\n\"previous_ips\": [],\n\"last_detection_timestamp\": \"2023-03-06T22:30:06Z\",\n\"is_key_asset\": false,\n\"state\": \"active\",\n\"is_targeting_key_asset\": false,\n\"detection_set\": [\n\"https://202079170575.uw2.devportal.vectra.ai/api/v3.4/detections/1\",\n\"https://202079170575.uw2.devportal.vectra.ai/api/v3.4/detections/44\"\n],\n\"host_artifact_set\": [],\n\"sensor\": null,\n\"sensor_name\": null,\n\"tags\": [],\n\"note\": null,\n\"notes\": [],\n\"note_modified_by\": null,\n© July 2024 Vectra AI, Inc. | 116\n\"note_modified_timestamp\": null,\n\"url\": \"\"https://202079170575.uw2.devportal.vectra.ai/api/v3.4/hosts/1\",\n\"last_modified\": \"2023-03-06T21:44:23Z\",\n\"assigned_to\": null,\n\"assigned_date\": null,\n\"groups\": [],\n\"has_custom_model\": false,\n\"privilege_level\": null,\n\"privilege_category\": null,\n\"probable_owner\": null,\n\"detection_profile\": \"Botnet\",\n\"assignment\": null,\n\"past_assignments\": [],\n\"host_session_luids\": [\n\"5CIdU065\"\n],\n\"host_luid\": null\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 114,
+      "end": 116
+    },
+    "content_stats": {
+      "char_count": 2512,
+      "word_count": 213
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_210",
+  "section_number": "1.9.16.3",
+  "header": "Store Private Keys on an HSM",
+  "content": "For added security, you can use an HSM to secure the private keys used in SSL/TLS decryption\nfor:\n• SSL Forward Proxy—The HSM can store the private key of the Forward Trust certificate\nthat signs certificates in SSL/TLS forward proxy operations. The firewall will then send the\ncertificates that it generates during such operations to the HSM for signing before forwarding\nthe certificates to the client.\n• SSL Inbound Inspection—The HSM can store the private keys for the internal servers for which\nyou are performing SSL/TLS inbound inspection.\nIf you use the DHE or ECDHE key exchange algorithms to enable perfect forward secrecy (PFS)\nsupport for SSL decryption, you can use an HSM to store the private keys for SSL Inbound\nInspection. You can also use an HSM to store ECDSA keys used for SSL Forward Proxy or\nSSL Inbound Inspection decryption unless you are using TLSv1.3. For TLSv1.3 traffic, PAN-\nOS supports HSMs only for SSL Forward Proxy. It does not support HSMs for SSL Inbound\nInspection.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n376\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 1 |\nOn the HSM, import or generate the certificate and private key used in your decryption\ndeployment.\nFor instructions on importing or generating a certificate and private key on the HSM, refer to\nyour HSM documentation.\nSTEP 2 |\n(nCipher nShield Connect only) Synchronize the key data from the nCipher nShield remote\nfile system to the firewall.\nSynchronization with the SafeNet Network HSM is automatic.\n1.\nAccess the firewall web interface and select Device > Setup > HSM.\n2.\nSynchronize with Remote Filesystem (Hardware Security Operations settings).\nSTEP 3 |\nImport the certificate that corresponds to the HSM-stored key.\n1.\nSelect Device > Certificate Management > Certificates > Device Certificates and click\nImport.\n2.\nEnter the Certificate Name.\n3.\nBrowse to the Certificate File on the HSM.\n4.\nSelect a File Format.\n5.\nSelect Private Key resides on Hardware Security Module.\n6.\nClick OK and Commit your changes.\nSTEP 4 |\n(Forward Trust certificates only) Enable the certificate for use in SSL/TLS Forward Proxy.\n1.\nOpen the certificate you imported in Step 3 for editing.\n2.\nSelect Forward Trust Certificate.\n3.\nClick OK and Commit your changes.\nSTEP 5 |\nVerify that you successfully imported the certificate onto the firewall.\nLocate the certificate you imported in Step 3 and check the icon in the Key column:\n• Lock icon—The private key for the certificate is on the HSM.\n• Error icon—The private key is not on the HSM or the HSM is not properly authenticated or\nconnected.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 376,
+      "end": 377
+    },
+    "content_stats": {
+      "char_count": 2593,
+      "word_count": 430
+    },
+    "hierarchy": {
+      "parent": "Secure Keys with a Hardware Security Module",
+      "children": []
+    }
+  }
+}

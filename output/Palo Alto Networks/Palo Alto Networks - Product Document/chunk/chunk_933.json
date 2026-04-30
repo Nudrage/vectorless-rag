@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_933",
+  "section_number": "1.22.1",
+  "header": "Policy Types",
+  "content": "The Palo Alto Networks next-generation firewall supports a variety of policy types that work\ntogether to safely enable applications on your network.\nFor all policy types, when you Enforce Policy Rule Description, Tag, and Audit Comment, you\ncan use the audit comment archive to view how a policy rule changed over time. The archive,\nwhich includes the audit comment history and the configuration logs, enables you to compare\nconfiguration versions and review who created or modified and why.\nPolicy Type\nDescription\nSecurity\nDetermine whether to block or allow a session based on traffic\nattributes such as the source and destination security zone, the source\nand destination IP address, the application, user, and the service. For\nmore details, see Security Policy.\nNAT\nInstruct the firewall which packets need translation and how to do\nthe translation. The firewall supports both source address and/or port\ntranslation and destination address and/or port translation. For more\ndetails, see NAT.\nQoS\nIdentify traffic requiring QoS treatment (either preferential treatment\nor bandwidth-limiting) using a defined parameter or multiple\nparameters and assign it a class. For more details, see Quality of\nService.\nPolicy Based\nForwarding\nIdentify traffic that should use a different egress interface than the\none that would normally be used based on the routing table. For more\ndetails, see Policy-Based Forwarding.\nDecryption\nIdentify encrypted traffic that you want to inspect for visibility,\ncontrol, and granular security. For more details, see Decryption.\nApplication Override\nIdentify sessions that you do not want processed by the App-ID\nengine, which is a Layer-7 inspection. Traffic matching an application\noverride policy forces the firewall to handle the session as a regular\nstateful inspection firewall at Layer-4. For more details, see Manage\nCustom or Unknown Applications.\nAuthentication\nIdentify traffic that requires users to authenticate. For more details,\nsee Authentication Policy.\nDoS Protection\nIdentify potential denial-of-service (DoS) attacks and take protective\naction in response to rule matches. For more details, see DoS\nProtection Profiles.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1589\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1589,
+      "end": 1590
+    },
+    "content_stats": {
+      "char_count": 2251,
+      "word_count": 333
+    },
+    "hierarchy": {
+      "parent": "Policy",
+      "children": []
+    }
+  }
+}

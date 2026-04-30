@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_024",
+  "section_number": "1.18.13",
+  "header": "Entity Scoring Events",
+  "content": "Entity Scoring Events are generated when an entity score is changed, which occurs upon initial threat\ndetection, discovery of additional detections, and updates to any discovered detections. The entity\nscore is reduced over time if the underlying detection behavior subsides, either because of user\nintervention or because the account has left the environment.\nHost scoring events prior to May 2023 will have score_decrease enabled to false, so that all scoring\nevents will be returned. Host scoring events starting May 2023 will be able to be filtered by the\ninclude_score_decreases query param.\nNOTE: You must include the type query param in your request to specify if you would like ‘account’ or\n‘host’ entity scoring events.\nThe URL to retrieve entity scoring events is\nhttps://<vectra_portal_url>/api/v3.4/events/entity_scoring?type=<entity_type>\nand uses OAuth2 authentication.\nThe following table lists the top-level fields and descriptions present in the response for a bulk GET\nrequest to the v3.4 API for Entity Scoring Events.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nevents\nA list of entity scoring\nevents\nlist\nEvent fields are described in the\ntable below\nremaining_count\nThe number of remaining\nevents\ninteger\nnext_checkpoint\nThe next checkpoint value\nto use to retrieve any\nremaining events\ninteger\nExample: \"next_checkpoint\": 101\nUse with the ‘from’ query\nparameter described below\n© July 2024 Vectra AI, Inc. | 39\nThe following table lists the fields and descriptions present in an Entity Scoring object.\nElement\nDescription\nType\nNotes\nentity_id\nEntity ID.\ninteger\nbreadth_contrib\nBreadth contribution of the entity.\ninteger\nimportance\nImportance score of the entity.\ninteger\ntype\nEntity type, e.g. “Account”, “Host”.\nstring\nis_prioritized\nWhether or not the priority of this entity\nis above the configured priority\nthreshold.\nboolean\nseverity\nEntity severity, e.g. “Low”, “Medium”,\n“High”.\nstring\nurgency_reason\nReason behind the urgency_score.\nstring\nurgency_score\nPriority or urgency of the entity.\ninteger\nvelocity_contrib\nVelocity contribution of the entity.\ninteger\nevent_timestamp\nTimestamp when the detection event\noccurred.\nstring\nTimestamp format:\nYYYY-MM-DD HH-\nMM-SS GMT\nname\nThe name associated with the account,\nor the learned hostname.\nstring\nactive_detection_types\nA list of all active detection types on\nthe entity.\nlist\ncategory\nThe event category\n(e.g. \"ACCOUNT_SCORING\").\nstring\nlast_detection\nThe id, type and url of the last\ndetection.\nObject\nThis will replace\nlast_detection_id,\nlast_detection_type\nand\nlast_detection_url\nurl\nThe URL link directly to this entity.\nstring\nThe available query parameters to filter for Entity Scoring events are listed below.\nQUERY PARAMETER\nDESCRIPTION\ntype\nREQUIRED. Specifies the type of entity scoring events:\naccount or host.\ninclude_score_decreases\nIf it is set (present), events reflecting score decreases will be\nincluded in event list.\nfrom\nUsed to provide a checkpoint value for filtering Entity Scoring\nEvents\n© July 2024 Vectra AI, Inc. | 40\nQUERY PARAMETER\nDESCRIPTION\nlimit\nUsed to specify the batch size returned by the response from\nthe /events/entity_scoring endpoint. By default 500 events will\nbe returned if a limit is not specified. A maximum of 1,000\nevents will be returned per request.\nevent_timestamp_gte\nStart date/time for scoring event, inclusive, formatted in ISO-\n8601\nevent_timestamp_lte\nEnd date/time for scoring event, inclusive, formatted in ISO-\n8601\nordering\nOrders events by “event_timestamp”. The default sorts event\ntimestamps by ascending order. Events can be sorted in\ndescending order by prepending the query with “minus”\nsymbol.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 38,
+      "end": 40
+    },
+    "content_stats": {
+      "char_count": 3631,
+      "word_count": 526
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

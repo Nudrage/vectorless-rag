@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_929",
+  "section_number": "1.21.22.4",
+  "header": "View Tunnel Information in Logs",
+  "content": "You can view Tunnel Inspection logs themselves or view tunnel inspection information in other\ntypes of logs.\nGRE, Non-Encrypted IPSec, and GTP-U Protocols\n• When there is a TCI traffic rule match, GRE, IPSec, and GTP-U protocols are logged in the\nTunnel Inspection log with the Tunnel log type, the matched protocol, and the configured\nMonitor name and Monitor tag (number).\n• When there is no TCI rule match, all protocols are logged under Traffic logs.\nVXLAN Protocol\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1585\n©2025 Palo Alto Networks, Inc.\nNetworking\n• When there is a TCI traffic rule match, VXLAN protocol is logged in the Tunnel Inspection log\nwith the Tunnel (VXLAN) log type, the configured Monitor name, and the Tunnel ID (VNI).\nIn the Traffic log for the inner session, the Tunnel Inspected flag indicates a VNI session. The\nParent Session is the session that was active when the inner session was created so the ID\nmight not match the current Session ID.\n• When there is no TCI rule match, VNI sessions are logged in Traffic logs with the UDP\nprotocol, source port 0, and destination port 4789 (the default).\nView Tunnel inspection logs.\n1.\nSelect Monitor > Logs > Tunnel Inspection and view the log data to identify the tunnel\nApplications used in your traffic and any concerns, such as high counts for packets\nfailing Strict Checking of headers.\n2.\nClick the Detailed Log View (\n) to see details about a log.\nView other logs for tunnel inspection information.\n1.\nSelect Monitor > Logs.\n2.\nSelect Traffic, Threat, URL Filtering, WildFire Submissions, Data Filtering, or Unified.\n3.\nFor a log entry, click the Detailed Log View (\n).\n4.\nIn the Flags window, see if the Tunnel Inspected flag is checked. A Tunnel Inspected flag\nindicates the firewall used a Tunnel Inspection policy rule to inspect the inside content\nor inner tunnel. Parent Session information refers to an outer tunnel (relative to an inner\ntunnel) or an inner tunnel (relative to inside content).\nOn the Traffic, Threat, URL Filtering, WildFire Submissions, Data Filtering logs, only\ndirect parent information appears in the Detailed Log View of the inner session log, no\ntunnel log information. If you configured two levels of tunnel inspection, you can select\nthe parent session of this direct parent to view the second parent log. (You must monitor\nthe Tunnel Inspection log as shown in the prior step to view tunnel log information.)\n5.\nIf you are viewing the log for an inside session that is Tunnel Inspected, click the View\nParent Session link in the General section to see the outside session information.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1585,
+      "end": 1586
+    },
+    "content_stats": {
+      "char_count": 2596,
+      "word_count": 440
+    },
+    "hierarchy": {
+      "parent": "Tunnel Content Inspection",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_819",
+  "section_number": "1.21.12.1",
+  "header": "DNS Overview",
+  "content": "DNS performs a crucial role in enabling user access to network resources so that users need not\nremember IP addresses and individual computers need not store a huge volume of domain names\nmapped to IP addresses. DNS employs a client/server model; a DNS server resolves a query for a\nDNS client by looking up the domain in its cache and if necessary sending queries to other servers\nuntil it can respond to the client with the corresponding IP address.\nThe DNS structure of domain names is hierarchical; the top-level domain (TLD) in a domain name\ncan be a generic TLD (gTLD): com, edu, gov, int, mil, net, or org (gov and mil are for the United\nStates only) or a country code (ccTLD), such as au (Australia) or us (United States). ccTLDs are\ngenerally reserved for countries and dependent territories.\nA fully qualified domain name (FQDN) includes at a minimum a host name, a second-level domain,\nand a TLD to completely specify the location of the host in the DNS structure. For example,\nwww.paloaltonetworks.com is an FQDN.\nWherever a Palo Alto Networks firewall uses an FQDN in the user interface or CLI, the firewall\nmust resolve that FQDN using DNS. Depending on where the FQDN query originates, the firewall\ndetermines which DNS settings to use to resolve the query.\nA DNS record of an FQDN includes a time-to-live (TTL) value, and by default the firewall\nrefreshes each FQDN in its cache based on that individual TTL provided the DNS server, as long\nas the TTL is greater than or equal to the Minimum FQDN Refresh Time you configure on the\nfirewall, or the default setting of 30 seconds if you don’t configure a minimum. Refreshing an\nFQDN based on its TTL value is especially helpful for securing access to cloud platform services,\nwhich often require frequent FQDN refreshes to ensure highly available services. For example,\ncloud environments that support autoscaling depend on FQDN resolutions for dynamically\nscaling services up and down, and fast resolutions of FQDNs are critical in such time-sensitive\nenvironments.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1455\n©2025 Palo Alto Networks, Inc.\nNetworking\nBy configuring a minimum FQDN refresh time, you limit how small a TTL value the firewall\nhonors. If your IP addresses don’t change very often you may want to set a higher Minimum\nFQDN Refresh Time so that the firewall doesn’t refresh entries unnecessarily. The firewall uses\nthe higher of the DNS TTL time and the configured Minimum FQDN Refresh Time.\nFor example, two FQDNs have the following TTL values. The Minimum FQDN Refresh Time\noverrides smaller (faster) TTL values.\nTTL\nIf Minimum FQDN Refresh = 26\nActual Refresh Time\nFQDN A\n20\n26\nFQDN B\n30\n30\nThe FQDN refresh timer starts when the firewall receives a DNS response from the DNS server\nor DNS proxy object that is resolving the FQDN.\nAdditionally, you can set a stale timeout to configure how long the firewall continues to use stale\n(expired) FQDN resolutions in the event of an unreachable DNS Server. At the end of the stale\ntimeout period, if the DNS server is still unreachable, the stale FQDN entries become unresolved\n(the firewall removes stale FQDN entries).\nThe following firewall tasks are related to DNS:\n• Configure your firewall with at least one DNS server so it can resolve hostnames. Configure\nprimary and secondary DNS servers or a DNS Proxy object that specifies such servers, as\nshown in Use Case 1: Firewall Requires DNS Resolution.\n• Customize how the firewall handles DNS resolution initiated by Security policy rules, reporting,\nand management services (such as email, Kerberos, SNMP, syslog, and more) for each virtual\nsystem, as shown in Use Case 2: ISP Tenant Uses DNS Proxy to Handle DNS Resolution for\nSecurity Policies, Reporting, and Services within its Virtual System.\n• Configure the firewall to act as a DNS server for a client, as shown in Use Case 3: Firewall Acts\nas DNS Proxy Between Client and Server.\n• Configure an Anti-Spyware profile to Use DNS Queries to Identify Infected Hosts on the\nNetwork.\n• Enable Evasion Signatures and then enable evasion signatures for threat prevention.\n• Configure an Interface as a DHCP Server. This enables the firewall to act as a DHCP Server\nand sends DNS information to its DHCP clients so the provisioned DHCP clients can reach\ntheir respective DNS servers.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1455,
+      "end": 1456
+    },
+    "content_stats": {
+      "char_count": 4314,
+      "word_count": 727
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

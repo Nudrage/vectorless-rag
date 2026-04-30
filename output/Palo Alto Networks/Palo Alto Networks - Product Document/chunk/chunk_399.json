@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_399",
+  "section_number": "1.12.2.2.5",
+  "header": "Authentication Policy and Authentication Portal",
+  "content": "In some cases, the User-ID agent can’t map an IP address to a username using server monitoring\nor other methods—for example, if the user isn’t logged in or uses an operating system such\nas Linux that your domain servers don’t support. In other cases, you might want users to\nauthenticate when accessing sensitive applications regardless of which methods the User-\nID agent uses to perform user mapping. For all these cases, you can configure Configure\nAuthentication Policy and Map IP Addresses to Usernames Using Authentication Portal. Any\nweb traffic (HTTP or HTTPS) that matches an Authentication policy rule prompts the user to\nauthenticate through Authentication Portal. You can use the following Authentication Portal\nAuthentication Methods:\n• Browser challenge—Use Kerberos single sign-on if you want to reduce the number of login\nprompts that users must respond to.\n• Web form—Use Multi-Factor Authentication, SAML single sign-on, Kerberos, TACACS+,\nRADIUS, LDAP, or Local Authentication.\n• Client Certificate Authentication.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 692,
+      "end": 692
+    },
+    "content_stats": {
+      "char_count": 1033,
+      "word_count": 155
+    },
+    "hierarchy": {
+      "parent": "User Mapping",
+      "children": []
+    }
+  }
+}

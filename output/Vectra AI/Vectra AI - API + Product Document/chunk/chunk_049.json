@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_049",
+  "section_number": "1.17",
+  "header": "Unique Hosts Observed – Audit",
+  "content": "API responses may vary depending on product subscriptions (Network, AWS, M365).\nThe unique hosts observed audit API can be used to view of all the distinct hosts seen during a given\ntimespan dating back one year. The endpoint is only available to Restricted Admin clients.\nNote that counts between unique hosts observed count API and this API may differ. This is because\nunique hosts may appear at varying times. This audit endpoint returns all relevant information about\nunique hosts including their individual sessions.\nTo obtain the list of unique hosts (GET) use the following URL:\nhttps://<vectra_management_ip>/api/v3.4/unique_hosts_observed/audit\nThe following table lists the fields and a description of the various elements for the month results.\nDetailed examples of using GET on unique_hosts_observed/audit is described in Appendix A\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nhost_id\nRelated Host ID (if available)\ninteger\nhost_luid\nHost LUID (if available)\nstring\nip_address\nstring\nhost_artifact_value\nHost Artifact Value (if available)\nstring\nhost_artifact_type\nHost Artifact Type (if available)\nstring\n© July 2024 Vectra AI, Inc. | 72\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nlast_seen_start\nLast seen start\ntimestamp\nThe column is ‘last_seen’\nbecause it gets updated at\nnew host sessions are\ncreated. Host may have\nbeen seen at more times\nthan what is recorded.\nlast_seen_end\nLast seen end\ntimestamp\nThe column is ‘last_seen’\nbecause it gets updated at\nnew host sessions are\ncreated. Host may have\nbeen seen at more times\nthan what is recorded.\nThe available query parameters to filter for Unique Hosts Observed - Audit are listed below.\nNote if start and end are left blank, default start will be the beginning of the month of the previous year.\nDefault end will be the current day.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\nstart\nstring\nISO8601\nStart date of data list. Example: ‘2023-08-15’\nend\nstring\nISO8601\nEnd date of data list. Example: ‘2023-09-31’\noffset\nstring\nISO8601\nTimezone offset to be used. Example: ‘+0700’\npage\ninteger\npage_size\ninteger\nLimit number of host records returned",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 71,
+      "end": 72
+    },
+    "content_stats": {
+      "char_count": 2078,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_139",
+  "section_number": "1.8.2",
+  "header": "Plan Your Authentication Deployment",
+  "content": "The following are key questions to consider before you implement an authentication solution\nfor administrators who access the firewall and end users who access services and applications\nthrough Authentication Portal.\nFor both end users and administrators, consider:\nHow can you leverage your existing security infrastructure? Usually, integrating the firewall\nwith an existing infrastructure is faster and cheaper than setting up a new, separate solution\njust for firewall services. The firewall can integrate with Multi-Factor Authentication, SAML,\nKerberos, TACACS+, RADIUS, and LDAP servers. If your users access services and applications\nthat are external to your network, you can use SAML to integrate the firewall with an identity\nprovider (IdP) that controls access to both external and internal services and applications.\nHow can you optimize the user experience? If you don’t want users to authenticate manually\nand you have a public key infrastructure, you can implement certificate authentication.\nAnother option is to implement Kerberos or SAML single sign-on (SSO) so that users can\naccess multiple services and applications after logging in to just one. If your network requires\nadditional security, you can combine certificate authentication with interactive (challenge-\nresponse) authentication.\nDo you require special user accounts that you don’t manage through the directory servers that\nyour organization reserves for regular accounts? For example, you might define a superuser\naccount that is local to the firewall so that you can access the firewall even if the directory\nserver is down. You can configure Local Authentication for these special-purpose accounts.\nExternal Authentication Services are usually preferable to local authentication\nbecause they provide central account management, reliable authentication services,\nand usually logging and troubleshooting features.\nAre the user names for your user accounts properly formatted? Leveraging SAML, Kerberos,\nTACACS+, RADIUS, and LDAP authentication requires all user names adhere to the regular\nexpression Linux login name rule. User names must have the format [a-zA-Z0-9_.][a-zA-\nZ0-9_.-]{0,30}[a-zA-Z0-9_.$-].\nThis means that:\n• The first character of the user name must be an upper or lower case alphabetical letter, a\nnumber (0-9), or either _ (underscore) or . (period).\n• Other than the first and last characters, the user name may contain upper or lower case\nalphabetical characters, numbers (0-9), and _ (underscore),. (period), or - (dash). The\nmaximum length is 30 characters excluding the first and last characters.\n• The last character of the user name may be an upper or lower case alphabetical letter, a\nnumber (0-9), or _ (underscore), . (period), $, or - (dash).\nAdhering to the regular expression Linux login name rule is required for PAN-OS administrators\nonly. It is not required for GlobalProtect and Captive Portal users.\nFor end users only, consider:\nWhich services and applications are more sensitive than others? For example, you might\nwant stronger authentication for key financial documents than for search engines. To protect\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n246\n©2025 Palo Alto Networks, Inc.\nAuthentication\nyour most sensitive services and applications, you can configure Multi-Factor Authentication\n(MFA) to ensure that each user authenticates using multiple methods (factors) when accessing\nthose services and applications. To accommodate a variety of security needs, Configure\nAuthentication Policy rules that trigger MFA or single factor authentication (such as login\ncredentials or certificates) based on specific services, applications, and end users. Other ways\nto reduce your attack surface include network segmentation and user groups for allowed\napplications.\nFor administrators only, consider:\nDo you use an external server to centrally manage authorization for all administrative\naccounts? By defining Vendor-Specific Attributes (VSAs) on the external server, you can\nquickly change administrative role assignments through your directory service instead of\nreconfiguring settings on the firewall. VSAs also enable you to specify access domains for\nadministrators of firewalls with multiple virtual systems. SAML, TACACS+, and RADIUS\nsupport external authorization.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n247\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 246,
+      "end": 248
+    },
+    "content_stats": {
+      "char_count": 4382,
+      "word_count": 632
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

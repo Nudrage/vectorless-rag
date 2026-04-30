@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_791",
+  "section_number": "1.21.8.2.3",
+  "header": "Reverse-Path Forwarding",
+  "content": "PIM uses reverse-path forwarding (RPF) to prevent multicast routing loops by leveraging the\nunicast routing table on the virtual router. When the virtual router receives a multicast packet,\nit looks up the source of the multicast packet in its unicast routing table to see if the outgoing\ninterface associated with that source IP address is the interface on which that packet arrived. If\nthe interfaces match, the virtual router duplicates the packet and forwards it out the interfaces\ntoward the multicast receivers in the group. If the interfaces don’t match, the virtual router drops\nthe packet. The unicast routing table is based on the underlying static routes or the interior\ngateway protocol (IGP) your network uses, such as OSPF.\nPIM also uses RPF to build a shortest-path tree to a source, one PIM router hop at a time. The\nvirtual router has the address of the multicast source, so the virtual router selects as its next\nhop back to the source the upstream PIM neighbor that the virtual router would use to forward\nunicast packets to the source. The next hop router does the same thing.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1417\n©2025 Palo Alto Networks, Inc.\nNetworking\nAfter RPF succeeds and the virtual router has a route entry in its multicast routing information\nbase (mRIB), the virtual router maintains source-based tree entries (S,G) and shared tree entries\n(*,G) in its multicast forwarding information base (multicast forwarding table or mFIB). Each entry\nincludes the source IP address, multicast group, incoming interface (RPF interface) and outgoing\ninterface list. There can be multiple outgoing interfaces for an entry because the shortest path\ntree can branch at the router, and the router must forward the packet out multiple interfaces to\nreach receivers of the group that are located down different paths. When the virtual router uses\nthe mFIB to forward a multicast packet, it matches an (S,G) entry before it attempts to match a\n(*,G) entry.\nIf you are advertising multicast source prefixes into BGP (you configured MP-BGP with the IPv4\nAddress Family and the multicast Subsequent Address Family), then the firewall always performs\nthe RPF check on the BGP routes that the firewall received under the multicast Subsequent\nAddress Family.\nView IP Multicast Information to see how to view the mFIB and mRIB entries. Keep in mind that\nthe multicast route table (mRIB) is a separate table from the unicast route table (RIB).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1417,
+      "end": 1418
+    },
+    "content_stats": {
+      "char_count": 2455,
+      "word_count": 401
+    },
+    "hierarchy": {
+      "parent": "PIM",
+      "children": []
+    }
+  }
+}

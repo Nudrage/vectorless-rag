@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_117",
+  "section_number": "6.1",
+  "header": "Create access group",
+  "content": "Deprecated\nCreates an access group.\nCaution: Access groups were deprecated in Tenable Vulnerability Management on February 4th,\n2022. Tenable recommends that customers use access control instead to manage user and group\naccess to resources in Tenable Vulnerability Management. Please update any existing integrations\nContent type\nthat your organization has. For more information about access control, see Access Control in the\nTenable Vulnerability Management User Guide.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the access group you want to create. This name must be:\nUnique within your Tenable Vulnerability Management instance.\nA maximum of 255 characters.\nAlphanumeric, but can include limited special characters (underscore,\ndash, parenthesis, brackets, colon).\nNote: You can add a maximum of 5,000 access groups to an individual\ncontainer.\nboolean\nThis parameter must always be false  or omitted from create requests to\nspecify that the access group is a user-created group. If you submit a\ncreate request with this parameter set to true , the create request fails.\nboolean\nSpecifies whether assets in the access group can be viewed by all or only\nsome users in your organization:\nIf true , all users in your organization have Can View access to the\nassets defined in the rules parameter. Tenable Vulnerability\nManagement ignores any principal parameters in your request.\nIf false , only specified users have Can View access to the assets\ndefined in the rules parameter. You define which users or user groups\nhave access in the principals parameter of the request.\nIf you omit this parameter, Tenable Vulnerability Management sets the\nparameter to false  by default.\nArray of objects\nAn array of asset rules. Tenable Vulnerability Management uses these rules\nto assign assets to the access group. You can specify a maximum of 1,000\nrules for an individual access group. If you specify multiple rules for an\naccess group, Tenable Vulnerability Management assigns an asset to the\naccess group if the asset matches any of the rules. You can only add rules\nto access groups if the all_assets  parameter is set to false .\nArray of objects\nname\nrequired\nall_assets\nall_users\nrules\nrequired\nprincipals\nAn array of principals. Each principal represents a user or user group\nassigned to the access group. You cannot add an access group as a\nprincipal to another access group.\nTenable Vulnerability Management handles data in this array based on the\nall_users  parameter of the request:\nIf all_users  is true , Tenable Vulnerability Management ignores\nany principal data in the request. You can omit this parameter from the\nrequest.\nIf all_users  is false , Tenable Vulnerability Management adds\nthe principal data to the access group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 77,
+      "end": 79
+    },
+    "content_stats": {
+      "char_count": 2823,
+      "word_count": 443
+    },
+    "hierarchy": {
+      "parent": "Access Groups v1",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

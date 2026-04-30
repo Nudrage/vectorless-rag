@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_083",
+  "section_number": "1.18.31",
+  "header": "Threat Feeds",
+  "content": "GET\nURL: https://<vectra_management_ip>/api/v3.4/threatFeeds/\nHeaders:\n“Authorization”: “Token <api-key>”\nResponse:\n{\n\"count\": 1,\n\"next\": null,\n\"previous\": null,\n\"results\": [\n© July 2024 Vectra AI, Inc. | 149\n{\n\"id\": \"40822ff3a8098b4073851996b5735185\",\n\"_rev\": \"2-563284353939596519e8b8a9f058193f\",\n\"name\": \"test-feed-2\",\n\"lastUpdatedBy\": \"api_client_78d7360065524aa9919dd127d56c1d81\",\n\"version\": \"7.8-336-g1de329dc878\",\n\"uploadDate\": \"2023-08-23T15:22:22.563534+00:00\",\n\"lastUpdated\": \"2023-08-31T15:35:23.837079+00:00\",\n\"defaults\": {\n\"indicatorType\": \"Anonymization\",\n\"certainty\": \"Low\",\n\"duration\": 7,\n\"category\": \"cnc\"\n},\n\"uploadResults\": \"{\n'indicatorType': 'Malware Artifacts',\n'observableCount': 2,\n'certainty': 'Low',\n'expiration': '2023-09-07T15:35:23.727684+00:00',\n'category': 'cnc'\n}\",\n\"type\": \"STIX\"\n},\n]\n}\nPOST to create a threatFeed\nURL: https://<vectra_management_ip>/api/v3.4/threatFeeds/\nHeaders:\n“Authorization”: “Token <api-key>”\nBody:\n{\n\"threatFeed\": {\n\"name\":\"test-feed\",\n\"defaults\": {\n\"certainty\":\"High\",\n\"duration\":7,\n\"indicatorType\":\"Anonymization\",\n\"category\":\"cnc\"\n}\n}\n}\nAll the fields shown above are mandatory. See the section on threatFeeds for possible values each label can take.\n© July 2024 Vectra AI, Inc. | 150\nPATCH to update a threatFeed\nURL: https://<vectra_management_ip>/api/v3.4/threatFeeds/<id>\nHeaders:\n“Authorization”: “Token <api-key>”\nBody:\n{\n\"threatFeed\": {\n\"name\":\"test-feed\",\n\"defaults\": {\n\"certainty\":\"High\",\n\"duration\":7,\n\"indicatorType\":\"Anonymization\",\n\"category\":\"cnc\"\n},\n“upload”: {\n“replace_filename”: “test_stix_file.xml”,\n“filename”: “existing_stix_file.xml”\n}\n}\n}\nNote: The replace_filename must be an already uploaded STIX file. This action will delete the former Threat Feed File\nand link the current Threat Feed object to the replacement file.\nPOST to add or replace STIX file to an existing threatFeed\nURL: https://<vectra_management_ip>/api/v3.4/threatFeeds/<id>/\nHeaders:\n“Authorization”: “Token <api-key>”\nBody: Send the STIX file as a multi part form data\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW\n------WebKitFormBoundary7MA4YWxkTrZu0gW\nContent-Disposition: form-data; name=\"file\"; filename=\"stix_test_url_anon.xml\"\nContent-Type: text/xml\n------WebKitFormBoundary7MA4YWxkTrZu0gW—\nResponse Success:\n© July 2024 Vectra AI, Inc. | 151\n{\n\"threatFeed\": {\n\"uploadResults\": {\n\"category\": \"cnc\",\n\"certainty\": \"High\",\n\"expiration\": \"2019-08-27T20:55:29.27Z \",\n\"indicatorType\": \"Anonymization\",\n\"observableCount\": 4\n}\n}\n}\nIf you are using a tool like postman, perform the POST with the body of the POST as “form-data” with Key as “file”\nand value as the selected file from the file system. Do not add a content type header explicitly for postman, since\nthe tool does it automatically.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 148,
+      "end": 151
+    },
+    "content_stats": {
+      "char_count": 2782,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

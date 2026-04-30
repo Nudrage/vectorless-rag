@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_365",
+  "section_number": "16.4",
+  "header": "Update network",
+  "content": "Updates the name or description of a network object.\nNote: The name  body parameter is required when updating the specified network with this\nendpoint. To retrieve the name , use the GET /networks/{network_id} endpoint.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nThe UUID of the network object you want to update. You cannot update the\ndefault network object.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe new name of the network object. This name must be unique within\nyour Tenable Vulnerability Management instance, cannot duplicate the\nname of a previously deleted network, and cannot be default .\nstring\nThe new description of the network object.\ninteger\nThe number of days to wait before assets age out. Assets will be\npermanently deleted if they are not seen on a scan within the specified\nnumber of days.\nMinimum value: 14\nMaximum value: 365\nWarning: If you enable this option, Tenable Vulnerability Management\nimmediately deletes assets in the specified network that have not been\nseen for the specified number of days. All asset records and associated\nvulnerabilities are deleted and cannot be recovered. The deleted assets no\nlonger count towards your license.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 354,
+      "end": 354
+    },
+    "content_stats": {
+      "char_count": 1229,
+      "word_count": 193
+    },
+    "hierarchy": {
+      "parent": "Networks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

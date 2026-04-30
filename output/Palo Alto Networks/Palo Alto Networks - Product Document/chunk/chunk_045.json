@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_045",
+  "section_number": "1.3.8.1",
+  "header": "Isolate the Management Network",
+  "content": "All Palo Alto Networks firewalls provide an out-of-band management port (MGT) that you can\nuse to perform the firewall administration functions. Alternatively, you can choose to use the\nMGT port for initial configuration, and then configure a data port for management access to\nthe firewall. Either way, because the management interface provides access to your security\nconfiguration, you must take the following precautions to safeguard access to this interface:\nDo not enable access to your management interface from the internet or from other\nuntrusted zones inside your enterprise security boundary. This applies whether you use\nthe dedicated management port (MGT) or you configure a data port as your management\ninterface.\nIsolate the management interface on a dedicated management VLAN.\nLimit the source IP addresses allowed in to the management network to those of your\ndedicated management devices, such as a jump server or a bastion host.\nUse a jump server or bastion host (with screen recording) to provide secure access from\nyour corporate network in to your dedicated management network, and require that users\nauthenticate and are authorized to access your management network.\nIf you don’t have a bastion host, use Authentication Policy with multi-factor authentication\n(MFA) to require administrators to successfully authenticate before you allow them to continue\nto the firewall web interface login page or CLI login prompt. This prevents access to the\nmanagement interface using stolen credentials or through vulnerability exploits.\nLimit access to users in your security admin, network admin, or IT user groups, as appropriate\nfor your organization.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n64\n©2025 Palo Alto Networks, Inc.\nGetting Started\nIf you must enable remote access to the management network, require access through a VPN\ntunnel using GlobalProtect. After administrators successfully establish a VPN tunnel into your\nVPN zone, they must still authenticate into the management network through your bastion\nhost.\nDo not use an interface management profile that allows HTTP, HTTPS, Telnet, or SSH on\nthe interface where you have configured a GlobalProtect portal or gateway because this\nconfiguration exposes access to the management interface via the internet. Do not use HTTP\nor Telnet internally because those protocols transmit in cleartext.\nIf you are using a template to deploy a VM-Series firewall that includes a field for restricting\nmanagement access to a specific IP address, make sure to supply a CIDR block that\ncorresponds to your dedicated management IP addresses or network. If necessary, modify\nthe corresponding security group to add additional hosts or networks after the template\nlaunch. Do not make the allowed source network range larger than necessary and do not ever\nconfigure the allowed source as 0.0.0.0/0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 64,
+      "end": 65
+    },
+    "content_stats": {
+      "char_count": 2855,
+      "word_count": 437
+    },
+    "hierarchy": {
+      "parent": "Best Practices for Securing Administrative Access",
+      "children": []
+    }
+  }
+}

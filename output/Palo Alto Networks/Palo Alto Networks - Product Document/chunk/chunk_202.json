@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_202",
+  "section_number": "1.9.15.1",
+  "header": "Revoke a Certificate",
+  "content": "Various circumstances can invalidate a certificate before the expiration date. Some examples are\na change of name, change of association between subject and certificate authority (for example,\nan employee terminates employment), and compromise (known or suspected) of the private key.\nUnder such circumstances, the certificate authority (CA) that issued the certificate must revoke it.\nThe following task describes how to revoke a certificate for which the firewall is the CA.\nSTEP 1 |\nSelect Device > Certificate Management > Certificates > Device Certificates.\nSTEP 2 |\nIf the firewall supports multiple virtual systems, the tab displays a Location drop-down.\nSelect the virtual system to which the certificate belongs.\nSTEP 3 |\nSelect the certificate to revoke.\nSTEP 4 |\nClick Revoke. PAN-OS immediately sets the status of the certificate to revoked and adds the\nserial number to the Online Certificate Status Protocol (OCSP) responder cache or certificate\nrevocation list (CRL). You need not perform a commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 368,
+      "end": 368
+    },
+    "content_stats": {
+      "char_count": 1013,
+      "word_count": 156
+    },
+    "hierarchy": {
+      "parent": "Revoke and Renew Certificates",
+      "children": []
+    }
+  }
+}

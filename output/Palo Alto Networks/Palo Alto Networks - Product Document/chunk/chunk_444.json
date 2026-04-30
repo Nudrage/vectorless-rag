@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_444",
+  "section_number": "1.13.1",
+  "header": "App-ID Overview",
+  "content": "App-ID, a patented traffic classification system only available in Palo Alto Networks firewalls,\ndetermines what an application is irrespective of port, protocol, encryption (SSH or SSL) or\nany other evasive tactic used by the application. It applies multiple classification mechanisms\n—application signatures, application protocol decoding, and heuristics—to your network traffic\nstream to accurately identify applications.\nHere's how App-ID identifies applications traversing your network:\n• Traffic is matched against policy to check whether it is allowed on the network.\n• Signatures are then applied to allowed traffic to identify the application based on unique\napplication properties and related transaction characteristics. The signature also determines if\nthe application is being used on its default port or it is using a non-standard port. If the traffic\nis allowed by policy, the traffic is then scanned for threats and further analyzed for identifying\nthe application more granularly.\n• If App-ID determines that encryption (SSL or SSH) is in use, and a Decryption policy rule is in\nplace, the session is decrypted and application signatures are applied again on the decrypted\nflow.\n• Decoders for known protocols are then used to apply additional context-based signatures to\ndetect other applications that may be tunneling inside of the protocol (for example, Yahoo!\nInstant Messenger used across HTTP). Decoders validate that the traffic conforms to the\nprotocol specification and provide support for NAT traversal and opening dynamic pinholes for\napplications such as SIP and FTP.\n• For applications that are particularly evasive and cannot be identified through advanced\nsignature and protocol analysis, heuristics or behavioral analysis may be used to determine the\nidentity of the application.\nWhen the application is identified, the policy check determines how to treat the application, for\nexample—block, or allow and scan for threats, inspect for unauthorized file transfer and data\npatterns, or shape using QoS.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n801\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 801,
+      "end": 802
+    },
+    "content_stats": {
+      "char_count": 2117,
+      "word_count": 314
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": []
+    }
+  }
+}

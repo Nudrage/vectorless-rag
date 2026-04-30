@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1038",
+  "section_number": "1.24.3.5.3",
+  "header": "Packet-Based Attack Protection",
+  "content": "Packet-based attacks take many forms. Zone Protection profiles check IP, TCP, ICMP, IPv6, and\nICMPv6 packet headers and protect a zone by:\n• Dropping packets with undesirable characteristics.\n• Stripping undesirable options from packets before admitting them to the zone.\nSelect the drop characteristics for each packet type when you Configure Packet Based Attack\nProtection. The best practices for each IP protocol are:\n• IP Drop—Drop Unknown and Malformed packets. Also drop Strict Source Routing and Loose\nSource Routing because allowing these options allows adversaries to bypass Security policy\nrules that use the Destination IP address as the matching criteria. For internal zones only,\ncheck Spoofed IP Address so only traffic with a source address that matches the firewall\nrouting table can access the zone.\n• TCP Drop—Retain the default TCP SYN with Data and TCP SYNACK with Data drops, drop\nMismatched overlapping TCP segment and Split Handshake packets, and strip the TCP\nTimestamp from packets.\nEnabling Rematch Sessions (Device > Setup > Session > Session Settings) is a best\npractice that applies committed newly configured or edited Security Policy rules to\nexisting sessions. However, if you configure Tunnel Content Inspection on a zone\nand Rematch Sessions is enabled, you must also disable Reject Non-SYN TCP (change\nthe selection from Global to No), or else when you enable or edit a Tunnel Content\nInspection policy, the firewall drops all existing tunnel sessions. Create a separate Zone\nProtection profile to disable Reject Non-SYN TCP only on zones that have Tunnel\nContent Inspection policies and only when you enable Rematch Sessions.\n• ICMP Drop—There are no standard best practice settings because dropping ICMP packets\ndepends on how you use ICMP (or if you use ICMP). For example, if you want to block ping\nactivity, you can block ICMP Ping ID 0.\n• IPv6 Drop—If compliance matters, ensure that the firewall drops packets with non-compliant\nrouting headers, extensions, etc.\n• ICMPv6 Drop—If compliance matters, ensure that the firewall drops certain packets if the\npackets don’t match a Security policy rule.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1736,
+      "end": 1736
+    },
+    "content_stats": {
+      "char_count": 2139,
+      "word_count": 337
+    },
+    "hierarchy": {
+      "parent": "Zone Protection Profiles",
+      "children": []
+    }
+  }
+}

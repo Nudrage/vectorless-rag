@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_685",
+  "section_number": "1.19.3.5.1",
+  "header": "Liveness Check",
+  "content": "The liveness check for IKEv2 is similar to Dead Peer Detection (DPD), which IKEv1 uses as the\nway to determine whether a peer is still available.\nIn IKEv2, the liveness check is achieved by any IKEv2 packet transmission or an empty\ninformational message that the gateway sends to the peer at a configurable interval, five seconds\nby default. If necessary, the sender attempts the retransmission up to ten times. If it doesn’t get\na response, the sender closes and deletes the IKE_SA and corresponding CHILD_SAs. The sender\nwill start over by sending out another IKE_SA_INIT message.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1254,
+      "end": 1254
+    },
+    "content_stats": {
+      "char_count": 582,
+      "word_count": 96
+    },
+    "hierarchy": {
+      "parent": "IKEv2",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_386",
+  "section_number": "1.11.17.1",
+  "header": "Configure NetFlow Exports",
+  "content": "To use a NetFlow collector for analyzing the network traffic ingressing firewall interfaces, perform\nthe following steps to configure NetFlow record exports.\nSTEP 1 |\nCreate a NetFlow server profile.\nThe profile defines which NetFlow collectors will receive the exported records and specifies\nexport parameters.\n1.\nSelect Device > Server Profiles > NetFlow and Add a profile.\n2.\nEnter a Name to identify the profile.\n3.\nSpecify the rate at which the firewall refreshes NetFlow Templates in Minutes (default is\n30) and Packets (exported records—default is 20), according to the requirements of your\nNetFlow collector. The firewall refreshes the templates after either threshold is passed.\n4.\nSpecify the Active Timeout, which is the frequency in minutes at which the firewall\nexports records (default is 5).\n5.\nSelect PAN-OS Field Types if you want the firewall to export App-ID and User-ID fields.\n6.\nAdd each NetFlow collector (up to two per profile) that will receive records. For each\ncollector, specify the following:\n• Name to identify the collector.\n• NetFlow Server hostname or IP address.\n• Access Port (default 2055).\n7.\nClick OK to save the profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n675\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 2 |\nAssign the NetFlow server profile to the firewall interfaces that traffic you want to analyze is\ningressing.\nIn this example, you assign the profile to an existing Ethernet interface.\n1.\nSelect Network > Interfaces > Ethernet and click an interface name to edit it.\nYou can export NetFlow records for Layer 3, Layer 2, virtual wire, tap, VLAN,\nloopback, and tunnel interfaces. For aggregate Ethernet interfaces, you can\nexport records for the individual sub-interfaces that data flows through within\nthe group.\n2.\nSelect the NetFlow server profile (NetFlow Profile) you configured and click OK.\nSTEP 3 |\n(Required for PA-7000 Series and PA-5200 Series firewalls) Configure a service route for\nthe interface that the firewall will use to send NetFlow records.\nYou cannot use the management (MGT) interface to send NetFlow records from the PA-7000\nSeries and PA-5200 Series firewalls. For other firewall models, a service route is optional. For\nall firewalls, the interface that sends NetFlow records does not have to be the same as the\ninterface for which the firewall collects the records.\n1.\nSelect Device > Setup > Services.\n2.\n(Firewall with multiple virtual systems) Select one of the following:\n• Global—Select this option if the service route applies to all virtual systems on the\nfirewall.\n• Virtual Systems—Select this option if the service route applies to a specific virtual\nsystem. Set the Location to the virtual system.\n3.\nSelect Service Route Configuration and Customize.\n4.\nSelect the protocol (IPv4 or IPv6) that the interface uses. You can configure the service\nroute for both protocols if necessary.\n5.\nClick Netflow in the Service column.\n6.\nSelect the Source Interface.\nAny, Use default, and MGT are not valid interface options for sending NetFlow records\nfrom PA-7000 Series or PA-5200 Series firewalls.\n7.\nSelect a Source Address (IP address).\n8.\nClick OK twice to save your changes.\nSTEP 4 |\nCommit your changes.\nSTEP 5 |\nMonitor the firewall traffic in a NetFlow collector.\nRefer to your NetFlow collector documentation.\nWhen monitoring statistics, you must match the interface indexes in the NetFlow\ncollector with interface names in the firewall web interface. For details, see Firewall\nInterface Identifiers in SNMP Managers and NetFlow Collectors.\nTo troubleshoot NetFlow delivery issues, use the operational CLI command debug log-\nreceiver netflow statistics.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n676\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 675,
+      "end": 677
+    },
+    "content_stats": {
+      "char_count": 3731,
+      "word_count": 592
+    },
+    "hierarchy": {
+      "parent": "NetFlow Monitoring",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_311",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully creates a managed credential object.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe UUID of the new managed credential object.\n— 400 Returned if Tenable Vulnerability Management encounters invalid JSON in request body.\n— 401\nReturned if Tenable Vulnerability Management cannot authenticate the user account that submitted\nthe request.\n— 403 Returned if you do not have permission to create managed credential objects.\n— 409 Returned if a managed credential object with the same name already exists.\n— 415 Returned if the request payload is in an unsupported format.\ndescription\ntype\nrequired\nsettings\nrequired\npermissions\nuuid\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500\nReturned if Tenable Vulnerability Management encountered an internal server error. Wait a moment,\nand try your request again.\n— 503\nReturned if a Tenable Vulnerability Management service is unavailable. Wait a moment, and try your\nrequest again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 307,
+      "end": 308
+    },
+    "content_stats": {
+      "char_count": 1065,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Create managed credential",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

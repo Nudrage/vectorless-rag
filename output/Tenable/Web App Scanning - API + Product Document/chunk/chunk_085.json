@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_085",
+  "section_number": "31",
+  "header": "List plugins",
+  "content": "Returns a list of plugins used in Tenable Web App Scanning scans.\nRequires the Basic [16] user role or the WAS.TOGGLE_WAS.USE  custom role privilege. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\ninteger <int32>\n[ 0 .. 200 ]\nDefault: 10\nThe number of records to retrieve. If this parameter is omitted, Tenable Web\nApp Scanning uses the default value of 10 . The minimum value is 0  and\nthe maximum value is 200 . If you need to retrieve more than 200 records,\nuse the offset value to iterate through page responses.\ninteger <int32>\n>= 0\nDefault: 0\nlimit\noffset\nContent type\nThe starting record to retrieve. If this parameter is omitted, Tenable Web\nApp Scanning uses the default value of 0 .\nstring\nExample: sort=family:asc;name:desc\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nsecond ( asc  or desc ). For example, plugin_id:asc  would sort\nresults by the plugin_id  field in ascending order.\nIf you specify multiple fields, the fields must be separated by commas. For\nexample, family:asc;name:desc  would first sort results by the\nfamily  field in ascending order and then by the name  field in\ndescending order.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 110,
+      "end": 111
+    },
+    "content_stats": {
+      "char_count": 1228,
+      "word_count": 209
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

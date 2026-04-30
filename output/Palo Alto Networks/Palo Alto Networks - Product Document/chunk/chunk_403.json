@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_403",
+  "section_number": "1.12.2.2.9",
+  "header": "Client Probing",
+  "content": "Palo Alto Networks strongly recommends disabling client probing because it is not a\nrecommended method of obtaining User-ID information in a high-security network.\nPalo Alto Networks does not recommend using client probing due to the following potential risks:\n• Because client probing trusts data reported back from the endpoint, it can expose you to\nsecurity risks when misconfigured. If you enable it on external, untrusted interfaces, this\nwould cause the agent to send client probes containing sensitive information such as the\nusername, domain name, and password hash of the User-ID agent service account outside\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n693\n©2025 Palo Alto Networks, Inc.\nUser-ID\nof your network. If you do not configure the service account correctly, the credentials could\npotentially be exploited by an attacker to penetrate the network to gain further access.\n• Client probing was designed for legacy networks where most users were on Windows\nworkstations on the internal network, but is not ideal for today’s more modern networks that\nsupport a roaming and mobile user base on a variety of devices and operating systems.\n• Client probing can generate a large amount of network traffic (based on the total number of\nmapped IP addresses).\nInstead, Palo Alto Networks strongly recommends using the following alternate methods for user\nmapping:\n• Using more isolated and trusted sources, such as domain controllers and integrations with\nSyslog or the XML API, to safely capture user mapping information from any device type or\noperating system.\n• Configuring Authentication Policy and Authentication Portal to ensure that you only allow\naccess to authorized users.\nThe User-ID agent supports two types of client probing:\n• NetBIOS probing, which uses the Windows User-ID agent.\n• WMI probing, which uses either the PAN-OS integrated User-ID agent or the Windows User-\nID agent.\nClient probing is not recommended as a user mapping method, but if you plan to\nenable it, Palo Alto Networks strongly recommends using WMI probing over NetBIOS\nprobing.\nIn a Microsoft Windows environment, you can configure the User-ID agent to probe client\nsystems using Windows Management Instrumentation (WMI) or NetBIOS probing at regular\nintervals to verify that an existing user mapping is still valid or to obtain the username for an IP\naddress that is not yet mapped.\nIf you do choose to enable probing in your trusted zones, the agent will probe each learned IP\naddress periodically (every 20 minutes by default, but this is configurable) to verify that the same\nuser is still logged in. In addition, when the firewall encounters an IP address for which it has no\nuser mapping, it will send the address to the agent for an immediate probe.\nSee Configure User Mapping Using the Windows User-ID Agent or Configure User Mapping\nUsing the PAN-OS Integrated User-ID Agent for details.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n694\n©2025 Palo Alto Networks, Inc.\nUser-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 693,
+      "end": 695
+    },
+    "content_stats": {
+      "char_count": 2972,
+      "word_count": 475
+    },
+    "hierarchy": {
+      "parent": "User Mapping",
+      "children": []
+    }
+  }
+}

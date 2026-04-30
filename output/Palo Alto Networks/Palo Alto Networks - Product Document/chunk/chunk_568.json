@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_568",
+  "section_number": "1.16.14",
+  "header": "Verify Decryption",
+  "content": "After you configure a best practice decryption profile and apply it to traffic, you can check both\nthe Decryption logs (introduced in PAN-OS 10.0) and the Traffic logs to verify that the firewall is\ndecrypting the traffic that you intend to decrypt and that the firewall is not decrypting the traffic\nthat you don’t want to decrypt. This topic shows you how to check decryption using Traffic logs.\nIn addition, follow post-deployment decryption best practices to maintain the deployment.\nView Decrypted Traffic Sessions—Filter the Traffic Logs (Monitor > Logs > Traffic) using the\nfilter ( flags has proxy ).\nThis filter displays only logs in which the SSL proxy flag is on, meaning only decrypted traffic—\nevery log entry has the value yes in the Decrypted column.\nYou can filter the traffic in a more granular fashion by adding more terms to the filter.\nFor example, you can filter for decrypted traffic going only to the destination IP address\n99.84.224.105 by adding the filter ( addr.dst in 99.84.224.105 ):\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1043\n©2025 Palo Alto Networks, Inc.\nDecryption\nView SSL Traffic Sessions That Are Not Decrypted—Filter the Traffic Logs (Monitor > Logs >\nTraffic) using the filter ( not flags has proxy ) and ( app eq ssl ).\nThis filter displays only logs in which the SSL proxy flag is off (meaning only encrypted traffic)\nand the traffic is SSL traffic; every log entry has the value no in the Decrypted column and the\nvalue ssl in the Application column.\nSimilar to the example for viewing decrypted traffic logs, you can add terms to filter the traffic\nthat you don’t decrypt in a more granular fashion.\nView The Log for a Particular Session—To view the Traffic log for a particular session, filter on\nthe Session ID.\nFor example, to see the log for a session with the ID 137020, filter using the term\n( sessionid eq 137020). You can find the ID number in the Session ID column in the\nlog output, as shown in the previous screens. If the Session ID column isn’t displayed, add the\ncolumn to the output.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1044\n©2025 Palo Alto Networks, Inc.\nDecryption\nView All TLS and SSH Traffic—Filter the Traffic Logs (Monitor > Logs > Traffic) to view both\ndecrypted and undecrypted TLS and SSH traffic, use the filter ( s_encrypted neq 0 ):\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1045\n©2025 Palo Alto Networks, Inc.\nDecryption\nDrill Down Into the Details—To view more information about a particular log entry, click the\nmagnifying glass to see a detailed log view. For example, for Session ID 137020 (shown in the\nprevious bullet), the detailed log looks like this:\nThe box for the Decrypted flag provides a second way to verify if traffic was decrypted.\nYou can also take upstream and downstream packet captures of decrypted traffic to view\nhow the firewall processes SSL traffic and takes actions on packets, or perform deep packet\ninspection.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1046\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1043,
+      "end": 1047
+    },
+    "content_stats": {
+      "char_count": 3004,
+      "word_count": 509
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": []
+    }
+  }
+}

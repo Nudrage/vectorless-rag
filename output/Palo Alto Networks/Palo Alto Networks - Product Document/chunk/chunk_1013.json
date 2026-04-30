@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1013",
+  "section_number": "1.23.3.1",
+  "header": "External Zones and Shared Gateway",
+  "content": "A shared gateway is an interface that multiple virtual systems share in order to communicate over\nthe Internet. Each virtual system requires an External Zone, which acts as an intermediary, for\nconfiguring security policies that allow or deny traffic from the virtual system’s internal zone to\nthe shared gateway.\nThe shared gateway uses a single virtual router to route traffic for all virtual systems. A shared\ngateway is used in cases when an interface does not need a full administrative boundary around it,\nor when multiple virtual systems must share a single Internet connection. This second case arises\nif an ISP provides an organization with only one IP address (interface), but multiple virtual systems\nneed external communication.\nUnlike the behavior between virtual systems, security policy and App-ID evaluations are not\nperformed between a virtual system and a shared gateway. That is why using a shared gateway to\naccess the Internet involves less overhead than creating another virtual system to do so.\nIn the following figure, three customers share a firewall, but there is only one interface accessible\nto the Internet. Creating another virtual system would add the overhead of App-ID and security\npolicy evaluation for traffic being sent to the interface through the added virtual system. To avoid\nadding another virtual system, the solution is to configure a shared gateway, as shown in the\nfollowing diagram.\nThe shared gateway has one globally-routable IP address used to communicate with the outside\nworld. Interfaces in the virtual systems have IP addresses too, but they can be private, non-\nroutable IP addresses.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1708\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nYou will recall that an administrator must specify whether a virtual system is visible to other\nvirtual systems. Unlike a virtual system, a shared gateway is always visible to all of the virtual\nsystems on the firewall.\nA shared gateway ID number appears as sg<ID> on the web interface. It is recommended that you\nname your shared gateway with a name that includes its ID number.\nWhen you add objects such as zones or interfaces to a shared gateway, the shared gateway\nappears as an available virtual system in the vsys menu.\nA shared gateway is a limited version of a virtual system; it supports NAT and policy-based\nforwarding (PBF), but does not support Security, DoS policies, QoS, Decryption, Application\nOverride, or Authentication policies.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1708,
+      "end": 1709
+    },
+    "content_stats": {
+      "char_count": 2479,
+      "word_count": 396
+    },
+    "hierarchy": {
+      "parent": "Shared Gateway",
+      "children": []
+    }
+  }
+}

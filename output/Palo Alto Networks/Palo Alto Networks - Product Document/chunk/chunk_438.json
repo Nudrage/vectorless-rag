@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_438",
+  "section_number": "1.12.9.2",
+  "header": "Insert Username in HTTP Headers",
+  "content": "When you configure a secondary enforcement appliance with your Palo Alto Networks firewall\nto enforce user-based policy, the secondary appliance may not have the IP address-to-username\nmapping from the firewall. Transmitting user information to downstream appliances may require\ndeployment of additional appliances such as proxies or negatively impact the user’s experience\n(for example, users having to log in multiple times). By sharing the user's identity in the HTTP\nheaders, you can enforce user-based policy without negatively impacting the user's experience or\ndeploying additional infrastructure.\nWhen you configure this feature, apply the URL profile to your Security policy, and commit your\nchanges, the firewall:\n1. Populates the user and domain values with the format of the primary username in the group\nmapping for the source user.\n2. Encodes this information using Base64.\n3. Adds the Base64-encoded header to the payload.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n789\n©2025 Palo Alto Networks, Inc.\nUser-ID\n4. Routes the traffic to the downstream appliance.\nIf you want to include the username and domain only when the user accesses specific domains,\nconfigure a domain list and the firewall inserts the header only when a domain in the list matches\nthe Host header of the HTTP request.\nTo share user information with downstream appliances, you must first enable User-ID and\nconfigure group mapping.\nTo include the username and domain in the header, the firewall requires the IP address-to-\nusername mapping for the user. If the user is not mapped, the firewall inserts unknown in\nBase64 encoding for both the domain and username in the header.\nTo include the username and domain in headers for HTTPS traffic, you must first create a\ndecryption profile to decrypt HTTPS traffic.\nThis feature supports forward-proxy decryption traffic.\nSTEP 1 |\nCreate or edit a URL Filtering Profile.\nThe firewall does not insert headers if the action for the URL filtering profile is block\nfor the domain.\nSTEP 2 |\nCreate or edit an HTTP header insertion entry using predefined types.\nYou can define up to five headers for each profile.\nSTEP 3 |\nSelect Dynamic Fields as the header Type.\nSTEP 4 |\nAdd the Domains where you want insert headers. When the user accesses a domain in the\nlist, the firewall inserts the specified header.\nSTEP 5 |\nAdd a new Header or select X-Authenticated-User to edit it.\nSTEP 6 |\nSelect a header Value format (either ($domain)\\($user) or WinNT://($domain)/\n($user)) or enter your own format using the ($domain) and ($user) dynamic tokens\n(for example, ($user)@($domain) for UserPrincipalName).\nDo not use the same dynamic token (either ($user) or ($domain)) more than once\nper value.\nEach value can be up to 512 characters. The firewall populates the ($user) and ($domain)\ndynamic tokens using the primary username in the group mapping profile. For example:\n• If the primary username is the sAMAccountName, the value for ($user) is the\nsAMAccountName and the value for ($domain) is the NetBios domain name.\n• If the primary username is the UserPrincipalName, the ($user) the user account name\n(prefix) and the ($domain) is the Domain Name System (DNS) name.\nSTEP 7 |\n(Optional) Select Log to enable logging for the header insertion.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n790\n©2025 Palo Alto Networks, Inc.\nUser-ID\nSTEP 8 |\nApply the URL filtering profile to the security policy rule for HTTP or HTTPS traffic.\nSTEP 9 |\nSelect OK twice to confirm the HTTP header configuration.\nSTEP 10 | Commit your changes.\nSTEP 11 | Verify the firewall includes the username and domain in the HTTP headers.\n• Use the show user user-ids all command to verify the group mapping is correct.\n• Use the show counter global name ctd_header_insert command to view the\nnumber of HTTP headers inserted by the firewall.\n• If you configured logging in Step 7, check the logs for the inserted Base64 encoded\npayload (for example, corpexample\\testuser would appear in the logs as\nY29ycGV4YW1wbGVcdGVzdHVzZXI=).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 789,
+      "end": 791
+    },
+    "content_stats": {
+      "char_count": 4014,
+      "word_count": 650
+    },
+    "hierarchy": {
+      "parent": "Deploy User-ID in a Large-Scale Network",
+      "children": []
+    }
+  }
+}

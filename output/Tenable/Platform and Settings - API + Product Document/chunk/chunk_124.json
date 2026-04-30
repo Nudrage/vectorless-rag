@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_124",
+  "section_number": "6.3",
+  "header": "Update access group",
+  "content": "Deprecated\nModifies an access group. This method overwrites the existing data.\nCaution: Access groups were deprecated in Tenable Vulnerability Management on February 4th,\n2022. Tenable recommends that customers use access control instead to manage user and group\naccess to resources in Tenable Vulnerability Management. Please update any existing integrations\nthat your organization has. For more information about access control, see Access Control in the\nTenable Vulnerability Management User Guide.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nThe UUID for the access group you want to modify.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the access group you want to modify.\nboolean\nSpecifies whether the access group you want to modify is the All Assets\ngroup or a user-defined group:\nIf you want to refine membership in the All Assets access group (the\nonly change you can make to the All Assets group), this parameter\nmust be true . Tenable Vulnerability Management ignores any rules\nparameters in your request, but overwrrites existing principals\nparameters with those in the request based on the all_users  and\nprincipals parameters in the request.\nIf you want to modify a user-defined access group, this parameter\nmust be false . Tenable Vulnerability Management overwrites the\nexisting rules parameters with the rules parameters you specify in this\nrequest, and overwrites existing principals parameters based on the\nall_users  and principals parameters in the request.\nboolean\nSpecifies whether assets in the access group can be viewed by all or only\nsome users in your organization:\nid\nrequired\nname\nall_assets\nall_users\nIf true , all users in your organization have Can View access to the\nassets defined in the rules parameter. Tenable Vulnerability\nManagement ignores any principal parameters in your request.\nIf false , only specified users have Can View access to the assets\ndefined in the rules parameter. You define which users or user groups\nhave access in the principals parameter of the request.\nIf you omit this parameter, Tenable Vulnerability Management sets the\nparameter to false  by default.\nArray of objects\nAn array of asset rules. Tenable Vulnerability Management uses these rules\nto assign assets to the access group. You can specify a maximum of 1,000\nrules for an individual access group. If you specify multiple rules for an\naccess group, Tenable Vulnerability Management assigns an asset to the\naccess group if the asset matches any of the rules. You can only add rules\nto access groups if the all_assets  parameter is set to false .\nArray of objects\nAn array of principals. Each principal represents a user or user group\nassigned to the access group. You cannot add an access group as a\nprincipal to another access group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 87,
+      "end": 88
+    },
+    "content_stats": {
+      "char_count": 2824,
+      "word_count": 447
+    },
+    "hierarchy": {
+      "parent": "Access Groups v1",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_078",
+  "section_number": "1.18.27",
+  "header": "Vectra Match Rules",
+  "content": "GET\nUsed to retrieve information about a Vectra Match ruleset, given its UUID\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/rules\nHeaders:\n“Authorization”: “Token <api-key>”\nQuery Params:\n{“uuid”:”<uuid>”}\nResponse:\nStatus Code: 200\n{\n© July 2024 Vectra AI, Inc. | 142\n\"device_serials\": [],\n\"hashsum\": \"e5227116937f484e3044ba1f28d6053edb33fc565581d0fda73b587d6a2bfed9\",\n\"name\": \"valid_rules.rules\",\n\"notes\": {\n\"creator\": \"vectra\",\n\"description\": \"test note\"\n},\n\"timestamp\": \"2023-02-01T01:23:45.123456+00:00\",\n\"uuid\": \"6aea451c-4156-4ac6-bbeb-c9e0b16b1da5\"\n}\nDELETE\nUsed to delete a Vectra Match ruleset\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/rules\nHeaders:\n“Authorization”: “Token <api-key>”\nRequired Request JSON Body:\n{“uuid”:”<uuid>”}\nResponse:\nStatus code: 200\n{\n\"details\": \"success\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 141,
+      "end": 142
+    },
+    "content_stats": {
+      "char_count": 821,
+      "word_count": 81
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

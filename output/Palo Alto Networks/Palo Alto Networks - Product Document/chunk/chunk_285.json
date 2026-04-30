@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_285",
+  "section_number": "1.11.5.4",
+  "header": "Take a Threat Packet Capture",
+  "content": "To configure the firewall to take a packet capture (pcap) when it detects a threat, enable packet\ncapture on Antivirus, Anti-Spyware, and Vulnerability Protection security profiles.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n510\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 1 |\nEnable the packet capture option in the security profile.\nSome security profiles allow you to define a single-packet capture or an extended-capture. If\nyou choose extended-capture, define the capture length. This will allow the firewall to capture\nmore packets to provide additional context related to the threat.\nIf the action for a given threat is allow, the firewall does not trigger a Threat log and\ndoes not capture packets. If the action is alert, you can set the packet capture to\nsingle-packet or extended-capture. All blocking actions (drop, block, and reset actions)\ncapture a single packet. The content package on the device determines the default\naction.\n1.\nSelect Objects > Security Profiles and enable the packet capture option for the\nsupported profiles as follows:\n• Antivirus—Select a custom antivirus profile and in the Antivirus tab select the Packet\nCapture check box.\n• Anti-Spyware—Select a custom Anti-Spyware profile, click the DNS Signatures tab\nand in the Packet Capture drop-down, select single-packet or extended-capture.\n• Vulnerability Protection—Select a custom Vulnerability Protection profile and in the\nRules tab, click Add to add a new rule, or select an existing rule. Set Packet Capture\nto single-packet or extended-capture.\nIf the profile has signature exceptions defined, click the Exceptions tab and\nin the Packet Capture column for a signature, set single-packet or extended-\ncapture.\n2.\n(Optional) If you selected extended-capture for any of the profiles, define the extended\npacket capture length.\n1. Select Device > Setup > Content-ID and edit the Content-ID Settings.\n2. In the Extended Packet Capture Length (packets) section, specify the number of\npackets that the firewall will capture (range is 1-50; default is 5).\n3. Click OK.\nSTEP 2 |\nAdd the security profile (with packet capture enabled) to a Security Policy rule.\n1.\nSelect Policies > Security and select a rule.\n2.\nSelect the Actions tab.\n3.\nIn the Profile Settings section, select a profile that has packet capture enabled.\nFor example, click the Antivirus drop-down and select a profile that has packet capture\nenabled.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n511\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 3 |\nView/export the packet capture from the Threat logs.\n1.\nSelect Monitor > Logs > Threat.\n2.\nIn the log entry that you are interested in, click the green packet capture icon\nin the\nsecond column. View the packet capture directly or Export it to your system.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 510,
+      "end": 512
+    },
+    "content_stats": {
+      "char_count": 2757,
+      "word_count": 437
+    },
+    "hierarchy": {
+      "parent": "Take Packet Captures",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_953",
+  "section_number": "1.22.9.3",
+  "header": "View Rules by Tag Group",
+  "content": "View your policy rulebase as tag groups to visually group rules based on the tagging structure\nyou created. In this view, you can perform operational procedures such as adding, deleting,\nand moving the rules in the selected tag group more easily. Viewing the rulebase as tag groups\nmaintains the rule evaluation order and a single tag may appear multiple times throughout the\nrulebase to visually preserve the rule hierarchy.\nYou must create the tag before you can assign it as a group tag on a rule. Policy rules that are\nalready tagged on upgrade to PAN-OS 9.0 have the first tag automatically assigned as the Group\ntag. Before you upgrade to PAN-OS 9.0, review the tagged rules in your rulebase to ensure rules\nare correctly grouped. You must manually edit each tag rule and configure the correct Group tag if\nyour rules are grouped incorrectly after you upgrade to PAN-OS 9.0.\nSTEP 1 |\nLaunch the Web Interface.\nSTEP 2 |\nCreate and Apply Tags you want to use for grouping rules.\nSTEP 3 |\nAssign a policy rule to a tag group.\n1.\nCreate a policy rule. Refer to Policy for more information on creating policy rules.\n2.\nIn the Group Rules by Tag field, select the tag from the drop-down and click OK.\n3.\nCommit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1628\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 4 |\nView your policy rulebase as groups.\n1.\n(Panorama only) From the Device Group, select the device group rulebase to view or\nview all Shared rules.\n2.\nClick Policies and select the rulebase where you created the rules in Step 2.\n3.\nSelect the View Rulebase as Groups option (at the bottom).\nRules not assigned a tag group display as None.\nSTEP 5 |\nPerform Group operations as needed.\n1.\nClick Group to perform group operations for rules in the selected tag group.\n• (Panorama only) Move rules in group to a different rulebase or device group—Move\nall policy rules in the selected tag group to the Pre-Rulebase or Post-Rulebase or\nmove them to a different device group.\n• Change group of all rules—Move all rules in the selected tag group to a different tag\ngroup.\n• Move all rules in group—Move all rules in the selected tag group to change the rule\npriority order.\n• Delete all rules in group—Delete all rules in the selected tag group.\n• Clone all rules in group—Clone all rules in the selected tag group.\n2.\nCommit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1629\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1628,
+      "end": 1630
+    },
+    "content_stats": {
+      "char_count": 2431,
+      "word_count": 430
+    },
+    "hierarchy": {
+      "parent": "Use Tags to Group and Visually Distinguish Objects",
+      "children": []
+    }
+  }
+}

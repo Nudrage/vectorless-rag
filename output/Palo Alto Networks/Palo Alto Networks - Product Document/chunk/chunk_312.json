@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_312",
+  "section_number": "1.11.7.4",
+  "header": "Export Logs",
+  "content": "You can export the contents of a log type to a comma-separated value (CSV) formatted report. By\ndefault, the report contains up to 2,000 rows of log entries.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n528\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 1 |\nSet the number of rows to display in the report.\n1.\nSelect Device > Setup > Management, then edit the Logging and Reporting Settings.\n2.\nClick the Log Export and Reporting tab.\n3.\nEdit the number of Max Rows in CSV Export (up to 1048576 rows).\n4.\nClick OK.\nSTEP 2 |\nDownload the log.\n1.\nClick Export to CSV (\n). A progress bar showing the status of the download appears.\n2.\nWhen the download is complete, click Download file to save a copy of the log to your\nlocal folder. For descriptions of the column headers in a downloaded log, refer to Syslog\nField Descriptions.\nNext Step...\nSchedule Log Exports to an SCP or FTP Server.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 528,
+      "end": 529
+    },
+    "content_stats": {
+      "char_count": 881,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "View and Manage Logs",
+      "children": []
+    }
+  }
+}

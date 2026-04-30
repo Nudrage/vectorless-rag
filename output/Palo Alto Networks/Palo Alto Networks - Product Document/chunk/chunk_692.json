@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_692",
+  "section_number": "1.19.4.1.1",
+  "header": "Export a Certificate for a Peer to Access Using Hash and URL",
+  "content": "IKEv2 supports Hash and URL Certificate Exchange as a method of having the peer at the remote\nend of the tunnel fetch the certificate from a server where you have exported the certificate.\nPerform this task to export your certificate to that server. You must have already created a\ncertificate using Device > Certificate Management.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1261\n©2025 Palo Alto Networks, Inc.\nVPNs\nSTEP 1 |\nSelect Device > Certificates, and if your platform supports multiple virtual systems, for\nLocation, select the appropriate virtual system.\nSTEP 2 |\nOn the Device Certificates tab, select the certificate to Export to the server.\nThe status of the certificate should be valid, not expired. The firewall will not stop you\nfrom exporting an invalid certificate.\nSTEP 3 |\nFor File Format, select Binary Encoded Certificate (DER).\nSTEP 4 |\nLeave Export private key clear. Exporting the private key is unnecessary for Hash and URL.\nSTEP 5 |\nClick OK.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1261,
+      "end": 1262
+    },
+    "content_stats": {
+      "char_count": 967,
+      "word_count": 160
+    },
+    "hierarchy": {
+      "parent": "Set Up an IKE Gateway",
+      "children": []
+    }
+  }
+}

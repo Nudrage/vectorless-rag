@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_320",
+  "section_number": "14.4",
+  "header": "Update managed credential",
+  "content": "Updates a managed credential object.\nNote: You cannot use this endpoint to update the credential type. If you create a managed credential\nwith the incorrect type, create a new managed credential with the correct credential type, and delete\nthe incorrect managed credential.\nRequires Can Edit [64] credential permissions. See Permissions.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nThe UUID of the managed credential object you want to update.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe new name of the managed credential object. This name must be\nunique within your Tenable Vulnerability Management instance.\nstring\nThe new description of the managed credential object.\nboolean\nA value specifying if the credential is managed ( false ) versus stored in a\nscan or policy configuration ( true ). You can only set this parameter from\ntrue  to false . You cannot set this parameter to true . If you omit\nthis parameter, the value defaults to false .\nobject\nThe configuration settings for the credential. The parameters of this object\nvary depending on the credential type. For more information, see Determine\nSettings for a Credential Type.\nNote: This form displays limited parameters that support a Windows type\nof credential that uses password authentication.\nArray of objects\nUser permissions for the managed credential.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 315,
+      "end": 316
+    },
+    "content_stats": {
+      "char_count": 1327,
+      "word_count": 206
+    },
+    "hierarchy": {
+      "parent": "Credentials",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

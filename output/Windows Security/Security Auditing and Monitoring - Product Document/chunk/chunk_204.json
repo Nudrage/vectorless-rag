@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_204",
+  "section_number": "9.6",
+  "header": "4952(F): Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the",
+  "content": "rule will be enforced.\nWhen you create or edit a Windows Firewall rule, the settings that you can include depend upon the version of Windows you use when creating the rule. As new settings are added to\nlater versions of Windows or to service packs for existing versions of Windows, the version number of the rules processing engine is updated, and that version number is stamped into\nrules that are created by using that version of Windows. For example, Windows Vista produces firewall rules that are stamped with version \"v2.0\". Future versions of Windows might use\n\"v2.1\", or \"v3.0\" to indicate, respectively, minor or major changes and additions.\nIf you create a firewall rule on a newer version of Windows that references firewall settings that are not available on earlier versions of Windows, and then try to deploy that rule to\ncomputers running the earlier version of Windows, the firewall engine produces this error to indicate that it cannot process the rule.\nThe only solution is to remove the incompatible rule, and then deploy a compatible rule.\nThere is no example of this event in this document.\nEvent Schema:\nParts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the rule will be enforced.\n%t\nProfile:%t%1\nPartially Ignored Rule:\n© 2016 Microsoft. All rights reserved.\n626\n%tID:%t%2\n%tName:%t%3\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 626,
+      "end": 627
+    },
+    "content_stats": {
+      "char_count": 1486,
+      "word_count": 245
+    },
+    "hierarchy": {
+      "parent": "Policy Change",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_261",
+  "section_number": "1.11.2.2",
+  "header": "ACC Tabs",
+  "content": "The ACC includes the following predefined tabs for viewing network activity, threat activity, and\nblocked activity.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n471\n©2025 Palo Alto Networks, Inc.\nMonitoring\nTab\nDescription\nNetwork Activity\nDisplays an overview of traffic and user activity on your network\nincluding:\n• Top applications in use\n• Top users who generate traffic (with a drill down into the bytes,\ncontent, threats or URLs accessed by the user)\n• Most used security rules against which traffic matches occur\nIn addition, you can also view network activity by source or\ndestination zone, region, or IP address, ingress or egress interfaces,\nand GlobalProtect host information such as the operating systems\nof the devices most commonly used on the network.\nThreat Activity\nDisplays an overview of the threats on the network, focusing on\nthe top threats: vulnerabilities, spyware, viruses, hosts visiting\nmalicious domains or URLs, top WildFire submissions by file type\nand application, and applications that use non-standard ports. The\nCompromised Hosts widget in this tab (the widget is supported\non some platforms only), supplements detection with better\nvisualization techniques; it uses the information from the correlated\nevents tab (Automated Correlation Engine > Correlated Events) to\npresent an aggregated view of compromised hosts on your network\nby source users/IP addresses and sorted by severity.\nBlocked Activity\nFocuses on traffic that was prevented from coming into the\nnetwork. The widgets in this tab allow you to view activity denied\nby application name, username, threat name, blocked content—files\nand data that were blocked by a file blocking profile. It also lists the\ntop security rules that were matched on to block threats, content,\nand URLs.\nTunnel Activity\nDisplays the activity of tunnel traffic that the firewall inspected\nbased on your tunnel inspection policies. Information includes\ntunnel usage based on tunnel ID, monitor tag, user, and tunnel\nprotocols such as Generic Routing Encapsulation (GRE), General\nPacket Radio Service (GPRS) Tunneling Protocol for User Data\n(GTP-U), and non-encrypted IPSec.\nGlobalProtect Activity\nDisplays an overview of user activity in your GlobalProtect\ndeployment. Information includes the number of users and number\nof times users connected, the gateways to which users connected,\nthe number of connection failures and the failure reason, a\nsummary of authentication methods and GlobalProtect app\nversions used, and the number of endpoints that are quarantined.\nIn addition, this tab displays a chart view summary of devices\nthat have been quarantined. Use the toggle at the top of the\nchart to view the quarantined devices by the actions that caused\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n472\n©2025 Palo Alto Networks, Inc.\nMonitoring\nTab\nDescription\nGlobalProtect to quarantine the device, the reason GlobalProtect\nquarantined the device, and the location of the quarantined devices.\nSSL Activity\nDisplays an overview of TLS/SSL decryption activity on the firewall.\nInformation includes successful and unsuccessful decryption\nactivity in your network, decryption failure reasons such as\nprotocol, certificate, and version issues, TLS versions, key exchange\nalgorithms, and the amount and type of decrypted and undecrypted\ntraffic.\nUse the ACC information to evaluate how decryption is working on\nyour network and then use the Decryption Log to drill down into\ndetails.\nYou can also Interact with the ACC to create customized tabs with custom layout and widgets\nthat meet your network monitoring needs, export the tab and share with another administrator.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 471,
+      "end": 473
+    },
+    "content_stats": {
+      "char_count": 3632,
+      "word_count": 548
+    },
+    "hierarchy": {
+      "parent": "Use the Application Command Center",
+      "children": []
+    }
+  }
+}

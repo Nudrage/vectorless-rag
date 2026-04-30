@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_121",
+  "section_number": "6.2",
+  "header": "List access groups",
+  "content": "Deprecated\nLists access groups without associated rules.\nCaution: Access groups were deprecated in Tenable Vulnerability Management on February 4th,\n2022. Tenable recommends that customers use access control instead to manage user and group\naccess to resources in Tenable Vulnerability Management. Please update any existing integrations\nthat your organization has. For more information about access control, see Access Control in the\nTenable Vulnerability Management User Guide.\nRequires the Basic [16] user role to list access groups to which you are assigned. Requires the\nAdministrator [64] user role to list all access groups for your organization. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring\nA filter condition in the following format: field:operator:value .\nFor a list of possible fields and operators, use the GET /access-\ngroups/filters endpoint. You can specify multiple f  parameters,\nseparated by ampersand (&) characters. If you specify multiple f\nparameters, use the ft  parameter to specify how Tenable\nVulnerability Management applies the multiple filter conditions.\nstring\nIf multiple f  parameters are present, specifies whether Tenable\nVulnerability Management applies AND  or OR  to conditions.\nSupported values are and  and or . If you omit this parameter\nwhen using multiple f  parameters, Tenable Vulnerability\nManagement applies AND  by default.\nstring\nThe search value that Tenable Vulnerability Management applies\nacross the wildcard fields. Wildcard fields are specified in the wf\nparameter.\nstring\nA comma-separated list of fields where Tenable Vulnerability\nManagement applies the search value specified in the w  parameter.\nFor a list of supported wildcard fields, use the GET /access-\ngroups/filters endpoint.\nboolean\nSpecifies whether or not to include the rules  and principals\nobjects in the response. Tenable Vulnerability Management defaults\nto false  if this parameter is omitted.\ninteger <int32>\nf\nft\nw\nwf\nfullypopulateresponse\nlimit\nThe number of records to retrieve.\ninteger <int32>\nThe starting record to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 0 .\nstring\nThe field you want to use to sort the results by along with the sort\norder. The field is specified first, followed by a colon, and the order is\nspecified second ( asc  or desc ). For example, name:desc\nwould sort results by the name  field in descending order.\nIf you specify multiple fields, the fields must be separated by\ncommas. For example, name:desc,created_at:asc  would first\nsort results by the name  field in descending order and then by the\ncreated_at  field in ascending order.\nFor a list of supported sort fields, use the GET /access-groups/filters\nendpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 83,
+      "end": 85
+    },
+    "content_stats": {
+      "char_count": 2740,
+      "word_count": 410
+    },
+    "hierarchy": {
+      "parent": "Access Groups v1",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

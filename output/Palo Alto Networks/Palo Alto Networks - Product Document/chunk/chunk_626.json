@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_626",
+  "section_number": "1.17.15.2",
+  "header": "Wildcard Guidelines for URL Category Exception Lists",
+  "content": "You can use asterisks (*) and carets (^) in URL category exception lists to configure a single entry\nto match multiple subdomains, domains, top-level domains (TLD), or pages without specifying\nexact URLs.\nAdd a trailing slash (/) to domain entries to ensure the firewall ignores matches to the right\nof the domain. For the trailing slash to have an impact, an entry must not end in a *.\nHow to Use Asterisk (*) and Caret (^) Wildcards\nThe following characters are token separators: . / ? & = ; +. Every string separated by one\nor two of these characters is a token. Use wildcard characters as token placeholders to indicate\nthat a specific token can contain any value. In the entry docs.paloaltonetworks.com, the\ntokens are “docs”, “paloaltonetworks”, and “com”.\nThe following table describes how asterisks and carets work and provides examples.\n*\n^\nIndicates one or more variable subdomains,\ndomains, TLDs, or subdirectories.\nCan use asterisk after trailing slash, for\nexample, example.com/*.\nEx: *.domain.com matches\ndocs.domain.com and\nabc.xyz.domain.com.\nIndicates one variable subdomain, root\ndomain, or TLD.\nCannot use caret after . The following entry is\ninvalid: example.com/^.\nEx: ^.domain.com matches\ndocs.domain.com and\nblog.domain.com.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1156\n©2025 Palo Alto Networks, Inc.\nURL Filtering\n*\n^\nKey Point: Asterisks match a greater range of URLs than carets. An asterisk corresponds to any\nnumber of consecutive tokens, while a caret corresponds to exactly one token.\nAn entry like xyz.*.com matches more sites than xyz.^.^.com; xyz.*.com matches sites\nwith any number of tokens between the strings, and xyz.^.^.com matches sites with exactly\ntwo tokens.\nThe firewall interprets entries that do not end in a / or * with an implicit asterisk to\ntheir end, which further increases the potential matches.\n• A wildcard must be the only character within a token. For example, example*.com is an\ninvalid entry because example and * are in the same token. An entry can contain wildcards in\nmore than one token, however.\n• You can use asterisks and carets in the same entry (for example, *.example.^).\nDo not create an entry with consecutive asterisks (*) or more than nine consecutive\ncarets (^)—entries like these can affect firewall performance.\nFor example, do not add an entry like mail.*.*.com. Instead, depending on the range\nof websites you want to control access to, enter mail.*.com or mail.^.^.com.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1156,
+      "end": 1157
+    },
+    "content_stats": {
+      "char_count": 2449,
+      "word_count": 391
+    },
+    "hierarchy": {
+      "parent": "URL Category Exceptions",
+      "children": []
+    }
+  }
+}

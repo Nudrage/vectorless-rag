@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1033",
+  "section_number": "1.24.3.4.1",
+  "header": "CPS Measurements to Take",
+  "content": "Measure average and peak CPS traffic over the course of at least five business days or until\nyou’re confident that the measurements reflect the network’s typical traffic patterns; the longer\nmeasurement period, the more accurate the measurements. Take into account special events,\nquarterly events, and annual events that may spike the number of CPS you need to support. You\nmay need to adjust Zone Protection profiles and schedule adjusted DoS Protection policy rules\nto accommodate these types of events if your firewalls have the capacity to handle extra traffic.\nTake the following baseline measurements:\n• For Zone Protection profiles, measure the average and peak CPS ingressing each zone.\n• For aggregate DoS Protection profiles, measure the combined average and peak CPS for each\ngroup of devices you want to protect.\n• For classified DoS Protection profiles, measure the average and peak CPS of the individual\ndevices you want to protect.\nAlso understand the capacity of your firewalls and how other resource-consuming features such\nas decryption affect the number of connections each firewall can control. As a general rule, the\ncloser a firewall is to the perimeter, the greater its capacity needs to be because it handles more\ntraffic. The datasheet for each firewall model includes the total new sessions per second (CPS) the\nfirewall supports and the Firewall Comparison Tool enables you to compare the CPS (and other\nmetrics) of different firewall models.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1732,
+      "end": 1732
+    },
+    "content_stats": {
+      "char_count": 1470,
+      "word_count": 233
+    },
+    "hierarchy": {
+      "parent": "Baseline CPS Measurements for Setting Flood Thresholds",
+      "children": []
+    }
+  }
+}

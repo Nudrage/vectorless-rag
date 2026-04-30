@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_040",
+  "section_number": "1.18.27",
+  "header": "Vectra Match Rules",
+  "content": "Version 3.4 of Vectra Match rules API supports GET and DELETE.  Audit logs will be emitted for using\nthe DELETE endpoint.   The API endpoint for accessing version 3.4 is\nhttps://<vectra_management_ip>/api/v3.4/vectra-match/rules.\nThe rules GET endpoint requires a single query parameter, uuid:\n© July 2024 Vectra AI, Inc. | 61\nQUERY PARAMETER\nDESCRIPTION\nuuid\nUUID of desired rules file\nThe following table lists the top-level fields present in the response for a GET request to the v3.4 API for\nVectra Match rules\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ndevice_serials\nList of all device serials\non which the ruleset is\ncurrently running\nlist\nIf no assignments are present for\na rules file, device_serials will be\nan empty list.\nhashsum\nsha256 sum of file\nstring\nname\nDisplay name of file\nstring\nRules cannot be referenced in API\noperations by their display name,\nUUID must be used\nnotes\nNotes about a file\nobject\nNotes are added by the user\nwhen uploading a new rules file\ntimestamp\nTimestamp of file upload\ntime\nstring\nISO-8601 format\nuuid\nUUID of file\nstring\nUse this UUID in later API calls to\nreference this ruleset\ndetails\nError output\nstring\nOnly returned with an\nunsuccessful return code\nThe rules DELETE endpoint requires a json body with a single parameter, uuid:\nJSON BODY PARAMETER\nDESCRIPTION\nuuid\nUUID of desired rules file\nThe following table lists the top-level fields present in the response for a DELETE request to the v3.4 API\nfor Vectra Match rules\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ndetails\nOutput\nstring\ndetails will be ‘success’ if\nsuccessful, otherwise, will contain\ninformation about the failure.\nExamples of GET and DELETE methods on the vectra-match/rules endpoint are shown in Appendix A.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 60,
+      "end": 61
+    },
+    "content_stats": {
+      "char_count": 1704,
+      "word_count": 275
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

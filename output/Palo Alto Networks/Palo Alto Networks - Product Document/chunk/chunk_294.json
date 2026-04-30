@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_294",
+  "section_number": "1.11.7.1.2",
+  "header": "Threat Logs",
+  "content": "Threat logs display entries when traffic matches one of the Security Profiles attached to a security\nrule on the firewall. Each entry includes the following information: date and time; type of threat\n(such as virus or spyware); threat description or URL (Name column); source and destination\nzones, addresses, source and destination dynamic address groups, and ports; application name;\nalarm action (such as allow or block); and severity level.\nA dynamic address group only appears in a log if the rule the traffic matches includes a\ndynamic address group. If an IP address appears in more than one dynamic address group,\nthe firewall displays up to five dynamic address groups in logs along with the source IP\naddress\nTo see more details on individual Threat log entries:\n• Click\nbeside a threat entry to view details such as whether the entry aggregates multiple\nthreats of the same type between the same source and destination (in which case the Count\ncolumn value is greater than one).\n• If you configured the firewall to Take Packet Captures, click\nbeside an entry to access the\ncaptured packets.\nThe following table summarizes the Threat severity levels:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n520\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSeverity\nDescription\nCritical\nSerious threats, such as those that affect default installations of widely\ndeployed software, result in root compromise of servers, and the exploit code\nis widely available to attackers. The attacker usually does not need any special\nauthentication credentials or knowledge about the individual victims and the\ntarget does not need to be manipulated into performing any special functions.\nHigh\nThreats that have the ability to become critical but have mitigating factors; for\nexample, they may be difficult to exploit, do not result in elevated privileges, or do\nnot have a large victim pool.\nWildFire Submissions log entries with a malicious verdict and an action set to allow\nare logged as High.\nMedium\nMinor threats in which impact is minimized, such as DoS attacks that do not\ncompromise the target or exploits that require an attacker to reside on the same\nLAN as the victim, affect only non-standard configurations or obscure applications,\nor provide very limited access.\n• Threat log entries with a malicious verdict and an action of block or alert, based\non the existing WildFire signature severity, are logged as Medium.\nLow\nWarning-level threats that have very little impact on an organization's\ninfrastructure. They usually require local or physical system access and may often\nresult in victim privacy or DoS issues and information leakage.\n• Data Filtering profile matches are logged as Low.\n• WildFire Submissions log entries with a grayware verdict and any action are\nlogged as Low.\nInformationalSuspicious events that do not pose an immediate threat, but that are reported to\ncall attention to deeper problems that could possibly exist.\n• URL Filtering log entries are logged as Informational.\n• WildFire Submissions log entries with a benign verdict and any action are\nlogged as Informational.\n• WildFire Submissions log entries with any verdict and an action set to block and\nforward are logged as Informational.\n• Log entries with any verdict and an action set to block are logged as\nInformational.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 520,
+      "end": 521
+    },
+    "content_stats": {
+      "char_count": 3295,
+      "word_count": 530
+    },
+    "hierarchy": {
+      "parent": "Log Types and Severity Levels",
+      "children": []
+    }
+  }
+}

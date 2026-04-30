@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_707",
+  "section_number": "1.19.4.5.3",
+  "header": "Refresh or Restart an IKE Gateway or IPSec Tunnel",
+  "content": "Keep in mind that the result of restarting an IKE gateway depends on whether it is IKEv1 or\nIKEv2. See Refresh and Restart Behaviors for an IKE gateway (IKEv1 and IKEv2) and for an IPSec\ntunnel.\nRefresh or restart an IKE gateway.\n1.\nSelect Network > IPSec Tunnels and select the tunnel for the gateway you want to\nrefresh or restart.\n2.\nIn the row for that tunnel, under the Status column, click IKE Info.\n3.\nAt the bottom of the IKE Info screen, click the action you want:\n• Refresh—Updates the statistics on the screen.\n• Restart—Clears the SAs, so traffic is dropped until the IKE negotiation starts over and\nthe tunnel is recreated.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1273\n©2025 Palo Alto Networks, Inc.\nVPNs\nRefresh or restart an IPSec tunnel.\nYou might determine that the tunnel needs to be refreshed or restarted because you use\nthe tunnel monitor to monitor the tunnel status, or you use an external network monitor to\nmonitor network connectivity through the IPSec tunnel.\n1.\nSelect Network > IPSec Tunnels and select the tunnel you want to refresh or restart.\n2.\nIn the row for that tunnel, under the Status column, click Tunnel Info.\n3.\nAt the bottom of the Tunnel Info screen, click the action you want:\n• Refresh—Updates the onscreen statistics.\n• Restart—Clears the SAs, so traffic is dropped until the IKE negotiation starts over and\nthe tunnel is recreated.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1273,
+      "end": 1274
+    },
+    "content_stats": {
+      "char_count": 1379,
+      "word_count": 239
+    },
+    "hierarchy": {
+      "parent": "Enable/Disable, Refresh or Restart an IKE Gateway or IPSec Tunnel",
+      "children": []
+    }
+  }
+}

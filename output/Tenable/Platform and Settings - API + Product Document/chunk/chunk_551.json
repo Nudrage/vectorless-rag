@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_551",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully retrieved the scan routes list for the\nspecified scanner group.\nRESPONSE SCHEMA:\napplication/json\nArray [\nstring\nA hostname, hostname wildcard, IP address, CIDR address, or IP range.\nFor more information about supported route formats, see Supported\nScan Routing Target Formats.\n]\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 403 Returned if you do not have permission to view the scan routes list.\n— 404 Returned if Tenable Vulnerability Management could not find the specified scanner group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 548,
+      "end": 548
+    },
+    "content_stats": {
+      "char_count": 616,
+      "word_count": 93
+    },
+    "hierarchy": {
+      "parent": "List scan routes",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

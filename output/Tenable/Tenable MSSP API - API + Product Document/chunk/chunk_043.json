@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_043",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200\nReturned if the Tenable MSSP Platform successfully generated authorization keys for the specified\nchild container.\nRESPONSE SCHEMA:\napplication/json\nchild_container_uuid\nrequired\nkeys_validity_duration_seconds\nstring <uuid>\nThe UUID of the parent container.\nstring <uuid>\nThe UUID of the child container associated with the\nparent customer account.\nstring\nThe cloud region in which the child container is located.\nstring <uuid>\nThe UUID of the read-only MSSP child keys user.\nstring\nThe generated access key. It must be paired with the\nsecret_key .\nstring\nThe generated secret key. It must be paired with the\naccess_key .\ninteger\nThe date and time in Unix format when the authorization\nkeys expire.\nboolean\nIndicates whether or not the parent and child containers\nare in the same cloud region. If true , the parent and\nchild containers are located in different cloud regions. If\nfalse , the parent and child containers are located in\nthe same cloud region.\nstring\nThe date and time in datetime format when the\nauthorization keys expire.\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 404 Returned if the Tenable MSSP Platform could not find the specified child container.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in the Tenable MSSP Portal.\nparent_container_uuid\nchild_container_uuid\nchild_container_site\nkeys_user_uuid\naccess_key\nsecret_key\nkeys_expiration_epoch_seconds\nremote\n_validity_info",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 30,
+      "end": 31
+    },
+    "content_stats": {
+      "char_count": 1586,
+      "word_count": 238
+    },
+    "hierarchy": {
+      "parent": "Generate auth keys for child container",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

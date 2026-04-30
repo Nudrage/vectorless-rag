@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_511",
+  "section_number": "1.15.10",
+  "header": "Enable Evasion Signatures",
+  "content": "Palo Alto Networks evasion signatures detect crafted HTTP or TLS requests, and can alert to\ninstances where a client connects to a domain other than the domain specified in a DNS query.\nEvasion signatures are effective only when the firewall is also enabled to act as a DNS proxy\nand resolve domain name queries. As a best practice, take the following steps to enable evasion\nsignatures.\nSTEP 1 |\nEnable a firewall intermediate to clients and servers to act as a DNS proxy.\nConfigure a DNS Proxy Object, including:\n• Specify the interfaces on which you want the firewall to listen for DNS queries.\n• Define the DNS servers with which the firewall communicates to resolve DNS requests.\n• Set up static FQDN-to-IP address entries that the firewall can resolve locally, without\nreaching out to DNS servers.\n• Enable caching for resolved hostname-to-IP-address mappings.\nSTEP 2 |\nGet the latest Applications and Threats content version (at least content version 579 or\nlater).\n1.\nSelect Device > Dynamic Updates.\n2.\nCheck Now to get the latest Applications and Threats content update.\n3.\nDownload and Install Applications and Threats content version 579 (or later).\nSTEP 3 |\nDefine how the firewall should enforce traffic matched to evasion signatures.\n1.\nSelect Objects > Security Profiles > Anti-Spyware and Add or modify an Anti-spyware\nprofile.\n2.\nSelect Exceptions and select Show all signatures.\n3.\nFilter signatures based on the keyword evasion.\n4.\nFor all evasion signatures, set the Action to any setting other than allow or the default\naction (the default action is for evasion signatures is allow). For example, set the Action\nfor signature IDs 14978 and 14984 to alert or drop.\n5.\nClick OK to save the updated Anti-spyware profile.\n6.\nAttach the Anti-spyware profile to a security policy rule: Select Policies > Security, select\nthe desired policy to modify and then click the Actions tab. In Profile Settings, click the\ndrop-down next to Anti-Spyware and select the anti-spyware profile you just modified\nto enforce evasion signatures.\nSTEP 4 |\nCommit your changes.\nClick Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n942\n©2025 Palo Alto Networks, Inc.\nThreat Prevention",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 942,
+      "end": 943
+    },
+    "content_stats": {
+      "char_count": 2182,
+      "word_count": 356
+    },
+    "hierarchy": {
+      "parent": "Threat Prevention",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,1761 @@
+{
+  "document_name": "Tenable\\Web App Scanning - API + Product Document",
+  "generated_at": "2026-02-17T22:06:23.886799",
+  "outline_text": "DOCUMENT INDEX: Tenable\\Web App Scanning - API + Product Document\n=================================================================\n\n1. Attachments [Page 1, 41 words]\n2. Download attachment [Pages 1-2, 93 words]\n   2.1. Responses [Page 2, 142 words]\n3. Configurations [Page 3, 38 words]\n   3.1. Response samples [Page 3, 52 words]\n4. Create scan configuration [Pages 3-5, 331 words]\n   4.1. Responses [Pages 5-8, 529 words]\n      4.1.1. Request samples [Pages 8-12, 384 words]\n      4.1.2. Response samples [Pages 13-18, 284 words]\n5. Get remediation scan configuration [Page 18, 110 words]\n   5.1. Responses [Pages 19-21, 504 words]\n      5.1.1. Response samples [Pages 21-30, 458 words]\n6. Search scan configurations [Pages 30-31, 333 words]\n   6.1. Responses [Page 31, 76 words]\n      6.1.1. Request samples [Page 31, 10 words]\n      6.1.2. Response samples [Pages 32-34, 188 words]\n7. Get scan configuration details [Page 34, 51 words]\n   7.1. Responses [Pages 34-35, 56 words]\n      7.1.1. Response samples [Pages 35-40, 301 words]\n8. Upsert scan configuration [Pages 40-42, 439 words]\n   8.1. Responses [Page 42, 47 words]\n      8.1.1. Request samples [Pages 42-47, 389 words]\n      8.1.2. Response samples [Pages 48-53, 283 words]\n9. Move scan configuration [Page 53, 59 words]\n   9.1. Responses [Page 54, 122 words]\n      9.1.1. Request samples [Page 54, 11 words]\n      9.1.2. Response samples [Page 55, 10 words]\n10. Delete scan configuration [Page 55, 69 words]\n   10.1. Responses [Pages 55-56, 78 words]\n      10.1.1. Response samples [Page 56, 11 words]\n11. Get scan configuration processing status [Pages 56-57, 216 words]\n   11.1. Responses [Page 57, 34 words]\n      11.1.1. Response samples [Page 57, 14 words]\n12. Export scan configuration for CI/CD [Page 58, 127 words]\n   12.1. Responses [Page 58, 90 words]\n      12.1.1. Response samples [Pages 59-60, 119 words]\n13. Exports [Page 61, 61 words]\n14. Export findings [Pages 61-62, 271 words]\n   14.1. Responses [Page 62, 106 words]\n      14.1.1. Request samples [Pages 63-65, 176 words]\n      14.1.2. Response samples [Page 66, 9 words]\n15. Get findings export status [Page 66, 80 words]\n   15.1. Responses [Pages 66-67, 93 words]\n      15.1.1. Response samples [Pages 67-68, 75 words]\n16. List findings export jobs [Page 68, 46 words]\n   16.1. Responses [Pages 68-69, 70 words]\n      16.1.1. Response samples [Pages 69-73, 239 words]\n17. Download findings export chunk [Pages 73-74, 127 words]\n   17.1. Responses [Page 74, 103 words]\n      17.1.1. Response samples [Pages 74-79, 614 words]\n18. Cancel findings export [Pages 79-80, 79 words]\n   18.1. Responses [Page 80, 98 words]\n      18.1.1. Response samples [Page 80, 14 words]\n19. Filters [Page 81, 77 words]\n20. List scan configuration filters [Page 81, 33 words]\n   20.1. Responses [Page 81, 31 words]\n      20.1.1. Response samples [Pages 81-88, 338 words]\n21. List scan filters [Page 88, 45 words]\n   21.1. Responses [Page 88, 30 words]\n      21.1.1. Response samples [Pages 88-91, 108 words]\n22. List user-defined template filters [Page 91, 39 words]\n   22.1. Responses [Page 91, 48 words]\n      22.1.1. Response samples [Pages 92-95, 148 words]\n23. List vulnerability filters [Pages 95-96, 30 words]\n   23.1. Responses [Page 96, 30 words]\n      23.1.1. Response samples [Pages 96-100, 177 words]\n24. List vulnerability filters for scan [Page 100, 52 words]\n   24.1. Responses [Page 100, 30 words]\n      24.1.1. Response samples [Pages 100-103, 164 words]\n25. Folders [Page 104, 45 words]\n26. Create folder [Page 104, 48 words]\n   26.1. Responses [Pages 104-105, 103 words]\n      26.1.1. Request samples [Page 105, 1 words]\n      26.1.2. Response samples [Page 105, 26 words]\n27. List folders [Page 106, 22 words]\n   27.1. Responses [Page 106, 89 words]\n      27.1.1. Response samples [Pages 106-107, 35 words]\n28. Rename folder [Page 107, 78 words]\n   28.1. Responses [Pages 107-108, 92 words]\n      28.1.1. Request samples [Page 108, 1 words]\n      28.1.2. Response samples [Page 108, 26 words]\n29. Delete folder [Page 109, 70 words]\n   29.1. Responses [Page 109, 98 words]\n30. Plugins [Page 110, 51 words]\n   30.1. Response samples [Page 110, 8 words]\n31. List plugins [Pages 110-111, 209 words]\n   31.1. Responses [Page 111, 29 words]\n      31.1.1. Response samples [Pages 111-114, 208 words]\n32. Get plugin details [Page 114, 38 words]\n   32.1. Responses [Pages 114-116, 359 words]\n      32.1.1. Response samples [Page 116, 16 words]\n33. Scans [Pages 117-118, 134 words]\n34. Launch scan [Page 118, 64 words]\n   34.1. Responses [Page 118, 104 words]\n      34.1.1. Response samples [Page 119, 14 words]\n35. Import scan [Page 119, 61 words]\n   35.1. Responses [Pages 119-120, 77 words]\n      35.1.1. Response samples [Page 120, 11 words]\n36. Search scans [Pages 120-121, 324 words]\n   36.1. Responses [Pages 121-122, 45 words]\n      36.1.1. Request samples [Page 122, 1 words]\n      36.1.2. Response samples [Pages 122-129, 583 words]\n37. Get scan details [Pages 129-130, 45 words]\n   37.1. Responses [Page 130, 49 words]\n      37.1.1. Response samples [Pages 130-131, 52 words]\n38. Update scan status [Page 131, 123 words]\n   38.1. Responses [Pages 131-132, 108 words]\n      38.1.1. Request samples [Page 132, 1 words]\n      38.1.2. Response samples [Pages 132-133, 24 words]\n39. Delete scan [Page 133, 58 words]\n   39.1. Responses [Page 133, 58 words]\n      39.1.1. Response samples [Pages 133-134, 12 words]\n40. Get scan notes [Pages 134-135, 235 words]\n   40.1. Responses [Page 135, 61 words]\n      40.1.1. Response samples [Pages 135-136, 66 words]\n41. Search vulnerabilities for scan [Pages 136-137, 336 words]\n   41.1. Responses [Page 138, 61 words]\n      41.1.1. Request samples [Page 138, 1 words]\n      41.1.2. Response samples [Pages 138-145, 606 words]\n42. Export scan results [Pages 145-146, 86 words]\n   42.1. Responses [Page 146, 81 words]\n      42.1.1. Response samples [Page 146, 14 words]\n43. Download exported scan [Page 147, 100 words]\n   43.1. Responses [Pages 147-148, 89 words]\n      43.1.1. Response samples [Pages 148-159, 923 words]\n44. Download debug ZIP file [Page 159, 71 words]\n   44.1. Responses [Page 159, 66 words]\n      44.1.1. Response samples [Page 159, 4 words]\n45. Templates [Page 160, 60 words]\n46. List Tenable-provided templates [Pages 160-161, 213 words]\n   46.1. Responses [Page 161, 38 words]\n      46.1.1. Response samples [Pages 161-167, 423 words]\n47. Get Tenable-provided template details [Page 167, 43 words]\n   47.1. Responses [Page 167, 56 words]\n      47.1.1. Response samples [Pages 168-177, 868 words]\n48. Search user-defined templates [Pages 177-178, 333 words]\n   48.1. Responses [Page 179, 30 words]\n      48.1.1. Request samples [Page 179, 1 words]\n      48.1.2. Response samples [Pages 179-182, 209 words]\n49. Get user-defined template details [Page 182, 62 words]\n   49.1. Responses [Page 183, 124 words]\n      49.1.1. Response samples [Pages 183-184, 62 words]\n50. Update user-defined template [Pages 184-185, 125 words]\n   50.1. Responses [Page 185, 58 words]\n      50.1.1. Request samples [Page 186, 1 words]\n      50.1.2. Response samples [Pages 186-187, 86 words]\n51. Delete user-defined template [Page 187, 79 words]\n   51.1. Responses [Page 187, 2 words]\n52. Vulnerabilities [Page 188, 110 words]\n   52.1. Response samples [Page 188, 11 words]\n53. Get vulnerability details [Pages 188-189, 64 words]\n   53.1. Responses [Page 189, 64 words]\n      53.1.1. Response samples [Pages 189-191, 127 words]\n54. Search vulnerabilities [Pages 191-192, 318 words]\n   54.1. Responses [Page 192, 51 words]\n      54.1.1. Request samples [Page 192, 14 words]\n      54.1.2. Response samples [Pages 193-196, 258 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Attachments",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 41,
+        "summary": "With Tenable Web App Scanning API, you can download the attachment files generated by Tenable\nWeb App Scanning plugins during scans."
+      },
+      {
+        "number": "2",
+        "title": "Download attachment",
+        "depth": 1,
+        "chunk_id": "chunk_002",
+        "page_start": 1,
+        "page_end": 2,
+        "word_count": 93,
+        "summary": "Returns the specified attachment file for a vulnerability detected by a Tenable Web App Scanning\nscan.",
+        "children": [
+          {
+            "number": "2.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 2,
+            "page_end": 2,
+            "word_count": 142,
+            "summary": "200 Returns the specified attachment file as a chunked transfer-encoded stream."
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "title": "Configurations",
+        "depth": 1,
+        "chunk_id": "chunk_004",
+        "page_start": 3,
+        "page_end": 3,
+        "word_count": 38,
+        "summary": "With Tenable Web App Scanning configurations, you can maintain reusable settings for running web\napplication scans.",
+        "children": [
+          {
+            "number": "3.1",
+            "title": "Response samples",
+            "depth": 2,
+            "chunk_id": "chunk_005",
+            "page_start": 3,
+            "page_end": 3,
+            "word_count": 52,
+            "summary": "200\n400\n404\n429\n500\nPUT /tenable-wasscan-9a3511f8-7852-4096-a7c0-6065ff8ebad3 HTTP/1."
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "title": "Create scan configuration",
+        "depth": 1,
+        "chunk_id": "chunk_006",
+        "page_start": 3,
+        "page_end": 5,
+        "word_count": 331,
+        "summary": "Creates a new scan configuration.",
+        "children": [
+          {
+            "number": "4.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_007",
+            "page_start": 5,
+            "page_end": 8,
+            "word_count": 529,
+            "summary": "202 Returned if Tenable Web App Scanning accepted the request for processing.",
+            "children": [
+              {
+                "number": "4.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 8,
+                "page_end": 12,
+                "word_count": 384,
+                "summary": "Payload\nreasons\nrequired\nPOST\n/was/v2/configs\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"name\": \"string\",\n\"targets\":\n-\n[\n\"https://example."
+              },
+              {
+                "number": "4.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 13,
+                "page_end": 18,
+                "word_count": 284,
+                "summary": "202\n400\n403\n429\n\"audit\":\n-\n{\n\"forms\": false,\n\"cookies\": false,\n\"ui_forms\": false,\n\"ui_inputs\": false..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "title": "Get remediation scan configuration",
+        "depth": 1,
+        "chunk_id": "chunk_010",
+        "page_start": 18,
+        "page_end": 18,
+        "word_count": 110,
+        "summary": "Returns a scan configuration for the vulnerability that you want to remediate.",
+        "children": [
+          {
+            "number": "5.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_011",
+            "page_start": 19,
+            "page_end": 21,
+            "word_count": 504,
+            "summary": "200\nReturned if Tenable Web App Scanning successfully generated the remediation scan configuration.",
+            "children": [
+              {
+                "number": "5.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 21,
+                "page_end": 30,
+                "word_count": 458,
+                "summary": "200\n403\n422\n429\n500\nreasons\nrequired\nreasons\nrequired\nreasons\nrequired\nGET\n/api/v3/export/configs/re..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "title": "Search scan configurations",
+        "depth": 1,
+        "chunk_id": "chunk_013",
+        "page_start": 30,
+        "page_end": 31,
+        "word_count": 333,
+        "summary": "Returns a list of web application scan configurations.",
+        "children": [
+          {
+            "number": "6.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_014",
+            "page_start": 31,
+            "page_end": 31,
+            "word_count": 76,
+            "summary": "200\nA list of web application scan configurations.",
+            "children": [
+              {
+                "number": "6.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_015",
+                "page_start": 31,
+                "page_end": 31,
+                "word_count": 10,
+                "summary": "Payload\nfield\noperator\nvalue\npagination\nrequired\nitems\nrequired\nPOST\n/was/v2/configs/search"
+              },
+              {
+                "number": "6.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_016",
+                "page_start": 32,
+                "page_end": 34,
+                "word_count": 188,
+                "summary": "200\n429\napplication/json\nAppliedFilters-ScanConfigs\nCopy\n{\n\"field\": \"folder_name\",\n\"operator\": \"matc..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "title": "Get scan configuration details",
+        "depth": 1,
+        "chunk_id": "chunk_017",
+        "page_start": 34,
+        "page_end": 34,
+        "word_count": 51,
+        "summary": "Returns details for the specified scan configuration.",
+        "children": [
+          {
+            "number": "7.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_018",
+            "page_start": 34,
+            "page_end": 35,
+            "word_count": 56,
+            "summary": "200 Returns details for the specified scan configuration.",
+            "children": [
+              {
+                "number": "7.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_019",
+                "page_start": 35,
+                "page_end": 40,
+                "word_count": 301,
+                "summary": "200\n400\n404\n429\nGET\n/was/v2/configs/{config_id}\napplication/json\nExpand all\nCollapse all\nCopy\nConten..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "8",
+        "title": "Upsert scan configuration",
+        "depth": 1,
+        "chunk_id": "chunk_020",
+        "page_start": 40,
+        "page_end": 42,
+        "word_count": 439,
+        "summary": "Updates an existing scan configuration or creates a new scan configuration.",
+        "children": [
+          {
+            "number": "8.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_021",
+            "page_start": 42,
+            "page_end": 42,
+            "word_count": 47,
+            "summary": "202 Returned if Tenable Web App Scanning successfully been accepted the request for processing.",
+            "children": [
+              {
+                "number": "8.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_022",
+                "page_start": 42,
+                "page_end": 47,
+                "word_count": 389,
+                "summary": "Payload\nschedule\npause_window\nschedule_windows\nnotifications\npermissions\nsettings\nrequired\nPUT\n/was/..."
+              },
+              {
+                "number": "8.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_023",
+                "page_start": 48,
+                "page_end": 53,
+                "word_count": 283,
+                "summary": "202\n400\n429\n\"audit\":\n-\n{\n\"forms\": false,\n\"cookies\": false,\n\"ui_forms\": false,\n\"ui_inputs\": false,\n\"h..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "9",
+        "title": "Move scan configuration",
+        "depth": 1,
+        "chunk_id": "chunk_024",
+        "page_start": 53,
+        "page_end": 53,
+        "word_count": 59,
+        "summary": "Moves the scan configuration to the specified folder.",
+        "children": [
+          {
+            "number": "9.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_025",
+            "page_start": 54,
+            "page_end": 54,
+            "word_count": 122,
+            "summary": "— 200 Returned if the request to move the scan configuration to another folder was successful.",
+            "children": [
+              {
+                "number": "9.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_026",
+                "page_start": 54,
+                "page_end": 54,
+                "word_count": 11,
+                "summary": "Payload\nLocation\nPATCH\n/was/v2/configs/{config_id}\napplication/json\nCopy\n{\n\"folder_name\": \"string\"\nC..."
+              },
+              {
+                "number": "9.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_027",
+                "page_start": 55,
+                "page_end": 55,
+                "word_count": 10,
+                "summary": "200\n202\n400\n404\n429\n}\napplication/json\nCopy\n{ }"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "10",
+        "title": "Delete scan configuration",
+        "depth": 1,
+        "chunk_id": "chunk_028",
+        "page_start": 55,
+        "page_end": 55,
+        "word_count": 69,
+        "summary": "Deletes the specified scan configuration and all associated scan history and vulnerabilities.",
+        "children": [
+          {
+            "number": "10.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_029",
+            "page_start": 55,
+            "page_end": 56,
+            "word_count": 78,
+            "summary": "— 202 Returned if Tenable Web App Scanning successfully created the deletion job.",
+            "children": [
+              {
+                "number": "10.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_030",
+                "page_start": 56,
+                "page_end": 56,
+                "word_count": 11,
+                "summary": "202\n400\n404\n409\n429\nDELETE\n/was/v2/configs/{config_id}\napplication/json\nCopy\n{ }"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "11",
+        "title": "Get scan configuration processing status",
+        "depth": 1,
+        "chunk_id": "chunk_031",
+        "page_start": 56,
+        "page_end": 57,
+        "word_count": 216,
+        "summary": "Tracks the current status of a scan configuration creation, update, or upsert process.",
+        "children": [
+          {
+            "number": "11.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_032",
+            "page_start": 57,
+            "page_end": 57,
+            "word_count": 34,
+            "summary": "200 Returned if the status for the scan configuration was found.",
+            "children": [
+              {
+                "number": "11.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_033",
+                "page_start": 57,
+                "page_end": 57,
+                "word_count": 14,
+                "summary": "200\n429\ntracking_id\nrequired\nGET\n/was/v2/configs/{config_id}/status/{tracking_id}\napplication/json\nC..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "12",
+        "title": "Export scan configuration for CI/CD",
+        "depth": 1,
+        "chunk_id": "chunk_034",
+        "page_start": 58,
+        "page_end": 58,
+        "word_count": 127,
+        "summary": "Downloads the specified scan configuration in HOCON (Human-Optimized Config Object Notation)\nformat ...",
+        "children": [
+          {
+            "number": "12.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_035",
+            "page_start": 58,
+            "page_end": 58,
+            "word_count": 90,
+            "summary": "— 200\nReturned if Tenable Web App Scanning successfully returned the HOCON file for the specified scan\nconfiguration.",
+            "children": [
+              {
+                "number": "12.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_036",
+                "page_start": 59,
+                "page_end": 60,
+                "word_count": 119,
+                "summary": "200\n403\n404\n429\n500\n\"config_id\"=\"262a01a3-9de3-43f9-bed6-b4da34015d71\"\n\"template_id\"=\"426ce117-b083-..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "13",
+        "title": "Exports",
+        "depth": 1,
+        "chunk_id": "chunk_037",
+        "page_start": 61,
+        "page_end": 61,
+        "word_count": 61,
+        "summary": "The Tenable Web App Scanning findings export API enables you to asynchronously export findings\ndata from Tenable Web App Scanning."
+      },
+      {
+        "number": "14",
+        "title": "Export findings",
+        "depth": 1,
+        "chunk_id": "chunk_038",
+        "page_start": 61,
+        "page_end": 62,
+        "word_count": 271,
+        "summary": "Exports Tenable Web App Scanning findings that match the request criteria.",
+        "children": [
+          {
+            "number": "14.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_039",
+            "page_start": 62,
+            "page_end": 62,
+            "word_count": 106,
+            "summary": "200 Returned if Tenable Web App Scanning successfully queued a WAS findings export request.",
+            "children": [
+              {
+                "number": "14.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_040",
+                "page_start": 63,
+                "page_end": 65,
+                "word_count": 176,
+                "summary": "Payload\nPOST\n/was/v1/export/vulns\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"num_assets\": 50,\n..."
+              },
+              {
+                "number": "14.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_041",
+                "page_start": 66,
+                "page_end": 66,
+                "word_count": 9,
+                "summary": "200\n409\n429\napplication/json\nCopy\n{\n\"export_uuid\": \"bf765455-53aa-4e70-9ef3-87cfca1d2be0\"\n}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "15",
+        "title": "Get findings export status",
+        "depth": 1,
+        "chunk_id": "chunk_042",
+        "page_start": 66,
+        "page_end": 66,
+        "word_count": 80,
+        "summary": "Returns the status of a Tenable Web App findings export request.",
+        "children": [
+          {
+            "number": "15.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_043",
+            "page_start": 66,
+            "page_end": 67,
+            "word_count": 93,
+            "summary": "200\nReturned if Tenable Web App Scanning successfully retrieved the status for the specified WAS findings\nexport.",
+            "children": [
+              {
+                "number": "15.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_044",
+                "page_start": 67,
+                "page_end": 68,
+                "word_count": 75,
+                "summary": "200\n429\nGET\n/was/v1/export/vulns/{export_uuid}/status\napplication/json\nExpand all\nCollapse all\nCopy\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "16",
+        "title": "List findings export jobs",
+        "depth": 1,
+        "chunk_id": "chunk_045",
+        "page_start": 68,
+        "page_end": 68,
+        "word_count": 46,
+        "summary": "Retrieves a list of WAS findings export jobs.",
+        "children": [
+          {
+            "number": "16.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_046",
+            "page_start": 68,
+            "page_end": 69,
+            "word_count": 70,
+            "summary": "200\nReturned if Tenable Web App Scanning successfully retrieved the list of WAS findings export jobs.",
+            "children": [
+              {
+                "number": "16.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_047",
+                "page_start": 69,
+                "page_end": 73,
+                "word_count": 239,
+                "summary": "200\n429\nGET\n/was/v1/export/vulns/status\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "17",
+        "title": "Download findings export chunk",
+        "depth": 1,
+        "chunk_id": "chunk_048",
+        "page_start": 73,
+        "page_end": 74,
+        "word_count": 127,
+        "summary": "Downloads exported WAS findings as a JSON file.",
+        "children": [
+          {
+            "number": "17.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_049",
+            "page_start": 74,
+            "page_end": 74,
+            "word_count": 103,
+            "summary": "200 Returned if Tenable Web App Scanning successfully retrieved the findings export chunk.",
+            "children": [
+              {
+                "number": "17.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_050",
+                "page_start": 74,
+                "page_end": 79,
+                "word_count": 614,
+                "summary": "200\n429\nexport_uuid\nrequired\nchunk_id\nrequired\nGET\n/was/v1/export/vulns/{export_uuid}/chunks/{chunk_..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "18",
+        "title": "Cancel findings export",
+        "depth": 1,
+        "chunk_id": "chunk_051",
+        "page_start": 79,
+        "page_end": 80,
+        "word_count": 79,
+        "summary": "Cancels the specified WAS finding export job.",
+        "children": [
+          {
+            "number": "18.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_052",
+            "page_start": 80,
+            "page_end": 80,
+            "word_count": 98,
+            "summary": "200\nReturned if Tenable Web App Scanning successfully canceled the specified WAS findings export job.",
+            "children": [
+              {
+                "number": "18.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_053",
+                "page_start": 80,
+                "page_end": 80,
+                "word_count": 14,
+                "summary": "200\n429\nexport_uuid\nrequired\nPOST\n/was/v1/export/vulns/{export_uuid}/cancel\napplication/json\nCopy\n{\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "19",
+        "title": "Filters",
+        "depth": 1,
+        "chunk_id": "chunk_054",
+        "page_start": 81,
+        "page_end": 81,
+        "word_count": 77,
+        "summary": "Some record types in Tenable Web App Scanning support the use of an optional POST body that\ncontrols filtering during record retrieval."
+      },
+      {
+        "number": "20",
+        "title": "List scan configuration filters",
+        "depth": 1,
+        "chunk_id": "chunk_055",
+        "page_start": 81,
+        "page_end": 81,
+        "word_count": 33,
+        "summary": "Lists the filtering capabilities available for scan configurations for endpoints that support scan\nconfiguration filtering.",
+        "children": [
+          {
+            "number": "20.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_056",
+            "page_start": 81,
+            "page_end": 81,
+            "word_count": 31,
+            "summary": "200 Returns the filtering capabilities for scan configurations.",
+            "children": [
+              {
+                "number": "20.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_057",
+                "page_start": 81,
+                "page_end": 88,
+                "word_count": 338,
+                "summary": "GET\n/was/v2/configs/filters\n200\n429\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"fi..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "21",
+        "title": "List scan filters",
+        "depth": 1,
+        "chunk_id": "chunk_058",
+        "page_start": 88,
+        "page_end": 88,
+        "word_count": 45,
+        "summary": "Lists the filtering capabilities available for scans for endpoints that support scan filtering.",
+        "children": [
+          {
+            "number": "21.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_059",
+            "page_start": 88,
+            "page_end": 88,
+            "word_count": 30,
+            "summary": "200 Returns the filtering capabilities for scans.",
+            "children": [
+              {
+                "number": "21.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_060",
+                "page_start": 88,
+                "page_end": 91,
+                "word_count": 108,
+                "summary": "200\n429\nconfig_id\nrequired\nGET\n/was/v2/configs/{config_id}/scans/filters\napplication/json\nExpand all..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "22",
+        "title": "List user-defined template filters",
+        "depth": 1,
+        "chunk_id": "chunk_061",
+        "page_start": 91,
+        "page_end": 91,
+        "word_count": 39,
+        "summary": "Lists the filtering capabilities available for user-defined templates for endpoints that support user-\ndefined template filtering.",
+        "children": [
+          {
+            "number": "22.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_062",
+            "page_start": 91,
+            "page_end": 91,
+            "word_count": 48,
+            "summary": "200 Returns the filtering capabilities for user-defined templates.",
+            "children": [
+              {
+                "number": "22.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_063",
+                "page_start": 92,
+                "page_end": 95,
+                "word_count": 148,
+                "summary": "200\n429\nGET\n/was/v2/user-templates/filters\napplication/json\nExpand all\nCollapse all\nCopy\nContent typ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "23",
+        "title": "List vulnerability filters",
+        "depth": 1,
+        "chunk_id": "chunk_064",
+        "page_start": 95,
+        "page_end": 96,
+        "word_count": 30,
+        "summary": "Lists the filtering capabilities available for vulnerability findings for endpoints that support\nvulnerability filtering.",
+        "children": [
+          {
+            "number": "23.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_065",
+            "page_start": 96,
+            "page_end": 96,
+            "word_count": 30,
+            "summary": "200 Returns the filtering capabilities for findings.",
+            "children": [
+              {
+                "number": "23.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_066",
+                "page_start": 96,
+                "page_end": 100,
+                "word_count": 177,
+                "summary": "200\n429\nGET\n/was/v2/vulnerabilities/filters\napplication/json\nExpand all\nCollapse all\nCopy\nContent ty..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "24",
+        "title": "List vulnerability filters for scan",
+        "depth": 1,
+        "chunk_id": "chunk_067",
+        "page_start": 100,
+        "page_end": 100,
+        "word_count": 52,
+        "summary": "Lists the filtering capabilities available for vulnerability findings on a given scan for endpoints that\nsupport vulnerability filtering.",
+        "children": [
+          {
+            "number": "24.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_068",
+            "page_start": 100,
+            "page_end": 100,
+            "word_count": 30,
+            "summary": "200 Returns the filtering capabilities for findings.",
+            "children": [
+              {
+                "number": "24.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_069",
+                "page_start": 100,
+                "page_end": 103,
+                "word_count": 164,
+                "summary": "200\n429\nscan_id\nrequired\nGET\n/was/v2/scans/{scan_id}/vulnerabilities/filters\napplication/json\nExpand..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "25",
+        "title": "Folders",
+        "depth": 1,
+        "chunk_id": "chunk_070",
+        "page_start": 104,
+        "page_end": 104,
+        "word_count": 45,
+        "summary": "Tenable Web App Scanning provides default folders that automatically organize scans."
+      },
+      {
+        "number": "26",
+        "title": "Create folder",
+        "depth": 1,
+        "chunk_id": "chunk_071",
+        "page_start": 104,
+        "page_end": 104,
+        "word_count": 48,
+        "summary": "Creates a new custom folder for the current user.",
+        "children": [
+          {
+            "number": "26.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_072",
+            "page_start": 104,
+            "page_end": 105,
+            "word_count": 103,
+            "summary": "200 Returned if the folder was successfully created.",
+            "children": [
+              {
+                "number": "26.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_073",
+                "page_start": 105,
+                "page_end": 105,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "26.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_074",
+                "page_start": 105,
+                "page_end": 105,
+                "word_count": 26,
+                "summary": "200\n400\n403\n429\n500\nPOST\n/was/v2/folders\napplication/json\nCopy\n{\n\"name\": \"string\"\n}\napplication/json..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "27",
+        "title": "List folders",
+        "depth": 1,
+        "chunk_id": "chunk_075",
+        "page_start": 106,
+        "page_end": 106,
+        "word_count": 22,
+        "summary": "Lists the current user's custom folders.",
+        "children": [
+          {
+            "number": "27.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_076",
+            "page_start": 106,
+            "page_end": 106,
+            "word_count": 89,
+            "summary": "200 Returned if the folder list for the current user was successfully retrieved.",
+            "children": [
+              {
+                "number": "27.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_077",
+                "page_start": 106,
+                "page_end": 107,
+                "word_count": 35,
+                "summary": "200\n403\n429\n500\nreasons\nrequired\nGET\n/was/v2/folders\napplication/json\nContent type\nExpand all\nCollap..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "28",
+        "title": "Rename folder",
+        "depth": 1,
+        "chunk_id": "chunk_078",
+        "page_start": 107,
+        "page_end": 107,
+        "word_count": 78,
+        "summary": "Renames a folder for the current user.",
+        "children": [
+          {
+            "number": "28.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_079",
+            "page_start": 107,
+            "page_end": 108,
+            "word_count": 92,
+            "summary": "200 Returned if Tenable Web App Scanning successfully renamed the folder.",
+            "children": [
+              {
+                "number": "28.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_080",
+                "page_start": 108,
+                "page_end": 108,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "28.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_081",
+                "page_start": 108,
+                "page_end": 108,
+                "word_count": 26,
+                "summary": "200\n400\n403\n429\n500\nPUT\n/was/v2/folders/{folder_id}\napplication/json\nCopy\n{\n\"name\": \"string\"\n}\nappli..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "29",
+        "title": "Delete folder",
+        "depth": 1,
+        "chunk_id": "chunk_082",
+        "page_start": 109,
+        "page_end": 109,
+        "word_count": 70,
+        "summary": "Deletes a folder.",
+        "children": [
+          {
+            "number": "29.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_083",
+            "page_start": 109,
+            "page_end": 109,
+            "word_count": 98,
+            "summary": "— 202 Returned if the request to delete the folder was accepted."
+          }
+        ]
+      },
+      {
+        "number": "30",
+        "title": "Plugins",
+        "depth": 1,
+        "chunk_id": "chunk_084",
+        "page_start": 110,
+        "page_end": 110,
+        "word_count": 51,
+        "summary": "With Tenable Web App Scanning API, you can return detailed information for Tenable Web App\nScanning ...",
+        "children": [
+          {
+            "number": "30.1",
+            "title": "Response samples",
+            "depth": 2,
+            "chunk_id": "chunk_085",
+            "page_start": 110,
+            "page_end": 110,
+            "word_count": 8,
+            "summary": "202\n403\n429\n500\napplication/json\nCopy\n{ }"
+          }
+        ]
+      },
+      {
+        "number": "31",
+        "title": "List plugins",
+        "depth": 1,
+        "chunk_id": "chunk_086",
+        "page_start": 110,
+        "page_end": 111,
+        "word_count": 209,
+        "summary": "Returns a list of plugins used in Tenable Web App Scanning scans.",
+        "children": [
+          {
+            "number": "31.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_087",
+            "page_start": 111,
+            "page_end": 111,
+            "word_count": 29,
+            "summary": "200 Returns a list of plugins.",
+            "children": [
+              {
+                "number": "31.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_088",
+                "page_start": 111,
+                "page_end": 114,
+                "word_count": 208,
+                "summary": "200\n429\nsort\nGET\n/was/v2/plugins\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"pagin..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "32",
+        "title": "Get plugin details",
+        "depth": 1,
+        "chunk_id": "chunk_089",
+        "page_start": 114,
+        "page_end": 114,
+        "word_count": 38,
+        "summary": "Returns details for the specified Tenable Web App Scanning plugin.",
+        "children": [
+          {
+            "number": "32.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_090",
+            "page_start": 114,
+            "page_end": 116,
+            "word_count": 359,
+            "summary": "200 Returns details for the specified Tenable Web App Scanning plugin.",
+            "children": [
+              {
+                "number": "32.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_091",
+                "page_start": 116,
+                "page_end": 116,
+                "word_count": 16,
+                "summary": "200\n400\n404\n429\nwasc\ncwe\nowasp\nreasons\nrequired\nreasons\nrequired\nGET\n/was/v2/plugins/{plugin_id}\napp..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "33",
+        "title": "Scans",
+        "depth": 1,
+        "chunk_id": "chunk_092",
+        "page_start": 117,
+        "page_end": 118,
+        "word_count": 134,
+        "summary": "Expand all\nCollapse all\nCopy\n{\n\"plugin_id\": 98074,\n\"name\": \"Backup file\",\n\"family\": \"Data Exposure\",..."
+      },
+      {
+        "number": "34",
+        "title": "Launch scan",
+        "depth": 1,
+        "chunk_id": "chunk_093",
+        "page_start": 118,
+        "page_end": 118,
+        "word_count": 64,
+        "summary": "Launches a scan using the specified configuration.",
+        "children": [
+          {
+            "number": "34.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_094",
+            "page_start": 118,
+            "page_end": 118,
+            "word_count": 104,
+            "summary": "202 Returned if Tenable Web App Scanning successfully launches the scan.",
+            "children": [
+              {
+                "number": "34.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_095",
+                "page_start": 119,
+                "page_end": 119,
+                "word_count": 14,
+                "summary": "202\n403\n404\n409\n429\n500\nPOST\n/was/v2/configs/{config_id}/scans\napplication/json\nCopy\n{\n\"scan_id\": \"7..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "35",
+        "title": "Import scan",
+        "depth": 1,
+        "chunk_id": "chunk_096",
+        "page_start": 119,
+        "page_end": 119,
+        "word_count": 61,
+        "summary": "Imports a scan that was previously exported in JSON format.",
+        "children": [
+          {
+            "number": "35.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_097",
+            "page_start": 119,
+            "page_end": 120,
+            "word_count": 77,
+            "summary": "— 202 Returned if the scan was imported successfully.",
+            "children": [
+              {
+                "number": "35.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_098",
+                "page_start": 120,
+                "page_end": 120,
+                "word_count": 11,
+                "summary": "202\n400\n403\n429\n500\nPOST\n/api/v3/was/import\napplication/json\nCopy\n{ }"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "36",
+        "title": "Search scans",
+        "depth": 1,
+        "chunk_id": "chunk_099",
+        "page_start": 120,
+        "page_end": 121,
+        "word_count": 324,
+        "summary": "Returns a list of scans.",
+        "children": [
+          {
+            "number": "36.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_100",
+            "page_start": 121,
+            "page_end": 122,
+            "word_count": 45,
+            "summary": "limit\noffset\nsort\nfield\noperator\nvalue\n200 Returns a list of scans.",
+            "children": [
+              {
+                "number": "36.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_101",
+                "page_start": 122,
+                "page_end": 122,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "36.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_102",
+                "page_start": 122,
+                "page_end": 129,
+                "word_count": 583,
+                "summary": "200\n400\n429\nPOST\n/was/v2/configs/{config_id}/scans/search\napplication/json\nAppliedFilters-Vulnerabil..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "37",
+        "title": "Get scan details",
+        "depth": 1,
+        "chunk_id": "chunk_103",
+        "page_start": 129,
+        "page_end": 130,
+        "word_count": 45,
+        "summary": "Returns scan details.",
+        "children": [
+          {
+            "number": "37.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_104",
+            "page_start": 130,
+            "page_end": 130,
+            "word_count": 49,
+            "summary": "200 Returns scan details.",
+            "children": [
+              {
+                "number": "37.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_105",
+                "page_start": 130,
+                "page_end": 131,
+                "word_count": 52,
+                "summary": "200\n400\n404\n429\nscan_id\nrequired\nGET\n/was/v2/scans/{scan_id}\napplication/json\nExpand all\nCollapse al..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "38",
+        "title": "Update scan status",
+        "depth": 1,
+        "chunk_id": "chunk_106",
+        "page_start": 131,
+        "page_end": 131,
+        "word_count": 123,
+        "summary": "Update the requested_action  attribute for a scan.",
+        "children": [
+          {
+            "number": "38.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_107",
+            "page_start": 131,
+            "page_end": 132,
+            "word_count": 108,
+            "summary": "— 202 Returned if Tenable Web App Scanning successfully creates an update job.",
+            "children": [
+              {
+                "number": "38.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_108",
+                "page_start": 132,
+                "page_end": 132,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "38.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_109",
+                "page_start": 132,
+                "page_end": 133,
+                "word_count": 24,
+                "summary": "202\n404\n409\n429\nreasons\nrequired\nreasons\nrequired\nPATCH\n/was/v2/scans/{scan_id}\napplication/json\nCop..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "39",
+        "title": "Delete scan",
+        "depth": 1,
+        "chunk_id": "chunk_110",
+        "page_start": 133,
+        "page_end": 133,
+        "word_count": 58,
+        "summary": "Removes the specified scan and all vulnerabilities it detected.",
+        "children": [
+          {
+            "number": "39.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_111",
+            "page_start": 133,
+            "page_end": 133,
+            "word_count": 58,
+            "summary": "— 202 Returned if Tenable Web App Scanning successfully creates the deletion job.",
+            "children": [
+              {
+                "number": "39.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_112",
+                "page_start": 133,
+                "page_end": 134,
+                "word_count": 12,
+                "summary": "202\n404\n409\n429\nscan_id\nrequired\nDELETE\n/was/v2/scans/{scan_id}\napplication/json\nCopy\n{ }"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "40",
+        "title": "Get scan notes",
+        "depth": 1,
+        "chunk_id": "chunk_113",
+        "page_start": 134,
+        "page_end": 135,
+        "word_count": 235,
+        "summary": "Returns a list of notes for the specified scan.",
+        "children": [
+          {
+            "number": "40.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_114",
+            "page_start": 135,
+            "page_end": 135,
+            "word_count": 61,
+            "summary": "200 A list of scan notes for the requested scan.",
+            "children": [
+              {
+                "number": "40.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_115",
+                "page_start": 135,
+                "page_end": 136,
+                "word_count": 66,
+                "summary": "200\n400\n403\n429\nGET\n/was/v2/scans/{scan_id}/notes\napplication/json\nExpand all\nCollapse all\nCopy\nCont..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "41",
+        "title": "Search vulnerabilities for scan",
+        "depth": 1,
+        "chunk_id": "chunk_116",
+        "page_start": 136,
+        "page_end": 137,
+        "word_count": 336,
+        "summary": "Returns a list of vulnerabilities for the specified scan.",
+        "children": [
+          {
+            "number": "41.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_117",
+            "page_start": 138,
+            "page_end": 138,
+            "word_count": 61,
+            "summary": "200 A list of scan vulnerabilities for the requested scan.",
+            "children": [
+              {
+                "number": "41.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_118",
+                "page_start": 138,
+                "page_end": 138,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "41.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_119",
+                "page_start": 138,
+                "page_end": 145,
+                "word_count": 606,
+                "summary": "200\n400\n403\n429\nPOST\n/was/v2/scans/{scan_id}/vulnerabilities/search\napplication/json\nAppliedFilters-..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "42",
+        "title": "Export scan results",
+        "depth": 1,
+        "chunk_id": "chunk_120",
+        "page_start": 145,
+        "page_end": 146,
+        "word_count": 86,
+        "summary": "Generates a scan report for the specified scan.",
+        "children": [
+          {
+            "number": "42.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_121",
+            "page_start": 146,
+            "page_end": 146,
+            "word_count": 81,
+            "summary": "— 200 Returned if the scan report generation is complete.",
+            "children": [
+              {
+                "number": "42.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_122",
+                "page_start": 146,
+                "page_end": 146,
+                "word_count": 14,
+                "summary": "200\n202\n400\n403\n415\n429\nPUT\n/was/v2/scans/{scan_id}/report\napplication/json\nCopy\n{ }\nContent type"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "43",
+        "title": "Download exported scan",
+        "depth": 1,
+        "chunk_id": "chunk_123",
+        "page_start": 147,
+        "page_end": 147,
+        "word_count": 100,
+        "summary": "Downloads a scan report for the specified scan.",
+        "children": [
+          {
+            "number": "43.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_124",
+            "page_start": 147,
+            "page_end": 148,
+            "word_count": 89,
+            "summary": "200 Returned if scan report in the specified format was downloaded successfully.",
+            "children": [
+              {
+                "number": "43.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_125",
+                "page_start": 148,
+                "page_end": 159,
+                "word_count": 923,
+                "summary": "200\n400\n403\n404\n415\n429\nGET\n/was/v2/scans/{scan_id}/report\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"report\":\n-\n{\n\"version\": \"1."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "44",
+        "title": "Download debug ZIP file",
+        "depth": 1,
+        "chunk_id": "chunk_126",
+        "page_start": 159,
+        "page_end": 159,
+        "word_count": 71,
+        "summary": "Returns a ZIP file containing debug information for the specified WAS scan.",
+        "children": [
+          {
+            "number": "44.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_127",
+            "page_start": 159,
+            "page_end": 159,
+            "word_count": 66,
+            "summary": "— 200 Returned if the ZIP file for the specified scan UUID was downloaded successfully.",
+            "children": [
+              {
+                "number": "44.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_128",
+                "page_start": 159,
+                "page_end": 159,
+                "word_count": 4,
+                "summary": "scan_id\nrequired\nGET\n/api/v3/export/{scan_id}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "45",
+        "title": "Templates",
+        "depth": 1,
+        "chunk_id": "chunk_129",
+        "page_start": 160,
+        "page_end": 160,
+        "word_count": 60,
+        "summary": "With Tenable Web App Scanning API, you can list templates, get template details, create and update\nu..."
+      },
+      {
+        "number": "46",
+        "title": "List Tenable-provided templates",
+        "depth": 1,
+        "chunk_id": "chunk_130",
+        "page_start": 160,
+        "page_end": 161,
+        "word_count": 213,
+        "summary": "Returns a paginated list of Tenable-provided templates that are available to be used for scan\nconfigurations.",
+        "children": [
+          {
+            "number": "46.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_131",
+            "page_start": 161,
+            "page_end": 161,
+            "word_count": 38,
+            "summary": "200 Returns a list of Tenable-provided templates.",
+            "children": [
+              {
+                "number": "46.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_132",
+                "page_start": 161,
+                "page_end": 167,
+                "word_count": 423,
+                "summary": "200\n400\n429\nsort\nGET\n/was/v2/templates\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "47",
+        "title": "Get Tenable-provided template details",
+        "depth": 1,
+        "chunk_id": "chunk_133",
+        "page_start": 167,
+        "page_end": 167,
+        "word_count": 43,
+        "summary": "Returns the details for a Tenable-provided template.",
+        "children": [
+          {
+            "number": "47.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_134",
+            "page_start": 167,
+            "page_end": 167,
+            "word_count": 56,
+            "summary": "200 Returns the details of the specified Tenable-provided template.",
+            "children": [
+              {
+                "number": "47.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_135",
+                "page_start": 168,
+                "page_end": 177,
+                "word_count": 868,
+                "summary": "200\n400\n404\n429\nGET\n/was/v2/templates/{template_id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "48",
+        "title": "Search user-defined templates",
+        "depth": 1,
+        "chunk_id": "chunk_136",
+        "page_start": 177,
+        "page_end": 178,
+        "word_count": 333,
+        "summary": "Returns a paginated list of user-defined templates that are available to be used for scan\nconfigurations.",
+        "children": [
+          {
+            "number": "48.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_137",
+            "page_start": 179,
+            "page_end": 179,
+            "word_count": 30,
+            "summary": "200 Returns a list of user-defined templates.",
+            "children": [
+              {
+                "number": "48.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_138",
+                "page_start": 179,
+                "page_end": 179,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "48.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_139",
+                "page_start": 179,
+                "page_end": 182,
+                "word_count": 209,
+                "summary": "200\n429\nPOST\n/was/v2/user-templates/search\napplication/json\nAppliedFilters-UserTemplates\nCopy\n{\n\"fie..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "49",
+        "title": "Get user-defined template details",
+        "depth": 1,
+        "chunk_id": "chunk_140",
+        "page_start": 182,
+        "page_end": 182,
+        "word_count": 62,
+        "summary": "Returns details for a user-defined template.",
+        "children": [
+          {
+            "number": "49.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_141",
+            "page_start": 183,
+            "page_end": 183,
+            "word_count": 124,
+            "summary": "200 Returns details for the specified user-defined template.",
+            "children": [
+              {
+                "number": "49.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_142",
+                "page_start": 183,
+                "page_end": 184,
+                "word_count": 62,
+                "summary": "user_template_id\nrequired\ncontainer_id\nrequired\ndata\nrequired\nreasons\nrequired\nreasons\nrequired\nGET\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "50",
+        "title": "Update user-defined template",
+        "depth": 1,
+        "chunk_id": "chunk_143",
+        "page_start": 184,
+        "page_end": 185,
+        "word_count": 125,
+        "summary": "Updates the specified user-defined template.",
+        "children": [
+          {
+            "number": "50.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_144",
+            "page_start": 185,
+            "page_end": 185,
+            "word_count": 58,
+            "summary": "202 Returned if Tenable Web App Scanning successfully updated the user-defined template.",
+            "children": [
+              {
+                "number": "50.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_145",
+                "page_start": 186,
+                "page_end": 186,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "50.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_146",
+                "page_start": 186,
+                "page_end": 187,
+                "word_count": 86,
+                "summary": "202\n400\n429\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"name\": \"string\",\n\"description\": \"string..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "51",
+        "title": "Delete user-defined template",
+        "depth": 1,
+        "chunk_id": "chunk_147",
+        "page_start": 187,
+        "page_end": 187,
+        "word_count": 79,
+        "summary": "Deletes the specified user-defined template.",
+        "children": [
+          {
+            "number": "51.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_148",
+            "page_start": 187,
+            "page_end": 187,
+            "word_count": 2,
+            "summary": "user_template_id\nrequired"
+          }
+        ]
+      },
+      {
+        "number": "52",
+        "title": "Vulnerabilities",
+        "depth": 1,
+        "chunk_id": "chunk_149",
+        "page_start": 188,
+        "page_end": 188,
+        "word_count": 110,
+        "summary": "With the Tenable Web App Scanning API, you can get a filtered list of detected vulnerabilities.",
+        "children": [
+          {
+            "number": "52.1",
+            "title": "Response samples",
+            "depth": 2,
+            "chunk_id": "chunk_150",
+            "page_start": 188,
+            "page_end": 188,
+            "word_count": 11,
+            "summary": "202\n400\n404\n409\n429\nDELETE\n/was/v2/user-templates/{user_template_id}\napplication/json\nCopy\n{ }"
+          }
+        ]
+      },
+      {
+        "number": "53",
+        "title": "Get vulnerability details",
+        "depth": 1,
+        "chunk_id": "chunk_151",
+        "page_start": 188,
+        "page_end": 189,
+        "word_count": 64,
+        "summary": "Content type\nReturns vulnerability details for a specific vulnerability instance.",
+        "children": [
+          {
+            "number": "53.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_152",
+            "page_start": 189,
+            "page_end": 189,
+            "word_count": 64,
+            "summary": "200 Returns the specified vulnerability instance.",
+            "children": [
+              {
+                "number": "53.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_153",
+                "page_start": 189,
+                "page_end": 191,
+                "word_count": 127,
+                "summary": "200\n400\n404\n429\n500\nvuln_id\nrequired\nGET\n/was/v2/vulnerabilities/{vuln_id}\napplication/json\nExpand a..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "54",
+        "title": "Search vulnerabilities",
+        "depth": 1,
+        "chunk_id": "chunk_154",
+        "page_start": 191,
+        "page_end": 192,
+        "word_count": 318,
+        "summary": "Returns a list of vulnerabilities detected by Tenable Web App Scanning API v2 scans.",
+        "children": [
+          {
+            "number": "54.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_155",
+            "page_start": 192,
+            "page_end": 192,
+            "word_count": 51,
+            "summary": "200 Returns a list of vulnerabilities.",
+            "children": [
+              {
+                "number": "54.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_156",
+                "page_start": 192,
+                "page_end": 192,
+                "word_count": 14,
+                "summary": "Payload\noperator\nvalue\nPOST\n/was/v2/vulnerabilities/search\napplication/json\nAppliedFilters-Vulnerabi..."
+              },
+              {
+                "number": "54.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_157",
+                "page_start": 193,
+                "page_end": 196,
+                "word_count": 258,
+                "summary": "200\n400\n429\n500\n\"operator\": \"match\",\n\"value\": \"My Scans\"\n}\napplication/json\nExpand all\nCollapse all\n..."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 157,
+    "max_depth": 3
+  }
+}

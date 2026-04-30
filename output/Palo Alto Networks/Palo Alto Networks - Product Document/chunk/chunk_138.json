@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_138",
+  "section_number": "1.8.1.8",
+  "header": "Local Authentication",
+  "content": "Although the firewall and Panorama provide local authentication for administrators and end\nusers, External Authentication Services are preferable in most cases because they provide\ncentral account management. However, you might require special user accounts that you don’t\nmanage through the directory servers that your organization reserves for regular accounts. For\nexample, you might define a superuser account that is local to the firewall so that you can access\nthe firewall even if the directory server is down. In such cases, you can use the following local\nauthentication methods:\n• (Firewall only) Local database authentication—To Configure Local Database Authentication,\nyou create a database that runs locally on the firewall and contains user accounts (usernames\nand passwords or hashed passwords) and user groups. This type of authentication is useful\nfor creating user accounts that reuse the credentials of existing Unix accounts in cases where\nyou know only the hashed passwords, not the plaintext passwords. Because local database\nauthentication is associated with authentication profiles, you can accommodate deployments\nwhere different sets of users require different authentication settings, such as Kerberos\nsingle sign-on (SSO) or Multi-Factor Authentication (MFA). (For details, see Configure an\nAuthentication Profile and Sequence). For administrator accounts that use an authentication\nprofile, password complexity and expiration settings are not applied. This authentication\nmethod is available to administrators who access the firewall (but not Panorama) and end users\nwho access services and applications through Authentication Portal or GlobalProtect.\n• Local authentication without a database—You can configure firewall administrative accounts\nor Panorama administrative accounts without creating a database of users and user groups\nthat runs locally on the firewall or Panorama. Because this method is not associated with\nauthentication profiles, you cannot combine it with Kerberos SSO or MFA. However, this is\nthe only authentication method that allows password profiles, which enable you to associate\nindividual accounts with password expiration settings that differ from the global settings. (For\ndetails, see Define password complexity and expiration settings)\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n245\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 245,
+      "end": 246
+    },
+    "content_stats": {
+      "char_count": 2387,
+      "word_count": 335
+    },
+    "hierarchy": {
+      "parent": "Authentication Types",
+      "children": []
+    }
+  }
+}

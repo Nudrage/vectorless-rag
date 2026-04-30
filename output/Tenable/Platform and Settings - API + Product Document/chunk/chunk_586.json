@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_586",
+  "section_number": "26.7",
+  "header": "List tag values",
+  "content": "Returns a list of tag values.\nNote: The list can also include the tag categories that do not have any associated values.\nRequires the Basic [16] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring\nA filter condition in the field:operator:value  format, for example,\nf=value:match:rhel . Filters should match field:op:value  format.\nFilter conditions can include:\nvalue:eq:<value>\nvalue:match:<value>\ncategory_name:match:<partial_value>\ncategory_name:eq:<category_name>\ncategory_name:match:<partial_category_name>\ndescription:eq:<description>\ndescription:match:<partial_description>\nupdated_at:date-eq:<timestamp_as_int>\nupdated_at:date-gt:<timestamp_as_int>\nupdated_at:date-lt:<timestamp_as_int>\nupdated_by:eq:<user_uuid>\nstring\nIf multiple f  parameters are present, specifies whether Tenable\nVulnerability Management applies AND  or OR  to conditions. Supported\nvalues are and  and or . If you omit this parameter when using multiple\nf  parameters, Tenable Vulnerability Management applies AND  by\ndefault.\nstring\nA comma-separated list of fields to include in the wildcard search. Provides\nthe same functionality as a match  condition in the f  in parameter. For\nexample, f=value:match:Chi  returns the same results as\nwf=value&w=Chi . Wildcard fields include:\ncategory_name\nvalue\nf\nft\nwf\ndescription\nUse the w  parameter to specify the search value.\nstring\nA single search value for the wildcard fields specified in the wf\nparameter.\ninteger <int32>\nDefault: 5000\nThe number of records to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 5000 .\ninteger <int32>\nDefault: 0\nThe starting record to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 0 .\nstring\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nsecond ( asc  or desc ). For example, value:desc  would sort results\nby the value  field in descending order.\nIf you specify multiple fields, the fields must be separated by commas. For\nexample, value:desc,updated_at:asc  would first sort results by the\nvalue  field in descending order and then by the updated_at  field in\nascending order.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 578,
+      "end": 579
+    },
+    "content_stats": {
+      "char_count": 2269,
+      "word_count": 309
+    },
+    "hierarchy": {
+      "parent": "Tags",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

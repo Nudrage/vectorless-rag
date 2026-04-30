@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_032",
+  "section_number": "1.14",
+  "header": "Health – External Connector Details",
+  "content": "The URL to retrieve health data is\nhttps://<vectra_portal_url>/api/v3.4/health/external_connectors/details and\nuses OAuth2 authentication.\nHealth information is refreshed every 10 minutes. To get health information at the current time, use the\n‘live’ query parameter. If refreshing health data takes more than 30 seconds, results will be stored and\ncan be accessed by calling the endpoint again without the ‘live’ parameter.\n© July 2024 Vectra AI, Inc. | 55\nField\nSub-Field\nType\nDescription\nexternal_connector\nobject\ndetails\nobject\nDictionary containing detailed information for an\nexternal connector. Detail information varies per\nconnector.\nDetailed information can be queried for the following external connectors:\nConnector Type\nDescription\nactive_directory\nActive Directory and Lockdown\nazure_ad_lockdown\nAzure AD Lockdown\naws\nAWS\nazure\nAzure\ngoogle_cloud\nGoogle Cloud\nreverse_lookup_dns\nReverse DNS Lookup\nsiem\nSIEM\nvcenter\nvCenter\nwindows_event_log_ingestion Windows Event Log Ingestion\nzscaler_private_access\nZscaler Private Access (ZPA)\nThe available query parameters to filter for Health – External Connector Details are listed below.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\nconnector_type\nstring\nConnector types to be returned in the response.\nMultiple values can be provided using commas to\nseparate values (e.g. connector_type=aws,azure).\nIf no data types are given, all will be returned.\nlive\nbool\nFalse by default. Set to ‘true’ to refresh the data at\nthe current time.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 54,
+      "end": 55
+    },
+    "content_stats": {
+      "char_count": 1477,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

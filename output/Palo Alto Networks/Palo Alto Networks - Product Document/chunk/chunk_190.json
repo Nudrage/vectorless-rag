@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_190",
+  "section_number": "1.9.8.4",
+  "header": "Obtain a Certificate from an External CA",
+  "content": "The advantage of obtaining a certificate from an external certificate authority (CA) is that the\nprivate key does not leave the firewall. To obtain a certificate from an external CA, generate a\ncertificate signing request (CSR) and submit it to the CA. After the CA issues a certificate with\nthe specified attributes, import it onto the firewall. The CA can be a well-known, public CA or an\nenterprise CA.\nTo use Online Certificate Status Protocol (OCSP) for verifying the revocation status of the\ncertificate, Configure an OCSP Responder before generating the CSR.\nSTEP 1 |\nRequest the certificate from an external CA.\n1.\nSelect Device > Certificate Management > Certificates > Device Certificates.\n2.\nIf the firewall has more than one virtual system (vsys), select a Location (vsys or Shared)\nfor the certificate.\n3.\nClick Generate.\n4.\nEnter a Certificate Name. The name is case-sensitive and can have up to 63 characters\non the firewall or up to 31 characters on Panorama. It must be unique and use only\nletters, numbers, hyphens, and underscores.\n5.\nIn the Common Name field, enter the FQDN (recommended) or IP address of the\ninterface where you will configure the service that will use this certificate.\n6.\nIf the firewall has more than one vsys and you want the certificate to be available to\nevery vsys, select the Shared check box.\n7.\nIn the Signed By field, select External Authority (CSR).\n8.\nIf applicable, select an OCSP Responder.\n9.\n(Optional) Add the Certificate Attributes to uniquely identify the firewall and the service\nthat will use the certificate.\nIf you add a Host Name attribute, it should match the Common Name (this is\nmandatory for GlobalProtect). The host name populates the Subject Alternative\nName field of the certificate.\n10. Click Generate. The Device Certificates tab displays the CSR with a Status of pending.\nSTEP 2 |\nSubmit the CSR to the CA.\n1.\nSelect the CSR and click Export to save the .csr file to a local computer.\n2.\nUpload the .csr file to the CA.\nSTEP 3 |\nImport the certificate.\n1.\nAfter the CA sends a signed certificate in response to the CSR, return to the Device\nCertificates tab and click Import.\n2.\nEnter the Certificate Name used to generate the CSR.\n3.\nEnter the path and name of the PEM Certificate File that the CA sent, or Browse to it.\n4.\nClick OK. The Device Certificates tab displays the certificate with a Status of valid.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n336\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 4 |\nConfigure the certificate.\n1.\nClick the certificate Name.\n2.\nSelect the check boxes that correspond to the intended use of the certificate on the\nfirewall. For example, if the firewall will use this certificate to secure forwarding of\nsyslogs to an external syslog server, select the Certificate for Secure Syslog check box.\n3.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 336,
+      "end": 337
+    },
+    "content_stats": {
+      "char_count": 2841,
+      "word_count": 485
+    },
+    "hierarchy": {
+      "parent": "Obtain Certificates",
+      "children": []
+    }
+  }
+}

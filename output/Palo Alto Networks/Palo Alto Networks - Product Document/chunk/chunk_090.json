@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_090",
+  "section_number": "1.6.4.4.3",
+  "header": "Configure Certificate-Based Administrator Authentication to the Web Interface",
+  "content": "As a more secure alternative to password-based authentication to the firewall web interface,\nyou can configure certificate-based authentication for administrator accounts that are local to\nthe firewall. Certificate-based authentication involves the exchange and verification of a digital\nsignature instead of a password.\nConfiguring certificate-based authentication for any administrator disables the username/\npassword logins for all administrators on the firewall; administrators thereafter require the\ncertificate to log in.\nSTEP 1 |\nGenerate a certificate authority (CA) certificate on the firewall.\nYou will use this CA certificate to sign the client certificate of each administrator.\nCreate a Self-Signed Root CA Certificate.\nAlternatively, Import a Certificate and Private Key from your enterprise CA or a\nthird-party CA.\nSTEP 2 |\nConfigure a certificate profile for securing access to the web interface.\nConfigure a Certificate Profile.\n• Set the Username Field to Subject.\n• In the CA Certificates section, Add the CA Certificate you just created or imported.\nSTEP 3 |\nConfigure the firewall to use the certificate profile for authenticating administrators.\n1.\nSelect Device > Setup > Management and edit the Authentication Settings.\n2.\nSelect the Certificate Profile you created for authenticating administrators and click OK.\nSTEP 4 |\nConfigure the administrator accounts to use client certificate authentication.\nFor each administrator who will access the firewall web interface, Configure a Firewall\nAdministrator Account and select Use only client certificate authentication.\nIf you have already deployed client certificates that your enterprise CA generated, skip to Step\n8. Otherwise, go to Step 5.\nSTEP 5 |\nGenerate a client certificate for each administrator.\nGenerate a Certificate. In the Signed By drop-down, select a self-signed root CA certificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n134\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nSTEP 6 |\nExport the client certificate.\n1.\nExport a Certificate and Private Key.\n2.\nCommit your changes. The firewall restarts and terminates your login session.\nThereafter, administrators can access the web interface only from client systems that\nhave the client certificate you generated.\nSTEP 7 |\nImport the client certificate into the client system of each administrator who will access the\nweb interface.\nRefer to your web browser documentation.\nSTEP 8 |\nVerify that administrators can access the web interface.\n1.\nOpen the firewall IP address in a browser on the computer that has the client certificate.\n2.\nWhen prompted, select the certificate you imported and click OK. The browser displays\na certificate warning.\n3.\nAdd the certificate to the browser exception list.\n4.\nClick Login. The web interface should appear without prompting you for a username or\npassword.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 134,
+      "end": 135
+    },
+    "content_stats": {
+      "char_count": 2847,
+      "word_count": 425
+    },
+    "hierarchy": {
+      "parent": "Configure Administrative Accounts and Authentication",
+      "children": []
+    }
+  }
+}

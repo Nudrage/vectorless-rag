@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_205",
+  "section_number": "1.9.16.1",
+  "header": "Set Up Connectivity with an HSM",
+  "content": "HSM clients are integrated with PA-3200 Series, PA-5200 Series, PA-7000 Series, and VM-Series\nfirewalls and with the Panorama management server (both virtual and M-Series appliances) for\nuse with the following HSM vendors:\n• nCipher nShield Connect—The supported client versions depend on the PAN-OS release:\n• PAN-OS 10.0 supports client version 12.40.2 (backward compatible up to client version\n11.50 for older appliances).\n• PAN-OS 9.1, 9.0, and 8.1 support client version 12.30.\n• PAN-OS 8.0 and earlier releases support client version 11.62.\n• SafeNet Network—The supported client versions depend on the PAN-OS release:\n• PAN-OS 10.0 supports client versions 5.4.2 and 7.2.\n• PAN-OS 9.1 and 9.0 support client versions 5.4.2 and 6.3.\n• PAN-OS 8.1 supports client versions 5.4.2 and 6.2.2.\n• PAN-OS 8.0.2 and later PAN-OS 8.0 releases (also PAN-OS 7.1.10 and later PAN-OS 7.1\nreleases) support client versions 5.2.1, 5.4.2, and 6.2.2.\nThe HSM server version must be compatible with these client versions. Refer to the HSM vendor\ndocumentation for the client-server version compatibility matrix. On the firewall or Panorama, use\nthe following procedure to select the SafeNet Network client version that is compatible with your\nSafeNet HSM server.\nDowngrading HSM servers might not be an option after you upgrade them.\n• Set Up Connectivity with a SafeNet Network HSM\n• Set Up Connectivity with an nCipher nShield Connect HSM\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n369\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nInstall the SafeNet Client RPM Packet Manager.\n1.\nSelect Device > Setup > HSM and Select HSM Client Version (Hardware Security\nOperations settings).\n2.\nSelect Version 5.4.2 (default) or 7.2 as appropriate for your HSM server version.\n3.\nClick OK.\n4.\n(Required only if you change the HSM version on the firewall) If the version change\nsucceeds, the firewall prompts you to reboot to change to the new HSM version. If\nprompted, click Yes.\n5.\nIf the master key isn’t on the firewall, the client version upgrade will fail. Close the\nmessage and make the master key local to the firewall:\n• Edit the Hardware Security Module Provider and disable (clear) the Master Key\nSecured by HSM option.\n• Click OK.\n• Select Device > Master Key and Diagnostics to edit the Master Key.\n• Enter the Current Master Key; you can then enter that same key to be the New\nMaster Key and then Confirm New Master Key.\n• Click OK.\n• Repeat the first four steps to Select HSM Client Version and reboot again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 369,
+      "end": 370
+    },
+    "content_stats": {
+      "char_count": 2506,
+      "word_count": 411
+    },
+    "hierarchy": {
+      "parent": "Secure Keys with a Hardware Security Module",
+      "children": [
+        "Set Up Connectivity with a SafeNet Network HSM",
+        "Set Up Connectivity with an nCipher nShield Connect HSM"
+      ]
+    }
+  }
+}

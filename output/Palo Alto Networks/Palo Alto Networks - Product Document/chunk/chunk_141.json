@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_141",
+  "section_number": "1.8.3.1",
+  "header": "Configure MFA Between RSA SecurID and the Firewall",
+  "content": "Multi-factor authentication allows you to protect company assets by using multiple factors to\nverify a user’s identity before allowing them to access network resources. To enable multi-factor\nauthentication (MFA) between the firewall and the RSA SecurID Access Cloud Authentication\nService, you must first configure the RSA SecurID Service so that you have the details that\nyou need to configure the firewall to authenticate users using multiple factors. After you have\nperformed the required configuration on the RSA SecurID Access Console, you can configure the\nfirewall to integrate with RSA SecurID.\nThe Palo Alto Networks next-generation firewall integrates with the RSA SecurID Access\nCloud Authentication Service. The MFA API integration with RSA SecurID is supported\nfor cloud-based services only and does not support two-factor authentication for the on-\npremise Authentication Manager when the second factor uses the Vendor Specific API.\nThe minimum content version required for this integration is 752 and PAN-OS 8.0.2.\n• Get the RSA SecurID Access Cloud Authentication Service Details\n• Configure the Firewall for MFA with RSA SecurID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 252,
+      "end": 252
+    },
+    "content_stats": {
+      "char_count": 1146,
+      "word_count": 171
+    },
+    "hierarchy": {
+      "parent": "Configure Multi-Factor Authentication",
+      "children": [
+        "Get the RSA SecurID Access Cloud Authentication Service Details",
+        "Configure the Firewall for MFA with RSA SecurID"
+      ]
+    }
+  }
+}

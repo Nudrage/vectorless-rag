@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_603",
+  "section_number": "1.17.3",
+  "header": "URL Filtering Inline ML",
+  "content": "URL Filtering inline ML enables the firewall dataplane to apply machine learning on webpages to\nalert users when phishing variants are detected while preventing malicious variants of JavaScript\nexploits from entering your network. Inline ML dynamically analyzes and detects malicious\ncontent by evaluating various web page details using a series of ML models. Each inline ML model\ndetects malicious content by evaluating file details, including decoder fields and patterns, to\nformulate a high probability classification and verdict, which is then used as part of your larger\nweb security policy. URLs classified as malicious are forwarded to PAN-DB for additional analysis\nand validation. You can specify URL exceptions to exclude any false-positives that might be\nencountered. This allows you to create more granular rules for your profiles to support your\nspecific security needs. To keep up with the latest changes in the threat landscape, inline ML\nmodels are updated regularly and added via content releases. An active Advanced URL Filtering or\nlegacy URL Filtering license is required to configure URL Filtering inline ML.\nInline ML-based protection can also be enabled to detect malicious PE (portable executables), ELF\nand MS Office files, and PowerShell and shell scripts in real-time as part of your Antivirus profile\nconfiguration. For more information, refer to: WildFire Inline ML\nURL Filtering inline ML is not supported on the VM-50 or VM50L virtual appliance.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1114\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1114,
+      "end": 1115
+    },
+    "content_stats": {
+      "char_count": 1567,
+      "word_count": 239
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": []
+    }
+  }
+}

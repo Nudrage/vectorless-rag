@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_077",
+  "section_number": "1.6.2.6",
+  "header": "Export Configuration Table Data",
+  "content": "Export policy rules, configuration objects, and IPS signatures from Panorama™ and firewalls\nto demonstrate regulatory compliance to external auditors, to conduct periodic reviews of the\nfirewall configuration, and to generate reports on firewall policies. This prevents you from having\nto give auditors direct access to your firewalls and appliances, to take screen shots or to access\nthe XML API to generate configuration reports. From the web interface, you can export the\nconfiguration table data for policies, objects, network, firewall, and Panorama configurations, as\nwell as Signature exceptions in the Antivirus, Anti-Spyware, and Vulnerability Protection Security\nprofiles, in either a PDF or CSV file.\nConfiguration table export works like a print function—you cannot import generated files back\ninto Panorama or the firewall. When you export data as a PDF file and the table data exceeds\n50,000 rows, the data is split in to multiple PDF files (for example, <report-name>_part1.pdf and\n<report-name>_part2.pdf) When you export data as a CSV file, the data is exported as a single\nfile. These export formats allow you to apply filters that match your report criteria and search\nwithin PDF reports to quickly find specific data. Additionally, when you export the configuration\ntable data, a system log is generated to record the event.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n118\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nSTEP 1 |\nLaunch the Web Interface and identify the configuration data you need to export.\nSTEP 2 |\nApply filters as needed to produce the configuration data you need to export and click PDF/\nCSV.\nSTEP 3 |\nConfigure the Configuration Table Export report:\n1.\nEnter a File Name.\n2.\nSelect the File Type.\n3.\n(Optional) Enter a report Description.\n4.\nConfirm the configuration table data matches the filters you applied.\nSelect Show All Columns to show all filters applied.\nSTEP 4 |\nExport the configuration table data.\nConfiguration table export works like a print function—you cannot import generated files back\nin to Panorama or the firewall.\nSTEP 5 |\nSelect a location to save the exported file.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 118,
+      "end": 119
+    },
+    "content_stats": {
+      "char_count": 2139,
+      "word_count": 338
+    },
+    "hierarchy": {
+      "parent": "Use the Web Interface",
+      "children": []
+    }
+  }
+}

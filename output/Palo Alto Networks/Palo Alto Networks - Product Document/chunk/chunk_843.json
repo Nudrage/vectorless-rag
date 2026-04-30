@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_843",
+  "section_number": "1.21.15.6",
+  "header": "Configure NAT",
+  "content": "Perform the following tasks to configure various aspects of NAT. In addition to the examples\nbelow, there are examples in the section NAT Configuration Examples.\n• Translate Internal Client IP Addresses to Your Public IP Address (Source DIPP NAT)\n• Enable Clients on the Internal Network to Access your Public Servers (Destination U-Turn\nNAT)\n• Enable Bi-Directional Address Translation for Your Public-Facing Servers (Static Source NAT)\n• Configure Destination NAT with DNS Rewrite\n• Configure Destination NAT Using Dynamic IP Addresses\n• Modify the Oversubscription Rate for DIPP NAT\n• Reserve Dynamic IP NAT Addresses\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1490\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Disable NAT for a Specific Host or Interface\nThe first three NAT examples in this section are based on the following topology:\nBased on this topology, there are three NAT policies we need to create as follows:\n• To enable the clients on the internal network to access resources on the Internet, the internal\n192.168.1.0 addresses will need to be translated to publicly routable addresses. In this case,\nwe will configure source NAT (the purple enclosure and arrow above), using the egress\ninterface address, 203.0.113.100, as the source address in all packets that leave the firewall\nfrom the internal zone. See Translate Internal Client IP Addresses to Your Public IP Address\n(Source DIPP NAT) for instructions.\n• To enable clients on the internal network to access the public web server in the DMZ zone,\nwe must configure a NAT rule that redirects the packet from the external network, where the\noriginal routing table lookup will determine it should go based on the destination address of\n203.0.113.11 within the packet, to the actual address of the web server on the DMZ network\nof 10.1.1.11. To do this you must create a NAT rule from the trust zone (where the source\naddress in the packet is) to the untrust zone (where the original destination address is) to\ntranslate the destination address to an address in the DMZ zone. This type of destination NAT\nis called U-Turn NAT (the yellow enclosure and arrow above). See Enable Clients on the Internal\nNetwork to Access your Public Servers (Destination U-Turn NAT) for instructions.\n• To enable the web server—which has both a private IP address on the DMZ network and a\npublic-facing address for access by external users—to both send and receive requests, the\nfirewall must translate the incoming packets from the public IP address to the private IP\naddress and the outgoing packets from the private IP address to the public IP address. On the\nfirewall, you can accomplish this with a single bi-directional static source NAT policy (the green\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1491\n©2025 Palo Alto Networks, Inc.\nNetworking\nenclosure and arrow above). See Enable Bi-Directional Address Translation for Your Public-\nFacing Servers (Static Source NAT).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1490,
+      "end": 1492
+    },
+    "content_stats": {
+      "char_count": 2923,
+      "word_count": 473
+    },
+    "hierarchy": {
+      "parent": "NAT",
+      "children": [
+        "Translate Internal Client IP Addresses to Your Public IP Address (Source DIPP NAT)",
+        "Enable Clients on the Internal Network to Access your Public Servers (Destination U- Turn NAT)",
+        "Enable Bi-Directional Address Translation for Your Public-Facing Servers (Static Source NAT)",
+        "Configure Destination NAT with DNS Rewrite",
+        "Configure Destination NAT Using Dynamic IP Addresses",
+        "Modify the Oversubscription Rate for DIPP NAT",
+        "Reserve Dynamic IP NAT Addresses",
+        "Disable NAT for a Specific Host or Interface"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_319",
+  "section_number": "1.11.9.3",
+  "header": "Configure the Expiration Period and Run Time for Reports",
+  "content": "The expiration period and run time are global settings that apply to all Report Types. After running\nnew reports, the firewall automatically deletes reports that exceed the expiration period.\nSTEP 1 |\nSelect Device > Setup > Management, edit the Logging and Reporting Settings, and select\nthe Log Export and Reporting tab.\nSTEP 2 |\nSet the Report Runtime to an hour in the 24-hour clock schedule (default is 02:00; range is\n00:00 [midnight] to 23:00).\nSTEP 3 |\nEnter the Report Expiration Period in days (default is no expiration; range is 1 is 2,000).\nYou can’t change the storage that the firewall allocates for saving reports: it is\npredefined at about 200 MB. When the firewall reaches the storage maximum, it\nautomatically deletes older reports to create space even if you don’t set a Report\nExpiration Period.\nSTEP 4 |\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 534,
+      "end": 534
+    },
+    "content_stats": {
+      "char_count": 845,
+      "word_count": 145
+    },
+    "hierarchy": {
+      "parent": "View and Manage Reports",
+      "children": []
+    }
+  }
+}

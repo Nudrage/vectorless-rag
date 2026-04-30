@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_456",
+  "section_number": "1.13.5.6",
+  "header": "Disable and Enable App-IDs",
+  "content": "You can disable all App-IDs introduced in a content release if you want to immediately benefit\nfrom the latest threat prevention, and plan to enable the App-IDs later, and you can disable App-\nIDs for specific applications.\nPolicy rules referencing App-IDs only match to and enforce traffic based on enabled App-IDs.\nCertain App-IDs cannot be disabled and only allow a status of enabled. App-IDs that cannot\nbe disabled include application signatures that are implicitly used by other App-IDs (such as\nunknown-tcp). Disabling a base App-ID could cause App-IDs which depend on the base App-ID to\nalso be disabled. For example, disabling facebook-base will disable all other Facebook App-IDs.\nDisable all App-IDs in a content release or for scheduled content updates.\nWhile this option allows you to be protected against threats, by giving you the option to\nenable the App-ID at a later time, Palo Alto Networks recommends that instead of disabling\nApp-IDs on a regular basis, you should instead configure a security policy rule to Temporarily\nAllow New App-IDs. This rule will always allow the new App-IDs introduced in only the latest\ncontent release. Because content updates that include new App-IDs are released only once a\nmonth, this gives you time to assess the new App-IDs and adjust your security policy to cover\nthe new App-IDs if needed, all the while ensuring that availability for critical applications is not\naffected.\n• To disable all new App-IDs introduced in a content release, select Device > Dynamic\nUpdates and Install an Application and Threats content release. When prompted, select\nDisable new apps in content update. Select the check box to disable apps and continue\ninstalling the content update.\n• On the Device > Dynamic Updates page, select Schedule. Choose to Disable new apps in\ncontent update for downloads and installations of content releases.\nDisable App-IDs for one application or multiple applications at a single time.\n• To quickly disable a single application or multiple applications at the same time, click\nObjects > Applications. Select one or more application check box and click Disable.\n• To review details for a single application, and then disable the App-ID for that application,\nselect Objects > Applications and Disable App-ID. You can use this step to disable both\npending App-IDs (where the content release including the App-ID is downloaded to the\nfirewall but not installed) or installed App-IDs.\nEnable App-IDs.\nEnable App-IDs that you previously disabled by selecting Objects > Applications. Select one or\nmore application check box and click Enable or open the details for a specific application and\nclick Enable App-ID.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n814\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 814,
+      "end": 815
+    },
+    "content_stats": {
+      "char_count": 2757,
+      "word_count": 439
+    },
+    "hierarchy": {
+      "parent": "Manage New and Modified App-IDs",
+      "children": []
+    }
+  }
+}

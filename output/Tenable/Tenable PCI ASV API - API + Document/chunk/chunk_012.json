@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_012",
+  "section_number": "9.1",
+  "header": "Responses",
+  "content": "attestation_uuid\nrequired\nsort\nlimit\noffset\n200\nReturned if Tenable PCI ASV successfully retrieved the list of undisputed failures for the PCI\nattestation.\n— 400 Returned if you do not have a license to use Tenable PCI ASV.\n— 403\nReturned if you do not have the required permissions to view the list of assets for the attestation. For\nexample, if you're an analyst user instead of an administrator.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in Tenable PCI ASV.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 13,
+      "end": 14
+    },
+    "content_stats": {
+      "char_count": 588,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "List undisputed failures",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_800",
+  "section_number": "1.21.11.2",
+  "header": "Firewall as a DHCP Server and Client",
+  "content": "The firewall can function as a DHCP server and as a DHCP client. Dynamic Host Configuration\nProtocol, RFC 2131, is designed to support IPv4 and IPv6 addresses. The Palo Alto Networks\nimplementation of DHCP server supports IPv4 addresses only.\nThe firewall DHCP server operates in the following manner:\n• When the DHCP server receives a DHCPDISCOVER message from a client, the server replies\nwith a DHCPOFFER message containing all of the predefined and user-defined options in the\norder they appear in the configuration. The client selects the options it needs and responds\nwith a DHCPREQUEST message.\n• When the server receives a DHCPREQUEST message from a client, the server replies with its\nDHCPACK message containing only the options specified in the request.\nThe firewall DHCP client operates in the following manner:\n• When the DHCP client receives a DHCPOFFER from the server, the client automatically\ncaches all of the options offered for future use, regardless of which options it had sent in its\nDHCPREQUEST.\n• By default and to save memory consumption, the client caches only the first value of each\noption code if it receives multiple values for a code.\n• There is no maximum length for DHCP messages unless the DHCP client specifies a maximum\nin option 57 in its DHCPDISCOVER or DHCPREQUEST messages.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1438,
+      "end": 1438
+    },
+    "content_stats": {
+      "char_count": 1313,
+      "word_count": 216
+    },
+    "hierarchy": {
+      "parent": "DHCP",
+      "children": []
+    }
+  }
+}

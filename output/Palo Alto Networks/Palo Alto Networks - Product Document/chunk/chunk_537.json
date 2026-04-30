@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_537",
+  "section_number": "1.16.2.10",
+  "header": "SSL Decryption for Elliptical Curve Cryptography (ECC) Certificates",
+  "content": "Certificates\nThe firewall automatically decrypts SSL traffic from websites and applications using ECC\ncertificates, including Elliptical Curve Digital Signature Algorithm (ECDSA) certificates. As\norganizations transition to using ECC certificates to benefit from the strong keys and small\ncertificate size, you can continue to maintain visibility into and safely enable ECC-secured\napplication and website traffic.\nDecryption for websites and applications using ECC certificates is not supported for traffic\nthat is mirrored to the firewall; encrypted traffic using ECC certificates must pass through\nthe firewall directly for the firewall to decrypt it.\nYou can use a hardware security module (HSM) to store the private keys associated with\nECDSA certificates. For TLSv1.3 traffic, PAN-OS supports HSMs only for SSL Forward\nProxy. It does not support HSMs for SSL Inbound Inspection.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 990,
+      "end": 990
+    },
+    "content_stats": {
+      "char_count": 884,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

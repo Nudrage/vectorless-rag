@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_789",
+  "section_number": "1.21.8.2.1",
+  "header": "Shortest-Path Tree (SPT) and Shared Tree",
+  "content": "After a receiver joins a multicast group, the routers in the multiaccess network build the routing\npaths necessary to send data to each receiver in the group. Each IP datagram sent to a multicast\ngroup is distributed (forwarded) to all members. The routing paths constitute a type of distribution\ntree for a multicast packet. The goal of a multicast distribution tree is for the router to duplicate\na multicast packet when the packet reaches a divergence of paths and the router must send the\npacket down multiple paths to reach all group members, yet the distribution tree must refrain\nfrom sending packets down a path where no interested receivers exist. The distribution tree is\none of the following:\n• A source tree—A path from a multicast source (the root of the tree) through the network\nto the receivers in the multicast group. The source tree is the shortest path that a multicast\npacket can take from source to receiver, so it is also known as the shortest-path tree (SPT).\nThe sender and receiver are annotated as a source and multicast group pair, shortened to (S,\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1415\n©2025 Palo Alto Networks, Inc.\nNetworking\nG); for example, (192.168.1.1, 225.9.2.6). The following figure illustrates three shortest-path\ntrees from the source to three receivers.\n• A shared tree—A path rooted at the RP, not at the multicast source. A shared tree is also\nknown as an RP tree or RPT. Routers forward multicast packets from various sources to the\nRP and the RP forwards the packets down the shared tree. A shared tree is annotated as (*, G),\nusing a wildcard as the source because all sources belonging to the multicast group share the\nsame distribution tree from the RP. An example shared tree annotation is (*, 226.3.1.5). The\nfollowing figure illustrates a shared tree from the root at the RP to the receivers.\nSource-Specific Multicast (SSM) uses source tree distribution. When you Configure IP Multicast\nto use Any Source Multicast (ASM), you can specify which distribution tree the virtual router on\nyour Palo Alto Networks® firewall uses to deliver multicast packets to a group by setting an SPT\nthreshold for the group:\n• By default the virtual router switches multicast routing from shared tree to SPT when it\nreceives the first multicast packet for a group or prefix (the SPT Threshold is set to 0).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1416\n©2025 Palo Alto Networks, Inc.\nNetworking\n• You can configure the virtual router to switch to SPT when the total number of kilobits in\npackets arriving for the specified multicast group or prefix at any interface over any length of\ntime reaches a configured number.\n• You can configure the virtual router to never switch to SPT for the group or prefix (it continues\nto use shared tree).\nSPT requires more memory, so choose your setting based on your multicast traffic level to the\ngroup. If the virtual router switches to SPT, then packets will arrive from the source (rather than\nthe RP) and the virtual router sends a Prune message to the RP. The source sends subsequent\nmulticast packets for that group down the shortest-path tree.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1415,
+      "end": 1417
+    },
+    "content_stats": {
+      "char_count": 3127,
+      "word_count": 530
+    },
+    "hierarchy": {
+      "parent": "PIM",
+      "children": []
+    }
+  }
+}

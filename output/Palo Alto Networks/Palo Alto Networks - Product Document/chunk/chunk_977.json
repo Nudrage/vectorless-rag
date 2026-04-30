@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_977",
+  "section_number": "1.22.14.2.1",
+  "header": "VMware ESXi",
+  "content": "Each VM on a monitored ESXi or vCenter server must have VMware Tools installed and running.\nVMware Tools provide the capability to glean the IP address(es) and other values assigned to each\nVM.\nWhen monitoring ESXi hosts that are part of the VM-Series NSX edition solution, use\nDynamic Address Groups (instead of using VM Information Sources) to learn about\nchanges in the virtual environment. For the VM-Series NSX edition solution, the NSX\nManager provides Panorama with information on the NSX security group to which an\nIP address belongs. The information from the NSX Manager provides the full context for\ndefining the match criteria in a Dynamic Address Group because it uses the service profile\nID as a distinguishing attribute and allows you to properly enforce policy when you have\noverlapping IP addresses across different NSX security groups.\nUp to 32 tags (from vCenter server and NSX Manager) can be registered to an IP address.\nTo collect the values assigned to the monitored VMs, use the VM Information Sources on the\nfirewall to monitor the following predefined set of ESXi attributes:\nAttributes Monitored on a VMware Source\nUUID\nName\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1666\n©2025 Palo Alto Networks, Inc.\nPolicy\nAttributes Monitored on a VMware Source\nGuest OS\nVM State — the power state can be poweredOff, poweredOn, standBy, and unknown.\nAnnotation\nVersion\nNetwork — Virtual Switch Name, Port Group Name, and VLAN ID\nContainer Name —vCenter Name, Data Center Object Name, Resource Pool Name, Cluster\nName, Host, Host IP address.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1666,
+      "end": 1667
+    },
+    "content_stats": {
+      "char_count": 1553,
+      "word_count": 251
+    },
+    "hierarchy": {
+      "parent": "Attributes Monitored on Virtual Machines in Cloud Platforms",
+      "children": []
+    }
+  }
+}

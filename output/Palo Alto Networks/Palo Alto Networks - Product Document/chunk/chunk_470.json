@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_470",
+  "section_number": "1.13.9.4",
+  "header": "Add Applications to an Existing Rule",
+  "content": "In some cases, you may want to add applications learned (seen) on a port-based rule to a rule\nthat already exists. For example, an administrator may create a cloned application-based rule\nfor general business web applications from a port-based rule that allows internet access (a\nport 80/443 rule). Later, the administrator notices that the port-based internet access rule has\nseen more general business applications and wants to add some or all of them to the cloned\napplication-based rule (cloning another application-based rule for the same type of application\nwould create an unnecessary rule and complicate the rulebase).\nThis example assumes that an application-based Security policy rule to control general business\ntraffic already exists or was cloned from a port-based internet access rule, similarly to the Rule\nCloning Migration Use Case: Web Browsing and SSL Traffic. In that example, we cloned an\napplication-based rule from the port-based internet access rule and changed the new rule’s\nService to application-default to prevent web-based applications from using non-standard ports.\nIn addition to adding applications to an existing application-based rule, you can add\napplications to an existing port-based rule. This converts the port-based rule to an\napplication-based rule for the applications you add to the rule. If you do this, go to the rule\nand change the Service to application-default to prevent the applications from using non-\nstandard ports (also, the Service configured on the rule may not match the application).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n846\n©2025 Palo Alto Networks, Inc.\nApp-ID\nSTEP 1 |\nYou check the port-based internet access rule and discover that the rule has seen general\nbusiness applications and that you need to allow some of them for business purposes.\nSTEP 2 |\nSelect the general business apps you want to add to the existing rule.\nSTEP 3 |\nClick Add to Existing Rule and select the Name of the rule to which you want to add the\napplications, in this example, general-business-applications.\nSTEP 4 |\nClick OK in Add Apps to Existing Ruleto add the selected applications to the general-\nbusiness-applications rule.\nSTEP 5 |\nClick OK in Applications & Usage.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n847\n©2025 Palo Alto Networks, Inc.\nApp-ID\nSTEP 6 |\nThe updated rule now controls the original applications on the rule and the applications you\njust added.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 846,
+      "end": 848
+    },
+    "content_stats": {
+      "char_count": 2411,
+      "word_count": 384
+    },
+    "hierarchy": {
+      "parent": "Security Policy Rule Optimization",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_721",
+  "section_number": "1.20.4",
+  "header": "Configure the Portal to Authenticate Satellites",
+  "content": "In order to register with the LSVPN, each satellite must establish an SSL/TLS connection with\nthe portal. After establishing the connection, the portal authenticates the satellite to ensure\nthat is authorized to join the LSVPN. After successfully authenticating the satellite, the portal\nwill issue a server certificate for the satellite and push the LSVPN configuration specifying the\ngateways to which the satellite can connect and the root CA certificate required to establish an\nSSL connection with the gateways.\nThere are two ways that the satellite can authenticate to the portal during its initial connection:\n• (Best Practice)Username and password—If you would rather provision your satellites without\nmanually entering the serial numbers of the satellites into the portal configuration, you\ncan instead require the satellite administrator to authenticate when establishing the initial\nconnection to the portal. Although the portal will always look for the serial number in the initial\nrequest from the satellite, if it cannot identify the serial number, the satellite administrator\nmust provide a username and password to authenticate to the portal. Because the portal\nwill always fall back to this form of authentication, you must create an authentication profile\nin order to commit the portal configuration. This requires that you set up an authentication\nprofile for the portal LSVPN configuration even if you plan to authenticate satellites using the\nserial number.\n• Serial number—You can configure the portal with the serial number of the satellite firewalls\nthat are authorized to join the LSVPN for deployments where the firewall hosting the portal\nis running PAN-OS 10.0 or lower; serial number authentication is not supported on firewalls\nrunning PAN-OS 10.1 or later. During the initial satellite connection to the portal, the\nsatellite presents its serial number to the portal and if the portal has the serial number in its\nconfiguration, the satellite will be successfully authenticated. You add the serial numbers of\nauthorized satellites when you configure the portal. See Configure the Portal.\nThe following workflow describes how to set up the portal to authenticate satellites using\nlocal database authentication. External authentication methods are not supported for satellite\nauthentication.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1304\n©2025 Palo Alto Networks, Inc.\nLarge Scale VPN (LSVPN)\nSTEP 1 |\nSet up local database authentication so that the satellite administrator can authenticate the\nsatellite to the portal.\n1.\nSelect Device > Local User Database > Users and Add the user account to the local\ndatabase.\n2.\nAdd the user account to the local database.\nSTEP 2 |\nConfigure an authentication profile.\n1.\nSelect Device > Authentication Profile > Add.\n2.\nEnter a Name for the profile and then set the Type to Local Database.\n3.\nClick OK and Commit your changes.\nSTEP 3 |\nAuthenticate the satellite.\nTo authenticate the satellite to the portal, the satellite administrator must provide the\nusername and password configured in the local database.\n1.\nSelect Network > IPSec Tunnels and click the Gateway Info link in the Status column of\nthe tunnel configuration you created for the LSVPN.\n2.\nClick the enter credentials link in the Portal Status field and username and password\nrequired to authenticate the satellite to the portal.\nAfter the portal successfully authenticates to the portal for the first time, the portal\ngenerates a satellite cookie, which it uses to authenticate the satellite on subsequent\nsessions.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1305\n©2025 Palo Alto Networks, Inc.\nLarge Scale VPN (LSVPN)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1304,
+      "end": 1306
+    },
+    "content_stats": {
+      "char_count": 3652,
+      "word_count": 566
+    },
+    "hierarchy": {
+      "parent": "Large Scale VPN (LSVPN)",
+      "children": []
+    }
+  }
+}

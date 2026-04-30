@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_060",
+  "section_number": "1.18.9",
+  "header": "Assignment Outcomes",
+  "content": "GET used to list assignment outcomes.\n© July 2024 Vectra AI, Inc. | 102\nURL: https://<vectra_portal_url>/api/v3.4/assignment_outcomes\nHeaders:\n“Authorization”: “Bearer <access_token>”\nResponse:\n{\n\"count\": 3,\n\"next\": null,\n\"previous\": null,\n\"results\": [\n{\n\"id\": 1,\n\"builtin\": true,\n\"user_selectable\": true,\n\"title\": \"Benign True Positive\",\n\"category\": \"benign_true_positive\"\n},\n{\n\"id\": 2,\n\"builtin\": true,\n\"user_selectable\": true,\n\"title\": \"Malicious True Positive\",\n\"category\": \"malicious_true_positive\"\n},\n{\n\"id\": 3,\n\"builtin\": true,\n\"user_selectable\": true,\n\"title\": \"False Positive\",\n\"category\": \"false_positive\"\n}\n]\n}\nPOST used to create assignment outcomes.\nURL: https://<vectra_portal_url>/api/v3.4/assignment_outcomes\nHeaders:\n“Authorization”: “Bearer <access_token>”,\n“Content-Type”: “application/json\"\nBody:\n{\n\"title\": \"Custom outcome\",\n\"category\": \"benign_true_positive\"\n© July 2024 Vectra AI, Inc. | 103\n}\nResponse:\n{\n\"id\": 6,\n\"builtin\": false,\n\"user_selectable\": true,\n\"title\": \"Custom outcome\",\n\"category\": \"benign_true_positive\"\n}\nPUT used to modify an assignment outcome. The title can always be modified, but category can only be\nmodified if the assignment outcome has not been used as an outcome for an assignment.\nURL: https://<vectra_portal_url>/api/v3.4/assignment_outcomes/<id>\nHeaders:\n“Authorization”: “Bearer <access_token>”,\n“Content-Type”: “application/json\"\nBody:\n{\n\"title\": \"My New Outcome Title\",\n\"category\": \"false_positive\"\n}\nResponse:\n{\n\"id\": 6,\n\"builtin\": false,\n\"user_selectable\": true,\n\"title\": \"My New Outcome Title\",\n\"category\": \"false_positive\"\n}\nDELETE used to delete an assignment outcome.\nURL: https://<vectra_portal_url>/api/v3.4/assignment_outcomes/<id>\nHeaders:\n“Authorization”: “Bearer <access_token>”\n© July 2024 Vectra AI, Inc. | 104",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 101,
+      "end": 104
+    },
+    "content_stats": {
+      "char_count": 1780,
+      "word_count": 205
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

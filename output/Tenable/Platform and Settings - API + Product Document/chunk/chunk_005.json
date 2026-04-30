@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "1.2",
+  "header": "Update allowed IP addresses",
+  "content": "Adds IP addresses or updates the existing list of IP addresses allowed to access the Tenable\nVulnerability Management API.\nCaution: Unless your network assignments are restricted to only IPv4 addresses or only IPv6\naddresses, you must specify allowed ranges for both IPv4 and IPv6 in order to avoid blocking some\nAPI traffic. It is not always predictable whether a client will connect via IPv4 or IPv6.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nA comma-separated list of IPv4 addresses to allow. The list can\ninclude discrete IPv4 addresses, IPv4 address ranges, and IPv4\nsubnets. For example, \"192.0.2.0, 198.51.100.4-\n198.51.100.10, 203.0.113.0/24\" .\nIf an empty string is provided then the API can be accessed from all\nIPv4 addresses.\nCaution: Ensure that you have reviewed the list of allowed IPv4\naddresses before submission since inappropriate IPv4 address\nrestrictions can result in users being locked out from API access. If\nthis occurs, an administrator can log in to the Vulnerability\nManagement user interface and update the list of allowed IPv4\naddresses in the access control settings. For more information, see\nAPI Access Security in the Tenable Vulnerability Management User\nGuide.\nstring\nA comma-separated list of IPv6 addresses to allow. The list can\ninclude discrete IPv6 addresses, IPv6 address ranges, and IPv6\nsubnets. For example,\nallowed_ipv4_addresses\nallowed_ipv6_addresses\n\"2001:db8:2e92:75f2:d40a:e290:10b3:c0f,\n2001:db8:1e1f:46a1:e3cb:2110:22c6:0000-\n2001:db8:1e1f:46a1:e3cb:2110:22c6:ffff,\n2001:0DB8::/32\" .\nIf an empty string is provided then the API can be accessed from all\nIPv6 addresses.\nCaution: Ensure that you have reviewed the list of allowed IPv6\naddresses before submission since inappropriate IPv6 address\nrestrictions can result in users being locked out from API access. If\nthis occurs, an administrator can log in to the Vulnerability\nManagement user interface and update the list of allowed IPv6\naddresses in the access control settings. For more information, see\nAPI Access Security in the Tenable Vulnerability Management User\nGuide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 3,
+      "end": 4
+    },
+    "content_stats": {
+      "char_count": 2159,
+      "word_count": 312
+    },
+    "hierarchy": {
+      "parent": "Access Control (API)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

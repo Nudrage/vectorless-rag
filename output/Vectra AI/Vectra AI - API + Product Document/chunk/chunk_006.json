@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "1.5",
+  "header": "Accessing REST API v3.4",
+  "content": "The REST API v 3.4 is accessed via the URL https://<vectra_portal_url>/api/v3.4/<path>.\nThe <path> options for REST API queries are listed in the table below.\nURL\nMETHOD\nDATA TO QUERY\n/detections\nGET, PATCH\nAll detection events\n/detections/<detection_id>\nGET\nSingle detection event\ndetails\n/detections/<detection_id>/notes\nGET, POST, PATCH, DELETE Detection notes\n/detections/<detection_id>/pcap\nGET\nDownload PCAP data for\nsingle detection\n/accounts\nGET\nAll accounts\n/accounts/<account_id>\nGET\nSingle account details\n/accounts/<account_id>/notes\nGET, POST, PATCH, DELETE Account notes\n/rules\nGET, POST, PUT, DELETE\nTriage rule configuration\n© July 2024 Vectra AI, Inc. | 8\nURL\nMETHOD\nDATA TO QUERY\n/tagging/detection/<detection_id>\nGET, PATCH\nDetection tags\n/tagging/account/<account_id>\nGET, PATCH\nAccount tags\n/tagging/host/<host_id>\nGET, PATCH\nHost tags\n/tagging/entity/<entity_id>\nGET, PATCH\nEntity tags\n/assignments\nGET, POST\nAccount assignments\n/assignments/<id>\nGET,PUT,DELETE\nSingle assignments\n/assignment_outcomes\nGET, POST, PUT, DELETE\nAssignment outcomes\n/assignment_outcomes/<id>\nGET,PUT,DELETE\nSingle assignment outcome\n/events/audits\nGET\nAudit log events\n/entities\nGET\nAll entities (Accounts,\nHosts)\n/entities/<entity_id>\nGET\nSingle entity details\n/events/entity_scoring\nGET\nEntity scoring events\n/groups\nGET, POST\nGroups\n/groups/<group_id>\nGET, PATCH, DELETE\nGroups\n/events/detections\nGET\nDetection events\n/lockdown\nGET\nEntities lockdown status\n/health\nGET\nAppliance health data\n/health/external_connectors\nGET\nExternal connector health\ndata\n/health/external_connectors/details\nGET\nExternal connector health\ndetails\n/health/edr\nGET\nEDR health data\n/health/edr/details\nGET\nEDR health details\n/health/network_brain/ping\nGET\nNetwork brain connection\nstatus\n/hosts\nGET\nAll Hosts\n/hosts/<host_id>\nGET\nSingle Host details\n/entities/<entity_id>/notes\nGET, POST\nAll entity notes\n/entities/<entity_id>/notes/<note_id>\nGET, PATCH, DELETE\nSingle note details\n/users\nGET, POST\nUsers\n/users/<user_id>\nGET, PATCH, DELETE\nSingle user\n© July 2024 Vectra AI, Inc. | 9\nURL\nMETHOD\nDATA TO QUERY\n/users/roles\nGET\nUser roles\n/threatFeeds\nGET, POST\nThreat Feeds\n/threatFeeds/<id>\nGET, POST, PATCH, DELETE Single Threat Feed\n/threatFeeds/<id>/file\nGET, DELETE\nSingle Threat Feed File\n/vectra-match/download-vectra-ruleset\nGET\nVectra Match Curated\nRuleset\n/unique_hosts_observed_monthly\nGET\nUnique Host Counts\n/unique_hosts_observed_monthly/audit\nGET\nUnique Host Audits\n/unique_hosts_observed\nGET\nUnique Host Counts\n/unique_hosts_observed/audit\nGET\nUnique Host Audits",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 7,
+      "end": 9
+    },
+    "content_stats": {
+      "char_count": 2559,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

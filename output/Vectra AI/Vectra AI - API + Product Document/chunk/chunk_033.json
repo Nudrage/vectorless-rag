@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_033",
+  "section_number": "1.18.20",
+  "header": "Health – EDR",
+  "content": "The URL to retrieve health data is https://<vectra_portal_url>/api/v3.4/health/edr and\nuses OAuth2 authentication.\nHealth information is refreshed every 10 minutes. To get health information at the current time, use the\n‘live’ query parameter. If refreshing health data takes more than 30 seconds, results will be stored and\ncan be accessed by calling the endpoint without the ‘live’ parameter.\n© July 2024 Vectra AI, Inc. | 56\nField\nSub-Field\nType\nDescription\nedr\nobject\nconnection_status string\nCurrent connection status. ‘enabled’ or ‘disabled’\nauth_status\nobject Authentication status. ‘authenticated’,\n‘not_authenticated’, or ‘not_configured’\nerror_states\nobject List of current error states. If a connection is in error, the\nerror message will be listed here.\nlockdown_status\nstring\nIf lockdown can be enabled for a tenant, the enabled\nstatus will be reflected. ‘enabled’ or ‘disabled’\nInformation can be queried for the following EDR connections:\nEDR\nDescription\nhost_lockdown\nHost Lockdown\nwindows_defender\nMicrosoft Defender ATP\ncarbon_black\nCarbon Black Response\ncb_cloud\nCarbon Black Cloud\nfireeye\nFireEye Endpoint Security\nsentinelone\nSentinelOne\ncybereason\nCybereason\ncrowdstrike\nCrowdStrike\nThe available query parameters to filter for Health – EDR are listed below.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\ndata_type\nstring\nData types to be returned in the response.\nMultiple values can be provided using commas to\nseparate values\n(e.g. data_type=connection_status,auth_status ).\nIf no data types are given, all will be returned.\nedr_type\nstring\nEDR types to be returned in the response.\nMultiple values can be provided using commas to\nseparate values (e.g. edr_type=fireeye,cybereason).\nIf no data types are given, all will be returned.\nlive\nbool\nFalse by default. Set to ‘true’ to refresh the data at\nthe current time.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 55,
+      "end": 56
+    },
+    "content_stats": {
+      "char_count": 1827,
+      "word_count": 260
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

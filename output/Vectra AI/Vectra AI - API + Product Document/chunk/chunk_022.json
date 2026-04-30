@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_022",
+  "section_number": "1.18.10",
+  "header": "Detection Events",
+  "content": "Detection Events are generated upon initial detection and for each update of the detection.\nThe URL to retrieve accounts scoring events is\nhttps://<vectra_portal_url>/api/v3.4/events/detections and uses OAuth2\nauthentication.\nThe following table lists the top-level fields and descriptions present in the response for a bulk GET\nrequest to the v3.4 API for Detection Events.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nevents\nA list of detection events\nlist\nEvent fields are described in the\ntable below\nremaining_count\nThe number of remaining\nevents\ninteger\nnext_checkpoint\nThe next checkpoint value\nto use to retrieve any\nremaining events\ninteger\nExample: \"next_checkpoint\": 101\nUse with the ‘from’ query\nparameter described below\nThe following table lists the fields and descriptions present in an Account Detection Event.\nElement\nDescription\nType\nNotes\nid\nThe ID of the Account Detection\nEvent\ninteger\n© July 2024 Vectra AI, Inc. | 35\nElement\nDescription\nType\nNotes\ndetection_id\nThe ID of the detection\ninteger\ncategory\nThe detection category\nstring\nthreat\nThe threat score attributed to the\ndetection\ninteger\ncertainty\nThe certainty score attributed to the\ndetection\ninteger\nd_type_vname\nThe detection name\nstring\ntriaged\nIndicates whether the detection has\nbeen triaged\nboolean\ncertainty\nThe certainty score attributed to the\naccount\ninteger\nevent_timestamp\nTimestamp when the Account\nDetection Event occurred\nstring\ndetail\nThe detection detail\nobject\nDetail fields are specific to\ndetection type\nseverity\nThe severity of the detection\ninteger\ndetection_href\nLink to the detection\nstring\ndetection_type\nType of detection\nstring\nentity_id\nId of the related entity\ninteger\nentity_uid\nUID of the related entity\nstring\ntype\nType of the related entity\nstring\nEither Account or Host\nurl\nCorresponding URL of the\ndetection event\nstring\nmitre\nType of Mitre Technique\nstring\nThe available query parameters to filter for Account Detection Events are listed below.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\nfrom\ninteger\nUsed to provide a checkpoint value for filtering\nAccount Detection Events\nlimit\ninteger\nUsed to specify the batch size returned by the\nresponse from the /events/account_detection\nendpoint. By default 500 events will be returned if a\nlimit is not specified. A maximum of 1,000 events will\nbe returned per request.\nevent_timestamp_gte\nstring\nISO8601\nDetection events with a more recent timestamp than\nthe value provided.\nevent_timestamp_lte\nstring\nISO8601\nDetection events with an older timestamp than the\nvalue provided.\n© July 2024 Vectra AI, Inc. | 36\nQUERY PARAMETER\nTYPE\nDESCRIPTION\ntype\nstring\nType of the related entity (Account, Host).\ninclude_info_category\nbool\nWhether to include Detection events with info\ncategory.\ninclude_triaged\nbool\nWhether to include Detection events that have been\ntriaged.\ndetection_id\ninteger\nFilter by a specific Detection id.\nordering\nstring\nOrders events by “event_timestamp”. The default\nsorts event timestamps by ascending order. Events\ncan be sorted in descending order by prepending the\nquery with “minus” symbol.\nThe URL to retrieve accounts detection events from the last checkpoint is\nhttps://<vectra_portal_url>/api/v3.4/events/account_detection?from=101",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 34,
+      "end": 36
+    },
+    "content_stats": {
+      "char_count": 3192,
+      "word_count": 459
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

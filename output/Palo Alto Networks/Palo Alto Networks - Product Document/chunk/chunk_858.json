@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_858",
+  "section_number": "1.21.15.7.6",
+  "header": "Virtual Wire Static NAT Example",
+  "content": "In this example, security policies are configured from the virtual wire zone named Trust to\nthe virtual wire zone named Untrust. Host 192.0.2.100 is statically translated to address\n198.51.100.100. With the Bi-directional option enabled, the firewall generates a NAT policy from\nthe Untrust zone to the Trust zone. Clients on the Untrust zone access the server using the IP\naddress 198.51.100.100, which the firewall translates to 198.0.2.100. Any connections initiated\nby the server at 192.0.2.100 are translated to source IP address 198.51.100.100.\nRoute on R2:\nDestination\nNext Hop\n198.51.100.100/32\n198.51.100.1",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1505,
+      "end": 1505
+    },
+    "content_stats": {
+      "char_count": 615,
+      "word_count": 90
+    },
+    "hierarchy": {
+      "parent": "NAT Configuration Examples",
+      "children": []
+    }
+  }
+}

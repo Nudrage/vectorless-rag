@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_651",
+  "section_number": "1.17.25.1",
+  "header": "M-600 Appliance for PAN-DB Private Cloud",
+  "content": "To deploy a PAN-DB private cloud, you need one or more M-600 appliances. The M-600\nappliance ships in Panorama mode, and to be deployed as PAN-DB private cloud you must set\nit up to operate in PAN-URL-DB mode. In the PAN-URL-DB mode, the appliance provides URL\ncategorization services for enterprises that do not want to use the PAN-DB public cloud.\nThe M-600 appliance when deployed as a PAN-DB private cloud uses two ports- MGT (Eth0) and\nEth1; Eth2 is not available for use. The management port is used for administrative access to the\nappliance and for obtaining the latest content updates from the PAN-DB public cloud or from a\nserver on your network. For communication between the PAN-DB private cloud and the firewalls\non the network, you can use the MGT port or Eth1.\nThe M-200 appliance cannot be deployed as a PAN-DB private cloud.\nThe M-600 appliance in PAN-URL-DB mode:\n• Does not have a web interface, it only supports a command-line interface (CLI).\n• Cannot be managed by Panorama.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1203\n©2025 Palo Alto Networks, Inc.\nURL Filtering\n• Cannot be deployed in a high availability pair.\n• Does not require a URL Filtering license. The firewalls must have a valid PAN-DB URL Filtering\nlicense to connect with and query the PAN-DB private cloud.\n• Ships with a set of default server certificates that are used to authenticate the firewalls that\nconnect to the PAN-DB private cloud. You cannot import or use another server certificate for\nauthenticating the firewalls. If you change the hostname on the M-600 appliance, the appliance\nautomatically generates a new set of certificates to authenticate the firewalls that it services.\n• Can be reset to Panorama mode only. If you want to deploy the appliance as a dedicated Log\nCollector, switch to Panorama mode and then set it in log collector mode.\nTable 4: Differences Between the PAN-DB Public Cloud and PAN-DB Private Cloud\nDifferences\nPAN-DB Public Cloud\nPAN-DB Private Cloud\nContent and\nDatabase\nUpdates\nContent (regular and critical) updates\nand full database updates are\npublished multiple times during\nthe day. The PAN-DB public cloud\nupdates the URL categories malware\nand phishing every five minutes. The\nfirewall checks for critical updates\nwhenever it queries the cloud\nservers for URL lookups.\nContent updates and full URL\ndatabase updates are available once a\nday during the work week.\nURL\nCategorization\nRequests\nSubmit URL categorization change\nrequests using the following options:\n• Palo Alto Networks Test A Site\nwebsite.\n• URL filtering profile setup page\non the firewall.\n• URL filtering log on the firewall.\nSubmit URL categorization change\nrequests only using the Palo Alto\nNetworks Test A Site website.\nUnresolved\nURL Queries\nIf the firewall cannot resolve a URL\nquery, the request is sent to the\nservers in the public cloud.\nIf the firewall cannot resolve a query,\nthe request is sent to the M-600\nappliance(s) in the PAN-DB private\ncloud. If there is no match for the\nURL, the PAN-DB private cloud sends\na category unknown response to the\nfirewall; the request is not sent to\nthe public cloud unless you have\nconfigured the M-600 appliance to\naccess the PAN-DB public cloud.\nIf the M-600 appliance(s) that\nconstitute your PAN-DB private\ncloud is configured to be completely\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1204\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nDifferences\nPAN-DB Public Cloud\nPAN-DB Private Cloud\noffline, it does not send any data or\nanalytics to the public cloud.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1203,
+      "end": 1205
+    },
+    "content_stats": {
+      "char_count": 3510,
+      "word_count": 579
+    },
+    "hierarchy": {
+      "parent": "PAN-DB Private Cloud",
+      "children": []
+    }
+  }
+}

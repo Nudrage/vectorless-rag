@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_454",
+  "section_number": "1.13.5.4",
+  "header": "Ensure Critical New App-IDs are Allowed",
+  "content": "New App-IDs can cause a change in policy enforcement for traffic that is newly-identified as\nbelonging to a certain application. To mitigate any impact to security policy enforcement, you can\nuse the New App-ID characteristic in a security policy rule so that the rule always enforces the\nmost recently introduced App-IDs without requiring you to make configuration changes when\nnew App-IDs are installed. The New App-ID characteristic always matches to only the new App-\nIDs in the most recently installed content releases. When a new content release is installed, the\nnew App-ID characteristic automatically begins to match only to the new App-IDs in that content\nrelease version.\nYou can choose to enforce all new App-IDs, or target the security policy rule to enforce certain\ntypes of new App-IDs that might have network-wide or critical impact (for example, enforce only\nauthentication or software development applications). Set the security policy rule to Allow to\nensure that even if an App-ID release introduces expanded or more precise coverage for critical\napplications, the firewall continues to allow them.\nNew App-IDs are released monthly, so a policy rule that allows the latest App-IDs gives you a\nmonth’s time (or, if the firewall is not installing content updates on a schedule, until the next time\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n811\n©2025 Palo Alto Networks, Inc.\nApp-ID\nyou manually install content) to assess how newly-categorized applications might impact security\npolicy enforcement and make any necessary adjustments.\nSTEP 1 |\nSelect Objects > Application Filters and Add a new application filter.\nSTEP 2 |\nDefine the types of new applications for which you want to ensure constant availability\nbased on subcategory or characteristic. For example, select the category “auth-service”\nto ensure that any newly-installed applications that are known to perform or support\nauthentication are allowed.\nSTEP 3 |\nOnly after narrowing the types of new applications that you want to allow immediately upon\ninstallation, select Apply to New App-IDs only.\nSTEP 4 |\nSelect Policies > Security and add or edit a security policy rule that is configured to allow\nmatching traffic.\nSTEP 5 |\nSelect Application and add the new Application Filter to the policy rule as match criteria.\nSTEP 6 |\nClick OK and Commit to save your changes.\nSTEP 7 |\nTo continue to adjust your security policy to account for any changes to enforcement that\nnew App-IDs introduce:\n• Monitor New App-IDs—Monitor and get reports on new App-ID activity.\n• See the New and Modified App-IDs in a Content Release—See how the newly-installed\nApp-IDs impact your existing security policy rules.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 811,
+      "end": 812
+    },
+    "content_stats": {
+      "char_count": 2677,
+      "word_count": 427
+    },
+    "hierarchy": {
+      "parent": "Manage New and Modified App-IDs",
+      "children": []
+    }
+  }
+}

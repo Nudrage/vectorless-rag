@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_153",
+  "section_number": "1.8.5",
+  "header": "Configure Kerberos Single Sign-On",
+  "content": "Palo Alto Networks firewalls and Panorama support Kerberos V5 single sign-on (SSO) to\nauthenticate administrators to the web interface and end users to Authentication Portal. With\nKerberos SSO enabled, the user needs to log in only for initial access to your network (such as\nlogging in to Microsoft Windows). After this initial login, the user can access any browser-based\nservice in the network (such as the firewall web interface) without having to log in again until the\nSSO session expires.\nSTEP 1 |\nCreate a Kerberos keytab.\nThe keytab is a file that contains the principal name and password of the firewall, and is\nrequired for the SSO process. When you configure Kerberos in your Authentication Profile and\nSequence, the firewall first checks for a Kerberos SSO hostname. If you provide a hostname,\nthe firewall searches the keytabs for a service principal name that matches the hostname\nand uses only that keytab for decryption. If you do not provide a hostname, the firewall tries\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n284\n©2025 Palo Alto Networks, Inc.\nAuthentication\neach keytab in the authentication sequence until it is able to successfully authenticate using\nKerberos.\nIf the Kerberos SSO hostname is included in the request sent to the firewall, then\nthe hostname must match the service principal name of the keytab; otherwise, the\nKerberos authentication request is not sent.\n1.\nLog in to the Active Directory server and open a command prompt.\n2.\nEnter the following command to register the service principal name (SPN)\nfor GlobalProtect or Authentication Portal, where <portal_fqdn> and\n<service_account_username> are variables.\nsetspn -s HTTP/<portal_fqdn> <service_account_username>\n3.\nCreate Kerberos account for the firewall. Refer to your Kerberos documentation for the\nsteps.\n4.\nLog in to the KDC and open a command prompt.\n5.\nEnter the following command, where <portal_fqdn>, <kerberos_realm>, <netbios_name>,\n<service_account_username>, <password>, <filename>, and <algorithm> are variables.\nktpass /princ HTTP <portal_fqdn>@<kerberos_realm> /mapuser\n<netbios_name>\\<service_account_username> /pass <password>/out\n<filename>.keytab /ptype KRB5_NT_PRINCIPAL /crypto <algorithm>\nThe <kerberos_realm> value must be in all uppercase characters (for example,\nenter AD1.EXAMPLE.COM, not ad1.example.com).\nIf the firewall is in FIPS/CC mode, the algorithm must be aes128-cts-hmac-\nsha1-96 or aes256-cts-hmac-sha1-96. Otherwise, you can also use\ndes3-cbc-sha1 or arcfour-hmac. To use an Advanced Encryption\nStandard (AES) algorithm, the functional level of the KDC must be Windows\nServer 2012 or later and you must enable AES encryption for the firewall\naccount.\nThe algorithm in the keytab must match the algorithm in the service ticket\nthat the TGS issues to clients. Your Kerberos administrator determines which\nalgorithms the service tickets use.\nSTEP 2 |\nConfigure an Authentication Profile and Sequence to define Kerberos settings and other\nauthentication options that are common to a set of users.\n• Enter the Kerberos Realm (usually the DNS domain of the users, except that the realm is\nuppercase).\n• Import the Kerberos Keytab that you created for the firewall.\nSTEP 3 |\nAssign the authentication profile to the firewall application that requires authentication.\n• Administrative access to the web interface—Configure a Firewall Administrator Account and\nassign the authentication profile you configured.\n• End user access to services and applications—Assign the authentication profile you\nconfigured to an authentication enforcement object. When configuring the object, set\nthe Authentication Method to browser-challenge. Assign the object to Authentication\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n285\n©2025 Palo Alto Networks, Inc.\nAuthentication\npolicy rules. For the full procedure to configure authentication for end users, see Configure\nAuthentication Policy.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n286\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 284,
+      "end": 287
+    },
+    "content_stats": {
+      "char_count": 3987,
+      "word_count": 577
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

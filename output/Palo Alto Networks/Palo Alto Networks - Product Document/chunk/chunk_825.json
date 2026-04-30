@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_825",
+  "section_number": "1.21.12.7",
+  "header": "Use Case 1: Firewall Requires DNS Resolution",
+  "content": "In this use case, the firewall is the client requesting DNS resolutions of FQDNs for Security\npolicy rules, reporting, management services (such as email, Kerberos, SNMP, syslog, and more),\nand management events such as software update services, dynamic software updates, and\nWildFire. In dynamic environments, FQDNs change more frequently; accurate DNS resolutions\nallow the firewall to enforce accurate policing, provide reporting and management services, and\nhandle management events. The shared, global DNS services perform the DNS resolution for the\nmanagement plane functions.\nSTEP 1 |\nConfigure the primary and secondary DNS servers you want the firewall to use for DNS\nresolutions.\nYou must manually configure at least one DNS server on the firewall or it won’t be able\nto resolve hostnames; the firewall cannot use DNS server settings from another source,\nsuch as an ISP.\n1.\nEdit the Services settings (Device > Setup > Services > Global for firewalls that support\nmultiple virtual systems; Device > Setup > Services for those that don’t).\n2.\nOn the Services tab, for DNS, select Servers and enter the Primary DNS Server address\nand Secondary DNS Server address.\n3.\nProceed to Step 3.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1462\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 2 |\nAlternatively, you can configure a DNS Proxy Object if you want to configure advanced DNS\nfunctions such as split DNS, DNS proxy overrides, DNS proxy rules, static entries, or DNS\ninheritance.\n1.\nEdit the Services settings (Device > Setup > Services > Global for firewalls that support\nmultiple virtual systems; Device > Setup > Services for those that don’t).\n2.\nOn the Services tab, for DNS, select DNS Proxy Object.\n3.\nFrom the DNS Proxy list, select the DNS proxy that you want to use to configure global\nDNS services, or select DNS Proxy to configure a new DNS proxy object as follows:\n1. Enable and then enter a Name for the DNS proxy object.\n2. On firewalls that support multiple virtual systems, for Location, select Shared for\nglobal, firewall-wide DNS proxy services.\nShared DNS proxy objects don’t use DNS server profiles because they don’t\nrequire a specific service route belonging to a tenant virtual system.\n3. Enter the Primary DNS server IP address. Optionally enter a Secondary DNS server IP\naddress.\n4.\nSelect the Advanced tab. Ensure that Cache is enabled and Cache EDNS Responses is\nenabled (both are enabled by default).\n5.\nClick OK to save the DNS Proxy object.\nSTEP 3 |\n(Optional) Set a Minimum FQDN Refresh Time (sec) to limit how frequently the firewall\nrefreshes FQDN cache entries.\nBy default, the firewall refreshes each FQDN in its cache based on the individual TTL for the\nFQDN in a DNS record, as long as the TTL is greater than or equal to this minimum FQDN\nrefresh setting (or as long as the TTL is greater than or equal to the default setting of 30\nseconds if you don’t configure a minimum FQDN refresh time). To set a minimum FQDN\nrefresh time, enter a value in seconds (range is 0 to 14,400; default is 30). A setting of 0 means\nthe firewall refreshes FQDNs based on the TTL value in the DNS records; the firewall doesn’t\nenforce a minimum FQDN refresh time. The firewall uses the higher of the DNS TTL time and\nthe minimum FQDN refresh time.\nIf the TTL for the FQDN in DNS is short, but your FQDN resolutions don’t change\nas frequently as the TTL timeframe so don’t need a faster refresh, you should set a\nMinimum FQDN Refresh Time to avoid making FQDN refresh attempts more often\nthan necessary.\nSTEP 4 |\n(Optional) Specify an FQDN Stale Entry Timeout (min), which is the number of minutes that\nthe firewall continues to use stale FQDN resolutions in the event of an unreachable DNS\nserver (range is 0 to 10,080; default is 1,440).\nA setting of 0 means the firewall does not continue to use a stale FQDN entry.\nMake sure the FQDN stale entry timeout is short enough not to allow incorrect traffic\nforwarding (which can pose a security risk), but long enough to allow traffic continuity\nwithout causing an unplanned network outage.\nSTEP 5 |\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1463\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1462,
+      "end": 1464
+    },
+    "content_stats": {
+      "char_count": 4178,
+      "word_count": 713
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

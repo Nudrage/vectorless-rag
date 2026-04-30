@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_025",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200 Returned if the Tenable MSSP Platform successfully created the account group.\nRESPONSE SCHEMA:\napplication/json\nstring <uuid>\nThe UUID of the account group.\n— 400\nReturned if your request specified invalid parameters, if your request was improperly formatted, or if an\naccount group with the specified name already exists.\n— 403\nReturned if you do not have permissions to create an account group. For more information, see\nPermissions.\n— 404 Returned if the Tenable MSSP Platform could not find the specified accounts.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in the Tenable MSSP Portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 21,
+      "end": 21
+    },
+    "content_stats": {
+      "char_count": 720,
+      "word_count": 117
+    },
+    "hierarchy": {
+      "parent": "Create account group",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

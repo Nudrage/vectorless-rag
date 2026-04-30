@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_462",
+  "section_number": "1.13.7",
+  "header": "Safely Enable Applications on Default Ports",
+  "content": "Applications running on unusual ports can indicate an attacker that is attempting to circumvent\ntraditional port-based protections. Application-default is a feature of Palo Alto Networks firewalls\nthat gives you an easy way to prevent this type of evasion and safely enable applications on their\nmost commonly-used ports. Application-default is a best practice for application-based security\npolicies—it reduces administrative overhead, and closes security gaps that port-based policy\nintroduces:\nLess overhead—Write simple application-based security policy rules based on your business\nneeds, instead of researching and maintaining application-to-port mappings. We’ve defined the\ndefault ports for all applications with an App-ID.\nStronger security—Enabling applications to run only on their default ports is a security best\npractice. Application-default helps you to make sure that critical applications are available\nwithout compromising security if an application is behaving in an unexpected way.\nAdditionally, the default ports an application uses can sometimes depend on whether the\napplication is encrypted or cleartext. Port-based policy requires you to open all the default\nports an application might use to account for encryption. Open ports introduce security gaps\nthat an attacker can leverage to bypass your security policy. However, application-default\ndifferentiates between encrypted and clear-text application traffic. This means that it can\nenforce the default port for an application, regardless of whether it is encrypted or not.\nFor example, without application-default, you would need to open ports 80 and 443 to enable\nweb-browsing traffic—you’d be allowing both cleartext and encrypted web-browsing traffic\non both ports. With application-default turned on, the firewall strictly enforces cleartext web-\nbrowsing traffic only on port 80 and SSL-tunneled traffic only on port 443.\nTo see the ports that an application uses by default, you can visit Applipedia or select Objects\n> Applications. Application details include the application’s standard port—the port it most\ncommonly uses when in cleartext. For web-browsing, SMTP, FTP, LDAP, POP3, and IMAP details\nalso include the application’s secure port—the port the application uses when encrypted.\nSelect Policy > Security and add or a modify a rule to enforce applications only on their default\nport(s):\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n823\n©2025 Palo Alto Networks, Inc.\nApp-ID\nUsing application-default as part of an application-based security policy and with SSL\ndecryption is a best practice. Additionally, if you have existing security policy rules that\ncontrol web-browsing traffic with the Service set to service-http and service-https, you\nshould update those rules to use application-default instead.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n824\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 823,
+      "end": 825
+    },
+    "content_stats": {
+      "char_count": 2878,
+      "word_count": 410
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_948",
+  "section_number": "1.22.8.1",
+  "header": "Address Objects",
+  "content": "An address object is a set of IP addresses that you can manage in one place and then use in\nmultiple firewall policy rules, filters, and other functions. There are four types of address objects:\nIP Netmask, IP Range, IP Wildcard Mask, and FQDN.\nAn address object of type IP Netmask, IP Range, or FQDN can specify IPv4 or IPv6 addresses. An\naddress object of type IP Wildcard Mask can specify only IPv4 addresses.\nAn address object of type IP Netmask requires you to enter the IP address or network using slash\nnotation to indicate the IPv4 network or the IPv6 prefix length. For example, 192.168.18.0/24 or\n2001:db8:123:1::/64.\nAn address object of type IP Range requires you to enter the IPv4 or IPv6 range of addresses\nseparated by a hyphen.\nAn address object of type FQDN (for example, paloaltonetworks.com) provides further ease of\nuse because DNS provides the FQDN resolution to the IP addresses instead of you needing to\nknow the IP addresses and manually updating them every time the FQDN resolves to new IP\naddresses.\nAn address object of type IP Wildcard Mask is useful if you define private IPv4 addresses to\ninternal devices and your addressing structure assigns meaning to certain bits in the address. For\nexample, the IP address of cash register 156 in the northeastern U.S. could be 10.132.1.156 based\non these bit assignments:\nAn address object of type IP Wildcard Mask specifies which source or destination addresses are\nsubject to a Security policy rule. For example, 10.132.1.1/0.0.2.255. A zero (0) bit in the mask\nindicates that the bit being compared must match the bit in the IP address that is covered by\nthe zero. A one (1) bit in the mask (a wildcard bit) indicates that the bit being compared need\nnot match the bit in the IP address. The following snippets of an IP address and wildcard mask\nillustrate how they yield four matches:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1623\n©2025 Palo Alto Networks, Inc.\nPolicy\nAfter you Create an Address Object:\n• You can reference an address object of type IP Netmask, IP Range, or FQDN in a policy\nrule for Security, Authentication, NAT, NAT64, Decryption, DoS Protection, Policy-Based\nForwarding (PBF), QoS, Application Override, or Tunnel Inspection; or in a NAT address pool,\nVPN tunnel, path monitoring, External Dynamic List, Reconnaissance Protection, ACC global\nfilter, log filter, or custom report log filter.\n• You can reference an address object of type IP Wildcard Mask only in a Security policy rule.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1623,
+      "end": 1624
+    },
+    "content_stats": {
+      "char_count": 2481,
+      "word_count": 417
+    },
+    "hierarchy": {
+      "parent": "Use an Address Object to Represent IP Addresses",
+      "children": []
+    }
+  }
+}

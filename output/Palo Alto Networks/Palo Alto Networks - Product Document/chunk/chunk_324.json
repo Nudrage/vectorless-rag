@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_324",
+  "section_number": "1.11.9.7.1",
+  "header": "Configure a Botnet Report",
+  "content": "You can schedule a botnet report or run it on demand. The firewall generates scheduled botnet\nreports every 24 hours because behavior-based detection requires correlating traffic across\nmultiple logs over that timeframe.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n540\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 1 |\nDefine the types of traffic that indicate possible botnet activity.\n1.\nSelect Monitor > Botnet and click Configuration on the right side of the page.\n2.\nEnable and define the Count for each type of HTTP Traffic that the report will include.\nThe Count values represent the minimum number of events of each traffic type that\nmust occur for the report to list the associated host with a higher confidence score\n(higher likelihood of botnet infection). If the number of events is less than the Count, the\nreport will display a lower confidence score or (for certain traffic types) won’t display\nan entry for the host. For example, if you set the Count to three for Malware URL visit,\nthen hosts that visit three or more known malware URLs will have higher scores than\nhosts that visit less than three. For details, see Interpret Botnet Report Output.\n3.\nDefine the thresholds that determine whether the report will include hosts associated\nwith traffic involving Unknown TCP or Unknown UDP applications.\n4.\nSelect the IRC check box to include traffic involving IRC servers.\n5.\nClick OK to save the report configuration.\nSTEP 2 |\nSchedule the report or run it on demand.\n1.\nClick Report Setting on the right side of the page.\n2.\nSelect a time interval for the report in the Test Run Time Frame drop-down.\n3.\nSelect the No. of Rows to include in the report.\n4.\n(Optional) Add queries to the Query Builder to filter the report output by attributes such\nas source/destination IP addresses, users, or zones.\nFor example, if you know in advance that traffic initiated from the IP address 10.3.3.15\ncontains no potential botnet activity, add not (addr.src in 10.0.1.35) as a\nquery to exclude that host from the report output. For details, see Interpret Botnet\nReport Output.\n5.\nSelect Scheduled to run the report daily or click Run Now to run the report immediately.\n6.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 540,
+      "end": 541
+    },
+    "content_stats": {
+      "char_count": 2196,
+      "word_count": 372
+    },
+    "hierarchy": {
+      "parent": "Generate Botnet Reports",
+      "children": []
+    }
+  }
+}

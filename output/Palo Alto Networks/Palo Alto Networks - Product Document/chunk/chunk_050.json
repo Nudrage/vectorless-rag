@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_050",
+  "section_number": "1.3.8.6",
+  "header": "Scan All Traffic Destined for the Management Interface",
+  "content": "Because security policy and decryption policy do not evaluate management plane traffic,\nyou cannot directly scan the MGT port for threats. If you are using the MGT port as your\nmanagement interface, consider routing traffic destined for the MGT port through a data\nport or through another firewall so that you can apply these important security checks to\nyour management traffic.\nCreate security policy rules to allow access to the management interfaces of the firewall and\nPanorama (web interface or CLI). The way you define the policy depends on whether or not\nyou are using a bastion host to enable access to the management network.\n• If you are not using a bastion host to isolate your management network, create a security\npolicy rule to allow access from the Users zone to the IT Infrastructure zone. This security\npolicy rule must be very granular and specify the source zone, source IP address (if\navailable), and source user group of the user attempting to access the management\ninterface, as well as the destination zone, IP address of the appliance (firewall or Panorama),\nand the App-ID to identify the specific management application (web interface or CLI)\nrunning on the application default port. For example, you would use the web-browsing\nApp-ID to allow access to the web interface and the ssh App-ID to allow access to the CLI.\nYou must also attach a Vulnerability Protection profile to the rule, as described in the next\nsection.\nThe following example rule allows access from the users zone directly to the IT\nInfrastructure zone, and restricts access to users in the IT-admins group who are attempting\nto access the management interface IP address to access the web-browsing application on\nthe application-default port only:\n• If you are using a bastion host to enable access to your management network, you need two\nsecurity policy rules: one rule to allow access from user zone to the bastion host zone and a\nsecond rule to allow access from the bastion host zone to the IT infrastructure zone. Again,\nboth of these security policy rules should be as granular as possible and include source\nzone, address (if available), user and destination zone and address, and the App-ID. Keep in\nmind that if you are using a bastion host, the user IP address is usually the IP address of the\nbastion host so you cannot identify the User-ID for the administrator unless you are using\nthe Terminal Server agent on the bastion host to identify individual users. In this case, you\nmust also attach a Vulnerability Protection profile to both rules, as described in the next\nsection.\nIn the example rules that follow, the first rule allows access from the Users zone to the\nBastion-host zone for users in the IT-admins group who are attempting to access the\nspecified bastion server IP address over SSH and/or RDP. The second rule allows access\nto users from the Bastion-host zone to the IT-infrastructure zone attempting to access the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n70\n©2025 Palo Alto Networks, Inc.\nGetting Started\nweb-browsing application on the default port on the firewall with the specified destination\naddress.\nAttach a best practice Vulnerability Protection profile to the security policy rules that allow\naccess in to your management network to protect against buffer overflows, illegal code\nexecution, and other attempts to exploit client- and server-side vulnerabilities. To create a\nprofile for the purpose of protecting your management interface, clone the strict profile and\nthen enable extended packet capture to help you track down the source of any potential\nattacks.\nConfigure SSL Inbound Inspection or Configure SSL Forward Proxy for traffic to or from the\nmanagement interface to ensure that you can decrypt and scan the traffic for threats. Attach\na best practice decryption profile to the decryption policy rule to ensure that you are blocking\nvulnerable SSL/TLS versions such as TLS 1.0 and SSLv3, and rejecting sessions using weak\nencryption algorithms such as RC4 and 3DES, and weak authentication algorithms such as\nMD5 and SHA1.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 70,
+      "end": 71
+    },
+    "content_stats": {
+      "char_count": 4069,
+      "word_count": 668
+    },
+    "hierarchy": {
+      "parent": "Best Practices for Securing Administrative Access",
+      "children": []
+    }
+  }
+}

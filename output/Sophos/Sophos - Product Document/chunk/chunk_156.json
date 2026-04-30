@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_156",
+  "section_number": "1.38.4",
+  "header": "Sample logs",
+  "content": "Message\nID\nLogs\n19023\ndevice=\"SFW\" date=2021-04-12 time=17:25:00 timezone=\"GMT\" device_name=\"SFVUNL\" device_id=SFDemo-\nqa-vm-246 log_id=158739519023 log_type=\"SD-WAN\" log_component=\"Profile\" log_subtype=\"Health\ncheck\" priority=Notification status=\"SLA met\" profile_id=2 profile_name=\"test_profile\" gw_id=4\ngw_name=\"gw1\" latency=20 jitter=30 packet_loss=40 message=\"SLA met for gateway gw1 (10.20.30.40)\nusing probe target 10.20.30.50\" probe_target=\"10.20.20.25, 10.212.212.5\" protocol=\"tcp\"\n19024\ndevice=\"SFW\" date=2021-04-12 time=17:25:00 timezone=\"GMT\" device_name=\"SFVUNL\" device_id=SFDemo-\nqa-vm-246 log_id=158739519024 log_type=\"SD-WAN\" log_component=\"Profile\" log_subtype=\"Health\ncheck\" priority=Notification status=\"SLA not met\" profile_id=2 profile_name=\"test_profile\"\ngw_id=4 gw_name=\"gw1\" latency=20 jitter=30 packet_loss=40 message=\"SLA not met for gateway gw2\n(<20.30.40.50>) using probe target 10.20.30.50\" probe_target=\"10.20.20.25, 10.212.212.5\"\nprotocol=\"tcp\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 181\nLog format name under crformatter.conf is sdwan_SLA_data_log_fmt.\nSyslog Field Name Data Type Length Format/Description\nPossible Values\nNotes / Example\ndevice\nString\nSFW\ndevice_name\nString\nSF01V\ndevice_id\nString\nSFDemo-ff87495\nlog_id\nString\neg. log_id=\"010101600001\"\nlog_type\nString\nSD-WAN\neg. log_type=\"SD-WAN\"\nlog_component\nString\nSLA\neg. log_component=\"SLA\"\nlog_subtype\nString\nInformation\neg. log_subtype=\"Information\"\npriority\nString\nInformation\neg. priority=\"Information\"\nprofile_id\nNumber\neg. profile_id=123\nprofile_name\nString\neg. profile_name=\"test_profile\"\ngw_id\nNumber\neg. gw_id=2\ngw_name\nString\neg. gw_name=\"gw1\"\nlatency\nNumber\n-1 if packet_loss is 100%\neg. latency=123\njitter\nNumber\n-1 if packet_loss is 100%\neg. jitter=123\npacket_loss\nNumber\neg. packet_loss=123\nstarttime\nTimestamp\neg. starttime=12345\ntimestamp\nTimestamp\neg. timestamp=1234567\ngw_status\nString\nup/down\neg. gw_status=\"up\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 182\nsla_status\nString\n\"SLA met\"/\"SLA not met\" eg. sla_status=\"SLA met\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 181,
+      "end": 183
+    },
+    "content_stats": {
+      "char_count": 2089,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (Legacy)",
+      "children": []
+    }
+  }
+}

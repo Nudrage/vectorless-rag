@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_377",
+  "section_number": "1.11.15.6.10",
+  "header": "PAN-COMMON-MIB.my",
+  "content": "Use the PAN-COMMON-MIB to monitor the following information for Palo Alto Networks\nfirewalls, Panorama, and WF-500 appliances:\nObject Group\nDescription\npanSys\nContains such objects as system software/hardware versions, dynamic\ncontent versions, serial number, HA mode/state, and global counters.\nThe global counters include those related to Denial of Service (DoS),\nIP fragmentation, TCP state, and dropped packets. Tracking these\ncounters enables you to monitor traffic irregularities that result from\nDoS attacks, system or connection faults, or resource limitations. PAN-\nCOMMON-MIB supports global counters for firewalls but not for\nPanorama.\npanChassis\nChassis type and M-Series appliance mode (Panorama or Log\nCollector).\npanSession\nSession utilization information. For example, the total number of active\nsessions on the firewall or a specific virtual system.\npanMgmt\nStatus of the connection from the firewall to the Panorama\nmanagement server.\npanGlobalProtect\nGlobalProtect gateway utilization as a percentage, maximum tunnels\nallowed, and number of active tunnels.\npanLogCollector\nLogging statistics for each Log Collector, including logging rate, log\nquotas, disk usage, retention periods, log redundancy (enabled or\ndisabled), the forwarding status from firewalls to Log Collectors, the\nforwarding status from Log Collectors to external services, and the\nstatus of firewall-to-Log Collector connections.\npanDeviceLogging\nLogging statistics for each firewall, including logging rate, disk usage,\nretention periods, the forwarding status from individual firewalls\nto Panorama and external servers, and the status of firewall-to-Log\nCollector connections.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 670,
+      "end": 670
+    },
+    "content_stats": {
+      "char_count": 1665,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Supported MIBs",
+      "children": []
+    }
+  }
+}

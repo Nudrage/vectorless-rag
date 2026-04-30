@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_081",
+  "section_number": "1.18.30",
+  "header": "Vectra Match Alert Stats",
+  "content": "GET\nUsed to retrieve Vectra Match alert stats.  Returned fields include:\n• top_alert_counts: statistics directly pulled from the Vectra Match (suricata) engine about the top 10\nalerts that have been processed since the last rotation of the suricata’s eve.json event log\n• eve_log_rotated_time: ISO-8601 timestamp of the last time the eve.json log was rotated, which helps\nto indicate the time window the alert counts were collected over (from this timestamp until the current\ntime)\n• device_serial: serial of the device for which the stats are given\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/alert-stats\nHeaders:\n“Authorization”: “Token <api-key>”\nOptional Query Params:\n{“device_serial”:”<device_serial>”}\nResponse:\nStatus Code: 200\n{\n\"alert_stats\": [\n{\n\"top_alert_counts\": [\n{\"count\": 1032, \"signature_id\": 2100498, \"signature\": \"GPL\nATTACK_RESPONSE id check returned root\"},\n{\n\"count\": 101,\n\"signature_id\": 2006380,\n\"signature\": \"ET POLICY Outgoing Basic Auth Base64 HTTP Password\ndetected unencrypted\",\n},\n{\"count\": 78, \"signature_id\": 2028807, \"signature\": \"ET JA3 Hash -\n[Abuse.ch] Possible Tofsee\"},\n{\"count\": 60, \"signature_id\": 2034636, \"signature\": \"ET INFO Python\nSimpleHTTP ServerBanner\"},\n{\n\"count\": 34,\n© July 2024 Vectra AI, Inc. | 148\n\"signature_id\": 2001580,\n\"signature\": \"ET SCAN Behavioral Unusual Port 137 traffic\nPotential Scan or Infection\",\n},\n{\"count\": 27, \"signature_id\": 2028763, \"signature\": \"ET JA3 Hash -\n[Abuse.ch] Possible Adwind\"},\n{\"count\": 12, \"signature_id\": 2017398, \"signature\": \"ET POLICY IP\nCheck Domain (icanhazip. com in HTTP Host)\"},\n{\"count\": 10, \"signature_id\": 2027390, \"signature\": \"ET USER_AGENTS\nMicrosoft Device Metadata Retrieval Client User-Agent\"},\n{\"count\": 8, \"signature_id\": 2035466, \"signature\": \"ET INFO Observed\nDiscord Domain in DNS Lookup (discordapp .com)\"},\n{\"count\": 7, \"signature_id\": 2016922, \"signature\": \"ET MALWARE\nBackdoor family PCRat/Gh0st CnC traffic\"},\n],\n\"device_serial\": \"A21010000000002\",\n\"eve_log_rotated_time\": \"2023-03-23T18:00:00\",\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 147,
+      "end": 148
+    },
+    "content_stats": {
+      "char_count": 2033,
+      "word_count": 257
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

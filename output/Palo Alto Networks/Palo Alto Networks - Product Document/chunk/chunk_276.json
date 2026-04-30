@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_276",
+  "section_number": "1.11.4.1.1",
+  "header": "Correlation Object",
+  "content": "A correlation object is a definition file that specifies patterns to match against, the data sources\nto use for the lookups, and time period within which to look for these patterns. A pattern is a\nboolean structure of conditions that queries the following data sources (or logs) on the firewall:\napplication statistics, traffic, traffic summary, threat summary, threat, data filtering, and URL\nfiltering. Each pattern has a severity rating, and a threshold for the number of times the pattern\nmatch must occur within a defined time limit to indicate malicious activity. When the match\nconditions are met, a correlated event is logged.\nA correlation object can connect isolated network events and look for patterns that indicate a\nmore significant event. These objects identify suspicious traffic patterns and network anomalies,\nincluding suspicious IP activity, known command-and-control activity, known vulnerability\nexploits, or botnet activity that, when correlated, indicate with a high probability that a host on\nthe network has been compromised. Correlation objects are defined and developed by the Palo\nAlto Networks Threat Research team, and are delivered with the weekly dynamic updates to\nthe firewall and Panorama. To obtain new correlation objects, the firewall must have a Threat\nPrevention license. Panorama requires a support license to get the updates.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n499\n©2025 Palo Alto Networks, Inc.\nMonitoring\nThe patterns defined in a correlation object can be static or dynamic. Correlated objects that\ninclude patterns observed in WildFire are dynamic, and can correlate malware patterns detected\nby WildFire with command-and-control activity initiated by a host that was targeted with the\nmalware on your network or activity seen by a Traps protected endpoint on Panorama. For\nexample, when a host submits a file to the WildFire cloud and the verdict is malicious, the\ncorrelation object looks for other hosts or clients on the network that exhibit the same behavior\nseen in the cloud. If the malware sample had performed a DNS query and browsed to a malware\ndomain, the correlation object will parse the logs for a similar event. When the activity on a host\nmatches the analysis in the cloud, a high severity correlated event is logged.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 499,
+      "end": 500
+    },
+    "content_stats": {
+      "char_count": 2287,
+      "word_count": 359
+    },
+    "hierarchy": {
+      "parent": "Automated Correlation Engine Concepts",
+      "children": []
+    }
+  }
+}

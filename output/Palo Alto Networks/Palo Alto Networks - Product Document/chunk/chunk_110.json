@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_110",
+  "section_number": "1.6.6.3",
+  "header": "Ports Used for Panorama",
+  "content": "Panorama uses the following ports.\nDestination\nPort\nProtocol\nDescription\n22\nTCP\nUsed for communication from a client system to the\nPanorama CLI interface.\n443\nTCP\nUsed for communication from a client system to the\nPanorama web interface.\n444\nTCP\nUsed for communication between Panorama and Cortex\nData Lake.\n3978\nTCP\nUsed for communication between Panorama and\nmanaged firewalls or managed collectors, as well as for\ncommunication among managed collectors in a Collector\nGroup:\n• For communication between Panorama and firewalls.\nThis connection is initiated from the managed firewall\nto Panorama and facilitates a bi-directional data\nexchange on which the firewalls forward logs to\nPanorama and Panorama pushes configuration changes\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n217\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nDestination\nPort\nProtocol\nDescription\nto the firewalls. Context switching commands are sent\nover the same connection.\n• Log Collectors use this destination port to forward logs\nto Panorama.\n• For communication with the default Log Collector on\nan M-Series appliance in Panorama mode and with\nDedicated Log Collectors.\n28443\nTCP\nUsed for managed devices (firewalls and Log Collectors) to\nretrieve software and content updates from Panorama.\nOnly devices that run PAN-OS 8.x and later\nreleases retrieve updates from Panorama over\nthis port. For devices running earlier releases,\nPanorama pushes the update packages over\nport 3978.\n28769 (5.1\nand later)\n28260 (5.0\nand later)\n49160 (5.0\nand earlier)\nTCP\nTCP\nTCP\nUsed for the HA connectivity and synchronization\nbetween Panorama HA peers using clear text\ncommunication. Communication can be initiated by either\npeer.\n28\nTCP\nUsed for the HA connectivity and synchronization\nbetween Panorama HA peers using encrypted\ncommunication (SSH over TCP). Communication can be\ninitiated by either peer.\nUsed for communication between Log Collectors in a\nCollector Group for log distribution.\n28270 (6.0\nand later)\n49190 (5.1\nand earlier)\nTCP\nUsed for communication among Log Collectors in a\nCollector Group for log distribution.\n2049\nTCP\nUsed by the Panorama virtual appliance to write logs to\nthe NFS datastore.\n10443\nSSL\nPort that Panorama uses to provide contextual information\nabout a threat or to seamlessly shift your threat\ninvestigation to the Threat Vault and AutoFocus.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n218\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nDestination\nPort\nProtocol\nDescription\n23000 to\n23999\nTCP, UDP, or\nSSL\nUsed for Syslog communication between Panorama and\nthe Traps ESM components.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 217,
+      "end": 219
+    },
+    "content_stats": {
+      "char_count": 2595,
+      "word_count": 391
+    },
+    "hierarchy": {
+      "parent": "Reference: Port Number Usage",
+      "children": []
+    }
+  }
+}

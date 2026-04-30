@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1023",
+  "section_number": "1.23.7.3",
+  "header": "Configure Administrative Access Per Virtual System or Firewall",
+  "content": "If you have a superuser administrative account, you can create and configure granular permissions\nfor a vsysadmin or device admin role.\nSTEP 1 |\nCreate an Admin Role Profile that grants or disables permission to an Administrator to\nconfigure or read-only various areas of the web interface.\n1.\nSelect Device > Admin Roles and Add an Admin Role Profile.\n2.\nEnter a Name and optional Description of the profile.\n3.\nFor Role, specify which level of control the profile affects:\n• Device—The profile allows the management of the global settings and any virtual\nsystems.\n• Virtual System—The profile allows the management of only the virtual system(s)\nassigned to the administrator(s) who have this profile. (The administrator will be able\nto access Device > Setup > Services > Virtual Systems, but not the Global tab.)\n4.\nOn the Web UI tab for the Admin Role Profile, scroll down to Device, and leave the\ngreen check mark (Enable).\n• Under Device, enable Setup. Under Setup, enable the areas to which this profile\nwill grant configuration permission to the administrator, as shown below. (The Read\nOnly lock icon appears in the Enable/Disable rotation if Read Only is allowed for that\nsetting.)\n• Management—Allows an admin with this profile to configure settings on the\nManagement tab.\n• Operations—Allows an admin with this profile to configure settings on the\nOperations tab.\n• Services—Allows an admin with this profile to configure settings on the Services\ntab. An admin must have Services enabled in order to access the Device > Setup\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1722\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nServices > Virtual Systems tab. If the Role was specified as Virtual System in the\nprior step, Services is the only setting that can be enabled under Device > Setup.\n• Content-ID—Allows an admin with this profile to configure settings on the\nContent-ID tab.\n• WildFire—Allows an admin with this profile to configure settings on the WildFire\ntab.\n• Session—Allows an admin with this profile to configure settings on the Session tab.\n• HSM—Allows an admin with this profile to configure settings on the HSM tab.\n5.\nClick OK.\n6.\n(Optional) Repeat the entire step to create another Admin Role profile with different\npermissions, as necessary.\nSTEP 2 |\nApply the Admin role profile to an administrator.\n1.\nSelect Device > Administrators, click Add and enter the Name to add an Administrator.\n2.\n(Optional) Select an Authentication Profile.\n3.\n(Optional) Select Use only client certificate authentication (Web) to have bi-directional\nauthentication; to get the server to authenticate the client.\n4.\nEnter a Password and Confirm Password.\n5.\n(Optional) Select Use Public Key Authentication (SSH) if you want to use a much\nstronger, key-based authentication method using an SSH public key rather than just a\npassword.\n6.\nFor Administrator Type, select Role Based.\n7.\nFor Profile, select the profile that you just created.\n8.\n(Optional) Select a Password Profile.\n9.\nClick OK.\nSTEP 3 |\nCommit the configuration.\nClick Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1723\n©2025 Palo Alto Networks, Inc.\nVirtual Systems",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1722,
+      "end": 1724
+    },
+    "content_stats": {
+      "char_count": 3139,
+      "word_count": 509
+    },
+    "hierarchy": {
+      "parent": "Customize Service Routes for a Virtual System",
+      "children": []
+    }
+  }
+}

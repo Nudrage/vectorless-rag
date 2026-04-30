@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_856",
+  "section_number": "1.21.15.7.4",
+  "header": "Source and Destination NAT Example",
+  "content": "In this example, NAT rules translate both the source and destination IP address of packets\nbetween the clients and the server.\n• Source NAT—The source addresses in the packets from the clients in the Trust-L3 zone to\nthe server in the Untrust-L3 zone are translated from the private addresses in the network\n192.168.1.0/24 to the IP address of the egress interface on the firewall (10.16.1.103).\nDynamic IP and Port translation causes the port numbers to be translated also.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1502\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Destination NAT—The destination addresses in the packets from the clients to the server\nare translated from the server’s public address (80.80.80.80) to the server’s private address\n(10.2.133.15).\nThe following address objects are created for destination NAT.\n• Server-Pre-NAT: 80.80.80.80\n• Server-post-NAT: 10.2.133.15\nThe following screen shots illustrate how to configure the source and destination NAT policies for\nthe example.\nTo verify the translations, use the CLI command show session all filter destination\n80.80.80.80. A client address 192.168.1.11 and its port number are translated to 10.16.1.103\nand a port number. The destination address 80.80.80.80 is translated to 10.2.133.15.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1503\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1502,
+      "end": 1504
+    },
+    "content_stats": {
+      "char_count": 1347,
+      "word_count": 200
+    },
+    "hierarchy": {
+      "parent": "NAT Configuration Examples",
+      "children": []
+    }
+  }
+}

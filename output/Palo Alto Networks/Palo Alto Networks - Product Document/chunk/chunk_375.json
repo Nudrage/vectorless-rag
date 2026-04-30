@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_375",
+  "section_number": "1.11.15.6.8",
+  "header": "LLDP-V2-MIB.my",
+  "content": "Use the LLDP-V2-MIB to monitor Link Layer Discovery Protocol (LLDP) events. For example,\nyou can check the lldpV2StatsRxPortFramesDiscardedTotal object to see the number of LLDP\nframes that were discarded for any reason. The Palo Alto Networks firewall uses LLDP to discover\nneighboring devices and their capabilities. LLDP makes troubleshooting easier, especially for\nvirtual wire deployments where the ping or traceroute utilities won’t detect the firewall.\nPalo Alto Networks firewalls support all the LLDP-V2-MIB objects except:\n• The following lldpV2Statistics objects:\n• lldpV2StatsRemTablesLastChangeTime\n• lldpV2StatsRemTablesInserts\n• lldpV2StatsRemTablesDeletes\n• lldpV2StatsRemTablesDrops\n• lldpV2StatsRemTablesAgeouts\n• The following lldpV2RemoteSystemsData objects:\n• The lldpV2RemOrgDefInfoTable table\n• In the lldpV2RemTable table: lldpV2RemTimeMark\nRFC 4957 defines this MIB.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 669,
+      "end": 669
+    },
+    "content_stats": {
+      "char_count": 891,
+      "word_count": 110
+    },
+    "hierarchy": {
+      "parent": "Supported MIBs",
+      "children": []
+    }
+  }
+}

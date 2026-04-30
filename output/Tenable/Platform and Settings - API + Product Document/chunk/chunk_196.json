@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_196",
+  "section_number": "10",
+  "header": "Agent Exclusions",
+  "content": "With agent exclusions, you can prevent agents from receiving software updates at specified times.\nUse the API to perform a standard set of CRUD operations on agent exclusion objects.\nFor background information about agent exclusions, also known as freeze windows, see Freeze\nWindows in the Tenable Vulnerability Management User Guide.\n{\n\"auto_unlink\":\n-\n{\n\"enabled\": \"false\",\n\"expiration\": 30\n},\n\"concurrent_update\":\n-\n{\n\"enabled\": \"true\",\n\"max_concurrent_update\": 500\n},\n\"software_update\": \"true\",\n\"hybrid_scanning_enabled\": false\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 19,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 200,
+      "end": 200
+    },
+    "content_stats": {
+      "char_count": 533,
+      "word_count": 72
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Create agent exclusion",
+        "List agent exclusions",
+        "Get agent exclusion details",
+        "Update agent exclusion",
+        "Delete agent exclusion"
+      ]
+    }
+  }
+}

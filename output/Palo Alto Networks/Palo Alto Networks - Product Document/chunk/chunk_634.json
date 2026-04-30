@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_634",
+  "section_number": "1.17.19",
+  "header": "Safe Search Enforcement",
+  "content": "Many search engines have a safe search setting that filters out adult images and videos in search\nquery return traffic. You can enable the firewall to block search results if the end user is not\nusing the strictest safe search settings, and you can also transparently enable safe search for your\nusers. The firewall supports safe search enforcement for the following search providers: Google,\nYahoo, Bing, Yandex, and YouTube. Consider that safe search is a best-effort setting and service\nproviders do not guarantee that it works with every website, and search providers classify sites as\nsafe or unsafe (not Palo Alto Networks).\nTo use this feature you must enable the Safe Search Enforcement option in a URL Filtering profile\nand attach it to a Security policy rule.The firewall then blocks any matching search query return\ntraffic that is not using the strictest safe search settings. There are two methods to enforce safe\nsearch:\n• Block Search Results when Strict Safe Search is not Enabled—When an end user attempts to\nperform a search without first enabling the strictest safe search settings, the firewall blocks\nthe search query results and displays the URL Filtering Safe Search Block Page. By default, this\npage will provide a URL to the search provider settings for configuring safe search.\n• Transparently Enable Safe Search for Users—When an end user attempts to perform a search\nwithout first enabling the strict safe search settings, the firewall blocks the search results\nwith an HTTP 503 status code and redirects the search query to a URL that includes the safe\nsearch parameters. You enable this functionality by importing a new URL Filtering Safe Search\nBlock Page containing the JavaScript for rewriting the search URL to include the strict safe\nsearch parameters. In this configuration, users will not see the block page, but will instead be\nautomatically redirected to a search query that enforces the strictest safe search options. This\nsafe search enforcement method is supported for Google, Yahoo, and Bing searches.\nAs safe search settings differ by search provider, get started by reviewing the different safe\nsearch implementations. Then, enforce safe search in one of two ways: block search results when\nsafe search is disabled, or transparently enable safe search for your users.\n• Safe Search Settings for Search Providers\n• Block Search Results when Strict Safe Search is not Enabled\n• Transparently Enable Safe Search for Users",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1176,
+      "end": 1176
+    },
+    "content_stats": {
+      "char_count": 2463,
+      "word_count": 398
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": [
+        "Safe Search Settings for Search Providers",
+        "Block Search Results when Strict Safe Search is not Enabled",
+        "Transparently Enable Safe Search for Users"
+      ]
+    }
+  }
+}

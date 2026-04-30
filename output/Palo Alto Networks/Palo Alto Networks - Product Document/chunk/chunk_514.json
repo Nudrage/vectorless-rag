@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_514",
+  "section_number": "1.15.13",
+  "header": "Create Threat Exceptions",
+  "content": "Palo Alto Networks defines a recommended default action (such as block or alert) for threat\nsignatures. You can use a threat ID to exclude a threat signature from enforcement or modify the\naction the firewall enforces for that threat signature. For example, you can modify the action for\nthreat signatures that are triggering false positives on your network.\nConfigure threat exceptions for antivirus, vulnerability, spyware, and DNS signatures to change\nfirewall enforcement for a threat. However, before you begin, make sure the firewall is detecting\nand enforcing threats based on the default signature settings:\n• Get the latest Antivirus, Threats and Applications, and WildFire signature updates.\n• Set Up Antivirus, Anti-Spyware, and Vulnerability Protection and apply these security profiles\nto your security policy.\nSTEP 1 |\nExclude antivirus signatures from enforcement.\nWhile you can use an Antivirus profile to exclude antivirus signatures from\nenforcement, you cannot change the action the firewall enforces for a specific antivirus\nsignature. However, you can define the action for the firewall to enforce for viruses\nfound in different types of traffic by editing the Decoders (Objects > Security Profiles\n> Antivirus > <antivirus-profile> > Antivirus).\n1.\nSelect Objects > Security Profiles > Antivirus.\n2.\nAdd or modify an existing Antivirus profile from which you want to exclude a threat\nsignature and select Signature Exceptions.\n3.\nAdd the Threat ID for the threat signature you want to exclude from enforcement.\n4.\nClick OK to save the Antivirus profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n954\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nSTEP 2 |\nModify enforcement for vulnerability and spyware signatures (except DNS signatures; skip\nto the next option to modify enforcement for DNS signatures, which are a type of spyware\nsignature).\n1.\nSelect Objects > Security Profiles > Anti-Spyware or Objects > Security Profiles >\nVulnerability Protection.\n2.\nAdd or modify an existing Anti-Spyware or Vulnerability Protection profile from which\nyou want to exclude the threat signature and then select either Signature Exceptions for\nAnti-Spyware Protection profiles or Exceptions for Vulnerability Protection profiles.\n3.\nShow all signatures and then filter to select the signature for which you want to modify\nenforcement rules.\n4.\nCheck the box under the Enable column for the signature whose enforcement you want\nto modify.\n5.\nSelect the Action you want the firewall to enforce for this threat signature.\nFor signatures that you want to exclude from enforcement because they trigger false\npositives, set the Action to Allow.\n6.\nClick OK to save your new or modified Anti-Spyware or Vulnerability Protection profile.\nSTEP 3 |\nModify enforcement for DNS signatures.\nBy default, the DNS lookups to malicious hostnames that DNS signatures are detect are\nsinkholed.\n1.\nSelect Objects > Security Profiles > Anti-Spyware.\n2.\nAdd or modify the Anti-Spyware profile from which you want to exclude the threat\nsignature, and select DNS Exceptions.\n3.\nSearch for the DNS Threat ID for the DNS signature that you want to exclude from\nenforcement and select the box of the applicable signature:\n4.\nClick OK to save your new or modified Anti-Spyware profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n955\n©2025 Palo Alto Networks, Inc.\nThreat Prevention",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 954,
+      "end": 956
+    },
+    "content_stats": {
+      "char_count": 3366,
+      "word_count": 522
+    },
+    "hierarchy": {
+      "parent": "Threat Prevention",
+      "children": []
+    }
+  }
+}

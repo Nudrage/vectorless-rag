@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_225",
+  "section_number": "1.10.2.9",
+  "header": "HA Timers",
+  "content": "High availability (HA) timers facilitate a firewall to detect a firewall failure and trigger a failover.\nTo reduce the complexity in configuring timers for an HA pair, you can select from three profiles:\nRecommended, Aggressive and Advanced. These profiles auto-populate the optimum HA timer\nvalues for the specific firewall platform to enable a speedier HA deployment.\nUse the Recommended profile for typical failover timer settings and the Aggressive profile for\nfaster failover timer settings. The Advanced profile allows you to customize the timer values to\nsuit your network requirements.\nThe following table describes each timer included in the profiles and the current preset values\n(Recommended/Aggressive) across the different hardware models; these values are for current\nreference only and can change in a subsequent release.\nTimers that affect members of an HA cluster are described in Configure HA Clustering.\nTimers\nDescription\nPA-7000 Series\nPA-5200 Series\nPA-3200 Series\nPA-800 Series\nPA-220\nVM-Series\nPanorama\nVirtual\nAppliance\nPanorama M-\nSeries\nMonitor Fail\nHold Up Time\n(ms)\nInterval during which\nthe firewall will remain\nactive following a path\nmonitor or link monitor\nfailure. This setting is\nrecommended to avoid\nan HA failover due to\nthe occasional flapping\nof neighboring devices.\n0/0\n0/0\n0/0\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n394\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nTimers\nDescription\nPA-7000 Series\nPA-5200 Series\nPA-3200 Series\nPA-800 Series\nPA-220\nVM-Series\nPanorama\nVirtual\nAppliance\nPanorama M-\nSeries\nPreemption\nHold Time (min)\nTime that a passive\nor active-secondary\nfirewall will wait before\ntaking over as the\nactive or active-primary\nfirewall.\n1/1\n1/1\n1/1\nHeartbeat\nInterval (ms)\nFrequency at which\nthe HA peers exchange\nheartbeat messages in\nthe form of an ICMP\n(ping).\n1000/1000\n2000/1000\n2000/1000\nPromotion\nHold Time (ms)\nTime that the passive\nfirewall (in active/\npassive mode) or the\nactive-secondary\nfirewall (in active/\nactive mode) will wait\nbefore taking over as\nthe active or active-\nprimary firewall after\ncommunications with\nthe HA peer have been\nlost. This hold time will\nbegin only after the\npeer failure declaration\nhas been made.\n2000/500\n2000/500\n2000/500\nAdditional\nMaster Hold\nUp Time (ms)\nTime interval in\nmilliseconds that is\napplied to the same\nevent as Monitor\nFail Hold Up Time\n(range is 0 to 60,000;\ndefault is 500). The\nadditional time interval\nis applied only to the\nactive firewall in active/\npassive mode and to\nthe active-primary\nfirewall in active/active\nmode. This timer is\n500/500\n500/500\n7000/5000\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n395\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nTimers\nDescription\nPA-7000 Series\nPA-5200 Series\nPA-3200 Series\nPA-800 Series\nPA-220\nVM-Series\nPanorama\nVirtual\nAppliance\nPanorama M-\nSeries\nrecommended to avoid\na failover when both\nfirewalls experience the\nsame link/path monitor\nfailure simultaneously.\nHello Interval\n(ms)\nInterval in milliseconds\nbetween hello packets\nthat are sent to\nverify that the HA\nfunctionality on\nthe other firewall is\noperational (range\nis 8,000 to 60,000;\ndefault is 8,000).\n8000/8000\n8000/8000\n8000/8000\nFlap Max\nA flap is counted when\none of the following\noccurs:\n• A preemption-\nenabled firewall\nleaves the active\nstate within 20\nminutes after\nbecoming active.\n• A link or path fails\nto stay up for\n10 minutes after\nbecoming functional.\nIn the case of a failed\npreemption or non-\nfunctional loop, this\nvalue indicates the\nmaximum number of\nflaps that are permitted\nbefore the firewall is\nsuspended (range 0 to\n16; default is 3).\n3/3\n3/3\nNot Applicable\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n396\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 394,
+      "end": 397
+    },
+    "content_stats": {
+      "char_count": 3711,
+      "word_count": 569
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

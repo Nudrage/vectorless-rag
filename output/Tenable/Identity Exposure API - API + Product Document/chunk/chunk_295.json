@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_295",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nPATCH\n/api/roles/{id}\napplication/json\nCopy\n{\n\"name\": \"string\",\n\"description\": \"string\"\n}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"name\": \"string\",\n\"description\": \"string\",\nContent type\nContent type\n\"permissions\":\n-\n[\n- {\n\"entityName\": \"string\",\n\"action\": \"string\",\n\"entityIds\":\n-\n[\n\"string\"\n],\n\"dynamicId\": \"self-user-id\"\n}\n]\n}\nDelete role instance.\nRequired license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 172,
+      "end": 173
+    },
+    "content_stats": {
+      "char_count": 545,
+      "word_count": 71
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

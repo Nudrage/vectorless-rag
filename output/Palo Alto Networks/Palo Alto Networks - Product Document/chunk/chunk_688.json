@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_688",
+  "section_number": "1.19.3.5.4",
+  "header": "Hash and URL Certificate Exchange",
+  "content": "IKEv2 supports Hash and URL Certificate Exchange, which is used during an IKEv2 negotiation of\nan SA. You store the certificate on an HTTP server, which is specified by a URL. The peer fetches\nthe certificate from the server based on receiving the URL to the server. The hash is used to check\nwhether the content of the certificate is valid or not. Thus, the two peers exchange certificates\nwith the HTTP CA rather than with each other.\nThe hash part of Hash and URL reduces the message size and thus Hash and URL is a way to\nreduce the likelihood of packet fragmentation during IKE negotiation. The peer receives the\ncertificate and hash that it expects, and thus IKE Phase 1 has validated the peer. Reducing\nfragmentation occurrences helps protect against DoS attacks.\nYou can enable the Hash and URL certificate exchange when configuring an IKE gateway by\nselecting HTTP Certificate Exchange and entering the Certificate URL. The peer must also use\nHash and URL certificate exchange in order for the exchange to be successful. If the peer cannot\nuse Hash and URL, X.509 certificates are exchanged similarly to how they are exchanged in IKEv1.\nIf you enable the Hash and URL certificate exchange, you must export your certificate to the\ncertificate server if it is not already there. When you export the certificate, the file format should\nbe Binary Encoded Certificate (DER). See Export a Certificate for a Peer to Access Using Hash\nand URL.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1256,
+      "end": 1256
+    },
+    "content_stats": {
+      "char_count": 1444,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "IKEv2",
+      "children": []
+    }
+  }
+}

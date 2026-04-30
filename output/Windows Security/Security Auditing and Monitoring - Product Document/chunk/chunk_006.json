@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4776(S, F): The computer attempted to validate the credentials for an account.\nType of monitoring required\nRecommendation\nHigh-value accounts: You might have high-value domain or local accounts for which you\nneed to monitor each action.\nExamples of high-value accounts are database administrators, built-in local administrator\naccount, domain administrators, service accounts, domain controller accounts and so on.\nMonitor this event with the “Logon Account” that corresponds to the high-value account\nor accounts.\nAnomalies or malicious actions: You might have specific requirements for detecting\nanomalies or monitoring potential malicious actions. For example, you might need to\nmonitor for use of an account outside of working hours.\nWhen you monitor for anomalies or malicious actions, use the “Logon Account” value\n(with other information) to monitor how or when a particular account is being used.\nTo monitor activity of specific user accounts outside of working hours, monitor the\nappropriate Logon Account + Source Workstation pairs.\nNon-active accounts: You might have non-active, disabled, or guest accounts, or other\naccounts that should never be used.\nMonitor this event with the “Logon Account” that should never be used.\nAccount whitelist: You might have a specific whitelist of accounts that are the only ones\nallowed to perform actions corresponding to particular events.\nIf this event corresponds to a “whitelist-only” action, review the “Logon Account” for\naccounts that are outside the whitelist.\nRestricted-use computers: You might have certain computers from which certain people\n(accounts) should not log on.\nMonitor the target Source Workstation for credential validation requests from the “Logon\nAccount” that you are concerned about.\nAccount naming conventions: Your organization might have specific naming conventions\nfor account names.\nMonitor “Logon Account” for names that don’t comply with naming conventions.\n\nIf NTLM authentication should not be used for a specific account, monitor for that account. Don’t forget that local logon will always use NTLM authentication if an account logs on\nto a device where its user account is stored.\n\nYou can use this event to collect all NTLM authentication attempts in the domain, if needed. Don’t forget that local logon will always use NTLM authentication if the account logs\non to a device where its user account is stored.\n\nIf a local account should be used only locally (for example, network logon or terminal services logon is not allowed), you need to monitor for all events where Source Workstation\nand Computer (where the event was generated and where the credentials are stored) have different values.\n\nConsider tracking the following errors for the reasons listed:\nError to track\nWhat the error might indicate\nUser logon with misspelled or bad user\naccount\nFor example, N events in the last N minutes can be an indicator of an account enumeration attack, especially relevant\nfor highly critical accounts.\n© 2016 Microsoft. All rights reserved.\n27\nUser logon with misspelled or bad password\nFor example, N events in the last N minutes can be an indicator of a brute-force password attack, especially relevant for\nhighly critical accounts.\nUser logon outside authorized hours\nCan indicate a compromised account; especially relevant for highly critical accounts.\nUser logon from unauthorized workstation\nCan indicate a compromised account; especially relevant for highly critical accounts.\nUser logon to account disabled by\nadministrator\nFor example, N events in last N minutes can be an indicator of an account compromise attempt, especially relevant for\nhighly critical accounts.\nUser logon with expired account\nCan indicate an account compromise attempt; especially relevant for highly critical accounts.\nUser logon with account locked\nCan indicate a brute-force password attack; especially relevant for highly critical accounts.\n4777(F): The domain controller failed to validate the credentials for an account.\nCurrently this event doesn’t generate. It is a defined event, but it is never invoked by the operating system. 4776\nfailure event is generated instead.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 27,
+      "end": 28
+    },
+    "content_stats": {
+      "char_count": 4152,
+      "word_count": 631
+    },
+    "hierarchy": {
+      "parent": "Audit Credential Validation",
+      "children": []
+    }
+  }
+}

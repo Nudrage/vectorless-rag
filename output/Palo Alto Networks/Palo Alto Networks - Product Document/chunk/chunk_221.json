@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_221",
+  "section_number": "1.10.2.5",
+  "header": "LACP and LLDP Pre-Negotiation for Active/Passive HA",
+  "content": "If a firewall uses LACP or LLDP, negotiation of those protocols upon failover prevents sub-second\nfailover. However, you can enable an interface on a passive firewall to negotiate LACP and LLDP\nprior to failover. Thus, a firewall in Passive or Non-functional HA state can communicate with\nneighboring devices using LACP or LLDP. Such pre-negotiation speeds up failover.\nAll firewall models except VM-Series firewalls support a pre-negotiation configuration, which\ndepends on whether the Ethernet or AE interface is in a Layer 2, Layer 3, or virtual wire\ndeployment. An HA passive firewall handles LACP and LLDP packets in one of two ways:\n• Active—The firewall has LACP or LLDP configured on the interface and actively participates in\nLACP or LLDP pre-negotiation, respectively.\n• Passive—LACP or LLDP is not configured on the interface and the firewall does not participate\nin the protocol, but allows the peers on either side of the firewall to pre-negotiate LACP or\nLLDP, respectively.\nThe following table displays which deployments are supported on Aggregate Ethernet (AE) and\nEthernet interfaces.\nInterface Deployment\nAE Interface\nEthernet Interface\nLACP in Layer 2\nActive\nNot supported\nLACP in Layer 3\nActive\nNot supported\nLACP in Virtual Wire\nNot supported\nPassive\nLLDP in Layer 2\nActive\nActive\nLLDP in Layer 3\nActive\nActive\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n389\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nInterface Deployment\nAE Interface\nEthernet Interface\nLLDP in Virtual Wire\nActive\n• Active if LLDP itself is\nconfigured.\n• Passive if LLDP itself is not\nconfigured.\nPre-negotiation is not supported on subinterfaces or tunnel interfaces.\nTo configure LACP or LLDP pre-negotiation, see the step (Optional) Enable LACP and LLDP Pre-\nNegotiation for Active/Passive HA for faster failover if your network uses LACP or LLDP.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 389,
+      "end": 390
+    },
+    "content_stats": {
+      "char_count": 1843,
+      "word_count": 287
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

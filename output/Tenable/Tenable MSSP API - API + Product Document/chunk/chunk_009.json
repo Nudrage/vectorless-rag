@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_009",
+  "section_number": "4",
+  "header": "Create quote",
+  "content": "Creates a quote for a customer.\nRequires ADMINISTRATOR [64] user permissions. See Permissions.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nContent type\nContent type\nstring\nA unique username for the evaluation account. It must be in email format,\nex. customer@partner.com , and the domain name of the email address\nmust match the MSSP partner's domain name.\nstring\nThe name of the customer account.\nobject (Object-Partner)\nobject (Object-Distributor)\nArray of objects (Licensed-Apps-Quote-Object)\nAn array of licensed Tenable applications and the amount of assets per\napplication.\nobject (Object-Contact)\nstring\nThe primary contact's country in ISO 3166-1 alpha-2 format. Valid country\ncodes are AU , BR , CA , EU , IN , JP , SG , UK , and US .\nobject (Object-Requester)\nobject (Object-Requester)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 6,
+      "end": 7
+    },
+    "content_stats": {
+      "char_count": 820,
+      "word_count": 123
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

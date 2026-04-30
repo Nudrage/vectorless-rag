@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_745",
+  "section_number": "25.9.1",
+  "header": "PUT    /web/api/v2.1/device-control/reorder",
+  "content": "When an external device connects to an endpoint, the SentinelOne Agent looks at the rules based on their order in the Device Control policy, from the top to the bottom.\nWhen the Agent finds a rule that matches the device identifiers of a connected device, that rule is applied. The Agent does not continue to the lower rules in the list.\nUse this command to change the order of rules for a specific scope.\nDevice Control requires Control SKU. Linux Agents do not support Device Control.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 949,
+      "end": 949
+    },
+    "content_stats": {
+      "char_count": 486,
+      "word_count": 86
+    },
+    "hierarchy": {
+      "parent": "Reorder Rules",
+      "children": []
+    }
+  }
+}

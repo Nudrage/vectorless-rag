@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_373",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturns the total number of assets in the network along with the number of assets that have not been\nseen for the specified number of days.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe number of assets in the network not seen since the specified\nnumber of days.\ninteger\nThe total number of assets in the network.\n— 400\nReturned if the parameters in your request were invalid. For example, if num_days  is out of range\n(min: 1, max: 365).\nnetwork_id\nrequired\nnum_days\nrequired\nnumAssetsNotSeen\nnumAssetstotal\n— 404\nReturned if Tenable Vulnerability Management cannot find a network object with the specified UUID.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 503\nReturned if a Tenable Vulnerability Management service is unavailable. Wait a moment, and try your\nrequest again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 360,
+      "end": 361
+    },
+    "content_stats": {
+      "char_count": 864,
+      "word_count": 142
+    },
+    "hierarchy": {
+      "parent": "Get network asset count",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

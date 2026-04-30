@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_593",
+  "section_number": "1.16.16.2.6",
+  "header": "Decryption Broker: Security Chain Health Checks",
+  "content": "A decryption broker can monitor the status of security chains to ensure that they are effectively\nprocessing decrypted traffic. Periodic health checks monitor:\n• Security device connectivity (Path Monitoring)\n• Security device processing speed and efficiency (HTTP Latency Monitoring)\n• Security device HTTP inspection capabilities (HTTP Monitoring)\nFor each type of monitoring you enable, you must define the conditions you want to trigger a\nhealth check failure. When a security chain fails a health check, the firewall can either:\n• Block existing SSL sessions assigned to the failed security chain. The firewall will only\ncommence to forward new decrypted sessions to that security chain for analysis when the\nsecurity chain passes a subsequent health check. The traffic flow must pass both the firewall\nsecurity policy check and the security chain check to be allowed to the Internet.\n• (Layer 3 Security Chain Only) Allow traffic to bypass the failed security chain. Keep in mind\nthat traffic that bypasses a security chain still undergoes firewall decryption and security\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1099\n©2025 Palo Alto Networks, Inc.\nDecryption\npolicy enforcement; however, it does not undergo security chain analysis. This option is only\nsupported with Layer 3 security chains. Because session distribution for Transparent Bridge\nsecurity chains is policy-based traffic cannot bypass a failed chain as the traffic matched to a\npolicy rule is assigned to a specific chain for inspection.\nYou might choose if you want the firewall to block sessions or bypass a security chain if a security\nchain fails based on your organization’s compliance and usability needs.\nWhen configuring multiple security chains, it is a best practice to deploy enough security chains\nto provide excess capacity in the event of a security chain failure. If you enable the firewall\nto perform Security Chain Health Checks, and a security chain fails, the firewall continues to\ndistribute decrypted sessions among the healthy security chains. If there are not enough healthy\nchains to cover the additional load, that single security chain failure could result in cascading\nfailures as the remaining healthy security chains are oversubscribed.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1099,
+      "end": 1100
+    },
+    "content_stats": {
+      "char_count": 2237,
+      "word_count": 345
+    },
+    "hierarchy": {
+      "parent": "Decryption Broker Concepts",
+      "children": []
+    }
+  }
+}

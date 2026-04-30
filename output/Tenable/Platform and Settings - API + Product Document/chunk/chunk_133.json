@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_133",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n429\nprincipals\ncreated_by_uuid\ncreated_by_name\nupdated_by_uuid\nupdated_by_name\nprocessing_percent_complete\nGET\n/access-groups/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"container_uuid\": \"d38c2376-44a2-4f1c-ae49-03d428c48299\",\n\"created_at\": \"2018-11-31T21:17:18.883Z\",\n\"updated_at\": \"2018-12-31T22:12:02.414Z\",\n\"id\": \"1a55b8d1-9fdd-47b9-8279-0fa5babd1fa3\",\n\"name\": \"Western Region\",\n\"all_assets\": false,\n\"all_users\": false,\n\"version\": 2,\n\"status\": \"COMPLETED\",\n\"rules\":\n-\n[\n- {\n\"type\": \"ipv4\",\n\"operator\": \"eq\",\n\"terms\":\n-\n[\n\"192.0.2.57\"\n],\n\"principals\":\n-\n[\n,\n- {\n\"type\": \"user\",\n\"principal_id\": \"f35a8524-e683-4367-9c3e-bab03d8e5889\",\n\"principal_name\": \"user1@example.com\"\n}\n- {\n\"type\": \"user\",\n\"principal_id\": \"55fda9c5-62c1-49fd-b414-e4cfeead2717\",\n\"principal_name\": \"user2@example.com\"\n}\n],\n\"created_by_uuid\": \"fdeb27bc-a55f-4fe9-8b6b-f861f3e47b99\",\n\"updated_by_uuid\": \"fdeb27bc-a55f-4fe9-8b6b-f861f3e47b99\",\n\"updated_by_name\": \"administrator@example.com\",\n\"created_by_name\": \"administrator@example.com\",\n\"processing_percent_complete\": 100\n}\n]\n}\nContent type",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 98,
+      "end": 99
+    },
+    "content_stats": {
+      "char_count": 1077,
+      "word_count": 88
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

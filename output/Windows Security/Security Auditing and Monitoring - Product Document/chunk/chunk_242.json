@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_242",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "\nThis event can be a sign of software or operating system issues, or a sign of malicious activity that corrupted Windows Firewall Driver. We recommend monitoring this event and\ninvestigating the reason for the condition.\n5030(F): The Windows Firewall Service failed to start.\nWindows logs this event if the Windows Firewall service fails to start, or if it unexpectedly terminates. The error message indicates the cause of the service failure by including an error\ncode in the text of the message.\nThis event doesn't generate during Windows Firewall service failures if Windows Firewall policy is incorrect\\corrupted or one of the service dependencies was not started.\nThere is no example of this event in this document.\nEvent Schema:\nThe Windows Firewall service failed to start.\nError Code:%1\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\n© 2016 Microsoft. All rights reserved.\n680",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 680,
+      "end": 681
+    },
+    "content_stats": {
+      "char_count": 942,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the",
+      "children": []
+    }
+  }
+}

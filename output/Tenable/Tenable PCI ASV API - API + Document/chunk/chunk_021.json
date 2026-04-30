@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_021",
+  "section_number": "9.1.1",
+  "header": "Response samples",
+  "content": "200\n400\n429\n500\nGET\n/pci-asv/scans/list\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"pagination\":\n-\n{\n\"total\": 2,\n\"offset\": 0,\n\"limit\": 200,\n\"sort\":\n-\n[\n- {\n\"name\": \"name\",\n\"order\": \"asc\"\n}\n]\n},\nContent type\n\"scans\":\n-\n[\n,\n- {\n\"asset_count\": 4,\n\"updated_at\": \"2023-01-13T08:30:03.219Z\",\n\"name\": \"PCI Scan Example 1\",\n\"cde.uuid\": \"2a26c398-d61f-4f0f-8aea-bce410a64818\",\n\"started_at\": \"2023-01-13T05:30:12Z\",\n\"scan_type\": \"nessus\",\n\"failure_count\": 68,\n\"import_status\": \"complete\",\n\"vulnerability_count\": 229,\n\"uuid\": \"1ud20a81-5dbf-4749-9173-62ba398c0646\",\n\"ended_at\": \"2023-01-13T05:50:03Z\",\n\"status\": 100\n}\n- {\n\"asset_count\": 4,\n\"updated_at\": \"2023-01-13T08:30:03.219Z\",\n\"name\": \"PCI Scan Example 2\",\n\"cde.uuid\": \"1a26c398-d61f-4f0f-8aea-bce410a64818\",\n\"started_at\": \"2023-01-13T05:30:12Z\",\n\"scan_type\": \"nessus\",\n\"failure_count\": 68,\n\"import_status\": \"complete\",\n\"vulnerability_count\": 229,\n\"uuid\": \"bu7e71d6-25db-44a1-8869-f7b234480c11\",\n\"ended_at\": \"2023-01-13T05:50:03Z\",\n\"status\": 100\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 19,
+      "end": 20
+    },
+    "content_stats": {
+      "char_count": 1000,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

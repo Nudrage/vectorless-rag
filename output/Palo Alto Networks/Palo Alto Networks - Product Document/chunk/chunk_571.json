@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_571",
+  "section_number": "1.16.15.2",
+  "header": "Decryption Log",
+  "content": "The Decryption Log (Monitor > Logs > Decryption) provides comprehensive information about\nsessions that match a Decryption policy to help you gain context about that traffic so you can\naccurately and easily diagnose and resolve decryption issues. The firewall does not log traffic if\nthe traffic does not match a Decryption policy. If you want to log traffic that you don’t decrypt,\ncreate a policy-based decryption exclusion and for policies that govern TLSv1.2 and earlier traffic,\napply a No Decryption profile to the traffic.\nPAN-OS supports Decryption logs for the following types of traffic:\n• Forward Proxy—Several fields only display information for Forward Proxy traffic, including\nRoot CA (for trusted certificates only) and Server Name Identification (SNI).\n• Inbound Inspection.\n• No Decrypt (traffic excluded from decryption by Decryption policy).\nBecause the session remains encrypted, the firewall displays less information. For\nundecrypted TLSv1.3 traffic, there is no certificate information because TLSv1.3\nencrypts certificate information.\n• GlobalProtect—Covers GlobalProtect Gateway, GlobalProtect Portal, and GlobalProtect\nClientless VPN (client-to-firewall only).\nGlobalProtect does not support TLSv1.3.\n• Decryption Mirror\n• Decryption Broker (shown as Forward Proxy in the Proxy Type column).\nNot all types of traffic support every parameter. Unsupported Parameters by Proxy\nType and TLS Version provides a complete list of unsupported parameters for each type\nof decryption traffic.\nThe data for Forward Proxy traffic is based on whether the TLS handshake is successful or\nunsuccessful. For unsuccessful TLS handshakes, the firewall sends error data for the leg of the\ntransaction that caused the error, either client-to-firewall or firewall-to-server. For successful TLS\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1052\n©2025 Palo Alto Networks, Inc.\nDecryption\nhandshakes, the data is from the leg that successfully completes first, which is usually client-to-\nfirewall.\nDecryption logs are not supported for SSH Proxy traffic. In addition, certificate\ninformation is not available for session resumption logs.\nBy default, the firewall logs all unsuccessful TLS handshake traffic. You can also log successful\nTLS handshake traffic if you choose to do so. You can view up to 62 columns of log information\nsuch as application, SNI, Decryption Policy Name, error index, TLS version, key exchange version,\nencryption algorithm, certificate key types, and many other characteristics:\nClick the magnifying glass icon (\n) to see the Detailed Log View of a session.\nThe Decryption log learns each session’s App-ID from the Traffic log, so Traffic logs must\nbe enabled to see the App-ID in the Decryption log. If Traffic logs are disabled, the App-\nID shows as incomplete. For example, a lot of GlobalProtect traffic is intrazone traffic\n(Untrust zone to Untrust zone), but the default intra-zone policy does not enable Traffic\nlogs. To see the App-ID for GlobalProtect intrazone traffic, you need to enable the Traffic\nlog for intrazone traffic.\nAnother reason that the App-ID may display as incomplete is that for long sessions, the\nfirewall may generate the Decryption log before the Traffic log is complete (the Traffic\nlog is usually generated at session end). In those cases, the App-ID is not available for the\nDecryption log. In addition, when the TLS handshake fails and generates an error log, the\nApp-ID is not available because the failure terminates the session before the firewall can\ndetermine the App-ID. In these cases, the application may display as ssl or as incomplete.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1053\n©2025 Palo Alto Networks, Inc.\nDecryption\nTo troubleshoot issues, use the Decryption ACC widgets (ACC > SSL Activity) to identify traffic\nthat causes decryption issues and then use the Decryption log and Custom Report Templates for\nDecryption to drill down into details.\nWhen you forward Decryption logs for storage, ensure that you properly secure log transport and\nstorage because Decryption logs contain sensitive information.\nWhen the Decryption logs are enabled, the firewall sends HTTP/2 logs as Tunnel\nInspection logs (when Decryption logs are disabled, HTTP/2 logs are sent as Traffic logs),\nso you need to check the Tunnel Inspection logs instead of the Traffic logs for HTTP/2\nevents. In addition, you must enable Tunnel Content Inspection to obtain the App-ID for\nHTTP/2 traffic.\n• Configure Decryption Logging\n• Repair Incomplete Certificate Chains\n• Decryption Log Errors, Error Indexes, and Bitmasks",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1052,
+      "end": 1054
+    },
+    "content_stats": {
+      "char_count": 4565,
+      "word_count": 694
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot and Monitor Decryption",
+      "children": [
+        "Configure Decryption Logging",
+        "Decryption Log Errors, Error Indexes, and Bitmasks",
+        "Repair Incomplete Certificate Chains"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_296",
+  "section_number": "1.11.7.1.4",
+  "header": "WildFire Submissions Logs",
+  "content": "The firewall forwards samples (files and emails links) to the WildFire cloud for analysis based on\nWildFire Analysis profiles settings (Objects > Security Profiles > WildFire Analysis). The firewall\ngenerates WildFire Submissions log entries for each sample it forwards after WildFire completes\nstatic and dynamic analysis of the sample. WildFire Submissions log entries include the firewall\nAction for the sample (allow or block), the WildFire verdict for the submitted sample, and the\nseverity level of the sample.\nThe following table summarizes the WildFire verdicts:\nVerdict\nDescription\nBenign\nIndicates that the entry received a WildFire analysis verdict of benign. Files\ncategorized as benign are safe and do not exhibit malicious behavior.\nGrayware\nIndicates that the entry received a WildFire analysis verdict of grayware. Files\ncategorized as grayware do not pose a direct security threat, but might display\notherwise obtrusive behavior. Grayware can include, adware, spyware, and\nBrowser Helper Objects (BHOs).\nPhishing\nIndicates that WildFire assigned a link an analysis verdict of phishing. A phishing\nverdict indicates that the site to which the link directs users displayed credential\nphishing activity.\nMalicious\nIndicates that the entry received a WildFire analysis verdict of malicious. Samples\ncategorized as malicious are can pose a security threat. Malware can include\nviruses, C2 (command-and-control), worms, Trojans, Remote Access Tools (RATs),\nrootkits, and botnets. For samples that are identified as malware, the WildFire\ncloud generates and distributes a signature to prevent against future exposure.\nC2 samples are classified as C2 in the WildFire analysis report and\nother Palo Alto Networks products that rely on WildFire analysis data;\nhowever, that verdict is translated and categorized as malicious by the\nfirewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n522\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 522,
+      "end": 523
+    },
+    "content_stats": {
+      "char_count": 1935,
+      "word_count": 282
+    },
+    "hierarchy": {
+      "parent": "Log Types and Severity Levels",
+      "children": []
+    }
+  }
+}

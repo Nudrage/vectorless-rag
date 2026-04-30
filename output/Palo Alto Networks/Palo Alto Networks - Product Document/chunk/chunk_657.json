@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_657",
+  "section_number": "1.18.1",
+  "header": "QoS Overview",
+  "content": "Use QoS to prioritize and adjust quality aspects of network traffic. You can assign the order in\nwhich packets are handled and allot bandwidth, ensuring preferred treatment and optimal levels\nof performance are afforded to selected traffic, applications, and users.\nService quality measurements subject to a QoS implementation are bandwidth (maximum rate\nof transfer), throughput (actual rate of transfer), latency (delay), and jitter (variance in latency).\nThe capability to shape and control these service quality measurements makes QoS of particular\nimportance to high-bandwidth, real-time traffic such as voice over IP (VoIP), video conferencing,\nand video-on-demand that has a high sensitivity to latency and jitter. Additionally, use QoS to\nachieve outcomes such as the following:\n• Prioritize network and application traffic, guaranteeing high priority to important traffic or\nlimiting non-essential traffic.\n• Achieve equal bandwidth sharing among different subnets, classes, or users in a network.\n• Allocate bandwidth externally or internally or both, applying QoS to both upload and download\ntraffic or to only upload or download traffic.\n• Ensure low latency for customer and revenue-generating traffic in an enterprise environment.\n• Perform traffic profiling of applications to ensure bandwidth usage.\nQoS implementation on a Palo Alto Networks firewall begins with three primary configuration\ncomponents that support a full QoS solution: a QoS Profile, a QoS Policy, and setting up the QoS\nEgress Interface. Each of these options in the QoS configuration task facilitate a broader process\nthat optimizes and prioritizes the traffic flow and allocates and ensures bandwidth according to\nconfigurable parameters.\nThe figure QoS Traffic Flow shows traffic as it flows from the source, is shaped by the firewall\nwith QoS enabled, and is ultimately prioritized and delivered to its destination.\nFigure 6: QoS Traffic Flow\nThe QoS configuration options allow you to control the traffic flow and define it at different\npoints in the flow. The figure QoS Traffic Flow indicates where the configurable options define\nthe traffic flow. A QoS policy rule allows you to define traffic you want to receive QoS treatment\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1216\n©2025 Palo Alto Networks, Inc.\nQuality of Service\nand assign that traffic a QoS class. The matching traffic is then shaped based on the QoS profile\nclass settings as it exits the physical interface.\nEach of the QoS configuration components influence each other and the QoS configuration\noptions can be used to create a full and granular QoS implementation or can be used sparingly\nwith minimal administrator action.\nEach firewall model supports a maximum number of ports that can be configured with QoS. Refer\nto the spec sheet for your firewall model or use the product comparison tool to view QoS feature\nsupport for two or more firewalls on a single page.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1217\n©2025 Palo Alto Networks, Inc.\nQuality of Service",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1216,
+      "end": 1218
+    },
+    "content_stats": {
+      "char_count": 3022,
+      "word_count": 468
+    },
+    "hierarchy": {
+      "parent": "Quality of Service",
+      "children": []
+    }
+  }
+}

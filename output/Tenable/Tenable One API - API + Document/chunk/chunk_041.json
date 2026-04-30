@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_041",
+  "section_number": "23.1",
+  "header": "Responses",
+  "content": "200 Returned if the asset export request was successfully queued.\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n401 Returned if the API keys specified in your request are invalid.\n— 403 Returned if you do not have permission to export assets.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\ncompress\nfilters\nquery\n500 Returned if an internal error occurred.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 137,
+      "end": 138
+    },
+    "content_stats": {
+      "char_count": 493,
+      "word_count": 82
+    },
+    "hierarchy": {
+      "parent": "Export assets",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

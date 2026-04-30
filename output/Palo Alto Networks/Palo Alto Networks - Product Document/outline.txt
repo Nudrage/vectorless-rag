@@ -1,0 +1,1070 @@
+DOCUMENT INDEX: Palo Alto Networks\Palo Alto Networks - Product Document
+========================================================================
+
+1. PAN-OS® Administrator’s Guide
+   1.1. 10.0 (EoL)
+   1.2. Table of Contents
+      1.2.1. Getting Started................................................................................................. 23
+      1.2.2. Subscriptions..................................................................................................... 73
+      1.2.3. Software and Content Updates................................................................... 85
+      1.2.4. Firewall Administration................................................................................108
+      1.2.5. Device Telemetry.......................................................................................... 230
+      1.2.6. Authentication................................................................................................238
+      1.2.7. Certificate Management..............................................................................314
+      1.2.8. High Availability.............................................................................................379
+      1.2.9. Monitoring.......................................................................................................466
+      1.2.10. User-ID............................................................................................................. 687
+      1.2.11. App-ID.............................................................................................................. 800
+      1.2.12. Device-ID.........................................................................................................865
+      1.2.13. Threat Prevention......................................................................................... 882
+      1.2.14. Decryption.......................................................................................................971
+      1.2.15. URL Filtering.................................................................................................1110
+      1.2.16. Quality of Service....................................................................................... 1215
+      1.2.17. VPNs...............................................................................................................1246
+      1.2.18. Large Scale VPN (LSVPN).........................................................................1294
+      1.2.19. Networking................................................................................................... 1331
+      1.2.20. Policy.............................................................................................................. 1588
+      1.2.21. Virtual Systems............................................................................................1699
+      1.2.22. Zone Protection and DoS Protection.................................................... 1725
+      1.2.23. Certifications................................................................................................ 1768
+   1.3. Getting Started
+      1.3.1. Integrate the Firewall into Your Management Network
+         1.3.1.1. Determine Your Management Strategy
+         1.3.1.2. Perform Initial Configuration
+         1.3.1.3. Set Up Network Access for External Services
+      1.3.2. Register the Firewall
+         1.3.2.1. Create a New Support Account and Register a Firewall
+         1.3.2.2. Register a Firewall
+         1.3.2.3. (Optional) Perform Day 1 Configuration
+         1.3.2.4. Register the Firewall Line Cards
+      1.3.3. Segment Your Network Using Interfaces and Zones
+         1.3.3.1. Network Segmentation for a Reduced Attack Surface
+         1.3.3.2. Configure Interfaces and Zones
+      1.3.4. Set Up a Basic Security Policy
+      1.3.5. Assess Network Traffic
+      1.3.6. Enable Free WildFire Forwarding
+      1.3.7. Best Practices for Completing the Firewall Deployment
+      1.3.8. Best Practices for Securing Administrative Access
+         1.3.8.1. Isolate the Management Network
+         1.3.8.2. Use Service Routes to Access External Services
+         1.3.8.3. Restrict Access to the Management Interface
+         1.3.8.4. Manage Administrator Access
+         1.3.8.5. Create Strong Administrator Passwords
+         1.3.8.6. Scan All Traffic Destined for the Management Interface
+         1.3.8.7. Replace the Certificate for Inbound Management Traffic
+         1.3.8.8. Keep Content and Software Updates Current
+   1.4. Subscriptions
+      1.4.1. Subscriptions You Can Use With the Firewall
+      1.4.2. Activate Subscription Licenses
+      1.4.3. What Happens When Licenses Expire?
+      1.4.4. Enhanced Application Logs for Palo Alto Networks Cloud Services
+   1.5. Software and Content Updates
+      1.5.1. PAN-OS Software Updates
+      1.5.2. Dynamic Content Updates
+      1.5.3. Install Content Updates
+      1.5.4. Applications and Threats Content Updates
+         1.5.4.1. Deploy Applications and Threats Content Updates
+         1.5.4.2. Tips for Content Updates
+      1.5.5. Best Practices for Applications and Threats Content Updates
+         1.5.5.1. Best Practices for Content Updates—Mission-Critical
+         1.5.5.2. Best Practices for Content Updates—Security-First
+      1.5.6. Content Delivery Network Infrastructure
+   1.6. Firewall Administration
+      1.6.1. Management Interfaces
+      1.6.2. Use the Web Interface
+         1.6.2.1. Launch the Web Interface
+         1.6.2.2. Configure Banners, Message of the Day, and Logos
+         1.6.2.3. Use the Administrator Login Activity Indicators to Detect Account Misuse
+         1.6.2.4. Manage and Monitor Administrative Tasks
+         1.6.2.5. Commit, Validate, and Preview Firewall Configuration Changes
+         1.6.2.6. Export Configuration Table Data
+         1.6.2.7. Use Global Find to Search the Firewall or Panorama Management Server
+         1.6.2.8. Manage Locks for Restricting Configuration Changes
+      1.6.3. Manage Configuration Backups
+         1.6.3.1. Save and Export Firewall Configurations
+         1.6.3.2. Revert Firewall Configuration Changes
+      1.6.4. Manage Firewall Administrators
+         1.6.4.1. Administrative Role Types
+         1.6.4.2. Configure an Admin Role Profile
+         1.6.4.3. Administrative Authentication
+         1.6.4.4. Configure Administrative Accounts and Authentication
+            1.6.4.4.1. Configure a Firewall Administrator Account
+            1.6.4.4.2. Configure Local or External Authentication for Firewall Administrators
+            1.6.4.4.3. Configure Certificate-Based Administrator Authentication to the Web Interface
+            1.6.4.4.4. Configure SSH Key-Based Administrator Authentication to the CLI
+            1.6.4.4.5. Configure API Key Lifetime
+      1.6.5. Reference: Web Interface Administrator Access
+         1.6.5.1. Web Interface Access Privileges
+            1.6.5.1.1. Define Access to the Web Interface Tabs
+            1.6.5.1.2. Provide Granular Access to the Monitor Tab
+            1.6.5.1.3. Provide Granular Access to the Policy Tab
+            1.6.5.1.4. Provide Granular Access to the Objects Tab
+            1.6.5.1.5. Provide Granular Access to the Network Tab
+            1.6.5.1.6. Provide Granular Access to the Device Tab
+            1.6.5.1.7. Define User Privacy Settings in the Admin Role Profile
+            1.6.5.1.8. Restrict Administrator Access to Commit and Validate Functions
+            1.6.5.1.9. Provide Granular Access to Global Settings
+            1.6.5.1.10. Provide Granular Access to the Panorama Tab
+            1.6.5.1.11. Provide Granular Access to Operations Settings
+         1.6.5.2. Panorama Web Interface Access Privileges
+      1.6.6. Reference: Port Number Usage
+         1.6.6.1. Ports Used for Management Functions
+         1.6.6.2. Ports Used for HA
+         1.6.6.3. Ports Used for Panorama
+         1.6.6.4. Ports Used for GlobalProtect
+         1.6.6.5. Ports Used for User-ID
+      1.6.7. Reset the Firewall to Factory Default Settings
+      1.6.8. Bootstrap the Firewall
+         1.6.8.1. USB Flash Drive Support
+         1.6.8.2. Sample init-cfg.txt Files
+         1.6.8.3. Prepare a USB Flash Drive for Bootstrapping a Firewall
+         1.6.8.4. Bootstrap a Firewall Using a USB Flash Drive
+   1.7. Device Telemetry
+      1.7.1. Device Telemetry Overview
+      1.7.2. Device Telemetry Collection and Transmission Intervals
+      1.7.3. Manage Device Telemetry
+         1.7.3.1. Enable Device Telemetry
+         1.7.3.2. Disable Device Telemetry
+         1.7.3.3. Manage the Data the Device Telemetry Collects
+         1.7.3.4. Manage Historical Device Telemetry
+      1.7.4. Monitor Device Telemetry
+      1.7.5. Sample the Data that Device Telemetry Collects
+   1.8. Authentication
+      1.8.1. Authentication Types
+         1.8.1.1. External Authentication Services
+         1.8.1.2. Multi-Factor Authentication
+         1.8.1.3. SAML
+         1.8.1.4. Kerberos
+         1.8.1.5. TACACS+
+         1.8.1.6. RADIUS
+         1.8.1.7. LDAP
+         1.8.1.8. Local Authentication
+      1.8.2. Plan Your Authentication Deployment
+      1.8.3. Configure Multi-Factor Authentication
+         1.8.3.1. Configure MFA Between RSA SecurID and the Firewall
+            1.8.3.1.1. Get the RSA SecurID Access Cloud Authentication Service Details
+            1.8.3.1.2. Configure the Firewall for MFA with RSA SecurID
+         1.8.3.2. Configure MFA Between Okta and the Firewall
+            1.8.3.2.1. Configure Okta
+            1.8.3.2.2. Configure the firewall to integrate with Okta
+            1.8.3.2.3. Verify MFA with Okta
+         1.8.3.3. Configure MFA Between Duo and the Firewall
+            1.8.3.3.1. Configure Duo for SAML MFA with Duo Access Gateway
+            1.8.3.3.2. Configure the Firewall to Integrate with Duo
+            1.8.3.3.3. Verify MFA with Duo
+      1.8.4. Configure SAML Authentication
+      1.8.5. Configure Kerberos Single Sign-On
+      1.8.6. Configure Kerberos Server Authentication
+      1.8.7. Configure TACACS+ Authentication
+      1.8.8. Configure RADIUS Authentication
+      1.8.9. Configure LDAP Authentication
+      1.8.10. Connection Timeouts for Authentication Servers
+         1.8.10.1. Guidelines for Setting Authentication Server Timeouts
+         1.8.10.2. Modify the PAN-OS Web Server Timeout
+         1.8.10.3. Modify the Authentication Portal Session Timeout
+      1.8.11. Configure Local Database Authentication
+      1.8.12. Configure an Authentication Profile and Sequence
+      1.8.13. Test Authentication Server Connectivity
+      1.8.14. Authentication Policy
+         1.8.14.1. Authentication Timestamps
+         1.8.14.2. Configure Authentication Policy
+      1.8.15. Troubleshoot Authentication Issues
+   1.9. Certificate Management
+      1.9.1. Keys and Certificates
+      1.9.2. Default Trusted Certificate Authorities (CAs)
+      1.9.3. Certificate Revocation
+         1.9.3.1. Certificate Revocation List (CRL)
+         1.9.3.2. Online Certificate Status Protocol (OCSP)
+      1.9.4. Certificate Deployment
+      1.9.5. Set Up Verification for Certificate Revocation Status
+         1.9.5.1. Configure an OCSP Responder
+         1.9.5.2. Configure Revocation Status Verification of Certificates
+         1.9.5.3. Configure Revocation Status Verification of Certificates Used for SSL/TLS Decryption
+      1.9.6. Configure the Master Key
+      1.9.7. Master Key Encryption
+         1.9.7.1. Configure Master Key Encryption Level
+         1.9.7.2. Master Key Encryption on a Firewall HA Pair
+         1.9.7.3. Master Key Encryption Logs
+         1.9.7.4. Unique Master Key Encryptions for AES-256-GCM
+      1.9.8. Obtain Certificates
+         1.9.8.1. Create a Self-Signed Root CA Certificate
+         1.9.8.2. Generate a Certificate
+         1.9.8.3. Import a Certificate and Private Key
+         1.9.8.4. Obtain a Certificate from an External CA
+         1.9.8.5. Install a Device Certificate
+         1.9.8.6. Deploy Certificates Using SCEP
+      1.9.9. Export a Certificate and Private Key
+      1.9.10. Configure a Certificate Profile
+      1.9.11. Configure an SSL/TLS Service Profile
+      1.9.12. Configure an SSH Service Profile
+         1.9.12.1. Create an SSH Management Profile
+         1.9.12.2. Create an SSH HA Profile
+      1.9.13. Replace the Certificate for Inbound Management Traffic
+      1.9.14. Configure the Key Size for SSL Forward Proxy Server Certificates
+      1.9.15. Revoke and Renew Certificates
+         1.9.15.1. Revoke a Certificate
+         1.9.15.2. Renew a Certificate
+      1.9.16. Secure Keys with a Hardware Security Module
+         1.9.16.1. Set Up Connectivity with an HSM
+            1.9.16.1.1. Set Up Connectivity with a SafeNet Network HSM
+            1.9.16.1.2. Set Up Connectivity with an nCipher nShield Connect HSM
+         1.9.16.2. Encrypt a Master Key Using an HSM
+            1.9.16.2.1. Encrypt the Master Key
+            1.9.16.2.2. Refresh the Master Key Encryption
+         1.9.16.3. Store Private Keys on an HSM
+         1.9.16.4. Manage the HSM Deployment
+   1.10. High Availability
+      1.10.1. HA Overview
+      1.10.2. HA Concepts
+         1.10.2.1. HA Modes
+         1.10.2.2. HA Links and Backup Links
+            1.10.2.2.1. HA Ports on Palo Alto Networks Firewalls
+         1.10.2.3. Device Priority and Preemption
+         1.10.2.4. Failover
+         1.10.2.5. LACP and LLDP Pre-Negotiation for Active/Passive HA
+         1.10.2.6. Floating IP Address and Virtual MAC Address
+         1.10.2.7. ARP Load-Sharing
+         1.10.2.8. Route-Based Redundancy
+         1.10.2.9. HA Timers
+         1.10.2.10. Session Owner
+         1.10.2.11. Session Setup
+         1.10.2.12. NAT in Active/Active HA Mode
+         1.10.2.13. ECMP in Active/Active HA Mode
+      1.10.3. Set Up Active/Passive HA
+         1.10.3.1. Prerequisites for Active/Passive HA
+         1.10.3.2. Configuration Guidelines for Active/Passive HA
+         1.10.3.3. Configure Active/Passive HA
+         1.10.3.4. Define HA Failover Conditions
+         1.10.3.5. Verify Failover
+      1.10.4. Set Up Active/Active HA
+         1.10.4.1. Prerequisites for Active/Active HA
+         1.10.4.2. Configure Active/Active HA
+         1.10.4.3. Determine Your Active/Active Use Case
+            1.10.4.3.1. Use Case: Configure Active/Active HA with Route-Based Redundancy
+            1.10.4.3.2. Use Case: Configure Active/Active HA with Floating IP Addresses
+            1.10.4.3.3. Use Case: Configure Active/Active HA with ARP Load-Sharing
+            1.10.4.3.4. Use Case: Configure Active/Active HA with Floating IP Address Bound to Active- Primary Firewall
+            1.10.4.3.5. Use Case: Configure Active/Active HA with Source DIPP NAT Using Floating IP Addresses
+            1.10.4.3.6. Use Case: Configure Separate Source NAT IP Address Pools for Active/Active HA Firewalls
+            1.10.4.3.7. Use Case: Configure Active/Active HA for ARP Load-Sharing with Destination NAT
+            1.10.4.3.8. Use Case: Configure Active/Active HA for ARP Load-Sharing with Destination NAT in Layer 3
+      1.10.5. HA Clustering Overview
+      1.10.6. HA Clustering Best Practices and Provisioning
+      1.10.7. Configure HA Clustering
+      1.10.8. Refresh HA1 SSH Keys and Configure Key Options
+      1.10.9. HA Firewall States
+      1.10.10. Reference: HA Synchronization
+         1.10.10.1. What Settings Don’t Sync in Active/Passive HA?
+         1.10.10.2. What Settings Don’t Sync in Active/Active HA?
+         1.10.10.3. Synchronization of System Runtime Information
+   1.11. Monitoring
+      1.11.1. Use the Dashboard
+      1.11.2. Use the Application Command Center
+         1.11.2.1. ACC—First Look
+         1.11.2.2. ACC Tabs
+         1.11.2.3. ACC Widgets
+         1.11.2.4. Widget Descriptions
+         1.11.2.5. ACC Filters
+         1.11.2.6. Interact with the ACC
+         1.11.2.7. Use Case: ACC—Path of Information Discovery
+      1.11.3. Use the App Scope Reports
+         1.11.3.1. Summary Report
+         1.11.3.2. Change Monitor Report
+         1.11.3.3. Threat Monitor Report
+         1.11.3.4. Threat Map Report
+         1.11.3.5. Network Monitor Report
+         1.11.3.6. Traffic Map Report
+      1.11.4. Use the Automated Correlation Engine
+         1.11.4.1. Automated Correlation Engine Concepts
+            1.11.4.1.1. Correlation Object
+            1.11.4.1.2. Correlated Events
+         1.11.4.2. View the Correlated Objects
+         1.11.4.3. Interpret Correlated Events
+         1.11.4.4. Use the Compromised Hosts Widget in the ACC
+      1.11.5. Take Packet Captures
+         1.11.5.1. Types of Packet Captures
+         1.11.5.2. Disable Hardware Offload
+         1.11.5.3. Take a Custom Packet Capture
+         1.11.5.4. Take a Threat Packet Capture
+         1.11.5.5. Take an Application Packet Capture
+            1.11.5.5.1. Take a Packet Capture for Unknown Applications
+            1.11.5.5.2. Take a Custom Application Packet Capture
+         1.11.5.6. Take a Packet Capture on the Management Interface
+      1.11.6. Monitor Applications and Threats
+      1.11.7. View and Manage Logs
+         1.11.7.1. Log Types and Severity Levels
+            1.11.7.1.1. Traffic Logs
+            1.11.7.1.2. Threat Logs
+            1.11.7.1.3. URL Filtering Logs
+            1.11.7.1.4. WildFire Submissions Logs
+            1.11.7.1.5. Data Filtering Logs
+            1.11.7.1.6. Correlation Logs
+            1.11.7.1.7. Tunnel Inspection Logs
+            1.11.7.1.8. Config Logs
+            1.11.7.1.9. System Logs
+            1.11.7.1.10. HIP Match Logs
+            1.11.7.1.11. GlobalProtect Logs
+            1.11.7.1.12. IP-Tag Logs
+            1.11.7.1.13. User-ID Logs
+            1.11.7.1.14. Decryption Logs
+            1.11.7.1.15. Alarms Logs
+            1.11.7.1.16. Authentication Logs
+            1.11.7.1.17. Unified Logs
+         1.11.7.2. View Logs
+         1.11.7.3. Filter Logs
+         1.11.7.4. Export Logs
+         1.11.7.5. Configure Log Storage Quotas and Expiration Periods
+         1.11.7.6. Schedule Log Exports to an SCP or FTP Server
+      1.11.8. Monitor Block List
+      1.11.9. View and Manage Reports
+         1.11.9.1. Report Types
+         1.11.9.2. View Reports
+         1.11.9.3. Configure the Expiration Period and Run Time for Reports
+         1.11.9.4. Disable Predefined Reports
+         1.11.9.5. Custom Reports
+         1.11.9.6. Generate Custom Reports
+         1.11.9.7. Generate Botnet Reports
+            1.11.9.7.1. Configure a Botnet Report
+            1.11.9.7.2. Interpret Botnet Report Output
+         1.11.9.8. Generate the SaaS Application Usage Report
+         1.11.9.9. Manage PDF Summary Reports
+         1.11.9.10. Generate User/Group Activity Reports
+         1.11.9.11. Manage Report Groups
+         1.11.9.12. Schedule Reports for Email Delivery
+         1.11.9.13. Manage Report Storage Capacity
+      1.11.10. View Policy Rule Usage
+      1.11.11. Use External Services for Monitoring
+      1.11.12. Configure Log Forwarding
+      1.11.13. Configure Email Alerts
+      1.11.14. Use Syslog for Monitoring
+         1.11.14.1. Configure Syslog Monitoring
+         1.11.14.2. Syslog Field Descriptions
+            1.11.14.2.1. Traffic Log Fields
+            1.11.14.2.2. Threat Log Fields
+            1.11.14.2.3. URL Filtering Log Fields
+            1.11.14.2.4. Data Filtering Log Fields
+            1.11.14.2.5. HIP Match Log Fields
+            1.11.14.2.6. GlobalProtect Log Fields
+            1.11.14.2.7. IP-Tag Log Fields
+            1.11.14.2.8. User-ID Log Fields
+            1.11.14.2.9. Decryption Log Fields
+            1.11.14.2.10. Tunnel Inspection Log Fields
+            1.11.14.2.11. SCTP Log Fields
+            1.11.14.2.12. Authentication Log Fields
+            1.11.14.2.13. Config Log Fields
+            1.11.14.2.14. System Log Fields
+            1.11.14.2.15. Correlated Events Log Fields
+            1.11.14.2.16. GTP Log Fields
+            1.11.14.2.17. Syslog Severity
+            1.11.14.2.18. Custom Log/Event Format
+            1.11.14.2.19. Escape Sequences
+      1.11.15. SNMP Monitoring and Traps
+         1.11.15.1. SNMP Support
+         1.11.15.2. Use an SNMP Manager to Explore MIBs and Objects
+            1.11.15.2.1. Identify a MIB Containing a Known OID
+            1.11.15.2.2. Walk a MIB
+            1.11.15.2.3. Identify the OID for a System Statistic or Trap
+         1.11.15.3. Enable SNMP Services for Firewall-Secured Network Elements
+         1.11.15.4. Monitor Statistics Using SNMP
+         1.11.15.5. Forward Traps to an SNMP Manager
+         1.11.15.6. Supported MIBs
+            1.11.15.6.1. MIB-II
+            1.11.15.6.2. IF-MIB
+            1.11.15.6.3. HOST-RESOURCES-MIB
+            1.11.15.6.4. ENTITY-MIB
+            1.11.15.6.5. ENTITY-SENSOR-MIB
+            1.11.15.6.6. ENTITY-STATE-MIB
+            1.11.15.6.7. IEEE 802.3 LAG MIB
+            1.11.15.6.8. LLDP-V2-MIB.my
+            1.11.15.6.9. BFD-STD-MIB
+            1.11.15.6.10. PAN-COMMON-MIB.my
+            1.11.15.6.11. PAN-GLOBAL-REG-MIB.my
+            1.11.15.6.12. PAN-GLOBAL-TC-MIB.my
+            1.11.15.6.13. PAN-LC-MIB.my
+            1.11.15.6.14. PAN-PRODUCT-MIB.my
+            1.11.15.6.15. PAN-ENTITY-EXT-MIB.my
+            1.11.15.6.16. PAN-TRAPS.my
+      1.11.16. Forward Logs to an HTTP/S Destination
+      1.11.17. NetFlow Monitoring
+         1.11.17.1. Configure NetFlow Exports
+         1.11.17.2. NetFlow Templates
+      1.11.18. Firewall Interface Identifiers in SNMP Managers and NetFlow Collectors
+      1.11.19. Monitor Transceivers
+   1.12. User-ID
+      1.12.1. User-ID Overview
+      1.12.2. User-ID Concepts
+         1.12.2.1. Group Mapping
+         1.12.2.2. User Mapping
+            1.12.2.2.1. Server Monitoring
+            1.12.2.2.2. Port Mapping
+            1.12.2.2.3. XFF Headers
+            1.12.2.2.4. Username Header Insertion
+            1.12.2.2.5. Authentication Policy and Authentication Portal
+            1.12.2.2.6. Syslog
+            1.12.2.2.7. GlobalProtect
+            1.12.2.2.8. XML API
+            1.12.2.2.9. Client Probing
+      1.12.3. Enable User-ID
+      1.12.4. Map Users to Groups
+      1.12.5. Map IP Addresses to Users
+         1.12.5.1. Create a Dedicated Service Account for the User-ID Agent
+            1.12.5.1.1. Configure a Service Account for the Windows User-ID Agent
+            1.12.5.1.2. Configure a Service Account for the PAN-OS Integrated User-ID Agent
+         1.12.5.2. Configure User Mapping Using the Windows User-ID Agent
+            1.12.5.2.1. Install the Windows-Based User-ID Agent
+            1.12.5.2.2. Configure the Windows User-ID Agent for User Mapping
+         1.12.5.3. Configure User Mapping Using the PAN-OS Integrated User-ID Agent
+         1.12.5.4. Configure Server Monitoring Using WinRM
+            1.12.5.4.1. Configure WinRM over HTTPS with Basic Authentication
+            1.12.5.4.2. Configure WinRM over HTTP with Kerberos
+            1.12.5.4.3. Configure WinRM over HTTPS with Kerberos
+         1.12.5.5. Configure User-ID to Monitor Syslog Senders for User Mapping
+            1.12.5.5.1. Configure the PAN-OS Integrated User-ID Agent as a Syslog Listener
+            1.12.5.5.2. Configure the Windows User-ID Agent as a Syslog Listener
+         1.12.5.6. Map IP Addresses to Usernames Using Authentication Portal
+            1.12.5.6.1. Authentication Portal Authentication Methods
+            1.12.5.6.2. Authentication Portal Modes
+            1.12.5.6.3. Configure Authentication Portal
+         1.12.5.7. Configure User Mapping for Terminal Server Users
+            1.12.5.7.1. Configure the Palo Alto Networks Terminal Server (TS) Agent for User Mapping
+            1.12.5.7.2. Retrieve User Mappings from a Terminal Server Using the PAN-OS XML API
+         1.12.5.8. Send User Mappings to User-ID Using the XML API
+      1.12.6. Enable User- and Group-Based Policy
+      1.12.7. Enable Policy for Users with Multiple Accounts
+      1.12.8. Verify the User-ID Configuration
+      1.12.9. Deploy User-ID in a Large-Scale Network
+         1.12.9.1. Deploy User-ID for Numerous Mapping Information Sources
+            1.12.9.1.1. Windows Log Forwarding and Global Catalog Servers
+            1.12.9.1.2. Plan a Large-Scale User-ID Deployment
+            1.12.9.1.3. Configure Windows Log Forwarding
+            1.12.9.1.4. Configure User-ID for Numerous Mapping Information Sources
+         1.12.9.2. Insert Username in HTTP Headers
+         1.12.9.3. Redistribute Data and Authentication Timestamps
+            1.12.9.3.1. Firewall Deployment for Data Redistribution
+            1.12.9.3.2. Configure Data Redistribution
+         1.12.9.4. Share User-ID Mappings Across Virtual Systems
+   1.13. App-ID
+      1.13.1. App-ID Overview
+      1.13.2. Streamlined App-ID Policy Rules
+         1.13.2.1. Create an Application Filter Using Tags
+         1.13.2.2. Create an Application Filter Based on Custom Tags
+      1.13.3. App-ID and HTTP/2 Inspection
+      1.13.4. Manage Custom or Unknown Applications
+      1.13.5. Manage New and Modified App-IDs
+         1.13.5.1. Workflow to Best Incorporate New and Modified App-IDs
+         1.13.5.2. See the New and Modified App-IDs in a Content Release
+         1.13.5.3. See How New and Modified App-IDs Impact Your Security Policy
+         1.13.5.4. Ensure Critical New App-IDs are Allowed
+         1.13.5.5. Monitor New App-IDs
+         1.13.5.6. Disable and Enable App-IDs
+      1.13.6. Use Application Objects in Policy
+         1.13.6.1. Create an Application Group
+         1.13.6.2. Create an Application Filter
+         1.13.6.3. Create a Custom Application
+         1.13.6.4. Resolve Application Dependencies
+      1.13.7. Safely Enable Applications on Default Ports
+      1.13.8. Applications with Implicit Support
+      1.13.9. Security Policy Rule Optimization
+         1.13.9.1. Policy Optimizer Concepts
+            1.13.9.1.1. Sorting and Filtering Security Policy Rules
+            1.13.9.1.2. Clear Application Usage Data
+         1.13.9.2. Migrate Port-Based to App-ID Based Security Policy Rules
+         1.13.9.3. Rule Cloning Migration Use Case: Web Browsing and SSL Traffic
+         1.13.9.4. Add Applications to an Existing Rule
+         1.13.9.5. Identify Security Policy Rules with Unused Applications
+         1.13.9.6. High Availability for Application Usage Statistics
+         1.13.9.7. How to Disable Policy Optimizer
+      1.13.10. Application Level Gateways
+      1.13.11. Disable the SIP Application-level Gateway (ALG)
+      1.13.12. Use HTTP Headers to Manage SaaS Application Access
+         1.13.12.1. Understand SaaS Custom Headers
+         1.13.12.2. Domains used by the Predefined SaaS Application Types
+         1.13.12.3. Create HTTP Header Insertion Entries using Predefined Types
+         1.13.12.4. Create Custom HTTP Header Insertion Entries
+      1.13.13. Maintain Custom Timeouts for Data Center Applications
+   1.14. Device-ID
+      1.14.1. Device-ID Overview
+      1.14.2. Prepare to Deploy Device-ID
+      1.14.3. Configure Device-ID
+      1.14.4. Manage Device-ID
+      1.14.5. CLI Commands for Device-ID
+   1.15. Threat Prevention
+      1.15.1. Best Practices for Securing Your Network from Layer 4 and Layer 7 Evasions
+      1.15.2. Set Up Antivirus, Anti-Spyware, and Vulnerability Protection
+      1.15.3. DNS Security
+         1.15.3.1. About DNS Security
+         1.15.3.2. Cloud-Delivered DNS Signatures and Protections
+         1.15.3.3. DNS Security Analytics
+         1.15.3.4. Enable DNS Security
+         1.15.3.5. DNS Security Data Collection and Logging
+      1.15.4. Use DNS Queries to Identify Infected Hosts on the Network
+         1.15.4.1. How DNS Sinkholing Works
+         1.15.4.2. Configure DNS Sinkholing
+         1.15.4.3. Configure DNS Sinkholing for a List of Custom Domains
+         1.15.4.4. Configure the Sinkhole IP Address to a Local Server on Your Network
+         1.15.4.5. See Infected Hosts that Attempted to Connect to a Malicious Domain
+      1.15.5. Data Filtering
+         1.15.5.1. Create a Data Filtering Profile
+         1.15.5.2. Predefined Data Filtering Patterns
+      1.15.6. WildFire Inline ML
+         1.15.6.1. Configure WildFire Inline ML
+      1.15.7. Set Up File Blocking
+      1.15.8. Prevent Brute Force Attacks
+      1.15.9. Customize the Action and Trigger Conditions for a Brute Force Signature
+      1.15.10. Enable Evasion Signatures
+      1.15.11. Monitor Blocked IP Addresses
+      1.15.12. Threat Signature Categories
+      1.15.13. Create Threat Exceptions
+      1.15.14. Custom Signatures
+      1.15.15. Monitor and Get Threat Reports
+         1.15.15.1. Monitor Activity and Create Custom Reports Based on Threat Categories
+         1.15.15.2. Learn More About Threat Signatures
+         1.15.15.3. AutoFocus Threat Intelligence for Network Traffic
+            1.15.15.3.1. AutoFocus Intelligence Summary
+            1.15.15.3.2. Enable AutoFocus Threat Intelligence
+            1.15.15.3.3. View and Act on AutoFocus Intelligence Summary Data
+      1.15.16. Share Threat Intelligence with Palo Alto Networks
+      1.15.17. Threat Prevention Resources
+   1.16. Decryption
+      1.16.1. Decryption Overview
+      1.16.2. Decryption Concepts
+         1.16.2.1. Keys and Certificates for Decryption Policies
+         1.16.2.2. SSL Forward Proxy
+         1.16.2.3. SSL Forward Proxy Decryption Profile
+         1.16.2.4. SSL Inbound Inspection
+         1.16.2.5. SSL Inbound Inspection Decryption Profile
+         1.16.2.6. SSL Protocol Settings Decryption Profile
+         1.16.2.7. SSH Proxy
+         1.16.2.8. SSH Proxy Decryption Profile
+         1.16.2.9. Profile for No Decryption
+         1.16.2.10. SSL Decryption for Elliptical Curve Cryptography (ECC) Certificates
+         1.16.2.11. Perfect Forward Secrecy (PFS) Support for SSL Decryption
+         1.16.2.12. SSL Decryption and Subject Alternative Names (SANs)
+         1.16.2.13. TLSv1.3 Decryption
+         1.16.2.14. High Availability Support for Decrypted Sessions
+         1.16.2.15. Decryption Mirroring
+      1.16.3. Prepare to Deploy Decryption
+         1.16.3.1. Work with Stakeholders to Develop a Decryption Deployment Strategy
+         1.16.3.2. Develop a PKI Rollout Plan
+         1.16.3.3. Size the Decryption Firewall Deployment
+         1.16.3.4. Plan a Staged, Prioritized Deployment
+      1.16.4. Define Traffic to Decrypt
+         1.16.4.1. Create a Decryption Profile
+         1.16.4.2. Create a Decryption Policy Rule
+      1.16.5. Configure SSL Forward Proxy
+      1.16.6. Configure SSL Inbound Inspection
+      1.16.7. Configure SSH Proxy
+      1.16.8. Configure Server Certificate Verification for Undecrypted Traffic
+      1.16.9. Decryption Exclusions
+         1.16.9.1. Palo Alto Networks Predefined Decryption Exclusions
+         1.16.9.2. Exclude a Server from Decryption for Technical Reasons
+         1.16.9.3. Local Decryption Exclusion Cache
+         1.16.9.4. Create a Policy-Based Decryption Exclusion
+      1.16.10. Block Private Key Export
+         1.16.10.1. Generate a Private Key and Block It
+         1.16.10.2. Import a Private Key and Block It
+         1.16.10.3. Import a Private Key for IKE Gateway and Block It
+         1.16.10.4. Verify Private Key Blocking
+      1.16.11. Enable Users to Opt Out of SSL Decryption
+      1.16.12. Temporarily Disable SSL Decryption
+      1.16.13. Configure Decryption Port Mirroring
+      1.16.14. Verify Decryption
+      1.16.15. Troubleshoot and Monitor Decryption
+         1.16.15.1. Decryption Application Command Center Widgets
+         1.16.15.2. Decryption Log
+            1.16.15.2.1. Configure Decryption Logging
+            1.16.15.2.2. Decryption Log Errors, Error Indexes, and Bitmasks
+            1.16.15.2.3. Repair Incomplete Certificate Chains
+         1.16.15.3. Custom Report Templates for Decryption
+         1.16.15.4. Unsupported Parameters by Proxy Type and TLS Version
+         1.16.15.5. Decryption Troubleshooting Workflow Examples
+            1.16.15.5.1. Investigate Decryption Failure Reasons
+            1.16.15.5.2. Troubleshoot Unsupported Cipher Suites
+            1.16.15.5.3. Identify Weak Protocols and Cipher Suites
+            1.16.15.5.4. Identify Untrusted CA Certificates
+            1.16.15.5.5. Troubleshoot Expired Certificates
+            1.16.15.5.6. Troubleshoot Revoked Certificates
+            1.16.15.5.7. Troubleshoot Pinned Certificates
+      1.16.16. Decryption Broker
+         1.16.16.1. How Decryption Broker Works
+         1.16.16.2. Decryption Broker Concepts
+            1.16.16.2.1. Decryption Broker: Forwarding Interfaces
+            1.16.16.2.2. Decryption Broker: Layer 3 Security Chain
+            1.16.16.2.3. Decryption Broker: Transparent Bridge Security Chain
+            1.16.16.2.4. Decryption Broker: Security Chain Session Flow
+            1.16.16.2.5. Decryption Broker: Multiple Security Chains
+            1.16.16.2.6. Decryption Broker: Security Chain Health Checks
+         1.16.16.3. Layer 3 Security Chain Guidelines
+         1.16.16.4. Configure Decryption Broker with One or More Layer 3 Security Chain
+         1.16.16.5. Transparent Bridge Security Chain Guidelines
+         1.16.16.6. Configure Decryption Broker with a Single Transparent Bridge Security Chain
+         1.16.16.7. Configure Decryption Broker with Multiple Transparent Bridge Security Chains
+      1.16.17. Activate Free Licenses for Decryption Features
+   1.17. URL Filtering
+      1.17.1. About Palo Alto Networks URL Filtering Solution
+      1.17.2. How Advanced URL Filtering Works
+      1.17.3. URL Filtering Inline ML
+      1.17.4. URL Filtering Use Cases
+      1.17.5. URL Categories
+         1.17.5.1. Security-Focused URL Categories
+         1.17.5.2. Malicious URL Categories
+         1.17.5.3. Verified URL Categories
+         1.17.5.4. Policy Actions You Can Take Based on URL Categories
+      1.17.6. Plan Your URL Filtering Deployment
+      1.17.7. URL Filtering Best Practices
+      1.17.8. Activate The Advanced URL Filtering Subscription
+      1.17.9. Test URL Filtering Configuration
+         1.17.9.1. Verify URL Filtering
+         1.17.9.2. Verify Advanced URL Filtering
+      1.17.10. Configure URL Filtering
+      1.17.11. Configure URL Filtering Inline ML
+      1.17.12. Monitor Web Activity
+         1.17.12.1. Monitor Web Activity of Network Users
+         1.17.12.2. View the User Activity Report
+         1.17.12.3. Configure Custom URL Filtering Reports
+      1.17.13. Log Only the Page a User Visits
+      1.17.14. Create a Custom URL Category
+      1.17.15. URL Category Exceptions
+         1.17.15.1. Basic Guidelines For URL Category Exception Lists
+         1.17.15.2. Wildcard Guidelines for URL Category Exception Lists
+         1.17.15.3. URL Category Exception List—Examples
+      1.17.16. Use an External Dynamic List in a URL Filtering Profile
+      1.17.17. Allow Password Access to Certain Sites
+      1.17.18. Prevent Credential Phishing
+         1.17.18.1. Methods to Check for Corporate Credential Submissions
+         1.17.18.2. Configure Credential Detection with the Windows User-ID Agent
+         1.17.18.3. Set Up Credential Phishing Prevention
+      1.17.19. Safe Search Enforcement
+         1.17.19.1. Safe Search Settings for Search Providers
+         1.17.19.2. Block Search Results when Strict Safe Search is not Enabled
+         1.17.19.3. Transparently Enable Safe Search for Users
+      1.17.20. URL Filtering Response Pages
+      1.17.21. Customize the URL Filtering Response Pages
+      1.17.22. HTTP Header Logging
+      1.17.23. Request to Change the Category for a URL
+         1.17.23.1. Make a Change Request Online
+         1.17.23.2. Make a Bulk Change Request
+         1.17.23.3. Make a Change Request from the Firewall
+      1.17.24. Troubleshoot URL Filtering
+         1.17.24.1. Problems Activating Advanced URL Filtering
+         1.17.24.2. PAN-DB Cloud Connectivity Issues
+         1.17.24.3. URLs Classified as Not-Resolved
+         1.17.24.4. Incorrect Categorization
+      1.17.25. PAN-DB Private Cloud
+         1.17.25.1. M-600 Appliance for PAN-DB Private Cloud
+         1.17.25.2. Set Up the PAN-DB Private Cloud
+            1.17.25.2.1. Configure the PAN-DB Private Cloud
+            1.17.25.2.2. Configure the Firewalls to Access the PAN-DB Private Cloud
+            1.17.25.2.3. Configure Authentication with Custom Certificates on the PAN-DB Private Cloud
+   1.18. Quality of Service
+      1.18.1. QoS Overview
+      1.18.2. QoS Concepts
+         1.18.2.1. QoS for Applications and Users
+         1.18.2.2. QoS Policy
+         1.18.2.3. QoS Profile
+         1.18.2.4. QoS Classes
+         1.18.2.5. QoS Priority Queuing
+         1.18.2.6. QoS Bandwidth Management
+         1.18.2.7. QoS Egress Interface
+         1.18.2.8. QoS for Clear Text and Tunneled Traffic
+      1.18.3. Configure QoS
+      1.18.4. Configure QoS for a Virtual System
+      1.18.5. Enforce QoS Based on DSCP Classification
+      1.18.6. QoS Use Cases
+         1.18.6.1. Use Case: QoS for a Single User
+         1.18.6.2. Use Case: QoS for Voice and Video Applications
+   1.19. VPNs
+      1.19.1. VPN Deployments
+      1.19.2. Site-to-Site VPN Overview
+      1.19.3. Site-to-Site VPN Concepts
+         1.19.3.1. IKE Gateway
+         1.19.3.2. Tunnel Interface
+         1.19.3.3. Tunnel Monitoring
+         1.19.3.4. Internet Key Exchange (IKE) for VPN
+            1.19.3.4.1. IKE Phase 1
+            1.19.3.4.2. IKE Phase 2
+            1.19.3.4.3. Methods of Securing IPSec VPN Tunnels (IKE Phase 2)
+         1.19.3.5. IKEv2
+            1.19.3.5.1. Liveness Check
+            1.19.3.5.2. Cookie Activation Threshold and Strict Cookie Validation
+            1.19.3.5.3. Traffic Selectors
+            1.19.3.5.4. Hash and URL Certificate Exchange
+            1.19.3.5.5. SA Key Lifetime and Re-Authentication Interval
+      1.19.4. Set Up Site-to-Site VPN
+         1.19.4.1. Set Up an IKE Gateway
+            1.19.4.1.1. Export a Certificate for a Peer to Access Using Hash and URL
+            1.19.4.1.2. Import a Certificate for IKEv2 Gateway Authentication
+            1.19.4.1.3. Change the Key Lifetime or Authentication Interval for IKEv2
+            1.19.4.1.4. Change the Cookie Activation Threshold for IKEv2
+            1.19.4.1.5. Configure IKEv2 Traffic Selectors
+         1.19.4.2. Define Cryptographic Profiles
+            1.19.4.2.1. Define IKE Crypto Profiles
+            1.19.4.2.2. Define IPSec Crypto Profiles
+         1.19.4.3. Set Up an IPSec Tunnel
+         1.19.4.4. Set Up Tunnel Monitoring
+            1.19.4.4.1. Define a Tunnel Monitoring Profile
+            1.19.4.4.2. View the Status of the Tunnels
+         1.19.4.5. Enable/Disable, Refresh or Restart an IKE Gateway or IPSec Tunnel
+            1.19.4.5.1. Enable or Disable an IKE Gateway or IPSec Tunnel
+            1.19.4.5.2. Refresh and Restart Behaviors
+            1.19.4.5.3. Refresh or Restart an IKE Gateway or IPSec Tunnel
+         1.19.4.6. Test VPN Connectivity
+         1.19.4.7. Interpret VPN Error Messages
+      1.19.5. Site-to-Site VPN Quick Configs
+         1.19.5.1. Site-to-Site VPN with Static Routing
+         1.19.5.2. Site-to-Site VPN with OSPF
+         1.19.5.3. Site-to-Site VPN with Static and Dynamic Routing
+   1.20. Large Scale VPN (LSVPN)
+      1.20.1. LSVPN Overview
+      1.20.2. Create Interfaces and Zones for the LSVPN
+      1.20.3. Enable SSL Between GlobalProtect LSVPN Components
+         1.20.3.1. About Certificate Deployment
+         1.20.3.2. Deploy Server Certificates to the GlobalProtect LSVPN Components
+         1.20.3.3. Deploy Client Certificates to the GlobalProtect Satellites Using SCEP
+      1.20.4. Configure the Portal to Authenticate Satellites
+      1.20.5. Configure GlobalProtect Gateways for LSVPN
+      1.20.6. Configure the GlobalProtect Portal for LSVPN
+         1.20.6.1. GlobalProtect Portal for LSVPN Prerequisite Tasks
+         1.20.6.2. Configure the Portal
+         1.20.6.3. Define the Satellite Configurations
+      1.20.7. Prepare the Satellite to Join the LSVPN
+      1.20.8. Verify the LSVPN Configuration
+      1.20.9. LSVPN Quick Configs
+         1.20.9.1. Basic LSVPN Configuration with Static Routing
+         1.20.9.2. Advanced LSVPN Configuration with Dynamic Routing
+         1.20.9.3. Advanced LSVPN Configuration with iBGP
+   1.21. Networking
+      1.21.1. Configure Interfaces
+         1.21.1.1. Tap Interfaces
+         1.21.1.2. Virtual Wire Interfaces
+            1.21.1.2.1. Layer 2 and Layer 3 Packets over a Virtual Wire
+            1.21.1.2.2. Port Speeds of Virtual Wire Interfaces
+            1.21.1.2.3. LLDP over a Virtual Wire
+            1.21.1.2.4. Aggregated Interfaces for a Virtual Wire
+            1.21.1.2.5. Virtual Wire Support of High Availability
+            1.21.1.2.6. Zone Protection for a Virtual Wire Interface
+            1.21.1.2.7. VLAN-Tagged Traffic
+            1.21.1.2.8. Virtual Wire Subinterfaces
+            1.21.1.2.9. Configure Virtual Wires
+         1.21.1.3. Layer 2 Interfaces
+            1.21.1.3.1. Layer 2 Interfaces with No VLANs
+            1.21.1.3.2. Layer 2 Interfaces with VLANs
+            1.21.1.3.3. Configure a Layer 2 Interface
+            1.21.1.3.4. Configure a Layer 2 Interface, Subinterface, and VLAN
+            1.21.1.3.5. Manage Per-VLAN Spanning Tree (PVST+) BPDU Rewrite
+         1.21.1.4. Layer 3 Interfaces
+            1.21.1.4.1. Configure Layer 3 Interfaces
+            1.21.1.4.2. Manage IPv6 Hosts Using NDP
+         1.21.1.5. Configure an Aggregate Interface Group
+         1.21.1.6. Configure Bonjour Reflector for Network Segmentation
+         1.21.1.7. Use Interface Management Profiles to Restrict Access
+      1.21.2. Virtual Routers
+      1.21.3. Service Routes
+      1.21.4. Static Routes
+         1.21.4.1. Static Route Overview
+         1.21.4.2. Static Route Removal Based on Path Monitoring
+         1.21.4.3. Configure a Static Route
+         1.21.4.4. Configure Path Monitoring for a Static Route
+      1.21.5. RIP
+      1.21.6. OSPF
+         1.21.6.1. OSPF Concepts
+            1.21.6.1.1. OSPFv3
+            1.21.6.1.2. OSPF Neighbors
+            1.21.6.1.3. OSPF Areas
+            1.21.6.1.4. OSPF Router Types
+         1.21.6.2. Configure OSPF
+         1.21.6.3. Configure OSPFv3
+         1.21.6.4. Configure OSPF Graceful Restart
+         1.21.6.5. Confirm OSPF Operation
+            1.21.6.5.1. View the Routing Table
+            1.21.6.5.2. Confirm OSPF Adjacencies
+            1.21.6.5.3. Confirm that OSPF Connections are Established
+      1.21.7. BGP
+         1.21.7.1. BGP Overview
+         1.21.7.2. MP-BGP
+         1.21.7.3. Configure BGP
+         1.21.7.4. Configure a BGP Peer with MP-BGP for IPv4 or IPv6 Unicast
+         1.21.7.5. Configure a BGP Peer with MP-BGP for IPv4 Multicast
+         1.21.7.6. BGP Confederations
+      1.21.8. IP Multicast
+         1.21.8.1. IGMP
+         1.21.8.2. PIM
+            1.21.8.2.1. Shortest-Path Tree (SPT) and Shared Tree
+            1.21.8.2.2. PIM Assert Mechanism
+            1.21.8.2.3. Reverse-Path Forwarding
+         1.21.8.3. Configure IP Multicast
+         1.21.8.4. View IP Multicast Information
+      1.21.9. Route Redistribution
+      1.21.10. GRE Tunnels
+         1.21.10.1. GRE Tunnel Overview
+         1.21.10.2. Create a GRE Tunnel
+      1.21.11. DHCP
+         1.21.11.1. DHCP Overview
+         1.21.11.2. Firewall as a DHCP Server and Client
+         1.21.11.3. DHCP Messages
+         1.21.11.4. DHCP Addressing
+            1.21.11.4.1. DHCP Address Allocation Methods
+            1.21.11.4.2. DHCP Leases
+         1.21.11.5. DHCP Options
+            1.21.11.5.1. Predefined DHCP Options
+            1.21.11.5.2. Multiple Values for a DHCP Option
+            1.21.11.5.3. DHCP Options 43, 55, and 60 and Other Customized Options
+         1.21.11.6. Configure an Interface as a DHCP Server
+         1.21.11.7. Configure an Interface as a DHCP Client
+         1.21.11.8. Configure the Management Interface as a DHCP Client
+         1.21.11.9. Configure an Interface as a DHCP Relay Agent
+         1.21.11.10. Monitor and Troubleshoot DHCP
+            1.21.11.10.1. View DHCP Server Information
+            1.21.11.10.2. Clear DHCP Leases
+            1.21.11.10.3. View DHCP Client Information
+            1.21.11.10.4. Gather Debug Output about DHCP
+      1.21.12. DNS
+         1.21.12.1. DNS Overview
+         1.21.12.2. DNS Proxy Object
+         1.21.12.3. DNS Server Profile
+         1.21.12.4. Multi-Tenant DNS Deployments
+         1.21.12.5. Configure a DNS Proxy Object
+         1.21.12.6. Configure a DNS Server Profile
+         1.21.12.7. Use Case 1: Firewall Requires DNS Resolution
+         1.21.12.8. Use Case 2: ISP Tenant Uses DNS Proxy to Handle DNS Resolution for Security Policies, Reporting, and Services within its Virtual System
+         1.21.12.9. Use Case 3: Firewall Acts as DNS Proxy Between Client and Server
+         1.21.12.10. DNS Proxy Rule and FQDN Matching
+      1.21.13. Dynamic DNS Overview
+      1.21.14. Configure Dynamic DNS for Firewall Interfaces
+      1.21.15. NAT
+         1.21.15.1. NAT Policy Rules
+            1.21.15.1.1. NAT Policy Overview
+            1.21.15.1.2. NAT Address Pools Identified as Address Objects
+            1.21.15.1.3. Proxy ARP for NAT Address Pools
+         1.21.15.2. Source NAT and Destination NAT
+            1.21.15.2.1. Source NAT
+            1.21.15.2.2. Destination NAT
+            1.21.15.2.3. Destination NAT with DNS Rewrite Use Cases
+         1.21.15.3. NAT Rule Capacities
+         1.21.15.4. Dynamic IP and Port NAT Oversubscription
+         1.21.15.5. Dataplane NAT Memory Statistics
+         1.21.15.6. Configure NAT
+            1.21.15.6.1. Translate Internal Client IP Addresses to Your Public IP Address (Source DIPP NAT)
+            1.21.15.6.2. Enable Clients on the Internal Network to Access your Public Servers (Destination U- Turn NAT)
+            1.21.15.6.3. Enable Bi-Directional Address Translation for Your Public-Facing Servers (Static Source NAT)
+            1.21.15.6.4. Configure Destination NAT with DNS Rewrite
+            1.21.15.6.5. Configure Destination NAT Using Dynamic IP Addresses
+            1.21.15.6.6. Modify the Oversubscription Rate for DIPP NAT
+            1.21.15.6.7. Reserve Dynamic IP NAT Addresses
+            1.21.15.6.8. Disable NAT for a Specific Host or Interface
+         1.21.15.7. NAT Configuration Examples
+            1.21.15.7.1. Destination NAT Example—One-to-One Mapping
+            1.21.15.7.2. Destination NAT with Port Translation Example
+            1.21.15.7.3. Destination NAT Example—One-to-Many Mapping
+            1.21.15.7.4. Source and Destination NAT Example
+            1.21.15.7.5. Virtual Wire Source NAT Example
+            1.21.15.7.6. Virtual Wire Static NAT Example
+            1.21.15.7.7. Virtual Wire Destination NAT Example
+      1.21.16. NPTv6
+         1.21.16.1. NPTv6 Overview
+            1.21.16.1.1. NPTv6 Does Not Provide Security
+            1.21.16.1.2. Model Support for NPTv6
+            1.21.16.1.3. Unique Local Addresses
+            1.21.16.1.4. Reasons to Use NPTv6
+         1.21.16.2. How NPTv6 Works
+            1.21.16.2.1. Checksum-Neutral Mapping
+            1.21.16.2.2. Bi-Directional Translation
+            1.21.16.2.3. NPTv6 Applied to a Specific Service
+         1.21.16.3. NDP Proxy
+         1.21.16.4. NPTv6 and NDP Proxy Example
+            1.21.16.4.1. The ND Cache in NPTv6 Example
+            1.21.16.4.2. The NDP Proxy in NPTv6 Example
+            1.21.16.4.3. The NPTv6 Translation in NPTv6 Example
+            1.21.16.4.4. Neighbors in the ND Cache are Not Translated
+         1.21.16.5. Create an NPTv6 Policy
+      1.21.17. NAT64
+         1.21.17.1. NAT64 Overview
+         1.21.17.2. IPv4-Embedded IPv6 Address
+         1.21.17.3. DNS64 Server
+         1.21.17.4. Path MTU Discovery
+         1.21.17.5. IPv6-Initiated Communication
+         1.21.17.6. Configure NAT64 for IPv6-Initiated Communication
+         1.21.17.7. Configure NAT64 for IPv4-Initiated Communication
+         1.21.17.8. Configure NAT64 for IPv4-Initiated Communication with Port Translation
+      1.21.18. ECMP
+         1.21.18.1. ECMP Load-Balancing Algorithms
+         1.21.18.2. ECMP Model, Interface, and IP Routing Support
+         1.21.18.3. Configure ECMP on a Virtual Router
+         1.21.18.4. Enable ECMP for Multiple BGP Autonomous Systems
+         1.21.18.5. Verify ECMP
+      1.21.19. LLDP
+         1.21.19.1. LLDP Overview
+         1.21.19.2. Supported TLVs in LLDP
+         1.21.19.3. LLDP Syslog Messages and SNMP Traps
+         1.21.19.4. Configure LLDP
+         1.21.19.5. View LLDP Settings and Status
+         1.21.19.6. Clear LLDP Statistics
+      1.21.20. BFD
+         1.21.20.1. BFD Overview
+            1.21.20.1.1. BFD Model, Interface, and Client Support
+            1.21.20.1.2. Non-Supported RFC Components of BFD
+            1.21.20.1.3. BFD for Static Routes
+            1.21.20.1.4. BFD for Dynamic Routing Protocols
+         1.21.20.2. Configure BFD
+         1.21.20.3. Reference: BFD Details
+      1.21.21. Session Settings and Timeouts
+         1.21.21.1. Transport Layer Sessions
+         1.21.21.2. TCP
+            1.21.21.2.1. TCP Half Closed and TCP Time Wait Timers
+            1.21.21.2.2. Unverified RST Timer
+            1.21.21.2.3. TCP Split Handshake Drop
+            1.21.21.2.4. Maximum Segment Size (MSS)
+         1.21.21.3. UDP
+         1.21.21.4. ICMP
+            1.21.21.4.1. Security Policy Rules Based on ICMP and ICMPv6 Packets
+            1.21.21.4.2. ICMPv6 Rate Limiting
+         1.21.21.5. Control Specific ICMP or ICMPv6 Types and Codes
+         1.21.21.6. Configure Session Timeouts
+         1.21.21.7. Configure Session Settings
+         1.21.21.8. Session Distribution Policies
+            1.21.21.8.1. Session Distribution Policy Descriptions
+            1.21.21.8.2. Change the Session Distribution Policy and View Statistics
+         1.21.21.9. Prevent TCP Split Handshake Session Establishment
+      1.21.22. Tunnel Content Inspection
+         1.21.22.1. Tunnel Content Inspection Overview
+         1.21.22.2. Configure Tunnel Content Inspection
+         1.21.22.3. View Inspected Tunnel Activity
+         1.21.22.4. View Tunnel Information in Logs
+         1.21.22.5. Create a Custom Report Based on Tagged Tunnel Traffic
+         1.21.22.6. Disable Tunnel Acceleration
+   1.22. Policy
+      1.22.1. Policy Types
+      1.22.2. Security Policy
+         1.22.2.1. Components of a Security Policy Rule
+         1.22.2.2. Security Policy Actions
+         1.22.2.3. Create a Security Policy Rule
+      1.22.3. Policy Objects
+      1.22.4. Security Profiles
+         1.22.4.1. Create a Security Profile Group
+         1.22.4.2. Set Up or Override a Default Security Profile Group
+      1.22.5. Track Rules Within a Rulebase
+         1.22.5.1. Rule Numbers
+         1.22.5.2. Rule UUIDs
+      1.22.6. Enforce Policy Rule Description, Tag, and Audit Comment
+      1.22.7. Move or Clone a Policy Rule or Object to a Different Virtual System
+      1.22.8. Use an Address Object to Represent IP Addresses
+         1.22.8.1. Address Objects
+         1.22.8.2. Create an Address Object
+      1.22.9. Use Tags to Group and Visually Distinguish Objects
+         1.22.9.1. Create and Apply Tags
+         1.22.9.2. Modify Tags
+         1.22.9.3. View Rules by Tag Group
+      1.22.10. Use an External Dynamic List in Policy
+         1.22.10.1. External Dynamic List
+         1.22.10.2. Formatting Guidelines for an External Dynamic List
+            1.22.10.2.1. IP Address List
+            1.22.10.2.2. Domain List
+            1.22.10.2.3. URL List
+         1.22.10.3. Built-in External Dynamic Lists
+         1.22.10.4. Configure the Firewall to Access an External Dynamic List
+         1.22.10.5. Configure the Firewall to Access an External Dynamic List from the EDL Hosting Service
+            1.22.10.5.1. Create an External Dynamic List Using the EDL Hosting Service
+            1.22.10.5.2. Convert the GlobalSign Root R1 Certificate to PEM Format
+         1.22.10.6. Retrieve an External Dynamic List from the Web Server
+         1.22.10.7. View External Dynamic List Entries
+         1.22.10.8. Exclude Entries from an External Dynamic List
+         1.22.10.9. Enforce Policy on an External Dynamic List
+         1.22.10.10. Find External Dynamic Lists That Failed Authentication
+         1.22.10.11. Disable Authentication for an External Dynamic List
+      1.22.11. Register IP Addresses and Tags Dynamically
+      1.22.12. Use Dynamic User Groups in Policy
+      1.22.13. Use Auto-Tagging to Automate Security Actions
+      1.22.14. Monitor Changes in the Virtual Environment
+         1.22.14.1. Enable VM Monitoring to Track Changes on the Virtual Network
+         1.22.14.2. Attributes Monitored on Virtual Machines in Cloud Platforms
+            1.22.14.2.1. VMware ESXi
+            1.22.14.2.2. Amazon Web Services (AWS)
+            1.22.14.2.3. Microsoft Azure
+            1.22.14.2.4. Google
+         1.22.14.3. Use Dynamic Address Groups in Policy
+      1.22.15. CLI Commands for Dynamic IP Addresses and Tags
+      1.22.16. Enforce Policy on Endpoints and Users Behind an Upstream Device
+         1.22.16.1. Use XFF Values for Policy Based on Source Users
+         1.22.16.2. Use XFF IP Address Values in Security Policy and Logging
+            1.22.16.2.1. Use XFF Values in Policy
+            1.22.16.2.2. Display XFF Values in Logs
+            1.22.16.2.3. Display XFF Values in Reports
+         1.22.16.3. Use the IP Address in the XFF Header to Troubleshoot Events
+      1.22.17. Policy-Based Forwarding
+         1.22.17.1. PBF
+            1.22.17.1.1. Egress Path and Symmetric Return
+            1.22.17.1.2. Path Monitoring for PBF
+            1.22.17.1.3. Service Versus Applications in PBF
+         1.22.17.2. Create a Policy-Based Forwarding Rule
+         1.22.17.3. Use Case: PBF for Outbound Access with Dual ISPs
+      1.22.18. Test Policy Rules
+   1.23. Virtual Systems
+      1.23.1. Virtual Systems Overview
+         1.23.1.1. Virtual System Components and Segmentation
+         1.23.1.2. Benefits of Virtual Systems
+         1.23.1.3. Use Cases for Virtual Systems
+         1.23.1.4. Platform Support and Licensing for Virtual Systems
+         1.23.1.5. Administrative Roles for Virtual Systems
+         1.23.1.6. Shared Objects for Virtual Systems
+      1.23.2. Communication Between Virtual Systems
+         1.23.2.1. Inter-VSYS Traffic That Must Leave the Firewall
+         1.23.2.2. Inter-VSYS Traffic That Remains Within the Firewall
+            1.23.2.2.1. External Zone
+            1.23.2.2.2. External Zones and Security Policies For Traffic Within a Firewall
+         1.23.2.3. Inter-VSYS Communication Uses Two Sessions
+      1.23.3. Shared Gateway
+         1.23.3.1. External Zones and Shared Gateway
+         1.23.3.2. Networking Considerations for a Shared Gateway
+      1.23.4. Configure Virtual Systems
+      1.23.5. Configure Inter-Virtual System Communication within the Firewall
+      1.23.6. Configure a Shared Gateway
+      1.23.7. Customize Service Routes for a Virtual System
+         1.23.7.1. Customize Service Routes to Services for Virtual Systems
+         1.23.7.2. Configure a PA-7000 Series Firewall for Logging Per Virtual System
+            1.23.7.2.1. Configure a PA-7000 Series LPC for Logging per Virtual System
+            1.23.7.2.2. Configure a PA-7000 Series LFC for Logging per Virtual System
+         1.23.7.3. Configure Administrative Access Per Virtual System or Firewall
+      1.23.8. Virtual System Functionality with Other Features
+   1.24. Zone Protection and DoS Protection
+      1.24.1. Network Segmentation Using Zones
+      1.24.2. How Do Zones Protect the Network?
+      1.24.3. Zone Defense
+         1.24.3.1. Zone Defense Tools
+         1.24.3.2. How Do the Zone Defense Tools Work?
+         1.24.3.3. Firewall Placement for DoS Protection
+         1.24.3.4. Baseline CPS Measurements for Setting Flood Thresholds
+            1.24.3.4.1. CPS Measurements to Take
+            1.24.3.4.2. How to Measure CPS
+         1.24.3.5. Zone Protection Profiles
+            1.24.3.5.1. Flood Protection
+            1.24.3.5.2. Reconnaissance Protection
+            1.24.3.5.3. Packet-Based Attack Protection
+            1.24.3.5.4. Protocol Protection
+            1.24.3.5.5. Ethernet SGT Protection
+         1.24.3.6. Packet Buffer Protection
+         1.24.3.7. DoS Protection Profiles and Policy Rules
+            1.24.3.7.1. Classified Versus Aggregate DoS Protection
+            1.24.3.7.2. DoS Protection Profiles
+            1.24.3.7.3. DoS Protection Policy Rules
+      1.24.4. Configure Zone Protection to Increase Network Security
+         1.24.4.1. Configure Reconnaissance Protection
+         1.24.4.2. Configure Packet Based Attack Protection
+         1.24.4.3. Configure Protocol Protection
+            1.24.4.3.1. Use Case: Non-IP Protocol Protection Between Security Zones on Layer 2 Interfaces
+            1.24.4.3.2. Use Case: Non-IP Protocol Protection Within a Security Zone on Layer 2 Interfaces
+         1.24.4.4. Configure Packet Buffer Protection
+         1.24.4.5. Configure Packet Buffer Protection Based on Latency
+         1.24.4.6. Configure Ethernet SGT Protection
+      1.24.5. DoS Protection Against Flooding of New Sessions
+         1.24.5.1. Multiple-Session DoS Attack
+         1.24.5.2. Single-Session DoS Attack
+         1.24.5.3. Configure DoS Protection Against Flooding of New Sessions
+         1.24.5.4. End a Single Session DoS Attack
+         1.24.5.5. Identify Sessions That Use Too Much of the On-Chip Packet Descriptor
+         1.24.5.6. Discard a Session Without a Commit
+   1.25. Certifications
+      1.25.1. Enable FIPS and Common Criteria Support
+         1.25.1.1. Access the Maintenance Recovery Tool (MRT)
+         1.25.1.2. Change the Operational Mode to FIPS-CC Mode
+      1.25.2. FIPS-CC Security Functions
+      1.25.3. Scrub the Swap Memory on Firewalls or Appliances Running in FIPS-CC Mode

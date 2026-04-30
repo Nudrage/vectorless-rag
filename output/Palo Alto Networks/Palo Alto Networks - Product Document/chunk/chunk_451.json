@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_451",
+  "section_number": "1.13.5.1",
+  "header": "Workflow to Best Incorporate New and Modified App-IDs",
+  "content": "Refer to this master workflow to first set up Application and Threat content updates, and then\nto best incorporate new and modified App-IDs into your security policy. Everything you need to\ndeploy content updates is referenced here.\nSTEP 1 |\nAlign your business needs with an approach to deploying Application and Threat content\nupdates.\nLearn how Applications and Threat Content Updates work, and identify your organization as\neither mission-critical or security-first. Understanding which of these is most important to your\nbusiness will help you to decide how to best deploy content updates and apply best practices\nto meet your business needs. You might find that you want to apply a mix of both approaches,\nperhaps depending on firewall deployment (data center or perimeter) or office location (remote\nor headquarters).\nSTEP 2 |\nReview and apply the Best Practices for Applications and Threats Content Updates based on\nyour organization’s network security and application availability requirements.\nSTEP 3 |\nConfigure a security policy rule to always allow new App-IDs that might have network-wide\nimpact, like authentication or software development applications.\nThe New App-ID characteristic matches to only the App-IDs introduced in the latest content\nrelease. When used in a security policy, this gives you a month’s time to fine tune your security\npolicy based on new App-IDs while ensuring constant availability for App-IDs that fall into\ncritical categories (Ensure Critical New App-IDs are Allowed).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n808\n©2025 Palo Alto Networks, Inc.\nApp-ID\nSTEP 4 |\nSet the schedule to Deploy Application and Threat Content Updates; this includes the option\nto delay new App-ID installation until you’ve had time to make necessary security policy\nupdates (using the New App-ID Threshold).\nSTEP 5 |\nAfter you’ve setup a content updates installation schedule, you’ll want to regularly check in\nand See the New and Modified App-IDs in a Content Release.\nSTEP 6 |\nYou can then See How New and Modified App-IDs Impact Your Security Policy, and make\nadjustments to your security policy as needed.\nSTEP 7 |\nMonitor New App-IDs to get a view into new App-ID activity on your network, so that\nyou’re best equipped to make the most effective security policy updates.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 808,
+      "end": 809
+    },
+    "content_stats": {
+      "char_count": 2295,
+      "word_count": 364
+    },
+    "hierarchy": {
+      "parent": "Manage New and Modified App-IDs",
+      "children": []
+    }
+  }
+}

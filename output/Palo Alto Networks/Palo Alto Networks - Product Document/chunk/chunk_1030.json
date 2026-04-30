@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1030",
+  "section_number": "1.24.3.2",
+  "header": "How Do the Zone Defense Tools Work?",
+  "content": "When a packet arrives at the firewall, the firewall attempts to match the packet to an existing\nsession, based on the ingress zone, egress zone, source IP address, destination IP address,\nprotocol, and application derived from the packet header. If the firewall finds a match, then the\npacket uses the Security policy rules that already control the session. If the packet doesn’t match\nan existing session, the firewall uses Zone Protection profiles, DoS Protection profiles and policy\nrules, and Security policy rules to determine whether to establish a session or discard the packet,\nand the level of access the packet receives.\nAfter traffic passes through your dedicated DDoS device at the internet-facing network edge,\nthe first protection the firewall applies is the broad defense of the Zone Protection profile, if\none is attached to the zone. The firewall determines the zone from the interface on which the\npacket arrives (each interface is assigned to only one zone and all interfaces that carry traffic must\nbelong to a zone). If the Zone Protection profile denies the packet, the firewall discards the packet\nand saves resources by not needing to look up the DoS Protection policy or Security policy. The\nfirewall applies Zone Protection profiles only to new sessions (packets that do not match an\nexisting session). After the firewall establishes a session, the firewall bypasses the Zone Protection\nprofile lookup for succeeding packets in that session.\nIf the Zone Protection profile doesn’t drop the packet, the second protection the firewall applies\nis a DoS Protection policy rule. If a Zone Protection profile allows a packet based on the total\naggregate amount of traffic going to the zone, a DoS Protection policy rule may deny the packet\nif it is going to a particular destination or coming from a particular source that has exceeded the\nflood protection or resource protection settings in the rule’s DoS Protection profile. If the packet\nmatches a DoS Protection policy rule, the firewall applies the rule to the packet. If the rule denies\naccess, the firewall discards the packet and doesn’t perform a Security policy lookup. If the rule\nallows access, the firewall performs a Security policy lookup. Like the Zone Protection profile, the\nfirewall enforces DoS Protection policy only on new sessions.\nThe third protection the firewall applies is a Security policy lookup, which happens only if the\nZone Protection profile and DoS Protection policy rules allow the packet. If the firewall finds no\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1730\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSecurity policy rule match for the packet, the firewall discards the packet. If the firewall finds a\nmatching Security policy rule, the firewall applies the rule to the packet. The firewall enforces the\nSecurity policy rule on traffic in both directions (c2s and s2c) for the life of the session. Apply the\nbest practice Vulnerability Protection profile to all Security policy rules to help defend against DoS\nattacks.\nThe fourth protection the firewall applies is packet buffer protection, which you apply globally\nto protect the device and can also apply individually to zones to prevent single-session DoS\nattacks that attempt to overwhelm the firewall’s packet buffer. For global protection, the firewall\nused Random Early Drop (RED) to drop packets (not sessions) when the level of traffic crosses\nprotection thresholds. For per-zone protection, the firewall blocks the source IP address if it\nviolates the packet buffer thresholds. Unlike zone and DoS protection, packet buffer protection\napplies to existing sessions.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1730,
+      "end": 1731
+    },
+    "content_stats": {
+      "char_count": 3657,
+      "word_count": 582
+    },
+    "hierarchy": {
+      "parent": "Zone Defense",
+      "children": []
+    }
+  }
+}

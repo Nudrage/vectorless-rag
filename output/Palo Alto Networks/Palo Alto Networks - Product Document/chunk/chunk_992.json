@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_992",
+  "section_number": "1.22.17.1.1",
+  "header": "Egress Path and Symmetric Return",
+  "content": "Using PBF, you can direct traffic to a specific interface on the firewall, drop the traffic, or direct\ntraffic to another virtual system (on systems enabled for multiple virtual systems).\nIn networks with asymmetric routes, such as in a dual ISP environment, connectivity issues occur\nwhen traffic arrives at one interface on the firewall and leaves from another interface. If the route\nis asymmetrical, where the forward (SYN packet) and return (SYN/ACK) paths are different, the\nfirewall is unable to track the state of the entire session and this causes a connection failure. To\nensure that the traffic uses a symmetrical path, which means that the traffic arrives at and leaves\nfrom the same interface on which the session was created, you can enable the Symmetric Return\noption.\nWith symmetric return, the virtual router overrides a routing lookup for return traffic and instead\ndirects the flow back to the MAC address from which it received the SYN packet (or first packet).\nHowever, if the destination IP address is on the same subnet as the ingress/egress interface’s\nIP address, a route lookup is performed and symmetric return is not enforced. This behavior\nprevents traffic from being silently discarded.\nTo determine the next hop for symmetric returns, the firewall uses an Address Resolution\nProtocol (ARP) table. The maximum number of entries that this ARP table supports is\nlimited by the firewall model and the value is not user configurable. To determine the limit\nfor your model, use the CLI command: show pbf return-mac all.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1683\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1683,
+      "end": 1684
+    },
+    "content_stats": {
+      "char_count": 1628,
+      "word_count": 264
+    },
+    "hierarchy": {
+      "parent": "PBF",
+      "children": []
+    }
+  }
+}

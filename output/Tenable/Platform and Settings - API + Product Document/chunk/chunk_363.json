@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_363",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returns the details of the specified network object.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe UUID of the owner of the network object. The owner of the\nnetwork object does not have any additional permissions above\nadministrator permissions.\ninteger\nThe date (in Unix milliseconds) when the network object was\ncreated.\ninteger\nThe date (in Unix milliseconds) when the network object was last\nupdated.\nstring\nThe UUID of the network object.\nstring\nThe name of the network object.\nstring\nnetwork_id\nrequired\nowner_uuid\ncreated\nmodified\nuuid\nname\ndescription\nThe description of the network object.\nboolean\nIndicates whether the network object is the default network object.\nThe default network object is a system-generated object that\ncontains any scanners and scanner groups not yet assigned to a\ncustom network object. You cannot update or delete the default\nnetwork object.\nstring\nThe UUID of the user who created the network object.\nstring\nThe UUID of the user who last updated the network object.\ninteger\nThe date (in Unix time) when the network object was deleted. This\nattribute is present for deleted network objects only. To view deleted\nnetwork objects, use the includeDeleted  parameter on the GET\n/networks endpoint.\nstring\nThe UUID of the user who deleted the network object. This attribute\nis present for deleted network objects only. To view deleted network\nobjects, use the includeDeleted  parameter on the GET\n/networks endpoint.\ninteger\nThe number of days before assets age out. Assets are permanently\ndeleted if they are not seen on a scan within the specified number of\ndays.\nMinimum value: 14\nMaximum value: 365\nNote: If you enable this option, Tenable Vulnerability Management\nimmediately deletes assets in the specified network that have not\nbeen seen for the specified number of days. All asset records and\nassociated vulnerabilities are deleted and cannot be recovered. The\ndeleted assets no longer count towards your license\ninteger\nThe date (in Unix seconds) when the network object was created.\ninteger\nThe date (in Unix seconds) when the network object was last\nupdated.\nis_default\ncreated_by\nmodified_by\ndeleted\ndeleted_by\nassets_ttl_days\ncreated_in_seconds\nmodified_in_seconds\n— 404\nReturned if Tenable Vulnerability Management cannot find a network object with the specified UUID.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 503\nReturned if a Tenable Vulnerability Management service is unavailable. Wait a moment, and try your\nrequest again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 351,
+      "end": 353
+    },
+    "content_stats": {
+      "char_count": 2563,
+      "word_count": 398
+    },
+    "hierarchy": {
+      "parent": "Get network details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

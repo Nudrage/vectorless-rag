@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_706",
+  "section_number": "1.19.4.5.2",
+  "header": "Refresh and Restart Behaviors",
+  "content": "You can Refresh or Restart an IKE Gateway or IPSec Tunnel. The refresh and restart behaviors for\nan IKE gateway and IPSec tunnel are as follows:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1272\n©2025 Palo Alto Networks, Inc.\nVPNs\nPhase\nRefresh\nRestart\nIKE\nGateway\n(IKE Phase\n1)\nUpdates the onscreen statistics for\nthe selected IKE gateway.\nEquivalent to issuing a second show\ncommand in the CLI (after an initial\nshow command).\nRestarts the selected IKE gateway.\nIKEv2: Also restarts any associated child\nIPSec security associations (SAs).\nIKEv1: Does not restart the associated\nIPSec SAs.\nA restart is disruptive to all existing\nsessions.\nEquivalent to issuing a clear, test,\nshow command sequence in the CLI.\nIPSec\nTunnel\n(IKE Phase\n2)\nUpdates the onscreen statistics for\nthe selected IPSec tunnel.\nEquivalent to issuing a second show\ncommand in the CLI (after an initial\nshow command).\nRestarts the IPSec tunnel.\nA restart is disruptive to all existing\nsessions.\nEquivalent to issuing a clear, test,\nshow command sequence in the CLI.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1272,
+      "end": 1273
+    },
+    "content_stats": {
+      "char_count": 1033,
+      "word_count": 166
+    },
+    "hierarchy": {
+      "parent": "Enable/Disable, Refresh or Restart an IKE Gateway or IPSec Tunnel",
+      "children": []
+    }
+  }
+}

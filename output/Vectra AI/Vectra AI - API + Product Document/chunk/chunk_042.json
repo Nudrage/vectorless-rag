@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_042",
+  "section_number": "1.18.29",
+  "header": "Vectra Match Assignment",
+  "content": "Version 3.4 of Vectra Match assignment API supports GET, POST, and DELETE.  Adding a new\nassignment via POST requires a valid license for Vectra Match.  Audit logs will be emitted for using the\nPOST and DELETE endpoints.  The API endpoint for accessing version 3.4 is\nhttps://<vectra_management_ip>/api/v3.4/vectra-match/assignment.\nThe following table lists the top-level fields present in the response for a GET request to the v3.4 API for\nVectra Match assignment\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ndevice_to_rules_map\nList of objects, each of\nwhich represents a\ndevice, providing\ninformation about which\nruleset is being run on\nthat device, who\nupdated it, and when it\nwas last updated\nlist of\nobjects\nAn example map can be found in\nAppendix A\nrules_to_devices_map\nList of objects, each of\nwhich represents a rules\nfile, providing information\nabout which devices that\nruleset is being run on,\nand other metadata\nabout the file\nlist of\nobjects\nAn example map can be found in\nAppendix A\ndetails\nError output\nstring\nOnly returned with an\nunsuccessful return code\nThe assignment POST endpoint requires a json body with two parameters, device_serials and uuid:\nJSON BODY PARAMETER\nDESCRIPTION\ndevice_serials\nList of serial numbers to assign the ruleset of <uuid> to\nuuid\nUUID of ruleset to assign to specified device(s)\n© July 2024 Vectra AI, Inc. | 66\nThe following table lists the top-level fields present in the response for a POST request to the v3.4 API\nfor Vectra Match assignment\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ndetails\nOutput\nstring\ndetails will be ‘success’ if\nsuccessful, otherwise, will contain\ninformation about the failure.\nThe assignment DELETE endpoint requires a json body with two parameters, device_serial and uuid:\nJSON BODY PARAMETER\nDESCRIPTION\ndevice_serial\nSerial numbers to remove assignment from\nuuid\nUUID of ruleset\nThe following table lists the top-level fields present in the response for a DELETE request to the v3.4 API\nfor Vectra Match assignment\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ndetails\nOutput\nstring\ndetails will be ‘success’ if\nsuccessful, otherwise, will contain\ninformation about the failure.\nExamples of GET, POST, and DELETE methods on the vectra-match/assignment endpoint are shown in\nAppendix A.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 65,
+      "end": 66
+    },
+    "content_stats": {
+      "char_count": 2226,
+      "word_count": 344
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

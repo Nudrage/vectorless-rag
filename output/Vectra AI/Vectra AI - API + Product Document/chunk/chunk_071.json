@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_071",
+  "section_number": "1.18.20",
+  "header": "Health – EDR",
+  "content": "GET\nURL: https://<vectra_portal_url>/api/v3.4/health/edr\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"results\": {\n\"carbon_black\": {\n\"connection_status\": \"enabled\",\n\"auth_status\": {\n\"cbdemo.demo.vectra.io:443\": \"authenticated\"\n},\n© July 2024 Vectra AI, Inc. | 120\n\"error_states\": {},\n\"lockdown_status\": \"enabled\"\n},\n\"cb_cloud\": {\n\"connection_status\": \"enabled\",\n\"auth_status\": {\n\"status\": \"authenticated\"\n},\n\"error_states\": {},\n\"lockdown_status\": \"enabled\"\n},\n\"crowdstrike\": {\n\"connection_status\": \"disabled\"\n},\n\"cybereason\": {\n\"connection_status\": \"disabled\"\n},\n\"fireeye\": {\n\"connection_status\": \"disabled\"\n},\n\"host_lockdown\": {\n\"connection_status\": \"enabled\",\n\"auth_status\": {\n\"status\": \"authenticated\"\n},\n\"lockdown_status\": \"enabled\"\n},\n\"sentinelone\": {\n\"connection_status\": \"disabled\"\n},\n\"windows_defender\": {\n\"connection_status\": \"enabled\",\n\"auth_status\": {\n\"status\": \"authenticated\"\n},\n\"error_states\": {},\n\"lockdown_status\": \"enabled\"\n}\n},\n\"updated_at\": \"2024-07-24T22:07:11Z\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 119,
+      "end": 120
+    },
+    "content_stats": {
+      "char_count": 1001,
+      "word_count": 97
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

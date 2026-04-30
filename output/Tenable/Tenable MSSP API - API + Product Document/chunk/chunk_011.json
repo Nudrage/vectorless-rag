@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_011",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200 Returned if the Tenable MSSP Platform successfully created the quote.\nRESPONSE SCHEMA:\napplication/json\nstring\nIndicates whether or not Tenable MSSP successfully created the quote.\nstring\nA short message about the creation of the quote.\nadmin_username\nrequired\ncustomer_name\nrequired\npartner\nrequired\ndistributor\nrequired\nlicensed_apps\nrequired\ncontact\nrequired\nregion\nrequired\nrequester\nrequired\nlicensee\nrequired\nsuccess\nmessage\nstring\nThe name associated with the quote. This corresponds with the\nadmin_username .\nstring <uuid>\nThe UUID of the quote.\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\nRESPONSE SCHEMA:\napplication/json\nstring\nA brief message about the missing or invalid parameter value(s).\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in the Tenable MSSP Portal.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 7,
+      "end": 8
+    },
+    "content_stats": {
+      "char_count": 1131,
+      "word_count": 166
+    },
+    "hierarchy": {
+      "parent": "Create quote",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_391",
+  "section_number": "1.12.1",
+  "header": "User-ID Overview",
+  "content": "User-ID™ enables you to identify all users on your network using a variety of techniques to\nensure that you can identify users in all locations using a variety of access methods and operating\nsystems, including Microsoft Windows, Apple iOS, Mac OS, Android, and Linux®/UNIX. Knowing\nwho your users are instead of just their IP addresses enables:\n• Visibility—Improved visibility into application usage based on users gives you a more relevant\npicture of network activity. The power of User-ID becomes evident when you notice a\nstrange or unfamiliar application on your network. Using either ACC or the log viewer, your\nsecurity team can discern what the application is, who the user is, the bandwidth and session\nconsumption, along with the source and destination of the application traffic, as well as any\nassociated threats.\n• Policy control—Tying user information to Security policy rules improves safe enablement of\napplications traversing the network and ensures that only those users who have a business\nneed for an application have access. For example, some applications, such as SaaS applications\nthat enable access to Human Resources services (such as Workday or Service Now) must be\navailable to any known user on your network. However, for more sensitive applications you\ncan reduce your attack surface by ensuring that only users who need these applications can\naccess them. For example, while IT support personnel may legitimately need access to remote\ndesktop applications, the majority of your users do not.\n• Logging, reporting, forensics—If a security incident occurs, forensics analysis and reporting\nbased on user information rather than just IP addresses provides a more complete picture of\nthe incident. For example, you can use the pre-defined User/Group Activity to see a summary\nof the web activity of individual users or user groups, or the SaaS Application Usage report to\nsee which users are transferring the most data over unsanctioned SaaS applications.\nTo enforce user- and group-based policies, the firewall must be able to map the IP addresses in\nthe packets it receives to usernames. User-ID provides many mechanisms to collect this User\nMapping information. For example, the User-ID agent monitors server logs for login events and\nlistens for syslog messages from authenticating services. To identify mappings for IP addresses\nthat the agent didn’t map, you can configure Authentication Policy to redirect HTTP requests\nto an Authentication Portal login. You can tailor the user mapping mechanisms to suit your\nenvironment, and even use different mechanisms at different sites to ensure that you are safely\nenabling access to applications for all users, in all locations, all the time.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n688\n©2025 Palo Alto Networks, Inc.\nUser-ID\nFigure 4: User-ID\nTo enable user- and group-based policy enforcement, the firewall requires a list of all available\nusers and their corresponding group memberships so that you can select groups when defining\nyour policy rules. The firewall collects Group Mapping information by connecting directly to your\nLDAP directory server, or using XML API integration with your directory server.\nSee User-ID Concepts for information on how User-ID works and Enable User-ID for instructions\non setting up User-ID.\nUser-ID does not work in environments where the source IP addresses of users are subject\nto NAT translation before the firewall maps the IP addresses to usernames.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n689\n©2025 Palo Alto Networks, Inc.\nUser-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 688,
+      "end": 690
+    },
+    "content_stats": {
+      "char_count": 3554,
+      "word_count": 553
+    },
+    "hierarchy": {
+      "parent": "User-ID",
+      "children": []
+    }
+  }
+}

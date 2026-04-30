@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_133",
+  "section_number": "1.8.1.3",
+  "header": "SAML",
+  "content": "You can use Security Assertion Markup Language (SAML) 2.0 to authenticate administrators who\naccess the firewall or Panorama web interface and end users who access web applications that\nare internal or external to your organization. In environments where each user accesses many\napplications and authenticating for each one would impede user productivity, you can configure\nSAML single sign-on (SSO) to enable one login to access multiple applications. Likewise, SAML\nsingle logout (SLO) enables a user to end sessions for multiple applications by logging out of just\none session. SSO is available to administrators who access the web interface and to end users\nwho access applications through GlobalProtect or Authentication Portal. SLO is available to\nadministrators and GlobalProtect end users, but not to Authentication Portal end users. When you\nconfigure SAML authentication on the firewall or on Panorama, you can specify SAML attributes\nfor administrator authorization. SAML attributes enable you to quickly change the roles, access\ndomains, and user groups of administrators through your directory service, which is often easier\nthan reconfiguring settings on the firewall or Panorama.\nAdministrators cannot use SAML to authenticate to the CLI on the firewall or Panorama.\nYou cannot use SAML authentication profiles in authentication sequences.\nSAML authentication requires a service provider (the firewall or Panorama), which controls access\nto applications, and an identity provider (IdP) such as PingFederate, which authenticates users.\nWhen a user requests a service or application, the firewall or Panorama intercepts the request and\nredirects the user to the IdP for authentication. The IdP then authenticates the user and returns\na SAML assertion, which indicates authentication succeeded or failed. SAML Authentication for\nAuthentication Portal End Users illustrates SAML authentication for an end user who accesses\napplications through Authentication Portal.\nFigure 1: SAML Authentication for Authentication Portal End Users",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 241,
+      "end": 241
+    },
+    "content_stats": {
+      "char_count": 2043,
+      "word_count": 296
+    },
+    "hierarchy": {
+      "parent": "Authentication Types",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_164",
+  "section_number": "1.8.13",
+  "header": "Test Authentication Server Connectivity",
+  "content": "The test authentication feature enables you to verify whether the firewall or Panorama can\ncommunicate with the authentication server specified in an authentication profile and whether\nan authentication request succeeds for a specific user. You can test authentication profiles\nthat authenticate administrators who access the web interface or that authenticate end users\nwho access applications through GlobalProtect or Authentication Portal. You can perform\nauthentication tests on the candidate configuration to verify the configuration is correct before\ncommitting.\nSTEP 1 |\nConfigure an authentication profile. You do not need to commit the authentication profile or\nserver profile configuration before testing.\nSTEP 2 |\nLog into the firewall CLI.\nSTEP 3 |\n(Firewalls with multiple virtual systems) Define the target virtual system that the test\ncommand will access.\nThis is required on firewalls with multiple virtual systems so that the test authentication\ncommand can locate the user you will test.\nDefine the target virtual system by entering:\nadmin@PA-325060> set system setting target-vsys <vsys-name>\nFor example, if the user is defined in vsys2, enter:\nadmin@PA-3250> set system setting target-vsys vsys2\nThe target-vsys option is per login session; the firewall clears the option when you\nlog off.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n305\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 4 |\nTest the authentication profile by entering the following command:\nadmin@PA-3250> test authentication authentication-\nprofile <authentication-profile-name> username <username> password\nFor example, to test an authentication profile named my-profile for a user named\nbsimpson, enter:\nadmin@PA-3250> test authentication authentication-profile my-\nprofile username bsimpson password\nWhen running the test command, the names of authentication profiles and server\nprofiles are case sensitive. Also, if an authentication profile has a username modifier\ndefined, you must enter the modifier with the username. For example, if you add the\nusername modifier %USERINPUT%@%USERDOMAIN% for a user named bsimpson\nand the domain name is mydomain.com, enter bsimpson@mydomain.com as\nthe username. This ensures that the firewall sends the correct credentials to the\nauthentication server. In this example, mydomain.com is the domain that you define in\nthe User Domain field in the authentication profile.\nSTEP 5 |\nView the test output.\nIf the authentication profile is configured correctly, the output displays Authentication\nsucceeded. If there is a configuration issue, the output displays information to help you\ntroubleshoot the configuration.\nThe output results vary based on several factors related to the authentication type\nthat you are testing as well as the type of issue. For example, RADIUS and TACACS\n+ use different underlying libraries, so the same issue that exists for both of these\ntypes will produce different errors. Also, if there is a network problem, such as using\nan incorrect port or IP address in the authentication server profile, the output error is\nnot specific. This is because the test command cannot perform the initial handshake\nbetween the firewall and the authentication server to determine details about the\nissue.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n306\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 305,
+      "end": 307
+    },
+    "content_stats": {
+      "char_count": 3336,
+      "word_count": 488
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

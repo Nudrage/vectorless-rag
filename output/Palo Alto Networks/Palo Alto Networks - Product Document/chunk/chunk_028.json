@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_028",
+  "section_number": "1.3.1",
+  "header": "Integrate the Firewall into Your Management Network",
+  "content": "All Palo Alto Networks firewalls provide an out-of-band management port (MGT) that you can\nuse to perform the firewall administration functions. By using the MGT port, you separate the\nmanagement functions of the firewall from the data processing functions, safeguarding access\nto the firewall and enhancing performance. When using the web interface, you must perform\nall initial configuration tasks from the MGT port even if you plan to use an in-band data port for\nmanaging your firewall going forward.\nSome management tasks, such as retrieving licenses and updating the threat and application\nsignatures on the firewall require access to the Internet. If you do not want to enable external\naccess to your MGT port, you will need to either set up an in-band data port to provide access to\nrequired external services (using service routes) or plan to manually upload updates regularly.\nDo not enable access to your management interface from the internet or from other\nuntrusted zones inside your enterprise security boundary. This applies whether you\nuse the dedicated management port (MGT) or you configured a data port as your\nmanagement interface. When integrating your firewall into your management network,\nfollow the Best Practices for Securing Administrative Access to ensure that you are\nsecuring administrative access to your firewalls and other security devices in a way that\nprevents successful attacks.\nThe following topics describe how to perform the initial configuration steps that are necessary\nto integrate a new firewall into the management network and deploy it in a basic security\nconfiguration.\n• Determine Your Management Strategy\n• Perform Initial Configuration\n• Set Up Network Access for External Services\nThe following topics describe how to integrate a single Palo Alto Networks next-\ngeneration firewall into your network. However, for redundancy, consider deploying a pair\nof firewalls in a High Availability configuration.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 24,
+      "end": 24
+    },
+    "content_stats": {
+      "char_count": 1953,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "Getting Started",
+      "children": [
+        "Determine Your Management Strategy",
+        "Perform Initial Configuration",
+        "Set Up Network Access for External Services"
+      ]
+    }
+  }
+}

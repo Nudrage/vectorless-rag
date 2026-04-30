@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1016",
+  "section_number": "1.23.5",
+  "header": "Configure Inter-Virtual System Communication within the Firewall",
+  "content": "the Firewall\nPerform this task if you have a use case, perhaps within a single enterprise, where you want the\nvirtual systems to be able to communicate with each other within the firewall. Such a scenario is\ndescribed in Inter-VSYS Traffic That Remains Within the Firewall. This task presumes:\n• You completed the task, Configure Virtual Systems.\n• When configuring the virtual systems, in the Visible Virtual System field, you checked the\nboxes of all virtual systems that must communicate with each other to be visible to each other.\nSTEP 1 |\nConfigure an external zone for each virtual system.\n1.\nSelect Network > Zones and Add a new zone by Name.\n2.\nFor Location, select the virtual system for which you are creating an external zone.\n3.\nFor Type, select External.\n4.\nFor Virtual Systems, click Add and enter the virtual system that the external zone can\nreach.\n5.\n(Optional) Select a Zone Protection Profile (or configure one later) that provides flood,\nreconnaissance, or packet-based attack protection.\n6.\n(Optional) In Log Setting, select a log forwarding profile for forwarding zone protection\nlogs to an external system.\n7.\n(Optional) Select Enable User Identification to enable User-ID for the external zone.\n8.\nClick OK.\nSTEP 2 |\nConfigure the Security policy rules to allow or deny traffic from the internal zones to the\nexternal zone of the virtual system, and vice versa.\n• See Create a Security Policy Rule.\n• See Inter-VSYS Traffic That Remains Within the Firewall.\nSTEP 3 |\nCommit your changes.\nClick Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1716\n©2025 Palo Alto Networks, Inc.\nVirtual Systems",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1716,
+      "end": 1717
+    },
+    "content_stats": {
+      "char_count": 1619,
+      "word_count": 268
+    },
+    "hierarchy": {
+      "parent": "Virtual Systems",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_849",
+  "section_number": "15.10.1",
+  "header": "POST    /web/api/v2.1/exclusions",
+  "content": "Create Exclusions to make your Agents suppress alerts and mitigation for items that you consider to be benign or which you require for interoperability.\nIMPORTANT! Every Exclusion is a possible security hole. Do not create Exclusions unless you are sure this hash, path, certificate signer, file type, or browser is always\nbenign.\nOf course, if you can make the Exclusion by its hash or path, that is much more secure than excluding all detections of a specific signer, file type, or browser. We do not\nrecommend the last types for Exclusions on production endpoints. These Exclusions might be helpful in a lab or pentester group. When you create an Exclusion, make sure\nyou set the filter to the smallest possible scope. For example, if you can exclude security for this item on a group, do not enter values for siteIds or accountIds.\nWe recommend that you read \"Not Recommended Exclusions: https://support.sentinelone.com/hc/en-us/articles/360007532894\nand Best Practices for Exclusions: https://support.sentinelone.com/hc/en-us/articles/360008709014",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1009,
+      "end": 1009
+    },
+    "content_stats": {
+      "char_count": 1052,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "Create Exclusion",
+      "children": []
+    }
+  }
+}

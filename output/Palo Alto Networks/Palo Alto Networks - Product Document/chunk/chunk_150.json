@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_150",
+  "section_number": "1.8.3.3.2",
+  "header": "Configure the Firewall to Integrate with Duo",
+  "content": "STEP 1 |\nImport the Duo metadata.\n1.\nLog on to the firewall web interface.\n2.\nOn the firewall, select Device > Server Profiles > SAML Identity Provider > Import.\n3.\nEnter the Profile Name.\n4.\nBrowse to the Identity Provider Metadata file (dag.xml).\n5.\nIf the Duo Access Gateway provides a self-signed certificate as the signing certificate for\nthe IdP, you cannot Validate Identity Provider Certificate. In this case, ensure that you\nare using PAN-OS 10.0 to mitigate exposure to CVE-2020-2021.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n274\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 2 |\nAdd an authentication profile.\nThe authentication profile allows Duo as the identity provider that validates administrator login\ncredentials.\n1.\nAdd an Authentication Profile.\n2.\nEnter the profile Name.\n3.\nSelect SAML as the authentication Type.\n4.\nSelect Duo Access Gateway Profile as the IdP Server Profile.\n5.\nSelect the certificate you want to use for SAML communication with the Duo Access\nGateway for the Certificate for Signing Requests.\n6.\nEnter duo_username as the Username Attribute.\n7.\nSelect Advanced to Add an allow list.\n8.\nSelect all, then click OK.\n9.\nCommit the changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n275\n©2025 Palo Alto Networks, Inc.\nAuthentication\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n276\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 3 |\nSpecify the authentication settings that the firewall uses for SAML authentication with Duo.\n1.\nSelect Device > Setup > Management and edit the Authentication Settings.\n2.\nSelect Duo Access Gateway as the Authentication Profile, then click OK.\n3.\nCommit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n277\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 4 |\nAdd accounts for administrators who will authenticate to the firewall using Duo.\n1.\nSelect Device > Administrators and Add an account.\n2.\nEnter a user Name.\n3.\nSelect Duo Access Gateway as the Authentication Profile.\n4.\nSelect the Administrator Type, then click OK.\nSelect Role Based if you want to use a custom role for the user. Otherwise, select\nDynamic. To require administrators to log in using SSO with Duo, assign the\nauthentication profile to all current administrators.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 274,
+      "end": 278
+    },
+    "content_stats": {
+      "char_count": 2220,
+      "word_count": 351
+    },
+    "hierarchy": {
+      "parent": "Configure MFA Between Duo and the Firewall",
+      "children": []
+    }
+  }
+}

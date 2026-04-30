@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_355",
+  "section_number": "16.1",
+  "header": "Create network",
+  "content": "Creates a network object that you associate with scanners and scanner groups.\nNote: You cannot add AWS assets to network objects. For AWS assets, use the network\nsegmentation provided by AWS instead.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the network object. This name must be unique within your\nTenable Vulnerability Management instance, cannot duplicate the name of\na previously deleted network, and cannot be default .\nNote: You can add a maximum of 50,000 network objects to an individual\nTenable Vulnerability Management instance.\nname\nrequired\nContent type\nstring\nThe description of the network object.\ninteger\nThe number of days to wait before assets age out. Assets will be\npermanently deleted if they are not seen on a scan within the specified\nnumber of days.\nMinimum value: 14\nMaximum value: 365\nWarning: If you enable this option, Tenable Vulnerability Management\nimmediately deletes assets in the specified network that have not been\nseen for the specified number of days. All asset records and associated\nvulnerabilities are deleted and cannot be recovered. The deleted assets no\nlonger count towards your license.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 343,
+      "end": 344
+    },
+    "content_stats": {
+      "char_count": 1222,
+      "word_count": 190
+    },
+    "hierarchy": {
+      "parent": "Networks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

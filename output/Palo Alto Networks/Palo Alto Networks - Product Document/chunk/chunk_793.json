@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_793",
+  "section_number": "1.21.8.4",
+  "header": "View IP Multicast Information",
+  "content": "After you Configure IP Multicast routing, view multicast routes, forwarding entries, and\ninformation about your IGMP and PIM interfaces.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1425\n©2025 Palo Alto Networks, Inc.\nNetworking\nSelect Network > Virtual Routers and in the row for the virtual router you configured, click\nMore Runtime Stats.\n1.\nSelect Routing > Route Table and then the Multicast radio button to display only\nmulticast routes (destination IP multicast group, the next hop toward that group, and\noutgoing interface). This information comes from the mRIB.\n2.\nSelect Multicast > FIB to view multicast route information from the mFIB: multicast\ngroups to which the virtual router belongs, the corresponding source, incoming\ninterfaces, and outgoing interfaces toward the receivers.\n3.\nSelect Multicast > IGMP > Interface to view IGMP-enabled interfaces, the associated\nIGMP version, IP address of the IGMP Querier, Querier up time and expiry time, the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1426\n©2025 Palo Alto Networks, Inc.\nNetworking\nrobustness setting, limits on numbers of multicast groups and sources, and whether the\ninterface is configured for immediate leave.\n4.\nSelect Multicast > IGMP > Membership to see IGMP-enabled interfaces and the\nmulticast groups to which they belong, the source, and other IGMP information.\n5.\nSelect Multicast > PIM > Group Mapping to view multicast groups mapped to an RP, the\norigin of the RP mapping, the PIM mode for the group (ASM or SSM), and whether the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1427\n©2025 Palo Alto Networks, Inc.\nNetworking\ngroup is inactive. Groups in SSM mode don’t use an RP, so the RP address displayed is\n0.0.0.0. The default SSM group is 232.0.0.0/8.\n6.\nSelect Multicast > PIM > Interface to view the IP address of the DR for an interface; the\nDR priority; the Hello, Join/Prune, and Assert intervals; and whether the interface is a\nbootstrap router (BSR).\n7.\nSelect Multicast > PIM > Neighbor to view information about routers that are PIM\nneighbors to the virtual router.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1428\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1425,
+      "end": 1429
+    },
+    "content_stats": {
+      "char_count": 2141,
+      "word_count": 340
+    },
+    "hierarchy": {
+      "parent": "IP Multicast",
+      "children": []
+    }
+  }
+}

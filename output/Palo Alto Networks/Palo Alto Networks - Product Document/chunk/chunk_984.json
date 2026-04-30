@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_984",
+  "section_number": "1.22.16.1",
+  "header": "Use XFF Values for Policy Based on Source Users",
+  "content": "You can configure the firewall map the IP address in the XFF header to a username using User-\nID so that you can have visibility into and user-based policy control over the web traffic of users\nbehind a proxy server who cannot otherwise be identified. In order to map the IP addresses from\nthe XFF headers to usernames, you must first Enable User-ID.\nWith this option enabled, the firewall uses the IP address in the XFF header for user mapping\npurposes only. The source IP address the firewall logs is still that of the proxy server, not that of\nthe source user. When you see a log event attributed to a user that the firewall mapped using\nand IP address extracted from an XFF header, it can be difficult to track down the specific device\nassociated with the event. To simplify debugging and troubleshooting of events attributed to\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1677\n©2025 Palo Alto Networks, Inc.\nPolicy\nusers behind the proxy server, you must also configure the firewall to populate the X-Forwarded-\nFor column in the URL Filtering log with the IP address in the XFF header so that you can track\ndown the specific user and device associated with an log event that is correlated with the URL\nFiltering log entry.\nThe XFF header your proxy server adds must contain the source IP address of the end user who\noriginated the request. If the header contains multiple IP addresses, the firewall uses the first IP\naddress only. If the header contains information other than an IP address, the firewall will not be\nable to perform user mapping.\nEnabling the firewall to use the X-Forwarded-For headers to perform user mapping\ndoes not enable the firewall to use the client IP address in the XFF header as the source\naddress in the logs; the logs still display the proxy server IP address as the source address.\nHowever, to simplify the debugging and troubleshooting process you can configure the\nfirewall to Add XFF Values to URL Filtering Logs to display the client IP address from\nthe XFF header in the URL Filtering logs.\nSTEP 1 |\nEnable the firewall to use XFF values in policies and in the source user fields of logs.\n1.\nSelect Device > Setup > Content-ID and edit the X-Forwarded-For Headers settings.\n2.\nSelect Use X-Forwarded-For Header in User-ID.\nSTEP 2 |\nRemove XFF values from outgoing web requests.\n1.\nSelect Strip X-Forwarded-For Header.\n2.\nClick OK and Commit.\nSTEP 3 |\nVerify the firewall is populating the source user fields of logs.\n1.\nSelect a log type that has a source user field (for example, Monitor > Logs > Traffic).\n2.\nVerify that the Source User column displays the usernames of users who access web\napplications.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1677,
+      "end": 1678
+    },
+    "content_stats": {
+      "char_count": 2645,
+      "word_count": 462
+    },
+    "hierarchy": {
+      "parent": "Enforce Policy on Endpoints and Users Behind an Upstream Device",
+      "children": []
+    }
+  }
+}

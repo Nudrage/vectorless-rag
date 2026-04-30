@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_043",
+  "section_number": "1.3.7",
+  "header": "Best Practices for Completing the Firewall Deployment",
+  "content": "Now that you have integrated the firewall into your network and enabled the basic security\nfeatures, you can begin configuring more advanced features. Here are some things to consider\nnext:\nFollow the Best Practices for Securing Administrative Access to make sure you are properly\nsecuring the management interfaces.\nConfigure a best-practice security policy rulebase to safely enable applications and protect\nyour network from attack. Go to the Best Practices page and select security policy best\npractice for your firewall deployment.\nSet up High Availability—High availability (HA) is a configuration in which two firewalls are\nplaced in a group and their configuration and session tables are synchronized to prevent a\nsingle point to failure on your network. A heartbeat connection between the firewall peers\nensures seamless failover in the event that a peer goes down. Setting up a two-firewall cluster\nprovides redundancy and allows you to ensure business continuity.\nEnable User Identification (User-ID)—User-ID is a Palo Alto Networks next-generation firewall\nfeature that allows you to create policies and perform reporting based on users and groups\nrather than individual IP addresses.\nEnable Decryption—Palo Alto Networks firewalls provide the capability to decrypt and inspect\ntraffic for visibility, control, and granular security. Use decryption on a firewall to prevent\nmalicious content from entering your network or sensitive content from leaving your network\nconcealed as encrypted or tunneled traffic.\nFollow the Best Practices for Securing Your Network from Layer 4 and Layer 7 Evasions.\nShare Threat Intelligence with Palo Alto Networks—Permit the firewall to periodically collect\nand send information about applications, threats, and device health to Palo Alto Networks.\nTelemetry includes options to enable passive DNS monitoring and to allow experimental\ntest signatures to run in the background with no impact to your security policy rules, firewall\nlogs, or firewall performance. All Palo Alto Networks customers benefit from the intelligence\ngathered from telemetry, which Palo Alto Networks uses to improve the threat prevention\ncapabilities of the firewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n63\n©2025 Palo Alto Networks, Inc.\nGetting Started",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 63,
+      "end": 64
+    },
+    "content_stats": {
+      "char_count": 2278,
+      "word_count": 335
+    },
+    "hierarchy": {
+      "parent": "Getting Started",
+      "children": []
+    }
+  }
+}

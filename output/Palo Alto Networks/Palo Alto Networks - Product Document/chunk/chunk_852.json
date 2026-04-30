@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_852",
+  "section_number": "1.21.15.6.8",
+  "header": "Disable NAT for a Specific Host or Interface",
+  "content": "Both source NAT and destination NAT rules can be configured to disable address translation. You\nmay have exceptions where you do not want NAT to occur for a certain host in a subnet or for\ntraffic exiting a specific interface. The following procedure shows how to disable source NAT for a\nhost.\nSTEP 1 |\nCreate the NAT policy.\n1.\nSelect Policies > NAT and click Add a descriptive Name for the policy.\n2.\nOn the Original Packet tab, select the zone you created for your internal network in the\nSource Zone section (click Add and then select the zone) and the zone you created for\nthe external network from the Destination Zone list.\n3.\nFor Source Address, click Add and enter the host address. Click OK.\n4.\nOn the Translated Packet tab, select None from the Translation Type list in the Source\nAddress Translation section of the screen.\n5.\nClick OK.\nSTEP 2 |\nCommit your changes.\nClick Commit.\nNAT rules are processed in order from the top to the bottom, so place the NAT\nexemption policy before other NAT policies to ensure it is processed before an address\ntranslation occurs for the sources you want to exempt.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1499,
+      "end": 1499
+    },
+    "content_stats": {
+      "char_count": 1112,
+      "word_count": 199
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

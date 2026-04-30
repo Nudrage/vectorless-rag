@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_160",
+  "section_number": "1.8.10.2",
+  "header": "Modify the PAN-OS Web Server Timeout",
+  "content": "The PAN-OS web server timeout must be the same as or greater than the timeout in any\nauthentication server profile multiplied by the number of retries and the number of servers in that\nprofile.\nDo not change the PAN-OS web server timeout unless you see authentication failures.\nSetting the timeout too high could degrade the performance of the firewall or cause it to\ndrop authentication requests. You can review authentication failures in Authentication\nlogs.\nSTEP 1 |\nAccess the firewall CLI.\nSTEP 2 |\nSet the PAN-OS web server timeout by entering the following commands, where <value> is\nthe number of seconds (default is 30; range is 3 to 125).\n> configure\n# set deviceconfig setting l3-service timeout <value>\n# commit",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 298,
+      "end": 298
+    },
+    "content_stats": {
+      "char_count": 723,
+      "word_count": 121
+    },
+    "hierarchy": {
+      "parent": "Connection Timeouts for Authentication Servers",
+      "children": []
+    }
+  }
+}

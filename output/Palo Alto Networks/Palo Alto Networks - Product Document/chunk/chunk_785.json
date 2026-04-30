@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_785",
+  "section_number": "1.21.7.6",
+  "header": "BGP Confederations",
+  "content": "BGP confederations provide a way to divide an autonomous system (AS) into two or more sub-\nautonomous systems (sub-AS) to reduce the burden that the full mesh requirement for IBGP\ncauses. The firewalls (or other routing devices) within a sub-AS must still have a full iBGP mesh\nwith the other firewalls in the same sub-AS. You need BGP peering between sub-autonomous\nsystems for full connectivity within the main AS. The firewalls peering with each other within a\nsub-AS form an IBGP confederation peering. The firewall in one sub-AS peering with a firewall in\na different sub-AS form an EBGP confederation peering. Two firewalls from different autonomous\nsystems that connect are EBGP peers.\nAutonomous systems are identified with a public (globally-assigned) AS number, such as AS 24\nand AS 25 in the preceding figure. In a PAN-OS environment, you assign each sub-AS a unique\nConfederation Member AS number, which is a private number seen only within the AS. In this\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1405\n©2025 Palo Alto Networks, Inc.\nNetworking\nfigure, the confederations are AS 65100 and AS 65110. (RFC6996, Autonomous System (AS)\nReservation for Private Use, indicates that the IANA reserves AS numbers 64512-65534 for\nprivate use.)\nThe sub-AS confederations seem like full autonomous systems to each other within the AS.\nHowever, when the firewall sends an AS path to an EBGP peer, only the public AS number\nappears in the AS path; no private sub-AS (Confederation Member AS) numbers are included.\nBGP peering occurs between the firewall and R2; the firewall in the figure has these relevant\nconfiguration settings:\n• AS number—24\n• Confederation Member AS—65100\n• Peering Type—EBGP confed\n• Peer AS—65110\nRouter 2 (R2) in AS 65110 is configured as follows:\n• AS number—24\n• Confederation Member AS—65110\n• Peering Type—EBGP confed\n• Peer AS—65100\nBGP peering also occurs between the firewall and R1. The firewall has the following additional\nconfiguration:\n• AS number—24\n• Confederation Member AS—65100\n• Peering Type—IBGP confed\n• Peer AS—65110\nR1 is configured as follows:\n• AS number—24\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1406\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Confederation Member AS—65110\n• Peering Type—IBGP confed\n• Peer AS—65100\nBGP peering occurs between the firewall and R5. The firewall has the following additional\nconfiguration:\n• AS number—24\n• Confederation Member AS—65100\n• Peering Type—EBGP\n• Peer AS—25\nR5 is configured as follows:\n• AS—25\n• Peering Type—EBGP\n• Peer AS—24\nAfter the firewall is configured to peer with R1, R2, and R5, its peers are visible on the Peer Group\ntab:\nThe firewall shows the R1, R2, and R5 peers:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1407\n©2025 Palo Alto Networks, Inc.\nNetworking\nTo verify that the routes from the firewall to the peers are established, on the virtual router’s\nscreen, select More Runtime Stats and select the Peer tab.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1408\n©2025 Palo Alto Networks, Inc.\nNetworking\nSelect the Local RIB tab to view information about the routes stored in the Routing Information\nBase (RIB).\nThen select the RIB Out tab.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1409\n©2025 Palo Alto Networks, Inc.\nNetworking\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1410\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1405,
+      "end": 1411
+    },
+    "content_stats": {
+      "char_count": 3322,
+      "word_count": 531
+    },
+    "hierarchy": {
+      "parent": "BGP",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_983",
+  "section_number": "1.22.16",
+  "header": "Enforce Policy on Endpoints and Users Behind an Upstream Device",
+  "content": "Upstream Device\nIf you have an upstream device, such as an explicit proxy server or load balance, deployed\nbetween the users on your network and the firewall, the firewall might see the upstream device IP\naddress as the source IP address in HTTP/HTTPS traffic that the proxy forwards rather than the\nIP address of the client that requested the content. In many cases, the upstream device adds an X-\nForwarded-For (XFF) header to HTTP requests that include the actual IPv4 or IPv6 address of the\nclient that requested the content or from whom the request originated.\nIn such cases, you can configure the firewall to extract the IP address from the XFF field and map\nit to a user with User-ID or apply security policy based on the IP address.\n• Use X-Forwarded-For Header in User-ID—This enables you enforce user-based policy to safely\nenable access to web-based applications for your users behind a proxy server. In addition, if\nUser-ID is able to map the XFF IP address to a username, the firewall displays that username\nas the Source user in Traffic, Threat, WildFire Submissions, and URL Filtering logs for visibility\ninto the web activity of users behind the proxy.\n• Use X-Forwarded-For Header in Security Policy—This enables you to enforce security\npolicy based on source IP address using the IP address in the XFF field of the HTTP header.\nAdditionally, when policy is applied to traffic that includes an IP address in the XFF field, you\ncan configure the Traffic, Threat, Data Filtering, and Wildfire Submission logs to assist in\ntroubleshooting and remediation.\nTo ensure that attackers can’t read and exploit the XFF values in web request packets that exit\nthe firewall to retrieve content from an external server, you can also configure the firewall to\nstrip the XFF values from outgoing packets. Using the XFF IP address for User-ID or in policy and\nstripping the XFF value are not mutually exclusive: if you configure both, the firewall zeroes out\nXFF values only after using them in policy enforcement and logging.\nYou cannot configure the firewall to use the IP address in the XFF field in User-ID and\nsecurity policy at the same time.\n• Use XFF Values for Policies and Logging Source Users\n• Use XFF IP Address Values in Security Policy and Logging\n• Use the IP Address in the XFF Header to Troubleshoot Events",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1677,
+      "end": 1677
+    },
+    "content_stats": {
+      "char_count": 2325,
+      "word_count": 397
+    },
+    "hierarchy": {
+      "parent": "Policy",
+      "children": [
+        "Use XFF Values for Policy Based on Source Users",
+        "Use XFF IP Address Values in Security Policy and Logging",
+        "Use the IP Address in the XFF Header to Troubleshoot Events"
+      ]
+    }
+  }
+}

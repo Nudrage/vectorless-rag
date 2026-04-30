@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_288",
+  "section_number": "13",
+  "header": "Appendix A: Security monitoring recommendations for many audit events",
+  "content": "This document provides reference information about individual audit events, and lists them within audit categories and subcategories. However, there are many events for which the\nfollowing overall recommendations apply. There are links throughout this document from the “Recommendations” sections of the relevant events to this appendix.\nType of monitoring required\nRecommendation\nHigh-value accounts: You might have high-value domain or local accounts for which you\nneed to monitor each action.\nExamples of high-value accounts are database administrators, built-in local administrator\naccount, domain administrators, service accounts, domain controller accounts and so on.\nMonitor relevant events for the “Subject\\Security ID” that corresponds to the high-value\naccount or accounts.\nAnomalies or malicious actions: You might have specific requirements for detecting\nanomalies or monitoring potential malicious actions. For example, you might need to\nmonitor for use of an account outside of working hours.\nWhen you monitor for anomalies or malicious actions, use the “Subject\\Security ID” (with\nother information) to monitor how or when a particular account is being used.\nNon-active accounts: You might have non-active, disabled, or guest accounts, or other\naccounts that should never be used.\nMonitor relevant events for the “Subject\\Security ID” that corresponds to the accounts\nthat should never be used.\nAccount whitelist: You might have a specific whitelist of accounts that are the only ones\nallowed to perform actions corresponding to particular events.\nMonitor the relevant events for “Subject\\Security ID” accounts that are outside the\nwhitelist of accounts.\nAccounts of different types: You might want to ensure that certain actions are performed\nonly by certain account types, for example, local or domain account, machine or user\naccount, vendor or employee account, and so on.\nIdentify events that correspond to the actions you want to monitor, and for those events,\nreview the “Subject\\Security ID” to see whether the account type is as expected.\nExternal accounts: You might be monitoring accounts from another domain, or “external”\naccounts that are not allowed to perform certain actions (represented by certain specific\nevents).\nMonitor the specific events for the “Subject\\Account Domain” corresponding to accounts\nfrom another domain or “external” accounts.\nRestricted-use computers or devices: You might have certain computers, machines, or\ndevices on which certain people (accounts) should not typically perform any actions.\nMonitor the target Computer: (or other target device) for actions performed by the\n“Subject\\Security ID” that you are concerned about.\nAccount naming conventions: Your organization might have specific naming conventions\nfor account names.\nMonitor “Subject\\Account Name” for names that don’t comply with naming conventions.\n© 2016 Microsoft. All rights reserved.\n733",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 733,
+      "end": 734
+    },
+    "content_stats": {
+      "char_count": 2914,
+      "word_count": 418
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

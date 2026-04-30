@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_035",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is appflt_deny_log_fmt.\nSyslog field name\nLog viewer -\nDetail view field\nname\nData\ntype\nLength\nFormat/Description\nPossible values\nNotes/Examples\nlog_type\nlog_type\nString\nContent Filtering\nlog_component\nlog_component\nString\nApplication\nlog_subtype\nlog_subtype\nString\nDenied\npriority\nString\nInformation\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 28\nfw_rule_id\nfw_rule_id\nNumber int32\nFirewall rule id\ne.g.\nfw_rule_id=1\nuser_name\nuser\nString\n384\n\"\" or\n\"<username>\"\nuser_gp\nuser_group\nString\n1024\n\"\" or\n\"<groupname>\"\napplication_filter_policy appfilter_policy_id Number int16\nId of application filter\npolicy\ncategory\ncategory\nString\n64\nCategory in which\napplication is categorized\nCategories present\nin IPS signature set\napplication_name\napp_name\nString\n64\nApplication Name\nApplications\npresent in IPS\nsignature set\napplication_risk\napp_risk\nNumber 8\nRisk in which application\nis categorized\nRisks present in\nIPS signature set\napplication_technology\napp_technology\nString\n32\nTechnology in which\napplication is categorized\nTechnologies\npresent in IPS\nsignature set\napplication_category\napp_category\nString\n64\nCategory in which\napplication is categorized\nCategories present\nin IPS signature set\nsrc_ip\nsrc_ip\n<Src IP address>\nsrc_country_code\nsrc_country\nString\n64\ndst_ip\ndst_ip\n<Dst IP address>\ndst_country_code\ndst_country\nString\n64\nsrc_port\nsrc_port\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 29\ndst_port\ndst_port\nsent_bytes\nbytes_sent\nNumber int32\nrecv_bytes\nbytes_received\nNumber int32\nstatus\nstatus\nString\nDeny\nmessage\nmessage\nString\n1024\nappresolvedby\nappresolvedby\nString\nModule that identified the\napplication (IPS,\nMicroapp or SAC)\nSignature\nProxy\nEAC",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 28,
+      "end": 30
+    },
+    "content_stats": {
+      "char_count": 1746,
+      "word_count": 227
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (Legacy)",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_154",
+  "section_number": "1.8.6",
+  "header": "Configure Kerberos Server Authentication",
+  "content": "You can use Kerberos to natively authenticate end users and firewall or Panorama administrators\nto an Active Directory domain controller or a Kerberos V5-compliant authentication server. This\nauthentication method is interactive, requiring users to enter usernames and passwords.\nTo use a Kerberos server for authentication, the server must be accessible over an IPv4\naddress. IPv6 addresses are not supported.\nSTEP 1 |\nAdd a Kerberos server profile.\nThe profile defines how the firewall connects to the Kerberos server.\n1.\nSelect Device > Server Profiles > Kerberos or Panorama > Server Profiles > Kerberos on\nPanorama™ and Add a server profile.\n2.\nEnter a Profile Name to identify the server profile.\n3.\nAdd each server and specify a Name (to identify the server), IPv4 address or FQDN\nof the Kerberos Server, and optional Port number for communication with the server\n(default 88).\nIf you use an FQDN address object to identify the server and you subsequently\nchange the address, you must commit the change in order for the new server\naddress to take effect.\n4.\nClick OK to save your changes to the profile.\nSTEP 2 |\nAssign the server profile to an Configure an Authentication Profile and Sequence.\nThe authentication profile defines authentication settings that are common to a set of users.\nSTEP 3 |\nAssign the authentication profile to the firewall application that requires authentication.\n• Administrative access to the web interface—Configure a Firewall Administrator Account and\nassign the authentication profile you configured.\n• End user access to services and applications—Assign the authentication profile you\nconfigured to an authentication enforcement object and assign the object to Authentication\npolicy rules. For the full procedure to configure authentication for end users, see Configure\nAuthentication Policy.\nSTEP 4 |\nVerify that the firewall can Test Authentication Server Connectivity to authenticate users.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n287\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 287,
+      "end": 288
+    },
+    "content_stats": {
+      "char_count": 2023,
+      "word_count": 311
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

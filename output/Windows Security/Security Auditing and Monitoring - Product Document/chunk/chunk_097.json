@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_097",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4626(S): User/Device claims information.\n\nTypically this action is reported by the NULL SID account, so we recommend reporting all events with “Subject\\Security ID” not equal “NULL SID”.\n\nIf you need to monitor account logons with specific claims, you can monitor for 4626 and check User Claims\\Device Claims fields.\n\nIf you have specific requirements, such as:\no\nUsers with specific claims should not access specific computers;\no\nComputer account should not have specific claims;\no\nUser account should not have specific claims;\no\nClaim should not be empty\no\nAnd so on…\nYou can monitor for 4626 and check User Claims\\Device Claims fields.\n\nIf you need to monitor computer/user logon attempts only and you don’t need information about claims, then it is better to monitor “4624: An account was successfully logged\non.”\n© 2016 Microsoft. All rights reserved.\n296",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 296,
+      "end": 297
+    },
+    "content_stats": {
+      "char_count": 868,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Audit User/Device Claims",
+      "children": []
+    }
+  }
+}

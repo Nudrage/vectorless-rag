@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_967",
+  "section_number": "1.22.10.8",
+  "header": "Exclude Entries from an External Dynamic List",
+  "content": "As you view the entries of an external dynamic list, you can exclude up to 100 entries from the\nlist. The ability to exclude entries from an external dynamic list gives you the option to enforce\npolicy on some (but not all) of the entries in a list. This is helpful if you cannot edit the contents of\nan external dynamic list (such as the Palo Alto Networks High-Risk IP Addresses feed) because it\ncomes from a third-party source.\nSTEP 1 |\nView External Dynamic List Entries.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1647\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 2 |\nSelect up to 100 entries to exclude from the list and click Submit (\n) or manually Add a list\nexception.\n• You cannot save your changes to the external dynamic list if you have duplicate entries\nin the Manual Exceptions list. To identify duplicate entries, look for entries with a red\nunderline.\n• A manual exception must match a list entry exactly. Additionally, you cannot exclude a\nspecific IP address from within an IP address range. To exclude a specific IP address from an\nIP address range, you must add each IP address in the range as a list entry and then exclude\nthe desired IP address.\nThe firewall does not support excluding an individual IP address from an IP address range.\nSTEP 3 |\nClick OK and Commit to save your changes.\nSTEP 4 |\n(Optional) Enforce Policy on an External Dynamic List.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1647,
+      "end": 1648
+    },
+    "content_stats": {
+      "char_count": 1370,
+      "word_count": 247
+    },
+    "hierarchy": {
+      "parent": "Use an External Dynamic List in Policy",
+      "children": []
+    }
+  }
+}

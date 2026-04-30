@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_047",
+  "section_number": "1.16",
+  "header": "Unique Hosts Observed Monthly – Audit",
+  "content": "API responses may vary depending on product subscriptions (Network, AWS, M365).\nThe unique hosts observed API can be used to view of all the distinct hosts seen during a calendar\nmonth, for each month dating back one year. The endpoint is only available to Restricted Admin clients.\nTo obtain the list of unique hosts (GET) use the following URL:\nhttps://<vectra_management_ip>/api/v3.4/unique_hosts_observed_monthly/audit\nThe following table lists the fields and a description of the various elements for the month results.\nDetailed examples of using GET on unique_hosts_observed_monthly/audit is described in Appendix A\n© July 2024 Vectra AI, Inc. | 70\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nmonth\nFormatted as ‘YYYY-MM’\ntimestamp\nhost_id\nRelated Host ID (if available)\ninteger\nhost_luid\nHost LUID (if available)\nstring\nip_address\nstring\nhost_artifact_value\nHost Artifact Value (if available)\nstring\nhost_artifact_type\nHost Artifact Type (if available)\nstring\nlast_seen_start\nLast seen start\ntimestamp\nThe column is ‘last_seen’\nbecause it gets updated at\nnew host sessions are\ncreated. Host may have\nbeen seen at more times\nthan what is recorded.\nlast_seen_end\nLast seen end\ntimestamp\nThe column is ‘last_seen’\nbecause it gets updated at\nnew host sessions are\ncreated. Host may have\nbeen seen at more times\nthan what is recorded.\nThe available query parameters to filter for Unique Hosts Observed Monthly - Audit are listed below.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\nmonth\nstring\nISO8601\nMonth of host records to be returned\nstart\nstring\nISO8601\nStarting month of data list. Example: ‘2023-08’\nend\nstring\nISO8601\nEnding month of data list. Example: ‘2023-09’\npage\ninteger\npage_size\ninteger\nLimit number of host records returned",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 69,
+      "end": 70
+    },
+    "content_stats": {
+      "char_count": 1718,
+      "word_count": 257
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

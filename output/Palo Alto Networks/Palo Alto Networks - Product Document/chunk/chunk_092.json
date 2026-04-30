@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_092",
+  "section_number": "1.6.4.4.5",
+  "header": "Configure API Key Lifetime",
+  "content": "The API keys on the firewall and Panorama enable you to authenticate API calls to the XML API\nand REST API. Because these keys grant access to the firewall and Panorama that are critical\nelements of your security posture, as a best practice, specify an API key lifetime to enforce regular\nkey rotation. After you specify the key lifetime, when you regenerate an API key, each key is\nunique.\nIn addition to setting a key lifetime that prompts you to regenerate new keys periodically, you can\nalso revoke all currently valid API keys in the event one or more keys are compromised. Revoking\nkeys is a way to expire all currently valid keys.\nSTEP 1 |\nSelect Device > Setup > Management.\nSTEP 2 |\nEdit Authentication Settings to specify the API Key Lifetime (min).\nSet the API key lifetime to protect against compromise and to reduce the effects of an\naccidental exposure. By default, the API key lifetime is set to 0, which means that the keys will\nnever expire. To ensure that your keys are frequently rotated and each key is unique when\nregenerated, you must specify a validity period that ranges between 1—525600 minutes. Refer\nto the audit and compliance policies for your enterprise to determine how you should specify\nthe lifetime for which your API keys are valid.\nSTEP 3 |\nCommit the changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n136\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nSTEP 4 |\n(To revoke all API keys) Select Expire all API Keys to reset currently valid API keys.\nIf you have just set a key lifetime and want to reset all API keys to adhere to the new term, you\ncan expire all existing keys.\nOn confirmation, the keys are revoked and you can view the timestamp for when the API Keys\nLast Expired.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n137\n©2025 Palo Alto Networks, Inc.\nFirewall Administration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 136,
+      "end": 138
+    },
+    "content_stats": {
+      "char_count": 1825,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "Configure Administrative Accounts and Authentication",
+      "children": []
+    }
+  }
+}

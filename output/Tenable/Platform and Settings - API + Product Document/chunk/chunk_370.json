@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_370",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully deleted the specified network object.\nnetwork_id\nrequired\nRESPONSE SCHEMA:\napplication/json\nany\n— 400 Returned if you attempted to delete the default network object.\n— 401\nReturned if Tenable Vulnerability Management cannot authenticate the user account that submitted\nthe request.\n— 403 Returned if you do not have sufficient permissions to delete the specified network object.\n— 404 Returned if Tenable Vulnerability Management could not find the network object you specified.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500\nReturned if Tenable Vulnerability Management encountered an internal server error. Wait a moment,\nand try your request again.\n— 503\nReturned if a Tenable Vulnerability Management service is unavailable. Wait a moment, and try your\nrequest again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 358,
+      "end": 359
+    },
+    "content_stats": {
+      "char_count": 919,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "Delete network",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_197",
+  "section_number": "1.9.12.1",
+  "header": "Create an SSH Management Profile",
+  "content": "You must create an SSH management profile to customize SSH settings for management\nconnections.\nYou can configure or update an existing management profile from your CLI.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n347\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 1 |\nCreate a Management - Server Profile.\n1.\nSelect Device > Certification Management > SSH Service Profile.\n2.\nAdd a Management - Server Profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n348\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n349\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n350\n©2025 Palo Alto Networks, Inc.\nCertificate Management\n3.\nEnter a Name to identify the profile.\n4.\n(Optional) Add the ciphers, message authentication codes, or key exchange algorithms\nthe profile will support.\n5.\n(Optional) Select a Hostkey and key length.\n6.\n(Optional) Enter values for the SSH session rekey parameters: Data, Interval, and\nPackets.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n351\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n352\n©2025 Palo Alto Networks, Inc.\nCertificate Management\n7.\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n353\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 2 |\nSelect a management profile to apply.\n1.\nSelect Device > Setup > Management. Under SSH Management Profiles Settings, select\nan existing profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n354\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n355\n©2025 Palo Alto Networks, Inc.\nCertificate Management\n2.\nClick OK and Commit the changes.\nSTEP 3 |\nRestart management SSH service from the CLI to apply the profile.\nYou must restart the connection each time you apply a new profile or make changes to\na profile in use; this reboots the appliance. The new configurations will not affect active\nsessions. The profile will apply to subsequent connections (or sessions).\n1.\nadmin@PA-3260> set ssh service-restart mgmt",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 347,
+      "end": 356
+    },
+    "content_stats": {
+      "char_count": 2095,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": "Configure an SSH Service Profile",
+      "children": []
+    }
+  }
+}

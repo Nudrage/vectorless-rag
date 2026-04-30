@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_478",
+  "section_number": "1.13.12.2",
+  "header": "Domains used by the Predefined SaaS Application Types",
+  "content": "SaaS applications use HTTPS so, to insert custom headers into this traffic, custom headers must\nbe decrypted. If you use the forward-proxy decryption available on the firewall to decrypt custom\nheaders, you must identify the specific HTTPS traffic you want to decrypt by identifying the\ndomains associated with the traffic. The following table identifies the relevant domains for each of\nthe SaaS applications for which Palo Alto Networks® has provided predefined rules.\nApplication\nDomains\nDropbox\n*.dropbox.com\nG Suite\n*.google.com\ngmail.com\nMicrosoft Office\n365\nlogin.microsoftonline.com\nlogin.microsoft.com\nlogin.windows.net\nYouTube\nwww.youtube.com\nm.youtube.com\nyoutubei.googleapis.com\nyoutube.googleapis.com\nwww.youtube-nocookie.com\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n859\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 859,
+      "end": 860
+    },
+    "content_stats": {
+      "char_count": 821,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Use HTTP Headers to Manage SaaS Application Access",
+      "children": []
+    }
+  }
+}

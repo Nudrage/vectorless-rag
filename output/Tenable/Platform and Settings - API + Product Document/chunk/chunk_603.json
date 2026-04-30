@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_603",
+  "section_number": "26.12",
+  "header": "Add or remove asset tags",
+  "content": "Adds or removes tags from the specified assets, and returns the UUID of the asynchronous asset\nupdate job.\nRequires the Basic [16] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nEnum: \"add\"\n\"remove\"\nSpecifies whether to add or remove tags.\nArray of strings <uuid>\nA list of asset unique identifiers (UUIDs). For more information on\ndetermining values for this array, see Determine Tag Identifiers.\nArray of strings <uuid>\nA list of tag value unique identifiers (UUIDs). For more information on\ndetermining values for this array, see Determine Tag Identifiers.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 601,
+      "end": 601
+    },
+    "content_stats": {
+      "char_count": 601,
+      "word_count": 92
+    },
+    "hierarchy": {
+      "parent": "Tags",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

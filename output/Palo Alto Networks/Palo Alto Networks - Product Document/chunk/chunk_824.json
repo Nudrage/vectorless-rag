@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_824",
+  "section_number": "1.21.12.6",
+  "header": "Configure a DNS Server Profile",
+  "content": "Configure a DNS Server Profile, which simplifies configuration of a virtual system. The Primary\nDNS or Secondary DNS address is used to create the DNS request that the virtual system sends\nto the DNS server.\nSTEP 1 |\nName the DNS server profile, select the virtual system to which it applies, and specify the\nprimary and secondary DNS server addresses.\n1.\nSelect Device > Server Profiles > DNS and Add a Name for the DNS server profile.\n2.\nFor Location, select the virtual system to which the profile applies.\n3.\nFor Inheritance Source, select None if the DNS server addresses are not inherited.\nOtherwise, specify the DNS server from which the profile should inherit settings. If you\nchoose a DNS server, click Check inheritance source status to see that information.\n4.\nSpecify the IP address of the Primary DNS server, or leave as inherited if you chose an\nInheritance Source.\nKeep in mind that if you specify an FQDN instead of an IP address, the DNS for\nthat FQDN is resolved in Device > Virtual Systems > DNS Proxy.\n5.\nSpecify the IP address of the Secondary DNS server, or leave as inherited if you chose\nan Inheritance Source.\nSTEP 2 |\nConfigure the service route that the firewall automatically uses, based on whether the target\nDNS Server has an IP address family type of IPv4 or IPv6.\n1.\nClick Service Route IPv4 to enable the subsequent interface and IPv4 address to be used\nas the service route, if the target DNS address is an IPv4 address.\n2.\nSpecify the Source Interface to select the DNS server’s source IP address that the\nservice route will use. The firewall determines which virtual router is assigned that\ninterface, and then does a route lookup in the virtual router routing table to reach the\ndestination network (based on the Primary DNS address).\n3.\nSpecify the IPv4 Source Address from which packets going to the DNS server are\nsourced.\n4.\nClick Service Route IPv6 to enable the subsequent interface and IPv6 address to be used\nas the service route, if the target DNS address is an IPv6 address.\n5.\nSpecify the Source Interface to select the DNS server’s source IP address that the\nservice route will use. The firewall determines which virtual router is assigned that\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1461\n©2025 Palo Alto Networks, Inc.\nNetworking\ninterface, and then does a route lookup in the virtual router routing table to reach the\ndestination network (based on the Primary DNS address).\n6.\nSpecify the IPv6 Source Address from which packets going to the DNS server are\nsourced.\n7.\nClick OK.\nSTEP 3 |\nCommit the configuration.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1461,
+      "end": 1462
+    },
+    "content_stats": {
+      "char_count": 2586,
+      "word_count": 447
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

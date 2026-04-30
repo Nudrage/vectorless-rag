@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_991",
+  "section_number": "1.22.17.1",
+  "header": "PBF",
+  "content": "PBF rules allow traffic to take an alternative path from the next hop specified in the route table,\nand are typically used to specify an egress interface for security or performance reasons. Let's\nsay your company has two links between the corporate office and the branch office: a cheaper\ninternet link and a more expensive leased line. The leased line is a high-bandwidth, low-latency\nlink. For enhanced security, you can use PBF to send applications that aren’t encrypted traffic,\nsuch as FTP traffic, over the private leased line and all other traffic over the internet link. Or, for\nperformance, you can choose to route business-critical applications over the leased line while\nsending all other traffic, such as web browsing, over the cheaper link.\n• Egress Path and Symmetric Return\n• Path Monitoring for PBF\n• Service Versus Applications in PBF",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1683,
+      "end": 1683
+    },
+    "content_stats": {
+      "char_count": 852,
+      "word_count": 140
+    },
+    "hierarchy": {
+      "parent": "Policy-Based Forwarding",
+      "children": [
+        "Egress Path and Symmetric Return",
+        "Path Monitoring for PBF",
+        "Service Versus Applications in PBF"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_964",
+  "section_number": "1.22.10.5.2",
+  "header": "Convert the GlobalSign Root R1 Certificate to PEM Format",
+  "content": "You must convert the GlobalSign Root R1 certificate to PEM format to create a certificate profile\nfor authenticating the EDL Hosting Service. Creating the certificate profile to authenticate the\nEDL Hosting Service is a best practice when leveraging the EDL Hosting Service when you\nconfigure the firewall to access an external dynamic list from the EDL Hosting Service.\nRefer to the appropriate procedure based on operating system of the device where you\ndownloaded the GlobalSign Root R1 certificate.\nSTEP 1 |\nDownload the GlobalSign Root R1 certificate if you have not already downloaded the\ncertificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1644\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 2 |\nConvert the certificate.\n• Mac and Linux operating systems\n1. Open the terminal and convert the GlobalSign Root R1 certificate you downloaded.\nadmin:  openssl x509 -in <certificate-path>.crt -inform DER -out\n<target-export-path>.pem -outform PEM\nIf no target export path is specified, the converted certificate is created on the\ndevice desktop.\n• Windows operating system\n1. Navigate to the location where you downloaded the GlobalSign Root1 certificate.\n2. Double click and Open the certificate.\n3. Click Details and Copy to File.\nClick Next when prompted to continue.\n4. Select Base-64 encoded x.509 (.CER) and click Next\n5. Click Browse to navigate to the location you want to copy the certificate and enter a name\nfor the certificate that includes .pem appended to the end of file name. For example,\nglobalsign-root-r1.pem\nSave the certificate. The File Name displayed shows the target export path and the\ncertificate name you entered with .cer appended. Delete the appended.cer.\n6. Click Next and Finish exporting the certificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1645\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1644,
+      "end": 1646
+    },
+    "content_stats": {
+      "char_count": 1820,
+      "word_count": 282
+    },
+    "hierarchy": {
+      "parent": "Configure the Firewall to Access an External Dynamic List from the EDL Hosting Service",
+      "children": []
+    }
+  }
+}

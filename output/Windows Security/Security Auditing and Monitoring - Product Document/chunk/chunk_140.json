@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_140",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5031(F): The Windows Firewall Service blocked an application from accepting incoming connections on the network.\n\nYou can use this event to detect applications for which no Windows Firewall rules were created.\n\nIf you have a pre-defined application which should be used to perform the operation that was reported by this event, monitor events with “Application” not equal to your\ndefined application.\n\nYou can monitor to see if “Application” is not in a standard folder (for example, not in System32 or Program Files) or is in a restricted folder (for example, Temporary Internet\nFiles).\n\nIf you have a pre-defined list of restricted substrings or words in application names (for example, “mimikatz” or “cain.exe”), check for these substrings in “Application.”\n5150(-): The Windows Filtering Platform blocked a packet.\nThis event is logged if the Windows Filtering Platform MAC filter blocked a packet.\nThere is no example of this event in this document.\nEvent Schema:\nThe Windows Filtering Platform has blocked a packet.\nNetwork Information:\nDirection:%1\nSource Address:%2\nDestination Address:%3\nEtherType:%4\nMediaType:%5\nInterfaceType:%6\nVlanTag:%7\nFilter Information:\nFilter Run-Time ID:%8\nLayer Name:%9\nLayer Run-Time ID:%10\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2012, Windows 8.\n© 2016 Microsoft. All rights reserved.\n418\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 418,
+      "end": 419
+    },
+    "content_stats": {
+      "char_count": 1379,
+      "word_count": 208
+    },
+    "hierarchy": {
+      "parent": "Audit Filtering Platform Connection",
+      "children": []
+    }
+  }
+}

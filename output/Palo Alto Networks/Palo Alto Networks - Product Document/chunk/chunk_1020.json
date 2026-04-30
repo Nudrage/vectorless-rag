@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1020",
+  "section_number": "1.23.7.2",
+  "header": "Configure a PA-7000 Series Firewall for Logging Per Virtual System",
+  "content": "System\nFor Traffic, HIP Match, Threat, and WildFire log types, the PA-7000 Series firewall does not use\nservice routes for SNMP Trap, Syslog, and email services. Instead, the PA-7000 Series firewall\nsupports using a logging card.\nDepending on your firewall configuration, you might have one of the following card types:\n• Log Processing Card (LPC)—Supports virtual system-specific paths from LPC subinterfaces to\nan on-premise switch to the respective service on a server. For System and Config logs, the\nPA-7000 Series firewall uses global service routes, and not the LPC. If your firewall has an LPC\ninstalled, you need to configure a log card port.\n• Log Forwarding Card (LFC)—Supports high-speed log forwarding of all dataplane logs to an\nexternal log collector (for example, Panorama and syslog servers). If your firewall has an LFC\ninstalled, you do not need to configure a log card port.\nLog forwarding to an external server is not yet supported on LFC subinterfaces.\nIn other Palo Alto Networks models, the dataplane sends logging service route traffic to the\nmanagement plane, which sends the traffic to logging servers. In a PA-7000 Series firewall, the\nLPC or LFC have only one interface, and dataplanes for multiple virtual systems send logging\nserver traffic (types mentioned above) to the PA-7000 Series firewall logging card. The logging\ncard is configured with multiple subinterfaces, over which the platform sends the logging service\ntraffic out to a customer’s switch, which can be connected to multiple logging servers.\nEach subinterface can be configured with a subinterface name and a dotted subinterface number.\nThe subinterface is assigned to a virtual system, which is configured for logging services. The\nother service routes on a PA-7000 Series firewall function similarly to service routes on other\nPalo Alto Networks platforms. For information about the LPC or LFC, see the PA-7000 Series\nHardware Reference Guide.\n• Configure a PA-7000 Series LPC for Logging per Virtual System\n• Configure a PA-7000 Series LFC for Logging per Virtual System",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1720,
+      "end": 1720
+    },
+    "content_stats": {
+      "char_count": 2070,
+      "word_count": 328
+    },
+    "hierarchy": {
+      "parent": "Customize Service Routes for a Virtual System",
+      "children": [
+        "Configure a PA-7000 Series LPC for Logging per Virtual System",
+        "Configure a PA-7000 Series LFC for Logging per Virtual System"
+      ]
+    }
+  }
+}

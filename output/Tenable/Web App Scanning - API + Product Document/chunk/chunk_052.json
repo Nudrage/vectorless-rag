@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_052",
+  "section_number": "54.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Web App Scanning successfully canceled the specified WAS findings export job.\n— 400\nReturned if your request specified invalid parameters, if your request was improperly formatted, or if\nTenable Web App Scanning could not cancel the WAS findings job.\n— 403 Returned if you do not have permission to cancel WAS findings export jobs.\n— 404 Returned if Tenable Web App Scanning could not find the specified WAS findings export job.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 80,
+      "end": 80
+    },
+    "content_stats": {
+      "char_count": 579,
+      "word_count": 98
+    },
+    "hierarchy": {
+      "parent": "Cancel findings export",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

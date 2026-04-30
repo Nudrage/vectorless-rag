@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_747",
+  "section_number": "1.21.1.3.1",
+  "header": "Layer 2 Interfaces with No VLANs",
+  "content": "Configure a Layer 2 Interface on the firewall so it can act as a switch in your layer 2 network (not\nat the edge of the network). The Layer 2 hosts are probably geographically close to each other\nand belong to a single broadcast domain. The firewall provides security between the Layer 2 hosts\nwhen you assign the interfaces to security zones and apply security rules to the zones.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1341\n©2025 Palo Alto Networks, Inc.\nNetworking\nThe hosts communicate with the firewall and each other at Layer 2 of the OSI model by\nexchanging frames. A frame contains an Ethernet header that includes a source and destination\nMedia Access Control (MAC) address, which is a physical hardware address. MAC addresses are\n48-bit hexadecimal numbers formatted as six octets separated by a colon or hyphen (for example,\n00-85-7E-46-F1-B2).\nThe following figure has a firewall with three Layer 2 interfaces that each connect to a Layer 2\nhost in a one-to-one mapping.\nThe firewall begins with an empty MAC table. When the host with source address 0A-76-\nF2-60-EA-83 sends a frame to the firewall, the firewall doesn’t have destination address\n0B-68-2D-05-12-76 in its MAC table, so it doesn’t know which interface to forward the frame\nto; it broadcasts the frame to all of its Layer 2 interfaces. The firewall puts source address 0A-76-\nF2-60-EA-83 and associated Eth1/1 into its MAC table.\nThe host at 0C-71-D4-E6-13-44 receives the broadcast, but the destination MAC address is not\nits own MAC address, so it drops the frame.\nThe receiving interface Ethernet 1/2 forwards the frame to its host. When host\n0B-68-2D-05-12-76 responds, it uses the destination address 0A-76-F2-60-EA-83, and the\nfirewall adds to its MAC table Ethernet 1/2 as the interface to reach 0B-68-2D-05-12-76.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1341,
+      "end": 1342
+    },
+    "content_stats": {
+      "char_count": 1799,
+      "word_count": 294
+    },
+    "hierarchy": {
+      "parent": "Layer 2 Interfaces",
+      "children": []
+    }
+  }
+}

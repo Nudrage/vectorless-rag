@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_326",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nx-api-key\nrequired\nGET\n/api/syslogs/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"ip\": \"string\",\n\"port\": 0,\n\"protocol\": \"UDP\",\n\"tls\": true,\n\"criticityThreshold\": 0,\n\"description\": \"string\",\n\"filterExpression\": { },\n\"inputType\": \"deviances\",\n\"directories\":\n-\n[\n0\n],\nContent type\n\"checkers\":\n-\n[\n0\n],\n\"attackTypes\":\n-\n[\n0\n],\n\"profiles\":\n-\n[\n0\n],\n\"shouldNotifyOnInitialFullSecurityCheck\": true,\n\"relayId\": 0,\n\"healthCheckNames\":\n-\n[\n\"string\"\n]\n}\nUpdate syslog instance.\nRequired license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nstring\ninteger\nstring\nEnum: \"UDP\"\n\"TCP\"\nid\nrequired\nx-api-key\nrequired\nip\nport\nprotocol\nboolean\ninteger\nstring\nobject\nstring\nEnum: \"deviances\"\n\"adObjectChanges\"\n\"attacks\"\n\"healthChecks\"\nArray of integers\nnon-empty\nArray of integers or null\nnon-empty\nArray of integers or null\nnon-empty\nArray of integers or null\nnon-empty\nnumber or null",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 190,
+      "end": 192
+    },
+    "content_stats": {
+      "char_count": 1045,
+      "word_count": 140
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

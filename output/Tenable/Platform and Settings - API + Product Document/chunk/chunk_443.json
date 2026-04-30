@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_443",
+  "section_number": "20.1",
+  "header": "Create recast rule",
+  "content": "Creates a new recast or accept rule.\nRequires the Administrator [64] user role or one of the following custom role privileges:\nTIO_BACKEND.RECAST_RULE.MANAGE  for Vulnerability Management or\nWAS.RECAST_RULE.MANAGE  for Web App Scanning. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\n<= 1024 characters\nA name for the rule.\nIf not provided, a default is generated using the following format: rule\ntype ( Recast  or Accept ), the plugin ID (for Vulnerabilities and Web\nApplications) or the audit file name (for Host Audits), and the rule\ncreation date. For example, Recast - Plugin ID: 123642 -\nCreated: 2023-03-14 .\nrule_name\nstring\n<= 1024 characters\nA description of the rule.\nstring\nEnum: \"HOST\"\n\"HOST_AUDIT\"\n\"WEBAPP\"\nSpecifies the type of findings that the rule will target.\nobject\nDefines the configuration of the rule based on the selected action.\nAND (OPTION 1) (object) or OR (OPTION 2) (object)\nFilter rules based on the targeted vulnerabilities. Use the and  array to\ncombine multiple conditions that all must be true. Use the or  array to\ncombine multiple conditions where at least one must be true.\nstring <date-time>\nThe date and time when the rule expires, in ISO 8601 format. If omitted,\nthe rule does not expire.\nobject\nSpecifies details for disabling the rule.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 417,
+      "end": 418
+    },
+    "content_stats": {
+      "char_count": 1308,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Recast Rules",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

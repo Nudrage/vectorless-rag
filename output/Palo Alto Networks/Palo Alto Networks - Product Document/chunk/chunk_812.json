@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_812",
+  "section_number": "1.21.11.9",
+  "header": "Configure an Interface as a DHCP Relay Agent",
+  "content": "To enable a firewall interface to transmit DHCP messages between clients and servers, you\nmust configure the firewall as a DHCP relay agent. The interface can forward messages to a\nmaximum of eight external IPv4 DHCP servers and eight external IPv6 DHCP servers. A client\nDHCPDISCOVER message is sent to all configured servers, and the DHCPOFFER message of the\nfirst server that responds is relayed back to the requesting client.\nCapacities are as follows:\n• You can configure a combined total of 500 DHCP servers (IPv4) and DHCP relay agents (IPv4\nand IPv6) on all firewall models except for PA-5200 Series and PA-7000 Series firewalls\n• On PA-5220 firewalls, you can configure a maximum of 500 DHCP servers and a maximum of\n2,048 DHCP relay agents minus the number of DHCP servers configured. For example, if you\nconfigure 500 DHCP servers, you can configure 1,548 DHCP relay agents.\n• On PA-5250, PA-5260, and PA-7000 Series firewalls, you can configure a maximum of 500\nDHCP servers, and a maximum of 4,096 DHCP relay agents minus the number of DHCP\nservers configured. For example, if you configure 500 DHCP servers, you can configure 3,596\nDHCP relay agents.\nBefore configuring a DHCP relay agent, make sure you have configured a Layer 3 Ethernet or\nLayer 3 VLAN interface, and the interface is assigned to a virtual router and a zone.\nSTEP 1 |\nSelect DHCP Relay.\nSelect Network > DHCP > DHCP Relay.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1451\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 2 |\nSpecify the IP address of each DHCP server with which the DHCP relay agent will\ncommunicate.\n1.\nIn the Interface field, select the interface you want to be the DHCP relay agent.\n2.\nSelect either IPv4 or IPv6, indicating the type of DHCP server address you will specify.\n3.\nIf you checked IPv4, in the DHCP Server IP Address field, Add the address of the DHCP\nserver to and from which you will relay DHCP messages.\n4.\nIf you checked IPv6, in the DHCP Server IPv6 Address field, Add the address of the\nDHCP server to and from which you will relay DHCP messages. If you specify a multicast\naddress, also specify an outgoing Interface.\n5.\n(Optional) Repeat the prior three steps to enter a maximum of eight DHCP server\naddresses per IP address family.\nSTEP 3 |\nCommit the configuration.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1451,
+      "end": 1452
+    },
+    "content_stats": {
+      "char_count": 2306,
+      "word_count": 400
+    },
+    "hierarchy": {
+      "parent": "DHCP",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_147",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nx-api-key\nrequired\nGET\n/api/directories\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n[\n- {\n\"id\": 0,\n\"name\": \"string\",\n\"ip\": \"string\",\n\"type\": \"ADDS\",\n\"ldapPort\": 0,\n\"globalCatalogPort\": 0,\n\"smbPort\": 0,\n\"dns\": \"string\",\n\"infrastructureId\": 0,\n\"infrastructureName\": \"string\",\n\"ldapInitialized\": { },\n\"sysvolInitialized\": { },\n\"ldapCrawlingStatus\": \"none\",\n\"sysvolCrawlingStatus\": \"none\",\n\"honeyAccountAdObjectId\": 0,\n\"honeyAccountDistinguishedName\": \"string\",\n\"honeyAccountConfigurationStatus\": \"none\",\n\"sensitiveDataCollectionIsEnabled\": true,\n\"sensitiveDataCollectionStatus\": \"none\",\n\"ioaProcedureInstalled\": true,\n\"ioaProcedureFailureReason\": \"unknown\",\n\"ioaProcedureFailureDescription\": \"string\",\n\"relayId\": 0,\n\"relayUuid\": \"string\",\n\"directoryUuid\": \"066f4b04-8e1f-4b9f-99da-99d312ef63ce\"\n}\n]\nCreate directory instance.\nRequired license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nx-api-key\nrequired\nThe user's API key\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nArray (non-empty) [\nnumber\n[ 0 .. 2147483647 ]\nstring\nstring\nstring\nValue: \"ADDS\"\ninteger\ninteger\ninteger\nstring\nboolean\n(integer or null)\n]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 89,
+      "end": 91
+    },
+    "content_stats": {
+      "char_count": 1190,
+      "word_count": 120
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

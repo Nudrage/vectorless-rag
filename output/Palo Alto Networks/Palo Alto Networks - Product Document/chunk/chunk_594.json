@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_594",
+  "section_number": "1.16.16.3",
+  "header": "Layer 3 Security Chain Guidelines",
+  "content": "Follow these guidelines to set up Layer 3 security chain devices to support decryption broker:\n• Configure security chain devices with Layer 3 interfaces to connect to the security chain\nnetwork. These Layer 3 interfaces must have an assigned IP address and subnet mask.\n• Do not include devices that modify IP or TCP headers in a security chain, or be sure to disable\nany features that perform these functions. If the security chain returns a session to the firewall\nwith a modified IP or TCP header, the firewall drops the session as it can no longer match it to\nthe original pre-decrypted session.\n• Set the default gateways for security chain devices:\n• For all security chain devices except the last device in the chain, configure the default\ngateway to be the IP address of the next inline device.\n• For the last security chain device, configure the default gateway to be the firewall’s\nSecondary Interface IP address. This ensures that the last device returns the traffic flow\nto the firewall. (When you configure a decryption forwarding profile, you’ll assign one of\nthe decryption forwarding interfaces to be the decryption broker Secondary Interface. See\nObjects > Decryption > Forwarding Profile > Secondary Interface, and use this interface’s IP\naddress).\n• If you configured the firewall to direct sessions through the security chain bidirectionally,\nyou must also set the default gateway of the first security chain device to be the firewall’s\nPrimary Interface IP address (When you configure a decryption forwarding profile, you’ll\nassign one of the decryption forwarding interfaces to be the decryption broker Primary\nInterface. See Objects > Decryption > Forwarding Profile > Primary Interface, and use this\ninterface’s IP address).\n• Confirm that the firewall and security chain can effectively communicate: check that the router\nthat directs traffic between the firewall and the security chain is configured correctly, and that\nsecurity chain devices are configured with static routes to appropriately direct traffic.\n• Security chain devices should not originate traffic to a network outside of the security chain.\nThe firewall blocks traffic that it cannot match to the original pre-decrypted session. However,\nif a security chain device requires Internet access to receive updates, make sure that the device\ncan access a separate network (for example, via the device’s management port) to facilitate\nthose updates.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1100\n©2025 Palo Alto Networks, Inc.\nDecryption\n• When configuring multiple security chains, it is a best practice to deploy enough security\nchains to provide excess capacity in the event of a security chain failure. If you enable the\nfirewall to perform Security Chain Health Checks, and a security chain fails, the firewall\ncontinues to distribute decrypted sessions among the healthy security chains. If there are not\nenough healthy chains to cover the additional load, that single security chain failure could\nresult in cascading failures as the remaining healthy security chains are oversubscribed.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1100,
+      "end": 1101
+    },
+    "content_stats": {
+      "char_count": 3080,
+      "word_count": 485
+    },
+    "hierarchy": {
+      "parent": "Decryption Broker",
+      "children": []
+    }
+  }
+}

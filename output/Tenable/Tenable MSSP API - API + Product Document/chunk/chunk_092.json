@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_092",
+  "section_number": "34",
+  "header": "Update logo",
+  "content": "Content type\nUpdates a logo in the Tenable MSSP Portal. This update overwrites the existing logo.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe UUID of the logo to update.\nREQUEST BODY SCHEMA:\nmultipart/form-data\nrequired\nstring <binary>\nThe logo to upload. The logo must be in PNG format and no larger than\n246x52 pixels.\nstring\nAn identifiable, user-defined name for the logo.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 60,
+      "end": 61
+    },
+    "content_stats": {
+      "char_count": 442,
+      "word_count": 69
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_150",
+  "section_number": "1.38.4",
+  "header": "Sample logs",
+  "content": "Message\nID\nLogs\n19021\nApr 18 01:12:33 10.146.6.96 device_name=\"SFW\" timestamp=\"2020-04-18T01:12:33+0200\"\ndevice_model=\"SF01V\" device_serial_id=\"SFDemo-ffef173\" log_id=\"158739519021\" log_type=\"SD-WAN\"\nlog_component=\"Profile\" log_subtype=\"Health check\" log_version=1 severity=\"Notification\"\nstatus=\"Available\" profile_id=2 profile_name=\"test_profile\" gw_id=4 gw_name=\"gw1\"\nmessage=\"Gateway gw1 (10.20.30.40) available. probe protocol TCP probe to 10.20.30.50\nsuccessful\"  probe_target=\"10.20.20.25, 10.212.212.5\" protocol=\"tcp\"\n19022\nApr 18 01:12:33 10.146.6.96 device_name=\"SFW\" timestamp=\"2020-04-18T01:12:33+0200\"\ndevice_model=\"SF01V\" device_serial_id=\"SFDemo-ffef173\" log_id=\"158739519022\" log_type=\"SD-WAN\"\nlog_component=\"Profile\" log_subtype=\"Health check\" log_version=1 severity=\"Notification\"\nstatus=\"Unavailable\" profile_id=2 profile_name=\"test_profile\" gw_id=4 gw_name=\"gw1\"\nmessage=\"Gateway gw1 (10.20.30.40) unavailable. probe protocol TCP probe to 10.20.30.50,\n10.20.30.60 failed\"  probe_target=\"10.20.20.25, 10.212.212.5\" protocol=\"tcp\"\n19026\nApr 18 01:12:33 10.146.6.96 device_name=\"SFW\" timestamp=\"2020-04-18T01:12:33+0200\"\ndevice_model=\"SF01V\" device_serial_id=\"SFDemo-ffef173\" log_id=\"158940519026\" log_type=\"SD-WAN\"\nlog_component=\"Route\" log_subtype=\"Route change\" log_version=1 severity=\"Notification\" status=\"\"\nprofile_id=2 profile_name=\"test_profile\" gw_id=4 gw_name=\"gw1\" message=\"SD-WAN route changed for\nSD-WAN profile test_profile1 from gateway gw2 (20.30.40.50) to gw1 (10.20.30.40)\"\nLog format name under crformatter.conf is CR_sdwan_SLA_met_log_fmt.\nSyslog Field\nName\nLog Viewer\nData Type Length Format/Description\nPossible Values\nNotes / Example\ntimestamp\nN/A\nTimestamp\nISO 8601\neg. timestamp=\"2018-12-\n07T10:03:48+0000\"\ndevice_name\nN/A\nString\nSFW\ndevice_model\nN/A\nString\nSF01V\ndevice_serial_id N/A\nString\nSFDemo-ff87495\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 172\nlog_id\nN/A\nString\neg.\nlog_id=\"010101600001\"\nlog_type\nlog_type\nString\nSD-WAN\neg. log_type=\"SD-WAN\"\nlog_component log_component String\nProfile\neg.\nlog_component=\"Profile\"\nlog_subtype\nlog_subtype\nString\nHealth check\neg. log_subtype=\"Health\ncheck\"\nlog_version\nN/A\nNumber\n1\neg. log_version=1\nseverity\nseverity\nString\nNotice\neg. severity=\"Notice\"\nstatus\nstatus\nString\nSLA met\nSLA not met\neg. status=\"SLA met\"\nprofile_id\nprofile_id\nNumber\neg. profile_id=123\nprofile_name\nprofile_name\nString\neg.\nprofile_name=\"test_profile\"\ngw_id\ngw_id\nNumber\neg. gw_id=2\ngw_name\ngw_name\nString\neg. gw_name=\"gw1\"\nlatency\nlatency\nNumber\n-1 if packet_loss is\n100%\neg. latency=123\njitter\njitter\nNumber\n-1 if packet_loss is\n100%\neg. jitter=123\npacket_loss\npacket_loss\nNumber\neg. packet_loss=123\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 173\nmessage\nmessage\nString\n•\nSLA met for\ngateway <name>\n(<IP\naddress>) using\nprobe target <IP\naddress>.\n•\nSLA not met for\ngateway <name>\n(<IP\naddress>) using\nprobe target <IP\naddress>.\neg. message=\"SLA met for\ngateway gw1 (10.20.30.40)\nusing probe target\n10.20.30.50\"\nprobe_target\nprobe_target\nString\n<IP Address>\nprobe_target=\"1.2.3.4,\n5.6.7.8\"\nprotocol\nprotocol\nString\nPING/TCP\nprotocol=\"PING\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 172,
+      "end": 174
+    },
+    "content_stats": {
+      "char_count": 3152,
+      "word_count": 322
+    },
+    "hierarchy": {
+      "parent": "Central Reporting Format",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_675",
+  "section_number": "1.19.2",
+  "header": "Site-to-Site VPN Overview",
+  "content": "A VPN connection that allows you to connect two Local Area Networks (LANs) is called a site-to-\nsite VPN. You can configure route-based VPNs to connect Palo Alto Networks firewalls located at\ntwo sites or to connect a Palo Alto Networks firewall with a third-party security device at another\nlocation. The firewall can also interoperate with third-party policy-based VPN devices; the Palo\nAlto Networks firewall supports route-based VPN.\nThe Palo Alto Networks firewall sets up a route-based VPN, where the firewall makes a routing\ndecision based on the destination IP address. If traffic is routed to a specific destination through a\nVPN tunnel, then it is handled as VPN traffic.\nThe IP Security (IPSec) set of protocols is used to set up a secure tunnel for the VPN traffic, and\nthe information in the TCP/IP packet is secured (and encrypted if the tunnel type is ESP). The IP\npacket (header and payload) is embedded in another IP payload, and a new header is applied and\nthen sent through the IPSec tunnel. The source IP address in the new header is that of the local\nVPN peer and the destination IP address is that of the VPN peer on the far end of the tunnel.\nWhen the packet reaches the remote VPN peer (the firewall at the far end of the tunnel), the\nouter header is removed and the original packet is sent to its destination.\nIn order to set up the VPN tunnel, first the peers need to be authenticated. After successful\nauthentication, the peers negotiate the encryption mechanism and algorithms to secure the\ncommunication. The Internet Key Exchange (IKE) process is used to authenticate the VPN peers,\nand IPSec Security Associations (SAs) are defined at each end of the tunnel to secure the VPN\ncommunication. IKE uses digital certificates or preshared keys, and the Diffie Hellman keys to set\nup the SAs for the IPSec tunnel. The SAs specify all of the parameters that are required for secure\ntransmission— including the security parameter index (SPI), security protocol, cryptographic keys,\nand the destination IP address—encryption, data authentication, data integrity, and endpoint\nauthentication.\nThe following figure shows a VPN tunnel between two sites. When a client that is secured\nby VPN Peer A needs content from a server located at the other site, VPN Peer A initiates a\nconnection request to VPN Peer B. If the security policy permits the connection, VPN Peer A uses\nthe IKE Crypto profile parameters (IKE phase 1) to establish a secure connection and authenticate\nVPN Peer B. Then, VPN Peer A establishes the VPN tunnel using the IPSec Crypto profile, which\ndefines the IKE phase 2 parameters to allow the secure transfer of data between the two sites.\nFigure 8: Site-to-Site VPN\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1248\n©2025 Palo Alto Networks, Inc.\nVPNs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1248,
+      "end": 1249
+    },
+    "content_stats": {
+      "char_count": 2787,
+      "word_count": 469
+    },
+    "hierarchy": {
+      "parent": "VPNs",
+      "children": []
+    }
+  }
+}

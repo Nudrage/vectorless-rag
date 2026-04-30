@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_861",
+  "section_number": "1.21.16.1",
+  "header": "NPTv6 Overview",
+  "content": "This section describes IPv6-to-IPv6 Network Prefix Translation (NPTv6) and how to configure it.\nNPTv6 is defined in RFC 6296. Palo Alto Networks does not implement all functionality defined in\nthe RFC, but is compliant with the RFC in the functionality it has implemented.\nNPTv6 performs stateless translation of one IPv6 prefix to another IPv6 prefix. It is stateless,\nmeaning that it does not keep track of ports or sessions on the addresses translated. NPTv6\ndiffers from NAT66, which is stateful. Palo Alto Networks supports NPTv6 RFC 6296 prefix\ntranslation; it does not support NAT66.\nWith the limited addresses in the IPv4 space, NAT was required to translate private, non-routable\nIPv4 addresses to one or more globally-routable IPv4 addresses.\nFor organizations using IPv6 addressing, there is no need to translate IPv6 addresses to IPv6\naddresses due to the abundance of IPv6 addresses. However, there are Reasons to Use NPTv6 to\ntranslate IPv6 prefixes at the firewall.\nNPTv6 translates the prefix portion of an IPv6 address but not the host portion or the application\nport numbers. The host portion is simply copied, and therefore remains the same on either side of\nthe firewall. The host portion also remains visible within the packet header.\n• NPTv6 Does Not Provide Security\n• Model Support for NPTv6\n• Unique Local Addresses\n• Reasons to Use NPTv6\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1507\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1507,
+      "end": 1508
+    },
+    "content_stats": {
+      "char_count": 1451,
+      "word_count": 233
+    },
+    "hierarchy": {
+      "parent": "NPTv6",
+      "children": [
+        "NPTv6 Does Not Provide Security",
+        "Model Support for NPTv6",
+        "Unique Local Addresses",
+        "Reasons to Use NPTv6"
+      ]
+    }
+  }
+}

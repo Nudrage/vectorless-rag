@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_413",
+  "section_number": "18.2",
+  "header": "Update object permissions",
+  "content": "Updates the permissions for a Tenable Vulnerability Management object.\nRequires the Basic [16] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nEnum: \"agent-group\"\n\"policy\"\n\"scan\"\n\"scanner\"\nThe type of object.\ninteger <int32>\nThe unique ID of the object (for example, scanner).\nobject_type\nrequired\nobject_id\nrequired\nContent type\nREQUEST BODY SCHEMA:\napplication/json\nobject",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 388,
+      "end": 389
+    },
+    "content_stats": {
+      "char_count": 393,
+      "word_count": 53
+    },
+    "hierarchy": {
+      "parent": "Permissions",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

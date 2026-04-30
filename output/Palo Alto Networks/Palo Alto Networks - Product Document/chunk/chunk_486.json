@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_486",
+  "section_number": "1.14.4",
+  "header": "Manage Device-ID",
+  "content": "Perform the following tasks as needed to ensure your policy rule recommendations and device\nobjects are current or to restore policy rule recommendation mappings.\nSTEP 1 |\nUpdate your policy rule recommendation whenever the New Updates Available column\ndisplays Yes for that recommendation.\nAs devices gain new capabilities, IoT Security updates the policy rule recommendations to\nadvise what additional traffic or protocols the firewall or Panorama should allow. Check IoT\nSecurity daily for updates and update your policy rule recommendations as soon as possible.\n1.\nOn the IoT Security app, Edit the policy rules then click Next.\n2.\nSelect the new recommendation then click Next.\n3.\nSave your changes.\n4.\nOn the firewall or Panorama, click Import Policy Rules then click Yes to confirm that you\nwant to overwrite the current rule.\nThis action overwrites the recommendation for the rule, not the rule itself.\n5.\n(Panorama only) Repeat the previous step for all device groups.\n6.\nCommit your changes.\nSTEP 2 |\nReview, update, and maintain the device objects in the Device Dictionary.\nYou must create device objects for any devices that do not have an IoT Security policy\nrule recommendation. For example, you cannot secure devices such as laptops and\nsmartphones using IoT Security policy rule recommendations, so you must create\ndevice objects for these types of devices and use them in your Security policy to secure\nthese devices.\n1.\nSelect Objects > Devices\n2.\nAdd a device object.\n3.\nBrowse the list or Search using keywords.\nThe search results can include multiple types of device object attributes (for example,\nboth Category and Profile).\n4.\nTo add a custom device object, enter a Name and optionally a Description for the device\nobject.\nAlways use a unique name for each device object. Do not change the tags in the\ndescription for device objects from policy rule recommendations.\n5.\n(Panorama only) Select the Shared option to make this device object available to other\ndevice groups.\n6.\nSelect the attributes for the device object (Category, OS, Profile, Osfamily, Model, and\nVendor).\n7.\nClick OK to confirm your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n878\n©2025 Palo Alto Networks, Inc.\nDevice-ID\nSTEP 3 |\nIn some cases (for example, if you restore a previous configuration), the policy rule\nrecommendation-to-policy rule mappings may become out of sync. You must also sync the\nmappings on each firewall after you push the policy rules from Panorama to the firewalls that\nPanorama manages. To sync the mappings:\n• On the firewall, select Device > Policy Recommendation > Sync Policy Rules\n• For Panorama, select Panorama > Policy Recommendation > Sync Policy Rules.\nThe firewall or Panorama scans all of the rules in the rulebase to check for tags that identify\na rule as an IoT Security policy rule recommendation, obtains the source device object\ninformation, and repopulates the local policy rule recommendation database.\nSTEP 4 |\nDelete any policy rule recommendations that are no longer needed.\nIf a policy rule recommendation no longer applies, you can remove the policy rule\nrecommendation. You must also remove the rule for the policy rule recommendation to\nenforce the updated Security policy.\n1.\nOn the IoT Security app, select Delete.\n2.\nClick Mark as Removed to select this recommendation for removal.\n3.\nRemove the mapping.\n• On the firewall, select Device > Policy Recommendation > Remove Policy Mapping.\n• For Panorama, select Device > Policy Recommendation > Remove Policy Mapping\nthen select the Location from which you want to remove the mapping.\n4.\nClick Yes to confirm the mapping removal.\n5.\nSelect Policies > Security. For Panorama, select Policies > Security > Pre-Rules/Post-\nRules.\n6.\nSelect the rule for the policy rule recommendation you want to remove then select\nDelete.\n7.\nCommit your changes.\nSTEP 5 |\nUse CLI commands to troubleshoot any issues between the firewall and IoT Security.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n879\n©2025 Palo Alto Networks, Inc.\nDevice-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 878,
+      "end": 880
+    },
+    "content_stats": {
+      "char_count": 4024,
+      "word_count": 651
+    },
+    "hierarchy": {
+      "parent": "Device-ID",
+      "children": []
+    }
+  }
+}

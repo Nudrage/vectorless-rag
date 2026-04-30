@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_004",
+  "section_number": "3",
+  "header": "Create evaluation account v2",
+  "content": "Content type\nContent type\nCreates an evaluation account.\nRequires ADMINISTRATOR [64] user permissions. See Permissions.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nstring\nThe name of the customer account.\nArray of strings (Licensed-Apps)\nAn array of strings defining the list of licensed Tenable applications\nFor example, [\"vm\", \"was\", \"lumin\"] . Valid strings include the\nfollowing:\nad—Tenable Identity Exposure\nasm—Tenable Attack Surface Management\nlumin—Tenable Lumin\none—Tenable One\nvm—Tenable Vulnerability Management\nwas—Tenable Web App Scanning\nstring\nThe default email address used for contacting the owner of the\nevaluation account. The domain name of the email address must\nmatch the MSSP partner's domain name.\nstring\nA unique username for the evaluation account. It must be in email\nformat, ex. customer@partner.com , and the domain name of the\nemail address must match the MSSP partner's domain name.\nstring\nThe primary contact's country in ISO 3166-1 alpha-2 format. Valid\ncountry codes are AU , BR , CA , EU , IN , JP , SG , UK , and\nUS .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 3,
+      "end": 4
+    },
+    "content_stats": {
+      "char_count": 1078,
+      "word_count": 166
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

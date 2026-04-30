@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_606",
+  "section_number": "1.17.5.1",
+  "header": "Security-Focused URL Categories",
+  "content": "Security-focused URL categories can help you to reduce your attack surface by providing targeted\ndecryption and enforcement for sites that pose varying levels of risk, but are not confirmed\nmalicious. Websites are classified with a security-related category only so long as they meet the\ncriteria for that category; as site content changes, policy enforcement dynamically adapts. You\ncannot submit a change request for security-focused URL Categories.\nSecurity-Focused URL Categories\nHigh-Risk\nHigh-risk sites include:\n• Sites previously confirmed to be malware, phishing, or\nC2 sites. These sites will remain in this category for at\nleast 30 days.\n• Unknown domains are classified as high-risk until PAN-\nDB completes site analysis and categorization.\n• Sites that are associated with confirmed malicious\nactivity. For example, a page might be high-risk if there\nare malicious hosts on the same domain, even if the\npage itself does not contain malicious content.\n• Bulletproof ISP-hosted sites.\n• Domains classified as DDNS due to the presence of an\nactive dynamic DNS configuration.\n• Sites hosted on IPs from ASNs that are known to allow\nmalicious content.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1118\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSecurity-Focused URL Categories\nDefault and Recommended Policy Action: Alert\nMedium-Risk\nMedium-risk sites include:\n• All cloud storage sites (with the URL category online-\nstorage-and-backup).\n• Sites previously confirmed to be malware, phishing, or\nC2 sites that have displayed only benign activity for at\nleast 30 days. These sites will remain in this category for\nan additional 60 days.\n• Unknown IP addresses are categorized as medium-\nrisk until PAN-DB completes site analysis and\ncategorization.\nDefault and Recommended Policy Action: Alert\nLow-Risk\nSites that are not medium or high risk are considered\nlow risk. These sites have displayed benign activity for a\nminimum of 90 days.\nDefault and Recommended Policy Action: Allow\nNewly-Registered Domains\nIdentifies sites that have been registered within the last\n32 days. New domains are frequently used as tools in\nmalicious campaigns.\nDefault Policy Action: Alert\nRecommended Policy Action: Block\nNewly-registered domains are often generated\npurposefully or by domain generation\nalgorithms and used for malicious activity. It is\na best practice to block this URL category.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1118,
+      "end": 1119
+    },
+    "content_stats": {
+      "char_count": 2381,
+      "word_count": 360
+    },
+    "hierarchy": {
+      "parent": "URL Categories",
+      "children": []
+    }
+  }
+}

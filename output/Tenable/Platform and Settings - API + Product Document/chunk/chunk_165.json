@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_165",
+  "section_number": "7.1",
+  "header": "View activity log",
+  "content": "Returns a list of activity log events for all users in your organization's Tenable Vulnerability\nManagement account.\nEach event includes details such as the timestamp, action taken, actor, and other relevant metadata.\nYou can apply filters to narrow the results and specify the number of events to return. By default, the\nresponse includes up to 50 events.\nFor more information, see Activity Logs in the developer documentation.\nNote: Tenable retains activity log data for three years, after which it is permanently deleted from the\ndatabase.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nArray of strings\nExample: f=action.eq:audit.log.view\nA filter condition in the field.operator:value  format. Filter conditions\ncan include:\ndate.gt:<ISO Date/Time>—Returns events only if the timestamp when\nthe events occurred is after the date or time you specify. For example:\nf=date.gt:2017-12-31 , f=date.gt:2017-12-\n31T13:14:15.678Z\nf\ndate.gte:<ISO Date/Time>—Returns events only if the timestamp when\nthe events occurred is at or after the date or time you specify. For\nexample: f=date.gte:2017-12-31 , f=date.gte:2017-12-\n31T13:14:15.678Z\ndate.lt:<ISO Date/Time>—Returns events only if the timestamp when\nthe events occurred is before the date or time you specify. For\nexample: f=date.lt:2017-12-31 , f=date.lt:2023-03-\n04T14:15:16.123-05:30\ndate.lte:<ISO Date/Time>—Returns events only if the timestamp when\nthe events occurred is at or before the date or time you specify. For\nexample: f=date.lte:2017-12-31 , f=date.lte:2023-03-\n04T14:15:16.123-05:30\nactor_id.eq:<UUID>—Returns only the events with a matching actor\nUUID. For example: f=actor_id.eq:ee512c41-282e-489c-a2cf-\n8bda1151e630\ntarget_id.eq:<UUID>—Returns only the events with a matching target\nUUID. For example: f=target_id.eq:ee512c41-282e-489c-a2cf-\n8bda1151e630\naction.eq:<String>—Returns only the events with a matching action. For\nexample: f=action.eq:audit.log.view\nYou can specify multiple f  parameters, separated by ampersand (&)\ncharacters. For example: ?f=date.gte:2019-12-30&f=date.lt:2019-\n12-31&f=actor_id.eq:f54eeec5-84e0-44bb-9ebe-\n64898bea0e59&limit=5000\nstring\nIf multiple f  parameters are present, specifies whether an AND or OR\ncondition is applied to the filters. Supported values are and  and or . If\nyou omit this parameter when using multiple f  parameters, Tenable\napplies and  by default.\ninteger <int32>\nExample: limit=5000\nThe maximum number of records to retrieve per request. If this parameter\nis omitted, Tenable uses the default value of 50 . For offset-based\npagination, the maximum number of events that can be retrieved in a single\npage is 10000. For example: limit=10000 . For cursor-based pagination,\nthe maximum number of events that can be retrieved in a single page is\n500.\nstring\nFor cursor-based pagination, the cursor position for the next page. For the\ninitial request, use a value 0 . For subsequent requests, set this parameter\nto the value found in the pagination.next  property of the previous\nresponse.\nft\nlimit\nnext\ninteger <int32>\nFor offset-based pagination, the starting record to retrieve. If this parameter\nis omitted, Tenable uses the default value of 0 .\nNote: Offset-based pagination is limited to 10,000 records. Use cursor-\nbased pagination ( next ) instead if you need to retrieve more than 10,000\nrecords.\nstring\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nsecond ( asc  or desc ). For example, received:desc  would sort\nresults by the received  field in descending order.\nNote: Currently, the only field that can be used to sort is received .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 149,
+      "end": 151
+    },
+    "content_stats": {
+      "char_count": 3722,
+      "word_count": 531
+    },
+    "hierarchy": {
+      "parent": "Activity Log",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

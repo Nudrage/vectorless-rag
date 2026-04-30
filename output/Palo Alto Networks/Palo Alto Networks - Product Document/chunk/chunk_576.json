@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_576",
+  "section_number": "1.16.15.4",
+  "header": "Unsupported Parameters by Proxy Type and TLS Version",
+  "content": "Decryption Log fields display decryption session parameters for each decryption proxy type.\nHowever, for reasons such as version support, encrypted portions of TLS handshakes, information\navailability, etc., some parameters are not available for every proxy type or TLS version. The\nfollowing table shows unsupported Decryption log parameters by proxy type and TLS version.\nProxy Type\nUnsupported Parameter\nTLS Version\nForward Proxy\nNegotiated EC Curve\nTLSv1.3\nServer Name Identification\nRoot Common Name\nAll\nInbound Inspection\nNegotiated EC Curve\nTLSv1.3\nNegotiated EC Curve\nServer Name Identification\nTLSv1.2\nNo Decrypt (No Decrypt action in the\nDecryption policy rule)\nNegotiated EC Curve\nServer Name Identification\nTLSv1.3\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1068\n©2025 Palo Alto Networks, Inc.\nDecryption\nProxy Type\nUnsupported Parameter\nTLS Version\nCertificate Information (all certificate\ninformation fields, for example,\nCertificate Start Date, Certificate End\nDate, Certificate Key Type, etc.)\nDecryption Broker\nNegotiated EC Curve\nTLSv1.3\nGlobalProtect Portal\nServer Name Identification\nRoot Common Name\nDecryption policy name\nApp-ID\nAll\nGlobalProtect Gateway\nServer Name Identification\nDecryption policy name\nApp-ID\nAll\nClientless SSLVPN\nServer Name Identification\nAll\nSSH\nDecryption Log Not Supported\nCleartext\nDecryption Log Not Supported",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1068,
+      "end": 1069
+    },
+    "content_stats": {
+      "char_count": 1356,
+      "word_count": 183
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot and Monitor Decryption",
+      "children": []
+    }
+  }
+}

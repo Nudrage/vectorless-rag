@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_116",
+  "section_number": "1.6.8.2",
+  "header": "Sample init-cfg.txt Files",
+  "content": "An init-cfg.txt file is required for the bootstrap process; this file is a basic configuration file that\nyou create using a text editor. To create this file, see Create the init-cfg.txt file. The following\nsample init-cfg.txt files show the parameters that are supported in the file; the parameters that\nyou must provide are in bold.\nSample init-cfg.txt (Static IP Address)\nSample init-cfg.txt (DHCP Client)\ntype=static\nip-address=10.5.107.19\ndefault-gateway=10.5.107.1\nnetmask=255.255.255.0\nipv6-address=2001:400:f00::1/64\nipv6-default-\ngateway=2001:400:f00::2\nhostname=Ca-FW-DC1\npanorama-server=10.5.107.20\npanorama-server-2=10.5.107.21\ntplname=FINANCE_TG4\ndgname=finance_dg\ndns-primary=10.5.6.6\ndns-secondary=10.5.6.7\nop-command-modes=multi-\nvsys,jumbo-frame\ndhcp-send-hostname=no\ndhcp-send-client-id=no\ndhcp-accept-server-hostname=no\ndhcp-accept-server-domain=no\ntype=dhcp-client\nip-address=\ndefault-gateway=\nnetmask=\nipv6-address=\nipv6-default-gateway=\nhostname=Ca-FW-DC1\npanorama-server=10.5.107.20\npanorama-server-2=10.5.107.21\ntplname=FINANCE_TG4\ndgname=finance_dg\ndns-primary=10.5.6.6\ndns-secondary=10.5.6.7\nop-command-modes=multi-\nvsys,jumbo-frame\ndhcp-send-hostname=yes\ndhcp-send-client-id=yes\ndhcp-accept-server-\nhostname=yes\ndhcp-accept-server-domain=yes\nThe following table describes the fields in the init-cfg.txt file. The type is required; if the type is\nstatic, the IP address, default gateway and netmask are required, or the IPv6 address and IPv6\ndefault gateway are required.\nField\nDescription\ntype\n(Required) Type of management IP address: static or dhcp-client.\nip-address\n(Required for IPv4 static management address) IPv4 address. The\nfirewall ignores this field if the type is dhcp-client.\ndefault-gateway\n(Required for IPv4 static management address) IPv4 default\ngateway for the management interface. The firewall ignores this\nfield if the type is dhcp-client.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n224\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nField\nDescription\nnetmask\n(Required for IPv4 static management address) IPv4 netmask. The\nfirewall ignores this field if the type is dhcp-client.\nipv6-address\n(Required for IPv6 static management address) IPv6 address and /\nprefix length of the management interface. The firewall ignores this\nfield if the type is dhcp-client.\nipv6-default-gateway\n(Required for IPv6 static management address) IPv6 default\ngateway for the management interface. The firewall ignores this\nfield if the type is dhcp-client.\nhostname\n(Optional) Host name for the firewall.\npanorama-server\n(Recommended) IPv4 or IPv6 address of the primary Panorama\nserver.\npanorama-server-2\n(Optional) IPv4 or IPv6 address of the secondary Panorama server.\ntplname\n(Recommended) Panorama template name.\ndgname\n(Recommended) Panorama device group name.\ndns-primary\n(Optional) IPv4 or IPv6 address of the primary DNS server.\ndns-secondary\n(Optional) IPv4 or IPv6 address of the secondary DNS server.\nvm-auth-key\n(VM-Series firewalls only) Virtual machine authentication key.\nop-command-modes\n(Optional) Enter multi-vsys, jumbo-frame, or both separated by a\ncomma only. Enables multiple virtual systems and jumbo frames\nwhile bootstrapping.\ndhcp-send-hostname\n(DHCP client type only) The DHCP server determines a value of yes\nor no. If yes, the firewall sends its hostname to the DHCP server.\ndhcp-send-client-id\n(DHCP client type only) The DHCP server determines a value of yes\nor no. If yes, the firewall sends its client ID to the DHCP server.\ndhcp-accept-server-\nhostname\n(DHCP client type only) The DHCP server determines a value of\nyes or no. If yes, the firewall accepts its hostname from the DHCP\nserver.\ndhcp-accept-server-\ndomain\n(DHCP client type only) The DHCP server determines a value of\nyes or no. If yes, the firewall accepts its DNS server from the DHCP\nserver.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n225\n©2025 Palo Alto Networks, Inc.\nFirewall Administration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 224,
+      "end": 226
+    },
+    "content_stats": {
+      "char_count": 3927,
+      "word_count": 494
+    },
+    "hierarchy": {
+      "parent": "Bootstrap the Firewall",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_287",
+  "section_number": "1.11.5.5.1",
+  "header": "Take a Packet Capture for Unknown Applications",
+  "content": "Palo Alto Networks firewalls automatically generate a packet capture for sessions that contain an\napplication that the firewall cannot identify. Typically, the only applications that are classified as\nunknown traffic—tcp, udp, or non-syn-tcp—are commercially available applications that do not yet\nhave App-ID signatures, are internal or custom applications on your network, or potential threats.\nYou can use these packet captures to gather more context related to the unknown application\nor use the information to analyze the traffic for potential threats. You can also Manage Custom\nor Unknown Applications by controlling them through security policy or by writing a custom\napplication signature and then creating a security rule based on the custom signature. If the\napplication is a commercial application, you can submit the packet capture to Palo Alto Networks\nto have an App-ID signature created.\nSTEP 1 |\nVerify that unknown application packet capture is enabled (this option is enabled by default).\n1.\nTo view the unknown application capture setting, run the following CLI command:\nadmin@PA-220>show running application setting | match “Unknown\ncapture”\n2.\nIf the unknown capture setting option is off, enable it:\nadmin@PA-220>set application dump-unknown yes\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n512\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 2 |\nLocate unknown TCP and UDP applications by filtering the traffic logs.\n1.\nSelect Monitor > Logs > Traffic.\n2.\nClick Add Filter, create the unknown TCP portion of the filter (Connector = “and”,\nAttribute = “Application”, Operator = “equal”, and enter “unknown-tcp” as the Value),\nand then click Add to add the query to the filter.\n3.\nCreate the unknown UDP portion of the filter (Connector = “or”, Attribute =\n“Application”, Operator = “equal”, and enter “unknown-udp” as the Value), and then click\nAdd to add the query to the filter.\n4.\nClick Apply to place the filter in the log screen query field.\nSTEP 3 |\nClick the Apply Filter arrow next to the query field to run the filter and then click the packet\ncapture icon\nto view the packet capture or Export it to your local system.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n513\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 512,
+      "end": 514
+    },
+    "content_stats": {
+      "char_count": 2232,
+      "word_count": 355
+    },
+    "hierarchy": {
+      "parent": "Take an Application Packet Capture",
+      "children": []
+    }
+  }
+}

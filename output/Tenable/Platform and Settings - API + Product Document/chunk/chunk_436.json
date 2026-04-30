@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_436",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the specified profile was successfully cloned.\nRESPONSE SCHEMA:\napplication/json\nstring <uuid>\nThe unique identifier (UUID) of the cloned profile.\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\nsensor_type\nrequired\nprofile_uuid\nrequired\nname\nrequired\ndescription\nuuid\nRESPONSE SCHEMA:\napplication/json\nstring\nA brief description of the error.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 403 Returned if you do not have permission to clone profiles.\n— 404 Returned if the specified profile was not found.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\nerror\nstatusCode\nerror\nmessage\nstatusCode\nerror\nmessage",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 409,
+      "end": 410
+    },
+    "content_stats": {
+      "char_count": 1162,
+      "word_count": 180
+    },
+    "hierarchy": {
+      "parent": "Clone profile",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

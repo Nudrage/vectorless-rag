@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_916",
+  "section_number": "1.21.21.4.1",
+  "header": "Security Policy Rules Based on ICMP and ICMPv6 Packets",
+  "content": "The firewall forwards ICMP or ICMPv6 packets only if a security policy rule allows the session (as\nthe firewall does for other packet types). The firewall determines a session match in one of two\nways, depending on whether the packet is an ICMP or ICMPv6 error packet or redirect packet as\nopposed to an ICMP or ICMPv6 informational packet:\n• ICMP Types 3, 5, 11, and 12 and ICMPv6 Types 1, 2, 3, 4, and 137—The firewall by default\nlooks up the embedded IP packet bytes of information from the original datagram that caused\nthe error (the invoking packet). If the embedded packet matches an existing session, the\nfirewall forwards or drops the ICMP or ICMPv6 packet according to the action specified in the\nsecurity policy rule that matches that same session. (You can use Zone Protection Profiles with\npacket based attack protection to override this default behavior for the ICMPv6 types.)\n• Remaining ICMP or ICMPv6 Packet Types—The firewall treats the ICMP or ICMPv6 packet as\nif it belongs to a new session. If a security policy rule matches the packet (which the firewall\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1560\n©2025 Palo Alto Networks, Inc.\nNetworking\nrecognizes as an icmp or ipv6-icmp session), the firewall forwards or drops the packet based\non the security policy rule action. Security policy counters and traffic logs reflect the actions.\nIf no security policy rule matches the packet, the firewall applies its default security policy\nrules, which allow intrazone traffic and block interzone traffic (logging is disabled by default for\nthese rules).\nAlthough you can override the default rules to enable logging or change the default\naction, we don’t recommend you change the default behavior for a specific case\nbecause it will impact all traffic that those default rules affect. Instead, create security\npolicy rules to control and log ICMP or ICMPv6 packets explicitly.\nThere are two ways to create explicit security policy rules to handle ICMP or ICMPv6 packets\nthat are not error or redirect packets:\n• Create a security policy rule to allow (or deny) all ICMP or ICMPv6 packets—In the security\npolicy rule, specify the application icmp or ipv6-icmp; the firewall allows (or denies) all\nIP packets matching the ICMP protocol number (1) or ICMPv6 protocol number (58),\nrespectively, through the firewall.\n• Create a custom application and a security policy rule to allow (or deny) packets from or\nto that application—This more granular approach allows you to Control Specific ICMP or\nICMPv6 Types and Codes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1560,
+      "end": 1561
+    },
+    "content_stats": {
+      "char_count": 2529,
+      "word_count": 416
+    },
+    "hierarchy": {
+      "parent": "ICMP",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_066",
+  "section_number": "1.18.15",
+  "header": "Groups",
+  "content": "GET\nURL: https://<vectra_portal_url>/api/v3.4/groups/<group_id>\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"id\": 5,\n\"name\": \"test_group\",\n\"description\": \"a test group\",\n\"last_modified\": \"2022-11-18T18:21:34Z\",\n\"last_modified_by\": \"API Client c628cdee\",\n\"type\": \"account\",\n\"members\": [\n{\n\"uid\": “name_1”\n},\n{\n\"uid\": “name_2”\n}\n],\n\"rules\": [],\n\"importance\": \"high\"\n}\nPOST\nURL: https://<vectra_portal_url>/api/v3.4/groups\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nMembers:\nMembers are added to the “members” list in the body. The member value added depends on the group type.\n-\nAccount Members:\nAdded by uuid\n-\nHost Members:\nAdded by name, ID, or url\n-\nIP Members:\nAdded by IP address\n-\nDomain Members:\nAdded by domain\nBody:\n{\n\"name\": \"test_group\",\n© July 2024 Vectra AI, Inc. | 112\n\"type\": \"account\",\n\"members\":[\n\"name_1\",\"name_2\"\n],\n\"description\": \"a test group\",\n\"importance\": \"high\"\n}\nResponse:\n{\n\"group\": {\n\"id\": 5\n}\n}\nPATCH\nPATCH method can be used to modify existing groups. A PATCH is a partial override, so the format can include one\nor more fields from the POST.\nWhen using the default PATCH functionality to modify the members, a complete new list must be included. For\nexample, if a group already contains accounts “acct1@test.com”, and “acct2@test.com”, and the group should be\nmodified to include account “acct5@test.com”, then “acct5@test.com” should be added to the list, the members\nfield of the PATCH request should be “acct1@test.com”,“acct2@test.com”,“acct1@test.com”.\nAlternatively, the “membership_action” query parameter can be passed in with a value of “replace”, “append”, or\n“remove”. The “append” and “remove” values will only affect members listed in the request body; if a user wants to\nadd or remove account “acct1@test.com” for a group, then the user can pass the members field of\n“acct1@test.com”  in the request body with the appropriate value of “membership_action”. The “replace” value will\nperform the default PATCH behavior.\nURL: https://<vectra_portal_url>/api/v3.4/groups/<group_id>\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nBody:\n{\n\"name\": \"test_group new name\"\n}\nResponse:\n{\n\"id\": 5,\n© July 2024 Vectra AI, Inc. | 113\n\"name\": \"test_group new name\",\n\"description\": \"a test group\",\n\"last_modified\": \"2022-11-18T18:28:11Z\",\n\"last_modified_by\": \"API Client c628cdee\",\n\"type\": \"account\",\n\"members\": [\n{\n\"uid\": “name_1”\n},\n{\n\"uid\": “name_2”\n}\n],\n\"rules\": [],\n\"importance\": \"high\"\n}\nDELETE\nURL: https://<vectra_portal_url>/api/v3.4/groups/<group_id>\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 111,
+      "end": 113
+    },
+    "content_stats": {
+      "char_count": 2637,
+      "word_count": 353
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

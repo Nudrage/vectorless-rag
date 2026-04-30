@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_502",
+  "section_number": "1.15.4.5",
+  "header": "See Infected Hosts that Attempted to Connect to a Malicious Domain",
+  "content": "Domain\nAfter you have configured DNS sinkholing and verified that traffic to a malicious domain goes to\nthe sinkhole address, you should regularly monitor traffic to the sinkhole address, so that you can\ntrack down the infected hosts and eliminate the threat.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n920\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nUse App Scope to identify infected client hosts.\n1.\nSelect Monitor > App Scope and select Threat Monitor.\n2.\nClick the Show spyware button along the top of the display page.\n3.\nSelect a time range.\nThe following screenshot shows three instances of Suspicious DNS queries, which were\ngenerated when the test client host performed an NSLOOKUP on a known malicious\ndomain. Click the graph to see more details about the event.\nConfigure a custom report to identify all client hosts that have sent traffic to the sinkhole IP\naddress, which is 10.15.0.20 in this example.\nForward to an SNMP manager, Syslog server and/or Panorama to enable alerts on\nthese events.\nIn this example, the infected client host performed an NSLOOKUP to a known malicious\ndomain that is listed in the Palo Alto Networks DNS Signature database. When this occurred,\nthe query was sent to the local DNS server, which then forwarded the request through\nthe firewall to an external DNS server. The firewall security policy with the Anti-Spyware\nprofile configured matched the query to the DNS Signature database, which then forged the\nreply using the sinkhole address of 10.15.0.20 and fd97:3dec:4d27:e37c:5:5:5:5. The client\nattempts to start a session and the traffic log records the activity with the source host and the\ndestination address, which is now directed to the forged sinkhole address.\nViewing the traffic log on the firewall allows you to identify any client host that is sending\ntraffic to the sinkhole address. In this example, the logs show that the source address\n192.168.2.10 sent the malicious DNS query. The host can then be found and cleaned. Without\nthe DNS sinkhole option, the administrator would only see the local DNS server as the system\nthat performed the query and would not see the client host that is infected. If you attempted\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n921\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nto run a report on the threat log using the action “Sinkhole”, the log would show the local DNS\nserver, not the infected host.\n1.\nSelect Monitor > Manage Custom Reports.\n2.\nClick Add and Name the report.\n3.\nDefine a custom report that captures traffic to the sinkhole address as follows:\n• Database—Select Traffic Log.\n• Scheduled—Enable Scheduled and the report will run every night.\n• Time Frame—30 days\n• Selected Columns—Select Source address or Source User (if you have User-ID\nconfigured), which will identify the infected client host in the report, and Destination\naddress, which will be the sinkhole address.\n• In the section at the bottom of the screen, create a custom query for traffic to the\nsinkhole address (10.15.0.20 in this example). You can either enter the destination\naddress in the Query Builder window (addr.dst in 10.15.0.20) or select the following\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n922\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nin each column and click Add: Connector = and, Attribute = Destination Address,\nOperator = in, and Value = 10.15.0.20. Click Add to add the query.\n4.\nClick Run Now to run the report. The report will show all client hosts that have sent\ntraffic to the sinkhole address, which indicates that they are most likely infected. You can\nnow track down the hosts and check them for spyware.\n5.\nTo view scheduled reports that have run, select Monitor > Reports.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n923\n©2025 Palo Alto Networks, Inc.\nThreat Prevention",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 920,
+      "end": 924
+    },
+    "content_stats": {
+      "char_count": 3786,
+      "word_count": 623
+    },
+    "hierarchy": {
+      "parent": "Use DNS Queries to Identify Infected Hosts on the Network",
+      "children": []
+    }
+  }
+}

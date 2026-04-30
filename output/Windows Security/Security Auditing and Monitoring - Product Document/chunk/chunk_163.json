@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_163",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4657(S): A registry value was modified.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.\n\n\nIf you have a pre-defined “Process Name” for the process reported in this event, monitor all events with “Process Name” not equal to your defined value.\n\nIf Object Name is a sensitive or critical registry key for which you need to monitor any modification of its values, monitor all 4657 events.\n\nIf Object Name has specific values (Object Value Name) and you need to monitor modifications of these values, monitor for all 4657 events.\n5039(-): A registry key was virtualized.\nThis event should be generated when registry key was virtualized using LUAFV.\nThis event occurs very rarely during during standard LUAFV registry key virtualization.\nThere is no example of this event in this document.\nEvent Schema:\nA registry key was virtualized.\nSubject:\nSecurity ID:%1%\nAccount Name:%2\nAccount Domain:%3\nLogon ID:%4\nObject:\nKey Name:%5\nVirtual Key Name:%6\nProcess Information:\nProcess ID:%7\nProcess Name%8\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 487,
+      "end": 487
+    },
+    "content_stats": {
+      "char_count": 1235,
+      "word_count": 193
+    },
+    "hierarchy": {
+      "parent": "Audit Registry",
+      "children": []
+    }
+  }
+}

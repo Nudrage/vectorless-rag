@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_118",
+  "section_number": "1.6.8.4",
+  "header": "Bootstrap a Firewall Using a USB Flash Drive",
+  "content": "After you receive a new Palo Alto Networks firewall and a USB flash drive loaded with bootstrap\nfiles, you can bootstrap the firewall.\nMicrosoft Windows and Apple Mac operating systems are unable to read the bootstrap\nUSB flash drive because the drive is formatted using an ext4 file system. You must install\nthird-party software or use a Linux system to read the USB drive.\nSTEP 1 |\nThe firewall must be in a factory default state or must have all private data deleted.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n228\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nSTEP 2 |\nTo ensure connectivity with your corporate headquarters, cable the firewall by connecting\nthe management interface (MGT) using an Ethernet cable to one of the following:\n• An upstream modem\n• A port on the switch or router\n• An Ethernet jack in the wall\nSTEP 3 |\nInsert the USB flash drive into the USB port on the firewall and power on the firewall. The\nfactory default firewall bootstraps itself from the USB flash drive.\nThe firewall Status light turns from yellow to green when the firewall is configured;\nautocommit is successful.\nSTEP 4 |\nVerify bootstrap completion. You can see basic status logs on the console during the\nbootstrap and you can verify that the process is complete.\n1.\nIf you included Panorama values (panorama-server, tplname, and dgname) in your init-\ncfg.txt file, check Panorama managed devices, device group, and template name.\n2.\nVerify the general system settings and configuration by accessing the web interface and\nselecting Dashboard > Widgets > System or by using the CLI operational commands\nshow system info and show config running.\n3.\nVerify the license installation by selecting Device > Licenses or by using the CLI\noperational command request license info.\n4.\nIf you have Panorama configured, manage the content versions and software versions\nfrom Panorama. If you do not have Panorama configured, use the web interface to\nmanage content versions and software versions.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n229\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 228,
+      "end": 229
+    },
+    "content_stats": {
+      "char_count": 2065,
+      "word_count": 340
+    },
+    "hierarchy": {
+      "parent": "Bootstrap the Firewall",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_335",
+  "section_number": "1.11.13",
+  "header": "Configure Email Alerts",
+  "content": "You can configure email alerts for System, Config, HIP Match, Correlation, Threat, WildFire\nSubmission, and Traffic logs. You can use separate profiles to send email notifications for each log\ntype to a different server. To increase availability, define multiple servers (up to four) in a single\nprofile.\nAs a best practice, configure transport layer security (TLS) to require the firewall to\nauthenticate with the email server before the firewall relays email to the server. This helps\nprevent malicious activity, such as Simple Mail Transfer Protocol (SMTP) relay, which can\nbe used to send spam or malware, and email spoofing, which can be used for phishing\nattacks.\nSTEP 1 |\n(Required for SMTP over TLS) If you have not already done so, create a certificate profile for\nthe email server.\nSTEP 2 |\nSelect Device > Server Profiles > Email.\nSTEP 3 |\nAdd an email server profile and enter a Name.\nSTEP 4 |\nFrom the read-only window that appears, Add the email server and enter a Name.\nSTEP 5 |\nIf the firewall has more than one virtual system (vsys), select the Location (vsys or Shared)\nwhere this profile is available.\nSTEP 6 |\n(Optional) Enter an Email Display Name to specify the name to display in the From field of\nthe email.\nSTEP 7 |\nEnter the email address From which the firewall sends emails.\nSTEP 8 |\nEnter the email address To which the firewall sends emails.\nSTEP 9 |\n(Optional) If you want to send emails to a second account, enter the address of the\nAdditional Recipient. You can add only one additional recipient. For multiple recipients, add\nthe email address of a distribution list.\nSTEP 10 | Enter the IP address or hostname of the Email Gateway to use for sending emails.\nSTEP 11 | Select the Type of protocol to use to connect to the email server:\n• Unauthenticated SMTP—Use SMTP to connect to the email server without authentication.\nThe default Port is 25, but you can optionally specify a different port. This protocol does\nnot provide the same security as SMTP over TLS, but if you select this protocol, skip the\nnext step.\n• SMTP over TLS—(Recommended) Use TLS to require authentication to connect to the email\nserver. Continue to the next step to configure the TLS authentication.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n561\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 12 | (SMTP over TLS only) Configure the firewall to use TLS authentication to connect to the\nemail server.\n1.\n(Optional) Specify the Port to use to connect to the email server (default is 587).\n2.\nTLS Version—Specify the TLS version (1.1 or 1.2).\nPalo Alto Networks strongly recommends using the latest TLS version.\n3.\nSelect the Authentication Method for the firewall and the email server:\n• Auto—Allow the firewall and the email server to determine the authentication\nmethod.\n• Login—Use Base64 encoding for the username and password and transmit them\nseparately.\n• Plain—Use Base64 encoding for the username and password and transmit them\ntogether.\n4.\nSelect a Certificate Profile to authenticate with the email server.\n5.\nEnter the Username and Password of the account that sends the emails, then Confirm\nPassword.\n6.\n(Optional) To confirm that the firewall can successfully authenticate with the email\nserver, you can Test Connection.\nSTEP 13 | Click OK to save the Email server profile.\nSTEP 14 | (Optional) Select the Custom Log Format tab and customize the format of the email\nmessages. For details on how to create custom formats for the various log types, refer to the\nCommon Event Format Configuration Guide.\nSTEP 15 | Configure email alerts for Traffic, Threat, and WildFire Submission logs.\n1.\nSee Create a Log Forwarding profile.\n1. Select Objects > Log Forwarding, click Add, and enter a Name to identify the profile.\n2. For each log type and each severity level or WildFire verdict, select the Email server\nprofile and click OK.\n2.\nSee Assign the Log Forwarding profile to policy rules and network zones.\nSTEP 16 | Configure email alerts for System, Config, HIP Match, and Correlation logs.\n1.\nSelect Device > Log Settings.\n2.\nFor System and Correlation logs, click each Severity level, select the Email server profile,\nand click OK.\n3.\nFor Config and HIP Match logs, edit the section, select the Email server profile, and click\nOK.\n4.\nClick Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n562\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 561,
+      "end": 563
+    },
+    "content_stats": {
+      "char_count": 4352,
+      "word_count": 738
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

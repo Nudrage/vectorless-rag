@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_921",
+  "section_number": "1.21.21.8",
+  "header": "Session Distribution Policies",
+  "content": "Session distribution policies define how PA-5200 and PA-7000 Series firewalls distribute security\nprocessing (App-ID, Content-ID, URL filtering, SSL decryption, and IPSec) among dataplane\nprocessors (DPs) on the firewall. Each policy is specifically designed for a certain type of network\nenvironment and firewall configuration to ensure that the firewall distributes sessions with\nmaximum efficiency. For example, the Hash session distribution policy is best fit for environments\nthat use large scale source NAT.\nThe number of DPs on a firewall varies based on the firewall model:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1568\n©2025 Palo Alto Networks, Inc.\nNetworking\nFirewall Model\nDataplane Processor(s)\nPA-7000 Series\nDepends on the number of installed Network Processing Cards\n(NPCs). Each NPC has multiple dataplane processors (DPs) and you\ncan install multiple NPCs in the firewall.\nPA-5220 firewall\n1\nThe PA-5220 firewall has only one DP so sessions\ndistribution policies do not have an effect. Leave the policy\nset to the default (round-robin).\nPA-5250 firewall\n2\nPA-5260 and\nPA-5280 firewalls\n3\nThe following topics provide information about the available session distribution policies, how to\nchange an active policy, and how to view session distribution statistics.\n• Session Distribution Policy Descriptions\n• Change the Session Distribution Policy and View Statistics",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1568,
+      "end": 1569
+    },
+    "content_stats": {
+      "char_count": 1382,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "Session Settings and Timeouts",
+      "children": [
+        "Session Distribution Policy Descriptions",
+        "Change the Session Distribution Policy and View Statistics"
+      ]
+    }
+  }
+}

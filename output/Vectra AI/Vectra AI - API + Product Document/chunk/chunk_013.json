@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_013",
+  "section_number": "1.8",
+  "header": "Mark/Unmark Detections as Fixed",
+  "content": "Marking a detection as Fixed indicates that some remedial action was taken based upon the detection.\nThreat and Certainty scores will both be 0 once a detection has been marked as fixed.\nMarking/unmarking a detection as fixed requires the following elements be present in the request body:\n•\ndetectionIdList\n•\nmark_as_fixed\nURL to mark/unmark a detection as fixed is\nhttps://<vectra_portal_url>/api/v3.4/detections.\nAn example of using the PATCH method to mark or unmark a detection as fixed can be found in\nAppendix A.\n© July 2024 Vectra AI, Inc. | 23",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 22,
+      "end": 23
+    },
+    "content_stats": {
+      "char_count": 552,
+      "word_count": 89
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": [
+        "Detection PCAP API"
+      ]
+    }
+  }
+}

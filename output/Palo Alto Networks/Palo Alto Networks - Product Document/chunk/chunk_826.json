@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_826",
+  "section_number": "1.21.12.8",
+  "header": "Use Case 2: ISP Tenant Uses DNS Proxy to Handle DNS Resolution for Security Policies, Reporting, and Services within its Virtual System",
+  "content": "Resolution for Security Policies, Reporting, and Services within its\nVirtual System\nIn this use case, multiple tenants (ISP subscribers) are defined on the firewall and each tenant is\nallocated a separate virtual system (vsys) and virtual router in order to segment its services and\nadministrative domains. The following figure illustrates several virtual systems within a firewall.\nEach tenant has its own server profiles for Security policy rules, reporting, and management\nservices (such as email, Kerberos, SNMP, syslog, and more) defined in its own networks.\nFor the DNS resolutions initiated by these services, each virtual system is configured with its\nown DNS Proxy Object to allow each tenant to customize how DNS resolution is handled within\nits virtual system. Any service with a Location will use the DNS Proxy object configured for\nthe virtual system to determine the primary (or secondary) DNS server to resolve FQDNs, as\nillustrated in the following figure.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1464\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 1 |\nFor each virtual system, specify the DNS Proxy to use.\n1.\nSelect Device > Virtual Systems and Add the ID of the virtual system (range is 1-255),\nand an optional Name, in this example, Corp1 Corporation.\n2.\nOn the General tab, choose a DNS Proxy or create a new one. In this example, Corp1\nDNS Proxy is selected as the proxy for Corp1 Corporation’s virtual system.\n3.\nFor Interfaces, click Add. In this example, Ethernet1/20 is dedicated to this tenant.\n4.\nFor Virtual Routers, click Add. A virtual router named Corp1 VR is assigned to the virtual\nsystem in order to separate routing functions.\n5.\nClick OK.\nSTEP 2 |\nConfigure a DNS Proxy and a server profile to support DNS resolution for a virtual system.\n1.\nSelect Network > DNS Proxy and click Add.\n2.\nClick Enable and enter a Name for the DNS Proxy.\n3.\nFor Location, select the virtual system of the tenant, in this example, Corp1 Corporation\n(vsys6). (You could choose the Shared DNS Proxy resource instead.)\n4.\nFor Server Profile, choose or create a profile to customize DNS servers to use for DNS\nresolutions for this tenant’s security policy, reporting, and server profile services.\nIf the profile is not already configured, in the Server Profile field, click DNS Server\nProfile to Configure a DNS Server Profile.\nThe DNS server profile identifies the IP addresses of the primary and secondary DNS\nserver to use for management DNS resolutions for this virtual system.\n5.\nAlso for this server profile, optionally configure a Service Route IPv4 and/or a Service\nRoute IPv6 to instruct the firewall which Source Interface to use in its DNS requests. If\nthat interface has more than one IP address, configure the Source Address also.\n6.\nSelect the Advanced tab. Ensure that Cache is enabled and Cache EDNS Responses is\nenabled (both are enabled by default). This is required if the DNS proxy object is used\nunder Device > Virtual Systems > vsys > General > DNS Proxy.\n7.\nClick OK.\n8.\nClick OK and Commit.\nOptional advanced features such as split DNS can be configured using DNS\nProxy Rules. A separate DNS server profile can be used to redirect DNS\nresolutions matching the Domain Name in a DNS Proxy Rule to another set of\nDNS servers, if required. Use Case 3 illustrates split DNS.\nIf you use two separate DNS server profiles in the same DNS Proxy object, one for the\nDNS Proxy and one for the DNS proxy rule, the following behaviors occur:\n• If a service route is defined in the DNS server profile used by the DNS Proxy, it takes\nprecedence and is used.\n• If a service route is defined in the DNS server profile used in the DNS proxy rules,\nit is not used. If the service route differs from the one defined in the DNS server\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1465\n©2025 Palo Alto Networks, Inc.\nNetworking\nprofile used by the DNS Proxy, the following warning message is displayed during the\nCommit process:\nWarning: The DNS service route defined in the DNS proxy object\nis different from the DNS proxy rule’s service route. Using\nthe DNS proxy object’s service route.\n• If no service route is defined in any DNS server profile, the global service route is\nused if needed.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1464,
+      "end": 1466
+    },
+    "content_stats": {
+      "char_count": 4205,
+      "word_count": 719
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

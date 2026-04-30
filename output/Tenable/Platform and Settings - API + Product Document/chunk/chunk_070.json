@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_070",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "user_id\nrequired\npermissions\nname\nemail\nenabled\n200 Returned if Tenable Vulnerability Management successfully updated the user.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe UUID of the user.\ninteger\nThe unique ID of the user.\nstring\nThe username for the user.\nstring\nThe username for the user.\nstring\nThe email address of the user. If this attribute is empty, Tenable\nVulnerability Management uses the username  value as the user's\nemail address.\nstring\nThe name of the user (for example, first and last name).\nstring\nThe type of user. The only supported type is local .\ninteger <int32>\nThe user permissions as described in Permissions.\ninteger\nThe time (in Unix milliseconds) of the last time the user failed to log\nin to the Tenable Vulnerability Management user interface. This\nattribute is only present if the user has attempted unsuccessfully to\nlog in to the Tenable Vulnerability Management user interface.\ninteger\nThe number of failed login attempts since the user last successfully\nlogged in to the Tenable Vulnerability Management user interface.\nIf this attribute is greater than 5, Tenable Vulnerability Management\nlocks the user account (that is, updates the lockout  attribute for\nthe user to 1 .)\nYou can reset this count to 0  by changing the user's password or\ngenerating the user's API keys.\nuuid\nid\nuser_name\nusername\nemail\nname\ntype\npermissions\nlast_login_attempt\nlogin_fail_count\ninteger\nThe total number of failed login attempts for the user.\nboolean\nSpecifies whether the user account is enabled ( true ) or disabled\n( false ).\nboolean\nSpecifies whether the user account is undeletable ( true ) or\ndeletable ( false ).\nobject\ninteger\nSpecifies whether the user can log into the Tenable Vulnerability\nManagement user interface ( 0 ) or is locked out ( 1 ).\nTenable Vulnerability Management automatically updates this\nattribute to 1  if the login_fail_count  attribute for the user is\ngreater than 5. To unlock a user account, reset the user's password\nusing the PUT /users/{user_id}/chpasswd endpoint.\nNote: A user can be locked out of the user interface but still submit\nAPI requests if they are assigned the appropriate authorizations\n( api_permitted ). To prevent a user from submitting API requests,\nlimit authorizations using the PUT /users/{user_id}/authorizations\nendpoint, or disable the user entirely using the PUT\n/users/{user_id}/enabled endpoint.\nstring\nThe UUID of the Tenable Vulnerability Management instance to which\nthe user belongs.\ninteger\nThe last time (in Unix milliseconds) that the user successfully logged\nin to the Tenable Vulnerability Management user interface. This\nattribute is only present if the user has logged in at least once\nsuccessfully to the Tenable Vulnerability Management user interface.\nstring\nThe UUID for the user.\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 403 Returned if you do not have permission to update a user.\nlogin_fail_total\nenabled\nundeletable\ntwo_factor\nlockout\ncontainer_uuid\nlastlogin\nuuid_id\n— 404 Returned if Tenable Vulnerability Management cannot find the specified user.\n— 409 Returned if you attempt to change your own account's enabled or disabled status.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 51,
+      "end": 54
+    },
+    "content_stats": {
+      "char_count": 3334,
+      "word_count": 522
+    },
+    "hierarchy": {
+      "parent": "Update user",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

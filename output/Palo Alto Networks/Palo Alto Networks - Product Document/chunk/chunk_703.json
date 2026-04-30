@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_703",
+  "section_number": "1.19.4.4.2",
+  "header": "View the Status of the Tunnels",
+  "content": "The status of the tunnel informs you about whether or not valid IKE phase-1 and phase-2 SAs\nhave been established, and whether the tunnel interface is up and available for passing traffic.\nBecause the tunnel interface is a logical interface, it cannot indicate a physical link status.\nTherefore, you must enable tunnel monitoring so that the tunnel interface can verify connectivity\nto an IP address and determine if the path is still usable. If the IP address is unreachable, the\nfirewall will either wait for the tunnel to recover or failover. When a failover occurs, the existing\ntunnel is torn down and routing changes are triggered to set up a new tunnel and redirect traffic.\nSTEP 1 |\nSelect Network > IPSec Tunnels.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1271\n©2025 Palo Alto Networks, Inc.\nVPNs\nSTEP 2 |\nView the Tunnel Status.\n• Green indicates a valid IPSec SA tunnel.\n• Red indicates that IPSec SA is not available or has expired.\nSTEP 3 |\nView the IKE Gateway Status.\n• Green indicates a valid IKE phase-1 SA.\n• Red indicates that IKE phase-1 SA is not available or has expired.\nSTEP 4 |\nView the Tunnel Interface Status.\n• Green indicates that the tunnel interface is up.\n• Red indicates that the tunnel interface is down, because tunnel monitoring is enabled and\nthe status is down.\nTo troubleshoot a VPN tunnel that is not yet up, see Interpret VPN Error Messages.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1271,
+      "end": 1272
+    },
+    "content_stats": {
+      "char_count": 1381,
+      "word_count": 242
+    },
+    "hierarchy": {
+      "parent": "Set Up Tunnel Monitoring",
+      "children": []
+    }
+  }
+}

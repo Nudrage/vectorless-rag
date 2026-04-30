@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_025",
+  "section_number": "54.1",
+  "header": "Responses",
+  "content": "— 200 Returned if the request to move the scan configuration to another folder was successful.\n202\nThe request to move the scan configuration to the Trash has successfully been accepted, and will be\nprocessed.\nRESPONSE HEADERS\nstring <uri>\nExample: \"/configs/:config_id/status/:tracking_id\"\nUse the contents of this header appended to the prefix /was/v2  to\nexecute lookups on the current status of the resource\nRESPONSE SCHEMA:\napplication/json\nSchema not provided\n400 Returned if your request body is invalid or if you specify a folder name with invalid characters.\n404 Returned if Tenable Web App Scanning cannot find the specified scan configuration.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 54,
+      "end": 54
+    },
+    "content_stats": {
+      "char_count": 781,
+      "word_count": 122
+    },
+    "hierarchy": {
+      "parent": "Move scan configuration",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

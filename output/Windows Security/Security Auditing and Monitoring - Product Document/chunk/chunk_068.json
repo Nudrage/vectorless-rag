@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_068",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4696(S): A primary token was assigned to process.\nType of monitoring required\nRecommendation\nHigh-value accounts: You might have high-value domain or local accounts for which you\nneed to monitor each action.\nExamples of high-value accounts are database administrators, built-in local administrator\naccount, domain administrators, service accounts, domain controller accounts and so on.\nMonitor this event with the “Subject\\Security ID” or “New Token Information\\Security\nID” that corresponds to the high-value account or accounts.\nAnomalies or malicious actions: You might have specific requirements for detecting\nanomalies or monitoring potential malicious actions. For example, you might need to\nmonitor for use of an account outside of working hours.\nWhen you monitor for anomalies or malicious actions, use the “Subject\\Security ID” or\n“New Token Information\\Security ID” (with other information) to monitor how or when a\nparticular account is being used.\nNon-active accounts: You might have non-active, disabled, or guest accounts, or other\naccounts that should never be used.\nMonitor this event with the “Subject\\Security ID” or “New Token Information\\Security\nID” that corresponds to the accounts that should never be used.\nAccount whitelist: You might have a specific whitelist of accounts that are the only ones\nallowed to perform actions corresponding to particular events.\nIf this event corresponds to a “whitelist-only” action, review the “Subject\\Security ID” and\n“New Token Information\\Security ID” for accounts that are outside the whitelist.\nAccounts of different types: You might want to ensure that certain actions are performed\nonly by certain account types, for example, local or domain account, machine or user\naccount, vendor or employee account, and so on.\nIf this event corresponds to an action you want to monitor for certain account types,\nreview the “Subject\\Security ID” or “New Token Information\\Security ID” to see whether\nthe account type is as expected.\nExternal accounts: You might be monitoring accounts from another domain, or “external”\naccounts that are not allowed to perform certain actions (represented by certain specific\nevents).\nMonitor this event for the “Subject\\Security ID” or “New Token Information\\Security ID”\ncorresponding to accounts from another domain or “external” accounts.\nRestricted-use computers or devices: You might have certain computers, machines, or\ndevices on which certain people (accounts) should not typically perform any actions.\nMonitor the target Computer: (or other target device) for actions performed by the\n“Subject\\Security ID” or “New Token Information\\Security ID” that you are concerned\nabout.\n© 2016 Microsoft. All rights reserved.\n227\nAccount naming conventions: Your organization might have specific naming conventions\nfor account names.\nMonitor “Subject\\Security ID” or “New Token Information\\Security ID” for names that\ndon’t comply with naming conventions.\n\nIf you have a pre-defined “Process Name” or “Target Process Name” for the process reported in this event, monitor all events with “Process Name” or “Target Process Name”\nnot equal to your defined value.\n\nYou can monitor to see if “Process Name” or “Target Process Name” is not in a standard folder (for example, not in System32 or Program Files) or is in a restricted folder (for\nexample, Temporary Internet Files).\n\nIf you have a pre-defined list of restricted substrings or words in process names (for example, “mimikatz” or “cain.exe”), check for these substrings in “Process Name” or “Target\nProcess Name”.\n\nIt can be uncommon if process runs using local account.\n© 2016 Microsoft. All rights reserved.\n228",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 227,
+      "end": 229
+    },
+    "content_stats": {
+      "char_count": 3661,
+      "word_count": 546
+    },
+    "hierarchy": {
+      "parent": "Audit Process Creation",
+      "children": []
+    }
+  }
+}

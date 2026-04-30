@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_019",
+  "section_number": "1.10",
+  "header": "Assignment Resolution",
+  "content": "Once completed, assignments can be resolved. Assignment resolutions provide a way to label and track\nthe outcomes of assignments. Outcomes get recorded in the assignment’s history.\nOutcome choices may include one of the following built-in assignment outcomes:\n•\nBenign True Positive\n•\nMalicious True Positive\n•\nFalse Positive\nAlternatively, users can choose to define their own Custom outcomes for reporting purposes.\n© July 2024 Vectra AI, Inc. | 31\nURL to resolve an assignment is\nhttps://<vectra_portal_url>/api/v3.4/assignments/<id>/resolve\nAn example of using curl to retrieve all assignments using token authentication:\ncurl 'https://<vectra_portal_url>/api/v3.4/assignments/9/resolve' \\\n-X 'GET' \\\n-H \"Content-Type: application/json\" \\\n--header \"Authorization: Bearer <access_token> \" \\\n--data '{\"outcome\": 2, \"note\": \"some note\", \"triage_as\": \"my triage rule\",\n\"detection_ids\": [23, 73, 85, 88]}' \\\n--compressed \\\n--insecure\nThe following table lists fields and description of the various elements for assignments.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ncount\nNumber of object\nIDs retrieved in the\noutput\ninteger\nnext\nURL to the next\npage of output\nstring\nprevious\nURL link to the\nprevious page of\noutput\nstring\nresults\nList of users\nreturned in the\noutput\nlist of objects\nThe following table lists the fields and descriptions present in an assignment. These elements will be\ncontained inside the ‘results’ field, which is a top-level field described in the table above.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nid\nObject ID\ninteger\nassigned_by\nThe user that made the\nassignment\nlist of objects\ndate_assigned\nTimestamp from when the\nassignment was assigned\ndatetime\ndate_resolved\nTimestamp from when the\nassignment was resolved\ndatetime\nevents\nActions take on the assignment\nlist of objects\noutcome\nOutcome of the assignment\nlist of objects\nresolved_by\nThe user that resolved the\nassignment\nlist of objects\ntriaged_detections\nThe number of detections that\nwere triaged as a part of the\nresolution of this assignment\ninteger\naccount_id\nThe ID of the account associated\nwith this assignment\ninteger\n© July 2024 Vectra AI, Inc. | 32\nassigned_to\nThe user this assignment has been\nassigned to\nlist of objects\nThe available options and filters for assignments are listed below.\nQUERY PARAMETER\nDESCRIPTION\naccounts\nFilter by accounts\nassignees\nFilter by assignees\nresolution\nFilter by resolution (outcome)\nresolved\nFilters by resolved status. True or False.\ncreated_after\nFilter by created after timestamp.\nExamples of assignments queries\nQUERY\nCOMMENT\nhttps://<vectra_portal_url>/api/v3.4/assignme\nnts?accounts=1,2,3\nRetrieves all assignments on accounts\n1, 2 and 3\nhttps://<vectra_portal_url>/api/v3.4/assignme\nnts?assignees=1,2,3\nRetrieves all assignments for users 1,\n2 and 3\nhttps://<vectra_portal_url>/api/v3.4/assignme\nnts?resolution=1,2,3\nRetrieves all assignments with\nresolution 1, 2 or 3\nhttps://<vectra_portal_url>/api/v3.4/assignme\nnts?resolved=true\nRetrieves all assignments that have\nbeen resolved\nhttps://<vectra_portal_url>/api/v3.4/assignme\nnts?created_after=2021-01-01T00:00:00Z\nRetrieves all assignments that have\nbeen created since 2021-01-\n01T00:00:00Z",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 30,
+      "end": 32
+    },
+    "content_stats": {
+      "char_count": 3158,
+      "word_count": 423
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

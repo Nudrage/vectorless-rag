@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_131",
+  "section_number": "1.8.1.1",
+  "header": "External Authentication Services",
+  "content": "The firewall and Panorama can use external servers to control administrative access to the\nweb interface and end user access to services or applications through Authentication Portal\nand GlobalProtect. In this context, any authentication service that is not local to the firewall or\nPanorama is considered external, regardless of whether the service is internal (such as Kerberos)\nor external (such as a SAML identity provider) relative to your network. The server types that\nthe firewall and Panorama can integrate with include Multi-Factor Authentication (MFA), SAML,\nKerberos, TACACS+, RADIUS, and LDAP. Although you can also use the Local Authentication\nservices that the firewall and Panorama support, usually external services are preferable because\nthey provide:\n• Central management of all user accounts in an external identity store. All the supported\nexternal services provide this option for end users and administrators.\n• Central management of account authorization (role and access domain assignments). SAML,\nTACACS+, and RADIUS support this option for administrators.\n• Single sign-on (SSO), which enables users to authenticate only once for access to multiple\nservices and applications. SAML and Kerberos support SSO.\n• Multiple authentication challenges of different types (factors) to protect your most sensitive\nservices and applications. MFA services support this option.\nAuthentication through an external service requires a server profile that defines how the firewall\nconnects to the service. You assign the server profile to authentication profiles, which define\nsettings that you customize for each application and set of users. For example, you can configure\none authentication profile for administrators who access the web interface and another profile for\nend users who access a GlobalProtect portal. For details, see Configure an Authentication Profile\nand Sequence.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 239,
+      "end": 239
+    },
+    "content_stats": {
+      "char_count": 1895,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": "Authentication Types",
+      "children": []
+    }
+  }
+}

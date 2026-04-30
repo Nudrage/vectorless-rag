@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_873",
+  "section_number": "1.21.16.4.2",
+  "header": "The NDP Proxy in NPTv6 Example",
+  "content": "In our scenario, we want the firewall to act as NDP Proxy for the prefixes on devices behind the\nfirewall. When the firewall is NDP Proxy for a specified set of addresses/ranges/prefixes, and it\nsees an address from this range in an ND solicitation or advertisement, the firewall will respond\nas long as a device with that specific address doesn’t respond first, the address is not negated in\nthe NDP proxy configuration, and the address is not in the ND cache. The firewall does the prefix\ntranslation (described below) and sends the packet to the trust side, where that address might or\nmight not be assigned to a device.\nIn this example, the ND Proxy table contains the network address 2001:DB8::0. When the\ninterface sees an ND for 2001:DB8::100, no other devices on the L2 switch claim the packet,\nso the proxy range causes the firewall to claim it, and after translation to FDD4:7A3E::100, the\nfirewall sends it out to the trust side.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1512,
+      "end": 1512
+    },
+    "content_stats": {
+      "char_count": 940,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "NPTv6 and NDP Proxy Example",
+      "children": []
+    }
+  }
+}

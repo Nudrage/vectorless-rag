@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_774",
+  "section_number": "1.21.6.4",
+  "header": "Configure OSPF Graceful Restart",
+  "content": "OSPF Graceful Restart directs OSPF neighbors to continue using routes through a firewall during\na short transition when it is out of service. This behavior increases network stability by reducing\nthe frequency of routing table reconfiguration and the related route flapping that can occur during\nshort periodic down times.\nFor a Palo Alto Networks firewall, OSPF Graceful Restart involves the following operations:\n• Firewall as a restarting device—If the firewall will be down for a short period of time or is\nunavailable for short intervals, it sends Grace LSAs to its OSPF neighbors. The neighbors\nmust be configured to run in Graceful Restart helper mode. In helper mode, the neighbor\nreceives Grace LSAs informing it that the firewall will perform a graceful restart within a\nspecified period of time defined as the Grace Period. During the grace period, the neighbor\ncontinues to forward routes through the firewall and to send LSAs that announce routes\nthrough the firewall. If the firewall resumes operation before expiration of the grace period,\ntraffic forwarding will continue as before without network disruption. If the firewall does not\nresume operation after the grace period has expired, the neighbors will exit helper mode and\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1389\n©2025 Palo Alto Networks, Inc.\nNetworking\nresume normal operation, which will involve reconfiguring the routing table to bypass the\nfirewall.\n• Firewall as a Graceful Restart Helper—If neighboring routers may be down for short periods\nof time, the firewall can be configured to operate in Graceful Restart helper mode, in which\ncase the firewall employs a Max Neighbor Restart Time. When the firewall receives the Grace\nLSAs from its OSPF neighbor, it continues to route traffic to the neighbor and advertise routes\nthrough the neighbor until either the grace period or max neighbor restart time expires. If\nneither expires before the neighbor returns to service, traffic forwarding continues as before\nwithout network disruption. If either period expires before the neighbor returns to service, the\nfirewall exits helper mode and resumes normal operation, which involves reconfiguring the\nrouting table to bypass the neighbor.\nSTEP 1 |\nSelect Network > Virtual Routers and select the virtual router you want to configure.\nSTEP 2 |\nSelect OSPF > Advanced or OSPFv3 > Advanced.\nSTEP 3 |\nVerify that the following are selected (they are enabled by default):\n• Enable Graceful Restart\n• Enable Helper Mode\n• Enable Strict LSA Checking\nThese should remain selected unless required by your topology.\nSTEP 4 |\nConfigure a Grace Period in seconds.\nSTEP 5 |\nConfigure a Max Neighbor Restart Time in seconds.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1389,
+      "end": 1390
+    },
+    "content_stats": {
+      "char_count": 2689,
+      "word_count": 429
+    },
+    "hierarchy": {
+      "parent": "OSPF",
+      "children": []
+    }
+  }
+}

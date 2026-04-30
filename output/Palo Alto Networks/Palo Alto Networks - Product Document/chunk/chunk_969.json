@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_969",
+  "section_number": "1.22.10.10",
+  "header": "Find External Dynamic Lists That Failed Authentication",
+  "content": "When an external dynamic list that requires SSL fails client or server authentication, the firewall\ngenerates a system log of critical severity. The log is critical because the firewall continues to\nenforce policy based on the last successful external dynamic list after it fails authentication,\ninstead of using the latest version. Use the following process to view critical system log messages\nnotifying you of authentication failure related to external dynamic lists.\nSTEP 1 |\nSelect Monitor > Logs > System.\nSTEP 2 |\nConstruct the following filters to view all messages related to authentication failure, and\napply the filters. For more information, review the complete workflow to Filter Logs.\n• Server authentication failure—(eventid eq tls-edl-auth-failure)\n• Client authentication failure—(eventid eq edl-cli-auth-failure)\nSTEP 3 |\nReview the system log messages. The message description includes the name of the external\ndynamic list, the source URL for the list, and the reason for the authentication failure.\nThe server that hosts the external dynamic list fails authentication if the certificate is expired.\nIf you have configured the certificate profile to check certificate revocation status via\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1651\n©2025 Palo Alto Networks, Inc.\nPolicy\nCertificate Revocation List (CRL) or Online Certificate Status Protocol (OCSP), the server may\nalso fail authentication if:\n• The certificate is revoked.\n• The revocation status of the certificate is unknown.\n• The connection times out as the firewall is attempting to connect to the CRL/OCSP service.\nFor more information on certificate profile settings, refer to the steps to Configure a\nCertificate Profile.\nVerify that you added the root CA and intermediate CA of the server to the certificate\nprofile configured with the external dynamic list. Otherwise, the firewall will not\nauthenticate the list properly.\nClient authentication fails if you have entered the incorrect username and password\ncombination for the external dynamic list.\nSTEP 4 |\n(Optional) Disable Authentication for an External Dynamic List that failed authentication as\na stop-gap measure until the list owner renews the certificate(s) of the server that hosts the\nlist.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1651,
+      "end": 1652
+    },
+    "content_stats": {
+      "char_count": 2237,
+      "word_count": 338
+    },
+    "hierarchy": {
+      "parent": "Use an External Dynamic List in Policy",
+      "children": []
+    }
+  }
+}

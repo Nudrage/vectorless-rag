@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_272",
+  "section_number": "12.10",
+  "header": "Unlink agents",
+  "content": "Creates a bulk operation task to unlink agents. For more information on unlinked agent data, see\nUnlink an Agent.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nContent type\nobject\nSpecifies the criteria you wish to filter agents on. The criteria is used to\nnarrow down the list of agents to perform the specified action on.\nArray of String for Agent UUIDs (OPTION 1) (string) or Integer for Agent IDs\n(OPTION 2) (integer)\nAn array of agent IDs or agent UUIDs to add to the criteria filter.\nArray of String for Agent UUIDs (OPTION 1) (string) or Integer for Agent IDs\n(OPTION 2) (integer)\nAn array of agent IDs or agent UUIDs to exclude from the criteria filter.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 257,
+      "end": 258
+    },
+    "content_stats": {
+      "char_count": 728,
+      "word_count": 125
+    },
+    "hierarchy": {
+      "parent": "Agent Tasks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

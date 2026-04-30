@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_566",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the tag category was created successfully.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe unique identifier (UUID) of the category.\nstring\nThe name of the category. The name must be unique within a Tenable\nVulnerability Management instance.\nstring\nThe description of the category.\nstring\nAn ISO timestamp indicating the date and time on which the category\nwas created, for example, 2018-12-31T13:51:17.243Z .\nstring\nThe name of the user who created the category.\nstring\nAn ISO timestamp indicating the date and time on which the category\nwas last updated, for example, 2018-12-31T13:51:17.243Z .\nstring\nThe name of the user who last updated the category.\nname\nrequired\ndescription\nuuid\nname\ndescription\ncreated_at\ncreated_by\nupdated_at\nupdated_by\nboolean\nIndicates whether the tags in this category are reserved (cannot be\nupdated). This is a read-only field set by the system.\n— 400\nReturned if Tenable Vulnerability Management encounters any of the following error conditions:\nname —The name  value in the request message exceeds 127 characters.\ndescription —The description value in the request message exceeds 3,000 characters.\nmax_entries —Your request exceeds the maximum number of categories (100 per container).\nduplicate —A category with the name you specified already exists.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\nreserved\nstatusCode\nerror\nmessage\nstatusCode\nerror\nmessage",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 557,
+      "end": 558
+    },
+    "content_stats": {
+      "char_count": 1933,
+      "word_count": 296
+    },
+    "hierarchy": {
+      "parent": "Create tag category",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

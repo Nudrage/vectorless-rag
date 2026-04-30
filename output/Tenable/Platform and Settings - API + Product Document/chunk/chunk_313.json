@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_313",
+  "section_number": "14.2",
+  "header": "List managed credentials",
+  "content": "Lists managed credentials where you have been assigned at least CAN USE (32) permissions.\nNote: This endpoint does not list scan-specific or policy-specific credentials (that is, credentials\nstored in either a scan or a policy). To view a list of scan-specific or policy-specific credentials, use\nthe editor details endpoint (GET /editor/{type}/{id}).\nRequires Can Use [32] credential permissions. See Permissions.\nContent type\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring\nA filter condition in the following format: field:operator:value .\nFor managed credentials, you can only filter on the name  field, using\nthe following operators:\neq—The name of the returned credential is equal to the text you\nspecify.\nneq—The returned list of managed credentials excludes the\ncredential object where the name is equal to the text you specify.\nmatch—The returned list includes managed credentials where the\nname contains the text you specify at least partially.\nYou can specify multiple f  parameters, separated by ampersand (&)\ncharacters. If you specify multiple f  parameters, use the ft\nparameter to specify how Tenable Vulnerability Management applies\nthe multiple filter conditions.\nstring\nThe operator that Tenable Vulnerability Management applies if multiple\n`f` parameters are present. The OR  and AND  operators are\nsupported. If you omit this parameter and multiple f  parameters are\npresent, Tenable Vulnerability Management applies the AND  operator\nby default.\nstring\nThe UUID of a scan owner. This parameter limits the returned data to\nmanaged credentials assigned to scans owned by the specified user.\ninteger <int32>\n[ 1 .. 300 ]\nThe number of records to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 50 . This\nparameter has a minimum value of 1  and a maximum value of 300 .\ninteger <int32>\nThe starting record to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 0 .\nstring\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is\nspecified second ( asc  or desc ). For example, name:asc  would\nsort results by the name  field in ascending order.\nf\nft\nreferrer_owner_uuid\nlimit\noffset\nsort",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 309,
+      "end": 310
+    },
+    "content_stats": {
+      "char_count": 2288,
+      "word_count": 358
+    },
+    "hierarchy": {
+      "parent": "Credentials",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

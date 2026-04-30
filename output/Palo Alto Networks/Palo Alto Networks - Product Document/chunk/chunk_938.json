@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_938",
+  "section_number": "1.22.3",
+  "header": "Policy Objects",
+  "content": "A policy object is a single object or a collective unit that groups discrete identities such as IP\naddresses, URLs, applications, or users. With policy objects that are a collective unit, you can\nreference the object in security policy instead of manually selecting multiple objects one at a\ntime. Typically, when creating a policy object, you group objects that require similar permissions\nin policy. For example, if your organization uses a set of server IP addresses for authenticating\nusers, you can group the set of server IP addresses as an address group policy object and reference\nthe address group in the security policy. By grouping objects, you can significantly reduce the\nadministrative overhead in creating policies.\nIf you need to export specific parts of the configuration for internal review or audit, you\ncan Export Configuration Table Data as a PDF or CSV file.\nYou can create the following policy objects on the firewall:\nPolicy Object\nDescription\nAddress/Address\nGroup, Region\nAllow you to group specific source or destination addresses that\nrequire the same policy enforcement. The address object can include\nan IPv4 or IPv6 address (single IP, range, subnet), an IP wildcard\naddress (IPv4 address/wildcard mask) or the FQDN. Alternatively, a\nregion can be defined by the latitude and longitude coordinates or\nyou can select a country and define an IP address or IP range. You can\nthen group a collection of address objects to create an address group\nobject.\nYou can also use dynamic address groups to dynamically update IP\naddresses in environments where host IP addresses change frequently.\nThe predefined External Dynamic Lists (EDLs) on the\nfirewall count toward the maximum number of address\nobjects that a firewall model supports.\nUser/User Group\nAllow you to create a list of users from the local database, an external\ndatabase, or match criteria and group them.\nApplication Group\nand Application Filter\nAn Application Filter allows you to filter applications dynamically.\nIt allows you to filter, and save a group of applications using the\nattributes defined in the application database on the firewall. For\nexample, you can Create an Application Filter by one or more\nattributes—category, sub-category, technology, risk, characteristics.\nWith an application filter, when a content update occurs, any new\napplications that match your filter criteria are automatically added to\nyour saved application filter.\nAn Application Group allows you to create a static group of specific\napplications that you want to group together for a group of users\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1598\n©2025 Palo Alto Networks, Inc.\nPolicy\nPolicy Object\nDescription\nor for a particular service, or to achieve a particular policy goal. See\nCreate an Application Group.\nService/Service\nGroups\nAllows you to specify the source and destination ports and protocol\nthat a service can use. The firewall includes two pre-defined services\n—service-http and service-https— that use TCP ports 80 and 8080\nfor HTTP, and TCP port 443 for HTTPS. You can however, create\nany custom service on any TCP/UDP port of your choice to restrict\napplication usage to specific ports on your network (in other words,\nyou can define the default port for the application).\nTo view the standard ports used by an application, in\nObjects > Applications search for the application and click\nthe link. A succinct description displays.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1599\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1598,
+      "end": 1600
+    },
+    "content_stats": {
+      "char_count": 3502,
+      "word_count": 553
+    },
+    "hierarchy": {
+      "parent": "Policy",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_757",
+  "section_number": "1.21.1.7",
+  "header": "Use Interface Management Profiles to Restrict Access",
+  "content": "An Interface Management profile protects the firewall from unauthorized access by defining the\nprotocols, services, and IP addresses that a firewall interface permits for management traffic.\nFor example, you might want to prevent users from accessing the firewall web interface over\nthe ethernet1/1 interface but allow that interface to receive SNMP queries from your network\nmonitoring system. In this case, you would enable SNMP and disable HTTP/HTTPS in an Interface\nManagement profile and assign the profile to ethernet1/1.\nYou can assign an Interface Management profile to Layer 3 Ethernet interfaces (including\nsubinterfaces) and to logical interfaces (aggregate group, VLAN, loopback, and tunnel interfaces).\nIf you do not assign an Interface Management profile to an interface, it denies access for all IP\naddresses, protocols, and services by default.\nThe management (MGT) interface does not require an Interface Management profile. You\nrestrict protocols, services, and IP addresses for the MGT interface when you Perform\nInitial Configuration of the firewall. In case the MGT interface goes down, allowing\nmanagement access over another interface enables you to continue managing the firewall.\nWhen enabling access to a firewall interface using an Interface Management profile, do\nnot enable management access (HTTP, HTTPS, SSH, or Telnet) from the internet or from\nother untrusted zones inside your enterprise security boundary, and never enable HTTP or\nTelnet access because those protocols transmit in cleartext. Follow the Best Practices for\nSecuring Administrative Access to ensure that you are properly securing management\naccess to your firewall.\nSTEP 1 |\nConfigure the Interface Management profile.\n1.\nSelect Network > Network Profiles > Interface Mgmt and click Add.\n2.\nSelect the protocols that the interface permits for management traffic: Ping, Telnet, SSH,\nHTTP, HTTP OCSP, HTTPS, or SNMP.\nDon’t enable HTTP or Telnet because those protocols transmit in cleartext and\ntherefore aren’t secure.\n3.\nSelect the services that the interface permits for management traffic:\n• Response Pages—Use to enable response pages for:\n• Authentication Portal—To serve Authentication Portal response pages, the\nfirewall leaves ports open on Layer 3 interfaces: 6081 for Authentication Portal in\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1364\n©2025 Palo Alto Networks, Inc.\nNetworking\ntransparent mode and 6082 for Authentication Portal in redirect mode. For details,\nsee Configure Authentication Portal.\n• URL Admin Override—For details, see Allow Password Access to Certain Sites.\n• User-ID—Use to Redistribute Data and Authentication Timestamps.\n• User-ID Syslog Listener-SSL or User-ID Syslog Listener-UDP—Use to Configure\nUser-ID to Monitor Syslog Senders for User Mapping over SSL or UDP.\n4.\n(Optional) Add the Permitted IP Addresses that can access the interface. If you don’t add\nentries to the list, the interface has no IP address restrictions.\n5.\nClick OK.\nSTEP 2 |\nAssign the Interface Management profile to an interface.\n1.\nSelect Network > Interfaces, select the type of interface (Ethernet, VLAN, Loopback, or\nTunnel), and select the interface.\n2.\nSelect Advanced > Other info and select the Interface Management Profile you just\nadded.\n3.\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1365\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1364,
+      "end": 1366
+    },
+    "content_stats": {
+      "char_count": 3367,
+      "word_count": 503
+    },
+    "hierarchy": {
+      "parent": "Configure Interfaces",
+      "children": []
+    }
+  }
+}

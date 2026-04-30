@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_766",
+  "section_number": "1.21.6",
+  "header": "OSPF",
+  "content": "Open Shortest Path First (OSPF) is an interior gateway protocol (IGP) that is most often used\nto dynamically manage network routes in large enterprise networks. It determines routes\ndynamically by obtaining information from other routers and advertising routes to other routers\nby way of Link State Advertisements (LSAs). The information gathered from the LSAs is used\nto construct a topology map of the network. This topology map is shared across routers in the\nnetwork and used to populate the IP routing table with available routes.\nChanges in the network topology are detected dynamically and used to generate a new topology\nmap within seconds. A shortest path tree is computed of each route. Metrics associated with\neach routing interface are used to calculate the best route. These can include distance, network\nthroughput, link availability etc. Additionally, these metrics can be configured statically to direct\nthe outcome of the OSPF topology map.\nThe Palo Alto Networks implementation of OSPF fully supports the following RFCs:\n• RFC 2328 (for IPv4)\n• RFC 5340 (for IPv6)\nThe following topics provide more information about the OSPF and procedures for configuring\nOSPF on the firewall:\n• OSPF Concepts\n• Configure OSPF\n• Configure OSPFv3\n• Configure OSPF Graceful Restart\n• Confirm OSPF Operation",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1381,
+      "end": 1381
+    },
+    "content_stats": {
+      "char_count": 1307,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Networking",
+      "children": [
+        "OSPF Concepts",
+        "Configure OSPF",
+        "Configure OSPFv3",
+        "Configure OSPF Graceful Restart",
+        "Confirm OSPF Operation"
+      ]
+    }
+  }
+}

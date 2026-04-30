@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_436",
+  "section_number": "1.12.9.1.3",
+  "header": "Configure Windows Log Forwarding",
+  "content": "To configure Windows Log Forwarding, you need administrative privileges for configuring group\npolicies on Windows servers. Configure Windows Log Forwarding on all the Windows Event\nCollectors—the member servers that collect login events from domain controllers. The following is\nan overview of the tasks; consult your Windows Server documentation for the specific steps.\nSTEP 1 |\nOn each Windows Event Collector, enable event collection, add the domain controllers\nas event sources, and configure the event collection query (subscription). The events you\nspecify in the subscription vary by domain controller platform:\n• Windows Server 2012 (including R2) and 2016, or MS Exchange—The event IDs for the\nrequired events are 4768 (Authentication Ticket Granted), 4769 (Service Ticket Granted),\n4770 (Ticket Granted Renewed), and 4624 (Logon Success).\nTo forward events as quickly as possible, Minimize Latency when configuring the\nsubscription.\nUser-ID agents monitor the Security log on Windows Event Collectors, not the default\nforwarded events location. To change the event logging path to the Security log, perform the\nfollowing steps on each Windows Event Collector.\n1. Open the Event Viewer.\n2. Right-click the Security log and select Properties.\n3. Copy the Log path (default %SystemRoot%\\System32\\Winevt\\Logs\n\\security.evtx) and click OK.\n4. Right-click the Forwarded Events folder and select Properties.\n5. Replace the default Log path (%SystemRoot%\\System32\\Winevt\\Logs\n\\ForwardedEvents.evtx) by pasting the value from the Security log, and then click OK.\nSTEP 2 |\nConfigure a group policy to enable Windows Remote Management (WinRM) on the domain\ncontrollers.\nSTEP 3 |\nConfigure a group policy to enable Windows Event Forwarding on the domain controllers.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n787\n©2025 Palo Alto Networks, Inc.\nUser-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 787,
+      "end": 788
+    },
+    "content_stats": {
+      "char_count": 1848,
+      "word_count": 269
+    },
+    "hierarchy": {
+      "parent": "Deploy User-ID for Numerous Mapping Information Sources",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_853",
+  "section_number": "1.21.15.7.1",
+  "header": "Destination NAT Example—One-to-One Mapping",
+  "content": "The most common mistakes when configuring NAT and security rules are the references to the\nzones and address objects. The addresses used in destination NAT rules always refer to the\noriginal IP address in the packet (that is, the pre-translated address). The destination zone in the\nNAT rule is determined after the route lookup of the destination IP address in the original packet\n(that is, the pre-NAT destination IP address).\nThe addresses in the security policy also refer to the IP address in the original packet (that is, the\npre-NAT address). However, the destination zone is the zone where the end host is physically\nconnected. In other words, the destination zone in the security rule is determined after the route\nlookup of the post-NAT destination IP address.\nIn the following example of a one-to-one destination NAT mapping, users from the zone\nnamed Untrust-L3 access the server 10.1.1.100 in the zone named DMZ using the IP address\n192.0.2.100.\nBefore configuring the NAT rules, consider the sequence of events for this scenario.\nHost 192.0.2.250 sends an ARP request for the address 192.0.2.100 (the public address of the\ndestination server).\nThe firewall receives the ARP request packet for destination 192.0.2.100 on the Ethernet1/1\ninterface and processes the request. The firewall responds to the ARP request with its own\nMAC address because of the destination NAT rule configured.\nThe NAT rules are evaluated for a match. For the destination IP address to be translated, a\ndestination NAT rule from zone Untrust-L3 to zone Untrust-L3 must be created to translate\nthe destination IP of 192.0.2.100 to 10.1.1.100.\nAfter determining the translated address, the firewall performs a route lookup for destination\n10.1.1.100 to determine the egress interface. In this example, the egress interface is\nEthernet1/2 in zone DMZ.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1500\n©2025 Palo Alto Networks, Inc.\nNetworking\nThe firewall performs a security policy lookup to see if the traffic is permitted from zone\nUntrust-L3 to DMZ.\nThe direction of the policy matches the ingress zone and the zone where the server is\nphysically located.\nThe security policy refers to the IP address in the original packet, which has a\ndestination address of 192.0.2.100.\nThe firewall forwards the packet to the server out egress interface Ethernet1/2. The\ndestination address is changed to 10.1.1.100 as the packet leaves the firewall.\nFor this example, address objects are configured for webserver-private (10.1.1.100) and\nWebserver-public (192.0.2.100). The configured NAT rule would look like this:\nThe direction of the NAT rules is based on the result of route lookup.\nThe configured security policy to provide access to the server from the Untrust-L3 zone would\nlook like this:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1500,
+      "end": 1501
+    },
+    "content_stats": {
+      "char_count": 2772,
+      "word_count": 438
+    },
+    "hierarchy": {
+      "parent": "NAT Configuration Examples",
+      "children": []
+    }
+  }
+}

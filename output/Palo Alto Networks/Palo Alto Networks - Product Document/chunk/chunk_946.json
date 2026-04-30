@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_946",
+  "section_number": "1.22.7",
+  "header": "Move or Clone a Policy Rule or Object to a Different Virtual System",
+  "content": "Virtual System\nOn a firewall that has more than one virtual system (vsys), you can move or clone policy rules and\nobjects to a different vsys or to the Shared location. Moving and cloning save you the effort of\ndeleting, recreating, or renaming rules and objects. If the policy rule or object that you will move\nor clone from a vsys has references to objects in that vsys, move or clone the referenced objects\nalso. If the references are to shared objects, you do not have to include those when moving or\ncloning. You can Use Global Find to Search the Firewall or Panorama Management Server for\nreferences.\nWhen cloning multiple policy rules, the order by which you select the rules will determine\nthe order they are copied to the device group. For example, if you have rules 1-4 and your\nselection order is 2-1-4-3, the device group where these rules will be cloned will display\nthe rules in the same order you selected. However, you can reorganize the rules as you see\nfit once they have been successfully copied.\nSTEP 1 |\nSelect the policy type (for example, Policy > Security) or object type (for example, Objects >\nAddresses).\nSTEP 2 |\nSelect the Virtual System and select one or more policy rules or objects.\nSTEP 3 |\nPerform one of the following steps:\n• Select Move > Move to other vsys (for policy rules).\n• Click Move (for objects).\n• Click Clone (for policy rules or objects).\nSTEP 4 |\nIn the Destination drop-down, select the new virtual system or Shared.\nSTEP 5 |\n(Policy rules only) Select the Rule order:\n• Move top (default)—The rule will come before all other rules.\n• Move bottom—The rule will come after all other rules.\n• Before rule—In the adjacent drop-down, select the rule that comes after the Selected Rules.\n• After rule—In the adjacent drop-down, select the rule that comes before the Selected Rules.\nSTEP 6 |\nThe Error out on first detected error in validation check box is selected by default. The\nfirewall stops performing the checks for the move or clone action when it finds the first\nerror, and displays just this error. For example, if an error occurs when the Destination vsys\ndoesn’t have an object that the policy rule you are moving references, the firewall will display\nthe error and stop any further validation. When you move or clone multiple items at once,\nselecting this check box will allow you to find one error at a time and troubleshoot it. If you\nclear the check box, the firewall collects and displays a list of errors. If there are any errors in\nvalidation, the object is not moved or cloned until you fix all the errors.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1621\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 7 |\nClick OK to start the error validation. If the firewall displays errors, fix them and retry the\nmove or clone operation. If the firewall doesn’t find errors, the object is moved or cloned\nsuccessfully. After the operation finishes, click Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1622\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1621,
+      "end": 1623
+    },
+    "content_stats": {
+      "char_count": 2994,
+      "word_count": 526
+    },
+    "hierarchy": {
+      "parent": "Policy",
+      "children": []
+    }
+  }
+}

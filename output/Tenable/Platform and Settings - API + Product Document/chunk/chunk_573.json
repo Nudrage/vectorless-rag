@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_573",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the details for the specified tag category were retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe unique identifier (UUID) of the category.\nstring\nThe name of the category. The name must be unique within a Tenable\nVulnerability Management instance.\nstring\nThe description of the category.\nstring\nAn ISO timestamp indicating the date and time on which the category\nwas created, for example, 2018-12-31T13:51:17.243Z .\nstring\nThe name of the user who created the category.\nstring\nAn ISO timestamp indicating the date and time on which the category\nwas last updated, for example, 2018-12-31T13:51:17.243Z .\nstring\nThe name of the user who last updated the category.\nboolean\nIndicates whether the tags in this category are reserved (cannot be\nupdated). This is a read-only field set by the system.\ntag_category_uuid\nrequired\nuuid\nname\ndescription\ncreated_at\ncreated_by\nupdated_at\nupdated_by\nreserved\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 404 Returned if the specified tag category was not found.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 564,
+      "end": 565
+    },
+    "content_stats": {
+      "char_count": 1565,
+      "word_count": 246
+    },
+    "hierarchy": {
+      "parent": "Get category details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_075",
+  "section_number": "1.6.2.4",
+  "header": "Manage and Monitor Administrative Tasks",
+  "content": "The Task Manager displays details about all the operations that you and other administrators\ninitiated (such as manual commits) or that the firewall initiated (such as scheduled report\ngeneration) since the last firewall reboot. You can use the Task Manager to troubleshoot failed\noperations, investigate warnings associated with completed commits, view details about queued\ncommits, or cancel pending commits.\nYou can also view System Logs to monitor system events on the firewall or view Config\nLogs to monitor firewall configuration changes.\nSTEP 1 |\nClick Tasks at the bottom of the web interface.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n115\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nSTEP 2 |\nShow only Running tasks (in progress) or All tasks (default). Optionally, filter the tasks by\ntype:\n• Jobs—Administrator-initiated commits, firewall-initiated commits, and software or content\ndownloads and installations.\n• Reports—Scheduled reports.\n• Log Requests—Log queries that you trigger by accessing the Dashboard or a Monitor page.\nSTEP 3 |\nPerform any of the following actions:\n• Display or hide task details—By default, the Task Manager displays the Type, Status, Start\nTime, and Messages for each task. To see the End Time and Job ID for a task, you must\nmanually configure the display to expose those columns. To display or hide a column, open\nthe drop-down in any column header, select Columns, and select or deselect the column\nnames as needed.\n• Investigate warnings or failures—Read the entries in the Messages column for task details.\nIf the column says Too many messages, click the corresponding entry in the Type column\nto see more information.\n• Display a commit description—If an administrator entered a description when configuring\na commit, you can click Commit Description in the Messages column to display the\ndescription.\n• Check the position of a commit in the queue—The Messages column indicates the queue\nposition of commits that are in progress.\n• Cancel pending commits—Click Clear Commit Queue to cancel all pending commits\n(available only to predefined administrative roles). To cancel an individual commit, click x\nin the Action column for that commit (the commit remains in the queue until the firewall\ndequeues it). You cannot cancel commits that are in progress.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 115,
+      "end": 116
+    },
+    "content_stats": {
+      "char_count": 2310,
+      "word_count": 363
+    },
+    "hierarchy": {
+      "parent": "Use the Web Interface",
+      "children": []
+    }
+  }
+}

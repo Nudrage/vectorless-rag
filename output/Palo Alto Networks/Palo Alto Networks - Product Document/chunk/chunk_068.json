@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_068",
+  "section_number": "1.5.6",
+  "header": "Content Delivery Network Infrastructure",
+  "content": "Palo Alto Networks maintains a Content Delivery Network (CDN) infrastructure for delivering\ncontent updates to the Palo Alto Networks firewalls. The firewalls access the web resources in the\nCDN to perform various content and application identification functions.\nThe following table lists the web resources that the firewall accesses for a feature or application:\nResource\nURL\nStatic Addresses\n(If a static server is\nrequired)\nApplication\nDatabase\nThreat/Antivirus\nDatabase\n• updates.paloaltonetworks.com (Global,\nexcluding mainland China)\n• updates.paloaltonetworks.cn (Mainland\nChina only)\nAdd the following URLs to your firewall allow\nlist if your firewall has limited access to the\nInternet:\n• downloads.paloaltonetworks.com:443\n• proditpdownloads.paloaltonetworks.com:443\nAs a best practice, set the update server to\nupdates.paloaltonetworks.com. This allows the\nPalo Alto Networks firewall to receive content\nupdates from the server closest to it in the CDN\ninfrastructure.\nIf you want additional reference\ninformation or are experiencing\nconnectivity and update download\nissues, please refer to: https://\nknowledgebase.paloaltonetworks.com/\nKCSArticleDetail?\nid=kA14u0000001UtRCAU\nThe Palo Alto Networks ThreatVault database\nincludes information about vulnerabilities,\nexploits, viruses, and spyware threats. Firewall\nfeatures, including DNS security and the\nAntivirus profile, use the following resource\nto retrieve threat ID information to create\nexceptions:\n• data.threatvault.paloaltonetworks.com\nus-\nstatic.updates.paloaltonetworks.com\nAdd the following\nIPv4 or IPv6 static\nserver address sets\nto your firewall allow\nlist:\n• IPv4—\n35.186.202.45:443\nand\n34.120.74.244:443\n• IPv6—\n[2600:1901:0:669::]:443\nand\n[2600:1901:0:5162::]:443\nBoth IP\naddresses\nprovided\nfor a\ngiven\nprotocol\ntype\nmust be\nadded\nto the\nallow\nlist for\nproper\nfunctionality.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n105\n©2025 Palo Alto Networks, Inc.\nSoftware and Content Updates\nResource\nURL\nStatic Addresses\n(If a static server is\nrequired)\nPAN-DB URL\nFiltering |\nAdvanced URL\nFiltering\n*.urlcloud.paloaltonetworks.com\nResolves to the primary URL\ns0000.urlcloud.paloaltonetworks.com and is\nthen redirected to the regional server that is\nclosest:\n• s0100.urlcloud.paloaltonetworks.com\n• s0200.urlcloud.paloaltonetworks.com\n• s0300.urlcloud.paloaltonetworks.com\n• s0500.urlcloud.paloaltonetworks.com\nStatic IP addresses\nare not available.\nHowever, you can\nmanually resolve a\nURL to an IP address\nand allow access to\nthe regional server IP\naddress.\nDNS Security\n• Cloud—\ndns.service.paloaltonetworks.com:443\n• Telemetry—\nio.dns.service.paloaltonetworks.com:443\nWhen downloading an allow list,\ndns.service.paloaltonetworks.com resolves to\nthe following server:\n• static.dns.service.paloaltonetworks.com:443\n• data.threatvault.paloaltonetworks.com (used\nto create DNS exceptions)\nStatic IP addresses\nare not available.\nFirewall-based\ninline ML:\n• URL Filtering\nInline ML\n• WildFire Inline\nML\n• ml.service.paloaltonetworks.com:443\nStatic IP addresses\nare not available.\nWildFire\n• Cloud (report retrieval)—\nwildfire.paloaltonetworks.com:443\nWildFire cloud regions:\n• Global—wildfire.paloaltonetworks.com\n• European Union—\neu.wildfire.paloaltonetworks.com\n• Japan—jp.wildfire.paloaltonetworks.com\n• Singapore—sg.wildfire.paloaltonetworks.com\nStatic IP addresses\nare not available.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n106\n©2025 Palo Alto Networks, Inc.\nSoftware and Content Updates\nResource\nURL\nStatic Addresses\n(If a static server is\nrequired)\n• United Kingdom—\nuk.wildfire.paloaltonetworks.com\n• Canada—ca.wildfire.paloaltonetworks.com\n• Australia—au.wildfire.paloaltonetworks.com\n• Germany—de.wildfire.paloaltonetworks.com\n• India—in.wildfire.paloaltonetworks.com\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n107\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 105,
+      "end": 107
+    },
+    "content_stats": {
+      "char_count": 3822,
+      "word_count": 447
+    },
+    "hierarchy": {
+      "parent": "Software and Content Updates",
+      "children": []
+    }
+  }
+}

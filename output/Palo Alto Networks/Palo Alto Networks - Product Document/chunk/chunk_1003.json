@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1003",
+  "section_number": "1.23.1.4",
+  "header": "Platform Support and Licensing for Virtual Systems",
+  "content": "Virtual systems are supported on PA-3200 Series, PA-5200 Series, and PA-7000 Series firewalls.\nEach firewall series supports a base number of virtual systems; the number varies by platform. A\nVirtual Systems license is required to support multiple virtual systems on PA-3200 Series firewalls,\nand to create more than the base number of virtual systems supported on a platform.\nFor license information, see Subscriptions. For the base and maximum number of virtual systems\nsupported, see Compare Firewalls tool.\nMultiple virtual systems are not supported on the PA-220, PA-800 Series, or VM-Series firewalls.\nThe default is vsys1. You cannot delete vsys1 because it is relevant to the internal\nhierarchy on the firewall; vsys1 appears even on firewall models that don’t support\nmultiple virtual systems.\nYou can limit the resource allocations for sessions, rules and VPN tunnels allowed for a virtual\nsystem, and thereby control firewall resources. Each resource setting displays the valid range of\nvalues, which varies per firewall model. The default setting is 0, which means the limit for the\nvirtual system is the limit for the firewall model. However, the limit for a specific setting isn’t\nreplicated for each virtual system. For example, if a firewall has four virtual systems, each virtual\nsystem can’t have the total number of Decryption Rules allowed per firewall. After the total\nnumber of Decryption Rules for all of the virtual systems reaches the firewall limit, you cannot\nadd more.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1702,
+      "end": 1702
+    },
+    "content_stats": {
+      "char_count": 1496,
+      "word_count": 235
+    },
+    "hierarchy": {
+      "parent": "Virtual Systems Overview",
+      "children": []
+    }
+  }
+}

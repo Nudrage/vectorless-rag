@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_395",
+  "section_number": "1.12.2.2.1",
+  "header": "Server Monitoring",
+  "content": "With server monitoring a User-ID agent—either a Windows-based agent running on a domain\nserver in your network, or the PAN-OS integrated User-ID agent running on the firewall—\nmonitors the security event logs for specified Microsoft Exchange Servers, Domain Controllers,\nor Novell eDirectory servers for login events. For example, in an AD environment, you can\nconfigure the User-ID agent to monitor the security logs for Kerberos ticket grants or renewals,\nExchange server access (if configured), and file and print service connections. For these events to\nbe recorded in the security log, the AD domain must be configured to log successful account login\nevents. In addition, because users can log in to any of the servers in the domain, you must set\nup server monitoring for all servers to capture all user login events. See Configure User Mapping\nUsing the Windows User-ID Agent or Configure User Mapping Using the PAN-OS Integrated\nUser-ID Agent for details.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 691,
+      "end": 691
+    },
+    "content_stats": {
+      "char_count": 962,
+      "word_count": 153
+    },
+    "hierarchy": {
+      "parent": "User Mapping",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_269",
+  "section_number": "11.6",
+  "header": "Audit System Integrity",
+  "content": "Audit System Integrity determines whether the operating system audits events that violate the integrity of the security subsystem.\nActivities that violate the integrity of the security subsystem include the following:\n\nAudited events are lost due to a failure of the auditing system.\n\nA process uses an invalid local procedure call (LPC) port in an attempt to impersonate a client, reply to a client address space, read to a client address space, or write from a client\naddress space.\n\nA remote procedure call (RPC) integrity violation is detected.\n\nA code integrity violation with an invalid hash value of an executable file is detected.\n\nCryptographic tasks are performed.\nViolations of security subsystem integrity are critical and could indicate a potential security attack.\nEvent volume: Low.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nYes\nYes\nYes\nYes\nThe main reason why we recommend Success auditing for this subcategory is to be able to get RPC integrity\nviolation errors and auditing subsystem errors (event 4612). However, if you are planning to manually invoke\n“4618(S): A monitored security event pattern has occurred”, then you also need to enable Success auditing for\nthis subcategory.\nThe main reason why we recommend Failure auditing for this subcategory is to be able to get Code Integrity\nfailure events.\nMember Server\nYes\nYes\nYes\nYes\nThe main reason why we recommend Success auditing for this subcategory is to be able to get RPC integrity\nviolation errors and auditing subsystem errors (event 4612). However, if you are planning to manually invoke\n“4618(S): A monitored security event pattern has occurred”, then you also need to enable Success auditing for\nthis subcategory.\nThe main reason why we recommend Failure auditing for this subcategory is to be able to get Code Integrity\nfailure events.\nWorkstation\nYes\nYes\nYes\nYes\nThe main reason why we recommend Success auditing for this subcategory is to be able to get RPC integrity\nviolation errors and auditing subsystem errors (event 4612). However, if you are planning to manually invoke\n“4618(S): A monitored security event pattern has occurred”, then you also need to enable Success auditing for\nthis subcategory.\nThe main reason why we recommend Failure auditing for this subcategory is to be able to get Code Integrity\nfailure events.\nEvents List:\n\n4612\n(S): Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.\n\n4615\n(S): Invalid use of LPC port.\n\n4618\n(S): A monitored security event pattern has occurred.\n© 2016 Microsoft. All rights reserved.\n712\n\n4816\n(S): RPC detected an integrity violation while decrypting an incoming message.\n\n5038\n(F): Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a\npotential disk device error.\n\n5056\n(S): A cryptographic self-test was performed.\n\n5062\n(S): A kernel-mode cryptographic self-test was performed.\n\n5057\n(F): A cryptographic primitive operation failed.\n\n5060\n(F): Verification operation failed.\n\n5061\n(S, F): Cryptographic operation.\n\n6281\n(F): Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes or corrupt due to unauthorized\nmodification. The invalid hashes could indicate a potential disk device error.\n\n6410\n(F): Code integrity determined that a file does not meet the security requirements to load into a process.\n4612(S): Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.\nThis event is generated when audit queues are filled and events must be discarded. This most commonly occurs when security events are being generated faster than they are being\nwritten to disk.\nThis event doesn't generate when the event log service is stopped or event log is full and events retention is disabled.\nThere is no example of this event in this document.\nEvent Schema:\nInternal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.\nNumber of audit messages discarded: %1\nThis event is generated when audit queues are filled and events must be discarded.  This most commonly occurs when security events are being generated faster than they are being\nwritten to disk, or when the auditing system loses connectivity to the event log, such as when the event log service is stopped.\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 712,
+      "end": 713
+    },
+    "content_stats": {
+      "char_count": 4651,
+      "word_count": 753
+    },
+    "hierarchy": {
+      "parent": "System",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

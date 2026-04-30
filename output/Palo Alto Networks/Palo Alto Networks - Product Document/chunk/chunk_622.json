@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_622",
+  "section_number": "1.17.13",
+  "header": "Log Only the Page a User Visits",
+  "content": "A container page is the main page that a user accesses when visiting a website, but additional\npages might be loaded along with the main page. If the Log Container page only option is enabled\nin a URL Filtering profile (Objects > Security Profiles > URL Filtering), only the main container\npage will be logged, not subsequent pages that may be loaded within the container page. Because\nURL filtering can potentially generate a lot of log entries, you may want to turn on this option, so\nlog entries will only contain those URIs where the requested page file name matches the specific\nmime-types. The default set includes the following mime-types:\n• application/pdf\n• application/soap+xml\n• application/xhtml+xml\n• text/html\n• text/plain\n• text/xml\nIf you have enabled the Log container page only option, there may not always be a\ncorrelated URL log entry for threats detected by antivirus or vulnerability protection.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1150\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1150,
+      "end": 1151
+    },
+    "content_stats": {
+      "char_count": 1008,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": []
+    }
+  }
+}

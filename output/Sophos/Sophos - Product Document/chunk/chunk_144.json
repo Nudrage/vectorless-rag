@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_144",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is sandbox_log_fmt.\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 162\nSyslog field\nname\nName\nLog viewer -\nDetail view\nfield name\nData\ntype\nLength Format/Description Possible\nvalues\nNotes/Examples\nlog_type\nN/A\nlog_type\nString\nSandbox\nlog_component Log\nComp\nlog_component String\nWeb\nMail\nlog_subtype\nN/A\nlog_subtype\nString\nAllowed\nDenied\nPending\npriority\nN/A\nN/A\nString\nuser_name\nUsername user\nString\n384\nThe end-user\nassociated with the\nitem being analysed\nWeb: End-user associated with the item being ana\nEmail: Recipient email address\nsrc_ip\nN/A\nsrc_ip\nfilename\nFile Name file_name\nString\n1024\nThe original\nfilename of the item\nbeing analysed\nWeb: This is the filename reported by the server in\nthe Content-disposition: header of the HTTP\nresponse. If this header is not available, it will be t\nfile part of the original URL\nEmail: This is the file attachment with email (extr\nfrom email MIME)\nfiletype\nFile Type file_type\nString\n32\nThe MIME type of\nthe file being\nanalysed\nWeb: (? this is as reported by the source server in\nthe Content-type: header of the HTTP response\nEmail: File type of file attachment\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 163\nfilesize\nN/A\nfile_size\nNumber int32\nThe size in bytes of\nthe file being\nanalysed\nWeb: This will usually differ from the bytes transf\nin the corresponding HTTP transaction because it\nexcludes HTTP headers and any compression used\ntransit.\nsha1sum\nFile Hash\n/\nChecksum\nsha1sum\nString\n64\nIn 17.5 and earlier\nthe sha1sum\ncontained the sha1\nchecksum of the file\nbeing analyzed.  In\n18.0 and later the\nsha1sum contains\nthe sha256\nchecksum of the file.\nThe checksum is\nused to identify\nindividual files and\nas the key when\ncaching results.\nAlthough the\nchecksum is not\nconsidered secure\nfor data encryption\npurposes due to the\nrisk of collision, it is\nsufficiently hard to\ndeliberately generate\nfiles with checksum\ncollisions that its use\nhere is considered\nsafe.\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 164\nsource\nSource\nhost\nString\n256\nThe origin of the\nitem being analysed\nWeb: FQDN part of the URL (e.g. for content\ndownloaded\nfrom http://fs1.cdn.example.com/files/example.ex\nwill say \"fs1.cdn.example.com\")\nEmail: Sender email address\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 165\nreason\nReason\nreason\nString\n256\nA text description of\nthe reason or event\nthat triggered the log\nline\neligible\npending\ncached\nclean\ncached\nmalicious\ncloud\nclean\ncloud\nmalicious\nerror\neligible: Records the fact that a file was identifi\nthe local scan engine as requiring analysis by\nSandstorm. These log lines are intended only as a\nof counting eligible items for reporting purposes,\ndetail fields are left blank.\npending: Records the fact that a file required furth\nanalysis. The file will be queued for sending to\nSandstorm and the end-user will be notified that th\nscan is in progress\ncached clean: The file has been previously analy\nand is known to be clean.\ncached malicious: The file has been previously\nanalysed and is known to be malicious.\ncloud clean: A result was returned from the\nSandstorm service after analysis indicating that th\nis considered clean.\ncloud malicious: A result was returned from the\nSandstorm service after analysis indicating that th\nis considered malicious.\nerror: An error occurred in processing the item. T\nincludes failures to communicate with the Sandsto\nservice, errors reported by the Sandstorm service a\ninternal errors such as problems with storage of ite\nbeing scanned\ndestination\ndomain\ndomain\nString\n256\nThe destination\ndomain of the email\nOnly applies to emails scanned by Sandstorm.\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 166\nsubject\nsubject\nsubject\nString\n64\nThe subject of the\nemail\nOnly applies to emails scanned by Sandstorm.\nlog_id\nN/A\nString\neg. \"010101600001\"\ndevice\nN/A\nString\neg \"SFW\"\ndevice_name\nN/A\nString\neg \"SF01V\"\ndevice_id\nN/A\nString\neg \"SFDemo-ff94e90\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 162,
+      "end": 167
+    },
+    "content_stats": {
+      "char_count": 4022,
+      "word_count": 645
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (Legacy)",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_589",
+  "section_number": "1.16.16.2.2",
+  "header": "Decryption Broker: Layer 3 Security Chain",
+  "content": "In a Layer 3 security chain network, security chain devices use Layer 3 interfaces to connect to\nthe security chain network, and each interface must have an assigned IP address and subnet mask.\nSecurity chain devices must be configured with static routes to direct inbound and outbound\ntraffic to the next device in the security chain and back to the firewall.\nDepending on the security chain session flow you choose (unidirectional or bidirectional),\ndecrypted inbound and outbound sessions pass through the security chain in the same or\nopposite directions.\nThe figure below shows a firewall that is enabled as a decryption broker directing allowed, clear\ntext traffic through a Layer 3 security chain bidirectionally. The firewall is configured with static\nroutes that direct inbound sessions to a trusted, internal zone where clients reside (for example,\nto employees), and with a default route that directs outbound sessions to an untrusted, external\nzone (the Internet). For outbound sessions, the firewall uses the Primary Interface dedicated\nto decryption forwarding to forward inbound sessions to the first security chain device. The\nsecurity chain devices use static routes to direct traffic to the next inline device; each security\nchain device’s next hop is the subsequent device’s ingress port IP address. The last security chain\ndevice’s next hop is the firewall’s Secondary Interface dedicated to decryption forwarding. (The\nflow for inbound sessions is exactly the opposite).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1092\n©2025 Palo Alto Networks, Inc.\nDecryption\nAlternatively, the following figure shows the same firewall enabled as a decryption broker\ndirecting decrypted traffic through a Layer 3 security chain; however, in this example, the firewall\ndirects all sessions to flow through the security unidirectionally. The firewall uses the Primary\nInterface dedicated to decryption forwarding to forward both inbound and outbound sessions to\nthe first security chain device. The last security chain device forwards both inbound and outbound\nsessions back to the firewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1093\n©2025 Palo Alto Networks, Inc.\nDecryption\nIn both Layer 3 security chain deployments (bidirectional and unidirectional), the firewall re-\nencrypts the traffic the security chain returns and continues to forward it to its destination.\nConfigure Decryption Broker with One or More Layer 3 Security Chain to get started with either\nof these deployments.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1092,
+      "end": 1094
+    },
+    "content_stats": {
+      "char_count": 2490,
+      "word_count": 376
+    },
+    "hierarchy": {
+      "parent": "Decryption Broker Concepts",
+      "children": []
+    }
+  }
+}

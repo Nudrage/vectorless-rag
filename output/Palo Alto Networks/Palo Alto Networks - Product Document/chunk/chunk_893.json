@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_893",
+  "section_number": "1.21.19.1",
+  "header": "LLDP Overview",
+  "content": "LLDP operates at Layer 2 of the OSI model, using MAC addresses. An LLDPDU is a sequence of\ntype-length-value (TLV) elements encapsulated in an Ethernet frame. The IEEE 802.1AB standard\ndefines three MAC addresses for LLDPDUs: 01-80-C2-00-00-0E, 01-80-C2-00-00-03, and\n01-80-C2-00-00-00.\nThe Palo Alto Networks firewall supports only one MAC address for transmitting and receiving\nLLDP data units: 01-80-C2-00-00-0E. When transmitting, the firewall uses 01-80-C2-00-00-0E\nas the destination MAC address. When receiving, the firewall processes datagrams with 01-80-\nC2-00-00-0E as the destination MAC address. If the firewall receives either of the other two MAC\naddresses for LLDPDUs on its interfaces, the firewall takes the same forwarding action it took\nprior to this feature, as follows:\n• If the interface type is vwire, the firewall forwards the datagram to the other port.\n• If the interface type is L2, the firewall floods the datagram to the rest of the VLAN.\n• If the interface type is L3, the firewall drops the datagrams.\nPanorama and the WildFire appliance are not supported.\nInterface types that do not support LLDP are TAP, high availability (HA), Decrypt Mirror, virtual\nwire/vlan/L3 subinterfaces, and PA-7000 Series Log Processing Card (LPC) interfaces.\nAn LLDP Ethernet frame has the following format:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1534\n©2025 Palo Alto Networks, Inc.\nNetworking\nWithin the LLDP Ethernet frame, the TLV structure has the following format:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1534,
+      "end": 1535
+    },
+    "content_stats": {
+      "char_count": 1483,
+      "word_count": 225
+    },
+    "hierarchy": {
+      "parent": "LLDP",
+      "children": []
+    }
+  }
+}

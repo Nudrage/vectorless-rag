@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_671",
+  "section_number": "1.18.6.1",
+  "header": "Use Case: QoS for a Single User",
+  "content": "A CEO finds that during periods of high network usage, she is unable to access enterprise\napplications to respond effectively to critical business communications. The IT admin wants to\nensure that all traffic to and from the CEO receives preferential treatment over other employee\ntraffic so that she is guaranteed not only access to, but high performance of, critical network\nresources.\nSTEP 1 |\nThe admin creates the QoS profile CEO_traffic to define how traffic originating from the CEO\nwill be treated and shaped as it flows out of the company network:\nThe admin assigns a guaranteed bandwidth (Egress Guaranteed) of 50 Mbps to ensure that the\nCEO will have that amount that bandwidth guaranteed to her at all times (more than she would\nneed to use), regardless of network congestion.\nThe admin continues by designating Class 1 traffic as high priority and sets the profile’s\nmaximum bandwidth usage (Egress Max) to 1000 Mbps, the same maximum bandwidth for the\ninterface that the admin will enable QoS on. The admin is choosing to not restrict the CEO’s\nbandwidth usage in any way.\nIt is a best practice to populate the Egress Max field for a QoS profile, even if the\nmax bandwidth of the profile matches the max bandwidth of the interface. The QoS\nprofile’s max bandwidth should never exceed the max bandwidth of the interface you\nare planning to enable QoS on.\nSTEP 2 |\nThe admin creates a QoS policy to identify the CEO’s traffic (Policies > QoS) and assigns it\nthe class that he defined in the QoS profile (see prior step). Because User-ID is configured,\nthe admin uses the Source tab in the QoS policy to singularly identify the CEO’s traffic by\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1240\n©2025 Palo Alto Networks, Inc.\nQuality of Service\nher company network username. (If User-ID is not configured, the administrator could Add\nthe CEO’s IP address under Source Address. See User-ID.):\nThe admin associates the CEO’s traffic with Class 1 (Other Settings tab) and then continues\nto populate the remaining required policy fields; the admin gives the policy a descriptive\nName (General tab) and selects Any for the Source Zone (Source tab) and Destination Zone\n(Destination tab):\nSTEP 3 |\nNow that Class 1 is associated with the CEO’s traffic, the admin enables QoS by checking\nTurn on QoS feature on interface and selecting the traffic flow’s egress interface. The egress\ninterface for the CEO’s traffic flow is the external-facing interface, in this case, ethernet 1/2:\nBecause the admin wants to ensure that all traffic originating from the CEO is guaranteed by\nthe QoS profile and associated QoS policy he created, he selects the CEO_traffic to apply to\nClear Text traffic flowing from ethernet 1/2.\nSTEP 4 |\nAfter committing the QoS configuration, the admin navigates to the Network > QoS page to\nconfirm that the QoS profile CEO_traffic is enabled on the external-facing interface, ethernet\n1/2:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1241\n©2025 Palo Alto Networks, Inc.\nQuality of Service\nSTEP 5 |\nHe clicks Statistics to view how traffic originating with the CEO (Class 1) is being shaped as it\nflows from ethernet 1/2:\nThis case demonstrates how to apply QoS to traffic originating from a single source\nuser. However, if you also wanted to guarantee or shape traffic to a destination user,\nyou could configure a similar QoS setup. Instead of, or in addition to this work flow,\ncreate a QoS policy that specifies the user’s IP address as the Destination Address on\nthe Policies > QoS page (instead of specifying the user’s source information) and then\nenable QoS on the network’s internal-facing interface on the Network > QoS page\n(instead of the external-facing interface).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1240,
+      "end": 1242
+    },
+    "content_stats": {
+      "char_count": 3695,
+      "word_count": 619
+    },
+    "hierarchy": {
+      "parent": "QoS Use Cases",
+      "children": []
+    }
+  }
+}

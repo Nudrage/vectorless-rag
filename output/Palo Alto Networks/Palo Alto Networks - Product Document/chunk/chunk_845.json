@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_845",
+  "section_number": "1.21.15.6.2",
+  "header": "Enable Clients on the Internal Network to Access your Public Servers (Destination U- Turn NAT)",
+  "content": "Turn NAT)\nWhen a user on the internal network sends a request for access to the corporate web server in\nthe DMZ, the DNS server will resolve it to the public IP address. When processing the request,\nthe firewall will use the original destination in the packet (the public IP address) and route the\npacket to the egress interface for the untrust zone. In order for the firewall to know that it must\ntranslate the public IP address of the web server to an address on the DMZ network when it\nreceives requests from users on the trust zone, you must create a destination NAT rule that will\nenable the firewall to send the request to the egress interface for the DMZ zone as follows.\nSTEP 1 |\nCreate an address object for the web server.\n1.\nSelect Objects > Addresses and Add a Name and optional Description for the address\nobject.\n2.\nFor Type, select IP Netmask and enter the public IP address of the web server,\n203.0.113.11 in this example.\nYou can switch the address object type from IP Netmask to FQDN by clicking Resolve,\nand when the FQDN appears, click Use this FQDN. Alternatively, for Type, select FQDN\nand enter the FQDN to use for the address object. If you enter an FQDN and click\nResolve, the IP address to which the FQDN resolves appears in the field. To switch the\naddress object Type from an FQDN to an IP Netmask using this IP address, click Use\nthis address and the Type will switch to IP Netmask with the IP address appearing in the\nfield.\n3.\nClick OK.\nSTEP 2 |\nCreate the NAT policy.\n1.\nSelect Policies > NAT and click Add.\n2.\nOn the General tab, enter a descriptive Name for the NAT rule.\n3.\nOn the Original Packet tab, select the zone you created for your internal network in the\nSource Zone section (click Add and then select the zone) and the zone you created for\nthe external network from the Destination Zone list.\n4.\nIn the Destination Address section, Add the address object you created for your public\nweb server.\n5.\nOn the Translated Packet tab, for Destination Address Translation, for Translation Type,\nselect Static IP and then enter the IP address that is assigned to the web server interface\non the DMZ network, 10.1.1.11 in this example. Alternatively, you can select Translation\nType to be Dynamic IP (with session distribution) and enter the Translated Address to\nbe an address object or address group that uses an IP netmask, IP range, or FQDN. Any\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1493\n©2025 Palo Alto Networks, Inc.\nNetworking\nof these can return multiple addresses from DNS. If the translated destination address\nresolves to more than one address, the firewall distributes incoming NAT sessions\namong the multiple addresses based on one of several methods you can select: Round\nRobin (the default method), Source IP Hash, IP Modulo, IP Hash, or Least Sessions.\n6.\nClick OK.\nSTEP 3 |\nClick Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1493,
+      "end": 1494
+    },
+    "content_stats": {
+      "char_count": 2842,
+      "word_count": 504
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

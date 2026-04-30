@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_841",
+  "section_number": "1.21.15.4",
+  "header": "Dynamic IP and Port NAT Oversubscription",
+  "content": "Dynamic IP and Port (DIPP) NAT allows you to use each translated IP address and port pair\nmultiple times (8, 4, or 2 times) in concurrent sessions. This reusability of an IP address and\nport (known as oversubscription) provides scalability for customers who have too few public\nIP addresses. The design is based on the assumption that hosts are connecting to different\ndestinations, therefore sessions can be uniquely identified and collisions are unlikely. The\noversubscription rate in effect multiplies the original size of the address/port pool to 8, 4, or 2\ntimes the size. For example, the default limit of 64K concurrent sessions allowed, when multiplied\nby an oversubscription rate of 8, results in 512K concurrent sessions allowed.\nThe oversubscription rates that are allowed vary based on the model. The oversubscription rate\nis global; it applies to the firewall. This oversubscription rate is set by default and consumes\nmemory, even if you have enough public IP addresses available to make oversubscription\nunnecessary. You can reduce the rate from the default setting to a lower setting or even 1 (which\nmeans no oversubscription). By configuring a reduced rate, you decrease the number of source\ndevice translations possible, but increase the DIP and DIPP NAT rule capacities. To change the\ndefault rate, see Modify the Oversubscription Rate for DIPP NAT.\nIf you select Platform Default, your explicit configuration of oversubscription is turned off and\nthe default oversubscription rate for the model applies, as shown in the table below. The Platform\nDefault setting allows for an upgrade or downgrade of a software release.\nThe following table lists the default (highest) oversubscription rate for each model.\nModel\nDefault Oversubscription Rate\nPA-220\n2\nPA-820\n2\nPA-850\n2\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1488\n©2025 Palo Alto Networks, Inc.\nNetworking\nModel\nDefault Oversubscription Rate\nPA-3220\n4\nPA-3250\n4\nPA-3260\n4\nPA-5220\n8\nPA-5250\n8\nPA-5260\n8\nPA-5280\n8\nPA-7050\n8\nPA-7080\n8\nVM-50\n2\nVM-100\n2\nVM-200\n2\nVM-300\n2\nVM-500\n8\nVM-700\n8\nVM-1000-HV\n2\nThe firewall supports a maximum of 256 translated IP addresses per NAT rule, and each\nmodel supports a maximum number of translated IP addresses (for all NAT rules combined). If\noversubscription causes the maximum translated addresses per rule (256) to be exceeded, the\nfirewall will automatically reduce the oversubscription ratio in an effort to have the commit\nsucceed. However, if your NAT rules result in translations that exceed the maximum translated\naddresses for the model, the commit will fail.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1488,
+      "end": 1489
+    },
+    "content_stats": {
+      "char_count": 2574,
+      "word_count": 409
+    },
+    "hierarchy": {
+      "parent": "NAT",
+      "children": []
+    }
+  }
+}

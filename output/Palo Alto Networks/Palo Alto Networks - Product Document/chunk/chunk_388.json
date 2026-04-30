@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_388",
+  "section_number": "1.11.18",
+  "header": "Firewall Interface Identifiers in SNMP Managers and NetFlow Collectors",
+  "content": "NetFlow Collectors\nWhen you use a NetFlow collector (see NetFlow Monitoring) or SNMP manager (see SNMP\nMonitoring and Traps) to monitor the Palo Alto Networks firewall, an interface index (SNMP\nifindex object) identifies the interface that carried a particular flow (see Interface Indexes in an\nSNMP Manager). In contrast, the firewall web interface uses interface names as identifiers (for\nexample, ethernet1/1), not indexes. To understand which statistics that you see in a NetFlow\ncollector or SNMP manager apply to which firewall interface, you must be able to match the\ninterface indexes with interface names.\nFigure 3: Interface Indexes in an SNMP Manager\nYou can match the indexes with names by understanding the formulas that the firewall uses to\ncalculate indexes. The formulas vary by platform and interface type: physical or logical.\nPhysical interface indexes have a range of 1-9999, which the firewall calculates as follows:\nFirewall Platform\nCalculation\nExample Interface Index\nVM-Series\nNumber of management ports +\nphysical port offset\n• Number of management\nports—This is a constant of 1.\n• Physical port offset—This is\nthe physical port number.\nVM-100 firewall, Eth1/4 =\n1 (number of management\nports) + 4 (physical port) = 5\nPA-220, PA-220R,\nPA-800 Series\nNumber of management ports +\nphysical port offset\n• Number of management\nports—This is a constant of 5.\n• Physical port offset—This is\nthe physical port number.\nPA-5200 Series firewall,\nEth1/4 =\n5 (number of management\nports) + 4 (physical port) = 9\nPA-3200 Series,\nPA-5200 Series\nNumber of management ports +\nphysical port offset\n• Number of management\nports—This is a constant of 4.\nPA-5200 Series firewall,\nEth1/4 =\n4 (number of management\nports) + 4 (physical port) = 8\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n683\n©2025 Palo Alto Networks, Inc.\nMonitoring\nFirewall Platform\nCalculation\nExample Interface Index\n• Physical port offset—This is\nthe physical port number.\nPA-7000 Series\n(Max. ports * slot) + physical port\noffset + number of management\nports\n• Maximum ports—This is a\nconstant of 64.\n• Slot—This is the chassis\nslot number of the network\ninterface card.\n• Physical port offset—This is\nthe physical port number.\n• Number of management\nports—This is a constant of 5.\nPA-7000 Series firewall,\nEth3/9 =\n[64 (max. ports) * 3 (slot)] + 9\n(physical port) + 5 (number of\nmanagement ports) = 206\nLogical interface indexes for all platforms are nine-digit numbers that the firewall calculates as\nfollows:\nInterface\nType\nRange\nDigit\n9\nDigits\n7-8\nDigits\n5-6\nDigits 1-4\nExample Interface Index\nLayer\n3\nsubinterface\n101010001-199999999\nType:\n1\nInterface\nslot:\n1-9\n(01-09)\nInterface\nport:\n1-9\n(01-09)\nSubinterface:\nsuffix\n1-9999\n(0001-9999)\nEth1/5.22 =\n100000000 (type) +\n100000 (slot) + 50000\n(port) + 22 (suffix) =\n101050022\nLayer\n2\nsubinterface\n101010001-199999999\nType:\n1\nInterface\nslot:\n1-9\n(01-09)\nInterface\nport:\n1-9\n(01-09)\nSubinterface:\nsuffix\n1-9999\n(0001-9999)\nEth2/3.6 = 100000000\n(type) + 200000 (slot) +\n30000 (port) + 6 (suffix)\n= 102030006\nVwire\nsubinterface\n101010001-199999999\nType:\n1\nInterface\nslot:\n1-9\n(01-09)\nInterface\nport:\n1-9\n(01-09)\nSubinterface:\nsuffix\n1-9999\n(0001-9999)\nEth4/2.312 =\n100000000 (type) +\n400000 (slot) + 20000\n(port) + 312 (suffix) =\n104020312\nVLAN\n200000001-200009999\nType:\n2\n00\n00\nVLAN\nsuffix:\n1-9999\n(0001-9999)\nVLAN.55 = 200000000\n(type) + 55 (suffix) =\n200000055\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n684\n©2025 Palo Alto Networks, Inc.\nMonitoring\nInterface\nType\nRange\nDigit\n9\nDigits\n7-8\nDigits\n5-6\nDigits 1-4\nExample Interface Index\nLoopback300000001-300009999\nType:\n3\n00\n00\nLoopback\nsuffix:\n1-9999\n(0001-9999)\nLoopback.55 =\n300000000 (type) + 55\n(suffix) = 300000055\nTunnel\n400000001-400009999\nType:\n4\n00\n00\nTunnel\nsuffix:\n1-9999\n(0001-9999)\nTunnel.55 =\n400000000 (type) + 55\n(suffix) = 400000055\nAggregate\ngroup\n500010001-500089999\nType:\n5\n00\nAE\nsuffix:\n1-8\n(01-08)\nSubinterface:\nsuffix\n1-9999\n(0001-9999)\nAE5.99 = 500000000\n(type) + 50000 (AE\nSuffix) + 99 (suffix) =\n500050099\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n685\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 683,
+      "end": 686
+    },
+    "content_stats": {
+      "char_count": 4094,
+      "word_count": 631
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

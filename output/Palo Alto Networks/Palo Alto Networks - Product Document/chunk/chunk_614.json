@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_614",
+  "section_number": "1.17.9.1",
+  "header": "Verify URL Filtering",
+  "content": "If you have the legacy URL Filtering subscription, follow the steps below to test and verify that\nthe firewall correctly categorizes, enforces, and logs URLs in the categories that you access.\nSTEP 1 |\nAccess a website in the URL category of interest.\nConsider testing sites in blocked URL categories. You can use a test page\n(urlfiltering.paloaltonetworks.com/test-<url-category>) to avoid directly accessing a site. For\nexample, to test your block policy for malware, visit https://urlfiltering.paloaltonetworks.com/\ntest-malware.\nSTEP 2 |\nVerify that your firewall processes the site correctly.\nFor example, if you configured a block page to display when someone accesses a site that\nviolates your organization’s policy, check that one appears when you visit the test site.\n1.\nReview the Traffic and URL Filtering logs (Monitor > Logs) to confirm that the URLs have\nbeen properly categorized and the correct policy rule is logged.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1132,
+      "end": 1132
+    },
+    "content_stats": {
+      "char_count": 933,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Test URL Filtering Configuration",
+      "children": []
+    }
+  }
+}

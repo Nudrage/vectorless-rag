@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_957",
+  "section_number": "1.22.10.2.1",
+  "header": "IP Address List",
+  "content": "The external dynamic list can include individual IP addresses, subnet addresses (address/mask),\nor range of IP addresses. In addition, the block list can include comments and special characters\nsuch as * , : , ; , #, or /. The syntax for each line in the list is [IP address, IP/Mask, or IP\nstart range-IP end range] [space] [comment].\nEnter each IP address/range/subnet in a new line; URLs or domains are not supported in this list.\nA subnet or an IP address range, such as 92.168.20.0/24 or 192.168.20.40-192.168.20.50, count\nas one IP address entry and not as multiple IP addresses. If you add comments, the comment must\nbe on the same line as the IP address/range/subnet. The space at the end of the IP address is the\ndelimiter that separates a comment from the IP address.\nAn example IP address list:\n192.168.20.10/32\n2001:db8:123:1::1 #test IPv6 address\n192.168.20.0/24 ; test internal subnet\n2001:db8:123:1::/64 test internal IPv6 range\n192.168.20.40-192.168.20.50\nFor an IP address that is blocked, you can display a notification page only if the protocol is\nHTTP.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1634,
+      "end": 1634
+    },
+    "content_stats": {
+      "char_count": 1072,
+      "word_count": 176
+    },
+    "hierarchy": {
+      "parent": "Formatting Guidelines for an External Dynamic List",
+      "children": []
+    }
+  }
+}

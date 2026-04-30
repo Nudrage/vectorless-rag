@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_520",
+  "section_number": "1.15.15.3.1",
+  "header": "AutoFocus Intelligence Summary",
+  "content": "The AutoFocus Intelligence Summary offers a centralized view of information about an artifact\nthat AutoFocus has extracted from threat intelligence gathered from other AutoFocus users,\nWildFire, the PAN-DB URL filtering database, Unit 42, and open-source intelligence.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n962\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nAutoFocus Intelligence Summary\nAnalysis Information\nThe Analysis Information tab displays the following information:\n• Sessions—The number of sessions logged in your firewall(s) in which\nthe firewall detected samples associated with the artifact.\n• Samples—A comparison of organization and global samples\nassociated with the artifact and grouped by WildFire verdict\n(benign, malware, or grayware). Global refers to samples from all\nWildFire submissions, while organization refers only to samples\nsubmitted to WildFire by your organization.\n• Matching Tags—The AutoFocus tags matched to the artifact.\nAutoFocus Tags indicate whether an artifact is linked to malware or\ntargeted attacks.\nPassive DNS\nThe Passive DNS tab displays passive DNS history that includes the\nartifact. This passive DNS history is based on global DNS intelligence\nin AutoFocus; it is not limited to the DNS activity in your network.\nPassive DNS history consists of:\n• The domain request\n• The DNS request type\n• The IP address or domain to which the DNS request resolved\n(private IP addresses are not displayed)\n• The number of times the request was made\n• The date and time the request was first seen and last seen\nMatching Hashes\nThe Matching Hashes tab displays the 5 most recently detected\nmatching samples. Sample information includes:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n963\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nAutoFocus Intelligence Summary\n• The SHA256 hash of the sample\n• The sample file type\n• The date and time that WildFire analyzed a sample and assigned a\nWildFire verdict to it\n• The WildFire verdict for the sample\n• The date and time that WildFire updated the WildFire verdict for\nthe sample (if applicable)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 962,
+      "end": 964
+    },
+    "content_stats": {
+      "char_count": 2077,
+      "word_count": 320
+    },
+    "hierarchy": {
+      "parent": "AutoFocus Threat Intelligence for Network Traffic",
+      "children": []
+    }
+  }
+}

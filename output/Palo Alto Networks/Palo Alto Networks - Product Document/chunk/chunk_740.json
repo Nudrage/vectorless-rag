@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_740",
+  "section_number": "1.21.1.2.4",
+  "header": "Aggregated Interfaces for a Virtual Wire",
+  "content": "You can Configure an Aggregate Interface Group of virtual wire interfaces, but virtual wires don’t\nuse LACP. If you configure LACP on devices that connect the firewall to other networks, the\nvirtual wire will pass LACP packets transparently without performing LACP functions.\nIn order for aggregate interface groups to function properly, ensure all links belonging to\nthe same LACP group on the same side of the virtual wire are assigned to the same zone.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1336,
+      "end": 1336
+    },
+    "content_stats": {
+      "char_count": 455,
+      "word_count": 74
+    },
+    "hierarchy": {
+      "parent": "Virtual Wire Interfaces",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_431",
+  "section_number": "1.12.8",
+  "header": "Verify the User-ID Configuration",
+  "content": "After you configure user and group mapping, enable User-ID in your Security policy, and\nconfigure Authentication policy, you should verify that User-ID works properly.\nSTEP 1 |\nAccess the firewall CLI.\nSTEP 2 |\nVerify that group mapping is working.\nFrom the CLI, enter the following operational command:\n> show user group-mapping statistics\nSTEP 3 |\nVerify that user mapping is working.\nIf you are using the PAN-OS integrated User-ID agent, you can verify this from the CLI using\nthe following command:\n> show user ip-user-mapping-mp all\nIP              Vsys  From  User         Timeout (sec)\n------------------------------------------------------\n192.168.201.1   vsys1 UIA   acme\\george            210\n192.168.201.11  vsys1 UIA   acme\\duane             210\n192.168.201.50  vsys1 UIA   acme\\betsy             210\n192.168.201.10  vsys1 UIA   acme\\administrator     210\n192.168.201.100 vsys1 AD    acme\\administrator     748\nTotal: 5 users\n*: WMI probe succeeded\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n782\n©2025 Palo Alto Networks, Inc.\nUser-ID\nSTEP 4 |\nTest your Security policy rule.\n• From a machine in the zone where User-ID is enabled, attempt to access sites and\napplications to test the rules you defined in your policy and ensure that traffic is allowed\nand denied as expected.\n• You can also troubleshoot the running configuration to determine whether the policy is\nconfigured correctly. For example, suppose you have a rule that blocks users from playing\nWorld of Warcraft; you could test the policy as follows:\n1.\nSelect Device > Troubleshooting, and select Security Policy Match from the Select Test\ndrop-down.\n2.\nEnter 0.0.0.0 as the Source and Destination IP addresses. This executes the policy\nmatch test against any source and destination IP addresses.\n3.\nEnter the Destination Port.\n4.\nEnter the Protocol.\n5.\nExecute the security policy match test.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n783\n©2025 Palo Alto Networks, Inc.\nUser-ID\nSTEP 5 |\nTest your Authentication policy and Authentication Portal configuration.\n1.\nFrom the same zone, go to a machine that is not a member of your directory, such as a\nMac OS system, and try to ping to a system external to the zone. The ping should work\nwithout requiring authentication.\n2.\nFrom the same machine, open a browser and navigate to a web site in a destination zone\nthat matches an Authentication rule you defined. The Authentication Portal web form\nshould display and prompt you for login credentials.\n3.\nLog in using the correct credentials and confirm that you are redirected to the requested\npage.\n4.\nYou can also test your Authentication policy using the test authentication-\npolicy-match operational command as follows:\n> test authentication-policy-match from corporate to internet\nsource 192.168.201.10 destination 8.8.8.8\nMatched rule: 'authentication portal' action: web-form\nSTEP 6 |\nVerify that the log files display usernames.\nSelect a logs page (such as Monitor > Logs > Traffic) and verify that the Source User column\ndisplays usernames.\nSTEP 7 |\nVerify that reports display usernames.\n1.\nSelect Monitor > Reports.\n2.\nSelect a report type that includes usernames. For example, the Denied Applications\nreport, Source User column, should display a list of the users who attempted to access\nthe applications.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n784\n©2025 Palo Alto Networks, Inc.\nUser-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 782,
+      "end": 785
+    },
+    "content_stats": {
+      "char_count": 3368,
+      "word_count": 512
+    },
+    "hierarchy": {
+      "parent": "User-ID",
+      "children": []
+    }
+  }
+}

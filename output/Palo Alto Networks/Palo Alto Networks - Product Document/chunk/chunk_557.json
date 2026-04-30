@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_557",
+  "section_number": "1.16.9.2",
+  "header": "Exclude a Server from Decryption for Technical Reasons",
+  "content": "If decryption breaks an important application or service technically (decrypting the traffic blocks\nit), you can add the hostname of the site that hosts to the application or service to the Palo Alto\nNetworks predefined SSL Decryption Exclusion list to create a custom decryption exception. The\nfirewall doesn’t decrypt, inspect, and enforce Security policy on traffic that the SSL Decryption\nExclusion list allows because the traffic remains encrypted, so be sure that the sites you add to\nthe list really are sites with applications or services you need for business. For example, some\nbusiness-critical internal custom applications may break decryption and you can add them to the\nlist so that the firewall allows the encrypted custom application traffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1023\n©2025 Palo Alto Networks, Inc.\nDecryption\nThe SSL Decryption Exclusion list is not for sites that you choose not to decrypt for legal,\nregulatory, business, privacy, or other volitional reasons, it is only for sites that break\ndecryption technically. For traffic (IP addresses, users, URL categories, services, and\neven entire zones) that you choose not to decrypt, Create a Policy-Based Decryption\nExclusion.\nReasons that sites break decryption technically include pinned certificates, client authentication,\nincomplete certificate chains, and unsupported ciphers. For HTTP public key pinning (HPKP), most\nbrowsers that use HPKP permit Forward Proxy decryption as long as you install the enterprise CA\ncertificate (or the certificate chain) on the client.\nIf the technical reason for excluding a site from decryption is an incomplete certificate\nchain, the next-generation firewall doesn’t automatically fix the chain as a browser would.\nIf you need to add a site to the SSL Decryption Exclusion list, manually review the site to\nensure it’s a legitimate business site, then download the missing sub-CA certificates and\nload and deploy them onto the firewall.\nAfter you add a server to the SSL Decryption Exclusion list, the firewall compares the server\nhostname that you use to define the decryption exclusion against both the Server Name\nIndication (SNI) in the client hello message and the Common Name (CN) in the server certificate.\nIf either the SNI or CN match the entry in the SSL Decryption Exclusion list, the firewall excludes\nthe traffic from decryption.\nSTEP 1 |\nSelect Device > Certificate Management > SSL Decryption Exclusions.\nSTEP 2 |\nAdd a new decryption exclusion, or select an existing custom entry to modify it.\nSTEP 3 |\nEnter the hostname of the website or application you want to exclude from decryption.\nThe hostname is case-sensitive.\nYou can use wildcards to exclude multiple hostnames associated with a domain. The\nfirewall excludes all sessions where the server presents a CN that matches the domain from\ndecryption.\nMake sure that the hostname field is unique for each custom entry. If a predefined exclusion\nmatches a custom entry, the custom entry takes precedence.\nSTEP 4 |\n(Optional) Select Shared to share the exclusion across all virtual systems in a multiple virtual\nsystem firewall.\nSTEP 5 |\nExclude the application from decryption. Alternatively, if you are modifying an existing\ndecryption exclusion, you can clear this checkbox to start decrypting an entry that was\npreviously excluded from decryption.\nSTEP 6 |\nClick OK to save the new exclusion entry.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1023,
+      "end": 1024
+    },
+    "content_stats": {
+      "char_count": 3399,
+      "word_count": 535
+    },
+    "hierarchy": {
+      "parent": "Decryption Exclusions",
+      "children": []
+    }
+  }
+}

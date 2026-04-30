@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_058",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is auth_log_fmt.\nSyslog field\nname\nLog viewer -\nDetail view field\nname\nData\ntype\nMax\nlength Format/Description\nPossible values\nNotes/Examples\nlog_type\nlog_type\nString\nEvent\nEvent\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 54\nlog_component\nlog_component\nString\nFirewall\nAuthentication\nMy Account\nAuthentication\nDial-In\nAuthentication\nVPN Authentication\nSSL VPN\nAuthentication\nGUI\nWeb Application\nFirewall\nCTA\nAppliance\nExternal\nAuthentication\nVPN Portal\nAuthentication\nFirewall Authentication\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 55\nlog_subtype\nlog_subtype\nString\nAuthentication\nAdmin\nSystem\nAuthentication\npriority\nString\nInformation\nNotice\nInformation\nuser_name\nuser\nString 384\n\"JohnDoe\"\nusergroupname\nuser_group\nString 1024\n\"Sales\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 56\nauth_client\nclient_used\nString 32\n\"\"\nAuthentication\nAgent\nWeb Client\nSSO\nClientless\nL2TP\nIPSec\nPPTP\nCTA\nMyAccount\nThin Client\nAdmin Client\nSSLVPN\nNTLM Client\n24online\nAndroid Client\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 57\niOS Client\niOS Web Client\nSSLVPN Portal\nAndroid Web Client\nRadius SSO\nAPI Client\nWiFi SSO\nAPI iOS Client\nAPI Android Client\nWAF\neDirectory SSO\nHeartbeat\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 58\nauth_mechanism auth_mechanism\nString 128\nLocal\n\"\"\nLDAP\nAD\nRADIUS\nTACACS+\nEDIR\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 59\nreason\nreason\nString 128\nLogin failed\nwrong credentials\naccess not allowed\nIP restriction\nMAC restriction\nmax login limit\nreached\nmultiple login not\nallowed\nAlready login as\nclientless user\nMaximum allowed\nusers limit reached\nLDAP account\nexpired\nClientless user is\nnot required to login\nuser validity\nexpired\nip lease failed\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 60\nno remote access\nVPN policy\nno access rights\nsrc_ip\nsrc_ip\n1.1.1.1\nmessage\nmessage\nString 1024\n\"Clientless user Nyarlathotep\nfrom 1.1.1.1 failed to log in to\nFirewall\"\nname\nname\nString 384\n\"Nyarlathotep S. exited\"\nsrc_mac\nsrc_mac\nString 32\n\"44:85:00:81:8a:8f",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 54,
+      "end": 61
+    },
+    "content_stats": {
+      "char_count": 2188,
+      "word_count": 321
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (Legacy)",
+      "children": []
+    }
+  }
+}

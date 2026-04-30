@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_112",
+  "section_number": "1.6.6.5",
+  "header": "Ports Used for User-ID",
+  "content": "User-ID is a feature that enables mapping of user IP addresses to usernames and group\nmemberships, enabling user- or group-based policy and visibility into user activity on your\nnetwork (for example, to be able to quickly track down a user who may be the victim of a threat).\nTo perform this mapping, the firewall, the User-ID agent (either installed on a Windows-based\nsystem or the PAN-OS integrated agent running on the firewall), and/or the Terminal Server agent\nmust be able to connect to directory services on your network to perform Group Mapping and\nUser Mapping. Additionally, if the agents are running on systems external to the firewall, they\nmust be able to connect to the firewall to communicate the IP address to username mappings to\nthe firewall. The following table lists the communication requirements for User-ID along with the\nport numbers required to establish connections.\nDestination\nPort\nProtocol\nDescription\n389\nTCP\nPort the firewall uses to connect to an LDAP server (plaintext\nor Start Transport Layer Security (Start TLS) to Map Users to\nGroups.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n219\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nDestination\nPort\nProtocol\nDescription\n3268\nTCP\nPort the firewall uses to connect to an Active Directory global\ncatalog server (plaintext or Start TLS) to Map Users to Groups.\n636\nTCP\nPort the firewall uses for LDAP over SSL connections with an\nLDAP server to Map Users to Groups.\n3269\nTCP\nPort the firewall uses for LDAP over SSL connections with an\nActive Directory global catalog server to Map Users to Groups.\n514\n6514\nTCP\nUDP\nSSL\nPort the User-ID agent listens on for authentication syslog\nmessages if you Configure User-ID to Monitor Syslog Senders\nfor User Mapping. The port depends on the type of agent and\nprotocol:\n• PAN-OS integrated User-ID agent—Port 6514 for SSL and port\n514 for UDP.\n• Windows-based User-ID agent—Port 514 for both TCP and\nUDP.\n5007\nTCP\nPort the firewall listens on for user mapping information from\nthe User-ID or Terminal Server agent. The agent sends the IP\naddress and username mapping along with a timestamp whenever\nit learns of a new or updated mapping. In addition, it connects to\nthe firewall at regular intervals to refresh known mappings.\n5006\nTCP\nPort the User-ID agent listens on for XML API requests. The\nsource for this communication is typically the system running a\nscript that invokes the API.\n88\nUDP/TCP\nPort the User-ID agent uses to authenticate to a Kerberos server.\nThe firewall tries UDP first and falls back to TCP.\n1812\nUDP\nPort the User-ID agent uses to authenticate to a RADIUS server.\n49\nTCP\nPort the User-ID agent uses to authenticate to a TACACS+\nserver.\n135\nTCP\nPort the User-ID agent uses to establish TCP-based WMI\nconnections with the Microsoft Remote Procedure Call (RPC)\nEndpoint Mapper. The Endpoint Mapper then assigns the agent\na randomly assigned port in the 49152-65535 port range. The\nagent uses this connection to make RPC queries for Exchange\nServer or AD server security logs, session tables. This is also the\nport used to access Terminal Servers.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n220\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nDestination\nPort\nProtocol\nDescription\nThe User-ID agent also uses this port to connect to client systems\nto perform Windows Management Instrumentation (WMI)\nprobing.\n139\nTCP\nPort the User-ID agent uses to establish TCP-based NetBIOS\nconnections to the AD server so that it can send RPC queries for\nsecurity logs and session information.\nThe User-ID agent also uses this port to connect to client systems\nfor NetBIOS probing (supported on the Windows-based User-ID\nagent only).\n445\nTCP\nPort the User-ID agent uses to connect to the Active Directory\n(AD) using TCP-based SMB connections to the AD server for\naccess to user logon information (print spooler and Net Logon).\n5985\nHTTP\nPort the User-ID agent uses to monitor security logs and session\ninformation with the WinRM protocol over HTTP.\n5986\nHTTPS\nPort the User-ID agent uses to monitor security logs and session\ninformation with the WinRM protocol over HTTPS.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n221\n©2025 Palo Alto Networks, Inc.\nFirewall Administration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 219,
+      "end": 222
+    },
+    "content_stats": {
+      "char_count": 4213,
+      "word_count": 687
+    },
+    "hierarchy": {
+      "parent": "Reference: Port Number Usage",
+      "children": []
+    }
+  }
+}

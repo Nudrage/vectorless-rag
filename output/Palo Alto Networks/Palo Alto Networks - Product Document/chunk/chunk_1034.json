@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1034",
+  "section_number": "1.24.3.4.2",
+  "header": "How to Measure CPS",
+  "content": "There are many ways to measure CPS:\n• If you use Panorama to manage your firewalls, use Device Monitoring to measure CPS coming\ninto a firewall (Panorama > Managed Devices > Health > All Devices). Device Monitoring can\nalso show you a 90-day trend line of CPU average and peak use to help you understand the\ntypical available capacity of each firewall.\n• Run the operational CLI command show session info.\nThe operational CLI command show counter interface displays two times the\nactual CPS value. If you use this command, divide the CPS value by two to derive the\nreal CPS value.\n• For setting appropriate DoS Protection profile thresholds, work with application teams to\nunderstand the normal and peak CPS to their servers and the maximum CPS those servers can\nsupport.\nIn addition, you can filter firewall Traffic logs and Threat logs for the destination IP addresses\nof the critical devices you want to protect to obtain normal and peak session activity\ninformation.\n• Use third-party tools such as Wireshark or NetFlow to collect and analyze network traffic.\n• Use scripts to automate CPS information collection and continuous monitoring, and to mine\ninformation from the logs.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1732\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\n• Configure every Security policy rule on the firewall to Log at Session End. If you have no\nmonitoring tools such as NetFlow or Wireshark, and cannot obtain or develop automated\nscripts, Log at Session End captures the number of connections at the session end. While\nthis doesn’t provide CPS information, it does show you the number of sessions ending in\nthe selected time duration and you can make an approximate calculation of the sessions per\nsecond from that information.\nTo conserve resources, the firewall measures the aggregate CPS at ten-second intervals.\nFor this reason, measurements you see on the firewall may not catch bursts within the\nten-second interval. Although the average CPS measurements aren’t affected, the peak\nCPS measurements may not be precise. For example, if the firewall logs report a 5,000\nCPS average in a ten-second interval, it’s possible that 4,000 CPS came in a one-second\nburst and the other 1,000 CPS were spread out over the remaining nine seconds.\nTo gather historical CPS data over time, if you use an SNMP server, you can use your own\nmanagement tools to poll SNMP MIBs. However, it is important to understand that the CPS\nmeasurements in the MIBs show twice the actual CPS value (for example, if the true CPS\nmeasurement is 10,000, the MIBs show 20,000 as the value). You can still see trends from the\nMIBs and you can divide the CPS values by two to derive the true values. The SNMP MIB OIDs\nare: PanZoneActiveTcpCps, PanZoneActiveUdpCps, and PanZoneOtherIpCps. Because the\nfirewall only takes measurements and updates the SNMP server every 10 seconds, poll every 10\nseconds.\nIn addition, create separate log forwarding profiles for flood events so the appropriate\nadministrator receives emails that contain only flood (potential DoS attack) events. Set Log\nForwarding for both zone protection and DoS protection threshold events.\nAfter you implement Zone and DoS protection, use these methods to monitor the\ndeployment, so as your network evolves and traffic patterns change, you adjust flood\nprotection thresholds.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1732,
+      "end": 1733
+    },
+    "content_stats": {
+      "char_count": 3356,
+      "word_count": 547
+    },
+    "hierarchy": {
+      "parent": "Baseline CPS Measurements for Setting Flood Thresholds",
+      "children": []
+    }
+  }
+}

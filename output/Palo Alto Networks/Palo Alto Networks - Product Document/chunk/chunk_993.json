@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_993",
+  "section_number": "1.22.17.1.2",
+  "header": "Path Monitoring for PBF",
+  "content": "Path monitoring allows you to verify connectivity to an IP address so that the firewall can direct\ntraffic through an alternate route, when needed. The firewall uses ICMP pings as heartbeats to\nverify that the specified IP address is reachable.\nA monitoring profile allows you to specify the threshold number of heartbeats to determine\nwhether the IP address is reachable. When the monitored IP address is unreachable, you can\neither disable the PBF rule or specify a fail-over or wait-recover action. Disabling the PBF rule\nallows the virtual router to take over the routing decisions. When the fail-over or wait-recover\naction is taken, the monitoring profile continues to monitor whether the target IP address is\nreachable, and when it comes back up, the firewall reverts back to using the original route.\nThe following table lists the difference in behavior for a path monitoring failure on a new session\nversus an established session.\nBehavior of a session\non a monitoring failure\nIf the rule stays enabled when\nthe monitored IP address is\nunreachable\nIf rule is disabled when the\nmonitored IP address is\nunreachable\nwait-recover—Continue to use\negress interface specified in\nthe PBF rule\nwait-recover—Continue to use\negress interface specified in the\nPBF rule\nFor an established\nsession\nfail-over—Use path\ndetermined by routing table\n(no PBF)\nfail-over—Use path determined by\nrouting table (no PBF)\nwait-recover—Use path\ndetermined by routing table\n(no PBF)\nwait-recover—Check the remaining\nPBF rules. If no match, use the\nrouting table\nFor a new session\nfail-over—Use path\ndetermined by routing table\n(no PBF)\nfail-over—Check the remaining\nPBF rules. If no match, use the\nrouting table",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1684,
+      "end": 1684
+    },
+    "content_stats": {
+      "char_count": 1692,
+      "word_count": 267
+    },
+    "hierarchy": {
+      "parent": "PBF",
+      "children": []
+    }
+  }
+}

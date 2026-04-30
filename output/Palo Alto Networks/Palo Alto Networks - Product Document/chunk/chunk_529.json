@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_529",
+  "section_number": "1.16.2.2",
+  "header": "SSL Forward Proxy",
+  "content": "When you configure the firewall to decrypt SSL traffic going to external sites, it functions as an\nSSL forward proxy. Use an SSL Forward Proxy decryption policy to decrypt and inspect SSL/TLS\ntraffic from internal users to the web. SSL Forward Proxy decryption prevents malware concealed\nas SSL encrypted traffic from being introduced into your corporate network by decrypting the\ntraffic so that the firewall can apply decryption profiles and security policies and profiles to the\ntraffic.\nIn SSL Forward Proxy decryption, the firewall is a man-in-the-middle between the internal client\nand the external server. The firewall uses certificates to transparently represent the client to\nthe server and to transparently represent the server to the client, so that the client believes it is\ncommunicating directly with the server (even though the client session is with the firewall), and\nserver believes it is communicating directly with the client (even though the server session is also\nwith the firewall). The firewall uses certificates to establish itself as a trusted third party (man-in-\nthe-middle) for the client-server session (for details on certificates, see Keys and Certificates for\nDecryption Policies).\nThe following figure shows this process in detail. See Configure SSL Forward Proxy for details on\nconfiguring SSL Forward Proxy.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n976\n©2025 Palo Alto Networks, Inc.\nDecryption\n1. The internal client on your network attempts to initiate a TLS session with an external server.\n2. The firewall intercepts the client’s SSL certificate request. For the client, the firewall acts as the\nexternal server, even though the secure session being established is with the firewall, not with\nthe actual server.\n3. The firewall then forwards the client’s SSL certificate request to the server to initiate a\nseparate session with the server. To the server, the firewall looks like the client, the server\ndoesn’t know there’s a man-in-the-middle, and the server verifies the certificate.\n4. The server sends the firewall a signed certificate intended for the client.\n5. The firewall analyzes the server certificate. If the server certificate is signed by a CA that the\nfirewall trusts and meets the policies and profiles you configure, the firewall generates an SSL\nForward Trust copy of the server certificate and sends it to the client. If the server certificate\nis signed by a CA that the firewall does not trust, the firewall generates an SSL Forward\nUntrust copy of the server certificate and sends it to the client. The certificate copy the firewall\ngenerates and sends to the client contains extensions from the original server certificate and is\ncalled an impersonation certificate because it is not the server’s actual certificate. If the firewall\ndoes not trust the server, the client sees a block page warning message that the site they’re\nattempting to connect to is not trusted, and if you Enable Users to Opt Out of SSL Decryption,\nthe client can choose to proceed or terminate the session.\n6. The client verifies the firewall’s impersonation certificate. The client then initiates a session\nkey exchange with the server, which the firewall proxies in the same manner as it proxies the\ncertificates. The firewall forwards the client key to the server, and makes an impersonation\ncopy of the server key for the client, so that firewall remains an “invisible” proxy, the client and\nserver believe their session is with each other, but there are still two separate sessions, one\nbetween the client and the firewall, and the other between the firewall and the server. Now all\nparties have the certificates and keys required and the firewall can decrypt the traffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n977\n©2025 Palo Alto Networks, Inc.\nDecryption\n7. All SSL session traffic between goes through the firewall transparently between the client\nand the server. The firewall decrypts the SSL traffic, applies security policies and profiles and\ndecryption profiles to the traffic, re-encrypts the traffic, and then forwards it.\nWhen you configure SSL Forward Proxy, the proxied traffic does not support DSCP code\npoints or QoS.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 976,
+      "end": 978
+    },
+    "content_stats": {
+      "char_count": 4175,
+      "word_count": 665
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

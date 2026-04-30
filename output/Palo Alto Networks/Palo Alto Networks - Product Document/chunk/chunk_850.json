@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_850",
+  "section_number": "1.21.15.6.7",
+  "header": "Reserve Dynamic IP NAT Addresses",
+  "content": "You can reserve Dynamic IP NAT addresses (for a configurable period of time) to prevent\nthem from being allocated as translated addresses to a different source IP address that needs\ntranslation. When configured, the reservation applies to all of the translated Dynamic IP addresses\nin progress and any new translations.\nFor both translations in progress and new translations, when a source IP address is translated\nto an available translated IP address, that pairing is retained even after all sessions related to\nthat specific source IP are expired. The reservation timer for each source IP address begins\nafter all sessions that use that source IP address translation expire. Dynamic IP NAT is a one-\nto-one translation; one source IP address translates to one translated IP address that is chosen\ndynamically from those addresses available in the configured pool. Therefore, a translated IP\naddress that is reserved is not available for any other source IP address until the reservation\nexpires because a new session has not started. The timer is reset each time a new session for a\nsource IP/translated IP mapping begins, after a period when no sessions were active.\nBy default, no addresses are reserved. You can reserve Dynamic IP NAT addresses for the firewall\nor for a virtual system.\nReserve dynamic IP NAT addresses for a firewall.\nEnter the following commands:\nadmin@PA-3250# set setting nat reserve-ip yes\nadmin@PA-3250# set setting nat reserve-time <1-604800 secs>\nReserve dynamic IP NAT addresses for a virtual system.\nEnter the following commands:\nadmin@PA-3250# set vsys <vsysid> setting nat reserve-ip yes\nadmin@PA-3250# set vsys <vsysid> setting nat reserve-time <1-604800\nsecs>\nFor example, suppose there is a Dynamic IP NAT pool of 30 addresses and there are 20\ntranslations in progress when the nat reserve-time is set to 28800 seconds (8 hours).\nThose 20 translations are now reserved, so that when the last session (of any application) that\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1498\n©2025 Palo Alto Networks, Inc.\nNetworking\nuses each source IP/translated IP mapping expires, the translated IP address is reserved for\nonly that source IP address for 8 hours, in case that source IP address needs translation again.\nAdditionally, as the 10 remaining translated addresses are allocated, they each are reserved for\ntheir source IP address, each with a timer that begins when the last session for that source IP\naddress expires.\nIn this manner, each source IP address can be repeatedly translated to its same NAT address\nfrom the pool; another host will not be assigned a reserved translated IP address from the\npool, even if there are no active sessions for that translated address.\nSuppose a source IP/translated IP mapping has all of its sessions expire, and the reservation\ntimer of 8 hours begins. After a new session for that translation begins, the timer stops, and\nthe sessions continue until they all end, at which point the reservation timer starts again,\nreserving the translated address.\nThe reservation timer remain in effect on the Dynamic IP NAT pool until you disable it by\nentering the set setting nat reserve-ip no command or you change the nat\nreserve-time to a different value.\nThe CLI commands for reservations do not affect Dynamic IP and Port (DIPP) or Static IP NAT\npools.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1498,
+      "end": 1499
+    },
+    "content_stats": {
+      "char_count": 3319,
+      "word_count": 537
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

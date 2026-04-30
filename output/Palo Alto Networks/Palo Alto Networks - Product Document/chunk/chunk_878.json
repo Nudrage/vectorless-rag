@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_878",
+  "section_number": "1.21.17.1",
+  "header": "NAT64 Overview",
+  "content": "You can configure two types of NAT64 translation on a Palo Alto Networks firewall; each one is\ndoing a bidirectional translation between the two IP address families:\n• The firewall supports stateful NAT64 for IPv6-Initiated Communication, which maps multiple\nIPv6 addresses to one IPv4 address, thus preserving IPv4 addresses. (It does not support\nstateless NAT64, which maps one IPv6 address to one IPv4 address and therefore does not\npreserve IPv4 addresses.) Configure NAT64 for IPv6-Initiated Communication.\n• The firewall supports IPv4-initiated communication with a static binding that maps an\nIPv4 address and port number to an IPv6 address. Configure NAT64 for IPv4-Initiated\nCommunication. It also supports port rewrite, which preserves even more IPv4 addresses by\ntranslating an IPv4 address and port number to an IPv6 address with multiple port numbers.\nConfigure NAT64 for IPv4-Initiated Communication with Port Translation.\nA single IPv4 address can be used for NAT44 and NAT64; you don’t reserve a pool of IPv4\naddresses for NAT64 only.\nNAT64 operates on Layer 3 interfaces, subinterfaces, and tunnel interfaces. To use NAT64 on a\nPalo Alto Networks firewall for IPv6-initiated communication, you must have a third-party DNS64\nServer or a solution in place to separate the DNS query function from the NAT function. The\nDNS64 server translates between your IPv6 host and an IPv4 DNS server by encoding the IPv4\naddress it receives from a public DNS server into an IPv6 address for the IPv6 host.\nPalo Alto Networks supports the following NAT64 features:\n• Hairpinning (NAT U-Turn); additionally, NAT64 prevents hairpinning loop attacks by dropping\nall incoming IPv6 packets that have a source prefix of 64::/n.\n• Translation of TCP/UDP/ICMP packets per RFC 6146 and the firewall makes a best effort to\ntranslate other protocols that don’t use an application-level gateway (ALG). For example, the\nfirewall can translate a GRE packet. This translation has the same limitation as NAT44: if you\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1516\n©2025 Palo Alto Networks, Inc.\nNetworking\ndon’t have an ALG for a protocol that can use a separate control and data channel, the firewall\nmight not understand the return traffic flow.\n• Translation between IPv4 and IPv6 of the ICMP length attribute of the original datagram field,\nper RFC 4884.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1516,
+      "end": 1517
+    },
+    "content_stats": {
+      "char_count": 2344,
+      "word_count": 369
+    },
+    "hierarchy": {
+      "parent": "NAT64",
+      "children": []
+    }
+  }
+}

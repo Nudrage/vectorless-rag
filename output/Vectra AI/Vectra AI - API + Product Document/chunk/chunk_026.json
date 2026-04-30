@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_026",
+  "section_number": "1.12",
+  "header": "Entity Notes",
+  "content": "The Entity Notes API can retrieve a list of all notes associated with an entity (Account, Host).\nVersion 3.4 of Entity Notes API supports GET, PATCH, POST, and DELETE to not only query the list of\nnotes, but also create, modify, or delete them.\nThe URL to retrieve Entity Notes is\nhttps://<vectra_portal_url>/api/v3.4/entities/<entity_id>/notes and uses OAuth2\nauthentication.\n© July 2024 Vectra AI, Inc. | 43\nThe following table lists the top-level fields and descriptions present in the response for a bulk GET\nrequest to the v3.4 API for Entity Notes.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nresults\nA list of group objects.\nlist\nnext\nURL to the next page of\nnotes.\nstring\nprevious\nURL to the previous page\nof notes.\nstring\ncount\nThe total number of notes\nmatching the query\nparameters.\ninteger\nThe following table lists the fields and descriptions present in a Group object.\nElement\nDescription\nType\nNotes\nid\nAuto-incrementing table id.\ninteger\ndate_created\nTime when Note was initially\ncreated.\nstring\nISO8601\ndate_modified\nTime Note was last modified.\nstring\nISO8601\ncreated_by\nUser who created the Note.\nstring\nmodified_by\nLast User to modify the Note.\nstring\nnote\nContent of the Note.\nstring\nThe available query parameters to filter for Entity Notes are listed below.\nQUERY PARAMETER\nDESCRIPTION\ntype\nAllows the caller to request only entities of the given type.\nValid values are \"account\" or \"host\". Multiple values can be\nprovided using commas to separate values\n(e.g. type=account,host ). Required when querying single\nentity.\nAn example of using the GET, POST,PATCH, and DELETE methods for Entity Notes can be found in\nAppendix A.\n© July 2024 Vectra AI, Inc. | 44",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 42,
+      "end": 44
+    },
+    "content_stats": {
+      "char_count": 1666,
+      "word_count": 267
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_002",
+  "section_number": "2",
+  "header": "Search attack paths",
+  "content": "Returns a list of the top attack paths leading to critical assets. The response includes details about\neach attack path, such as associated techniques, nodes, and metadata.\nThis endpoint supports advanced search capabilities, including filtering, sorting, and pagination.\nFor more information, see Top Attack Paths in the Exposure Management User Guide.\nRequires the Basic [16] user role or the ATTACK_PATH_ANALYSIS.QUERY.SEARCH  custom role\nprivilege. See Roles and Permissions.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\ninteger\n[ 100 .. 10000 ]\nDefault: 1000\nThe number of attack path records to retrieve. If omitted, the default\nvalue is 1000 . The minimum value is 100  and the maximum value\nis 10000 .\nlimit\ninteger\n>= 0\nDefault: 0\nThe number of records to skip for offset-based pagination. If omitted,\nthe default value is 0 .\nstring ^[a-zA-Z_]+:(asc|desc)$\nExample: sort=priority:desc\nThe property and direction to sort the results by, in the format\nproperty:direction . For example: name:asc  or\npriority:desc .\nstring\nDefault: \"false\"\nEnum: \"true\"\n\"false\"\nIndicates whether or not to run the AI summarization for missing\npaths.\nGenerative AI enables users to better understand attack paths and\ntheir associated risk, and it provides additional insight into the assets\naffected by the attack paths.\nNote that enabling the AI summarization results in slower response\ntimes.\nREQUEST BODY SCHEMA:\napplication/json\noptional\nFilter conditions for searching attack paths. Filter operators can include nested conditions and\noperators to create complex filtering logic.\nOne of\nSingle Filter\nMultiple Filters\nstring\nEnum: \"priority\"\n\"name\"\n\"summary\"\n\"steps\"\n\"asset_exposure\"\n\"blast_radius\"\n\"asset_id\"\n\"freetext\"\n\"finding_id\"\n\"technique\"\n\"weakness_id\"\n\"critical_asset\"\n\"data_source\"\n\"apa_aes\"\n\"acr\"\nThe property to filter on.\nFor example, you might filter by priority , name , or technique .\nstring\nEnum: \"eq\"\n\"ne\"\n\"gt\"\n\"gte\"\n\"lt\"\n\"lte\"\n\"contains\"\n\"not_contains\"\n\"in\"\n\"not_in\"\nThe comparison operator to apply to the filter. For example: eq , ne , etc.\nSingle String Value (string) or Array of Multiple String Values (strings) or Single\nInteger Value (integer) or Array of Multiple Integer Values (integers) or Single\nBoolean Value (boolean)\noffset\nsort\nrun_ai_summarization\nproperty\noperator\nvalue\nThe value to use for comparison in the filter.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 3
+    },
+    "content_stats": {
+      "char_count": 2340,
+      "word_count": 344
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

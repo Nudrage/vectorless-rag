@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_393",
+  "section_number": "17.2",
+  "header": "List OT connectors",
+  "content": "Returns a list of Tenable OT connectors.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nDefault: \"ot\"\nValue: \"ot\"\nThe type of connector or sensor. This value is always ot  for OT\nconnectors.\nQUERY PARAMETERS\nstring\nEnum: \"id\"\n\"name\"\n\"created\"\n\"modified\"\n\"lastAuth\"\nThe attribute used to sort the list of OT connectors.\nstring\nEnum: \"asc\"\n\"desc\"\ntype\nrequired\nsortBy\norderBy\nContent type\nThe criteria used to order the list of OT connectors. If this value is\nomitted, Tenable uses the default value asc .\ninteger <int32>\n[ 1 .. 200 ]\nDefault: 50\nThe maximum number of OT connectors to return. The valid range is\n[1-200].\nstring\nThe ID of the last OT connector included in the current result set. This\nparameter is used for paging through the results and it must be used\nin conjunction with the exclusiveStartSortKey  parameter.\nstring\nThe value of the sortBy  key for which to sort the returned list of OT\nconnectors. It must be used in conjunction with the\nexclusiveStartKey  parameter.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 374,
+      "end": 375
+    },
+    "content_stats": {
+      "char_count": 1037,
+      "word_count": 173
+    },
+    "hierarchy": {
+      "parent": "OT Connectors",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_890",
+  "section_number": "1.21.18.4",
+  "header": "Enable ECMP for Multiple BGP Autonomous Systems",
+  "content": "Perform the following task if you have BGP configured, and you want to enable ECMP over\nmultiple autonomous systems. This task presumes that BGP is already configured. In the following\nfigure, two ECMP paths to a destination go through two firewalls belonging to a single ISP in a\nsingle BGP autonomous system.\nIn the following figure, two ECMP paths to a destination go through two firewalls belonging to\ntwo different ISPs in different BGP autonomous systems.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1532\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 1 |\nConfigure ECMP.\nSee Configure ECMP on a Virtual Router.\nSTEP 2 |\nFor BGP routing, enable ECMP over multiple autonomous systems.\n1.\nSelect Network > Virtual Routers and select the virtual router on which to enable ECMP\nfor multiple BGP autonomous systems.\n2.\nSelect BGP > Advanced and select ECMP Multiple AS Support.\nSTEP 3 |\nCommit your changes.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1532,
+      "end": 1533
+    },
+    "content_stats": {
+      "char_count": 926,
+      "word_count": 154
+    },
+    "hierarchy": {
+      "parent": "ECMP",
+      "children": []
+    }
+  }
+}

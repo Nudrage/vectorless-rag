@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_650",
+  "section_number": "1.17.25",
+  "header": "PAN-DB Private Cloud",
+  "content": "The PAN-DB private cloud is an on-premise solution for organizations that restrict the usage\nof public cloud services. With this on-premise solution, you can deploy one or more M-600\nappliances as PAN-DB servers within your network or data center. The firewalls query the PAN-\nDB private cloud to perform URL lookups, instead of accessing the PAN-DB public cloud.\nThe process for performing URL lookups, in both the private and the public cloud is the same for\nthe firewalls on the network. By default, the firewall is configured to access the public PAN-DB\ncloud. If you deploy a PAN-DB private cloud, you must configure the firewalls with a list of IP\naddresses or FQDNs to access the server(s) in the private cloud.\nFirewalls running PAN-OS 5.0 or later versions can communicate with the PAN-DB\nprivate cloud.\nWhen you set up the PAN-DB private cloud, you can either configure the M-600 appliance(s) to\nhave direct internet access or keep it completely offline. Because the M-600 appliance requires\ndatabase and content updates to perform URL lookups, if the appliance does not have an active\ninternet connection, you must manually download the updates to a server on your network and\nthen, import the updates using SCP into each M-600 appliance in the PAN-DB private cloud. In\naddition, the appliances must be able to obtain the seed database and any other regular or critical\ncontent updates for the firewalls that it services.\nTo authenticate the firewalls that connect to the PAN-DB private cloud, a set of default server\ncertificates are packaged with the appliance; you cannot import or use another server certificate\nfor authenticating the firewalls. If you change the hostname on the M-600 appliance, the\nappliance automatically generates a new set of certificates to authenticate the firewalls.\n• M-600 Appliance for PAN-DB Private Cloud\n• Set Up the PAN-DB Private Cloud",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1203,
+      "end": 1203
+    },
+    "content_stats": {
+      "char_count": 1883,
+      "word_count": 307
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": [
+        "M-600 Appliance for PAN-DB Private Cloud",
+        "Set Up the PAN-DB Private Cloud"
+      ]
+    }
+  }
+}

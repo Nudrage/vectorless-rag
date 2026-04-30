@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_237",
+  "section_number": "1.10.4.1",
+  "header": "Prerequisites for Active/Active HA",
+  "content": "To set up active/active HA on your firewalls, you need a pair of firewalls that meet the following\nrequirements:\nThe same model—The firewalls in the pair must be of the same hardware model.\nThe same PAN-OS version—The firewalls must be running the same PAN-OS version and must\neach be up-to-date on the application, URL, and threat databases.\nThe same multi virtual system capability—Both firewalls must have Multi Virtual System\nCapability either enabled or not enabled. When enabled, each firewall requires its own multiple\nvirtual systems licenses.\nThe same type of interfaces—Dedicated HA links, or a combination of the management port\nand in-band ports that are set to interface type HA.\n• The HA interfaces must be configured with static IP addresses only, not IP addresses\nobtained from DHCP (except AWS can use DHCP addresses). Determine the IP address\nfor the HA1 (control) connection between the HA peers. The HA1 IP address for the peers\nmust be on the same subnet if they are directly connected or are connected to the same\nswitch.\nFor firewalls without dedicated HA ports, you can use the management port for the control\nconnection. Using the management port provides a direct communication link between the\nmanagement planes on both firewalls. However, because the management ports will not be\ndirectly cabled between the peers, make sure that you have a route that connects these two\ninterfaces across your network.\n• If you use Layer 3 as the transport method for the HA2 (data) connection, determine the IP\naddress for the HA2 link. Use Layer 3 only if the HA2 connection must communicate over a\nrouted network. The IP subnet for the HA2 links must not overlap with that of the HA1 links\nor with any other subnet assigned to the data ports on the firewall.\n• Each firewall needs a dedicated interface for the HA3 link. The PA-7000 Series firewalls use\nthe HSCI port for HA3. The PA-5200 Series firewalls can use the HSCI port for HA3 or you\ncan configure aggregate interfaces on the dataplane ports for HA3 for redundancy. On the\nremaining platforms, you can configure aggregate interfaces on dataplane ports as the HA3\nlink for redundancy.\nThe same set of licenses—Licenses are unique to each firewall and cannot be shared between\nthe firewalls. Therefore, you must license both firewalls identically. If both firewalls do not\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n414\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nhave an identical set of licenses, they cannot synchronize configuration information and\nmaintain parity for a seamless failover.\nIf you have an existing firewall and you want to add a new firewall for HA purposes\nand the new firewall has an existing configuration, it is recommended that you Reset\nthe Firewall to Factory Default Settings on the new firewall. This will ensure that the\nnew firewall has a clean configuration. After HA is configured, you will then sync the\nconfiguration on the primary firewall to the newly introduced firewall with the clean\nconfig. You will also have to configure local IP addresses.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 414,
+      "end": 415
+    },
+    "content_stats": {
+      "char_count": 3058,
+      "word_count": 506
+    },
+    "hierarchy": {
+      "parent": "Set Up Active/Active HA",
+      "children": []
+    }
+  }
+}

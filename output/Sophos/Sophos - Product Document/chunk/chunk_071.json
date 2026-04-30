@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_071",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is CR_dhcp_svr_log_fmt.\nSyslog field\nname\nData type Length\nFormat/Description\nPossible\nvalues\nNotes/Examples\ntimestamp\nTimestamp\nISO 8601\neg. timestamp=\"2018-12-07T10:03:48+0000\"\ndevice_name\nString\nSFW\neg. device_name=\"SFW\"\ndevice_model\nString\neg. device_model=\"XG135\"\ndevice_serial_id String\neg. device_serial_id=\"C44313350024-\nP29PUA\"\nlog_id\nString\neg. log_id=\"010101600001\"\nlog_type\nString\nLog Type\nEvent\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 69\nlog_component\nString\nLog Component\nDHCP\nServer\ne.g.\nlog_component=\"DHCP Server\"\nlog_subtype\nString\nLog subtype\nSystem\ne.g.\nlog_subtype=\"System\"\nstatus\nString\nDHCP lease status\nRenew\nRelease\nExpire\ne.g.\nstatus=\"Renew\"\nlog_version\nNumber\n1\neg. log_version=1\nSeverity\nString\nSeverity of log\nInformation\nreported_ip\nIPv4 or IPv6 address leased\nto DHCP client\ne.g.\nreported_ip=\"55.1.1.2\"\nsrc_mac\nString\n32\nMAC address of the DHCP\nclient\ne.g.\nsrc_mac=\"1a:74:ed:3c:74:ce\"\nreported_host\nString\n384\nHostname of the DHCP\nclient\ne.g.\nreported_host=\"AH-MM-\n33445.green.sophos\"\nmessage\nString\n1024\nMessage about DHCP lease\ne.g.\nmessage=\"Lease IP 55.1.1.2 renewed for\nMAC 1a:74:ed:3c:74:ce\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 70\nlease_time\nNumber\neg. lease_time=86400",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 69,
+      "end": 71
+    },
+    "content_stats": {
+      "char_count": 1306,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "Central Reporting Format",
+      "children": []
+    }
+  }
+}

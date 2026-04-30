@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_886",
+  "section_number": "1.21.18",
+  "header": "ECMP",
+  "content": "Equal Cost Multiple Path (ECMP) processing is a networking feature that enables the firewall\nto use up to four equal-cost routes to the same destination. Without this feature, if there are\nmultiple equal-cost routes to the same destination, the virtual router chooses one of those routes\nfrom the routing table and adds it to its forwarding table; it will not use any of the other routes\nunless there is an outage in the chosen route.\nEnabling ECMP functionality on a virtual router allows the firewall to have up to four equal-cost\npaths to a destination in its forwarding table, allowing the firewall to:\n• Load balance flows (sessions) to the same destination over multiple equal-cost links.\n• Efficiently use all available bandwidth on links to the same destination rather than leave some\nlinks unused.\n• Dynamically shift traffic to another ECMP member to the same destination if a link fails, rather\nthan having to wait for the routing protocol or RIB table to elect an alternative path/route. This\ncan help reduce downtime when links fail.\nFor information about ECMP path selection when an HA peer fails, see ECMP in Active/Active\nHA Mode.\nThe following sections describe ECMP and how to configure it.\n• ECMP Load-Balancing Algorithms\n• ECMP Model, Interface, and IP Routing Support\n• Configure ECMP on a Virtual Router\n• Enable ECMP for Multiple BGP Autonomous Systems\n• Verify ECMP",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1528,
+      "end": 1528
+    },
+    "content_stats": {
+      "char_count": 1390,
+      "word_count": 232
+    },
+    "hierarchy": {
+      "parent": "Networking",
+      "children": [
+        "ECMP Load-Balancing Algorithms",
+        "ECMP Model, Interface, and IP Routing Support",
+        "Configure ECMP on a Virtual Router",
+        "Enable ECMP for Multiple BGP Autonomous Systems",
+        "Verify ECMP"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_004",
+  "section_number": "3.1",
+  "header": "Audit Credential Validation",
+  "content": "Audit Credential Validation determines whether the operating system generates audit events on credentials that are submitted for a user account logon request.\nThese events occur on the computer that is authoritative for the credentials as follows:\n\nFor domain accounts, the domain controller is authoritative.\n\nFor local accounts, the local computer is authoritative.\nEvent volume:\n\nHigh on domain controllers.\n\nLow on member servers and workstations.\nBecause domain accounts are used much more frequently than local accounts in enterprise environments, most of the Account Logon events in a domain environment occur on the\ndomain controllers that are authoritative for the domain accounts. However, these events can occur on any computer, and they may occur in conjunction with or on separate computers\nfrom Logon and Logoff events.\nThe main reason to enable this auditing subcategory is to handle local accounts authentication attempts and, for domain accounts, NTLM authentication in the domain. It is especially\nuseful for monitoring unsuccessful attempts, to find brute-force attacks, account enumeration, and potential account compromise events on domain controllers.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nIF\nYes\nYes\nYes\nExpected volume of events is high for domain controllers, because this subcategory will generate events when\nan authentication attempt is made using any domain account and NTLM authentication.\nIF – We recommend Success auditing to keep track of domain-account authentication events using the NTLM\nprotocol. Expect a high volume of events. For recommendations for using and analyzing the collected\ninformation, see the Security Monitoring Recommendations sections. Just collecting Success auditing events in\nthis subcategory for future use in case of a security incident is not very useful, because events in this\nsubcategory are not always informative.\nWe recommend Failure auditing, to collect information about failed authentication attempts using domain\naccounts and the NTLM authentication protocol.\nMember Server\nYes\nYes\nYes\nYes\nExpected volume of events is low for member servers, because this subcategory will generate events when an\nauthentication attempt is made using a local account, which should not happen too often.\nWe recommend Success auditing, to keep track of authentication events by local accounts.\nWe recommend Failure auditing, to collect information about failed authentication attempts by local accounts.\nWorkstation\nYes\nYes\nYes\nYes\nExpected volume of events is low for workstations, because this subcategory will generate events when an\nauthentication attempt is made using a local account, which should not happen too often.\nWe recommend Success auditing, to keep track of authentication events by local accounts.\nWe recommend Failure auditing, to collect information about failed authentication attempts by local accounts.\nEvents List:\n© 2016 Microsoft. All rights reserved.\n23\n\n4774\n(S): An account was mapped for logon.\n\n4775\n(F): An account could not be mapped for logon.\n\n4776\n(S, F): The computer attempted to validate the credentials for an account.\n\n4777\n(F): The domain controller failed to validate the credentials for an account.\n4774(S): An account was mapped for logon.\nIt appears that this event never occurs.\nEvent Schema:\nAn account was mapped for logon.\nAuthentication Package:%1\nAccount UPN:%2\nMapped Name:%3\nRequired Server Roles: no information.\nMinimum OS Version: no information.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 23,
+      "end": 24
+    },
+    "content_stats": {
+      "char_count": 3533,
+      "word_count": 528
+    },
+    "hierarchy": {
+      "parent": "Account Logon",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

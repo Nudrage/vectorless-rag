@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_621",
+  "section_number": "1.17.12.3",
+  "header": "Configure Custom URL Filtering Reports",
+  "content": "To generate a detailed report that you can schedule to run regularly, configure a custom URL\nFiltering report. You can choose any combination of URL Filtering log fields on which to base the\nreport.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1146\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 1 |\nAdd a new custom report.\n1.\nSelect Monitor > Manage Custom Reports and Add a report.\n2.\nGive the report a unique Name, and optionally a Description.\n3.\nSelect the Database you want to use to generate the report. To generate a detailed URL\nFiltering report, select URL from the Detailed Logs section:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1147\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 2 |\nConfigure report options.\n1.\nSelect a predefined Time Frame or select Custom.\n2.\nSelect the log columns to include in the report from the Available Columns list add them\n(\n) to the Selected Columns. For example, for a URL Filtering report you might select:\n• Action\n• App Category\n• Category\n• Destination Country\n• Source User\n• URL\n3.\nIf the firewall is enabled to prevent credential phishing, select the Attribute Flags, the\nOperator has and the Value Credential Detected to also include events in the report that\nrecord when a user submitted a valid corporate credential to a site.\n4.\n(Optional) Select a Sort By option to set the attribute to use to aggregate the report\ndetails. If you do not select an attribute to sort by, the report will return the first N\nnumber of results without any aggregation. Select a Group By attribute to use as an\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1148\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nanchor for grouping data. The following example shows a report with Group By set to\nApp Category and Sort By set to a Count of Top 5.\nSTEP 3 |\nRun the report.\n1.\nClick the Run Now icon to immediately generate the report, which opens in a new tab.\n2.\nWhen you are done reviewing the report, go back to the Report Setting tab and either\ntune the settings and run the report again, or continue to the next step to schedule the\nreport.\n3.\nSelect the Schedule check box to run the report once per day. This will generate a daily\nreport that details web activity over the last 24 hours.\nSTEP 4 |\nCommit the configuration.\nSTEP 5 |\nView the custom report.\n1.\nSelect Monitor > Reports.\n2.\nExpand the Custom Reports pane in the right column and select the report you want to\nview. The latest report displays automatically.\n3.\nTo view the report for a previous date, select the date from the calendar. You can also\nexport the report to PDF, CSV, or XML.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1149\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1146,
+      "end": 1150
+    },
+    "content_stats": {
+      "char_count": 2674,
+      "word_count": 477
+    },
+    "hierarchy": {
+      "parent": "Monitor Web Activity",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_286",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 1105(S): Event log automatic backup.\n\nTypically it’s an informational event and no actions are needed. But if your baseline settings are not set to Archive the log when full, do not overwrite events, then this event will\nbe a sign that some settings are not set to baseline settings or were changed.\n1108(S): The event logging service encountered an error while processing an incoming event published from %1.\nEvent Description:\nThis event generates when event logging service encountered an error while processing an incoming\nevent.\nIt typically generates when logging service will not be able to correctly write the event to the event log or\nsome parameters were not passed to logging service to log the event correctly. You will typically see a\ndefective or incorrect event before 1108.\nFor example, event 1108 might be generated after an incorrect 4703 event:\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n© 2016 Microsoft. All rights reserved.\n730\n- <System>\n<Provider Name=\"Microsoft-Windows-Eventlog\" Guid=\"{fc65ddd8-d6ef-4962-83d5-6e5cfe9ce148}\" />\n<EventID>1108</EventID>\n<Version>0</Version>\n<Level>2</Level>\n<Task>101</Task>\n<Opcode>0</Opcode>\n<Keywords>0x4020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-11-12T20:59:47.431979300Z\" />\n<EventRecordID>5599</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"972\" ThreadID=\"1320\" />\n<Channel>Security</Channel>\n<Computer>WIN-GG82ULGC9GO.contoso.local</Computer>\n<Security />\n</System>\n- <UserData>\n- <EventProcessingFailure xmlns=\"http://manifests.microsoft.com/win/2004/08/windows/eventlog\">\n<Error Code=\"15005\" />\n<EventID>0</EventID>\n<PublisherID>Microsoft-Windows-Security-Auditing</PublisherID>\n</EventProcessingFailure>\n</UserData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008 R2, Windows 7.\nEvent Versions: 0.\nField Descriptions:\n%1 [Type = UnicodeString]: the name of security event source from which event was received for processing. You can see all registered security event source names in this registry path:\n“HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Security”. Here is an example:\n© 2016 Microsoft. All rights reserved.\n731",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 730,
+      "end": 732
+    },
+    "content_stats": {
+      "char_count": 2287,
+      "word_count": 265
+    },
+    "hierarchy": {
+      "parent": "Other Events",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_1042",
+  "section_number": "1.24.3.7",
+  "header": "DoS Protection Profiles and Policy Rules",
+  "content": "DoS Protection profiles and DoS Protection policy rules combine to protect specific groups of\ncritical resources and individual critical resources against session floods. Compared to Zone\nProtection profiles, which protect entire zones from flood attacks, DoS protection provides\ngranular defense for specific systems, especially critical systems that users access from the\ninternet and are often attack targets, such as web servers and database servers. Apply both types\nof protection because if you only apply a Zone Protection profile, then a DoS attack that targets\na particular system in the zone can succeed if the total connections-per-second (CPS) doesn’t\nexceed the zone’s Activate and Maximum rates.\nDoS Protection is resource-intensive, so use it only for critical systems. Similar to Zone Protection\nprofiles, DoS Protection profiles specify flood thresholds. DoS Protection policy rules determine\nthe devices, users, zones, and services to which DoS Profiles apply.\nIn addition to configuring DoS protection and zone protection, apply the best practice\nVulnerability Protection profile to each Security policy rule to help defend against DoS\nattacks.\n• Classified Versus Aggregate DoS Protection\n• DoS Protection Profiles\n• DoS Protection Policy Rules",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1740,
+      "end": 1740
+    },
+    "content_stats": {
+      "char_count": 1264,
+      "word_count": 185
+    },
+    "hierarchy": {
+      "parent": "Zone Defense",
+      "children": [
+        "Classified Versus Aggregate DoS Protection",
+        "DoS Protection Profiles",
+        "DoS Protection Policy Rules"
+      ]
+    }
+  }
+}

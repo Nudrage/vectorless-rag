@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_562",
+  "section_number": "1.16.10.2",
+  "header": "Import a Private Key and Block It",
+  "content": "Block the export of a private key to prevent its misuse after importing a certificate.\nSTEP 1 |\nSelect Device > Certificate Management > Certificates > Device Certificates.\nIf there is more than one virtual system, select a Location or Shared for the certificate.\nSTEP 2 |\nImport the certificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1031\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 3 |\nSelect Import Private Key to activate the option to block private key export.\nSTEP 4 |\nSelect Block Private Key Export to prevent anyone from exporting the certificate.\nSee Import a Certificate and Private Key for information about the other certificate import\nfields.\nSTEP 5 |\nClick OK to import the certificate.\nIf you use the SCP operational CLI command to import a certificate or to import a\nprivate key for a certificate, you can still block export of the private key:\n•\nadmin@pa-220> scp import private-key block-private-\nkey ...\nEach of the preceding CLI commands can also include keywords to specify the source,\nthe certificate name, and other parameters that are not shown.\nIf you use the SCP operational CLI command to export a certificate and include its\nprivate key (scp export certificate passphrase <phrase> remote-\nport <1-65536> to <destination> certificate-name <name>\ninclude-key <yes | no> format <der | pem | pkcs10 | pkcs12>),\nand if the certificate’s private key is blocked, the command fails and returns an error\nmessage because you cannot export a blocked private key.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1031,
+      "end": 1032
+    },
+    "content_stats": {
+      "char_count": 1486,
+      "word_count": 244
+    },
+    "hierarchy": {
+      "parent": "Block Private Key Export",
+      "children": []
+    }
+  }
+}

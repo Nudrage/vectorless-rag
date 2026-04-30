@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_183",
+  "section_number": "1.9.7.2",
+  "header": "Master Key Encryption on a Firewall HA Pair",
+  "content": "To use the AES-256-GCM encryption level on a firewall high availability (HA) pair, both firewalls\nmust run PAN-OS 10.0 so that both firewalls support AES-256-GCM. If either firewall in the HA\npair runs an earlier version than PAN-OS 10.0, you can’t use AES-256-GCM. When both firewalls\nare on PAN-OS 10.0, both firewalls can decode AES-256-CBC or AES-256-GCM encryption\nkeys, so they can use the either encryption level. However, both firewalls should use the same\nencryption level to avoid the possibility of becoming out of sync.\nUse AES-256-GCM encryption on both firewalls in the HA pair. Whether you use\nAES-256-GCM or AES-256-CBC, use the same algorithm on both firewalls.\nYou do not need to disable HA to change the encryption level on a firewall in an HA pair in which\nboth firewalls run PAN-OS 10.0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 330,
+      "end": 330
+    },
+    "content_stats": {
+      "char_count": 808,
+      "word_count": 134
+    },
+    "hierarchy": {
+      "parent": "Master Key Encryption",
+      "children": []
+    }
+  }
+}

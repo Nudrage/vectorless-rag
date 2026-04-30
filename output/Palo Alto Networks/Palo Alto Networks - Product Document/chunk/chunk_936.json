@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_936",
+  "section_number": "1.22.2.2",
+  "header": "Security Policy Actions",
+  "content": "For traffic that matches the attributes defined in a security policy, you can apply the following\nactions:\nAction\nDescription\nAllow (default)\nAllows the traffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1593\n©2025 Palo Alto Networks, Inc.\nPolicy\nAction\nDescription\nDeny\nBlocks traffic and enforces the default Deny Action defined for\nthe application that is being denied. To view the deny action\ndefined by default for an application, view the application details\nin Objects > Applications or check the application details in\nApplipedia.\nDrop\nSilently drops the traffic; for an application, it overrides the default\ndeny action. A TCP reset is not sent to the host/application.\nFor Layer 3 interfaces, to optionally send an ICMP unreachable\nresponse to the client, set Action: Drop and enable the Send ICMP\nUnreachable check box. When enabled, the firewall sends the\nICMP code for communication with the destination is administratively\nprohibited—ICMPv4: Type 3, Code 13; ICMPv6: Type 1, Code 1.\nReset client\nSends a TCP reset to the client-side device.\nReset server\nSends a TCP reset to the server-side device.\nReset both\nSends a TCP reset to both the client-side and server-side devices.\nA reset is sent only after a session is formed. If the session is blocked before a 3-\nway handshake is completed, the firewall will not send the reset.\nFor a TCP session with a reset action, the firewall does not send an ICMP Unreachable\nresponse.\nFor a UDP session with a drop or reset action, if the ICMP Unreachable check box is\nselected, the firewall sends an ICMP message to the client.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1593,
+      "end": 1594
+    },
+    "content_stats": {
+      "char_count": 1581,
+      "word_count": 260
+    },
+    "hierarchy": {
+      "parent": "Security Policy",
+      "children": []
+    }
+  }
+}

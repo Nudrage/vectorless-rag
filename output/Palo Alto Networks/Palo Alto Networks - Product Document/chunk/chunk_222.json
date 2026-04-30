@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_222",
+  "section_number": "1.10.2.6",
+  "header": "Floating IP Address and Virtual MAC Address",
+  "content": "In a Layer 3 deployment of HA active/active mode, you can assign floating IP addresses, which\nmove from one HA firewall to the other if a link or firewall fails. The interface on the firewall that\nowns the floating IP address responds to ARP requests with a virtual MAC address.\nFloating IP addresses are recommended when you need functionality such as Virtual Router\nRedundancy Protocol (VRRP). Floating IP addresses can also be used to implement VPNs and\nsource NAT, allowing for persistent connections when a firewall offering those services fails.\nAs shown in the figure below, each HA firewall interface has its own IP address and floating IP\naddress. The interface IP address remains local to the firewall, but the floating IP address moves\nbetween the firewalls upon firewall failure. You configure the end hosts to use a floating IP\naddress as its default gateway, allowing you to load balance traffic to the two HA peers. You can\nalso use external load balancers to load balance traffic.\nIf a link or firewall fails or a path monitoring event causes a failover, the floating IP address and\nvirtual MAC address move over to the functional firewall. (In the figure below, each firewall has\ntwo floating IP addresses and virtual MAC addresses; they all move over if the firewall fails.) The\nfunctioning firewall sends a gratuitous ARP to update the MAC tables of the connected switches\nto inform them of the change in floating IP address and MAC address ownership to redirect traffic\nto itself.\nAfter the failed firewall recovers, by default the floating IP address and virtual MAC address\nmove back to firewall with the Device ID [0 or 1] to which the floating IP address is bound.\nMore specifically, after the failed firewall recovers, it comes on line. The currently active firewall\ndetermines that the firewall is back online and checks whether the floating IP address it is\nhandling belongs natively to itself or the other firewall. If the floating IP address was originally\nbound to the other Device ID, the firewall automatically gives it back. (For an alternative to this\ndefault behavior, see Use Case: Configure Active/Active HA with Floating IP Address Bound to\nActive-Primary Firewall.)\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n390\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nEach firewall in the HA pair creates a virtual MAC address for each of its interfaces that has a\nfloating IP address or ARP Load-Sharing IP address.\nThe format of the virtual MAC address (on firewalls other than PA-7000, PA-5200, and PA-3200\nSeries firewalls) is 00-1B-17-00-xx-yy, where 00-1B-17 is the vendor ID (of Palo Alto Networks\nin this case), 00 is fixed, xx indicates the Device ID and Group ID as shown in the following figure,\nand yy is the Interface ID:\n7\n6\n5 4 3 2 1 0\n7 6 5 4 3 2 1 0\nDevice-ID\n0\nGroup-ID\nInterface-ID\nThe format of the virtual MAC address on PA-7000, PA-5200, and PA-3200 Series firewalls is\nB4-0C-25-xx-xx-xx, where B4-0C-25 is the vendor ID (of Palo Alto Networks in this case), and the\nnext 24 bits indicate the Device ID, Group ID and Interface ID as follows:\n7 6 5\n4\n3 2 1 0 7 6\n5 4 3 2\n1 0 7 6 5 4 3 2 1 0\n111\nDevice-ID\nGroup-ID\n0000\nInterface-ID\nWhen a new active firewall takes over, it sends gratuitous ARPs from each of its connected\ninterfaces to inform the connected Layer 2 switches of the new location of the virtual MAC\naddress. To configure floating IP addresses, see Use Case: Configure Active/Active HA with\nFloating IP Addresses.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 390,
+      "end": 391
+    },
+    "content_stats": {
+      "char_count": 3479,
+      "word_count": 604
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

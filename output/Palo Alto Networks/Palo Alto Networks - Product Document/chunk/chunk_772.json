@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_772",
+  "section_number": "1.21.6.1.4",
+  "header": "OSPF Router Types",
+  "content": "Within an OSPF area, routers are divided into the following categories.\n• Internal Router—A router with that has OSPF neighbor relationships only with devices in the\nsame area.\n• Area Border Router (ABR)—A router that has OSPF neighbor relationships with devices in\nmultiple OSPF areas. ABRs gather topology information from their connected areas and\ndistribute it to the backbone area.\n• Backbone Router—A backbone router is a router that runs OSPF and has at least one interface\nconnected to the OSPF backbone area. Since ABRs are always connected to the backbone,\nthey are always classified as backbone routers.\n• Autonomous System Boundary Router (ASBR)—An ASBR is a router that attaches to more\nthan one routing protocol and exchanges routing information between them.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1383,
+      "end": 1383
+    },
+    "content_stats": {
+      "char_count": 773,
+      "word_count": 122
+    },
+    "hierarchy": {
+      "parent": "OSPF Concepts",
+      "children": []
+    }
+  }
+}

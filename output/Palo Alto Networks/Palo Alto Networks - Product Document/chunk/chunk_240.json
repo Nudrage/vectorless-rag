@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_240",
+  "section_number": "1.10.4.3.1",
+  "header": "Use Case: Configure Active/Active HA with Route-Based Redundancy",
+  "content": "The following Layer 3 topology illustrates two PA-7050 firewalls in an active/active HA\nenvironment that use Route-Based Redundancy. The firewalls belong to an OSPF area. When a\nlink or firewall fails, OSPF handles the redundancy by redirecting traffic to the functioning firewall.\nSTEP 1 |\nConfigure Active/Active HA.\nPerform Step 1 through Step 15.\nSTEP 2 |\nConfigure OSPF.\nSee OSPF.\nSTEP 3 |\nDefine HA failover conditions.\nDefine HA Failover Conditions.\nSTEP 4 |\nCommit the configuration.\nSTEP 5 |\nConfigure the peer firewall in the same way, except if you selected Device ID 0 for the first\nfirewall, select Device ID 1 for the peer firewall.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 422,
+      "end": 422
+    },
+    "content_stats": {
+      "char_count": 646,
+      "word_count": 108
+    },
+    "hierarchy": {
+      "parent": "Determine Your Active/Active Use Case",
+      "children": []
+    }
+  }
+}

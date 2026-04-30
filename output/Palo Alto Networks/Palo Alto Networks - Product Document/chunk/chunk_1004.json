@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1004",
+  "section_number": "1.23.1.5",
+  "header": "Administrative Roles for Virtual Systems",
+  "content": "A Superuser administrator can create virtual systems and add a Device administrator,\nvsysadmin, or vsysreader. A Device administrator can access all virtual systems, but cannot add\nadministrators. When you create an Admin Role profile and select the role to be Virtual System,\nthe role applies to specific virtual systems on the firewall. From the Command Line tab, the two\ntypes of virtual system administrative roles are:\n• vsysadmin—Has access to specific virtual systems on the firewall to create and manage specific\naspects of virtual systems. A vsysadmin doesn’t have access to network interfaces, VLANs,\nvirtual wires, virtual routers, IPSec tunnels, GRE tunnels, DHCP, DNS Proxy, QoS, LLDP, or\nnetwork profiles. Persons with vsysadmin permission can commit configurations for only the\nvirtual systems assigned to them.\n• vsysreader—Has read-only access to specific virtual systems on the firewall and specific\naspects of virtual systems. A vsysreader doesn’t have access to network interfaces, VLANs,\nvirtual wires, virtual routers, IPSec tunnels, GRE tunnels, DHCP, DNS Proxy, QoS, LLDP, or\nnetwork profiles.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1702\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nA virtual system administrator can view logs of only the virtual systems assigned to that\nadministrator. A Superuser or Device administrator can view all of the logs, select a virtual system\nto view, or configure a virtual system as a User-ID hub.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1702,
+      "end": 1703
+    },
+    "content_stats": {
+      "char_count": 1458,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "Virtual Systems Overview",
+      "children": []
+    }
+  }
+}

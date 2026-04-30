@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_028",
+  "section_number": "1.18.16",
+  "header": "Lockdown",
+  "content": "This is a new endpoint for to retrieve a list of entities (Accounts. Hosts) that are currently in “lockdown”\nmode. API  responses may vary depending on product subscriptions (Network, AWS, M365).\nThe URL to retrieve lockdown data is https://<vectra_portal_url>/api/v3.4/lockdown and\nuses OAuth2 authentication.\nThe following table lists the top-level fields and descriptions present in the response for a bulk GET\nrequest to the v3.4 API for Lockdown.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nresults\nA list of lockdown\ninformation\nlist\nnext\nURL to the next page of\nentity results\nstring\nprevious\nURL to the previous page\nof entity results\nstring\ncount\nTotal number of entity\nobjects\ninteger\nThe following table lists the fields and descriptions present in an lockdown result.\nElement\nDescription\nType\nNotes\nid\nAutoincrementing ID\ninteger\nlock_event_timestamp\nTime when the lockdown occurred.\nstring\nISO8601\nlocked_by\nUser who issued the lockdown.\nstring\nunlock_event_timestamp Time when the lockdown expires.\nstring\nISO8601\nentity_id\nID of the related entity.\ninteger\nentity_name\nName of the related entity.\nstring\ntype\nType of the related entity.\nstring\n‘Account’ or\n‘Host’\nThe available query parameters to filter for lockdown.\n© July 2024 Vectra AI, Inc. | 47\nQUERY PARAMETER\nDESCRIPTION\ntype\nType of the related entity (Account, Host)",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 46,
+      "end": 47
+    },
+    "content_stats": {
+      "char_count": 1329,
+      "word_count": 200
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

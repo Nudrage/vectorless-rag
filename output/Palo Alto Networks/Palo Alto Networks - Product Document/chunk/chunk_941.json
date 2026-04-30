@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_941",
+  "section_number": "1.22.4.2",
+  "header": "Set Up or Override a Default Security Profile Group",
+  "content": "Use the following options to set up a default security profile group to be used in new security\npolicies, or to override an existing default group. When an administrator creates a new security\npolicy, the default profile group will be automatically selected as the policy’s profile settings, and\ntraffic matching the policy will be checked according to the settings defined in the profile group\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1608\n©2025 Palo Alto Networks, Inc.\nPolicy\n(the administrator can choose to manually select different profile settings if desired). Use the\nfollowing options to set up a default security profile group or to override your default settings.\nIf no default security profile exists, the profile settings for a new security policy are set to\nNone by default.\nCreate a security profile group.\n1.\nSelect Objects > Security Profile Groups and Add a new security profile group.\n2.\nGive the profile group a descriptive Name, for example, Threats.\n3.\nIf the firewall is in Multiple Virtual System Mode, enable the profile to be Shared by all\nvirtual systems.\n4.\nAdd existing profiles to the group. For details on creating profiles, see Security Profiles.\n5.\nClick OK to save the profile group.\n6.\nAdd the security profile group to a security policy.\n7.\nAdd or modify a security policy rule and select the Actions tab.\n8.\nSelect Group for the Profile Type.\n9.\nIn the Group Profile drop-down, select the group you created (for example, select the\nThreats group):\n10. Click OK to save the policy and Commit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1609\n©2025 Palo Alto Networks, Inc.\nPolicy\nSet up a default security profile group.\n1.\nSelect Objects > Security Profile Groups and add a new security profile group or modify\nan existing security profile group.\n2.\nName the security profile group default:\n3.\nClick OK and Commit.\n4.\nConfirm that the default security profile group is included in new security policies by\ndefault:\n1. Select Policies > Security and Add a new security policy.\n2. Select the Actions tab and view the Profile Setting fields:\nBy default, the new security policy correctly shows the Profile Type set to Group and\nthe default Group Profile is selected.\nOverride a default security profile group.\nIf you have an existing default security profile group, and you do not want that set of profiles\nto be attached to a new security policy, you can continue to modify the Profile Setting fields\naccording to your preference. Begin by selecting a different Profile Type for your policy\n(Policies > Security > Security Policy Rule > Actions).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1610\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1608,
+      "end": 1611
+    },
+    "content_stats": {
+      "char_count": 2675,
+      "word_count": 444
+    },
+    "hierarchy": {
+      "parent": "Security Profiles",
+      "children": []
+    }
+  }
+}

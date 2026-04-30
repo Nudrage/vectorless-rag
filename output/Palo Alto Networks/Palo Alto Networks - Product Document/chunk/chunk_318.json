@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_318",
+  "section_number": "1.11.9.2",
+  "header": "View Reports",
+  "content": "The firewall provides an assortment of over 40 predefined reports that it generates every day.\nYou can view these reports directly on the firewall. You can also view custom reports and\nsummary reports.\nAbout 200 MB of storage is allocated for saving reports on the firewall. This limit can be\nreconfigured for PA-7000 series and PA-5200 series firewalls only. For all other firewall models,\nyou can Configure the Expiration Period and Run Time for Reports to allow the firewall to delete\nreports that exceed the period. Keep in mind that when the firewall reaches its storage limit, it\nautomatically deletes older reports to create space even if you don’t set an expiration period.\nAnother way to conserve system resources on the firewall is to Disable Predefined Reports.\nFor long-term retention of reports, you can export the reports (as described below) or Schedule\nReports for Email Delivery.\nUnlike other reports, you can’t save User/Group Activity reports on the firewall. You must\nGenerate User/Group Activity Reports on demand or schedule them for email delivery.\nSTEP 1 |\n(VM-50, VM-50 Lite, and PA-200 firewalls only) Enable generation of predefined reports.\nBy default, predefined reports are disabled on VM-50, VM-50 Lite, and PA-200\nfirewalls to save resources.\n1.\nSelect Device > Setup > Management and edit Logging and Reporting.\n2.\nSelect Pre-Defined Reports and enable (check) Pre-Defined Reports.\n3.\nCheck (enable) the predefined reports you want to generate and click OK\n4.\nCommit your configuration changes.\n5.\nAccess the firewall CLI to enable predefined reports.\nThis step is required for local predefined reports and predefined reports pushed from a\nPanorama™ management server.\nadmin> debug predefined-default enable\nSTEP 2 |\nSelect Monitor > Reports.\nThe reports are grouped into sections (types) on the right-hand side of the page: Custom\nReports, Application Reports, Traffic Reports, Threat Reports, URL Filtering Reports, and PDF\nSummary Reports.\nSTEP 3 |\nSelect a report to view. The reports page then displays the report for the previous day.\nTo view reports for other days, select a date in the calendar at the bottom right of the page\nand select a report. If you select a report in another section, the date selection resets to the\ncurrent date.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n533\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 4 |\nTo view a report offline, you can export the report to PDF, CSV or to XML formats. Click\nExport to PDF, Export to CSV, or Export to XML at the bottom of the page, then print or\nsave the file.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 533,
+      "end": 534
+    },
+    "content_stats": {
+      "char_count": 2566,
+      "word_count": 421
+    },
+    "hierarchy": {
+      "parent": "View and Manage Reports",
+      "children": []
+    }
+  }
+}

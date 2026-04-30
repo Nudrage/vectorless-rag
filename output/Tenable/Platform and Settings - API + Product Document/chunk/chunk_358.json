@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_358",
+  "section_number": "16.2",
+  "header": "List networks",
+  "content": "Lists network objects for your organization.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nContent type\nstring\nA filter condition in the following format: field:operator:value . For\nnetwork objects, you can only filter on the name  field, using the following\noperators:\neq—The name of the returned network object is equal to the text you\nspecify.\nneq—The returned list of network objects excludes the network object\nwhere the name is equal to the text you specify.\nmatch—The returned list includes network objects where the name\ncontains the text you specify at least partially.\nYou can specify multiple f  parameters, separated by ampersand (&)\ncharacters. If you specify multiple f  parameters, use the ft  parameter\nto specify how Tenable Vulnerability Management applies the multiple filter\nconditions.\nstring\nThe operator that Tenable Vulnerability Management applies if multiple `f`\nparameters are present. The OR  operator is the only supported value. If\nyou omit this parameter and multiple f  parameters are present, Tenable\nVulnerability Management applies the OR  operator by default.\ninteger <int32>\nThe number of records to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 50 .\ninteger <int32>\nThe starting record to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 0 .\nstring\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nsecond ( asc  or desc ). For example, name:asc  would sort results by\nthe name  field in ascending order.\nboolean\nIndicates whether Tenable Vulnerability Management includes deleted\nnetwork objects in the response message. Deleted network objects contain\nthe additional attributes, deleted  and deleted_by , which specifies the\ndate (in Unix time) when the network object was deleted and the UUID of\nthe user that deleted the network object.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 347,
+      "end": 348
+    },
+    "content_stats": {
+      "char_count": 2032,
+      "word_count": 314
+    },
+    "hierarchy": {
+      "parent": "Networks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

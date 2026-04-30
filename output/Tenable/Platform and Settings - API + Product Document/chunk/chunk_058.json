@@ -1,0 +1,41 @@
+{
+  "chunk_id": "chunk_058",
+  "section_number": "4",
+  "header": "Access Control (Users)",
+  "content": "User accounts enable you to provide access to Tenable Vulnerability Management and manage\npermissions for Tenable Vulnerability Management resources. You can use the API to perform\nstandard CRUD operations on user objects, and also change passwords, generate API keys,\nimpersonate users, enable multi-factor authentication, and manage access authorizations.\nFor background information about managing users, see Users in the Tenable Vulnerability\nManagement User Guide.\n{\n\"permissions_granted\":\n-\n[\n- {\n\"permission_uuid\": \"dc99495e-afed-421a-9417-bc7e8d5d1c22\",\n\"name\": \"Default\",\n\"subjects\":\n-\n[\n- {\n\"type\": \"AllUsers\"\n}\n],\n\"actions\":\n-\n[\n\"CanScan\",\n\"CanView\"\n],\n\"objects\":\n-\n[\n- {\n\"type\": \"AllAssets\"\n}\n],\n\"created_at\": 1629364713836,\n\"created_by\": \"System\"\n}\n],\n\"permissions_available\": [ ]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 19,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 38,
+      "end": 38
+    },
+    "content_stats": {
+      "char_count": 794,
+      "word_count": 107
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Create user",
+        "List users",
+        "Get user details",
+        "Update user",
+        "Delete user",
+        "Get user role",
+        "Change user role",
+        "Change password",
+        "Enable user account",
+        "Get user authorizations",
+        "Update user authorizations",
+        "Generate API keys",
+        "Impersonate user",
+        "Send verification code",
+        "Validate verification code",
+        "Configure two-factor authentication"
+      ]
+    }
+  }
+}

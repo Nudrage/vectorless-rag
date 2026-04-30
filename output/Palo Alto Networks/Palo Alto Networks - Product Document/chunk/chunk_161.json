@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_161",
+  "section_number": "1.8.10.3",
+  "header": "Modify the Authentication Portal Session Timeout",
+  "content": "The Authentication Portal session timeout must be the same as or greater than the PAN-OS web\nserver timeout. For details, see Connection Timeouts for Authentication Servers.\nThe more you raise the PAN-OS web server and Authentication Portal session timeouts,\nthe slower Authentication Portal will respond to users.\nSTEP 1 |\nSelect Device > Setup > Session and edit the Session Timeouts.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n298\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 2 |\nEnter a new Authentication Portal value in seconds (default is 30; range is 1 to 1,599,999)\nand click OK.\nSTEP 3 |\nCommit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n299\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 298,
+      "end": 300
+    },
+    "content_stats": {
+      "char_count": 713,
+      "word_count": 113
+    },
+    "hierarchy": {
+      "parent": "Connection Timeouts for Authentication Servers",
+      "children": []
+    }
+  }
+}

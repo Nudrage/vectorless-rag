@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_790",
+  "section_number": "1.21.8.2.2",
+  "header": "PIM Assert Mechanism",
+  "content": "To prevent routers on a multiaccess network from forwarding the same multicast traffic to the\nsame next hop (which would cause redundant traffic and wasted bandwidth), PIM uses the Assert\nmechanism to elect a single PIM Forwarder for the multiaccess network.\nIf the virtual router receives a multicast packet from a source on an interface that the virtual\nrouter already associates as the outgoing interface for the same (S,G) pair identified in the packet,\nthat means this is a duplicate packet. Consequently, the virtual router sends an Assert message\ncontaining its metrics to the other routers on the multiaccess network. The routers then elect a\nPIM Forwarder in this manner:\n1. The PIM Forwarder is the router with the lowest administrative distance to the multicast\nsource.\n2. In the event of a tie for lowest administrative distance, the PIM Forwarder is the router with\nthe best unicast routing metric to the source.\n3. In the event of a tie for best metric, the PIM Forwarder is the router with the highest IP\naddress.\nRouters that are not elected as the PIM Forwarder will stop forwarding traffic to the multicast\ngroup identified in the (S,G) pair.\nWhen you Configure IP Multicast, you can configure the interval at which the virtual router\nsends PIM Assert messages out an interface (the Assert interval). When you View IP Multicast\nInformation, the PIM Interface tab displays the Assert interval for an interface.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1417,
+      "end": 1417
+    },
+    "content_stats": {
+      "char_count": 1427,
+      "word_count": 237
+    },
+    "hierarchy": {
+      "parent": "PIM",
+      "children": []
+    }
+  }
+}

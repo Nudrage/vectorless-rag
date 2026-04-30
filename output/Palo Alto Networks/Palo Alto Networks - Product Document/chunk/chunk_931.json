@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_931",
+  "section_number": "1.21.22.6",
+  "header": "Disable Tunnel Acceleration",
+  "content": "By default, supported firewalls perform tunnel acceleration to improve performance and\nthroughput for traffic going through GRE tunnels, VXLAN tunnels, and GTP-U tunnels. Tunnel\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1586\n©2025 Palo Alto Networks, Inc.\nNetworking\nacceleration provides hardware offloading to reduce the time it takes to perform flow lookups and\nallows the tunnel traffic to be distributed more efficiently based on the inner traffic.\nGRE and VXLAN tunnel acceleration is supported on PA-3200 Series firewalls and PA-7000 Series\nfirewalls with PA-7000-100G-NPC-A and PA-7050-SMC-B or PA-7080-SMC-B. You can disable\ntunnel acceleration to troubleshoot. When you disable tunnel acceleration, you are doing so for\nGRE, VXLAN, and GTP-U tunnels simultaneously.\nThere is no performance impact for GRE traffic when disabling tunnel acceleration if no\ntunnel content inspection (TCI) policies are being used.\nSTEP 1 |\nSelect Device > Setup > Management and edit General Settings.\nSTEP 2 |\nDeselect Tunnel Acceleration to disable it.\nSTEP 3 |\nClick OK.\nSTEP 4 |\nCommit.\nSTEP 5 |\nReboot the firewall.\nSTEP 6 |\n(Optional) Verify status of tunnel acceleration.\n1.\nAccess the CLI.\n2.\n> show tunnel-acceleration\nSystem output is Enabled or Disabled. Additional status and reason for GTP-U only:\n• Disabled—GTP-U tunnel acceleration is not supported on firewall model or GTP\nSecurity is disabled.\n• Error (TCI with GTP-U configured unexpectedly)—TCI with GTP-U\nprotocol is configured when Tunnel Acceleration is enabled.\n• Enabled—Tunnel Acceleration is enabled; GTP-U Tunnel Acceleration is not running\nyet. GTP Security is enabled, but yet to reboot.\n• Installed—GTP-U Tunnel Acceleration is running.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1587\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1586,
+      "end": 1587
+    },
+    "content_stats": {
+      "char_count": 1783,
+      "word_count": 267
+    },
+    "hierarchy": {
+      "parent": "Tunnel Content Inspection",
+      "children": []
+    }
+  }
+}

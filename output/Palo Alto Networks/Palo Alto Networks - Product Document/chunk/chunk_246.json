@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_246",
+  "section_number": "1.10.4.3.7",
+  "header": "Use Case: Configure Active/Active HA for ARP Load-Sharing with Destination NAT",
+  "content": "This Layer 3 interface example uses NAT in Active/Active HA Mode and ARP Load-Sharing\nwith destination NAT. Both HA firewalls respond to an ARP request for the destination NAT\naddress with the ingress interface MAC address. Destination NAT translates the public, shared\nIP address (in this example, 10.1.1.200) to the private IP address of the server (in this example,\n192.168.2.200).\nWhen the HA firewalls receive traffic for the destination 10.1.1.200, both firewalls could possibly\nrespond to the ARP request, which could cause network instability. To avoid the potential issue,\nconfigure the firewall that is in active-primary state to respond to the ARP request by binding the\ndestination NAT rule to the active-primary firewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n432\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nSTEP 1 |\nOn PA-3050-2 (Device ID 1), perform Step 1 through Step 3 of Configure Active/Active HA.\nSTEP 2 |\nEnable active/active HA.\n1.\nIn Device > High Availability > General, edit Setup.\n2.\nSelect Enable HA.\n3.\nEnter a Group ID, which must be the same for both firewalls. The firewall uses the Group\nID to calculate the virtual MAC address (range is 1-63).\n4.\n(Optional) Enter a Description.\n5.\nFor Mode, select Active Active.\n6.\nSelect Device ID to be 1.\n7.\nSelect Enable Config Sync. This setting is required to synchronize the two firewall\nconfigurations (enabled by default).\n8.\nEnter the Peer HA1 IP Address, which is the IP address of the HA1 control link on the\npeer firewall.\n9.\n(Optional) Enter a Backup Peer HA1 IP Address, which is the IP address of the backup\ncontrol link on the peer firewall.\n10. Click OK.\nSTEP 3 |\nPerform Step 6 through Step 15 in Configure Active/Active HA.\nSTEP 4 |\nConfigure an HA virtual address.\n1.\nSelect Device > High Availability > Active/Active Config > Virtual Address and click\nAdd.\n2.\nSelect Interface eth1/1.\n3.\nSelect IPv4 and Add an IPv4 Address of 10.1.1.200.\n4.\nFor Type, select ARP Load Sharing, which configures the virtual IP address to be for\nboth peers to use for ARP Load-Sharing.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n433\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nSTEP 5 |\nConfigure ARP Load-Sharing.\nThe device selection algorithm determines which HA firewall responds to the ARP requests to\nprovide load sharing.\n1.\nFor Device Selection Algorithm, select IP Modulo. The firewall that will respond to ARP\nrequests is based on the parity of the ARP requester's IP address.\n2.\nClick OK.\nSTEP 6 |\nEnable jumbo frames on firewalls other than the PA-7000 Series firewalls.\nSTEP 7 |\nDefine HA Failover Conditions.\nSTEP 8 |\nCommit the configuration.\nSTEP 9 |\nConfigure the peer firewall, PA-3050-1 (Device ID 0), with the same settings, except select\nDevice ID 0.\nSTEP 10 | Still on PA-3050-1 (Device ID 0), create the destination NAT rule so that the active-primary\nfirewall responds to ARP requests.\n1.\nSelect Policies > NAT and click Add.\n2.\nEnter a Name for the rule that, in this example, identifies it as a destination NAT rule for\nLayer 2 ARP.\n3.\nFor NAT Type, select ipv4 (default).\n4.\nOn the Original Packet, for Source Zone, select Any.\n5.\nFor Destination Zone, select the Untrust zone you created for the external network.\n6.\nAllow Destination Interface, Service, and Source Address to remain set to Any.\n7.\nFor Destination Address, specify 10.1.1.200.\n8.\nFor the Translated Packet, Source Address Translation remains None.\n9.\nFor Destination Address Translation, enter the private IP address of the destination\nserver, in this example, 192.168.1.200.\n10. On the Active/Active HA Binding tab, for Active/Active HA Binding, select primary to\nbind the NAT rule to the firewall in active-primary state.\n11. Click OK.\nSTEP 11 | Commit the configuration.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 432,
+      "end": 434
+    },
+    "content_stats": {
+      "char_count": 3751,
+      "word_count": 625
+    },
+    "hierarchy": {
+      "parent": "Determine Your Active/Active Use Case",
+      "children": []
+    }
+  }
+}

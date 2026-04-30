@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_170",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nx-api-key\nrequired\nGET\n/api/email-notifiers/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"address\": \"string\",\n\"criticityThreshold\": 0,\n\"directories\":\n-\n[\n0\n],\n\"description\": \"string\",\n\"checkers\":\n-\n[\n0\n],\n\"attackTypes\":\n-\n[\n0\n],\nContent type\n\"profiles\":\n-\n[\n0\n],\n\"shouldNotifyOnInitialFullSecurityCheck\": true,\n\"inputType\": \"deviances\",\n\"healthCheckNames\":\n-\n[\n\"string\"\n]\n}\nUpdate email-notifier instance.\nRequired license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nstring\ninteger\nArray of integers\nnon-empty\nstring\nArray of integers or null\nnon-empty\nArray of integers or null\nnon-empty\nid\nrequired\nx-api-key\nrequired\naddress\ncriticityThreshold\ndirectories\ndescription\ncheckers\nattackTypes\nArray of integers or null\nnon-empty\nany\nEnum: \"deviances\"\n\"attacks\"\n\"healthChecks\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 108,
+      "end": 110
+    },
+    "content_stats": {
+      "char_count": 955,
+      "word_count": 121
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

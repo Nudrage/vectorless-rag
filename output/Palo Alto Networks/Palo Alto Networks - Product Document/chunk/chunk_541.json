@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_541",
+  "section_number": "1.16.2.14",
+  "header": "High Availability Support for Decrypted Sessions",
+  "content": "The firewall supports High Availability (HA) sync only for inbound, decrypted SSL sessions, and\nonly if the sessions were established using non-PFS key exchange algorithms. The firewall does\nnot support HA sync for any other decrypted traffic. The firewall decrypts new sessions that start\nafter the failover based on Decryption policy.\nThe following table shows HA sync support for decrypted sessions after a failover:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n994\n©2025 Palo Alto Networks, Inc.\nDecryption\nSession Type\nPFS Key Exchange\nNon-PFS Key Exchange\nInbound SSL Session\n(Inbound Inspection\nDecryption)\nNo HA Sync, firewall drops\nthe session\nHA Sync occurs, firewall\nallows the session but does\nnot decrypt the session\nOutbound SSL Sessions (SSL\nForward Proxy Decryption)\nNo HA Sync, firewall drops\nthe session\nNo HA Sync, firewall drops\nthe session",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 994,
+      "end": 995
+    },
+    "content_stats": {
+      "char_count": 856,
+      "word_count": 131
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_035",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4799(S): A security-enabled local group membership was enumerated.\nAppendix A: Security monitoring recommendations for many audit events\n© 2016 Microsoft. All rights reserved.\n133\n\nImportant\nFor this event, also see Appendix A: Security monitoring recommendations for many audit events. If you have a list of critical local security groups in the\norganization, and need to specifically monitor these groups for any access (in this case, enumeration of group membership), monitor events with the “Group\\Group Name”\nvalues that correspond to the critical local security groups. Examples of critical local groups are built-in local administrators, built-in backup operators, and so on.\n\nIf you need to monitor each time the membership is enumerated for a local or domain security group, to see who enumerated the membership and when, monitor this event.\nTypically, this event is used as an informational event, to be reviewed if needed.\n© 2016 Microsoft. All rights reserved.\n134",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 133,
+      "end": 135
+    },
+    "content_stats": {
+      "char_count": 982,
+      "word_count": 152
+    },
+    "hierarchy": {
+      "parent": "Audit Security Group Management",
+      "children": []
+    }
+  }
+}

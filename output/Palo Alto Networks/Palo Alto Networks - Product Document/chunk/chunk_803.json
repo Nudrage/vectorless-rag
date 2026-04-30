@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_803",
+  "section_number": "1.21.11.4.1",
+  "header": "DHCP Address Allocation Methods",
+  "content": "There are three ways that a DHCP server either assigns or sends an IP address to a client:\n• Automatic allocation—The DHCP server assigns a permanent IP address to a client from its IP\nPools. On the firewall, a Lease specified as Unlimited means the allocation is permanent.\n• Dynamic allocation—The DHCP server assigns a reusable IP address from IP Pools of\naddresses to a client for a maximum period of time, known as a lease. This method of address\nallocation is useful when the customer has a limited number of IP addresses; they can be\nassigned to clients who need only temporary access to the network. See the DHCP Leases\nsection.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1439\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Static allocation—The network administrator chooses the IP address to assign to the client\nand the DHCP server sends it to the client. A static DHCP allocation is permanent; it is done\nby configuring a DHCP server and choosing a Reserved Address to correspond to the MAC\nAddress of the client device. The DHCP assignment remains in place even if the client logs off,\nreboots, has a power outage, etc.\nStatic allocation of an IP address is useful, for example, if you have a printer on a LAN and\nyou do not want its IP address to keep changing, because it is associated with a printer name\nthrough DNS. Another example is if a client device is used for something crucial and must keep\nthe same IP address, even if the device is turned off, unplugged, rebooted, or a power outage\noccurs, etc.\nKeep these points in mind when configuring a Reserved Address:\n• It is an address from the IP Pools. You may configure multiple reserved addresses.\n• If you configure no Reserved Address, the clients of the server will receive new DHCP\nassignments from the pool when their leases expire or if they reboot, etc. (unless you\nspecified that a Lease is Unlimited).\n• If you allocate all of the addresses in the IP Pools as a Reserved Address, there are no\ndynamic addresses free to assign to the next DHCP client requesting an address.\n• You may configure a Reserved Address without configuring a MAC Address. In this case,\nthe DHCP server will not assign the Reserved Address to any device. You might reserve\na few addresses from the pool and statically assign them to a fax and printer, for example,\nwithout using DHCP.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1439,
+      "end": 1440
+    },
+    "content_stats": {
+      "char_count": 2335,
+      "word_count": 411
+    },
+    "hierarchy": {
+      "parent": "DHCP Addressing",
+      "children": []
+    }
+  }
+}

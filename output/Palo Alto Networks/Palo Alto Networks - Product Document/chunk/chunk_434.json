@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_434",
+  "section_number": "1.12.9.1.1",
+  "header": "Windows Log Forwarding and Global Catalog Servers",
+  "content": "Because each User-ID agent can monitor up to 100 servers, the firewall needs multiple User-\nID agents to monitor a network with hundreds of AD domain controllers or Exchange servers.\nCreating and managing numerous User-ID agents involves considerable administrative overhead,\nespecially in expanding networks where tracking new domain controllers is difficult. Windows\nLog Forwarding enables you to minimize the administrative overhead by reducing the number of\nservers to monitor and thereby reducing the number of User-ID agents to manage. When you\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n785\n©2025 Palo Alto Networks, Inc.\nUser-ID\nconfigure Windows Log Forwarding, multiple domain controllers export their login events to a\nsingle domain member from which a User-ID agent collects the user mapping information.\nYou can configure Windows Log Forwarding for Windows Server versions 2012 and 2012\nR2. Windows Log Forwarding is not available for non-Microsoft servers.\nTo collect group mapping information in a large-scale network, you can configure the firewall to\nquery a Global Catalog server that receives account information from the domain controllers.\nThe following figure illustrates user mapping and group mapping for a large-scale network\nin which the firewall uses a Windows-based User-ID agent. See Plan a Large-Scale User-ID\nDeployment to determine if this deployment suits your network.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 785,
+      "end": 786
+    },
+    "content_stats": {
+      "char_count": 1400,
+      "word_count": 206
+    },
+    "hierarchy": {
+      "parent": "Deploy User-ID for Numerous Mapping Information Sources",
+      "children": []
+    }
+  }
+}

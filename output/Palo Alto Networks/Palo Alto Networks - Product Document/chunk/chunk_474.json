@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_474",
+  "section_number": "1.13.10",
+  "header": "Application Level Gateways",
+  "content": "The Palo Alto Networks firewall does not classify traffic by port and protocol; instead it identifies\nthe application based on its unique properties and transaction characteristics using the App-\nID technology. Some applications, however, require the firewall to dynamically open pinholes\nto establish the connection, determine the parameters for the session and negotiate the ports\nthat will be used for the transfer of data; these applications use the application-layer payload to\ncommunicate the dynamic TCP or UDP ports on which the application opens data connections.\nFor such applications, the firewall serves as an Application Level Gateway (ALG), and it opens a\npinhole for a limited time and for exclusively transferring data or control traffic. The firewall also\nperforms a NAT rewrite of the payload when necessary.\n• H.323 (H.225 and H.248) ALG is not supported in gatekeeper routed mode.\n• When the firewall serves as an ALG for the Session Initiation Protocol (SIP), by default\nit performs NAT on the payload and opens dynamic pinholes for media ports. In some\ncases, depending on the SIP applications in use in your environment, the SIP endpoints\nhave NAT intelligence embedded in their clients. In such cases, you might need to\ndisable the SIP ALG functionality to prevent the firewall from modifying the signaling\nsessions. When SIP ALG is disabled, if App-ID determines that a session is SIP, the\npayload is not translated and dynamic pinholes are not opened. See Disable the SIP\nApplication-level Gateway (ALG).\nWhen you use Dynamic IP and Port (DIPP) NAT, the Palo Alto Networks firewall ALG\ndecoder needs a combination of IP and Port (Sent-by Address and Sent-by Port) under SIP\nheaders (Contact and Via fields) to be able to translate the mentioned headers and open\npredict sessions based on them.\nThe following table lists IPv4, NAT, IPv6, NPTv6 and NAT64 ALGs and indicates with a check\nmark whether the ALG supports each protocol (such as SIP).\nApp-ID\nIPv4\nNAT\nIPv6\nNPTv6\nNAT64\nSIP\n—\n—\nSCCP\n—\n—\nMGCP\n—\n—\n—\nFTP\n—\nRTSP\n—\nMySQL\n—\n—\n—\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n853\n©2025 Palo Alto Networks, Inc.\nApp-ID\nApp-ID\nIPv4\nNAT\nIPv6\nNPTv6\nNAT64\nOracle/\nSQLNet/ TNS\n—\nRPC\n—\n—\n—\nRSH\n—\n—\n—\nUNIStim\n—\n—\n—\nH.225\n—\n—\n—\nH.248\n—\n—\n—\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n854\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 853,
+      "end": 855
+    },
+    "content_stats": {
+      "char_count": 2334,
+      "word_count": 397
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": []
+    }
+  }
+}

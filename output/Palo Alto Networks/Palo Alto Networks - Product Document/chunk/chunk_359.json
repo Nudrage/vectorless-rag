@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_359",
+  "section_number": "1.11.15.1",
+  "header": "SNMP Support",
+  "content": "You can use an SNMP manager to monitor event-driven alerts and operational statistics for the\nfirewall, Panorama, or WF-500 appliance and for the traffic they process. The statistics and traps\ncan help you identify resource limitations, system changes or failures, and malware attacks. You\nconfigure alerts by forwarding log data as traps, and enable the delivery of statistics in response\nto GET messages (requests) from your SNMP manager. Each trap and statistic has an object\nidentifier (OID). Related OIDs are organized hierarchically within the Management Information\nBases (MIBs) that you load into the SNMP manager to enable monitoring.\nWhen an event triggers SNMP trap generation (for example, an interface goes down),\nthe firewall, Panorama virtual appliance, M-Series appliance, and WF-500 appliance\nrespond by updating the corresponding SNMP object (for example, the interfaces MIB)\ninstead of waiting for the periodic update of all objects that occurs every ten seconds. This\nensures that your SNMP manager displays the latest information when polling an object\nto confirm an event.\nThe firewall, Panorama, and WF-500 appliance support SNMP Version 2c and Version 3. Decide\nwhich to use based on the version that other devices in your network support and on your\nnetwork security requirements. SNMPv3 is more secure and enables more granular access control\nfor system statistics than SNMPv2c. The following table summarizes the security features of each\nversion. You select the version and configure the security features when you Monitor Statistics\nUsing SNMP and Forward Traps to an SNMP Manager.\nSNMPVersion\nAuthentication\nMessage Privacy\nMessageIntegrity\nMIB Access Granularity\nSNMPv2cCommunity string\nNo (cleartext)\nNo\nSNMP community access for all\nMIBs on a device\nSNMPv3 EngineID, username,\nand authentication\npassword (SHA\nPrivacy\npassword\nfor AES 128\nencryption\nYes\nUser access based on views that\ninclude or exclude specific OIDs\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n655\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSNMPVersion\nAuthentication\nMessage Privacy\nMessageIntegrity\nMIB Access Granularity\nhashing for the\npassword)\nof SNMP\nmessages\nSNMP Implementation illustrates a deployment in which firewalls forward traps to an SNMP\nmanager while also forwarding logs to Log Collectors. Alternatively, you could configure the Log\nCollectors to forward the firewall traps to the SNMP manager. For details on these deployments,\nrefer to Log Forwarding Options in Centralized Logging and Reporting. In all deployments, the\nSNMP manager gets statistics directly from the firewall, Panorama, or WF-500 appliance. In this\nexample, a single SNMP manager collects both traps and statistics, though you can use separate\nmanagers for these functions if that better suits your network.\nFigure 2: SNMP Implementation",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 655,
+      "end": 656
+    },
+    "content_stats": {
+      "char_count": 2825,
+      "word_count": 420
+    },
+    "hierarchy": {
+      "parent": "SNMP Monitoring and Traps",
+      "children": []
+    }
+  }
+}

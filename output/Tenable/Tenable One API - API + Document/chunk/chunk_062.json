@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_062",
+  "section_number": "23.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable One successfully retrieved the list of assets.\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n401 Returned if the API keys specified in your request are invalid.\n— 403 Returned if you do not have permission to search tags.\noffset\nlimit\nsort\nquery\nfilters\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in Tenable One.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 152,
+      "end": 153
+    },
+    "content_stats": {
+      "char_count": 520,
+      "word_count": 88
+    },
+    "hierarchy": {
+      "parent": "Search tags",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

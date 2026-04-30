@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_449",
+  "section_number": "1.13.4",
+  "header": "Manage Custom or Unknown Applications",
+  "content": "Palo Alto Networks provides weekly application updates to identify new App-ID signatures.\nBy default, App-ID is always enabled on the firewall, and you don't need to enable a series of\nsignatures to identify well-known applications. Typically, the only applications that are classified\nas unknown traffic—tcp, udp or non-syn-tcp—in the ACC and the traffic logs are commercially\navailable applications that have not yet been added to App-ID, internal or custom applications on\nyour network, or potential threats.\nOn occasion, the firewall may report an application as unknown for the following reasons:\n• Incomplete data—A handshake took place, but no data packets were sent prior to the timeout.\n• Insufficient data—A handshake took place followed by one or more data packets; however, not\nenough data packets were exchanged to identify the application.\nThe following choices are available to handle unknown applications:\n• Create security policies to control unknown applications by unknown TCP, unknown UDP or\nby a combination of source zone, destination zone, and IP addresses.\n• Request an App-ID from Palo Alto Networks—If you would like to inspect and control the\napplications that traverse your network, for any unknown traffic, you can record a packet\ncapture. If the packet capture reveals that the application is a commercial application, you can\nsubmit this packet capture to Palo Alto Networks for App-ID development. If it is an internal\napplication, you can create a custom App-ID and/or define an application override policy.\n• Create a Custom Application with a signature and attach it to a security policy, or create a\ncustom application and define an application override policy—A custom application allows\nyou to customize the definition of the internal application—its characteristics, category and\nsub-category, risk, port, timeout—and exercise granular policy control in order to minimize the\nrange of unidentified traffic on your network. Creating a custom application also allows you to\ncorrectly identify the application in the ACC and traffic logs and is useful in auditing/reporting\non the applications on your network. For a custom application you can specify a signature and\na pattern that uniquely identifies the application and attach it to a security policy that allows or\ndenies the application.\nAlternatively, if you would like the firewall to process the custom application using fast path\n(Layer-4 inspection instead of using App-ID for Layer-7 inspection), you can reference the\ncustom application in an application override policy rule. An application override with a custom\napplication will prevent the session from being processed by the App-ID engine, which is a\nLayer-7 inspection. Instead it forces the firewall to handle the session as a regular stateful\ninspection firewall at Layer-4, and thereby saves application processing time.\nFor example, if you build a custom application that triggers on a host header\nwww.mywebsite.com, the packets are first identified as web-browsing and then are matched\nas your custom application (whose parent application is web-browsing). Because the parent\napplication is web-browsing, the custom application is inspected at Layer-7 and scanned for\ncontent and vulnerabilities.\nIf you define an application override, the firewall stops processing at Layer-4. The custom\napplication name is assigned to the session to help identify it in the logs, and the traffic is not\nscanned for threats.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n807\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 807,
+      "end": 808
+    },
+    "content_stats": {
+      "char_count": 3551,
+      "word_count": 542
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": []
+    }
+  }
+}

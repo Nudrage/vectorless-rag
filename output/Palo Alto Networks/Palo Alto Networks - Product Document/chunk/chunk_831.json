@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_831",
+  "section_number": "1.21.15",
+  "header": "NAT",
+  "content": "This section describes Network Address Translation (NAT) and how to configure the firewall\nfor NAT. NAT allows you to translate private, non-routable IPv4 addresses to one or more\nglobally-routable IPv4 addresses, thereby conserving an organization’s routable IP addresses.\nNAT allows you to not disclose the real IP addresses of hosts that need access to public addresses\nand to manage traffic by performing port forwarding. You can use NAT to solve network design\nchallenges, enabling networks with identical IP subnets to communicate with each other. The\nfirewall supports NAT on Layer 3 and virtual wire interfaces.\nThe NAT64 option translates between IPv6 and IPv4 addresses, providing connectivity between\nnetworks using disparate IP addressing schemes, and therefore a migration path to IPv6\naddressing. IPv6-to-IPv6 Network Prefix Translation (NPTv6) translates one IPv6 prefix to\nanother IPv6 prefix. PAN-OS supports all of these functions.\nIf you use private IP addresses within your internal networks, you must use NAT to translate\nthe private addresses to public addresses that can be routed on external networks. In PAN-OS,\nyou create NAT policy rules that instruct the firewall which packet addresses and ports need\ntranslation and what the translated addresses and ports are.\n• NAT Policy Rules\n• Source NAT and Destination NAT\n• Destination NAT with DNS Rewrite Use Cases\n• NAT Rule Capacities\n• Dynamic IP and Port NAT Oversubscription\n• Dataplane NAT Memory Statistics\n• Configure NAT\n• NAT Configuration Examples",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1478,
+      "end": 1478
+    },
+    "content_stats": {
+      "char_count": 1531,
+      "word_count": 236
+    },
+    "hierarchy": {
+      "parent": "Networking",
+      "children": [
+        "NAT Policy Rules",
+        "Source NAT and Destination NAT",
+        "NAT Rule Capacities",
+        "Dynamic IP and Port NAT Oversubscription",
+        "Dataplane NAT Memory Statistics",
+        "Configure NAT",
+        "NAT Configuration Examples"
+      ]
+    }
+  }
+}

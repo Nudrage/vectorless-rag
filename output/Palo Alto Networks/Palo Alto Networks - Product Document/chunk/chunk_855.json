@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_855",
+  "section_number": "1.21.15.7.3",
+  "header": "Destination NAT Example—One-to-Many Mapping",
+  "content": "In this example, one IP address maps to two different internal hosts. The firewall uses the\napplication to identify the internal host to which the firewall forwards the traffic.\nAll HTTP traffic is sent to host 10.1.1.100 and SSH traffic is sent to server 10.1.1.101. The\nfollowing address objects are required:\n• Address object for the one pre-translated IP address of the server\n• Address object for the real IP address of the SSH server\n• Address object for the real IP address of the web server\nThe corresponding address objects are created:\n• Servers-public: 192.0.2.100\n• SSH-server: 10.1.1.101\n• webserver-private: 10.1.1.100\nThe NAT rules would look like this:\nThe security rules would look like this:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1502,
+      "end": 1502
+    },
+    "content_stats": {
+      "char_count": 709,
+      "word_count": 116
+    },
+    "hierarchy": {
+      "parent": "NAT Configuration Examples",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_376",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully assigned the scanner or scanner group to\nthe network object.\nRESPONSE SCHEMA:\napplication/json\nany\n— 400\nReturned if you attempt to assign an AWS scanner to the network object. For AWS assets, use network\nsegmentation processes offered by AWS instead.\n— 401\nReturned if Tenable Vulnerability Management cannot authenticate the user account that submitted\nthe request.\n— 403\nReturned if you do not have sufficient permissions to assign a scanner or scanner group to the\nspecified network object.\n— 404\nReturned if Tenable Vulnerability Management could not find either the network object, the scanner\nobject, or the scanner group object you specified.\n409\nReturned if Tenable Vulnerability Management determines that assigning the scanner or scanner\ngroup causes a network conflict. A response message with this code includes a response body under\nthe following conditions:\nThe scanner you attempted to assign is a member of more than one scanner group.\nThe scanner group you attempted to assign contains one or more scanners that belong to another\nscanner group.\nnetwork_id\nrequired\nscanner_uuid\nrequired\nRESPONSE SCHEMA:\napplication/json\nArray of objects\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500\nReturned if Tenable Vulnerability Management encountered an internal server error. Wait a moment,\nand try your request again.\n— 503\nReturned if a Tenable Vulnerability Management service is unavailable. Wait a moment, and try your\nrequest again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 362,
+      "end": 363
+    },
+    "content_stats": {
+      "char_count": 1596,
+      "word_count": 246
+    },
+    "hierarchy": {
+      "parent": "Assign scanners",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

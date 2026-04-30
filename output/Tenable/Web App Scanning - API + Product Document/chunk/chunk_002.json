@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_002",
+  "section_number": "2",
+  "header": "Download attachment",
+  "content": "Returns the specified attachment file for a vulnerability detected by a Tenable Web App Scanning\nscan. Attachments provide additional details for a detected vulnerability.\nNote: The transfer-encoding  header value of the response stream is set to chunked .\nRequires the Basic [16] user role or the WAS.TOGGLE_WAS.USE  custom role privilege. Additionally,\nrequires the Can View [16] scan permission. See Roles and Permissions.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nattachment_id\nrequired\nThe UUID of the attachment to download. To determine the UUID of an\nattachment, use either the GET /was/v2/vulnerabilities or GET\n/was/v2/scans/{scan_id}/vulnerabilities endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 1,
+      "end": 2
+    },
+    "content_stats": {
+      "char_count": 680,
+      "word_count": 93
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

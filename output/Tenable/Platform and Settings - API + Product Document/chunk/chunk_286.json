@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_286",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully retrieved the details of the specified cloud\nconnector.\nRESPONSE SCHEMA:\napplication/json\nArray of objects\nconnector_id\nrequired\nconnector\n— 403 Returned if you do not have permission to view cloud connector details.\n— 404 Returned if the specified connector doesn't exist.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 274,
+      "end": 275
+    },
+    "content_stats": {
+      "char_count": 462,
+      "word_count": 70
+    },
+    "hierarchy": {
+      "parent": "Get connector details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_469",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the details for the specified scanner were retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe Unix timestamp when the scanner was created. This\nattribute specifies the original creation date if the scanner was\nmigrated.\nstring\nThe scanner operating system distribution.\nstring\nThe version of the scanner.\nboolean\nIndicates whether the scanner belongs to a scanner group\n('true') or not ('false').\nstring\nThe hostname of the scanner.\ninteger\nThe unique ID of the scanner.\nArray of strings\nA list of IP addresses associated with the scanner.\nstring\nThe linking key, that is, the alpha-numeric sequence of\ncharacters you use to link a scanner to Tenable Vulnerability\nManagement. For more information about linking a scanner, see\nthe Link a Sensor in the Tenable Vulnerability Management User\nGuide.\nstring\nThe Unix timestamp when any of the scanner's tasks have\nprovided its last update.\ninteger\nThe Unix timestamp when the scanner was last modified.\ninteger\ncreation_date\ndistro\nengine_version\ngroup\nhostname\nid\nip_addresses\nkey\nlast_connect\nlast_modification_date\nlinked\nSpecifies whether you disabled ( 0 ) or enabled ( 1 ) the\nscanner. For more information, see the PUT\n/scanners/{scanner_id}/link endpoint.\nstring\nThe current plugin set on the scanner.\nstring\nThe registration code of the scanner.\nobject\nstring\nThe user-defined name of the scanner.\nstring\nThe name of the network object associated with the scanner.\nFor more information about network objects, see Manage\nNetworks.\ninteger\nThe number of scans (tasks) the scanner is currently executing.\nstring\nThe owner of the scanner.\ninteger\nThe ID of the owner of the scanner.\nstring\nThe username of the owner of the scanner.\nstring\nThe UUID of the owner of the scanner.\nstring\nThe platform of the scanner.\nboolean\nIndicates whether the scanner is part of a scanner group ('true')\nor not ('false'). For more information about scanner groups, see\nthe Scanner Groups endpoints.\ninteger\nThe number of scans that the scanner is currently running.\nboolean\nloaded_plugin_set\nregistration_code\nlicense\nname\nnetwork_name\nnum_scans\nowner\nowner_id\nowner_name\nowner_uuid\nplatform\npool\nscan_count\nshared\nIndicates whether anyone other than the scanner owner has\nexplicit access to the scanner ( 1 ).\nstring\nAlways set to service .\nstring\nThe status of the scanner ( on  or off ).\ninteger\nEquivalent to the last_modification_date  attribute.\nstring\nThe type of scanner ( local , managed , managed_pvs ,\npool , remote , or webapp ).\ninteger\nThe backend build of Nessus that is running on the scanner.\nstring\nThe backend version of Nessus that is running on the scanner.\ninteger\nThe permissions you (the current user) have been assigned for\nthe scanner. See Permissions.\nstring\nThe UUID of the scanner.\nstring\nThe UUID of the Nessus installation on the scanner.\nboolean\nIndicates if the scanner supports remote logging.\nboolean\nIndicates if the scanner supports Tenable Web App Scanning.\ninteger\nSpecifies how often, in minutes, the scanner checks in with\nTenable Vulnerability Management (Amazon Web Services\nscanners only).\nstring\nThe unique ID (UUID) of the scanner profile that the scanner\nbelongs to.\nsource\nstatus\ntimestamp\ntype\nui_build\nui_version\nuser_permissions\nuuid\nremote_uuid\nsupports_remote_logs\nsupports_webapp\naws_update_interval\nprofile_uuid\nstring\nThe name of the scanner profile that the scanner belongs to.\n— 403 Returned if you do not have permission to view the specified scanner.\n— 404 Returned if Tenable Vulnerability Management cannot find the specified scanner.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 486,
+      "end": 489
+    },
+    "content_stats": {
+      "char_count": 3692,
+      "word_count": 570
+    },
+    "hierarchy": {
+      "parent": "Get scanner details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

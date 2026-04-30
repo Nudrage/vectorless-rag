@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_761",
+  "section_number": "1.21.4.1",
+  "header": "Static Route Overview",
+  "content": "If you decide that you want specific Layer 3 traffic to take a certain route without participating in\nIP routing protocols, you can Configure a Static Route using IPv4 and IPv6 routes.\nA default route is a specific static route. If you don’t use dynamic routing to obtain a default route\nfor your virtual router, you must configure a static default route. When the virtual router has\nan incoming packet and finds no match for the packet’s destination in its route table, the virtual\nrouter sends the packet to the default route. The default IPv4 route is 0.0.0.0/0; the default IPv6\nroute is ::/0. You can configure both an IPv4 and IPv6 default route.\nStatic routes themselves don’t change or adjust to changes in network environments, so traffic\ntypically isn’t rerouted if a failure occurs along the route to a statically defined endpoint.\nHowever, you have options to back up static routes in the event of a problem:\n• You can configure a static route with a Bidirectional Forwarding Detection (BFD) profile so that\nif a BFD session between the firewall and the BFD peer fails, the firewall removes the failed\nstatic route from the RIB and FIB tables and uses an alternative route with a lower priority.\n• You can Configure Path Monitoring for a Static Route so that the firewall can use an alternative\nroute.\nBy default, static routes have an administrative distance of 10. When the firewall has two or\nmore routes to the same destination, it uses the route with the lowest administrative distance. By\nincreasing the administrative distance of a static route to a value higher than a dynamic route, you\ncan use the static route as a backup route if the dynamic route is unavailable.\nWhile you’re configuring a static route, you can specify whether the firewall installs an IPv4 static\nroute in the unicast or multicast route table (RIB), or both tables, or doesn’t install the route at all.\nFor example, you could install an IPv4 static route in the multicast route table only, because you\nwant only multicast traffic to use that route. This option give you more control over which route\nthe traffic takes. You can specify whether the firewall installs an IPv6 static route in the unicast\nroute table or not.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1371,
+      "end": 1371
+    },
+    "content_stats": {
+      "char_count": 2213,
+      "word_count": 381
+    },
+    "hierarchy": {
+      "parent": "Static Routes",
+      "children": []
+    }
+  }
+}

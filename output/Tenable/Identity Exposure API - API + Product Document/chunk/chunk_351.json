@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_351",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nx-api-key\nrequired\nGET\n/api/users/whoami\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"surname\": \"string\",\n\"name\": \"string\",\n\"email\": \"string\",\n\"provider\": \"string\",\n\"lockedOut\": true,\n\"department\": \"string\",\nContent type\n\"roles\":\n-\n[\n- {\n\"id\": 0,\n\"name\": \"string\",\n\"description\": \"string\",\n\"permissions\":\n-\n[\n- {\n\"entityName\": \"string\",\n\"action\": \"string\",\n\"entityIds\":\n-\n[\n\"string\"\n],\n\"dynamicId\": \"self-user-id\"\n}\n]\n}\n],\n\"biography\": \"string\",\n\"active\": true,\n\"identifier\": \"string\",\n\"eulaVersion\": 0,\n\"internal\": true,\n\"tenableCloudUserName\": \"string\"\n}\nGet user instance by id.\nRequired license type: none\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\nid\nrequired\nx-api-key\nrequired",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 205,
+      "end": 206
+    },
+    "content_stats": {
+      "char_count": 787,
+      "word_count": 100
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

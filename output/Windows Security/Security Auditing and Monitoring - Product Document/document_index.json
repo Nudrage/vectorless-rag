@@ -1,0 +1,3021 @@
+{
+  "document_name": "Windows Security\\Security Auditing and Monitoring - Product Document",
+  "generated_at": "2026-02-17T22:06:39.552793",
+  "outline_text": "DOCUMENT INDEX: Windows Security\\Security Auditing and Monitoring - Product Document\n====================================================================================\n\n1. Table of publishing updates [Pages 3-4, 41 words]\n2. Contents [Pages 4-23, 4740 words]\n3. Account Logon [Page 23, 2 words]\n   3.1. Audit Credential Validation [Pages 23-24, 528 words]\n      3.1.1. Security Monitoring Recommendations: [Pages 24-27, 682 words]\n      3.1.2. Security Monitoring Recommendations: [Pages 27-28, 631 words]\n   3.2. Audit Kerberos Authentication Service [Pages 28-39, 4431 words]\n      3.2.1. Security Monitoring Recommendations: [Pages 39-46, 2891 words]\n      3.2.2. Security Monitoring Recommendations: [Pages 46-48, 570 words]\n   3.3. Audit Kerberos Service Ticket Operations [Pages 48-58, 4202 words]\n      3.3.1. Security Monitoring Recommendations: [Pages 58-63, 1961 words]\n      3.3.2. Security Monitoring Recommendations: [Pages 63-64, 55 words]\n   3.4. Audit Other Account Logon Events [Pages 64-65, 116 words]\n4. Account Management [Page 65, 2 words]\n   4.1. Audit Application Group Management [Pages 65-66, 205 words]\n   4.2. Audit Computer Account Management [Pages 66-77, 4870 words]\n      4.2.1. Security Monitoring Recommendations: [Pages 77-84, 3182 words]\n      4.2.2. Security Monitoring Recommendations: [Pages 84-88, 1359 words]\n      4.2.3. Security Monitoring Recommendations: [Pages 88-89, 85 words]\n   4.3. Audit Distribution Group Management [Pages 89-92, 1040 words]\n      4.3.1. Security Monitoring Recommendations: [Pages 92-94, 1126 words]\n      4.3.2. Security Monitoring Recommendations: [Pages 94-97, 883 words]\n      4.3.3. Security Monitoring Recommendations: [Pages 97-101, 1225 words]\n      4.3.4. Security Monitoring Recommendations: [Pages 101-104, 1080 words]\n      4.3.5. Security Monitoring Recommendations: [Pages 104-106, 676 words]\n   4.4. Audit Other Account Management Events [Pages 106-110, 1409 words]\n      4.4.1. Security Monitoring Recommendations: [Pages 110-111, 88 words]\n   4.5. Audit Security Group Management [Pages 111-115, 1567 words]\n      4.5.1. Security Monitoring Recommendations: [Pages 115-117, 937 words]\n      4.5.2. Security Monitoring Recommendations: [Pages 117-121, 1420 words]\n      4.5.3. Security Monitoring Recommendations: [Pages 121-124, 1177 words]\n      4.5.4. Security Monitoring Recommendations: [Pages 124-127, 1258 words]\n      4.5.5. Security Monitoring Recommendations: [Pages 127-131, 1192 words]\n      4.5.6. Security Monitoring Recommendations: [Pages 131-133, 820 words]\n      4.5.7. Security Monitoring Recommendations: [Pages 133-135, 152 words]\n   4.6. Audit User Account Management [Pages 135-143, 3622 words]\n      4.6.1. Security Monitoring Recommendations: [Pages 143-146, 1084 words]\n      4.6.2. Security Monitoring Recommendations: [Pages 146-148, 837 words]\n      4.6.3. Security Monitoring Recommendations: [Pages 148-150, 763 words]\n      4.6.4. Security Monitoring Recommendations: [Pages 150-152, 713 words]\n      4.6.5. Security Monitoring Recommendations: [Pages 152-154, 711 words]\n      4.6.6. Security Monitoring Recommendations: [Pages 154-160, 2710 words]\n      4.6.7. Security Monitoring Recommendations: [Pages 160-164, 1357 words]\n      4.6.8. Security Monitoring Recommendations: [Pages 164-165, 300 words]\n      4.6.9. Security Monitoring Recommendations: [Pages 165-166, 113 words]\n      4.6.10. Security Monitoring Recommendations: [Pages 166-167, 538 words]\n      4.6.11. Security Monitoring Recommendations: [Pages 167-170, 854 words]\n      4.6.12. Security Monitoring Recommendations: [Pages 170-175, 1271 words]\n      4.6.13. Security Monitoring Recommendations: [Pages 175-176, 528 words]\n      4.6.14. Security Monitoring Recommendations: [Pages 176-178, 501 words]\n      4.6.15. Security Monitoring Recommendations: [Pages 178-179, 80 words]\n5. Detailed Tracking [Page 179, 2 words]\n   5.1. Audit DPAPI Activity [Pages 179-181, 1064 words]\n      5.1.1. Security Monitoring Recommendations: [Pages 181-184, 831 words]\n      5.1.2. Security Monitoring Recommendations: [Pages 184-185, 164 words]\n      5.1.3. Security Monitoring Recommendations: [Page 185, 128 words]\n      5.1.4. Security Monitoring Recommendations: [Pages 185-186, 44 words]\n   5.2. Audit PNP Activity [Pages 186-191, 1032 words]\n      5.2.1. Security Monitoring Recommendations: [Pages 191-195, 747 words]\n      5.2.2. Security Monitoring Recommendations: [Pages 195-200, 713 words]\n      5.2.3. Security Monitoring Recommendations: [Pages 200-205, 726 words]\n      5.2.4. Security Monitoring Recommendations: [Pages 205-210, 713 words]\n      5.2.5. Security Monitoring Recommendations: [Pages 210-215, 772 words]\n      5.2.6. Security Monitoring Recommendations: [Pages 215-216, 210 words]\n      5.2.7. Security Monitoring Recommendations: [Pages 216-217, 18 words]\n   5.3. Audit Process Creation [Pages 217-222, 1724 words]\n      5.3.1. Security Monitoring Recommendations: [Pages 222-227, 1716 words]\n      5.3.2. Security Monitoring Recommendations: [Pages 227-229, 546 words]\n   5.4. Audit Process Termination [Pages 229-232, 895 words]\n      5.4.1. Security Monitoring Recommendations: [Pages 232-233, 102 words]\n   5.5. Audit RPC Events [Pages 233-234, 147 words]\n      5.5.1. Security Monitoring Recommendations: [Pages 234-235, 18 words]\n6. DS Access [Page 235, 2 words]\n   6.1. Audit Detailed Directory Service Replication [Pages 235-239, 1149 words]\n      6.1.1. Security Monitoring Recommendations: [Pages 239-241, 508 words]\n      6.1.2. Security Monitoring Recommendations: [Pages 241-243, 502 words]\n      6.1.3. Security Monitoring Recommendations: [Pages 243-244, 229 words]\n      6.1.4. Security Monitoring Recommendations: [Pages 244-245, 75 words]\n      6.1.5. Security Monitoring Recommendations: [Page 245, 76 words]\n      6.1.6. Security Monitoring Recommendations: [Pages 245-246, 18 words]\n   6.2. Audit Directory Service Access [Pages 246-251, 1689 words]\n      6.2.1. Security Monitoring Recommendations: [Pages 251-259, 2824 words]\n      6.2.2. Security Monitoring Recommendations: [Pages 259-260, 68 words]\n   6.3. Audit Directory Service Changes [Pages 260-265, 1702 words]\n      6.3.1. Security Monitoring Recommendations: [Pages 265-268, 1167 words]\n      6.3.2. Security Monitoring Recommendations: [Pages 268-271, 1195 words]\n      6.3.3. Security Monitoring Recommendations: [Pages 271-275, 1123 words]\n      6.3.4. Security Monitoring Recommendations: [Pages 275-278, 1176 words]\n      6.3.5. Security Monitoring Recommendations: [Pages 278-279, 112 words]\n   6.4. Audit Directory Service Replication [Pages 279-281, 665 words]\n      6.4.1. Security Monitoring Recommendations: [Pages 281-283, 649 words]\n      6.4.2. Security Monitoring Recommendations: [Pages 283-284, 62 words]\n7. Logon and Logoff [Page 284, 3 words]\n   7.1. Audit Account Lockout [Pages 284-290, 2186 words]\n      7.1.1. Security Monitoring Recommendations: [Pages 290-292, 766 words]\n   7.2. Audit User/Device Claims [Pages 292-296, 1459 words]\n      7.2.1. Security Monitoring Recommendations: [Pages 296-297, 143 words]\n   7.3. Audit Group Membership [Pages 297-300, 1488 words]\n      7.3.1. Security Monitoring Recommendations: [Pages 300-301, 83 words]\n   7.4. Audit IPsec Extended Mode [Pages 301-302, 250 words]\n   7.5. Audit IPsec Main Mode [Page 302, 137 words]\n      7.5.1. 4646: Security ID: %1 [Pages 302-303, 127 words]\n   7.6. Audit IPsec Quick Mode [Pages 303-304, 191 words]\n   7.7. Audit Logoff [Pages 304-307, 1180 words]\n      7.7.1. Security Monitoring Recommendations: [Pages 307-308, 578 words]\n      7.7.2. Security Monitoring Recommendations: [Pages 308-309, 36 words]\n   7.8. Audit Logon [Pages 309-315, 2545 words]\n      7.8.1. Security Monitoring Recommendations: [Pages 315-320, 1859 words]\n      7.8.2. Security Monitoring Recommendations: [Pages 320-322, 753 words]\n      7.8.3. Security Monitoring Recommendations: [Pages 322-323, 34 words]\n   7.9. Audit Network Policy Server [Pages 323-324, 313 words]\n   7.10. Audit Other Logon/Logoff Events [Pages 324-326, 628 words]\n      7.10.1. Security Monitoring Recommendations: [Pages 326-327, 446 words]\n      7.10.2. Security Monitoring Recommendations: [Pages 327-330, 879 words]\n      7.10.3. Security Monitoring Recommendations: [Pages 330-335, 1434 words]\n      7.10.4. Security Monitoring Recommendations: [Pages 335-337, 497 words]\n      7.10.5. Security Monitoring Recommendations: [Pages 337-338, 492 words]\n      7.10.6. Security Monitoring Recommendations: [Pages 338-341, 689 words]\n      7.10.7. Security Monitoring Recommendations: [Pages 341-346, 1074 words]\n      7.10.8. Security Monitoring Recommendations: [Pages 346-347, 31 words]\n   7.11. Audit Special Logon [Pages 347-354, 2822 words]\n      7.11.1. Security Monitoring Recommendations: [Pages 354-355, 136 words]\n8. Object Access [Page 355, 2 words]\n   8.1. Audit Application Generated [Pages 355-356, 213 words]\n   8.2. Audit Certification Services [Pages 356-359, 510 words]\n   8.3. Audit Detailed File Share [Pages 359-365, 2291 words]\n      8.3.1. Security Monitoring Recommendations: [Pages 365-367, 195 words]\n   8.4. Audit File Share [Pages 367-370, 978 words]\n      8.4.1. Security Monitoring Recommendations: [Pages 370-372, 605 words]\n      8.4.2. Security Monitoring Recommendations: [Pages 372-381, 2679 words]\n      8.4.3. Security Monitoring Recommendations: [Pages 381-382, 60 words]\n   8.5. Audit File System [Pages 382-392, 3546 words]\n      8.5.1. Security Monitoring Recommendations: [Pages 392-398, 1806 words]\n      8.5.2. Security Monitoring Recommendations: [Pages 398-403, 1485 words]\n      8.5.3. Security Monitoring Recommendations: [Pages 403-406, 803 words]\n      8.5.4. Security Monitoring Recommendations: [Pages 406-408, 671 words]\n      8.5.5. Security Monitoring Recommendations: [Pages 408-414, 1530 words]\n      8.5.6. Security Monitoring Recommendations: [Pages 414-416, 195 words]\n   8.6. Audit Filtering Platform Connection [Pages 416-418, 685 words]\n      8.6.1. Security Monitoring Recommendations: [Pages 418-419, 208 words]\n      8.6.2. Security Monitoring Recommendations: [Pages 419-424, 675 words]\n      8.6.3. Security Monitoring Recommendations: [Pages 424-430, 1063 words]\n      8.6.4. Security Monitoring Recommendations: [Pages 430-436, 959 words]\n      8.6.5. Security Monitoring Recommendations: [Pages 436-441, 906 words]\n      8.6.6. Security Monitoring Recommendations: [Pages 441-442, 285 words]\n      8.6.7. Security Monitoring Recommendations: [Pages 442-443, 18 words]\n   8.7. Audit Filtering Platform Packet Drop [Pages 443-449, 1002 words]\n      8.7.1. Security Monitoring Recommendations: [Pages 449-450, 381 words]\n      8.7.2. Security Monitoring Recommendations: [Pages 450-451, 18 words]\n   8.8. Audit Handle Manipulation [Pages 451-454, 1010 words]\n      8.8.1. Security Monitoring Recommendations: [Pages 454-455, 73 words]\n   8.9. Audit Kernel Object [Pages 455-457, 438 words]\n   8.10. Audit Other Object Access Events [Pages 457-460, 1005 words]\n      8.10.1. Security Monitoring Recommendations: [Pages 460-461, 151 words]\n      8.10.2. Security Monitoring Recommendations: [Page 461, 113 words]\n      8.10.3. Security Monitoring Recommendations: [Pages 461-464, 564 words]\n      8.10.4. Security Monitoring Recommendations: [Pages 464-468, 1336 words]\n      8.10.5. Security Monitoring Recommendations: [Pages 468-471, 584 words]\n      8.10.6. Security Monitoring Recommendations: [Pages 471-473, 574 words]\n      8.10.7. Security Monitoring Recommendations: [Pages 473-482, 3743 words]\n      8.10.8. Security Monitoring Recommendations: [Pages 482-483, 68 words]\n   8.11. Audit Registry [Pages 483-487, 1268 words]\n      8.11.1. Security Monitoring Recommendations: [Page 487, 193 words]\n      8.11.2. Security Monitoring Recommendations: [Pages 487-489, 54 words]\n   8.12. Audit Removable Storage [Pages 489-490, 317 words]\n   8.13. Audit SAM [Pages 490-491, 335 words]\n   8.14. Audit Central Policy Staging [Pages 491-496, 2108 words]\n      8.14.1. Security Monitoring Recommendations: [Pages 496-498, 51 words]\n9. Policy Change [Page 498, 2 words]\n   9.1. Audit Policy Change [Pages 498-503, 1492 words]\n      9.1.1. Security Monitoring Recommendations: [Pages 503-506, 766 words]\n      9.1.2. Security Monitoring Recommendations: [Pages 506-511, 1233 words]\n      9.1.3. Security Monitoring Recommendations: [Pages 511-513, 489 words]\n      9.1.4. Security Monitoring Recommendations: [Pages 513-519, 1482 words]\n      9.1.5. Security Monitoring Recommendations: [Pages 519-521, 459 words]\n      9.1.6. Security Monitoring Recommendations: [Pages 521-530, 2361 words]\n      9.1.7. Security Monitoring Recommendations: [Pages 530-531, 131 words]\n   9.2. Audit Authentication Policy Change [Pages 531-535, 1899 words]\n      9.2.1. Security Monitoring Recommendations: [Pages 535-541, 2077 words]\n      9.2.2. Security Monitoring Recommendations: [Pages 541-543, 623 words]\n      9.2.3. Security Monitoring Recommendations: [Pages 543-545, 619 words]\n      9.2.4. Security Monitoring Recommendations: [Pages 545-549, 1184 words]\n      9.2.5. Security Monitoring Recommendations: [Pages 549-558, 3385 words]\n      9.2.6. Security Monitoring Recommendations: [Pages 558-561, 995 words]\n      9.2.7. Security Monitoring Recommendations: [Pages 561-563, 892 words]\n      9.2.8. Security Monitoring Recommendations: [Pages 563-566, 916 words]\n      9.2.9. Security Monitoring Recommendations: [Pages 566-567, 45 words]\n   9.3. Audit Authorization Policy Change [Pages 567-575, 3267 words]\n      9.3.1. Security Monitoring Recommendations: [Pages 575-581, 2584 words]\n      9.3.2. Security Monitoring Recommendations: [Pages 581-588, 2567 words]\n      9.3.3. Security Monitoring Recommendations: [Pages 588-595, 2090 words]\n      9.3.4. Security Monitoring Recommendations: [Pages 595-602, 1676 words]\n      9.3.5. Security Monitoring Recommendations: [Pages 602-603, 175 words]\n   9.4. Audit Filtering Platform Policy Change [Pages 603-605, 589 words]\n      9.4.1. 5466(F): PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory cannot be reached, and will use the [Page 605, 66 words]\n      9.4.2. 5468(S): PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, found changes to the [Pages 605-607, 90 words]\n   9.5. Audit MPSSVC Rule-Level Policy Change [Pages 607-611, 927 words]\n      9.5.1. Security Monitoring Recommendations: [Pages 611-613, 348 words]\n      9.5.2. Security Monitoring Recommendations: [Pages 613-615, 296 words]\n      9.5.3. Security Monitoring Recommendations: [Pages 615-618, 279 words]\n      9.5.4. Security Monitoring Recommendations: [Pages 618-620, 270 words]\n      9.5.5. Security Monitoring Recommendations: [Pages 620-621, 130 words]\n      9.5.6. Security Monitoring Recommendations: [Pages 621-626, 734 words]\n      9.5.7. Security Monitoring Recommendations: [Page 626, 60 words]\n   9.6. 4952(F): Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the [Pages 626-627, 245 words]\n      9.6.1. Security Monitoring Recommendations: [Pages 627-629, 292 words]\n      9.6.2. Security Monitoring Recommendations: [Pages 629-630, 176 words]\n      9.6.3. Security Monitoring Recommendations: [Pages 630-631, 157 words]\n      9.6.4. Security Monitoring Recommendations: [Pages 631-633, 262 words]\n      9.6.5. Security Monitoring Recommendations: [Pages 633-634, 191 words]\n      9.6.6. Security Monitoring Recommendations: [Pages 634-635, 49 words]\n   9.7. Audit Other Policy Change Events [Pages 635-637, 676 words]\n      9.7.1. Security Monitoring Recommendations: [Pages 637-642, 1532 words]\n      9.7.2. Security Monitoring Recommendations: [Pages 642-643, 265 words]\n      9.7.3. Security Monitoring Recommendations: [Pages 643-644, 155 words]\n      9.7.4. Security Monitoring Recommendations: [Pages 644-645, 161 words]\n      9.7.5. Security Monitoring Recommendations: [Pages 645-646, 171 words]\n      9.7.6. Security Monitoring Recommendations: [Pages 646-647, 168 words]\n      9.7.7. Security Monitoring Recommendations: [Pages 647-648, 151 words]\n      9.7.8. Security Monitoring Recommendations: [Pages 648-649, 169 words]\n      9.7.9. Security Monitoring Recommendations: [Pages 649-650, 171 words]\n      9.7.10. Security Monitoring Recommendations: [Pages 650-651, 202 words]\n      9.7.11. Security Monitoring Recommendations: [Pages 651-653, 284 words]\n      9.7.12. Security Monitoring Recommendations: [Pages 653-654, 352 words]\n      9.7.13. Security Monitoring Recommendations: [Pages 654-655, 148 words]\n10. Privilege Use [Page 655, 2 words]\n   10.1. Audit Non Sensitive Privilege Use [Pages 655-657, 497 words]\n   10.2. Audit Other Privilege Use Events [Pages 657-658, 132 words]\n   10.3. Audit Sensitive Privilege Use [Pages 658-664, 2359 words]\n      10.3.1. Security Monitoring Recommendations: [Pages 664-671, 2646 words]\n      10.3.2. Security Monitoring Recommendations: [Pages 671-673, 311 words]\n11. System [Page 673, 1 words]\n   11.1. Audit IPsec Driver [Pages 673-674, 395 words]\n      11.1.1. 4965(S): IPsec received a packet from a remote computer with an incorrect Security Parameter Index (SPI). This is usually caused by malfunctioning [Page 674, 210 words]\n      11.1.2. some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the [Page 674, 1 words]\n   11.2. Audit Other System Events [Pages 674-676, 593 words]\n      11.2.1. Security Monitoring Recommendations: [Pages 676-677, 147 words]\n      11.2.2. Security Monitoring Recommendations: [Pages 677-678, 56 words]\n   11.3. 5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the [Pages 678-679, 157 words]\n      11.3.1. Security Monitoring Recommendations: [Pages 679-680, 249 words]\n      11.3.2. Security Monitoring Recommendations: [Page 680, 175 words]\n      11.3.3. Security Monitoring Recommendations: [Pages 680-681, 149 words]\n      11.3.4. Security Monitoring Recommendations: [Page 681, 163 words]\n      11.3.5. Security Monitoring Recommendations: [Pages 681-682, 113 words]\n      11.3.6. Security Monitoring Recommendations: [Pages 682-683, 150 words]\n      11.3.7. Security Monitoring Recommendations: [Page 683, 128 words]\n      11.3.8. Security Monitoring Recommendations: [Pages 683-684, 128 words]\n      11.3.9. Security Monitoring Recommendations: [Pages 684-687, 838 words]\n      11.3.10. Security Monitoring Recommendations: [Pages 687-690, 871 words]\n      11.3.11. Security Monitoring Recommendations: [Pages 690-691, 157 words]\n      11.3.12. Security Monitoring Recommendations: [Page 691, 76 words]\n      11.3.13. Security Monitoring Recommendations: [Pages 691-692, 92 words]\n      11.3.14. Security Monitoring Recommendations: [Page 692, 85 words]\n      11.3.15. Security Monitoring Recommendations: [Page 692, 81 words]\n      11.3.16. Security Monitoring Recommendations: [Pages 692-693, 72 words]\n      11.3.17. Security Monitoring Recommendations: [Page 693, 73 words]\n      11.3.18. Security Monitoring Recommendations: [Page 693, 51 words]\n      11.3.19. Security Monitoring Recommendations: [Pages 693-694, 84 words]\n      11.3.20. Security Monitoring Recommendations: [Page 694, 73 words]\n      11.3.21. Security Monitoring Recommendations: [Pages 694-695, 18 words]\n   11.4. Audit Security State Change [Pages 695-699, 1093 words]\n      11.4.1. Security Monitoring Recommendations: [Pages 699-700, 269 words]\n      11.4.2. Security Monitoring Recommendations: [Pages 700-701, 71 words]\n   11.5. Audit Security System Extension [Pages 701-703, 670 words]\n      11.5.1. Security Monitoring Recommendations: [Pages 703-705, 587 words]\n      11.5.2. Security Monitoring Recommendations: [Pages 705-706, 265 words]\n      11.5.3. Security Monitoring Recommendations: [Pages 706-711, 1341 words]\n      11.5.4. Security Monitoring Recommendations: [Pages 711-712, 203 words]\n   11.6. Audit System Integrity [Pages 712-713, 753 words]\n      11.6.1. Security Monitoring Recommendations: [Pages 713-714, 147 words]\n      11.6.2. Security Monitoring Recommendations: [Pages 714-716, 264 words]\n      11.6.3. Security Monitoring Recommendations: [Page 716, 105 words]\n      11.6.4. Security Monitoring Recommendations: [Page 716, 30 words]\n   11.7. 5038(F): Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the [Page 716, 153 words]\n      11.7.1. Security Monitoring Recommendations: [Pages 716-717, 133 words]\n      11.7.2. Security Monitoring Recommendations: [Pages 717-718, 96 words]\n      11.7.3. Security Monitoring Recommendations: [Pages 718-719, 147 words]\n      11.7.4. Security Monitoring Recommendations: [Pages 719-720, 147 words]\n      11.7.5. Security Monitoring Recommendations: [Pages 720-723, 835 words]\n      11.7.6. Security Monitoring Recommendations: [Page 723, 76 words]\n   11.8. 6281(F): Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes [Page 723, 218 words]\n      11.8.1. Security Monitoring Recommendations: [Pages 723-724, 210 words]\n      11.8.2. Security Monitoring Recommendations: [Pages 724-725, 37 words]\n12. Other Events [Pages 725-726, 173 words]\n   12.1. Security Monitoring Recommendations: [Pages 726-730, 915 words]\n   12.2. Security Monitoring Recommendations: [Pages 730-732, 265 words]\n   12.3. Security Monitoring Recommendations: [Pages 732-733, 43 words]\n13. Appendix A: Security monitoring recommendations for many audit events [Pages 733-734, 418 words]\n14. Appendix B: List of Tables [Page 734, 80 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Table of publishing updates",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 3,
+        "page_end": 4,
+        "word_count": 41,
+        "summary": "Version\nDate\nType of publishing\n1\n05/13/2016\nFirst publication\n1."
+      },
+      {
+        "number": "2",
+        "title": "Contents",
+        "depth": 1,
+        "chunk_id": "chunk_002",
+        "page_start": 4,
+        "page_end": 23,
+        "word_count": 4740,
+        "summary": "Account Logon."
+      },
+      {
+        "number": "3",
+        "title": "Account Logon",
+        "depth": 1,
+        "chunk_id": "chunk_003",
+        "page_start": 23,
+        "page_end": 23,
+        "word_count": 2,
+        "summary": "Account Logon",
+        "children": [
+          {
+            "number": "3.1",
+            "title": "Audit Credential Validation",
+            "depth": 2,
+            "chunk_id": "chunk_004",
+            "page_start": 23,
+            "page_end": 24,
+            "word_count": 528,
+            "summary": "Audit Credential Validation determines whether the operating system generates audit events on creden...",
+            "children": [
+              {
+                "number": "3.1.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 24,
+                "page_end": 27,
+                "word_count": 682,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "3.1.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_006",
+                "page_start": 27,
+                "page_end": 28,
+                "word_count": 631,
+                "summary": "For 4776(S, F): The computer attempted to validate the credentials for an account."
+              }
+            ]
+          },
+          {
+            "number": "3.2",
+            "title": "Audit Kerberos Authentication Service",
+            "depth": 2,
+            "chunk_id": "chunk_007",
+            "page_start": 28,
+            "page_end": 39,
+            "word_count": 4431,
+            "summary": "Audit Kerberos Authentication Service determines whether to generate audit events for Kerberos authentication ticket-granting ticket (TGT) requests.",
+            "children": [
+              {
+                "number": "3.2.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 39,
+                "page_end": 46,
+                "word_count": 2891,
+                "summary": "For 4768(S, F): A Kerberos authentication ticket (TGT) was requested."
+              },
+              {
+                "number": "3.2.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 46,
+                "page_end": 48,
+                "word_count": 570,
+                "summary": "For 4771(F): Kerberos pre-authentication failed."
+              }
+            ]
+          },
+          {
+            "number": "3.3",
+            "title": "Audit Kerberos Service Ticket Operations",
+            "depth": 2,
+            "chunk_id": "chunk_010",
+            "page_start": 48,
+            "page_end": 58,
+            "word_count": 4202,
+            "summary": "Audit Kerberos Service Ticket Operations determines whether the operating system generates security audit events for Kerberos service ticket requests.",
+            "children": [
+              {
+                "number": "3.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_011",
+                "page_start": 58,
+                "page_end": 63,
+                "word_count": 1961,
+                "summary": "For 4769(S, F): A Kerberos service ticket was requested."
+              },
+              {
+                "number": "3.3.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 63,
+                "page_end": 64,
+                "word_count": 55,
+                "summary": "For 4770(S): A Kerberos service ticket was renewed."
+              }
+            ]
+          },
+          {
+            "number": "3.4",
+            "title": "Audit Other Account Logon Events",
+            "depth": 2,
+            "chunk_id": "chunk_013",
+            "page_start": 64,
+            "page_end": 65,
+            "word_count": 116,
+            "summary": "General Subcategory Information:\nThis auditing subcategory does not contain any events."
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "title": "Account Management",
+        "depth": 1,
+        "chunk_id": "chunk_014",
+        "page_start": 65,
+        "page_end": 65,
+        "word_count": 2,
+        "summary": "Account Management",
+        "children": [
+          {
+            "number": "4.1",
+            "title": "Audit Application Group Management",
+            "depth": 2,
+            "chunk_id": "chunk_015",
+            "page_start": 65,
+            "page_end": 66,
+            "word_count": 205,
+            "summary": "Audit Application Group Management generates events for actions related to application groups, such ..."
+          },
+          {
+            "number": "4.2",
+            "title": "Audit Computer Account Management",
+            "depth": 2,
+            "chunk_id": "chunk_016",
+            "page_start": 66,
+            "page_end": 77,
+            "word_count": 4870,
+            "summary": "Audit Computer Account Management determines whether the operating system generates audit events whe...",
+            "children": [
+              {
+                "number": "4.2.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_017",
+                "page_start": 77,
+                "page_end": 84,
+                "word_count": 3182,
+                "summary": "For 4741(S): A computer account was created."
+              },
+              {
+                "number": "4.2.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_018",
+                "page_start": 84,
+                "page_end": 88,
+                "word_count": 1359,
+                "summary": "For 4742(S): A computer account was changed."
+              },
+              {
+                "number": "4.2.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_019",
+                "page_start": 88,
+                "page_end": 89,
+                "word_count": 85,
+                "summary": "For 4743(S): A computer account was deleted."
+              }
+            ]
+          },
+          {
+            "number": "4.3",
+            "title": "Audit Distribution Group Management",
+            "depth": 2,
+            "chunk_id": "chunk_020",
+            "page_start": 89,
+            "page_end": 92,
+            "word_count": 1040,
+            "summary": "Audit Distribution Group Management determines whether the operating system generates audit events for specific distribution-group management tasks.",
+            "children": [
+              {
+                "number": "4.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_021",
+                "page_start": 92,
+                "page_end": 94,
+                "word_count": 1126,
+                "summary": "For 4749(S): A security-disabled global group was created."
+              },
+              {
+                "number": "4.3.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_022",
+                "page_start": 94,
+                "page_end": 97,
+                "word_count": 883,
+                "summary": "For 4750(S): A security-disabled global group was changed."
+              },
+              {
+                "number": "4.3.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_023",
+                "page_start": 97,
+                "page_end": 101,
+                "word_count": 1225,
+                "summary": "For 4751(S): A member was added to a security-disabled global group."
+              },
+              {
+                "number": "4.3.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_024",
+                "page_start": 101,
+                "page_end": 104,
+                "word_count": 1080,
+                "summary": "For 4752(S): A member was removed from a security-disabled global group."
+              },
+              {
+                "number": "4.3.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_025",
+                "page_start": 104,
+                "page_end": 106,
+                "word_count": 676,
+                "summary": "For 4753(S): A security-disabled global group was deleted."
+              }
+            ]
+          },
+          {
+            "number": "4.4",
+            "title": "Audit Other Account Management Events",
+            "depth": 2,
+            "chunk_id": "chunk_026",
+            "page_start": 106,
+            "page_end": 110,
+            "word_count": 1409,
+            "summary": "Audit Other Account Management Events determines whether the operating system generates user account management audit events.",
+            "children": [
+              {
+                "number": "4.4.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_027",
+                "page_start": 110,
+                "page_end": 111,
+                "word_count": 88,
+                "summary": "For 4793(S): The Password Policy Checking API was called."
+              }
+            ]
+          },
+          {
+            "number": "4.5",
+            "title": "Audit Security Group Management",
+            "depth": 2,
+            "chunk_id": "chunk_028",
+            "page_start": 111,
+            "page_end": 115,
+            "word_count": 1567,
+            "summary": "Audit Security Group Management determines whether the operating system generates audit events when ...",
+            "children": [
+              {
+                "number": "4.5.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_029",
+                "page_start": 115,
+                "page_end": 117,
+                "word_count": 937,
+                "summary": "For 4731(S): A security-enabled local group was created."
+              },
+              {
+                "number": "4.5.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_030",
+                "page_start": 117,
+                "page_end": 121,
+                "word_count": 1420,
+                "summary": "For 4732(S): A member was added to a security-enabled local group."
+              },
+              {
+                "number": "4.5.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_031",
+                "page_start": 121,
+                "page_end": 124,
+                "word_count": 1177,
+                "summary": "For 4733(S): A member was removed from a security-enabled local group."
+              },
+              {
+                "number": "4.5.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_032",
+                "page_start": 124,
+                "page_end": 127,
+                "word_count": 1258,
+                "summary": "For 4734(S): A security-enabled local group was deleted."
+              },
+              {
+                "number": "4.5.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_033",
+                "page_start": 127,
+                "page_end": 131,
+                "word_count": 1192,
+                "summary": "For 4735(S): A security-enabled local group was changed."
+              },
+              {
+                "number": "4.5.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_034",
+                "page_start": 131,
+                "page_end": 133,
+                "word_count": 820,
+                "summary": "For 4764(S): A group’s type was changed."
+              },
+              {
+                "number": "4.5.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_035",
+                "page_start": 133,
+                "page_end": 135,
+                "word_count": 152,
+                "summary": "For 4799(S): A security-enabled local group membership was enumerated."
+              }
+            ]
+          },
+          {
+            "number": "4.6",
+            "title": "Audit User Account Management",
+            "depth": 2,
+            "chunk_id": "chunk_036",
+            "page_start": 135,
+            "page_end": 143,
+            "word_count": 3622,
+            "summary": "Audit User Account Management determines whether the operating system generates audit events when sp...",
+            "children": [
+              {
+                "number": "4.6.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_037",
+                "page_start": 143,
+                "page_end": 146,
+                "word_count": 1084,
+                "summary": "For 4720(S): A user account was created."
+              },
+              {
+                "number": "4.6.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_038",
+                "page_start": 146,
+                "page_end": 148,
+                "word_count": 837,
+                "summary": "For 4722(S): A user account was enabled."
+              },
+              {
+                "number": "4.6.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_039",
+                "page_start": 148,
+                "page_end": 150,
+                "word_count": 763,
+                "summary": "For 4723(S, F): An attempt was made to change an account's password."
+              },
+              {
+                "number": "4.6.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_040",
+                "page_start": 150,
+                "page_end": 152,
+                "word_count": 713,
+                "summary": "For 4724(S, F): An attempt was made to reset an account's password."
+              },
+              {
+                "number": "4.6.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_041",
+                "page_start": 152,
+                "page_end": 154,
+                "word_count": 711,
+                "summary": "For 4725(S): A user account was disabled."
+              },
+              {
+                "number": "4.6.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_042",
+                "page_start": 154,
+                "page_end": 160,
+                "word_count": 2710,
+                "summary": "For 4726(S): A user account was deleted."
+              },
+              {
+                "number": "4.6.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_043",
+                "page_start": 160,
+                "page_end": 164,
+                "word_count": 1357,
+                "summary": "For 4738(S): A user account was changed."
+              },
+              {
+                "number": "4.6.8",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_044",
+                "page_start": 164,
+                "page_end": 165,
+                "word_count": 300,
+                "summary": "For 4740(S): A user account was locked out."
+              },
+              {
+                "number": "4.6.9",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_045",
+                "page_start": 165,
+                "page_end": 166,
+                "word_count": 113,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "4.6.10",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_046",
+                "page_start": 166,
+                "page_end": 167,
+                "word_count": 538,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "4.6.11",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_047",
+                "page_start": 167,
+                "page_end": 170,
+                "word_count": 854,
+                "summary": "For 4767(S): A user account was unlocked."
+              },
+              {
+                "number": "4.6.12",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_048",
+                "page_start": 170,
+                "page_end": 175,
+                "word_count": 1271,
+                "summary": "For 4781(S): The name of an account was changed."
+              },
+              {
+                "number": "4.6.13",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_049",
+                "page_start": 175,
+                "page_end": 176,
+                "word_count": 528,
+                "summary": "For 4798(S): A user's local group membership was enumerated."
+              },
+              {
+                "number": "4.6.14",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_050",
+                "page_start": 176,
+                "page_end": 178,
+                "word_count": 501,
+                "summary": "For 5376(S): Credential Manager credentials were backed up."
+              },
+              {
+                "number": "4.6.15",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_051",
+                "page_start": 178,
+                "page_end": 179,
+                "word_count": 80,
+                "summary": "For 5377(S): Credential Manager credentials were restored from a backup."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "title": "Detailed Tracking",
+        "depth": 1,
+        "chunk_id": "chunk_052",
+        "page_start": 179,
+        "page_end": 179,
+        "word_count": 2,
+        "summary": "Detailed Tracking",
+        "children": [
+          {
+            "number": "5.1",
+            "title": "Audit DPAPI Activity",
+            "depth": 2,
+            "chunk_id": "chunk_053",
+            "page_start": 179,
+            "page_end": 181,
+            "word_count": 1064,
+            "summary": "Audit DPAPI Activity determines whether the operating system generates audit events when encryption ...",
+            "children": [
+              {
+                "number": "5.1.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_054",
+                "page_start": 181,
+                "page_end": 184,
+                "word_count": 831,
+                "summary": "For 4692(S, F): Backup of data protection master key was attempted."
+              },
+              {
+                "number": "5.1.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_055",
+                "page_start": 184,
+                "page_end": 185,
+                "word_count": 164,
+                "summary": "For 4693(S, F): Recovery of data protection master key was attempted."
+              },
+              {
+                "number": "5.1.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_056",
+                "page_start": 185,
+                "page_end": 185,
+                "word_count": 128,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "5.1.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_057",
+                "page_start": 185,
+                "page_end": 186,
+                "word_count": 44,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          },
+          {
+            "number": "5.2",
+            "title": "Audit PNP Activity",
+            "depth": 2,
+            "chunk_id": "chunk_058",
+            "page_start": 186,
+            "page_end": 191,
+            "word_count": 1032,
+            "summary": "Audit PNP Activity determines when Plug and Play detects an external device.",
+            "children": [
+              {
+                "number": "5.2.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_059",
+                "page_start": 191,
+                "page_end": 195,
+                "word_count": 747,
+                "summary": "For 6416(S): A new external device was recognized by the System."
+              },
+              {
+                "number": "5.2.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_060",
+                "page_start": 195,
+                "page_end": 200,
+                "word_count": 713,
+                "summary": "For 6419(S): A request was made to disable a device."
+              },
+              {
+                "number": "5.2.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_061",
+                "page_start": 200,
+                "page_end": 205,
+                "word_count": 726,
+                "summary": "For 6420(S): A device was disabled."
+              },
+              {
+                "number": "5.2.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_062",
+                "page_start": 205,
+                "page_end": 210,
+                "word_count": 713,
+                "summary": "For 6421(S): A request was made to enable a device."
+              },
+              {
+                "number": "5.2.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_063",
+                "page_start": 210,
+                "page_end": 215,
+                "word_count": 772,
+                "summary": "For 6422(S): A device was enabled."
+              },
+              {
+                "number": "5.2.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_064",
+                "page_start": 215,
+                "page_end": 216,
+                "word_count": 210,
+                "summary": "For 6423(S): The installation of this device is forbidden by system policy."
+              },
+              {
+                "number": "5.2.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_065",
+                "page_start": 216,
+                "page_end": 217,
+                "word_count": 18,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          },
+          {
+            "number": "5.3",
+            "title": "Audit Process Creation",
+            "depth": 2,
+            "chunk_id": "chunk_066",
+            "page_start": 217,
+            "page_end": 222,
+            "word_count": 1724,
+            "summary": "Audit Process Creation determines whether the operating system generates audit events when a process is created (starts).",
+            "children": [
+              {
+                "number": "5.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_067",
+                "page_start": 222,
+                "page_end": 227,
+                "word_count": 1716,
+                "summary": "For 4688(S): A new process has been created."
+              },
+              {
+                "number": "5.3.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_068",
+                "page_start": 227,
+                "page_end": 229,
+                "word_count": 546,
+                "summary": "For 4696(S): A primary token was assigned to process."
+              }
+            ]
+          },
+          {
+            "number": "5.4",
+            "title": "Audit Process Termination",
+            "depth": 2,
+            "chunk_id": "chunk_069",
+            "page_start": 229,
+            "page_end": 232,
+            "word_count": 895,
+            "summary": "Audit Process Termination determines whether the operating system generates audit events when process has exited.",
+            "children": [
+              {
+                "number": "5.4.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_070",
+                "page_start": 232,
+                "page_end": 233,
+                "word_count": 102,
+                "summary": "For 4689(S): A process has exited."
+              }
+            ]
+          },
+          {
+            "number": "5.5",
+            "title": "Audit RPC Events",
+            "depth": 2,
+            "chunk_id": "chunk_071",
+            "page_start": 233,
+            "page_end": 234,
+            "word_count": 147,
+            "summary": "Audit RPC Events determines whether the operating system generates audit events when inbound remote procedure call (RPC) connections are made.",
+            "children": [
+              {
+                "number": "5.5.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_072",
+                "page_start": 234,
+                "page_end": 235,
+                "word_count": 18,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "title": "DS Access",
+        "depth": 1,
+        "chunk_id": "chunk_073",
+        "page_start": 235,
+        "page_end": 235,
+        "word_count": 2,
+        "summary": "DS Access",
+        "children": [
+          {
+            "number": "6.1",
+            "title": "Audit Detailed Directory Service Replication",
+            "depth": 2,
+            "chunk_id": "chunk_074",
+            "page_start": 235,
+            "page_end": 239,
+            "word_count": 1149,
+            "summary": "Audit Detailed Directory Service Replication determines whether the operating system generates audit...",
+            "children": [
+              {
+                "number": "6.1.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_075",
+                "page_start": 239,
+                "page_end": 241,
+                "word_count": 508,
+                "summary": "For 4929(S, F): An Active Directory replica source naming context was removed."
+              },
+              {
+                "number": "6.1.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_076",
+                "page_start": 241,
+                "page_end": 243,
+                "word_count": 502,
+                "summary": "For 4930(S, F): An Active Directory replica source naming context was modified."
+              },
+              {
+                "number": "6.1.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_077",
+                "page_start": 243,
+                "page_end": 244,
+                "word_count": 229,
+                "summary": "For 4931(S, F): An Active Directory replica destination naming context was modified."
+              },
+              {
+                "number": "6.1.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_078",
+                "page_start": 244,
+                "page_end": 245,
+                "word_count": 75,
+                "summary": "For 4935(F): Replication failure begins."
+              },
+              {
+                "number": "6.1.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_079",
+                "page_start": 245,
+                "page_end": 245,
+                "word_count": 76,
+                "summary": "\nThis event is typically used for Active Directory replication troubleshooting."
+              },
+              {
+                "number": "6.1.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_080",
+                "page_start": 245,
+                "page_end": 246,
+                "word_count": 18,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          },
+          {
+            "number": "6.2",
+            "title": "Audit Directory Service Access",
+            "depth": 2,
+            "chunk_id": "chunk_081",
+            "page_start": 246,
+            "page_end": 251,
+            "word_count": 1689,
+            "summary": "Audit Directory Service Access determines whether the operating system generates audit events when a...",
+            "children": [
+              {
+                "number": "6.2.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_082",
+                "page_start": 251,
+                "page_end": 259,
+                "word_count": 2824,
+                "summary": "For 4662(S, F): An operation was performed on an object."
+              },
+              {
+                "number": "6.2.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_083",
+                "page_start": 259,
+                "page_end": 260,
+                "word_count": 68,
+                "summary": "For 4661(S, F): A handle to an object was requested."
+              }
+            ]
+          },
+          {
+            "number": "6.3",
+            "title": "Audit Directory Service Changes",
+            "depth": 2,
+            "chunk_id": "chunk_084",
+            "page_start": 260,
+            "page_end": 265,
+            "word_count": 1702,
+            "summary": "Audit Directory Service Changes determines whether the operating system generates audit events when ...",
+            "children": [
+              {
+                "number": "6.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_085",
+                "page_start": 265,
+                "page_end": 268,
+                "word_count": 1167,
+                "summary": "For 5136(S): A directory service object was modified."
+              },
+              {
+                "number": "6.3.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_086",
+                "page_start": 268,
+                "page_end": 271,
+                "word_count": 1195,
+                "summary": "For 5137(S): A directory service object was created."
+              },
+              {
+                "number": "6.3.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_087",
+                "page_start": 271,
+                "page_end": 275,
+                "word_count": 1123,
+                "summary": "For 5138(S): A directory service object was undeleted."
+              },
+              {
+                "number": "6.3.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_088",
+                "page_start": 275,
+                "page_end": 278,
+                "word_count": 1176,
+                "summary": "For 5139(S): A directory service object was moved."
+              },
+              {
+                "number": "6.3.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_089",
+                "page_start": 278,
+                "page_end": 279,
+                "word_count": 112,
+                "summary": "For 5141(S): A directory service object was deleted."
+              }
+            ]
+          },
+          {
+            "number": "6.4",
+            "title": "Audit Directory Service Replication",
+            "depth": 2,
+            "chunk_id": "chunk_090",
+            "page_start": 279,
+            "page_end": 281,
+            "word_count": 665,
+            "summary": "Audit Directory Service Replication determines whether the operating system generates audit events w...",
+            "children": [
+              {
+                "number": "6.4.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_091",
+                "page_start": 281,
+                "page_end": 283,
+                "word_count": 649,
+                "summary": "For 4932(S): Synchronization of a replica of an Active Directory naming context has begun."
+              },
+              {
+                "number": "6.4.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_092",
+                "page_start": 283,
+                "page_end": 284,
+                "word_count": 62,
+                "summary": "For 4933(S, F): Synchronization of a replica of an Active Directory naming context has ended."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "title": "Logon and Logoff",
+        "depth": 1,
+        "chunk_id": "chunk_093",
+        "page_start": 284,
+        "page_end": 284,
+        "word_count": 3,
+        "summary": "Logon and Logoff",
+        "children": [
+          {
+            "number": "7.1",
+            "title": "Audit Account Lockout",
+            "depth": 2,
+            "chunk_id": "chunk_094",
+            "page_start": 284,
+            "page_end": 290,
+            "word_count": 2186,
+            "summary": "Audit Account Lockout enables you to audit security events that are generated by a failed attempt to log on to an account that is locked out.",
+            "children": [
+              {
+                "number": "7.1.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_095",
+                "page_start": 290,
+                "page_end": 292,
+                "word_count": 766,
+                "summary": "For 4625(F): An account failed to log on."
+              }
+            ]
+          },
+          {
+            "number": "7.2",
+            "title": "Audit User/Device Claims",
+            "depth": 2,
+            "chunk_id": "chunk_096",
+            "page_start": 292,
+            "page_end": 296,
+            "word_count": 1459,
+            "summary": "Audit User/Device Claims allows you to audit user and device claims information in the account’s logon token.",
+            "children": [
+              {
+                "number": "7.2.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_097",
+                "page_start": 296,
+                "page_end": 297,
+                "word_count": 143,
+                "summary": "For 4626(S): User/Device claims information."
+              }
+            ]
+          },
+          {
+            "number": "7.3",
+            "title": "Audit Group Membership",
+            "depth": 2,
+            "chunk_id": "chunk_098",
+            "page_start": 297,
+            "page_end": 300,
+            "word_count": 1488,
+            "summary": "Audit Group Membership enables you to audit group memberships when they are enumerated on the client computer.",
+            "children": [
+              {
+                "number": "7.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_099",
+                "page_start": 300,
+                "page_end": 301,
+                "word_count": 83,
+                "summary": "For 4627(S): Group membership information."
+              }
+            ]
+          },
+          {
+            "number": "7.4",
+            "title": "Audit IPsec Extended Mode",
+            "depth": 2,
+            "chunk_id": "chunk_100",
+            "page_start": 301,
+            "page_end": 302,
+            "word_count": 250,
+            "summary": "Audit IPsec Extended Mode allows you to audit events generated by Internet Key Exchange protocol (IK..."
+          },
+          {
+            "number": "7.5",
+            "title": "Audit IPsec Main Mode",
+            "depth": 2,
+            "chunk_id": "chunk_101",
+            "page_start": 302,
+            "page_end": 302,
+            "word_count": 137,
+            "summary": "Audit IPsec Main Mode allows you to audit events generated by Internet Key Exchange protocol (IKE) a...",
+            "children": [
+              {
+                "number": "7.5.1",
+                "title": "4646: Security ID: %1",
+                "depth": 3,
+                "chunk_id": "chunk_102",
+                "page_start": 302,
+                "page_end": 303,
+                "word_count": 127,
+                "summary": "4650: An IPsec Main Mode security association was established."
+              }
+            ]
+          },
+          {
+            "number": "7.6",
+            "title": "Audit IPsec Quick Mode",
+            "depth": 2,
+            "chunk_id": "chunk_103",
+            "page_start": 303,
+            "page_end": 304,
+            "word_count": 191,
+            "summary": "Audit IPsec Quick Mode allows you to audit events generated by Internet Key Exchange protocol (IKE) ..."
+          },
+          {
+            "number": "7.7",
+            "title": "Audit Logoff",
+            "depth": 2,
+            "chunk_id": "chunk_104",
+            "page_start": 304,
+            "page_end": 307,
+            "word_count": 1180,
+            "summary": "Audit Logoff determines whether the operating system generates audit events when logon sessions are terminated.",
+            "children": [
+              {
+                "number": "7.7.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_105",
+                "page_start": 307,
+                "page_end": 308,
+                "word_count": 578,
+                "summary": "For 4634(S): An account was logged off."
+              },
+              {
+                "number": "7.7.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_106",
+                "page_start": 308,
+                "page_end": 309,
+                "word_count": 36,
+                "summary": "For 4647(S): User initiated logoff."
+              }
+            ]
+          },
+          {
+            "number": "7.8",
+            "title": "Audit Logon",
+            "depth": 2,
+            "chunk_id": "chunk_107",
+            "page_start": 309,
+            "page_end": 315,
+            "word_count": 2545,
+            "summary": "Audit Logon determines whether the operating system generates audit events when a user attempts to log on to a computer.",
+            "children": [
+              {
+                "number": "7.8.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_108",
+                "page_start": 315,
+                "page_end": 320,
+                "word_count": 1859,
+                "summary": "For 4624(S): An account was successfully logged on."
+              },
+              {
+                "number": "7.8.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_109",
+                "page_start": 320,
+                "page_end": 322,
+                "word_count": 753,
+                "summary": "For 4648(S): A logon was attempted using explicit credentials."
+              },
+              {
+                "number": "7.8.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_110",
+                "page_start": 322,
+                "page_end": 323,
+                "word_count": 34,
+                "summary": "\nIf you need to monitor all SID filtering events/operations for specific or all Active Directory tr..."
+              }
+            ]
+          },
+          {
+            "number": "7.9",
+            "title": "Audit Network Policy Server",
+            "depth": 2,
+            "chunk_id": "chunk_111",
+            "page_start": 323,
+            "page_end": 324,
+            "word_count": 313,
+            "summary": "Audit Network Policy Server allows you to audit events generated by RADIUS (IAS) and Network Access ..."
+          },
+          {
+            "number": "7.10",
+            "title": "Audit Other Logon/Logoff Events",
+            "depth": 2,
+            "chunk_id": "chunk_112",
+            "page_start": 324,
+            "page_end": 326,
+            "word_count": 628,
+            "summary": "Audit Other Logon/Logoff Events determines whether Windows generates audit events for other logon or logoff events.",
+            "children": [
+              {
+                "number": "7.10.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_113",
+                "page_start": 326,
+                "page_end": 327,
+                "word_count": 446,
+                "summary": "For 4649(S): A replay attack was detected."
+              },
+              {
+                "number": "7.10.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_114",
+                "page_start": 327,
+                "page_end": 330,
+                "word_count": 879,
+                "summary": "For 4778(S): A session was reconnected to a Window Station."
+              },
+              {
+                "number": "7.10.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_115",
+                "page_start": 330,
+                "page_end": 335,
+                "word_count": 1434,
+                "summary": "For 4779(S): A session was disconnected from a Window Station."
+              },
+              {
+                "number": "7.10.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_116",
+                "page_start": 335,
+                "page_end": 337,
+                "word_count": 497,
+                "summary": "For 4801(S): The workstation was unlocked."
+              },
+              {
+                "number": "7.10.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_117",
+                "page_start": 337,
+                "page_end": 338,
+                "word_count": 492,
+                "summary": "For 4802(S): The screen saver was invoked."
+              },
+              {
+                "number": "7.10.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_118",
+                "page_start": 338,
+                "page_end": 341,
+                "word_count": 689,
+                "summary": "For 4803(S): The screen saver was dismissed."
+              },
+              {
+                "number": "7.10.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_119",
+                "page_start": 341,
+                "page_end": 346,
+                "word_count": 1074,
+                "summary": "For 5378(F): The requested credentials delegation was disallowed by policy."
+              },
+              {
+                "number": "7.10.8",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_120",
+                "page_start": 346,
+                "page_end": 347,
+                "word_count": 31,
+                "summary": "For 5633(S, F): A request was made to authenticate to a wired network."
+              }
+            ]
+          },
+          {
+            "number": "7.11",
+            "title": "Audit Special Logon",
+            "depth": 2,
+            "chunk_id": "chunk_121",
+            "page_start": 347,
+            "page_end": 354,
+            "word_count": 2822,
+            "summary": "Audit Special Logon determines whether the operating system generates audit events under special sign on (or log on) circumstances.",
+            "children": [
+              {
+                "number": "7.11.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_122",
+                "page_start": 354,
+                "page_end": 355,
+                "word_count": 136,
+                "summary": "For 4672(S): Special privileges assigned to new logon."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "8",
+        "title": "Object Access",
+        "depth": 1,
+        "chunk_id": "chunk_123",
+        "page_start": 355,
+        "page_end": 355,
+        "word_count": 2,
+        "summary": "Object Access",
+        "children": [
+          {
+            "number": "8.1",
+            "title": "Audit Application Generated",
+            "depth": 2,
+            "chunk_id": "chunk_124",
+            "page_start": 355,
+            "page_end": 356,
+            "word_count": 213,
+            "summary": "Audit Application Generated generates events for actions related to Authorization Manager applications."
+          },
+          {
+            "number": "8.2",
+            "title": "Audit Certification Services",
+            "depth": 2,
+            "chunk_id": "chunk_125",
+            "page_start": 356,
+            "page_end": 359,
+            "word_count": 510,
+            "summary": "Audit Certification Services determines whether the operating system generates events when Active Di..."
+          },
+          {
+            "number": "8.3",
+            "title": "Audit Detailed File Share",
+            "depth": 2,
+            "chunk_id": "chunk_126",
+            "page_start": 359,
+            "page_end": 365,
+            "word_count": 2291,
+            "summary": "Audit Detailed File Share allows you to audit attempts to access files and folders on a shared folder.",
+            "children": [
+              {
+                "number": "8.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_127",
+                "page_start": 365,
+                "page_end": 367,
+                "word_count": 195,
+                "summary": "For 5145(S, F): A network share object was checked to see whether client can be granted desired access."
+              }
+            ]
+          },
+          {
+            "number": "8.4",
+            "title": "Audit File Share",
+            "depth": 2,
+            "chunk_id": "chunk_128",
+            "page_start": 367,
+            "page_end": 370,
+            "word_count": 978,
+            "summary": "Audit File Share allows you to audit events related to file shares: creation, deletion, modification, and access attempts.",
+            "children": [
+              {
+                "number": "8.4.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_129",
+                "page_start": 370,
+                "page_end": 372,
+                "word_count": 605,
+                "summary": "For 5140(S, F): A network share object was accessed."
+              },
+              {
+                "number": "8.4.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_130",
+                "page_start": 372,
+                "page_end": 381,
+                "word_count": 2679,
+                "summary": "For 5142(S): A network share object was added."
+              },
+              {
+                "number": "8.4.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_131",
+                "page_start": 381,
+                "page_end": 382,
+                "word_count": 60,
+                "summary": "For 5168(F): SPN check for SMB/SMB2 failed."
+              }
+            ]
+          },
+          {
+            "number": "8.5",
+            "title": "Audit File System",
+            "depth": 2,
+            "chunk_id": "chunk_132",
+            "page_start": 382,
+            "page_end": 392,
+            "word_count": 3546,
+            "summary": "Audit File System determines whether the operating system generates audit events when users attempt to access file system objects.",
+            "children": [
+              {
+                "number": "8.5.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_133",
+                "page_start": 392,
+                "page_end": 398,
+                "word_count": 1806,
+                "summary": "For 4656(S, F): A handle to an object was requested."
+              },
+              {
+                "number": "8.5.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_134",
+                "page_start": 398,
+                "page_end": 403,
+                "word_count": 1485,
+                "summary": "For 4660(S): An object was deleted."
+              },
+              {
+                "number": "8.5.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_135",
+                "page_start": 403,
+                "page_end": 406,
+                "word_count": 803,
+                "summary": "For 4663(S): An attempt was made to access an object."
+              },
+              {
+                "number": "8.5.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_136",
+                "page_start": 406,
+                "page_end": 408,
+                "word_count": 671,
+                "summary": "For 4664(S): An attempt was made to create a hard link."
+              },
+              {
+                "number": "8.5.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_137",
+                "page_start": 408,
+                "page_end": 414,
+                "word_count": 1530,
+                "summary": "For 4985(S): The state of a transaction has changed."
+              },
+              {
+                "number": "8.5.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_138",
+                "page_start": 414,
+                "page_end": 416,
+                "word_count": 195,
+                "summary": "For 4670(S): Permissions on an object were changed."
+              }
+            ]
+          },
+          {
+            "number": "8.6",
+            "title": "Audit Filtering Platform Connection",
+            "depth": 2,
+            "chunk_id": "chunk_139",
+            "page_start": 416,
+            "page_end": 418,
+            "word_count": 685,
+            "summary": "Audit Filtering Platform Connection determines whether the operating system generates audit events w...",
+            "children": [
+              {
+                "number": "8.6.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_140",
+                "page_start": 418,
+                "page_end": 419,
+                "word_count": 208,
+                "summary": "For 5031(F): The Windows Firewall Service blocked an application from accepting incoming connections on the network."
+              },
+              {
+                "number": "8.6.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_141",
+                "page_start": 419,
+                "page_end": 424,
+                "word_count": 675,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "8.6.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_142",
+                "page_start": 424,
+                "page_end": 430,
+                "word_count": 1063,
+                "summary": "For 5154(S): The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections."
+              },
+              {
+                "number": "8.6.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_143",
+                "page_start": 430,
+                "page_end": 436,
+                "word_count": 959,
+                "summary": "For 5156(S): The Windows Filtering Platform has permitted a connection."
+              },
+              {
+                "number": "8.6.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_144",
+                "page_start": 436,
+                "page_end": 441,
+                "word_count": 906,
+                "summary": "For 5157(F): The Windows Filtering Platform has blocked a connection."
+              },
+              {
+                "number": "8.6.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_145",
+                "page_start": 441,
+                "page_end": 442,
+                "word_count": 285,
+                "summary": "For 5158(S): The Windows Filtering Platform has permitted a bind to a local port."
+              },
+              {
+                "number": "8.6.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_146",
+                "page_start": 442,
+                "page_end": 443,
+                "word_count": 18,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          },
+          {
+            "number": "8.7",
+            "title": "Audit Filtering Platform Packet Drop",
+            "depth": 2,
+            "chunk_id": "chunk_147",
+            "page_start": 443,
+            "page_end": 449,
+            "word_count": 1002,
+            "summary": "Audit Filtering Platform Packet Drop determines whether the operating system generates audit events ...",
+            "children": [
+              {
+                "number": "8.7.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_148",
+                "page_start": 449,
+                "page_end": 450,
+                "word_count": 381,
+                "summary": "For 5152(F): The Windows Filtering Platform blocked a packet."
+              },
+              {
+                "number": "8.7.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_149",
+                "page_start": 450,
+                "page_end": 451,
+                "word_count": 18,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          },
+          {
+            "number": "8.8",
+            "title": "Audit Handle Manipulation",
+            "depth": 2,
+            "chunk_id": "chunk_150",
+            "page_start": 451,
+            "page_end": 454,
+            "word_count": 1010,
+            "summary": "Audit Handle Manipulation enables generation of “4658: The handle to an object was closed” in Audit ...",
+            "children": [
+              {
+                "number": "8.8.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_151",
+                "page_start": 454,
+                "page_end": 455,
+                "word_count": 73,
+                "summary": "For 4690(S): An attempt was made to duplicate a handle to an object."
+              }
+            ]
+          },
+          {
+            "number": "8.9",
+            "title": "Audit Kernel Object",
+            "depth": 2,
+            "chunk_id": "chunk_152",
+            "page_start": 455,
+            "page_end": 457,
+            "word_count": 438,
+            "summary": "Audit Kernel Object determines whether the operating system generates audit events when users attemp..."
+          },
+          {
+            "number": "8.10",
+            "title": "Audit Other Object Access Events",
+            "depth": 2,
+            "chunk_id": "chunk_153",
+            "page_start": 457,
+            "page_end": 460,
+            "word_count": 1005,
+            "summary": "Audit Other Object Access Events allows you to monitor operations with scheduled tasks, COM+ objects and indirect object access requests.",
+            "children": [
+              {
+                "number": "8.10.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_154",
+                "page_start": 460,
+                "page_end": 461,
+                "word_count": 151,
+                "summary": "For 4691(S): Indirect access to an object was requested."
+              },
+              {
+                "number": "8.10.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_155",
+                "page_start": 461,
+                "page_end": 461,
+                "word_count": 113,
+                "summary": "\nThis event can be a sign of ICMP DoS attack or, among other things, hardware or network device related problems."
+              },
+              {
+                "number": "8.10.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_156",
+                "page_start": 461,
+                "page_end": 464,
+                "word_count": 564,
+                "summary": "\nThis event can be a sign of ICMP DoS attack or, among other things, hardware or network device related problems."
+              },
+              {
+                "number": "8.10.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_157",
+                "page_start": 464,
+                "page_end": 468,
+                "word_count": 1336,
+                "summary": "For 4698(S): A scheduled task was created."
+              },
+              {
+                "number": "8.10.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_158",
+                "page_start": 468,
+                "page_end": 471,
+                "word_count": 584,
+                "summary": "For 4700(S): A scheduled task was enabled."
+              },
+              {
+                "number": "8.10.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_159",
+                "page_start": 471,
+                "page_end": 473,
+                "word_count": 574,
+                "summary": "For 4701(S): A scheduled task was disabled."
+              },
+              {
+                "number": "8.10.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_160",
+                "page_start": 473,
+                "page_end": 482,
+                "word_count": 3743,
+                "summary": "For 4702(S): A scheduled task was updated."
+              },
+              {
+                "number": "8.10.8",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_161",
+                "page_start": 482,
+                "page_end": 483,
+                "word_count": 68,
+                "summary": "For 5890(S): An object was added to the COM+ Catalog."
+              }
+            ]
+          },
+          {
+            "number": "8.11",
+            "title": "Audit Registry",
+            "depth": 2,
+            "chunk_id": "chunk_162",
+            "page_start": 483,
+            "page_end": 487,
+            "word_count": 1268,
+            "summary": "Audit Registry allows you to audit attempts to access registry objects.",
+            "children": [
+              {
+                "number": "8.11.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_163",
+                "page_start": 487,
+                "page_end": 487,
+                "word_count": 193,
+                "summary": "For 4657(S): A registry value was modified."
+              },
+              {
+                "number": "8.11.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_164",
+                "page_start": 487,
+                "page_end": 489,
+                "word_count": 54,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          },
+          {
+            "number": "8.12",
+            "title": "Audit Removable Storage",
+            "depth": 2,
+            "chunk_id": "chunk_165",
+            "page_start": 489,
+            "page_end": 490,
+            "word_count": 317,
+            "summary": "Audit Removable Storage allows you to audit user attempts to access file system objects on a removable storage device."
+          },
+          {
+            "number": "8.13",
+            "title": "Audit SAM",
+            "depth": 2,
+            "chunk_id": "chunk_166",
+            "page_start": 490,
+            "page_end": 491,
+            "word_count": 335,
+            "summary": "Audit SAM, which enables you to audit events that are generated by attempts to access Security Account Manager (SAM) objects."
+          },
+          {
+            "number": "8.14",
+            "title": "Audit Central Policy Staging",
+            "depth": 2,
+            "chunk_id": "chunk_167",
+            "page_start": 491,
+            "page_end": 496,
+            "word_count": 2108,
+            "summary": "Audit Central Policy Staging allows you to audit access requests where a permission granted or denie...",
+            "children": [
+              {
+                "number": "8.14.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_168",
+                "page_start": 496,
+                "page_end": 498,
+                "word_count": 51,
+                "summary": "For 4818(S): Proposed Central Access Policy does not grant the same access permissions as the current Central Access Policy."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "9",
+        "title": "Policy Change",
+        "depth": 1,
+        "chunk_id": "chunk_169",
+        "page_start": 498,
+        "page_end": 498,
+        "word_count": 2,
+        "summary": "Policy Change",
+        "children": [
+          {
+            "number": "9.1",
+            "title": "Audit Policy Change",
+            "depth": 2,
+            "chunk_id": "chunk_170",
+            "page_start": 498,
+            "page_end": 503,
+            "word_count": 1492,
+            "summary": "Audit Policy Change determines whether the operating system generates audit events when changes are made to audit policy.",
+            "children": [
+              {
+                "number": "9.1.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_171",
+                "page_start": 503,
+                "page_end": 506,
+                "word_count": 766,
+                "summary": "For 4715(S): The audit policy (SACL) on an object was changed."
+              },
+              {
+                "number": "9.1.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_172",
+                "page_start": 506,
+                "page_end": 511,
+                "word_count": 1233,
+                "summary": "For 4719(S): System audit policy was changed."
+              },
+              {
+                "number": "9.1.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_173",
+                "page_start": 511,
+                "page_end": 513,
+                "word_count": 489,
+                "summary": "For 4817(S): Auditing settings on object were changed."
+              },
+              {
+                "number": "9.1.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_174",
+                "page_start": 513,
+                "page_end": 519,
+                "word_count": 1482,
+                "summary": "For 4906(S): The CrashOnAuditFail value has changed."
+              },
+              {
+                "number": "9.1.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_175",
+                "page_start": 519,
+                "page_end": 521,
+                "word_count": 459,
+                "summary": "For 4907(S): Auditing settings on object were changed."
+              },
+              {
+                "number": "9.1.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_176",
+                "page_start": 521,
+                "page_end": 530,
+                "word_count": 2361,
+                "summary": "For 4908(S): Special Groups Logon table modified."
+              },
+              {
+                "number": "9.1.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_177",
+                "page_start": 530,
+                "page_end": 531,
+                "word_count": 131,
+                "summary": "For 4905(S): An attempt was made to unregister a security event source."
+              }
+            ]
+          },
+          {
+            "number": "9.2",
+            "title": "Audit Authentication Policy Change",
+            "depth": 2,
+            "chunk_id": "chunk_178",
+            "page_start": 531,
+            "page_end": 535,
+            "word_count": 1899,
+            "summary": "Audit Authentication Policy Change determines whether the operating system generates audit events when changes are made to authentication policy.",
+            "children": [
+              {
+                "number": "9.2.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_179",
+                "page_start": 535,
+                "page_end": 541,
+                "word_count": 2077,
+                "summary": "For 4706(S): A new trust was created to a domain."
+              },
+              {
+                "number": "9.2.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_180",
+                "page_start": 541,
+                "page_end": 543,
+                "word_count": 623,
+                "summary": "For 4716(S): Trusted domain information was modified."
+              },
+              {
+                "number": "9.2.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_181",
+                "page_start": 543,
+                "page_end": 545,
+                "word_count": 619,
+                "summary": "For 4713(S): Kerberos policy was changed."
+              },
+              {
+                "number": "9.2.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_182",
+                "page_start": 545,
+                "page_end": 549,
+                "word_count": 1184,
+                "summary": "For 4717(S): System security access was granted to an account."
+              },
+              {
+                "number": "9.2.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_183",
+                "page_start": 549,
+                "page_end": 558,
+                "word_count": 3385,
+                "summary": "For 4718(S): System security access was removed from an account."
+              },
+              {
+                "number": "9.2.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_184",
+                "page_start": 558,
+                "page_end": 561,
+                "word_count": 995,
+                "summary": "For 4739(S): Domain Policy was changed."
+              },
+              {
+                "number": "9.2.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_185",
+                "page_start": 561,
+                "page_end": 563,
+                "word_count": 892,
+                "summary": "For 4865(S): A trusted forest information entry was added."
+              },
+              {
+                "number": "9.2.8",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_186",
+                "page_start": 563,
+                "page_end": 566,
+                "word_count": 916,
+                "summary": "For 4866(S): A trusted forest information entry was removed."
+              },
+              {
+                "number": "9.2.9",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_187",
+                "page_start": 566,
+                "page_end": 567,
+                "word_count": 45,
+                "summary": "For 4867(S): A trusted forest information entry was modified."
+              }
+            ]
+          },
+          {
+            "number": "9.3",
+            "title": "Audit Authorization Policy Change",
+            "depth": 2,
+            "chunk_id": "chunk_188",
+            "page_start": 567,
+            "page_end": 575,
+            "word_count": 3267,
+            "summary": "Audit Authorization Policy Change allows you to audit assignment and removal of user rights in user ...",
+            "children": [
+              {
+                "number": "9.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_189",
+                "page_start": 575,
+                "page_end": 581,
+                "word_count": 2584,
+                "summary": "For 4703(S): A user right was adjusted."
+              },
+              {
+                "number": "9.3.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_190",
+                "page_start": 581,
+                "page_end": 588,
+                "word_count": 2567,
+                "summary": "For 4704(S): A user right was assigned."
+              },
+              {
+                "number": "9.3.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_191",
+                "page_start": 588,
+                "page_end": 595,
+                "word_count": 2090,
+                "summary": "For 4705(S): A user right was removed."
+              },
+              {
+                "number": "9.3.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_192",
+                "page_start": 595,
+                "page_end": 602,
+                "word_count": 1676,
+                "summary": "For 4911(S): Resource attributes of the object were changed."
+              },
+              {
+                "number": "9.3.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_193",
+                "page_start": 602,
+                "page_end": 603,
+                "word_count": 175,
+                "summary": "For 4913(S): Central Access Policy on the object was changed."
+              }
+            ]
+          },
+          {
+            "number": "9.4",
+            "title": "Audit Filtering Platform Policy Change",
+            "depth": 2,
+            "chunk_id": "chunk_194",
+            "page_start": 603,
+            "page_end": 605,
+            "word_count": 589,
+            "summary": "Audit Filtering Platform Policy Change allows you to audit events generated by changes to the Window...",
+            "children": [
+              {
+                "number": "9.4.1",
+                "title": "5466(F): PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory cannot be reached, and will use the",
+                "depth": 3,
+                "chunk_id": "chunk_195",
+                "page_start": 605,
+                "page_end": 605,
+                "word_count": 66,
+                "summary": "cached copy of the Active Directory IPsec policy instead."
+              },
+              {
+                "number": "9.4.2",
+                "title": "5468(S): PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, found changes to the",
+                "depth": 3,
+                "chunk_id": "chunk_196",
+                "page_start": 605,
+                "page_end": 607,
+                "word_count": 90,
+                "summary": "policy, and applied those changes."
+              }
+            ]
+          },
+          {
+            "number": "9.5",
+            "title": "Audit MPSSVC Rule-Level Policy Change",
+            "depth": 2,
+            "chunk_id": "chunk_197",
+            "page_start": 607,
+            "page_end": 611,
+            "word_count": 927,
+            "summary": "Audit MPSSVC Rule-Level Policy Change determines whether the operating system generates audit events...",
+            "children": [
+              {
+                "number": "9.5.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_198",
+                "page_start": 611,
+                "page_end": 613,
+                "word_count": 348,
+                "summary": "For 4944(S): The following policy was active when the Windows Firewall started."
+              },
+              {
+                "number": "9.5.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_199",
+                "page_start": 613,
+                "page_end": 615,
+                "word_count": 296,
+                "summary": "For 4945(S): A rule was listed when the Windows Firewall started."
+              },
+              {
+                "number": "9.5.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_200",
+                "page_start": 615,
+                "page_end": 618,
+                "word_count": 279,
+                "summary": "For 4946(S): A change has been made to Windows Firewall exception list."
+              },
+              {
+                "number": "9.5.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_201",
+                "page_start": 618,
+                "page_end": 620,
+                "word_count": 270,
+                "summary": "For 4947(S): A change has been made to Windows Firewall exception list."
+              },
+              {
+                "number": "9.5.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_202",
+                "page_start": 620,
+                "page_end": 621,
+                "word_count": 130,
+                "summary": "For 4948(S): A change has been made to Windows Firewall exception list."
+              },
+              {
+                "number": "9.5.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_203",
+                "page_start": 621,
+                "page_end": 626,
+                "word_count": 734,
+                "summary": "For 4949(S): Windows Firewall settings were restored to the default values."
+              },
+              {
+                "number": "9.5.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_204",
+                "page_start": 626,
+                "page_end": 626,
+                "word_count": 60,
+                "summary": "For 4951(F): A rule has been ignored because its major version number was not recognized by Windows Firewall."
+              }
+            ]
+          },
+          {
+            "number": "9.6",
+            "title": "4952(F): Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the",
+            "depth": 2,
+            "chunk_id": "chunk_205",
+            "page_start": 626,
+            "page_end": 627,
+            "word_count": 245,
+            "summary": "rule will be enforced.",
+            "children": [
+              {
+                "number": "9.6.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_206",
+                "page_start": 627,
+                "page_end": 629,
+                "word_count": 292,
+                "summary": "\nThis event can be a sign of software issues, Windows Firewall registry errors or corruption, or Group Policy setting misconfigurations."
+              },
+              {
+                "number": "9.6.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_207",
+                "page_start": 629,
+                "page_end": 630,
+                "word_count": 176,
+                "summary": "For 4953(F): Windows Firewall ignored a rule because it could not be parsed."
+              },
+              {
+                "number": "9.6.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_208",
+                "page_start": 630,
+                "page_end": 631,
+                "word_count": 157,
+                "summary": "For 4954(S): Windows Firewall Group Policy settings have changed."
+              },
+              {
+                "number": "9.6.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_209",
+                "page_start": 631,
+                "page_end": 633,
+                "word_count": 262,
+                "summary": "For 4956(S): Windows Firewall has changed the active profile."
+              },
+              {
+                "number": "9.6.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_210",
+                "page_start": 633,
+                "page_end": 634,
+                "word_count": 191,
+                "summary": "For 4957(F): Windows Firewall did not apply the following rule."
+              },
+              {
+                "number": "9.6.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_211",
+                "page_start": 634,
+                "page_end": 635,
+                "word_count": 49,
+                "summary": "\nThis event can be a sign of software issues, Windows Firewall registry errors or corruption, or Group Policy setting misconfigurations."
+              }
+            ]
+          },
+          {
+            "number": "9.7",
+            "title": "Audit Other Policy Change Events",
+            "depth": 2,
+            "chunk_id": "chunk_212",
+            "page_start": 635,
+            "page_end": 637,
+            "word_count": 676,
+            "summary": "Audit Other Policy Change Events contains events about EFS Data Recovery Agent policy changes, chang...",
+            "children": [
+              {
+                "number": "9.7.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_213",
+                "page_start": 637,
+                "page_end": 642,
+                "word_count": 1532,
+                "summary": "For 4714(S): Encrypted data recovery policy was changed."
+              },
+              {
+                "number": "9.7.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_214",
+                "page_start": 642,
+                "page_end": 643,
+                "word_count": 265,
+                "summary": "For 4826(S): Boot Configuration Data loaded."
+              },
+              {
+                "number": "9.7.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_215",
+                "page_start": 643,
+                "page_end": 644,
+                "word_count": 155,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_216",
+                "page_start": 644,
+                "page_end": 645,
+                "word_count": 161,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_217",
+                "page_start": 645,
+                "page_end": 646,
+                "word_count": 171,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_218",
+                "page_start": 646,
+                "page_end": 647,
+                "word_count": 168,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_219",
+                "page_start": 647,
+                "page_end": 648,
+                "word_count": 151,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.8",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_220",
+                "page_start": 648,
+                "page_end": 649,
+                "word_count": 169,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.9",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_221",
+                "page_start": 649,
+                "page_end": 650,
+                "word_count": 171,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.10",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_222",
+                "page_start": 650,
+                "page_end": 651,
+                "word_count": 202,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions."
+              },
+              {
+                "number": "9.7.11",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_223",
+                "page_start": 651,
+                "page_end": 653,
+                "word_count": 284,
+                "summary": "For 5447(S): A Windows Filtering Platform filter has been changed."
+              },
+              {
+                "number": "9.7.12",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_224",
+                "page_start": 653,
+                "page_end": 654,
+                "word_count": 352,
+                "summary": "For 6144(S): Security policy in the group policy objects has been applied successfully."
+              },
+              {
+                "number": "9.7.13",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_225",
+                "page_start": 654,
+                "page_end": 655,
+                "word_count": 148,
+                "summary": "For 6145(F): One or more errors occurred while processing security policy in the group policy objects."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "10",
+        "title": "Privilege Use",
+        "depth": 1,
+        "chunk_id": "chunk_226",
+        "page_start": 655,
+        "page_end": 655,
+        "word_count": 2,
+        "summary": "Privilege Use",
+        "children": [
+          {
+            "number": "10.1",
+            "title": "Audit Non Sensitive Privilege Use",
+            "depth": 2,
+            "chunk_id": "chunk_227",
+            "page_start": 655,
+            "page_end": 657,
+            "word_count": 497,
+            "summary": "Audit Non Sensitive Privilege Use contains events that show usage of non-sensitive privileges."
+          },
+          {
+            "number": "10.2",
+            "title": "Audit Other Privilege Use Events",
+            "depth": 2,
+            "chunk_id": "chunk_228",
+            "page_start": 657,
+            "page_end": 658,
+            "word_count": 132,
+            "summary": "This auditing subcategory should not have any events in it, but for some reason Success auditing wil..."
+          },
+          {
+            "number": "10.3",
+            "title": "Audit Sensitive Privilege Use",
+            "depth": 2,
+            "chunk_id": "chunk_229",
+            "page_start": 658,
+            "page_end": 664,
+            "word_count": 2359,
+            "summary": "Audit Sensitive Privilege Use contains events that show the usage of sensitive privileges.",
+            "children": [
+              {
+                "number": "10.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_230",
+                "page_start": 664,
+                "page_end": 671,
+                "word_count": 2646,
+                "summary": "For 4673(S, F): A privileged service was called."
+              },
+              {
+                "number": "10.3.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_231",
+                "page_start": 671,
+                "page_end": 673,
+                "word_count": 311,
+                "summary": "For 4674(S, F): An operation was attempted on a privileged object."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "11",
+        "title": "System",
+        "depth": 1,
+        "chunk_id": "chunk_232",
+        "page_start": 673,
+        "page_end": 673,
+        "word_count": 1,
+        "summary": "System",
+        "children": [
+          {
+            "number": "11.1",
+            "title": "Audit IPsec Driver",
+            "depth": 2,
+            "chunk_id": "chunk_233",
+            "page_start": 673,
+            "page_end": 674,
+            "word_count": 395,
+            "summary": "Audit IPsec Driver allows you to audit events generated by IPSec driver such as the following:\n\nStartup and shutdown of the IPsec services.",
+            "children": [
+              {
+                "number": "11.1.1",
+                "title": "4965(S): IPsec received a packet from a remote computer with an incorrect Security Parameter Index (SPI). This is usually caused by malfunctioning",
+                "depth": 3,
+                "chunk_id": "chunk_234",
+                "page_start": 674,
+                "page_end": 674,
+                "word_count": 210,
+                "summary": "hardware that is corrupting packets."
+              },
+              {
+                "number": "11.1.2",
+                "title": "some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the",
+                "depth": 3,
+                "chunk_id": "chunk_235",
+                "page_start": 674,
+                "page_end": 674,
+                "word_count": 1,
+                "summary": "problem."
+              }
+            ]
+          },
+          {
+            "number": "11.2",
+            "title": "Audit Other System Events",
+            "depth": 2,
+            "chunk_id": "chunk_236",
+            "page_start": 674,
+            "page_end": 676,
+            "word_count": 593,
+            "summary": "Audit Other System Events contains Windows Firewall Service and Windows Firewall driver start and st...",
+            "children": [
+              {
+                "number": "11.2.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_237",
+                "page_start": 676,
+                "page_end": 677,
+                "word_count": 147,
+                "summary": "For 5024(S): The Windows Firewall Service has started successfully."
+              },
+              {
+                "number": "11.2.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_238",
+                "page_start": 677,
+                "page_end": 678,
+                "word_count": 56,
+                "summary": "For 5025(S): The Windows Firewall Service has been stopped."
+              }
+            ]
+          },
+          {
+            "number": "11.3",
+            "title": "5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the",
+            "depth": 2,
+            "chunk_id": "chunk_239",
+            "page_start": 678,
+            "page_end": 679,
+            "word_count": 157,
+            "summary": "current policy.",
+            "children": [
+              {
+                "number": "11.3.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_240",
+                "page_start": 679,
+                "page_end": 680,
+                "word_count": 249,
+                "summary": "For 5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage."
+              },
+              {
+                "number": "11.3.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_241",
+                "page_start": 680,
+                "page_end": 680,
+                "word_count": 175,
+                "summary": "For 5028(F): The Windows Firewall Service was unable to parse the new security policy."
+              },
+              {
+                "number": "11.3.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_242",
+                "page_start": 680,
+                "page_end": 681,
+                "word_count": 149,
+                "summary": "\nThis event can be a sign of software or operating system issues, or a sign of malicious activity that corrupted Windows Firewall Driver."
+              },
+              {
+                "number": "11.3.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_243",
+                "page_start": 681,
+                "page_end": 681,
+                "word_count": 163,
+                "summary": "\nThis event can be a sign of software or operating system issues, or a sign of malicious activity that corrupted Windows Firewall Driver."
+              },
+              {
+                "number": "11.3.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_244",
+                "page_start": 681,
+                "page_end": 682,
+                "word_count": 113,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_245",
+                "page_start": 682,
+                "page_end": 683,
+                "word_count": 150,
+                "summary": "For 5033(S): The Windows Firewall Driver has started successfully."
+              },
+              {
+                "number": "11.3.7",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_246",
+                "page_start": 683,
+                "page_end": 683,
+                "word_count": 128,
+                "summary": "For 5034(S): The Windows Firewall Driver was stopped."
+              },
+              {
+                "number": "11.3.8",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_247",
+                "page_start": 683,
+                "page_end": 684,
+                "word_count": 128,
+                "summary": "\nThis event can be a sign of software or operating system issues, or a sign of malicious activity that corrupted Windows Firewall Driver."
+              },
+              {
+                "number": "11.3.9",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_248",
+                "page_start": 684,
+                "page_end": 687,
+                "word_count": 838,
+                "summary": "\nThis event can be a sign of software or operating system issues, or a sign of malicious activity that corrupted Windows Firewall Driver."
+              },
+              {
+                "number": "11.3.10",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_249",
+                "page_start": 687,
+                "page_end": 690,
+                "word_count": 871,
+                "summary": "For 5058(S, F): Key file operation."
+              },
+              {
+                "number": "11.3.11",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_250",
+                "page_start": 690,
+                "page_end": 691,
+                "word_count": 157,
+                "summary": "For 5059(S, F): Key migration operation."
+              },
+              {
+                "number": "11.3.12",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_251",
+                "page_start": 691,
+                "page_end": 691,
+                "word_count": 76,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.13",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_252",
+                "page_start": 691,
+                "page_end": 692,
+                "word_count": 92,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.14",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_253",
+                "page_start": 692,
+                "page_end": 692,
+                "word_count": 85,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.15",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_254",
+                "page_start": 692,
+                "page_end": 692,
+                "word_count": 81,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.16",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_255",
+                "page_start": 692,
+                "page_end": 693,
+                "word_count": 72,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.17",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_256",
+                "page_start": 693,
+                "page_end": 693,
+                "word_count": 73,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.18",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_257",
+                "page_start": 693,
+                "page_end": 693,
+                "word_count": 51,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.19",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_258",
+                "page_start": 693,
+                "page_end": 694,
+                "word_count": 84,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.20",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_259",
+                "page_start": 694,
+                "page_end": 694,
+                "word_count": 73,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.3.21",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_260",
+                "page_start": 694,
+                "page_end": 695,
+                "word_count": 18,
+                "summary": "\nThere is no recommendation for this event in this document."
+              }
+            ]
+          },
+          {
+            "number": "11.4",
+            "title": "Audit Security State Change",
+            "depth": 2,
+            "chunk_id": "chunk_261",
+            "page_start": 695,
+            "page_end": 699,
+            "word_count": 1093,
+            "summary": "Audit Security State Change contains Windows startup, recovery, and shutdown events, and information about changes in system time.",
+            "children": [
+              {
+                "number": "11.4.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_262",
+                "page_start": 699,
+                "page_end": 700,
+                "word_count": 269,
+                "summary": "For 4616(S): The system time was changed."
+              },
+              {
+                "number": "11.4.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_263",
+                "page_start": 700,
+                "page_end": 701,
+                "word_count": 71,
+                "summary": "\nWe recommend triggering an alert for any occurrence of this event."
+              }
+            ]
+          },
+          {
+            "number": "11.5",
+            "title": "Audit Security System Extension",
+            "depth": 2,
+            "chunk_id": "chunk_264",
+            "page_start": 701,
+            "page_end": 703,
+            "word_count": 670,
+            "summary": "Audit Security System Extension contains information about the loading of an authentication package,...",
+            "children": [
+              {
+                "number": "11.5.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_265",
+                "page_start": 703,
+                "page_end": 705,
+                "word_count": 587,
+                "summary": "For 4610(S): An authentication package has been loaded by the Local Security Authority."
+              },
+              {
+                "number": "11.5.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_266",
+                "page_start": 705,
+                "page_end": 706,
+                "word_count": 265,
+                "summary": "For 4611(S): A trusted logon process has been registered with the Local Security Authority."
+              },
+              {
+                "number": "11.5.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_267",
+                "page_start": 706,
+                "page_end": 711,
+                "word_count": 1341,
+                "summary": "For 4614(S): A notification package has been loaded by the Security Account Manager."
+              },
+              {
+                "number": "11.5.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_268",
+                "page_start": 711,
+                "page_end": 712,
+                "word_count": 203,
+                "summary": "For 4697(S): A service was installed in the system."
+              }
+            ]
+          },
+          {
+            "number": "11.6",
+            "title": "Audit System Integrity",
+            "depth": 2,
+            "chunk_id": "chunk_269",
+            "page_start": 712,
+            "page_end": 713,
+            "word_count": 753,
+            "summary": "Audit System Integrity determines whether the operating system audits events that violate the integrity of the security subsystem.",
+            "children": [
+              {
+                "number": "11.6.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_270",
+                "page_start": 713,
+                "page_end": 714,
+                "word_count": 147,
+                "summary": "\nThis event can be a sign of hardware issues or lack of system resources (for example, RAM)."
+              },
+              {
+                "number": "11.6.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_271",
+                "page_start": 714,
+                "page_end": 716,
+                "word_count": 264,
+                "summary": "\nThere is no recommendation for this event in this document."
+              },
+              {
+                "number": "11.6.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_272",
+                "page_start": 716,
+                "page_end": 716,
+                "word_count": 105,
+                "summary": "For 4618(S): A monitored security event pattern has occurred."
+              },
+              {
+                "number": "11.6.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_273",
+                "page_start": 716,
+                "page_end": 716,
+                "word_count": 30,
+                "summary": "\nWe recommend monitoring for this event, especially on high value assets or computers, because it c..."
+              }
+            ]
+          },
+          {
+            "number": "11.7",
+            "title": "5038(F): Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the",
+            "depth": 2,
+            "chunk_id": "chunk_274",
+            "page_start": 716,
+            "page_end": 716,
+            "word_count": 153,
+            "summary": "invalid hash could indicate a potential disk device error.",
+            "children": [
+              {
+                "number": "11.7.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_275",
+                "page_start": 716,
+                "page_end": 717,
+                "word_count": 133,
+                "summary": "\nWe recommend monitoring for this event, especially on high value assets or computers, because it c..."
+              },
+              {
+                "number": "11.7.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_276",
+                "page_start": 717,
+                "page_end": 718,
+                "word_count": 96,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related actions with cryptographic keys."
+              },
+              {
+                "number": "11.7.3",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_277",
+                "page_start": 718,
+                "page_end": 719,
+                "word_count": 147,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related actions with cryptographic keys."
+              },
+              {
+                "number": "11.7.4",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_278",
+                "page_start": 719,
+                "page_end": 720,
+                "word_count": 147,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related actions with cryptographic keys."
+              },
+              {
+                "number": "11.7.5",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_279",
+                "page_start": 720,
+                "page_end": 723,
+                "word_count": 835,
+                "summary": "\nTypically this event is required for detailed monitoring of CNG-related actions with cryptographic keys."
+              },
+              {
+                "number": "11.7.6",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_280",
+                "page_start": 723,
+                "page_end": 723,
+                "word_count": 76,
+                "summary": "For 5061(S, F): Cryptographic operation."
+              }
+            ]
+          },
+          {
+            "number": "11.8",
+            "title": "6281(F): Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes",
+            "depth": 2,
+            "chunk_id": "chunk_281",
+            "page_start": 723,
+            "page_end": 723,
+            "word_count": 218,
+            "summary": "or corrupt due to unauthorized modification.",
+            "children": [
+              {
+                "number": "11.8.1",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_282",
+                "page_start": 723,
+                "page_end": 724,
+                "word_count": 210,
+                "summary": "\nWe recommend monitoring for this event, especially on high value assets or computers, because it c..."
+              },
+              {
+                "number": "11.8.2",
+                "title": "Security Monitoring Recommendations:",
+                "depth": 3,
+                "chunk_id": "chunk_283",
+                "page_start": 724,
+                "page_end": 725,
+                "word_count": 37,
+                "summary": "\nWe recommend monitoring for this event, especially on high value assets or computers, because it c..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "12",
+        "title": "Other Events",
+        "depth": 1,
+        "chunk_id": "chunk_284",
+        "page_start": 725,
+        "page_end": 726,
+        "word_count": 173,
+        "summary": "Events in this section generate automatically and are enabled by default.",
+        "children": [
+          {
+            "number": "12.1",
+            "title": "Security Monitoring Recommendations:",
+            "depth": 2,
+            "chunk_id": "chunk_285",
+            "page_start": 726,
+            "page_end": 730,
+            "word_count": 915,
+            "summary": "For 1100(S): The event logging service has shut down."
+          },
+          {
+            "number": "12.2",
+            "title": "Security Monitoring Recommendations:",
+            "depth": 2,
+            "chunk_id": "chunk_286",
+            "page_start": 730,
+            "page_end": 732,
+            "word_count": 265,
+            "summary": "For 1105(S): Event log automatic backup."
+          },
+          {
+            "number": "12.3",
+            "title": "Security Monitoring Recommendations:",
+            "depth": 2,
+            "chunk_id": "chunk_287",
+            "page_start": 732,
+            "page_end": 733,
+            "word_count": 43,
+            "summary": "For 1108(S): The event logging service encountered an error while processing an incoming event published from %1."
+          }
+        ]
+      },
+      {
+        "number": "13",
+        "title": "Appendix A: Security monitoring recommendations for many audit events",
+        "depth": 1,
+        "chunk_id": "chunk_288",
+        "page_start": 733,
+        "page_end": 734,
+        "word_count": 418,
+        "summary": "This document provides reference information about individual audit events, and lists them within audit categories and subcategories."
+      },
+      {
+        "number": "14",
+        "title": "Appendix B: List of Tables",
+        "depth": 1,
+        "chunk_id": "chunk_289",
+        "page_start": 734,
+        "page_end": 734,
+        "word_count": 80,
+        "summary": "Table 1."
+      }
+    ],
+    "total_sections": 289,
+    "max_depth": 3
+  }
+}

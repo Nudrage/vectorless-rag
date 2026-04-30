@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_844",
+  "section_number": "1.21.15.6.1",
+  "header": "Translate Internal Client IP Addresses to Your Public IP Address (Source DIPP NAT)",
+  "content": "When a client on your internal network sends a request, the source address in the packet contains\nthe IP address for the client on your internal network. If you use private IP address ranges\ninternally, the packets from the client will not be able to be routed on the Internet unless you\ntranslate the source IP address in the packets leaving the network into a publicly routable address.\nOn the firewall you can do this by configuring a source NAT policy that translates the source\naddress (and optionally the port) into a public address. One way to do this is to translate the\nsource address for all packets to the egress interface on your firewall, as shown in the following\nprocedure.\nSTEP 1 |\nCreate an address object for the external IP address you plan to use.\n1.\nSelect Objects > Addresses and Add a Name and optional Description for the object.\n2.\nSelect IP Netmask from the Type and then enter the IP address of the external interface\non the firewall, 203.0.113.100 in this example.\n3.\nClick OK.\nAlthough you do not have to use address objects in your policies, it is a best\npractice because it simplifies administration by allowing you to make updates\nin one place rather than having to update every policy where the address is\nreferenced.\nSTEP 2 |\nCreate the NAT policy.\n1.\nSelect Policies > NAT and click Add.\n2.\nOn the General tab, enter a descriptive Name for the policy.\n3.\n(Optional) Enter a tag, which is a keyword or phrase that allows you to sort or filter\npolicies.\n4.\nFor NAT Type, select ipv4 (default).\n5.\nOn the Original Packet tab, select the zone you created for your internal network in the\nSource Zone section (click Add and then select the zone) and the zone you created for\nthe external network from the Destination Zone list.\n6.\nOn the Translated Packet tab, select Dynamic IP And Port from the Translation Type list\nin the Source Address Translation section of the screen.\n7.\nFor Address Type, there are two choices. You could select Translated Address and then\nclick Add. Select the address object you just created.\nAn alternative Address Type is Interface Address, in which case the translated address\nwill be the IP address of the interface. For this choice, you would select an Interface and\noptionally an IP Address if the interface has more than one IP address.\n8.\nClick OK.\nSTEP 3 |\nCommit your changes.\nClick Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1492\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 4 |\n(Optional) Access the CLI to verify the translation.\n1.\nUse the show session all command to view the session table, where you can verify\nthe source IP address and port and the corresponding translated IP address and port.\n2.\nUse the show session id <id_number> to view more details about a session.\n3.\nIf you configured Dynamic IP NAT, use the show counter global filter aspect\nsession severity drop | match nat command to see if any sessions failed due\nto NAT IP allocation. If all of the addresses in the Dynamic IP NAT pool are allocated\nwhen a new connection is supposed to be translated, the packet will be dropped.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1492,
+      "end": 1493
+    },
+    "content_stats": {
+      "char_count": 3075,
+      "word_count": 544
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

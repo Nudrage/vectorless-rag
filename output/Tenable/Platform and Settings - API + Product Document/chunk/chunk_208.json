@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_208",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Vulnerability Management successfully modified the exclusion.\nexclusion_id\nrequired\nname\ndescription\nschedule\nrequired\nRESPONSE SCHEMA:\napplication/json\nstring\nThe description of the exclusion.\nstring\nThe name of the exclusion.\nstring\nThe unique UUID of the exclusion.\ninteger\nA Unix timestamp indicating the creation date of the exclusion.\ninteger\nA Unix timestamp indicating the last modification date for the\nexclusion.\ninteger\nThe unique ID of the exclusion.\nboolean\nIndicates whether core updates are blocked while the exclusion\nis active.\nobject\n— 403 Returned if you do not have permission to modify the exclusion.\n— 404 Returned if Tenable Vulnerability Management cannot find the specified exclusion.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500 Returned if Tenable Vulnerability Management fails to change the exclusion.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 209,
+      "end": 210
+    },
+    "content_stats": {
+      "char_count": 942,
+      "word_count": 141
+    },
+    "hierarchy": {
+      "parent": "Update agent exclusion",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_256",
+  "section_number": "1.10.10.3",
+  "header": "Synchronization of System Runtime Information",
+  "content": "The following table summarizes what system runtime information is synchronized between HA\npeers.\nConfig Synced?\nRuntime Information\nA/P\nA/A\nHA Link\nDetails\nManagement Plane\nUser to Group Mappings\nYes\nYes\nHA1\nUser Mappings across\nVirtual Systems\nYes\nYes\nHA1\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n462\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nConfig Synced?\nRuntime Information\nA/P\nA/A\nHA Link\nDetails\nUser to IP Address\nMappings\nYes\nYes\nHA1\nIn an A/A configuration,\nonly the Active-Primary\npeer connects to User-\nID Servers or Agents,\nand not the Active-\nSecondary peer. If the\nActive-Primary peer is\nSuspended or offline, the\nActive-Secondary peer\nconnects to the User-ID\nServers or Agents.\nDHCP Lease (as server)\nYes\nYes\nHA1\nIf the PAN-OS versions\non the HA peers don’t\nmatch, the DHCP\nLease (as server) config\ninformation won’t sync.\nDNS Cache\nNo\nNo\nN/A\nFQDN Refresh\nNo\nNo\nN/A\nIKE SAs [Security\nAssociations] (phase 1)\nNo\nNo\nN/A\nForward Information Base\n(FIB)\nYes\nNo\nHA1\nMulticast FIB (MFIB)\nYes\nNo\nHA1\nPAN-DB URL Cache\nYes\nNo\nHA1\nThis is synchronized upon\ndatabase backup to disk\n(every eight hours, when\nURL database version\nupdates), or when the\nfirewall reboots.\nContent (manual sync)\nYes\nYes\nHA1\nPPPoE, PPPoE Lease\nYes\nYes\nHA1\nDHCP Client Settings and\nLease\nYes\nYes\nHA1\nIf the PAN-OS versions\non the HA peers don’t\nmatch, the DHCP Client\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n463\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nConfig Synced?\nRuntime Information\nA/P\nA/A\nHA Link\nDetails\nSettings and Lease config\ninformation won’t sync.\nSSL VPN Logged in User\nList\nYes\nYes\nHA1\nDataplane\nSession Table\nYes\nYes\nHA2\n• Active/passive peers\ndo not sync ICMP\nor host session\ninformation.\n• Active/active peers\ndo not sync host\nsession, multicast\nsession, or BFD\nsession information.\nA host\nsession is\na session\nterminated\non one\nof the\nfirewall\ninterfaces,\nsuch as\nan ICMP\nsession\npinging\none\nof the\nfirewall\ninterfaces\nor a GP\ntunnel.\nMulticast Session Table\nYes\nNo\nHA2\nARP Table\nYes\nNo\nHA2\nNeighbor Discovery (ND)\nTable\nYes\nNo\nHA2\nMAC Table\nYes\nNo\nHA2\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n464\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nConfig Synced?\nRuntime Information\nA/P\nA/A\nHA Link\nDetails\nIPSec SAs [Security\nAssociations] (phase 2)\nYes\nYes\nHA2\nIPSec Sequence Number\n(anti-replay)\nYes\nYes\nHA2\nDoS Block List Entries\nNo\nNo\nN/A\nVirtual MAC\nYes\nYes\nHA2\nSCTP Associations\nYes\nNo\nHA2\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n465\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 462,
+      "end": 465
+    },
+    "content_stats": {
+      "char_count": 2487,
+      "word_count": 412
+    },
+    "hierarchy": {
+      "parent": "Reference: HA Synchronization",
+      "children": []
+    }
+  }
+}

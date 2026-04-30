@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_281",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n429\n{\n\"connector\":\n-\n{\n\"name\": \"string\",\n\"type\": \"aws\",\n\"network_uuid\": \"00000000-0000-0000-0000-000000000000\",\n\"params\":\n-\n{\n\"access_key\": \"string\",\n\"secret_key\": \"string\",\n\"trails\":\n-\n[\n- {\n\"arn\": \"string\",\n\"name\": \"string\",\n\"region\":\n-\n{\n\"name\": \"string\",\n\"friendly_name\": \"string\"\n},\n\"availability\": \"success\"\n}\n]\n},\n\"schedule\":\n-\n{\n\"units\": \"string\",\n\"value\": 0\n}\n}\n}\napplication/json\nAWS (Keyed)\nExpand all\nCollapse all\nCopy\nContent type\nExample\n{\n\"connector\":\n-\n{\n\"type\": \"aws\",\n\"human_type\": \"AWS\",\n\"data_type\": \"assets\",\n\"name\": \"AWS Connector - Keyed\",\n\"status\": \"Scheduled\",\n\"status_message\": \"\",\n\"schedule\":\n-\n{\n\"units\": \"days\",\n\"value\": 1\n},\n\"schedule_full\":\n-\n{\n\"units\": \"days\",\n\"value\": 1\n},\n\"date_created\": \"2019-12-31T20:50:23.635Z\",\n\"id\": \"6d75a992-0727-4d84-aa5f-ebae0185868b\",\n\"container_uuid\": \"154a05bd-3f27-495a-a001-a659c24eb1a4\",\n\"expired\": false,\n\"incremental_mode\": false,\n\"params\":\n-\n{\n\"access_key\": \"AJIAJLRNVRLZRDZLVBXR\",\n\"trails\":\n-\n[\n- {\n\"arn\": \"arn:aws:cloudtrail:us-east-1:069647819620:trail/Example\n\"name\": \"ExampleAWSTrail\",\n\"region\":\n-\n{\n\"name\": \"All\",\n\"friendly_name\": \"All\"\n},\n\"availability\": \"\"\n}\n],\n\"service\": \"aws\"\n},\n\"network_uuid\": \"2825e3c9-16be-41f4-8b83-dfe534d10627\"\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 263,
+      "end": 264
+    },
+    "content_stats": {
+      "char_count": 1222,
+      "word_count": 140
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

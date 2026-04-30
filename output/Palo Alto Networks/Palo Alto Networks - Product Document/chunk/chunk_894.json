@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_894",
+  "section_number": "1.21.19.2",
+  "header": "Supported TLVs in LLDP",
+  "content": "LLDPDUs include mandatory and optional TLVs. The following table lists the mandatory TLVs that\nthe firewall supports:\nMandatory\nTLVs\nTLV\nType\nDescription\nChassis ID TLV\n1\nIdentifies the firewall chassis. Each firewall must have exactly one\nunique Chassis ID. The Chassis ID subtype is 4 (MAC address) on\nPalo Alto Networks models will use the MAC address of Eth0 to\nensure uniqueness.\nPort ID TLV\n2\nIdentifies the port from which the LLDPDU is sent. Each firewall\nuses one Port ID for each LLDPDU message transmitted. The\nPort ID subtype is 5 (interface name) and uniquely identifies the\ntransmitting port. The firewall uses the interface’s ifname as the\nPort ID.\nTime-to-live\n(TTL) TLV\n3\nSpecifies how long (in seconds) LLDPDU information received\nfrom the peer is retained as valid in the local firewall (range\nis 0-65,535). The value is a multiple of the LLDP Hold Time\nMultiplier. When the TTL value is 0, the information associated\nwith the device is no longer valid and the firewall removes that\nentry from the MIB.\nEnd of\nLLDPDU TLV\n0\nIndicates the end of the TLVs in the LLDP Ethernet frame.\nThe following table lists the optional TLVs that the Palo Alto Networks firewall supports:\nOptional TLVs\nTLV\nType\nPurpose and Notes Regarding Firewall Implementation\nPort\nDescription\nTLV\n4\nDescribes the port of the firewall in alpha-numeric format. The\nifAlias object is used.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1535\n©2025 Palo Alto Networks, Inc.\nNetworking\nOptional TLVs\nTLV\nType\nPurpose and Notes Regarding Firewall Implementation\nSystem Name\nTLV\n5\nConfigured name of the firewall in alpha-numeric format. The\nsysName object is used.\nSystem\nDescription\nTLV\n6\nDescribes the firewall in alpha-numeric format. The sysDescr\nobject is used.\nSystem\nCapabilities\n7\nDescribes the deployment mode of the interface, as follows:\n• An L3 interface is advertised with router (bit 6) capability and\nthe “other” bit (bit 1).\n• An L2 interface is advertised with MAC Bridge (bit 3) capability\nand the “other” bit (bit 1).\n• A virtual wire interface is advertised with Repeater (bit 2)\ncapability and the “other” bit (bit 1).\nManagement\nAddress\n8\nOne or more IP addresses used for firewall management, as\nfollows:\n• IP address of the management (MGT) interface\n• IPv4 and/or IPv6 address of the interface\n• Loopback address\n• User-defined address entered in the management address field\nIf no management IP address is provided, the default is the MAC\naddress of the transmitting interface.\nIncluded is the interface number of the management address\nspecified. Also included is the OID of the hardware interface with\nthe management address specified (if applicable).\nIf more than one management address is specified, they will be\nsent in the order they are specified, starting at the top of the list.\nA maximum of four Management Addresses are supported.\nThis is an optional parameter and can be left disabled.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1535,
+      "end": 1536
+    },
+    "content_stats": {
+      "char_count": 2901,
+      "word_count": 477
+    },
+    "hierarchy": {
+      "parent": "LLDP",
+      "children": []
+    }
+  }
+}

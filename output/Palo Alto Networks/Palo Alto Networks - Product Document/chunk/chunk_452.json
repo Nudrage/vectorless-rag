@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_452",
+  "section_number": "1.13.5.2",
+  "header": "See the New and Modified App-IDs in a Content Release",
+  "content": "For both downloaded and installed content updates, you can see a list of the new and modified\nApp-IDs the update includes. Full application details are provided, and importantly, updates to\napplications with network-wide impact (for example, LDAP or IKE) are prominently flagged as\na recommended for policy review. For modified App-IDs, application details also describe how\ncoverage is either now expanded or more precise.\nSTEP 1 |\nSelect Device > Dynamic Updates and select Check Now to refresh the list of available\ncontent updates.\nSTEP 2 |\nFor either a downloaded or currently installed content release, click Review Apps link in the\nActions column to view details on newly-identified and modified applications in that release:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n809\n©2025 Palo Alto Networks, Inc.\nApp-ID\nSTEP 3 |\nReview the App-IDs this content release introduces or modifies since the last content\nversion.\nNew and modified App-IDs are listed separately. Full application details are provided for each,\nand App-IDs that Palo Alto Networks foresees as having network-wide impact are flagged as\nrecommended for policy review.\nNew App-ID details that you can use to assess possible impact to policy enforcement include:\n• Depends on—Lists the application signatures that this App-ID relies on to uniquely identify\nthe application. If one of the application signatures listed in the Depends On field is\ndisabled, the dependent App-ID is also disabled.\n• Previously Identified As—Lists the App-IDs that matched to the application before the new\nApp-ID was installed to uniquely identify the application.\n• App-ID Enabled—All App-IDs display as enabled when a content release is downloaded,\nunless you choose to manually disable the App-ID signature before installing the content\nupdate.\nFor modified App-IDs, details include information on: Expanded Coverage, Remove False\nPositive, and application metadata changes. The Expanded Coverage and Remove False\nPositive fields both indicate how the application’s coverage has changed (it’s either more\ncomprehensive or has been narrowed) and a clock icon indicates a metadata change, where\ncertain application details are updated.\nSTEP 4 |\nBased on your findings, click Review Policies to see how the new and modified App-IDs\nimpact security policy enforcement: See How New and Modified App-IDs Impact Your\nSecurity Policy.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n810\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 809,
+      "end": 811
+    },
+    "content_stats": {
+      "char_count": 2459,
+      "word_count": 374
+    },
+    "hierarchy": {
+      "parent": "Manage New and Modified App-IDs",
+      "children": []
+    }
+  }
+}

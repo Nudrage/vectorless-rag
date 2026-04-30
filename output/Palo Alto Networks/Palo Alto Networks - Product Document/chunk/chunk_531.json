@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_531",
+  "section_number": "1.16.2.4",
+  "header": "SSL Inbound Inspection",
+  "content": "Use SSL Inbound Inspection to decrypt and inspect inbound SSL/TLS traffic from a client to\na targeted network server (any server you have the certificate for and can import it onto the\nfirewall) and block suspicious sessions. For example, suppose a malicious actor wants to exploit a\nknown vulnerability in your web server. Inbound SSL/TLS decryption provides visibility into the\ntraffic, allowing the firewall to respond to the threat proactively.\nThe way the firewall performs SSL Inbound Inspection depends on the type of key exchange\nin use—Rivest, Shamir, Adleman (RSA) or Perfect Forward Secrecy (PFS). The Diffie-Hellman\nexchange (DHE) and Elliptic Curve Diffie-Hellman exchange (ECDHE) algorithms provide PFS.\nFor the RSA key exchange, the firewall performs SSL Inbound Inspection without terminating the\nconnection. As the encrypted session flows through the firewall, the firewall transparently makes\na copy of it and decrypts it so that the firewall can apply the appropriate policy to the traffic. In\nother words, the firewall passively observes and decrypts inbound traffic using the server’s private\nkey without being detected by the client and server.\nFor PFS key exchange algorithms (DHE or ECDHE), the firewall acts as a man-in-the-middle proxy\nbetween the external client and the internal server. Because PFS methods generate a new key\nfor every session, the firewall can’t simply copy and decrypt the inbound SSL flow as it passes\nthrough and must act as a proxy device.\nOn the firewall, you must install the certificate and private key for each server for which you want\nto perform SSL Inbound Inspection. The TLS versions and key exchange algorithms that your web\nserver support determine how you should install the server certificate on the firewall. If your web\nserver supports TLS 1.2 and PFS key exchange algorithms and your end-entity (leaf) certificate is\nsigned by intermediate certificates, we recommend uploading a certificate chain (a single file) to\nthe firewall. Uploading the chain avoids client-side server certificate authentication issues.\nTLS 1.3 removes support for the RSA key exchange algorithm.\nThe firewall handles TLS 1.3 connections differently than TLS 1.2 connections. During TLS 1.3\nhandshakes, the firewall sends the client the same certificate or certificate chain that it receives\nfrom the server. As a result, uploading the server certificate and private key to the firewall is\nsufficient if you correctly set up your web server. For example, if your server’s leaf certificate is\nsigned by intermediate certificates, the chain of certificates needs to be installed on the server to\navoid client-side server authentication issues.\nIf your web server supports only TLS 1.2 and the RSA key exchange algorithm, you can upload the\nserver certificate and private key alone because the connection is transparent. As with TLS 1.3\nconnections, the certificate or certificate chain configured on the web server is the same sent to\nthe client.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n981\n©2025 Palo Alto Networks, Inc.\nDecryption\nWhen you configure the SSL Protocol Settings Decryption Profile for SSL Inbound\nInspection traffic, create separate profiles for servers with different security capabilities.\nFor example, if one set of servers supports only RSA, the SSL Protocol Settings only need\nto support RSA. However, the SSL Protocol Settings for servers that support PFS should\nsupport PFS. Configure SSL Protocol Settings for the highest level of security that the\nserver supports, but check performance to ensure that the firewall resources can handle\nthe higher processing load that higher security protocols and algorithms require.\nWhen you configure SSL Inbound Inspection and use a PFS cipher, session resumption is\nnot supported.\nWhen you configure SSL Inbound Inspection, the proxied traffic does not support DSCP\ncode points or QoS.\nThe following figure shows how SSL Inbound Inspection works when the key exchange algorithm\nis RSA. When a PFS key exchange algorithm is in use, the firewall functions as a proxy (creates\na secure session between the client and the firewall and another secure session between the\nfirewall and the server) and generates a new session key for each session.\nTo protect an internal server, follow the steps to configure SSL Inbound Inspection policy rules.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 981,
+      "end": 982
+    },
+    "content_stats": {
+      "char_count": 4340,
+      "word_count": 678
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

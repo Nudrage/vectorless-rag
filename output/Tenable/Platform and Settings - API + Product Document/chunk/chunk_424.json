@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_424",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n401\n429\n500\nstatusCode\nerror\nmessage\nGET\n/sensors/profiles/{sensor_type}\napplication/json\nAgent Profile Response\nExpand all\nCollapse all\nCopy\nContent type\nExample\n{\n\"profiles\":\n-\n[\n,\n- {\n\"name\": \"US-1A Sensors\",\n\"description\": \"This profile targets sensors for US-1A.\",\n\"profile_uuid\": \"52cddf58-f10f-49f6-969f-d17f623171f5\",\n\"created\": \"2024-07-19T00:11:47.227483Z\",\n\"updated\": \"2024-07-19T00:11:47.227483Z\",\n\"config\":\n-\n{\n\"version\": \"11.0.0\",\n\"immediate_plugin_update\": true,\n\"update_disabled\": false,\n\"container_public_key\": \"-----BEGIN PUBLIC KEY-----\\nMIICIjANBgkqh\n\"modules\":\n-\n{\n\"com.tenable.nessus_agent\":\n-\n{\n\"enabled\": true,\n\"settings\":\n-\n[\n- {\n\"setting\": \"backend_log_level\",\n\"value\": \"normal\"\n}\n]\n},\n\"com.tenable.agent_identifier_service\":\n-\n{\n\"enabled\": true,\n\"open_agent_port\": 5050\n},\n\"com.tenable.fredi_module\":\n-\n{\n\"enabled\": true,\n\"base_inventory_freq\": 2\n},\n\"com.tenable.tua_comm_module\":\n-\n{\n\"enabled\": true\n}\n},\n\"resources\":\n-\n{\n\"cpu_limit\": 30\n}\n}\n}\n- {\n\"name\": \"Laptop sensors\",\n\"description\": \"Agents installed on laptops.\",\n\"profile_uuid\": \"5aa47f9a-bc02-404a-84d1-f54a30c5c652\",\n\"created\": \"2024-07-19T02:15:26.668164Z\",\n\"updated\": \"2024-07-19T02:15:26.668164Z\",\n,\n\"config\":\n-\n{\n\"version\": \"11.0.0\",\n\"immediate_plugin_update\": true,\n\"update_disabled\": false,\n\"container_public_key\": \"-----BEGIN PUBLIC KEY-----\\nMIICIjANBgkqh\n\"modules\":\n-\n{\n\"com.tenable.agent_identifier_service\":\n-\n{\n\"enabled\": false\n},\n\"com.tenable.fredi_module\":\n-\n{\n\"enabled\": true,\n\"base_inventory_freq\": 1\n},\n\"com.tenable.tua_comm_module\":\n-\n{\n\"enabled\": true\n}\n}\n}\n}\n,\n- {\n\"name\": \"Headquarters\",\n\"description\": \"Agents on assets at headquarters.\",\n\"profile_uuid\": \"97108036-2262-4dc2-997e-2a1d0cd9904f\",\n\"created\": \"2024-07-19T02:14:47.447461Z\",\n\"updated\": \"2024-07-19T02:14:47.447461Z\",\n\"config\":\n-\n{\n\"version\": \"10.6.4\",\n\"pluginset\": \"202407181903\",\n\"update_disabled\": false,\n\"container_public_key\": \"-----BEGIN PUBLIC KEY-----\\nMIICIjANBgkqh\n\"modules\":\n-\n{\n\"com.tenable.agent_identifier_service\":\n-\n{\n\"enabled\": false\n},\n\"com.tenable.fredi_module\":\n-\n{\n\"enabled\": true,\n\"base_inventory_freq\": 1\n},\n\"com.tenable.tua_comm_module\":\n-\n{\n\"enabled\": true\n}\n}\n}\n}\n- {\n\"name\": \"Default\",\n\"description\": \"Used for agents not assigned to a user-defined profile\n\"profile_uuid\": \"00000000-0000-0000-0000-000000000000\",\n\"created\": \"2024-07-19T02:15:38.879127Z\",\n\"updated\": \"2024-07-19T02:15:38.879136Z\",\n\"config\": { }\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 395,
+      "end": 399
+    },
+    "content_stats": {
+      "char_count": 2418,
+      "word_count": 246
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

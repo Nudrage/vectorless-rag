@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_091",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200 Returns logo details for the requested logo.\n404 Returned if the Tenable MSSP Portal cannot find the specified logo.\nRESPONSE SCHEMA:\napplication/json\nstring\nA brief message about the object that could not be found.\nlogo_uuid\nrequired\nerror\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in the Tenable MSSP Portal.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 59,
+      "end": 60
+    },
+    "content_stats": {
+      "char_count": 609,
+      "word_count": 100
+    },
+    "hierarchy": {
+      "parent": "Get logo details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

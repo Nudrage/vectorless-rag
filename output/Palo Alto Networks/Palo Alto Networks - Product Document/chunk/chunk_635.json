@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_635",
+  "section_number": "1.17.19.1",
+  "header": "Safe Search Settings for Search Providers",
+  "content": "Safe search settings differ for each search provider—review the following settings to learn more.\nSearch Provider\nSafe Search Setting Description\nGoogle/\nYouTube\nOffers safe search on individual computers or network-wide through\nGoogle’s safe search virtual IP address:\nSafe Search Enforcement for Google Searches on Individual Computers\nIn the Google Search Settings, the Filter explicit results setting enables\nsafe search functionality. When enabled, the setting is stored in a browser\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1176\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSearch Provider\nSafe Search Setting Description\ncookie as FF= and passed to the server each time the user performs a\nGoogle search.\nAppending safe=active to a Google search query URL also enables the\nstrictest safe search settings.\nSafe Search Enforcement for Google and YouTube Searches using a Virtual\nIP Address\nGoogle provides servers thatLock SafeSearch (forcesafesearch.google.com)\nsettings in every Google and YouTube search. By adding a DNS entry for\nwww.google.com and www.youtube.com (and other relevant Google\nand YouTube country subdomains) that includes a CNAME record pointing\nto forcesafesearch.google.com to your DNS server configuration,\nyou can ensure that all users on your network are using strict safe search\nsettings every time they perform a Google or YouTube search. Keep\nin mind, however, that this solution is not compatible with Safe Search\nEnforcement on the firewall. Therefore, if you are using this option to force\nsafe search on Google, the best practice is to block access to other search\nengines on the firewall by creating custom URL categories and adding them\nto the block list in the URL filtering profile.\n• PAN-OS supports safe search enforcement for YouTube\nthrough HTTP header insertion. HTTP header insertion is\nnot currently supported for HTTP/2. To enforce safe search\nfor YouTube, App-ID and HTTP/2 Inspection downgrade\nHTTP/2 connections to HTTP/1.1 using the Strip ALPN\nfeature in the appropriate decryption profile.\n• If you plan to use the Google Lock SafeSearch solution,\nconsider configuring DNS Proxy (Network > DNS Proxy) and\nsetting the inheritance source as the Layer 3 interface on\nwhich the firewall receives DNS settings from service provider\nvia DHCP. You would configure the DNS proxy with Static\nEntries for www.google.com and www.youtube.com, using the\nlocal IP address for the forcesafesearch.google.com server.\nYahoo\nOffers safe search on individual computers only. The Yahoo Search\nPreferences includes three SafeSearch settings: Strict, Moderate, or Off.\nWhen enabled, the setting is stored in a browser cookie as vm= and passed\nto the server each time the user performs a Yahoo search.\nAppending vm=r to a Yahoo search query URL also enables the strictest\nsafe search settings.\nWhen performing a search on Yahoo Japan (yahoo.co.jp)\nwhile logged into a Yahoo account, end users must also enable\nthe SafeSearch Lock option.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1177\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSearch Provider\nSafe Search Setting Description\nBing\nOffers safe search on individual computers or through their Bing in the\nClassroom program. The Bing Settings include three SafeSearch settings:\nStrict, Moderate, or Off. When enabled, the setting is stored in a browser\ncookie as adtl= and passed to the server each time the user performs a\nBing search.\nAppending adlt=strict to a Bing search query URL also enables the\nstrictest safe search settings.\nThe Bing SSL search engine does not enforce the safe search URL\nparameters and you should therefore consider blocking Bing over SSL for\nfull safe search enforcement.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1176,
+      "end": 1178
+    },
+    "content_stats": {
+      "char_count": 3679,
+      "word_count": 564
+    },
+    "hierarchy": {
+      "parent": "Safe Search Enforcement",
+      "children": []
+    }
+  }
+}

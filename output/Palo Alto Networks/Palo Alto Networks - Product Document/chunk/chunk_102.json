@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_102",
+  "section_number": "1.6.5.1.8",
+  "header": "Restrict Administrator Access to Commit and Validate Functions",
+  "content": "To restrict access to commit (and revert), save, and validate functions when creating or editing\nan Admin Role profile (Device > Admin Roles), scroll down to the Commit, Save, and Validate\noptions on the WebUI tab.\nAccess Level\nDescription\nEnable\nRead\nOnly\nDisable\nCommit\nSets the default state to enabled or\ndisabled for all of the commit and revert\nprivileges described below.\nYes\nN/A\nYes\nDevice\nWhen disabled, an administrator cannot\ncommit or revert changes that any\nadministrator made to the firewall\nconfiguration, including his or her own\nchanges.\nYes\nN/A\nYes\nCommit For\nOther Admins\nWhen disabled, an administrator cannot\ncommit or revert changes that other\nadministrators made to the firewall\nconfiguration.\nYes\nN/A\nYes\nSave\nSets the default state to enabled or\ndisabled for all of the save operation\nprivileges described below.\nYes\nN/A\nYes\nPartial save\nWhen disabled, an administrator cannot\nsave changes that any administrator made\nto the firewall configuration, including his\nor her own changes.\nYes\nN/A\nYes\nSave For Other\nAdmins\nWhen disabled, an administrator cannot\nsave changes that other administrators\nmade to the firewall configuration.\nYes\nN/A\nYes\nValidate\nWhen disabled, an administrator cannot\nvalidate a configuration.\nYes\nN/A\nYes",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 182,
+      "end": 182
+    },
+    "content_stats": {
+      "char_count": 1253,
+      "word_count": 197
+    },
+    "hierarchy": {
+      "parent": "Web Interface Access Privileges",
+      "children": []
+    }
+  }
+}

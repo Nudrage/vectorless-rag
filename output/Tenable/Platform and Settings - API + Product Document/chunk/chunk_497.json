@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_497",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the status of the asynchronous scanner task was retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nstring <uuid>\nThe unique identifier (UUID) of the container where the task took place.\nstring\nrequest_status_id\nrequired\ncontainer_uuid\ntype\nThe type of asynchronous task. For scanners, the type is always\nservice-scanner-bulk-operation .\nstring <uuid>\nThe unique identifier (UUID) for tracking the status of the asynchronous\ntask. This identifier corresponds to the request_status_id  or id\nreturned by supported endpoints.\nstring\nThe status of the asynchronous operation. The possible statuses are\ncompleted , received , processing , and aborted .\nstring\nA Unix timestamp indicating the date and time when the asynchronous\ntask was created.\nstring\nA Unix timestamp indicating the date and time when the asynchronous\ntask was modified.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 403 Returned if you do not have permission to retrieve the status of the scanner task.\n404 Returned if the specified scanner task was not found.\nRESPONSE SCHEMA:\napplication/json\nstring\nA brief message about the cause of the error.\n— 500 Returned if an internal error occurred.\nid\nstatus\ncreated\nmodified\nstatusCode\nerror\nmessage\nerror",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 505,
+      "end": 506
+    },
+    "content_stats": {
+      "char_count": 1431,
+      "word_count": 219
+    },
+    "hierarchy": {
+      "parent": "Get scanner task status",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

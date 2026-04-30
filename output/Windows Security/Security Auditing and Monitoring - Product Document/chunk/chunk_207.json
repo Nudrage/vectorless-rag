@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_207",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4953(F): Windows Firewall ignored a rule because it could not be parsed.\n\nThis event can be a sign of software issues, Windows Firewall registry errors or corruption, or Group Policy setting misconfigurations. We recommend monitoring this event and\ninvestigating the reason for the condition. Typically this event indicates configuration issues, not security issues.\n4954(S): Windows Firewall Group Policy settings have changed. The new settings have been applied.\nEvent Description:\nThis event generates every time Windows Firewall group policy is changed, locally or from Active Directory Group Policy.\nThis event generates every time local Group Policy is refreshed, even if no Windows Firewall settings were modified or\npresented.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4954</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13571</Task>\n<Opcode>0</Opcode>\n© 2016 Microsoft. All rights reserved.\n629\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-02T23:13:14.527924800Z\" />\n<EventRecordID>1049893</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"500\" ThreadID=\"2284\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n<EventData />\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 629,
+      "end": 630
+    },
+    "content_stats": {
+      "char_count": 1581,
+      "word_count": 176
+    },
+    "hierarchy": {
+      "parent": "4952(F): Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the",
+      "children": []
+    }
+  }
+}

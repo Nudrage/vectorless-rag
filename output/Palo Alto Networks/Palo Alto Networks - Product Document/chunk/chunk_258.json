@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_258",
+  "section_number": "1.11.1",
+  "header": "Use the Dashboard",
+  "content": "The Dashboard tab widgets show general firewall information, such as the software version, the\noperational status of each interface, resource utilization, and up to 10 of the most recent entries\nin the threat, configuration, and system logs. All of the available widgets are displayed by default,\nbut each administrator can remove and add individual widgets, as needed. Click the refresh icon\nto update the dashboard or an individual widget. To change the automatic refresh interval,\nselect an interval from the drop-down (1 min, 2 mins, 5 mins, or Manual). To add a widget to the\ndashboard, click the widget drop-down, select a category and then the widget name. To delete a\nwidget, click\nin the title bar. The following table describes the dashboard widgets.\nDashboard Charts\nDescriptions\nTop Applications\nDisplays the applications with the most sessions. The block size\nindicates the relative number of sessions (mouse-over the block to\nview the number), and the color indicates the security risk—from green\n(lowest) to red (highest). Click an application to view its application\nprofile.\nTop High Risk\nApplications\nSimilar to Top Applications, except that it displays the highest-risk\napplications with the most sessions.\nGeneral Information\nDisplays the firewall name, model, PAN-OS software version, the\napplication, threat, and URL filtering definition versions, the current\ndate and time, and the length of time since the last restart.\nInterface Status\nIndicates whether each interface is up (green), down (red), or in an\nunknown state (gray).\nThreat Logs\nDisplays the threat ID, application, and date and time for the last 10\nentries in the Threat log. The threat ID is a malware description or URL\nthat violates the URL filtering profile.\nConfig Logs\nDisplays the administrator username, client (Web or CLI), and date and\ntime for the last 10 entries in the Configuration log.\nData Filtering Logs\nDisplays the description and date and time for the last 60 minutes in\nthe Data Filtering log.\nURL Filtering Logs\nDisplays the description and date and time for the last 60 minutes in\nthe URL Filtering log.\nSystem Logs\nDisplays the description and date and time for the last 10 entries in the\nSystem log.\nA Config installed entry indicates configuration\nchanges were committed successfully.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n467\n©2025 Palo Alto Networks, Inc.\nMonitoring\nDashboard Charts\nDescriptions\nSystem Resources\nDisplays the Management CPU usage, Data Plane usage, and the\nSession Count, which displays the number of sessions established\nthrough the firewall.\nLogged In Admins\nDisplays the source IP address, session type (Web or CLI), and session\nstart time for each administrator who is currently logged in.\nACC Risk Factor\nDisplays the average risk factor (1 to 5) for the network traffic\nprocessed over the past week. Higher values indicate higher risk.\nHigh Availability\nIf high availability (HA) is enabled, indicates the HA status of the local\nand peer firewall—green (active), yellow (passive), or black (other). For\nmore information about HA, see High Availability.\nLocks\nShows configuration locks taken by administrators.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n468\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 467,
+      "end": 469
+    },
+    "content_stats": {
+      "char_count": 3237,
+      "word_count": 506
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_087",
+  "section_number": "1.18.36",
+  "header": "Unique Hosts Observed - Audit",
+  "content": "GET used to list information on unique hosts observed.\nURL: https://<vectra_portal_url>/api/v3.4/unique_hosts_observed/audit\nHeaders:\n“Authorization”: “Bearer <access_token>”\nResponse:\n\"count\": 21,\n\"next\":\n\"https://<vectra_portal_url>.uw2.devportal.vectra.ai/api/v3.4/unique_hosts_observed/au\ndit?page=3&page_size=6\",\n\"previous\": null,\n\"results\": [\n{\n\"host_id\": 1,\n\"host_luid\": \"test1\",\n\"ip_address\": \"1.2.3.4\",\n\"host_artifact_value\": \"test\",\n\"host_artifact_type\": \"generic\",\n\"last_seen_start\": \"2023-06-12T16:00:00Z\",\n\"last_seen_end\": \"2023-06-29T19:18:03Z\"\n},\n{\n\"host_id\": 1,\n\"host_luid\": \"test1\",\n\"ip_address\": \"1.2.3.4\",\n\"host_artifact_value\": \"test\",\n\"host_artifact_type\": \"generic\",\n\"last_seen_start\": \"2023-07-12T16:00:00Z\",\n\"last_seen_end\": \"2023-07-29T19:18:03Z\"\n},\n{\n\"host_id\": 2,\n\"host_luid\": null,\n\"ip_address\": \"4.8.8.8\",\n© July 2024 Vectra AI, Inc. | 156\n\"host_artifact_value\": \"test_2\",\n\"host_artifact_type\": \"kerberos\",\n\"last_seen_start\": \"2023-08-25T16:00:00Z\",\n\"last_seen_end\": null\n},\n{\n\"host_id\": 1,\n\"host_luid\": \"ex_luid\",\n\"ip_address\": \"3.8.8.8\",\n\"host_artifact_value\": \"test\",\n\"host_artifact_type\": \"generic\",\n\"last_seen_start\": \"2023-09-24T16:00:00Z\",\n\"last_seen_end\": null\n},\n{\n\"host_id\": 22,\n\"host_luid\": null,\n\"ip_address\": \"3.7.8.8\",\n\"host_artifact_value\": null,\n\"host_artifact_type\": null,\n\"last_seen_start\": \"2023-09-24T16:00:00Z\",\n\"last_seen_end\": null\n},\n{\n\"host_id\": 13,\n\"host_luid\": \"test22\",\n\"ip_address\": \"1.7.8.5\",\n\"host_artifact_value\": null,\n\"host_artifact_type\": null,\n\"last_seen_start\": \"2023-10-14T16:00:00Z\",\n\"last_seen_end\": null\n},\n]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 155,
+      "end": 156
+    },
+    "content_stats": {
+      "char_count": 1578,
+      "word_count": 130
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

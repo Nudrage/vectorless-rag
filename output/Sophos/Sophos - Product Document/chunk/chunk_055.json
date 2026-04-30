@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_055",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is CR_auth_log_fmt.\nSyslog field\nname\nData type\nMax\nlength\nFormat/Description\nPossible values\nNotes/Examples\ntimestamp\nTimestamp\nISO 8601\neg. timestamp=\"2018-12-\n07T10:03:48+0000\"\ndevice_name\nString\neg. device_name=\"SFW\"\ndevice_model\nString\neg. device_model=\"XG135\"\ndevice_serial_id String\neg. device_serial_id=\"C44313350024-\nP29PUA\"\nlog_id\nString\neg. log_id=\"010101600001\"\nlog_type\nString\nEvent\nEvent\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 44\nlog_component\nString\nFirewall\nAuthentication\nMy Account\nAuthentication\nDial-In\nAuthentication\nVPN Authentication\nSSL VPN\nAuthentication\nGUI\nWeb Application\nFirewall\nCTA\nAppliance\nExternal\nAuthentication\nVPN Portal\nAuthentication\nFirewall Authentication\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 45\nlog_subtype\nString\nAuthentication\nAdmin\nSystem\nAuthentication\nlog_version\nNumber\neg. log_version=1\nseverity\nString\nInformation\nNotice\nInformation\nstatus\nString\neg. status=\"Successful\"\nuser_name\nString\n384\n\"JohnDoe\"\nuser_group\nString\n1024\n\"Sales\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 46\nclient_used\nString\n32\n\"\"\nAuthentication\nAgent\nWeb Client\nSSO\nClientless\nL2TP\nIPSec\nPPTP\nCTA\nMyAccount\nThin Client\nAdmin Client\nSSLVPN\nNTLM Client\n24online\nAndroid Client\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 47\niOS Client\niOS Web Client\nSSLVPN Portal\nAndroid Web Client\nRadius SSO\nAPI Client\nWiFi SSO\nAPI iOS Client\nAPI Android Client\nWAF\neDirectory SSO\nHeartbeat\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 48\nauth_mechanism String\n128\nLocal\n\"\"\nLDAP\nAD\nRADIUS\nTACACS+\nEDIR\nAzure AD SSO\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 49\nreason\nString\n128\nLogin failed\nwrong credentials\naccess not allowed\nIP restriction\nMAC restriction\nmax login limit\nreached\nmultiple login not\nallowed\nAlready login as\nclientless user\nMaximum allowed\nusers limit reached\nLDAP account\nexpired\nClientless user is not\nrequired to login\nuser validity expired\nip lease failed\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 50\nno remote access\nVPN policy\nno access rights\nsrc_ip\n1.1.1.1\nsrc_country\nString\nISO 3166\n(A 3)\nCode\neg. src_country=\"IND\"\nmessage\nString\n1024\n\"Clientless user Nyarlathotep from 1.1.1.1\nfailed to log in to Firewall\"\nuser_full_name\nString\n384\n\"Nyarlathotep S. exited\"\nsrc_mac\nString\n32\n\"44:85:00:81:8a:8f",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 44,
+      "end": 51
+    },
+    "content_stats": {
+      "char_count": 2463,
+      "word_count": 346
+    },
+    "hierarchy": {
+      "parent": "Central Reporting Format",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_135",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturns a list of available filters for access groups. The response includes supported filter operators\nfor each filter. Filter operators can include:\neq—Filters on exact matches of the specified value.\nmatch—Filters on partial matches of the specified value.\ndate-lt —Filters on dates earlier than the specified date.\ndate-gt—Filters on dates later than the specified date.\ndate-eq—Filters on dates equal to the specified date.\nset-has—Filters on exact matches of the specified tag_uuid .\nThe response sample shown does not represent a complete list of supported filters.\nRESPONSE SCHEMA:\napplication/json\nArray of strings\nThe fields you can use as a wildcard ( wf  parameter) value in the GET\n/access-groups endpoint.\nArray of objects\nThe filters and operators for each field you can use when constructing\nfilter ( f  parameter) values in the GET /access-groups endpoint.\nwildcard_fields\nfilters\nArray of objects\nThe fields you can use when constructing sort  parameter values for\nthe GET /access-groups endpoint.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 100,
+      "end": 101
+    },
+    "content_stats": {
+      "char_count": 1146,
+      "word_count": 177
+    },
+    "hierarchy": {
+      "parent": "List access group filters",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

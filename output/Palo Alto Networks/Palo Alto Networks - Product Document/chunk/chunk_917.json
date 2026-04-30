@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_917",
+  "section_number": "1.21.21.5",
+  "header": "Control Specific ICMP or ICMPv6 Types and Codes",
+  "content": "Use this task to create a custom ICMP or ICMPv6 application and then create a security policy\nrule to allow or deny that application.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1561\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 1 |\nCreate a custom application for ICMP or ICMPv6 message types and codes.\n1.\nSelect Object > Applications and Add a custom application.\n2.\nOn the Configuration tab, enter a Name for the custom application and a Description.\nFor example, enter the name ping6.\n3.\nFor Category, select networking.\n4.\nFor Subcategory, select ip-protocol.\n5.\nFor Technology, select network-protocol.\n6.\nClick OK.\n7.\nOn the Advanced tab, select ICMP Type or ICMPv6 Type.\n8.\nFor Type, enter the number (range is 0-255) that designates the ICMP or ICMPv6\nmessage type you want to allow or deny. For example, Echo Request message (ping) is\n128.\n9.\nIf the Type includes codes, enter the Code number (range is 0-255) that applies to the\nType value you want to allow or deny. Some Type values have Code 0 only.\n10. Click OK.\nSTEP 2 |\nCreate a Security policy rule that allows or denies the custom application you created.\nCreate a Security Policy Rule. On the Application tab, specify the name of the custom\napplication you just created.\nSTEP 3 |\nCommit your changes.\nClick Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1561,
+      "end": 1562
+    },
+    "content_stats": {
+      "char_count": 1282,
+      "word_count": 221
+    },
+    "hierarchy": {
+      "parent": "Session Settings and Timeouts",
+      "children": []
+    }
+  }
+}

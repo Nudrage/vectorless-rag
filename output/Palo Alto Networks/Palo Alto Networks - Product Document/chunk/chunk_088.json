@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_088",
+  "section_number": "1.6.4.4.1",
+  "header": "Configure a Firewall Administrator Account",
+  "content": "Administrative accounts specify roles and authentication methods for firewall administrators.\nThe service that you use to assign roles and perform authentication determines whether you add\nthe accounts on the firewall, on an external server, or both (see Administrative Authentication).\nIf the authentication method relies on a local firewall database or an external service, you must\nconfigure an authentication profile before adding an administrative account (see Configure\nAdministrative Accounts and Authentication). If you already configured the authentication profile\nor you will use Local Authentication without a firewall database, perform the following steps to\nadd an administrative account on the firewall.\nCreate a separate administrative account for each person who needs access to the\nadministrative or reporting functions of the firewall. This enables you to better protect the\nfirewall from unauthorized configuration and enables logging of the actions of individual\nadministrators.\nMake sure you are following the Best Practices for Securing Administrative Access to\nensure that you are securing administrative access to your firewalls and other security\ndevices in a way that prevents successful attacks.\nSTEP 1 |\nModify the number of supported administrator accounts.\nConfigure the total number of supported concurrent administrative accounts sessions for\na firewall in the normal operational mode or in FIPS-CC mode. You can allow up to four\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n130\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nconcurrent administrative account sessions or configure the firewall to support an unlimited\nnumber of concurrent administrative account sessions.\n1.\nSelect Device > Setup > Management and edit the Authentication Settings.\n2.\nEdit the Max Session Count to specify the number of supported concurrent sessions\n(range is 0 to 4) allowed for all administrator and user accounts.\nEnter 0 to configure the firewall to support an unlimited number of administrative\naccounts.\nIn FIPS-CC mode, the range is 1 to 4 with a default value of 4.\nIn PAN-OS 10.0.4 and later releases, firewalls in FIPS-CC mode support a value\nof 0 to allow an unlimited amount of concurrent sessions.\n3.\nEdit the Max Session Time in minutes for an administrative account. Default is 720\nminutes.\n4.\nClick OK.\n5.\nCommit.\nYou can also configure the total number of supported concurrent sessions by logging\nin to the firewall CLI.\nadmin> configure\nadmin# set deviceconfig setting management admin-session\nmax-session-count <0-4>\nadmin# set deviceconfig setting management admin-session\nmax-session-time <0, 60-1499>\nadmin# commit\nSTEP 2 |\nSelect Device > Administrators and Add an account.\nSTEP 3 |\nEnter a user Name.\nIf the firewall uses a local user database to authenticate the account, enter the name that you\nspecified for the account in the database (see Add the user group to the local database.)\nSTEP 4 |\nSelect an Authentication Profile or sequence if you configured either for the administrator.\nIf the firewall uses Local Authentication without a local user database for the account, select\nNone (default) and enter a Password.\nSTEP 5 |\nSelect the Administrator Type.\nIf you configured a custom role for the user, select Role Based and select the Admin Role\nProfile. Otherwise, select Dynamic (default) and select a dynamic role. If the dynamic role\nis virtual system administrator, add one or more virtual systems that the virtual system\nadministrator is allowed to manage.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n131\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nSTEP 6 |\n(Optional) Select a Password Profile for administrators that the firewall authenticates locally\nwithout a local user database. For details, see Define a Password Profile.\nSTEP 7 |\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 130,
+      "end": 132
+    },
+    "content_stats": {
+      "char_count": 3822,
+      "word_count": 584
+    },
+    "hierarchy": {
+      "parent": "Configure Administrative Accounts and Authentication",
+      "children": []
+    }
+  }
+}

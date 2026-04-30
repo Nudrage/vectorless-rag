@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_547",
+  "section_number": "1.16.3.4",
+  "header": "Plan a Staged, Prioritized Deployment",
+  "content": "Plan to roll out decryption in a controlled manner, piece by piece. Don’t roll out your entire\ndecryption deployment at one time. Test and ensure that decryption is working as planned and\nthat users understand what you are doing and why. Rolling out decryption in this manner makes\nit easier to troubleshoot in case anything doesn’t work as expected and helps users adjust to the\nchanges.\nEducating stakeholders, employees, and other users such as contractors and partners is critical\nbecause decryption settings may change their ability to access some websites. Users should\nunderstand how to respond to situations in which previously reachable websites become\nunreachable and what information to give technical support. Support should understand what is\nbeing rolled out when and how to help users who encounter issues. Before you roll out decryption\nto the general population:\n• Identify early adopters to help champion decryption and who will be able to help other\nemployees who have questions during the full rollout. Enlist the help of department managers\nand help them understand the benefits of decrypting traffic.\n• Set up proof-of-concept (POC) trials in each department with early adopters and other\nemployees who understand why decrypting traffic is important. Educate POC participants\nabout the changes and how to contact technical support if they run into issues. In this way,\ndecryption POCs become an opportunity to work with technical support to POC how to\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1001\n©2025 Palo Alto Networks, Inc.\nDecryption\nsupport decryption and to develop the most painless method for supporting the general\nrollout. The interaction between POC users and technical support also allows you to fine-tune\npolicies and how to communicate with users.\nPOCs enable you to experiment with prioritizing what to decrypt first, so that when you phase\nin decryption in the general population, your POC experience helps you understand how to\nphase in decrypting different URL Categories. Measure the way decryption affects firewall\nCPU and memory utilization to help understand if the firewall sizing is correct or if you need to\nupgrade. POCs can also reveal applications that break decryption technically (decrypting them\nblocks their traffic) and need to be added to the Decryption Exclusion list.\nWhen you set up POCs, also set up a user group that can certify the operational readiness and\nprocedures prior to the general rollout.\n• Educate the user population before the general rollout, and plan to educate new users as they\njoin the company. This is a critical phase of deploying decryption because the deployment\nmay affect websites that users previously visited but are not safe, so those sites are no longer\nreachable. The POC experience helps identify the most important points to communicate.\n• Phase in decryption. You can accomplish this several ways. You can decrypt the highest priority\ntraffic first (for example, the URL Categories most likely to harbor malicious traffic, such as\ngaming) and then decrypt more as you gain experience. Alternatively, you can take a more\nconservative approach and decrypt the URL Categories that don’t affect your business first\n(so if something goes wrong, no issues occur that affect business), for example, news feeds.\nIn all cases, the best way to phase in decryption is to decrypt a few URL Categories, take user\nfeedback into account, run reports to ensure that decryption is working as expected, and then\ngradually decrypt a few more URL Categories and verify, and so on. Plan to make Decryption\nExclusions to exclude sites from decryption if you can’t decrypt them for technical reasons or\nbecause you choose not to decrypt them.\nIf you Enable Users to Opt Out of SSL Decryption (users see a response page that allows them\neither to opt out of decryption and end the session without going to the site or to proceed to\nthe site and agree to have the traffic decrypted), educate them about what it is, why they’re\nseeing it, and what their options are.\n• Create realistic deployment schedules that allow time to evaluate each stage of the rollout.\nPlace firewalls in positions where they can see all of the network traffic so that no\nencrypted traffic inadvertently gains access to your network because it bypasses the\nfirewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1002\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1001,
+      "end": 1003
+    },
+    "content_stats": {
+      "char_count": 4400,
+      "word_count": 711
+    },
+    "hierarchy": {
+      "parent": "Prepare to Deploy Decryption",
+      "children": []
+    }
+  }
+}

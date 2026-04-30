@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_846",
+  "section_number": "1.21.15.6.3",
+  "header": "Enable Bi-Directional Address Translation for Your Public-Facing Servers (Static Source NAT)",
+  "content": "Source NAT)\nWhen your public-facing servers have private IP addresses assigned on the network segment\nwhere they are physically located, you need a source NAT rule to translate the source address\nof the server to the external address upon egress. You create a static NAT rule to translate the\ninternal source address, 10.1.1.11, to the external web server address, 203.0.113.11 in our\nexample.\nHowever, a public-facing server must be able to both send and receive packets. You need\na reciprocal policy that translates the public address (the destination IP address in incoming\npackets from Internet users) into the private address so that the firewall can route the packet\nto your DMZ network. You create a bi-directional static NAT rule, as described in the following\nprocedure. Bi-directional translation is an option for static NAT only.\nSTEP 1 |\nCreate an address object for the web server’s internal IP address.\n1.\nSelect Objects > Addresses and Add a Name and optional Description for the object.\n2.\nSelect IP Netmask from the Type list and enter the IP address of the web server on the\nDMZ network, 10.1.1.11 in this example.\n3.\nClick OK.\nIf you did not already create an address object for the public address of your\nweb server, you should create that object now.\nSTEP 2 |\nCreate the NAT policy.\n1.\nSelect Policies > NAT and click Add.\n2.\nOn the General tab, enter a descriptive Name for the NAT rule.\n3.\nOn the Original Packet tab, select the zone you created for your DMZ in the Source\nZone section (click Add and then select the zone) and the zone you created for the\nexternal network from the Destination Zone list.\n4.\nIn the Source Address section, Add the address object you created for your internal web\nserver address.\n5.\nOn the Translated Packet tab, select Static IP from the Translation Type list in the\nSource Address Translation section and then select the address object you created for\nyour external web server address from the Translated Address list.\n6.\nIn the Bi-directional field, select Yes.\n7.\nClick OK.\nSTEP 3 |\nCommit.\nClick Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1494\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1494,
+      "end": 1495
+    },
+    "content_stats": {
+      "char_count": 2151,
+      "word_count": 367
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

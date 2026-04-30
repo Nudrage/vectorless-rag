@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_985",
+  "section_number": "1.22.16.2",
+  "header": "Use XFF IP Address Values in Security Policy and Logging",
+  "content": "You can configure the firewall to use the source IP address in the X-Forwarded-For (XFF) HTTP\nheader field to enforce security policy. When a packet passes through a single proxy server before\nreaching the firewall, the XFF field contains the IP address of the originating endpoint. However,\nif the packet passes through multiple upstream devices, the firewall uses the most recently added\nIP address to enforce policy or use other features that rely on IP information.\n• Use XFF Values in Policy\n• Display XFF Values in Logs\n• Display XFF Values in Reports\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1678\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1678,
+      "end": 1679
+    },
+    "content_stats": {
+      "char_count": 641,
+      "word_count": 106
+    },
+    "hierarchy": {
+      "parent": "Enforce Policy on Endpoints and Users Behind an Upstream Device",
+      "children": [
+        "Use XFF Values in Policy",
+        "Display XFF Values in Logs",
+        "Display XFF Values in Reports"
+      ]
+    }
+  }
+}

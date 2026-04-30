@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_463",
+  "section_number": "1.13.8",
+  "header": "Applications with Implicit Support",
+  "content": "When creating a policy to allow specific applications, you must also be sure that you are allowing\nany other applications on which the application depends. In many cases, you do not have to\nexplicitly allow access to the dependent applications for the traffic to flow because the firewall is\nable to determine the dependencies and allow them implicitly. This implicit support also applies to\ncustom applications that are based on HTTP, SSL, MS-RPC, or RTSP. Applications for which the\nfirewall cannot determine dependent applications on time will require that you explicitly allow the\ndependent applications when defining your policies. You can determine application dependencies\nfrom within your application-based security policy workflow using one of the following:\n• Policy Optimizer\n• Create an Application Filter Using Tags\n• Create an Application Filter Based on Custom Tags\n• Resolve Application Dependencies\nApplipedia is also available if needed.\nThe following table lists the applications for which the firewall has implicit support (as of Content\nUpdate 595).\nApplication\nImplicitly Supports\n360-safeguard-update\nhttp\napple-update\nhttp\napt-get\nhttp\nas2\nhttp\navg-update\nhttp\navira-antivir-update\nhttp, ssl\nblokus\nrtmp\nbugzilla\nhttp\nclubcooee\nhttp\ncorba\nhttp\ncubby\nhttp, ssl\ndropbox\nssl\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n825\n©2025 Palo Alto Networks, Inc.\nApp-ID\nApplication\nImplicitly Supports\nesignal\nhttp\nevernote\nhttp, ssl\nezhelp\nhttp\nfacebook\nhttp, ssl\nfacebook-chat\njabber\nfacebook-social-plugin\nhttp\nfastviewer\nhttp, ssl\nforticlient-update\nhttp\ngood-for-enterprise\nhttp, ssl\ngoogle-cloud-print\nhttp, ssl, jabber\ngoogle-desktop\nhttp\ngoogle-talk\njabber\ngoogle-update\nhttp\ngotomypc-desktop-sharing\ncitrix-jedi\ngotomypc-file-transfer\ncitrix-jedi\ngotomypc-printing\ncitrix-jedi\nhipchat\nhttp\niheartradio\nssl, http, rtmp\ninfront\nhttp\ninstagram\nhttp, ssl\nissuu\nhttp, ssl\njava-update\nhttp\njepptech-updates\nhttp\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n826\n©2025 Palo Alto Networks, Inc.\nApp-ID\nApplication\nImplicitly Supports\nkerberos\nrpc\nkik\nhttp, ssl\nlastpass\nhttp, ssl\nlogmein\nhttp, ssl\nmcafee-update\nhttp\nmegaupload\nhttp\nmetatrader\nhttp\nmocha-rdp\nt_120\nmount\nrpc\nms-frs\nmsrpc\nms-rdp\nt_120\nms-scheduler\nmsrpc\nms-service-controller\nmsrpc\nnfs\nrpc\noovoo\nhttp, ssl\npaloalto-updates\nssl\npanos-global-protect\nhttp\npanos-web-interface\nhttp\npastebin\nhttp\npastebin-posting\nhttp\npinterest\nhttp, ssl\nportmapper\nrpc\nprezi\nhttp, ssl\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n827\n©2025 Palo Alto Networks, Inc.\nApp-ID\nApplication\nImplicitly Supports\nrdp2tcp\nt_120\nrenren-im\njabber\nroboform\nhttp, ssl\nsalesforce\nhttp\nstumbleupon\nhttp\nsupremo\nhttp\nsymantec-av-update\nhttp\ntrendmicro\nhttp\ntrillian\nhttp, ssl\ntwitter\nhttp\nwhatsapp\nhttp, ssl\nxm-radio\nrtsp\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n828\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 825,
+      "end": 829
+    },
+    "content_stats": {
+      "char_count": 2834,
+      "word_count": 384
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": []
+    }
+  }
+}

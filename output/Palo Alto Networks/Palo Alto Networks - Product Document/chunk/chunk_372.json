@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_372",
+  "section_number": "1.11.15.6.5",
+  "header": "ENTITY-SENSOR-MIB",
+  "content": "ENTITY-SENSOR-MIB adds support for physical sensors of networking equipment beyond what\nENTITY-MIB defines. Use this MIB in tandem with the ENTITY-MIB to monitor the operational\nstatus of the physical components of a system (for example, fans and temperature sensors). For\nexample, to troubleshoot issues that might result from environmental conditions, you can map\nthe entity indexes from the ENTITY-MIB (entPhysicalDescr object) to operational status values\n(entPhysSensorOperStatus object) in the ENTITY-SENSOR-MIB. In the following example, all the\nfans and temperature sensors for a PA-3020 firewall are working:\nThe same OID might refer to different sensors on different platforms. Use the ENTITY-MIB\nfor the targeted platform to match the value to the description.\nPalo Alto Networks firewalls, Panorama, and WF-500 appliances support only portions of the\nentPhySensorTable group. The supported portions vary by platform and include only thermal\n(temperature in Celsius) and fan (in RPM) sensors.\nRFC 3433 defines the ENTITY-SENSOR-MIB.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 667,
+      "end": 667
+    },
+    "content_stats": {
+      "char_count": 1043,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Supported MIBs",
+      "children": []
+    }
+  }
+}

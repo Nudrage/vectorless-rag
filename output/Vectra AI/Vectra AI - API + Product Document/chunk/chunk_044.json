@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_044",
+  "section_number": "1.18.31",
+  "header": "Threat Feeds",
+  "content": "API responses may vary depending on product subscriptions (Network, AWS, M365).\nThe threat feeds API can be used to automate the upload of STIX files for threat intelligence matching.\nThe API endpoint can also be used to retrieve the current list of threat feed objects already configured in\nthe system.\nTo obtain the list of threat feeds (GET) or to create a new threat Feed (POST) use the following URL:\nhttps://<vectra_management_ip>/api/v3.4/threatFeeds\nTo obtain details of any threat feed (GET), add a file to a threat feed (POST), update a threat feed\n(PATCH), or delete a threat feed (DELETE) use the following URL:\nhttps://<vectra_management_ip>/api/v3.4/threatFeeds/<id>\nTo download a threat feed file (GET) or delete a threat feed file (DELETE), use the following URL:\nhttps://<vectra_management_ip>/api/v3.4/threatFeeds/<id>/file\nwhere <id> is the id of the threat feed.\nFile Upload Specifications\nThere is a hard limit for file upload sizes of 5 MB at this time. If you receive a “413 Payload Too Large”\nerror while uploading a file via POST /api/v3.4/threatFeeds/<id>, the file you are attempting to\nupload is too large. There is no limit on the amount of threatFeeds files you can upload, so we\nrecommend splitting apart your STIX file into smaller parts and uploading each as its own threat feed so\nthat each file is below the 5MB limit.\nThe following table lists the fields and a description of the various elements for the “threatFeeds”.\nDetailed examples of using GET, POST on threatFeeds is described in Appendix A\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nname\nThe name of the threat\nfeed\nstring\nid\nThe ID of the threat feed string\n© July 2024 Vectra AI, Inc. | 68\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\n_rev\nThe revision ID of the\nthreat feed\nstring\nlastUpdatedBy\nThe user who updated\nthe threat feed\nstring\nversion\nVersion of the threat\nfeed\nstring\nuploadDate\nTimestamp the threat\nfeed was created\nstring\nISO8601\nlastUpdated\nTimestamp the threat\nfeed was last updated\nstring\nISO8601\nuploadResults\nDictionary describing file\nuploaded\nobject\nIncludes indicatorType, expiration,\nobservableCount, certainty,\ncategory\ndefaults\nDictionary describing\nthreat feed default\nvalues\nobject\nIncludes indicatorType, category,\ncertainty, duration\ntype\nThreat Feed type\nstring\nThe available query parameters to filter for Threat Feeds are listed below.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\ncategory\nstring\ncertainty\nstring\nexpiration\nstring\nISO8601\nlastUpdated\nstring\nISO8601\nlastUpdatedBy\nstring\nname\nstring\nordering\nstring\npage\ninteger\npage_size\ninteger\nLimit number of threat feeds returned",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 67,
+      "end": 68
+    },
+    "content_stats": {
+      "char_count": 2577,
+      "word_count": 393
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

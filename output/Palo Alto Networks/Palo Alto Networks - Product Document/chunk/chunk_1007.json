@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1007",
+  "section_number": "1.23.2.1",
+  "header": "Inter-VSYS Traffic That Must Leave the Firewall",
+  "content": "An ISP that has multiple customers on a firewall (known as multi-tenancy) can use a virtual system\nfor each customer, and thereby give each customer control over its virtual system configuration.\nThe ISP grants vsysadmin permission to customers. Each customer’s traffic and management are\nisolated from the others. Each virtual system must be configured with its own IP address and one\nor more virtual routers in order to manage traffic and its own connection to the Internet.\nIf the virtual systems need to communicate with each other, that traffic goes out the firewall to\nanother Layer 3 routing device and back to the firewall, even though the virtual systems exist on\nthe same physical firewall, as shown in the following figure.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1704\n©2025 Palo Alto Networks, Inc.\nVirtual Systems",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1704,
+      "end": 1705
+    },
+    "content_stats": {
+      "char_count": 827,
+      "word_count": 134
+    },
+    "hierarchy": {
+      "parent": "Communication Between Virtual Systems",
+      "children": []
+    }
+  }
+}

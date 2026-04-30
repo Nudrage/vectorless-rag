@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_120",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n429\nPOST\n/access-groups\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"name\": \"string\",\n\"all_assets\": true,\n\"all_users\": true,\n\"rules\":\n-\n[\n- {\n\"type\": \"string\",\n\"operator\": \"string\",\n\"terms\":\n-\n[\n\"string\"\n]\n}\n],\n\"principals\":\n-\n[\n- {\n\"type\": \"string\",\n\"principal_id\": \"string\",\n\"principal_name\": \"string\"\n}\n]\n}\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\nContent type\n{\n\"container_uuid\": \"c568aa2d-8e09-44f2-96fd-f669832ab34b\",\n\"created_at\": \"2018-11-31T18:17:04.827Z\",\n\"updated_at\": \"2018-12-31T18:17:04.827Z\",\n\"id\": \"89b7cfad-c783-4d34-90a7-5372be71c234\",\n\"name\": \"Headquarters\",\n\"all_assets\": false,\n\"all_users\": false,\n\"status\": \"COMPLETED\",\n\"rules\":\n-\n[\n,\n- {\n\"type\": \"aws_account\",\n\"operator\": \"eq\",\n\"terms\":\n-\n[\n\"123456789012\"\n]\n}\n,\n- {\n\"type\": \"fqdn\",\n\"operator\": \"eq\",\n\"terms\":\n-\n[\n\"www.example.com\"\n]\n}\n- {\n\"type\": \"ipv4\",\n\"operator\": \"eq\",\n\"terms\":\n-\n[\n\"192.0.2.57\"\n]\n}\n],\n\"created_by_uuid\": \"01403792-01c1-452d-a6f5-1352a327e9d9\",\n\"updated_by_uuid\": \"01403792-01c1-452d-a6f5-1352a327e9d9\",\n\"updated_by_name\": \"user3@example.com\",\n\"created_by_name\": \"user3@example.com\",\n\"processing_percent_complete\": 100\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 82,
+      "end": 83
+    },
+    "content_stats": {
+      "char_count": 1140,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

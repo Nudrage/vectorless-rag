@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_062",
+  "section_number": "1.5.4",
+  "header": "Applications and Threats Content Updates",
+  "content": "Applications and Threats content updates deliver the very latest application and threat signatures\nto the firewall. The applications portion of the package includes new and modified App-IDs\nand does not require a license. The full Applications and Threats content package, which also\nincludes new and modified threat signatures, requires a Threat Prevention license. As the firewall\nautomatically retrieves and installs the latest application and threat signatures (based on your\ncustom settings), it starts enforcing security policy based on the latest App-IDs and threat\nprotection without any additional configuration.\nNew and modified threat signatures and modified App-IDs are released at least weekly and, often,\nmore frequently. New App-IDs are released on the third Tuesday of every month.\nIn rare cases, publication of the update that contains new App-IDs may be delayed one or\ntwo days.\nBecause new App-IDs can change how the security policy enforces traffic, this more limited\nrelease of new App-IDs is intended to provide you with a predictable window in which you can\nprepare and update your security policy. Additionally, content updates are cumulative; this means\nthat the latest content update always includes the application and threat signatures released in\nprevious versions.\nBecause application and threat signatures are delivered in a single package—the same decoders\nthat enable application signatures to identify applications also enable threat signatures to inspect\ntraffic—you need to consider whether you want to deploy the signatures together or separately.\nHow you choose to deploy content updates depends on your organization’s network security and\napplication availability requirements. As a starting point, identify your organization as having one\nof the following postures (or perhaps both, depending on firewall location):\n• An organization with a security-first posture prioritizes protection using the latest threat\nsignatures over application availability. You’re primarily using the firewall for its threat\nprevention capabilities. Any changes to App-ID that impact how security policy enforces\napplication traffic is secondary.\n• A mission-critical network prioritizes application availability over protection using the latest\nthreat signatures. Your network has zero tolerance for downtime. The firewall is deployed\ninline to enforce security policy and if you’re using App-ID in security policy, any change a\ncontent releases introduces that affects App-ID could cause downtime.\nYou can take a mission-critical or security-first approach to deploying content updates, or you\ncan apply a mix of both approaches to meet the needs of the business. Review and consider Best\nPractices for Applications and Threats Content Updates to decide how you want to implement\napplication and threat updates. Then:\nDeploy Applications and Threats Content Updates.\nFollow our Tips for Content Updates.\nWhile scheduling content updates is a one-time or infrequent task, after you’ve set the\nschedule, you’ll need to continue to Manage New and Modified App-IDs that are\nincluded in content releases, as these App-IDs can change how security policy is enforced.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n93\n©2025 Palo Alto Networks, Inc.\nSoftware and Content Updates",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 93,
+      "end": 94
+    },
+    "content_stats": {
+      "char_count": 3285,
+      "word_count": 482
+    },
+    "hierarchy": {
+      "parent": "Software and Content Updates",
+      "children": [
+        "Deploy Applications and Threats Content Updates",
+        "Tips for Content Updates"
+      ]
+    }
+  }
+}

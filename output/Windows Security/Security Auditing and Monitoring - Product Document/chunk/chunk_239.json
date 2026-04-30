@@ -1,0 +1,46 @@
+{
+  "chunk_id": "chunk_239",
+  "section_number": "11.3",
+  "header": "5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the",
+  "content": "current policy.\nEvent Description:\nThis error indicates one of two situations, low memory resources or Windows Firewall group policy registry corruption.\nTypically if this event occurs it indicates that Windows Firewall service was not able to start.\nIt typically occurs with “5028(S): The Windows Firewall Service was unable to parse the new security policy. The service will\ncontinue with currently enforced policy.”\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>5027</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12292</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8010000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-13T23:10:05.318922900Z\" />\n<EventRecordID>1101848</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"500\" ThreadID=\"2000\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"ErrorCode\">2147942413</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nError Code [Type = UInt32]: unique error code. For information about error codes meanings for this event use https://technet.microsoft.com/ or other informational resources.\n© 2016 Microsoft. All rights reserved.\n678",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 678,
+      "end": 679
+    },
+    "content_stats": {
+      "char_count": 1508,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "System",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

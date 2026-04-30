@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_612",
+  "section_number": "1.17.8",
+  "header": "Activate The Advanced URL Filtering Subscription",
+  "content": "Palo Alto Networks URL filtering solution, the Advanced URL Filtering subscription, provides\nreal time URL analysis and malware prevention. In addition to PAN-DB access, the Palo Alto\nNetworks-developed URL filtering database for high-performance URL lookups, it also offers\ncoverage against malicious URLs and IP addresses. This multi-layered protection solution is\nconfigured through your URL filtering profile.\nSTEP 1 |\nObtain and install an Advanced URL filtering license and confirm that it is installed.\nThe Advanced URL Filtering license includes access to PAN-DB; if the license expires,\nthe firewall ceases to perform all URL filtering functions, URL category enforcement,\nand URL cloud lookups. Additionally, all other cloud based updates will not function\nuntil you install a valid license.\n1.\nSelect Device > Licenses and, in the License Management section, select the license\ninstallation method:\n• Retrieve license keys from license server\n• Activate feature using authorization code\n2.\nAfter installing the license, confirm that the Advanced URL Filtering section, Date\nExpires field, displays a valid date.\nWhen you activate the advanced URL filtering license, your license entitlements\nfor PAN-DB and advanced URL filtering might not display correctly on the\nfirewall — this is a display anomaly, not a licensing issue, and does not affect\naccess to the services. You can update the licenses on the firewall to rectify\nthe display issue by using the following CLI command: request license\nfetch.\nSTEP 2 |\nDownload and install the latest PAN-OS content release. PAN-OS Applications and Threats\ncontent release 8390-6607 and later allows firewalls operating PAN-OS 9.x and later to\nidentify URLs that have been categorized using the new real-time-detection category,\nidentifying URLs classified by advanced URL filtering. For more information about the\nupdate, refer to the Applications and Threat Content Release Notes. You can also review\nContent Release Notes for apps and threats on the Palo Alto Networks Support Portal\nor directly in the firewall web interface: select Device > Dynamic Updates and open the\nRelease Note for a specific content release version.\nFollow the Best Practices for Applications and Threats Content Updates when\nupdating to the latest content release version.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1130\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 3 |\nSchedule the firewall to download dynamic updates for Applications and Threats.\nA Threat Prevention license is required to receive content updates, which covers\nAntivirus and Applications and Threats.\n1.\nSelect Device > Dynamic Updates.\n2.\nIn the Schedule field in the Applications and Threats section, click the None link to\nschedule periodic updates.\nYou can only schedule dynamic updates if the firewall has direct Internet access.\nIf updates are already scheduled in a section, the link text displays the schedule\nsettings.\nThe Applications and Threats updates sometimes contain updates for URL filtering\nrelated to Safe Search Enforcement.\nNext Steps:\n1. Configure a URL filtering profile to define your organization’s web usage policies.\n2. Verify Advanced URL Filtering\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1131\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1130,
+      "end": 1132
+    },
+    "content_stats": {
+      "char_count": 3272,
+      "word_count": 495
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": []
+    }
+  }
+}

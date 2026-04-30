@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_055",
+  "section_number": "23.1",
+  "header": "Responses",
+  "content": "200 Returned if the status of the specified export request was retrieved successfully.\nexport_id\nrequired\nContent type\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n401 Returned if the API keys specified in your request are invalid.\n— 403 Returned if you do not have permission to view the export status.\n404 Returned if Tenable One could not find the specified export request.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 146,
+      "end": 147
+    },
+    "content_stats": {
+      "char_count": 773,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Get export status",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

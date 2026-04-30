@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_038",
+  "section_number": "1.3.3.1",
+  "header": "Network Segmentation for a Reduced Attack Surface",
+  "content": "The following diagram shows a very basic example of Network Segmentation Using Zones. The\nmore granular you make your zones (and the corresponding security policy rules that allows traffic\nbetween zones), the more you reduce the attack surface on your network. This is because traffic\ncan flow freely within a zone (intra-zone traffic), but traffic cannot flow between zones (inter-\nzone traffic) until you define a Security policy rule that allows it. Additionally, an interface cannot\nprocess traffic until you have assigned it to a zone. Therefore, by segmenting your network into\ngranular zones you have more control over access to sensitive applications or data and you can\nprevent malicious traffic from establishing a communication channel within your network, thereby\nreducing the likelihood of a successful attack on your network.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n48\n©2025 Palo Alto Networks, Inc.\nGetting Started",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 48,
+      "end": 49
+    },
+    "content_stats": {
+      "char_count": 930,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Segment Your Network Using Interfaces and Zones",
+      "children": []
+    }
+  }
+}

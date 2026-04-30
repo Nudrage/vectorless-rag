@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_923",
+  "section_number": "1.21.21.8.2",
+  "header": "Change the Session Distribution Policy and View Statistics",
+  "content": "The following table describes how to view and change the active Session Distribution Policies and\ndescribes how to view session statistics for each dataplane processor (DP) in the firewall.\nTask\nCommand\nShow the active\nsession distribution\npolicy.\nUse the show session distribution policy command to\nview the active session distribution policy.\nThe following output is from a PA-7080 firewall with four NPCs\ninstalled in slots 2, 10, 11, and 12 with the ingress-slot distribution\npolicy enabled:\n> show session distribution policy\nOwnership Distribution Policy: ingress-slot\nFlow Enabled Line Cards: [2, 10, 11, 12]Packet Pr\nocessing Enabled Line Cards: [2, 10, 11, 12]\nChange the active\nsession distribution\npolicy.\nUse the set session distribution-policy <policy>\ncommand to change the active session distribution policy.\nFor example, to select the session-load policy, enter the following\ncommand:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1571\n©2025 Palo Alto Networks, Inc.\nNetworking\nTask\nCommand\n> set session distribution-policy session-load\nView session\ndistribution statistics.\nUse the show session distribution statistics command\nto view the dataplane processors (DPs) on the firewall and the\nnumber of sessions on each active DP.\nThe following output is from a PA-7080 firewall:\n> show session distribution statistics\nDP     Active    Dispatched Dispatched/sec\n------------------------------------------\ns1dp0    78698    7829818   1473\ns1dp1    78775    7831384   1535\ns3dp0    7796     736639    1488\ns3dp1    7707     737026    1442\nThe DP Active column lists each dataplane on the installed\nNPCs. The first two characters indicate the slot number and the\nlast three characters indicate the dataplane number. For example,\ns1dp0 indicates dataplane 0 on the NPC in slot 1 and s1dp1 indicates\ndataplane 1 on the NPC in slot1.\nThe Dispatched column shows the total number of sessions that\nthe dataplane processed since the last time the firewall rebooted.\nThe Dispatched/sec column indicates the dispatch rate. If you\nadd the numbers in the Dispatched column, the total equals the\nnumber of active sessions on the firewall. You can also view the total\nnumber of active sessions by running the show session info\nCLI command.\nThe PA-5200 Series firewall output will look similar, except\nthat the number of DPs depends on the model and there is\nonly one NPC slot (s1).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1571,
+      "end": 1572
+    },
+    "content_stats": {
+      "char_count": 2376,
+      "word_count": 356
+    },
+    "hierarchy": {
+      "parent": "Session Distribution Policies",
+      "children": []
+    }
+  }
+}

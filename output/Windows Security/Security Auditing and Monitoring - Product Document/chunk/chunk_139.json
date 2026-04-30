@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_139",
+  "section_number": "8.6",
+  "header": "Audit Filtering Platform Connection",
+  "content": "Audit Filtering Platform Connection determines whether the operating system generates audit events when connections are allowed or blocked by the Windows Filtering Platform.\nWindows Filtering Platform (WFP) enables independent software vendors (ISVs) to filter and modify TCP/IP packets, monitor or authorize connections, filter Internet Protocol security\n(IPsec)-protected traffic, and filter remote procedure calls (RPCs).\nThis subcategory contains Windows Filtering Platform events about blocked and allowed connections, blocked and allowed port bindings, blocked and allowed port listening actions, and\nblocked to accept incoming connections applications.\nEvent volume: High.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nNo\nYes\nIF\nYes\nSuccess auditing for this subcategory typically generates a very high volume of events, for example, one event\nfor every connection that was made to the system. It is much more important to audit Failure events (blocked\nconnections, for example). For recommendations for using and analyzing the collected information, see the\nSecurity Monitoring Recommendations sections.\nIF - Enable Success audit in case you need to monitor successful outbound or inbound connections to and from\nuntrusted IP addresses on high value computers or devices.\nMember Server\nNo\nYes\nIF\nYes\nSuccess auditing for this subcategory typically generates a very high volume of events, for example, one event\nfor every connection that was made to the system. It is much more important to audit Failure events (blocked\nconnections, for example). For recommendations for using and analyzing the collected information, see the\nSecurity Monitoring Recommendations sections.\nIF - Enable Success audit in case you need to monitor successful outbound or inbound connections to and from\nuntrusted IP addresses on high value computers or devices.\nWorkstation\nNo\nYes\nIF\nYes\nSuccess auditing for this subcategory typically generates a very high volume of events, for example, one event\nfor every connection that was made to the system. It is much more important to audit Failure events (blocked\nconnections, for example). For recommendations for using and analyzing the collected information, see the\nSecurity Monitoring Recommendations sections.\nIF - Enable Success audit in case you need to monitor successful outbound or inbound connections to and from\nuntrusted IP addresses on high value computers or devices.\nEvents List:\n\n5031\n(F): The Windows Firewall Service blocked an application from accepting incoming connections on the network.\n\n5150\n(-): The Windows Filtering Platform blocked a packet.\n\n5151\n(-): A more restrictive Windows Filtering Platform filter has blocked a packet.\n\n5154\n(S): The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.\n\n5155\n(F): The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.\n\n5156\n(S): The Windows Filtering Platform has permitted a connection.\n\n5157\n(F): The Windows Filtering Platform has blocked a connection.\n© 2016 Microsoft. All rights reserved.\n416\n\n5158\n(S): The Windows Filtering Platform has permitted a bind to a local port.\n\n5159\n(F): The Windows Filtering Platform has blocked a bind to a local port.\n5031(F): The Windows Firewall Service blocked an application from accepting incoming connections on the network.\nEvent Description:\nThis event generates when an application was blocked from accepting incoming connections on the network by Windows\nFiltering Platform.\nIf you don’t have any firewall rules (Allow or Deny) in Windows Firewall for specific applications, you will get this event from\nWindows Filtering Platform layer, because by default this layer is denying any incoming connections.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>5031</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12810</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8010000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-09-22T03:46:36.634473000Z\" />\n<EventRecordID>304373</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"516\" ThreadID=\"2976\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"Profiles\">Domain</Data>\n<Data Name=\"Application\">C:\\documents\\listener.exe</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\n© 2016 Microsoft. All rights reserved.\n417\nField Descriptions:\n\nProfiles [Type = UnicodeString]: network profile using which application was blocked. Possible values:\no\nDomain\no\nPublic\no\nPrivate\n\nApplication [Type = UnicodeString]: full path and file name of executable file for blocked application.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 416,
+      "end": 418
+    },
+    "content_stats": {
+      "char_count": 5042,
+      "word_count": 685
+    },
+    "hierarchy": {
+      "parent": "Object Access",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_211",
+  "section_number": "1.9.16.2.2",
+  "header": "Refresh the Master Key Encryption",
+  "content": "As a best practice, periodically refresh the master key encryption by rotating the wrapping key\nthat encrypts it. The frequency of the rotation depends on your application. The wrapping key\nresides on your HSM. The following command is the same for SafeNet Network and nCipher\nnShield Connect HSMs.\nSTEP 1 |\nLog in to the firewall CLI.\nSTEP 2 |\nUse the following CLI command to rotate the wrapping key for the master key on an HSM:\n> request hsm mkey-wrapping-key-rotation\nIf the master key is encrypted on the HSM, the CLI command will generate a new wrapping\nkey on the HSM and encrypt the master key with the new wrapping key.\nIf the master key is not encrypted on the HSM, the CLI command will generate new wrapping\nkey on the HSM for future use.\nThe old wrapping key is not deleted by this command.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 376,
+      "end": 376
+    },
+    "content_stats": {
+      "char_count": 803,
+      "word_count": 146
+    },
+    "hierarchy": {
+      "parent": "Encrypt a Master Key Using an HSM",
+      "children": []
+    }
+  }
+}

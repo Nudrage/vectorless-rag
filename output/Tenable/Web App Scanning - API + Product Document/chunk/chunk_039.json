@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_039",
+  "section_number": "54.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Web App Scanning successfully queued a WAS findings export request.\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 403 Returned if you do not have permission to export WAS findings.\n409\nReturned if your request was a duplicate of an ongoing export that was already submitted. Tenable\nWeb App Scanning prevents duplicate exports from running concurrently. For example, export requests\nwith the same filters.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting and Concurrency Limiting.\nnum_assets\ninclude_unlicensed\nfilters",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 62,
+      "end": 62
+    },
+    "content_stats": {
+      "char_count": 680,
+      "word_count": 106
+    },
+    "hierarchy": {
+      "parent": "Export findings",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

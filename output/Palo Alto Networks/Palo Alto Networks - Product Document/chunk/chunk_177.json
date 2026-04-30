@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_177",
+  "section_number": "1.9.5.1",
+  "header": "Configure an OCSP Responder",
+  "content": "To use Online Certificate Status Protocol (OCSP) for verifying the revocation status of certificates,\nyou must configure the firewall to access an OCSP responder (server). The entity that manages\nthe OCSP responder can be a third-party certificate authority (CA). If your enterprise has its own\npublic key infrastructure (PKI), you can use external OCSP responders or you can configure the\nfirewall itself as an OCSP responder. For details on OCSP, see Certificate Revocation.\nSTEP 1 |\nDefine an external OCSP responder or configure the firewall itself as an OCSP responder.\n1.\nSelect Device > Certificate Management > OCSP Responder and click Add.\n2.\nEnter a Name to identify the responder (up to 31 characters). The name is case-sensitive.\nIt must be unique and use only letters, numbers, spaces, hyphens, and underscores.\n3.\nIf the firewall has more than one virtual system (vsys), select a Location (vsys or Shared)\nfor the certificate.\n4.\nIn the Host Name field, enter the host name (recommended) or IP address of the\nOCSP responder. You can enter an IPv4 or IPv6 address. From this value, PAN-OS\nautomatically derives a URL and adds it to the certificate being verified.\nIf you configure the firewall itself as an OCSP responder, the host name must resolve to\nan IP address in the interface that the firewall uses for OCSP services.\n5.\nClick OK.\nSTEP 2 |\nIf you want the firewall to use the management interface for the OCSP responder interface,\nenable OCSP communication on the firewall. Otherwise, continue to the next step to\nconfigure an alternate interface.\n1.\nSelect Device > Setup > Management.\n2.\nIn the Management Interface Settings section, edit to select the HTTP OCSP check box,\nthen click OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n322\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 3 |\nTo use an alternate interface as the OCSP responder interface, add an Interface\nManagement Profile to the interface used for OCSP services.\n1.\nSelect Network > Network Profiles > Interface Mgmt.\n2.\nClick Add to create a new profile or click the name of an existing profile.\n3.\nSelect the HTTP OCSP check box and click OK.\n4.\nSelect Network > Interfaces and click the name of the interface that the firewall will\nuse for OCSP services. The OCSP Host Name specified in Step 1 must resolve to an IP\naddress in this interface.\n5.\nSelect Advanced > Other info and select the Interface Management Profile you\nconfigured.\n6.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 322,
+      "end": 323
+    },
+    "content_stats": {
+      "char_count": 2458,
+      "word_count": 414
+    },
+    "hierarchy": {
+      "parent": "Set Up Verification for Certificate Revocation Status",
+      "children": []
+    }
+  }
+}

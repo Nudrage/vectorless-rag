@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_951",
+  "section_number": "1.22.9.1",
+  "header": "Create and Apply Tags",
+  "content": "Use tags to identify the purpose of a rule or configuration object and to help you better organize\nyour rulebase. To ensure that policy rules are properly tagged, see how to Enforce Policy Rule\nDescription, Tag, and Audit Comment. Additionally, you can View Rules by Tag Group by first\ncreating and then setting the tag as the Group tag.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1626\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 1 |\nCreate tags.\nTo tag a zone, you must create a tag with the same name as the zone. When the zone\nis attached in policy rules, the tag color automatically displays as the background color\nagainst the zone name.\n1.\nSelect Objects > Tags.\n2.\nOn Panorama or a multiple virtual system firewall, select the Device Group or the Virtual\nSystem to make the tag available.\n3.\nAdd a tag and enter a Name to identify the tag or select a zone Name to create a tag for\na zone. The maximum length is 127 characters.\n4.\n(Optional) Select Shared to create the object in a shared location for access as a shared\nobject in Panorama or for use across all virtual systems in a multiple virtual system\nfirewall.\n5.\n(Optional) Assign a Color from the 17 predefined colors. By default, Color is None.\n6.\nClick OK and Commit to save your changes.\nSTEP 2 |\nApply tags to policy.\n1.\nSelect Policies and any rulebase under it.\n2.\nAdd a policy rule and use the tagged objects you created in Step 1.\n3.\nVerify that the tags are in use.\nSTEP 3 |\nApply tags to an address object, address group, service, or service group.\n1.\nCreate the object.\nFor example, to create a service group, select Objects > Service Groups > Add.\n2.\nSelect a tag (Tags) or enter a name in the field to create a new tag.\nTo edit a tag or add color to the tag, see Modify Tags.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1626,
+      "end": 1627
+    },
+    "content_stats": {
+      "char_count": 1749,
+      "word_count": 328
+    },
+    "hierarchy": {
+      "parent": "Use Tags to Group and Visually Distinguish Objects",
+      "children": []
+    }
+  }
+}

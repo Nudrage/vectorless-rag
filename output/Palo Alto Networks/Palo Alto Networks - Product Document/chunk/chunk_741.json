@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_741",
+  "section_number": "1.21.1.2.5",
+  "header": "Virtual Wire Support of High Availability",
+  "content": "If you configure the firewall to perform path monitoring for High Availability using a virtual wire\npath group, the firewall attempts to resolve ARP for the configured destination IP address by\nsending ARP packets out both of the virtual wire interfaces. The destination IP address that you\nare monitoring must be on the same subnetwork as one of the devices surrounding the virtual\nwire.\nVirtual wire interfaces support both active/passive and active/active HA. For an active/active HA\ndeployment with a virtual wire, the scanned packets must be returned to the receiving firewall to\npreserve the forwarding path. Therefore, if a firewall receives a packet that belongs to the session\nthat the peer HA firewall owns, it sends the packet across the HA3 link to the peer.\nFor PAN-OS 7.1 and later releases, you can configure the passive firewall in an HA pair to allow\npeer devices on either side of the firewall to pre-negotiate LLDP and LACP over a virtual wire\nbefore an HA failover occurs. Such a configuration for LACP and LLDP Pre-Negotiation for\nActive/Passive HA speeds up HA failovers.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1336,
+      "end": 1336
+    },
+    "content_stats": {
+      "char_count": 1093,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": "Virtual Wire Interfaces",
+      "children": []
+    }
+  }
+}

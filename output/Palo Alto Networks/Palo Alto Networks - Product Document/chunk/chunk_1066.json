@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1066",
+  "section_number": "1.25.2",
+  "header": "FIPS-CC Security Functions",
+  "content": "When FIPS-CC mode is enabled, the following security functions are enforced on all firewalls and\nappliances:\nTo log in, the browser must be TLS 1.1 (or later) compatible; on a WF-500 appliance, you\nmanage the appliance only through the CLI and you must connect using an SSHv2-compatible\nclient application.\nAll passwords must be at least six characters.\nYou must ensure that Failed Attempts and Lockout Time (min) are greater than 0 in\nauthentication settings. If an administrator reaches the Failed Attempts threshold, the\nadministrator is locked out for the duration defined in the Lockout Time (min) field.\nYou must ensure that the Idle Timeout is greater than 0 in authentication settings. If a login\nsession is idle for more than the specified time, the administrator is automatically logged out.\nYou can configure the Absolute Session Length to set the maximum length of time in minutes\nthat a user can be logged in. The minimum length that can be set is 60 minutes. You will\nreceive a session termination warning 5 minutes before timeout. This feature cannot be\ndisabled in FIPS-CC mode and defaults at a session of 30 days.\nYou can configure the Max No. of Sessions to set how many users can be concurrently logged\nin to the same administrator account.\nThe firewall or appliance automatically determines the appropriate level of self-testing and\nenforces the appropriate level of strength in encryption algorithms and cipher suites.\nUnapproved FIPS-CC algorithms are not decrypted—they are ignored during decryption.\nMS-CHAPv2 is not compatible with FIPS-CC mode. It is recommended to use RADIUS with\nTLS.\nWhen configuring an IPSec VPN, the administrator must select a cipher suite option presented\nto them during the IPSec setup.\n(For Panorama and WildFire only) IPSec can be enabled on the management interface to\nprotect protocols such as NTP, RADIUS, TACACS, and DNS.\nSelf-generated and imported certificates must contain public keys that are either RSA 2,048\nbits (or more) or ECDSA 256 bits (or more); you must also use a digest of SHA256 or greater.\nTelnet, TFTP, and HTTP management connections are not available.\n(New HA Deployments) You must enable encryption for the HA1 control link when you set\nup high availability (HA) for firewalls in FIPS-CC mode. You must set automatic rekeying\nparameters; you must set the data parameter to a value no greater than 1000 MB (you cannot\nlet it default) and you must set a time interval (you cannot leave it disabled).\n(Existing HA Deployment) Before you change the operational mode to FIPS-CC mode for\nfirewalls in a high availability (HA) configuration, you must first disable HA (Device > High\nAvailability > General) before changing the operational mode to FIPS-CC mode.\nAfter you change the operational mode to FIPS-CC mode for both HA peers, re-enable HA and\nenable encryption for the HA1 control link as described above.\nThe serial console port in FIPS-CC mode functions as a limited status output port only; CLI\naccess is not available.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1774\n©2025 Palo Alto Networks, Inc.\nCertifications\nThe serial console port on hardware and private-cloud VM-Series firewalls booted into the\nMRT provides interactive access to the MRT.\nInteractive console access is not supported in the hypervisor environment private-cloud VM-\nSeries firewalls booted into the MRT; you can access the MRT only using SSH.\nYou must manually configure a new master key before the old master key expires; Auto Renew\nMaster Key is not supported in FIPS-CC mode.\nIf the master key expires, the firewall or Panorama automatically reboots in Maintenance\nmode. You must then Reset the Firewall to Factory Default Settings.\n(Panorama managed devices) Review the Panorama support of firewalls and Log Collectors\nwhen FIPS-CC is enabled.\nPanorama\nFirewall\nLog Collector\nFIPS-CC Enabled\nFIPS-CC\nDisabled\nFIPS-CC Enabled\nFIPS-CC\nDisabled\nFIPS-CC\nEnabled\nSupported\nSupported\nSupported\nSupported\nFIPS-CC\nDisabled\nNot Supported\nSupported\nNot Supported\nSupported\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1775\n©2025 Palo Alto Networks, Inc.\nCertifications",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1774,
+      "end": 1776
+    },
+    "content_stats": {
+      "char_count": 4113,
+      "word_count": 651
+    },
+    "hierarchy": {
+      "parent": "Certifications",
+      "children": []
+    }
+  }
+}

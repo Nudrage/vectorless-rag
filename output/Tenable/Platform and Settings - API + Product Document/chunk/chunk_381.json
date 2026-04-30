@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_381",
+  "section_number": "16.9",
+  "header": "Bulk assign scanners",
+  "content": "Bulk assigns scanners and scanner groups to a custom network. The data in this request payload\noverwrites the full list of specified scanners and scanner groups previously assigned to the specified\nnetwork object. If the payload excludes scanners or scanner groups previously assigned to the\nspecified network object, Tenable Vulnerability Management returns those scanners and scanner\ngroups to the default network. You cannot use this endpoint to bulk return scanners and scanner\ngroups from multiple custom networks to the default network.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nThe UUID of the network object where you want to bulk assign scanners\nand scanner groups.\nREQUEST BODY SCHEMA:\napplication/json\nArray of strings\nA list of UUIDs for the scanners and scanner groups you want to bulk move\nto a network object. To get values for this list, use the GET\n/networks/{network_id}/assignable-scanners endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 366,
+      "end": 366
+    },
+    "content_stats": {
+      "char_count": 975,
+      "word_count": 147
+    },
+    "hierarchy": {
+      "parent": "Networks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

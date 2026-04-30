@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_028",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\ndate\nrequired\ndirectoryId\nrequired\ninfrastructureId\nrequired\nGET\n/api/alerts/{id}\napplication/json\nCopy\n{\n\"id\": 0,\n\"devianceId\": 0,\n\"archived\": false,\n\"read\": false,\n\"date\": \"2019-08-24T14:15:22Z\",\n\"directoryId\": 0,\n\"infrastructureId\": 0\n}\nUpdate alert instance.\nRequired license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nContent type\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nboolean\nboolean",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 17,
+      "end": 18
+    },
+    "content_stats": {
+      "char_count": 516,
+      "word_count": 60
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

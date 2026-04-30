@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_189",
+  "section_number": "1.9.8.3",
+  "header": "Import a Certificate and Private Key",
+  "content": "If your enterprise has its own public key infrastructure (PKI), you can import a certificate and\nprivate key into the firewall from your enterprise certificate authority (CA). Enterprise CA\ncertificates (unlike most certificates purchased from a trusted, third-party CA) can automatically\nissue CA certificates for applications such as SSL/TLS decryption or large-scale VPN.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n334\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nOn a Palo Alto Networks firewall or Panorama, you can import self-signed certificates only\nif they are CA certificates.\nInstead of importing a self-signed root CA certificate into all the client systems, it is a best\npractice to import a certificate from the enterprise CA because the clients will already\nhave a trust relationship with the enterprise CA, which simplifies the deployment.\nIf the certificate you will import is part of a certificate chain, it is a best practice to import\nthe entire chain.\nSTEP 1 |\nFrom the enterprise CA, export the certificate and private key that the firewall will use for\nauthentication.\nWhen exporting a private key, you must enter a passphrase to encrypt the key for transport.\nEnsure the management system can access the certificate and key files. When importing the\nkey onto the firewall, you must enter the same passphrase to decrypt it.\nSTEP 2 |\nSelect Device > Certificate Management > Certificates > Device Certificates.\nSTEP 3 |\nIf the firewall has more than one virtual system (vsys), select a Location (vsys or Shared) for\nthe certificate.\nSTEP 4 |\nClick Import and enter a Certificate Name. The name is case-sensitive and can have up to\n63 characters on the firewall or up to 31 characters on Panorama. It must be unique and use\nonly letters, numbers, hyphens, and underscores.\nSTEP 5 |\nTo make the certificate available to all virtual systems, select the Shared check box. This\ncheck box appears only if the firewall supports multiple virtual systems.\nSTEP 6 |\nEnter the path and name of the Certificate File received from the CA, or Browse to find the\nfile.\nSTEP 7 |\nSelect a File Format:\n• Encrypted Private Key and Certificate (PKCS12)—This is the default and most common\nformat, in which the key and certificate are in a single container (Certificate File). If a\nhardware security module (HSM) will store the private key for this certificate, select the\nPrivate key resides on Hardware Security Module check box.\n• Base64 Encoded Certificate (PEM)—You must import the key separately from the\ncertificate. If a hardware security module (HSM) stores the private key for this certificate,\nselect the Private key resides on Hardware Security Module check box and skip the next\nstep. Otherwise, select the Import Private Key check box, enter the Key File or Browse to\nit, then continue to the next step.\n(Panorama managed firewalls) You are required to Import Private Key if you\nenabled Block Private Key Export when the certificate was generated to\nsuccessfully push configuration changes from the Panorama management server to\nmanaged firewalls.\nSTEP 8 |\nEnter and re-enter (confirm) the Passphrase used to encrypt the private key.\nSTEP 9 |\nClick OK. The Device Certificates page displays the imported certificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n335\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 334,
+      "end": 336
+    },
+    "content_stats": {
+      "char_count": 3338,
+      "word_count": 541
+    },
+    "hierarchy": {
+      "parent": "Obtain Certificates",
+      "children": []
+    }
+  }
+}

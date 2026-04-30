@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_379",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returns a list of scanners and scanner groups for the specified network object.\nRESPONSE SCHEMA:\napplication/json\nArray of objects\n— 401\nReturned if Tenable Vulnerability Management cannot authenticate the user account that submitted\nthe request.\n— 403\nReturned if you do not have sufficient permissions to list scanners and scanner groups for the\nspecified network object.\n— 404 Returned if Tenable Vulnerability Management could not find the network object you specified.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500\nReturned if Tenable Vulnerability Management encountered an internal server error. Wait a moment,\nand try your request again.\n— 503\nReturned if a Tenable Vulnerability Management service is unavailable. Wait a moment, and try your\nrequest again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 364,
+      "end": 364
+    },
+    "content_stats": {
+      "char_count": 856,
+      "word_count": 134
+    },
+    "hierarchy": {
+      "parent": "List network scanners",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

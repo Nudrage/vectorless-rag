@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_517",
+  "section_number": "1.15.15.1",
+  "header": "Monitor Activity and Create Custom Reports Based on Threat Categories",
+  "content": "Categories\nThreat categories classify different types of threat signatures to help you understand and draw\nconnections between events threat signatures detect. Threat categories are subsets of the more\nbroad threat signature types: spyware, vulnerability, antivirus, and DNS signatures. Threat log\nentries display the Threat Category for each recorded event.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n957\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nFilter Threat logs by threat category.\n1.\nSelect Monitor > Logs > Threat.\n2.\nAdd the Threat Category column so you can view the Threat Category for each log\nentry:\n3.\nTo filter based on Threat Category:\n• Use the log query builder to add a filter with the Attribute Threat Category and in the\nValue field, enter a Threat Category.\n• Select the Threat Category of any log entry to add that category to the filter:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n958\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nFilter ACC activity by threat category.\n1.\nSelect ACC and add Threat Category as a global filter:\n2.\nSelect the Threat Category to filter all ACC tabs.\nCreate custom reports based on threat categories to receive information about specific types\nof threats that the firewall has detected.\n1.\nSelect Monitor > Manage Custom reports to add a new custom report or modify an\nexistingone.\n2.\nChoose the Database to use as the source for the custom report—in this case, select\nThreat from either of the two types of database sources, summary databases and\nDetailed logs. Summary database data is condensed to allow a faster response time\nwhen generating reports. Detailed logs take longer to generate but provide an itemized\nand complete set of data for each log entry.\n3.\nIn the Query Builder, add a report filter with the Attribute Threat Category and in the\nValue field, select a threat category on which to base your report.\n4.\nTo test the new report settings, click Run Now.\n5.\nClick OK to save the report.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 957,
+      "end": 959
+    },
+    "content_stats": {
+      "char_count": 1964,
+      "word_count": 326
+    },
+    "hierarchy": {
+      "parent": "Monitor and Get Threat Reports",
+      "children": []
+    }
+  }
+}

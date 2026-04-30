@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_575",
+  "section_number": "26.4",
+  "header": "Update tag category",
+  "content": "Updates the specified tag category. To update a category you must be an admin or have edit\npermissions on all tags within the category.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe unique identifier (UUID) of the tag category to update. For more\ninformation on determining this value, see Determine Tag Identifiers.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the tag category. Note that name  must not exceed 127\ncharacters and must not contain colons.\nstring\nThe description of the category. Must not exceed 3,000 characters.\ntag_category_uuid\nrequired\nname\nrequired\ndescription\nContent type",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 566,
+      "end": 566
+    },
+    "content_stats": {
+      "char_count": 670,
+      "word_count": 102
+    },
+    "hierarchy": {
+      "parent": "Tags",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "chunk_id": "chunk_736",
+  "section_number": "1.21.1.2",
+  "header": "Virtual Wire Interfaces",
+  "content": "In a virtual wire deployment, you install a firewall transparently on a network segment by binding\ntwo firewall ports (interfaces) together. The virtual wire logically connects the two interfaces;\nhence, the virtual wire is internal to the firewall.\nUse a virtual wire deployment only when you want to seamlessly integrate a firewall into a\ntopology and the two connected interfaces on the firewall need not do any switching or routing.\nFor these two interfaces, the firewall is considered a bump in the wire.\nA virtual wire deployment simplifies firewall installation and configuration because you can insert\nthe firewall into an existing topology without assigning MAC or IP addresses to the interfaces,\nredesigning the network, or reconfiguring surrounding network devices. The virtual wire supports\nblocking or allowing traffic based on virtual LAN (VLAN) tags, in addition to supporting security\npolicy rules, App-ID, Content-ID, User-ID, decryption, LLDP, active/passive and active/active HA,\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1333\n©2025 Palo Alto Networks, Inc.\nNetworking\nQoS, zone protection (with some exceptions), non-IP protocol protection, DoS protection, packet\nbuffer protection, tunnel content inspection, and NAT.\nEach virtual wire interface is directly connected to a Layer 2 or Layer 3 networking device or host.\nThe virtual wire interfaces have no Layer 2 or Layer 3 addresses. When one of the virtual wire\ninterfaces receives a frame or packet, it ignores any Layer 2 or Layer 3 addresses for switching or\nrouting purposes, but applies your security or NAT policy rules before passing an allowed frame or\npacket over the virtual wire to the second interface and on to the network device connected to it.\nYou wouldn’t use a virtual wire deployment for interfaces that need to support switching, VPN\ntunnels, or routing because they require a Layer 2 or Layer 3 address. A virtual wire interface\ndoesn’t use an interface management profile, which controls services such as HTTP and ping and\ntherefore requires the interface have an IP address.\nAll firewalls shipped from the factory have two Ethernet ports (ports 1 and 2) preconfigured as\nvirtual wire interfaces, and these interfaces allow all untagged traffic.\nIf you’re using security group tags (SGTs) in a Cisco TrustSec network, it’s a best practice\nto deploy inline firewalls in either Layer 2 or virtual wire mode. Firewalls in Layer 2 or\nvirtual wire mode can inspect and provide threat prevention for the tagged traffic.\nIf you don’t intend to use the preconfigured virtual wire, you must delete that\nconfiguration to prevent it from interfering with other settings you configure on the\nfirewall. See Set Up Network Access for External Services.\n• Layer 2 and Layer 3 Packets over a Virtual Wire\n• Port Speeds of Virtual Wire Interfaces\n• LLDP over a Virtual Wire\n• Aggregated Interfaces for a Virtual Wire\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1334\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Virtual Wire Support of High Availability\n• Zone Protection for a Virtual Wire Interface\n• VLAN-Tagged Traffic\n• Virtual Wire Subinterfaces\n• Configure Virtual Wires",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1333,
+      "end": 1335
+    },
+    "content_stats": {
+      "char_count": 3149,
+      "word_count": 500
+    },
+    "hierarchy": {
+      "parent": "Configure Interfaces",
+      "children": [
+        "Layer 2 and Layer 3 Packets over a Virtual Wire",
+        "Port Speeds of Virtual Wire Interfaces",
+        "LLDP over a Virtual Wire",
+        "Aggregated Interfaces for a Virtual Wire",
+        "Virtual Wire Support of High Availability",
+        "Zone Protection for a Virtual Wire Interface",
+        "VLAN-Tagged Traffic",
+        "Virtual Wire Subinterfaces",
+        "Configure Virtual Wires"
+      ]
+    }
+  }
+}

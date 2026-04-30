@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_234",
+  "section_number": "11.2",
+  "header": "Audit Other System Events",
+  "content": "Audit Other System Events contains Windows Firewall Service and Windows Firewall driver start and stop events, failure events for these services and Windows Firewall Service policy\nprocessing failures.\n© 2016 Microsoft. All rights reserved.\n674\nAudit Other System Events determines whether the operating system audits various system events.\nThe system events in this category include:\n\nStartup and shutdown of the Windows Firewall service and driver.\n\nSecurity policy processing by the Windows Firewall service.\n\nCryptography key file and migration operations.\n\nBranchCache events.\nEvent volume: Low.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nYes\nYes\nYes\nYes\nWe recommend enabling Success and Failure auditing because you will be able to get Windows Firewall Service\nand Windows Firewall Driver status events.\nMember Server\nYes\nYes\nYes\nYes\nWe recommend enabling Success and Failure auditing because you will be able to get Windows Firewall Service\nand Windows Firewall Driver status events.\nWorkstation\nYes\nYes\nYes\nYes\nWe recommend enabling Success and Failure auditing because you will be able to get Windows Firewall Service\nand Windows Firewall Driver status events.\nEvents List:\n\n5024\n(S): The Windows Firewall Service has started successfully.\n\n5025\n(S): The Windows Firewall Service has been stopped.\n\n5027\n(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the current policy.\n\n5028\n(F): The Windows Firewall Service was unable to parse the new security policy. The service will continue with currently enforced policy.\n\n5029\n(F): The Windows Firewall Service failed to initialize the driver. The service will continue to enforce the current policy.\n\n5030\n(F): The Windows Firewall Service failed to start.\n\n5032\n(F): Windows Firewall was unable to notify the user that it blocked an application from accepting incoming connections on the network.\n\n5033\n(S): The Windows Firewall Driver has started successfully.\n\n5034\n(S): The Windows Firewall Driver was stopped.\n\n5035\n(F): The Windows Firewall Driver failed to start.\n\n5037\n(F): The Windows Firewall Driver detected critical runtime error. Terminating.\n\n5058\n(S, F): Key file operation.\n\n5059\n(S, F): Key migration operation.\n\n6400\n(-): BranchCache: Received an incorrectly formatted response while discovering availability of content.\n\n6401\n(-): BranchCache: Received invalid data from a peer. Data discarded.\n\n6402\n(-): BranchCache: The message to the hosted cache offering it data is incorrectly formatted.\n\n6403\n(-): BranchCache: The hosted cache sent an incorrectly formatted response to the client.\n\n6404\n(-): BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate.\n\n6405\n(-): BranchCache: %2 instance(s) of event id %1 occurred.\n© 2016 Microsoft. All rights reserved.\n675\n\n6406\n(-): %1 registered to Windows Firewall to control filtering for the following: %2\n\n6407\n(-): 1%\n\n6408\n(-): Registered product %1 failed and Windows Firewall is now controlling the filtering for %2\n\n6409\n(-): BranchCache: A service connection point object could not be parsed.\n5024(S): The Windows Firewall Service has started successfully.\nEvent Description:\nThis event generates when Windows Firewall (MpsSvc) service has started successfully.\nThis event is typically logged during operating system startup process.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>5024</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12292</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-09T03:22:53.842816300Z\" />\n<EventRecordID>1101613</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"500\" ThreadID=\"528\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n<EventData />\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 674,
+      "end": 676
+    },
+    "content_stats": {
+      "char_count": 4256,
+      "word_count": 593
+    },
+    "hierarchy": {
+      "parent": "System",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

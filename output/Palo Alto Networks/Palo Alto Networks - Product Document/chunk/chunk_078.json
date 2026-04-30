@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_078",
+  "section_number": "1.6.2.7",
+  "header": "Use Global Find to Search the Firewall or Panorama Management Server",
+  "content": "Server\nGlobal Find enables you to search the candidate configuration on a firewall or on Panorama\nfor a particular string, such as an IP address, object name, policy rule name, threat ID, UUID, or\napplication name. In addition to searching for configuration objects and settings, you can search\nby job ID or job type for manual commits that administrators performed or auto-commits that\nthe firewall or Panorama performed. The search results are grouped by category and provide\nlinks to the configuration location in the web interface, so that you can easily find all of the places\nwhere the string is referenced. The search results also help you identify other objects that depend\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n119\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\non or make reference to the search term or string. For example, when deprecating a security\nprofile enter the profile name in Global Find to locate all instances of the profile and then click\neach instance to navigate to the configuration page and make the necessary change. After all\nreferences are removed, you can then delete the profile. You can do this for any configuration\nitem that has dependencies.\nWatch the video.\nGlobal Find will not search dynamic content (such as logs, address ranges, or allocated\nDHCP addresses). In the case of DHCP, you can search on a DHCP server attribute, such\nas the DNS entry, but you cannot search for individual addresses allocated to users.\nGlobal Find also does not search for individual user or group names identified by User-ID\nunless the user/group is defined in a policy. In general, you can only search content that\nthe firewall writes to the configuration.\nLaunch Global Find by clicking the Search icon located on the upper right of the web interface.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n120\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nTo access the Global Find from within a configuration area, click the drop-down next to an item\nand select Global Find:\nFor example, click Global Find on a zone named Users to search the candidate configuration\nfor each location where the zone is referenced. The following screen capture shows the search\nresults for the zone Users:\nSearch tips:\n• If you initiate a search on a firewall that has multiple virtual systems enabled or if custom\nAdministrative Role Types are defined, Global Find will only return results for areas of the\nfirewall in which the administrator has permissions. The same applies to Panorama device\ngroups.\n• Spaces in search terms are handled as AND operations. For example, if you search on\ncorp policy, the search results include instances where corp and policy exist in the\nconfiguration.\n• To find an exact phrase, enclose the phrase in quotation marks.\n• Enter no more than five keywords or use an exact phrase match with quotation marks.\n• To rerun a previous search, click Search (located on the upper right of the web interface) to\nsee a list of the last 20 searches. Click an item in the list to rerun that search. Search history\nis unique to each administrator account.\n• To search for a UUID, you must copy and paste the UUID.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 119,
+      "end": 121
+    },
+    "content_stats": {
+      "char_count": 3148,
+      "word_count": 529
+    },
+    "hierarchy": {
+      "parent": "Use the Web Interface",
+      "children": []
+    }
+  }
+}

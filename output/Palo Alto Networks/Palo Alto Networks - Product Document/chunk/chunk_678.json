@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_678",
+  "section_number": "1.19.3.2",
+  "header": "Tunnel Interface",
+  "content": "To set up a VPN tunnel, the Layer 3 interface at each end must have a logical tunnel interface\nfor the firewall to connect to and establish a VPN tunnel. A tunnel interface is a logical (virtual)\ninterface that is used to deliver traffic between two endpoints. If you configure any proxy IDs, the\nproxy ID is counted toward any IPSec tunnel capacity.\nThe tunnel interface must belong to a security zone to apply policy and it must be assigned to a\nvirtual router in order to use the existing routing infrastructure. Ensure that the tunnel interface\nand the physical interface are assigned to the same virtual router so that the firewall can perform\na route lookup and determine the appropriate tunnel to use.\nTypically, the Layer 3 interface that the tunnel interface is attached to belongs to an external\nzone, for example the untrust zone. While the tunnel interface can be in the same security zone as\nthe physical interface, for added security and better visibility, you can create a separate zone for\nthe tunnel interface. If you create a separate zone for the tunnel interface, say a VPN zone, you\nwill need to create security policies to enable traffic to flow between the VPN zone and the trust\nzone.\nTo route traffic between the sites, a tunnel interface does not require an IP address. An IP address\nis only required if you want to enable tunnel monitoring or if you are using a dynamic routing\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1249\n©2025 Palo Alto Networks, Inc.\nVPNs\nprotocol to route traffic across the tunnel. With dynamic routing, the tunnel IP address serves as\nthe next hop IP address for routing traffic to the VPN tunnel.\nIf you are configuring the Palo Alto Networks firewall with a VPN peer that performs policy-\nbased VPN, you must configure a local and remote Proxy ID when setting up the IPSec tunnel.\nEach peer compares the Proxy-IDs configured on it with what is actually received in the packet\nin order to allow a successful IKE phase 2 negotiation. If multiple tunnels are required, configure\nunique Proxy IDs for each tunnel interface; a tunnel interface can have a maximum of 250 Proxy\nIDs. Each Proxy ID counts towards the IPSec VPN tunnel capacity of the firewall, and the tunnel\ncapacity varies by the firewall model.\nSee Set Up an IPSec Tunnel for configuration details.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1249,
+      "end": 1250
+    },
+    "content_stats": {
+      "char_count": 2312,
+      "word_count": 401
+    },
+    "hierarchy": {
+      "parent": "Site-to-Site VPN Concepts",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_076",
+  "section_number": "1.18.25",
+  "header": "Vectra Match Status",
+  "content": "GET\nUsed to retrieve Vectra Match status.  Returned fields include:\n• device_serial: serial of the device for which the information is valid\n• is_enabled: boolean of whether Vectra Match is enabled on given device\n• process_health: returns “healthy” if process is healthy, else gives description of current process health\n• timestamp: timestamp of when the information was gathered\n• process_error_detail: returns empty string when healthy, otherwise gives more information about\ncause of health degredation\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/status\nHeaders:\n“Authorization”: “Token <api-key>”\nOptional Query Params:\n{“device_serial”:”<device_serial>”}\nResponse:\nStatus Code: 200\n{\n\"status\": [\n{\n\"device_serial\": \"U12312300000123\",\n\"is_enabled\": true,\n\"process_health\": \"healthy\",\n© July 2024 Vectra AI, Inc. | 140\n\"timestamp\": \"2023-02-01T01:23:45.123456+00:00\"\n},\n{\n\"device_serial\": \"U12312300000456\",\n\"is_enabled\": true,\n\"process_health\": \"healthy\",\n\"timestamp\": \"2023-02-01T01:23:46.234567+00:00\"\n},\n{\n\"device_serial\": \"U12312300000789\",\n\"is_enabled\": true,\n\"process_health\": \"healthy\",\n\"timestamp\": \"2023-02-01T01:23:47.345678+00:00\"\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 139,
+      "end": 140
+    },
+    "content_stats": {
+      "char_count": 1167,
+      "word_count": 131
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

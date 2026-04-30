@@ -1,0 +1,2449 @@
+DOCUMENT INDEX: Microsoft Sentinel One\Sentinel One - Product Document
+======================================================================
+
+1. Accounts
+   1.1. Export Accounts
+      1.1.1. Parameters
+      1.1.2. Response Messages
+   1.2. Get Accounts
+      1.2.1. GET    /web/api/v2.1/accounts
+      1.2.2. Parameters
+      1.2.3. Response Messages
+         1.2.3.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      1.2.4. Response Schema
+         1.2.4.1. Name Description Required Value
+   1.3. Create Account
+      1.3.1. POST    /web/api/v2.1/accounts
+      1.3.2. Response Messages
+      1.3.3. Body Schema
+         1.3.3.1. Name Description Required Value
+   1.4. Get Uninstall Password Metadata
+      1.4.1. GET    /web/api/v2.1/accounts/{account_id}/uninstall-password/metadata
+      1.4.2. Response Messages
+         1.4.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      1.4.3. Response Schema
+         1.4.3.1. Name Description Required Value
+   1.5. Generate/Regenerate Uninstall Password
+      1.5.1. POST    /web/api/v2.1/accounts/{account_id}/uninstall-password/generate
+      1.5.2. Response Messages
+         1.5.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      1.5.3. Response Schema
+         1.5.3.1. Name Description Required Value
+      1.5.4. Body Schema
+         1.5.4.1. Name Description Required Value
+   1.6. Revoke Uninstall Password
+      1.6.1. POST    /web/api/v2.1/accounts/{account_id}/uninstall-password/revoke
+      1.6.2. Response Messages
+         1.6.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      1.6.3. Response Schema
+         1.6.3.1. Name Description Required Value
+   1.7. Get Uninstall Password
+      1.7.1. GET    /web/api/v2.1/accounts/{account_id}/uninstall-password/view
+      1.7.2. Response Messages
+         1.7.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      1.7.3. Response Schema
+         1.7.3.1. Name Description Required Value
+   1.8. Revert Policy
+      1.8.1. PUT    /web/api/v2.1/accounts/{account_id}/revert-policy
+      1.8.2. Response Messages
+      1.8.3. Response Schema
+         1.8.3.1. Name Description Required Value
+      1.8.4. Body Schema
+         1.8.4.1. Name Description Required Value
+   1.9. Reactivate Account
+      1.9.1. PUT    /web/api/v2.1/accounts/{account_id}/reactivate
+      1.9.2. Response Messages
+         1.9.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Account not found
+      1.9.3. Response Schema
+         1.9.3.1. Name Description Required Value
+      1.9.4. Body Schema
+         1.9.4.1. Name Description Required Value
+   1.10. Expire an Account
+      1.10.1. POST    /web/api/v2.1/accounts/{account_id}/expire-now
+      1.10.2. Response Messages
+         1.10.2.1. 200 - Expire account now 401 - Unauthorized access - please sign in and retry. 404 - Account not found
+      1.10.3. Response Schema
+         1.10.3.1. Name Description Required Value
+   1.11. Get Account by ID
+      1.11.1. GET    /web/api/v2.1/accounts/{account_id}
+      1.11.2. Response Messages
+         1.11.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Account not found
+      1.11.3. Response Schema
+         1.11.3.1. Name Description Required Value
+   1.12. Update Account
+      1.12.1. PUT    /web/api/v2.1/accounts/{account_id}
+      1.12.2. Response Messages
+         1.12.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Account not found
+      1.12.3. Response Schema
+         1.12.3.1. Name Description Required Value
+      1.12.4. Body Schema
+         1.12.4.1. Name Description Required Value
+2. Activities
+   2.1. Get Activity Types
+      2.1.1. GET    /web/api/v2.1/activities/types
+      2.1.2. Response Messages
+      2.1.3. Response Schema
+         2.1.3.1. Name Description Required Value
+   2.2. Export Activities
+      2.2.1. Parameters
+      2.2.2. Response Messages
+   2.3. Last activity as Syslog message
+      2.3.1. GET    /web/api/v2.1/last-activity-as-syslog
+      2.3.2. Parameters
+      2.3.3. Response Messages
+      2.3.4. Response Schema
+         2.3.4.1. Name Description Required Value
+   2.4. Get Activities
+      2.4.1. Parameters
+      2.4.2. Response Messages
+      2.4.3. Response Schema
+         2.4.3.1. Name Description Required Value
+3. Agent Actions
+   3.1. Approve Stateless Upgrades
+      3.1.1. POST    /web/api/v2.1/agents/actions/approve-stateless-upgrade Approve stateless upgrade for agents
+      3.1.2. Response Messages
+         3.1.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.1.3. Response Schema
+         3.1.3.1. Name Description Required Value
+      3.1.4. Body Schema
+         3.1.4.1. Name Description Required Value
+   3.2. Can run Remote Shell
+      3.2.1. POST    /web/api/v2.1/agents/actions/can-start-remote-shell
+      3.2.2. Response Messages
+         3.2.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.2.3. Response Schema
+         3.2.3.1. Name Description Required Value
+      3.2.4. Body Schema
+         3.2.4.1. Name Description Required Value
+   3.3. Terminate Remote Shell
+      3.3.1. POST    /web/api/v2.1/agents/actions/terminate-remote-shell
+      3.3.2. Response Messages
+         3.3.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.3.3. Response Schema
+         3.3.3.1. Name Description Required Value
+      3.3.4. Body Schema
+         3.3.4.1. Name Description Required Value
+   3.4. Fetch Firewall Rules
+      3.4.1. POST    /web/api/v2.1/agents/actions/fetch-firewall-rules
+      3.4.2. Response Messages
+         3.4.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.4.3. Response Schema
+         3.4.3.1. Name Description Required Value
+      3.4.4. Body Schema
+         3.4.4.1. Name Description Required Value
+   3.5. Get Applications
+      3.5.1. POST    /web/api/v2.1/agents/actions/fetch-installed-apps
+      3.5.2. Response Messages
+         3.5.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.5.3. Response Schema
+         3.5.3.1. Name Description Required Value
+      3.5.4. Body Schema
+         3.5.4.1. Name Description Required Value
+   3.6. Reset Local Config
+      3.6.1. POST    /web/api/v2.1/agents/actions/reset-local-config
+      3.6.2. Response Messages
+         3.6.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.6.3. Response Schema
+         3.6.3.1. Name Description Required Value
+      3.6.4. Body Schema
+         3.6.4.1. Name Description Required Value
+   3.7. Start Remote Shell
+      3.7.1. POST    /web/api/v2.1/agents/actions/start-remote-shell
+      3.7.2. Response Messages
+         3.7.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.7.3. Response Schema
+         3.7.3.1. Name Description Required Value
+      3.7.4. Body Schema
+         3.7.4.1. Name Description Required Value
+   3.8. Approve Uninstall
+      3.8.1. POST    /web/api/v2.1/agents/actions/approve-uninstall
+      3.8.2. Response Messages
+         3.8.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.8.3. Response Schema
+         3.8.3.1. Name Description Required Value
+      3.8.4. Body Schema
+         3.8.4.1. Name Description Required Value
+   3.9. Reject uninstall
+      3.9.1. POST    /web/api/v2.1/agents/actions/reject-uninstall
+      3.9.2. Response Messages
+         3.9.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.9.3. Response Schema
+         3.9.3.1. Name Description Required Value
+      3.9.4. Body Schema
+         3.9.4.1. Name Description Required Value
+   3.10. Fetch Firewall Logs
+      3.10.1. POST    /web/api/v2.1/agents/actions/firewall-logging
+      3.10.2. Response Messages
+         3.10.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.10.3. Response Schema
+         3.10.3.1. Name Description Required Value
+      3.10.4. Body Schema
+         3.10.4.1. Name Description Required Value
+   3.11. Restart
+      3.11.1. POST    /web/api/v2.1/agents/actions/restart-machine
+      3.11.2. Response Messages
+         3.11.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.11.3. Response Schema
+         3.11.3.1. Name Description Required Value
+      3.11.4. Body Schema
+         3.11.4.1. Name Description Required Value
+   3.12. Update Software
+      3.12.1. POST    /web/api/v2.1/agents/actions/update-software
+      3.12.2. SentinelOne Support. IMPORTANT: These parameters are required:
+      3.12.3. packageType - example: "packageType": "AgentAndRanger",osType - example: "osType": "windows",fileName - example: "fileName": "SentinelInstaller-
+      3.12.4. x86_windows_32bit_v4_6_12_241.exe"
+      3.12.5. BEST PRACTICE
+      3.12.6. Response Messages
+         3.12.6.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+         3.12.6.2. 409 - The Agent is automatically upgraded according to its Upgrade Policy. Manually upgrading the Agent may cause conflicts
+      3.12.7. Response Schema
+         3.12.7.1. Name Description Required Value
+      3.12.8. Body Schema
+         3.12.8.1. Name Description Required Value
+   3.13. Set External ID
+      3.13.1. POST    /web/api/v2.1/agents/actions/set-external-id
+      3.13.2. Response Messages
+         3.13.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.13.3. Response Schema
+         3.13.3.1. Name Description Required Value
+      3.13.4. Body Schema
+         3.13.4.1. Name Description Required Value
+   3.14. Move to Console
+      3.14.1. POST    /web/api/v2.1/agents/actions/move-to-console
+      3.14.2. Response Messages
+         3.14.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.14.3. Response Schema
+         3.14.3.1. Name Description Required Value
+      3.14.4. Body Schema
+         3.14.4.1. Name Description Required Value
+   3.15. Mark as up-to-date
+      3.15.1. POST    /web/api/v2.1/agents/actions/mark-up-to-date
+      3.15.2. Response Messages
+         3.15.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.15.3. Response Schema
+         3.15.3.1. Name Description Required Value
+      3.15.4. Body Schema
+         3.15.4.1. Name Description Required Value
+   3.16. Start Remote Profiling
+      3.16.1. Response Messages
+         3.16.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.16.2. Response Schema
+         3.16.2.1. Name Description Required Value
+      3.16.3. Body Schema
+         3.16.3.1. Name Description Required Value
+   3.17. Randomize UUID
+      3.17.1. Response Messages
+         3.17.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.17.2. Response Schema
+         3.17.2.1. Name Description Required Value
+      3.17.3. Body Schema
+         3.17.3.1. Name Description Required Value
+   3.18. Disable Ranger
+      3.18.1. Response Messages
+         3.18.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.18.2. Response Schema
+         3.18.2.1. Name Description Required Value
+      3.18.3. Body Schema
+         3.18.3.1. Name Description Required Value
+   3.19. Stop Remote Profiling
+      3.19.1. Response Messages
+         3.19.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.19.2. Response Schema
+         3.19.2.1. Name Description Required Value
+      3.19.3. Body Schema
+         3.19.3.1. Name Description Required Value
+   3.20. Initiate Scan
+      3.20.1. Response Messages
+         3.20.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.20.2. Response Schema
+         3.20.2.1. Name Description Required Value
+      3.20.3. Body Schema
+         3.20.3.1. Name Description Required Value
+   3.21. Enable Ranger
+      3.21.1. POST    /web/api/v2.1/agents/actions/ranger-enable
+      3.21.2. Response Messages
+         3.21.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.21.3. Response Schema
+         3.21.3.1. Name Description Required Value
+      3.21.4. Body Schema
+         3.21.4.1. Name Description Required Value
+   3.22. Disable Agent
+      3.22.1. Response Messages
+         3.22.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.22.2. Response Schema
+         3.22.2.1. Name Description Required Value
+      3.22.3. Body Schema
+         3.22.3.1. Name Description Required Value
+   3.23. Decommission
+      3.23.1. POST    /web/api/v2.1/agents/actions/decommission
+      3.23.2. Response Messages
+         3.23.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.23.3. Response Schema
+         3.23.3.1. Name Description Required Value
+      3.23.4. Body Schema
+         3.23.4.1. Name Description Required Value
+   3.24. Move between Sites
+      3.24.1. Response Messages
+         3.24.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.24.2. Response Schema
+         3.24.2.1. Name Description Required Value
+      3.24.3. Body Schema
+         3.24.3.1. Name Description Required Value
+   3.25. Enable Agent
+      3.25.1. Response Messages
+         3.25.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      3.25.2. Response Schema
+         3.25.2.1. Name Description Required Value
+      3.25.3. Body Schema
+         3.25.3.1. Name Description Required Value
+   3.26. Manage endpoint tags: add, remove, override
+      3.26.1. POST    /web/api/v2.1/agents/actions/manage-tags
+      3.26.2. Response Messages
+      3.26.3. Response Schema
+         3.26.3.1. Name Description Required Value
+      3.26.4. Body Schema
+         3.26.4.1. Name Description Required Value
+   3.27. Fetch Logs
+      3.27.1. Response Messages
+         3.27.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.27.2. Response Schema
+         3.27.2.1. Name Description Required Value
+      3.27.3. Body Schema
+         3.27.3.1. Name Description Required Value
+   3.28. Abort Scan
+      3.28.1. POST    /web/api/v2.1/agents/actions/abort-scan
+      3.28.2. Response Messages
+         3.28.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.28.3. Response Schema
+         3.28.3.1. Name Description Required Value
+      3.28.4. Body Schema
+         3.28.4.1. Name Description Required Value
+   3.29. Disconnect from Network
+      3.29.1. POST    /web/api/v2.1/agents/actions/disconnect
+      3.29.2. "accounts/{id} command (see "Update Account") with: "networkQuarantine":true. BEST PRACTICE
+      3.29.3. Response Messages
+         3.29.3.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.29.4. Response Schema
+         3.29.4.1. Name Description Required Value
+      3.29.5. Body Schema
+         3.29.5.1. Name Description Required Value
+   3.30. Set Persistent Configuration Overrides
+      3.30.1. Response Messages
+         3.30.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.30.2. Response Schema
+         3.30.2.1. Name Description Required Value
+      3.30.3. Body Schema
+         3.30.3.1. Name Description Required Value
+   3.31. Broadcast Message
+      3.31.1. Response Messages
+         3.31.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.31.2. Response Schema
+         3.31.2.1. Name Description Required Value
+      3.31.3. Body Schema
+         3.31.3.1. Name Description Required Value
+   3.32. Uninstall
+      3.32.1. POST    /web/api/v2.1/agents/actions/uninstall
+      3.32.2. Response Messages
+         3.32.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.32.3. Response Schema
+         3.32.3.1. Name Description Required Value
+      3.32.4. Body Schema
+         3.32.4.1. Name Description Required Value
+   3.33. Shutdown
+      3.33.1. If the endpoint is offline, the shutdown command is not available. BEST PRACTICE
+      3.33.2. If an endpoint is infected, we recommend the "disconnect" command and not the "shutdown" command. The disconnect command secures the environment from
+      3.33.3. Response Messages
+         3.33.3.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.33.4. Response Schema
+         3.33.4.1. Name Description Required Value
+      3.33.5. Body Schema
+         3.33.5.1. Name Description Required Value
+   3.34. Connect to Network
+      3.34.1. POST    /web/api/v2.1/agents/actions/connect
+      3.34.2. Response Messages
+         3.34.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action
+      3.34.3. Response Schema
+         3.34.3.1. Name Description Required Value
+      3.34.4. Body Schema
+         3.34.4.1. Name Description Required Value
+   3.35. Fetch Files
+      3.35.1. POST    /web/api/v2.1/agents/{agent_id}/actions/fetch-files
+      3.35.2. Response Messages
+         3.35.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User has insufficient permissions to perform the requested action 404 - Agent not found
+      3.35.3. Response Schema
+         3.35.3.1. Name Description Required Value
+      3.35.4. Body Schema
+         3.35.4.1. Name Description Required Value
+4. Agent Content Updates
+   4.1. Get Agent Merged Updates
+      4.1.1. Parameters
+      4.1.2. Response Messages
+      4.1.3. Response Schema
+         4.1.3.1. Name Description Required Value
+   4.2. Get Content Updates Types
+      4.2.1. GET    /web/api/v2.1/atlas-agents-control/hotfix-policy/asset-family-types Get a list of agent components which can receive content updates
+      4.2.2. Response Messages
+         4.2.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry
+      4.2.3. Response Schema
+         4.2.3.1. Name Description Required Value
+   4.3. Get existing content updates policy
+      4.3.1. GET    /web/api/v2.1/atlas-agents-control/hotfix-policy/policy Get Existing Content Updates policy
+      4.3.2. Parameters
+      4.3.3. Response Messages
+      4.3.4. Response Schema
+         4.3.4.1. Name Description Required Value
+   4.4. Change content updates policy
+      4.4.1. PUT    /web/api/v2.1/atlas-agents-control/hotfix-policy/policy Change content updates policy
+      4.4.2. Response Messages
+      4.4.3. Response Schema
+         4.4.3.1. Name Description Required Value
+      4.4.4. Body Schema
+         4.4.4.1. Name Description Required Value
+5. Agent Support Actions
+   5.1. Clear Remote Shell
+      5.1.1. POST    /web/api/v2.1/agents/actions/clear-remote-shell-session
+      5.1.2. Response Messages
+      5.1.3. Response Schema
+         5.1.3.1. Name Description Required Value
+      5.1.4. Body Schema
+         5.1.4.1. Name Description Required Value
+6. Agents
+   6.1. Applications
+      6.1.1. Parameters
+      6.1.2. Response Messages
+      6.1.3. Response Schema
+         6.1.3.1. Name Description Required Value
+   6.2. Export Agents - Light
+      6.2.1. GET    /web/api/v2.1/export/agents-light
+      6.2.2. Parameters
+      6.2.3. Response Messages
+   6.3. Get Passphrase
+      6.3.1. GET    /web/api/v2.1/agents/passphrases
+      6.3.2. Parameters
+      6.3.3. Response Messages
+         6.3.3.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      6.3.4. Response Schema
+         6.3.4.1. Name Description Required Value
+   6.4. Processes
+      6.4.1. GET    /web/api/v2.1/agents/processes
+      6.4.2. Parameters
+      6.4.3. Response Messages
+      6.4.4. Response Schema
+         6.4.4.1. Name Description Required Value
+   6.5. Export Agents
+      6.5.1. GET    /web/api/v2.1/export/agents
+      6.5.2. Parameters
+      6.5.3. Response Messages
+   6.6. Count Agents
+      6.6.1. GET    /web/api/v2.1/agents/count
+      6.6.2. Parameters
+      6.6.3. Response Messages
+      6.6.4. Response Schema
+         6.6.4.1. Name Description Required Value
+      6.6.5. Parameters
+      6.6.6. Response Messages
+      6.6.7. Response Schema
+         6.6.7.1. Name Description Required Value
+   6.7. Get Agents
+      6.7.1. GET    /web/api/v2.1/agents
+      6.7.2. Parameters
+      6.7.3. Response Messages
+      6.7.4. Response Schema
+         6.7.4.1. Name Description Required Value
+   6.8. Export Agent Logs
+      6.8.1. GET    /web/api/v2.1/agents/{agent_id}/uploads/{activity_id}
+      6.8.2. Response Messages
+         6.8.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 404 - Agent or activity not found
+7. alerts
+   7.1. Update Alert Analyst Verdict
+      7.1.1. POST    /web/api/v2.1/cloud-detection/alerts/analyst-verdict Change the verdict of an alert
+      7.1.2. Response Messages
+      7.1.3. Response Schema
+         7.1.3.1. Name Description Required Value
+      7.1.4. Body Schema
+         7.1.4.1. Name Description Required Value
+   7.2. Updated Threat Incident
+      7.2.1. Response Messages
+      7.2.2. Response Schema
+         7.2.2.1. Name Description Required Value
+      7.2.3. Body Schema
+         7.2.3.1. Name Description Required Value
+   7.3. Get alerts
+      7.3.1. GET    /web/api/v2.1/cloud-detection/alerts Get a list of alerts for a given scope
+      7.3.2. Parameters
+      7.3.3. Response Messages
+         7.3.3.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      7.3.4. Response Schema
+         7.3.4.1. Name Description Required Value
+8. Application Inventory
+   8.1. Counters
+      8.1.1. Parameters
+      8.1.2. Response Messages
+      8.1.3. Response Schema
+         8.1.3.1. Name Description Required Value
+   8.2. Grouped app inventory
+      8.2.1. Parameters
+      8.2.2. Response Messages
+      8.2.3. Response Schema
+         8.2.3.1. Name Description Required Value
+9. Application Risk
+   9.1. Get CVEs
+      9.1.1. Parameters
+      9.1.2. Response Messages
+      9.1.3. Response Schema
+         9.1.3.1. Name Description Required Value
+   9.2. Export Applications
+      9.2.1. GET    /web/api/v2.1/export/installed-applications
+      9.2.2. Parameters
+      9.2.3. Response Messages
+   9.3. Get Applications
+      9.3.1. GET    /web/api/v2.1/installed-applications
+      9.3.2. Parameters
+      9.3.3. Response Messages
+      9.3.4. Response Schema
+         9.3.4.1. Name Description Required Value
+10. Auto Upgrade Policy
+   10.1. Has Policy
+      10.1.1. POST    /web/api/v2.1/upgrade-policy/has-policy Has policy
+      10.1.2. Response Messages
+         10.1.2.1. 200 - Success 400 - Bad request
+      10.1.3. Response Schema
+         10.1.3.1. Name Description Required Value
+      10.1.4. Body Schema
+         10.1.4.1. Name Description Required Value
+   10.2. Get Parent Policies
+      10.2.1. GET    /web/api/v2.1/upgrade-policy/parent-policies Get paginated and ordered parent policies by a given scope
+      10.2.2. Parameters
+      10.2.3. Response Messages
+         10.2.3.1. 200 - Success 400 - Bad request
+      10.2.4. Response Schema
+         10.2.4.1. Name Description Required Value
+   10.3. Get Policies
+      10.3.1. GET    /web/api/v2.1/upgrade-policy/policies Get paginated and ordered policies by a given scope
+      10.3.2. Parameters
+      10.3.3. Response Messages
+         10.3.3.1. 200 - Success 400 - Bad request
+      10.3.4. Response Schema
+         10.3.4.1. Name Description Required Value
+   10.4. Deactivate Policies
+      10.4.1. POST    /web/api/v2.1/upgrade-policy/policies Deactivate all policies
+      10.4.2. Parameters
+      10.4.3. Response Messages
+         10.4.3.1. 200 - Success 400 - Bad request
+      10.4.4. Response Schema
+         10.4.4.1. Name Description Required Value
+   10.5. Policies OS Count
+      10.5.1. GET    /web/api/v2.1/upgrade-policy/policies-count Get the number of policies for each OS, for a given scope level and id
+      10.5.2. Parameters
+      10.5.3. Response Messages
+         10.5.3.1. 200 - Success 400 - Bad request
+      10.5.4. Response Schema
+         10.5.4.1. Name Description Required Value
+   10.6. Create Policy
+      10.6.1. POST    /web/api/v2.1/upgrade-policy/policy Add policy
+      10.6.2. Response Messages
+         10.6.2.1. 200 - Success 400 - Bad request
+      10.6.3. Response Schema
+         10.6.3.1. Name Description Required Value
+      10.6.4. Body Schema
+         10.6.4.1. Name Description Required Value
+   10.7. Update Policy
+      10.7.1. PUT    /web/api/v2.1/upgrade-policy/policy/:policyid Update existing policy
+      10.7.2. Parameters
+      10.7.3. Response Messages
+         10.7.3.1. 200 - Success 400 - Bad request
+      10.7.4. Response Schema
+         10.7.4.1. Name Description Required Value
+      10.7.5. Body Schema
+         10.7.5.1. Name Description Required Value
+   10.8. Policy Action
+      10.8.1. POST    /web/api/v2.1/upgrade-policy/policy/:policyid Perform action on a certain policy
+      10.8.2. Parameters
+      10.8.3. Response Messages
+         10.8.3.1. 200 - Success 400 - Bad request
+      10.8.4. Response Schema
+         10.8.4.1. Name Description Required Value
+      10.8.5. Body Schema
+         10.8.5.1. Name Description Required Value
+   10.9. Reorder Policies
+      10.9.1. PUT    /web/api/v2.1/upgrade-policy/reorder Reorder policies
+      10.9.2. Response Messages
+         10.9.2.1. 200 - Success 400 - Bad request
+      10.9.3. Response Schema
+         10.9.3.1. Name Description Required Value
+      10.9.4. Body Schema
+         10.9.4.1. Name Description Required Value
+   10.10. Set Scope Inheriting
+      10.10.1. PUT    /web/api/v2.1/upgrade-policy/set-inheriting Set Scope Inheriting
+      10.10.2. Response Messages
+         10.10.2.1. 200 - Success 400 - Bad request
+      10.10.3. Response Schema
+         10.10.3.1. Name Description Required Value
+      10.10.4. Body Schema
+         10.10.4.1. Name Description Required Value
+11. Config Overrides
+   11.1. Get Config Overrides
+      11.1.1. GET    /web/api/v2.1/config-override
+      11.1.2. Parameters
+      11.1.3. Response Messages
+      11.1.4. Response Schema
+         11.1.4.1. Name Description Required Value
+   11.2. Create Config Override
+      11.2.1. POST    /web/api/v2.1/config-override
+      11.2.2. Response Messages
+      11.2.3. Response Schema
+         11.2.3.1. Name Description Required Value
+      11.2.4. Body Schema
+         11.2.4.1. Name Description Required Value
+   11.3. Delete Config Overrides
+      11.3.1. DELETE    /web/api/v2.1/config-override
+      11.3.2. Response Messages
+         11.3.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      11.3.3. Response Schema
+         11.3.3.1. Name Description Required Value
+      11.3.4. Body Schema
+         11.3.4.1. Name Description Required Value
+   11.4. Delete Config Override
+      11.4.1. DELETE    /web/api/v2.1/config-override/{override_id}
+      11.4.2. Response Messages
+      11.4.3. Response Schema
+         11.4.3.1. Name Description Required Value
+   11.5. Update Config Override
+      11.5.1. PUT    /web/api/v2.1/config-override/{override_id}
+      11.5.2. Response Messages
+      11.5.3. Response Schema
+         11.5.3.1. Name Description Required Value
+      11.5.4. Body Schema
+         11.5.4.1. Name Description Required Value
+12. Custom Detection Rule
+   12.1. Disable Rules
+      12.1.1. Response Messages
+         12.1.1.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      12.1.2. Response Schema
+         12.1.2.1. Name Description Required Value
+      12.1.3. Body Schema
+         12.1.3.1. Name Description Required Value
+   12.2. Activate Rules
+      12.2.1. Response Messages
+         12.2.1.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      12.2.2. Response Schema
+         12.2.2.1. Name Description Required Value
+      12.2.3. Body Schema
+         12.2.3.1. Name Description Required Value
+   12.3. Get Rules
+      12.3.1. Parameters
+      12.3.2. Response Messages
+         12.3.2.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      12.3.3. Response Schema
+         12.3.3.1. Name Description Required Value
+   12.4. Create Rule
+      12.4.1. POST    /web/api/v2.1/cloud-detection/rules
+      12.4.2. Response Messages
+         12.4.2.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      12.4.3. Response Schema
+         12.4.3.1. Name Description Required Value
+      12.4.4. Body Schema
+         12.4.4.1. Name Description Required Value
+   12.5. Delete Rules
+      12.5.1. Response Messages
+         12.5.1.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      12.5.2. Response Schema
+         12.5.2.1. Name Description Required Value
+      12.5.3. Body Schema
+         12.5.3.1. Name Description Required Value
+   12.6. Update Rule
+      12.6.1. Response Messages
+      12.6.2. Response Schema
+         12.6.2.1. Name Description Required Value
+      12.6.3. Body Schema
+         12.6.3.1. Name Description Required Value
+13. Deep Visibility
+   13.1. Ping a Power Query if results haven't been retrieved
+      13.1.1. GET    /web/api/v2.1/dv/events/pq-ping
+      13.1.2. Ping a Deep Visibility Power Query using the queryId if results have not returned from an initial Power Query or a previous ping
+      13.1.3. Parameters
+      13.1.4. Response Messages
+      13.1.5. Response Schema
+         13.1.5.1. Name Description Required Value
+   13.2. Create a Power Query and Get QueryId
+      13.2.1. POST    /web/api/v2.1/dv/events/pq
+      13.2.2. Start a Deep Visibility Power Query, get back status and potential results (ping afterwards using the queryId if query has not finished)
+      13.2.3. Response Messages
+      13.2.4. Response Schema
+         13.2.4.1. Name Description Required Value
+      13.2.5. Body Schema
+         13.2.5.1. Name Description Required Value
+   13.3. Get Process State
+      13.3.1. GET    /web/api/v2.1/dv/process-state
+      13.3.2. Parameters
+      13.3.3. Response Messages
+   13.4. Cancel Running Query
+      13.4.1. POST    /web/api/v2.1/dv/cancel-query
+      13.4.2. Response Messages
+         13.4.2.1. 200 - Success
+      13.4.3. Response Schema
+         13.4.3.1. Name Description Required Value
+      13.4.4. Body Schema
+         13.4.4.1. Name Description Required Value
+   13.5. Get Query Status
+      13.5.1. GET    /web/api/v2.1/dv/query-status
+      13.5.2. responseState can return these values: EMPTY_RESULTS, EVENTS_RUNNING, FAILED, FAILED_CLIENT, FINISHED, PLANNING, PROCESS_RUNNING, QUERY_CANCEL,
+      13.5.3. Parameters
+      13.5.4. Response Messages
+      13.5.5. Response Schema
+         13.5.5.1. Name Description Required Value
+   13.6. Create Query and Get QueryId
+      13.6.1. POST    /web/api/v2.1/dv/init-query
+      13.6.2. Response Messages
+      13.6.3. Response Schema
+         13.6.3.1. Name Description Required Value
+      13.6.4. Body Schema
+         13.6.4.1. Name Description Required Value
+   13.7. Download source process file
+      13.7.1. Parameters
+      13.7.2. Response Messages
+         13.7.2.1. 401 - Unauthorized access - please sign in and retry. 404 - File not found
+      13.7.3. Response Schema
+         13.7.3.1. Name Description Required Value
+   13.8. Get Events
+      13.8.1. GET    /web/api/v2.1/dv/events
+      13.8.2. Parameters
+      13.8.3. Response Messages
+      13.8.4. Response Schema
+         13.8.4.1. Name Description Required Value
+   13.9. Get Events By Type
+      13.9.1. GET    /web/api/v2.1/dv/events/{event_type}
+      13.9.2. Parameters
+      13.9.3. Response Messages
+      13.9.4. Response Schema
+         13.9.4.1. Name Description Required Value
+14. Device Control
+   14.1. Get Configuration
+      14.1.1. Parameters
+      14.1.2. Response Messages
+      14.1.3. Response Schema
+         14.1.3.1. Name Description Required Value
+   14.2. Update Configuration
+      14.2.1. PUT    /web/api/v2.1/device-control/configuration
+      14.2.2. Response Messages
+      14.2.3. Response Schema
+         14.2.3.1. Name Description Required Value
+      14.2.4. Body Schema
+         14.2.4.1. Name Description Required Value
+   14.3. Copy Rules
+      14.3.1. POST    /web/api/v2.1/device-control/copy-rules
+      14.3.2. Response Messages
+      14.3.3. Response Schema
+         14.3.3.1. Name Description Required Value
+      14.3.4. Body Schema
+         14.3.4.1. Name Description Required Value
+   14.4. Move rules
+      14.4.1. POST    /web/api/v2.1/device-control/move-rules
+      14.4.2. Response Messages
+      14.4.3. Response Schema
+         14.4.3.1. Name Description Required Value
+      14.4.4. Body Schema
+         14.4.4.1. Name Description Required Value
+   14.5. Reorder Rules
+      14.5.1. PUT    /web/api/v2.1/device-control/reorder
+      14.5.2. Response Messages
+      14.5.3. Response Schema
+         14.5.3.1. Name Description Required Value
+      14.5.4. Body Schema
+         14.5.4.1. Name Description Required Value
+   14.6. Export Rules
+      14.6.1. Parameters
+      14.6.2. Response Messages
+   14.7. Get Device Control Events
+      14.7.1. GET    /web/api/v2.1/device-control/events
+      14.7.2. Parameters
+      14.7.3. Response Messages
+      14.7.4. Response Schema
+         14.7.4.1. Name Description Required Value
+   14.8. Enable/Disable Rules
+      14.8.1. PUT    /web/api/v2.1/device-control/enable
+      14.8.2. Response Messages
+      14.8.3. Response Schema
+         14.8.3.1. Name Description Required Value
+      14.8.4. Body Schema
+         14.8.4.1. Name Description Required Value
+   14.9. Get Device Rules
+      14.9.1. Parameters
+      14.9.2. Response Messages
+      14.9.3. Response Schema
+         14.9.3.1. Name Description Required Value
+   14.10. Create Device Control Rule
+      14.10.1. POST    /web/api/v2.1/device-control
+      14.10.2. Response Messages
+      14.10.3. Response Schema
+         14.10.3.1. Name Description Required Value
+      14.10.4. Body Schema
+         14.10.4.1. Name Description Required Value
+   14.11. Delete Rules
+      14.11.1. Response Messages
+      14.11.2. Response Schema
+         14.11.2.1. Name Description Required Value
+      14.11.3. Body Schema
+         14.11.3.1. Name Description Required Value
+   14.12. Update Device Rule
+      14.12.1. PUT    /web/api/v2.1/device-control/{rule_id}
+      14.12.2. Response Messages
+         14.12.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Device rule not found
+      14.12.3. Response Schema
+         14.12.3.1. Name Description Required Value
+      14.12.4. Body Schema
+         14.12.4.1. Name Description Required Value
+15. Exclusions and Blacklist
+   15.1. Validate Blacklist Item
+      15.1.1. POST    /web/api/v2.1/restrictions/validate
+      15.1.2. Check if a hash is on the list of SentinelOne items that are "Not Allowed" or "Not Recommended". This API returns one of the following statuses:
+      15.1.3. Response Messages
+      15.1.4. Response Schema
+         15.1.4.1. Name Description Required Value
+      15.1.5. Body Schema
+         15.1.5.1. Name Description Required Value
+   15.2. Validate Exclusion Item
+      15.2.1. POST    /web/api/v2.1/exclusions/validate
+      15.2.2. Check if an exclusion is on the list of SentinelOne items that are "Not Allowed" or "Not Recommended". This API returns one of the following statuses:
+      15.2.3. Response Messages
+      15.2.4. Response Schema
+         15.2.4.1. Name Description Required Value
+      15.2.5. Body Schema
+         15.2.5.1. Name Description Required Value
+   15.3. Export Blacklist
+      15.3.1. Parameters
+      15.3.2. Response Messages
+   15.4. Export Exclusions
+      15.4.1. Parameters
+      15.4.2. Response Messages
+   15.5. Get Blacklist
+      15.5.1. Parameters
+      15.5.2. Response Messages
+      15.5.3. Response Schema
+         15.5.3.1. Name Description Required Value
+   15.6. Create Blacklist Item
+      15.6.1. POST    /web/api/v2.1/restrictions
+      15.6.2. Response Messages
+      15.6.3. Response Schema
+         15.6.3.1. Name Description Required Value
+      15.6.4. Body Schema
+         15.6.4.1. Name Description Required Value
+   15.7. Update Blacklist Item
+      15.7.1. PUT    /web/api/v2.1/restrictions
+      15.7.2. Response Messages
+         15.7.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Blacklist not found
+      15.7.3. Response Schema
+         15.7.3.1. Name Description Required Value
+      15.7.4. Body Schema
+         15.7.4.1. Name Description Required Value
+   15.8. Delete Blacklist Item
+      15.8.1. DELETE    /web/api/v2.1/restrictions
+      15.8.2. Response Messages
+      15.8.3. Response Schema
+         15.8.3.1. Name Description Required Value
+      15.8.4. Body Schema
+         15.8.4.1. Name Description Required Value
+   15.9. Get Exclusions
+      15.9.1. Parameters
+      15.9.2. Response Messages
+      15.9.3. Response Schema
+         15.9.3.1. Name Description Required Value
+   15.10. Create Exclusion
+      15.10.1. POST    /web/api/v2.1/exclusions
+      15.10.2. Response Messages
+      15.10.3. Response Schema
+         15.10.3.1. Name Description Required Value
+      15.10.4. Body Schema
+         15.10.4.1. Name Description Required Value
+   15.11. Update Exclusions
+      15.11.1. PUT    /web/api/v2.1/exclusions
+      15.11.2. Response Messages
+         15.11.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Exclusion not found
+      15.11.3. Response Schema
+         15.11.3.1. Name Description Required Value
+      15.11.4. Body Schema
+         15.11.4.1. Name Description Required Value
+   15.12. Delete Exclusions
+      15.12.1. DELETE    /web/api/v2.1/exclusions
+      15.12.2. Response Messages
+      15.12.3. Response Schema
+         15.12.3.1. Name Description Required Value
+      15.12.4. Body Schema
+         15.12.4.1. Name Description Required Value
+16. Filters
+   16.1. Upload CSV file
+      16.1.1. POST    /web/api/v2.1/filters/csv-filter Upload CSV file
+      16.1.2. Response Messages
+      16.1.3. Response Schema
+         16.1.3.1. Name Description Required Value
+      16.1.4. Body Schema
+         16.1.4.1. Name Description Required Value
+   16.2. Get Deep Visibility Filters
+      16.2.1. GET    /web/api/v2.1/filters/dv
+      16.2.2. Parameters
+      16.2.3. Response Messages
+   16.3. Save Deep Visibility Filter
+      16.3.1. POST    /web/api/v2.1/filters/dv
+      16.3.2. Response Messages
+      16.3.3. Body Schema
+         16.3.3.1. Name Description Required Value
+   16.4. Get Filters
+      16.4.1. GET    /web/api/v2.1/filters
+      16.4.2. Parameters
+      16.4.3. Response Messages
+         16.4.3.1. 200 - Success
+      16.4.4. Response Schema
+         16.4.4.1. Name Description Required Value
+   16.5. Save Filter
+      16.5.1. POST    /web/api/v2.1/filters
+      16.5.2. Response Messages
+      16.5.3. Response Schema
+         16.5.3.1. Name Description Required Value
+      16.5.4. Body Schema
+         16.5.4.1. Name Description Required Value
+   16.6. Delete Deep Visibility Filter
+      16.6.1. Response Messages
+      16.6.2. Response Schema
+         16.6.2.1. Name Description Required Value
+   16.7. Update Deep Visibility Filter
+      16.7.1. PUT    /web/api/v2.1/filters/dv/{filter_id}
+      16.7.2. Response Messages
+      16.7.3. Response Schema
+         16.7.3.1. Name Description Required Value
+      16.7.4. Body Schema
+         16.7.4.1. Name Description Required Value
+   16.8. Update Filter
+      16.8.1. PUT    /web/api/v2.1/filters/{filter_id} Update an existing filter
+      16.8.2. Response Messages
+      16.8.3. Response Schema
+         16.8.3.1. Name Description Required Value
+      16.8.4. Body Schema
+         16.8.4.1. Name Description Required Value
+   16.9. Delete Filter
+      16.9.1. Response Messages
+      16.9.2. Response Schema
+         16.9.2.1. Name Description Required Value
+17. Firewall Control
+   17.1. Get Configuration
+      17.1.1. Parameters
+      17.1.2. Response Messages
+      17.1.3. Response Schema
+         17.1.3.1. Name Description Required Value
+   17.2. Update Configuration
+      17.2.1. Response Messages
+      17.2.2. Response Schema
+         17.2.2.1. Name Description Required Value
+      17.2.3. Body Schema
+         17.2.3.1. Name Description Required Value
+   17.3. Set Location
+      17.3.1. POST    /web/api/v2.1/firewall-control/set-location
+      17.3.2. Response Messages
+      17.3.3. Response Schema
+         17.3.3.1. Name Description Required Value
+      17.3.4. Body Schema
+         17.3.4.1. Name Description Required Value
+   17.4. Remove Rule Tags
+      17.4.1. Response Messages
+      17.4.2. Response Schema
+         17.4.2.1. Name Description Required Value
+      17.4.3. Body Schema
+         17.4.3.1. Name Description Required Value
+   17.5. Copy Rules
+      17.5.1. Response Messages
+      17.5.2. Response Schema
+         17.5.2.1. Name Description Required Value
+      17.5.3. Body Schema
+         17.5.3.1. Name Description Required Value
+   17.6. Move Rules
+      17.6.1. POST    /web/api/v2.1/firewall-control/move-rules
+      17.6.2. Response Messages
+      17.6.3. Response Schema
+         17.6.3.1. Name Description Required Value
+      17.6.4. Body Schema
+         17.6.4.1. Name Description Required Value
+   17.7. Get Protocols
+      17.7.1. Parameters
+      17.7.2. Response Messages
+      17.7.3. Response Schema
+         17.7.3.1. Name Description Required Value
+   17.8. Add Rule Tags
+      17.8.1. Response Messages
+      17.8.2. Response Schema
+         17.8.2.1. Name Description Required Value
+      17.8.3. Body Schema
+         17.8.3.1. Name Description Required Value
+   17.9. Reorder Rules
+      17.9.1. Response Messages
+      17.9.2. Response Schema
+         17.9.2.1. Name Description Required Value
+      17.9.3. Body Schema
+         17.9.3.1. Name Description Required Value
+   17.10. Export Rules
+      17.10.1. GET    /web/api/v2.1/firewall-control/export
+      17.10.2. Parameters
+      17.10.3. Response Messages
+   17.11. Import Rules
+      17.11.1. POST    /web/api/v2.1/firewall-control/import
+      17.11.2. Response Messages
+      17.11.3. Response Schema
+         17.11.3.1. Name Description Required Value
+      17.11.4. Body Schema
+         17.11.4.1. Name Description Required Value
+   17.12. Enable/Disable Rules
+      17.12.1. PUT    /web/api/v2.1/firewall-control/enable
+      17.12.2. Response Messages
+      17.12.3. Response Schema
+         17.12.3.1. Name Description Required Value
+      17.12.4. Body Schema
+         17.12.4.1. Name Description Required Value
+   17.13. Get Firewall Rules
+      17.13.1. GET    /web/api/v2.1/firewall-control
+      17.13.2. Parameters
+      17.13.3. Response Messages
+      17.13.4. Response Schema
+         17.13.4.1. Name Description Required Value
+   17.14. Create Firewall Rule
+      17.14.1. POST    /web/api/v2.1/firewall-control
+      17.14.2. Response Messages
+      17.14.3. Response Schema
+         17.14.3.1. Name Description Required Value
+      17.14.4. Body Schema
+         17.14.4.1. Name Description Required Value
+   17.15. Delete Rules
+      17.15.1. Response Messages
+      17.15.2. Response Schema
+         17.15.2.1. Name Description Required Value
+      17.15.3. Body Schema
+         17.15.3.1. Name Description Required Value
+   17.16. Get Tag Firewall Rules
+      17.16.1. Parameters
+      17.16.2. Response Messages
+      17.16.3. Response Schema
+         17.16.3.1. Name Description Required Value
+   17.17. Update Firewall Rule
+      17.17.1. Response Messages
+         17.17.1.1. 401 - Unauthorized access - please sign in and retry. 404 - Firewall rule not found
+      17.17.2. Response Schema
+         17.17.2.1. Name Description Required Value
+      17.17.3. Body Schema
+         17.17.3.1. Name Description Required Value
+18. Forensics
+   18.1. Application Connections
+      18.1.1. GET    /web/api/v2.1/applications/{application_id}/forensics/connections [DEPRECATED] Returns an empty array
+      18.1.2. Parameters
+      18.1.3. Response Messages
+         18.1.3.1. 401 - Unauthorized access - please sign in and retry. 404 - Not found
+      18.1.4. Response Schema
+         18.1.4.1. Name Description Required Value
+   18.2. Application Forensics - Detailed
+      18.2.1. GET    /web/api/v2.1/applications/{application_id}/forensics/details [DEPRECATED] Returns an empty array
+      18.2.2. Parameters
+      18.2.3. Response Messages
+         18.2.3.1. 401 - Unauthorized access - please sign in and retry. 404 - Not found
+      18.2.4. Response Schema
+         18.2.4.1. Name Description Required Value
+   18.3. Export Application
+      18.3.1. GET    /web/api/v2.1/applications/{application_id}/forensics/export/{export_format} [DEPRECATED] Returns an empty array
+      18.3.2. Parameters
+      18.3.3. Response Messages
+         18.3.3.1. 401 - Unauthorized access - please sign in and retry. 404 - Not found
+   18.4. Application Forensics
+      18.4.1. GET    /web/api/v2.1/applications/{application_id}/forensics DEPRECATED
+      18.4.2. Parameters
+      18.4.3. Response Messages
+         18.4.3.1. 401 - Unauthorized access - please sign in and retry. 404 - Not found
+      18.4.4. Response Schema
+         18.4.4.1. Name Description Required Value
+19. Gateways
+   19.1. Update Gateways
+      19.1.1. POST    /web/api/v2.1/ranger/gateways/update
+      19.1.2. Response Messages
+         19.1.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      19.1.3. Response Schema
+         19.1.3.1. Name Description Required Value
+      19.1.4. Body Schema
+         19.1.4.1. Name Description Required Value
+   19.2. Get Gateways
+      19.2.1. Parameters
+      19.2.2. Response Messages
+         19.2.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      19.2.3. Response Schema
+         19.2.3.1. Name Description Required Value
+   19.3. Update Gateway
+      19.3.1. PUT    /web/api/v2.1/ranger/gateways/{gateway_id} Change the Ranger scan configuration for a gateway that Ranger discovered
+      19.3.2. Response Messages
+         19.3.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      19.3.3. Response Schema
+         19.3.3.1. Name Description Required Value
+      19.3.4. Body Schema
+         19.3.4.1. Name Description Required Value
+20. Groups
+   20.1. Update Ranks
+      20.1.1. PUT    /web/api/v2.1/groups/ranks
+      20.1.2. Response Messages
+         20.1.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      20.1.3. Body Schema
+         20.1.3.1. Name Description Required Value
+   20.2. Get Groups
+      20.2.1. GET    /web/api/v2.1/groups
+      20.2.2. group, which you can use in other commands. BEST PRACTICE
+      20.2.3. Parameters
+      20.2.4. Response Messages
+      20.2.5. Response Schema
+         20.2.5.1. Name Description Required Value
+   20.3. Create Group
+      20.3.1. POST    /web/api/v2.1/groups
+      20.3.2. Response Messages
+         20.3.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      20.3.3. Response Schema
+         20.3.3.1. Name Description Required Value
+      20.3.4. Body Schema
+         20.3.4.1. Name Description Required Value
+   20.4. Regenerate Group Token
+      20.4.1. PUT    /web/api/v2.1/groups/{group_id}/regenerate-key
+      20.4.2. Response Messages
+      20.4.3. Response Schema
+         20.4.3.1. Name Description Required Value
+   20.5. Revert Policy
+      20.5.1. PUT    /web/api/v2.1/groups/{group_id}/revert-policy
+      20.5.2. Response Messages
+         20.5.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      20.5.3. Response Schema
+         20.5.3.1. Name Description Required Value
+      20.5.4. Body Schema
+         20.5.4.1. Name Description Required Value
+   20.6. Move Agents
+      20.6.1. PUT    /web/api/v2.1/groups/{group_id}/move-agents
+      20.6.2. Response Messages
+         20.6.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 409 - Conflict
+      20.6.3. Body Schema
+         20.6.3.1. Name Description Required Value
+   20.7. Delete Group
+      20.7.1. DELETE    /web/api/v2.1/groups/{group_id}
+      20.7.2. Response Messages
+      20.7.3. Response Schema
+         20.7.3.1. Name Description Required Value
+   20.8. Update Group
+      20.8.1. PUT    /web/api/v2.1/groups/{group_id}
+      20.8.2. Response Messages
+      20.8.3. Response Schema
+         20.8.3.1. Name Description Required Value
+      20.8.4. Body Schema
+         20.8.4.1. Name Description Required Value
+   20.9. Get Group by ID
+      20.9.1. GET    /web/api/v2.1/groups/{group_id}
+      20.9.2. Response Messages
+         20.9.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      20.9.3. Response Schema
+         20.9.3.1. Name Description Required Value
+21. Hashes
+   21.1. Hash classification
+      21.1.1. Response Messages
+      21.1.2. Response Schema
+         21.1.2.1. Name Description Required Value
+   21.2. Hash Reputation
+      21.2.1. GET    /web/api/v2.1/hashes/{hash}/reputation
+      21.2.2. Response Messages
+      21.2.3. Response Schema
+         21.2.3.1. Name Description Required Value
+22. licenses
+   22.1. Update sites add-ons
+      22.1.1. PUT    /web/api/v2.1/licenses/update-sites-modules Change the add-ons of the sites by a given filter
+      22.1.2. Response Messages
+      22.1.3. Response Schema
+         22.1.3.1. Name Description Required Value
+      22.1.4. Body Schema
+         22.1.4.1. Name Description Required Value
+23. Locations
+   23.1. Create Location
+      23.1.1. POST    /web/api/v2.1/locations
+      23.1.2. Create a location that defines parameters of Agents in a scope filter. Parameters include:
+      23.1.3. Response Messages
+         23.1.3.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      23.1.4. Response Schema
+         23.1.4.1. Name Description Required Value
+      23.1.5. Body Schema
+         23.1.5.1. Name Description Required Value
+   23.2. Get Locations
+      23.2.1. GET    /web/api/v2.1/locations
+      23.2.2. Parameters
+      23.2.3. Response Messages
+      23.2.4. Response Schema
+         23.2.4.1. Name Description Required Value
+   23.3. Delete Locations
+      23.3.1. DELETE    /web/api/v2.1/locations
+      23.3.2. Response Messages
+         23.3.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      23.3.3. Response Schema
+         23.3.3.1. Name Description Required Value
+      23.3.4. Body Schema
+         23.3.4.1. Name Description Required Value
+   23.4. Update Location
+      23.4.1. PUT    /web/api/v2.1/locations/{location_id}
+      23.4.2. Response Messages
+         23.4.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 404 - Location not found
+      23.4.3. Response Schema
+         23.4.3.1. Name Description Required Value
+      23.4.4. Body Schema
+         23.4.4.1. Name Description Required Value
+24. marketplace
+   24.1. Get Applications Catalog
+      24.1.1. Parameters
+      24.1.2. Response Messages
+         24.1.2.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      24.1.3. Response Schema
+         24.1.3.1. Name Description Required Value
+   24.2. Get Installed Applications
+      24.2.1. Parameters
+      24.2.2. Response Messages
+         24.2.2.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      24.2.3. Response Schema
+         24.2.3.1. Name Description Required Value
+   24.3. Delete Application
+      24.3.1. Response Messages
+      24.3.2. Response Schema
+         24.3.2.1. Name Description Required Value
+      24.3.3. Body Schema
+         24.3.3.1. Name Description Required Value
+   24.4. Install Applications
+      24.4.1. Response Messages
+      24.4.2. Response Schema
+         24.4.2.1. Name Description Required Value
+      24.4.3. Body Schema
+         24.4.3.1. Name Description Required Value
+   24.5. Update Application Configuration
+      24.5.1. Response Messages
+         24.5.1.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      24.5.2. Response Schema
+         24.5.2.1. Name Description Required Value
+      24.5.3. Body Schema
+         24.5.3.1. Name Description Required Value
+   24.6. Get Configuration Fields
+      24.6.1. Response Messages
+         24.6.1.1. 200 - Success 401 - Unauthorized access - please sign in and retry 404 - Application Catalog not found
+      24.6.2. Response Schema
+         24.6.2.1. Name Description Required Value
+   24.7. Get Configuration fields for Catalog Application
+      24.7.1. GET    /web/api/v2.1/singularity-marketplace/applications/{application_id}/config
+      24.7.2. Response Messages
+         24.7.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry 404 - Application not found
+      24.7.3. Response Schema
+         24.7.3.1. Name Description Required Value
+   24.8. Enable or Disable application
+      24.8.1. POST    /web/api/v2.1/singularity-marketplace/applications/{mode}
+      24.8.2. Response Messages
+      24.8.3. Response Schema
+         24.8.3.1. Name Description Required Value
+      24.8.4. Body Schema
+         24.8.4.1. Name Description Required Value
+25. Network Quarantine Control
+   25.1. Get Configuration
+      25.1.1. Parameters
+      25.1.2. Response Messages
+      25.1.3. Response Schema
+         25.1.3.1. Name Description Required Value
+   25.2. Update Configuration
+      25.2.1. Response Messages
+      25.2.2. Response Schema
+         25.2.2.1. Name Description Required Value
+      25.2.3. Body Schema
+         25.2.3.1. Name Description Required Value
+   25.3. Set Location
+      25.3.1. POST    /web/api/v2.1/firewall-control/{firewall_rule_category}/set-location
+      25.3.2. Response Messages
+      25.3.3. Response Schema
+         25.3.3.1. Name Description Required Value
+      25.3.4. Body Schema
+         25.3.4.1. Name Description Required Value
+   25.4. Remove Rule Tags
+      25.4.1. Response Messages
+      25.4.2. Response Schema
+         25.4.2.1. Name Description Required Value
+      25.4.3. Body Schema
+         25.4.3.1. Name Description Required Value
+   25.5. Copy Rules
+      25.5.1. Response Messages
+      25.5.2. Response Schema
+         25.5.2.1. Name Description Required Value
+      25.5.3. Body Schema
+         25.5.3.1. Name Description Required Value
+   25.6. Move Rules
+      25.6.1. POST    /web/api/v2.1/firewall-control/{firewall_rule_category}/move-rules
+      25.6.2. Response Messages
+      25.6.3. Response Schema
+         25.6.3.1. Name Description Required Value
+      25.6.4. Body Schema
+         25.6.4.1. Name Description Required Value
+   25.7. Get Protocols
+      25.7.1. Parameters
+      25.7.2. Response Messages
+      25.7.3. Response Schema
+         25.7.3.1. Name Description Required Value
+   25.8. Add Rule Tags
+      25.8.1. Response Messages
+      25.8.2. Response Schema
+         25.8.2.1. Name Description Required Value
+      25.8.3. Body Schema
+         25.8.3.1. Name Description Required Value
+   25.9. Reorder Rules
+      25.9.1. PUT    /web/api/v2.1/firewall-control/{firewall_rule_category}/reorder
+      25.9.2. Response Messages
+      25.9.3. Response Schema
+         25.9.3.1. Name Description Required Value
+      25.9.4. Body Schema
+         25.9.4.1. Name Description Required Value
+   25.10. Export Rules
+      25.10.1. GET    /web/api/v2.1/firewall-control/{firewall_rule_category}/export
+      25.10.2. Parameters
+      25.10.3. Response Messages
+   25.11. Import Rules
+      25.11.1. POST    /web/api/v2.1/firewall-control/{firewall_rule_category}/import
+      25.11.2. Response Messages
+      25.11.3. Response Schema
+         25.11.3.1. Name Description Required Value
+      25.11.4. Body Schema
+         25.11.4.1. Name Description Required Value
+   25.12. Enable/Disable Rules
+      25.12.1. PUT    /web/api/v2.1/firewall-control/{firewall_rule_category}/enable
+      25.12.2. Response Messages
+      25.12.3. Response Schema
+         25.12.3.1. Name Description Required Value
+      25.12.4. Body Schema
+         25.12.4.1. Name Description Required Value
+   25.13. Get Firewall Rules
+      25.13.1. GET    /web/api/v2.1/firewall-control/{firewall_rule_category}
+      25.13.2. Parameters
+      25.13.3. Response Messages
+      25.13.4. Response Schema
+         25.13.4.1. Name Description Required Value
+   25.14. Create Firewall Rule
+      25.14.1. POST    /web/api/v2.1/firewall-control/{firewall_rule_category}
+      25.14.2. Response Messages
+      25.14.3. Response Schema
+         25.14.3.1. Name Description Required Value
+      25.14.4. Body Schema
+         25.14.4.1. Name Description Required Value
+   25.15. Delete Rules
+      25.15.1. Response Messages
+      25.15.2. Response Schema
+         25.15.2.1. Name Description Required Value
+      25.15.3. Body Schema
+         25.15.3.1. Name Description Required Value
+26. Policies
+   26.1. Global Policy
+      26.1.1. GET    /web/api/v2.1/tenant/policy
+      26.1.2. Response Messages
+         26.1.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Policy not found
+      26.1.3. Response Schema
+         26.1.3.1. Name Description Required Value
+   26.2. Update Global Policy
+      26.2.1. PUT    /web/api/v2.1/tenant/policy
+      26.2.2. Response Messages
+         26.2.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Policy not found
+      26.2.3. Response Schema
+         26.2.3.1. Name Description Required Value
+      26.2.4. Body Schema
+         26.2.4.1. Name Description Required Value
+   26.3. Account Policy
+      26.3.1. GET    /web/api/v2.1/accounts/{account_id}/policy
+      26.3.2. Response Messages
+         26.3.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Policy not found
+      26.3.3. Response Schema
+         26.3.3.1. Name Description Required Value
+   26.4. Update Account Policy
+      26.4.1. PUT    /web/api/v2.1/accounts/{account_id}/policy
+      26.4.2. Response Messages
+         26.4.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Account not found
+      26.4.3. Response Schema
+         26.4.3.1. Name Description Required Value
+      26.4.4. Body Schema
+         26.4.4.1. Name Description Required Value
+   26.5. Group Policy
+      26.5.1. GET    /web/api/v2.1/groups/{group_id}/policy
+      26.5.2. Response Messages
+         26.5.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Policy not found
+      26.5.3. Response Schema
+         26.5.3.1. Name Description Required Value
+   26.6. Update Group Policy
+      26.6.1. PUT    /web/api/v2.1/groups/{group_id}/policy
+      26.6.2. Response Messages
+         26.6.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Group not found
+      26.6.3. Response Schema
+         26.6.3.1. Name Description Required Value
+      26.6.4. Body Schema
+         26.6.4.1. Name Description Required Value
+   26.7. Site Policy
+      26.7.1. GET    /web/api/v2.1/sites/{site_id}/policy
+      26.7.2. Response Messages
+         26.7.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Policy not found
+      26.7.3. Response Schema
+         26.7.3.1. Name Description Required Value
+   26.8. Update Site Policy
+      26.8.1. PUT    /web/api/v2.1/sites/{site_id}/policy
+      26.8.2. Response Messages
+         26.8.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Site not found
+      26.8.3. Response Schema
+         26.8.3.1. Name Description Required Value
+      26.8.4. Body Schema
+         26.8.4.1. Name Description Required Value
+27. Ranger
+   27.1. Export Ranger Data
+      27.1.1. GET    /web/api/v2.1/ranger/report/csv
+      27.1.2. Parameters
+      27.1.3. Response Messages
+   27.2. Change Device Review in Bulk
+      27.2.1. Response Messages
+      27.2.2. Response Schema
+         27.2.2.1. Name Description Required Value
+      27.2.3. Body Schema
+         27.2.3.1. Name Description Required Value
+   27.3. Get Ranger Table
+      27.3.1. GET    /web/api/v2.1/ranger/table-view
+      27.3.2. Parameters
+      27.3.3. Response Messages
+         27.3.3.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      27.3.4. Response Schema
+         27.3.4.1. Name Description Required Value
+   27.4. Get Ranger Settings
+      27.4.1. GET    /web/api/v2.1/ranger/settings
+      27.4.2. Account, the protocols and ports of the scans, and more:
+      27.4.3. Parameters
+      27.4.4. Response Messages
+         27.4.4.1. 403 - Insufficient permissions
+      27.4.5. Response Schema
+         27.4.5.1. Name Description Required Value
+   27.5. Update Ranger Settings
+      27.5.1. PUT    /web/api/v2.1/ranger/settings
+      27.5.2. Response Messages
+         27.5.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      27.5.3. Response Schema
+         27.5.3.1. Name Description Required Value
+      27.5.4. Body Schema
+         27.5.4.1. Name Description Required Value
+   27.6. Change Device Tags
+      27.6.1. Response Messages
+      27.6.2. Response Schema
+         27.6.2.1. Name Description Required Value
+      27.6.3. Body Schema
+         27.6.3.1. Name Description Required Value
+   27.7. Export JSON Raw Data
+      27.7.1. GET    /web/api/v2.1/ranger/{inventory_id}/json/export
+      27.7.2. Response Messages
+         27.7.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Not found
+   27.8. Change Device Review
+      27.8.1. Response Messages
+      27.8.2. Response Schema
+         27.8.2.1. Name Description Required Value
+      27.8.3. Body Schema
+         27.8.3.1. Name Description Required Value
+   27.9. JSON Raw Data
+      27.9.1. Response Messages
+      27.9.2. Response Schema
+         27.9.2.1. Name Description Required Value
+28. Ranger Deploy
+   28.1. Add cred details
+      28.1.1. Response Messages
+      28.1.2. Response Schema
+         28.1.2.1. Name Description Required Value
+      28.1.3. Body Schema
+         28.1.3.1. Name Description Required Value
+   28.2. Get Cred group details
+      28.2.1. Parameters
+      28.2.2. Response Messages
+         28.2.2.1. 403 - Insufficient permissions
+      28.2.3. Response Schema
+         28.2.3.1. Name Description Required Value
+   28.3. Create Cred Group
+      28.3.1. Response Messages
+      28.3.2. Response Schema
+         28.3.2.1. Name Description Required Value
+      28.3.3. Body Schema
+         28.3.3.1. Name Description Required Value
+   28.4. Get Cred groups
+      28.4.1. Parameters
+      28.4.2. Response Messages
+         28.4.2.1. 403 - Insufficient permissions
+      28.4.3. Response Schema
+         28.4.3.1. Name Description Required Value
+   28.5. Delete Cred Group Detail
+      28.5.1. Response Messages
+      28.5.2. Response Schema
+         28.5.2.1. Name Description Required Value
+   28.6. Update Cred Group Details
+      28.6.1. Response Messages
+      28.6.2. Response Schema
+         28.6.2.1. Name Description Required Value
+      28.6.3. Body Schema
+         28.6.3.1. Name Description Required Value
+   28.7. Delete Cred Group
+      28.7.1. Response Messages
+      28.7.2. Response Schema
+         28.7.2.1. Name Description Required Value
+29. Ranger Self Enablement
+   29.1. Features Configuration for New Sites
+      29.1.1. GET    /web/api/v2.1/ranger/enablement/defaults
+      29.1.2. Parameters
+      29.1.3. Response Messages
+      29.1.4. Response Schema
+         29.1.4.1. Name Description Required Value
+   29.2. Change Feature Defaults for New Sites
+      29.2.1. POST    /web/api/v2.1/ranger/enablement/defaults
+      29.2.2. Response Messages
+         29.2.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      29.2.3. Response Schema
+         29.2.3.1. Name Description Required Value
+      29.2.4. Body Schema
+         29.2.4.1. Name Description Required Value
+   29.3. Change the Self-Enablement for Accounts
+      29.3.1. Response Messages
+         29.3.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      29.3.2. Response Schema
+         29.3.2.1. Name Description Required Value
+      29.3.3. Body Schema
+         29.3.3.1. Name Description Required Value
+   29.4. Get Self Enablement
+      29.4.1. Parameters
+      29.4.2. Response Messages
+         29.4.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      29.4.3. Response Schema
+         29.4.3.1. Name Description Required Value
+   29.5. Change Ranger or Rogues Features
+      29.5.1. Response Messages
+         29.5.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      29.5.2. Response Schema
+         29.5.2.1. Name Description Required Value
+      29.5.3. Body Schema
+         29.5.3.1. Name Description Required Value
+30. RBAC
+   30.1. Get All Roles
+      30.1.1. GET    /web/api/v2.1/rbac/roles
+      30.1.2. Parameters
+      30.1.3. Response Messages
+      30.1.4. Response Schema
+         30.1.4.1. Name Description Required Value
+   30.2. Create new role
+      30.2.1. Response Messages
+      30.2.2. Response Schema
+         30.2.2.1. Name Description Required Value
+      30.2.3. Body Schema
+         30.2.3.1. Name Description Required Value
+   30.3. Get template for new role
+      30.3.1. Parameters
+      30.3.2. Response Messages
+      30.3.3. Response Schema
+         30.3.3.1. Name Description Required Value
+   30.4. Get Specific Role Definition
+      30.4.1. Parameters
+      30.4.2. Response Messages
+      30.4.3. Response Schema
+         30.4.3.1. Name Description Required Value
+   30.5. Update role
+      30.5.1. Response Messages
+      30.5.2. Response Schema
+         30.5.2.1. Name Description Required Value
+      30.5.3. Body Schema
+         30.5.3.1. Name Description Required Value
+   30.6. Delete role
+      30.6.1. DELETE    /web/api/v2.1/rbac/role/{role_id}
+      30.6.2. Response Messages
+      30.6.3. Response Schema
+         30.6.3.1. Name Description Required Value
+      30.6.4. Body Schema
+         30.6.4.1. Name Description Required Value
+31. Remote Script Orchestration
+   31.1. Get Script Results
+      31.1.1. POST    /web/api/v2.1/remote-scripts/fetch-files
+      31.1.2. Get scripts results URLs. Accessible via API only
+      31.1.3. Response Messages
+      31.1.4. Response Schema
+         31.1.4.1. Name Description Required Value
+      31.1.5. Body Schema
+         31.1.5.1. Name Description Required Value
+   31.2. Run Remote Script
+      31.2.1. Response Messages
+      31.2.2. Response Schema
+         31.2.2.1. Name Description Required Value
+      31.2.3. Body Schema
+         31.2.3.1. Name Description Required Value
+   31.3. Get Remote Scripts Tasks Status
+      31.3.1. GET    /web/api/v2.1/remote-scripts/status
+      31.3.2. Get remote scripts tasks using a variety of filters. Accessible via API only parent_task_id or parent_task_id__in query parameter is mandatory
+      31.3.3. Parameters
+      31.3.4. Response Messages
+      31.3.5. Response Schema
+         31.3.5.1. Name Description Required Value
+   31.4. Get Scripts
+      31.4.1. Parameters
+      31.4.2. Response Messages
+      31.4.3. Response Schema
+         31.4.3.1. Name Description Required Value
+   31.5. Upload New Script
+      31.5.1. POST    /web/api/v2.1/remote-scripts
+      31.5.2. Response Messages
+      31.5.3. Response Schema
+         31.5.3.1. Name Description Required Value
+      31.5.4. Body Schema
+         31.5.4.1. Name Description Required Value
+   31.6. Delete Scripts
+      31.6.1. Response Messages
+      31.6.2. Response Schema
+         31.6.2.1. Name Description Required Value
+      31.6.3. Body Schema
+         31.6.3.1. Name Description Required Value
+   31.7. Update a Script
+      31.7.1. PUT    /web/api/v2.1/remote-scripts/{script_id}
+      31.7.2. Response Messages
+         31.7.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Script not found
+      31.7.3. Response Schema
+         31.7.3.1. Name Description Required Value
+      31.7.4. Body Schema
+         31.7.4.1. Name Description Required Value
+32. Rogues
+   32.1. Export Rogues Data
+      32.1.1. GET    /web/api/v2.1/rogues/report/csv
+      32.1.2. Parameters
+      32.1.3. Response Messages
+   32.2. Get Rogues Table
+      32.2.1. Parameters
+      32.2.2. Response Messages
+         32.2.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      32.2.3. Response Schema
+         32.2.3.1. Name Description Required Value
+   32.3. Get Rogues Settings
+      32.3.1. GET    /web/api/v2.1/rogues/settings
+      32.3.2. those not protected by or supported by SentinelOne. Rogues identifies devices as:
+      32.3.3. Parameters
+      32.3.4. Response Messages
+         32.3.4.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      32.3.5. Response Schema
+         32.3.5.1. Name Description Required Value
+   32.4. Update Rogues Settings
+      32.4.1. PUT    /web/api/v2.1/rogues/settings
+      32.4.2. Response Messages
+         32.4.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      32.4.3. Response Schema
+         32.4.3.1. Name Description Required Value
+      32.4.4. Body Schema
+         32.4.4.1. Name Description Required Value
+33. Service Users
+   33.1. Bulk Delete Service Users
+      33.1.1. Response Messages
+      33.1.2. Response Schema
+         33.1.2.1. Name Description Required Value
+      33.1.3. Body Schema
+         33.1.3.1. Name Description Required Value
+   33.2. List service users
+      33.2.1. Parameters
+      33.2.2. Response Messages
+      33.2.3. Response Schema
+         33.2.3.1. Name Description Required Value
+   33.3. Create Service User
+      33.3.1. Response Messages
+      33.3.2. Response Schema
+         33.3.2.1. Name Description Required Value
+      33.3.3. Body Schema
+         33.3.3.1. Name Description Required Value
+   33.4. Update Service User
+      33.4.1. Response Messages
+      33.4.2. Response Schema
+         33.4.2.1. Name Description Required Value
+      33.4.3. Body Schema
+         33.4.3.1. Name Description Required Value
+   33.5. Delete Service User
+      33.5.1. Response Messages
+      33.5.2. Response Schema
+         33.5.2.1. Name Description Required Value
+34. Settings
+   34.1. Get AD FQDNs
+      34.1.1. GET    /web/api/v2.1/settings/active-directory/scope-mapping
+      34.1.2. Parameters
+      34.1.3. Response Messages
+         34.1.3.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope
+      34.1.4. Response Schema
+         34.1.4.1. Name Description Required Value
+   34.2. Set AD FQDNs
+      34.2.1. Response Messages
+         34.2.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.2.2. Response Schema
+         34.2.2.1. Name Description Required Value
+      34.2.3. Body Schema
+         34.2.3.1. Name Description Required Value
+   34.3. Test AD Settings
+      34.3.1. Response Messages
+         34.3.1.1. 401 - Unauthorized access - please sign in and retry. 404 - Scope does not exist
+      34.3.2. Response Schema
+         34.3.2.1. Name Description Required Value
+      34.3.3. Body Schema
+         34.3.3.1. Name Description Required Value
+   34.4. Clear Pending Emails
+      34.4.1. POST    /web/api/v2.1/settings/notifications/cancel-pending-emails
+      34.4.2. Response Messages
+         34.4.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.4.3. Response Schema
+         34.4.3.1. Name Description Required Value
+      34.4.4. Body Schema
+         34.4.4.1. Name Description Required Value
+   34.5. Test Microsoft Settings
+      34.5.1. Response Messages
+         34.5.1.1. 401 - Unauthorized access - please sign in and retry. 404 - Scope does not exist
+      34.5.2. Response Schema
+         34.5.2.1. Name Description Required Value
+      34.5.3. Body Schema
+         34.5.3.1. Name Description Required Value
+   34.6. Test Syslog Settings
+      34.6.1. POST    /web/api/v2.1/settings/syslog/test
+      34.6.2. Response Messages
+         34.6.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Scope does not exist
+      34.6.3. Response Schema
+         34.6.3.1. Name Description Required Value
+      34.6.4. Body Schema
+         34.6.4.1. Name Description Required Value
+   34.7. Test SMTP Settings
+      34.7.1. POST    /web/api/v2.1/settings/smtp/test
+      34.7.2. Response Messages
+         34.7.2.1. 401 - Unauthorized access - please sign in and retry. 404 - Scope does not exist
+      34.7.3. Response Schema
+         34.7.3.1. Name Description Required Value
+      34.7.4. Body Schema
+         34.7.4.1. Name Description Required Value
+   34.8. Test SSO Settings
+      34.8.1. Response Messages
+      34.8.2. Response Schema
+         34.8.2.1. Name Description Required Value
+      34.8.3. Body Schema
+         34.8.3.1. Name Description Required Value
+   34.9. Get AD Settings
+      34.9.1. Parameters
+      34.9.2. Response Messages
+         34.9.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope
+      34.9.3. Response Schema
+         34.9.3.1. Name Description Required Value
+   34.10. Set AD Settings
+      34.10.1. Response Messages
+      34.10.2. Response Schema
+         34.10.2.1. Name Description Required Value
+      34.10.3. Body Schema
+         34.10.3.1. Name Description Required Value
+   34.11. Get Notification Settings
+      34.11.1. GET    /web/api/v2.1/settings/notifications
+      34.11.2. Parameters
+      34.11.3. Response Messages
+         34.11.3.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope
+      34.11.4. Response Schema
+         34.11.4.1. Name Description Required Value
+   34.12. Set Notification Settings
+      34.12.1. PUT    /web/api/v2.1/settings/notifications
+      34.12.2. Response Messages
+         34.12.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.12.3. Response Schema
+         34.12.3.1. Name Description Required Value
+      34.12.4. Body Schema
+         34.12.4.1. Name Description Required Value
+   34.13. Get Notification Recipients
+      34.13.1. Parameters
+      34.13.2. Response Messages
+         34.13.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.13.3. Response Schema
+         34.13.3.1. Name Description Required Value
+   34.14. Set Notification Recipients
+      34.14.1. Response Messages
+         34.14.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.14.2. Response Schema
+         34.14.2.1. Name Description Required Value
+      34.14.3. Body Schema
+         34.14.3.1. Name Description Required Value
+   34.15. Get Microsoft Settings
+      34.15.1. Parameters
+      34.15.2. Response Messages
+         34.15.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.15.3. Response Schema
+         34.15.3.1. Name Description Required Value
+   34.16. Set Microsoft Settings
+      34.16.1. Response Messages
+         34.16.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.16.2. Response Schema
+         34.16.2.1. Name Description Required Value
+      34.16.3. Body Schema
+         34.16.3.1. Name Description Required Value
+   34.17. Get Syslog Settings
+      34.17.1. GET    /web/api/v2.1/settings/syslog
+      34.17.2. Parameters
+      34.17.3. Response Messages
+         34.17.3.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.17.4. Response Schema
+         34.17.4.1. Name Description Required Value
+   34.18. Set Syslog Settings
+      34.18.1. PUT    /web/api/v2.1/settings/syslog
+      34.18.2. Response Messages
+         34.18.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.18.3. Response Schema
+         34.18.3.1. Name Description Required Value
+      34.18.4. Body Schema
+         34.18.4.1. Name Description Required Value
+   34.19. Get SMTP Settings
+      34.19.1. GET    /web/api/v2.1/settings/smtp
+      34.19.2. Parameters
+      34.19.3. Response Messages
+         34.19.3.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.19.4. Response Schema
+         34.19.4.1. Name Description Required Value
+   34.20. Set SMTP Settings
+      34.20.1. PUT    /web/api/v2.1/settings/smtp
+      34.20.2. Response Messages
+         34.20.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.20.3. Response Schema
+         34.20.3.1. Name Description Required Value
+      34.20.4. Body Schema
+         34.20.4.1. Name Description Required Value
+   34.21. Get SSO Settings
+      34.21.1. Parameters
+      34.21.2. Response Messages
+      34.21.3. Response Schema
+         34.21.3.1. Name Description Required Value
+   34.22. Set SSO Settings
+      34.22.1. Response Messages
+      34.22.2. Response Schema
+         34.22.2.1. Name Description Required Value
+      34.22.3. Body Schema
+         34.22.3.1. Name Description Required Value
+   34.23. Get SMS Settings
+      34.23.1. Parameters
+      34.23.2. Response Messages
+         34.23.2.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.23.3. Response Schema
+         34.23.3.1. Name Description Required Value
+   34.24. Set SMS Settings
+      34.24.1. Response Messages
+         34.24.1.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Scope does not exist
+      34.24.2. Response Schema
+         34.24.2.1. Name Description Required Value
+      34.24.3. Body Schema
+         34.24.3.1. Name Description Required Value
+   34.25. Delete Notification Recipient
+      34.25.1. DELETE    /web/api/v2.1/settings/recipients/{recipient_id}
+      34.25.2. Response Messages
+      34.25.3. Response Schema
+         34.25.3.1. Name Description Required Value
+35. Sites
+   35.1. Export Sites
+      35.1.1. Parameters
+      35.1.2. Response Messages
+   35.2. Create duplicate site
+      35.2.1. Response Messages
+      35.2.2. Response Schema
+         35.2.2.1. Name Description Required Value
+      35.2.3. Body Schema
+         35.2.3.1. Name Description Required Value
+   35.3. Update Sites
+      35.3.1. Response Messages
+      35.3.2. Response Schema
+         35.3.2.1. Name Description Required Value
+      35.3.3. Body Schema
+         35.3.3.1. Name Description Required Value
+   35.4. Create Site and User
+      35.4.1. POST    /web/api/v2.1/site-with-admin
+      35.4.2. Response Messages
+      35.4.3. Response Schema
+         35.4.3.1. Name Description Required Value
+      35.4.4. Body Schema
+         35.4.4.1. Name Description Required Value
+   35.5. Get Sites
+      35.5.1. Parameters
+      35.5.2. Response Messages
+      35.5.3. Response Schema
+         35.5.3.1. Name Description Required Value
+   35.6. Create Site
+      35.6.1. POST    /web/api/v2.1/sites
+      35.6.2. Response Messages
+      35.6.3. Response Schema
+         35.6.3.1. Name Description Required Value
+      35.6.4. Body Schema
+         35.6.4.1. Name Description Required Value
+   35.7. Regenerate Site Key
+      35.7.1. Response Messages
+      35.7.2. Response Schema
+         35.7.2.1. Name Description Required Value
+   35.8. Revert Policy
+      35.8.1. Response Messages
+      35.8.2. Response Schema
+         35.8.2.1. Name Description Required Value
+      35.8.3. Body Schema
+         35.8.3.1. Name Description Required Value
+   35.9. Reactivate Site
+      35.9.1. Response Messages
+         35.9.1.1. 401 - Unauthorized access - please sign in and retry. 404 - Site not found
+      35.9.2. Response Schema
+         35.9.2.1. Name Description Required Value
+      35.9.3. Body Schema
+         35.9.3.1. Name Description Required Value
+   35.10. Expire Site
+      35.10.1. Response Messages
+         35.10.1.1. 200 - Expire site now 401 - Unauthorized access - please sign in and retry. 404 - Site not found
+      35.10.2. Response Schema
+         35.10.2.1. Name Description Required Value
+   35.11. Get Site by ID
+      35.11.1. GET    /web/api/v2.1/sites/{site_id}
+      35.11.2. Response Messages
+         35.11.2.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Site not found
+      35.11.3. Response Schema
+         35.11.3.1. Name Description Required Value
+   35.12. Update Site
+      35.12.1. Response Messages
+         35.12.1.1. 401 - Unauthorized access - please sign in and retry. 404 - Site not found
+      35.12.2. Response Schema
+         35.12.2.1. Name Description Required Value
+      35.12.3. Body Schema
+         35.12.3.1. Name Description Required Value
+   35.13. Delete Site
+      35.13.1. DELETE    /web/api/v2.1/sites/{site_id}
+      35.13.2. Response Messages
+      35.13.3. Response Schema
+         35.13.3.1. Name Description Required Value
+36. System
+   36.1. Cache Status
+      36.1.1. Response Messages
+         36.1.1.1. 200 - Success
+      36.1.2. Response Schema
+         36.1.2.1. Name Description Required Value
+   36.2. Database Status
+      36.2.1. Response Messages
+         36.2.1.1. 200 - Success
+      36.2.2. Response Schema
+         36.2.2.1. Name Description Required Value
+   36.3. Get System Config
+      36.3.1. Parameters
+      36.3.2. Response Messages
+      36.3.3. Response Schema
+         36.3.3.1. Name Description Required Value
+   36.4. Set System Config
+      36.4.1. Response Messages
+         36.4.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      36.4.2. Response Schema
+         36.4.2.1. Name Description Required Value
+      36.4.3. Body Schema
+         36.4.3.1. Name Description Required Value
+   36.5. System Status
+      36.5.1. Response Messages
+         36.5.1.1. 200 - Success
+      36.5.2. Response Schema
+         36.5.2.1. Name Description Required Value
+   36.6. System Info
+      36.6.1. Response Messages
+      36.6.2. Response Schema
+         36.6.2.1. Name Description Required Value
+37. Tag Manager
+   37.1. Create a new endpoint tag
+      37.1.1. POST    /web/api/v2.1/tag-manager
+      37.1.2. Response Messages
+      37.1.3. Response Schema
+         37.1.3.1. Name Description Required Value
+      37.1.4. Body Schema
+         37.1.4.1. Name Description Required Value
+   37.2. Delete tags
+      37.2.1. Response Messages
+      37.2.2. Response Schema
+         37.2.2.1. Name Description Required Value
+      37.2.3. Body Schema
+         37.2.3.1. Name Description Required Value
+   37.3. Edit an existing tag
+      37.3.1. Response Messages
+      37.3.2. Response Schema
+         37.3.2.1. Name Description Required Value
+      37.3.3. Body Schema
+         37.3.3.1. Name Description Required Value
+38. Tags
+   38.1. Get Tags
+      38.1.1. Parameters
+      38.1.2. Response Messages
+      38.1.3. Response Schema
+         38.1.3.1. Name Description Required Value
+   38.2. Create Tags
+      38.2.1. Response Messages
+      38.2.2. Response Schema
+         38.2.2.1. Name Description Required Value
+      38.2.3. Body Schema
+         38.2.3.1. Name Description Required Value
+   38.3. Delete Tags
+      38.3.1. Response Messages
+      38.3.2. Response Schema
+         38.3.2.1. Name Description Required Value
+      38.3.3. Body Schema
+         38.3.3.1. Name Description Required Value
+   38.4. Delete Tag by ID
+      38.4.1. Response Messages
+      38.4.2. Response Schema
+         38.4.2.1. Name Description Required Value
+   38.5. Edit Tag
+      38.5.1. PUT    /web/api/v2.1/tags/{tag_id} Edit tag
+      38.5.2. Response Messages
+      38.5.3. Response Schema
+         38.5.3.1. Name Description Required Value
+      38.5.4. Body Schema
+         38.5.4.1. Name Description Required Value
+39. Tasks
+   39.1. Has Child Scopes
+      39.1.1. GET    /web/api/v2.1/tasks-configuration/has-explicit-subscope
+      39.1.2. Parameters
+      39.1.3. Response Messages
+         39.1.3.1. 200 - Success
+         39.1.3.2. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Configuration not found
+      39.1.4. Response Schema
+         39.1.4.1. Name Description Required Value
+   39.2. Get Child Scope Task Configuration
+      39.2.1. GET    /web/api/v2.1/tasks-configuration/explicit-subscopes
+      39.2.2. Parameters
+      39.2.3. Response Messages
+         39.2.3.1. 401 - Unauthorized access - please sign in and retry. 403 - User is not allowed in this scope 404 - Configuration not found
+      39.2.4. Response Schema
+         39.2.4.1. Name Description Required Value
+   39.3. Get Task Configuration
+      39.3.1. Parameters
+      39.3.2. Response Messages
+         39.3.2.1. 403 - Insufficient permissions 404 - Configuration not found
+      39.3.3. Response Schema
+         39.3.3.1. Name Description Required Value
+   39.4. Create Task
+      39.4.1. Response Messages
+         39.4.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Operation is not allowed 404 - Configuration not found
+      39.4.2. Response Schema
+         39.4.2.1. Name Description Required Value
+      39.4.3. Body Schema
+         39.4.3.1. Name Description Required Value
+40. Threat Intelligence
+   40.1. Get IOCs
+      40.1.1. Parameters
+      40.1.2. Response Messages
+         40.1.2.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      40.1.3. Response Schema
+         40.1.3.1. Name Description Required Value
+   40.2. Create IOCs
+      40.2.1. POST    /web/api/v2.1/threat-intelligence/iocs
+      40.2.2. Response Messages
+         40.2.2.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      40.2.3. Response Schema
+         40.2.3.1. Name Description Required Value
+      40.2.4. Body Schema
+         40.2.4.1. Name Description Required Value
+   40.3. Delete IOCs
+      40.3.1. DELETE    /web/api/v2.1/threat-intelligence/iocs
+      40.3.2. Response Messages
+         40.3.2.1. 200 - Success 400 - Invalid user input received, See error details for further information 401 - Unauthorized access - please sign in and retry
+      40.3.3. Response Schema
+         40.3.3.1. Name Description Required Value
+      40.3.4. Body Schema
+         40.3.4.1. Name Description Required Value
+41. Threat Notes
+   41.1. Add Note to Multiple
+      41.1.1. Response Messages
+      41.1.2. Response Schema
+         41.1.2.1. Name Description Required Value
+      41.1.3. Body Schema
+         41.1.3.1. Name Description Required Value
+   41.2. Update Threat Note
+      41.2.1. Response Messages
+      41.2.2. Response Schema
+         41.2.2.1. Name Description Required Value
+      41.2.3. Body Schema
+         41.2.3.1. Name Description Required Value
+   41.3. Delete Threat Note
+      41.3.1. Response Messages
+      41.3.2. Response Schema
+         41.3.2.1. Name Description Required Value
+   41.4. Get Threat Notes
+      41.4.1. Parameters
+      41.4.2. Response Messages
+      41.4.3. Response Schema
+         41.4.3.1. Name Description Required Value
+42. Threats
+   42.1. Disconnect Container
+      42.1.1. POST    /web/api/v2.1/threats/actions/container-network-disconnect Network quarantine a specific container
+      42.1.2. Response Messages
+      42.1.3. Response Schema
+         42.1.3.1. Name Description Required Value
+      42.1.4. Body Schema
+         42.1.4.1. Name Description Required Value
+   42.2. Reconnect Container
+      42.2.1. POST    /web/api/v2.1/threats/actions/container-network-connect Restore network to a container that was disconnected
+      42.2.2. Response Messages
+      42.2.3. Response Schema
+         42.2.3.1. Name Description Required Value
+      42.2.4. Body Schema
+         42.2.4.1. Name Description Required Value
+   42.3. Disable Engines
+      42.3.1. POST    /web/api/v2.1/threats/engines/disable
+      42.3.2. Response Messages
+      42.3.3. Response Schema
+         42.3.3.1. Name Description Required Value
+      42.3.4. Body Schema
+         42.3.4.1. Name Description Required Value
+   42.4. Add to Blacklist (Deep Visibility)
+      42.4.1. POST    /web/api/v2.1/threats/dv-add-to-blacklist
+      42.4.2. Response Messages
+      42.4.3. Response Schema
+         42.4.3.1. Name Description Required Value
+      42.4.4. Body Schema
+         42.4.4.1. Name Description Required Value
+   42.5. Update Threat External Ticket ID
+      42.5.1. Response Messages
+      42.5.2. Response Schema
+         42.5.2.1. Name Description Required Value
+      42.5.3. Body Schema
+         42.5.3.1. Name Description Required Value
+   42.6. Add to Exclusions
+      42.6.1. POST    /web/api/v2.1/threats/add-to-exclusions
+      42.6.2. Response Messages
+      42.6.3. Response Schema
+         42.6.3.1. Name Description Required Value
+      42.6.4. Body Schema
+         42.6.4.1. Name Description Required Value
+   42.7. Mark as Threat (Deep Visibility)
+      42.7.1. POST    /web/api/v2.1/threats/dv-mark-as-threat
+      42.7.2. Response Messages
+      42.7.3. Response Schema
+         42.7.3.1. Name Description Required Value
+      42.7.4. Body Schema
+         42.7.4.1. Name Description Required Value
+   42.8. Add to Blacklist
+      42.8.1. POST    /web/api/v2.1/threats/add-to-blacklist
+      42.8.2. Response Messages
+      42.8.3. Response Schema
+         42.8.3.1. Name Description Required Value
+      42.8.4. Body Schema
+         42.8.4.1. Name Description Required Value
+   42.9. Update Threat Analyst Verdict
+      42.9.1. Response Messages
+      42.9.2. Response Schema
+         42.9.2.1. Name Description Required Value
+      42.9.3. Body Schema
+         42.9.3.1. Name Description Required Value
+   42.10. Fetch Threat File
+      42.10.1. POST    /web/api/v2.1/threats/fetch-file
+      42.10.2. Response Messages
+      42.10.3. Response Schema
+         42.10.3.1. Name Description Required Value
+      42.10.4. Body Schema
+         42.10.4.1. Name Description Required Value
+   42.11. Updated Threat Incident
+      42.11.1. Response Messages
+      42.11.2. Response Schema
+         42.11.2.1. Name Description Required Value
+      42.11.3. Body Schema
+         42.11.3.1. Name Description Required Value
+   42.12. Export Threats
+      42.12.1. GET    /web/api/v2.1/threats/export
+      42.12.2. Parameters
+      42.12.3. Response Messages
+   42.13. Get Threats
+      42.13.1. GET    /web/api/v2.1/threats
+      42.13.2. Parameters
+      42.13.3. Response Messages
+      42.13.4. Response Schema
+         42.13.4.1. Name Description Required Value
+   42.14. Export Events
+      42.14.1. Parameters
+      42.14.2. Response Messages
+   42.15. Get Events
+      42.15.1. Parameters
+      42.15.2. Response Messages
+      42.15.3. Response Schema
+         42.15.3.1. Name Description Required Value
+   42.16. Export Threat Timeline
+      42.16.1. Parameters
+      42.16.2. Response Messages
+   42.17. Export Mitigation Report
+      42.17.1. Response Messages
+   42.18. Mitigate Threats
+      42.18.1. POST    /web/api/v2.1/threats/mitigate/{action}
+      42.18.2. Response Messages
+      42.18.3. Response Schema
+         42.18.3.1. Name Description Required Value
+      42.18.4. Body Schema
+         42.18.4.1. Name Description Required Value
+   42.19. Download from cloud
+      42.19.1. Response Messages
+      42.19.2. Response Schema
+         42.19.2.1. Name Description Required Value
+   42.20. Exclusion Options
+      42.20.1. Response Messages
+      42.20.2. Response Schema
+         42.20.2.1. Name Description Required Value
+   42.21. Get Threat Timeline
+      42.21.1. Parameters
+      42.21.2. Response Messages
+      42.21.3. Response Schema
+         42.21.3.1. Name Description Required Value
+43. Updates
+   43.1. Deploy System Package
+      43.1.1. POST    /web/api/v2.1/upload/software/deploy
+      43.1.2. Response Messages
+      43.1.3. Response Schema
+         43.1.3.1. Name Description Required Value
+   43.2. Latest Packages by OS
+      43.2.1. Parameters
+      43.2.2. Response Messages
+      43.2.3. Response Schema
+         43.2.3.1. Name Description Required Value
+   43.3. Get Latest Packages
+      43.3.1. Parameters
+      43.3.2. Response Messages
+      43.3.3. Response Schema
+         43.3.3.1. Name Description Required Value
+   43.4. Delete Packages
+      43.4.1. DELETE    /web/api/v2.1/update/agent/packages
+      43.4.2. Response Messages
+         43.4.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      43.4.3. Response Schema
+         43.4.3.1. Name Description Required Value
+      43.4.4. Body Schema
+         43.4.4.1. Name Description Required Value
+   43.5. Upload Agent Package
+      43.5.1. POST    /web/api/v2.1/upload/agent/software
+      43.5.2. Response Messages
+      43.5.3. Response Schema
+         43.5.3.1. Name Description Required Value
+      43.5.4. Body Schema
+         43.5.4.1. Name Description Required Value
+   43.6. Upload System Package
+      43.6.1. POST    /web/api/v2.1/upload/software
+      43.6.2. Response Messages
+      43.6.3. Response Schema
+         43.6.3.1. Name Description Required Value
+      43.6.4. Body Schema
+         43.6.4.1. Name Description Required Value
+   43.7. Download Package
+      43.7.1. Response Messages
+         43.7.1.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Package not found or bad site
+   43.8. Update package
+      43.8.1. Response Messages
+         43.8.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 404 - Package not found
+      43.8.2. Response Schema
+         43.8.2.1. Name Description Required Value
+      43.8.3. Body Schema
+         43.8.3.1. Name Description Required Value
+   43.9. Download Agent Package
+      43.9.1. GET    /web/api/v2.1/update/agent/download/{package_id}
+      43.9.2. [DEPRECATED] Download an agent package by package ID.Rate limit: 2 call per minute for each different user token
+      43.9.3. Response Messages
+         43.9.3.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 404 - Package not found
+44. Users
+   44.1. Verify 2FA Code
+      44.1.1. Response Messages
+      44.1.2. Response Schema
+         44.1.2.1. Name Description Required Value
+      44.1.3. Body Schema
+         44.1.3.1. Name Description Required Value
+   44.2. Send 2FA Code
+      44.2.1. POST    /web/api/v2.1/users/2fa-recover/send-code Sends 2FA recovery code
+      44.2.2. Response Messages
+      44.2.3. Response Schema
+         44.2.3.1. Name Description Required Value
+   44.3. Send Verification Email
+      44.3.1. POST    /web/api/v2.1/users/onboarding/send-verification-email
+      44.3.2. Response Messages
+         44.3.2.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions
+      44.3.3. Response Schema
+         44.3.3.1. Name Description Required Value
+      44.3.4. Body Schema
+         44.3.4.1. Name Description Required Value
+   44.4. Validate Verification Token
+      44.4.1. GET    /web/api/v2.1/users/onboarding/validate-token
+      44.4.2. Parameters
+      44.4.3. Response Messages
+         44.4.3.1. 401 - Verification failed 404 - A user matching the input verification token wasn't found
+      44.4.4. Response Schema
+         44.4.4.1. Name Description Required Value
+   44.5. Email Verification
+      44.5.1. POST    /web/api/v2.1/users/onboarding/verify
+      44.5.2. Response Messages
+         44.5.2.1. 401 - Verification failed 404 - A user matching the input verification token wasn't found
+      44.5.3. Response Schema
+         44.5.3.1. Name Description Required Value
+      44.5.4. Body Schema
+         44.5.4.1. Name Description Required Value
+   44.6. Login by API Token
+      44.6.1. POST    /web/api/v2.1/users/login/by-api-token
+      44.6.2. Response Messages
+         44.6.2.1. 401 - User authentication failed
+      44.6.3. Response Schema
+         44.6.3.1. Name Description Required Value
+      44.6.4. Body Schema
+         44.6.4.1. Name Description Required Value
+   44.7. Redirect to SSO
+      44.7.1. GET    /web/api/v2.1/users/login/sso-saml2
+      44.7.2. Parameters
+      44.7.3. Response Messages
+   44.8. Login by Token
+      44.8.1. Parameters
+      44.8.2. Response Messages
+         44.8.2.1. 200 - user logged in
+         44.8.2.2. 401 - User authentication failed
+   44.9. Auth Recovery Code
+      44.9.1. Response Messages
+      44.9.2. Response Schema
+         44.9.2.1. Name Description Required Value
+      44.9.3. Body Schema
+         44.9.3.1. Name Description Required Value
+   44.10. Sign EULA
+      44.10.1. Response Messages
+      44.10.2. Response Schema
+         44.10.2.1. Name Description Required Value
+   44.11. Auth App
+      44.11.1. POST    /web/api/v2.1/users/auth/app
+      44.11.2. Response Messages
+      44.11.3. Response Schema
+         44.11.3.1. Name Description Required Value
+      44.11.4. Body Schema
+         44.11.4.1. Name Description Required Value
+   44.12. Disable 2FA
+      44.12.1. POST    /web/api/v2.1/users/2fa/disable
+      44.12.2. Response Messages
+         44.12.2.1. 401 - Unauthorized access - please sign in and retry. 403 - No permission for the action
+      44.12.3. Response Schema
+         44.12.3.1. Name Description Required Value
+      44.12.4. Body Schema
+         44.12.4.1. Name Description Required Value
+   44.13. Enable 2FA
+      44.13.1. Response Messages
+         44.13.1.1. 401 - Unauthorized access - please sign in and retry. 403 - No permission for the action
+      44.13.2. Response Schema
+         44.13.2.1. Name Description Required Value
+      44.13.3. Body Schema
+         44.13.3.1. Name Description Required Value
+   44.14. Export Users
+      44.14.1. Parameters
+      44.14.2. Response Messages
+         44.14.2.1. 200 - Success
+   44.15. Generate Recovery Code
+      44.15.1. Response Messages
+      44.15.2. Response Schema
+         44.15.2.1. Name Description Required Value
+   44.16. Check Global User
+      44.16.1. Response Messages
+      44.16.2. Response Schema
+         44.16.2.1. Name Description Required Value
+   44.17. Generate iFrame Token
+      44.17.1. Response Messages
+      44.17.2. Response Schema
+         44.17.2.1. Name Description Required Value
+      44.17.3. Body Schema
+         44.17.3.1. Name Description Required Value
+   44.18. Generate API Token
+      44.18.1. Response Messages
+      44.18.2. Response Schema
+         44.18.2.1. Name Description Required Value
+   44.19. API Token Details
+      44.19.1. Response Messages
+      44.19.2. Response Schema
+         44.19.2.1. Name Description Required Value
+      44.19.3. Body Schema
+         44.19.3.1. Name Description Required Value
+   44.20. Check Viewer
+      44.20.1. Response Messages
+      44.20.2. Response Schema
+         44.20.2.1. Name Description Required Value
+   44.21. Revoke API Token
+      44.21.1. Response Messages
+         44.21.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 404 - User not found
+      44.21.2. Response Schema
+         44.21.2.1. Name Description Required Value
+      44.21.3. Body Schema
+         44.21.3.1. Name Description Required Value
+   44.22. Change Password
+      44.22.1. Response Messages
+         44.22.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 404 - User not found
+      44.22.2. Response Schema
+         44.22.2.1. Name Description Required Value
+      44.22.3. Body Schema
+         44.22.3.1. Name Description Required Value
+   44.23. Check Remote Shell Permissions
+      44.23.1. Response Messages
+      44.23.2. Response Schema
+         44.23.2.1. Name Description Required Value
+   44.24. Bulk Delete Users
+      44.24.1. Response Messages
+      44.24.2. Body Schema
+         44.24.2.1. Name Description Required Value
+   44.25. Request 2FA App
+      44.25.1. Response Messages
+      44.25.2. Response Schema
+         44.25.2.1. Name Description Required Value
+      44.25.3. Body Schema
+         44.25.3.1. Name Description Required Value
+   44.26. Enable 2FA App
+      44.26.1. POST    /web/api/v2.1/users/enable-app
+      44.26.2. Response Messages
+      44.26.3. Response Schema
+         44.26.3.1. Name Description Required Value
+      44.26.4. Body Schema
+         44.26.4.1. Name Description Required Value
+   44.27. Reset 2FA
+      44.27.1. Response Messages
+         44.27.1.1. 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 404 - User not found
+      44.27.2. Response Schema
+         44.27.2.1. Name Description Required Value
+      44.27.3. Body Schema
+         44.27.3.1. Name Description Required Value
+   44.28. Logout
+      44.28.1. Response Messages
+   44.29. Login
+      44.29.1. POST    /web/api/v2.1/users/login
+      44.29.2. Response Messages
+      44.29.3. Response Schema
+         44.29.3.1. Name Description Required Value
+      44.29.4. Body Schema
+         44.29.4.1. Name Description Required Value
+   44.30. List users
+      44.30.1. Parameters
+      44.30.2. Response Messages
+      44.30.3. Response Schema
+         44.30.3.1. Name Description Required Value
+   44.31. Create User
+      44.31.1. Response Messages
+      44.31.2. Response Schema
+         44.31.2.1. Name Description Required Value
+      44.31.3. Body Schema
+         44.31.3.1. Name Description Required Value
+   44.32. User by token
+      44.32.1. Parameters
+      44.32.2. Response Messages
+      44.32.3. Response Schema
+         44.32.3.1. Name Description Required Value
+   44.33. Auth by SSO
+      44.33.1. Response Messages
+   44.34. Verify 2FA Email
+      44.34.1. Response Messages
+      44.34.2. Response Schema
+         44.34.2.1. Name Description Required Value
+      44.34.3. Body Schema
+         44.34.3.1. Name Description Required Value
+   44.35. Resend 2FA Email Code
+      44.35.1. POST    /web/api/v2.1/users/{user_id}/resend-recovery-email-code Resend the verification code to the new 2FA recovery email
+      44.35.2. Response Messages
+      44.35.3. Response Schema
+         44.35.3.1. Name Description Required Value
+   44.36. API Token by User ID
+      44.36.1. Response Messages
+         44.36.1.1. 200 - Success 401 - Unauthorized access - please sign in and retry. 403 - Insufficient permissions 404 - User not found
+      44.36.2. Response Schema
+         44.36.2.1. Name Description Required Value
+   44.37. Update 2FA email
+      44.37.1. PUT    /web/api/v2.1/users/{user_id}/recovery-email Update Two Factor Authentication recovery email
+      44.37.2. Response Messages
+      44.37.3. Response Schema
+         44.37.3.1. Name Description Required Value
+      44.37.4. Body Schema
+         44.37.4.1. Name Description Required Value
+   44.38. Get User
+      44.38.1. Response Messages
+      44.38.2. Response Schema
+         44.38.2.1. Name Description Required Value
+   44.39. Delete User
+      44.39.1. Response Messages
+      44.39.2. Response Schema
+         44.39.2.1. Name Description Required Value
+   44.40. Update User
+      44.40.1. Response Messages
+      44.40.2. Response Schema
+         44.40.2.1. Name Description Required Value
+      44.40.3. Body Schema
+         44.40.3.1. Name Description Required Value

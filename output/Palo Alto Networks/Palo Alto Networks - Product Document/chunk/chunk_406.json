@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_406",
+  "section_number": "1.12.5",
+  "header": "Map IP Addresses to Users",
+  "content": "User-ID provides many different methods for mapping IP addresses to usernames. Before you\nbegin configuring user mapping, consider where your users are logging in from, what services\nthey are accessing, and what applications and data you need to control access to. This will inform\nwhich types of agents or integrations would best allow you to identify your users.\nOnce you have your plan, you can begin configuring user mapping using one or more of the\nfollowing methods as needed to enable user-based access and visibility to applications and\nresources:\nIf you have users with client systems that aren’t logged in to your domain servers—for example,\nusers running Linux clients that don’t log in to the domain—you can Map IP Addresses to\nUsernames Using Authentication Portal. Using Authentication Portal in conjunction with\nAuthentication Policy also ensures that all users authenticate to access your most sensitive\napplications and data.\nTo map users as they log in to your Exchange servers, domain controllers, eDirectory servers,\nor Windows clients you must configure a User-ID agent:\n• Configure User Mapping Using the PAN-OS Integrated User-ID Agent\n• Configure User Mapping Using the Windows User-ID Agent\nIf you have clients running multi-user systems in a Windows environment, such as Microsoft\nTerminal Server or Citrix Metaframe Presentation Server or XenApp, Configure the Palo Alto\nNetworks Terminal Server (TS) Agent for User Mapping. For a multi-user system that doesn’t\nrun on Windows, you can Retrieve User Mappings from a Terminal Server Using the PAN-OS\nXML API.\nTo obtain user mappings from existing network services that authenticate users—such as\nwireless controllers, 802.1x devices, Apple Open Directory servers, proxy servers, or other\nNetwork Access Control (NAC) mechanisms—Configure User-ID to Monitor Syslog Senders for\nUser Mapping.\nWhile you can configure either the Windows agent or the PAN-OS integrated User-\nID agent on the firewall to listen for authentication syslog messages from the network\nservices, because only the PAN-OS integrated agent supports syslog listening over TLS,\nit is the preferred configuration.\nTo include the username and domain in the headers for outgoing traffic so other devices in\nyour network can identify the user and enforce user-based policy, you can Insert Username in\nHTTP Headers.\nTo Share User-ID Mappings Across Virtual Systems, you can configure a virtual system as a\nUser-ID hub.\nFor other clients that you can’t map using the other methods, you can Send User Mappings to\nUser-ID Using the XML API.\nA large-scale network can have hundreds of information sources that firewalls query for\nuser and group mapping and can have numerous firewalls that enforce policies based on\nthe mapping information. You can simplify User-ID administration for such a network by\naggregating the mapping information before the User-ID agents collect it. You can also reduce\nthe resources that the firewalls and information sources use in the querying process by\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n706\n©2025 Palo Alto Networks, Inc.\nUser-ID\nconfiguring some firewalls to redistribute the mapping information. For details, see Deploy\nUser-ID in a Large-Scale Network.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 706,
+      "end": 707
+    },
+    "content_stats": {
+      "char_count": 3227,
+      "word_count": 498
+    },
+    "hierarchy": {
+      "parent": "User-ID",
+      "children": [
+        "Create a Dedicated Service Account for the User-ID Agent",
+        "Configure User Mapping Using the Windows User-ID Agent",
+        "Configure User Mapping Using the PAN-OS Integrated User-ID Agent",
+        "Configure Server Monitoring Using WinRM",
+        "Configure User-ID to Monitor Syslog Senders for User Mapping",
+        "Map IP Addresses to Usernames Using Authentication Portal",
+        "Configure User Mapping for Terminal Server Users",
+        "Send User Mappings to User-ID Using the XML API"
+      ]
+    }
+  }
+}

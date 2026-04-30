@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_422",
+  "section_number": "1.12.5.6.1",
+  "header": "Authentication Portal Authentication Methods",
+  "content": "Authentication Portal uses the following methods to authenticate users whose web requests\nmatch Authentication Policy rules:\nAuthentication Method\nDescription\nKerberos SSO\nThe firewall uses Kerberos single sign-on (SSO) to transparently\nobtain user credentials from the browser. To use this method,\nyour network requires a Kerberos infrastructure, including a\nkey distribution center (KDC) with an authentication server\nand ticket granting service. The firewall must have a Kerberos\naccount.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n762\n©2025 Palo Alto Networks, Inc.\nUser-ID\nAuthentication Method\nDescription\nIf Kerberos SSO authentication fails, the firewall falls back to\nweb form or client certificate authentication, depending on your\nAuthentication policy and Authentication Portal configuration.\nWeb Form\nThe firewall redirects web requests to a web form for\nauthentication. For this method, you can configure\nAuthentication policy to use Multi-Factor Authentication (MFA),\nSAML, Kerberos, TACACS+, RADIUS, or LDAP authentication.\nAlthough users have to manually enter their login credentials,\nthis method works with all browsers and operating systems.\nClient Certificate\nAuthentication\nThe firewall prompts the browser to present a valid client\ncertificate to authenticate the user. To use this method, you\nmust provision client certificates on each user system and install\nthe trusted certificate authority (CA) certificate used to issue\nthose certificates on the firewall.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 762,
+      "end": 763
+    },
+    "content_stats": {
+      "char_count": 1482,
+      "word_count": 205
+    },
+    "hierarchy": {
+      "parent": "Map IP Addresses to Usernames Using Authentication Portal",
+      "children": []
+    }
+  }
+}

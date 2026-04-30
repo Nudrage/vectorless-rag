@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_897",
+  "section_number": "1.21.19.5",
+  "header": "View LLDP Settings and Status",
+  "content": "Perform the following procedure to view LLDP settings and status.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1538\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 1 |\nView LLDP global settings.\nSelect Network > LLDP.\nOn the LLDP General screen, Enable indicates whether LLDP is enabled or not.\n• If LLDP is enabled, the configured global settings (Transmit Interval, Transmit Delay, Hold\nTime Multiple, and Notification Interval) are displayed.\n• If LLDP is not enabled, the default values of the global settings are displayed.\nFor descriptions of these values, see second step in Configure LLDP.\nSTEP 2 |\nView the LLDP status information.\n1.\nSelect the Status tab.\n2.\n(Optional) Enter a filter to restrict the information that is displayed.\nInterface Information:\n• Interface—Name of the interfaces that have LLDP profiles assigned to them.\n• LLDP—LLDP status: enabled or disabled.\n• Mode— LLDP mode of the interface: Tx/Rx, Tx Only, or Rx Only.\n• Profile—Name of the profile assigned to the interface.\nTransmission Information:\n• Total Transmitted—Count of LLDPDUs transmitted out the interface.\n• Dropped Transmit—Count of LLDPDUs that were not transmitted out the interface\nbecause of an error. For example, a length error when the system is constructing an\nLLDPDU for transmission.\nReceived Information:\n• Total Received—Count of LLDP frames received on the interface.\n• Dropped TLV—Count of LLDP frames discarded upon receipt.\n• Errors—Count of TLVs that were received on the interface and contained errors.\nTypes of TLV errors include: one or more mandatory TLVs missing, out of order,\ncontaining out-of-range information, or length error.\n• Unrecognized—Count of TLVs received on the interface that are not recognized by\nthe LLDP local agent. For example, the TLV type is in the reserved TLV range.\n• Aged Out—Count of items deleted from the Receive MIB due to proper TTL\nexpiration.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1539\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 3 |\nView summary LLDP information for each neighbor seen on an interface.\n1.\nSelect the Peers tab.\n2.\n(Optional) Enter a filter to restrict the information being displayed.\nLocal Interface—Interface on the firewall that detected the neighboring device.\nRemote Chassis ID—Chassis ID of the peer. The MAC address will be used.\nPort ID—Port ID of the peer.\nName—Name of peer.\nMore info—Provides the following remote peer details, which are based on the\nMandatory and Optional TLVs:\n• Chassis Type: MAC address.\n• MAC Address: MAC address of the peer.\n• System Name: Name of the peer.\n• System Description: Description of the peer.\n• Port Description: Port description of the peer.\n• Port Type: Interface name.\n• Port ID: The firewall uses the interface’s ifname.\n• System Capabilities: Capabilities of the system. O=Other, P=Repeater, B=Bridge,\nW=Wireless-LAN, R=Router, T=Telephone\n• Enabled Capabilities: Capabilities enabled on the peer.\n• Management Address: Management address of the peer.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1538,
+      "end": 1540
+    },
+    "content_stats": {
+      "char_count": 2972,
+      "word_count": 466
+    },
+    "hierarchy": {
+      "parent": "LLDP",
+      "children": []
+    }
+  }
+}

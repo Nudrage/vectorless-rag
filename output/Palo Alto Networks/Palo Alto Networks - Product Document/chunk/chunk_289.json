@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_289",
+  "section_number": "1.11.5.6",
+  "header": "Take a Packet Capture on the Management Interface",
+  "content": "The tcpdump CLI command enables you to capture packets that traverse the management\ninterface (MGT) on a Palo Alto Networks firewall.\nEach platform has a default number of bytes that tcpdump captures. The PA-220\nfirewalls capture 68 bytes of data from each packet and anything over that is truncated.\nThe PA-7000 Series firewalls and VM-Series firewalls capture 96 bytes of data from each\npacket. To define the number of packets that tcpdump will capture, use the snaplen\n(snap length) option (range 0-65535). Setting the snaplen to 0 will cause the firewall to\nuse the maximum length required to capture whole packets.\nSTEP 1 |\nUsing a terminal emulation application, such as PuTTY, launch an SSH session to the firewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n515\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 2 |\nTo start a packet capture on the MGT interface, run the following command:\nadmin@PA-220>tcpdump filter “<filter-option> <IP-address>” snaplen\nlength\nFor example, to capture the traffic that is generated when and administrator authenticates\nto the firewall using RADIUS, filter on the destination IP address of the RADIUS server\n(10.5.104.99 in this example):\nadmin@PA-220>tcpdump filter “dst 10.5.104.99” snaplen 0\nYou can also filter on src (source IP address), host, net, and you can exclude content. For\nexample, to filter on a subnet and exclude all SCP, SFTP, and SSH traffic (which uses port 22),\nrun the following command:\nadmin@PA-220>tcpdump filter “net 10.5.104.0/24 and not port 22”\nsnaplen 0\nEach time tcpdump takes a packet capture, it stores the content in a file named\nmgmt.pcap. This file is overwritten each time you run tcpdump.\nSTEP 3 |\nAfter the traffic you are interested in has traversed the MGT interface, press Ctrl + C to stop\nthe capture.\nSTEP 4 |\nView the packet capture by running the following command:\nadmin@PA-220> view-pcap mgmt-pcap mgmt.pcap\nThe following output shows the packet capture from the MGT port (10.5.104.98) to the\nRADIUS server (10.5.104.99):\n09:55:29.139394 IP 10.5.104.98.43063 > 10.5.104.99.radius: RADIUS,\nAccess Request (1), id: 0x00 length: 89\n09:55:29.144354 arp reply 10.5.104.98 is-at 00:25:90:23:94:98 (oui\nUnknown)\n09:55:29.379290 IP 10.5.104.98.43063 > 10.5.104.99.radius: RADIUS,\nAccess Request (1), id: 0x00 length: 70\n09:55:34.379262 arp who-has 10.5.104.99 tell 10.5.104.98\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n516\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 5 |\n(Optional) Export the packet capture from the firewall using SCP (or TFTP). For example, to\nexport the packet capture using SCP, run the following command:\nadmin@PA-220>scp export mgmt-pcap from mgmt.pcap\nto <username@host:path>\nFor example, to export the pcap to an SCP enabled server at 10.5.5.20 to a temp folder named\ntemp-SCP, run the following CLI command:\nadmin@PA-220>scp export mgmt-pcap from mgmt.pcap to\nadmin@10.5.5.20:c:/temp-SCP\nEnter the login name and password for the account on the SCP server to enable the firewall to\ncopy the packet capture to the c:\\temp-SCP folder on the SCP-enabled.\nSTEP 6 |\nYou can now view the packet capture files using a network packet analyzer, such as\nWireshark.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n517\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 515,
+      "end": 518
+    },
+    "content_stats": {
+      "char_count": 3248,
+      "word_count": 499
+    },
+    "hierarchy": {
+      "parent": "Take Packet Captures",
+      "children": []
+    }
+  }
+}

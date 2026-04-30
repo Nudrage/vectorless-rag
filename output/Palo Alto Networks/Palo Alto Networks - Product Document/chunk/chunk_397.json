@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_397",
+  "section_number": "1.12.2.2.3",
+  "header": "XFF Headers",
+  "content": "If you have a proxy server deployed between the users on your network and the firewall, the\nfirewall might see the proxy server IP address as the source IP address in HTTP/HTTPS traffic\nthat the proxy forwards rather than the IP address of the client that requested the content.\nIn many cases, the proxy server adds an X-Forwarded-For (XFF) header to traffic packets that\nincludes the actual IPv4 or IPv6 address of the client that requested the content or from whom\nthe request originated. In such cases, you can configure the firewall to extract the end user IP\naddress from the XFF so that User-ID can map the IP address to a username. This enables you to\nUse XFF Values for Policies and Logging Source Users so that you can enforce user-based policy\nto safely enable access to web-based for your users behind a proxy server.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 691,
+      "end": 691
+    },
+    "content_stats": {
+      "char_count": 828,
+      "word_count": 146
+    },
+    "hierarchy": {
+      "parent": "User Mapping",
+      "children": []
+    }
+  }
+}

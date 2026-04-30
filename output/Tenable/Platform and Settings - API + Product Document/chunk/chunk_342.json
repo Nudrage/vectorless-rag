@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_342",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Vulnerability Management successfully imported the exclusion file.\nRESPONSE SCHEMA:\napplication/json\nArray [\nstring\nThe UUID of the exclusion.\nstring\nThe targets that you want excluded from scans. Specify\nmultiple targets as a comma-separated string. Targets can be\nin the following formats:\nAn individual IPv4 address ( 192.0.2.1 )\nA range of IPv4 addresses ( 192.0.2.1-192.0.2.255 )\nCIDR notation ( 192.0.2.0/24 )\nfile\nrequired\nuuid\nmembers\nA fully-qualified domain name (FQDN)\n( host.domain.com )\nstring\nThe name of the exclusion.\nstring\nThe description of the exclusion.\ninteger\nThe unique ID of the exclusion.\nobject\nThe schedule parameters for the exclusion.\ninteger\nThe creation date of the exclusion in Unix time.\ninteger\nThe last modification date for the exclusion in Unix time.\nstring\nThe ID of the network object associated with scanners where\nTenable Vulnerability Management applies the exclusion. The\ndefault network ID is 00000000-0000-0000-0000-\n000000000000 . To determine the ID of a custom network, use\nthe GET /networks endpoint. For more information about\nnetwork objects, see Manage Networks.\n]\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500 Returned if Tenable Vulnerability Management failed to import the exclusion.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 333,
+      "end": 334
+    },
+    "content_stats": {
+      "char_count": 1351,
+      "word_count": 207
+    },
+    "hierarchy": {
+      "parent": "Import exclusion",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

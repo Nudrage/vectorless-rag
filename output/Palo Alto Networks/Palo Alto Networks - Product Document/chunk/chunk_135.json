@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_135",
+  "section_number": "1.8.1.5",
+  "header": "TACACS+",
+  "content": "Terminal Access Controller Access-Control System Plus (TACACS+) is a family of protocols\nthat enable authentication and authorization through a centralized server. TACACS+ encrypts\nusernames and passwords, making it more secure than RADIUS, which encrypts only passwords.\nTACACS+ is also more reliable because it uses TCP, whereas RADIUS uses UDP. You can\nconfigure TACACS+ authentication for end users or administrators on the firewall and for\nadministrators on Panorama. Optionally, you can use TACACS+ Vendor-Specific Attributes (VSAs)\nto manage administrator authorization. TACACS+ VSAs enable you to quickly change the roles,\naccess domains, and user groups of administrators through your directory service instead of\nreconfiguring settings on the firewall and Panorama.\nThe firewall and Panorama support the following TACACS+ attributes and VSAs. Refer to your\nTACACS+ server documentation for the steps to define these VSAs on the TACACS+ server.\nName\nValue\nservice\nThis attribute is required to identify the VSAs as\nspecific to Palo Alto Networks. You must set the value\nto PaloAlto.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n242\n©2025 Palo Alto Networks, Inc.\nAuthentication\nName\nValue\nprotocol\nThis attribute is required to identify the VSAs as\nspecific to Palo Alto Networks devices. You must set\nthe value to firewall.\nPaloAlto-Admin-Role\nA default (dynamic) administrative role name or a\ncustom administrative role name on the firewall.\nPaloAlto-Admin-Access-Domain\nThe name of an access domain for firewall\nadministrators (configured in the Device > Access\nDomains page). Define this VSA if the firewall has\nmultiple virtual systems.\nPaloAlto-Panorama-Admin-Role\nA default (dynamic) administrative role name or a\ncustom administrative role name on Panorama.\nPaloAlto-Panorama-Admin-Access-\nDomain\nThe name of an access domain for Device Group and\nTemplate administrators (configured in the Panorama\n> Access Domains page).\nPaloAlto-User-Group\nThe name of a user group in the Allow List of an\nauthentication profile.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 242,
+      "end": 243
+    },
+    "content_stats": {
+      "char_count": 2028,
+      "word_count": 293
+    },
+    "hierarchy": {
+      "parent": "Authentication Types",
+      "children": []
+    }
+  }
+}

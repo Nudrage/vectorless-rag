@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_368",
+  "section_number": "1.11.15.6.1",
+  "header": "MIB-II",
+  "content": "MIB-II provides object identifiers (OIDs) for network management protocols in TCP/IP-based\nnetworks. Use this MIB to monitor general information about systems and interfaces. For\nexample, you can analyze trends in bandwidth usage by interface type (ifType object) to\ndetermine if the firewall needs more interfaces of that type to accommodate spikes in traffic\nvolume.\nPalo Alto Networks firewalls, Panorama, and WF-500 appliances support only the following\nobject groups:\nObject Group\nDescription\nsystem\nProvides system information such as the hardware model, system\nuptime, FQDN, and physical location.\ninterfaces\nProvides statistics for physical and logical interfaces such as type,\ncurrent bandwidth (speed), operational status (for example, up or\ndown), and discarded packets. Logical interface support includes VPN\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n664\n©2025 Palo Alto Networks, Inc.\nMonitoring\nObject Group\nDescription\ntunnels, aggregate groups, Layer 2 subinterfaces, Layer 3 subinterfaces,\nloopback interfaces, and VLAN interfaces.\nRFC 1213 defines this MIB.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 664,
+      "end": 665
+    },
+    "content_stats": {
+      "char_count": 1074,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Supported MIBs",
+      "children": []
+    }
+  }
+}

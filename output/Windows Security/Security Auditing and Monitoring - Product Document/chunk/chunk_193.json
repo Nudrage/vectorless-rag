@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_193",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4913(S): Central Access Policy on the object was changed.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.\n\nIf you need to monitor events related to specific Windows object types (“Object Type”), for example File or Key, monitor this event for the corresponding “Object Type.”If you\nneed to monitor all changes to specific files or folders (in this case, changes to the Central Access Policy), monitor for the “Object Name” that corresponds to the file or folder.\n\n\n\nIf you have a pre-defined “Process Name” for the process reported in this event, monitor all events with “Process Name” not equal to your defined value.\n\nIf you have specific files, folders, or entire systems to which a specific Central Access Policy should be applied, you can monitor this event and compare the Central Access Policy\nSID in “New Security Descriptor” to see if it matches the expected policy.\n© 2016 Microsoft. All rights reserved.\n602",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 602,
+      "end": 603
+    },
+    "content_stats": {
+      "char_count": 1059,
+      "word_count": 175
+    },
+    "hierarchy": {
+      "parent": "Audit Authorization Policy Change",
+      "children": []
+    }
+  }
+}

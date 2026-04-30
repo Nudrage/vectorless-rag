@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_770",
+  "section_number": "1.21.6.1.3",
+  "header": "OSPF Areas",
+  "content": "OSPF operates within a single autonomous system (AS). Networks within this single AS, however,\ncan be divided into a number of areas. By default, Area 0 is created. Area 0 can either function\nalone or act as the OSPF backbone for a larger number of areas. Each OSPF area is named using\na 32-bit identifier which in most cases is written in the same dotted-decimal notation as an IP4\naddress. For example, Area 0 is usually written as 0.0.0.0.\nThe topology of an area is maintained in its own link state database and is hidden from other\nareas, which reduces the amount of traffic routing required by OSPF. The topology is then shared\nin a summarized form between areas by a connecting router.\nOSPF Area Type\nDescription\nBackbone Area\nThe backbone area (Area 0) is the core of an OSPF network. All\nother areas are connected to it and all traffic between areas must\ntraverse it. All routing between areas is distributed through the\nbackbone area. While all other OSPF areas must connect to the\nbackbone area, this connection doesn’t need to be direct and can\nbe made through a virtual link.\nNormal OSPF Area\nIn a normal OSPF area there are no restrictions; the area can carry\nall types of routes.\nStub OSPF Area\nA stub area does not receive routes from other autonomous\nsystems. Routing from the stub area is performed through the\ndefault route to the backbone area.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1382\n©2025 Palo Alto Networks, Inc.\nNetworking\nOSPF Area Type\nDescription\nNSSA Area\nThe Not So Stubby Area (NSSA) is a type of stub area that can\nimport external routes, with some limited exceptions.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1382,
+      "end": 1383
+    },
+    "content_stats": {
+      "char_count": 1605,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "OSPF Concepts",
+      "children": []
+    }
+  }
+}

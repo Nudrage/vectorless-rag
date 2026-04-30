@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_332",
+  "section_number": "15",
+  "header": "Exclusions",
+  "content": "With exclusions, you can restrict the scanning of specific hosts based on a selected schedule. Use\nthe API to perform standard CRUD operations on exclusion objects, and also import exclusions.\nstring\nThe name of the uploaded file. If the file with the same name already\nexists, Tenable Vulnerability Management appends an underscore with a\nnumber, for example ssh_private_key_1.txt. Use this attribute value when\nreferencing the file for subsequent requests.\n— 400\nReturned if your request is malformed (for example, the request is missing a required query parameter\nor an invalid file is provided).\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500 Returned if Tenable Vulnerability Management cannot upload the file.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 19,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 326,
+      "end": 326
+    },
+    "content_stats": {
+      "char_count": 801,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Response samples",
+        "Create exclusion",
+        "List exclusions",
+        "Import exclusion",
+        "Get exclusion details",
+        "Update exclusion",
+        "Delete exclusion"
+      ]
+    }
+  }
+}

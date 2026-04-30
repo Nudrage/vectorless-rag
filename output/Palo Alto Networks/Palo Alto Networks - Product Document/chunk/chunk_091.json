@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_091",
+  "section_number": "1.6.4.4.4",
+  "header": "Configure SSH Key-Based Administrator Authentication to the CLI",
+  "content": "For administrators who use Secure Shell (SSH) to access the CLI of a Palo Alto Networks firewall,\nSSH keys provide a more secure authentication method than passwords. SSH keys almost\neliminate the risk of brute-force attacks, provide the option for two-factor authentication (key and\npassphrase), and don’t send passwords over the network. SSH keys also enable automated scripts\nto access the CLI.\nSTEP 1 |\nUse an SSH key generation tool to create an asymmetric keypair on the client system of the\nadministrator.\nThe supported key formats are IETF SECSH and Open SSH. The supported algorithms are DSA\n(1,024 bits) and RSA (768-4,096 bits).\nFor the commands to generate the keypair, refer to your SSH client documentation.\nThe public key and private key are separate files. Save both to a location that the firewall can\naccess. For added security, enter a passphrase to encrypt the private key. The firewall prompts\nthe administrator for this passphrase during login.\nSTEP 2 |\nConfigure the administrator account to use public key authentication.\n1.\nConfigure a Firewall Administrator Account.\n• Configure the authentication method to use as a fallback if SSH key authentication\nfails. If you configured an Authentication Profile for the administrator, select it in the\ndrop-down. If you select None, you must enter a Password and Confirm Password.\n• Select Use Public Key Authentication (SSH), then Import Key, Browse to the public\nkey you just generated, and click OK.\n2.\nCommit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n135\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nSTEP 3 |\nConfigure the SSH client to use the private key to authenticate to the firewall.\nPerform this task on the client system of the administrator. For the steps, refer to your SSH\nclient documentation.\nSTEP 4 |\nVerify that the administrator can access the firewall CLI using SSH key authentication.\n1.\nUse a browser on the client system of the administrator to go to the firewall IP address.\n2.\nLog in to the firewall CLI as the administrator. After entering a username, you will see\nthe following output (the key value is an example):\nAuthenticating with public key “dsa-key-20130415”\n3.\nIf prompted, enter the passphrase you defined when creating the keys.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 135,
+      "end": 136
+    },
+    "content_stats": {
+      "char_count": 2256,
+      "word_count": 367
+    },
+    "hierarchy": {
+      "parent": "Configure Administrative Accounts and Authentication",
+      "children": []
+    }
+  }
+}

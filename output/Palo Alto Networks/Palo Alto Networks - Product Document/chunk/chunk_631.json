@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_631",
+  "section_number": "1.17.18.1",
+  "header": "Methods to Check for Corporate Credential Submissions",
+  "content": "Before you set up credential phishing prevention, decide which method you want the firewall to\nuse to check if credentials submitted to a web page are valid corporate credentials.\nMethod to\nCheck Submitted\nCredentials\nUser-ID\nConfiguration\nRequirements\nHow does this method detect corporate usernames\nand/or passwords that users submit to websites?\nGroup Mapping\nGroup Mapping\nconfiguration on\nthe firewall\nThe firewall checks to determine if the username a\nuser submits to a restricted site matches any valid\ncorporate username.\nTo do this, the firewall matches the submitted\nusername to the list of usernames in its user-to-group\nmapping table to detect when users submit corporate\nusernames to sites in a restricted category.\nThis method only checks for corporate username\nsubmissions based on LDAP group membership, which\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1166\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nMethod to\nCheck Submitted\nCredentials\nUser-ID\nConfiguration\nRequirements\nHow does this method detect corporate usernames\nand/or passwords that users submit to websites?\nmakes it simple to configure, but more prone to false\npositives.\nIP User Mapping\nIP address-\nto- username\nmappings\nidentified\nthrough User\nMapping,\nGlobalProtect,\nor\nAuthentication\nPolicy and\nAuthentication\nPortal.\nThe firewall checks to determine if the username a\nuser submits to a restricted site maps to the IP address\nof the login username.\nTo do this, the firewall matches the IP address of the\nlogin username and the username submitted to a web\nsite to its IP address-to-user mapping table to detect\nwhen users submit their corporate usernames to sites\nin a restricted category.\nBecause this method matches the IP address of the\nlogin username associated with the session against\nthe IP address-to-username mapping table, it is an\neffective method for detecting corporate username\nsubmissions, but it does not detect corporate password\nsubmission. If you want to detect corporate username\nand password submission, you must use the Domain\nCredential Filter method.\nDomain\nCredential Filter\nWindows\nUser-ID agent\nconfigured\nwith the User-\nID credential\nservice add-on\n- AND -\nIP address-\nto- username\nmappings\nidentified\nthrough User\nMapping,\nGlobalProtect,\nor\nAuthentication\nPolicy and\nAuthentication\nPortal.\nThe firewall checks to determine if the username\nand password a user submits match the same user’s\ncorporate username and password.\nTo do this, the firewall must be able to match\ncredential submissions to valid corporate usernames\nand passwords and verify that the username submitted\nmaps to the IP address of the login username as\nfollows:\n• To detect corporate usernames and passwords—\nThe firewall retrieves a secure bit mask, called\na bloom filter, from a Windows User-ID agent\nequipped with the User-ID credential service add-\non. This add-on service scans your directory for\nusernames and password hashes and deconstructs\nthem into a secure bit mask (the bloom filter) and\ndelivers it to the Windows User-ID agent. The\nfirewall retrieves the bloom filter from the Windows\nUser-ID agent at regular intervals. Whenever it\ndetects a user submitting credentials to a restricted\ncategory, it reconstructs the bloom filter and looks\nfor a matching username and password hash. The\nfirewall can only connect to one Windows User-ID\nagent running the User-ID credential service add-\non.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1167\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nMethod to\nCheck Submitted\nCredentials\nUser-ID\nConfiguration\nRequirements\nHow does this method detect corporate usernames\nand/or passwords that users submit to websites?\n• To verify that the credentials belong to the login\nusername—The firewall looks for a mapping\nbetween the IP address of the login username\nand the detected username in its IP address-to-\nusername mapping table.\nTo learn more how the domain credential method\nworks and the requirements for enabling this type of\ndetection, see Configure Credential Detection with the\nWindows-based User-ID Agent.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1166,
+      "end": 1168
+    },
+    "content_stats": {
+      "char_count": 4039,
+      "word_count": 615
+    },
+    "hierarchy": {
+      "parent": "Prevent Credential Phishing",
+      "children": []
+    }
+  }
+}

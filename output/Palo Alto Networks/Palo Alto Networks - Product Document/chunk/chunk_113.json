@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_113",
+  "section_number": "1.6.7",
+  "header": "Reset the Firewall to Factory Default Settings",
+  "content": "Resetting the firewall to factory defaults will result in the loss of all configuration settings and\nlogs.\nSTEP 1 |\nSet up a console connection to the firewall.\n1.\nConnect a serial cable from your computer to the Console port and connect to the\nfirewall using terminal emulation software (9600-8-N-1).\nIf your computer does not have a 9-pin serial port, use a USB-to-serial port\nconnector.\n2.\nEnter your login credentials.\n3.\nEnter the following CLI command:\ndebug system maintenance-mode\nThe firewall will reboot in the maintenance mode.\nSTEP 2 |\nReset the system to factory default settings.\n1.\nWhen the firewall reboots, press Enter to continue to the maintenance mode menu.\n2.\nSelect Factory Reset and press Enter.\n3.\nSelect Factory Reset and press Enter again.\nThe firewall will reboot without any configuration settings. The default username and\npassword to log in to the firewall is admin/admin.\nTo perform initial configuration on the firewall and to set up network connectivity, see\nIntegrate the Firewall into Your Management Network.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n222\n©2025 Palo Alto Networks, Inc.\nFirewall Administration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 222,
+      "end": 223
+    },
+    "content_stats": {
+      "char_count": 1144,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": "Firewall Administration",
+      "children": []
+    }
+  }
+}

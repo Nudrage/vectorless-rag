@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_214",
+  "section_number": "1.10.1",
+  "header": "HA Overview",
+  "content": "You can configure two Palo Alto Networks firewalls as an HA pair or configure up to 16 firewalls\nas peer members of an HA cluster. The peers in the cluster can be HA pairs or standalone\nfirewalls. HA allows you to minimize downtime by making sure that an alternate firewall\nis available in the event that a peer firewall fails. The firewalls in an HA pair or cluster use\ndedicated or in-band HA ports on the firewall to synchronize data—network, object, and policy\nconfigurations—and to maintain state information. Firewall-specific configuration such as\nmanagement interface IP address or administrator profiles, HA specific configuration, log data,\nand the Application Command Center (ACC) information is not shared between peers.\nFor a consolidated application and log view across an HA pair, you must use Panorama, the Palo\nAlto Networks centralized management system. See Context Switch—Firewall or Panorama\nin the Panorama Administrator’s Guide. Consult the Prerequisites for Active/Passive HA and\nPrerequisites for Active/Active HA. It is highly recommended that you use Panorama to provision\nHA cluster members. Consult the HA Clustering Best Practices and Provisioning.\nWhen a failure occurs on a firewall in an HA pair or HA cluster and a peer firewall takes over the\ntask of securing traffic, the event is called a Failover. The conditions that trigger a failover are:\n• One or more of the monitored interfaces fail. (Link Monitoring)\n• One or more of the destinations specified on the firewall cannot be reached. (Path Monitoring)\n• The firewall does not respond to heartbeat polls. (Heartbeat Polling and Hello messages)\n• A critical chip or software component fails, known as packet path health monitoring.\nPalo Alto Networks firewalls support stateful active/passive or active/active high availability with\nsession and configuration synchronization with a few exceptions:\n• The VM-Series firewall on Azure and VM-Series firewall on AWS support active/passive HA\nonly.\nOn AWS, when you deploy the firewall with the Amazon Elastic Load Balancing (ELB) service, it\ndoes not support HA (in this case, ELB service provides the failover capabilities).\n• The VM-Series firewall on Google Cloud Platform does not support HA.\nBegin by understanding the HA Concepts and the HA Clustering Overview if you are going to\nconfigure HA clustering.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n380\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 380,
+      "end": 381
+    },
+    "content_stats": {
+      "char_count": 2440,
+      "word_count": 381
+    },
+    "hierarchy": {
+      "parent": "High Availability",
+      "children": []
+    }
+  }
+}

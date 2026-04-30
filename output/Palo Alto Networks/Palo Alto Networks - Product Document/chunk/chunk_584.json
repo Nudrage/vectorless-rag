@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_584",
+  "section_number": "1.16.15.5.7",
+  "header": "Troubleshoot Pinned Certificates",
+  "content": "Certificate pinning forces the client application to validate the server’s certificate against a known\ncopy to ensure that certificate really comes from the server. The intent of pinned certificates is\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1088\n©2025 Palo Alto Networks, Inc.\nDecryption\nto protect against man-in-the-middle (MITM) attacks where a device between the client and the\nserver replaces the server certificate with another certificate.\nAlthough this prevents malicious actors from intercepting and manipulating connections, it also\nprevents forward proxy decryption because the firewall creates an impersonation certificate\ninstead of the server certificate to present to the client. Instead of one session that connects the\nclient and server directly, forward proxy creates two sessions, one between the client and the\nfirewall and another between the firewall and the server. This establishes trust with the client so\nthat the firewall can decrypt and inspect the traffic.\nHowever, when a certificate is pinned, the firewall cannot decrypt the traffic because the client\ndoes not accept the firewall’s impersonation certificate—the client only accepts the certificate that\nis pinned to the application.\nSTEP 1 |\nFilter the Decryption log (Monitor > Logs > Decryption) to find pinned certificates using the\nquery (error contains ‘UnknownCA’).\nThe application generates a TLS error code (Alert) when it fails to verify the server’s certificate.\nDifferent applications may use different error codes to indicate a pinned certificate. The most\ncommon error indicators for pinned certificates are UnknownCA and BadCertificate. After\nrunning the (error contains ‘UnknownCA’) query, run the query (error contains\n‘BadCertificate’) to catch more pinned certificate errors.\nYou can use Wireshark or other packet analyzers to double-check the error. Look for\nthe client breaking the connection immediately after the TLS handshake to confirm\nthat it is a pinned certificate issue.\nSTEP 2 |\nDecide what to do about pinned certificates.\nIf you don’t need access for business purposes, you can let the firewall continue to block\naccess. If you need access, then you can Exclude a Server from Decryption for Technical\nReasons by adding it to the SSL Decryption Exclusion List (Device > Certificate Management >\nSSL Decryption Exclusion.\nThe firewall bypasses decryption for sites on the SSL Decryption Exclusion List. The firewall\ncannot inspect the traffic, but the traffic is allowed.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1089\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1088,
+      "end": 1090
+    },
+    "content_stats": {
+      "char_count": 2573,
+      "word_count": 385
+    },
+    "hierarchy": {
+      "parent": "Decryption Troubleshooting Workflow Examples",
+      "children": []
+    }
+  }
+}

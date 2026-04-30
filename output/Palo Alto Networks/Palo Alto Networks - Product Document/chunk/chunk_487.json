@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_487",
+  "section_number": "1.14.5",
+  "header": "CLI Commands for Device-ID",
+  "content": "Use the following CLI commands to view information for troubleshooting any issues between the\nfirewall and IoT Security. In general, CLI commands that include eal show counters for outgoing\ndata and CLI commands that include icd show counters for incoming data.\nExample\nCommand\nView Enhanced Application Logging (EAL)\ncounters, such as the number of connections\nbetween the firewall and the Cortex Data Lake\nand the volume of the logs.\nshow iot eal all\nView more details about the connection between\nthe firewall and Cortex Data Lake.\nshow iot eal conn\nView a summary of the EAL counters by plane\n(dataplane or management plane), such as the\nPAN-OS version and serial number.\nshow iot eal dpi-eal\nView EAL counters by plane (dataplane or\nmanagement plane) and by protocol.\nshow iot eal dpi-stats all\nView EAL counters by protocol.\nshow iot eal dpi-stats subtype\ndhcp|http\nView a summary of Host Information Profile (HIP)\nMatch report counters.\nshow iot eal hipreport-eal\nView EAL log response time counters.\nshow iot eal response-time\nView details for the health of the connection\nto the edge service between the firewall and\nthe IoT Security app and counters for the IP\naddress-to-device mappings and policy rule\nrecommendations.\nshow iot icd statistics all\nView counters for the connection to the edge\nservice.\nshow iot icd statistics conn\nView counters for the IP address-to-device\nmappings.\nshow iot icd statistics\nverdict\nView all IP address-to-device mappings on the\nfirewall.\nshow iot ip-device-mapping-mp\nall\nView the IP address-to-device mapping for a\nspecific IP address.\nshow iot ip-device-mapping-mp\nip IP-address\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n880\n©2025 Palo Alto Networks, Inc.\nDevice-ID\nExample\nCommand\nView a list of IP address-to-device mappings on\nthe dataplane.\nshow iot ip-device-mapping all\nClear the IP address-to-device mappings on the\nmanagement plane.\ndebug iot clear-all type\ndevice\nClear the IP address-to-device mappings on the\ndataplane.\nclear user-cache all\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n881\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 880,
+      "end": 881
+    },
+    "content_stats": {
+      "char_count": 2073,
+      "word_count": 321
+    },
+    "hierarchy": {
+      "parent": "Device-ID",
+      "children": []
+    }
+  }
+}

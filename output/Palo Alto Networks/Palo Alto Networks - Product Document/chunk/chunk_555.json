@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_555",
+  "section_number": "1.16.9",
+  "header": "Decryption Exclusions",
+  "content": "You can exclude two types of traffic from decryption:\n• Traffic that breaks decryption for technical reasons, such as using a pinned certificate, an\nincomplete certificate chain, unsupported ciphers, or mutual authentication (attempting to\ndecrypt the traffic results in blocking the traffic). Palo Alto Networks provides a predefined SSL\nDecryption Exclusion list (Device > Certificate Management > SSL Decryption Exclusion) that\nexcludes hosts with applications and services that are known to break decryption technically\nfrom SSL Decryption by default. If you encounter sites that break decryption technically\nand are not on the SSL Decryption Exclusion list, you can add them to list manually by\nserver hostname. The firewall blocks sites whose applications and services break decryption\ntechnically unless you add them to the SSL Decryption Exclusion list.\nIf the Decryption profile allows Unsupported Modes (sessions with client authentication,\nunsupported versions, or unsupported cipher suites), the firewall automatically adds servers\nand applications that use the allowed unsupported modes to the its Local SSL Decryption\nExclusion Cache (Device > Certificate Management > SSL Decryption Exclusion > Show Local\nExclusion Cache). When you block unsupported modes, you increase security but you also\nblock communication with applications that use those modes.\n• Traffic that you choose not to decrypt because of business, regulatory, personal, or other\nreasons, such as financial-services, health-and-medicine, or government traffic. You can choose\nto exclude traffic based on source, destination, URL category, and service.\nYou can use asterisks (*) as wildcards to create decryption exclusions for multiple hostnames\nassociated with a domain. Asterisks behave the same way that carets (^) behave for URL category\nexceptions—each asterisk controls one variable subdomain (label) in the hostname. This enables\nyou to create both very specific and very general exclusions. For example:\n• mail.*.com matches mail.company.com but does not match mail.company.sso.com.\n• *.company.com matches tools.company.com but does not match eng.tools.company.com.\n• *.*.company.com matches eng.tools.company.com but does not match eng.company.com.\n• *.*.*.company.com matches corp.exec.mail.company.com, but does not match\ncorp.mail.company.com.\n• mail.google.* matches mail.google.com, but does not match mail.google.uk.com.\n• mail.google.*.* matches mail.google.co.uk, but does not match mail.google.com.\nFor example, to use wildcards to exclude video-stats.video.google.com from decryption but not to\nexclude video.google.com from decryption, exclude *.*.google.com.\nRegardless of the number of asterisk wildcards that precede a hostname (without a non-\nwildcard label preceding the hostname), the hostname matches the entry. For example,\n*.google.com, *.*.google.com, and *.*.*.google.com all match google.com. However,\n*.dev.*.google.com does not match google.com because one label (dev) is not a wildcard.\nTo increase visibility into traffic and reduce the attack surface as much as possible, don’t make\ndecryption exceptions unless you must.\n• Palo Alto Networks Predefined Decryption Exclusions\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1021\n©2025 Palo Alto Networks, Inc.\nDecryption\n• Exclude a Server from Decryption for Technical Reasons\n• Local Decryption Exclusion Cache\n• Create a Policy-Based Decryption Exclusion",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1021,
+      "end": 1022
+    },
+    "content_stats": {
+      "char_count": 3419,
+      "word_count": 468
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": [
+        "Palo Alto Networks Predefined Decryption Exclusions",
+        "Exclude a Server from Decryption for Technical Reasons",
+        "Local Decryption Exclusion Cache",
+        "Create a Policy-Based Decryption Exclusion"
+      ]
+    }
+  }
+}

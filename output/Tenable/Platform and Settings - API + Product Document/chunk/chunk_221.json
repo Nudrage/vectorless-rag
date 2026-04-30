@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_221",
+  "section_number": "11.3",
+  "header": "Get agent group details",
+  "content": "Content type\nGets details for the agent group. Agent records which belong to this group will also be returned. You\ncan apply filtering, sorting, or pagination to the agent records.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\ninteger <int32>\nThe ID or UUID of the agent group to query.\nYou can retrieve the agent group ID or UUID by using the List agent groups\nendpoint.\nQUERY PARAMETERS\nstring\nApply a filter in the format :: . For example, field1:match:sometext\nwould match any records where the value of field1 contains sometext .\nYou can use multiple query filters.\nstring\nFilter type. If the filter type is and , the record is only returned if all filters\nmatch. If the filter type is or , the record is returned if any of the filters\nmatch.\nstring\nWildcard filter text. Wildcard search is a mechanism where multiple fields\nof a record are filtered against one specific filter string. If any one of the\nwildcard_fields' values matches against the filter string, then the record\nmatches the wildcard filter. For a record to be returned, it must pass the\nwildcard filter (if there is one) AND the set of standard filters. For example,\nif w=wild&f=field1:match:one&f=field2:match:two&ft=or , the\nrecord would match if the value of any supported wildcard_fields contained\nwild , AND either field1's value contained one  or field2's value\ncontained two .\nstring\nA comma delimited subset of wildcard_fields to search when applying the\nwildcard filter. For example, field1,field2 . If w  is provided, but wf\nis not, then all wildcard_fields' values are searched against the wildcard\nfilter text.\ninteger <int32>\nThe number of records to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 50 . The minimum\ngroup_id\nrequired\nf\nft\nw\nwf\nlimit\nsupported limit is 1 , and the maximum supported limit is 5000 .\ninteger <int32>\nThe starting record to retrieve. If this parameter is omitted, Tenable\nVulnerability Management uses the default value of 0 .\nstring\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nsecond ( asc  or desc ). For example, name:desc  would sort results by\nthe name  field in descending order.\nIf you specify multiple fields, the fields must be separated by commas. For\nexample, name:desc,creation_date:asc  would first sort results by the\nname  field in descending order and then by the creation_date  field in\nascending order.\nSort can only be applied to the sortable_fields specified by the filter\ncapabilities. There may be no more than max_sort_fields number of\ncolumns used in the sort, as specified by the filter capabilities.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 218,
+      "end": 220
+    },
+    "content_stats": {
+      "char_count": 2746,
+      "word_count": 455
+    },
+    "hierarchy": {
+      "parent": "Agent Groups",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

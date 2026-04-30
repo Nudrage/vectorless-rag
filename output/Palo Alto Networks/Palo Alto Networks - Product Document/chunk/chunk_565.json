@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_565",
+  "section_number": "1.16.11",
+  "header": "Enable Users to Opt Out of SSL Decryption",
+  "content": "In privacy-sensitive situations, you may want to alert your users that the firewall is decrypting\ncertain web traffic and allow them either to continue to the site with the understanding that their\ntraffic is decrypted or to terminate the session and be block from going to the site. (There is no\noption to go to the site and also avoid decryption.)\nThe first time a user attempts to browse to an HTTPS site or application that matches the\ndecryption policy, the firewall displays a response page notifying users that it will decrypt the\nsession. Users can either click Yes to allow decryption and continue to the site or click No to\nopt out of decryption and terminate the session. The choice to allow decryption applies to all\nHTTPS sites that users try to access for the next 24 hours, after which the firewall redisplays the\nresponse page. Users who opt out of SSL decryption cannot access the requested web page, or\nany other HTTPS site, for the next minute. After the minute elapses, the firewall redisplays the\nresponse page the next time the users attempt to access an HTTPS site.\nThe firewall includes a predefined SSL Decryption Opt-out Page that you can enable. You can\noptionally customize the page with your own text and/or images. However, the best practice is to\nnot allow users to opt out of decryption.\nCustom response pages larger than the maximum supported size are not decrypted or\ndisplayed to users. In PAN-OS 8.1.2 and earlier PAN-OS 8.1 releases, custom response\npages on a decrypted site cannot exceed 8,191 bytes; the maximum size is increased to\n17,999 bytes in PAN-OS 8.1.3 and later releases.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1037\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 1 |\n(Optional) Customize the SSL Decryption Opt-out Page.\n1.\nSelect Device > Response Pages.\n2.\nSelect the SSL Decryption Opt-out Page link.\n3.\nSelect the Predefined page and click Export.\n4.\nUsing the HTML text editor of your choice, edit the page.\n5.\nIf you want to add an image, host the image on a web server that is accessible from your\nend user systems.\n6.\nAdd a line to the HTML to point to the image. For example:\n<img src=\"http://cdn.slidesharecdn.com/ Acme-logo-96x96.jpg?\n1382722588\"/>\n7.\nSave the edited page with a new filename. Make sure that the page retains its UTF-8\nencoding.\n8.\nBack on the firewall, select Device > Response Pages.\n9.\nSelect the SSL Decryption Opt-out Page link.\n10. Click Import and then enter the path and filename in the Import File field or Browse to\nlocate the file.\n11. (Optional) Select the virtual system on which this login page will be used from the\nDestination drop-down or select shared to make it available to all virtual systems.\n12. Click OK to import the file.\n13. Select the response page you just imported and click Close.\nSTEP 2 |\nEnable SSL Decryption Opt Out.\n1.\nOn the Device > Response Pages page, click the Disabled link.\n2.\nSelect the Enable SSL Opt-out Page and click OK.\n3.\nCommit the changes.\nSTEP 3 |\nVerify that the Opt Out page displays when you attempt to browse to a site.\nFrom a browser, go to an encrypted site that matches your decryption policy.\nVerify that the SSL Decryption Opt-out response page displays.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1038\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1037,
+      "end": 1039
+    },
+    "content_stats": {
+      "char_count": 3284,
+      "word_count": 565
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": []
+    }
+  }
+}

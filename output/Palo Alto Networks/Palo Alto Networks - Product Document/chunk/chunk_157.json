@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_157",
+  "section_number": "1.8.9",
+  "header": "Configure LDAP Authentication",
+  "content": "You can use LDAP to authenticate end users who access applications or services through\nAuthentication Portal and authenticate firewall or Panorama administrators who access the web\ninterface.\nYou can also connect to an LDAP server to define policy rules based on user groups. For\ndetails, see Map Users to Groups.\nSTEP 1 |\nAdd an LDAP server profile.\nThe profile defines how the firewall connects to the LDAP server.\n1.\nSelect Device > Server Profiles > LDAP or Panorama > Server Profiles > LDAP on\nPanorama™ and Add a server profile.\n2.\nEnter a Profile Name to identify the server profile.\n3.\n(Multi-vsys only) Select the Location in which the profile is available.\n4.\n(Optional) Select Administrator Use Only to restrict access to administrators.\n5.\nAdd the LDAP servers (up to four). For each server, enter a Name (to identify the server),\nLDAP Server IP address or FQDN, and server Port (default 389).\nIf you use an FQDN address object to identify the server and you subsequently\nchange the address, you must commit the change for the new server address to\ntake effect.\n6.\nSelect the server Type.\n7.\nSelect the Base DN.\nTo identify the Base DN of your directory, open the Active Directory Domains and\nTrusts Microsoft Management Console snap-in and use the name of the top-level\ndomain.\n8.\nEnter the Bind DN and Password to enable the authentication service to authenticate\nthe firewall.\nThe Bind DN account must have permission to read the LDAP directory.\n9.\nEnter the Bind Timeout and Search Timeout in seconds (default is 30 for both).\n10. Enter the Retry Interval in seconds (default is 60).\n11. Enable the option to Require SSL/TLS secured connection (enabled by default). The\nprotocol that the endpoint uses depends on the server port:\n• 389 (default)—TLS (Specifically, the device uses the StartTLS operation, which\nupgrades the initial plaintext connection to TLS.)\n• 636—SSL\n• Any other port—The device first attempts to use TLS. If the directory server doesn’t\nsupport TLS, the device falls back to SSL.\n12. (Optional) For additional security, enable to the option to Verify Server Certificate\nfor SSL sessions so that the endpoint verifies the certificate that the directory server\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n295\n©2025 Palo Alto Networks, Inc.\nAuthentication\npresents for SSL/TLS connections. To enable verification, you must also enable the\noption to Require SSL/TLS secured connection. For verification to succeed, the\ncertificate must meet one of the following conditions:\n• It is in the list of device certificates: Device > Certificate Management > Certificates\n> Device Certificates. If necessary, import the certificate into the device.\n• The certificate signer is in the list of trusted certificate authorities: Device >\nCertificate Management > Certificates > Default Trusted Certificate Authorities.\n13. Click OK to save the server profile.\nSTEP 2 |\nAssign the server profile to Configure an Authentication Profile and Sequence to define\nvarious authentication settings.\nSTEP 3 |\nAssign the authentication profile to the firewall application that requires authentication.\n• Administrative access to the web interface—Configure a Firewall Administrator Account\nand assign the authentication profile you configured.\n• End user access to services and applications—For the full procedure to configure\nauthentication for end users, see Configure Authentication Policy.\nSTEP 4 |\nVerify that the firewall can Test Authentication Server Connectivity to authenticate users.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n296\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 295,
+      "end": 297
+    },
+    "content_stats": {
+      "char_count": 3594,
+      "word_count": 565
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

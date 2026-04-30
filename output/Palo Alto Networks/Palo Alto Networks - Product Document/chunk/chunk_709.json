@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_709",
+  "section_number": "1.19.4.7",
+  "header": "Interpret VPN Error Messages",
+  "content": "The following table lists some of the common VPN error messages that are logged in the system\nlog.\nTable 6: Syslog Error Messages for VPN Issues\nIf error is this:\nTry this:\nIKE phase-1 negotiation is failed\nas initiator, main mode. Failed\nSA: x.x.x.x[500]-y.y.y.y[500]\ncookie:84222f276c2fa2e9:0000000000000000\ndue to timeout.\nor\nIKE phase 1 negotiation is failed.\nCouldn’t find configuration for\nIKE phase-1 request for peer IP\nx.x.x.x[1929]\n• Verify that the public IP address\nfor each VPN peer is accurate in\nthe IKE Gateway configuration.\n• Verify that the IP addresses can\nbe pinged and that routing issues\nare not causing the connection\nfailure.\nReceived unencrypted notify payload (no\nproposal chosen) from IP x.x.x.x[500] to\ny.y.y.y[500], ignored...\nor\nIKE phase-1 negotiation is failed.\nUnable to process peer’s SA payload.\nCheck the IKE Crypto profile\nconfiguration to verify that the\nproposals on both sides have a\ncommon encryption, authentication,\nand DH Group proposal.\npfs group mismatched:my: 2peer: 0\nor\nIKE phase-2 negotiation failed when\nprocessing SA payload. No suitable\nproposal found in peer’s SA payload.\nCheck the IPSec Crypto profile\nconfiguration to verify that:\n• pfs is either enabled or disabled\non both VPN peers\n• the DH Groups proposed by each\npeer has at least one DH Group\nin common\nIKE phase-2 negotiation failed when\nprocessing Proxy ID. Received local id\nx.x.x.x/x type IPv4 address protocol\nThe VPN peer on one end is using\npolicy-based VPN. You must\nconfigure a Proxy ID on the Palo\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1275\n©2025 Palo Alto Networks, Inc.\nVPNs\nIf error is this:\nTry this:\n0 port 0, received remote id y.y.y.y/y\ntype IPv4 address protocol 0 port 0.\nAlto Networks firewall. See Create a\nProxy ID to identify the VPN peers..\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1276\n©2025 Palo Alto Networks, Inc.\nVPNs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1275,
+      "end": 1277
+    },
+    "content_stats": {
+      "char_count": 1863,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "Set Up Site-to-Site VPN",
+      "children": []
+    }
+  }
+}

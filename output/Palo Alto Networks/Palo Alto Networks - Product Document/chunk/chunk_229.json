@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_229",
+  "section_number": "1.10.2.13",
+  "header": "ECMP in Active/Active HA Mode",
+  "content": "When an active/active HA peer fails, its sessions transfer to the new active-primary firewall,\nwhich tries to use the same egress interface that the failed firewall was using. If the firewall finds\nthat interface among the ECMP paths, the transferred sessions will take the same egress interface\nand path. This behavior occurs regardless of the ECMP algorithm in use; using the same interface\nis desirable.\nOnly if no ECMP path matches the original egress interface will the active-primary firewall select a\nnew ECMP path.\nIf you did not configure the same interfaces on the active/active peers, upon failover the active-\nprimary firewall selects the next best path from the FIB table. Consequently, the existing sessions\nmight not be distributed according to the ECMP algorithm.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n400\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 400,
+      "end": 401
+    },
+    "content_stats": {
+      "char_count": 873,
+      "word_count": 137
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_009",
+  "section_number": "23.1.2",
+  "header": "Response samples",
+  "content": "200\n400\n401\n403\n429\n500\nstatusCode\nerror\nmessage\nPOST\n/api/v1/t1/apa/top-attack-techniques/search\napplication/json\nFilter by priority\nCopy\n{\n\"operator\": \"==\",\n\"property\": \"priority\",\n\"value\": \"high\"\n}\nContent type\nExample\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"data\":\n-\n[\n- {\n\"mitre_id\": \"attack-pattern--1ecfdab8-7d59-4c98-95d4-dc41970f57fc\",\n\"mitigations\":\n-\n[\n\"Privileged Account Management\",\n\"User Training\",\n\"Password Policies\"\n],\n\"malwares\":\n-\n[\n\"CosmicDuke\",\n\"IceApple\"\n],\n\"tools\":\n-\n[\n\"Impacket\",\n\"Pupy\",\n\"CrackMapExec\",\n\"gsecdump\",\n\"Mimikatz\",\n\"LaZagne\",\n\"AADInternals\"\n],\n\"name\": \"Remote Desktop Protocol\",\n\"procedureName\": \"Network Sniffing-10931\",\n\"priority\": \"high\",\n\"state\": \"open\",\n\"status\": \"to_do\",\n\"tactics\":\n-\n[\n\"Lateral Movement\",\n\"Persistence\"\n],\n\"target\": \"ARCHIE\",\n\"source\": \"WORKSTATION-01\",\n\"cause\": \"Weak Authentication\",\n\"created\": \"2024-06-01T10:30:00.000Z\",\n\"last_updated_at\": \"2024-06-02T11:29:12.498763Z\",\n\"serial_id\": \"RDP-001\"\n}\n],\nContent type",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 11,
+      "end": 12
+    },
+    "content_stats": {
+      "char_count": 987,
+      "word_count": 106
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

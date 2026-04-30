@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_647",
+  "section_number": "1.17.24.2",
+  "header": "PAN-DB Cloud Connectivity Issues",
+  "content": "To help ensure connectivity to PAN-DB cloud, create a dedicated Security policy rule to\nallow all Palo Alto Management Service traffic. This will avoid management traffic from\nbeing classified as not-resolved and prevent the traffic from being blocked when\nrouted through the dataplane.\nTo check connectivity between the firewall and the PAN-DB cloud:\nshow url-cloud status\nIf the cloud is accessible, the expected response is similar to the following:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1198\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nThe firewall initially queries the default PAN-DB cloud to determine the highest\nperforming regional cloud server; this server is used for all PAN-DB queries, including the\nstatus check. If the best available server is not operational, it will fall back to the next best\navailable option.\nshow url-cloud status\nPAN-DB URL Filtering\nLicense :                          valid\nCurrent cloud server :\nserverlist.urlcloud.paloaltonetworks.com\nCloud connection :                 connected\nCloud mode :                       public\nURL database version - device :    20200624.20296\nURL database version - cloud :     20200624.20296  ( last update time\n2020/06/24 12:39:19 )\nURL database status :              good\nURL protocol version - device :    pan/2.0.0\nURL protocol version - cloud :     pan/2.0.0\nProtocol compatibility status :    compatible\nIf none of the clouds are accessible, the expected response is similar to the following:\nshow url-cloud status\nPAN-DB URL Filtering\nLicense :                          valid\nCloud connection :                 not connected\nURL database version - device :    0000.00.00.000\nURL protocol version - device :    pan/0.0.2\nUse the following checklist to identify and resolve connectivity issues:\nDoes the PAN-DB URL Filtering license field shows as invalid? Obtain and install a valid PAN-\nDB license.\nDoes your networks environment have a proxy server handling Internet traffic? You may need\nto add the following PAN-DB cloud servers to an allow list to enable PAN-DB connectivity and\nupdates. The PAN-DB regional clouds currently include the following:\n• Default: s000new.urlcloud.paloaltonetworks.com\n• Server List Provider: serverlist.urlcloud.paloaltonetworks.com\n• Americas East: pandb2dlprod.urlcloud.paloaltonetworks.com\n• Americas West: pandb2pdx1prod.urlcloud.paloaltonetworks.com\n• EMEA: pandb2am1prod.urlcloud.paloaltonetworks.com\n• APAC: pandb2ty6prod.urlcloud.paloaltonetworks.com\nDoes the URL protocol version show as not compatible? Upgrade PAN-OS to the latest\nversion.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1199\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nCan you ping the PAN-DB cloud server from the firewall? Run the following command to\ncheck:\nping source <ip-address> host\nserverlist.urlcloud.paloaltonetworks.com <\nFor example, if your management interface IP address is 10.1.1.5, run the following command:\nping source 10.1.1.5 host serverlist.urlcloud.paloaltonetworks.com\nIs the firewall in an HA configuration? Verify that the HA state of the firewalls is in the active,\nactive-primary, or active-secondary state. Access to the PAN-DB cloud will be blocked if the\nfirewall is in a different state. Run the following command on each firewall in the pair to see\nthe state:\nshow high-availability state\nIf you still have problems with connectivity between the firewall and the PAN-DB cloud, contact\nPalo Alto Networks support.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1198,
+      "end": 1200
+    },
+    "content_stats": {
+      "char_count": 3435,
+      "word_count": 471
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot URL Filtering",
+      "children": []
+    }
+  }
+}

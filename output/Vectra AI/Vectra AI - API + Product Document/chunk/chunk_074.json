@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_074",
+  "section_number": "1.18.23",
+  "header": "Vectra Match Enablement",
+  "content": "GET\nUsed to retrieve whether Vectra Match is enabled on a given device\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/enablement\n© July 2024 Vectra AI, Inc. | 123\nHeaders:\n“Authorization”: “Token <api-key>”\nQuery Params:\n{“device_serial”:”<device_serial>”}\nResponse:\nStatus Code: 200\n{\n\"is_enabled\": true\n}\nPOST\nUsed to enable or disable Vectra Match on a given device (WARNING: POSTing to the enablement endpoint causes\na reboot if changing state).  A valid Vectra Match license is required to enable this feature on a given paired device,\nbut is not required to disable Match.\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/enablement\nHeaders:\n“Authorization”: “Token <api-key>”\nRequired Request JSON Body:\n{“device_serial”:”<device_serial”, “desired_state”: true}\nResponse:\nStatus code: 200\n{\n\"is_enabled\": true\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 122,
+      "end": 123
+    },
+    "content_stats": {
+      "char_count": 838,
+      "word_count": 106
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

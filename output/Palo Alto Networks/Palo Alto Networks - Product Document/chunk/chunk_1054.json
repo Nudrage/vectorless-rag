@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1054",
+  "section_number": "1.24.4.6",
+  "header": "Configure Ethernet SGT Protection",
+  "content": "Use the following task to configure an Ethernet SGT Protection profile.\nSTEP 1 |\nCreate a Zone Protection profile to provide Ethernet SGT Protection.\n1.\nSelect Network > Network Profiles > Zone Protection.\n2.\nAdd a Zone Protection profile by Name.\n3.\nSelect Ethernet SGT Protection.\n4.\nAdd a Layer 2 SGT Exclude List by name.\n5.\nEnter one or more Tag values for the list; range is 0 to 65,535. You can enter individual\nentries that are a contiguous range of tag values (for example, 100-500). You can add up\nto 100 (individual or range) tag entries in an Exclude List.\n6.\nEnable the Layer 2 SGT Exclude List. You can disable the list at any time.\n7.\nClick OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1754\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 2 |\nApply the Zone Protection profile to the security zone to which the Layer 2, virtual wire, or\ntap interfaces belong.\n1.\nSelect Network > Zones.\n2.\nAdd a zone.\n3.\nEnter the Name of the zone.\n4.\nFor Location, select the virtual system where the zone applies.\n5.\nFor Type, select Layer2, Virtual Wire, or Tap.\n6.\nAdd an Interface that belongs to the zone.\n7.\nFor Zone Protection Profile, select the profile you created.\n8.\nClick OK.\nSTEP 3 |\nCommit.\nSTEP 4 |\nView the global counter of packets that the firewall dropped as a result of all Zone\nProtection profiles that employ Ethernet SGT Protection.\n1.\nAccess the CLI.\n2.\n> show counter global name pan_flow_dos_l2_sec_tag_drop\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1755\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1754,
+      "end": 1756
+    },
+    "content_stats": {
+      "char_count": 1568,
+      "word_count": 275
+    },
+    "hierarchy": {
+      "parent": "Configure Zone Protection to Increase Network Security",
+      "children": []
+    }
+  }
+}

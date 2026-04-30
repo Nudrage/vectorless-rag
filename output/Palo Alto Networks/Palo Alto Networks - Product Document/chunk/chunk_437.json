@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_437",
+  "section_number": "1.12.9.1.4",
+  "header": "Configure User-ID for Numerous Mapping Information Sources",
+  "content": "STEP 1 |\nConfigure Windows Log Forwarding on the member servers that will collect login events.\nConfigure Windows Log Forwarding. This step requires administrative privileges for\nconfiguring group policies on Windows servers.\nSTEP 2 |\nInstall the Windows-based User-ID agent.\nInstall the Windows-Based User-ID Agent on a Windows server that can access the member\nservers. Make sure the system that will host the User-ID agent is a member of the same\ndomain as the servers it will monitor.\nSTEP 3 |\nConfigure the User-ID agent to collect user mapping information from the member servers.\n1.\nStart the Windows-based User-ID agent.\n2.\nSelect User Identification > Discovery and perform the following steps for each member\nserver that will receive events from domain controllers:\n1. In the Servers section, click Add and enter a Name to identify the member server.\n2. In the Server Address field, enter the FQDN or IP address of the member server.\n3. For the Server Type, select Microsoft Active Directory.\n4. Click OK to save the server entry.\n3.\nConfigure the remaining User-ID agent settings (refer to Configure the Windows-Based\nUser-ID Agent for User Mapping).\n4.\nIf the User-ID sources provide usernames in multiple formats, specify the format for the\nPrimary Username when you Map Users to Groups.\nThe primary username is the username that identifies the user on the firewall and\nrepresents the user in reports and logs, regardless of the format that the User-ID source\nprovides.\nSTEP 4 |\nConfigure an LDAP server profile to specify how the firewall connects to the Global Catalog\nservers (up to four) for group mapping information.\nTo improve availability, use at least two Global Catalog servers for redundancy.\nYou can collect group mapping information only for universal groups, not local domain groups\n(subdomains).\n1.\nSelect Device > Server Profiles > LDAP, click Add, and enter a Name for the profile.\n2.\nIn the Servers section, for each Global Catalog, click Add and enter the server Name, IP\naddress (LDAP Server), and Port. For a plaintext or Start Transport Layer Security (Start\nTLS) connection, use Port 3268. For an LDAP over SSL connection, use Port 3269. If\nthe connection will use Start TLS or LDAP over SSL, select the Require SSL/TLS secured\nconnection check box.\n3.\nIn the Base DN field, enter the Distinguished Name (DN) of the point in the Global\nCatalog server where the firewall will start searching for group mapping information (for\nexample, DC=acbdomain,DC=com).\n4.\nFor the Type, select active-directory.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n788\n©2025 Palo Alto Networks, Inc.\nUser-ID\nSTEP 5 |\nConfigure an LDAP server profile to specify how the firewall connects to the servers (up to\nfour) that contain domain mapping information.\nUser-ID uses this information to map DNS domain names to NetBIOS domain names. This\nmapping ensures consistent domain/username references in policy rules.\nTo improve availability, use at least two servers for redundancy.\nThe steps are the same as for the LDAP server profile you created for Global Catalogs in the\nprevious step, except for the following fields:\n• LDAP Server—Enter the IP address of the domain controller that contains the domain\nmapping information.\n• Port—For a plaintext or Start TLS connection, use Port 389. For an LDAP over SSL\nconnection, use Port 636. If the connection will use Start TLS or LDAP over SSL, select the\nRequire SSL/TLS secured connection check box.\n• Base DN—Select the DN of the point in the domain controller where the\nfirewall will start searching for domain mapping information. The value must\nstart with the string: cn=partitions,cn=configuration (for example,\ncn=partitions,cn=configuration,DC=acbdomain,DC=com).\nSTEP 6 |\nCreate a group mapping configuration for each LDAP server profile you created.\n1.\nSelect Device > User Identification > Group Mapping Settings.\n2.\nClick Add and enter a Name to identify the group mapping configuration.\n3.\nSelect the LDAP Server Profile and ensure the Enabled check box is selected.\nIf the Global Catalog and domain mapping servers reference more groups than\nyour security rules require, configure the Group Include List and/or Custom\nGroup list to limit the groups for which User-ID performs mapping.\n4.\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 788,
+      "end": 789
+    },
+    "content_stats": {
+      "char_count": 4276,
+      "word_count": 686
+    },
+    "hierarchy": {
+      "parent": "Deploy User-ID for Numerous Mapping Information Sources",
+      "children": []
+    }
+  }
+}

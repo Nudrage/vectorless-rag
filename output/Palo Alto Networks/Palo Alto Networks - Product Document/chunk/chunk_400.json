@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_400",
+  "section_number": "1.12.2.2.6",
+  "header": "Syslog",
+  "content": "Your environment might have existing network services that authenticate users. These services\ninclude wireless controllers, 802.1x devices, Apple Open Directory servers, proxy servers, and\nother Network Access Control (NAC) mechanisms. You can configure these services to send\nsyslog messages that contain information about login and logout events and configure the User-\nID agent to parse those messages. The User-ID agent parses for login events to map IP addresses\nto usernames and parses for logout events to delete outdated mappings. Deleting outdated\nmappings is particularly useful in environments where IP address assignments change often.\nBoth the PAN-OS integrated User-ID agent and Windows-based User-ID agent use Syslog Parse\nprofiles to parse syslog messages. In environments where services send the messages in different\nformats, you can create a custom profile for each format and associate multiple profiles with\neach syslog sender. If you use the PAN-OS integrated User-ID agent, you can also use predefined\nSyslog Parse profiles that Palo Alto Networks provides through Applications content updates.\nSyslog messages must meet the following criteria for a User-ID agent to parse them:\n• Each message must be a single-line text string. The allowed delimiters for line breaks are a new\nline (\\n) or a carriage return plus a new line (\\r\\n).\n• The maximum size for individual messages is 8,000 bytes.\n• Messages sent over UDP must be contained in a single packet; messages sent over SSL can\nspan multiple packets. A single packet might contain multiple messages.\nSee Configure User-ID to Monitor Syslog Senders for User Mapping for configuration details.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n692\n©2025 Palo Alto Networks, Inc.\nUser-ID\nFigure 5: User-ID Integration with Syslog",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 692,
+      "end": 693
+    },
+    "content_stats": {
+      "char_count": 1794,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "User Mapping",
+      "children": []
+    }
+  }
+}

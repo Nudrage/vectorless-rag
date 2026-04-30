@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_918",
+  "section_number": "1.21.21.4.2",
+  "header": "ICMPv6 Rate Limiting",
+  "content": "ICMPv6 rate limiting is a throttling mechanism to prevent flooding and DDoS attempts. The\nimplementation employs an error packet rate and a token bucket, which work together to enable\nthrottling and ensure that ICMP packets don’t flood the network segments protected by the\nfirewall.\nFirst the global ICMPv6 Error Packet Rate (per sec) controls the rate at which ICMPv6 error\npackets are allowed through the firewall; the default is 100 packets per second; the range is 10 to\n65535 packets per second. If the firewall reaches the ICMPv6 error packet rate, then the token\nbucket comes into play and throttling occurs, as follows.\nThe concept of a logical token bucket controls the rate at which ICMP messages can be\ntransmitted. The number of tokens in the bucket is configurable, and each token represents\nan ICMPv6 message that can be sent. The token count is decremented each time an ICMPv6\nmessage is sent; when the bucket reaches zero tokens, no more ICMPv6 messages can be sent\nuntil another token is added to the bucket. The default size of the token bucket is 100 tokens\n(packets); the range is 10 to 65535 tokens.\nTo change the default token bucket size or error packet rate, see the section Configure Session\nSettings.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1561,
+      "end": 1561
+    },
+    "content_stats": {
+      "char_count": 1227,
+      "word_count": 208
+    },
+    "hierarchy": {
+      "parent": "ICMP",
+      "children": []
+    }
+  }
+}

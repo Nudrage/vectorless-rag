@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_011",
+  "section_number": "1.7",
+  "header": "API Rate Limits",
+  "content": "Rate limits define the frequency of requests that can be made to the v3.4 API. API rate limits apply on a\nper-tenant basis.\nThe following rate limits are enforced across all v3.4 API endpoints and methods:\n•\nSteady-state: 4 requests per second\n•\nBurst: 10 requests per second\nWhen request submissions exceed the steady-state request rate and burst limits, the v3.4 API will\nthrottle requests and return a 429 Too Many Requests error response.\n© July 2024 Vectra AI, Inc. | 17",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 16,
+      "end": 17
+    },
+    "content_stats": {
+      "char_count": 475,
+      "word_count": 82
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

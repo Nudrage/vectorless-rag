@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_1032",
+  "section_number": "1.24.3.4",
+  "header": "Baseline CPS Measurements for Setting Flood Thresholds",
+  "content": "Flood protection thresholds determine the number of new connections-per-second (CPS) to\nallow for a zone (Zone Protection profile), for a group of devices in a zone (aggregate DoS\nProtection policy), or for individual devices in a zone (classified DoS Protection policy), when to\nthrottle new connections to begin mitigating a potential flood attack, and when to drop all new\nconnections. The default Zone Protection profile and DoS Protection profile flood protection\nthresholds aren’t appropriate for most networks because each network is unique. You need to\nunderstand the aggregate normal and peak CPS for each zone to set effective Zone Protection\nprofile thresholds, and for the individual critical systems you want to defend to set effective DoS\nProtection profile thresholds that don’t inadvertently set thresholds too high and allow flood\nattacks or set thresholds too low and throttle traffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1731\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\n• CPS Measurements to Take\n• How to Measure CPS",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1731,
+      "end": 1732
+    },
+    "content_stats": {
+      "char_count": 1063,
+      "word_count": 164
+    },
+    "hierarchy": {
+      "parent": "Zone Defense",
+      "children": [
+        "CPS Measurements to Take",
+        "How to Measure CPS"
+      ]
+    }
+  }
+}

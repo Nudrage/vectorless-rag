@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_047",
+  "section_number": "1.3.8.3",
+  "header": "Restrict Access to the Management Interface",
+  "content": "Restrict the IP addresses that are permitted to access the management interface.\nEven if your firewall is on a dedicated management network that is only accessible by a device\non the same VLAN or through a bastion host or VPN tunnel, you can secure the firewall further\nby restricting the source IP addresses that can access the management interface to those of\nyour administrators. Limiting access to the management interface reduces the attack surface by\nhelping to prevent access from unexpected IP addresses or subnets and prevents access using\nstolen credentials.\nRestrict the services that are available on the management interface.\nDo not allow access over Telnet and HTTP because these services use plaintext and are not\nas secure as the other services and could compromise administrator credentials. Instead,\nrequire administrators to access the firewall interfaces over SSH or HTTPS.\nEnable ping if you want to be able to test connectivity to the interface, but do not enable\nany other services on the management interface.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n66\n©2025 Palo Alto Networks, Inc.\nGetting Started\nThe way you configure these settings depends on whether you are using the MGT port or a\ndata port for access to the firewall management interfaces:\n• If you are using the MGT port as your management interface, select Device > Setup >\nInterfaces and select the Management interface to configure the settings to restrict who\ncan access the management interface and what services the interface allows.\n• If you are using a data port as your management interface, after you configure the interface,\nselect Network > Network Profiles > Interface Mgmt and Add an interface management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n67\n©2025 Palo Alto Networks, Inc.\nGetting Started\nprofile to restrict who can access the management interface and what services the interface\nallows.\nDo not attach an interface management profile that allows Telnet, SSH, HTTP,\nor HTTPS to an interface where you have configured a GlobalProtect portal or\ngateway because this will expose the management interface to the internet. Do not\nuse HTTP or Telnet for any management interface profile because those protocols\ntransmit in cleartext.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 66,
+      "end": 68
+    },
+    "content_stats": {
+      "char_count": 2232,
+      "word_count": 356
+    },
+    "hierarchy": {
+      "parent": "Best Practices for Securing Administrative Access",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_496",
+  "section_number": "1.15.3.5",
+  "header": "DNS Security Data Collection and Logging",
+  "content": "The DNS Security service collects server response and request information based on your firewall\nsecurity policy rules, associated action, and the DNS query details when performing domain\nlookups. The firewall forwards supplemental DNS data to the DNS Security cloud servers and\nis used by Palo Alto Networks services to provide more accurate domain information (such as\nprovider ASN, hosting information, and geolocation identification). While this supplemental\ndata is not necessary to operate the DNS Security service, it provides the resources to generate\nimproved analytics, DNS detection, and prevention capabilities. This action occurs in less than\n30 seconds after collection and batching does not impact firewall performance. In cases where\nthe firewall is experiencing a high load, DNS data collection scales down as needed to maintain\nexpected performance levels.\nThe firewall can submit the following data fields:\nField\nDescription\nAction\nDisplays the policy action taken on the DNS query.\nType\nDisplays the DNS record type.\nResponse\nThe IP address that the domain in the DNS query got resolved to.\nResponse Code\nThe DNS response code that was received as an answer to your DNS\nquery.\nSource IP\nThe IP address of the system that made the DNS request.\nSource User\nWhen the firewall User-ID feature is enabled, the identity of the DNS\nrequester is shown.\nSource Zone\nThe configured source zone referenced in your security policy rule.\nDNS expanded data collection is bypassed for domains added to the Allow list in DNS\nExceptions.\nData fields that can be used to potentially identify users (Source IP, Source User, and Source\nZone) can be withheld from automatic submission using the following CLI command: set\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n911\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\ndeviceconfig setting ctd cloud-dns-privacy-mask yes. You must commit the\nchanges for the update to take effect.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n912\n©2025 Palo Alto Networks, Inc.\nThreat Prevention",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 911,
+      "end": 913
+    },
+    "content_stats": {
+      "char_count": 2020,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": "DNS Security",
+      "children": []
+    }
+  }
+}

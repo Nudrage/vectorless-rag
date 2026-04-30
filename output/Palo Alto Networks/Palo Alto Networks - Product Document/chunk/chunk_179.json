@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_179",
+  "section_number": "1.9.5.3",
+  "header": "Configure Revocation Status Verification of Certificates Used for SSL/TLS Decryption",
+  "content": "SSL/TLS Decryption\nThe firewall decrypts inbound and outbound SSL/TLS traffic to inspect the traffic for threats.\nWhen you create a Security policy rule that allows traffic and apply Security profiles to the rule,\ncreate an analogous Decryption policy rule to decrypt that traffic. If you don’t decrypt the traffic,\nthe firewall can’t use the Security profiles to inspect the traffic (you can’t inspect what you can’t\nsee). The firewall re-encrypts the traffic before forwarding it. (See SSL Inbound Inspection and SSL\nForward Proxy.) You can configure the firewall to verify the revocation status of certificates used\nfor decryption as follows.\nEnabling revocation status verification for SSL/TLS decryption certificates will add time to\nthe process of establishing the session. The first attempt to access a site might fail if the\nverification does not finish before the session times out. For these reasons, verification is\ndisabled by default.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n323\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 1 |\nDefine the service-specific timeout intervals for revocation status requests.\n1.\nSelect Device > Setup > Session and, in the Session Features section, select Decryption\nCertificate Revocation Settings.\n2.\nPerform one or both of the following steps, depending on whether the firewall will\nuse Online Certificate Status Protocol (OCSP) or the Certificate Revocation List (CRL)\nmethod to verify the revocation status of certificates. If the firewall will use both, it first\ntries OCSP; if the OCSP responder is unavailable, the firewall then tries the CRL method.\n• In the CRL section, select the Enable check box and enter the Receive Timeout. This\nis the interval (1-60 seconds) after which the firewall stops waiting for a response\nfrom the CRL service.\n• In the OCSP section, select the Enable check box and enter the Receive Timeout.\nThis is the interval (1-60 seconds) after which the firewall stops waiting for a response\nfrom the OCSP responder.\nDepending on the Certificate Status Timeout value you specify in Step 2, the firewall\nmight register a timeout before either or both of the Receive Timeout intervals pass.\nSTEP 2 |\nDefine the total timeout interval for revocation status requests.\nEnter the Certificate Status Timeout. This is the interval (1-60 seconds) after which the\nfirewall stops waiting for a response from any certificate status service and applies the session-\nblocking logic you optionally define in Step 3. The Certificate Status Timeout relates to the\nOCSP/CRL Receive Timeout as follows:\n• If you enable both OCSP and CRL—The firewall registers a request timeout after the lesser\nof two intervals passes: the Certificate Status Timeout value or the aggregate of the two\nReceive Timeout values.\n• If you enable only OCSP—The firewall registers a request timeout after the lesser of two\nintervals passes: the Certificate Status Timeout value or the OCSP Receive Timeout value.\n• If you enable only CRL—The firewall registers a request timeout after the lesser of two\nintervals passes: the Certificate Status Timeout value or the CRL Receive Timeout value.\nSTEP 3 |\nDefine the blocking behavior for unknown certificate status or a revocation status request\ntimeout.\nIf you want the firewall to block SSL/TLS sessions when the OCSP or CRL service returns a\ncertificate revocation status of unknown, select the Block Session With Unknown Certificate\nStatus check box. Otherwise, the firewall proceeds with the session.\nIf you want the firewall to block SSL/TLS sessions after it registers a request timeout, select\nthe Block Session On Certificate Status Check Timeout check box. Otherwise, the firewall\nproceeds with the session.\nSTEP 4 |\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n324\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 323,
+      "end": 325
+    },
+    "content_stats": {
+      "char_count": 3840,
+      "word_count": 605
+    },
+    "hierarchy": {
+      "parent": "Set Up Verification for Certificate Revocation Status",
+      "children": []
+    }
+  }
+}

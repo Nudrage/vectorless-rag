@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_111",
+  "section_number": "4.16",
+  "header": "Configure two-factor authentication",
+  "content": "Enables or disables a user's two-factor authentication settings.\nNote: The workflow for two-factor authentication is as follows:\n1. Send a verification code.\n2. Validate the verification code.\n3. Configure two-factor authentication.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\ninteger <int32>\nThe unique ID of the user.\nREQUEST BODY SCHEMA:\napplication/json\nboolean\nuser_id\nrequired\nemail_enabled\nContent type\nContent type\nSpecifies whether backup notification for two-factor authentication is\nenabled. If enabled, Tenable Vulnerability Management sends the two-\nfactor verification code via e-mail, as well as via the default SMS message.\nboolean\nSpecifies whether two-factor authentication is enabled. If enabled, Tenable\nVulnerability Management sends the verification code via an SMS\nmessage. This parameter must be enabled to enable two-factor verification\nfor the user.\nstring\nThe phone number to use for two-factor authentication. Must begin with\nthe +  character and the country code. This field is required when\nsms_enabled is set to true .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 75,
+      "end": 76
+    },
+    "content_stats": {
+      "char_count": 1097,
+      "word_count": 155
+    },
+    "hierarchy": {
+      "parent": "Access Control (Users)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

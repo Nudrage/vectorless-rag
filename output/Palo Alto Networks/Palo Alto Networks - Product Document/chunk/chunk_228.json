@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_228",
+  "section_number": "1.10.2.12",
+  "header": "NAT in Active/Active HA Mode",
+  "content": "In an active/active HA configuration:\n• You must bind each Dynamic IP (DIP) NAT rule and Dynamic IP and Port (DIPP) NAT rule to\neither Device ID 0 or Device ID 1.\n• You must bind each static NAT rule to either Device ID 0, Device ID 1, both Device IDs, or the\nfirewall in active-primary state.\nThus, when one of the firewalls creates a new session, the Device ID 0 or Device ID 1 binding\ndetermines which NAT rules match the firewall. The device binding must include the session\nowner firewall to produce a match.\nThe session setup firewall performs the NAT policy match, but the NAT rules are evaluated based\non the session owner. That is, the session is translated according to NAT rules that are bound to\nthe session owner firewall. While performing NAT policy matching, a firewall skips all NAT rules\nthat are not bound to the session owner firewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n399\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nFor example, suppose the firewall with Device ID 1 is the session owner and session setup\nfirewall. When the firewall with Device ID 1 tries to match a session to a NAT rule, it skips all rules\nbound to Device ID 0. The firewall performs the NAT translation only if the session owner and the\nDevice ID in the NAT rule match.\nYou will typically create device-specific NAT rules when the peer firewalls use different IP\naddresses for translation.\nIf one of the peer firewalls fails, the active firewall continues to process traffic for synchronized\nsessions from the failed firewall, including NAT traffic. In a source NAT configuration, when one\nfirewall fails:\n• The floating IP address that is used as the Translated IP address of the NAT rule transfers to\nthe surviving firewall. Hence, the existing sessions that fail over will still use this IP address.\n• All new sessions will use the device-specific NAT rules that the surviving firewall naturally\nowns. That is, the surviving firewall translates new sessions using only the NAT rules that\nmatch its Device ID; it ignores any NAT rules bound to the failed Device ID.\nFor examples of active/active HA with NAT, see:\n• Use Case: Configure Active/Active HA with Source DIPP NAT Using Floating IP Addresses\n• Use Case: Configure Separate Source NAT IP Address Pools for Active/Active HA Firewalls\n• Use Case: Configure Active/Active HA for ARP Load-Sharing with Destination NAT\n• Use Case: Configure Active/Active HA for ARP Load-Sharing with Destination NAT in Layer 3",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 399,
+      "end": 400
+    },
+    "content_stats": {
+      "char_count": 2470,
+      "word_count": 422
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

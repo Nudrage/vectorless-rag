@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_689",
+  "section_number": "1.19.3.5.5",
+  "header": "SA Key Lifetime and Re-Authentication Interval",
+  "content": "In IKEv2, two IKE crypto profile values, Key Lifetime and IKEv2 Authentication Multiple, control\nthe establishment of IKEv2 IKE SAs. The key lifetime is the length of time that a negotiated IKE\nSA key is effective. Before the key lifetime expires, the SA must be re-keyed; otherwise, upon\nexpiration, the SA must begin a new IKEv2 IKE SA re-key. The default value is 8 hours.\nThe re-authentication interval is derived by multiplying the Key Lifetime by the IKEv2\nAuthentication Multiple. The authentication multiple defaults to 0, which disables the re-\nauthentication feature.\nThe range of the authentication multiple is 0-50. So, if you were to configure an authentication\nmultiple of 20, for example, the system would perform re-authentication every 20 re-keys, which\nis every 160 hours. That means the gateway could perform Child SA creation for 160 hours\nbefore the gateway must re-authenticate with IKE to recreate the IKE SA from scratch.\nIn IKEv2, the Initiator and Responder gateways have their own key lifetime value, and the\ngateway with the shorter key lifetime is the one that will request that the SA be re-keyed.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1256\n©2025 Palo Alto Networks, Inc.\nVPNs",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1256,
+      "end": 1257
+    },
+    "content_stats": {
+      "char_count": 1209,
+      "word_count": 196
+    },
+    "hierarchy": {
+      "parent": "IKEv2",
+      "children": []
+    }
+  }
+}

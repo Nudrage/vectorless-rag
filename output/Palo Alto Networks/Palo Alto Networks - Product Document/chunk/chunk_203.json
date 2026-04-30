@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_203",
+  "section_number": "1.9.15.2",
+  "header": "Renew a Certificate",
+  "content": "If a certificate expires, or soon will, you can reset the validity period. If an external certificate\nauthority (CA) signed the certificate and the firewall uses the Online Certificate Status Protocol\n(OCSP) to verify certificate revocation status, the firewall uses the OCSP responder information\nto update the certificate status (see Configure an OCSP Responder). If the firewall is the CA that\nissued the certificate, the firewall replaces it with a new certificate that has a different serial\nnumber but the same attributes as the old certificate.\nSTEP 1 |\nSelect Device > Certificate Management > Certificates > Device Certificates.\nSTEP 2 |\nIf the firewall has more than one virtual system (vsys), select a Location (vsys or Shared) for\nthe certificate.\nSTEP 3 |\nSelect a certificate to renew and click Renew.\nSTEP 4 |\nEnter a New Expiration Interval (in days).\nSTEP 5 |\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n368\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 368,
+      "end": 369
+    },
+    "content_stats": {
+      "char_count": 996,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Revoke and Renew Certificates",
+      "children": []
+    }
+  }
+}

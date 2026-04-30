@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_015",
+  "section_number": "23.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable One successfully retrieved the data for the specified exposure view card.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe unique ID of the exposure view card.\nstring\nThe name of the exposure view card.\nstring\nEnum: \"GLOBAL\"\n\"CATEGORY\"\n\"EXPOSURE\"\n\"CUSTOM\"\nsla_efficiency_start_date\nsla_efficiency_end_date\nsla_breakdown_filter\ninclude_trend_events\nid\nname\ncard_type\nThe type of exposure view card. Global cards are Tenable-\nprovided cards. Custom cards are user-created cards.\nboolean\nIndicates whether or not the exposure view card is a\nTenable-provided global card ( true ) or a user-created\ncustom card ( false ).\nobject\nAn object containing Cyber Exposure Scores (CES) per\nexposure, per tag, and total.\nArray of objects\nAn array of Cyber Exposure Score (CES) values along with\ntheir timestamps.\nstring <date-time>\nA timestamp in ISO 8601 format indicating the date and\ntime when the exposure view card was created.\nstring <date-time>\nA timestamp in ISO 8601 format indicating the date and\ntime when the exposure view card was last updated.\ninteger\nThe number of tags associated with the exposure view\ncard.\nArray of strings\nThe exposure class is determined by the sensor that\nassessed the asset or detected the finding. For more\ninformation about exposure classes, see Scoring (Beta).\nArray of strings\nThe sources that supply data for the card.\nstring <date-time>\nA timestamp in ISO 8601 format indicating the date and\ntime when the data for the exposure view card was last\nupdated.\nobject\nMetrics, breakdowns, and efficiency data for each exposure\nclass. Exposure classes include VM , WAS , CLOUD , OT ,\nIDENTITY , and ALL . For each exposure class, score\nbenchmarks, asset risk breakdowns, score trend metrics,\nSLA efficiency, and SLA breakdowns are included.\nis_global_card\nces_scores\nces_trend\ncreated_at\nupdated_at\ntag_count\nexposures\nsources\nlast_data_update_date\nexposure_classes_details\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n401 Returned if the API keys specified in your request are invalid.\n— 403 Returned if you do not have permission to retrieve the specified exposure view card.\n404 Returned if Tenable One could not find the specified exposure view card.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in Tenable One.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 23,
+      "end": 25
+    },
+    "content_stats": {
+      "char_count": 2445,
+      "word_count": 379
+    },
+    "hierarchy": {
+      "parent": "Get card details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

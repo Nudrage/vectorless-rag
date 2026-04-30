@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_599",
+  "section_number": "1.16.17",
+  "header": "Activate Free Licenses for Decryption Features",
+  "content": "No licenses are required to decrypt SSH traffic and SSL traffic (SSL internet traffic or SSL traffic to\nan internal server).\nHowever, you must activate a free license in order to enable Decryption Broker and Decryption\nMirroring. The free license requirement ensures that these features can only be used after the\napproved personnel purposefully activates the associated license.\nFollow these steps on the Palo Alto Networks Customer Support Portal to activate a decryption\nbroker or decryption mirroring feature license.\nSTEP 1 |\nLog in to the Customer Support Portal.\nSTEP 2 |\nSelect Assets > Devices on the left-hand navigation pane.\nSTEP 3 |\nFind the device on which you want to enable decryption broker or decryption port mirroring\nand select Actions (the pencil icon).\nSTEP 4 |\nUnder Activate Licenses, select Activate Feature License.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1108\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 5 |\nSelect the feature for which you want to activate a free license: Decryption Port Mirror or\nSSL Decryption Broker.\nSTEP 6 |\nAgree and Submit.\nSTEP 7 |\nInstall the decryption broker or decryption mirroring license on the firewall.\n1.\nSelect Device > Licenses.\n2.\nClick Retrieve license keys from the license server.\n3.\nVerify that the SSL Decryption Broker or the Decryption Port Mirror license is now\nactive on the firewall.\n4.\nRestart the firewall (Device > Setup > Operations). Decryption port mirroring and\ndecryption broker are not available for configuration until the firewall reloads.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1109\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1108,
+      "end": 1109
+    },
+    "content_stats": {
+      "char_count": 1607,
+      "word_count": 257
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": []
+    }
+  }
+}

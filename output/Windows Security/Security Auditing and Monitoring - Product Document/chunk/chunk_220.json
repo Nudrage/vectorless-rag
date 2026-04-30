@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_220",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions. If you need to monitor or troubleshoot actions related to specific cryptographic\nfunctions, review this event to see if it provides the information you need.\n5069(S, F): A cryptographic function property operation was attempted.\nThis event generates in BCryptSetContextFunctionProperty() function. This is a Cryptographic Next Generation (CNG) function.\nThis event generates when named property for a cryptographic function in an existing CNG context was added or removed.\nFor more information about Cryptographic Next Generation (CNG) visit these pages:\n\nhttps://msdn.microsoft.com/en-us/library/windows/desktop/aa376214(v=vs.85).aspx\n\nhttp://www.microsoft.com/en-us/download/details.aspx?id=1251\n\nhttp://www.microsoft.com/en-us/download/details.aspx?id=30688\nThis event is mainly used for Cryptographic Next Generation (CNG) troubleshooting.\nThere is no example of this event in this document.\nEvent Schema:\nA cryptographic function property operation was attempted.\nSubject:\nSecurity ID:%1\nAccount Name:%2\nAccount Domain:%3\nLogon ID:%4\nConfiguration Parameters:\nScope:%5\nContext:%6\nInterface:%7\nFunction:%8\nProperty:%9\nOperation:%10\nValue:%11\nReturn Code:%12\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\n© 2016 Microsoft. All rights reserved.\n648",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 648,
+      "end": 649
+    },
+    "content_stats": {
+      "char_count": 1410,
+      "word_count": 169
+    },
+    "hierarchy": {
+      "parent": "Audit Other Policy Change Events",
+      "children": []
+    }
+  }
+}

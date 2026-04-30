@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_061",
+  "section_number": "22",
+  "header": "Search tags",
+  "content": "Returns a list of tags in your organization that match the specified search criteria.\nCaution: This endpoint is available for use but is currently in beta. The response structure is subject\nto change as we continue to enhance the data model.\nRequires the Basic [16] user role or the ASSET_INVENTORY.CYBER_ASSET_MANAGEMENT.READ  and\nAD.TOGGLE_AD.USE  custom role privileges. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring ^[a-zA-Z0-9_]+(,[a-zA-Z0-9_]+)*$\nExample: extra_properties=prop1,prop2,prop3\nSpecifies extra tag properties to include in the search results. You can\nprovide multiple properties as a comma-separated list.\nextra_properties\nUse the List tag properties endpoint to retrieve a list of valid properties for\nthis parameter. For example, you might include tag_data_source ,\nlast_updated , and tag_created_by_id  as extra properties.\ninteger\nDefault: 0\nThe starting record to retrieve. If omitted, the default value is 0 .\ninteger\n<= 1000\nDefault: 1000\nThe number of records to retrieve. If omitted, the default value is 1000 .\nThe maximum value is 1000 .\nstring ^[a-zA-Z0-9_]+:(asc|desc)$\nDefault: \"total_weakness_count:desc\"\nExample: sort=tag_name:asc\nThe property and direction to sort the results by, in the format\nproperty:direction . For example: tag_name:asc  or\nlast_updated:desc\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nobject\nThe search mode and query text.\nArray of objects\nA set of tag properties used to filter the search results.\nUse the List tag properties endpoint to view available tag properties that\ncan be used as filters.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 151,
+      "end": 152
+    },
+    "content_stats": {
+      "char_count": 1571,
+      "word_count": 224
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

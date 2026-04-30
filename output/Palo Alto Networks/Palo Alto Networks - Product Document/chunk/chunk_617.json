@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_617",
+  "section_number": "1.17.11",
+  "header": "Configure URL Filtering Inline ML",
+  "content": "To enable your URL Filtering inline ML configuration, attach the URL Filtering profile configured\nwith the inline ML settings to a Security policy rule (see Set Up a Basic Security Policy).\nURL Filtering inline ML is not currently supported on the VM-50 or VM50L virtual\nappliance.\nSTEP 1 |\nTo take advantage of URL Filtering inline ML, you must have an active Advanced URL\nFiltering or legacy URL Filtering subscription.\nVerify that you have a URL Filtering subscription. To verify subscriptions for which you have\ncurrently-active licenses, select Device > Licenses and verify that the appropriate licenses\ndisplay and are not expired. The image below shows the license entry for the legacy URL\nFiltering subscription.\nSTEP 2 |\nCreate a new or update your existing URL Filtering profiles to use URL Filtering inline ML.\n1. Select an existing URL Filtering Profile or Add a new one (Objects > Security Profiles > URL\nFiltering).\n2. Select Inline ML and define a policy Action for each URL Filtering inline ML model.\nThis enforces the selected policy action on a per model basis. Currently, there are two\nclassification engines available: Phishing and JavaScript Exploit, one for each type of\nmalicious webpage content.\n• Block—When the firewall detects a website with phishing content, the firewall generates\na URL Filtering log entry.\n• Alert—The firewall allows access to the website and generates a URL Filtering log entry.\n• Allow—The firewall allows access to the website but does not generate a URL Filtering\nlog entry.\n3. Click OK to exit the URL Filtering Profile dialog, then Commit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1139\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 3 |\n(Optional) Add URL exceptions to your URL Filtering profile if you encounter false-positives.\nYou can add exceptions by specifying an external dynamic list from the URL Filtering profile\nor by adding a web page entry from the URL Filtering logs.\n• Add an external dynamic list of URL exceptions.\n1. Select Objects > Security Profiles > URL Filtering.\n2. Select a URL Filtering profile for which you want to exclude specific URLs, then select\nInline ML.\n3. Add a pre-existing URL-based external dynamic list. If none is available, create a new\nexternal dynamic list.\n4. Click OK to save the URL Filtering profile and Commit your changes.\n• Add file exceptions from URL Filtering log entries.\n1. Select Monitor > Logs > URL Filtering and filter the logs for URL entries with an Inline\nML Verdict of malicious-javascript or phishing. Select a URL Filtering log for a URL that\nyou wish to create an exception for.\n2. Go to the Detailed Log View and scroll down to the Details pane, then select Create\nException located next to the Inline ML Verdict.\n3. Select a custom category for the URL exception and click OK.\n4. The new URL exception can be found in the list to which it was added, under Objects >\nCustom Objects > URL Category.\nSTEP 4 |\n(Optional) Verify the status of your firewall’s connectivity to the inline ML cloud service.\nUse the following CLI command on the firewall to view the connection status.\nshow mlav cloud-status\nFor example:\nshow mlav cloud-status\nMLAV cloud\nCurrent cloud server:          ml.service.paloaltonetworks.com\nCloud connection:              connected\nIf you are unable to connect to the inline ML cloud service, verify that the following domain is\nnot being blocked: ml.service.paloaltonetworks.com.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1140\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nTo view information about web pages that have been processed using URL Filtering inline ML,\nFilter the logs (Monitor > Logs > URL Filtering) based on Inline ML Verdict. Web pages that have\nbeen determined to contain threats are categorized with verdicts of either phishing or malicious-\njavascript. For example:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1141\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1139,
+      "end": 1142
+    },
+    "content_stats": {
+      "char_count": 3932,
+      "word_count": 641
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": []
+    }
+  }
+}

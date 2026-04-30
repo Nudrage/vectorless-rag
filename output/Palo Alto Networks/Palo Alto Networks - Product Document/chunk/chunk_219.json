@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_219",
+  "section_number": "1.10.2.3",
+  "header": "Device Priority and Preemption",
+  "content": "The firewalls in an Active-Passive HA pair can be assigned a device priority value to indicate a\npreference for which firewall should assume the active role. If you need to use a specific firewall\nin the HA pair for actively securing traffic, you must enable the preemptive behavior on both the\nfirewalls and assign a device priority value for each firewall. The firewall with the lower numerical\nvalue, and therefore higher priority, is designated as active. The other firewall is the passive\nfirewall.\nThe same is true for an Active-Active HA pair; however, the device ID  is used to assign a device\npriority value. Similarly, the lower numerical value in device ID corresponds to a higher priority.\nThe firewall with the higher priority becomes active-primary and the paired firewall becomes\nactive-secondary.\nBy default, preemption is disabled on the firewalls and must be enabled on both firewalls. When\nenabled, the preemptive behavior allows the firewall with the higher priority (lower numerical\nvalue) to resume as active or active-primary after it recovers from a failure. When preemption\noccurs, the event is logged in the system logs.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n387\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 387,
+      "end": 388
+    },
+    "content_stats": {
+      "char_count": 1240,
+      "word_count": 197
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

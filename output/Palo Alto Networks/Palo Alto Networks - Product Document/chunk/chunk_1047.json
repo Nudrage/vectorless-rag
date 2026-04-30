@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1047",
+  "section_number": "1.24.4.1",
+  "header": "Configure Reconnaissance Protection",
+  "content": "Configure one of the following Reconnaissance Protection actions for the firewall to take in\nresponse to the corresponding reconnaissance attempt:\n• Allow—The firewall allows the port scan or host sweep reconnaissance to continue.\n• Alert—The firewall generates an alert for each port scan or host sweep that matches the\nconfigured threshold within the specified time interval. Alert is the default action.\n• Block—The firewall drops all subsequent packets from the source to the destination for the\nremainder of the specified time interval.\n• Block IP—The firewall drops all subsequent packets for the specified Duration, in seconds\n(the range is 1-3,600). Track By determines whether the firewall blocks source or source-and-\ndestination traffic.\nSTEP 1 |\nConfigure Reconnaissance Protection.\n1.\nSelect Network > Network Profiles > Zone Protection.\n2.\nSelect a Zone Protection profile or Add a new profile and enter a Name for it.\n3.\nOn the Reconnaissance Protection tab, select the scan types to protect against.\n4.\nSelect an Action for each scan. If you select Block IP, you must also configure Track By\n(source or source-and-destination) and Duration.\n5.\nSet the Interval in seconds. This options defines the time interval for port scan and host\nsweep detection.\n6.\nSet the Threshold. The threshold defines the number of port scan events or host sweeps\nthat occurs within the interval configured above that triggers an action.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1746\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 2 |\n(Optional) Configure a Source Address Exclusion.\n1.\nOn the Reconnaissance Protection tab, Add a Source Address Exclusion.\n1. Enter a descriptive Name for the address you want to exclude.\n2. Set the Address Type to IPv4 or IPv6 and then select an address object or enter an IP\naddress.\n3. Click OK.\n2.\nClick OK to save the Zone Protection profile.\n3.\nCommit your changes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1746,
+      "end": 1747
+    },
+    "content_stats": {
+      "char_count": 1923,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Configure Zone Protection to Increase Network Security",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_114",
+  "section_number": "42",
+  "header": "Bulk add resource links",
+  "content": "Adds or updates resource links for multiple customer accounts.\nRequires the Basic [16] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nstring <uuid>\nThe UUID of the parent container for the child containers you want to\nbulk add resource links for.\nArray of strings\nAn array of child containers that you want to bulk add resource links\nfor.\nparent_container_uuid\ncontainer_uuid_list\nrequired\nArray of objects\nAn array of resource links to bulk add to the child containers.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 72,
+      "end": 73
+    },
+    "content_stats": {
+      "char_count": 514,
+      "word_count": 79
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

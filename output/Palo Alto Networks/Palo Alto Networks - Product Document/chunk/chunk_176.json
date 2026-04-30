@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_176",
+  "section_number": "1.9.5",
+  "header": "Set Up Verification for Certificate Revocation Status",
+  "content": "To verify the revocation status of certificates, the firewall uses Online Certificate Status Protocol\n(OCSP) and/or certificate revocation lists (CRLs). For details on these methods, see Certificate\nRevocation If you configure both methods, the firewall first tries OCSP and only falls back to\nthe CRL method if the OCSP responder is unavailable. If your enterprise has its own public key\ninfrastructure (PKI), you can configure the firewall to function as the OCSP responder.\nThe following topics describe how to configure the firewall to verify certificate revocation status:\n• Configure an OCSP Responder\n• Configure Revocation Status Verification of Certificates\n• Configure Revocation Status Verification of Certificates Used for SSL/TLS Decryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 322,
+      "end": 322
+    },
+    "content_stats": {
+      "char_count": 753,
+      "word_count": 110
+    },
+    "hierarchy": {
+      "parent": "Certificate Management",
+      "children": [
+        "Configure an OCSP Responder",
+        "Configure Revocation Status Verification of Certificates",
+        "Configure Revocation Status Verification of Certificates Used for SSL/TLS Decryption"
+      ]
+    }
+  }
+}

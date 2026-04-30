@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_857",
+  "section_number": "1.21.15.7.5",
+  "header": "Virtual Wire Source NAT Example",
+  "content": "Virtual wire deployment of a Palo Alto Networks firewall includes the benefit of providing security\ntransparently to the end devices. It is possible to configure NAT for interfaces configured in a\nvirtual wire. All of the NAT types are allowed: source NAT (Dynamic IP, Dynamic IP and Port,\nstatic) and destination NAT.\nBecause interfaces in a virtual wire do not have an IP address assigned, it is not possible to\ntranslate an IP address to an interface IP address. You must configure an IP address pool.\nWhen performing NAT on virtual wire interfaces, it is recommended that you translate the source\naddress to a different subnet than the one on which the neighboring devices are communicating.\nThe firewall will not proxy ARP for NAT addresses. Proper routing must be configured on the\nupstream and downstream routers in order for the packets to be translated in virtual wire mode.\nNeighboring devices will only be able to resolve ARP requests for IP addresses that reside on the\ninterface of the device on the other end of the virtual wire. See Proxy ARP for NAT Address Pools\nfor more explanation about proxy ARP.\nIn the source NAT example below, security policies (not shown) are configured from the virtual\nwire zone named vw-trust to the zone named vw-untrust.\nIn the following topology, two routers are configured to provide connectivity between\nsubnets 192.0.2.0/24 and 172.16.1.0/24. The link between the routers is configured in subnet\n198.51.100.0/30. Static routing is configured on both routers to establish connectivity between\nthe networks. Before the firewall is deployed in the environment, the topology and the routing\ntable for each router look like this:\nRoute on R1:\nDestination\nNext Hop\n172.16.1.0/24\n198.51.100.2\nRoute on R2:\nDestination\nNext Hop\n192.0.2.0/24\n198.51.100.1\nNow the firewall is deployed in virtual wire mode between the two Layer 3 devices. A NAT\nIP address pool with range 198.51.100.9 to 198.51.100.14 is configured on the firewall. All\ncommunications from clients in subnet 192.0.2.0/24 accessing servers in network 172.16.1.0/24\nwill arrive at R2 with a translated source address in the range 198.51.100.9 to 198.51.100.14. The\nresponse from servers will be directed to these addresses.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1504\n©2025 Palo Alto Networks, Inc.\nNetworking\nIn order for source NAT to work, you must configure proper routing on R2, so that packets\ndestined for other addresses are not dropped. The routing table below shows the modified\nrouting table on R2; the route ensures traffic to the destinations 198.51.100.9-198.51.100.14\n(that is, hosts on subnet 198.51.100.8/29) will be sent back through the firewall to R1.\nRoute on R2:\nDestination\nNext Hop\n198.51.100.8/29\n198.51.100.1",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1504,
+      "end": 1505
+    },
+    "content_stats": {
+      "char_count": 2742,
+      "word_count": 434
+    },
+    "hierarchy": {
+      "parent": "NAT Configuration Examples",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_750",
+  "section_number": "1.21.1.3.4",
+  "header": "Configure a Layer 2 Interface, Subinterface, and VLAN",
+  "content": "Configure Layer 2 Interfaces with VLANs when you want Layer 2 switching and traffic separation\namong VLANs. You can optionally control non-IP protocols between security zones on a Layer 2\ninterface or between interfaces within a single zone on a Layer 2 VLAN.\nSTEP 1 |\nConfigure a Layer 2 interface and subinterface and assign a VLAN ID.\n1.\nSelect Network > Interfaces > Ethernet and select an interface. The Interface Name is\nfixed, such as ethernet1/1.\n2.\nFor Interface Type, select Layer2.\n3.\nSelect the Config tab.\n4.\nFor VLAN, leave the setting None.\n5.\nAssign the interface to a Security Zone or create a New Zone.\n6.\nClick OK.\n7.\nWith the Ethernet interface highlighted, click Add Subinterface.\n8.\nThe Interface Name remains fixed. After the period, enter the subinterface number, in\nthe range 1-9,999.\n9.\nEnter a VLAN Tag ID in the range 1-4,094.\n10. Assign the subinterface to a Security Zone.\n11. Click OK.\nSTEP 2 |\nCommit.\nClick Commit.\nSTEP 3 |\n(Optional) Apply a Zone Protection profile with protocol protection to control non-IP\nprotocol packets between Layer 2 zones (or between interfaces within a Layer 2 zone).\nConfigure Protocol Protection.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1344,
+      "end": 1344
+    },
+    "content_stats": {
+      "char_count": 1159,
+      "word_count": 196
+    },
+    "hierarchy": {
+      "parent": "Layer 2 Interfaces",
+      "children": []
+    }
+  }
+}

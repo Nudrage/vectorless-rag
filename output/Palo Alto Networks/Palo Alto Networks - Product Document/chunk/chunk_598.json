@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_598",
+  "section_number": "1.16.16.7",
+  "header": "Configure Decryption Broker with Multiple Transparent Bridge Security Chains",
+  "content": "Security Chains\nYou can configure the firewall to distribute sessions among multiple Multiple Security Chains,\nwhere the security chains are in Transparent Bridge mode. For each Transparent Bridge security\nchain you want to support, you must configure:\n• A pair of decryption forwarding interfaces that forward traffic only to that single Transparent\nBridge security chain.\n• A Decryption Forwarding profile that specifies settings only for that single Transparent Bridge\nsecurity chain.\n• A Decryption policy rule that specifies only for certain decrypted traffic to be forwarded to\nthat single Transparent Bridge security chain. This allows you to distribute sessions more\nevenly among multiple Transparent Bridge security chains (in order to avoid oversubscribing\nany one security chain) based on traffic origin.\nSTEP 1 |\nFirst, follow the steps to Configure Decryption Broker with a Single Transparent Bridge\nSecurity Chain. For each Transparent Bridge security chain you want to support, this\nincludes:\n• On the firewall, enable a pair of Layer 3 interfaces to support forwarding of decrypted\ntraffic.\n• Create a Decryption Forwarding profile to define settings for the firewall to forward\ndecrypted traffic to a Transparent Bridge security chain.\nSTEP 2 |\nAttach each Transparent Bridge Decryption Forwarding profile to a separate decryption\npolicy rule.\nIn addition to applying the decryption forwarding settings to matching traffic, attaching\nTransparent Bridge Decryption Forwarding profiles to decryption policies rules allows you to\ndistribute sessions amongst the Transparent Bridge Security chains. Specify a different source\naddress range for each policy rule to dedicate a single Transparent Bridge security chain to\nanalyze and enforce traffic originating from that range.\n1.\nSelect Policies > Decryption and select a decryption policy rule.\n2.\nSelect Source and Add a Source Address range, or click New Address to create a new\naddress objects that identifies traffic originating from a given IP address range. Only\ntraffic originating from this IP address range is forwarded to the associated Transparent\nBridge security chain for analysis.\n3.\nSelect Options.\n4.\nSet the Action to Decrypt and Forward.\n5.\nSelect a Transparent Bridge Forwarding Profile to attach to the policy rule.\n6.\nClick OK to save the policy rule and Commit your changes.\nSTEP 3 |\nContinue to repeat these steps—associated one Transparent Bridge decryption forwarding\nprofile with one decryption policy—for as many security chains as you want to support.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1107\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1107,
+      "end": 1108
+    },
+    "content_stats": {
+      "char_count": 2630,
+      "word_count": 398
+    },
+    "hierarchy": {
+      "parent": "Decryption Broker",
+      "children": []
+    }
+  }
+}

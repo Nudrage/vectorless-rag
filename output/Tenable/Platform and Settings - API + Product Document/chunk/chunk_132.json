@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_132",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returns the access group details.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe UUID of your Tenable Vulnerability Management\ninstance.\nstring\nAn ISO timestamp indicating the date and time on which\nthe access group was created.\nstring\nAn ISO timestamp indicating the date and time on which\nthe access group was last modified.\nstring\nThe UUID of the access group.\nstring\nThe name of the access group. This name must be:\nUnique within your Tenable Vulnerability Management\ninstance.\nA maximum of 255 characters.\nAlphanumeric, but can include limited special\ncharacters (underscore, dash, parenthesis, brackets,\ncolon).\nboolean\nSpecifies whether the access group is the system-\nprovided All Assets access group:\nIf true , the access group is the All Assets access\ngroup. The only change you can make to this access\ngroup is to refine user membership in the group. For\nmore information, see descriptions of the all_users\nand principals parameters for the PUT /access-\ngroups/{id} endpoint.\nIf false , the access group is a user-defined access\ngroup, and you can change all parameters for the\ngroup. This parameter is false  for all access\ngroups you create.\ncontainer_uuid\ncreated_at\nupdated_at\nid\nname\nall_assets\nboolean\nSpecifies whether assets in the access group can be\nviewed by all or only some users in your organization:\nIf true , all users in your organization have Can View\naccess to the assets defined in the rules parameter. If\ntrue  in a POST /access-groups or PUT /access-\ngroups/{id} request, Tenable Vulnerability\nManagement ignores any principal parameters in the\nrequest.\nIf false , only specified users have Can View access\nto the assets defined in the rules parameter. You\ndefine which users or user groups have access in the\nprincipals parameter of a POST /access-groups or\nPUT /access-groups/{id} request.\nNote: If a PUT /access-groups/{id} endpoint request sets\nthis parameter to true  for an access group where the\nparameter was previously set to false , Tenable\nVulnerability Management removes all principal data\npreviously associated with the access group.\nstring\nThe status of the process evaluating and assigning assets\nto the access group. Possible values are:\nPROCESSING—Tenable Vulnerability Management is\ncurrently evaluating assets against the asset rules for\nthe access group. For an indication of evaluation\nprogress, see the processing_percent_complete\nattribute for the access group.\nCOMPLETED—Tenable Vulnerability Management has\nsuccessfully completed its evaluation of assets\nagainst the asset rules for the group.\nERROR—Tenable Vulnerability Management\nencountered an error while evaluating assets against\nasset rules for the access group. Rule validation\ntypically prevents this status from occurring.\nHowever, if you encounter an ERROR status, Tenable\nrecommends that you delete the existing asset rules,\nthen recreate the rules after a short time has elapsed.\nArray of objects\nAn array of asset rules. Tenable Vulnerability Management\nuses these rules to assign assets to the access group.\nYou can specify a maximum of 1,000 rules for an\nindividual access group. If you specify multiple rules for\nall_users\nstatus\nrules\nan access group, Tenable Vulnerability Management\nassigns an asset to the access group if the asset matches\nany of the rules. You can only add rules to access groups\nif the all_assets  parameter is set to false .\nArray of objects\nAn array of principals. Each principal represents a user or\nuser group assigned to the access group. You cannot add\nan access group as a principal to another access group.\nstring\nThe UUID of the user who created the access group.\nstring\nThe name of the user who created the access group.\nstring\nThe UUID of the user who last modified the access group.\nstring\nThe name of the user who last modified the access group.\ninteger\nThe percentage of assets that Tenable Vulnerability\nManagement has evaluated against the asset rules for the\naccess group.\n— 403 Returned if you do not have permissions to view the access group details.\n— 404 Returned if Tenable Vulnerability Management could not find the access group you specified.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 96,
+      "end": 98
+    },
+    "content_stats": {
+      "char_count": 4245,
+      "word_count": 673
+    },
+    "hierarchy": {
+      "parent": "Get access group details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

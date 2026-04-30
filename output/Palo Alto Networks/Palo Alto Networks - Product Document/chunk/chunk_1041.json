@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1041",
+  "section_number": "1.24.3.5.5",
+  "header": "Ethernet SGT Protection",
+  "content": "In a Cisco TrustSec network, a Cisco Identity Services Engine (ISE) assigns a Layer 2 Security\nGroup Tag (SGT) of 16 bits to a user’s or endpoint’s session. You can create a Zone Protection\nprofile with Ethernet SGT protection when your firewall is part of a Cisco TrustSec network.\nThe firewall can inspect headers with 802.1Q (Ethertype 0x8909) for specific Layer 2 security\ngroup tag (SGT) values and drop the packet if the SGT matches the list you configure for the\nZone Protection profile attached to the interface. Determine which SGT values you want to deny\naccess to a zone.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1737,
+      "end": 1737
+    },
+    "content_stats": {
+      "char_count": 582,
+      "word_count": 100
+    },
+    "hierarchy": {
+      "parent": "Zone Protection Profiles",
+      "children": []
+    }
+  }
+}

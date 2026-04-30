@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_253",
+  "section_number": "1.10.10",
+  "header": "Reference: HA Synchronization",
+  "content": "If you have enabled configuration synchronization on both peers in an HA pair, most of the\nconfiguration settings you configure on one peer will automatically sync to the other peer upon\ncommit. To avoid configuration conflicts, always make configuration changes on the active\n(active/passive) or active-primary (active/active) peer and wait for the changes to sync to the peer\nbefore making any additional configuration changes.\nOnly committed configurations synchronize between HA peers. Any configuration in the\ncommit queue at the time of an HA sync will not be synchronized.\nThe following topics identify which configuration settings you must configure on each firewall\nindependently (these settings are not synchronized from the HA peer).\n• What Settings Don’t Sync in Active/Passive HA?\n• What Settings Don’t Sync in Active/Active HA?\n• Synchronization of System Runtime Information",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 456,
+      "end": 456
+    },
+    "content_stats": {
+      "char_count": 889,
+      "word_count": 133
+    },
+    "hierarchy": {
+      "parent": "High Availability",
+      "children": [
+        "What Settings Don’t Sync in Active/Passive HA?",
+        "What Settings Don’t Sync in Active/Active HA?",
+        "Synchronization of System Runtime Information"
+      ]
+    }
+  }
+}

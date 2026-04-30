@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_038",
+  "section_number": "14",
+  "header": "Export findings",
+  "content": "Exports Tenable Web App Scanning findings that match the request criteria.\nUsers need at least BASIC [16] user permissions and the Can View access control permission for the\nasset objects they want to export. You can set the Can View permission for the All Assets object for\nall assets. ADMINISTRATOR [64] users can export without the explicit Can View access control\npermissions.\nNote: There are limits for concurrent export requests. For more information, see Concurrency\nLimiting and Rate Limiting.\nRequires the Basic [16] user role and the Can View access control permission for the asset objects to\nbe exported. Administrator [64] users can export without the explicit Can View access control\npermissions. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nrequired\ninteger <int32>\n[ 50 .. 5000 ]\nDefault: 50\nSpecifies the number of assets used to chunk the findings. The findings\nexport is split up by number of asset IDs in a chunk. The exported data of\na chunk is the sum of all the findings for each asset in that chunk. The\nrange for number of assets in a chunk is a minimum of 50 (the default\nsize) to a maximum of 5,000. If you specify a value outside this range, the\nsystem uses the upper or lower-bound value.\nboolean\nDefault: false\nSpecifies whether or not to include unlicensed assets. The default is\nfalse  when no parameter is specified.\nobject\nSpecifies filters to apply to the findings export.\nNote: By default, vulnerability exports will only include accepted and non-\naccepted vulnerabilities found or fixed within the last 30 days if no time-\nbased filters are submitted with the request.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 61,
+      "end": 62
+    },
+    "content_stats": {
+      "char_count": 1631,
+      "word_count": 271
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

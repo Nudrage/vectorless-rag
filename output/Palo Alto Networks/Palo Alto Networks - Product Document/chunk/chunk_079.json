@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_079",
+  "section_number": "1.6.2.8",
+  "header": "Manage Locks for Restricting Configuration Changes",
+  "content": "You can use configuration locks to prevent other administrators from changing the candidate\nconfiguration or from committing configuration changes until you manually remove the lock or\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n121\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nthe firewall automatically removes it (after a commit). Locks ensure that administrators don’t\nmake conflicting changes to the same settings or interdependent settings during concurrent login\nsessions.\nThe firewall queues commit requests and performs them in the order that administrators\ninitiate the commits. For details, see Commit, Validate, and Preview Firewall\nConfiguration Changes. To view the status of queued commits, see Manage and\nMonitor Administrative Tasks.\nView details about current locks.\nFor example, you can check whether other administrators have set locks and read comments\nthey entered to explain the locks.\nClick the lock\nat the top of the web interface. An adjacent number indicates the number of\ncurrent locks.\nLock a configuration.\n1.\nClick the lock at the top of the web interface.\nThe lock image varies based on whether existing locks are\nor are not\nset.\n2.\nTake a Lock and select the lock Type:\n• Config—Blocks other administrators from changing the candidate configuration.\n• Commit—Blocks other administrators from committing changes made to the\ncandidate configuration.\n3.\n(Firewall with multiple virtual systems only) Select a Location to lock the configuration\nfor a specific virtual system or the Shared location.\n4.\n(Optional) As a best practice, enter a Comment so that other administrators will\nunderstand the reason for the lock.\n5.\nClick OK and Close.\nUnlock a configuration.\nOnly a superuser or the administrator who locked the configuration can manually unlock it.\nHowever, the firewall automatically removes a lock after completing the commit operation.\n1.\nClick the lock at the top of the web interface.\n2.\nSelect the lock entry in the list.\n3.\nClick Remove Lock, OK, and Close.\nConfigure the firewall to automatically apply a commit lock when you change the candidate\nconfiguration. This setting applies to all administrators.\n1.\nSelect Device > Setup > Management and edit the General Settings.\n2.\nSelect Automatically Acquire Commit Lock and then click OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n122\n©2025 Palo Alto Networks, Inc.\nFirewall Administration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 121,
+      "end": 123
+    },
+    "content_stats": {
+      "char_count": 2400,
+      "word_count": 368
+    },
+    "hierarchy": {
+      "parent": "Use the Web Interface",
+      "children": []
+    }
+  }
+}

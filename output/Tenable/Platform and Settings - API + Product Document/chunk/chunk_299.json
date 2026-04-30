@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_299",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "— 200\nReturned if Tenable Vulnerability Management successfully retrieved the CFT template for the\nspecified AWS Frictionless Assessment connector and AWS account.\n— 400\nReturned if your request specified invalid input parameters, if your request was improperly formatted,\nor if an error occurred while processing the request.\n— 403 Returned if you do not have permission to download CFT templates.\n— 404\nReturned if Tenable Vulnerability Management could not find not find the specified connector or AWS\naccount.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\nconnector_id\nrequired\naccount_id\nrequired\nPOST\n/settings/connectors/cloudformation-template",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 294,
+      "end": 294
+    },
+    "content_stats": {
+      "char_count": 732,
+      "word_count": 107
+    },
+    "hierarchy": {
+      "parent": "Download CFT Template",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

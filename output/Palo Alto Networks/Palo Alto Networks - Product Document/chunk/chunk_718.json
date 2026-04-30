@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_718",
+  "section_number": "1.20.3.1",
+  "header": "About Certificate Deployment",
+  "content": "There are two basic approaches to deploying certificates for GlobalProtect LSVPN:\n• Enterprise Certificate Authority—If you already have your own enterprise certificate authority,\nyou can use this internal CA to issue an intermediate CA certificate for the GlobalProtect portal\nto enable it to issue certificates to the GlobalProtect gateways and satellites. You can also\nconfigure the GlobalProtect portal to act as a Simple Certificate Enrollment Protocol (SCEP)\nclient to issue client certificates to GlobalProtect satellites.\n• Self-Signed Certificates—You can generate a self-signed root CA certificate on the firewall\nand use it to issue server certificates for the portal, gateway(s), and satellite(s). When using\nself-signed root CA certificates, as a best practice, create a self-signed root CA certificate on\nthe portal and use it to issue server certificates for the gateways and satellites. This way, the\nprivate key used for certificate signing stays on the portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1298,
+      "end": 1298
+    },
+    "content_stats": {
+      "char_count": 978,
+      "word_count": 145
+    },
+    "hierarchy": {
+      "parent": "Enable SSL Between GlobalProtect LSVPN Components",
+      "children": []
+    }
+  }
+}

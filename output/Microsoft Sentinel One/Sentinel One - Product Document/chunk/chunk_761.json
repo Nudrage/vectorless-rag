@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_761",
+  "section_number": "25.12.1",
+  "header": "PUT    /web/api/v2.1/device-control/enable",
+  "content": "It is best practice to disable a rule rather than delete it. Use this command to change the status of a rule between Enabled and Disabled.\nNote: On Windows, if a USB device is already connected to an endpoint, new rules and rule changes do not affect it. USB rules will apply the next time the device\nconnects to the endpoint. For Windows Bluetooth rules, the device and endpoint must be paired after the SentinelOne Agent that supports Bluetooth is installed or\nupgraded. If the endpoint and device were already paired before the Agent supported bluetooth, reboot the endpoint to activate the rule, or re-pair the endpoint and\ndevice.\nOn macOS, changes apply to devices that are already connected to an endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 10,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 956,
+      "end": 956
+    },
+    "content_stats": {
+      "char_count": 713,
+      "word_count": 122
+    },
+    "hierarchy": {
+      "parent": "Enable/Disable Rules",
+      "children": []
+    }
+  }
+}

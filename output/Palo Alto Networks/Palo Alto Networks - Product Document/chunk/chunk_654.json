@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_654",
+  "section_number": "1.17.25.2.2",
+  "header": "Configure the Firewalls to Access the PAN-DB Private Cloud",
+  "content": "When using the PAN-DB public cloud, each firewall accesses the PAN-DB servers in the AWS\ncloud to download the list of eligible servers to which it can connect for URL lookups. With\nthe PAN-DB private cloud, you must configure the firewalls with a (static) list of your PAN-DB\nprivate cloud servers that will be used for URL lookups. The list can contain up to 20 entries;\nIPv4 addresses, IPv6 addresses, and FQDNs are supported. Each entry on the list— IP address or\nFQDN—must be assigned to the management port and/or eth1 of the PAN-DB server.\nSTEP 1 |\nFrom the PAN-OS CLI, add a list of static PAN-DB private cloud servers used for URL\nlookups.\n• Use the following CLI command to add private PAN-DB server IP addresses:\n> configure\n# set deviceconfig setting pan-url-db cloud-static-list <IP\naddresses>\nOr, in the web interface for each firewall, select Device > Setup > Content-ID, edit the URL\nFiltering section and enter the PAN-DB Server IP address(es) or FQDN(s). The list must be\ncomma separated.\n• To delete the entries for the private PAN-DB servers, use the following command:\n# delete deviceconfig setting pan-url-db cloud-static-list <IP\naddresses>\nWhen you delete the list of private PAN-DB servers, a re-election process is triggered on\nthe firewall. The firewall first checks for the list of PAN-DB private cloud servers and when\nit cannot find one, the firewall accesses the PAN-DB servers in the AWS cloud to download\nthe list of eligible servers to which it can connect.\nSTEP 2 |\nEnter # commit to save your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1210\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 3 |\nTo verify that the change is effective, use the following CLI command on the firewall:\n> show url-cloud status\nCloud status:            Up\nURL database version:    20150417-220",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1210,
+      "end": 1211
+    },
+    "content_stats": {
+      "char_count": 1814,
+      "word_count": 303
+    },
+    "hierarchy": {
+      "parent": "Set Up the PAN-DB Private Cloud",
+      "children": []
+    }
+  }
+}

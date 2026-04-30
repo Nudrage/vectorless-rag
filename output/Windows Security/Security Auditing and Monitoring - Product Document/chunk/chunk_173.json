@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_173",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4817(S): Auditing settings on object were changed.\n\nIf you use Global Object Access Auditing policies, then this event should be always monitored, especially on high value assets or computers. If this change was not planned,\ninvestigate the reason for the change.\n\nIf you don’t use Global Object Access Auditing policies, then this event should be always monitored because it indicates use of Global Object Access Auditing policies outside of\nyour standard procedures.\n4902(S): The Per-user audit policy table was created.\nEvent Description:\nThis event generates during system startup if Per-user audit policy is defined on the computer.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4902</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13568</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-01T00:05:25.814466500Z\" />\n<EventRecordID>1049490</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"520\" ThreadID=\"556\" />\n© 2016 Microsoft. All rights reserved.\n511\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"PuaCount\">1</Data>\n<Data Name=\"PuaPolicyId\">0x703e</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nNumber of Elements [Type = UInt32]: number of users for which Per-user policies were defined (number of unique users). You can get the list of users for which Per-user policies are\ndefined using “auditpol /list /user” command:\nPolicy ID [Type = HexInt64]: unique per-User Audit Policy hexadecimal identifier.\nSecurity Monitoring Recommendations:\nFor 4902(S): The Per-user audit policy table was created.\n\nIf you don’t expect to see any per-User Audit Policies enabled on specific computers (Computer), monitor for these\nevents.\n\nIf you don’t use per-User Audit Policies in your network, monitor for these events.\n\nTypically this is an informational event and has little to no security relevance.\n4906(S): The CrashOnAuditFail value has changed.\nEvent Description:\nThis event generates every time CrashOnAuditFail audit flag value was modified.\nThis event is always logged regardless of the \"Audit Policy Change\" sub-category setting.\nMore information about CrashOnAuditFail flag can be found here.\n© 2016 Microsoft. All rights reserved.\n512\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4906</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13568</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-01T00:45:07.048458800Z\" />\n<EventRecordID>1049529</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"516\" ThreadID=\"532\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"CrashOnAuditFailValue\">1</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nNew Value of CrashOnAuditFail [Type = UInt32]: contains new value of CrashOnAuditFail flag. Possible values are:\n\n0 - The feature is off. The system does not halt, even when it cannot record events in the Security Log.\n\n1 - The feature is on. The system halts when it cannot record an event in the Security Log.\n\n2 - The feature is on and has been triggered. The system halted because it could not record an auditable event in the Security Log. Only members of the Administrators group can\nlog on.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 511,
+      "end": 513
+    },
+    "content_stats": {
+      "char_count": 4007,
+      "word_count": 489
+    },
+    "hierarchy": {
+      "parent": "Audit Policy Change",
+      "children": []
+    }
+  }
+}

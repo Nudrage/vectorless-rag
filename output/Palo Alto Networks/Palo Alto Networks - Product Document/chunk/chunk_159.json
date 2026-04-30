@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_159",
+  "section_number": "1.8.10.1",
+  "header": "Guidelines for Setting Authentication Server Timeouts",
+  "content": "The following are some guidelines for setting the timeouts for firewall attempts to connect with\nExternal Authentication Services.\nIn addition to the timeouts you set in server profiles for specific servers, the firewall has a\nglobal PAN-OS web server timeout. This global timeout applies when the firewall connects\nto any external server for authenticating administrative access to the firewall web interface\nor PAN-OS XML API and end user access to applications or services through Authentication\nPortal. The global timeout is 30 seconds by default (range is 3 to 125). It must be the same as\nor greater than the total time that any server profile allows for connection attempts. The total\ntime in a server profile is the timeout value multiplied by the number of retries and the number\nof servers. For example, if a RADIUS server profile specifies a 3-second timeout, 3 retries, and\n4 servers, the total time that the profile allows for connection attempts is 36 seconds (3 x 3 x\n4). Modify the PAN-OS Web Server Timeout if necessary.\nDo not change the PAN-OS web server timeout unless you see authentication\nfailures. Setting the timeout too high could degrade the performance of the firewall\nor cause it to drop authentication requests. You can review authentication failures in\nAuthentication logs.\nThe firewall applies an Authentication Portal session timeout that defines how long end users\ncan take to respond to the authentication challenge in a Authentication Portal web form. The\nweb form displays when users request services or applications that match an Authentication\npolicy rule. The session timeout is 30 seconds by default (range is 1 to 1,599,999). It must\nbe the same as or greater than the PAN-OS web server timeout. Modify the Authentication\nPortal Session Timeout if necessary. Keep in mind that increasing the PAN-OS web server and\nAuthentication Portal session timeouts might degrade the performance of the firewall or cause\nit to drop authentication requests.\nThe Authentication Portal session timeout is not related to the timers that determine\nhow long the firewall retains IP address-to-username mappings.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n297\n©2025 Palo Alto Networks, Inc.\nAuthentication\nTimeouts are cumulative for authentication sequences. For example, consider the case of\nan authentication sequence with two authentication profiles. One authentication profile\nspecifies a RADIUS server profile with a 3-second timeout, 3 retries, and 4 servers. The other\nauthentication profile specifies a TACACS+ server profile with a 3-second timeout and 2\nservers. The longest possible period in which the firewall can try to authenticate user accounts\nwith that authentication sequence is 42 seconds: 36 seconds for the RADIUS server profile\nplus 6 seconds for the TACACS+ server profile.\nThe non-configurable timeout for Kerberos servers is 17 seconds for each server specified in\nthe Kerberos server profile.\nTo configure the timeouts and related settings for other server types, see:\n• Add an MFA server profile.\n• Add a SAML IdP server profile.\n• Add a TACACS+ server profile.\n• Add a RADIUS server profile.\n• Add an LDAP server profile.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 297,
+      "end": 298
+    },
+    "content_stats": {
+      "char_count": 3171,
+      "word_count": 502
+    },
+    "hierarchy": {
+      "parent": "Connection Timeouts for Authentication Servers",
+      "children": []
+    }
+  }
+}

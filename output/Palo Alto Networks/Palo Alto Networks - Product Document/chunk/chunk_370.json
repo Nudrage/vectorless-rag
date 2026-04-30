@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_370",
+  "section_number": "1.11.15.6.3",
+  "header": "HOST-RESOURCES-MIB",
+  "content": "HOST-RESOURCES-MIB provides information for host computer resources. Use this MIB\nto monitor CPU and memory usage statistics. For example, checking the current CPU load\n(hrProcessorLoad object) can help you troubleshoot performance issues on the firewall.\nPalo Alto Networks firewalls, Panorama, and WF-500 appliances support portions of the following\nobject groups:\nObject Group\nDescription\nhrDevice\nProvides information such as CPU load, storage capacity, and\npartition size. The hrProcessorLoad OIDs provide an average of the\ncores that process packets.\nFor the PA-7000 and PA-5200 Series firewalls, which have multiple\ndataplanes (DPs), you can monitor individual dataplane processor\nutilization. Set alerts when utilization reaches a specific threshold for\neach DP processor to avoid service availability issues.\nhrSystem\nProvides information such as system uptime, number of current user\nsessions, and number of current processes.\nhrStorage\nProvides information such as the amount of used storage.\nRFC 2790 defines this MIB.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n665\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 665,
+      "end": 666
+    },
+    "content_stats": {
+      "char_count": 1117,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "Supported MIBs",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_227",
+  "section_number": "10.1",
+  "header": "Audit Non Sensitive Privilege Use",
+  "content": "Audit Non Sensitive Privilege Use contains events that show usage of non-sensitive privileges. This is the list of non-sensitive privileges:\n\nAccess Credential Manager as a trusted caller\n\nAdd workstations to domain\n\nAdjust memory quotas for a process\n\nBypass traverse checking\n\nChange the system time\n\nChange the time zone\n\nCreate a page file\n\nCreate global objects\n\nCreate permanent shared objects\n\nCreate symbolic links\n\nForce shutdown from a remote system\n\nIncrease a process working set\n\nIncrease scheduling priority\n\nLock pages in memory\n\nModify an object label\n\nPerform volume maintenance tasks\n\nProfile single process\n\nProfile system performance\n\nRemove computer from docking station\n\nShut down the system\n\nSynchronize directory service data\nThis subcategory also contains informational events from filesystem Transaction Manager.\nIf you configure this policy setting, an audit event is generated when a non-sensitive privilege is called. Success audits record successful attempts, and failure audits record unsuccessful\nattempts.\nEvent volume: Very High.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nNo\nIF\nNo\nIF\nWe do not recommend Success auditing because the volume of events is very high and typically they are not as\nimportant as events from Audit Sensitive Privilege Use subcategory.\nIF – You can enable Failure auditing if you need information about failed attempts to use non-sensitive\nprivileges, for example, SeShutdownPrivilege or SeRemoteShutdownPrivilege.\nMember Server\nNo\nIF\nNo\nIF\nWe do not recommend Success auditing because the volume of events is very high and typically they are not as\n© 2016 Microsoft. All rights reserved.\n655\nimportant as events from Audit Sensitive Privilege Use subcategory.\nIF – You can enable Failure auditing if you need information about failed attempts to use non-sensitive\nprivileges, for example, SeShutdownPrivilege or SeRemoteShutdownPrivilege.\nWorkstation\nNo\nIF\nNo\nIF\nWe do not recommend Success auditing because the volume of events is very high and typically they are not as\nimportant as events from Audit Sensitive Privilege Use subcategory.\nIF – You can enable Failure auditing if you need information about failed attempts to use non-sensitive\nprivileges, for example, SeShutdownPrivilege or SeRemoteShutdownPrivilege.\nEvents List:\n\n4673\n(S, F): A privileged service was called.\n\n4674\n(S, F): An operation was attempted on a privileged object.\n\n4985\n(S): The state of a transaction has changed.\n4673(S, F): A privileged service was called.\nThis event also belongs in the Audit Sensitive Privilege Use subcategory, and is described there. See “4673(S, F): A privileged service was called.”\n4674(S, F): An operation was attempted on a privileged object.\nThis event also belongs in the Audit Sensitive Privilege Use subcategory, and is described there. See “4674(S, F): An operation was attempted on a privileged object.”\n4985(S): The state of a transaction has changed.\nThis event is also generated in the Audit File System subcategory, and is described there. See “4985(S): The state of a transaction has changed.”\n© 2016 Microsoft. All rights reserved.\n656",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 655,
+      "end": 657
+    },
+    "content_stats": {
+      "char_count": 3188,
+      "word_count": 497
+    },
+    "hierarchy": {
+      "parent": "Privilege Use",
+      "children": []
+    }
+  }
+}

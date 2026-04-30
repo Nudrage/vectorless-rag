@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_994",
+  "section_number": "1.22.17.1.3",
+  "header": "Service Versus Applications in PBF",
+  "content": "PBF rules are applied either on the first packet (SYN) or the first response to the first packet\n(SYN/ACK). This means that a PBF rule may be applied before the firewall has enough information\nto determine the application. Therefore, application-specific rules are not recommended for use\nwith PBF. Whenever possible, use a service object, which is the Layer 4 port (TCP or UDP) used\nby the protocol or application.\nHowever, if you specify an application in a PBF rule, the firewall performs App-ID caching. When\nan application passes through the firewall for the first time, the firewall does not have enough\ninformation to identify the application and therefore cannot enforce the PBF rule. As more\npackets arrive, the firewall determines the application and creates an entry in the App-ID cache\nand retains this App-ID for the session.When a new session is created with the same destination\nIP address, destination port, and protocol ID, the firewall could identify the application as the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1684\n©2025 Palo Alto Networks, Inc.\nPolicy\nsame from the initial session (based on the App-ID cache) and apply the PBF rule. Therefore, a\nsession that is not an exact match and is not the same application, can be forwarded based on the\nPBF rule.\nFurther, applications have dependencies and the identity of the application can change as the\nfirewall receives more packets. Because PBF makes a routing decision at the start of a session,\nthe firewall cannot enforce a change in application identity. YouTube, for example, starts as web-\nbrowsing but changes to Flash, RTSP, or YouTube based on the different links and videos included\non the page. However with PBF, because the firewall identifies the application as web-browsing\nat the start of the session, the change in application is not recognized thereafter.\nYou cannot use custom applications, application filters, or application groups in PBF rules.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1684,
+      "end": 1685
+    },
+    "content_stats": {
+      "char_count": 1937,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": "PBF",
+      "children": []
+    }
+  }
+}

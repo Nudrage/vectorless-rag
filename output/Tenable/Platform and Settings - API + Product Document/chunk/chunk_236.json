@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_236",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the agent has been successfully removed from the agent group.\nRESPONSE SCHEMA:\napplication/json\nany\n— 404 Returned if Tenable Vulnerability Management cannot find the specified agent.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500 Returned if Tenable Vulnerability Management fails to remove the agent from the agent group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 229,
+      "end": 229
+    },
+    "content_stats": {
+      "char_count": 425,
+      "word_count": 68
+    },
+    "hierarchy": {
+      "parent": "Remove agent from group",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

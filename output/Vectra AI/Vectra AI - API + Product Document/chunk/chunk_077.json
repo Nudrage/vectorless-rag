@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_077",
+  "section_number": "1.18.26",
+  "header": "Vectra Match Available Devices",
+  "content": "GET\nUsed to retrieve devices on which Vectra Match can be enabled.  Returned fields include:\n• device_serial: serial of the device\n• ip_address: IP address of the device\n• is_virtual: boolean, returns True if the device is virtual\n• last_seen: ISO-8601 timestamp of the time this device was last seen by the headend\n• location: string, user-provided location\n• product_name: string, name of the product platform of the device\n• version: string, version of Vectra software that the device is currently running\n• alias: string, user-provided name for the device\n• headend_uri: string, if the device is a sensor, this is the URI of the headend to which it is paired\n• mode: string, ‘sensor’ if the device is a sensor, ‘mixed’ if the device is a headend in mixed mode\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/available-devices\nHeaders:\n“Authorization”: “Token <api-key>”\nResponse:\nStatus Code: 200\n{\n\"devices\": [\n{\n\"device_serial\": \"U12312300000123\",\n\"ip_address\": \"192.168.0.10\",\n\"is_virtual\": false,\n\"product_name\": \"X29v2\",\n© July 2024 Vectra AI, Inc. | 141\n\"version\": \"7.5.0-1-9036\",\n“mode”: “mixed”,\n},\n{\n\"alias\": \"Sensor-Office\",\n\"device_serial\": \"U12312300000456\",\n\"headend_uri\": \"x29v2-5-10.example.local\",\n\"ip_address\": \"192.168.1.10\",\n\"is_virtual\": false,\n\"last_seen\": \"2023-02-01T12:34:56Z\",\n\"location\": \"Main Office\",\n\"product_name\": \"S101\",\n\"version\": \"7.5.0-1-9036\",\n“mode”: “sensor”,\n},\n{\n\"alias\": \"Sensor-DC\",\n\"device_serial\": \"U12312300000789\",\n\"headend_uri\": \"x29v2-5-10.example.local\",\n\"ip_address\": \"192.168.2.10\",\n\"is_virtual\": false,\n\"last_seen\": \"2023-02-01T01:23:45Z\",\n\"location\": \"New Office\",\n\"product_name\": \"S11\",\n\"version\": \"7.5.0-1-9036\",\n“mode”: “sensor”,\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 140,
+      "end": 141
+    },
+    "content_stats": {
+      "char_count": 1705,
+      "word_count": 214
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_876",
+  "section_number": "1.21.16.4.4",
+  "header": "Neighbors in the ND Cache are Not Translated",
+  "content": "In our example, there are hosts behind the firewall with host identifiers :1, :2, and :3. If the\nprefixes of those hosts are translated to a prefix that exists beyond the firewall, and if those\ndevices also have host identifiers :1, :2, and :3, because the host identifier portion of the address\nremains unchanged, the resulting translated address would belong to the existing device, and\nan addressing conflict would result. In order to avoid a conflict with overlapping host identifiers,\nNPTv6 does not translate addresses that it finds it its ND cache.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1513,
+      "end": 1513
+    },
+    "content_stats": {
+      "char_count": 555,
+      "word_count": 92
+    },
+    "hierarchy": {
+      "parent": "NPTv6 and NDP Proxy Example",
+      "children": []
+    }
+  }
+}

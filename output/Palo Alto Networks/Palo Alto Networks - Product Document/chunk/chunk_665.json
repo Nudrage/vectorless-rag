@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_665",
+  "section_number": "1.18.2.7",
+  "header": "QoS Egress Interface",
+  "content": "Enabling a QoS profile rule on the egress interface of the traffic identified for QoS treatment\ncompletes a QoS configuration. The ingress interface for QoS traffic is the interface on which the\ntraffic enters the firewall. The egress interface for QoS traffic is the interface that traffic leaves\nthe firewall from. QoS is always enabled and enforced on the egress interface for a traffic flow.\nThe egress interface in a QoS configuration can either be the external- or internal-facing interface\nof the firewall, depending on the flow of the traffic receiving QoS treatment.\nFor example, in an enterprise network, if you are limiting employees’ download traffic from a\nspecific website, the egress interface in the QoS configuration is the firewall’s internal interface,\nas the traffic flow is from the Internet, through the firewall, and to your company network.\nAlternatively, when limiting employees’ upload traffic to the same website, the egress interface in\nthe QoS configuration is the firewall’s external interface, as the traffic you are limiting flows from\nyour company network, through the firewall, and then to the Internet.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1221\n©2025 Palo Alto Networks, Inc.\nQuality of Service\nBecause QoS is enforced on traffic as it egresses the firewall, your QoS policy rule is applied to\ntraffic after the firewall has enforced all other security policy rules, including Network Address\nTranslation (NAT) rules. If you want to apply QoS treatment to traffic based on source, you\nmust specify the post-NAT source address in a QoS policy rule (do not use the pre-NAT source\naddress).\nLearn more about how to Identify the egress interface for applications that you want to receive\nQoS treatment.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1221,
+      "end": 1222
+    },
+    "content_stats": {
+      "char_count": 1737,
+      "word_count": 277
+    },
+    "hierarchy": {
+      "parent": "QoS Concepts",
+      "children": []
+    }
+  }
+}

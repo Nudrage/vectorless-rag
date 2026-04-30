@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_310",
+  "section_number": "14.1",
+  "header": "Create managed credential",
+  "content": "Creates a managed credential object that you can use when configuring and running scans. You can\ngrant other users the permission to use the managed credential object in scans and to edit the\nmanaged credential configuration.\nRequires the Basic [16] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the managed credential. This name must be unique within\nyour Tenable Vulnerability Management instance.\nname\nrequired\nstring\nThe description of the managed credential object.\nstring\nThe type of credential object. For a list of supported credential types, use\nthe GET /credentials/types endpoint.\nobject\nThe configuration settings for the credential. The parameters of this object\nvary depending on the credential type. For more information, see Determine\nSettings for a Credential Type.\nNote: This form displays limited parameters that support a Windows type\nof credential that uses password authentication.\nArray of objects\nA list of user permissions for the managed credential. If a request message\nomits this parameter, Tenable Vulnerability Management automatically\ncreates a permissions  object for the user account that submits the\nrequest.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 306,
+      "end": 307
+    },
+    "content_stats": {
+      "char_count": 1197,
+      "word_count": 176
+    },
+    "hierarchy": {
+      "parent": "Credentials",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

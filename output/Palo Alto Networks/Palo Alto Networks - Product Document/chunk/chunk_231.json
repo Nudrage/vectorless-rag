@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_231",
+  "section_number": "1.10.3.1",
+  "header": "Prerequisites for Active/Passive HA",
+  "content": "To set up high availability on your Palo Alto Networks firewalls, you need a pair of firewalls that\nmeet the following requirements:\nThe same model—Both the firewalls in the pair must be of the same hardware model or virtual\nmachine model.\nThe same PAN-OS version—Both the firewalls should be running the same PAN-OS version\nand must each be up-to-date on the application, URL, and threat databases.\nThe same multi virtual system capability—Both firewalls must have Multi Virtual System\nCapability either enabled or not enabled. When enabled, each firewall requires its own multiple\nvirtual systems licenses.\nThe same type of interfaces—Dedicated HA links, or a combination of the management port\nand in-band ports that are set to interface type HA.\n• Determine the IP address for the HA1 (control) connection between the HA peers. The HA1\nIP address for both peers must be on the same subnet if they are directly connected or are\nconnected to the same switch.\nFor firewalls without dedicated HA ports, you can use the management port for the control\nconnection. Using the management port provides a direct communication link between the\nmanagement planes on both firewalls. However, because the management ports will not be\ndirectly cabled between the peers, make sure that you have a route that connects these two\ninterfaces across your network.\n• If you use Layer 3 as the transport method for the HA2 (data) connection, determine the IP\naddress for the HA2 link. Use Layer 3 only if the HA2 connection must communicate over a\nrouted network. The IP subnet for the HA2 links must not overlap with that of the HA1 links\nor with any other subnet assigned to the data ports on the firewall.\nThe same set of licenses—Licenses are unique to each firewall and cannot be shared between\nthe firewalls. Therefore, you must license both firewalls identically. If both firewalls do not\nhave an identical set of licenses, they cannot synchronize configuration information and\nmaintain parity for a seamless failover.\nAs a best practice, if you have an existing firewall and you want to add a new firewall\nfor HA purposes and the new firewall has an existing configuration Reset the Firewall\nto Factory Default Settings on the new firewall. This ensures that the new firewall has\na clean configuration. After HA is configured, you will then sync the configuration on\nthe primary firewall to the newly introduced firewall with the clean configuration.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n401\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 401,
+      "end": 402
+    },
+    "content_stats": {
+      "char_count": 2534,
+      "word_count": 417
+    },
+    "hierarchy": {
+      "parent": "Set Up Active/Passive HA",
+      "children": []
+    }
+  }
+}

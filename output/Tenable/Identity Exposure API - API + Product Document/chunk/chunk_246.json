@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_246",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nGET\n/api/profiles/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"name\": \"string\",\n\"deleted\": true,\n\"directories\":\n-\n[\n0\n],\n\"dirty\": true,\n\"hasEverBeenCommitted\": true\n}\nUpdate profile instance.\nRequired license type: ioe, ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\nREQUEST BODY SCHEMA:\napplication/json\nid\nrequired\nx-api-key\nrequired\nContent type\nrequired\nstring ^(?!([tT][eE][nN][aA][bB][lL][eE])$).*$\nboolean\nArray of numbers [ items\n[ 0 .. 2147483647 ]\n]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 148,
+      "end": 149
+    },
+    "content_stats": {
+      "char_count": 580,
+      "word_count": 75
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

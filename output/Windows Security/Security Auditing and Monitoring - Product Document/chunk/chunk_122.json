@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_122",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4672(S): Special privileges assigned to new logon.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.Monitor for this event where “Subject\\Security ID” is not one of\nthese well-known security principals: LOCAL SYSTEM, NETWORK SERVICE, LOCAL SERVICE, and where “Subject\\Security ID” is not an administrative account that is expected to\nhave the listed Privileges.\n\nIf you have a list of specific privileges which should never be granted, or granted only to a few accounts (for example, SeDebugPrivilege), use this event to monitor for those\n“Privileges.”\n\nIf you are required to monitor any of the sensitive privileges in the Event Description for this event, search for those specific privileges in the event.\n© 2016 Microsoft. All rights reserved.\n354",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 354,
+      "end": 355
+    },
+    "content_stats": {
+      "char_count": 887,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "Audit Special Logon",
+      "children": []
+    }
+  }
+}

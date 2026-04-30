@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_330",
+  "section_number": "1.11.9.12",
+  "header": "Schedule Reports for Email Delivery",
+  "content": "Reports can be scheduled for daily delivery or delivered weekly on a specified day. Scheduled\nreports are executed starting at 2:00 AM, and email delivery starts after all scheduled reports\nhave been generated.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n549\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 1 |\nSelect Monitor > PDF Reports > Email Scheduler and click Add.\nSTEP 2 |\nEnter a Name to identify the schedule.\nSTEP 3 |\nSelect the Report Group for email delivery. To set up a report group; see Manage Report\nGroups.\nSTEP 4 |\nFor the Email Profile, select an Email server profile to use for delivering the reports, or click\nthe Email Profile link to Create an Email server profile.\nSTEP 5 |\nSelect the frequency at which to generate and send the report in Recurrence.\nSTEP 6 |\nThe Override Email Addresses field allows you to send this report exclusively to the\nspecified recipients. When you add recipients to the field, the firewall does not send the\nreport to the recipients configured in the Email server profile. Use this option for those\noccasions when the report is for the attention of someone other than the administrators or\nrecipients defined in the Email server profile.\nSTEP 7 |\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 549,
+      "end": 550
+    },
+    "content_stats": {
+      "char_count": 1217,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "View and Manage Reports",
+      "children": []
+    }
+  }
+}

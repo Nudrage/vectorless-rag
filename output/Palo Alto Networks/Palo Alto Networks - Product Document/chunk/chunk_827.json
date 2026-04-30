@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_827",
+  "section_number": "1.21.12.9",
+  "header": "Use Case 3: Firewall Acts as DNS Proxy Between Client and Server",
+  "content": "Server\nIn this use case, the firewall is located between a DNS client and a DNS server. A DNS Proxy\non the firewall is configured to act as the DNS server for the hosts that reside on the tenant’s\nnetwork connected to the firewall interface. In such a scenario, the firewall performs DNS\nresolution on its dataplane.\nThis scenario happens to use split DNS, a configuration where DNS Proxy rules are configured\nto redirect DNS requests to a set of DNS servers based on a domain name match. If there is no\nmatch, the server profile determines the DNS servers to which to send the request, hence the\ntwo, split DNS resolution methods.\nFor dataplane DNS resolutions, the source IP address from the DNS proxy in PAN-OS\nto the outside DNS server would be the address of the proxy (the destination IP of the\noriginal request). Any service routes defined in the DNS Server Profile are not used. For\nexample, if the request is from host 172.16.1.1 to the DNS proxy at 192.168.1.1, then\nthe request to the DNS server (at 10.10.10.10) would use a source of 192.168.1.1 and a\ndestination of 10.10.10.10.\nSTEP 1 |\nSelect Network > DNS Proxy and click Add.\nSTEP 2 |\nClick Enable and enter a Name for the DNS Proxy.\nSTEP 3 |\nFor Location, select the virtual system of the tenant, in this example, Corp1 Corporation\n(vsys6).\nSTEP 4 |\nFor Interface, select the interface that will receive the DNS requests from the tenant’s hosts,\nin this example, Ethernet1/20.\nSTEP 5 |\nChoose or create a Server Profile to customize DNS servers to resolve DNS requests for this\ntenant.\nSTEP 6 |\nOn the DNS Proxy Rules tab, Add a Name for the rule.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1466\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 7 |\n(Optional) Select Turn on caching of domains resolved by this mapping.\nSTEP 8 |\nAdd one or more Domain Name(s), one entry per row. DNS Proxy Rule and FQDN Matching\ndescribes how the firewall matches FQDNs to domain names in a DNS proxy rule.\nSTEP 9 |\nFor DNS Server profile, select a profile. The firewall compares the domain name in the DNS\nrequest to the domain name(s) defined in the DNS Proxy Rules. If there is a match, the DNS\nServer profile defined in the rule is used to determine the DNS server.\nSTEP 10 | In this example, if the domain in the request matches myweb.corp1.com, the DNS server\ndefined in the myweb DNS Server Profile is used. If there is no match, the DNS server\ndefined in the Server Profile (Corp1 DNS Server Profile) is used.\nSTEP 11 | Click OK twice.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1466,
+      "end": 1467
+    },
+    "content_stats": {
+      "char_count": 2491,
+      "word_count": 452
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

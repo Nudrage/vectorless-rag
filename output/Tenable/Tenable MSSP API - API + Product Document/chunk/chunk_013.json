@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_013",
+  "section_number": "5",
+  "header": "List child accounts",
+  "content": "Returns a list of child accounts in the Tenable MSSP Portal.\nA child account contains information about a customer instance of a Tenable product, including\nproduct license information and user-defined notes that can include valuable internal tracking or\ncustomer contact information.\nRequires the Basic [16] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring <uuid>\nThe UUID of an account group. This parameter can be used to retrieve only\nchild accounts in the specified account group.\nArray of strings\nA filter condition in the format field:operator:value . For example,\nf=container_name:match:tenable .\nNote: To retrieve a list of filters to use with this endpoint, see the GET\n/filters/mssp/accounts endpoint.\nSee the list below for additional examples of possible filter combinations:\nuuid:neq:afe4fa83-8430-4f7b-a4dd-c25bcfd21317\nlicensed_assets:gte:222\ngroup\nf\nContent type\nlicense_utilization:lt:100\nlicense_expiration_date:gt:90\nlicensed_apps:eq:was,lumin\nregion:eq:US\nstring\nIf multiple f  parameters are present, specifies whether Tenable MSSP\napplies AND  or OR  to conditions. Supported values are and  and or . If\nyou omit this parameter when using multiple f  parameters, Tenable\napplies AND  by default.\nstring\nWildcard filter text. Wildcard search is a mechanism where multiple fields\nof a record are filtered against one specific filter string. If any one of the\nwildcard_fields' values matches against the filter string, then the record\nmatches the wildcard filter. For a record to be returned, it must pass the\nwildcard filter (if there is one) AND the set of standard filters. For example,\nif w=wild&f=field1:match:one&f=field2:match:two&ft=or , the\nrecord would match if the value of any supported wildcard_fields contained\nwild , AND either field1's value contained one  or field2's value contained\ntwo .\nstring\nA comma-delimited subset of wildcard_fields to search when applying the\nwildcard filter. For example, field1,field2 . If w  is provided, but wf  is\nnot, then all wildcard_fields' values are searched against the wildcard filter\ntext.\nNote: To retrieve a list of fields that can be used as wild cards, see the GET\n/filters/mssp/accounts endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 10,
+      "end": 11
+    },
+    "content_stats": {
+      "char_count": 2196,
+      "word_count": 317
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

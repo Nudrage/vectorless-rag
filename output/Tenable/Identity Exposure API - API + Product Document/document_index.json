@@ -1,0 +1,4357 @@
+{
+  "document_name": "Tenable\\Identity Exposure API - API + Product Document",
+  "generated_at": "2026-02-17T22:05:55.793524",
+  "outline_text": "DOCUMENT INDEX: Tenable\\Identity Exposure API - API + Product Document\n======================================================================\n\n1. Identity Exposure (production) [Page 1, 10 words]\n   1.1. About [Page 1, 12 words]\n      1.1.1. Responses [Page 1, 17 words]\n   1.2. AD object [Page 2, 6 words]\n      1.2.1. Response samples [Page 2, 13 words]\n   1.3. Return the last state of every ad-object at the provided timestampBy default, the timestamp is now. Objects out of scope are included [Page 2, 33 words]\n      1.3.1. Responses [Page 3, 14 words]\n         1.3.1.1. Response samples [Pages 3-4, 87 words]\n      1.3.2. Responses [Page 5, 25 words]\n         1.3.2.1. Response samples [Pages 5-6, 74 words]\n      1.3.3. Responses [Pages 6-7, 35 words]\n         1.3.3.1. Response samples [Page 7, 42 words]\n   1.4. Retrieve an AD object by id that have deviances for a specific profile and checker [Page 8, 31 words]\n      1.4.1. Responses [Pages 8-9, 43 words]\n         1.4.1.1. Response samples [Page 9, 45 words]\n   1.5. Get one ad-object by event and by id [Page 10, 27 words]\n      1.5.1. Responses [Pages 10-11, 43 words]\n         1.5.1.1. Response samples [Page 11, 34 words]\n   1.6. Get one ad-object changes between a given event and the event which precedes it [Pages 11-12, 39 words]\n      1.6.1. Responses [Page 12, 9 words]\n         1.6.1.1. Response samples [Pages 12-13, 39 words]\n   1.7. Search all AD objects having deviances by profile by checker [Pages 13-14, 57 words]\n      1.7.1. Responses [Page 14, 9 words]\n         1.7.1.1. Request samples [Page 14, 25 words]\n         1.7.1.2. Response samples [Page 15, 57 words]\n   1.8. Alert [Page 16, 29 words]\n      1.8.1. Responses [Pages 16-17, 36 words]\n         1.8.1.1. Response samples [Pages 17-18, 60 words]\n      1.8.2. Responses [Page 18, 9 words]\n         1.8.2.1. Request samples [Page 18, 18 words]\n         1.8.2.2. Response samples [Pages 19-20, 66 words]\n      1.8.3. Responses [Page 20, 9 words]\n         1.8.3.1. Response samples [Pages 20-21, 33 words]\n   1.9. Update alerts for one profile [Page 21, 28 words]\n      1.9.1. Responses [Page 21, 7 words]\n   1.10. API key [Page 22, 13 words]\n      1.10.1. Request samples [Page 22, 1 words]\n      1.10.2. Response samples [Page 22, 18 words]\n   1.11. Get the API key of the current user [Page 23, 17 words]\n      1.11.1. Responses [Page 23, 13 words]\n         1.11.1.1. Response samples [Pages 23-24, 15 words]\n   1.12. Create or renew an API key for the current user [Page 24, 17 words]\n      1.12.1. Responses [Page 24, 13 words]\n         1.12.1.1. Response samples [Page 24, 7 words]\n   1.13. Application setting [Page 25, 9 words]\n   1.14. Get the application settings [Page 25, 17 words]\n      1.14.1. Responses [Page 25, 13 words]\n         1.14.1.1. Response samples [Page 26, 50 words]\n   1.15. Update the application settings [Pages 26-27, 85 words]\n      1.15.1. Responses [Page 28, 9 words]\n         1.15.1.1. Request samples [Page 28, 51 words]\n   1.16. Attack [Page 29, 5 words]\n      1.16.1. Response samples [Page 29, 51 words]\n   1.17. Get all attacks [Page 30, 47 words]\n      1.17.1. Responses [Pages 30-31, 24 words]\n         1.17.1.1. Response samples [Pages 31-32, 67 words]\n   1.18. Get all attacks in CSV rows format [Pages 32-33, 49 words]\n      1.18.1. Responses [Page 33, 24 words]\n         1.18.1.1. Response samples [Page 34, 65 words]\n   1.19. Attack type [Page 35, 2 words]\n   1.20. Get attack types [Page 35, 16 words]\n      1.20.1. Responses [Page 35, 9 words]\n         1.20.1.1. Response samples [Page 35, 8 words]\n   1.21. Attack type configuration [Page 36, 58 words]\n   1.22. Get the attack type configuration [Pages 36-37, 16 words]\n      1.22.1. Responses [Page 37, 9 words]\n         1.22.1.1. Response samples [Pages 37-38, 38 words]\n   1.23. Update the attack type configuration [Page 38, 24 words]\n      1.23.1. Responses [Page 38, 7 words]\n   1.24. Attack type option [Page 39, 15 words]\n      1.24.1. Request samples [Page 39, 1 words]\n      1.24.2. Response samples [Pages 39-40, 70 words]\n      1.24.3. Responses [Page 40, 9 words]\n         1.24.3.1. Response samples [Pages 40-42, 116 words]\n      1.24.4. Responses [Page 42, 9 words]\n         1.24.4.1. Request samples [Page 42, 15 words]\n   1.25. Category [Page 43, 1 words]\n      1.25.1. Response samples [Pages 43-44, 81 words]\n      1.25.2. Responses [Page 44, 9 words]\n         1.25.2.1. Response samples [Pages 44-45, 48 words]\n      1.25.3. Responses [Page 45, 22 words]\n   1.26. Checker [Page 46, 13 words]\n      1.26.1. Response samples [Page 46, 30 words]\n      1.26.2. Responses [Pages 46-47, 13 words]\n         1.26.2.1. Response samples [Pages 47-48, 66 words]\n      1.26.3. Responses [Page 48, 9 words]\n         1.26.3.1. Response samples [Page 48, 30 words]\n   1.27. Checker option [Page 49, 67 words]\n      1.27.1. Responses [Page 50, 9 words]\n         1.27.1.1. Response samples [Pages 50-51, 102 words]\n      1.27.2. Responses [Pages 51-52, 22 words]\n         1.27.2.1. Request samples [Page 52, 1 words]\n         1.27.2.2. Response samples [Page 52, 32 words]\n   1.28. Cloud statistics [Page 53, 59 words]\n      1.28.1. Responses [Pages 53-54, 24 words]\n         1.28.1.1. Response samples [Page 54, 28 words]\n   1.29. Dashboard [Page 55, 33 words]\n      1.29.1. Responses [Page 55, 13 words]\n         1.29.1.1. Response samples [Page 56, 55 words]\n      1.29.2. Responses [Pages 56-57, 17 words]\n         1.29.2.1. Request samples [Page 57, 1 words]\n         1.29.2.2. Response samples [Pages 57-58, 53 words]\n      1.29.3. Responses [Page 58, 28 words]\n         1.29.3.1. Response samples [Pages 59-60, 61 words]\n      1.29.4. Responses [Page 60, 9 words]\n         1.29.4.1. Request samples [Page 60, 1 words]\n         1.29.4.2. Response samples [Pages 60-61, 28 words]\n   1.30. Delete dashboard instance with it's associated widgets [Page 61, 21 words]\n      1.30.1. Responses [Page 61, 15 words]\n         1.30.1.1. Response samples [Page 61, 6 words]\n   1.31. Deviance [Page 62, 8 words]\n   1.32. Get all deviances that has been created or resolved since an event [Page 62, 17 words]\n      1.32.1. Responses [Page 62, 13 words]\n         1.32.1.1. Response samples [Pages 63-65, 103 words]\n      1.32.2. Responses [Page 65, 9 words]\n         1.32.2.1. Response samples [Pages 65-66, 72 words]\n   1.33. Get all ad objects of a deviance in CSV rows format [Pages 66-67, 30 words]\n      1.33.1. Responses [Page 67, 17 words]\n         1.33.1.1. Response samples [Pages 67-68, 52 words]\n      1.33.2. Responses [Page 68, 22 words]\n         1.33.2.1. Response samples [Pages 69-70, 95 words]\n      1.33.3. Responses [Page 70, 9 words]\n         1.33.3.1. Response samples [Pages 70-72, 109 words]\n      1.33.4. Responses [Page 72, 9 words]\n         1.33.4.1. Request samples [Page 72, 16 words]\n         1.33.4.2. Response samples [Pages 73-74, 109 words]\n      1.33.5. Responses [Page 74, 21 words]\n         1.33.5.1. Response samples [Pages 75-77, 110 words]\n      1.33.6. Responses [Page 77, 9 words]\n         1.33.6.1. Request samples [Page 77, 15 words]\n         1.33.6.2. Response samples [Pages 78-79, 64 words]\n      1.33.7. Responses [Page 79, 9 words]\n         1.33.7.1. Request samples [Page 79, 1 words]\n         1.33.7.2. Response samples [Pages 79-81, 173 words]\n      1.33.8. Responses [Pages 81-82, 22 words]\n         1.33.8.1. Request samples [Page 82, 1 words]\n         1.33.8.2. Response samples [Page 82, 12 words]\n   1.34. Search all deviances by profile by checker by AD object [Pages 82-83, 47 words]\n      1.34.1. Responses [Page 83, 9 words]\n         1.34.1.1. Request samples [Pages 83-84, 15 words]\n         1.34.1.2. Response samples [Pages 84-86, 126 words]\n      1.34.2. Responses [Page 86, 27 words]\n         1.34.2.1. Request samples [Page 87, 1 words]\n         1.34.2.2. Response samples [Page 87, 29 words]\n   1.35. Directory [Pages 88-89, 83 words]\n      1.35.1. Responses [Page 89, 9 words]\n         1.35.1.1. Response samples [Pages 89-91, 120 words]\n      1.35.2. Responses [Page 91, 25 words]\n         1.35.2.1. Request samples [Page 92, 1 words]\n         1.35.2.2. Response samples [Pages 92-94, 127 words]\n      1.35.3. Responses [Page 94, 9 words]\n         1.35.3.1. Response samples [Pages 94-95, 67 words]\n   1.36. Get all directories for a given infrastructure [Page 95, 21 words]\n      1.36.1. Responses [Pages 95-96, 13 words]\n         1.36.1.1. Response samples [Pages 96-97, 96 words]\n      1.36.2. Responses [Page 97, 9 words]\n         1.36.2.1. Response samples [Pages 97-99, 117 words]\n      1.36.3. Responses [Page 99, 24 words]\n         1.36.3.1. Request samples [Page 100, 1 words]\n         1.36.3.2. Response samples [Pages 100-101, 115 words]\n      1.36.4. Responses [Page 101, 6 words]\n   1.37. Email notifier [Page 102, 22 words]\n      1.37.1. Response samples [Pages 102-103, 30 words]\n      1.37.2. Responses [Page 103, 9 words]\n         1.37.2.1. Response samples [Pages 103-105, 113 words]\n      1.37.3. Responses [Page 105, 9 words]\n         1.37.3.1. Request samples [Page 105, 21 words]\n         1.37.3.2. Response samples [Pages 106-108, 104 words]\n      1.37.4. Responses [Page 108, 9 words]\n         1.37.4.1. Response samples [Pages 108-110, 121 words]\n      1.37.5. Responses [Page 110, 9 words]\n         1.37.5.1. Request samples [Page 110, 35 words]\n         1.37.5.2. Response samples [Pages 111-112, 80 words]\n      1.37.6. Responses [Page 112, 16 words]\n         1.37.6.1. Response samples [Pages 112-113, 13 words]\n   1.38. Send a test email notification by id [Page 113, 21 words]\n      1.38.1. Responses [Page 113, 9 words]\n         1.38.1.1. Response samples [Pages 113-114, 12 words]\n   1.39. Send a test email notification [Page 114, 47 words]\n      1.39.1. Responses [Pages 114-115, 24 words]\n         1.39.1.1. Request samples [Page 115, 1 words]\n         1.39.1.2. Response samples [Page 115, 31 words]\n   1.40. Event [Page 116, 34 words]\n      1.40.1. Responses [Pages 116-117, 33 words]\n         1.40.1.1. Response samples [Pages 117-118, 55 words]\n      1.40.2. Responses [Page 118, 9 words]\n         1.40.2.1. Response samples [Pages 118-119, 25 words]\n   1.41. Search events instances [Page 119, 33 words]\n      1.41.1. Responses [Pages 119-120, 22 words]\n         1.41.1.1. Request samples [Page 120, 1 words]\n         1.41.1.2. Response samples [Page 120, 43 words]\n   1.42. Infrastructure [Page 121, 40 words]\n      1.42.1. Responses [Pages 121-122, 11 words]\n         1.42.1.1. Response samples [Pages 122-123, 61 words]\n      1.42.2. Responses [Page 123, 9 words]\n         1.42.2.1. Request samples [Page 123, 1 words]\n         1.42.2.2. Response samples [Pages 123-124, 76 words]\n      1.42.3. Responses [Pages 124-125, 15 words]\n         1.42.3.1. Response samples [Pages 125-126, 58 words]\n      1.42.4. Responses [Page 126, 9 words]\n         1.42.4.1. Request samples [Page 126, 1 words]\n         1.42.4.2. Response samples [Pages 126-127, 54 words]\n      1.42.5. Responses [Page 127, 14 words]\n   1.43. LDAP configuration [Page 128, 14 words]\n      1.43.1. Response samples [Page 128, 31 words]\n      1.43.2. Responses [Page 129, 9 words]\n         1.43.2.1. Response samples [Pages 129-131, 103 words]\n      1.43.3. Responses [Page 131, 9 words]\n         1.43.3.1. Request samples [Page 131, 30 words]\n         1.43.3.2. Response samples [Page 132, 66 words]\n   1.44. License [Page 133, 20 words]\n      1.44.1. Responses [Page 133, 9 words]\n         1.44.1.1. Response samples [Pages 133-134, 38 words]\n   1.45. Create new license singleton [Page 134, 21 words]\n      1.45.1. Responses [Pages 134-135, 13 words]\n         1.45.1.1. Request samples [Page 135, 1 words]\n         1.45.1.2. Response samples [Page 135, 42 words]\n   1.46. Lockout policy Get product association in the License [Page 136, 10 words]\n      1.46.1. Responses [Page 136, 12 words]\n         1.46.1.1. Response samples [Pages 136-137, 26 words]\n   1.47. Get the lockout policy [Page 137, 15 words]\n      1.47.1. Responses [Page 137, 25 words]\n         1.47.1.1. Response samples [Pages 137-138, 25 words]\n   1.48. Update the lockout policy [Page 138, 33 words]\n      1.48.1. Responses [Pages 138-139, 17 words]\n         1.48.1.1. Request samples [Page 139, 1 words]\n         1.48.1.2. Response samples [Page 139, 22 words]\n   1.49. Metrics [Page 140, 11 words]\n      1.49.1. Responses [Page 140, 10 words]\n         1.49.1.1. Response samples [Page 140, 8 words]\n   1.50. Preference [Page 141, 3 words]\n   1.51. Get a user's preferences [Page 141, 15 words]\n      1.51.1. Responses [Page 141, 22 words]\n         1.51.1.1. Response samples [Page 142, 9 words]\n   1.52. Update a user's preferences [Page 142, 22 words]\n      1.52.1. Responses [Page 142, 10 words]\n   1.53. Profile [Page 143, 11 words]\n      1.53.1. Request samples [Page 143, 1 words]\n      1.53.2. Response samples [Pages 143-144, 44 words]\n      1.53.3. Responses [Page 144, 9 words]\n         1.53.3.1. Response samples [Pages 144-145, 67 words]\n      1.53.4. Responses [Pages 145-146, 15 words]\n         1.53.4.1. Request samples [Page 146, 1 words]\n         1.53.4.2. Response samples [Pages 146-147, 77 words]\n      1.53.5. Responses [Page 147, 13 words]\n         1.53.5.1. Response samples [Pages 148-149, 75 words]\n      1.53.6. Responses [Page 149, 9 words]\n         1.53.6.1. Request samples [Page 149, 1 words]\n         1.53.6.2. Response samples [Pages 149-150, 72 words]\n      1.53.7. Responses [Pages 150-151, 22 words]\n         1.53.7.1. Response samples [Page 151, 6 words]\n   1.54. Creates a new profile from another one [Pages 151-152, 37 words]\n      1.54.1. Responses [Page 152, 9 words]\n         1.54.1.1. Request samples [Page 152, 1 words]\n         1.54.1.2. Response samples [Pages 152-153, 49 words]\n   1.55. Unstages change of the related profile [Page 153, 21 words]\n      1.55.1. Responses [Pages 153-154, 20 words]\n         1.55.1.1. Response samples [Page 154, 6 words]\n   1.56. Commits change of the related profile [Page 154, 21 words]\n      1.56.1. Responses [Page 154, 7 words]\n   1.57. Reason [Page 155, 25 words]\n      1.57.1. Response samples [Pages 155-156, 27 words]\n      1.57.2. Responses [Page 156, 9 words]\n         1.57.2.1. Response samples [Pages 156-157, 50 words]\n      1.57.3. Responses [Page 157, 24 words]\n         1.57.3.1. Response samples [Pages 157-158, 59 words]\n      1.57.4. Responses [Pages 158-159, 17 words]\n         1.57.4.1. Response samples [Pages 159-160, 69 words]\n      1.57.5. Responses [Page 160, 9 words]\n         1.57.5.1. Response samples [Page 160, 17 words]\n   1.58. Relay [Page 161, 21 words]\n   1.59. Get current linking key for relay setup [Page 161, 17 words]\n      1.59.1. Responses [Page 161, 9 words]\n   1.60. Report access token [Page 162, 14 words]\n      1.60.1. Response samples [Page 162, 9 words]\n   1.61. Returns the authentication token required to pull data from Tenable Cloud [Pages 162-163, 24 words]\n      1.61.1. Responses [Page 163, 13 words]\n         1.61.1.1. Response samples [Page 163, 11 words]\n   1.62. Updates the authentication token required to pull data from Tenable Cloud [Pages 163-164, 22 words]\n      1.62.1. Responses [Page 164, 13 words]\n         1.62.1.1. Response samples [Page 164, 15 words]\n   1.63. Role [Page 165, 31 words]\n      1.63.1. Responses [Page 165, 9 words]\n         1.63.1.1. Response samples [Pages 165-166, 79 words]\n      1.63.2. Responses [Page 167, 9 words]\n         1.63.2.1. Request samples [Page 167, 1 words]\n         1.63.2.2. Response samples [Pages 167-168, 57 words]\n   1.64. Return the default roles for user creation [Page 168, 17 words]\n      1.64.1. Responses [Pages 168-169, 11 words]\n         1.64.1.1. Response samples [Pages 169-170, 66 words]\n      1.64.2. Responses [Page 170, 9 words]\n         1.64.2.1. Response samples [Pages 170-171, 72 words]\n      1.64.3. Responses [Pages 171-172, 15 words]\n         1.64.3.1. Request samples [Page 172, 1 words]\n         1.64.3.2. Response samples [Pages 172-173, 71 words]\n      1.64.4. Responses [Pages 173-174, 20 words]\n         1.64.4.1. Response samples [Page 174, 6 words]\n   1.65. Creates a new role from another one [Page 174, 35 words]\n      1.65.1. Responses [Page 175, 9 words]\n         1.65.1.1. Request samples [Page 175, 1 words]\n         1.65.1.2. Response samples [Pages 175-176, 45 words]\n   1.66. Replace permission list for a role [Pages 176-177, 55 words]\n      1.66.1. Responses [Page 177, 9 words]\n         1.66.1.1. Request samples [Page 177, 1 words]\n         1.66.1.2. Response samples [Page 177, 27 words]\n   1.67. SAML configuration [Page 178, 60 words]\n      1.67.1. Responses [Page 179, 9 words]\n         1.67.1.1. Response samples [Pages 179-180, 82 words]\n      1.67.2. Responses [Page 180, 9 words]\n         1.67.2.1. Request samples [Pages 180-181, 10 words]\n         1.67.2.2. Response samples [Pages 181-182, 75 words]\n   1.68. Generates SAML certificate [Page 182, 17 words]\n      1.68.1. Responses [Page 182, 9 words]\n         1.68.1.1. Response samples [Page 182, 4 words]\n   1.69. Score [Page 183, 10 words]\n   1.70. Get the directories score by profile [Page 183, 61 words]\n   1.71. Syslog [Page 184, 10 words]\n      1.71.1. Responses [Page 184, 9 words]\n         1.71.1.1. Response samples [Pages 184-185, 43 words]\n      1.71.2. Responses [Page 185, 9 words]\n         1.71.2.1. Response samples [Pages 185-187, 135 words]\n      1.71.3. Responses [Pages 187-188, 31 words]\n         1.71.3.1. Request samples [Page 188, 1 words]\n         1.71.3.2. Response samples [Pages 188-190, 128 words]\n      1.71.4. Responses [Page 190, 9 words]\n         1.71.4.1. Response samples [Pages 190-192, 140 words]\n      1.71.5. Responses [Page 192, 9 words]\n         1.71.5.1. Request samples [Page 192, 16 words]\n         1.71.5.2. Response samples [Pages 193-194, 129 words]\n      1.71.6. Responses [Pages 194-195, 20 words]\n         1.71.6.1. Response samples [Page 195, 7 words]\n   1.72. Send a test syslog notification by id [Page 195, 27 words]\n      1.72.1. Responses [Page 196, 9 words]\n         1.72.1.1. Response samples [Page 196, 6 words]\n   1.73. Send a test syslog notification [Pages 196-197, 64 words]\n      1.73.1. Responses [Page 197, 31 words]\n   1.74. Topology [Page 198, 11 words]\n      1.74.1. Request samples [Page 198, 1 words]\n      1.74.2. Response samples [Pages 198-199, 65 words]\n      1.74.3. Responses [Page 199, 9 words]\n         1.74.3.1. Response samples [Page 199, 15 words]\n   1.75. User [Page 200, 51 words]\n   1.76. Get all users [Pages 200-201, 15 words]\n      1.76.1. Responses [Page 201, 9 words]\n         1.76.1.1. Response samples [Pages 201-203, 107 words]\n      1.76.2. Responses [Page 203, 9 words]\n         1.76.2.1. Request samples [Page 203, 16 words]\n         1.76.2.2. Response samples [Page 204, 58 words]\n   1.77. Get a user's information [Pages 204-205, 17 words]\n      1.77.1. Responses [Page 205, 9 words]\n         1.77.1.1. Response samples [Pages 205-206, 100 words]\n      1.77.2. Responses [Page 207, 9 words]\n         1.77.2.1. Response samples [Pages 207-208, 96 words]\n      1.77.3. Responses [Pages 208-209, 21 words]\n         1.77.3.1. Request samples [Page 209, 1 words]\n         1.77.3.2. Response samples [Pages 209-210, 84 words]\n      1.77.4. Responses [Page 210, 13 words]\n         1.77.4.1. Response samples [Page 211, 7 words]\n   1.78. Update a user's password [Page 211, 68 words]\n      1.78.1. Responses [Page 212, 9 words]\n         1.78.1.1. Request samples [Page 212, 1 words]\n         1.78.1.2. Response samples [Page 212, 14 words]\n   1.79. Logs in a user [Pages 212-213, 17 words]\n      1.79.1. Responses [Page 213, 6 words]\n         1.79.1.1. Request samples [Page 213, 1 words]\n         1.79.1.2. Response samples [Pages 213-214, 27 words]\n   1.80. Logs out a user [Page 214, 15 words]\n      1.80.1. Responses [Page 214, 16 words]\n         1.80.1.1. Response samples [Pages 214-215, 8 words]\n   1.81. Replace role list for a user [Page 215, 31 words]\n      1.81.1. Responses [Page 215, 12 words]\n   1.82. Widget [Page 216, 5 words]\n      1.82.1. Request samples [Page 216, 1 words]\n      1.82.2. Response samples [Pages 216-217, 38 words]\n   1.83. Get all widgets by dashboard id [Page 217, 21 words]\n      1.83.1. Responses [Page 217, 9 words]\n         1.83.1.1. Response samples [Pages 217-218, 34 words]\n   1.84. Create a new widget in dashboard by dashboard id [Pages 218-219, 53 words]\n      1.84.1. Responses [Page 219, 9 words]\n         1.84.1.1. Request samples [Page 219, 1 words]\n         1.84.1.2. Response samples [Pages 219-220, 69 words]\n      1.84.2. Responses [Pages 220-221, 27 words]\n         1.84.2.1. Response samples [Pages 221-222, 86 words]\n      1.84.3. Responses [Pages 222-223, 21 words]\n         1.84.3.1. Request samples [Page 223, 1 words]\n         1.84.3.2. Response samples [Pages 223-224, 67 words]\n      1.84.4. Responses [Pages 224-225, 21 words]\n         1.84.4.1. Response samples [Page 225, 7 words]\n   1.85. Get a widget's options by id [Page 225, 23 words]\n      1.85.1. Responses [Pages 225-226, 17 words]\n         1.85.1.1. Response samples [Page 226, 45 words]\n   1.86. Define widget's options by id [Page 227, 44 words]\n      1.86.1. Responses [Page 227, 19 words]\n         1.86.1.1. Request samples [Page 228, 1 words]\n         1.86.1.2. Response samples [Page 228, 51 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Identity Exposure (production)",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 10,
+        "summary": "Download OpenAPI specification:\nDownload\nAPI to interact with Identity Exposure.",
+        "children": [
+          {
+            "number": "1.1",
+            "title": "About",
+            "depth": 2,
+            "chunk_id": "chunk_002",
+            "page_start": 1,
+            "page_end": 1,
+            "word_count": 12,
+            "summary": "Provide general information on Eridanis\nGet about singleton.",
+            "children": [
+              {
+                "number": "1.1.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_003",
+                "page_start": 1,
+                "page_end": 1,
+                "word_count": 17,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\nstring\nboolean\n— 500 Internal server error\nversion\nrequ..."
+              }
+            ]
+          },
+          {
+            "number": "1.2",
+            "title": "AD object",
+            "depth": 2,
+            "chunk_id": "chunk_004",
+            "page_start": 2,
+            "page_end": 2,
+            "word_count": 6,
+            "summary": "Representation of an Active Directory Object",
+            "children": [
+              {
+                "number": "1.2.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 2,
+                "page_end": 2,
+                "word_count": 13,
+                "summary": "200\nGET\n/api/about\napplication/json\nCopy\n{\n\"version\": \"string\",\n\"hostname\": \"string\",\n\"isSaaSDeploym..."
+              }
+            ]
+          },
+          {
+            "number": "1.3",
+            "title": "Return the last state of every ad-object at the provided timestampBy default, the timestamp is now. Objects out of scope are included",
+            "depth": 2,
+            "chunk_id": "chunk_006",
+            "page_start": 2,
+            "page_end": 2,
+            "word_count": 33,
+            "summary": "timestampBy default, the timestamp is now.",
+            "children": [
+              {
+                "number": "1.3.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_007",
+                "page_start": 3,
+                "page_end": 3,
+                "word_count": 14,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nobject\nobject\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.3.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_008",
+                    "page_start": 3,
+                    "page_end": 4,
+                    "word_count": 87,
+                    "summary": "200\n_embedded\n_links\nGET\n/api/ad-objects\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.3.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 5,
+                "page_end": 5,
+                "word_count": 25,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\nnumber\nstring\nstring\nEnum: \"LDAP\"\n\"SYSVOL\"\nArray of obj...",
+                "children": [
+                  {
+                    "number": "1.3.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_010",
+                    "page_start": 5,
+                    "page_end": 6,
+                    "word_count": 74,
+                    "summary": "200\nid\nrequired\ndirectoryId\nrequired\nobjectId\nrequired\ntype\nrequired\nobjectAttributes\nrequired\nGET\n/..."
+                  }
+                ]
+              },
+              {
+                "number": "1.3.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_011",
+                "page_start": 6,
+                "page_end": 7,
+                "word_count": 35,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\ndirectoryId\nrequired\ninfrastructureId\nrequired\nid\nrequi...",
+                "children": [
+                  {
+                    "number": "1.3.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_012",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "word_count": 42,
+                    "summary": "200\ndirectoryId\nrequired\nobjectId\nrequired\ntype\nrequired\nobjectAttributes\nrequired\nGET\n/api/infrastr..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.4",
+            "title": "Retrieve an AD object by id that have deviances for a specific profile and checker",
+            "depth": 2,
+            "chunk_id": "chunk_013",
+            "page_start": 8,
+            "page_end": 8,
+            "word_count": 31,
+            "summary": "specific profile and checker\nRequired license type: ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstrin...",
+            "children": [
+              {
+                "number": "1.4.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_014",
+                "page_start": 8,
+                "page_end": 9,
+                "word_count": 43,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\nnumber\nstring\nprofileId\nrequired\ncheckerId\nrequired\nid\n...",
+                "children": [
+                  {
+                    "number": "1.4.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_015",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "word_count": 45,
+                    "summary": "200\ntype\nrequired\nobjectAttributes\nrequired\nreasons\nrequired\nGET\n/api/profiles/{profileId}/checkers/..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.5",
+            "title": "Get one ad-object by event and by id",
+            "depth": 2,
+            "chunk_id": "chunk_016",
+            "page_start": 10,
+            "page_end": 10,
+            "word_count": 27,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\ns...",
+            "children": [
+              {
+                "number": "1.5.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_017",
+                "page_start": 10,
+                "page_end": 11,
+                "word_count": 43,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\nnumber\nstring\nstring\nEnum: \"LDAP\"\n\"SYSVOL\"\ndirectoryId\n...",
+                "children": [
+                  {
+                    "number": "1.5.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_018",
+                    "page_start": 11,
+                    "page_end": 11,
+                    "word_count": 34,
+                    "summary": "200\nobjectAttributes\nrequired\nGET\n/api/infrastructures/{infrastructureId}/directories/{directoryId}/..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.6",
+            "title": "Get one ad-object changes between a given event and the event which precedes it",
+            "depth": 2,
+            "chunk_id": "chunk_019",
+            "page_start": 11,
+            "page_end": 12,
+            "word_count": 39,
+            "summary": "the event which precedes it\nRequired license type: ioe, ioaPreview, ioa\nContent type\nAUTHORIZATIONS:...",
+            "children": [
+              {
+                "number": "1.6.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_020",
+                "page_start": 12,
+                "page_end": 12,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.6.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_021",
+                    "page_start": 12,
+                    "page_end": 13,
+                    "word_count": 39,
+                    "summary": "200\ninfrastructureId\nrequired\ndirectoryId\nrequired\neventId\nrequired\nid\nrequired\nwantedValues\nx-api-k..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.7",
+            "title": "Search all AD objects having deviances by profile by checker",
+            "depth": 2,
+            "chunk_id": "chunk_022",
+            "page_start": 13,
+            "page_end": 14,
+            "word_count": 57,
+            "summary": "checker\nRequired license type: ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nstring ^[0...",
+            "children": [
+              {
+                "number": "1.7.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_023",
+                "page_start": 14,
+                "page_end": 14,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.7.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_024",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "word_count": 25,
+                    "summary": "Payload\nexpression\nrequired\ndirectories\nrequired\nreasons\nrequired\ndateStart\ndateEnd\nshowIgnored\nrequ..."
+                  },
+                  {
+                    "number": "1.7.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_025",
+                    "page_start": 15,
+                    "page_end": 15,
+                    "word_count": 57,
+                    "summary": "200\n\"directories\":\n-\n[\n0\n],\n\"reasons\":\n-\n[\n0\n],\n\"dateStart\": \"2019-08-24T14:15:22Z\",\n\"dateEnd\": \"201..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.8",
+            "title": "Alert",
+            "depth": 2,
+            "chunk_id": "chunk_026",
+            "page_start": 16,
+            "page_end": 16,
+            "word_count": 29,
+            "summary": "New deviances alert\nGet alert instance by id.",
+            "children": [
+              {
+                "number": "1.8.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_027",
+                "page_start": 16,
+                "page_end": 17,
+                "word_count": 36,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\ninteger\ninteger\nboolean\nDefault: false\nboolean\nDefault: false\n...",
+                "children": [
+                  {
+                    "number": "1.8.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_028",
+                    "page_start": 17,
+                    "page_end": 18,
+                    "word_count": 60,
+                    "summary": "200\ndate\nrequired\ndirectoryId\nrequired\ninfrastructureId\nrequired\nGET\n/api/alerts/{id}\napplication/js..."
+                  }
+                ]
+              },
+              {
+                "number": "1.8.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_029",
+                "page_start": 18,
+                "page_end": 18,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.8.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_030",
+                    "page_start": 18,
+                    "page_end": 18,
+                    "word_count": 18,
+                    "summary": "Payload\nid\nrequired\nx-api-key\nrequired\narchived\nread\nPATCH\n/api/alerts/{id}\napplication/json\nCopy\n{\n..."
+                  },
+                  {
+                    "number": "1.8.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_031",
+                    "page_start": 19,
+                    "page_end": 20,
+                    "word_count": 66,
+                    "summary": "200\n}\napplication/json\nCopy\n{\n\"id\": 0,\n\"devianceId\": 0,\n\"archived\": false,\n\"read\": false,\n\"date\": \"2..."
+                  }
+                ]
+              },
+              {
+                "number": "1.8.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_032",
+                "page_start": 20,
+                "page_end": 20,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.8.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_033",
+                    "page_start": 20,
+                    "page_end": 21,
+                    "word_count": 33,
+                    "summary": "200\npage\nx-api-key\nrequired\nGET\n/api/profiles/{profileId}/alerts\napplication/json\nExpand all\nCollaps..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.9",
+            "title": "Update alerts for one profile",
+            "depth": 2,
+            "chunk_id": "chunk_034",
+            "page_start": 21,
+            "page_end": 21,
+            "word_count": 28,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.9.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_035",
+                "page_start": 21,
+                "page_end": 21,
+                "word_count": 7,
+                "summary": "200\nprofileId\nrequired\nx-api-key\nrequired\narchived\nread"
+              }
+            ]
+          },
+          {
+            "number": "1.10",
+            "title": "API key",
+            "depth": 2,
+            "chunk_id": "chunk_036",
+            "page_start": 22,
+            "page_end": 22,
+            "word_count": 13,
+            "summary": "Token to programmatically access Eridanis\n— 401 Unauthorized\n— 500 Internal server error",
+            "children": [
+              {
+                "number": "1.10.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_037",
+                "page_start": 22,
+                "page_end": 22,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "1.10.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_038",
+                "page_start": 22,
+                "page_end": 22,
+                "word_count": 18,
+                "summary": "200\nPATCH\n/api/profiles/{profileId}/alerts\napplication/json\nCopy\n{\n\"archived\": true,\n\"read\": true\n}\n..."
+              }
+            ]
+          },
+          {
+            "number": "1.11",
+            "title": "Get the API key of the current user",
+            "depth": 2,
+            "chunk_id": "chunk_039",
+            "page_start": 23,
+            "page_end": 23,
+            "word_count": 17,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.11.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_040",
+                "page_start": 23,
+                "page_end": 23,
+                "word_count": 13,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.11.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_041",
+                    "page_start": 23,
+                    "page_end": 24,
+                    "word_count": 15,
+                    "summary": "200\nx-api-key\nrequired\nkey\nrequired\nGET\n/api/api-key\napplication/json\nCopy\nContent type\n{\n\"key\": \"st..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.12",
+            "title": "Create or renew an API key for the current user",
+            "depth": 2,
+            "chunk_id": "chunk_042",
+            "page_start": 24,
+            "page_end": 24,
+            "word_count": 17,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.12.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_043",
+                "page_start": 24,
+                "page_end": 24,
+                "word_count": 13,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.12.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_044",
+                    "page_start": 24,
+                    "page_end": 24,
+                    "word_count": 7,
+                    "summary": "200\nx-api-key\nrequired\nkey\nrequired\nPOST\n/api/api-key"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.13",
+            "title": "Application setting",
+            "depth": 2,
+            "chunk_id": "chunk_045",
+            "page_start": 25,
+            "page_end": 25,
+            "word_count": 9,
+            "summary": "Tenable."
+          },
+          {
+            "number": "1.14",
+            "title": "Get the application settings",
+            "depth": 2,
+            "chunk_id": "chunk_046",
+            "page_start": 25,
+            "page_end": 25,
+            "word_count": 17,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.14.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_047",
+                "page_start": 25,
+                "page_end": 25,
+                "word_count": 13,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nx-api-key\nrequired\nContent type",
+                "children": [
+                  {
+                    "number": "1.14.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_048",
+                    "page_start": 26,
+                    "page_end": 26,
+                    "word_count": 50,
+                    "summary": "200\nGET\n/api/application-settings\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"userRegistration\"..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.15",
+            "title": "Update the application settings",
+            "depth": 2,
+            "chunk_id": "chunk_049",
+            "page_start": 26,
+            "page_end": 27,
+            "word_count": 85,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nContent type\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nst...",
+            "children": [
+              {
+                "number": "1.15.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_050",
+                "page_start": 28,
+                "page_end": 28,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.15.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_051",
+                    "page_start": 28,
+                    "page_end": 28,
+                    "word_count": 51,
+                    "summary": "Payload\nPATCH\n/api/application-settings\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"userRegistr..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.16",
+            "title": "Attack",
+            "depth": 2,
+            "chunk_id": "chunk_052",
+            "page_start": 29,
+            "page_end": 29,
+            "word_count": 5,
+            "summary": "Attacks as detected by Tenable.",
+            "children": [
+              {
+                "number": "1.16.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_053",
+                "page_start": 29,
+                "page_end": 29,
+                "word_count": 51,
+                "summary": "200\n}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"userRegistration\": true,\n\"activityLogsIsActiv..."
+              }
+            ]
+          },
+          {
+            "number": "1.17",
+            "title": "Get all attacks",
+            "depth": 2,
+            "chunk_id": "chunk_054",
+            "page_start": 30,
+            "page_end": 30,
+            "word_count": 47,
+            "summary": "Required license type: ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nQUERY ...",
+            "children": [
+              {
+                "number": "1.17.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_055",
+                "page_start": 30,
+                "page_end": 31,
+                "word_count": 24,
+                "summary": "profileId\nrequired\nattackTypeIds\ndateEnd\ndateStart\nincludeClosed\nlimit\norder\nresourceType\nrequired\nr...",
+                "children": [
+                  {
+                    "number": "1.17.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_056",
+                    "page_start": 31,
+                    "page_end": 32,
+                    "word_count": 67,
+                    "summary": "200\nGET\n/api/profiles/{profileId}/attacks\napplication/json\nExpand all\nCollapse all\nCopy\nContent type..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.18",
+            "title": "Get all attacks in CSV rows format",
+            "depth": 2,
+            "chunk_id": "chunk_057",
+            "page_start": 32,
+            "page_end": 33,
+            "word_count": 49,
+            "summary": "Required license type: ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nprofil...",
+            "children": [
+              {
+                "number": "1.18.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_058",
+                "page_start": 33,
+                "page_end": 33,
+                "word_count": 24,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nattackTypeIds\ndateEnd\ndateStart\nincludeClosed\nlim...",
+                "children": [
+                  {
+                    "number": "1.18.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_059",
+                    "page_start": 34,
+                    "page_end": 34,
+                    "word_count": 65,
+                    "summary": "200\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": 0,\n\"directoryId\": 0,\n\"attackTypeId\": 0..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.19",
+            "title": "Attack type",
+            "depth": 2,
+            "chunk_id": "chunk_060",
+            "page_start": 35,
+            "page_end": 35,
+            "word_count": 2,
+            "summary": "Attack types"
+          },
+          {
+            "number": "1.20",
+            "title": "Get attack types",
+            "depth": 2,
+            "chunk_id": "chunk_061",
+            "page_start": 35,
+            "page_end": 35,
+            "word_count": 16,
+            "summary": "Required license type: ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-...",
+            "children": [
+              {
+                "number": "1.20.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_062",
+                "page_start": 35,
+                "page_end": 35,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.20.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_063",
+                    "page_start": 35,
+                    "page_end": 35,
+                    "word_count": 8,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/attack-types\napplication/json\nContent type"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.21",
+            "title": "Attack type configuration",
+            "depth": 2,
+            "chunk_id": "chunk_064",
+            "page_start": 36,
+            "page_end": 36,
+            "word_count": 58,
+            "summary": "The attack type per directory configuration\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": 0,\n\"codeName\": ..."
+          },
+          {
+            "number": "1.22",
+            "title": "Get the attack type configuration",
+            "depth": 2,
+            "chunk_id": "chunk_065",
+            "page_start": 36,
+            "page_end": 37,
+            "word_count": 16,
+            "summary": "Required license type: ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-...",
+            "children": [
+              {
+                "number": "1.22.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_066",
+                "page_start": 37,
+                "page_end": 37,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.22.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_067",
+                    "page_start": 37,
+                    "page_end": 38,
+                    "word_count": 38,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/attack-type-configuration\napplication/json\nExpand all\nCollapse all\nC..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.23",
+            "title": "Update the attack type configuration",
+            "depth": 2,
+            "chunk_id": "chunk_068",
+            "page_start": 38,
+            "page_end": 38,
+            "word_count": 24,
+            "summary": "Required license type: ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-...",
+            "children": [
+              {
+                "number": "1.23.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_069",
+                "page_start": 38,
+                "page_end": 38,
+                "word_count": 7,
+                "summary": "204\n— 401 Unauthorized\nx-api-key\nrequired\nconfiguration"
+              }
+            ]
+          },
+          {
+            "number": "1.24",
+            "title": "Attack type option",
+            "depth": 2,
+            "chunk_id": "chunk_070",
+            "page_start": 39,
+            "page_end": 39,
+            "word_count": 15,
+            "summary": "Security profile options relative to attack types (Indicator of Attacks)\n— 500 Internal server error",
+            "children": [
+              {
+                "number": "1.24.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_071",
+                "page_start": 39,
+                "page_end": 39,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "1.24.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_072",
+                "page_start": 39,
+                "page_end": 40,
+                "word_count": 70,
+                "summary": "204\nPATCH\n/api/attack-type-configuration\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"configurat..."
+              },
+              {
+                "number": "1.24.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_073",
+                "page_start": 40,
+                "page_end": 40,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.24.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_074",
+                    "page_start": 40,
+                    "page_end": 42,
+                    "word_count": 116,
+                    "summary": "profileId\nrequired\nattackTypeId\nrequired\nstaged\nx-api-key\nrequired\nGET\n/api/profiles/{profileId}/att..."
+                  }
+                ]
+              },
+              {
+                "number": "1.24.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_075",
+                "page_start": 42,
+                "page_end": 42,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.24.4.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_076",
+                    "page_start": 42,
+                    "page_end": 42,
+                    "word_count": 15,
+                    "summary": "Payload\nx-api-key\nrequired\ncodename\nrequired\ndirectoryId\nvalue\nrequired\nvalueType\nrequired\nPOST\n/api..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.25",
+            "title": "Category",
+            "depth": 2,
+            "chunk_id": "chunk_077",
+            "page_start": 43,
+            "page_end": 43,
+            "word_count": 1,
+            "summary": "Category",
+            "children": [
+              {
+                "number": "1.25.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_078",
+                "page_start": 43,
+                "page_end": 44,
+                "word_count": 81,
+                "summary": "200\nExpand all\nCollapse all\nCopy\n[\n- {\n\"codename\": \"string\",\n\"directoryId\": null,\n\"value\": \"string\",..."
+              },
+              {
+                "number": "1.25.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_079",
+                "page_start": 44,
+                "page_end": 44,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.25.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_080",
+                    "page_start": 44,
+                    "page_end": 45,
+                    "word_count": 48,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/categories\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\":..."
+                  }
+                ]
+              },
+              {
+                "number": "1.25.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_081",
+                "page_start": 45,
+                "page_end": 45,
+                "word_count": 22,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\nstring\n— 401 Unauthorized\n— 500 Internal server error\ni..."
+              }
+            ]
+          },
+          {
+            "number": "1.26",
+            "title": "Checker",
+            "depth": 2,
+            "chunk_id": "chunk_082",
+            "page_start": 46,
+            "page_end": 46,
+            "word_count": 13,
+            "summary": "Checkers are the implementations of the state of the art of AD security",
+            "children": [
+              {
+                "number": "1.26.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_083",
+                "page_start": 46,
+                "page_end": 46,
+                "word_count": 30,
+                "summary": "200\nGET\n/api/categories/{id}\napplication/json\nCopy\n{\n\"id\": 0,\n\"name\": \"string\"\n}\nRetrieve all checker instances."
+              },
+              {
+                "number": "1.26.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_084",
+                "page_start": 46,
+                "page_end": 47,
+                "word_count": 13,
+                "summary": "x-api-key\nrequired\nContent type\n200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.26.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_085",
+                    "page_start": 47,
+                    "page_end": 48,
+                    "word_count": 66,
+                    "summary": "200\nGET\n/api/checkers\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": 0,\n\"codename\": \"C-SA..."
+                  }
+                ]
+              },
+              {
+                "number": "1.26.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_086",
+                "page_start": 48,
+                "page_end": 48,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.26.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_087",
+                    "page_start": 48,
+                    "page_end": 48,
+                    "word_count": 30,
+                    "summary": "200\nid\nrequired\nx-api-key\nrequired\nGET\n/api/checkers/{id}\napplication/json\nExpand all\nCollapse all\nC..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.27",
+            "title": "Checker option",
+            "depth": 2,
+            "chunk_id": "chunk_088",
+            "page_start": 49,
+            "page_end": 49,
+            "word_count": 67,
+            "summary": "Security profile options relative to checkers (Indicator of Exposure)\n\"vulnerabilityDetail\": { },\n\"a...",
+            "children": [
+              {
+                "number": "1.27.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_089",
+                "page_start": 50,
+                "page_end": 50,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.27.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_090",
+                    "page_start": 50,
+                    "page_end": 51,
+                    "word_count": 102,
+                    "summary": "200\nGET\n/api/profiles/{profileId}/checkers/{checkerId}/checker-options\napplication/json\nExpand all\nC..."
+                  }
+                ]
+              },
+              {
+                "number": "1.27.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_091",
+                "page_start": 51,
+                "page_end": 52,
+                "word_count": 22,
+                "summary": "200\nprofileId\nrequired\ncheckerId\nrequired\nx-api-key\nrequired\ncodename\nrequired\ndirectoryId\nvalue\nreq...",
+                "children": [
+                  {
+                    "number": "1.27.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_092",
+                    "page_start": 52,
+                    "page_end": 52,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.27.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_093",
+                    "page_start": 52,
+                    "page_end": 52,
+                    "word_count": 32,
+                    "summary": "200\nPOST\n/api/profiles/{profileId}/checkers/{checkerId}/checker-options\napplication/json\nExpand all\n..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.28",
+            "title": "Cloud statistics",
+            "depth": 2,
+            "chunk_id": "chunk_094",
+            "page_start": 53,
+            "page_end": 53,
+            "word_count": 59,
+            "summary": "Attributes sent to tenable cloud statistics\n[\n- {\n\"id\": 0,\n\"codename\": \"string\",\n\"profileId\": 0,\n\"ch...",
+            "children": [
+              {
+                "number": "1.28.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_095",
+                "page_start": 53,
+                "page_end": 54,
+                "word_count": 24,
+                "summary": "x-api-key\nrequired\n200\nRESPONSE SCHEMA:\napplication/json\nstring\nstring\nstring\nboolean\nstring\nstring\n...",
+                "children": [
+                  {
+                    "number": "1.28.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_096",
+                    "page_start": 54,
+                    "page_end": 54,
+                    "word_count": 28,
+                    "summary": "200\ncontainerUuid\nrequired\ncustomerName\nrequired\nenvironmentType\nrequired\nisEnabled\nrequired\nuserUui..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.29",
+            "title": "Dashboard",
+            "depth": 2,
+            "chunk_id": "chunk_097",
+            "page_start": 55,
+            "page_end": 55,
+            "word_count": 33,
+            "summary": "A widget container\n\"isEnabled\": true,\n\"userUuid\": \"string\",\n\"siteId\": \"string\",\n\"role\": \"BASIC\"\n}\nRetrieve all dashboard instances.",
+            "children": [
+              {
+                "number": "1.29.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_098",
+                "page_start": 55,
+                "page_end": 55,
+                "word_count": 13,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nx-api-key\nrequired\nGET\n/api/dashboards",
+                "children": [
+                  {
+                    "number": "1.29.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_099",
+                    "page_start": 56,
+                    "page_end": 56,
+                    "word_count": 55,
+                    "summary": "200\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": 0,\n\"name\": \"string\",\n\"order\": 0,\n\"userId\": 0\n}\n]\nCreate dashboard instance."
+                  }
+                ]
+              },
+              {
+                "number": "1.29.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_100",
+                "page_start": 56,
+                "page_end": 57,
+                "word_count": 17,
+                "summary": "x-api-key\nrequired\nname\nrequired\norder\nrequired\nContent type\n201\n— 401 Unauthorized\n— 500 Internal s...",
+                "children": [
+                  {
+                    "number": "1.29.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_101",
+                    "page_start": 57,
+                    "page_end": 57,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.29.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_102",
+                    "page_start": 57,
+                    "page_end": 58,
+                    "word_count": 53,
+                    "summary": "201\nPOST\n/api/dashboards\napplication/json\nCopy\n{\n\"name\": \"string\",\n\"order\": 2147483647\n}\napplication..."
+                  }
+                ]
+              },
+              {
+                "number": "1.29.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_103",
+                "page_start": 58,
+                "page_end": 58,
+                "word_count": 28,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\nstring\nnumber\nnumber\n— 401 Unauthorized\n— 500 Internal ...",
+                "children": [
+                  {
+                    "number": "1.29.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_104",
+                    "page_start": 59,
+                    "page_end": 60,
+                    "word_count": 61,
+                    "summary": "200\nGET\n/api/dashboards/{id}\napplication/json\nCopy\n{\n\"id\": 0,\n\"name\": \"string\",\n\"order\": 0,\n\"userId\": 0\n}\nUpdate dashboard instance."
+                  }
+                ]
+              },
+              {
+                "number": "1.29.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_105",
+                "page_start": 60,
+                "page_end": 60,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.29.4.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_106",
+                    "page_start": 60,
+                    "page_end": 60,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.29.4.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_107",
+                    "page_start": 60,
+                    "page_end": 61,
+                    "word_count": 28,
+                    "summary": "200\norder\nPATCH\n/api/dashboards/{id}\napplication/json\nCopy\n{\n\"name\": \"string\",\n\"order\": 2147483647\n}..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.30",
+            "title": "Delete dashboard instance with it's associated widgets",
+            "depth": 2,
+            "chunk_id": "chunk_108",
+            "page_start": 61,
+            "page_end": 61,
+            "word_count": 21,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.30.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_109",
+                "page_start": 61,
+                "page_end": 61,
+                "word_count": 15,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nobject or null\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.30.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_110",
+                    "page_start": 61,
+                    "page_end": 61,
+                    "word_count": 6,
+                    "summary": "id\nrequired\nx-api-key\nrequired\nDELETE\n/api/dashboards/{id}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.31",
+            "title": "Deviance",
+            "depth": 2,
+            "chunk_id": "chunk_111",
+            "page_start": 62,
+            "page_end": 62,
+            "word_count": 8,
+            "summary": "Security deviance items\n204\napplication/json\nCopy\n{ }"
+          },
+          {
+            "number": "1.32",
+            "title": "Get all deviances that has been created or resolved since an event",
+            "depth": 2,
+            "chunk_id": "chunk_112",
+            "page_start": 62,
+            "page_end": 62,
+            "word_count": 17,
+            "summary": "an event\nRequired license type: ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-you...",
+            "children": [
+              {
+                "number": "1.32.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_113",
+                "page_start": 62,
+                "page_end": 62,
+                "word_count": 13,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nx-api-key\nrequired\nContent type",
+                "children": [
+                  {
+                    "number": "1.32.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_114",
+                    "page_start": 63,
+                    "page_end": 65,
+                    "word_count": 103,
+                    "summary": "200\nGET\n/api/deviances/changed\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"_embedd..."
+                  }
+                ]
+              },
+              {
+                "number": "1.32.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_115",
+                "page_start": 65,
+                "page_end": 65,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.32.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_116",
+                    "page_start": 65,
+                    "page_end": 66,
+                    "word_count": 72,
+                    "summary": "200\ndirectoryId\nrequired\nid\nrequired\nx-api-key\nrequired\nGET\n/api/directories/{directoryId}/deviances..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.33",
+            "title": "Get all ad objects of a deviance in CSV rows format",
+            "depth": 2,
+            "chunk_id": "chunk_117",
+            "page_start": 66,
+            "page_end": 67,
+            "word_count": 30,
+            "summary": "Required license type: ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nstring ^[0-9]+$\nQU...",
+            "children": [
+              {
+                "number": "1.33.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_118",
+                "page_start": 67,
+                "page_end": 67,
+                "word_count": 17,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\nValidates GET /ad-object-deviance-history/rofiles/:prof...",
+                "children": [
+                  {
+                    "number": "1.33.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_119",
+                    "page_start": 67,
+                    "page_end": 68,
+                    "word_count": 52,
+                    "summary": "200\nparameters\nx-api-key\nrequired\nGET\n/api/export/profiles/{profileId}/checkers/{checkerId}\napplicat..."
+                  }
+                ]
+              },
+              {
+                "number": "1.33.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_120",
+                "page_start": 68,
+                "page_end": 68,
+                "word_count": 22,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\ndirectoryId\nrequired\ninfrastructureId\nrequired\npa...",
+                "children": [
+                  {
+                    "number": "1.33.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_121",
+                    "page_start": 69,
+                    "page_end": 70,
+                    "word_count": 95,
+                    "summary": "200\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": 0,\n\"directoryId\": 0,\n\"checkerId\": 0,\n\"..."
+                  }
+                ]
+              },
+              {
+                "number": "1.33.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_122",
+                "page_start": 70,
+                "page_end": 70,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.33.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_123",
+                    "page_start": 70,
+                    "page_end": 72,
+                    "word_count": 109,
+                    "summary": "200\ninfrastructureId\nrequired\ndirectoryId\nrequired\nid\nrequired\nx-api-key\nrequired\nGET\n/api/infrastru..."
+                  }
+                ]
+              },
+              {
+                "number": "1.33.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_124",
+                "page_start": 72,
+                "page_end": 72,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.33.4.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_125",
+                    "page_start": 72,
+                    "page_end": 72,
+                    "word_count": 16,
+                    "summary": "Payload\ninfrastructureId\nrequired\ndirectoryId\nrequired\nid\nrequired\nx-api-key\nrequired\nignoreUntil\nPA..."
+                  },
+                  {
+                    "number": "1.33.4.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_126",
+                    "page_start": 73,
+                    "page_end": 74,
+                    "word_count": 109,
+                    "summary": "200\n{\n\"ignoreUntil\": \"2019-08-24T14:15:22Z\"\n}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": ..."
+                  }
+                ]
+              },
+              {
+                "number": "1.33.5",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_127",
+                "page_start": 74,
+                "page_end": 74,
+                "word_count": 21,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nprofileId\nrequired\ninfrastructureId\nrequired\ndire...",
+                "children": [
+                  {
+                    "number": "1.33.5.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_128",
+                    "page_start": 75,
+                    "page_end": 77,
+                    "word_count": 110,
+                    "summary": "200\nGET\n/api/profiles/{profileId}/infrastructures/{infrastructureId}/directories/{\napplication/json\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.33.6",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_129",
+                "page_start": 77,
+                "page_end": 77,
+                "word_count": 9,
+                "summary": "204\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.33.6.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_130",
+                    "page_start": 77,
+                    "page_end": 77,
+                    "word_count": 15,
+                    "summary": "Payload\nprofileId\nrequired\ncheckerId\nrequired\nprofileId\nrequired\ncheckerId\nrequired\nx-api-key\nrequir..."
+                  },
+                  {
+                    "number": "1.33.6.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_131",
+                    "page_start": 78,
+                    "page_end": 79,
+                    "word_count": 64,
+                    "summary": "204\napplication/json\nCopy\n{\n\"ignoreUntil\": \"2019-08-24T14:15:22Z\"\n}\napplication/json\nCopy\nnull\nGet all deviances by checker."
+                  }
+                ]
+              },
+              {
+                "number": "1.33.7",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_132",
+                "page_start": 79,
+                "page_end": 79,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.33.7.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_133",
+                    "page_start": 79,
+                    "page_end": 79,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.33.7.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_134",
+                    "page_start": 79,
+                    "page_end": 81,
+                    "word_count": 173,
+                    "summary": "200\nx-api-key\nrequired\nexpression\nrequired\nPOST\n/api/profiles/{profileId}/checkers/{checkerId}/devia..."
+                  }
+                ]
+              },
+              {
+                "number": "1.33.8",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_135",
+                "page_start": 81,
+                "page_end": 82,
+                "word_count": 22,
+                "summary": "204\n— 401 Unauthorized\nprofileId\nrequired\ncheckerId\nrequired\nadObjectId\nrequired\nreasonIds\ndateStart...",
+                "children": [
+                  {
+                    "number": "1.33.8.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_136",
+                    "page_start": 82,
+                    "page_end": 82,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.33.8.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_137",
+                    "page_start": 82,
+                    "page_end": 82,
+                    "word_count": 12,
+                    "summary": "204\nPATCH\n/api/profiles/{profileId}/checkers/{checkerId}/ad-objects/{adObjectId}/d\napplication/json\n..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.34",
+            "title": "Search all deviances by profile by checker by AD object",
+            "depth": 2,
+            "chunk_id": "chunk_138",
+            "page_start": 82,
+            "page_end": 83,
+            "word_count": 47,
+            "summary": "Required license type: ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nprofileId\nrequired...",
+            "children": [
+              {
+                "number": "1.34.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_139",
+                "page_start": 83,
+                "page_end": 83,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.34.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_140",
+                    "page_start": 83,
+                    "page_end": 84,
+                    "word_count": 15,
+                    "summary": "checkerId\nrequired\nadObjectId\nrequired\nperPage\npage\nx-api-key\nrequired\ndateStart\ndateEnd\nshowIgnored..."
+                  },
+                  {
+                    "number": "1.34.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_141",
+                    "page_start": 84,
+                    "page_end": 86,
+                    "word_count": 126,
+                    "summary": "200\napplication/json\nCopy\n{\n\"dateStart\": \"2019-08-24T14:15:22Z\",\n\"dateEnd\": \"2019-08-24T14:15:22Z\",\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.34.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_142",
+                "page_start": 86,
+                "page_end": 86,
+                "word_count": 27,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nprofileId\nrequired\ninfrastructureId\nrequired\ndire...",
+                "children": [
+                  {
+                    "number": "1.34.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_143",
+                    "page_start": 87,
+                    "page_end": 87,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.34.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_144",
+                    "page_start": 87,
+                    "page_end": 87,
+                    "word_count": 29,
+                    "summary": "200\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"checkers\":\n-\n[\n0\n],\n\"reasons\":\n-\n[\n0\n]\n}\napplic..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.35",
+            "title": "Directory",
+            "depth": 2,
+            "chunk_id": "chunk_145",
+            "page_start": 88,
+            "page_end": 89,
+            "word_count": 83,
+            "summary": "Represents an Active directory\n[\n- {\n\"id\": 0,\n\"directoryId\": 0,\n\"checkerId\": 0,\n\"profileId\": 0,\n\"adO...",
+            "children": [
+              {
+                "number": "1.35.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_146",
+                "page_start": 89,
+                "page_end": 89,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.35.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_147",
+                    "page_start": 89,
+                    "page_end": 91,
+                    "word_count": 120,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/directories\napplication/json\nExpand all\nCollapse all\nCopy\nContent ty..."
+                  }
+                ]
+              },
+              {
+                "number": "1.35.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_148",
+                "page_start": 91,
+                "page_end": 91,
+                "word_count": 25,
+                "summary": "201\n— 401 Unauthorized\n— 500 Internal server error\ninfrastructureId\nrequired\nname\nrequired\nip\nrequir...",
+                "children": [
+                  {
+                    "number": "1.35.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_149",
+                    "page_start": 92,
+                    "page_end": 92,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.35.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_150",
+                    "page_start": 92,
+                    "page_end": 94,
+                    "word_count": 127,
+                    "summary": "201\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"infrastructureId\": 2147483647,\n\"name\": \"str..."
+                  }
+                ]
+              },
+              {
+                "number": "1.35.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_151",
+                "page_start": 94,
+                "page_end": 94,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.35.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_152",
+                    "page_start": 94,
+                    "page_end": 95,
+                    "word_count": 67,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/directories/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.36",
+            "title": "Get all directories for a given infrastructure",
+            "depth": 2,
+            "chunk_id": "chunk_153",
+            "page_start": 95,
+            "page_end": 95,
+            "word_count": 21,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.36.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_154",
+                "page_start": 95,
+                "page_end": 96,
+                "word_count": 13,
+                "summary": "200\n— 401 Unauthorized\ninfrastructureId\nrequired\nx-api-key\nrequired\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.36.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_155",
+                    "page_start": 96,
+                    "page_end": 97,
+                    "word_count": 96,
+                    "summary": "200\nGET\n/api/infrastructures/{infrastructureId}/directories\napplication/json\nExpand all\nCollapse all..."
+                  }
+                ]
+              },
+              {
+                "number": "1.36.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_156",
+                "page_start": 97,
+                "page_end": 97,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.36.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_157",
+                    "page_start": 97,
+                    "page_end": 99,
+                    "word_count": 117,
+                    "summary": "200\ninfrastructureId\nrequired\nid\nrequired\nx-api-key\nrequired\nGET\n/api/infrastructures/{infrastructur..."
+                  }
+                ]
+              },
+              {
+                "number": "1.36.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_158",
+                "page_start": 99,
+                "page_end": 99,
+                "word_count": 24,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\ninfrastructureId\nrequired\nid\nrequired\nx-api-key\nr...",
+                "children": [
+                  {
+                    "number": "1.36.3.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_159",
+                    "page_start": 100,
+                    "page_end": 100,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.36.3.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_160",
+                    "page_start": 100,
+                    "page_end": 101,
+                    "word_count": 115,
+                    "summary": "200\nPATCH\n/api/infrastructures/{infrastructureId}/directories/{id}\napplication/json\nCopy\n{\n\"name\": \"..."
+                  }
+                ]
+              },
+              {
+                "number": "1.36.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_161",
+                "page_start": 101,
+                "page_end": 101,
+                "word_count": 6,
+                "summary": "infrastructureId\nrequired\nid\nrequired\nx-api-key\nrequired"
+              }
+            ]
+          },
+          {
+            "number": "1.37",
+            "title": "Email notifier",
+            "depth": 2,
+            "chunk_id": "chunk_162",
+            "page_start": 102,
+            "page_end": 102,
+            "word_count": 22,
+            "summary": "An email notification about new deviances\n204\nRESPONSE SCHEMA:\napplication/json\nobject or null\nDirec...",
+            "children": [
+              {
+                "number": "1.37.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_163",
+                "page_start": 102,
+                "page_end": 103,
+                "word_count": 30,
+                "summary": "204\nDELETE\n/api/infrastructures/{infrastructureId}/directories/{id}\napplication/json\nCopy\n{ }\nRetrieve all email-notifier instances."
+              },
+              {
+                "number": "1.37.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_164",
+                "page_start": 103,
+                "page_end": 103,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.37.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_165",
+                    "page_start": 103,
+                    "page_end": 105,
+                    "word_count": 113,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/email-notifiers\napplication/json\nExpand all\nCollapse all\nCopy\nConten..."
+                  }
+                ]
+              },
+              {
+                "number": "1.37.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_166",
+                "page_start": 105,
+                "page_end": 105,
+                "word_count": 9,
+                "summary": "201\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.37.3.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_167",
+                    "page_start": 105,
+                    "page_end": 105,
+                    "word_count": 21,
+                    "summary": "Payload\naddress\nrequired\ncriticityThreshold\nrequired\ndirectories\nrequired\ndescription\nshouldNotifyOn..."
+                  },
+                  {
+                    "number": "1.37.3.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_168",
+                    "page_start": 106,
+                    "page_end": 108,
+                    "word_count": 104,
+                    "summary": "201\nExpand all\nCollapse all\nCopy\n[\n- {\n\"address\": \"string\",\n\"criticityThreshold\": 0,\n\"directories\":\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.37.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_169",
+                "page_start": 108,
+                "page_end": 108,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.37.4.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_170",
+                    "page_start": 108,
+                    "page_end": 110,
+                    "word_count": 121,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/email-notifiers/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{..."
+                  }
+                ]
+              },
+              {
+                "number": "1.37.5",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_171",
+                "page_start": 110,
+                "page_end": 110,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.37.5.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_172",
+                    "page_start": 110,
+                    "page_end": 110,
+                    "word_count": 35,
+                    "summary": "Payload\nprofiles\ninputType\nPATCH\n/api/email-notifiers/{id}\napplication/json\nExpand all\nCollapse all\n..."
+                  },
+                  {
+                    "number": "1.37.5.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_173",
+                    "page_start": 111,
+                    "page_end": 112,
+                    "word_count": 80,
+                    "summary": "200\n\"profiles\":\n-\n[\n0\n],\n\"inputType\": \"deviances\"\n}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.37.6",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_174",
+                "page_start": 112,
+                "page_end": 112,
+                "word_count": 16,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nobject or null\nemail-notifier\n— 401 Unauthorized\n— 500 Interna...",
+                "children": [
+                  {
+                    "number": "1.37.6.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_175",
+                    "page_start": 112,
+                    "page_end": 113,
+                    "word_count": 13,
+                    "summary": "204\nid\nrequired\nx-api-key\nrequired\nDELETE\n/api/email-notifiers/{id}\napplication/json\nCopy\nContent ty..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.38",
+            "title": "Send a test email notification by id",
+            "depth": 2,
+            "chunk_id": "chunk_176",
+            "page_start": 113,
+            "page_end": 113,
+            "word_count": 21,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.38.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_177",
+                "page_start": 113,
+                "page_end": 113,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.38.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_178",
+                    "page_start": 113,
+                    "page_end": 114,
+                    "word_count": 12,
+                    "summary": "200\nid\nrequired\nx-api-key\nrequired\nGET\n/api/email-notifiers/test-message/{id}\napplication/json\nConte..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.39",
+            "title": "Send a test email notification",
+            "depth": 2,
+            "chunk_id": "chunk_179",
+            "page_start": 114,
+            "page_end": 114,
+            "word_count": 47,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.39.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_180",
+                "page_start": 114,
+                "page_end": 115,
+                "word_count": 24,
+                "summary": "x-api-key\nrequired\naddress\nrequired\ncriticityThreshold\nrequired\ndirectories\nrequired\ndescription\ninp...",
+                "children": [
+                  {
+                    "number": "1.39.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_181",
+                    "page_start": 115,
+                    "page_end": 115,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.39.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_182",
+                    "page_start": 115,
+                    "page_end": 115,
+                    "word_count": 31,
+                    "summary": "200\nPOST\n/api/email-notifiers/test-message\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"address\"..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.40",
+            "title": "Event",
+            "depth": 2,
+            "chunk_id": "chunk_183",
+            "page_start": 116,
+            "page_end": 116,
+            "word_count": 34,
+            "summary": "A change in the Active Directory\nGet event instance by id.",
+            "children": [
+              {
+                "number": "1.40.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_184",
+                "page_start": 116,
+                "page_end": 117,
+                "word_count": 33,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nany <int64>\nnumber\nnumber\ndirectoryId\nrequired\nid\nrequired\nx-a...",
+                "children": [
+                  {
+                    "number": "1.40.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_185",
+                    "page_start": 117,
+                    "page_end": 118,
+                    "word_count": 55,
+                    "summary": "200\ntype\nrequired\ndate\nrequired\nGET\n/api/directories/{directoryId}/events/{id}\napplication/json\nCopy..."
+                  }
+                ]
+              },
+              {
+                "number": "1.40.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_186",
+                "page_start": 118,
+                "page_end": 118,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.40.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_187",
+                    "page_start": 118,
+                    "page_end": 119,
+                    "word_count": 25,
+                    "summary": "200\ndirectoryId\nrequired\nid\nrequired\nx-api-key\nrequired\nGET\n/api/infrastructures/{infrastructureId}/..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.41",
+            "title": "Search events instances",
+            "depth": 2,
+            "chunk_id": "chunk_188",
+            "page_start": 119,
+            "page_end": 119,
+            "word_count": 33,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.41.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_189",
+                "page_start": 119,
+                "page_end": 120,
+                "word_count": 22,
+                "summary": "x-api-key\nrequired\nexpression\nrequired\norder\nprofileId\nrequired\ndirectoryIds\nrequired\ndateStart\nrequ...",
+                "children": [
+                  {
+                    "number": "1.41.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_190",
+                    "page_start": 120,
+                    "page_end": 120,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.41.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_191",
+                    "page_start": 120,
+                    "page_end": 120,
+                    "word_count": 43,
+                    "summary": "200\nPOST\n/api/events/search\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"expression\": { },\n\"orde..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.42",
+            "title": "Infrastructure",
+            "depth": 2,
+            "chunk_id": "chunk_192",
+            "page_start": 121,
+            "page_end": 121,
+            "word_count": 40,
+            "summary": "A groupment of directories\n[\n- {\n\"id\": null,\n\"adObjectId\": 0,\n\"directoryId\": 0,\n\"type\": \"string\",\n\"d...",
+            "children": [
+              {
+                "number": "1.42.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_193",
+                "page_start": 121,
+                "page_end": 122,
+                "word_count": 11,
+                "summary": "201\n— 401 Unauthorized\nx-api-key\nrequired\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.42.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_194",
+                    "page_start": 122,
+                    "page_end": 123,
+                    "word_count": 61,
+                    "summary": "201\nGET\n/api/infrastructures\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": 0,\n\"name\": \"s..."
+                  }
+                ]
+              },
+              {
+                "number": "1.42.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_195",
+                "page_start": 123,
+                "page_end": 123,
+                "word_count": 9,
+                "summary": "201\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.42.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_196",
+                    "page_start": 123,
+                    "page_end": 123,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.42.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_197",
+                    "page_start": 123,
+                    "page_end": 124,
+                    "word_count": 76,
+                    "summary": "name\nrequired\nlogin\nrequired\npassword\nrequired\nPOST\n/api/infrastructures\napplication/json\nExpand all..."
+                  }
+                ]
+              },
+              {
+                "number": "1.42.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_198",
+                "page_start": 124,
+                "page_end": 125,
+                "word_count": 15,
+                "summary": "200\nid\nrequired\nx-api-key\nrequired\nContent type\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.42.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_199",
+                    "page_start": 125,
+                    "page_end": 126,
+                    "word_count": 58,
+                    "summary": "200\nGET\n/api/infrastructures/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"name\": \"..."
+                  }
+                ]
+              },
+              {
+                "number": "1.42.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_200",
+                "page_start": 126,
+                "page_end": 126,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.42.4.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_201",
+                    "page_start": 126,
+                    "page_end": 126,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.42.4.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_202",
+                    "page_start": 126,
+                    "page_end": 127,
+                    "word_count": 54,
+                    "summary": "x-api-key\nrequired\nname\nlogin\npassword\nPATCH\n/api/infrastructures/{id}\napplication/json\nCopy\n{\n\"name..."
+                  }
+                ]
+              },
+              {
+                "number": "1.42.5",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_203",
+                "page_start": 127,
+                "page_end": 127,
+                "word_count": 14,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nobject or null\nInfrastructure\nid\nrequired\nx-api-key\nrequired\nC..."
+              }
+            ]
+          },
+          {
+            "number": "1.43",
+            "title": "LDAP configuration",
+            "depth": 2,
+            "chunk_id": "chunk_204",
+            "page_start": 128,
+            "page_end": 128,
+            "word_count": 14,
+            "summary": "Configuration of LDAP for authentication purposes.",
+            "children": [
+              {
+                "number": "1.43.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_205",
+                "page_start": 128,
+                "page_end": 128,
+                "word_count": 31,
+                "summary": "204\nDELETE\n/api/infrastructures/{id}\napplication/json\nCopy\n{ }\nGet ldap-configuration singleton."
+              },
+              {
+                "number": "1.43.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_206",
+                "page_start": 129,
+                "page_end": 129,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.43.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_207",
+                    "page_start": 129,
+                    "page_end": 131,
+                    "word_count": 103,
+                    "summary": "200\nGET\n/api/ldap-configuration\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"enable..."
+                  }
+                ]
+              },
+              {
+                "number": "1.43.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_208",
+                "page_start": 131,
+                "page_end": 131,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.43.3.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_209",
+                    "page_start": 131,
+                    "page_end": 131,
+                    "word_count": 30,
+                    "summary": "Payload\nsearchUserPassword\nuserSearchBase\nuserSearchFilter\nallowedGroups\nenableSaslBinding\nrelayId\nP..."
+                  },
+                  {
+                    "number": "1.43.3.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_210",
+                    "page_start": 132,
+                    "page_end": 132,
+                    "word_count": 66,
+                    "summary": "200\n\"allowedGroups\":\n-\n[\n- {\n\"name\": \"string\",\n\"defaultRoleIds\":\n-\n[\n0\n],\n\"defaultProfileId\": 0\n}\n],..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.44",
+            "title": "License",
+            "depth": 2,
+            "chunk_id": "chunk_211",
+            "page_start": 133,
+            "page_end": 133,
+            "word_count": 20,
+            "summary": "Product license\nGet license singleton.",
+            "children": [
+              {
+                "number": "1.44.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_212",
+                "page_start": 133,
+                "page_end": 133,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.44.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_213",
+                    "page_start": 133,
+                    "page_end": 134,
+                    "word_count": 38,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/license\napplication/json\nContent type\nExpand all\nCollapse all\nCopy\n{..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.45",
+            "title": "Create new license singleton",
+            "depth": 2,
+            "chunk_id": "chunk_214",
+            "page_start": 134,
+            "page_end": 134,
+            "word_count": 21,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.45.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_215",
+                "page_start": 134,
+                "page_end": 135,
+                "word_count": 13,
+                "summary": "201\n— 401 Unauthorized\nx-api-key\nrequired\nlicense\nrequired\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.45.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_216",
+                    "page_start": 135,
+                    "page_end": 135,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.45.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_217",
+                    "page_start": 135,
+                    "page_end": 135,
+                    "word_count": 42,
+                    "summary": "201\nPOST\n/api/license\napplication/json\nCopy\n{\n\"license\": \"string\"\n}\napplication/json\nExpand all\nColl..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.46",
+            "title": "Lockout policy Get product association in the License",
+            "depth": 2,
+            "chunk_id": "chunk_218",
+            "page_start": 136,
+            "page_end": 136,
+            "word_count": 10,
+            "summary": "Get product association in the License\nRequired license type: none",
+            "children": [
+              {
+                "number": "1.46.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_219",
+                "page_start": 136,
+                "page_end": 136,
+                "word_count": 12,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring or null\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.46.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_220",
+                    "page_start": 136,
+                    "page_end": 137,
+                    "word_count": 26,
+                    "summary": "200\nproductAssociation\nGET\n/api/license/product-association\napplication/json\nCopy\n{\n\"productAssociat..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.47",
+            "title": "Get the lockout policy",
+            "depth": 2,
+            "chunk_id": "chunk_221",
+            "page_start": 137,
+            "page_end": 137,
+            "word_count": 15,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.47.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_222",
+                "page_start": 137,
+                "page_end": 137,
+                "word_count": 25,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nboolean\ninteger\n>= 0\ninteger\n[ 1 .",
+                "children": [
+                  {
+                    "number": "1.47.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_223",
+                    "page_start": 137,
+                    "page_end": 138,
+                    "word_count": 25,
+                    "summary": "x-api-key\nrequired\nenabled\nrequired\nlockoutDuration\nrequired\nfailedAttemptThreshold\nrequired\nfailedA..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.48",
+            "title": "Update the lockout policy",
+            "depth": 2,
+            "chunk_id": "chunk_224",
+            "page_start": 138,
+            "page_end": 138,
+            "word_count": 33,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.48.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_225",
+                "page_start": 138,
+                "page_end": 139,
+                "word_count": 17,
+                "summary": "x-api-key\nrequired\nenabled\nlockoutDuration\nfailedAttemptThreshold\nfailedAttemptPeriod\nContent type\n2...",
+                "children": [
+                  {
+                    "number": "1.48.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_226",
+                    "page_start": 139,
+                    "page_end": 139,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.48.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_227",
+                    "page_start": 139,
+                    "page_end": 139,
+                    "word_count": 22,
+                    "summary": "200\nPATCH\n/api/lockout-policy\napplication/json\nCopy\n{\n\"enabled\": true,\n\"lockoutDuration\": 0,\n\"failed..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.49",
+            "title": "Metrics",
+            "depth": 2,
+            "chunk_id": "chunk_228",
+            "page_start": 140,
+            "page_end": 140,
+            "word_count": 11,
+            "summary": "Collect Eridanis and SQL Server health metrics.",
+            "children": [
+              {
+                "number": "1.49.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_229",
+                "page_start": 140,
+                "page_end": 140,
+                "word_count": 10,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.49.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_230",
+                    "page_start": 140,
+                    "page_end": 140,
+                    "word_count": 8,
+                    "summary": "200\nGET\n/api/metrics\napplication/json\nCopy\n\"string\"\nContent type"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.50",
+            "title": "Preference",
+            "depth": 2,
+            "chunk_id": "chunk_231",
+            "page_start": 141,
+            "page_end": 141,
+            "word_count": 3,
+            "summary": "A user's preferences"
+          },
+          {
+            "number": "1.51",
+            "title": "Get a user's preferences",
+            "depth": 2,
+            "chunk_id": "chunk_232",
+            "page_start": 141,
+            "page_end": 141,
+            "word_count": 15,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.51.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_233",
+                "page_start": 141,
+                "page_end": 141,
+                "word_count": 22,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\ninteger\n— 401 Unauthorized\n— 500 Internal server error\n...",
+                "children": [
+                  {
+                    "number": "1.51.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_234",
+                    "page_start": 142,
+                    "page_end": 142,
+                    "word_count": 9,
+                    "summary": "200\napplication/json\nCopy\n{\n\"language\": \"string\",\n\"preferredProfileId\": 0\n}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.52",
+            "title": "Update a user's preferences",
+            "depth": 2,
+            "chunk_id": "chunk_235",
+            "page_start": 142,
+            "page_end": 142,
+            "word_count": 22,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.52.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_236",
+                "page_start": 142,
+                "page_end": 142,
+                "word_count": 10,
+                "summary": "200\n— 401 Unauthorized\nx-api-key\nrequired\nlanguage\npreferredProfileId\nContent type"
+              }
+            ]
+          },
+          {
+            "number": "1.53",
+            "title": "Profile",
+            "depth": 2,
+            "chunk_id": "chunk_237",
+            "page_start": 143,
+            "page_end": 143,
+            "word_count": 11,
+            "summary": "A set of Checker option value\n— 500 Internal server error",
+            "children": [
+              {
+                "number": "1.53.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_238",
+                "page_start": 143,
+                "page_end": 143,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "1.53.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_239",
+                "page_start": 143,
+                "page_end": 144,
+                "word_count": 44,
+                "summary": "200\nPATCH\n/api/preferences\napplication/json\nCopy\n{\n\"language\": \"string\",\n\"preferredProfileId\": 0\n}\na..."
+              },
+              {
+                "number": "1.53.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_240",
+                "page_start": 144,
+                "page_end": 144,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.53.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_241",
+                    "page_start": 144,
+                    "page_end": 145,
+                    "word_count": 67,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/profiles\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.53.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_242",
+                "page_start": 145,
+                "page_end": 146,
+                "word_count": 15,
+                "summary": "201\nx-api-key\nrequired\nname\nrequired\ndirectories\nrequired\n— 401 Unauthorized\n— 500 Internal server e...",
+                "children": [
+                  {
+                    "number": "1.53.4.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_243",
+                    "page_start": 146,
+                    "page_end": 146,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.53.4.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_244",
+                    "page_start": 146,
+                    "page_end": 147,
+                    "word_count": 77,
+                    "summary": "201\nPOST\n/api/profiles\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"name\": \"^(?!(tenable)$)$..."
+                  }
+                ]
+              },
+              {
+                "number": "1.53.5",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_245",
+                "page_start": 147,
+                "page_end": 147,
+                "word_count": 13,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nid\nrequired\nx-api-key\nrequired",
+                "children": [
+                  {
+                    "number": "1.53.5.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_246",
+                    "page_start": 148,
+                    "page_end": 149,
+                    "word_count": 75,
+                    "summary": "200\nGET\n/api/profiles/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"name\": \"string\"..."
+                  }
+                ]
+              },
+              {
+                "number": "1.53.6",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_247",
+                "page_start": 149,
+                "page_end": 149,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.53.6.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_248",
+                    "page_start": 149,
+                    "page_end": 149,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.53.6.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_249",
+                    "page_start": 149,
+                    "page_end": 150,
+                    "word_count": 72,
+                    "summary": "200\nname\ndeleted\ndirectories\nPATCH\n/api/profiles/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.53.7",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_250",
+                "page_start": 150,
+                "page_end": 151,
+                "word_count": 22,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nid\nrequired\nx-api-key\nrequired\nContent type\nany or null\nProfil...",
+                "children": [
+                  {
+                    "number": "1.53.7.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_251",
+                    "page_start": 151,
+                    "page_end": 151,
+                    "word_count": 6,
+                    "summary": "204\nDELETE\n/api/profiles/{id}\napplication/json\nCopy\nnull"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.54",
+            "title": "Creates a new profile from another one",
+            "depth": 2,
+            "chunk_id": "chunk_252",
+            "page_start": 151,
+            "page_end": 152,
+            "word_count": 37,
+            "summary": "Required license type: ioe, ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.54.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_253",
+                "page_start": 152,
+                "page_end": 152,
+                "word_count": 9,
+                "summary": "204\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.54.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_254",
+                    "page_start": 152,
+                    "page_end": 152,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.54.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_255",
+                    "page_start": 152,
+                    "page_end": 153,
+                    "word_count": 49,
+                    "summary": "204\nname\nrequired\ndirectories\nrequired\nPOST\n/api/profiles/from/{fromId}\napplication/json\nExpand all\n..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.55",
+            "title": "Unstages change of the related profile",
+            "depth": 2,
+            "chunk_id": "chunk_256",
+            "page_start": 153,
+            "page_end": 153,
+            "word_count": 21,
+            "summary": "Required license type: ioe, ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.55.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_257",
+                "page_start": 153,
+                "page_end": 154,
+                "word_count": 20,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nany or null\nProfile\n— 401 Unauthorized\nid\nrequired\nx-api-key\nr...",
+                "children": [
+                  {
+                    "number": "1.55.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_258",
+                    "page_start": 154,
+                    "page_end": 154,
+                    "word_count": 6,
+                    "summary": "204\nPOST\n/api/profiles/{id}/unstage\napplication/json\nCopy\nnull"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.56",
+            "title": "Commits change of the related profile",
+            "depth": 2,
+            "chunk_id": "chunk_259",
+            "page_start": 154,
+            "page_end": 154,
+            "word_count": 21,
+            "summary": "Required license type: ioe, ioa, ioaPreview\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.56.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_260",
+                "page_start": 154,
+                "page_end": 154,
+                "word_count": 7,
+                "summary": "204\nid\nrequired\nx-api-key\nrequired\nContent type"
+              }
+            ]
+          },
+          {
+            "number": "1.57",
+            "title": "Reason",
+            "depth": 2,
+            "chunk_id": "chunk_261",
+            "page_start": 155,
+            "page_end": 155,
+            "word_count": 25,
+            "summary": "The reason why a AD object is marked as deviant\nRESPONSE SCHEMA:\napplication/json\nany or null\nProfil...",
+            "children": [
+              {
+                "number": "1.57.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_262",
+                "page_start": 155,
+                "page_end": 156,
+                "word_count": 27,
+                "summary": "204\nPOST\n/api/profiles/{id}/commit\napplication/json\nCopy\nnull\nRetrieve all reason instances."
+              },
+              {
+                "number": "1.57.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_263",
+                "page_start": 156,
+                "page_end": 156,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.57.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_264",
+                    "page_start": 156,
+                    "page_end": 157,
+                    "word_count": 50,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/reasons\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": 0,..."
+                  }
+                ]
+              },
+              {
+                "number": "1.57.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_265",
+                "page_start": 157,
+                "page_end": 157,
+                "word_count": 24,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\nstring\nstring or null\nDefault: null\nstring or null\nDefa...",
+                "children": [
+                  {
+                    "number": "1.57.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_266",
+                    "page_start": 157,
+                    "page_end": 158,
+                    "word_count": 59,
+                    "summary": "id\nrequired\nx-api-key\nrequired\nid\nrequired\ncodename\nrequired\nname\ndescription\nGET\n/api/reasons/{id}\n..."
+                  }
+                ]
+              },
+              {
+                "number": "1.57.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_267",
+                "page_start": 158,
+                "page_end": 159,
+                "word_count": 17,
+                "summary": "200\nprofileId\nrequired\ncheckerId\nrequired\nx-api-key\nrequired\nContent type\n— 401 Unauthorized\n— 500 I...",
+                "children": [
+                  {
+                    "number": "1.57.4.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_268",
+                    "page_start": 159,
+                    "page_end": 160,
+                    "word_count": 69,
+                    "summary": "200\nGET\n/api/profiles/{profileId}/checkers/{checkerId}/reasons\napplication/json\nExpand all\nCollapse ..."
+                  }
+                ]
+              },
+              {
+                "number": "1.57.5",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_269",
+                "page_start": 160,
+                "page_end": 160,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.57.5.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_270",
+                    "page_start": 160,
+                    "page_end": 160,
+                    "word_count": 17,
+                    "summary": "200\ndirectoryId\nrequired\neventId\nrequired\nx-api-key\nrequired\nGET\n/api/profiles/{profileId}/infrastru..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.58",
+            "title": "Relay",
+            "depth": 2,
+            "chunk_id": "chunk_271",
+            "page_start": 161,
+            "page_end": 161,
+            "word_count": 21,
+            "summary": "Configure relays that make AD queries for Ceti\n[\n- {\n\"id\": 0,\n\"codename\": \"string\",\n\"name\": null,\n\"d..."
+          },
+          {
+            "number": "1.59",
+            "title": "Get current linking key for relay setup",
+            "depth": 2,
+            "chunk_id": "chunk_272",
+            "page_start": 161,
+            "page_end": 161,
+            "word_count": 17,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.59.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_273",
+                "page_start": 161,
+                "page_end": 161,
+                "word_count": 9,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\nx-api-key\nrequired\nlinkingKey\nrequired"
+              }
+            ]
+          },
+          {
+            "number": "1.60",
+            "title": "Report access token",
+            "depth": 2,
+            "chunk_id": "chunk_274",
+            "page_start": 162,
+            "page_end": 162,
+            "word_count": 14,
+            "summary": "Token to access the reports download\n— 401 Unauthorized\n— 500 Internal server error",
+            "children": [
+              {
+                "number": "1.60.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_275",
+                "page_start": 162,
+                "page_end": 162,
+                "word_count": 9,
+                "summary": "200\nGET\n/api/relays/linking-key\napplication/json\nCopy\n{\n\"linkingKey\": \"string\"\n}"
+              }
+            ]
+          },
+          {
+            "number": "1.61",
+            "title": "Returns the authentication token required to pull data from Tenable Cloud",
+            "depth": 2,
+            "chunk_id": "chunk_276",
+            "page_start": 162,
+            "page_end": 163,
+            "word_count": 24,
+            "summary": "from Tenable Cloud\nRequired license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMET...",
+            "children": [
+              {
+                "number": "1.61.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_277",
+                "page_start": 163,
+                "page_end": 163,
+                "word_count": 13,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nstring\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.61.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_278",
+                    "page_start": 163,
+                    "page_end": 163,
+                    "word_count": 11,
+                    "summary": "200\nreportAccessToken\nrequired\nGET\n/api/report-access-token\napplication/json\nCopy\n{\n\"reportAccessTok..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.62",
+            "title": "Updates the authentication token required to pull data from Tenable Cloud",
+            "depth": 2,
+            "chunk_id": "chunk_279",
+            "page_start": 163,
+            "page_end": 164,
+            "word_count": 22,
+            "summary": "from Tenable Cloud\nRequired license type: ioa, ioaPreview, ioe\nContent type\nAUTHORIZATIONS:\nApiKey\nH...",
+            "children": [
+              {
+                "number": "1.62.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_280",
+                "page_start": 164,
+                "page_end": 164,
+                "word_count": 13,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nstring\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.62.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_281",
+                    "page_start": 164,
+                    "page_end": 164,
+                    "word_count": 15,
+                    "summary": "204\nx-api-key\nrequired\nreportAccessToken\nrequired\nPOST\n/api/report-access-token/refresh\napplication/..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.63",
+            "title": "Role",
+            "depth": 2,
+            "chunk_id": "chunk_282",
+            "page_start": 165,
+            "page_end": 165,
+            "word_count": 31,
+            "summary": "Groupment of permissions that may be assigned to several users\nRetrieve all role instances.",
+            "children": [
+              {
+                "number": "1.63.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_283",
+                "page_start": 165,
+                "page_end": 165,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.63.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_284",
+                    "page_start": 165,
+                    "page_end": 166,
+                    "word_count": 79,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/roles\napplication/json\nContent type\nExpand all\nCollapse all\nCopy\n[\n-..."
+                  }
+                ]
+              },
+              {
+                "number": "1.63.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_285",
+                "page_start": 167,
+                "page_end": 167,
+                "word_count": 9,
+                "summary": "201\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.63.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_286",
+                    "page_start": 167,
+                    "page_end": 167,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.63.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_287",
+                    "page_start": 167,
+                    "page_end": 168,
+                    "word_count": 57,
+                    "summary": "201\nPOST\n/api/roles\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"name\": \"string\",\n\"descripti..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.64",
+            "title": "Return the default roles for user creation",
+            "depth": 2,
+            "chunk_id": "chunk_288",
+            "page_start": 168,
+            "page_end": 168,
+            "word_count": 17,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.64.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_289",
+                "page_start": 168,
+                "page_end": 169,
+                "word_count": 11,
+                "summary": "200\n— 401 Unauthorized\nx-api-key\nrequired\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.64.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_290",
+                    "page_start": 169,
+                    "page_end": 170,
+                    "word_count": 66,
+                    "summary": "200\nGET\n/api/roles/user-creation-defaults\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"id\": ..."
+                  }
+                ]
+              },
+              {
+                "number": "1.64.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_291",
+                "page_start": 170,
+                "page_end": 170,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.64.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_292",
+                    "page_start": 170,
+                    "page_end": 171,
+                    "word_count": 72,
+                    "summary": "200\nid\nrequired\nx-api-key\nrequired\nGET\n/api/roles/{id}\napplication/json\nExpand all\nCollapse all\nCopy..."
+                  }
+                ]
+              },
+              {
+                "number": "1.64.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_293",
+                "page_start": 171,
+                "page_end": 172,
+                "word_count": 15,
+                "summary": "200\nid\nrequired\nx-api-key\nrequired\nname\ndescription\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.64.3.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_294",
+                    "page_start": 172,
+                    "page_end": 172,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.64.3.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_295",
+                    "page_start": 172,
+                    "page_end": 173,
+                    "word_count": 71,
+                    "summary": "200\nPATCH\n/api/roles/{id}\napplication/json\nCopy\n{\n\"name\": \"string\",\n\"description\": \"string\"\n}\napplic..."
+                  }
+                ]
+              },
+              {
+                "number": "1.64.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_296",
+                "page_start": 173,
+                "page_end": 174,
+                "word_count": 20,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nany or null\nRole\n— 401 Unauthorized\nid\nrequired\nx-api-key\nrequ...",
+                "children": [
+                  {
+                    "number": "1.64.4.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_297",
+                    "page_start": 174,
+                    "page_end": 174,
+                    "word_count": 6,
+                    "summary": "204\nDELETE\n/api/roles/{id}\napplication/json\nCopy\nnull"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.65",
+            "title": "Creates a new role from another one",
+            "depth": 2,
+            "chunk_id": "chunk_298",
+            "page_start": 174,
+            "page_end": 174,
+            "word_count": 35,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.65.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_299",
+                "page_start": 175,
+                "page_end": 175,
+                "word_count": 9,
+                "summary": "204\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.65.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_300",
+                    "page_start": 175,
+                    "page_end": 175,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.65.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_301",
+                    "page_start": 175,
+                    "page_end": 176,
+                    "word_count": 45,
+                    "summary": "204\nPOST\n/api/roles/from/{fromId}\napplication/json\nCopy\n{\n\"name\": \"string\"\n}\napplication/json\nExpand..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.66",
+            "title": "Replace permission list for a role",
+            "depth": 2,
+            "chunk_id": "chunk_302",
+            "page_start": 176,
+            "page_end": 177,
+            "word_count": 55,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.66.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_303",
+                "page_start": 177,
+                "page_end": 177,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.66.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_304",
+                    "page_start": 177,
+                    "page_end": 177,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.66.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_305",
+                    "page_start": 177,
+                    "page_end": 177,
+                    "word_count": 27,
+                    "summary": "200\nPUT\n/api/roles/{id}/permissions\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"entityName\"..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.67",
+            "title": "SAML configuration",
+            "depth": 2,
+            "chunk_id": "chunk_306",
+            "page_start": 178,
+            "page_end": 178,
+            "word_count": 60,
+            "summary": "Authentification configuration with SAML\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"n...",
+            "children": [
+              {
+                "number": "1.67.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_307",
+                "page_start": 179,
+                "page_end": 179,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.67.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_308",
+                    "page_start": 179,
+                    "page_end": 180,
+                    "word_count": 82,
+                    "summary": "200\nGET\n/api/saml-configuration\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"enabled\": true,\n\"pr..."
+                  }
+                ]
+              },
+              {
+                "number": "1.67.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_309",
+                "page_start": 180,
+                "page_end": 180,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.67.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_310",
+                    "page_start": 180,
+                    "page_end": 181,
+                    "word_count": 10,
+                    "summary": "x-api-key\nrequired\nenabled\nproviderLoginUrl\nsignatureCertificate\nactivateCreatedUsers\nallowedGroups\n..."
+                  },
+                  {
+                    "number": "1.67.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_311",
+                    "page_start": 181,
+                    "page_end": 182,
+                    "word_count": 75,
+                    "summary": "200\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"enabled\": true,\n\"providerLoginUrl\": \"string\",\n\"..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.68",
+            "title": "Generates SAML certificate",
+            "depth": 2,
+            "chunk_id": "chunk_312",
+            "page_start": 182,
+            "page_end": 182,
+            "word_count": 17,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.68.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_313",
+                "page_start": 182,
+                "page_end": 182,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.68.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_314",
+                    "page_start": 182,
+                    "page_end": 182,
+                    "word_count": 4,
+                    "summary": "x-api-key\nrequired\nGET\n/api/saml-configuration/generate-certificate"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.69",
+            "title": "Score",
+            "depth": 2,
+            "chunk_id": "chunk_315",
+            "page_start": 183,
+            "page_end": 183,
+            "word_count": 10,
+            "summary": "The directories' scores\n200\napplication/json\nCopy\n{\n\"encryptionCertificate\": \"string\"\n}"
+          },
+          {
+            "number": "1.70",
+            "title": "Get the directories score by profile",
+            "depth": 2,
+            "chunk_id": "chunk_316",
+            "page_start": 183,
+            "page_end": 183,
+            "word_count": 61,
+            "summary": "Required license type: ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nQUERY PARAMETERS\nA..."
+          },
+          {
+            "number": "1.71",
+            "title": "Syslog",
+            "depth": 2,
+            "chunk_id": "chunk_317",
+            "page_start": 184,
+            "page_end": 184,
+            "word_count": 10,
+            "summary": "A syslog alert\nstring\nDefault: put-your-api-key-here\nThe user's API key",
+            "children": [
+              {
+                "number": "1.71.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_318",
+                "page_start": 184,
+                "page_end": 184,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.71.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_319",
+                    "page_start": 184,
+                    "page_end": 185,
+                    "word_count": 43,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/profiles/{profileId}/scores\napplication/json\nExpand all\nCollapse all..."
+                  }
+                ]
+              },
+              {
+                "number": "1.71.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_320",
+                "page_start": 185,
+                "page_end": 185,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.71.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_321",
+                    "page_start": 185,
+                    "page_end": 187,
+                    "word_count": 135,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/syslogs\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n[..."
+                  }
+                ]
+              },
+              {
+                "number": "1.71.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_322",
+                "page_start": 187,
+                "page_end": 188,
+                "word_count": 31,
+                "summary": "201\n— 401 Unauthorized\nip\nrequired\nport\nrequired\nprotocol\nrequired\ntls\nrequired\ncriticityThreshold\nr...",
+                "children": [
+                  {
+                    "number": "1.71.3.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_323",
+                    "page_start": 188,
+                    "page_end": 188,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.71.3.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_324",
+                    "page_start": 188,
+                    "page_end": 190,
+                    "word_count": 128,
+                    "summary": "201\nPOST\n/api/syslogs\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"ip\": \"string\",\n\"port\": 0,..."
+                  }
+                ]
+              },
+              {
+                "number": "1.71.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_325",
+                "page_start": 190,
+                "page_end": 190,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.71.4.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_326",
+                    "page_start": 190,
+                    "page_end": 192,
+                    "word_count": 140,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/syslogs/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0..."
+                  }
+                ]
+              },
+              {
+                "number": "1.71.5",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_327",
+                "page_start": 192,
+                "page_end": 192,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.71.5.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_328",
+                    "page_start": 192,
+                    "page_end": 192,
+                    "word_count": 16,
+                    "summary": "Payload\ntls\ncriticityThreshold\ndescription\nfilterExpression\ninputType\ndirectories\ncheckers\nprofiles\n..."
+                  },
+                  {
+                    "number": "1.71.5.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_329",
+                    "page_start": 193,
+                    "page_end": 194,
+                    "word_count": 129,
+                    "summary": "200\nExpand all\nCollapse all\nCopy\n{\n\"ip\": \"string\",\n\"port\": 0,\n\"protocol\": \"UDP\",\n\"tls\": true,\n\"criti..."
+                  }
+                ]
+              },
+              {
+                "number": "1.71.6",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_330",
+                "page_start": 194,
+                "page_end": 195,
+                "word_count": 20,
+                "summary": "204\nid\nrequired\nx-api-key\nrequired\nRESPONSE SCHEMA:\napplication/json\nobject or null\nsyslog\n— 401 Una...",
+                "children": [
+                  {
+                    "number": "1.71.6.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_331",
+                    "page_start": 195,
+                    "page_end": 195,
+                    "word_count": 7,
+                    "summary": "204\nDELETE\n/api/syslogs/{id}\napplication/json\nCopy\n{ }"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.72",
+            "title": "Send a test syslog notification by id",
+            "depth": 2,
+            "chunk_id": "chunk_332",
+            "page_start": 195,
+            "page_end": 195,
+            "word_count": 27,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.72.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_333",
+                "page_start": 196,
+                "page_end": 196,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.72.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_334",
+                    "page_start": 196,
+                    "page_end": 196,
+                    "word_count": 6,
+                    "summary": "200\nGET\n/api/syslogs/test-message/{id}\napplication/json\nCopy\nnull"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.73",
+            "title": "Send a test syslog notification",
+            "depth": 2,
+            "chunk_id": "chunk_335",
+            "page_start": 196,
+            "page_end": 197,
+            "word_count": 64,
+            "summary": "Required license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault:...",
+            "children": [
+              {
+                "number": "1.73.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_336",
+                "page_start": 197,
+                "page_end": 197,
+                "word_count": 31,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\nip\nrequired\nport\nrequired\nprotocol\nrequired\ntls\nr..."
+              }
+            ]
+          },
+          {
+            "number": "1.74",
+            "title": "Topology",
+            "depth": 2,
+            "chunk_id": "chunk_337",
+            "page_start": 198,
+            "page_end": 198,
+            "word_count": 11,
+            "summary": "A graph to represent the trust relationships between different Active Directories",
+            "children": [
+              {
+                "number": "1.74.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_338",
+                "page_start": 198,
+                "page_end": 198,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "1.74.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_339",
+                "page_start": 198,
+                "page_end": 199,
+                "word_count": 65,
+                "summary": "200\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"ip\": \"string\",\n\"port\": 0,\n\"protocol\": \"UDP\",\n\"t..."
+              },
+              {
+                "number": "1.74.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_340",
+                "page_start": 199,
+                "page_end": 199,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.74.3.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_341",
+                    "page_start": 199,
+                    "page_end": 199,
+                    "word_count": 15,
+                    "summary": "200\nprofileId\nrequired\nx-api-key\nrequired\nGET\n/api/profiles/{profileId}/topology\napplication/json\nEx..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.75",
+            "title": "User",
+            "depth": 2,
+            "chunk_id": "chunk_342",
+            "page_start": 200,
+            "page_end": 200,
+            "word_count": 51,
+            "summary": "A Tenable."
+          },
+          {
+            "number": "1.76",
+            "title": "Get all users",
+            "depth": 2,
+            "chunk_id": "chunk_343",
+            "page_start": 200,
+            "page_end": 201,
+            "word_count": 15,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.76.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_344",
+                "page_start": 201,
+                "page_end": 201,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.76.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_345",
+                    "page_start": 201,
+                    "page_end": 203,
+                    "word_count": 107,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/users\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n[\n-..."
+                  }
+                ]
+              },
+              {
+                "number": "1.76.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_346",
+                "page_start": 203,
+                "page_end": 203,
+                "word_count": 9,
+                "summary": "201\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.76.2.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_347",
+                    "page_start": 203,
+                    "page_end": 203,
+                    "word_count": 16,
+                    "summary": "Payload\npassword\nrequired\ndepartment\nbiography\nactive\nPOST\n/api/users\napplication/json\nExpand all\nCo..."
+                  },
+                  {
+                    "number": "1.76.2.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_348",
+                    "page_start": 204,
+                    "page_end": 204,
+                    "word_count": 58,
+                    "summary": "201\n[\n- {\n\"surname\": \"string\",\n\"name\": \"string\",\n\"email\": \"string\",\n\"password\": \"^(?=\\\\d)(?=a)(?=A)(?=\\\\W)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.77",
+            "title": "Get a user's information",
+            "depth": 2,
+            "chunk_id": "chunk_349",
+            "page_start": 204,
+            "page_end": 205,
+            "word_count": 17,
+            "summary": "Content type\nRequired license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: pu...",
+            "children": [
+              {
+                "number": "1.77.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_350",
+                "page_start": 205,
+                "page_end": 205,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.77.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_351",
+                    "page_start": 205,
+                    "page_end": 206,
+                    "word_count": 100,
+                    "summary": "200\nx-api-key\nrequired\nGET\n/api/users/whoami\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0..."
+                  }
+                ]
+              },
+              {
+                "number": "1.77.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_352",
+                "page_start": 207,
+                "page_end": 207,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.77.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_353",
+                    "page_start": 207,
+                    "page_end": 208,
+                    "word_count": 96,
+                    "summary": "200\nGET\n/api/users/{id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 0,\n\"surname\": \"string\"..."
+                  }
+                ]
+              },
+              {
+                "number": "1.77.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_354",
+                "page_start": 208,
+                "page_end": 209,
+                "word_count": 21,
+                "summary": "id\nrequired\nx-api-key\nrequired\nsurname\nname\npassword\nemail\ndepartment\nbiography\nactive\nlockedOut\n200...",
+                "children": [
+                  {
+                    "number": "1.77.3.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_355",
+                    "page_start": 209,
+                    "page_end": 209,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.77.3.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_356",
+                    "page_start": 209,
+                    "page_end": 210,
+                    "word_count": 84,
+                    "summary": "200\nPATCH\n/api/users/{id}\napplication/json\nCopy\n{\n\"surname\": \"string\",\n\"name\": \"string\",\n\"password\": \"^(?=\\\\d)(?=a)(?=A)(?=\\\\W)."
+                  }
+                ]
+              },
+              {
+                "number": "1.77.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_357",
+                "page_start": 210,
+                "page_end": 210,
+                "word_count": 13,
+                "summary": "204\n— 401 Unauthorized\n— 500 Internal server error\nid\nrequired\nx-api-key\nrequired",
+                "children": [
+                  {
+                    "number": "1.77.4.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_358",
+                    "page_start": 211,
+                    "page_end": 211,
+                    "word_count": 7,
+                    "summary": "204\nDELETE\n/api/users/{id}\napplication/json\nCopy\n{ }"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.78",
+            "title": "Update a user's password",
+            "depth": 2,
+            "chunk_id": "chunk_359",
+            "page_start": 211,
+            "page_end": 211,
+            "word_count": 68,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.78.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_360",
+                "page_start": 212,
+                "page_end": 212,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.78.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_361",
+                    "page_start": 212,
+                    "page_end": 212,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.78.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_362",
+                    "page_start": 212,
+                    "page_end": 212,
+                    "word_count": 14,
+                    "summary": "200\nPATCH\n/api/users/password\napplication/json\nCopy\n{\n\"oldPassword\": \"^(?=\\\\d)(?=a)(?=A)(?=\\\\W)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.79",
+            "title": "Logs in a user",
+            "depth": 2,
+            "chunk_id": "chunk_363",
+            "page_start": 212,
+            "page_end": 213,
+            "word_count": 17,
+            "summary": "Required license type: none\nContent type\nContent type\nREQUEST BODY SCHEMA:\napplication/json\nrequired...",
+            "children": [
+              {
+                "number": "1.79.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_364",
+                "page_start": 213,
+                "page_end": 213,
+                "word_count": 6,
+                "summary": "200\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.79.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_365",
+                    "page_start": 213,
+                    "page_end": 213,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.79.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_366",
+                    "page_start": 213,
+                    "page_end": 214,
+                    "word_count": 27,
+                    "summary": "200\npassword\nrequired\nemail\nrequired\nPOST\n/api/login\napplication/json\nCopy\n{\n\"password\": \"string\",\n\"..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.80",
+            "title": "Logs out a user",
+            "depth": 2,
+            "chunk_id": "chunk_367",
+            "page_start": 214,
+            "page_end": 214,
+            "word_count": 15,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-ke...",
+            "children": [
+              {
+                "number": "1.80.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_368",
+                "page_start": 214,
+                "page_end": 214,
+                "word_count": 16,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nany\nEnum: \"null\"\n\"undefined\"\n— 401 Unauthorized\n— 500 Internal...",
+                "children": [
+                  {
+                    "number": "1.80.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_369",
+                    "page_start": 214,
+                    "page_end": 215,
+                    "word_count": 8,
+                    "summary": "x-api-key\nrequired\nPOST\n/api/logout\n204\napplication/json\nCopy\n\"null\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.81",
+            "title": "Replace role list for a user",
+            "depth": 2,
+            "chunk_id": "chunk_370",
+            "page_start": 215,
+            "page_end": 215,
+            "word_count": 31,
+            "summary": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nHEADER PARAMETERS...",
+            "children": [
+              {
+                "number": "1.81.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_371",
+                "page_start": 215,
+                "page_end": 215,
+                "word_count": 12,
+                "summary": "200\n— 401 Unauthorized\nid\nrequired\nx-api-key\nrequired\nroles\nrequired\nContent type"
+              }
+            ]
+          },
+          {
+            "number": "1.82",
+            "title": "Widget",
+            "depth": 2,
+            "chunk_id": "chunk_372",
+            "page_start": 216,
+            "page_end": 216,
+            "word_count": 5,
+            "summary": "— 500 Internal server error",
+            "children": [
+              {
+                "number": "1.82.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_373",
+                "page_start": 216,
+                "page_end": 216,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "1.82.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_374",
+                "page_start": 216,
+                "page_end": 217,
+                "word_count": 38,
+                "summary": "200\nPUT\n/api/users/{id}/roles\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"roles\":\n-\n[\n0\n]\n}\napp..."
+              }
+            ]
+          },
+          {
+            "number": "1.83",
+            "title": "Get all widgets by dashboard id",
+            "depth": 2,
+            "chunk_id": "chunk_375",
+            "page_start": 217,
+            "page_end": 217,
+            "word_count": 21,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.83.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_376",
+                "page_start": 217,
+                "page_end": 217,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.83.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_377",
+                    "page_start": 217,
+                    "page_end": 218,
+                    "word_count": 34,
+                    "summary": "200\ndashboardId\nrequired\nx-api-key\nrequired\nGET\n/api/dashboards/{dashboardId}/widgets\napplication/js..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.84",
+            "title": "Create a new widget in dashboard by dashboard id",
+            "depth": 2,
+            "chunk_id": "chunk_378",
+            "page_start": 218,
+            "page_end": 219,
+            "word_count": 53,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nH...",
+            "children": [
+              {
+                "number": "1.84.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_379",
+                "page_start": 219,
+                "page_end": 219,
+                "word_count": 9,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error",
+                "children": [
+                  {
+                    "number": "1.84.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_380",
+                    "page_start": 219,
+                    "page_end": 219,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.84.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_381",
+                    "page_start": 219,
+                    "page_end": 220,
+                    "word_count": 69,
+                    "summary": "200\ntitle\nrequired\nPOST\n/api/dashboards/{dashboardId}/widgets\napplication/json\nCopy\n{\n\"posX\": 0,\n\"po..."
+                  }
+                ]
+              },
+              {
+                "number": "1.84.2",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_382",
+                "page_start": 220,
+                "page_end": 221,
+                "word_count": 27,
+                "summary": "200\nRESPONSE SCHEMA:\napplication/json\nnumber\ndashboardId\nrequired\nid\nrequired\nx-api-key\nrequired\nid\n...",
+                "children": [
+                  {
+                    "number": "1.84.2.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_383",
+                    "page_start": 221,
+                    "page_end": 222,
+                    "word_count": 86,
+                    "summary": "200\nposX\nrequired\nposY\nrequired\nwidth\nrequired\nheight\nrequired\ndashboardId\nrequired\ntitle\nGET\n/api/d..."
+                  }
+                ]
+              },
+              {
+                "number": "1.84.3",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_384",
+                "page_start": 222,
+                "page_end": 223,
+                "word_count": 21,
+                "summary": "200\n— 401 Unauthorized\ndashboardId\nrequired\nid\nrequired\nx-api-key\nrequired\nid\nposX\nposY\nwidth\nheight...",
+                "children": [
+                  {
+                    "number": "1.84.3.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_385",
+                    "page_start": 223,
+                    "page_end": 223,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.84.3.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_386",
+                    "page_start": 223,
+                    "page_end": 224,
+                    "word_count": 67,
+                    "summary": "200\nPATCH\n/api/dashboards/{dashboardId}/widgets/{id}\napplication/json\nCopy\n{\n\"id\": 2147483647,\n\"posX..."
+                  }
+                ]
+              },
+              {
+                "number": "1.84.4",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_387",
+                "page_start": 224,
+                "page_end": 225,
+                "word_count": 21,
+                "summary": "204\nRESPONSE SCHEMA:\napplication/json\nobject or null\n— 401 Unauthorized\nid\nrequired\ndashboardId\nrequ...",
+                "children": [
+                  {
+                    "number": "1.84.4.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_388",
+                    "page_start": 225,
+                    "page_end": 225,
+                    "word_count": 7,
+                    "summary": "204\nDELETE\n/api/dashboards/{dashboardId}/widgets/{id}\napplication/json\nCopy\n{ }"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.85",
+            "title": "Get a widget's options by id",
+            "depth": 2,
+            "chunk_id": "chunk_389",
+            "page_start": 225,
+            "page_end": 225,
+            "word_count": 23,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\ns...",
+            "children": [
+              {
+                "number": "1.85.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_390",
+                "page_start": 225,
+                "page_end": 226,
+                "word_count": 17,
+                "summary": "dashboardId\nrequired\nid\nrequired\nx-api-key\nrequired\nContent type\n200\n— 401 Unauthorized\n— 500 Intern...",
+                "children": [
+                  {
+                    "number": "1.85.1.1",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_391",
+                    "page_start": 226,
+                    "page_end": 226,
+                    "word_count": 45,
+                    "summary": "200\nGET\n/api/dashboards/{dashboardId}/widgets/{id}/options\napplication/json\nExpand all\nCollapse all\n..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "1.86",
+            "title": "Define widget's options by id",
+            "depth": 2,
+            "chunk_id": "chunk_392",
+            "page_start": 227,
+            "page_end": 227,
+            "word_count": 44,
+            "summary": "Required license type: ioe, ioaPreview, ioa\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\ns...",
+            "children": [
+              {
+                "number": "1.86.1",
+                "title": "Responses",
+                "depth": 3,
+                "chunk_id": "chunk_393",
+                "page_start": 227,
+                "page_end": 227,
+                "word_count": 19,
+                "summary": "200\n— 401 Unauthorized\n— 500 Internal server error\ndashboardId\nrequired\nid\nrequired\nx-api-key\nrequir...",
+                "children": [
+                  {
+                    "number": "1.86.1.1",
+                    "title": "Request samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_394",
+                    "page_start": 228,
+                    "page_end": 228,
+                    "word_count": 1,
+                    "summary": "Payload"
+                  },
+                  {
+                    "number": "1.86.1.2",
+                    "title": "Response samples",
+                    "depth": 4,
+                    "chunk_id": "chunk_395",
+                    "page_start": 228,
+                    "page_end": 228,
+                    "word_count": 51,
+                    "summary": "200\nPUT\n/api/dashboards/{dashboardId}/widgets/{id}/options\napplication/json\nExpand all\nCollapse all\n..."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 395,
+    "max_depth": 4
+  }
+}

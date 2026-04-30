@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_178",
+  "section_number": "1.9.5.2",
+  "header": "Configure Revocation Status Verification of Certificates",
+  "content": "The firewall and Panorama use certificates to authenticate users and devices for such applications\nas Authentication Portal, GlobalProtect, site-to-site IPSec VPN, and web interface access to the\nfirewall/Panorama. To improve security, it is a best practice to configure the firewall or Panorama\nto verify the revocation status of certificates that it uses for device/user authentication.\nSTEP 1 |\nConfigure a Certificate Profile for each application.\nAssign one or more root CA certificates to the profile and select how the firewall verifies\ncertificate revocation status.\nFor details on the certificates that various applications use, see Keys and Certificates\nSTEP 2 |\nAssign the certificate profiles to the relevant applications.\nThe steps to assign a certificate profile depend on the application that requires it.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 323,
+      "end": 323
+    },
+    "content_stats": {
+      "char_count": 820,
+      "word_count": 122
+    },
+    "hierarchy": {
+      "parent": "Set Up Verification for Certificate Revocation Status",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_008",
+  "section_number": "5.1",
+  "header": "Responses",
+  "content": "200 Returned if the list of downloadable files for the specified product was retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nobject (Releases)\nArray of objects (SigningKey)\n404 Returned if the specified page cannot be found.\nRESPONSE SCHEMA:\napplication/json\nboolean\nIndicates whether the server successfully found the requested item or\nnot.\ninteger\nThe HTTP response status code of request.\nstring\nThe error that corresponds to the HTTP response status code.\nstring\nAdditional details about the error.\nobject\n500 Returned if an internal error occurred while processing the request.\nRESPONSE SCHEMA:\napplication/json\nboolean\nIndicates whether the server successfully processed the request or not.\nslug\nrequired\nreleases\nsigning_keys\nsuccess\nstatusCode\nerror\nmessage\ntrace\nsuccess\ninteger\nThe HTTP response status code of request.\nstring\nThe error that corresponds to the HTTP response status code.\nstring\nAdditional details about the error.\nobject",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 4,
+      "end": 5
+    },
+    "content_stats": {
+      "char_count": 957,
+      "word_count": 135
+    },
+    "hierarchy": {
+      "parent": "List downloadable files for a product",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

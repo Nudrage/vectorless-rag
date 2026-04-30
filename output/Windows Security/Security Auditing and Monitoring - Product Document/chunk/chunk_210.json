@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_210",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4957(F): Windows Firewall did not apply the following rule.\n\nThis event can be a sign of software issues, Windows Firewall registry errors or corruption, or Group Policy setting misconfigurations. We recommend monitoring this event and\ninvestigating the reason for the condition. Typically this event indicates configuration issues, not security issues.\n4958(F): Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer.\nWindows Firewall with Advanced Security processed a rule that contains parameters that cannot be resolved on the local computer. The rule is therefore not enforceable on the computer\nand so is excluded from the runtime state of the firewall. This is not necessarily an error. Examine the rule for applicability on the computers to which it was applied.\nThere is no example of this event in this document.\nEvent Schema:\nWindows Firewall did not apply the following rule because the rule referred to items not configured on this computer:\nRule Information:\n%tID:%t%1\n%tName:%t%2\nError Information:\n%tError:%t%3\n%tReason:%t%4\n© 2016 Microsoft. All rights reserved.\n633\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 633,
+      "end": 634
+    },
+    "content_stats": {
+      "char_count": 1255,
+      "word_count": 191
+    },
+    "hierarchy": {
+      "parent": "4952(F): Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the",
+      "children": []
+    }
+  }
+}

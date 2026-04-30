@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_415",
+  "section_number": "1.12.5.4.1",
+  "header": "Configure WinRM over HTTPS with Basic Authentication",
+  "content": "When you configure WinRM to use HTTPS with basic authentication, the firewall transfers the\ncredentials for the service account in a secure tunnel using SSL.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n744\n©2025 Palo Alto Networks, Inc.\nUser-ID\nSTEP 1 |\nConfigure the service account with Remote Management User and CIMV2 privileges for the\nserver you want to monitor.\nSTEP 2 |\nOn the Windows server you are monitoring, obtain the thumbprint from the certificate for\nthe Windows server to use with WinRM and enable WinRM.\nEnsure that you use an account with administrator privileges to configure WinRM on\nthe server you want to monitor. As a best practice for security, this account should not\nbe the same account as the service account in Step 1.\n1.\nVerify the certificate is installed in the Local Computer certificate store (Certificates\n(Local Computer) > Personal > Certificates).\nIf you do not see the Local Computer certificate store, launch the Microsoft\nManagement Console (Start > Run > MMC) and add the Certificates snap-in (File > Add/\nRemove Snap-in > Certificates > Add > Computer account > Next > Finish).\n2.\nOpen the certificate and select General > Details > Show: <All>.\n3.\nSelect the Thumbprint and copy it.\n4.\nTo enable the firewall to connect to the Windows server using WinRM, enter the\nfollowing command: winrm quickconfig.\n5.\nEnter y to confirm the changes and then confirm the output displays WinRM service\nstarted.\nIf WinRM is enabled, the output displays WinRM service is already running\non this machine. You will be prompted to confirm any additional required\nconfiguration changes.\n6.\nTo verify that WinRM is communicating using HTTPS, enter the following command:\nwinrm enumerate winrm/config/listener and confirm that the output displays\nTransport = HTTPS.\nBy default, WinRM/HTTPS uses port 5986.\n7.\nFrom the Windows server command prompt, enter the following command:\nwinrm create winrm/config/Listener?Address=*+Transport=HTTPS\n@{Hostname=”<hostname>\";CertificateThumbprint=”Certificate\nThumbprint\"}, where hostname is the hostname of the Windows server and Certificate\nThumbprint is the value you copied from the certificate.\nUse the command prompt (not Powershell) and remove any spaces in the\nCertificate Thumbprint to ensure that WinRM can validate the certificate.\n8.\nFrom the Windows server command prompt, enter the following command:\nc:\\> winrm set winrm/config/client/auth @{Basic=\"true\"}\n9.\nEnter the following command: winrm get winrm/config/service/Auth and\nconfirm that Basic = true.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n745\n©2025 Palo Alto Networks, Inc.\nUser-ID\nSTEP 3 |\nEnable Basic Authentication between the PAN-OS integrated User-ID agent and the\nmonitored servers.\n1.\nSelect Device > User Identification > User Mapping > Palo Alto Networks User-ID\nAgent Setup > Server Monitor Account.\n2.\nIn domain\\username format, enter the User Name for the service account that the\nUser-ID agent will use to monitor servers.\n3.\nEnter the Domain’s DNS Name of the server monitor account.\n4.\nEnter the Password and Confirm Password for the service account.\n5.\nClick OK\nSTEP 4 |\nConfigure server monitoring for the PAN-OS integrated User-ID agent.\n1.\nSelect the Microsoft server Type (Microsoft Active Directory or Microsoft Exchange).\n2.\nSelect Win-RM-HTTPS as the Transport Protocol to use Windows Remote Management\n(WinRM) over HTTPS to monitor the server security logs and session information.\n3.\nEnter the IP address or FQDN Network Address of the server.\nSTEP 5 |\nTo enable the PAN-OS integrated User-ID agent to communicate with the monitored servers\nusing WinRM-HTTPS, verify that you successfully imported the root certificate for the\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n746\n©2025 Palo Alto Networks, Inc.\nUser-ID\nservice certificates that the Windows server uses for WinRM on to the firewall and associate\nthe certificate with the User-ID Certificate Profile.\n1.\nSelect Device > User Identification > Connection Security.\n2.\nClick Edit.\n3.\nSelect the Windows server certificate to use for the User-ID Certificate Profile.\n4.\nClick OK.\nSTEP 6 |\nCommit your changes.\nSTEP 7 |\nVerify that the status of each monitored server is Connected (Device > User Identification >\nUser Mapping).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 744,
+      "end": 747
+    },
+    "content_stats": {
+      "char_count": 4234,
+      "word_count": 654
+    },
+    "hierarchy": {
+      "parent": "Configure Server Monitoring Using WinRM",
+      "children": []
+    }
+  }
+}

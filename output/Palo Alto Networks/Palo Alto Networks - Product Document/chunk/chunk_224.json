@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_224",
+  "section_number": "1.10.2.8",
+  "header": "Route-Based Redundancy",
+  "content": "In a Layer 3 interface deployment and active/active HA configuration, the firewalls are connected\nto routers, not switches. The firewalls use dynamic routing protocols to determine the best path\n(asymmetric route) and to load share between the HA pair. In such a scenario, no floating IP\naddresses are necessary. If a link, monitored path, or firewall fails, or if Bidirectional Forwarding\nDetection (BFD) detects a link failure, the routing protocol (RIP, OSPF, or BGP) handles the\nrerouting of traffic to the functioning firewall. You configure each firewall interface with a unique\nIP address. The IP addresses remain local to the firewall where they are configured; they do not\nmove between devices when a firewall fails. See Use Case: Configure Active/Active HA with\nRoute-Based Redundancy.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n393\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 393,
+      "end": 394
+    },
+    "content_stats": {
+      "char_count": 889,
+      "word_count": 137
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

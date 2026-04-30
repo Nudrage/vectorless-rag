@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_260",
+  "section_number": "12.7",
+  "header": "Assign or remove profile",
+  "content": "Assigns or removes agents from a profile by creating an asynchronous bulk operation task.\nNote: You can create an agent profile using the Create profile endpoint.\nContent type\nContent type\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nOne of\nAssign agents to a profile\nRemove agents from a profile\nstring <uuid>\nThe unique identifier (UUID) of the agent profile to assign the agents to.\nobject\nSpecifies the criteria you wish to filter agents on. The criteria is used to\nnarrow down the list of agents to perform the specified action on.\nArray of String for Agent UUIDs (OPTION 1) (string) or Integer for Agent IDs\n(OPTION 2) (integer)\nAn array of agent IDs or agent UUIDs to add to the criteria filter.\nArray of String for Agent UUIDs (OPTION 1) (string) or Integer for Agent IDs\n(OPTION 2) (integer)\nAn array of agent IDs or agent UUIDs to exclude from the criteria filter.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 247,
+      "end": 248
+    },
+    "content_stats": {
+      "char_count": 942,
+      "word_count": 161
+    },
+    "hierarchy": {
+      "parent": "Agent Tasks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

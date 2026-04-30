@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_023",
+  "section_number": "1.18.11",
+  "header": "Audit Log Events",
+  "content": "Audit Log Events are generated when a user action is performed on the system. Audit Log Event are\nsequential and can be used to create an audit trail of user activity on your system.\nThe URL to retrieve audit log events is\nhttps://<vectra_portal_url>/api/v3.4/events/audits and uses OAuth2 authentication.\nThe following table lists the top-level fields and descriptions present in the response for a bulk GET\nrequest to the v3.4 API for Audit Log Events.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nevents\nA list of audit log events\nlist\nEvent fields are described in the\ntable below\nremaining_count\nThe number of remaining\nevents\ninteger\nnext_checkpoint\nThe next checkpoint value\nto use to retrieve any\nremaining events\ninteger\nExample: \"next_checkpoint\": 101\nUse with the ‘from’ query\nparameter described below\nThe following table lists the fields and descriptions present in an Audit Log Event.\n© July 2024 Vectra AI, Inc. | 37\nElement\nDescription\nType\nNotes\nid\nAutoincrementing ID\nbigint\nused for\ncheckpoints\nuser_id\nUser ID of the user account associated with\nthe event.\ninteger\nusername\nUsername of the account associated with the\nevent, at the time of the event\nstring\nuser_type\nUser type, e.g. “LOCAL”, “SAML”,\n“API_CLIENT”\nstring / enum\napi_client_id\nAPI client ID, if an event was caused by an\nAPI client interaction\nstring\nrole\nRole the user/API client had at the time of the\nevent\nstring\nversion\nVectra UI version at the time of the event\nstring\nsource_ip\nIP address of the user/API client\nstring\nevent_timestamp\nEvent timestamp (UTC) in ISO-8601 format\ntimestamp\nExample: 2022-\n03-01T13:00:00Z\nmessage\nMessage describing the event.\nstring\nresult_status\n\"success\" or \"failure\"\nstring / enum\nevent_data\nJSON data specific to the event type\nstring / JSON\nFor example,\nwhich tags were\nadded/removed\nfor a tagging\nevent\nevent_object\nThe object type the audited action is being\nperformed on\nstring / enum\nFor example user,\nfilter, or account\nevent_action\nWhat type of action is being audited\nstring / enum\nFor example,\ncreation or\ndeletion\nThe available query parameters to filter for Audit Log Events are listed below.\nQUERY PARAMETER\nDESCRIPTION\nevent_timestamp_gte\nStart date/time for audit, inclusive, formatted in ISO-8601\nevent_timestamp_lte\nEnd date/time for audit, inclusive, formatted in ISO-8601\nfrom\nUsed to provide a checkpoint value for filtering Audit Events\nuser_id\nAudit events associated with a particular user_id\nevent_object\nAudit events on a particular object (e.g. account, user, host,\netc.)\nevent_action\nAudit events regarding a particular action (e.g. delete, create,\netc.)\n© July 2024 Vectra AI, Inc. | 38\nQUERY PARAMETER\nDESCRIPTION\nlimit\nUsed to specify the batch size returned by the response from\nthe /events/audits endpoint. By default 500 events will be\nreturned if a limit is not specified. A maximum of 1,000 events\nwill be returned per request.\nordering\nOrders events by “event_timestamp”. The default sorts event\ntimestamps by ascending order. Events can be sorted in\ndescending order by prepending the query with “minus”\nsymbol.\nThe URL to retrieve accounts scoring events from the last checkpoint is\nhttps://<vectra_portal_url>/api/v3.4/events/audits?from=101",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 36,
+      "end": 38
+    },
+    "content_stats": {
+      "char_count": 3189,
+      "word_count": 488
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

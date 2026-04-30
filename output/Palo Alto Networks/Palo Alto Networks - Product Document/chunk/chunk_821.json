@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_821",
+  "section_number": "1.21.12.3",
+  "header": "DNS Server Profile",
+  "content": "To simplify configuration for a virtual system, a DNS server profile allows you to specify the\nvirtual system that is being configured, an inheritance source or the primary and secondary IP\naddresses for DNS servers, and a source interface and source address (service route) that will\nbe used in packets sent to the DNS server. The source interface determines the virtual router,\nwhich has a route table. The destination IP address is looked up in the route table of the virtual\nrouter where the source interface is assigned. It’s possible that the result of the destination IP\negress interface differs from the source interface. The packet would egress out of the destination\nIP egress interface determined by the route table lookup, but the source IP address would be the\naddress configured. The source address is used as the destination address in the reply from the\nDNS server.\nThe virtual system report and virtual system server profile send their queries to the DNS server\nspecified for the virtual system, if there is one. (The DNS server used is defined in Device >\nVirtual Systems > General > DNS Proxy.) If there is no DNS server specified for the virtual\nsystem, the DNS server specified for the firewall is queried.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1457\n©2025 Palo Alto Networks, Inc.\nNetworking\nYou Configure a DNS Server Profile for a virtual system only; it is not for a global Shared location.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1457,
+      "end": 1458
+    },
+    "content_stats": {
+      "char_count": 1417,
+      "word_count": 239
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

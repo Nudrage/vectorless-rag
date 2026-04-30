@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_903",
+  "section_number": "1.21.20.1.3",
+  "header": "BFD for Static Routes",
+  "content": "To use BFD on a static route, both the firewall and the peer at the opposite end of the static route\nmust support BFD sessions. A static route can have a BFD profile only if the Next Hop type is IP\nAddress.\nIf an interface is configured with more than one static route to a peer (the BFD session has the\nsame source IP address and same destination IP address), a single BFD session automatically\nhandles the multiple static routes. This behavior reduces BFD sessions. If the static routes have\ndifferent BFD profiles, the profile with the smallest Desired Minimum Tx Interval takes effect.\nIn a deployment where you want to configure BFD for a static route on a DHCP or PPPoE client\ninterface, you must perform two commits. Enabling BFD for a static route requires that the\nNext Hop type must be IP Address. But at the time of a DHCP or PPPoE interface commit, the\ninterface IP address and next hop IP address (default gateway) are unknown.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1542\n©2025 Palo Alto Networks, Inc.\nNetworking\nYou must first enable a DHCP or PPPoE client for the interface, perform a commit, and wait\nfor the DHCP or PPPoE server to send the firewall the client IP address and default gateway IP\naddress. Then you can configure the static route (using the default gateway address of the DHCP\nor PPPoE client as the next hop), enable BFD, and perform a second commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1542,
+      "end": 1543
+    },
+    "content_stats": {
+      "char_count": 1385,
+      "word_count": 246
+    },
+    "hierarchy": {
+      "parent": "BFD Overview",
+      "children": []
+    }
+  }
+}

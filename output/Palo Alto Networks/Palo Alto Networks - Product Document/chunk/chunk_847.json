@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_847",
+  "section_number": "1.21.15.6.4",
+  "header": "Configure Destination NAT with DNS Rewrite",
+  "content": "When you configure a destination NAT policy rule that performs static translation of IPv4\naddresses, you can also enable DNS Rewrite so that the firewall rewrites the IPv4 address in a\nDNS response based on the original destination IP address and translated destination IP address\nconfigured for the rule. The firewall performs NAT on the IPv4 address (the FQDN resolution) in\na DNS response (that matches the rule) before forwarding the response to the client; thus, the\nclient receives the appropriate address to reach the destination service.\nView the DNS rewrite use cases to understand DNS Rewrite and to help you determine whether\nto specify that the rewrite occur in the reverse or forward direction.\nYou cannot enable Bi-directional source address translation in the same NAT rule where\nyou enable DNS rewrite.\nSTEP 1 |\nCreate a destination NAT policy rule that specifies the firewall perform static translation of\nIPv4 addresses that match the rule, and also specifies the firewall rewrite IP addresses in\nDNS responses when that IPv4 address (from the A Record) matches the original destination\naddress in the NAT rule.\n1.\nSelect Policies > NAT and Add a NAT policy rule.\n2.\n(Optional) On the General tab, enter a descriptive Name for the rule.\n3.\nFor NAT Type, select ipv4.\n4.\nOn the Original Packet tab, Add a Destination Address.\nYou will also have to select a Source Zone or Any source zone, but DNS rewrite\noccurs at the global level; only the Destination Address on the Original Packet\ntab is matched. DNS Rewrite ignores all other fields on the Original Packet tab.\n5.\nOn the Translated Packet tab, for Destination Address Translation, select Translation\nType to be Static IP.\n6.\nSelect a Translated Address or enter a new address.\n7.\nEnable DNS Rewrite and select a Direction:\n• Select reverse (default) when the IP address in the DNS response requires the\nopposite translation that the NAT rule specifies. If the DNS response matches the\nTranslated Destination Address in the rule, translate the DNS response using the\nreverse translation that the rule uses. For example, if the rule translates IP address\n1.1.1.10 to 192.168.1.10, the firewall rewrites a DNS response of 192.168.1.10 to\n1.1.1.10.\n• Select forward when the IP address in the DNS response requires the same\ntranslation that the NAT rule specifies. If the DNS response matches the Original\nDestination Address in the rule, translate the DNS response using the same\ntranslation the rule uses. For example, if the rule translates IP address 1.1.1.10 to\n192.168.1.10, the firewall rewrites a DNS response of 1.1.1.10 to 192.168.1.10.\n8.\nClick OK.\nSTEP 2 |\nCommit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1495\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1495,
+      "end": 1496
+    },
+    "content_stats": {
+      "char_count": 2745,
+      "word_count": 452
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

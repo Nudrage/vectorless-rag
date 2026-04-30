@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_262",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Vulnerability Management successfully created the bulk operation task.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe UUID of the task.\nstring\nThe UUID of the container where the task is operating.\nstring\nEnum: \"NEW\"\n\"RUNNING\"\n\"COMPLETED\"\n\"FAILED\"\n\"STALE\"\nThe status of the task. Possible status values are:\nNEW —The task was created but has not yet started\nrunning.\nRUNNING —The task is in progress.\nCOMPLETED —The task is done.\nprofile_uuid\nrequired\ncriteria\nitems\nnot_items\ntask_id\ncontainer_uuid\nstatus\nFAILED —There was an error completing the task.\nSTALE —The task has not been updated in a long\ntime.\nstring\nAn informative, human-readable message about the state\nof the task.\ninteger\nStart time of the task in unix time milliseconds.\ninteger\nEnd time of the task in unix time milliseconds, if the task is\nfinished.\ninteger\nLast time progress was made on executing the task in unix\ntime milliseconds.\ninteger\nTotal amount of work which the task will attempt to\ncomplete.\ninteger\nTotal amount of work that the task has completed.\ninteger\ntotal_work_units_completed  divided by\ntotal_work_units .\n— 400 Returned if your request message contained an invalid parameter.\n— 403 Returned if you do not have permission to create or interact with a bulk operation task.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500 Returned if an error occurred while attempting to create or interact with the bulk operation.\nmessage\nstart_time\nend_time\nlast_update_time\ntotal_work_units\ntotal_work_units_completed\ncompletion_percentage\nPOST\n/scanners/null/agents/_bulk/assignToProfile",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 248,
+      "end": 249
+    },
+    "content_stats": {
+      "char_count": 1675,
+      "word_count": 253
+    },
+    "hierarchy": {
+      "parent": "Assign or remove profile",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

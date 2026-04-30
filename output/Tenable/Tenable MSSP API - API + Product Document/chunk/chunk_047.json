@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_047",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200\nReturned if the Tenable MSSP Platform successfully retrieved the list of child containers for the\nspecified user UUID.\nRESPONSE SCHEMA:\napplication/json\nArray [\nstring <uuid>\nThe UUID of the parent account.\nArray of strings\nAn array of child account UUIDs that you want to link with the parent\naccount.\n]\n— 404 Returned if the Tenable MSSP Platform could not find the specified child container.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\nuser_uuid\nrequired\nparent_uuid\naccount_uuids\n500 Returned if an internal error occurred in the Tenable MSSP Portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 33,
+      "end": 34
+    },
+    "content_stats": {
+      "char_count": 641,
+      "word_count": 105
+    },
+    "hierarchy": {
+      "parent": "List child containers",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

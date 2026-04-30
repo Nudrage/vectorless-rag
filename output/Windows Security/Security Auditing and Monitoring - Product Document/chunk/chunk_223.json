@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_223",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5447(S): A Windows Filtering Platform filter has been changed.\n\nThis event mainly used for Windows Filtering Platform troubleshooting and typically has little to no security relevance.\n6144(S): Security policy in the group policy objects has been applied successfully.\nEvent Description:\nThis event generates every time settings from the “Security Settings” section in the group policy object are applied\nsuccessfully to a computer, without any errors. This event generates on the target computer itself.\nIt is a routine event which shows you the list of Group Policy Objects that include “Security Settings” policies, and that were\napplied to the computer.\nThis event generates every time Group Policy is applied to the computer.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>6144</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13573</Task>\n<Opcode>0</Opcode>\n© 2016 Microsoft. All rights reserved.\n651\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-07T22:59:32.280498500Z\" />\n<EventRecordID>1055041</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"524\" ThreadID=\"712\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"ErrorCode\">0</Data>\n<Data Name=\"GPOList\">{8AB9311A-E5FB-4A5A-8FB7-027D1B877D6D} DC Main Policy</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nReturn Code [Type = UInt32]: always has “0” value for this event.\nGPO List [Type = UnicodeString]: the list of Group Policy Objects that include “Security Settings” policies, and that were applied to the computer. The format of the list item is:\n“GROUP_POLICY_GUID\nGROUP_POLICY_NAME”.\nYou can find specific GROUP_POLICY_GUID using Get-GPO PowerShell cmdlet with “–Name GROUP_POLICY_NAME” parameter. Row “Id” is the GUID of the Group Policy:\nGUID is an acronym for 'Globally Unique Identifier'. It is a 128-bit integer number used to identify resources, activities or instances.\n© 2016 Microsoft. All rights reserved.\n652",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 651,
+      "end": 653
+    },
+    "content_stats": {
+      "char_count": 2344,
+      "word_count": 284
+    },
+    "hierarchy": {
+      "parent": "Audit Other Policy Change Events",
+      "children": []
+    }
+  }
+}

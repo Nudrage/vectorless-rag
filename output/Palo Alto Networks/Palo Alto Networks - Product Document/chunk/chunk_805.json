@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_805",
+  "section_number": "1.21.11.5",
+  "header": "DHCP Options",
+  "content": "The history of DHCP and DHCP options traces back to the Bootstrap Protocol (BOOTP). BOOTP\nwas used by a host to configure itself dynamically during its booting procedure. A host could\nreceive an IP address and a file from which to download a boot program from a server, along with\nthe server’s address and the address of an Internet gateway.\nIncluded in the BOOTP packet was a vendor information field, which could contain a number of\ntagged fields containing various types of information, such as the subnet mask, the BOOTP file\nsize, and many other values. RFC 1497 describes the BOOTP Vendor Information Extensions.\nDHCP replaces BOOTP; BOOTP is not supported on the firewall.\nThese extensions eventually expanded with the use of DHCP and DHCP host configuration\nparameters, also known as options. Similar to vendor extensions, DHCP options are tagged data\nitems that provide information to a DHCP client. The options are sent in a variable-length field at\nthe end of a DHCP message. For example, the DHCP Message Type is option 53, and a value of 1\nindicates the DHCPDISCOVER message. DHCP options are defined in RFC 2132, DHCP Options\nand BOOTP Vendor Extensions.\nA DHCP client can negotiate with the server, limiting the server to send only those options that\nthe client requests.\n• Predefined DHCP Options\n• Multiple Values for a DHCP Option\n• DHCP Options 43, 55, and 60 and Other Customized Options",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1441,
+      "end": 1441
+    },
+    "content_stats": {
+      "char_count": 1407,
+      "word_count": 237
+    },
+    "hierarchy": {
+      "parent": "DHCP",
+      "children": [
+        "Predefined DHCP Options",
+        "Multiple Values for a DHCP Option",
+        "DHCP Options 43, 55, and 60 and Other Customized Options"
+      ]
+    }
+  }
+}

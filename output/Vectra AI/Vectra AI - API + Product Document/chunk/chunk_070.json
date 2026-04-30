@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_070",
+  "section_number": "1.18.19",
+  "header": "Health – External Connectors Details",
+  "content": "GET\nURL: https://<vectra_portal_url>/api/v3.4/health/external_connectors/details\nHeaders:\n© July 2024 Vectra AI, Inc. | 118\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"results\": {\n\"active_directory\": {\n\"connection_status\": \"enabled\",\n\"details\": {\n\"profiles\": {\n\"3a27a16e\": {\n\"uriConnectionStatus\": {\n\"192.168.49.204\": {\n\"message\": \"Connected\",\n\"severity\": \"misc-yep\"\n}\n},\n\"metrics\": {\n\"numADAccountsFound\": 87,\n\"numADMetricOverlap\": 0\n},\n\"connectionStatus\": {\n\"message\": \"Connected\",\n\"severity\": \"misc-yep\"\n}\n}\n},\n\"metrics\": {\n\"numKerberosLast30Days\": 10,\n\"numADMetricOverlap\": \"0\"\n},\n\"numAdServersConnected\": 1,\n\"numAdServersDisconnected\": 0,\n\"numAdServersDisabled\": 0,\n\"numUrisDisconnected\": 0\n}\n},\n\"azure_ad_lockdown\": {\n\"connection_status\": \"enabled\",\n\"details\": {\n\"lockdownManualEnabled\": true,\n\"lockdownAutoEnabled\": false,\n\"lockdownEnabled\": true,\n\"lockdownAutoType\": \"lock\",\n\"lockdownAutoUrgency\": 100,\n\"consentState\": \"CONSENT_AWAITING\"\n}\n},\n\"aws\": {\n© July 2024 Vectra AI, Inc. | 119\n\"connection_status\": \"disabled\"\n},\n\"azure\": {\n\"connection_status\": \"disabled\"\n},\n\"google_cloud\": {\n\"connection_status\": \"disabled\"\n},\n\"reverse_lookup_dns\": {\n\"connection_status\": \"disabled\"\n},\n\"siem\": {\n\"connection_status\": \"disabled\"\n},\n\"vcenter\": {\n\"connection_status\": \"enabled\"\n},\n\"windows_event_log_ingestion\": {\n\"connection_status\": \"enabled\",\n\"details\": {\n\"status\": \"Not connected\",\n\"severity\": \"misc-alert\"\n}\n},\n\"zscaler_private_access\": {\n\"connection_status\": \"disabled\"\n}\n},\n\"updated_at\": \"2024-07-24T21:56:41Z\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 117,
+      "end": 119
+    },
+    "content_stats": {
+      "char_count": 1527,
+      "word_count": 152
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

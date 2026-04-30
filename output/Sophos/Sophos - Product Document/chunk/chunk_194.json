@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_194",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Syslog field\nname\nName\nLog viewer -\nDetail view field\nname\nData\ntype\nLength Format/Description Possible\nvalues\nNotes/Examples\nlog_type\nN/A\nlog_type\nString\nContent\nFiltering\nlog_component\nN/A\nlog_component\nString\nWeb\nContent\nPolicy\nlog_subtype\nN/A\nlog_subtype\nString\nThe action taken for\nthe logged\ntransaction\nAlert\nseverity\nN/A\nN/A\nString\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 221\nuser_name\nUsername\nuser\nString\n384\nThe end-user\nassociated with the\nitem being scanned\nuserid\nString\nuser_group\nUser group\nString\nsrc_ip\nN/A\nsrc_ip\nThe IP address of the\nuser trying to\ndownload/upload\ncontent\ntransaction_id\nTransaction\nID\ntransaction_id\nString\n64\nIndicates the\ntransaction_id of the\nAV scan. The same\ntransaction_id\nappears in the Web\nFilter logs allowing\nthe admin to view the\nWeb policy decision\nassociated with a\nparticular transaction\neg.\ntransaction_id=\"e4a127f7-\na850-477c-920e-\na471b38727c1\"\ncontent_filter_key Content\nFilter\ncontent_filter_key String\n128\nThe name of the\ncustom/ predefined\ncontent filter matched\nduring content\nscanning\neg. EthnicitytermsCA\nhttp_category\nSite\nCategory\nsite_category\nString\n64\nThe web category of\nthe website accessed\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 222\ndomain\nWebsite\nwebsite\nString\n512\nThe domainname of\nlocation where\ncontent is being\ndownloaded from or\nuploaded to\ncon_direction\nDirection\ndirection\nString\n64\nThe direction of the\ncontent being\nscanned\nin\nout\n•\n\"in\" when content\nis being\ndownloaded\n•\n\"out\" when content\nis being uploaded\naction\nAction\naction\nString\n64\nThe web policy\naction taken on the\ncontent ,based on the\nweb policy rule\nDeny\nLog\n•\n\"Deny\" when\nwebsite is blocked\ndue to content\nmatch\n•\n\"Log\" when\ncontent matches\nare logged and acl\nsystem continues\nwith policy rules to\nmake he final\ndecision\nfile_name\nFilename\nfile_name\nString\n1024\nname of the file being\ndownloaded or\nuploaded\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 223\ncontext_match\nContext\ncontext_match\nString\n128\nThe string(context) of\nthe file that matches\nthe exact word/words\ndefined in the content\nFilter\neg. context_match=\"far\"\ncontext_prefix\nContext\ncontext_prefix\nString\n64\nThe string (context)\nof the file that\nprecedes the matched\ncontent\neg. context_prefix=\"This\nplace is  \"\ncontext_suffix\nContext\ncontext_suffix\nString\n64\nThe string (context)\nof the file that\nsucceeds the matched\ncontent\neg. context_suffix=\" from\nhome! \"\napp_name\nApplication\nname\napp_name\nString\nlog_id\nN/A\nString\neg. \"010101600001\"\ndevice_name\nN/A\nString\neg \"SFW\"\ndevice_model\nN/A\nString\neg \"SF01V\"\ndevice_serial_id\nN/A\nString\neg \"SFDemo-ff94e90\"\nlog_version\nN/A\nNumber\n1\neg. log_version=1\nuser_group\nN/A\ndst_country\ndestination\ncountry\nN/A\nstring\n64\nISO 3166 (A 3) Code\ne.g. \"IND\" \"CAN\" \"USA\"\n\"GBR\"\ndst_zone\ndestination\nzone\nN/A\ndestination zone\ne.g. \"WAN\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 224\ndst_zone_type\ndestination\nzone type\nN/A\nstring\ndestination zone type\n(for custom zones)\ne.g. \"WAN\"\nsrc_country\nsource\ncountry\nN/A\nstring\n64\nISO 3166 (A 3) Code\ne.g. \"IND\" \"CAN\" \"USA\"\n\"GBR\"\nsrc_zone\nsource\nzone\nN/A\nsource zone\ne.g. \"LAN\"\nsrc_zone_type\nsource\nzone type\nN/A\nsource zone type (for\ncustom zones)\ne.g. \"LAN\"\ndst_ip\nDestination\nIP\nN/A\nThe IP address to\nwhich the\nHTTP/HTTPS\nconnection was made\nsrc_port\nN/A\nN/A\nThe port from which\nthe HTTP/HTTPS\nconnection originated\ndst_port\nN/A\nN/A\nThe port to which the\nHTTP/HTTPS\nconnection was made",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 221,
+      "end": 225
+    },
+    "content_stats": {
+      "char_count": 3479,
+      "word_count": 522
+    },
+    "hierarchy": {
+      "parent": "Central Reporting Format",
+      "children": []
+    }
+  }
+}

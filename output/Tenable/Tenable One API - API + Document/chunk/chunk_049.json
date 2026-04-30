@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_049",
+  "section_number": "23.1",
+  "header": "Responses",
+  "content": "200 Returned if the list of asset export jobs was retrieved successfully.\n400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n401 Returned if the API keys specified in your request are invalid.\n— 403 Returned if you do not have permission to view asset export jobs.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 143,
+      "end": 143
+    },
+    "content_stats": {
+      "char_count": 655,
+      "word_count": 110
+    },
+    "hierarchy": {
+      "parent": "List asset export jobs",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

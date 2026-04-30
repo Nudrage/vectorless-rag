@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_398",
+  "section_number": "17.4",
+  "header": "Update OT connector",
+  "content": "Updates the specified OT connector. This endpoint can also be used to enable or disable an OT\nconnector.\nRequires the Scan Manager [40] user role. See Roles.\nContent type\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nDefault: \"ot\"\nValue: \"ot\"\nThe type of connector or sensor. This value is always ot  for OT\nconnectors.\nstring <uuid>\nThe OT connector's unique identifier.\nREQUEST BODY SCHEMA:\napplication/json\nstring\n<= 64 characters\nThe name of the OT connector. The maximum character length is 64 chars.\nstring\nEnum: \"icp\"\n\"em\"\nThe type of OT connector. There are two types of OT connectors, Industrial\nCore Platform (ICP) and Enterprise Manager (EM).\nboolean\nIndicates whether or not the OT connector is enabled.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 380,
+      "end": 381
+    },
+    "content_stats": {
+      "char_count": 714,
+      "word_count": 114
+    },
+    "hierarchy": {
+      "parent": "OT Connectors",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

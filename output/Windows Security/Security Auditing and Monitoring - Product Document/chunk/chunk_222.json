@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_222",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "\nTypically this event is required for detailed monitoring of CNG-related cryptographic functions. If you need to monitor or troubleshoot actions related to specific cryptographic\nfunctions, review this event to see if it provides the information you need.\n5447(S): A Windows Filtering Platform filter has been changed.\nEvent Description:\nThis event generates every time a Windows Filtering Platform filter has been changed.\nIt typically generates during Group Policy update procedures.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>5447</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13573</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-07T23:51:12.191198900Z\" />\n<EventRecordID>1060216</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"524\" ThreadID=\"3784\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"ProcessId\">284</Data>\n<Data Name=\"UserSid\">S-1-5-19</Data>\n<Data Name=\"UserName\">NT AUTHORITY\\LOCAL SERVICE</Data>\n<Data Name=\"ProviderKey\">{DECC16CA-3F33-4346-BE1E-8FB4AE0F3D62}</Data>\n<Data Name=\"ProviderName\">Microsoft Corporation</Data>\n<Data Name=\"ChangeType\">%%16385</Data>\n<Data Name=\"FilterKey\">{91334E6D-FFAB-40F1-8C43-5554965C228D}</Data>\n<Data Name=\"FilterName\">Port Scanning Prevention Filter</Data>\n© 2016 Microsoft. All rights reserved.\n650\n<Data Name=\"FilterType\">%%16388</Data>\n<Data Name=\"FilterId\">100100</Data>\n<Data Name=\"LayerKey\">{AC4A9833-F69D-4648-B261-6DC84835EF39}</Data>\n<Data Name=\"LayerName\">Inbound Transport v4 Discard Layer</Data>\n<Data Name=\"LayerId\">13</Data>\n<Data Name=\"Weight\">13835058055315718144</Data>\n<Data Name=\"Conditions\">Condition ID: {632ce23b-5167-435c-86d7-e903684aa80c} Match value: No flags set Condition value: 0x00000003</Data>\n<Data Name=\"Action\">%%16391</Data>\n<Data Name=\"CalloutKey\">{EDA08606-2494-4D78-89BC-67837C03B969}</Data>\n<Data Name=\"CalloutName\">WFP Built-in Silent Drop Transport v4 Discard Layer Callout</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 650,
+      "end": 651
+    },
+    "content_stats": {
+      "char_count": 2387,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "Audit Other Policy Change Events",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_006",
+  "section_number": "3",
+  "header": "Search attack techniques",
+  "content": "Returns a list of the top attack techniques in your organization that match the specified search\ncriteria. The response includes details about each technique, such as MITRE ATT&CK framework\ninformation, mitigations, and metadata.\nThis endpoint supports advanced search capabilities, including filtering, sorting, and pagination.\nFor more information, see Top Attack Techniques in the Exposure Management User Guide.\nRequires the Basic [16] user role or the ATTACK_PATH_ANALYSIS.QUERY.SEARCH  custom role\nprivilege. See Roles and Permissions.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\ninteger\n[ 100 .. 10000 ]\nDefault: 1000\nThe number of attack technique records to retrieve. If omitted, the default\nvalue is 1000 . The minimum value is 100  and the maximum value is\n10000 .\ninteger\n>= 0\nDefault: 0\nThe number of records to skip for offset-based pagination. If omitted, the\ndefault value is 0 .\nstring ^[a-zA-Z_]+:(asc|ASC|ascending|ASCENDING|Asce...\nShow pattern\nExample: sort=priority:desc\nlimit\noffset\nsort\nThe property and direction to sort the results by, in the format\nproperty:direction . For example: name:asc  or priority:desc .\nSupported properties for sorting include last_updated_at , priority ,\nmitre_id , name , technique_name , status , state , and\nvector_ount .\nREQUEST BODY SCHEMA:\napplication/json\noptional\nFilter conditions for searching attack techniques. Filter operators can include nested conditions and\noperators to create complex filtering logic.\nOne of\nSingle Filter\nMultiple Filters\nstring\nEnum: \"priority\"\n\"state\"\n\"status\"\n\"name\"\n\"procedureName\"\n\"mitre_id\"\n\"tactics\"\n\"target\"\n\"source\"\n\"cause\"\n\"last_updated_at\"\n\"created\"\n\"serial_id\"\nThe property to filter on.\nFor example, you might filter by priority , name , or\nlast_updated_at .\nstring\nEnum: \"eq\"\n\"ne\"\n\"gt\"\n\"gte\"\n\"lt\"\n\"lte\"\n\"contains\"\n\"not_contains\"\n\"in\"\n\"not_in\"\nThe comparison operator to apply to the filter. For example: eq , ne , etc.\nSingle String Value (string) or Array of Multiple String Values (strings) or Single\nInteger Value (integer) or Array of Multiple Integer Values (integers) or Single\nBoolean Value (boolean)\nThe value to use for comparison in the filter.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 8,
+      "end": 9
+    },
+    "content_stats": {
+      "char_count": 2152,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

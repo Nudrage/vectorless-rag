@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_057",
+  "section_number": "54.1.2",
+  "header": "Response samples",
+  "content": "GET\n/was/v2/configs/filters\n200\n429\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"filters\":\n-\n[\n,\n- {\n\"name\": \"scans_status\",\n\"readable_name\": \"scans_status\",\n\"operators\":\n-\n[\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"dropdown\",\n\"list\":\n-\n[\n\"Never Run\",\n\"pending\",\n\"running\",\n\"stopping\",\n\"aborted\",\n\"canceled\",\n\"completed\"\n]\n}\n}\n,\n- {\n\"name\": \"scans_finalized_at\",\n\"readable_name\": \"scans_finalized_at\",\n\"operators\":\n-\n[\n\"lt\",\n\"lte\",\n\"gt\",\n\"gte\"\n],\n\"control\":\n-\n{\n\"type\": \"datefield\",\n\"regex\": \"^[0-9]{4}/[0-9]{2}/[0-9]{2}$\",\n\"readable_regex\": \"YYYY/MM/DD\"\n}\n}\n- {\n\"name\": \"user_template.name\",\n\"readable_name\": \"user_template.name\",\n\"operators\":\n-\n[\n\"match\",\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n,\ng\n,\n\"readable_regex\": null\n}\n}\n,\n- {\n\"name\": \"templates.name\",\n\"readable_name\": \"templates.name\",\n\"operators\":\n-\n[\n\"eq\",\n\"neq\"\n],\n\"control\":\n-\n{\n\"type\": \"dropdown\",\n\"list\":\n-\n[\n\"scan\",\n\"overview\",\n\"ssl_tls\",\n\"config_audit\",\n\"pci\",\n\"api\"\n]\n}\n}\n,\n- {\n\"name\": \"configs.schedule\",\n\"readable_name\": \"configs.schedule\",\n\"operators\":\n-\n[\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"dropdown\",\n\"list\":\n-\n[\n\"Enabled\",\n\"On Demand\"\n]\n}\n}\n- {\n\"name\": \"target\",\n\"readable_name\": \"target\",\n\"operators\":\n-\n[\n\"match\",\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n,\ntype :\ne t y ,\n\"regex\": null,\n\"readable_regex\": null\n}\n}\n,\n- {\n\"name\": \"scans_started_at\",\n\"readable_name\": \"scans_started_at\",\n\"operators\":\n-\n[\n\"lt\",\n\"lte\",\n\"gt\",\n\"gte\"\n],\n\"control\":\n-\n{\n\"type\": \"datefield\",\n\"regex\": \"^[0-9]{4}/[0-9]{2}/[0-9]{2}$\",\n\"readable_regex\": \"YYYY/MM/DD\"\n}\n}\n,\n- {\n\"name\": \"configs.created_at\",\n\"readable_name\": \"configs.created_at\",\n\"operators\":\n-\n[\n\"lt\",\n\"lte\",\n\"gt\",\n\"gte\"\n],\n\"control\":\n-\n{\n\"type\": \"datefield\",\n\"regex\": \"^[0-9]{4}/[0-9]{2}/[0-9]{2}$\",\n\"readable_regex\": \"YYYY/MM/DD\"\n}\n}\n- {\n\"name\": \"configs.updated_at\",\n\"readable_name\": \"configs.updated_at\",\n\"operators\":\n-\n[\n\"lt\",\n\"lte\",\n\"gt\",\n\"gte\"\n],\n\"control\":\n-\n{\n\"type\": \"datefield\"\n,\n\"type\": \"datefield\",\n\"regex\": \"^[0-9]{4}/[0-9]{2}/[0-9]{2}$\",\n\"readable_regex\": \"YYYY/MM/DD\"\n}\n}\n,\n- {\n\"name\": \"folder_name\",\n\"readable_name\": \"folder_name\",\n\"operators\":\n-\n[\n\"match\",\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n\"readable_regex\": null\n}\n}\n,\n- {\n\"name\": \"configs.name\",\n\"readable_name\": \"configs.name\",\n\"operators\":\n-\n[\n\"match\",\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n\"readable_regex\": null\n}\n}\n- {\n\"name\": \"configs.description\",\n\"readable_name\": \"configs.description\",\n\"operators\":\n-\n[\n\"match\",\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n\"readable_regex\": null\n}\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 81,
+      "end": 88
+    },
+    "content_stats": {
+      "char_count": 2550,
+      "word_count": 338
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

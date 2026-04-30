@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_521",
+  "section_number": "1.15.15.3.2",
+  "header": "Enable AutoFocus Threat Intelligence",
+  "content": "Activate the AutoFocus license, and enable the firewall to communicate with AutoFocus. Once\nyou’re set up, you’ll be able to view the AutoFocus Intelligence Summary for a log or ACC artifact,\nto assess its pervasiveness in your network and any associated threats.\nSTEP 1 |\nVerify that the AutoFocus license is activated on the firewall.\n1.\nSelect Device > Licenses to verify that the AutoFocus Device License is installed and\nvalid (check the expiration date).\n2.\nIf the firewall doesn’t show the license, Activate Subscription Licenses.\nSTEP 2 |\nConnect the firewall to AutoFocus.\n1.\nSelect Device > Setup > Management and edit the AutoFocus settings.\n2.\nEnter the AutoFocus URL:\nhttps://autofocus.paloaltonetworks.com:10443\n3.\nUse the Query Timeout field to set the duration of time for the firewall to attempt to\nquery AutoFocus for threat intelligence data. If the AutoFocus portal does not respond\nbefore the end of the specified period, the firewall closes the connection.\nAs a best practice, set the query timeout to the default value of 15 seconds.\nAutoFocus queries are optimized to complete within this duration.\n4.\nSelect Enabled to allow the firewall to connect to AutoFocus.\n5.\nClick OK.\n6.\nCommit your changes to retain the AutoFocus settings upon reboot.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n964\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nSTEP 3 |\nConnect AutoFocus to the firewall.\n1.\nLog in to the AutoFocus portal: https://autofocus.paloaltonetworks.com\n2.\nSelect Settings.\n3.\nAdd new remote systems.\n4.\nEnter a descriptive Name to identify the firewall.\n5.\nSelect PanOS as the System Type.\n6.\nEnter the firewall IP Address.\n7.\nClick Save changes to add the remote system.\n8.\nClick Save changes again on the Settings page to ensure the firewall is successfully\nadded.\nSTEP 4 |\nTest the connection between the firewall and AutoFocus.\n1.\nOn the firewall, select Monitor > Logs > Traffic.\n2.\nVerify that you can Assess Firewall Artifacts with AutoFocus.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 964,
+      "end": 965
+    },
+    "content_stats": {
+      "char_count": 1978,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "AutoFocus Threat Intelligence for Network Traffic",
+      "children": []
+    }
+  }
+}

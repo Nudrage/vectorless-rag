@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_046",
+  "section_number": "1.18.33",
+  "header": "Unique Hosts Observed Monthly",
+  "content": "API responses may vary depending on product subscriptions (Network, AWS, M365).\nThe unique hosts observed API can be used to view the count of all distinct hosts seen during a\ncalendar month, for each month dating back one year. The endpoint is only available to Restricted\nAdmin clients.\nTo obtain the list of unique hosts observed (GET) use the following URL:\nhttps://<vectra_management_ip>/api/v3.4/unique_hosts_observed_monthly/\nThe following table lists the fields and a description of the various elements for the month results.\nDetailed examples of using GET on unique_hosts_observed_monthly is described in Appendix A\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nmonth_start\nFirst day of the month\nstring\nmonth_end\nLast day of the month\nstring\nunique_hosts_observed\nCount of unique hosts\nobserved between\nmonth_start and\nmonth_end\ninteger\nIncludes hosts seen from 00:00\nUTC on first day of month through\n23:59 UTC on last day of month\nThe available query parameters to filter for Unique Hosts Observed Monthly are listed below.\nNote if start and end are left blank, default start will be the beginning of the month of the previous year.\nDefault end will be the current day.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\nstart\nstring\nISO8601\nStarting month of data list. Example: ‘2023-08’\nend\nstring\nISO8601\nEnding month of data list. Example: ‘2023-09’\nlast_month_only\nboolean\nOnly return current month’s count.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 69,
+      "end": 69
+    },
+    "content_stats": {
+      "char_count": 1393,
+      "word_count": 212
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

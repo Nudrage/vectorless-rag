@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_079",
+  "section_number": "1.18.28",
+  "header": "Vectra Match Rules Upload",
+  "content": "POST\nUsed to upload a new Vectra Match ruleset.  A valid Vectra Match license is required to use this endpoint.\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/rules/upload/\nHeaders:\n“Authorization”: “Bearer <api-key>”\nRequired Request JSON Body:\n{“file_name”:”<filename>”, \"notes\": \"<notes>\"}\nRequest cURL Example:\ncurl --request POST \\\n--url https://<vectra_management_ip>/api/v3.4/vectra-match/rules/uploads/ \\\n© July 2024 Vectra AI, Inc. | 143\n--header 'Authorization: Bearer <token>' \\\n--header 'Content-Type: application/json' \\\n--data '{\"file_name\": \"<your-filename.rules>\", \"notes\": \"We can put some notes\nhere\"}'\nRequest Python Requests Example:\npayload = {\"file_name\": \"your-rules.rules\", \"notes\": \"additional notes here\"}\nresp = requests.post(\"https://<vectra_management_ip>/api/v3.4/vectra-\nmatch/rules/upload/\", headers={\"Authorization\":\"Bearer <token>\"}, verify=False,\njson=payload\nResponse:\nStatus code: 200\n{\n\"urls\": [\n\"<temporary-upload-url-valid-for-2-mins>\"\n],\n\"id\": \"b68f41be-1312-4275-8c36-4ba0f738cf8a\"\n}\nPUT\nUpload the file to Vectra.\nRequest cURL Example:\ncurl --request PUT \\\n--url ‘<upload-url-from-post>' \\\n--upload-file valid_rules.rules\nRequest Python Requests Example:\npayload = open('./your-file.rules', 'rb')\nresp = requests.request(\"PUT\", upload-url-from-post, data=payload)\nResponse:\nStatus code: 200\nPATCH\nMark the upload as completed.\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/rules/upload/<upload-uuid>\nHeaders:\n“Authorization”: “Bearer <api-key>”\n© July 2024 Vectra AI, Inc. | 144\nRequired Request JSON Body:\n{“upload_status\": \"completed”}\nResponse:\nStatus code: 200\n{\n\"upload_status\": \"completed\"\n}\nGET\nGet the details of the upload.\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/rules/upload/<upload-uuid>\nHeaders:\n“Authorization”: “Bearer <api-key>”\nResponse:\nStatus code: 200\n{\n“id\": \"b68f41be-1312-4275-8c36-4ba0f738cf8a\",\n\"upload_status\": \"completed\",\n\"external_task_status\": \"not_started\",\n\"external_task_updated_at\": \"2024-02-29T09:58:28Z\"\n}\nFailed external task Response:\n{\n“id\": \"b68f41be-1312-4275-8c36-4ba0f738cf8a\",\n\"upload_status\": \"completed\",\n\"external_task_status\": \"not_started\",\n\"external_task_error\": \"\"Uploaded Vectra Match ruleset failed validation, errors:\n22/5/2024 -- 16:03:54 - <Error> - [ERRCODE: SC_ERR_INVALID_ACTION(142)]….. - <Error> -\n[ERRCODE: SC_ERR_NO_RULES_LOADED(43)] - Loading signatures failed.\",\n\"external_task updated_at\": \"2024-02-29T09:58:28Z\",\n“external_task_error_code”: 6005\n}\nGET LIST\nGet the list of the users uploads from the last 24 hours.\nURL: https://<vectra_management_ip>/api/v3.4/vectra-match/rules/upload/\nHeaders:\n“Authorization”: “Bearer <api-key>”\nResponse:\nStatus code: 200\n© July 2024 Vectra AI, Inc. | 145\n[\n{\n“id\": \"b68f41be-1312-4275-8c36-4ba0f738cf8a\",\n\"upload_status\": \"completed\",\n\"external_task_status\": \"not_started\",\n\"external_task_updated_at\": \"2024-02-29T09:58:28Z\"\n}\n]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 142,
+      "end": 145
+    },
+    "content_stats": {
+      "char_count": 2917,
+      "word_count": 284
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

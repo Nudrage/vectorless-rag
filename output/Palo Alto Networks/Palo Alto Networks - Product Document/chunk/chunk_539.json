@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_539",
+  "section_number": "1.16.2.12",
+  "header": "SSL Decryption and Subject Alternative Names (SANs)",
+  "content": "Some browsers require server certificates to use a Subject Alternative Name (SAN) to specify\nthe domains the certificate protects, and no longer support certificate matching based on a\nserver certificate Common Name (CN). SANs enable a single server certificate to protect multiple\nnames; CNs are less well-defined than SANs and can protect only a single domain or all first-\nlevel subdomains on a domain. However, if a server certificates contains only a CN, browsers that\nrequire a SAN will not allow end users to connect to the requested web resource.The firewall\ncan add a SAN to the impersonation certificate it generates to establish itself as a trusted third-\nparty during SSL decryption. When a server certificate contains only a CN, a firewall performing\nSSL decryption copies the server certificate CN to the impersonation certificate SAN. The firewall\npresents the impersonation certificate with the SAN to the client, and the browser is able to\nsupport the connection. End users can continue to access the resources they need, and the\nfirewall can decrypt the sessions.\nTo enable SAN support for decrypted SSL traffic, update the decryption profile attached to the\nrelevant decryption policy: select Objects > Decryption Profile > SSL Decryption > SSL Forward\nProxy > Append certificate’s CN value to SAN extension).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n991\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 991,
+      "end": 992
+    },
+    "content_stats": {
+      "char_count": 1415,
+      "word_count": 223
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

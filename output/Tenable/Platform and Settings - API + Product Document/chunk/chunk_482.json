@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_482",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the AWS target list for the specified scanner was retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe ID of the scanner.\nstring\nUnique instance identifier from Amazon.\nstring\nPrivate IP address of the AWS instance.\nstring\nPublic IP address of the AWS instance.\nstring\nThe state of the instance. Can be one of the following values: running ,\nstopped , or terminated .\nstring\nThe availability zone for the instance. Example: us-east-1a , us-\neast-1b , etc.\nstring\nThe size of the instance. Example: t2.small , t2.medium , etc.\nstring\nThe user-defined name of the instance.\nscanner_id\nrequired\nscanner_id\ninstance_id\nprivate_ip\npublic_ip\nstate\nzone\ntype\nname\n— 403 Returned if you do not have permission to view scanner data.\n— 404\nReturned if Tenable Vulnerability Management cannot find the specified scanner, or if the scanner is\nnot an AWS scanner.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 497,
+      "end": 498
+    },
+    "content_stats": {
+      "char_count": 1010,
+      "word_count": 165
+    },
+    "hierarchy": {
+      "parent": "List AWS scan targets",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

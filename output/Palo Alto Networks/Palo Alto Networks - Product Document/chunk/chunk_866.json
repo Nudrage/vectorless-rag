@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_866",
+  "section_number": "1.21.16.2",
+  "header": "How NPTv6 Works",
+  "content": "When you configure a policy for NPTv6, the Palo Alto Networks firewall performs a static, one-\nto-one IPv6 translation in both directions. The translation is based on the algorithm described in\nRFC 6296.\nIn one use case, the firewall performing NPTv6 is located between an internal network and an\nexternal network (such as the Internet) that uses globally routable prefixes. When datagrams are\ngoing in the outbound direction, the internal source prefix is replaced with the external prefix; this\nis known as source translation.\nIn another use case, when datagrams are going in the inbound direction, the destination prefix is\nreplaced with the internal prefix (known as destination translation). The figure below illustrates\ndestination translation and a characteristic of NPTv6: only the prefix portion of an IPv6 address is\ntranslated. The host portion of the address is not translated and remains the same on either side\nof the firewall. In the figure below, the host identifier is 111::55 on both sides of the firewall.\nIt is important to understand that NPTv6 does not provide security. While you are planning your\nNPTv6 NAT policies, remember also to configure security policies in each direction.\nA NAT or NPTv6 policy rule cannot have both the Source Address and the Translated Address set\nto Any.\nIn an environment where you want IPv6 prefix translation, three firewall features work together:\nNPTv6 NAT policies, security policies, and NDP Proxy.\nThe firewall does not translate the following:\n• Addresses that the firewall has in its Neighbor Discovery (ND) cache.\n• The subnet 0xFFFF (in accordance with RFC 6296, Appendix B).\n• IP multicast addresses.\n• IPv6 addresses with a prefix length of /31 or shorter.\n• Link-local addresses. If the firewall is operating in virtual wire mode, there are no IP addresses\nto translate, and the firewall does not translate link-local addresses.\n• Addresses for TCP sessions that authenticate peers using the TCP Authentication Option (RFC\n5925).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1509\n©2025 Palo Alto Networks, Inc.\nNetworking\nWhen using NPTv6, performance for fast path traffic is impacted because NPTv6 is performed in\nthe slow path.\nNPTv6 will work with IPSec IPv6 only if the firewall is originating and terminating the tunnel.\nTransit IPSec traffic would fail because the source and/or destination IPv6 address would be\nmodified. A NAT traversal technique that encapsulates the packet would allow IPSec IPv6 to work\nwith NPTv6.\n• Checksum-Neutral Mapping\n• Bi-Directional Translation\n• NPTv6 Applied to a Specific Service",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1509,
+      "end": 1510
+    },
+    "content_stats": {
+      "char_count": 2584,
+      "word_count": 410
+    },
+    "hierarchy": {
+      "parent": "NPTv6",
+      "children": [
+        "Checksum-Neutral Mapping",
+        "Bi-Directional Translation",
+        "NPTv6 Applied to a Specific Service"
+      ]
+    }
+  }
+}

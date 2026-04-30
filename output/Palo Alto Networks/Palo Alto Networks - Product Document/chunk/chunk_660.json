@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_660",
+  "section_number": "1.18.2.2",
+  "header": "QoS Policy",
+  "content": "Use a QoS policy rule to define traffic to receive QoS treatment (either preferential treatment or\nbandwidth-limiting) and assigns such traffic a QoS class of service.\nDefine a QoS policy rule to match to traffic based on:\n• Applications and application groups.\n• Source zones, source addresses, and source users.\n• Destination zones and destination addresses.\n• Services and service groups limited to specific TCP and/or UDP port numbers.\n• URL categories, including custom URL categories.\n• Differentiated Services Code Point (DSCP) and Type of Service (ToS) values, which are used to\nindicate the level of service requested for traffic, such as high priority or best effort delivery.\nYou cannot apply DSCP code points or QoS to SSL Forward Proxy, SSL Inbound\nInspection, and SSH Proxy traffic.\nSet up multiple QoS policy rules (Policies > QoS) to associate different types of traffic with\ndifferent QoS Classes of service.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1218\n©2025 Palo Alto Networks, Inc.\nQuality of Service\nBecause QoS is enforced on traffic as it egresses the firewall, your QoS policy rule is applied to\ntraffic after the firewall has enforced all other security policy rules, including Network Address\nTranslation (NAT) rules. If you want to apply QoS treatment to traffic based on source, make\nsure to specify the post-NAT source address in a QoS policy rule (do not use the pre-NAT source\naddress).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1218,
+      "end": 1219
+    },
+    "content_stats": {
+      "char_count": 1418,
+      "word_count": 229
+    },
+    "hierarchy": {
+      "parent": "QoS Concepts",
+      "children": []
+    }
+  }
+}

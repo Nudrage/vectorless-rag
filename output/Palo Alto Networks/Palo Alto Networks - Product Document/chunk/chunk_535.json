@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_535",
+  "section_number": "1.16.2.8",
+  "header": "SSH Proxy Decryption Profile",
+  "content": "The SSH Proxy Decryption profile (Objects > Decryption Profile > SSH Proxy) controls the\nsession mode checks and failure checks for SSH traffic defined in the SSH Proxy Decryption\npolicies to which you attach the profile. The following figure shows the general best practice\nrecommendations for SSH Proxy Decryption profile settings, but the settings you use also depend\non your company’s security compliance rules and local laws and regulations.\nThe firewall doesn’t perform content and threat inspection on SSH tunnels (port\nforwarding). However, the firewall distinguishes between the SSH application and the\nSSH-tunnel application. If the firewall identifies SSH tunnels, it blocks the SSH tunneled\ntraffic and restricts the traffic according to configured security policies.\nUnsupported Mode Checks. The firewall supports SSHv2. If you don’t block sessions with\nunsupported modes, users receive a warning message if they connect with potentially unsafe\nservers, and they can click through that message and reach the potentially dangerous site.\nBlocking these sessions protects you from servers that use weak, risky protocol versions and\nalgorithms:\n1. Block sessions with unsupported versions—The firewall has a set of predefined supported\nversions. Checking this box blocks traffic with weak versions. Always check this box to block\nsessions with the weak protocol versions to reduce the attack surface.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n988\n©2025 Palo Alto Networks, Inc.\nDecryption\n2. Block sessions with unsupported algorithms—The firewall has a set of predefined supported\nalgorithms. Checking this box blocks traffic with weak algorithms. Always check this box to\nblock sessions with unsupported algorithms to reduce the attack surface.\nFailure Checks:\n• Block sessions on SSH errors—Checking this box terminates the session if SSH errors occur.\n• Block sessions if resources not available—If you don’t block sessions when firewall processing\nresources aren’t available, then encrypted traffic that you want to decrypt enters the network\nstill encrypted, risking allowing potentially dangerous connections. However, blocking sessions\nwhen firewall processing resources aren’t available may affect the user experience by making\nsites that users normally can reach temporarily unreachable. Whether to implement failure\nchecks depends on your company’s security compliance stance and the importance to your\nbusiness of the user experience, weighed against tighter security. Alternatively, consider using\nfirewall models with more processing power so that you can decrypt more traffic.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 988,
+      "end": 989
+    },
+    "content_stats": {
+      "char_count": 2599,
+      "word_count": 376
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

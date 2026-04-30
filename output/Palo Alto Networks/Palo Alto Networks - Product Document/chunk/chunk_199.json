@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_199",
+  "section_number": "1.9.13",
+  "header": "Replace the Certificate for Inbound Management Traffic",
+  "content": "When you first boot up the firewall or Panorama, it automatically generates a default certificate\nthat enables HTTPS access to the web interface and XML API over the management (MGT)\ninterface and (on the firewall only) over any other interface that supports HTTPS management\ntraffic (for details, see Use Interface Management Profiles to Restrict Access). To improve the\nsecurity of inbound management traffic, replace the default certificate with a new certificate\nissued specifically for your organization.\nYou cannot view, modify, or delete the default certificate.\nTo secure management traffic, you must also Configure Administrative Accounts and\nAuthentication.\nSTEP 1 |\nObtain the certificate that will authenticate the firewall or Panorama to the client systems of\nadministrators.\nYou can simplify your Certificate Deployment by using a certificate that the client systems\nalready trust. Therefore, we recommend that you Import a Certificate and Private Key from\nyour enterprise certificate authority (CA) or Obtain a Certificate from an External CA; the\ntrusted root certificate store of the client systems is likely to already have the associated root\nCA certificate that ensures trust.\nIf you Generate a Certificate on the firewall or Panorama, administrators will see a\ncertificate error because the root CA certificate is not in the trusted root certificate\nstore of client systems. To prevent this, deploy the self-signed root CA certificate to all\nclient systems.\nRegardless of how you obtain the certificate, we recommend a Digest algorithm of\nsha256 or higher for enhanced security.\nSTEP 2 |\nConfigure an SSL/TLS Service Profile.\nSelect the Certificate you just obtained.\nFor enhanced security, we recommend that you set the Min Version (earliest allowed\nTLS version) to TLSv1.2 for inbound management traffic. We also recommend that you\nuse a different SSL/TLS Service Profile for each firewall or Panorama service instead of\nreusing this profile for all services.\nSTEP 3 |\nApply the SSL/TLS Service Profile to inbound management traffic.\n1.\nSelect Device > Setup > Management and edit the General Settings.\n2.\nSelect the SSL/TLS Service Profile you just configured.\n3.\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n366\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 366,
+      "end": 367
+    },
+    "content_stats": {
+      "char_count": 2307,
+      "word_count": 354
+    },
+    "hierarchy": {
+      "parent": "Certificate Management",
+      "children": []
+    }
+  }
+}

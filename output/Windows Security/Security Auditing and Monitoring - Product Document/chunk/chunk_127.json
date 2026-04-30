@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_127",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5145(S, F): A network share object was checked to see whether client can be granted desired access.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.Monitor this event if the Network Information\\Source Address is\nnot from your internal IP range.\n\nMonitor this event if the Network Information\\Source Address should not be able to connect with the specific computer (Computer:).\n\nIf you have critical files or folders on specific network shares, for which you need to monitor access attempts (Success and Failure), monitor for specific Share Information\\Share\nName and Share Information\\Relative Target Name.\n\nIf you have domain or local accounts that should only be able to access a specific list of shared files or folders, you can monitor for access attempts outside the allowed list.\n\nWe recommend that you monitor for these Access Request Information\\Accesses rights (especially for Failure):\no\nWriteData (or AddFile)\no\nAppendData (or AddSubdirectory or CreatePipeInstance)\no\nWriteEA\no\nDeleteChild\no\nWriteAttributes\no\nDELETE\n© 2016 Microsoft. All rights reserved.\n365\no\nWRITE_DAC\no\nWRITE_OWNER\n© 2016 Microsoft. All rights reserved.\n366",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 365,
+      "end": 367
+    },
+    "content_stats": {
+      "char_count": 1278,
+      "word_count": 195
+    },
+    "hierarchy": {
+      "parent": "Audit Detailed File Share",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_765",
+  "section_number": "1.21.5",
+  "header": "RIP",
+  "content": "Routing Information Protocol (RIP) is an interior gateway protocol (IGP) that was designed for\nsmall IP networks. RIP relies on hop count to determine routes; the best routes have the fewest\nnumber of hops. RIP is based on UDP and uses port 520 for route updates. By limiting routes to a\nmaximum of 15 hops, the protocol helps prevent the development of routing loops, but also limits\nthe supported network size. If more than 15 hops are required, traffic is not routed. RIP also can\ntake longer to converge than OSPF and other routing protocols. The firewall supports RIP v2.\nPerform the following procedure to configure RIP.\nSTEP 1 |\nConfigure general virtual router configuration settings.\nSee Virtual Routers for details.\nSTEP 2 |\nConfigure general RIP configuration settings.\n1.\nSelect the RIP tab.\n2.\nSelect Enable to enable the RIP protocol.\n3.\nSelect Reject Default Route if you do not want to learn any default routes through RIP.\nThis is the recommended, default setting.\nClear Reject Default Route if you want to permit redistribution of default routes through\nRIP.\nSTEP 3 |\nConfigure interfaces for RIP.\n1.\nOn the Interfaces tab, select an interface in the Interface configuration section.\n2.\nSelect an already defined interface.\n3.\nSelect Enable.\n4.\nSelect Advertise to advertise a default route to RIP peers with the specified metric value.\n5.\n(Optional) Select a profile from the Auth Profile list.\n6.\nSelect normal, passive or send-only from the Mode list.\n7.\nClick OK.\nSTEP 4 |\nConfigure RIP timers.\n1.\nOn the Timers tab, enter a value for Interval Seconds (sec). This setting defines the\nlength of the following RIP timer intervals in seconds (range is 1-60; default is 1).\n2.\nSpecify the Update Intervals to define the number of intervals between route update\nannouncements (range is 1-3,600; default is 30).\n3.\nSpecify the Delete Intervals to define the number of intervals between the time that the\nroute expires to its deletion (range is 1-3,600; default is 180).\n4.\nSpecify the Expire Intervals to define the number of intervals between the time that the\nroute was last updated to its expiration (range is 1-3600; default is 120).\nSTEP 5 |\n(Optional) Configure Auth Profiles.\nBy default, the firewall does not use RIP authentication for the exchange between RIP\nneighbors. Optionally, you can configure RIP authentication between RIP neighbors by either\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1379\n©2025 Palo Alto Networks, Inc.\nNetworking\na simple password or MD5 authentication. MD5 authentication is recommended; it is more\nsecure than a simple password.\nSimple Password RIP authentication\n1.\nSelect Auth Profiles and Add a name for the authentication profile to authenticate RIP\nmessages.\n2.\nSelect Simple Password as the Password Type.\n3.\nEnter a simple password and then confirm.\nMD5 RIP authentication\n1.\nSelect Auth Profiles and Add a name for the authentication profile to authenticate RIP\nmessages.\n2.\nSelect MD5 as the Password Type.\n3.\nAdd one or more password entries, including:\n• Key-ID (range is 0-255)\n• Key\n4.\n(Optional) Select Preferred status.\n5.\nClick OK to specify the key to be used to authenticate outgoing message.\n6.\nClick OK again in the Virtual Router - RIP Auth Profile dialog box.\nSTEP 6 |\nCommit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1380\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1379,
+      "end": 1381
+    },
+    "content_stats": {
+      "char_count": 3353,
+      "word_count": 553
+    },
+    "hierarchy": {
+      "parent": "Networking",
+      "children": []
+    }
+  }
+}

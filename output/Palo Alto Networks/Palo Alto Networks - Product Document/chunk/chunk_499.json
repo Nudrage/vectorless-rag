@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_499",
+  "section_number": "1.15.4.2",
+  "header": "Configure DNS Sinkholing",
+  "content": "To enable DNS sinkholing, attach the default Anti-Spyware profile to a security policy rule\n(see Set Up Antivirus, Anti-Spyware, and Vulnerability Protection). DNS queries to any domain\nincluded in the Palo Alto Networks DNS signature source that you specify are resolved to\nthe default Palo Alto Networks sinkhole IP address. The IP addresses currently are IPv4—\nsinkhole.paloaltonetworks.com and a loopback address IPv6 address—::1. These address are\nsubject to change and can be updated with content updates.\nSTEP 1 |\nEnable DNS sinkholing for the custom list of domains in an external dynamic list.\n1.\nSelect Objects > Security Profiles > Anti-Spyware.\n2.\nModify an existing profile, or select one of the existing default profiles and clone it.\n3.\nName the profile and select the DNS Policies tab.\n4.\nVerify that default-paloalto-dns is present in the Signature Source.\n5.\n(Optional) In the Packet Capture drop-down, select single-packet to capture the first\npacket of the session or extended-capture to set between 1-50 packets. You can then\nuse the packet captures for further analysis.\nSTEP 2 |\nVerify the sinkholing settings on the Anti-Spyware profile.\n1.\nOn the DNS Policies tab, verify that the Policy Action on DNS queries is sinkhole.\n2.\nIn the DNS Sinkhole Settings section, verify that Sinkhole is enabled. For your\nconvenience, the default Sinkhole IP address is set to access a Palo Alto Networks\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n914\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nserver. Palo Alto Networks can automatically refresh this IP address through content\nupdates.\nIf you want to modify the Sinkhole IPv4 or Sinkhole IPv6 address to a local server on\nyour network or to a loopback address, see Configure the Sinkhole IP Address to a Local\nServer on Your Network.\n3.\nClick OK to save the Anti-Spyware profile.\nSTEP 3 |\nAttach the Anti-Spyware profile to a Security policy rule.\n1.\nSelect Policies > Security and select a security policy rule.\n2.\nOn the Actions tab, select the Log at Session Start check box to enable logging.\n3.\nIn the Profile Setting section, click the Profile Type drop-down to view all Profiles. From\nthe Anti-Spyware drop-down and select the new profile.\n4.\nClick OK to save the policy rule.\nSTEP 4 |\nTest that the policy action is enforced by monitoring the activity on the firewall.\n1.\nSelect ACC and add a URL Domain as a global filter to view the Threat Activity and\nBlocked Activity for the domain you accessed.\n2.\nSelect Monitor > Logs > Threat and filter by (action eq sinkhole) to view logs on\nsinkholed domains.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 914,
+      "end": 915
+    },
+    "content_stats": {
+      "char_count": 2578,
+      "word_count": 429
+    },
+    "hierarchy": {
+      "parent": "Use DNS Queries to Identify Infected Hosts on the Network",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_125",
+  "section_number": "8.2",
+  "header": "Audit Certification Services",
+  "content": "Audit Certification Services determines whether the operating system generates events when Active Directory Certificate Services (AD CS) operations are performed.\nExamples of AD CS operations include:\n\nAD CS starts, shuts down, is backed up, or is restored.\n\nCertificate revocation list (CRL)-related tasks are performed.\n\nCertificates are requested, issued, or revoked.\n\nCertificate manager settings for AD CS are changed.\n\nThe configuration and properties of the certification authority (CA) are changed.\n\nAD CS templates are modified.\n\nCertificates are imported.\n\nA CA certificate is published to Active Directory Domain Services.\n\nSecurity permissions for AD CS role services are modified.\n\nKeys are archived, imported, or retrieved.\n\nThe OCSP Responder Service is started or stopped.\nMonitoring these operational events is important to ensure that AD CS role services are functioning properly.\nEvent volume: Low to medium on servers that provide AD CS role services.\nRole-specific subcategories are outside the scope of this document.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nIF\nIF\nIF\nIF\nIF – if a server has the Active Directory Certificate Services (AD CS) role installed and you need to monitor AD CS\nrelated events, enable this subcategory.\nMember Server\nIF\nIF\nIF\nIF\nIF – if a server has the Active Directory Certificate Services (AD CS) role installed and you need to monitor AD CS\nrelated events, enable this subcategory.\nWorkstation\nNo\nNo\nNo\nNo\nActive Directory Certificate Services (AD CS) role cannot be installed on client OS.\n© 2016 Microsoft. All rights reserved.\n356\n4868: The certificate manager denied a pending certificate request.\n4869: Certificate Services received a resubmitted certificate request.\n4870: Certificate Services revoked a certificate.\n4871: Certificate Services received a request to publish the certificate revocation list (CRL).\n4872: Certificate Services published the certificate revocation list (CRL).\n4873: A certificate request extension changed.\n4874: One or more certificate request attributes changed.\n4875: Certificate Services received a request to shut down.\n4876: Certificate Services backup started.\n4877: Certificate Services backup completed.\n4878: Certificate Services restore started.\n4879: Certificate Services restore completed.\n4880: Certificate Services started.\n4881: Certificate Services stopped.\n4882: The security permissions for Certificate Services changed.\n4883: Certificate Services retrieved an archived key.\n4884: Certificate Services imported a certificate into its database.\n4885: The audit filter for Certificate Services changed.\n4886: Certificate Services received a certificate request.\n4887: Certificate Services approved a certificate request and issued a certificate.\n4888: Certificate Services denied a certificate request.\n© 2016 Microsoft. All rights reserved.\n357\n4889: Certificate Services set the status of a certificate request to pending.\n4890: The certificate manager settings for Certificate Services changed.\n4891: A configuration entry changed in Certificate Services.\n4892: A property of Certificate Services changed.\n4893: Certificate Services archived a key.\n4894: Certificate Services imported and archived a key.\n4895: Certificate Services published the CA certificate to Active Directory Domain Services.\n4896: One or more rows have been deleted from the certificate database.\n4897: Role separation enabled.\n4898: Certificate Services loaded a template.\n© 2016 Microsoft. All rights reserved.\n358",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 356,
+      "end": 359
+    },
+    "content_stats": {
+      "char_count": 3555,
+      "word_count": 510
+    },
+    "hierarchy": {
+      "parent": "Object Access",
+      "children": []
+    }
+  }
+}

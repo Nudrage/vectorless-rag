@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_069",
+  "section_number": "4.4",
+  "header": "Update user",
+  "content": "Updates an existing user account.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\ninteger <int32>\nThe UUID ( uuid ) or unique ID ( id ) of the user.\nREQUEST BODY SCHEMA:\napplication/json\ninteger <int32>\nThe user role represented as an integer value, as described in User Roles.\nstring\nThe name of the user (for example, first and last name).\nstring\nThe email address of the user. A valid email address must be in the format,\nname@domain , where domain  corresponds to a domain approved for\nyour Tenable Vulnerability Management instance. However, a user can\nupdate their own email  property value to have an unapproved domain if\nan administrator has already approved the domain for that particular user.\nThis email address overrides the email address set in username . If your\nrequest omits this parameter, Tenable Vulnerability Management uses the\nusername  value as the user's email address.\nNote: During initial setup, Tenable configures approved domains for your\nVulnerability Management instance. To add domains to your instance,\ncontact Tenable Support.\nboolean\nSpecifies whether the user's account is enabled ( true ) or disabled\n( false ).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 51,
+      "end": 51
+    },
+    "content_stats": {
+      "char_count": 1191,
+      "word_count": 189
+    },
+    "hierarchy": {
+      "parent": "Access Control (Users)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

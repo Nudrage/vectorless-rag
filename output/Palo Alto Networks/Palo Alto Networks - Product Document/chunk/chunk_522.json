@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_522",
+  "section_number": "1.15.15.3.3",
+  "header": "View and Act on AutoFocus Intelligence Summary Data",
+  "content": "Interact with the AutoFocus Intelligence Summary to display more information about an artifact\nor extend your artifact research to AutoFocus. AutoFocus tags reveal if the artifact is associated\nwith certain types of malware or malicious behavior.\nSTEP 1 |\nConfirm that the firewall is connected to AutoFocus.\nEnable AutoFocus Threat Intelligence on the firewall (active AutoFocus subscription required).\nSTEP 2 |\nFind artifacts to investigate.\nYou can view an AutoFocus Intelligence Summary for artifacts when you:\n• View Logs (Traffic, Threat, URL Filtering, WildFire Submissions, Data Filtering, and Unified\nlogs only).\n• View External Dynamic List Entries.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n965\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nSTEP 3 |\nHover over an artifact to open the drop-down, and click AutoFocus.\nThe AutoFocus Intelligence Summary is only available for the following types of artifacts:\nIP address\nURL\nDomain\nUser agent\nThreat name (only for threats of the subtypes virus and wildfire-virus)\nFilename\nSHA-256 hash\nSTEP 4 |\nLaunch an AutoFocus search for the artifact for which you opened the AutoFocus\nIntelligence Summary.\nClick the Search AutoFocus for... link at the top of the AutoFocus Intelligence Summary\nwindow. The search results include all samples associated with the artifact. Toggle between\nthe My Samples and All Samples tabs and compare the number of samples to determine the\npervasiveness of the artifact in your organization.\nSTEP 5 |\nLaunch an AutoFocus search for other artifacts in the AutoFocus Intelligence Summary.\nClick on the following artifacts to determine their pervasiveness in your organization:\n• WildFire verdicts in the Analysis Information tab\n• URLs and IP addresses in the Passive DNS tab\n• The SHA256 hashes in the Matching Hashes tab\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n966\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nSTEP 6 |\nView the number of sessions associated with the artifact in your organization per month.\nHover over the session bars.\nSTEP 7 |\nView the number of samples associated with the artifact by scope and WildFire verdict.\nHover over the samples bars.\nSTEP 8 |\nView more details about matching AutoFocus. tags.\nHover over a matching tag to view the tag description and other tag details.\nSTEP 9 |\nView other samples associated with a matching tag.\nClick a matching tag to launch an AutoFocus search for that tag. The search results include all\nsamples matched to the tag.\nUnit 42 tags identify threats and campaigns that pose a direct security risk. Click on a Unit 42\nmatching tag to see how many samples in your network are associated with the threat the tag\nidentifies.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n967\n©2025 Palo Alto Networks, Inc.\nThreat Prevention\nSTEP 10 | Find more matching tags for an artifact.\nClick the ellipsis ( ... ) to launch an AutoFocus search for the artifact. The Tags column in\nthe search results displays more matching tags for the artifact, which give you an idea of\nother malware, malicious behavior, threat actors, exploits, or campaigns where the artifact is\ncommonly detected.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n968\n©2025 Palo Alto Networks, Inc.\nThreat Prevention",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 965,
+      "end": 969
+    },
+    "content_stats": {
+      "char_count": 3210,
+      "word_count": 514
+    },
+    "hierarchy": {
+      "parent": "AutoFocus Threat Intelligence for Network Traffic",
+      "children": []
+    }
+  }
+}

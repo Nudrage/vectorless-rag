@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_925",
+  "section_number": "1.21.22",
+  "header": "Tunnel Content Inspection",
+  "content": "The firewall can inspect the traffic content of cleartext tunnel protocols without terminating the\ntunnel:\n• Generic Routing Encapsulation (GRE) (RFC 2784)\n• Non-encrypted IPSec traffic [NULL Encryption Algorithm for IPSec (RFC 2410) and transport\nmode AH IPSec]\n• General Packet Radio Service (GPRS) Tunneling Protocol for User Data (GTP-U)\n• Virtual Extensible Local Area Network (VXLAN) (RFC 7348)\nTunnel content inspection is for cleartext tunnels, not for VPN or LSVPN tunnels, which\ncarry encrypted traffic.\nYou can use tunnel content inspection to enforce Security, DoS Protection, and QoS policies on\ntraffic in these types of tunnels and traffic nested within another cleartext tunnel (for example, a\nNull Encrypted IPSec tunnel inside a GRE tunnel). You can view tunnel inspection logs and tunnel\nactivity in the ACC to verify that tunneled traffic complies with your corporate security and usage\npolicies.\nAll firewall models support tunnel content inspection for GRE, non-encrypted IPSec, and VXLAN\nprotocols. Only firewalls that support GTP security support GTP-U tunnel content inspection—see\nthe PAN-OS Releases by Model that Support GTP and SCTP Security in the Compatibility Matrix.\nBy default, supported firewalls perform tunnel acceleration to improve performance and\nthroughput for traffic going through GRE tunnels, VXLAN tunnels, and GTP-U tunnels. Tunnel\nacceleration provides hardware offloading to reduce the time it takes to perform flow lookups and\nallows the tunnel traffic to be distributed more efficiently based on the inner traffic. However,\nyou can Disable Tunnel Acceleration to troubleshoot.\n• Tunnel Content Inspection Overview\n• Configure Tunnel Content Inspection\n• View Inspected Tunnel Activity\n• View Tunnel Information in Logs\n• Create a Custom Report Based on Tagged Tunnel Traffic\n• Disable Tunnel Acceleration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1574,
+      "end": 1574
+    },
+    "content_stats": {
+      "char_count": 1854,
+      "word_count": 276
+    },
+    "hierarchy": {
+      "parent": "Networking",
+      "children": [
+        "Tunnel Content Inspection Overview",
+        "Configure Tunnel Content Inspection",
+        "View Inspected Tunnel Activity",
+        "View Tunnel Information in Logs",
+        "Create a Custom Report Based on Tagged Tunnel Traffic",
+        "Disable Tunnel Acceleration"
+      ]
+    }
+  }
+}

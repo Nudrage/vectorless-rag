@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_982",
+  "section_number": "1.22.15",
+  "header": "CLI Commands for Dynamic IP Addresses and Tags",
+  "content": "The Command Line Interface on the firewall and Panorama give you a detailed view into the\ndifferent sources from which tags and IP addresses are dynamically registered. It also allows you\nto audit registered and unregistered tags. The following examples illustrate the capabilities in the\nCLI.\nExample\nCLI Command\nView all registered IP addresses that\nmatch the tag, state.poweredOn or\nthat are not tagged as vSwitch0.\nshow log iptag tag_name equal state.p\noweredOn\nshow log iptag tag_name not-equal swi\ntch.vSwitch0\nView all dynamically registered IP\naddresses that were sourced by\nVM Information Source with name\nvmware1 and tagged as poweredOn.\nshow vm-monitor source source-name vm\nware1 tag state.poweredOn registered-\nip all\nregistered IP                    Tag\ns\n----------------------   ------------\n---\nfe80::20c:29ff:fe69:2f76  \"state.powe\nredOn\"\n10.1.22.100               \"state.powe\nredOn\"\n2001:1890:12f2:11:20c:29ff:fe69:2f76\"\nstate.poweredOn\"\nfe80::20c:29ff:fe69:2f80 \"state.power\nedOn\"\n192.168.1.102            \"state.power\nedOn\"\n10.1.22.105              \"state.power\nedOn\"\n2001:1890:12f2:11:2cf8:77a9:5435:c0d\"\nstate.poweredOn\"\nfe80::2cf8:77a9:5435:c0d \"state.power\nedOn\"\nClear all IP addresses and tags learned\nfrom a specific VM Monitoring source\nwithout disconnecting the source.\ndebug vm-monitor clear source-name <n\name>\nDisplay IP addresses registered from all\nsources.\nshow object registered-ip all\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1674\n©2025 Palo Alto Networks, Inc.\nPolicy\nExample\nCLI Command\nDisplay the count for IP addresses\nregistered from all sources.\nshow object registered-ip all option\ncount\nClear IP addresses registered from all\nsources\ndebug object registered-ip clear all\nAdd or delete tags for a given IP\naddress that was registered using the\nXML API.\ndebug object registered-ip test [<reg\nister/unregister>] <ip/netmask><tag>\nView all tags registered from a specific\ninformation source.\nshow vm-monitor source source-name vm\nware1 tag all\nvlanId.4095\nvswitch.vSwitch1\nhost-ip.10.1.5.22\nportgroup.TOBEUSED\nhostname.panserver22\nportgroup.VM Network 2\ndatacenter.ha-datacenter\nvlanId.0\nstate.poweredOn\nvswitch.vSwitch0\nvmname.Ubuntu22-100\nvmname.win2k8-22-105\nresource-pool.Resources\nvswitch.vSwitch2\nguestos.Ubuntu Linux 32-bit\nguestos.Microsoft Windows Server 2008\n32-bit\nannotation.\nversion.vmx-08\nportgroup.VM Network\nvm-info-source.vmware1\nuuid.564d362c-11cd-b27f-271f-c361604d\nfad7\nuuid.564dd337-677a-eb8d-47db-293bd669\n2f76\nTotal: 22\nView all tags registered from a specific\ndata source, for example from the VM\nMonitoring Agent on the firewall, the\nXML API, Windows User-ID Agent or\nthe CLI.\n• To view tags registered from the CLI:\nshow log iptag datasource_type equ\nal unknown\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1675\n©2025 Palo Alto Networks, Inc.\nPolicy\nExample\nCLI Command\n• To view tags registered from the XML API:\nshow log iptag datasource_type equ\nal xml-api\n• To view tags registered from VM Information\nsources:\nshow log iptag datasource_type equ\nal vm-monitor\n• To view tags registered from the Windows User-\nID agent:\nshow log iptag datasource_type equ\nal xml-api datasource_subtype equa\nl user-id-agent\nView all tags that are registered for a\nspecific IP address (across all sources).\ndebug object registered-ip show tag-s\nource ip ip_address tag all\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1676\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1674,
+      "end": 1677
+    },
+    "content_stats": {
+      "char_count": 3404,
+      "word_count": 440
+    },
+    "hierarchy": {
+      "parent": "Policy",
+      "children": []
+    }
+  }
+}

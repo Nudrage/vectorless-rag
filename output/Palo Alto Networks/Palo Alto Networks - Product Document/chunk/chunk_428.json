@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_428",
+  "section_number": "1.12.5.8",
+  "header": "Send User Mappings to User-ID Using the XML API",
+  "content": "User-ID provides many out-of-the box methods for obtaining user mapping information.\nHowever, you might have applications or devices that capture user information but cannot\nnatively integrate with User-ID. For example, you might have a custom, internally developed\napplication or a device that no standard user mapping method supports. In such cases, you can\nuse the PAN-OS XML API to create custom scripts that send the information to the PAN-OS\nintegrated User-ID agent or directly to the firewall. The PAN-OS XML API uses standard HTTP\nrequests to send and receive data. API calls can be made directly from command line utilities such\nas cURL or using any scripting or application framework that supports POST and GET requests.\nTo enable an external system to send user mapping information to the PAN-OS integrated User-\nID agent, create scripts that extract user login and logout events and use the events as input\nto the PAN-OS XML API request. Then define the mechanisms for submitting the XML API\nrequests to the firewall (using cURL, for example) and use the API key of the firewall for secure\ncommunication. For more details, refer to the PAN-OS XML API Usage Guide.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n778\n©2025 Palo Alto Networks, Inc.\nUser-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 778,
+      "end": 779
+    },
+    "content_stats": {
+      "char_count": 1260,
+      "word_count": 205
+    },
+    "hierarchy": {
+      "parent": "Map IP Addresses to Users",
+      "children": []
+    }
+  }
+}

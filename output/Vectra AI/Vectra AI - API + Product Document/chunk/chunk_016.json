@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_016",
+  "section_number": "1.18.3",
+  "header": "Tagging",
+  "content": "The tagging API can be used to manage tags for accounts and detections.\nTo manage tags for an account, use the following URL:\nhttps://<vectra_portal_url>/api/v3.4/tagging/account/<account_id>\nTo manage tags for a host, use the following URL:\nhttps://<vectra_portal_url>/api/v3.4/tagging/host/<host_id>\nTo manage tags for a detection, use the following URL:\nhttps://<vectra_portal_url>/api/v3.4/tagging/detection/<detection_id>\nTo manage tags for any of the above entities, use the following URL with the type of entity specified as a\nquery parameter:\nhttps://<vectra_portal_url>/api/v3.4/tagging/entity/<entity_id>?type=type\nThe following table lists the fields and a description of the various elements for tagging operations.\nDetailed examples of using GET and PATCH methods on tags is described in Appendix A.\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nstatus\nStatus of tagging\nrequest.\nstring\nValid values: ‘success’ or ‘failure’\nentity_id\nThe id of the entity\ninteger\nThe id of the object being tagged.\ntags\nList of tags for the host\nor detection object.\nlist of strings\nWhen doing a PATCH operation,\nthe object will be updated to\nmatch the list of tags provided.\nTo remove tags for a host or\ndetection set tags to an empty\nlist.\nmessage\nError message if\noperation was\nunsuccessful.\nstring\nOnly present when status is\n‘failure’ of operation is a failure.\n© July 2024 Vectra AI, Inc. | 27\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\ninvalid_tags\nList of tags which are\ninvalid for the account or\ndetection object.\nlist of strings\nOnly present when status is\n‘failure’.  This will only be returned\nin the response for a PATCH\noperation.\nOne of the following query parameter is required for the /tagging/entity/<entity_id> endpoint in order to\ndifferentiate the object type:\nQUERY PARAMETER\nDESCRIPTION\ntype\nReplaces “entity_type”",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 26,
+      "end": 27
+    },
+    "content_stats": {
+      "char_count": 1807,
+      "word_count": 264
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

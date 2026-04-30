@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_248",
+  "section_number": "1.10.5",
+  "header": "HA Clustering Overview",
+  "content": "A number of Palo Alto Networks\n® firewall models now support session state synchronization\namong firewalls in a high availability (HA) cluster of up to 16 firewalls. The HA cluster peers\nsynchronize sessions to protect against failure of the data center or a large security inspection\npoint with horizontally scaled firewalls. In the case of a network outage or a firewall going down,\nthe sessions fail over to a different firewall in the cluster. Such synchronization is especially\nhelpful in the following use cases.\nOne use case is when HA peers are spread across multiple data centers so that there is no single\npoint of failure within or between data centers. A second multi-data center use case is when one\ndata center is active and the other is standby.\nA third HA clustering use case is horizontal scaling, in which you add HA cluster members to a\nsingle data center to scale security and ensure session survivability.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n437\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nHA clusters support a Layer 3 or virtual wire deployment. HA peers in the cluster can be a\ncombination of HA pairs and standalone cluster members. In an HA cluster, all members are\nconsidered active; there is no concept of passive firewalls except for HA pairs, which can keep\ntheir active/passive relationship after you add them to an HA cluster.\nAll cluster members share session state. When a new firewall joins an HA cluster, that triggers all\nfirewalls in the cluster to synchronize all existing sessions. HA4 and HA4 backup connections are\nthe dedicated cluster links that synchronize session state among all cluster members having the\nsame cluster ID. The HA4 link between cluster members detects connectivity failures between\ncluster members. HA1 (control link), HA2 (data link), and HA3 (packet-forwarding link) are not\nsupported between cluster members that aren’t HA pairs.\nFor a normal session that has not failed over, only the firewall that is the session owner creates\na traffic log. For a session that failed over, the new session owner (the firewall that receives the\nfailed over traffic) creates the traffic log.\nThe firewall models that support HA clustering and the maximum number of members supported\nper cluster are as follows:\nFirewall Model\nNumber of Members Supported Per\nCluster\nPA-3200 Series\n6\nPA-5200 Series\n16\nPA-7000 Series firewalls that have at least one\nof the following cards: PA-7000-100G-NPC,\nPA-7000-20GQXM-NPC, PA-7000-20GXM-NPC\nPA-7080: 4\nPA-7050: 6\nVM-300\n6\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n438\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nFirewall Model\nNumber of Members Supported Per\nCluster\nVM-500\n6\nVM-700\n16\nHA clustering is not supported in public cloud deployments. Consider the HA Clustering Best\nPractices and Provisioning before you start to Configure HA Clustering.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n439\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 437,
+      "end": 440
+    },
+    "content_stats": {
+      "char_count": 2945,
+      "word_count": 470
+    },
+    "hierarchy": {
+      "parent": "High Availability",
+      "children": []
+    }
+  }
+}

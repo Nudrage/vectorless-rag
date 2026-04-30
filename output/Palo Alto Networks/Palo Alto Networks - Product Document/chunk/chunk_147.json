@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_147",
+  "section_number": "1.8.3.3",
+  "header": "Configure MFA Between Duo and the Firewall",
+  "content": "Multi-factor authentication (MFA) allows you to protect company assets by using multiple factors\nto verify the identity of users before allowing them to access network resources. There are\nmultiple ways to use the Duo identity management service to authenticate with the firewall:\n• Two-factor authentication for VPN logins using the GlobalProtect Gateway and a RADIUS\nserver profile (supported on PAN-OS 7.0 and later).\n• API-based integration using Authentication Portal and an MFA server profile (does not require\na Duo Authentication Proxy or SAML IdP - supported on PAN-OS 8.0 and later).\n• SAML integration for on-premise servers (supported on PAN-OS 8.0 and later).\nTo enable SAML MFA between the firewall and Duo to secure administrative access to the\nfirewall:\n• Configure Duo for SAML MFA with Duo Access Gateway\n• Configure the Firewall to Integrate with Duo\n• Verify MFA with Duo",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 270,
+      "end": 270
+    },
+    "content_stats": {
+      "char_count": 891,
+      "word_count": 142
+    },
+    "hierarchy": {
+      "parent": "Configure Multi-Factor Authentication",
+      "children": [
+        "Configure Duo for SAML MFA with Duo Access Gateway",
+        "Configure the Firewall to Integrate with Duo",
+        "Verify MFA with Duo"
+      ]
+    }
+  }
+}

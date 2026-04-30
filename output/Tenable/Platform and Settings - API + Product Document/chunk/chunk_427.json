@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_427",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n401\n404\n429\n500\nstatusCode\nerror\nmessage\nGET\n/sensors/profiles/{sensor_type}/{profile_uuid}\napplication/json\nAgent Profile Details Response\nExpand all\nCollapse all\nCopy\n{\n\"name\": \"US-1A Sensors\",\n\"description\": \"This profile targets sensors for US-1A.\",\n\"profile_uuid\": \"52cddf58-f10f-49f6-969f-d17f623171f5\",\n\"created\": \"2024-07-19T00:11:47.227483Z\",\n\"updated\": \"2024-07-19T00:11:47.227483Z\",\nContent type\nExample\n\"config\":\n-\n{\n\"version\": \"11.0.0\",\n\"immediate_plugin_update\": true,\n\"update_disabled\": false,\n\"container_public_key\": \"-----BEGIN PUBLIC KEY-----\\nMIICIjANBgkqhkiG9w0BA\n\"modules\":\n-\n{\n\"com.tenable.nessus_agent\":\n-\n{\n\"enabled\": true,\n\"settings\":\n-\n[\n- {\n\"setting\": \"backend_log_level\",\n\"value\": \"normal\"\n}\n]\n},\n\"com.tenable.agent_identifier_service\":\n-\n{\n\"enabled\": true,\n\"open_agent_port\": 5050\n},\n\"com.tenable.fredi_module\":\n-\n{\n\"enabled\": true,\n\"base_inventory_freq\": 2\n},\n\"com.tenable.tua_comm_module\":\n-\n{\n\"enabled\": true\n}\n},\n\"resources\":\n-\n{\n\"cpu_limit\": 30\n}\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 401,
+      "end": 402
+    },
+    "content_stats": {
+      "char_count": 988,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

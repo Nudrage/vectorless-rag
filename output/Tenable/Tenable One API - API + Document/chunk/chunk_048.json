@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_048",
+  "section_number": "17",
+  "header": "List asset export jobs",
+  "content": "Returns a list of up to 1,000 asset export jobs submitted in the last 3 days, sorted by the most recent\nrefresh time.\nRequires the Basic [16] user role or the ASSET_INVENTORY.CYBER_ASSET_MANAGEMENT.READ  and\nAD.TOGGLE_AD.USE  custom role privileges. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring\nEnum: \"QUEUED\"\n\"PROCESSING\"\n\"FINISHED\"\n\"ERROR\"\nFilters the results by export job status.\nSupported values include:\nQUEUED —The request is waiting for earlier requests to complete.\nPROCESSING —The request is currently being processed.\nFINISHED —Processing is complete, and all chunks are available.\nERROR —An error occurred while processing. Retry the request, and if\nthe issue persists, contact Tenable Support.\ninteger\n[ 1 .. 1000 ]\nDefault: 1000\nExample: limit=100\nThe maximum number of export jobs to return from the last 3 days.\nNote: Only jobs submitted within the last 3 days are returned. The actual\nnumber of results may be less than the specified limit if fewer jobs exist.\nIf omitted, the default is 1000 . The maximum value is 1000  and the\nminimum value is 1 .\nstatus\nlimit",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 142,
+      "end": 142
+    },
+    "content_stats": {
+      "char_count": 1092,
+      "word_count": 173
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_041",
+  "section_number": "1.3.5",
+  "header": "Assess Network Traffic",
+  "content": "Now that you have a basic security policy, you can review the statistics and data in the\nApplication Command Center (ACC), traffic logs, and the threat logs to observe trends on your\nnetwork. Use this information to identify where you need to create more granular security policy\nrules.\nUse the Application Command Center and Use the Automated Correlation Engine.\nIn the ACC, review the most used applications and the high-risk applications on your network.\nThe ACC graphically summarizes the log information to highlight the applications traversing\nthe network, who is using them (with User-ID enabled), and the potential security impact\nof the content to help you identify what is happening on the network in real time. You can\nthen use this information to create appropriate security policy rules that block unwanted\napplications, while allowing and enabling applications in a secure manner.\nThe Compromised Hosts widget in ACC > Threat Activity displays potentially compromised\nhosts on your network and the logs and match evidence that corroborates the events.\nDetermine what updates/modifications are required for your network security policy rules and\nimplement the changes.\nFor example:\n• Evaluate whether to allow web content based on schedule, users, or groups.\n• Allow or control certain applications or functions within an application.\n• Decrypt and inspect content.\n• Allow but scan for threats and exploits.\nFor information on refining your security policies and for attaching custom security profiles,\nsee how to Create a Security Policy Rule and Security Profiles.\nView Logs.\nSpecifically, view the traffic and threat logs (Monitor > Logs).\nTraffic logs are dependent on how your security policies are defined and set up to log\ntraffic. The Application Usage widget in the ACC, however, records applications and\nstatistics regardless of policy configuration; it shows all traffic that is allowed on your\nnetwork, therefore it includes the inter-zone traffic that is allowed by policy and the\nsame zone traffic that is allowed implicitly.\nConfigure Log Storage Quotas and Expiration Periods.\nReview the AutoFocus intelligence summary for artifacts in your logs. An artifact is an item,\nproperty, activity, or behavior associated with logged events on the firewall. The intelligence\nsummary reveals the number of sessions and samples in which WildFire detected the artifact.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n58\n©2025 Palo Alto Networks, Inc.\nGetting Started\nUse WildFire verdict information (benign, grayware, malware) and AutoFocus matching tags to\nlook for potential risks in your network.\nAutoFocus tags created by Unit 42, the Palo Alto Networks threat intelligence team,\ncall attention to advanced, targeted campaigns and threats in your network.\nFrom the AutoFocus intelligence summary, you can start an AutoFocus search for artifacts and\nassess their pervasiveness within global, industry, and network contexts.\nMonitor Web Activity of Network Users.\nReview the URL filtering logs to scan through alerts, denied categories/URLs. URL logs are\ngenerated when a traffic matches a security rule that has a URL filtering profile attached with\nan action of alert, continue, override or block.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n59\n©2025 Palo Alto Networks, Inc.\nGetting Started",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 58,
+      "end": 60
+    },
+    "content_stats": {
+      "char_count": 3306,
+      "word_count": 505
+    },
+    "hierarchy": {
+      "parent": "Getting Started",
+      "children": []
+    }
+  }
+}

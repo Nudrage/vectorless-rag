@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_597",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the tag value was deleted successfully.\nRESPONSE SCHEMA:\napplication/json\nany\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 403 Returned if you do not have permissions to delete tags.\n— 404 Returned if the specified tag value was not found.\ntag_value_uuid\nrequired\nstatusCode\nerror\nmessage\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 597,
+      "end": 598
+    },
+    "content_stats": {
+      "char_count": 836,
+      "word_count": 137
+    },
+    "hierarchy": {
+      "parent": "Delete tag value",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

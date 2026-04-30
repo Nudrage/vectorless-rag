@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_833",
+  "section_number": "1.21.15.1.1",
+  "header": "NAT Policy Overview",
+  "content": "You configure a NAT rule to match a packet’s source zone and destination zone, at a minimum. In\naddition to zones, you can configure matching criteria based on the packet’s destination interface,\nsource and destination address, and service. You can configure multiple NAT rules. The firewall\nevaluates the rules in order from the top down. Once a packet matches the criteria of a single\nNAT rule, the packet is not subjected to additional NAT rules. Therefore, your list of NAT rules\nshould be in order from most specific to least specific so that packets are subjected to the most\nspecific rule you created for them.\nStatic NAT rules do not have precedence over other forms of NAT. Therefore, for static NAT to\nwork, the static NAT rules must be above all other NAT rules in the list on the firewall.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1478\n©2025 Palo Alto Networks, Inc.\nNetworking\nNAT rules provide address translation, and are different from security policy rules, which allow or\ndeny packets. It is important to understand the firewall’s flow logic when it applies NAT rules and\nsecurity policy rules so that you can determine what rules you need, based on the zones you have\ndefined. You must configure security policy rules to allow the NAT traffic.\nUpon ingress, the firewall inspects the packet and does a route lookup to determine the egress\ninterface and zone. Then the firewall determines if the packet matches one of the NAT rules that\nhave been defined, based on source and/or destination zone. It then evaluates and applies any\nsecurity policies that match the packet based on the original (pre-NAT) source and destination\naddresses, but the post-NAT zones. Finally, upon egress, for a matching NAT rule, the firewall\ntranslates the source and/or destination address and port numbers.\nKeep in mind that the translation of the IP address and port do not occur until the packet leaves\nthe firewall. The NAT rules and security policies apply to the original IP address (the pre-NAT\naddress). A NAT rule is configured based on the zone associated with a pre-NAT IP address.\nSecurity policies differ from NAT rules because security policies examine post-NAT zones to\ndetermine whether the packet is allowed or not. Because the very nature of NAT is to modify\nsource or destination IP addresses, which can result in modifying the packet’s outgoing interface\nand zone, security policies are enforced on the post-NAT zone.\nA SIP call sometimes experiences one-way audio when going through the firewall because\nthe call manager sends a SIP message on behalf of the phone to set up the connection.\nWhen the message from the call manager reaches the firewall, the SIP ALG must put the\nIP address of the phone through NAT. If the call manager and the phones are not in the\nsame security zone, the NAT lookup of the IP address of the phone is done using the call\nmanager zone. The NAT policy should take this into consideration.\nNo-NAT rules are configured to allow exclusion of IP addresses defined within the range of NAT\nrules defined later in the NAT policy. To define a no-NAT policy, specify all of the match criteria\nand select No Source Translation in the source translation column.\nYou can verify the NAT rules processed by selecting Device > Troubleshooting and testing the\ntraffic matches for the NAT rule. For example:",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1478,
+      "end": 1479
+    },
+    "content_stats": {
+      "char_count": 3338,
+      "word_count": 564
+    },
+    "hierarchy": {
+      "parent": "NAT Policy Rules",
+      "children": []
+    }
+  }
+}

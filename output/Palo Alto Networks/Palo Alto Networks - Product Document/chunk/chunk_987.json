@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_987",
+  "section_number": "1.22.16.2.2",
+  "header": "Display XFF Values in Logs",
+  "content": "In addition to XFF header usage in security policy, you can view the XFF IP address in\nvarious logs, reports, and the Application Command Center (ACC) to aid in monitoring and\ntroubleshooting. You can add the X-Forwarded-For column to Traffic, Threat, Data Filtering, and\nWildfire Submissions logs.\nFor non-URL Filtering logs, XFF IP logging is supported only when packet capture is not\nenabled.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1679\n©2025 Palo Alto Networks, Inc.\nPolicy\nThe X-Forwarded-For IP column does not display a value if the firewall detects a threat\nthat requires a reset action (reset-client, reset-server, or reset-both)\nand the last inspected packet does not contain the XFF header.\nTo view the XFF IP address in your logs, complete the following steps.\nSTEP 1 |\nLog in to your firewall.\nSTEP 2 |\nSelect Monitoring > Logs.\nSTEP 3 |\nSelect Traffic, Threat, Data Filtering, or Wildfire Submissions.\nSTEP 4 |\nClick the arrow to the right of any column header and select Columns.\nSTEP 5 |\nSelect X-Forwarded-For IP to display the XFF IP in your log.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1679,
+      "end": 1680
+    },
+    "content_stats": {
+      "char_count": 1066,
+      "word_count": 179
+    },
+    "hierarchy": {
+      "parent": "Use XFF IP Address Values in Security Policy and Logging",
+      "children": []
+    }
+  }
+}

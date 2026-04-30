@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_912",
+  "section_number": "1.21.21.2.3",
+  "header": "TCP Split Handshake Drop",
+  "content": "The Split Handshake option in a Zone Protection profile will prevent a TCP session from being\nestablished if the session establishment procedure does not use the well-known three-way\nhandshake, but instead uses a variation, such as a four-way or five-way split handshake or a\nsimultaneous open.\nThe Palo Alto Networks next-generation firewall correctly handles sessions and all Layer 7\nprocesses for split handshake and simultaneous open session establishment without enabling\nthe Split Handshake option. Nevertheless, the Split Handshake option (which causes a TCP split\nhandshake drop) is made available. When the Split Handshake option is configured for a Zone\nProtection profile and that profile is applied to a zone, TCP sessions for interfaces in that zone\nmust be established using the standard three-way handshake; variations are not allowed.\nThe Split Handshake option is disabled by default.\nThe following illustrates the standard three-way handshake used to establish a TCP session with a\nPAN-OS firewall between the initiator (typically a client) and the listener (typically a server).\nThe Split Handshake option is configured for a Zone Protection profile that is assigned to a zone.\nAn interface that is a member of the zone drops any synchronization (SYN) packets sent from the\nserver, preventing the following variations of handshakes. The letter A in the figure indicates the\nsession initiator and B indicates the listener. Each numbered segment of the handshake has an\narrow indicating the direction of the segment from the sender to the receiver, and each segment\nindicates the control bit(s) setting.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1557\n©2025 Palo Alto Networks, Inc.\nNetworking\nYou can Prevent TCP Split Handshake Session Establishment.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1557,
+      "end": 1558
+    },
+    "content_stats": {
+      "char_count": 1767,
+      "word_count": 270
+    },
+    "hierarchy": {
+      "parent": "TCP",
+      "children": []
+    }
+  }
+}

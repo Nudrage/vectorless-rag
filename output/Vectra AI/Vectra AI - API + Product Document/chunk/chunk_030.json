@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_030",
+  "section_number": "1.13",
+  "header": "Health",
+  "content": "API responses may vary depending on product subscriptions (Network, AWS, M365).\nThe URL to retrieve health data is https://<vectra_portal_url>/api/v3.4/health and uses\nOAuth2 authentication.\nThe following table lists the fields and descriptions present in a Health object.\nField\nSub-Field\nType\nDescription\nmemory\nobject\nSystem memory\nusage_percent\ninteger\nfree_bytes\ninteger\nused_bytes\ninteger\ntotal_bytes\ninteger\nupdated_at\nstring\nISO8601\ntrafficdrop\nobject\nSensor output is only shown if traffic has gone out of\nbaseline\nsensors\narray\nname\nstring\nip_address\nstring\nluid\nstring\nerror\nstring\nstatus\nstring\nStatus can be OK, WARNING, UNKNOWN, or SKIP\nstart\nstring\nend\nstring\ninterfaces\narray\nname\nstring\n© July 2024 Vectra AI, Inc. | 51\nField\nSub-Field\nType\nDescription\nbaseline\ninteger\ncutoff\ninteger\ntraffic\ninteger\ncpu\nobject\nProcessor information\nuser_percent\ninteger\n% of CPU processing tasks\nnice_percent\ninteger\n% of CPU processing higher prioritized tasks\nsystem_percent\ninteger\n% of CPU processing system specific tasks\nidle_percent\ninteger\n% of CPU idle\nupdated_at\nstring\nISO8601\nhostid\nobject\nip_always\ninteger\nNumber of IP addresses that are always covered by Host ID\nwhen seen on the network\nip_sometimes\ninteger\nNumber of IP addresses that are sometimes covered by Host\nID when seen on the network\nip_never\ninteger\nNumber of IP addresses that are never covered by Host ID\nwhen seen on the network\nartifact_counts\nlist of\nobjects\nCalculated weekly\nupdated_at\nstring\nISO8601\nnetwork\nobject\nUpdates every 5 mins\ninterfaces\nlist of\nobjects\nLink speed shown in megabits per s\ntraffic\nlist of\nobjects\nLink speed shown in megabits per s\nupdated_at\nstring\nISO8601\nvlans\ninteger\ndisk\ndisk_utilization\nobject\nIncludes free, used, total, and usage percentage of filesystem\nin bytes\nraid_disks_missing\nobject\nOptional health status and errors, if any\ndegraded_raid_volume\nobject\nOptional health status and errors, if any\ndisk_raid\nobject\nOptional health status and errors, if any\nupdated_at\nstring\nISO8601\npower\nobject\nPower supply information\n© July 2024 Vectra AI, Inc. | 52\nField\nSub-Field\nType\nDescription\nstatus\nstring\nerror\nstring\nOptional power supply errors, if any\npower_supplies\nlist of\nobjects\nList of power supplies and temperature information\nupdated_at\nstring\nISO8601\nsystem\nobject\nSystem Information\nuptime\nstring\nserial_number\nstring\nversion\nobject\nIncludes date of last update, version, mode, and model\nupdated_at\nstring\nISO8601\nconnectivity\nobject\nsensors\narray\nlast_check\nstring\naffected_metadata_hours string\nField not present if status is ‘OK’\nerror\nstring\nstatus\nstring\nStatus can be OK, WARNING, CRITICAL, or UNKNOWN\nname\nstring\nserial_number\nstring\nluid\nstring\nip_address\nstring\nsensors\nlist of\nobjects\nSensor Information\nstatus\nstring\nname\nstring\nserial_number\nstring\npackage_version\nstring\nlast_seen\nstring\nISO8601\nip_address\nstring\nluid\nstring\nlocation\nstring\ndetection\nobject\nDetection model health\nupdated_at\nstring\nISO8601\n© July 2024 Vectra AI, Inc. | 53\nField\nSub-Field\nType\nDescription\ncheck_results\narray\nOne entry per failing detection model, or exactly one entry if\nall detection models are healthy\nname\nstring\ndetection_type\nstring\nmessage\nstring\nstatus\nstring\nStatus can be OK or CRITICAL\nevent_timestamp\nstring\nISO8601\nThe available query parameters to filter for Health are listed below.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\ncache\nbool\nTrue by default.\nv_lans\nbool\nTrue by default.\nAdditionally, Health allows querying by field by appending the field to the end of the request url. For\nexample: https://<vectra_portal_url>/api/v3.4/health/memory will return only memory fields.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 50,
+      "end": 53
+    },
+    "content_stats": {
+      "char_count": 3614,
+      "word_count": 521
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_407",
+  "section_number": "1.12.5.1",
+  "header": "Create a Dedicated Service Account for the User-ID Agent",
+  "content": "To use the Windows-based User-ID agent or the PAN-OS integrated User-ID agent to map users\nas they log in to your Exchange servers, domain controllers, eDirectory servers, or Windows\nclients, create a dedicated service account for the User-ID agent on a domain controller in each\ndomain that the agent will monitor.\nThe User-ID agent maps users based on logs for security events. To ensure that the User-ID agent\ncan successfully map users, verify that the source for your mappings generates logs for Audit\nLogon, Audit Kerberos Authentication Service, and Audit Kerberos Service Ticket Operations\nevents. At a minimum, the source must generate logs for the following events:\n• Logon Success (4624)\n• Authentication Ticket Granted (4768)\n• Service Ticket Granted (4769)\n• Ticket Granted Renewed (4770)\nThe required permissions for the service account depend on the user mapping methods and\nsettings you plan to use. For example, if you are using the PAN-OS integrated User-ID agent, the\nservice account requires Server Operator privileges to monitor user sessions. If you are using the\nWindows-based User-ID agent, the service account does not require Server Operator privileges\nto monitor user sessions. To reduce the risk of compromising the User-ID service account, always\nconfigure the account with the minimum set of permissions necessary for the agent.\n• If you are installing the Windows-based User-ID agent on a supported Windows server,\nConfigure a Service Account for the Windows User-ID Agent.\n• If you are using the PAN-OS integrated User-ID agent on the firewall, Configure a Service\nAccount for the PAN-OS Integrated User-ID Agent.\nUser-ID provides many methods for safely collecting user mapping information. Some\nlegacy features designed for environments that only required user mapping on Windows\ndesktops attached to the local network require privileged service accounts. If the\nprivileged service account is compromised, this would open your network to attack. As a\nbest practice, avoid using legacy features that require privileges that would pose a threat\nif compromised, such as client probing and session monitoring.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 707,
+      "end": 707
+    },
+    "content_stats": {
+      "char_count": 2139,
+      "word_count": 330
+    },
+    "hierarchy": {
+      "parent": "Map IP Addresses to Users",
+      "children": [
+        "Configure a Service Account for the Windows User-ID Agent",
+        "Configure a Service Account for the PAN-OS Integrated User-ID Agent"
+      ]
+    }
+  }
+}

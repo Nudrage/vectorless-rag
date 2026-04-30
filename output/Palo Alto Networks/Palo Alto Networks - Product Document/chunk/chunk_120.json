@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_120",
+  "section_number": "1.7.1",
+  "header": "Device Telemetry Overview",
+  "content": "Device telemetry collects data about your next-generation firewall or Panorama and shares it\nwith Palo Alto Networks by uploading the data to Cortex Data Lake. This data is used to power\ntelemetry apps, which are cloud-based applications that make it easy to monitor and manage your\nnext-generation firewalls and Panoramas. These apps improve your visibility into device health,\nperformance, capacity planning, and configuration. Through these apps, you can maximize the\nbenefits you enjoy from the products and services that Palo Alto Networks delivers.\nTelemetry data is also used for sharing threat intelligence, providing enhanced intrusion\nprevention, evaluation of threat signatures, as well as improved malware detection within PAN-\nDB URL filtering, DNS-based command-and-control (C2) signatures, and WildFire.\nTelemetry data is collected and stored locally on your device for a limited period of time. This\ndata is shared with Palo Alto Networks only if you configure a destination region for the data. If\nyour organization has a Cortex Data Lake license, then you can only send the data to the same\nregion as where your Cortex Data Lake instance resides. If your organization does not have a\nCortex Data Lake license, then you must install a device certificate in order to share this data. In\nthis case, you can choose any available region, although you must conform to all applicable local\nlaws regarding privacy and data storage.\nTelemetry data is collected and shared with Palo Alto Networks on predefined collection intervals.\nYou can control whether data is collected and shared by enabling/disabling categories of data.\nYou can also monitor the current status of data collection and transmission.\nFinally, you can obtain a live sample of the data that your firewall is collecting for telemetry\npurposes. For a complete description of all the telemetry metrics that can be shared with Palo\nAlto Networks, including the privacy implication for each metric, see the PAN-OS Device\nTelemetry Metrics Reference Guide.\nAutomatically created users such as _cliadmin may appear under Logged in Admins on\nthe dashboard while telemetry is enabled.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n231\n©2025 Palo Alto Networks, Inc.\nDevice Telemetry",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 231,
+      "end": 232
+    },
+    "content_stats": {
+      "char_count": 2245,
+      "word_count": 348
+    },
+    "hierarchy": {
+      "parent": "Device Telemetry",
+      "children": []
+    }
+  }
+}

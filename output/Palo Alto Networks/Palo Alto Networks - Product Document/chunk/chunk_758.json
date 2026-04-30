@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_758",
+  "section_number": "1.21.2",
+  "header": "Virtual Routers",
+  "content": "A virtual router is a function of the firewall that participates in Layer 3 routing. The firewall uses\nvirtual routers to obtain routes to other subnets by you manually defining static routes or through\nparticipation in one or more Layer 3 routing protocols (dynamic routes). The routes that the\nfirewall obtains through these methods populate the IP routing information base (RIB) on the\nfirewall. When a packet is destined for a different subnet than the one it arrived on, the virtual\nrouter obtains the best route from the RIB, places it in the forwarding information base (FIB),\nand forwards the packet to the next hop router defined in the FIB. The firewall uses Ethernet\nswitching to reach other devices on the same IP subnet. (An exception to one best route going in\nthe FIB occurs if you are using ECMP, in which case all equal-cost routes go in the FIB.)\nThe Ethernet, VLAN, and tunnel interfaces defined on the firewall receive and forward Layer 3\npackets. The destination zone is derived from the outgoing interface based on the forwarding\ncriteria, and the firewall consults policy rules to identify the security policies that it applies to each\npacket. In addition to routing to other network devices, virtual routers can route to other virtual\nrouters within the same firewall if a next hop is specified to point to another virtual router.\nYou can configure Layer 3 interfaces on a virtual router to participate with dynamic routing\nprotocols (BGP, OSPF, OSPFv3, or RIP) as well as add static routes. You can also create multiple\nvirtual routers, each maintaining a separate set of routes that aren’t shared between virtual\nrouters, enabling you to configure different routing behaviors for different interfaces.\nYou can configure dynamic routing from one virtual router to another by configuring a loopback\ninterface in each virtual router, creating a static route between the two loopback interfaces, and\nthen configuring a dynamic routing protocol to peer between these two interfaces.\nEach Layer 3 Ethernet, loopback, VLAN, and tunnel interface defined on the firewall must be\nassociated with a virtual router. While each interface can belong to only one virtual router, you\ncan configure multiple routing protocols and static routes for a virtual router. Regardless of\nthe static routes and dynamic routing protocols you configure for a virtual router, one general\nconfiguration is required:\nSTEP 1 |\nGather the required information from your network administrator.\n• Interfaces on the firewall that you want to perform routing.\n• Administrative distances for static, OSPF internal, OSPF external, IBGP, EBGP and RIP.\nSTEP 2 |\nCreate a virtual router and apply interfaces to it.\nThe firewall comes with a virtual router named default. You can edit the default virtual router\nor add a new virtual router.\n1.\nSelect Network > Virtual Routers.\n2.\nSelect a virtual router (the one named default or a different virtual router) or Add the\nName of a new virtual router.\n3.\nSelect Router Settings > General.\n4.\nClick Add in the Interfaces box and select an already defined interface.\nRepeat this step for all interfaces you want to add to the virtual router.\n5.\nClick OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1366\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 3 |\nSet Administrative Distances for static and dynamic routing.\nSet Administrative Distances for types of routes as required for your network. When the\nvirtual router has two or more different routes to the same destination, it uses administrative\ndistance to choose the best path from different routing protocols and static routes, by\npreferring a lower distance.\n• Static—Range is 10-240; default is 10.\n• OSPF Internal—Range is 10-240; default is 30.\n• OSPF External—Range is 10-240; default is 110.\n• IBGP—Range is 10-240; default is 200.\n• EBGP—Range is 10-240; default is 20.\n• RIP—Range is 10-240; default is 120.\nSee ECMP if you want to leverage having multiple equal-cost paths for forwarding.\nSTEP 4 |\nCommit virtual router general settings.\nClick OK and Commit.\nSTEP 5 |\nConfigure Ethernet, VLAN, loopback, and tunnel interfaces as needed.\nConfigure Layer 3 Interfaces.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1367\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1366,
+      "end": 1368
+    },
+    "content_stats": {
+      "char_count": 4246,
+      "word_count": 692
+    },
+    "hierarchy": {
+      "parent": "Networking",
+      "children": []
+    }
+  }
+}

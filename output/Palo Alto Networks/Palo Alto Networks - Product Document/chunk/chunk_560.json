@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_560",
+  "section_number": "1.16.10",
+  "header": "Block Private Key Export",
+  "content": "You can permanently block the export of private keys for certificates when you generate them in\nor import them into PAN-OS or Panorama. Blocking the export of private keys from your PAN-\nOS devices hardens your security posture because it prevents rogue administrators or other bad\nactors from misusing keys. Administrators with roles that include certificate management can\nblock the export of private keys. You can’t block keys that already exist on a device; you can only\nblock keys at the time that you generate them in or import them into PAN-OS.\nWhen an administrator blocks the export of a private key, no administrator can export that key,\nnot even Superuser administrators. If you need to export a private key from a PAN-OS appliance,\nregenerate the certificate and the key without selecting the option to block private key export.\nTo downgrade to an earlier version of PAN-OS, you must first delete the certificates whose\nprivate keys are blocked. If you don’t delete the certificates whose private keys are blocked\nbefore you attempt to downgrade, an error message asks you to delete those certificates. You\ncan’t downgrade until you delete them. After you downgrade, reimport or regenerate the deleted\ncertificates if you need them.\nIf you use an enterprise Public Key Infrastructure (PKI) to generate certificates and private\nkeys, block the export of private keys because you can install them on new firewalls and\nPanoramas from your enterprise certificate authority (CA), so there is no reason to export\nthem from PAN-OS.\nIf you generate self-signed certificates on the firewall or Panorama and apply the block\nprivate key export option, you can’t export the certificate and key to other PAN-OS\nappliances.\nYou can export and import the device state (Device > Setup > Operations) even if you block\nthe export of private keys. We include the private keys in device state imports and exports, but\nadministrators can’t read or decode them.\nYou can import or load the configuration of one firewall on another firewall if the master\nkey is the same on both firewalls. If the master key is different on the firewalls, then\nimporting or loading the configuration doesn’t work and the commit fails while reading the\ncertificates.\n• Generate a Private Key and Block It\n• Import a Private Key and Block It\n• Import a Private Key for IKE Gateway and Block It\n• Verify Private Key Blocking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1030,
+      "end": 1030
+    },
+    "content_stats": {
+      "char_count": 2392,
+      "word_count": 399
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": [
+        "Generate a Private Key and Block It",
+        "Import a Private Key and Block It",
+        "Import a Private Key for IKE Gateway and Block It",
+        "Verify Private Key Blocking"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_165",
+  "section_number": "1.8.14",
+  "header": "Authentication Policy",
+  "content": "Authentication policy enables you to authenticate end users before they can access services and\napplications. Whenever a user requests a service or application (such as by visiting a web page),\nthe firewall evaluates Authentication policy. Based on the matching Authentication policy rule, the\nfirewall then prompts the user to authenticate using one or more methods (factors), such as login\nand password, Voice, SMS, Push, or One-time Password (OTP) authentication. For the first factor,\nusers authenticate through a Authentication Portal web form. For any additional factors, users\nauthenticate through a Multi-Factor Authentication (MFA) login page.\nTo implement Authentication policy for GlobalProtect, refer to Configure GlobalProtect\nto facilitate multi-factor authentication notifications.\nAfter the user authenticates for all factors, the firewall evaluates Security Policy to determine\nwhether to allow access to the service or application.\nTo reduce the frequency of authentication challenges that interrupt the user workflow, you can\nspecify a timeout period during which a user authenticates only for initial access to services and\napplications, not for subsequent access. Authentication policy integrates with Authentication\nPortal to record the timestamps used to evaluate the timeout and to enable user-based policies\nand reports.\nBased on user information that the firewall collects during authentication, User-ID creates\na new IP address-to-username mapping or updates the existing mapping for that user (if the\nmapping information has changed). The firewall generates User-ID logs to record the additions\nand updates. The firewall also generates an Authentication log for each request that matches an\nAuthentication rule. If you favor centralized monitoring, you can configure reports based on User-\nID or Authentication logs and forward the logs to Panorama or external services as you would for\nany other log types.\n• Authentication Timestamps\n• Configure Authentication Policy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 307,
+      "end": 307
+    },
+    "content_stats": {
+      "char_count": 1997,
+      "word_count": 286
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": [
+        "Authentication Timestamps",
+        "Configure Authentication Policy"
+      ]
+    }
+  }
+}

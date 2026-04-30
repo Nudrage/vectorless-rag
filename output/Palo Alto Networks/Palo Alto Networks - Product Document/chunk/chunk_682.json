@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_682",
+  "section_number": "1.19.3.4.2",
+  "header": "IKE Phase 2",
+  "content": "After the tunnel is secured and authenticated, in Phase 2 the channel is further secured for the\ntransfer of data between the networks. IKE Phase 2 uses the keys that were established in Phase\n1 of the process and the IPSec Crypto profile, which defines the IPSec protocols and keys used for\nthe SA in IKE Phase 2.\nThe IPSEC uses the following protocols to enable secure communication:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1251\n©2025 Palo Alto Networks, Inc.\nVPNs\n• Encapsulating Security Payload (ESP)—Allows you to encrypt the entire IP packet, and\nauthenticate the source and verify integrity of the data. While ESP requires that you encrypt\nand authenticate the packet, you can choose to only encrypt or only authenticate by setting\nthe encryption option to Null; using encryption without authentication is discouraged.\n• Authentication Header (AH)—Authenticates the source of the packet and verifies data\nintegrity. AH does not encrypt the data payload and is unsuited for deployments where data\nprivacy is important. AH is commonly used when the main concern is to verify the legitimacy of\nthe peer, and data privacy is not required.\nTable 5: Algorithms Supported for IPSEC Authentication and Encryption\nESP\nAH\nDiffie Hellman (DH) exchange options supported\n• Group 1—768 bits\n• Group 2—1024 bits (the default)\n• Group 5—1536 bits\n• Group 14—2048 bits.\n• Group 19— 256-bit elliptic curve group\n• Group 20—384-bit elliptic curve group\n• no-pfs—By default, perfect forward secrecy (PFS) is enabled, which means a new DH key is\ngenerated in IKE phase 2 using one of the groups listed above. This key is independent of\nthe keys exchanged in IKE phase1 and provides better data transfer security. If you select\nno-pfs, the DH key created at phase 1 is not renewed and a single key is used for the IPSec\nSA negotiations. Both VPN peers must be enabled or disabled for PFS.\nEncryption algorithms supported\n• 3des\nTriple Data Encryption Standard (3DES) with a security strength\nof 112 bits\n• aes-128-cbc\nAdvanced Encryption Standard (AES) using cipher block\nchaining (CBC) with a security strength of 128 bits\n• aes-192-cbc\nAES using CBC with a security strength of 192 bits\n• aes-256-cbc\nAES using CBC with a security strength of 256 bits\n• aes-128-ccm\nAES using Counter with CBC-MAC (CCM) with a security\nstrength of 128 bits\n• aes-128-gcm\nAES using Galois/Counter Mode (GCM) with a security strength\nof 128 bits\n• aes-256-gcm\nAES using GCM with a security strength of 256 bits\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1252\n©2025 Palo Alto Networks, Inc.\nVPNs\nESP\nAH\n• des\nData Encryption Standard (DES) with a security strength of 56\nbits\nAuthentication algorithms supported\n• md5\n• md5\n• sha 1\n• sha 1\n• sha 256\n• sha 256\n• sha 384\n• sha 384\n• sha512\n• sha 512",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1251,
+      "end": 1253
+    },
+    "content_stats": {
+      "char_count": 2766,
+      "word_count": 471
+    },
+    "hierarchy": {
+      "parent": "Internet Key Exchange (IKE) for VPN",
+      "children": []
+    }
+  }
+}

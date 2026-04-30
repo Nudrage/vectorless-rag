@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_018",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is CR_ftp_av_log_fmt.\nSyslog field\nname\nName\nLog viewer -\nDetail view\nfield name\nData\ntype\nMax\nlength\nFormat/Description\nPossible\nvalues\nNotes/Examples\nlog_type\nN/A\nlog_type\nString\nAnti-\nVirus\nlog_component N/A\nlog_component String\nFTP\nlog_subtype\nLog\nSubtype\nlog_subtype\nString\nVirus\nClean\nseverity\nN/A\nString\nfw_rule_id\nN/A\nfw_rule_id\nNumber int32\nuser_name\nUsername\nuser\nString\n384\nmalware\nDetection\nvirus\nString\n256\nName of detected virus\nurl\nN/A\nurl\nString\n1024\nURL of\ndownload/upload\ncon_direction\nN/A\ndirection\nDownload/Upload\nDownload\nUpload\nfile_name\nN/A\nfile_name\nString\n64\nDownloaded/uploaded\nfilename\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 16\nfile_size\nN/A\nfile_size\nNumber 32\nSize of the\ndownloaded/uploaded\nfile\nfile_path\nN/A\nfile_path\nString\n1024\nPath the file was\nuploaded/downloaded\nto/from\nftpcommand\nN/A\ncmd\nString\n64\nFTP command\nRETR\nSTOR\nsrc_ip\nSource IP\nsrc_ip\nSource IP address\nsrc_country\nN/A\nsrc_country\nString\n64\nSource country code of\nthe source IP address\neg. \"IND\"\n\"USA\"\ndst_ip\nDestination\nIP\ndst_ip\nThe destination IP\naddress.\ndst_country\nN/A\ndst_country\nString\n64\nDestination country\ncode of the destination\nIP address\neg. \"IND\"\n\"USA\"\nsrc_port\nN/A\nsrc_port\ndst_port\nN/A\ndst_port\ndstdomain\nN/A\ndomain\nString\n512\nsent_bytes\nN/A\nbytes_sent\nNumber int32\nrecv_bytes\nN/A\nbytes_received Number int32\nlog_id\nString\neg. \"010101600001\"\ndevice_name\nString\neg \"SFW\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 17\ndevice_model\nString\neg \"SF01V\"\ndevice_serial_id\nString\neg \"SFDemo-ff94e90\"\nmessage\nString\neg \"Malware 'EICAR-AV-\nTest' was detected and\nblocked in a download\nfrom www.eicar.org\"\nprotocol\nString\neg. \"TCP\"\nlog_version\nNumber\n1\neg. log_version=1\nsrc_zone_type\nString\neg. src_zone_type=\"LAN\"\nsrc_zone\nString\neg. src_zone=\"LAN\"\ndst_zone_type\nString\neg. dst_zone_type=\"WAN\"\ndst_zone\nString\neg. dst_zone=\"WAN\"\nuser_group\nString\neg. user_group=\"student\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 18",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 16,
+      "end": 18
+    },
+    "content_stats": {
+      "char_count": 2043,
+      "word_count": 284
+    },
+    "hierarchy": {
+      "parent": "Antivirus (FTP) Central Reporting Format",
+      "children": []
+    }
+  }
+}

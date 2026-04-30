@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_447",
+  "section_number": "20.2",
+  "header": "Search recast rules",
+  "content": "Searches for rules that match the requested criteria.\nRequires the Administrator [64] user role or one of the following custom role privileges:\nTIO_BACKEND.RECAST_RULE.READ  for Vulnerability Management or WAS.RECAST_RULE.READ\nfor Web App Scanning. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nArray of strings\nItems Enum: \"HOST\"\n\"HOST_AUDIT\"\n\"WEBAPP\"\nThe type of findings targeted by the recast rules to search for. Supported\nvalues are HOST , HOST_AUDIT , and WEBAPP .\nAND (OPTION 1) (object) or OR (OPTION 2) (object)\nFilter rules based on the targeted vulnerabilities. Use the and  array to\ncombine multiple conditions that all must be true. Use the or  array to\ncombine multiple conditions where at least one must be true.\ninteger\n[ 1 .. 500 ]\nDefault: 100\nThe number of records to retrieve. If this parameter is omitted, Tenable\nuses the default value of 100 . The minimum value is 1 , and the\nmaximum value is 500 .\nArray of objects\nThe property you want to use to sort the results by along with the sort\norder.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 422,
+      "end": 423
+    },
+    "content_stats": {
+      "char_count": 1044,
+      "word_count": 173
+    },
+    "hierarchy": {
+      "parent": "Recast Rules",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_543",
+  "section_number": "1.16.3",
+  "header": "Prepare to Deploy Decryption",
+  "content": "The most time-consuming part of deploying decryption isn’t configuring the decryption policies\nand profiles, it’s preparing for the deployment by working with stakeholders to decide what traffic\nto decrypt and not to decrypt, educating your user population about changes to website access,\ndeveloping a private key infrastructure (PKI) strategy, and planning a staged, prioritized rollout.\nSet goals for decryption and review Decryption planning best practices checklist to ensure that\nyou understand the recommended best practices. The best practice goal is to decrypt as much\ntraffic as your firewall resources permit and decrypt the most important traffic first.\nMigrate from port-based to application-based Security policy rules before you create\nand deploy Decryption policy rules. If you create Decryption rules based on port-based\nSecurity policy and then migrate to application-based Security policy, the change could\ncause the Decryption rules to block traffic that you intend to allow because Security policy\nrules are likely to use application default ports to prevent application traffic from using\nnon-standard ports. For example, traffic identified as web-browsing application traffic\n(default port 80) may have underlying applications that have different default ports, such\nas HTTPS traffic (default port 443). The application-default rule blocks the HTTPS traffic\nbecause it sees the decrypted traffic using a “non-standard” port (443 instead of 80).\nMigrating to App-ID based rules before deploying decryption means that when you test\nyour decryption deployment in POCs, you’ll discover Security policy misconfiguration and\nfix it before rolling it out to the general user population.\nTo prepare to deploy Decryption:\n• Work with Stakeholders to Develop a Decryption Deployment Strategy\n• Develop a PKI Rollout Plan\n• Size the Decryption Firewall Deployment\n• Plan a Staged, Prioritized Deployment",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 996,
+      "end": 996
+    },
+    "content_stats": {
+      "char_count": 1915,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": [
+        "Work with Stakeholders to Develop a Decryption Deployment Strategy",
+        "Develop a PKI Rollout Plan",
+        "Size the Decryption Firewall Deployment",
+        "Plan a Staged, Prioritized Deployment"
+      ]
+    }
+  }
+}

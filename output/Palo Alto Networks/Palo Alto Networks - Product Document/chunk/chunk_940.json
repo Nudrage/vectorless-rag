@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_940",
+  "section_number": "1.22.4.1",
+  "header": "Create a Security Profile Group",
+  "content": "Use the following steps to create a security profile group and add it to a security policy.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1607\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 1 |\nCreate a security profile group.\nIf you name the group default, the firewall will automatically attach it to any new\nrules you create. This is a time saver if you have a preferred set of security profiles that\nyou want to make sure get attached to every new rule.\n1.\nSelect Objects > Security Profile Groups and Add a new security profile group.\n2.\nGive the profile group a descriptive Name, for example, Threats.\n3.\nIf the firewall is in Multiple Virtual System Mode, enable the profile to be Shared by all\nvirtual systems.\n4.\nAdd existing profiles to the group.\n5.\nClick OK to save the profile group.\nSTEP 2 |\nAdd a security profile group to a security policy.\n1.\nSelect Policies > Security and Add or modify a security policy rule.\n2.\nSelect the Actions tab.\n3.\nIn the Profile Setting section, select Group for the Profile Type.\n4.\nIn the Group Profile drop-down, select the group you created (for example, select the\nbest-practice group):\n5.\nClick OK to save the policy and Commit your changes.\nSTEP 3 |\nSave your changes.\nClick Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1607,
+      "end": 1608
+    },
+    "content_stats": {
+      "char_count": 1225,
+      "word_count": 219
+    },
+    "hierarchy": {
+      "parent": "Security Profiles",
+      "children": []
+    }
+  }
+}

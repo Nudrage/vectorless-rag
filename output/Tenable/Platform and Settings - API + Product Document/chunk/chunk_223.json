@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_223",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returns the agent group details.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe unique ID of the agent group.\nstring\nThe UUID of the agent group.\nstring\nThe name of the agent group.\ninteger\nA Unix timestamp indicating the date and time when the agent\ngroup was created.\ninteger\nA Unix timestamp indicating the date and time when the agent\ngroup was last modified.\noffset\nsort\nid\nuuid\nname\ncreation_date\nlast_modification_date\ninteger\nIndicates whether or not the agent group is shared.\nstring\nThe username for the owner of the agent group.\nstring\nThe unique ID of the owner of the agent group.\nstring\nThe name of the owner of the agent group.\nstring\nThe UUID of the owner of the agent group.\ninteger\nThe sharing permissions for the agent group.\ninteger\nThe number of agents in the group.\nobject\nobject\nAn object containing pagination information for the current\nresult set.\n— 403 Returned if you do not have permission to view the agent group.\n— 404 Returned if Tenable Vulnerability Management cannot find the specified agent group.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 220,
+      "end": 221
+    },
+    "content_stats": {
+      "char_count": 1163,
+      "word_count": 198
+    },
+    "hierarchy": {
+      "parent": "Get agent group details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

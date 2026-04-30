@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_333",
+  "section_number": "1.11.11",
+  "header": "Use External Services for Monitoring",
+  "content": "Using an external service to monitor the firewall enables you to receive alerts for important\nevents, archive monitored information on systems with dedicated long-term storage, and\nintegrate with third-party security monitoring tools. The following are some common scenarios for\nusing external services:\nFor immediate notification about important system events or threats, you can Monitor\nStatistics Using SNMP, Forward Traps to an SNMP Manager, or Configure Email Alerts.\nTo send an HTTP-based API request directly to any third-party service that exposes an API to\nautomate a workflow or an action. You can, for example, forward logs that match a defined\ncriteria to create an incidence ticket on ServiceNow instead of relying on an external system to\nconvert syslog messages or SNMP traps to an HTTP request. You can modify the URL, HTTP\nheader, parameters, and the payload in the HTTP request to trigger an action based on the\nattributes in a firewall log. See Forward Logs to an HTTP(S) Destination.\nFor long-term log storage and centralized firewall monitoring, you can Configure Syslog\nMonitoring to send log data to a syslog server. This enables integration with third-party\nsecurity monitoring tools such as Splunk or ArcSight.\nFor monitoring statistics on the IP traffic that traverses firewall interfaces, you can Configure\nNetFlow Exports to view the statistics in a NetFlow collector.\nYou can Configure Log Forwarding from the firewalls directly to external services or from the\nfirewalls to Panorama and then configure Panorama to forwardlogs to the servers. Refer to Log\nForwarding Options for the factors to consider when deciding where to forward logs.\nYou can’t aggregate NetFlow records on Panorama; you must send them directly from the\nfirewalls to a NetFlow collector.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n556\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 556,
+      "end": 557
+    },
+    "content_stats": {
+      "char_count": 1875,
+      "word_count": 291
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

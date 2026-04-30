@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_848",
+  "section_number": "1.21.15.6.5",
+  "header": "Configure Destination NAT Using Dynamic IP Addresses",
+  "content": "Use Destination NAT to translate the original destination address to a destination host or server\nthat has a dynamic IP address and uses an FQDN. Destination NAT using a dynamic IP address\nis especially helpful in cloud deployments, which typically use dynamic IP addressing. When the\nhost or server in the cloud has new (dynamic) IP addresses, you don’t need to manually update\nthe NAT policy rule by continuously querying the DNS server, nor do you need to use a separate,\nexternal component to update the DNS server with the latest FQDN-to-IP address mapping.\nWhen you configure destination NAT using dynamic IP addresses, you should use only an FQDN\n(not an IP netmask or IP range).\nIn the following example topology, clients want to reach servers that are hosting web applications\nin the cloud. An external Elastic Load Balancer (ELB) connects to firewalls, which connect to\ninternal ELBs that connect to the servers. Over time, Amazon Web Services (AWS), for example,\nadds (and removes) IP addresses for the FQDN assigned to the internal ELBs based on the\ndemand for services. The flexibility of using an FQDN for NAT to the internal ELB helps the policy\nto resolve to different IP addresses at different times, making destination NAT easier to use\nbecause the updates are dynamic.\nSTEP 1 |\nCreate an address object using the FQDN of the server to which you want to translate the\naddress.\n1.\nSelect Objects > Addresses and Add an address object by Name, such as post-NAT-\nInternal-ELB.\n2.\nSelect FQDN as the Type and enter the FQDN. In this example, the FQDN is\nielb.appweb.com.\n3.\nClick OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1496\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 2 |\nCreate the destination NAT policy.\n1.\nSelect Policies > NAT and Add a NAT policy rule by Name on the General tab.\n2.\nSelect ipv4 as the NAT Type.\n3.\nOn the Original Packet tab, Add the Source Zone and Destination Zone.\n4.\nOn the Translated Packet tab, in the Destination Address Translation section, select\nDynamic IP (with session distribution) as the Translation Type.\n5.\nFor Translated Address, select the address object you created for the FQDN. In this\nexample, the FQDN is post-NAT-Internal-ELB.\n6.\nFor Session Distribution Method, select one of the following:\n• Round Robin (default)—Assigns new sessions to IP addresses in rotating order. Unless\nyou have a reason to change the distribution method, round robin distribution is likely\nsuitable.\n• Source IP Hash—Assigns new sessions based on hash of source IP address. If you\nhave traffic coming from a single source IP address, don’t select Source IP Hash;\nselect a different method.\n• IP Modulo—The firewall takes into consideration the source and destination IP\naddress from the incoming packet; the firewall performs an XOR operation and a\nmodulo operation; the result determines to which IP address the firewall assigns new\nsessions.\n• IP Hash—Assigns new sessions based on hash of source and destination IP addresses.\n• Least Sessions—Assigns new sessions to the IP address with the fewest concurrent\nsessions. If you have many short-lived sessions, Least Sessions provides you with a\nmore balanced distribution of sessions.\nThe firewall does not remove duplicate IP addresses from the list of destination\nIP addresses before it distributes sessions among the multiple IP addresses.\nThe firewall distributes sessions to the duplicate addresses in the same way\nit distributes sessions to non-duplicate addresses. (Duplicate addresses in the\ntranslation pool can occur, for example, if the translated address is an address\ngroup of address objects, and one address object is an FQDN that resolves to\nan IP address, while another address object is a range that includes the same IP\naddress.)\n7.\nClick OK.\nSTEP 3 |\nCommit your changes.\nSTEP 4 |\n(Optional) You can configure the frequency at which the firewall refreshes an FQDN (Use\nCase 1: Firewall Requires DNS Resolution).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1496,
+      "end": 1497
+    },
+    "content_stats": {
+      "char_count": 3929,
+      "word_count": 647
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

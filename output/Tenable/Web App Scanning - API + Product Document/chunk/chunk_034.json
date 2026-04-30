@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_034",
+  "section_number": "12",
+  "header": "Export scan configuration for CI/CD",
+  "content": "Downloads the specified scan configuration in HOCON (Human-Optimized Config Object Notation)\nformat for use with WAS Docker images in CI/CD (continuous integration / continuous delivery)\nmode.\nYou can integrate Tenable WAS Docker images with GitHub, GitLab, Jenkins, CircleCI, or Bamboo to\nscan builds and prevent vulnerabilities before your code and applications are deployed. For more\ninformation, see CI/CD Application Scan Overview in the Tenable Web App Scanning User Guide.\nRequires the WAS.TOGGLE_WAS.USE  custom role privilege. Additionally, requires the Can Configure\nWAS scan permission. See Roles and Permissions.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe UUID of the scan configuration to export in HOCON format for WAS\nCI/CD mode. You can use the POST /was/v2/configs/search endpoint to\ndetermine the UUID of the scan configuration you want to export.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 58,
+      "end": 58
+    },
+    "content_stats": {
+      "char_count": 878,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_639",
+  "section_number": "1.17.21",
+  "header": "Customize the URL Filtering Response Pages",
+  "content": "The firewall provides predefined URL filtering response pages that display by default when a user:\n• A user attempts to browse to a site in a category with restricted access.\n• A user submits valid corporate credentials to a site for which credential detection is enabled\n(Prevent Credential Phishing based on URL category).\n• Log Only the Page a User Visits blocks a search attempt.\nHowever, you can create your own custom response pages with your corporate branding,\nacceptable use policies, and links to your internal resources.\nCustom response pages larger than the maximum supported size are not decrypted or\ndisplayed to users. In PAN-OS 8.1.2 and earlier PAN-OS 8.1 releases, custom response\npages on a decrypted site cannot exceed 8,191 bytes; the maximum size is increased to\n17,999 bytes in PAN-OS 8.1.3 and later releases.\nSTEP 1 |\nExport the default response page(s).\n1.\nSelect Device > Response Pages.\n2.\nSelect the link for the URL filtering response page you want to modify.\n3.\nClick the response page (predefined or shared) and then click the Export link and save\nthe file to your desktop.\nSTEP 2 |\nEdit the exported page.\n1.\nUsing the HTML text editor of your choice, edit the page:\n• If you want the response page to display custom information about the specific user,\nURL, or category that was blocked, add one or more of the supported URL filtering\nresponse page variables.\n• If you want to include custom images (such as your corporate logo), a sound, or style\nsheet, or link to another URL, for example to a document detailing your acceptable\nweb use policy, include one or more of the supported response page references.\n2.\nSave the edited page with a new filename. Make sure that the page retains its UTF-8\nencoding. For example, in Notepad you would select UTF-8 from the Encoding drop-\ndown in the Save As dialog.\nSTEP 3 |\nImport the customized response page.\n1.\nSelect Device > Response Pages.\n2.\nSelect the link that corresponds to the URL filtering response page you edited.\n3.\nClick Import and then enter the path and filename in the Import File field or Browse to\nlocate the file.\n4.\n(Optional) Select the virtual system on which this login page will be used from the\nDestination drop-down or select shared to make it available to all virtual systems.\n5.\nClick OK to import the file.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1191\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 4 |\nSave the new response page(s).\nCommit the changes.\nSTEP 5 |\nVerify that the new response page displays.\nFrom a browser, go to the URL that will trigger the response page. For example, to see a\nmodified URL Filtering and Category Match response page, browse the site that your URL\nfiltering policy is set to block.\nThe firewall uses the following ports to display the URL filtering response pages:\n• HTTP—6080\n• Default TLS with firewall certificate—6081\n• Custom SSL/TLS profile—6082\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1192\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1191,
+      "end": 1193
+    },
+    "content_stats": {
+      "char_count": 2989,
+      "word_count": 512
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": []
+    }
+  }
+}

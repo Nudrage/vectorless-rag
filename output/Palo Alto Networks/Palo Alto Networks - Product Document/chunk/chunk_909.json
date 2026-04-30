@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_909",
+  "section_number": "1.21.21.2",
+  "header": "TCP",
+  "content": "Transmission Control Protocol (TCP) (RFC 793) is one of the main protocols in the Internet\nProtocol (IP) suite, and is so prevalent that it is frequently referenced together with IP as TCP/\nIP. TCP is considered a reliable transport protocol because it provides error-checking while\ntransmitting and receiving segments, acknowledges segments received, and reorders segments\nthat arrive in the wrong order. TCP also requests and provides retransmission of segments that\nwere dropped. TCP is stateful and connection-oriented, meaning a connection between the\nsender and receiver is established for the duration of the session. TCP provides flow control of\npackets, so it can handle congestion over networks.\nTCP performs a handshake during session setup to initiate and acknowledge a session. After\nthe data is transferred, the session is closed in an orderly manner, where each side transmits\na FIN packet and acknowledges it with an ACK packet. The handshake that initiates the TCP\nsession is often a three-way handshake (an exchange of three messages) between the initiator\nand the listener, or it could be a variation, such as a four-way or five-way split handshake or a\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1554\n©2025 Palo Alto Networks, Inc.\nNetworking\nsimultaneous open. The TCP Split Handshake Drop explains how to Prevent TCP Split Handshake\nSession Establishment.\nApplications that use TCP as their transport protocol include Hypertext Transfer Protocol (HTTP),\nHTTP Secure (HTTPS), File Transfer Protocol (FTP), Simple Mail Transfer Protocol (SMTP), Telnet,\nPost Office Protocol version 3 (POP3), Internet Message Access Protocol (IMAP), and Secure Shell\n(SSH).\nThe following topics describe details of the PAN-OS implementation of TCP.\n• TCP Half Closed and TCP Time Wait Timers\n• Unverified RST Timer\n• TCP Split Handshake Drop\n• Maximum Segment Size (MSS)\nYou can use Zone Protection Profiles on the firewall to configure packet-based attack protection\nand thereby drop IP, TCP, and IPv6 packets with undesirable characteristics or strip undesirable\noptions from packets before allowing them into the zone. You can also configure flood protection,\nspecifying the rate of SYN connections per second (not matching an existing session) that trigger\nan alarm, cause the firewall to randomly drop SYN packets or use SYN cookies, and cause the\nfirewall to drop SYN packets that exceed the maximum rate.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1554,
+      "end": 1555
+    },
+    "content_stats": {
+      "char_count": 2412,
+      "word_count": 373
+    },
+    "hierarchy": {
+      "parent": "Session Settings and Timeouts",
+      "children": [
+        "TCP Half Closed and TCP Time Wait Timers",
+        "Unverified RST Timer",
+        "TCP Split Handshake Drop",
+        "Maximum Segment Size (MSS)"
+      ]
+    }
+  }
+}

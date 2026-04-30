@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_108",
+  "section_number": "1.6.6.1",
+  "header": "Ports Used for Management Functions",
+  "content": "The firewall and Panorama use the following ports for management functions.\nDestination\nPort\nProtocol\nDescription\n22\nTCP\nUsed for communication from a client system to the firewall CLI\ninterface.\n80\nTCP\nThe port the firewall listens on for Online Certificate Status\nProtocol (OCSP) updates when acting as an OCSP responder.\n123\nUDP\nPort the firewall uses for NTP updates.\n443\nTCP\nUsed for communication from a client system to the firewall web\ninterface. This is also the port the firewall and User-ID agent\nlistens on for updates when you Enable VM Monitoring to Track\nChanges on the Virtual Network.\nFor monitoring an AWS environment, this is the only port that is\nused.\nFor monitoring a VMware vCenter/ESXi environment, the\nlistening port defaults to 443, but it is configurable.\n162\nUDP\nPort the firewall, Panorama, or a Log Collector uses to Forward\nTraps to an SNMP Manager.\nThis port doesn’t need to be open on the Palo\nAlto Networks firewall. You must configure the\nSimple Network Management Protocol (SNMP)\nmanager to listen on this port. For details, refer to the\ndocumentation of your SNMP management software.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n215\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nDestination\nPort\nProtocol\nDescription\n161\nUDP\nPort the firewall listens on for polling requests (GET messages)\nfrom the SNMP manager.\n514\n514\n6514\nTCP\nUDP\nSSL\nPort that the firewall, Panorama, or a Log Collector uses to\nsend logs to a syslog server if you Configure Syslog Monitoring,\nand the ports that the PAN-OS integrated User-ID agent or\nWindows-based User-ID agent listens on for authentication\nsyslog messages.\n2055\nUDP\nDefault port the firewall uses to send NetFlow records to a\nNetFlow collector if you Configure NetFlow Exports, but this is\nconfigurable.\n5008\nTCP\nPort the GlobalProtect Mobile Security Manager listens on for\nHIP requests from the GlobalProtect gateways.\nIf you are using a third-party MDM system, you can configure the\ngateway to use a different port as required by the MDM vendor.\n6081\n6082\nTLS 1.2\nTCP\nPorts used for User-ID™ Authentication Portal: 6081 for\nAuthentication Portal without an SSL/TLS Server Profile, and\n6082 for Authentication Portal with an SSL/TLS Server Profile.\n10443\nSSL\nPort that the firewall and Panorama use to provide contextual\ninformation about a threat or to seamlessly shift your threat\ninvestigation to the Threat Vault and AutoFocus.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 215,
+      "end": 216
+    },
+    "content_stats": {
+      "char_count": 2416,
+      "word_count": 389
+    },
+    "hierarchy": {
+      "parent": "Reference: Port Number Usage",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_752",
+  "section_number": "1.21.1.4",
+  "header": "Layer 3 Interfaces",
+  "content": "In a Layer 3 deployment, the firewall routes traffic between multiple ports. Before you can\nConfigure Layer 3 Interfaces, you must configure the Virtual Routers that you want the firewall to\nuse to route the traffic for each Layer 3 interface.\nIf you’re using security group tags (SGTs) in a Cisco TrustSec network, it’s a best practice\nto deploy inline firewalls in either Layer 2 or virtual wire mode. However, if you need to\nuse a Layer 3 firewall in a Cisco TrustSec network, you should deploy the Layer 3 firewall\nbetween two SGT exchange protocol (SXP) peers, and configure the firewall to allow\ntraffic between the SXP peers.\nThe following topics describe how to configure Layer 3 interfaces, and how to use Neighbor\nDiscovery Protocol (NDP) to provision IPv6 hosts and view the IPv6 addresses of devices on the\nlink local network to quickly locate devices.\n• Configure Layer 3 Interfaces\n• Manage IPv6 Hosts Using NDP\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1347\n©2025 Palo Alto Networks, Inc.\nNetworking",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1347,
+      "end": 1348
+    },
+    "content_stats": {
+      "char_count": 1013,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "Configure Interfaces",
+      "children": [
+        "Configure Layer 3 Interfaces",
+        "Manage IPv6 Hosts Using NDP"
+      ]
+    }
+  }
+}

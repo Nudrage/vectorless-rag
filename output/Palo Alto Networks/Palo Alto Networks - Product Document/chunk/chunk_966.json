@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_966",
+  "section_number": "1.22.10.7",
+  "header": "View External Dynamic List Entries",
+  "content": "Before you Enforce Policy on an External Dynamic List, you can view the contents of an external\ndynamic list directly on the firewall to check if it contains certain IP addresses, domains, or URLs.\nThe entries displayed are based on the version of the external dynamic list that the firewall most\nrecently retrieved.\nSTEP 1 |\nSelect Objects > External Dynamic Lists.\nSTEP 2 |\nClick the external dynamic list you want to view.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1646\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 3 |\nClick List Entries and Exceptions and view the objects that the firewall retrieved from the\nlist.\nThe list might be empty if:\n• The EDL has not yet been applied to a Security policy rule. To apply an EDL to a Security\npolicy rule and populate the EDL, see Enforce Policy on an External Dynamic List.\n• The firewall has not yet retrieved the external dynamic list. To force the firewall to retrieve\nan external dynamic list immediately, Retrieve an External Dynamic List from the Web\nServer.\n• The firewall is unable to access the server that hosts the external dynamic list. Click Test\nSource URL to verify that the firewall can connect to the server.\nSTEP 4 |\nEnter an IP address, domain, or URL (depending on the type of list) in the filter field and\nApply Filter (\n) to check if it’s in the list. Exclude Entries from an External Dynamic List\nbased on which IP addresses, domains, and URLs you need to block or allow.\nSTEP 5 |\n(Optional) View the AutoFocus Intelligence Summary for a list entry. Hover over an entry to\nopen the drop-down and then click AutoFocus.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1646,
+      "end": 1647
+    },
+    "content_stats": {
+      "char_count": 1585,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "Use an External Dynamic List in Policy",
+      "children": []
+    }
+  }
+}

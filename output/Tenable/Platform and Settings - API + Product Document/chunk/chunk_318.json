@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_318",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returns the details of the specified managed credential object.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe name of the managed credential object. You specify the name when\nyou create or update the managed credential.\nstring\nThe definition of the managed credential object. You specify the\ndescription when you create or update the managed credential.\nobject\nobject\nboolean\nA value specifying how a user creates a managed credential in the user\ninterface. If true , the user created the credential during the scan\nconfiguration. If false , the user created the credential independently\nfrom scan configuration.\ninteger\nThe permissions for the managed credential that are assigned to the\nuser account submitting the API request. For possible values, see\n\"Credential Roles\" in Permissions.\nuuid\nrequired\nname\ndescription\ncategory\ntype\nad_hoc\nuser_permissions\nobject\nThe configuration settings for the credential. The parameters of this\nobject vary depending on the credential type. For more information, see\nDetermine Settings for a Credential Type.\nArray of objects\n— 403\nReturned if you do not have sufficient permissions to view the specified managed credential object.\n— 404\nReturned if Tenable Vulnerability Management cannot find a managed credential object with the\nspecified UUID.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 503\nReturned if a Tenable Vulnerability Management service is unavailable. Wait a moment, and try your\nrequest again.\n— 504\nReturned if Tenable Vulnerability Management is unavailable. Wait a moment, and try your request\nagain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 313,
+      "end": 314
+    },
+    "content_stats": {
+      "char_count": 1648,
+      "word_count": 252
+    },
+    "hierarchy": {
+      "parent": "Get managed credential details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

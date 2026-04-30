@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_072",
+  "section_number": "1.18.21",
+  "header": "Health – EDR Details",
+  "content": "GET\nURL: https://<vectra_portal_url>/api/v3.4/health/edr/details\n© July 2024 Vectra AI, Inc. | 121\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"results\": {\n\"host_lockdown\": {\n\"connection_status\": \"enabled\",\n\"details\": {\n\"activeIntegrations\": [\n\"Microsoft Defender ATP\",\n\"Carbon Black\",\n\"Carbon Black Cloud\"\n],\n\"lockdownAutoEnabled\": true\n}\n},\n\"windows_defender\": {\n\"connection_status\": \"enabled\",\n\"details\": {\n\"status\": \"Connected\",\n\"severity\": \"misc-yep\",\n\"hostLockdown\": {\n\"enabled\": true\n}\n}\n},\n\"carbon_black\": {\n\"connection_status\": \"enabled\",\n\"details\": {\n\"carbon_blacks\": {\n\"cbdemo.demo.vectra.io:443\": {\n\"status\": \"Connected\",\n\"severity\": \"misc-yep\"\n}\n},\n\"hostLockdown\": {\n\"enabled\": true\n}\n}\n},\n\"cb_cloud\": {\n\"connection_status\": \"enabled\",\n\"details\": [\n{\n\"statusType\": \"success\",\n\"text\": \"Carbon Black Cloud connected\"\n© July 2024 Vectra AI, Inc. | 122\n},\n{\n\"statusType\": \"success\",\n\"text\": \"Host Lockdown\"\n}\n]\n},\n\"fireeye\": {\n\"connection_status\": \"disabled\"\n},\n\"sentinelone\": {\n\"connection_status\": \"disabled\"\n},\n\"cybereason\": {\n\"connection_status\": \"disabled\"\n},\n\"crowdstrike\": {\n\"connection_status\": \"disabled\"\n}\n},\n\"updated_at\": \"2024-07-24T22:07:11Z\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "Lato-SemiBold",
+    "page_range": {
+      "start": 120,
+      "end": 122
+    },
+    "content_stats": {
+      "char_count": 1184,
+      "word_count": 136
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

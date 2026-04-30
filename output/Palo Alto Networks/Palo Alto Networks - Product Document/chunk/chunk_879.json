@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_879",
+  "section_number": "1.21.17.2",
+  "header": "IPv4-Embedded IPv6 Address",
+  "content": "NAT64 uses an IPv4-embedded IPv6 address as described in RFC 6052, IPv6 Addressing of IPv4/\nIPv6 Translators. An IPv4-embedded IPv6 address is an IPv6 address in which 32 bits have an\nIPv4 address encoded in them. The IPv6 prefix length (PL in the figure) determines where in the\nIPv6 address the IPv4 address is encoded, as follows:\nThe firewall supports translation for /32, /40, /48, /56, /64, and /96 subnets using these prefixes.\nA single firewall supports multiple prefixes; each NAT64 rule uses one prefix. The prefix can be\nthe Well-Known Prefix (64:FF9B::/96) or a Network-Specific Prefix (NSP) that is unique to the\norganization that controls the address translator (the DNS64 device). An NSP is usually a network\nwithin the organization’s IPv6 prefix. The DNS64 device typically sets the u field and suffix to\nzeros; the firewall ignores those fields.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1517,
+      "end": 1517
+    },
+    "content_stats": {
+      "char_count": 862,
+      "word_count": 140
+    },
+    "hierarchy": {
+      "parent": "NAT64",
+      "children": []
+    }
+  }
+}

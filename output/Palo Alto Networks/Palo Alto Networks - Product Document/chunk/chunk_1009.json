@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1009",
+  "section_number": "1.23.2.2.1",
+  "header": "External Zone",
+  "content": "The communication desired in the use case above is achieved by configuring security policies that\npoint to or from an external zone. An external zone is a security object that is associated with a\nspecific virtual system that it can reach; the zone is external to the virtual system. A virtual system\ncan have only one external zone, regardless of how many security zones the virtual system has\nwithin it. External zones are required to allow traffic between zones in different virtual systems,\nwithout the traffic leaving the firewall.\nThe virtual system administrator configures the security policies needed to allow traffic between\ntwo virtual systems. Unlike security zones, an external zone is not associated with an interface;\nit is associated with a virtual system. The security policy allows or denies traffic between the\nsecurity (internal) zone and the external zone.\nBecause external zones do not have interfaces or IP addresses associated with them, some zone\nprotection profiles are not supported on external zones.\nRemember that each virtual system is a separate instance of a firewall, which means that each\npacket moving between virtual systems is inspected for security policy and App-ID evaluation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1705,
+      "end": 1705
+    },
+    "content_stats": {
+      "char_count": 1216,
+      "word_count": 192
+    },
+    "hierarchy": {
+      "parent": "Inter-VSYS Traffic That Remains Within the Firewall",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_924",
+  "section_number": "25.1",
+  "header": "Get Configuration",
+  "content": "GET    /web/api/v2.1/firewall-control/configuration\nGet the Firewall Control configuration for a given scope.\nTo filter the results for a scope:\n* Global - Make sure \"tenant\" is \"true\" and no other scope ID is given.\n* Account - Make sure \"tenant\" is \"false\" and at least one Account ID is given.\n* Site - Make sure \"tenant\" is \"false\" and at least one Site ID is given.\nThe response shows if Firewall Control is enabled for the scope, if Location Awareness is enabled, the higher scope from which this scope inherited the configuration, and\nwhether a lower scope inherits this configuration.\nFirewall Control requires Control SKU.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1094,
+      "end": 1094
+    },
+    "content_stats": {
+      "char_count": 631,
+      "word_count": 104
+    },
+    "hierarchy": {
+      "parent": "Firewall Control",
+      "children": [
+        "Parameters",
+        "Response Messages",
+        "Response Schema"
+      ]
+    }
+  }
+}

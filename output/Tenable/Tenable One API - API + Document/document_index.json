@@ -1,0 +1,753 @@
+{
+  "document_name": "Tenable\\Tenable One API - API + Document",
+  "generated_at": "2026-02-17T22:06:12.913345",
+  "outline_text": "DOCUMENT INDEX: Tenable\\Tenable One API - API + Document\n========================================================\n\n1. Attack Path [Page 1, 102 words]\n2. Search attack paths [Pages 1-3, 344 words]\n   2.1. Responses [Pages 3-4, 224 words]\n      2.1.1. Request samples [Page 4, 22 words]\n      2.1.2. Response samples [Pages 5-8, 178 words]\n3. Search attack techniques [Pages 8-9, 313 words]\n   3.1. Responses [Pages 9-11, 223 words]\n      3.1.1. Request samples [Page 11, 1 words]\n      3.1.2. Response samples [Pages 11-12, 106 words]\n4. Exposure View [Page 13, 59 words]\n5. Search cards [Pages 13-14, 195 words]\n   5.1. Responses [Pages 14-15, 156 words]\n      5.1.1. Response samples [Pages 15-22, 395 words]\n6. Get card details [Pages 22-23, 298 words]\n   6.1. Responses [Pages 23-25, 379 words]\n      6.1.1. Response samples [Pages 25-47, 2065 words]\n7. Inventory [Page 48, 105 words]\n8. Search assets [Pages 48-49, 238 words]\n   8.1. Responses [Page 50, 83 words]\n      8.1.1. Request samples [Page 50, 20 words]\n      8.1.2. Response samples [Pages 51-57, 356 words]\n9. Search findings [Pages 57-58, 235 words]\n   9.1. Responses [Page 58, 88 words]\n      9.1.1. Request samples [Page 59, 1 words]\n      9.1.2. Response samples [Pages 59-63, 237 words]\n10. Search software [Pages 63-64, 235 words]\n   10.1. Responses [Page 64, 89 words]\n      10.1.1. Request samples [Page 65, 1 words]\n      10.1.2. Response samples [Pages 65-70, 328 words]\n11. List asset properties [Page 70, 183 words]\n   11.1. Responses [Page 71, 96 words]\n      11.1.1. Response samples [Pages 71-97, 2533 words]\n12. List finding properties [Page 97, 107 words]\n   12.1. Responses [Pages 97-98, 89 words]\n      12.1.1. Response samples [Pages 98-115, 1574 words]\n13. List software properties [Page 115, 107 words]\n   13.1. Responses [Page 116, 89 words]\n      13.1.1. Response samples [Pages 116-134, 1724 words]\n14. Inventory Exports [Page 135, 107 words]\n15. Export assets [Pages 135-137, 368 words]\n   15.1. Responses [Pages 137-138, 82 words]\n      15.1.1. Request samples [Page 138, 1 words]\n      15.1.2. Response samples [Page 138, 49 words]\n16. Export findings [Pages 139-140, 368 words]\n   16.1. Responses [Pages 140-141, 83 words]\n      16.1.1. Request samples [Page 141, 1 words]\n      16.1.2. Response samples [Pages 141-142, 49 words]\n17. List asset export jobs [Page 142, 173 words]\n   17.1. Responses [Page 143, 110 words]\n      17.1.1. Response samples [Pages 143-144, 37 words]\n18. List finding export jobs [Pages 144-145, 173 words]\n   18.1. Responses [Page 145, 110 words]\n      18.1.1. Response samples [Pages 145-146, 35 words]\n19. Get export status [Page 146, 70 words]\n   19.1. Responses [Pages 146-147, 127 words]\n      19.1.1. Response samples [Pages 147-148, 41 words]\n20. Download export [Page 148, 97 words]\n   20.1. Responses [Pages 148-149, 158 words]\n      20.1.1. Response samples [Pages 149-150, 133 words]\n21. Tags [Page 151, 88 words]\n22. Search tags [Pages 151-152, 224 words]\n   22.1. Responses [Pages 152-153, 88 words]\n      22.1.1. Request samples [Page 153, 1 words]\n      22.1.2. Response samples [Pages 153-162, 694 words]\n23. List tag properties [Page 162, 107 words]\n   23.1. Responses [Pages 162-163, 89 words]\n      23.1.1. Response samples [Pages 163-176, 1184 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Attack Path",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 102,
+        "summary": "The Tenable Attack Path API enables users to retrieve details about attack path findings and attack\npath vectors."
+      },
+      {
+        "number": "2",
+        "title": "Search attack paths",
+        "depth": 1,
+        "chunk_id": "chunk_002",
+        "page_start": 1,
+        "page_end": 3,
+        "word_count": 344,
+        "summary": "Returns a list of the top attack paths leading to critical assets.",
+        "children": [
+          {
+            "number": "2.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 3,
+            "page_end": 4,
+            "word_count": 224,
+            "summary": "200 Returned if the attack path search results were retrieved successfully.",
+            "children": [
+              {
+                "number": "2.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_004",
+                "page_start": 4,
+                "page_end": 4,
+                "word_count": 22,
+                "summary": "Payload\nFilter for high priority attack paths leading to critical assets\nstatusCode\nerror\nmessage\nst..."
+              },
+              {
+                "number": "2.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_005",
+                "page_start": 5,
+                "page_end": 8,
+                "word_count": 178,
+                "summary": "200\n400\n401\n403\n429\n500\nExample response showing attack paths with detailed information\nExpand all\nC..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "title": "Search attack techniques",
+        "depth": 1,
+        "chunk_id": "chunk_006",
+        "page_start": 8,
+        "page_end": 9,
+        "word_count": 313,
+        "summary": "Returns a list of the top attack techniques in your organization that match the specified search\ncriteria.",
+        "children": [
+          {
+            "number": "3.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_007",
+            "page_start": 9,
+            "page_end": 11,
+            "word_count": 223,
+            "summary": "200 Returned if the attack technique search results were retrieved successfully.",
+            "children": [
+              {
+                "number": "3.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_008",
+                "page_start": 11,
+                "page_end": 11,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "3.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 11,
+                "page_end": 12,
+                "word_count": 106,
+                "summary": "200\n400\n401\n403\n429\n500\nstatusCode\nerror\nmessage\nPOST\n/api/v1/t1/apa/top-attack-techniques/search\nap..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "title": "Exposure View",
+        "depth": 1,
+        "chunk_id": "chunk_010",
+        "page_start": 13,
+        "page_end": 13,
+        "word_count": 59,
+        "summary": "The Tenable Exposure View API enables users to search Tenable Exposure view for their\norganization's..."
+      },
+      {
+        "number": "5",
+        "title": "Search cards",
+        "depth": 1,
+        "chunk_id": "chunk_011",
+        "page_start": 13,
+        "page_end": 14,
+        "word_count": 195,
+        "summary": "Returns a list of exposure view cards based on your search criteria.",
+        "children": [
+          {
+            "number": "5.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_012",
+            "page_start": 14,
+            "page_end": 15,
+            "word_count": 156,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of exposure view cards.",
+            "children": [
+              {
+                "number": "5.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_013",
+                "page_start": 15,
+                "page_end": 22,
+                "word_count": 395,
+                "summary": "200\n400\n401\n429\n500\nmessage\nstatusCode\nerror\nmessage\nGET\n/api/v1/t1/exposure-view/cards\napplication/..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "title": "Get card details",
+        "depth": 1,
+        "chunk_id": "chunk_014",
+        "page_start": 22,
+        "page_end": 23,
+        "word_count": 298,
+        "summary": "Retrieves details for the specified exposure view card.",
+        "children": [
+          {
+            "number": "6.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_015",
+            "page_start": 23,
+            "page_end": 25,
+            "word_count": 379,
+            "summary": "200 Returned if Tenable One successfully retrieved the data for the specified exposure view card.",
+            "children": [
+              {
+                "number": "6.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_016",
+                "page_start": 25,
+                "page_end": 47,
+                "word_count": 2065,
+                "summary": "200\n401\n404\n429\n500\nGET\n/api/v1/t1/exposure-view/cards/{card_id}\napplication/json\nExpand all\nCollaps..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "title": "Inventory",
+        "depth": 1,
+        "chunk_id": "chunk_017",
+        "page_start": 48,
+        "page_end": 48,
+        "word_count": 105,
+        "summary": "The Tenable Inventory API enables users to search for their organization's assets and the software\ninstalled on those assets."
+      },
+      {
+        "number": "8",
+        "title": "Search assets",
+        "depth": 1,
+        "chunk_id": "chunk_018",
+        "page_start": 48,
+        "page_end": 49,
+        "word_count": 238,
+        "summary": "Returns a list of assets in your organization that match the specified search criteria.",
+        "children": [
+          {
+            "number": "8.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_019",
+            "page_start": 50,
+            "page_end": 50,
+            "word_count": 83,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of assets.",
+            "children": [
+              {
+                "number": "8.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_020",
+                "page_start": 50,
+                "page_end": 50,
+                "word_count": 20,
+                "summary": "Payload\nPOST\n/api/v1/t1/inventory/assets/search\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"que..."
+              },
+              {
+                "number": "8.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_021",
+                "page_start": 51,
+                "page_end": 57,
+                "word_count": 356,
+                "summary": "200\n400\n401\n429\n500\n\"filters\":\n-\n[\n- {\n\"property\": \"string\",\n\"operator\": \"=\",\n\"value\":\n-\n[\n\"string\"\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "9",
+        "title": "Search findings",
+        "depth": 1,
+        "chunk_id": "chunk_022",
+        "page_start": 57,
+        "page_end": 58,
+        "word_count": 235,
+        "summary": "Returns a list of findings in your organization that match the specified search criteria.",
+        "children": [
+          {
+            "number": "9.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_023",
+            "page_start": 58,
+            "page_end": 58,
+            "word_count": 88,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of findings.",
+            "children": [
+              {
+                "number": "9.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_024",
+                "page_start": 59,
+                "page_end": 59,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "9.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_025",
+                "page_start": 59,
+                "page_end": 63,
+                "word_count": 237,
+                "summary": "200\n400\n401\n429\n500\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"query\":\n-\n{\n\"mode\": \"simple\",\n\"..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "10",
+        "title": "Search software",
+        "depth": 1,
+        "chunk_id": "chunk_026",
+        "page_start": 63,
+        "page_end": 64,
+        "word_count": 235,
+        "summary": "Returns a list of software installed on your assets that match the specified search criteria.",
+        "children": [
+          {
+            "number": "10.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_027",
+            "page_start": 64,
+            "page_end": 64,
+            "word_count": 89,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of installed software.",
+            "children": [
+              {
+                "number": "10.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_028",
+                "page_start": 65,
+                "page_end": 65,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "10.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_029",
+                "page_start": 65,
+                "page_end": 70,
+                "word_count": 328,
+                "summary": "200\n400\n401\n429\n500\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"query\":\n-\n{\n\"mode\": \"simple\",\n\"..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "11",
+        "title": "List asset properties",
+        "depth": 1,
+        "chunk_id": "chunk_030",
+        "page_start": 70,
+        "page_end": 70,
+        "word_count": 183,
+        "summary": "Returns a list of asset properties that can be used as filters on endpoints that support them.",
+        "children": [
+          {
+            "number": "11.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_031",
+            "page_start": 71,
+            "page_end": 71,
+            "word_count": 96,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of asset properties.",
+            "children": [
+              {
+                "number": "11.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_032",
+                "page_start": 71,
+                "page_end": 97,
+                "word_count": 2533,
+                "summary": "200\n400\n401\n429\n500\nGET\n/api/v1/t1/inventory/assets/properties\napplication/json\nExpand all\nCollapse ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "12",
+        "title": "List finding properties",
+        "depth": 1,
+        "chunk_id": "chunk_033",
+        "page_start": 97,
+        "page_end": 97,
+        "word_count": 107,
+        "summary": "Returns a list of finding properties that can be used for filters on endpoints that support them.",
+        "children": [
+          {
+            "number": "12.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_034",
+            "page_start": 97,
+            "page_end": 98,
+            "word_count": 89,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of finding properties.",
+            "children": [
+              {
+                "number": "12.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_035",
+                "page_start": 98,
+                "page_end": 115,
+                "word_count": 1574,
+                "summary": "200\n401\n429\n500\nGET\n/api/v1/t1/inventory/findings/properties\napplication/json\nExpand all\nCollapse al..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "13",
+        "title": "List software properties",
+        "depth": 1,
+        "chunk_id": "chunk_036",
+        "page_start": 115,
+        "page_end": 115,
+        "word_count": 107,
+        "summary": "Returns a list of software properties that can be used for filters on endpoints that support them.",
+        "children": [
+          {
+            "number": "13.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_037",
+            "page_start": 116,
+            "page_end": 116,
+            "word_count": 89,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of software properties.",
+            "children": [
+              {
+                "number": "13.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_038",
+                "page_start": 116,
+                "page_end": 134,
+                "word_count": 1724,
+                "summary": "200\n401\n429\n500\nGET\n/api/v1/t1/inventory/software/properties\napplication/json\nExpand all\nCollapse al..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "14",
+        "title": "Inventory Exports",
+        "depth": 1,
+        "chunk_id": "chunk_039",
+        "page_start": 135,
+        "page_end": 135,
+        "word_count": 107,
+        "summary": "The Tenable Inventory Exports API enables users to export inventory assets and findings in JSON or\nCSV format."
+      },
+      {
+        "number": "15",
+        "title": "Export assets",
+        "depth": 1,
+        "chunk_id": "chunk_040",
+        "page_start": 135,
+        "page_end": 137,
+        "word_count": 368,
+        "summary": "Exports assets in your organization that match the specified search criteria.",
+        "children": [
+          {
+            "number": "15.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_041",
+            "page_start": 137,
+            "page_end": 138,
+            "word_count": 82,
+            "summary": "200 Returned if the asset export request was successfully queued.",
+            "children": [
+              {
+                "number": "15.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_042",
+                "page_start": 138,
+                "page_end": 138,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "15.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_043",
+                "page_start": 138,
+                "page_end": 138,
+                "word_count": 49,
+                "summary": "200\n400\n401\n429\n500\nPOST\n/api/v1/t1/inventory/export/assets\napplication/json\nExpand all\nCollapse all..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "16",
+        "title": "Export findings",
+        "depth": 1,
+        "chunk_id": "chunk_044",
+        "page_start": 139,
+        "page_end": 140,
+        "word_count": 368,
+        "summary": "Exports findings in your organization that match the specified search criteria.",
+        "children": [
+          {
+            "number": "16.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_045",
+            "page_start": 140,
+            "page_end": 141,
+            "word_count": 83,
+            "summary": "200 Returned if the findings export request was successfully queued.",
+            "children": [
+              {
+                "number": "16.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_046",
+                "page_start": 141,
+                "page_end": 141,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "16.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_047",
+                "page_start": 141,
+                "page_end": 142,
+                "word_count": 49,
+                "summary": "200\n400\n401\n429\n500\nPOST\n/api/v1/t1/inventory/export/findings\napplication/json\nExpand all\nCollapse a..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "17",
+        "title": "List asset export jobs",
+        "depth": 1,
+        "chunk_id": "chunk_048",
+        "page_start": 142,
+        "page_end": 142,
+        "word_count": 173,
+        "summary": "Returns a list of up to 1,000 asset export jobs submitted in the last 3 days, sorted by the most recent\nrefresh time.",
+        "children": [
+          {
+            "number": "17.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_049",
+            "page_start": 143,
+            "page_end": 143,
+            "word_count": 110,
+            "summary": "200 Returned if the list of asset export jobs was retrieved successfully.",
+            "children": [
+              {
+                "number": "17.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_050",
+                "page_start": 143,
+                "page_end": 144,
+                "word_count": 37,
+                "summary": "200\n400\n401\n429\n500\nstatusCode\nerror\nmessage\nGET\n/api/v1/t1/inventory/export/assets/status\napplicati..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "18",
+        "title": "List finding export jobs",
+        "depth": 1,
+        "chunk_id": "chunk_051",
+        "page_start": 144,
+        "page_end": 145,
+        "word_count": 173,
+        "summary": "Returns a list of up to 1,000 findings export jobs submitted in the last 3 days, sorted by the most\nrecent refresh time.",
+        "children": [
+          {
+            "number": "18.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_052",
+            "page_start": 145,
+            "page_end": 145,
+            "word_count": 110,
+            "summary": "200 Returned if the list of findings export jobs was retrieved successfully.",
+            "children": [
+              {
+                "number": "18.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_053",
+                "page_start": 145,
+                "page_end": 146,
+                "word_count": 35,
+                "summary": "200\n400\n401\n429\n500\nstatusCode\nerror\nmessage\nGET\n/api/v1/t1/inventory/export/findings/status\napplica..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "19",
+        "title": "Get export status",
+        "depth": 1,
+        "chunk_id": "chunk_054",
+        "page_start": 146,
+        "page_end": 146,
+        "word_count": 70,
+        "summary": "Returns the current status of an export request.",
+        "children": [
+          {
+            "number": "19.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_055",
+            "page_start": 146,
+            "page_end": 147,
+            "word_count": 127,
+            "summary": "200 Returned if the status of the specified export request was retrieved successfully.",
+            "children": [
+              {
+                "number": "19.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_056",
+                "page_start": 147,
+                "page_end": 148,
+                "word_count": 41,
+                "summary": "200\n400\n401\n404\n429\n500\nstatusCode\nerror\nmessage\nGET\n/api/v1/t1/inventory/export/{export_id}/status\n..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "20",
+        "title": "Download export",
+        "depth": 1,
+        "chunk_id": "chunk_057",
+        "page_start": 148,
+        "page_end": 148,
+        "word_count": 97,
+        "summary": "Downloads a specific export chunk in JSON or CSV format.",
+        "children": [
+          {
+            "number": "20.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_058",
+            "page_start": 148,
+            "page_end": 149,
+            "word_count": 158,
+            "summary": "200 Returned if the assets export chunk was retrieved successfully.",
+            "children": [
+              {
+                "number": "20.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_059",
+                "page_start": 149,
+                "page_end": 150,
+                "word_count": 133,
+                "summary": "message\nstatus\nstatusCode\nerror\nmessage\nGET\n/api/v1/t1/inventory/export/{export_id}/download/{chunk_..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "21",
+        "title": "Tags",
+        "depth": 1,
+        "chunk_id": "chunk_060",
+        "page_start": 151,
+        "page_end": 151,
+        "word_count": 88,
+        "summary": "The Tenable One tags API enables users to search for their organization's tags."
+      },
+      {
+        "number": "22",
+        "title": "Search tags",
+        "depth": 1,
+        "chunk_id": "chunk_061",
+        "page_start": 151,
+        "page_end": 152,
+        "word_count": 224,
+        "summary": "Returns a list of tags in your organization that match the specified search criteria.",
+        "children": [
+          {
+            "number": "22.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_062",
+            "page_start": 152,
+            "page_end": 153,
+            "word_count": 88,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of assets.",
+            "children": [
+              {
+                "number": "22.1.1",
+                "title": "Request samples",
+                "depth": 3,
+                "chunk_id": "chunk_063",
+                "page_start": 153,
+                "page_end": 153,
+                "word_count": 1,
+                "summary": "Payload"
+              },
+              {
+                "number": "22.1.2",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_064",
+                "page_start": 153,
+                "page_end": 162,
+                "word_count": 694,
+                "summary": "200\n400\n401\n429\n500\nPOST\n/api/v1/t1/tags/search\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"que..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "23",
+        "title": "List tag properties",
+        "depth": 1,
+        "chunk_id": "chunk_065",
+        "page_start": 162,
+        "page_end": 162,
+        "word_count": 107,
+        "summary": "Returns a list of tag properties that can be used for filters on endpoints that support them.",
+        "children": [
+          {
+            "number": "23.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_066",
+            "page_start": 162,
+            "page_end": 163,
+            "word_count": 89,
+            "summary": "200 Returned if Tenable One successfully retrieved the list of tag properties.",
+            "children": [
+              {
+                "number": "23.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_067",
+                "page_start": 163,
+                "page_end": 176,
+                "word_count": 1184,
+                "summary": "200\n401\n429\n500\nGET\n/api/v1/t1/tags/properties\napplication/json\nExpand all\nCollapse all\nCopy\nContent..."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 67,
+    "max_depth": 3
+  }
+}

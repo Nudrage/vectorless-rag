@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_005",
+  "section_number": "23.1.2",
+  "header": "Response samples",
+  "content": "200\n400\n401\n403\n429\n500\nExample response showing attack paths with detailed information\nExpand all\nCollapse all\nCopy\n{\n\"operator\": \"AND\",\n\"value\":\n-\n[\n,\n- {\n\"property\": \"priority\",\n\"operator\": \"gte\",\n\"value\": 8\n}\n- {\n\"property\": \"critical_asset\",\n\"operator\": \"eq\",\n\"value\": true\n}\n]\n}\napplication/json\nSample response with attack paths\nExpand all\nCollapse all\nCopy\nContent type\nExample\n{\n\"data\":\n-\n[\n- {\n\"vectorId\": \"vec_123\",\n\"name\": \"High Priority Attack Path\",\n\"priority\": 9,\n\"path\":\n-\n{\n\"nodes\":\n-\n[\n,\n- {\n\"name\": \"Source Asset\",\n\"full_name\": \"source.example.com\",\n\"asset_id\": \"asset-123\",\n\"id\": 1001,\n\"labels\":\n-\n[\n\"Computer\",\n\"WindowsObject\"\n]\n}\n- {\n\"name\": \"Target Asset\",\n\"full_name\": \"target.example.com\",\n\"asset_id\": \"asset-456\",\n\"id\": 1002,\n\"labels\":\n-\n[\n\"Computer\",\n\"CriticalAsset\"\n]\n}\n],\n\"relationships\":\n-\n[\n- {\n\"type\": \"ATTACKS\",\n\"source\": 1001,\n\"target\": 1002\n}\n]\n},\n\"techniques\":\n-\n[\n- {\n\"name\": \"Initial Access\",\n\"full_name\": \"Initial Access Technique\",\n\"asset_id\": \"asset-123\",\n\"id\": 2001,\n\"labels\":\n-\n[\n\"Procedure\"\n],\n\"procedure_uuid\": \"uuid-123\"\n}\n],\n\"summary\": \"Attack path description showing the route from source to cr\n\"firstAES\": 8,\n\"lastACR\": 9\n}\n],\n\"total\": 1\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 5,
+      "end": 8
+    },
+    "content_stats": {
+      "char_count": 1189,
+      "word_count": 178
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

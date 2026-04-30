@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_227",
+  "section_number": "1.10.2.11",
+  "header": "Session Setup",
+  "content": "The session setup firewall performs the Layer 2 through Layer 4 processing necessary to set up\na new session. The session setup firewall also performs NAT using the NAT pool of the session\nowner. You determine the session setup firewall in an active/active configuration by selecting one\nof the following session setup load sharing options.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n397\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nSession Setup Option\nDescription\nIP Modulo\nThe firewall distributes the session setup load based on parity of the\nsource IP address. This is a deterministic method of sharing the session\nsetup.\nIP Hash\nThe firewall uses a hash of the source and destination IP addresses to\ndistribute session setup responsibilities.\nPrimary Device\nThe active-primary firewall always sets up the session; only one\nfirewall performs all session setup responsibilities.\nFirst Packet\nThe firewall that receives the first packet of a session performs session\nsetup.\n• If you want to load-share the session owner and session setup responsibilities,\nset session owner to First Packet and session setup to IP modulo. These are the\nrecommended settings.\n• If you want to do troubleshooting or capture logs or pcaps, or if you want an active/\nactive HA pair to function like an active/passive HA pair, set both the session owner\nand session setup to Primary device so that the active-primary device performs all\ntraffic processing. See Use Case: Configure Active/Active HA with Floating IP\nAddress Bound to Active-Primary Firewall.\nThe firewall uses the HA3 link to send packets to its peer for session setup if necessary. The\nfollowing figure and text describe the path of a packet that firewall FW1 receives for a new\nsession. The red dotted lines indicate FW1 forwarding the packet to FW2 and FW2 forwarding\nthe packet back to FW1 over the HA3 link.\nThe end host sends a packet to FW1.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n398\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nFW1 examines the contents of the packet to match it to an existing session. If there is no\nsession match, FW1 determines that it has received the first packet for a new session and\ntherefore becomes the session owner (assuming Session Owner Selection is set to First\nPacket).\nFW1 uses the configured session setup load-sharing option to identify the session setup\nfirewall. In this example, FW2 is configured to perform session setup.\nFW1 uses the HA3 link to send the first packet to FW2.\nFW2 sets up the session and returns the packet to FW1 for Layer 7 processing, if any.\nFW1 then forwards the packet out the egress interface to the destination.\nThe following figure and text describe the path of a packet that matches an existing session:\nThe end host sends a packet to FW1.\nFW1 examines the contents of the packet to match it to an existing session. If the session\nmatches an existing session, FW1 processes the packet and sends the packet out the egress\ninterface to the destination.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 397,
+      "end": 399
+    },
+    "content_stats": {
+      "char_count": 2981,
+      "word_count": 496
+    },
+    "hierarchy": {
+      "parent": "HA Concepts",
+      "children": []
+    }
+  }
+}

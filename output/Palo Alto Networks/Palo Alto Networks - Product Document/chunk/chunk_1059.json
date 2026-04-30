@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1059",
+  "section_number": "1.24.5.4",
+  "header": "End a Single Session DoS Attack",
+  "content": "To mitigate a single-session DoS attack, you would still Configure DoS Protection Against\nFlooding of New Sessions in advance. At some point after you configure the feature, a session\nmight be established before you realize a DoS attack (from the IP address of that session) is\nunderway. When you see a single-session DoS attack, perform the following task to end the\nsession, so that subsequent connection attempts from that IP address trigger the DoS protection\nagainst flooding of new sessions.\nSTEP 1 |\nIdentify the source IP address that is causing the attack.\nFor example, use the firewall Packet Capture feature with a destination filter to collect a\nsample of the traffic going to the destination IP address. Alternatively, use the ACC to filter on\ndestination address to view the activity to the target host being attacked.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1763\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 2 |\nCreate a DoS Protection policy rule that will block the attacker’s IP address after the attack\nthresholds are exceeded.\nSTEP 3 |\nCreate a Security policy rule to deny the source IP address and its attack traffic.\nSTEP 4 |\nEnd any existing attacks from the attacking source IP address by executing the clear\nsession all filter source <ip-address> operational command.\nAlternatively, if you know the session ID, you can execute the clear session id\n<value> command to end that session only.\nIf you use the clear session all filter source <ip-address>\ncommand, all sessions matching the source IP address are discarded, which can include\nboth good and bad sessions.\nAfter you end the existing attack session, any subsequent attempts to form an attack session\nare blocked by the Security policy. The DoS Protection policy counts all connection attempts\ntoward the thresholds. When the Max Rate threshold is exceeded, the source IP address is\nblocked for the Block Duration, as described in Multiple-Session DoS Attack.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1763,
+      "end": 1764
+    },
+    "content_stats": {
+      "char_count": 1968,
+      "word_count": 321
+    },
+    "hierarchy": {
+      "parent": "DoS Protection Against Flooding of New Sessions",
+      "children": []
+    }
+  }
+}

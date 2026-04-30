@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_014",
+  "section_number": "54.1",
+  "header": "Responses",
+  "content": "200\nA list of web application scan configurations. If a scan has been run using the configuration, the list\nalso contains information about the last scan that was run.\nRESPONSE SCHEMA:\napplication/json\nobject (PaginationResponse)\nAn object containing pagination information for the current result set.\nArray of objects (ConfigMetadata)\nA list of scan configurations.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 31,
+      "end": 31
+    },
+    "content_stats": {
+      "char_count": 493,
+      "word_count": 76
+    },
+    "hierarchy": {
+      "parent": "Search scan configurations",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_385",
+  "section_number": "1.11.17",
+  "header": "NetFlow Monitoring",
+  "content": "NetFlow is an industry-standard protocol that the firewall can use to export statistics about\nthe IP traffic ingressing its interfaces. The firewall exports the statistics as NetFlow fields to\na NetFlow collector. The NetFlow collector is a server you use to analyze network traffic for\nsecurity, administration, accounting and troubleshooting. All Palo Alto Networks firewalls support\nNetFlow Version 9. The firewalls support only unidirectional NetFlow, not bidirectional. The\nfirewalls perform NetFlow processing on all IP packets on the interfaces and do not support\nsampled NetFlow. You can export NetFlow records for Layer 3, Layer 2, virtual wire, tap, VLAN,\nloopback, and tunnel interfaces. For aggregate Ethernet sub-interfaces, you can export records\nfor the individual sub-interfaces that data flows through within the group. To identify firewall\ninterfaces in a NetFlow collector, see Firewall Interface Identifiers in SNMP Managers and\nNetFlow Collectors. The firewalls support standard and enterprise (PAN-OS specific) NetFlow\nTemplates, which NetFlow collectors use to decipher the NetFlow fields.\n• Configure NetFlow Exports\n• NetFlow Templates",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 675,
+      "end": 675
+    },
+    "content_stats": {
+      "char_count": 1160,
+      "word_count": 166
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": [
+        "Configure NetFlow Exports",
+        "NetFlow Templates"
+      ]
+    }
+  }
+}

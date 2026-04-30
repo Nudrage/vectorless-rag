@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_532",
+  "section_number": "1.16.2.5",
+  "header": "SSL Inbound Inspection Decryption Profile",
+  "content": "The SSL Inbound Inspection Decryption profile (Objects > Decryption Profile > SSL Decryption\n> SSL Inbound Inspection) controls the session mode checks and failure checks for inbound SSL/\nTLS traffic defined in the Inbound Inspection Decryption policies to which you attach the profile.\nThe following figure shows the general best practice recommendations for Inbound Inspection\nDecryption profile settings, but the settings you use also depend on your company’s security\ncompliance rules and local laws and regulations.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n982\n©2025 Palo Alto Networks, Inc.\nDecryption\nUnsupported Mode Checks. If you don’t block sessions with unsupported modes, users receive\na warning message if they connect with potentially unsafe servers, and they can click through\nthat message and reach the potentially dangerous site. Blocking these sessions protects you from\nservers that use weak, risky protocol versions and algorithms:\n1. Block sessions with unsupported versions—When you configure the SSL Protocol Settings\nDecryption Profile, you specify the minimum version of TLS protocol to allow on your network\nto reduce the attack surface by blocking weak protocols. Always check this box to block\nsessions with the weak SSL and TLS protocol versions that you have chosen not to support.\n2. Block sessions with unsupported cipher suites—Always check this box to block sessions if\nthe firewall doesn’t support the cipher suite specified in the handshake. You configure which\nalgorithms the firewall supports on the SSL Protocol Settings tab of the Decryption profile.\nFailure Checks:\n• Block sessions if resources not available—If you block sessions when no firewall processing\nresources are available, the firewall drops traffic when it doesn’t have the resources to decrypt\nthe traffic. If you don’t block sessions when the firewall can’t process decryption due to a\nlack of resources, then traffic that you want to decrypt enters the network still encrypted\nand therefore is not inspected. However, blocking sessions when resources aren’t available\nmay affect the user experience by making sites that users normally can reach temporarily\nunreachable. Whether to implement this failure check depends on your company’s security\ncompliance stance and the importance of the user experience, weighed against tighter security.\nAlternatively, consider using firewall models with more processing power so that you can\ndecrypt more traffic.\n• Block sessions if HSM not available—If you use a Hardware Security Module (HSM) to store\nyour private keys, whether you use one depends on your compliance rules about where the\nprivate key must come from and how you want to handle encrypted traffic if the HSM isn’t\navailable. For example, if your company mandates the use of an HSM for private key signing,\nthen block sessions if the HSM isn’t available. However, if your company is less strict about\nthis, then you can consider not blocking sessions if the HSM isn’t available. (If the HSM is\ndown, the firewall can process decryption for sites for which it has cached the response from\nthe HSM, but not for other sites.) The best practice in this case depends on your company’s\npolicies. If the HSM is critical to your business, run the HSM in a high-availability (HA) pair\n(PAN-OS 8.1 supports two members in an HSM HA pair).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n983\n©2025 Palo Alto Networks, Inc.\nDecryption\n• Block downgrade on no resource—Prevents the firewall from downgrading TLSv1.3 to TLSv1.2\nif the firewall has no available TLSv1.3 processing resources. If you block the downgrade, then\nwhen the firewall runs out of TLSv1.3 resources, it drops traffic that uses TLSv1.3 instead of\ndowngrading it to TLSv1.2. If you don’t block downgrade, then when the firewall runs out of\nTLSv1.3 resources, it downgrades to TLSv1.2. However, blocking downgrade when resources\naren’t available may affect the user experience by making sites that users normally can reach\ntemporarily unreachable. Whether to implement this failure check depends on your company’s\nsecurity compliance stance and the importance of the user experience, weighed against tighter\nsecurity. You may want to create a separate Decryption policy and profile to govern decryption\nfor sensitive traffic for which you don’t want to downgrade the TLS version.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 982,
+      "end": 984
+    },
+    "content_stats": {
+      "char_count": 4340,
+      "word_count": 676
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

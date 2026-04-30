@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_056",
+  "section_number": "1.4.3",
+  "header": "What Happens When Licenses Expire?",
+  "content": "Palo Alto Networks subscriptions provide the firewall with added functionality and/or access\nto a Palo Alto Networks cloud-delivered service. When a license is within 30 days of expiration,\na warning message displays in the system log daily until the subscription is renewed or expires.\nUpon license expiration, some subscriptions continue to function in a limited capacity, while\nothers stop operating completely. Here you can find out what happens when each subscription\nexpires.\nThe precise moment of license expiry is at the beginning of the following day at 12:00 AM\n(GMT). For example, if your license is scheduled to end on 1/20 you will have functionality\nfor the remainder of that day. At the start of the new day on 1/21 at 12:00 AM (GMT),\nthe license will expire. All license-related functions operate on Greenwich Mean Time\n(GMT), regardless of the configured time zone on the firewall.\nSubscription\nExpiry Behavior\nThreat Prevention\nAlerts appear in the System Log indicating that the license has\nexpired.\nYou can still:\n• Use signatures that were installed at the time the license\nexpired, unless you install a new Applications-only content\nupdate either manually or as part of an automatic schedule.\nIf you do, the update will delete your existing threat\nsignatures and you will no longer receive protection against\nthem.\n• Use and modify Custom App-ID™ and threat signatures.\nYou can no longer:\n• Install new signatures.\n• Roll signatures back to previous versions.\nDNS Security\nYou can still:\n• Use local DNS signatures if you have an active Threat\nPrevention license.\nYou can no longer:\n• Get new DNS signatures.\nAdvanced URL Filtering /\nURL Filtering\nYou can still:\n• Enforce policy using custom URL categories.\nYou can no longer:\n• Get updates to cached PAN-DB categories.\n• Connect to the PAN-DB URL filtering database.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n79\n©2025 Palo Alto Networks, Inc.\nSubscriptions\nSubscription\nExpiry Behavior\n• Get PAN-DB URL categories.\n• Analyze URL requests in real-time using advanced URL\nfiltering.\nWildFire\nYou can still:\n• Forward PEs for analysis.\n• Get signature updates every 24-48 hours if you have an\nactive Threat Prevention subscription.\nYou can no longer:\n• Get five-minute updates through the WildFire public and\nprivate clouds.\n• Forward advanced file types such as APKs, Flash files,\nPDFs, Microsoft Office files, Java Applets, Java files (.jar\nand .class), and HTTP/HTTPS email links contained in\nSMTP and POP3 email messages.\n• Use the WildFire API.\n• Use the WildFire appliance to host a WildFire private cloud\nor a WildFire hybrid cloud.\nAutoFocus\nYou can still:\n• Use an external dynamic list with AutoFocus data for a\ngrace period of three months.\nYou can no longer:\n• Access the AutoFocus portal.\n• View the AutoFocus Intelligence Summary for Monitor log\nor ACC artifacts.\nCortex Data Lake\nYou can still:\n• Store log data for a 30-day grace period, after which it is\ndeleted.\n• Forward logs to Cortex Data Lake until the end of the 30-\nday grace period.\nGlobalProtect\nYou can still:\n• Use the app for endpoints running Windows and macOS.\n• Configure single or multiple internal/external gateways.\nYou can no longer:\n• Access the Linux OS app and mobile app for iOS, Android,\nChrome OS, and Windows 10 UWP.\n• Use IPv6 for external gateways.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n80\n©2025 Palo Alto Networks, Inc.\nSubscriptions\nSubscription\nExpiry Behavior\n• Run HIP checks.\n• Use Clientless VPN.\n• Enforce split tunneling based on destination domain, client\nprocess, and video streaming application.\nVM-Series\nSee the VM-Series Deployment Guide.\nSupport\nYou can no longer:\n• Receive software updates.\n• Download VM images.\n• Benefit from technical support.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n81\n©2025 Palo Alto Networks, Inc.\nSubscriptions",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 79,
+      "end": 82
+    },
+    "content_stats": {
+      "char_count": 3822,
+      "word_count": 622
+    },
+    "hierarchy": {
+      "parent": "Subscriptions",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_746",
+  "section_number": "1.21.1.3",
+  "header": "Layer 2 Interfaces",
+  "content": "In a Layer 2 deployment, the firewall provides switching between two or more networks. Devices\nare connected to a Layer 2 segment; the firewall forwards the frames to the proper port, which\nis associated with the MAC address identified in the frame. Configure a Layer 2 Interface when\nswitching is required.\nIf you’re using security group tags (SGTs) in a Cisco TrustSec network, it’s a best practice\nto deploy inline firewalls in either Layer 2 or virtual wire mode. Firewalls in Layer 2 or\nvirtual wire mode can inspect and provide threat prevention for the tagged traffic.\nThe following topics describe the different types of Layer 2 interfaces you can configure for each\ntype of deployment you need, including details on using virtual LANs (VLANs) for traffic and\npolicy separation among groups. Another topic describes how the firewall rewrites the inbound\nport VLAN ID number in a Cisco per-VLAN spanning tree (PVST+) or Rapid PVST+ bridge protocol\ndata unit (BPDU).\n• Layer 2 Interfaces with No VLANs\n• Layer 2 Interfaces with VLANs\n• Configure a Layer 2 Interface\n• Configure a Layer 2 Interface, Subinterface, and VLAN\n• Manage Per-VLAN Spanning Tree (PVST+) BPDU Rewrite",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1341,
+      "end": 1341
+    },
+    "content_stats": {
+      "char_count": 1180,
+      "word_count": 196
+    },
+    "hierarchy": {
+      "parent": "Configure Interfaces",
+      "children": [
+        "Layer 2 Interfaces with No VLANs",
+        "Layer 2 Interfaces with VLANs",
+        "Configure a Layer 2 Interface",
+        "Configure a Layer 2 Interface, Subinterface, and VLAN",
+        "Manage Per-VLAN Spanning Tree (PVST+) BPDU Rewrite"
+      ]
+    }
+  }
+}

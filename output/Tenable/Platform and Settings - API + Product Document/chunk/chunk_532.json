@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_532",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "group_id\nrequired\n200\nReturned if Tenable Vulnerability Management successfully retrieve the details of the specified\nscanner group.\nRESPONSE SCHEMA:\napplication/json\ninteger\nA Unix timestamp indicating the date and time when the scanner\ngroup was created.\ninteger\nA Unix timestamp indicating the date and time when the scanner\ngroup was last modified.\ninteger\nThe unique ID of the owner of the scanner group.\nstring\nThe username of the owner of the scanner group.\ninteger\nThe access permissions for the Default group.\ninteger\nThe sharing permissions for the scanner group.\ninteger\nIndicates whether or not the scanner group is shared.\ninteger\nThe number of scans currently tasked to the scanner group.\nstring\nThe number of scanners associated with this scanner group.\nstring\nThe UUID of the scanner group.\nstring\nThe unique token for a scanner group.\nstring\nThe flag indicating what type of scanner group.\nstring\ncreation_date\nlast_modification_date\nowner_id\nowner\ndefault_permissions\nuser_permissions\nshared\nscan_count\nscanner_count\nuuid\ntoken\nflag\ntype\nThe type of scanner group. This is set to \"load_balancing\" by\ndefault.\nstring\nThe name of the scanner group.\nstring\nThe name of the network object associated with the scanner\ngroup. For more information about network objects, see Manage\nNetworks.\ninteger\nThe unique ID of the scanner group.\nboolean\nIndicates whether or not the scanner group supports Tenable\nWeb App Scanning scanners.\ninteger\nThe unique scanner ID of the scanner group.\nstring\nThe UUID of the scanner group.\nstring\nThe username of the owner of the scanner group.\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 403 Returned if you do not have permission to view the scanner group details.\n— 404 Returned if Tenable Vulnerability Management could not find the specified scanner group.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 532,
+      "end": 534
+    },
+    "content_stats": {
+      "char_count": 1993,
+      "word_count": 313
+    },
+    "hierarchy": {
+      "parent": "List scanner group details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

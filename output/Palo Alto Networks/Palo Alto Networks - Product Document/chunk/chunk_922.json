@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_922",
+  "section_number": "1.21.21.8.1",
+  "header": "Session Distribution Policy Descriptions",
+  "content": "The following table provides information about Session Distribution Policies to help you decide\nwhich policy best fits your environment and firewall configuration.\nSession Distribution Policy\nDescription\nFixed\nAllows you to specify the dataplane processor (DP) that\nthe firewall will use for security processing.\nUse this policy for debugging purposes.\nHash\nThe firewall distributes sessions based on a hash of\nthe source address or destination address. Hash based\ndistribution improves the efficiency of NAT address\nresource management and reduces latency for NAT\nsession setup by avoiding potential IP address or port\nconflicts.\nUse this policy in environments that use large scale\nsource NAT with dynamic IP translation or Dynamic\nIP and Port translation or both. When using dynamic\nIP translation, select the source address option.\nWhen using dynamic IP and port translation, select the\ndestination address option.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1569\n©2025 Palo Alto Networks, Inc.\nNetworking\nSession Distribution Policy\nDescription\nIngress-slot (default on PA-7000\nSeries firewalls)\n(PA-7000 Series firewalls only) New sessions are assigned\nto a DP on the same NPC on which the first packet of\nthe session arrived. The selection of the DP is based on\nthe session-load algorithm but, in this case, sessions are\nlimited to the DPs on the ingress NPC.\nDepending on the traffic and network topology, this\npolicy generally decreases the odds that traffic will need\nto traverse the switch fabric.\nUse this policy to reduce latency if both ingress and\negress are on the same NPC. If the firewall has a mix of\nNPCs (PA-7000 20G and PA-7000 20GXM for example),\nthis policy can isolate the increased capacity to the\ncorresponding NPCs and help to isolate the impact of\nNPC failures.\nRandom\nThe firewall randomly selects a DP for session processing.\nRound-robin (default on PA-5200\nSeries firewalls)\nThe firewall selects the dataplane processor based on\na round-robin algorithm between active dataplanes so\nthat input, output, and security processing functions are\nshared among all dataplanes.\nUse this policy in low to medium demand environments\nwhere a simple and predictable load balancing algorithm\nwill suffice.\nIn high demand environments, we recommend that you\nuse the session-load algorithm.\nSession-load\nThis policy is similar to the round-robin policy but uses a\nweight-based algorithm to determine how to distribute\nsessions to achieve balance among the DPs. Because of\nthe variability in the lifetime of a session, the DPs may\nnot always experience an equal load. For example, if the\nfirewall has three DPs and DP0 is at 25% of capacity, DP1\nis at 25%, and DP2 is at 50%, new session assignment will\nbe weighted towards the DP with the lower capacities.\nThis helps improve load balancing over time.\nUse this policy in environments where sessions are\ndistributed across multiple NPC slots, such as in an inter-\nslot aggregate interface group or environments with\nasymmetric forwarding. You can also use this policy or\nthe ingress-slot policy if the firewall has a combination\nof NPCs with different session capacities (such as a\ncombination of PA-7000 20G and PA-7000 20GXM\nNPCs).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1570\n©2025 Palo Alto Networks, Inc.\nNetworking\nSession Distribution Policy\nDescription\nSymmetric-hash\n(PA-5200 Series and PA-7000 Series firewalls running\nPAN-OS 8.0 or later) The firewall selects the DP by a hash\nof sorted source and destination IP addresses. This policy\nprovides the same results for server-to-client (s2c) and\nclient-to-server (c2s) traffic (assuming the firewall does\nnot use NAT).\nUse this policy in high-demand IPSec or GTP\ndeployments.\nWith these protocols, each direction is treated as\na unidirectional flow where the flow tuples cannot\nbe derived from each other. This policy improves\nperformance and reduces latency by ensuring that both\ndirections are assigned to the same DP, which removes\nthe need for inter-DP communication.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1569,
+      "end": 1571
+    },
+    "content_stats": {
+      "char_count": 3992,
+      "word_count": 621
+    },
+    "hierarchy": {
+      "parent": "Session Distribution Policies",
+      "children": []
+    }
+  }
+}

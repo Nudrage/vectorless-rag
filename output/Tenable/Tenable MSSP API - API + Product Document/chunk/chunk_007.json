@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_007",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200 Returned if the Tenable MSSP Platform successfully created the evaluation account.\nRESPONSE SCHEMA:\napplication/json\ncustomer_name\nrequired\nlicensed_apps\nrequired\ndefault_contact_email\nrequired\nadmin_username\ncountry\nrequired\nstring\nIndicates whether or not Tenable MSSP successfully created the new\nevaluation account.\nstring\nA short message about the creation of the evaluation account.\nstring\nThe name of the evaluation account. The name is the specified email\ndomain followed by a dash and random integers. For example\nexample.com-830759035 .\nstring <uuid>\nThe UUID of the new evaluation account.\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in the Tenable MSSP Portal.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 4,
+      "end": 5
+    },
+    "content_stats": {
+      "char_count": 1074,
+      "word_count": 160
+    },
+    "hierarchy": {
+      "parent": "Create evaluation account v2",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

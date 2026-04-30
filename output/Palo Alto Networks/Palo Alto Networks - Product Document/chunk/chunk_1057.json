@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1057",
+  "section_number": "1.24.5.2",
+  "header": "Single-Session DoS Attack",
+  "content": "A single-session DoS attack typically will not trigger Zone or DoS Protection profiles because\nthey are attacks that are formed after the session is created. These attacks are allowed by the\nSecurity policy because a session is allowed to be created, and after the session is created, the\nattack drives up the packet volume and takes down the target device.\nConfigure DoS Protection Against Flooding of New Sessions to protect against flooding of new\nsessions (single-session and multiple-session flooding). In the event of a single-session attack that\nis underway, additionally End a Single Session DoS Attack.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1760,
+      "end": 1760
+    },
+    "content_stats": {
+      "char_count": 611,
+      "word_count": 96
+    },
+    "hierarchy": {
+      "parent": "DoS Protection Against Flooding of New Sessions",
+      "children": []
+    }
+  }
+}

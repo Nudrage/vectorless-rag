@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_195",
+  "section_number": "1.9.11",
+  "header": "Configure an SSL/TLS Service Profile",
+  "content": "Palo Alto Networks firewalls and Panorama use SSL/TLS service profiles to specify a certificate\nand the allowed protocol versions for SSL/TLS services. The firewall and Panorama use SSL/TLS\nfor Authentication Portal, GlobalProtect portals and gateways, inbound traffic on the management\n(MGT) interface, the URL Admin Override feature, and the User-ID™ syslog listening service.\nBy defining the protocol versions, you can use a profile to restrict the cipher suites that are\navailable for securing communication with the clients requesting the services. This improves\nnetwork security by enabling the firewall or Panorama to avoid SSL/TLS versions that have known\nweaknesses. If a service request involves a protocol version that is outside the specified range, the\nfirewall or Panorama downgrades or upgrades the connection to a supported version.\nIn the client systems that request firewall services, the certificate trust list (CTL) must\ninclude the certificate authority (CA) certificate that issued the certificate specified in\nthe SSL/TLS service profile. Otherwise, users will see a certificate error when requesting\nfirewall services. Most third-party CA certificates are present by default in client browsers.\nIf an enterprise or firewall-generated CA certificate is the issuer, you must deploy that CA\ncertificate to the CTL in client browsers.\nSTEP 1 |\nFor each desired service, generate or import a certificate on the firewall (see Obtain\nCertificates).\nUse only signed certificates, not CA certificates, in SSL/TLS service profiles.\nSTEP 2 |\nSelect Device > Certificate Management > SSL/TLS Service Profile.\nSTEP 3 |\nIf the firewall has more than one virtual system (vsys), select the Location (vsys or Shared)\nwhere the profile is available.\nSTEP 4 |\nClick Add and enter a Name to identify the profile.\nSTEP 5 |\nSelect the Certificate you just obtained.\nSTEP 6 |\nDefine the range of protocols that the service can use:\n• For the Min Version, select the earliest allowed TLS version: TLSv1.0 (default), TLSv1.1, or\nTLSv1.2.\n• For the Max Version, select the latest allowed TLS version: TLSv1.0, TLSv1.1, TLSv1.2, or\nMax (latest available version). The default is Max.\nAs a best practice, set the Min Version to TLSv1.2 and the Max Version to Max.\nOn firewalls in FIPS/CC mode running PAN-OS 8.0 or a later release, TLSv1.1 is the earliest\nsupported TLS version; do not select TLSv1.0.\nClient certificates that are used when requesting firewall services that rely on TLSv1.2 cannot\nhave SHA512 as a digest algorithm. The client certificates must use a lower digest algorithm\n(such as SHA384) or you must limit the Max Version to TLSv1.1 for the firewall services.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n345\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 7 |\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n346\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 345,
+      "end": 347
+    },
+    "content_stats": {
+      "char_count": 2903,
+      "word_count": 455
+    },
+    "hierarchy": {
+      "parent": "Certificate Management",
+      "children": []
+    }
+  }
+}

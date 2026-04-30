@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_126",
+  "section_number": "1.7.3.4",
+  "header": "Manage Historical Device Telemetry",
+  "content": "Device Telemetry changed significantly for the PAN-OS 10.0 release. Prior to 10.0, telemetry\ndata was mostly of interest for threat intelligence purposes. As of 10.0, threat intelligence metrics\nare still a large portion the data collected by the device, but a great deal more data involving the\nhealth, performance, and configuration of the device is collected as well.\nIn other words, PAN-OS 10.0 device telemetry extends the data that was collected for previous\nreleases. PAN-OS 10.0 also sends telemetry data to a different cloud location than did prior\nreleases. But the historical telemetry support still exists for next-generation firewalls running\nPAN-OS 10.0. The only difference is that the 10.0 device telemetry user interface is not capable\nof managing this historical data collection.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n234\n©2025 Palo Alto Networks, Inc.\nDevice Telemetry\nIf you have an existing next-generation firewall, and you have any of the historical telemetry data\ncategories enabled, then when you upgrade to PAN-OS 10.0 your firewall will continue to collect\nand share this information. If you want to turn this telemetry data sharing off, use the following\nCLI commands:\nset deviceconfig system update-schedule statistics-service\napplication-reports no\nset deviceconfig system update-schedule statistics-service threat-\nprevention-reports no\nset deviceconfig system update-schedule statistics-service threat-\nprevention-information no\nset deviceconfig system update-schedule statistics-service threat-\nprevention-pcap no\nset deviceconfig system update-schedule statistics-service passive-\ndns-monitoring no\nset deviceconfig system update-schedule statistics-service url-\nreports no\nset deviceconfig system update-schedule statistics-service health-\nperformance-reports no\nset deviceconfig system update-schedule statistics-service file-\nidentification-reports no\nIf you have a 10.0 firewall and this telemetry sharing is turned off, but you want to share this data\nwith Palo Alto Networks, then you can turn it on using:\nset deviceconfig system update-schedule statistics-service\napplication-reports yes\nset deviceconfig system update-schedule statistics-service threat-\nprevention-reports yes\nset deviceconfig system update-schedule statistics-service threat-\nprevention-information yes\nset deviceconfig system update-schedule statistics-service threat-\nprevention-pcap yes\nset deviceconfig system update-schedule statistics-service passive-\ndns-monitoring yes\nset deviceconfig system update-schedule statistics-service url-\nreports yes\nset deviceconfig system update-schedule statistics-service health-\nperformance-reports yes\nset deviceconfig system update-schedule statistics-service file-\nidentification-reports yes\nYou can see whether your device is collecting and sharing this historical telemetry data using the\nfollowing CLI command:\nshow deviceconfig system update-schedule statistics-service\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n235\n©2025 Palo Alto Networks, Inc.\nDevice Telemetry",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 234,
+      "end": 236
+    },
+    "content_stats": {
+      "char_count": 3024,
+      "word_count": 379
+    },
+    "hierarchy": {
+      "parent": "Manage Device Telemetry",
+      "children": []
+    }
+  }
+}

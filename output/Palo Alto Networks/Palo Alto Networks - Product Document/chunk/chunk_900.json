@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_900",
+  "section_number": "1.21.20.1",
+  "header": "BFD Overview",
+  "content": "When you enable BFD, BFD establishes a session from one endpoint (the firewall) to its BFD peer\nat the endpoint of a link using a three-way handshake. Control packets perform the handshake\nand negotiate the parameters configured in the BFD profile, including the minimum intervals at\nwhich the peers can send and receive control packets. BFD control packets for both IPv4 and IPv6\nare transmitted over UDP port 3784. BFD control packets for multihop support are transmitted\nover UDP port 4784. BFD control packets transmitted over either port are encapsulated in the\nUDP packets.\nAfter the BFD session is established, the Palo Alto Networks implementation of BFD operates in\nasynchronous mode, meaning both endpoints send each other control packets (which function\nlike Hello packets) at the negotiated interval. If a peer does not receive a control packet within\nthe detection time (calculated as the negotiated transmit interval multiplied by a Detection Time\nMultiplier), the peer considers the session down. (The firewall does not support demand mode, in\nwhich control packets are sent only if necessary rather than periodically.)\nWhen you enable BFD for a static route and a BFD session between the firewall and the BFD\npeer fails, the firewall removes the failed route from the RIB and FIB tables and allows an\nalternate path with a lower priority to take over. When you enable BFD for a routing protocol,\nBFD notifies the routing protocol to switch to an alternate path to the peer. Thus, the firewall and\nBFD peer reconverge on a new path.\nA BFD profile allows you to Configure BFD settings and apply them to one or more routing\nprotocols or static routes on the firewall. If you enable BFD without configuring a profile, the\nfirewall uses its default BFD profile (with all of the default settings). You cannot change the\ndefault BFD profile.\nWhen an interface is running multiple protocols that use different BFD profiles, BFD uses the\nprofile having the lowest Desired Minimum Tx Interval. See BFD for Dynamic Routing Protocols.\nActive/passive HA peers synchronize BFD configurations and sessions; active/active HA peers do\nnot.\nBFD is standardized in RFC 5880. PAN-OS does not support all components of RFC 5880; see\nNon-Supported RFC Components of BFD.\nPAN-OS also supports RFC 5881, http://www.rfc-editor.org/rfc/rfc5881.txt. In this case, BFD\ntracks a single hop between two systems that use IPv4 or IPv6, so the two systems are directly\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1541\n©2025 Palo Alto Networks, Inc.\nNetworking\nconnected to each other. BFD also tracks multiple hops from peers connected by BGP. PAN-OS\nfollows BFD encapsulation as described in RFC 5883, https://www.rfc-editor.org/rfc/rfc5883.txt.\nHowever, PAN-OS does not support authentication.\n• BFD Model, Interface, and Client Support\n• Non-Supported RFC Components of BFD\n• BFD for Static Routes\n• BFD for Dynamic Routing Protocols",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1541,
+      "end": 1542
+    },
+    "content_stats": {
+      "char_count": 2916,
+      "word_count": 464
+    },
+    "hierarchy": {
+      "parent": "BFD",
+      "children": [
+        "BFD Model, Interface, and Client Support",
+        "Non-Supported RFC Components of BFD",
+        "BFD for Static Routes",
+        "BFD for Dynamic Routing Protocols"
+      ]
+    }
+  }
+}

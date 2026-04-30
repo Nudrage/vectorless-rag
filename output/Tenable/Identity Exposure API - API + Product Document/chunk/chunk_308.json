@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_308",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "200\nGET\n/api/saml-configuration\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"enabled\": true,\n\"providerLoginUrl\": \"string\",\n\"encryptionCertificate\": \"string\",\n\"signatureCertificate\": \"string\",\n\"serviceProviderUrl\": \"string\",\n\"assertEndpoint\": \"string\",\n\"activateCreatedUsers\": true,\n\"allowedGroups\":\n-\n[\n- {\n\"name\": \"string\",\n\"defaultProfileId\": 0,\n\"defaultRoleIds\":\n-\n[\n0\n]\n}\n]\n}\nContent type\nUpdate saml-configuration singleton.\nRequired license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nboolean\nstring or null\nstring or null\nboolean\nArray of objects or null\nnon-empty",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 179,
+      "end": 180
+    },
+    "content_stats": {
+      "char_count": 703,
+      "word_count": 82
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

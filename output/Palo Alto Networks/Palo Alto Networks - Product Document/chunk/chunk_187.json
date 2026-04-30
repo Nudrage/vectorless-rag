@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_187",
+  "section_number": "1.9.8.1",
+  "header": "Create a Self-Signed Root CA Certificate",
+  "content": "A self-signed root certificate authority (CA) certificate is the top-most certificate in a certificate\nchain. A firewall can use this certificate to automatically issue certificates for other uses.\nFor example, the firewall issues certificates for SSL/TLS decryption and for satellites in a\nGlobalProtect large-scale VPN.\nWhen establishing a secure connection with the firewall, the remote client must trust the root CA\nthat issued the certificate. Otherwise, the client browser will display a warning that the certificate\nis invalid and might (depending on security settings) block the connection. To prevent this, after\ngenerating the self-signed root CA certificate, import it into the client systems.\nOn a Palo Alto Networks firewall or Panorama, you can generate self-signed certificates\nonly if they are CA certificates.\nSTEP 1 |\nSelect Device > Certificate Management > Certificates > Device Certificates.\nSTEP 2 |\nIf the firewall has more than one virtual system (vsys), select a Location (vsys or Shared) for\nthe certificate.\nSTEP 3 |\nClick Generate.\nSTEP 4 |\nEnter a Certificate Name, such as GlobalProtect_CA. The name is case-sensitive and\ncan have up to 63 characters on the firewall or up to 31 characters on Panorama. It must be\nunique and use only letters, numbers, hyphens, and underscores.\nSTEP 5 |\nIn the Common Name field, enter the FQDN (recommended) or IP address of the interface\nwhere you will configure the service that will use this certificate.\nSTEP 6 |\nIf the firewall has more than one vsys and you want the certificate to be available to every\nvsys, select the Shared check box.\nSTEP 7 |\nLeave the Signed By field blank to designate the certificate as self-signed.\nSTEP 8 |\n(Required) Select the Certificate Authority check box.\nSTEP 9 |\nLeave the OCSP Responder field blank; revocation status verification doesn’t apply to root\nCA certificates.\nSTEP 10 | Click Generate and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n332\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 332,
+      "end": 333
+    },
+    "content_stats": {
+      "char_count": 2011,
+      "word_count": 324
+    },
+    "hierarchy": {
+      "parent": "Obtain Certificates",
+      "children": []
+    }
+  }
+}

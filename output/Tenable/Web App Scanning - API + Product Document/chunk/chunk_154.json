@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_154",
+  "section_number": "54",
+  "header": "Search vulnerabilities",
+  "content": "Returns a list of vulnerabilities detected by Tenable Web App Scanning API v2 scans.\nRequires the Basic [16] user role or the WAS.TOGGLE_WAS.USE  custom role privilege. Additionally,\nrequires the Can View [16] scan permission. See Roles and Permissions.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\ninteger <int32>\n[ 0 .. 200 ]\nDefault: 10\nThe number of records to retrieve. If this parameter is omitted, Tenable Web\nApp Scanning uses the default value of 10 . The minimum value is 0  and\nthe maximum value is 200 . If you need to retrieve more than 200 records,\nuse the offset value to iterate through page responses.\ninteger <int32>\n>= 0\nDefault: 0\nThe starting record to retrieve. If this parameter is omitted, Tenable Web\nApp Scanning uses the default value of 0 .\nstring\nExample: sort=last_seen:desc,ipv4:asc\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nsecond ( asc  or desc ). For example, name:desc  would sort results by\nthe name  field in descending order.\nIf you specify multiple fields, the fields must be separated by commas. For\nexample, name:desc,created_at:asc  would first sort results by the\nname  field in descending order and then by the created_at  field in\nascending order.\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nOne of\nAppliedFilters-Vulnerabilities\nMultiple Filters\nstring\nlimit\noffset\nsort\nfield\nThe name of the field you want to filter on. You can list available\nvulnerability filters with the GET /was/v2/vulnerabilities/filters endpoint.\nstring\nThe comparison operator to apply to the filter. You can find available\ncomparison operators for the filter in the operators  attribute of the\nobjects returned by the GET /was/v2/vulnerabilities/filters endpoint.\nstring\nThe value to compare the given field to using the given operator. You can\nfind valid values for the filter in the control  attribute of the objects\nreturned by the GET /was/v2/vulnerabilities/filters endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 191,
+      "end": 192
+    },
+    "content_stats": {
+      "char_count": 2012,
+      "word_count": 318
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

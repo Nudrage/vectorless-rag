@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_446",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n401\n429\n500\n\"rule_value\":\n-\n{\n\"action\": \"RECAST\",\n\"severity\": \"1\",\n\"original_severity\": \"0\"\n},\n\"resource_type\": \"HOST\",\n\"filter\":\n-\n{\n\"and\":\n-\n[\n,\n- {\n\"property\": \"asset.name\",\n\"operator\": \"eq\",\n\"value\":\n-\n[\n\"win-2ovr3hh18lv\"\n]\n}\n- {\n\"property\": \"definition.cve\",\n\"operator\": \"eq\",\n\"value\":\n-\n[\n\"CVE-2015-9876\"\n]\n}\n]\n},\n\"expires_at\": \"2025-11-15T23:42:45Z\"\n}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"rule_value\":\n-\n{\n\"action\": \"RECAST\",\n\"false_positive\": false,\n\"severity\": \"LOW\",\n\"original_severity\": \"MEDIUM\"\n},\n\"rule_name\": \"test1\",\n\"description\": \"description1\",\nContent type\n\"rule_id\": \"810207f8-a9de-4bc8-8b7c-3f149b12ec94\",\n\"container_id\": \"1cb2b875-1dc7-4fdc-98ef-527b41be853c\",\n\"created_by\": \"f9975077-7f1e-4be4-b2e4-e1171d17af1a\",\n\"created_at\": \"2025-08-26T19:11:32.052550334Z\",\n\"expires_at\": \"2025-11-15T23:42:45Z\",\n\"resource_type\": \"HOST\",\n\"filter\":\n-\n{\n\"and\":\n-\n[\n,\n- {\n\"property\": \"asset.name\",\n\"operator\": \"eq\",\n\"value\":\n-\n[\n\"win-2ovr3hh18lv\"\n]\n}\n,\n- {\n\"property\": \"definition.id\",\n\"operator\": \"eq\",\n\"value\": \"10114\"\n}\n,\n- {\n\"property\": \"port\",\n\"operator\": \"eq\",\n\"value\": 8080\n}\n- {\n\"property\": \"definition.cve\",\n\"operator\": \"eq\",\n\"value\":\n-\n[\n\"CVE-2015-9876\"\n]\n}\n]\n},\n\"disabled_details\":\n-\n{\n\"disabled\": false\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 421,
+      "end": 422
+    },
+    "content_stats": {
+      "char_count": 1241,
+      "word_count": 149
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

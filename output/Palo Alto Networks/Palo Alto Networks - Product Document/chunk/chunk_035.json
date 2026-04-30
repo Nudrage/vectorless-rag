@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_035",
+  "section_number": "1.3.2.3",
+  "header": "(Optional) Perform Day 1 Configuration",
+  "content": "After you register your firewall, you have the option of running Day 1 Configuration. The Day\n1 Configuration tool provides configuration templates informed by Palo Alto Networks best\npractices, which you can use as a starting point to build the rest of your configuration.\nThe benefits of Day 1 Configuration templates include:\n• Faster implementation time\n• Reduced configuration errors\n• Improved security posture\nPerform Day 1 Configuration by following these steps:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n44\n©2025 Palo Alto Networks, Inc.\nGetting Started\nSTEP 1 |\nFrom the page that displays after you have registered your firewall, select Run Day 1\nConfiguration.\nIf you’ve already registered your firewall but haven’t run Day 1 Configuration, you can\nalso run it from the Customer Support Portal home page by selecting Tools > Run Day\n1 Configuration.\nSTEP 2 |\nEnter the Hostname and Pan OS Version for your new device, and optionally, the Serial\nNumber and Device Type.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n45\n©2025 Palo Alto Networks, Inc.\nGetting Started\nSTEP 3 |\nUnder Management, select either Static or DHCP Client for your Management Type.\nSelecting Static will require you fill out the IPV4, Subnet Mask, and Default Gateway fields.\nSelecting DHCP Client only requires that you enter the Primary DNS and Secondary DNS. A\ndevice configured in DHCP client mode will ensure the management interface receives an IP\naddress from the local DHCP server, or it will fill out all the parameters if they are known.\nSTEP 4 |\nFill out all fields under Logging.\nSTEP 5 |\nClick Generate Config File.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n46\n©2025 Palo Alto Networks, Inc.\nGetting Started\nSTEP 6 |\nTo import and load the Day 1 Configuration file you just downloaded to your firewall:\n1.\nLog into your firewall web interface.\n2.\nSelect Device > Setup > Operations.\n3.\nClick Import named configuration snapshot.\n4.\nSelect the file.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 44,
+      "end": 47
+    },
+    "content_stats": {
+      "char_count": 1938,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "Register the Firewall",
+      "children": []
+    }
+  }
+}

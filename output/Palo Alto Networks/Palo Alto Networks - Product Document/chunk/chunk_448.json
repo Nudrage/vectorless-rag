@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_448",
+  "section_number": "1.13.3",
+  "header": "App-ID and HTTP/2 Inspection",
+  "content": "You can now safely enable applications running over HTTP/2, without any additional\nconfiguration on the firewall. As more websites continue to adopt HTTP/2, the firewall can\nenforce security policy and all threat detection and prevention capabilities on a stream-by-stream\nbasis. This visibility into HTTP/2 traffic enables you to secure web servers that provide services\nover HTTP/2, and allow your users to benefit from the speed and resource efficiency gains that\nHTTP/2 provides.\nThe firewall processes and inspects HTTP/2 traffic by default when SSL decryption is enabled. For\nHTTP/2 inspection to work correctly, the firewall must be enabled to use ECDHE (elliptic curve\nDiffie-Hellman) as a key exchange algorithm for SSL sessions. ECDHE is enabled by default, but\nyou can check to confirm that it’s enabled by selecting Objects > Decryption > Decryption Profile\n> SSL Decryption > SSL Protocol Settings.\nWhen the Decryption logs introduced in PAN-OS 10.0 are enabled, you must enable\nTunnel Content Inspection to obtain the App-ID for HTTP/2 traffic.\nYou can disable HTTP/2 inspection for targeted traffic, or globally:\nDisable HTTP/2 inspection for targeted traffic.\nYou’ll need to specify for the firewall to remove any value contained in the Application-Layer\nProtocol Negotiation (ALPN) TLS extension. ALPN is used to secure HTTP/2 connections—\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n805\n©2025 Palo Alto Networks, Inc.\nApp-ID\nwhen there is no value specified for this TLS extension, the firewall either downgrades HTTP/2\ntraffic to HTTP/1.1 or classifies it as unknown TCP traffic.\n1.\nSelect Objects > Decryption > Decryption Profile > SSL Decryption > SSL Forward\nProxy and then select Strip ALPN.\n2.\nAttach the decryption profile to a decryption policy (Policies > Decryption) to turn off\nHTTP/2 inspection for traffic that matches the policy.\n3.\nCommit your changes.\nDisable HTTP/2 inspection globally.\nUse the CLI command: set deviceconfig setting http2 enable no and Commit\nyour changes. The firewall will classify HTTP/2 traffic as unknown TCP traffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n806\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 805,
+      "end": 807
+    },
+    "content_stats": {
+      "char_count": 2155,
+      "word_count": 330
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": []
+    }
+  }
+}

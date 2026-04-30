@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_105",
+  "section_number": "1.6.5.1.11",
+  "header": "Provide Granular Access to Operations Settings",
+  "content": "To define which operations settings an administrator has access to, when creating or editing an\nadmin role profile for a firewall (Device > Admin Roles), scroll down to the Operations option on\nthe Web UI tab.\nAccess Level\nDescription\nEnable\nRead\nOnly\nDisable\nReboot\nRestart the firewall. The firewall logs out\nall users, reloads the PAN-OS software\nand active configuration, closes and logs\nexisting sessions, and creates a system\nlog entry that shows the name of the\nadministrator that initiated the reboot.\nYes\nN/A\nYes\nGenerate Tech\nSupport File\nGenerate a tech support system file that\nthe Palo Alto Networks support team can\nYes\nN/A\nYes\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n209\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nAccess Level\nDescription\nEnable\nRead\nOnly\nDisable\nuse to troubleshoot issues that you may\nbe experiencing with the firewall.\nGenerate Stats\nDump File\nGenerate and download a set of XML\nreports that summarizes network traffic\nover the last seven days for the firewall.\nYes\nN/A\nYes\nDownload Core\nFiles\nIf the firewall experiences a system\nprocess failure, a core file is automatically\ngenerated that contains details about\nthe process and why it failed. You can\ndownload this core file to upload to your\nPalo Alto Networks support case to obtain\nfurther assistance in resolving the issue.\nYes\nN/A\nYes",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 209,
+      "end": 210
+    },
+    "content_stats": {
+      "char_count": 1340,
+      "word_count": 218
+    },
+    "hierarchy": {
+      "parent": "Web Interface Access Privileges",
+      "children": []
+    }
+  }
+}

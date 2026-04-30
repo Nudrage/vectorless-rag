@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_018",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200\nReturned if the Tenable MSSP Platform successfully retrieved the details for the specified child\naccount.\nRESPONSE SCHEMA:\napplication/json\nstring <uuid>\nThe UUID of the customer account in the Tenable MSSP Portal.\nstring\nThe name of the customer account in the Tenable MSSP Portal.\naccount_uuid\nrequired\nuuid\nrequired\ncontainer_name\nstring\nThe customer's licensing management system customer ID.\nstring\nA custom name in addition to the container name to help you\nmore easily identify the customer / container.\nstring\nThe sso_username.\nstring\nThe Tenable AWS cloud region that contains the customer\naccount. Customer account regions correspond to the regions\nused for cloud sensors. To avoid latency issues, Tenable\nrecommends that scans in the customer instance use scanners in\nthe same region as the customer account.\ninteger <int64>\nThe number of assets currently counted against the customer's\nlicense.\ninteger <int64>\nThe number of assets which the customer is licensed to scan.\nnumber\ndecimal places <= 1\nThe current license utilization.\nArray of strings (Licensed-Apps)\nAn array of strings defining the list of licensed Tenable\napplications For example, [\"vm\", \"was\", \"lumin\"] . Valid\nstrings include the following:\nad—Tenable Identity Exposure\nasm—Tenable Attack Surface Management\nlumin—Tenable Lumin\none—Tenable One\nvm—Tenable Vulnerability Management\nwas—Tenable Web App Scanning\nstring\nUser-defined text; for example, internal tracking or customer\ncontact information.\nlms_customer_id\ncustom_name\nsso_username\nregion\nlicensed_assets\nlicensed_assets_limit\nlicense_utilization\nlicensed_apps\nnotes\nstring\nThe UUID of the logo assigned to the customer account in the\nTenable MSSP Portal. This attribute is only present if a custom\nlogo is assigned to the account.\nArray of strings\nA list of the customer domains.\nstring\nAn ISO timestamp indicating the date and time on which the\ncontainer was created; for example, 2021-01-16T12:00:00Z .\nstring\nAn ISO timestamp indicating the date and time on which the\ncontainer was last modified; for example, 2021-01-\n16T12:00:00Z .\n— 404 Returned if the Tenable MSSP Platform could not find the specified child account.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in the Tenable MSSP Portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 15,
+      "end": 17
+    },
+    "content_stats": {
+      "char_count": 2367,
+      "word_count": 351
+    },
+    "hierarchy": {
+      "parent": "Get child account details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

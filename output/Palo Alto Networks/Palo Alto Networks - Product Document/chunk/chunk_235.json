@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_235",
+  "section_number": "1.10.3.5",
+  "header": "Verify Failover",
+  "content": "To test that your HA configuration works properly, trigger a manual failover and verify that the\nfirewalls transition states successfully.\nSTEP 1 |\nSuspend the active firewall.\nSelect Device > High Availability > Operational Commands and click the Suspend local device\nlink.\nSTEP 2 |\nVerify that the passive firewall has taken over as active.\nOn the Dashboard, verify that the state of the passive firewall changes to active in the High\nAvailability widget.\nSTEP 3 |\nRestore the suspended firewall to a functional state. Wait for a couple of minutes, and then\nverify that preemption has occurred, if Preemptive is enabled.\n1.\nOn the firewall you previously suspended, select Device > High Availability >\nOperational Commands and click the Make local device functional link.\n2.\nIn the High Availability widget on the Dashboard, confirm that the firewall has taken\nover as the active firewall and that the peer is now in a passive state.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n413\n©2025 Palo Alto Networks, Inc.\nHigh Availability",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 413,
+      "end": 414
+    },
+    "content_stats": {
+      "char_count": 1029,
+      "word_count": 168
+    },
+    "hierarchy": {
+      "parent": "Set Up Active/Passive HA",
+      "children": []
+    }
+  }
+}

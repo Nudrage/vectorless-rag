@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_780",
+  "section_number": "1.21.7.1",
+  "header": "BGP Overview",
+  "content": "BGP functions between autonomous systems (exterior BGP or eBGP) or within an AS (interior\nBGP or iBGP) to exchange routing and reachability information with BGP speakers. The firewall\nprovides a complete BGP implementation, which includes the following features:\n• Specification of one BGP routing instance per virtual router.\n• BGP settings per virtual router, which include basic parameters such as local route ID and local\nAS, and advanced options such as path selection, route reflector, BGP Confederations, route\nflap dampening, and graceful restart.\n• Peer group and neighbor settings, which include neighbor address and remote AS, and\nadvanced options such as neighbor attributes and connections.\n• Route policies to control route import, export and advertisement; prefix-based filtering; and\naddress aggregation.\n• IGP-BGP interaction to inject routes to BGP using redistribution profiles.\n• Authentication profiles, which specify the MD5 authentication key for BGP connections.\nAuthentication helps prevent route leaking and successful DoS attacks.\n• Multiprotocol BGP (MP-BGP) to allow BGP peers to carry IPv6 unicast routes and IPv4\nmulticast routes in Update packets, and to allow the firewall and a BGP peer to communicate\nwith each other using IPv6 addresses.\n• Beginning with PAN-OS 10.0.5, BGP supports a maximum of 255 AS numbers in an AS_PATH\nlist for a prefix.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1392,
+      "end": 1392
+    },
+    "content_stats": {
+      "char_count": 1379,
+      "word_count": 209
+    },
+    "hierarchy": {
+      "parent": "BGP",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_804",
+  "section_number": "1.21.11.4.2",
+  "header": "DHCP Leases",
+  "content": "A lease is defined as the time period for which a DHCP server allocates a network address to a\nclient. The lease might be extended (renewed) upon subsequent requests. If the client no longer\nneeds the address, it can release the address back to the server before the lease is up. The server\nis then free to assign that address to a different client if it has run out of unassigned addresses.\nThe lease period configured for a DHCP server applies to all of the addresses that a single\nDHCP server (interface) dynamically assigns to its clients. That is, all of that interface’s addresses\nassigned dynamically are of Unlimited duration or have the same Timeout value. A different\nDHCP server configured on the firewall may have a different lease term for its clients. A Reserved\nAddress is a static address allocation and is not subject to the lease terms.\nPer the DHCP standard, RFC 2131, a DHCP client does not wait for its lease to expire, because it\nrisks getting a new address assigned to it. Instead, when a DHCP client reaches the halfway point\nof its lease period, it attempts to extend its lease so that it retains the same IP address. Thus, the\nlease duration is like a sliding window.\nTypically if an IP address was assigned to a device, the device was subsequently taken off the\nnetwork and its lease was not extended, the DHCP server will let that lease run out. Because the\nclient is gone from the network and no longer needs the address, the lease duration in the server\nis reached and the lease is in “Expired” state.\nThe firewall has a hold timer that prevents the expired IP address from being reassigned\nimmediately. This behavior temporarily reserves the address for the device in case it comes back\nonto the network. But if the address pool runs out of addresses, the server re-allocates this\nexpired address before the hold timer expires. Expired addresses are cleared automatically as the\nsystems needs more addresses or when the hold timer releases them.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1440\n©2025 Palo Alto Networks, Inc.\nNetworking\nIn the CLI, use the show dhcp server lease operational command to view lease information\nabout the allocated IP addresses. If you don’t want to wait for expired leases to be released\nautomatically, you can use the clear dhcp lease interface <interface> expired-\nonly command to clear expired leases, making those addresses available in the pool again. You\ncan use the clear dhcp lease interface <interface> ip <ip_address> command\nto release a particular IP address. Use the clear dhcp lease interface <interface>\nmac <mac_address> command to release a particular MAC address.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1440,
+      "end": 1441
+    },
+    "content_stats": {
+      "char_count": 2641,
+      "word_count": 448
+    },
+    "hierarchy": {
+      "parent": "DHCP Addressing",
+      "children": []
+    }
+  }
+}

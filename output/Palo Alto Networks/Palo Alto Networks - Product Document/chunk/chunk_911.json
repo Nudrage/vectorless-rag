@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_911",
+  "section_number": "1.21.21.2.2",
+  "header": "Unverified RST Timer",
+  "content": "If the firewall receives a Reset (RST) packet that cannot be verified (because it has an unexpected\nsequence number within the TCP window or it is from an asymmetric path), the Unverified RST\ntimer controls the aging out of the session. It defaults to 30 seconds; the range is 1-600 seconds.\nThe Unverified RST timer provides an additional security measure, explained in the second bullet\nbelow.\nA RST packet will have one of three possible outcomes:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1556\n©2025 Palo Alto Networks, Inc.\nNetworking\n• A RST packet that falls outside the TCP window is dropped.\n• A RST packet that falls inside the TCP window but does not have the exact expected sequence\nnumber is unverified and subject to the Unverified RST timer setting. This behavior helps\nprevent denial of service (DoS) attacks where the attack tries to disrupt existing sessions by\nsending random RST packets to the firewall.\n• A RST packet that falls within the TCP window and has the exact expected sequence number is\nsubject to the TCP Time Wait timer setting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1556,
+      "end": 1557
+    },
+    "content_stats": {
+      "char_count": 1060,
+      "word_count": 180
+    },
+    "hierarchy": {
+      "parent": "TCP",
+      "children": []
+    }
+  }
+}

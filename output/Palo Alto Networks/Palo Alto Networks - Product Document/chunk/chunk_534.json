@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_534",
+  "section_number": "1.16.2.7",
+  "header": "SSH Proxy",
+  "content": "In an SSH Proxy configuration, the firewall resides between a client and a server. SSH Proxy\nenables the firewall to decrypt inbound and outbound SSH connections and ensures that\nattackers don’t use SSH to tunnel unwanted applications and content. SSH decryption does not\nrequire certificates and the firewall automatically generates the key used for SSH decryption\nwhen the firewall boots up. During the boot up process, the firewall checks if there is an existing\nkey. If not, the firewall generates a key. The firewall uses the key to decrypt SSH sessions for all\nvirtual systems configured on the firewall and all SSH v2 sessions.\nSSH allows tunneling, which can hide malicious traffic from decryption. The firewall can’t decrypt\ntraffic inside an SSH tunnel. You can block all SSH tunnel traffic by configuring a Security policy\nrule for the application ssh-tunnel with the Action set to Deny (along with a Security policy rule to\nallow traffic from the ssh application).\nSSH tunneling sessions can tunnel X11 Windows packets and TCP packets. One SSH connection\nmay contain multiple channels. When you apply an SSH Decryption profile to traffic, for each\nchannel in the connection, the firewall examines the App-ID of the traffic and identifies the\nchannel type. The channel type can be:\n• session\n• X11\n• forwarded-tcpip\n• direct-tcpip\nWhen the channel type is session, the firewall identifies the traffic as allowed SSH traffic such\nas SFTP or SCP. When the channel type is X11, forwarded-tcpip, or direct-tcpip, the firewall\nidentifies the traffic as SSH tunneling traffic and blocks it.\nLimit SSH use to administrators who need to manage network devices, log all SSH traffic,\nand consider configuring Multi-Factor Authentication to help ensure that only legitimate\nusers can use SSH to access devices, which reduces the attack surface.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n986\n©2025 Palo Alto Networks, Inc.\nDecryption\nAfter you enable SSH Decryption on the firewall, authenticating to hosts that have a\ncertificate fails because the SSH client no longer uses public key-based authentication,\nso the server can’t use a public key that the client that the client can decrypt to with its\nprivate key to complete the handshake. Use username and password authentication to\ninitiate the SSH session.\nFor systems that must use key-based authentication, configure your SSH Decryption\npolicy rule to exclude the systems that require public key authentication. To edit the SSH\nDecryption policy rule:\n1. Go to Policies > Decryption and select the policy rule that controls SSH decryption.\n2. Select the Destination tab.\n3. Add the IP addresses of the systems you want to exclude from the rule.\n4. Select Negate.\n5. Click OK.\n6. Commit the change.\nThe following figure shows how SSH Proxy decryption works. See Configure SSH Proxy for how\nto enable SSH Proxy decryption.\n1. The client sends an SSH request to the server to initiate a session.\n2. The firewall intercepts the client’s SSH request .\n3. The firewall forwards the request to the server and initiates an SSH session with the server.\nThis establishes the first of two separate sessions that the firewall creates. Each session\nestablishes a separate SSH tunnel.\n4. The server responds to the request, which the firewall intercepts.\n5. The firewall inserts the SSH key into the server’s response and forwards it to the client. This\nestablishes the second separate session (and separate SSH tunnel) that the firewall creates.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n987\n©2025 Palo Alto Networks, Inc.\nDecryption\n6. (First part of “7” in the diagram) After the firewall establishes separate sessions with the server\nand the client, the firewall acts as a proxy between them.\n7. The firewall checks the traffic between the client and server to see if it is routed normally or\nif it uses SSH port forwarding (SSH tunneling). If the firewall identifies SSH port forwarding,\nthe firewall blocks the tunneled traffic and restricts it according to the configured Security\npolicy. The firewall only looks for SSH port forwarding, it does not perform content and threat\ninspection on SSH tunnels.\nWhen you configure SSH Proxy, the proxied traffic does not support DSCP code points or\nQoS.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 986,
+      "end": 988
+    },
+    "content_stats": {
+      "char_count": 4240,
+      "word_count": 689
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

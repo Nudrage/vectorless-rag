@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_972",
+  "section_number": "25.9",
+  "header": "Reorder Rules",
+  "content": "PUT    /web/api/v2.1/firewall-control/reorder\nChange the order of rules for a scope  specified by ID (run \"accounts\", \"sites\", or \"groups\").\nThe Agent looks at the rules based on their order in the Firewall Control policy, from the top to the bottom. First it goes through the Group rules, then the Site rules, then\nthe Account rules, then the Global rules. When the Agent finds a rule that matches the parameters of the traffic, that rule is applied. The Agent does not continue to the\nlower rules in the list. Thus, the scope and the order of the rules is important.\nFirewall Control requires Control SKU.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1128,
+      "end": 1128
+    },
+    "content_stats": {
+      "char_count": 607,
+      "word_count": 103
+    },
+    "hierarchy": {
+      "parent": "Firewall Control",
+      "children": [
+        "Response Messages",
+        "Response Schema",
+        "Body Schema"
+      ]
+    }
+  }
+}

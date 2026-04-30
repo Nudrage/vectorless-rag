@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_150",
+  "section_number": "53",
+  "header": "Get vulnerability details",
+  "content": "Content type\nReturns vulnerability details for a specific vulnerability instance.\nRequires the Basic [16] user role or the WAS.TOGGLE_WAS.USE  custom role privilege. Additionally,\nrequires the Can View [16] scan permission. See Roles and Permissions.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe UUID of the vulnerability instance. To determine the UUID of a\nvulnerability, use either the POST /was/v2/vulnerabilities/search endpoint\nor the POST /was/v2/scans/{scan_id}/vulnerabilities/search endpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 188,
+      "end": 189
+    },
+    "content_stats": {
+      "char_count": 513,
+      "word_count": 64
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

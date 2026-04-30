@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_526",
+  "section_number": "1.16.1",
+  "header": "Decryption Overview",
+  "content": "The Secure Sockets Layer (SSL) and Secure Shell (SSH) encryption protocols secure traffic\nbetween two entities, such as a web server and a client. SSL and SSH encapsulate traffic,\nencrypting data so that it is meaningless to entities other than the client and server with the\ncertificates to affirm trust between the devices and the keys to decode the data. Decrypt SSL and\nSSH traffic to:\n• Prevent malware concealed as encrypted traffic from being introduced into your network. For\nexample, an attacker compromises a website that uses SSL encryption. Employees visit that\nwebsite and unknowingly download an exploit or malware. The malware then uses the infected\nemployee endpoint to move laterally through the network and compromise other systems.\n• Prevent sensitive information from moving outside the network.\n• Ensure the appropriate applications are running on a secure network.\n• Selectively decrypt traffic; for example, create a Decryption policy and profile to exclude traffic\nfor financial or healthcare sites from decryption.\nPalo Alto Networks firewall decryption is policy-based, and can decrypt, inspect, and control\ninbound and outbound SSL and SSH connections. A Decryption policy enables you to specify\ntraffic to decrypt by destination, source, service, or URL category, and to block, restrict, or\nforward the specified traffic according to the security settings in the associated Decryption\nprofile. A Decryption profile controls SSL protocols, certificate verification, and failure checks to\nprevent traffic that uses weak algorithms or unsupported modes from accessing the network.\nThe firewall uses certificates and keys to decrypt traffic to plaintext, and then enforces App-\nID and security settings on the plaintext traffic, including Decryption, Antivirus, Vulnerability,\nAnti-Spyware, URL Filtering, WildFire, and File-Blocking profiles. After decrypting and inspecting\ntraffic, the firewall re-encrypts the plaintext traffic as it exits the firewall to ensure privacy and\nsecurity.\nThe firewall provides three types of Decryption policy rules: SSL Forward Proxy to control\noutbound SSL traffic, SSL Inbound Inspection to control inbound SSL traffic, and SSH Proxy to\ncontrol tunneled SSH traffic. You can attach a Decryption profile to a policy rule to apply granular\naccess settings to traffic, such as checks for server certificates, unsupported modes, and failures.\nSSL decryption (both forward proxy and inbound inspection) requires certificates to establish the\nfirewall as a trusted third party, and to establish trust between a client and a server to secure an\nSSL/TLS connection. You can also use certificates when excluding servers from SSL decryption for\ntechnical reasons (the site breaks decryption for reasons such as certificate pinning, unsupported\nciphers, or mutual authentication). SSH decryption does not require certificates.\nUse the Decryption Best Practices Checklist to plan, implement, and maintain your\ndecryption deployment.\nYou can integrate a hardware security module (HSM) with a firewall to enable enhanced security\nfor the private keys used in SSL forward proxy and SSL inbound inspection decryption. To learn\nmore about storing and generating keys using an HSM and integrating an HSM with your firewall,\nsee Secure Keys with a Hardware Security Module.\nYou can also use Decryption Mirroring to forward decrypted traffic as plaintext to a third party\nsolution for additional analysis and archiving.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n972\n©2025 Palo Alto Networks, Inc.\nDecryption\nIf you enable Decryption mirroring, be aware of local laws and regulations about what\ntraffic you can mirror and where and how you can store the traffic, because all mirrored\ntraffic, including sensitive information, is forwarded in cleartext.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n973\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 972,
+      "end": 974
+    },
+    "content_stats": {
+      "char_count": 3878,
+      "word_count": 579
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": []
+    }
+  }
+}

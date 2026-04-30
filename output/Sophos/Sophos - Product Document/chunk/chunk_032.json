@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_032",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is CR_appflt_deny_log_fmt.\nSyslog field name\nData type Length\nFormat/Description\nPossible values\nNotes/Examples\ntimestamp\nTimestamp\nISO 8601\neg. 2018-12-07T10:03:48+0000\ndevice_model\nString\neg. XG135\ndevice_name\nString\nSFW\ndevice_serial_id\nString\neg. C44313350024-P29PUA\nlog_id\nString\neg. 010101600001\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 25\nlog_type\nString\nContent Filtering\nlog_subtype\nString\nDenied\nlog_version\nNumber\neg. log_version=1\nseverity\nString\nInformation\nfw_rule_id\nNumber\nint32\nFirewall rule id\ne.g. fw_rule_id=1\nuser_name\nString\n384\n\"\" or \"<username>\"\nuser_group\nString\n1024\n\"\" or\n\"<groupname>\"\napp_filter_policy_id Number\nint16\nId of application filter policy\ncategory\nString\n64\nCategory in which application\nis categorized\nCategories present\nin IPS signature set\napp_name\nString\n64\nApplication Name\nApplications present\nin IPS signature set\napp_risk\nNumber\n8\nRisk in which application is\ncategorized\nRisks present in IPS\nsignature set\napp_technology\nString\n32\nTechnology in which\napplication is categorized\nTechnologies\npresent in IPS\nsignature set\napp_category\nString\n64\nCategory in which application\nis categorized\nCategories present\nin IPS signature set\nsrc_ip\n<Src IP address>\nsrc_country\nString\n64\nISO 3166 (A 3) Code\ndst_ip\n<Dst IP address>\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 26\ndst_country\nString\n64\nISO 3166 (A 3) Code\nsrc_port\ndst_port\nbytes_sent\nNumber\nint32\nbytes_received\nNumber\nint32\nmessage\nString\n1024\napp_is_cloud\nBoolean\ntrue\nfalse\nparent_app\nString\neg. parent_app=\"Skype\"\nparent_app_category String\neg. parent_app_category=\"Instant\nMessaging\"\nparent_app_risk\nNumber\neg. parent_app_risk=1\nclassification\nString\n\"\"\nSanctioned\nUnsanctioned\nNew\nTolerated\neg. classification=\"Sanctioned\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 27\napp_resolved_by\nString\nThe module that identified\nthe application (IPS, Micro\napp or SAC)\nSignature\nProxy\nEAC\nqualifier\nString\neg. qualifier=\"Mapped\"\nstatus\nString\nDeny",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 25,
+      "end": 28
+    },
+    "content_stats": {
+      "char_count": 2062,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "Central Reporting Format",
+      "children": []
+    }
+  }
+}

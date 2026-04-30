@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_592",
+  "section_number": "1.16.16.2.5",
+  "header": "Decryption Broker: Multiple Security Chains",
+  "content": "A firewall enabled as a decryption broker supports forwarding to multiple security chains (Layer\n3, Transparent Bridge, or a mix of both) in order provide redundancy and to balance the analysis\nload, avoiding oversubscribing a security chain or a single security chain device. Because the\nfirewall capacity to decrypt and forward traffic can exceed the capacity of security chain devices\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1096\n©2025 Palo Alto Networks, Inc.\nDecryption\nto process traffic, you can configure the firewall to distribute clear text sessions to multiple\nsecurity chain networks for inspection. The firewall can distribute sessions among both types\nof security chain networks, so that security chains can share the inspection load; however, the\nmethods to enable session distribution varies depending on whether you are using Layer 3\nsecurity chains or Transparent Bridge security chains.A decryption broker forwarding to multiple\nLayer 3 Security Chains can distribute sessions for inspection using one of four methods:\n• IP modulo—The firewall assigns sessions based on the modulo hash of the source and\ndestination IP addresses.\n• IP hash—The firewall assigns sessions based on the IP hash of the source and destination IP\naddresses and port numbers.\n• Round robin—The firewall allocates sessions evenly amongst the security chains.\n• Lowest latency—The firewall allocates more sessions to the security chain with the lowest\nlatency.\nA decryption broker forwarding to multiple Transparent Bridge Security Chains must be\nconfigured to perform policy-based session distribution; traffic matched to a policy rule is\nforwarded only to the security chain associated with that rule. For example, specify a different\nsource address range for each decryption policy to dedicate a single Transparent Bridge security\nchain to analyze and enforce traffic originating from specified IP address ranges.\nWhen configuring multiple security chains, make sure that you’re deploying enough security\nchains to provide excess capacity in the event of a security chain failure. If you enable the firewall\nto perform Security Chain Health Checks, and a security chain fails, the firewall continues to\ndistribute decrypted sessions among the healthy security chains. If there are not enough healthy\nchains to cover the additional load, that single security chain failure could result in cascading\nfailures as the remaining healthy security chains are oversubscribed.\nThe first image below shows a decryption broker deployment with multiple Layer 3 security\nchains. Note that a single pair of Decryption Forwarding Interfaces can forward decrypted traffic\nto multiple Layer 3 security chains (up to 64).\nThe second image below shows a decryption broker deployment with multiple Transparent Bridge\nsecurity chains; a dedicated pair of decryption forwarding interfaces is required to forward to\neach separate Transparent Bridge security chain.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1097\n©2025 Palo Alto Networks, Inc.\nDecryption\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1098\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1096,
+      "end": 1099
+    },
+    "content_stats": {
+      "char_count": 3114,
+      "word_count": 463
+    },
+    "hierarchy": {
+      "parent": "Decryption Broker Concepts",
+      "children": []
+    }
+  }
+}

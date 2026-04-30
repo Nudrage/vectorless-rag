@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_369",
+  "section_number": "16.5",
+  "header": "Delete network",
+  "content": "Deletes the specified network object. Before you delete a network object, consider moving assets to\na different network using the bulk asset move endpoint (POST /api/v2/assets/bulk-jobs/move-to-\nnetwork). If you delete a network object, Tenable Vulnerability Management:\nReturns the scanners and scanner groups associated with the deleted object to the default\nnetwork object.\nRetains any asset records for the deleted network until the assets age out of your licensed\nassets count.\nNote: You can view deleted network objects using the includeDeleted  filter in a GET /networks\nrequest.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nUUID for the network object you want to delete. You cannot delete the\ndefault network object.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 358,
+      "end": 358
+    },
+    "content_stats": {
+      "char_count": 779,
+      "word_count": 115
+    },
+    "hierarchy": {
+      "parent": "Networks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

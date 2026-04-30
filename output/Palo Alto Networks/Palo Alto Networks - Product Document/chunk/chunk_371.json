@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_371",
+  "section_number": "1.11.15.6.4",
+  "header": "ENTITY-MIB",
+  "content": "ENTITY-MIB provides OIDs for multiple logical and physical components. Use this MIB to\ndetermine what physical components are loaded on a system (for example, fans and temperature\nsensors) and see related information such as models and serial numbers. You can also use the\nindex numbers for these components to determine their operational status in the ENTITY-\nSENSOR-MIB and ENTITY-STATE-MIB.\nPalo Alto Networks firewalls, Panorama, and WF-500 appliances support only portions of the\nentPhysicalTable group:\nObject\nDescription\nentPhysicalIndex\nA single namespace that includes disk slots and disk drives.\nentPhysicalDescr\nThe component description.\nentPhysicalVendorTypeThe sysObjectID (see PAN-PRODUCT-MIB.my) when it is available\n(chassis and module objects).\nentPhysicalContainedInThe value of entPhysicalIndex for the component that contains this\ncomponent.\nentPhysicalClass\nChassis (3), container (5) for a slot, power supply (6), fan (7), sensor (8)\nfor each temperature or other environmental, and module (9) for each\nline card.\nentPhysicalParentRelPosThe relative position of this child component among its sibling\ncomponents. Sibling components are defined as entPhysicalEntry\ncomponents that share the same instance values of each of the\nentPhysicalContainedIn and entPhysicalClass objects.\nentPhysicalName\nSupported only if the management (MGT) interface allows for naming\nthe line card.\nentPhysicalHardwareRev\nThe vendor-specific hardware revision of the component.\nentPhysicalFirwareRevThe vendor-specific firmware revision of the component.\nentPhysicalSoftwareRevThe vendor-specific software revision of the component.\nentPhysicalSerialNum The vendor-specific serial number of the component.\nentPhysicalMfgName The name of the manufacturer of the component.\nentPhysicalMfgDate\nThe date when the component was manufactured.\nentPhysicalModelNameThe disk model number.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n666\n©2025 Palo Alto Networks, Inc.\nMonitoring\nObject\nDescription\nentPhysicalAlias\nAn alias that the network manager specified for the component.\nentPhysicalAssetID\nA user-assigned asset tracking identifier that the network manager\nspecified for the component.\nentPhysicalIsFRU\nIndicates whether the component is a field replaceable unit (FRU).\nentPhysicalUris\nThe Common Language Equipment Identifier (CLEI) number of the\ncomponent (for example, URN:CLEI:CNME120ARA).\nRFC 4133 defines this MIB.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 666,
+      "end": 667
+    },
+    "content_stats": {
+      "char_count": 2416,
+      "word_count": 308
+    },
+    "hierarchy": {
+      "parent": "Supported MIBs",
+      "children": []
+    }
+  }
+}

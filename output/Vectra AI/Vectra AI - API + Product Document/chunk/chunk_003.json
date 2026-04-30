@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_003",
+  "section_number": "1.2",
+  "header": "API Version 3.4 Changelog",
+  "content": "Accounts\n•\nThe ‘subaccounts’ field is deprecated in v3.4, replaced by the field ‘associated_accounts’.\nDetections\n•\nDeprecating the following params and fields for v3.4/detections/:\no\n‘c_score’ parameter and field\no\n‘t_score’ parameter and field\no\n‘targets_key_asset’ parameter and field\no\n‘category’ parameter and field\no\n‘c_score_gte’ parameter\no\n‘t_score_gte’ parameter\nEntities\n•\nDeprecating the following params and fields for v3.4/entities/:\no\n‘entity_type’ parameter and field\no\n‘entity_importance’ field\nEvents\n•\nDeprecating the paths v3.4/events/account_scoring, and\nv3.4/events/account_detection.\n•\nDeprecating the following params and fields for v3.4/events/entity_scoring:\no\n‘entity_type’ parameter and field\no\n‘entity_importance’ field\no\n‘last_detection_id’ field\no\n‘last_detection_type’ field\no\n‘last_detection_url’ field\n•\nDeprecating the following params and fields for v3.4/events/detections:\no\n‘entity_type’ parameter and field\nHealth\n•\nAdded ability to query health information for external connectors via the endpoint\nv3.4/health/external_connectors\n•\nAdded ability to query detailed health information for external connectors via the endpoint\nv3.4/health/external_connectors/details\n•\nAdded ability to query health information for EDR connections via the endpoint\nv3.4/health/edr\n•\nAdded ability to query detailed health information for EDR connections via the endpoint\nv3.4/health/edr/details\n•\nAdded ability to ping the network brain connection via the endpoint\nv3.4/health/network_brain/ping\n•\nAdded ability to query detection model health via the endpoint v3.4/health/detection\n© July 2024 Vectra AI, Inc. | 6\nLockdown\n•\nDeprecating the param and field ‘entity_type’.\nNotes\n•\nDeprecating the param ‘entity_type’.\nTagging\n•\n‘tag_id’ key renamed to ‘entity_id’ in the response. The value of this key and the path for this\nendpoint is unchanged.\n•\nDeprecating the param ‘entity_type’.\nUsers\n•\nUpdates /api/v3.4/users endpoint to remove ‘username’ and ‘last_login’ fields and to add\n‘name’, ‘verified’, and ‘identities’ fields in the list Users response, adds ability to add Users.\n•\nAdds ability to view, update, and delete single Users via the endpoint /api/v3.4/users/<id>\n•\nAdds ability to list the available roles for user creation via the endpoint\n/api/v3.4/users/roles\nVectra Match\n•\nAdds /api/v3.4/vectra-match/download-vectra-ruleset endpoint\nUnique Host Count\n•\nAdded /api/v3.4/unique_host_count endpoint to query the count of unique hosts seen in\na given timespan up to a year in the past.\n•\nAdded /api/v3.4/unique_host_count endpoint to query the unique hosts seen in a given\ntimespan up to a year in the past.\n•\nRenamed previous unique_host_count endpoint to:\n/api/v3.4/unique_host_count_monthly\n•\nRenamed previous unique_host_count/audit endpoint to:\n/api/v3.4/unique_host_count_monthly/audit",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 5,
+      "end": 6
+    },
+    "content_stats": {
+      "char_count": 2827,
+      "word_count": 375
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

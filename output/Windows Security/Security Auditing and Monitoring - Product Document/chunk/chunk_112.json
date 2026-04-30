@@ -1,0 +1,33 @@
+{
+  "chunk_id": "chunk_112",
+  "section_number": "7.10",
+  "header": "Audit Other Logon/Logoff Events",
+  "content": "Audit Other Logon/Logoff Events determines whether Windows generates audit events for other logon or logoff events.\nThese other logon or logoff events include:\n\nA Remote Desktop session connects or disconnects.\n\nA workstation is locked or unlocked.\n\nA screen saver is invoked or dismissed.\n\nA replay attack is detected. This event indicates that a Kerberos request was received twice with identical information. This condition could also be caused by network\nmisconfiguration.\n\nA user is granted access to a wireless network. It can be either a user account or the computer account.\n\nA user is granted access to a wired 802.1x network. It can be either a user account or the computer account.\nLogon events are essential to understanding user activity and detecting potential attacks.\nEvent volume: Low.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nYes\nYes\nYes\nYes\nWe recommend Success auditing, to track possible Kerberos replay attacks, terminal session connect and\ndisconnect actions, network authentication events, and some other events. Volume of these events is typically\nvery low.\nFailure events will show you when requested credentials CredSSP delegation was disallowed by policy. The\nvolume of these events is very low—typically you will not get any of these events.\nMember Server\nYes\nYes\nYes\nYes\nWe recommend Success auditing, to track possible terminal session connect and disconnect actions, network\nauthentication events, and some other events. Volume of these events is typically very low.\nFailure events will show you when requested credentials CredSSP delegation was disallowed by policy. The\nvolume of these events is very low—typically you will not get any of these events.\nWorkstation\nYes\nYes\nYes\nYes\nWe recommend Success auditing, to track possible terminal session connect and disconnect actions, network\nauthentication events, and some other events. Volume of these events is typically very low.\nFailure events will show you when requested credentials CredSSP delegation was disallowed by policy. The\nvolume of these events is very low—typically you will not get any of these events.\nEvents List:\n\n4649\n(S): A replay attack was detected.\n\n4778\n(S): A session was reconnected to a Window Station.\n\n4779\n(S): A session was disconnected from a Window Station.\n\n4800\n(S): The workstation was locked.\n\n4801\n(S): The workstation was unlocked.\n\n4802\n(S): The screen saver was invoked.\n\n4803\n(S): The screen saver was dismissed.\n© 2016 Microsoft. All rights reserved.\n324\n\n5378\n(F): The requested credentials delegation was disallowed by policy.\n\n5632\n(S): A request was made to authenticate to a wireless network.\n\n5633\n(S): A request was made to authenticate to a wired network.\n4649(S): A replay attack was detected.\nThis event generates on domain controllers when KRB_AP_ERR_REPEAT Kerberos response was sent to the client.\nDomain controllers cache information from recently received tickets. If the server name, client name, time, and microsecond fields from the Authenticator match recently seen entries in\nthe cache, it will return KRB_AP_ERR_REPEAT. You can read more about this in RFC-1510. One potential cause for this is a misconfigured network device between the client and server\nthat could send the same packet(s) repeatedly.\nThere is no example of this event in this document.\nEvent Schema:\nA replay attack was detected.\nSubject:\nSecurity ID:%1\nAccount Name:%2\nAccount Domain:%3\nLogon ID:%4\nCredentials Which Were Replayed:\nAccount Name:%5\nAccount Domain:%6\nProcess Information:\nProcess ID:%12\nProcess Name:%13\nNetwork Information:\nWorkstation Name:%10\nDetailed Authentication Information:\nRequest Type:%7\nLogon Process:%8\nAuthentication Package:%9\nTransited Services:%11\nThis event indicates that a Kerberos replay attack was detected- a request was received twice with identical information. This condition could be caused by network misconfiguration.\"\n© 2016 Microsoft. All rights reserved.\n325\nRequired Server Roles: Active Directory domain controller.\nMinimum OS Version: Windows Server 2008.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 324,
+      "end": 326
+    },
+    "content_stats": {
+      "char_count": 4105,
+      "word_count": 628
+    },
+    "hierarchy": {
+      "parent": "Logon and Logoff",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

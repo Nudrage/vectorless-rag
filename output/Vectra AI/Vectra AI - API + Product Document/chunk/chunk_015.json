@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_015",
+  "section_number": "1.8.1",
+  "header": "Detection PCAP API",
+  "content": "Version 3.4 of the API supports download of PCAP for a particular detection. Users can perform a GET\nusing the following URL format to download PCAP for any detection:\nhttps://<vectra_portal_url>/api/v3.4/detections/<id>/pcap\nThe download of PCAP via API is subject to RBAC rules just like UI access. The api client role requires\nthe ‘view pcap’ permission (i.e. security analyst) in order to access PCAP data.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 23,
+      "end": 23
+    },
+    "content_stats": {
+      "char_count": 410,
+      "word_count": 63
+    },
+    "hierarchy": {
+      "parent": "Mark/Unmark Detections as Fixed",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_268",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4697(S): A service was installed in the system.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.We recommend monitoring for this event, especially on high value\nassets or computers, because a new service installation should be planned and expected. Unexpected service installation should trigger an alert.\n\nMonitor for all events where “Service File Name” is not located in %windir% or “Program Files/Program Files (x86)” folders. Typically new services are located in these folders.\n\nReport all “Service Type” equals “0x1”, “0x2” or “0x8”. These service types start first and have almost unlimited access to the operating system from the beginning of operating\nsystem startup. These types are very rarely installed.\n\nReport all “Service Start Type” equals “0” or “1”. These service start types are used by drivers, which have unlimited access to the operating system.\n\nReport all “Service Start Type” equals “4”. It is not common to install a new service in the Disabled state.\n\nReport all “Service Account” not equals “localSystem”, “localService” or “networkService” to identify services which are running under a user account.\n© 2016 Microsoft. All rights reserved.\n711",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 711,
+      "end": 712
+    },
+    "content_stats": {
+      "char_count": 1313,
+      "word_count": 203
+    },
+    "hierarchy": {
+      "parent": "Audit Security System Extension",
+      "children": []
+    }
+  }
+}

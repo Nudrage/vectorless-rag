@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_149",
+  "section_number": "1.8.3.3.1",
+  "header": "Configure Duo for SAML MFA with Duo Access Gateway",
+  "content": "Before you begin, verify that you have deployed the DuoAccessGateway (DAG) on an on-premise\nserver in your DMZ zone.\nCreate your Duo administrator account and configure the Duo Access Gateway to authenticate\nyour users before they can access resources.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n270\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 1 |\nCreate your Duo administrator account.\n1.\nOn the Duo account creation page, enter your First Name, Last Name, Email Address,\nCell Phone Number, Company / Account Name, and select the number of employees in\nthe organization.\n2.\nAgree to the Terms and Privacy Policy and respond to the reCAPTCHA challenge to\nCreate My Account.\nSTEP 2 |\nVerify your Duo administrator account.\n1.\nSelect the authentication verification method (Duo Push, Text Me, or Calling...).\n2.\nEnter the Passcode you receive and Submit it to verify your account.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n271\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 3 |\nConfigure your Duo service for SAML.\nAfter creating your configuration, download the configuration file at the top of the page.\n1.\nIn the Duo Admin Panel, select Applications > Protect an Application.\n2.\nEnter Palo Alto Networks to search the applications.\n3.\nLocate SAML - Palo Alto Networks in the list of results, then Protect this Application.\n4.\nEnter the Domain.\n5.\nSelect Admin UI as the Palo Alto Networks Service.\n6.\nConfigure your Policy and other Settings, and Save Configuration.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n272\n©2025 Palo Alto Networks, Inc.\nAuthentication\n7.\nDownload your configuration file.\nThe link to download the file is at the top of the page.\nSTEP 4 |\nUpload the configuration file to the Duo Access Gateway (DAG).\n1.\nIn the DAG admin console, select Applications.\n2.\nClick Choose File and select the configuration file you downloaded, then Upload it.\n3.\nIn Settings > Session Management, disable User agent binding, then Save Settings.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n273\n©2025 Palo Alto Networks, Inc.\nAuthentication\nSTEP 5 |\nIn the DAG admin console, configure your Active Directory or OpenLDAP server as the\nauthentication source and download the metadata file.\n1.\nLog in to the DAG admin console.\n2.\nIn Authentication Source > Set Active Source, select your Source type (Active Directory\nor OpenLDAP) and Set Active Source.\n3.\nIn Configure Sources, enter the Attributes.\n• For Active Directory, enter\nmail,sAMAccountName,userPrincipalName,objectGUID.\n• For OpenLDAP, enter mail,uid.\n• For any custom attributes, append them to the end of the list and separate each\nattribute with a comma. Do not delete any existing attributes.\n4.\nSave Settings to save the configuration.\n5.\nSelect Applications > Metadata, then click Download XML metadata to download the\nXML metadata you will need to import into the firewall.\nThe file will be named dag.xml. Because this file includes sensitive information to\nauthenticate your Duo account with the firewall, make sure to keep the file in a secure\nlocation to avoid the risk of compromising this information.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 270,
+      "end": 274
+    },
+    "content_stats": {
+      "char_count": 3076,
+      "word_count": 491
+    },
+    "hierarchy": {
+      "parent": "Configure MFA Between Duo and the Firewall",
+      "children": []
+    }
+  }
+}

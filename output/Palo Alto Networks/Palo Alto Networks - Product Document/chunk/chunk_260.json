@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_260",
+  "section_number": "1.11.2.1",
+  "header": "ACC—First Look",
+  "content": "Take a quick tour of the ACC.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n469\n©2025 Palo Alto Networks, Inc.\nMonitoring\nACC—First Look\nTabs\nThe ACC includes three predefined tabs that\nprovide visibility into network traffic, threat\nactivity, and blocked activity. For information on\neach tab, see ACC Tabs.\nWidgets\nEach tab includes a default set of widgets that best\nrepresent the events/trends associated with the\ntab. The widgets allow you to survey the data using\nthe following filters:\n• bytes (in and out)\n• sessions\n• content (files and data)\n• URL categories\n• threats (and count)\nFor information on each widget, see ACC Widgets.\nTime\nThe charts or graphs in each widget provide a\nsummary and historic view. You can choose a\ncustom range or use the predefined time periods\nthat range from the last 15 minutes up to the last\n90 days or last 30 calendar days. The selected time\nperiod applies across all tabs in the ACC.\nThe time period used to render data, by default,\nis the Last Hour updated in 15 minute intervals.\nThe date and time interval are displayed onscreen,\nfor example at 11:40, the time range is 01/12\n10:30:00-01/12 11:29:59.\nGlobal Filters\nThe Global Filters allow you to set the filter across\nall widgets and all tabs. The charts/graphs apply\nthe selected filters before rendering the data. For\ninformation on using the filters, see ACC Filters.\nApplication\nView\nThe application view allows you filter the ACC\nview by either the sanctioned and unsanctioned\napplications in use on your network, or by the risk\nlevel of the applications in use on your network.\nGreen indicates sanctioned applications, blue\nunsanctioned applications, and yellow indicates\napplications that are partially sanctioned. Partially\nsanctioned applications are those that have a\nmixed sanctioned state; it indicates that the\napplication is inconsistently tagged as sanctioned,\nfor example it might be sanctioned on one or more\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n470\n©2025 Palo Alto Networks, Inc.\nMonitoring\nACC—First Look\nvirtual systems on a firewall enabled for multiple\nvirtual systems or across one or more firewalls\nwithin a device group on Panorama.\nRisk Factor\nThe risk factor (1=lowest to 5=highest) indicates\nthe relative risk based on the applications used\non your network. The risk factor uses a variety of\nfactors to assess the associated risk levels, such\nas whether the application can share files, is it\nprone to misuse or does it try to evade firewalls,\nit also factors in the threat activity and malware\nas seen through the number of blocked threats,\ncompromised hosts or traffic to malware hosts/\ndomains.\nSource\nThe data used for the ACC display. The options\nvary on the firewall and on Panorama.\nOn the firewall, if enabled for multiple virtual\nsystems, you can use the Virtual System drop-\ndown to change the ACC display to include data\nfrom all virtual systems or just a selected virtual\nsystem.\nOn Panorama, you can select the Device Group\ndrop-down to change the ACC display to include\ndata from all device groups or just a selected\ndevice group.\nAdditionally, on Panorama, you can change the\nData Source as Panorama data or Remote Device\nData. Remote Device Data is only available when\nall the managed firewalls are on PAN-OS 7.0.0\nor later. When you filter the display for a specific\ndevice group, Panorama data is used as the data\nsource.\nExport\nYou can export the widgets displayed in the\ncurrently selected tab as a PDF. The PDF is\ndownloaded and saved to the downloads folder\nassociated with your web browser, on your\ncomputer.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 469,
+      "end": 471
+    },
+    "content_stats": {
+      "char_count": 3558,
+      "word_count": 592
+    },
+    "hierarchy": {
+      "parent": "Use the Application Command Center",
+      "children": []
+    }
+  }
+}

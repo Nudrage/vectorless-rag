@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1010",
+  "section_number": "1.23.2.2.2",
+  "header": "External Zones and Security Policies For Traffic Within a Firewall",
+  "content": "In the following example, an enterprise has two separate administrative groups: the departmentA\nand departmentB virtual systems. The following figure shows the external zone associated with\neach virtual system, and traffic flowing from one trust zone, out an external zone, into an external\nzone of another virtual system, and into its trust zone.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1705\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nTo create external zones, the firewall administrator must configure the virtual systems so that\nthey are visible to each other. External zones do not have security policies between them because\ntheir virtual systems are visible to each other.\nTo communicate between virtual systems, the ingress and egress interfaces on the firewall are\neither assigned to a single virtual router or else they are connected using inter-virtual router\nstatic routes. The simpler of these two approaches is to assign all virtual systems that must\ncommunicate with each other to a single virtual router.\nThere might be a reason that the virtual systems need to have their own virtual router, for\nexample, if the virtual systems use overlapping IP address ranges. Traffic can be routed between\nthe virtual systems, but each virtual router must have static routes that point to the other virtual\nrouter(s) as the next hop.\nReferring to the scenario in the figure above, we have an enterprise with two administrative\ngroups: departmentA and departmentB. The departmentA group manages the local network and\nthe DMZ resources. The departmentB group manages traffic in and out of the sales segment\nof the network. All traffic is on a local network, so a single virtual router is used. There are two\nexternal zones configured for communication between the two virtual systems. The departmentA\nvirtual system has three zones used in security policies: deptA-DMZ, deptA-trust, and deptA-\nExternal. The departmentB virtual system also has three zones: deptB-DMZ, deptB-trust, and\ndeptB-External. Both groups can control the traffic passing through their virtual systems.\nIn order to allow traffic from deptA-trust to deptB-trust, two security policies are required. In the\nfollowing figure, the two vertical arrows indicate where the security policies (described below the\nfigure) are controlling traffic.\n• Security Policy 1: In the preceding figure, traffic is destined for the deptB-trust zone. Traffic\nleaves the deptA-trust zone and goes to the deptA-External zone. A security policy must allow\ntraffic from the source zone (deptA-trust) to the destination zone (deptA-External). A virtual\nsystem allows any policy type to be used for this traffic, including NAT.\nNo policy is needed between external zones because traffic sent to an external zone appears\nin and has automatic access to the other external zones that are visible to the original external\nzone.\n• Security Policy 2: In the preceding figure, the traffic from deptB-External is still destined to the\ndeptB-trust zone, and a security policy must be configured to allow it. The policy must allow\ntraffic from the source zone (deptB-External) to the destination zone (deptB-trust).\nThe departmentB virtual system could be configured to block traffic from the departmentA virtual\nsystem, and vice versa. Like traffic from any other zone, traffic from external zones must be\nexplicitly allowed by policy to reach other zones in a virtual system.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1706\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nIn addition to external zones being required for inter-virtual system traffic that does not\nleave the firewall, external zones are also required if you configure a Shared Gateway, in\nwhich case the traffic is intended to leave the firewall.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1705,
+      "end": 1707
+    },
+    "content_stats": {
+      "char_count": 3753,
+      "word_count": 585
+    },
+    "hierarchy": {
+      "parent": "Inter-VSYS Traffic That Remains Within the Firewall",
+      "children": []
+    }
+  }
+}

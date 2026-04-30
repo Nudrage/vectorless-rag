@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_198",
+  "section_number": "1.9.12.2",
+  "header": "Create an SSH HA Profile",
+  "content": "To secure SSH communications between appliances in an HA pair, you should create an SSH\nHA profile. Before you can create a profile, you must establish an HA connection between the\nappliances. If an HA connection has not been established, you must enable encryption on the\ncontrol link connection, export the HA key to a network location, and import the HA key on the\npeer. (See Configure Active/Passive HA or Configure Active/Active HA.)\nYou can configure or update an existing HA profile from your CLI.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n356\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 1 |\nCreate an HA Profile.\n1.\nSelect Device > Certification Management > SSH Service Profile.\n2.\nAdd an HA Profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n357\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n358\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n359\n©2025 Palo Alto Networks, Inc.\nCertificate Management\n3.\nEnter a Name to identify the profile.\n4.\n(Optional) Add the ciphers, message authentication codes, or key exchange algorithms\nthe profile will support.\n5.\n(Optional) Select a Hostkey and key length.\n6.\n(Optional) Enter values for the SSH session rekey parameters: Data, Interval, and\nPackets.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n360\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n361\n©2025 Palo Alto Networks, Inc.\nCertificate Management\n7.\nClick OK and Commit.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n362\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nSTEP 2 |\nSelect an HA Profile to apply.\n1.\nSelect Device > High Availability > General. Under SSH HA Profile Setting, select an\nexisting profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n363\n©2025 Palo Alto Networks, Inc.\nCertificate Management\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n364\n©2025 Palo Alto Networks, Inc.\nCertificate Management\n2.\nClick OK and Commit the changes.\nSTEP 3 |\nRestart HA1 SSH service from the CLI to apply the profile.\nYou must restart the connection each time you apply a new profile or make changes to a\nprofile in use; this reboots the appliance. The new configuration will not affect active sessions.\nThe profile will apply to subsequent connections (or sessions).\n1.\nadmin@PA-3260> set ssh service-restart ha\nYou can use the following commands if connection between the HA pair has\nbeen established and you’d like to minimize the downtime that accompanies an\nSSH service restart. If no HA connection has been established, you must restart\nSSH service.\n• (HA1 Backup is configured) admin@PA-3260> request high-\navailability session-reestablish\n• (No HA1 Backup is configured or HA1 Backup link is down)\nadmin@PA-3260> request high-availability session-\nreestablish force\nYou can force the firewall to reestablish HA1 sessions if there is no HA1\nbackup, which causes a brief split-brain condition between the HA peers.\n(Using the force option when an HA1 backup is configured has no effect.)\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n365\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 356,
+      "end": 366
+    },
+    "content_stats": {
+      "char_count": 3160,
+      "word_count": 488
+    },
+    "hierarchy": {
+      "parent": "Configure an SSH Service Profile",
+      "children": []
+    }
+  }
+}

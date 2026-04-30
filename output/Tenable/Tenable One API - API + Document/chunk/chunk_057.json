@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_057",
+  "section_number": "20",
+  "header": "Download export",
+  "content": "Downloads a specific export chunk in JSON or CSV format.\nCaution: This endpoint is available for use but is currently in beta. The response structure is subject\nto change as we continue to enhance the data model.\nRequires the Basic [16] user role or the ASSET_INVENTORY.CYBER_ASSET_MANAGEMENT.READ  and\nAD.TOGGLE_AD.USE  custom role privileges. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nThe unique identifier (UUID) of the export request for which you want to\ndownload a chunk.\nstring\nThe specific chunk number to retrieve from the export request.\nNote: For exports in CSV format, each chunk includes a header row.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 148,
+      "end": 148
+    },
+    "content_stats": {
+      "char_count": 628,
+      "word_count": 97
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_206",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "\nThis event can be a sign of software issues, Windows Firewall registry errors or corruption, or Group Policy setting misconfigurations. We recommend monitoring this event and\ninvestigating the reason for the condition. Typically this event indicates configuration issues, not security issues.\n4953(F): Windows Firewall ignored a rule because it could not be parsed.\nEvent Description:\nThis event generates if Windows Firewall was not able to parse Windows Firewall rule for some reason.\nIt can happen if Windows Firewall rule registry entry was corrupted.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4953</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13571</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8010000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-07T22:03:40.261507200Z\" />\n<EventRecordID>1052340</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"524\" ThreadID=\"5088\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"Profile\">All</Data>\n<Data Name=\"ReasonForRejection\">An error occurred.</Data>\n<Data Name=\"RuleId\">{08CBB349-D158-46BE-81E1-2ABC59BDD523}</Data>\n© 2016 Microsoft. All rights reserved.\n627\n<Data Name=\"RuleName\">-</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nProfile [Type = UnicodeString]: the name of the profile of the ignored rule. Possible values are:\n\nAll\n\nDomain,Public\n\nDomain,Private\n\nPrivate,Public\n\nPublic\n\nDomain\n\nPrivate\nReason for Rejection [Type = UnicodeString]: the reason, why the rule was ignored.\nRule:\n\nID [Type = UnicodeString]: the unique identifier for ignored firewall rule.\nTo see the unique ID of the rule you need to navigate to\n“HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\FirewallRules” registry key and you will see the list of Windows\nFirewall rule IDs (Name column) with parameters:\n\nName [Type = UnicodeString]: the name of the rule which was ignored. You can see the name of Windows Firewall rule using Windows Firewall with Advanced Security\nmanagement console (wf.msc), check “Name” column:\n© 2016 Microsoft. All rights reserved.\n628",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 627,
+      "end": 629
+    },
+    "content_stats": {
+      "char_count": 2488,
+      "word_count": 292
+    },
+    "hierarchy": {
+      "parent": "4952(F): Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the",
+      "children": []
+    }
+  }
+}

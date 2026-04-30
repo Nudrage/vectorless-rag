@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_330",
+  "section_number": "14.7",
+  "header": "Upload credentials file",
+  "content": "Uploads a file for use with a managed credential (for example, as a private key file for an SSH\ncredential).\nTenable Vulnerability Management validates this request with the required fileType  query\nparameter. The supported fileTypes  are: pem , json , csv , x.509 , p12 , cookie , ssh\n(only RSA and DSA OpenSSH keys/certificates are supported). To pass validation, cookie  files\nmust adhere to the Netscape cookies file format. Additionally, csv  files must adhere to one of the\nfollowing formats:\ntarget, port, database_name, username, cred_manager\ntarget, port, instance_name, username, auth_type, cred_manager\ntarget, port, service_type, service_ID, username, auth_type, cred_manager\ntarget, port, service_type, service_ID, username, auth_type, cred_manager,\naccountname_or_secretname\nFor more information about using this file, see Create a Managed Credential.\nRequires the Basic [16] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring\nEnum: \"pem\"\n\"json\"\n\"csv\"\n\"p12\"\n\"ssh\"\n\"x.509\"\n\"cookie\"\nThe type of the file being uploaded.\nREQUEST BODY SCHEMA:\nmultipart/form-data\nstring <binary>\nThe file to upload.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 325,
+      "end": 325
+    },
+    "content_stats": {
+      "char_count": 1125,
+      "word_count": 157
+    },
+    "hierarchy": {
+      "parent": "Credentials",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

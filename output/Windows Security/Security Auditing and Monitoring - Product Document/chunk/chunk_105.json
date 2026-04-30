@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_105",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4634(S): An account was logged off.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.If a particular Logon Type should not be used by a particular account\n(for example if Logon Type 4-Batch or 5-Service is used by a member of a domain administrative group), monitor this event for such actions.\n4647(S): User initiated logoff.\nEvent Description:\nThis event is generated when a logoff is initiated. No further user-initiated activity can occur. This event can be interpreted as\na logoff event.\nThe main difference with “4634(S): An account was logged off.” event is that 4647 event is generated when logoff procedure\nwas initiated by specific account using logoff function, and 4634 event shows that session was terminated and no longer\nexists.\n4647 is more typical for Interactive and RemoteInteractive logon types when user was logged off using standard methods.\nYou will typically see both 4647 and 4634 events when logoff procedure was initiated by user.\nIt may be positively correlated with a “4624: An account was successfully logged on.” event using the Logon ID value. Logon\nIDs are only unique between reboots on the same computer.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4647</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12545</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-09-09T03:08:39.126890800Z\" />\n<EventRecordID>230200</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"516\" ThreadID=\"3864\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n© 2016 Microsoft. All rights reserved.\n307\n<Security />\n</System>\n- <EventData>\n<Data Name=\"TargetUserSid\">S-1-5-21-3457937927-2839227994-823803824-1104</Data>\n<Data Name=\"TargetUserName\">dadmin</Data>\n<Data Name=\"TargetDomainName\">CONTOSO</Data>\n<Data Name=\"TargetLogonId\">0x29b379</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nSubject:\n\nSecurity ID [Type = SID]: SID of account that requested the “logoff” operation. Event Viewer automatically tries to resolve SIDs and show the account name. If the SID cannot be\nresolved, you will see the source data in the event.\nA security identifier (SID) is a unique value of variable length used to identify a trustee (security principal). Each account has a unique SID that is issued by an authority, such\nas an Active Directory domain controller, and stored in a security database. Each time a user logs on, the system retrieves the SID for that user from the database and places it\nin the access token for that user. The system uses the SID in the access token to identify the user in all subsequent interactions with Windows security. When a SID has been\nused as the unique identifier for a user or group, it cannot ever be used again to identify another user or group. For more information about SIDs, see Security Identifiers.\n\nAccount Name [Type = UnicodeString]: the name of the account that requested the “logoff” operation.\n\nAccount Domain [Type = UnicodeString]: subject’s domain or computer name. Formats vary, and include the following:\no\nDomain NETBIOS name example: CONTOSO\no\nLowercase full domain name: contoso.local\no\nUppercase full domain name: CONTOSO.LOCAL\no\nFor some well-known security principals, such as LOCAL SERVICE or ANONYMOUS LOGON, the value of this field is “NT AUTHORITY”.\no\nFor local user accounts, this field will contain the name of the computer or device that this account belongs to, for example: “Win81”.\n\nLogon ID [Type = HexInt64]: hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID, for example, “4624: An account\nwas successfully logged on.”",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 307,
+      "end": 308
+    },
+    "content_stats": {
+      "char_count": 4121,
+      "word_count": 578
+    },
+    "hierarchy": {
+      "parent": "Audit Logoff",
+      "children": []
+    }
+  }
+}

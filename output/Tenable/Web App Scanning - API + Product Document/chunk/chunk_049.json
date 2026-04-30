@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_049",
+  "section_number": "54.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Web App Scanning successfully retrieved the findings export chunk.\n— 400\nReturned if your request specified invalid parameters, if your request was improperly formatted, or if\nthe WAS findings chunk was not ready for download.\n— 403 Returned if you do not have permission to download WAS findings chunks.\n— 404\nReturned if Tenable Web App Scanning could not find a chunk with the specified UUID or if the chunk\nwith the specified UUID has expired.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 74,
+      "end": 74
+    },
+    "content_stats": {
+      "char_count": 598,
+      "word_count": 103
+    },
+    "hierarchy": {
+      "parent": "Download findings export chunk",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

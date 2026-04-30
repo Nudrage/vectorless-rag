@@ -1,0 +1,145 @@
+{
+  "document_name": "Tenable\\Downloads API - API + Product Document",
+  "generated_at": "2026-02-17T22:05:53.578814",
+  "outline_text": "DOCUMENT INDEX: Tenable\\Downloads API - API + Product Document\n==============================================================\n\n1. Authentication [Page 1, 72 words]\n2. Downloads [Page 1, 80 words]\n   2.1. Authentication [Pages 1-2, 74 words]\n3. List product pages [Page 2, 6 words]\n   3.1. Responses [Pages 2-3, 103 words]\n      3.1.1. Response samples [Page 3, 35 words]\n4. List downloadable files for a product [Pages 3-4, 26 words]\n   4.1. Responses [Pages 4-5, 135 words]\n      4.1.1. Response samples [Pages 5-6, 107 words]\n5. Download a file [Page 7, 36 words]\n   5.1. Responses [Pages 7-8, 139 words]\n      5.1.1. Response samples [Page 8, 21 words]",
+  "structured_index": {
+    "sections": [
+      {
+        "number": "1",
+        "title": "Authentication",
+        "depth": 1,
+        "chunk_id": "chunk_001",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 72,
+        "summary": "Like the Downloads website, certain files require authentication to download."
+      },
+      {
+        "number": "2",
+        "title": "Downloads",
+        "depth": 1,
+        "chunk_id": "chunk_002",
+        "page_start": 1,
+        "page_end": 1,
+        "word_count": 80,
+        "summary": "The Downloads API enables customers to access and download installation and update files for\navailable Tenable products.",
+        "children": [
+          {
+            "number": "2.1",
+            "title": "Authentication",
+            "depth": 2,
+            "chunk_id": "chunk_003",
+            "page_start": 1,
+            "page_end": 2,
+            "word_count": 74,
+            "summary": ":\nLike the Downloads website, certain files require authentication to download."
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "title": "List product pages",
+        "depth": 1,
+        "chunk_id": "chunk_004",
+        "page_start": 2,
+        "page_end": 2,
+        "word_count": 6,
+        "summary": "Returns a list of product pages.",
+        "children": [
+          {
+            "number": "3.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_005",
+            "page_start": 2,
+            "page_end": 3,
+            "word_count": 103,
+            "summary": "200 Returned if the list of product pages is retrieved successfully.",
+            "children": [
+              {
+                "number": "3.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_006",
+                "page_start": 3,
+                "page_end": 3,
+                "word_count": 35,
+                "summary": "200\n500\nsuccess\nstatusCode\nerror\nmessage\ntrace\nGET\n/pages\napplication/json\nExpand all\nCollapse all\nC..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "title": "List downloadable files for a product",
+        "depth": 1,
+        "chunk_id": "chunk_007",
+        "page_start": 3,
+        "page_end": 4,
+        "word_count": 26,
+        "summary": "Returns a JSON hash of all download files for a given product page.",
+        "children": [
+          {
+            "number": "4.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_008",
+            "page_start": 4,
+            "page_end": 5,
+            "word_count": 135,
+            "summary": "200 Returned if the list of downloadable files for the specified product was retrieved successfully.",
+            "children": [
+              {
+                "number": "4.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_009",
+                "page_start": 5,
+                "page_end": 6,
+                "word_count": 107,
+                "summary": "200\n404\n500\nstatusCode\nerror\nmessage\ntrace\nGET\n/pages/{slug}\napplication/json\nExpand all\nCollapse al..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "title": "Download a file",
+        "depth": 1,
+        "chunk_id": "chunk_010",
+        "page_start": 7,
+        "page_end": 7,
+        "word_count": 36,
+        "summary": "Downloads a requested file.",
+        "children": [
+          {
+            "number": "5.1",
+            "title": "Responses",
+            "depth": 2,
+            "chunk_id": "chunk_011",
+            "page_start": 7,
+            "page_end": 8,
+            "word_count": 139,
+            "summary": "— 200 Returned if the requested file is successfully retrieved.",
+            "children": [
+              {
+                "number": "5.1.1",
+                "title": "Response samples",
+                "depth": 3,
+                "chunk_id": "chunk_012",
+                "page_start": 8,
+                "page_end": 8,
+                "word_count": 21,
+                "summary": "401\n404\n500\nerror\nmessage\ntrace\nsuccess\nstatusCode\nerror\nmessage\ntrace\nGET\n/pages/{slug}/files/{file..."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "total_sections": 12,
+    "max_depth": 3
+  }
+}

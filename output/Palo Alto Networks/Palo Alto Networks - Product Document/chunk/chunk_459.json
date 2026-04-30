@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_459",
+  "section_number": "1.13.6.2",
+  "header": "Create an Application Filter",
+  "content": "An application filter is an object that dynamically groups applications based on application\nattributes that you define, including category, subcategory, technology, risk factor, and\ncharacteristic. This is useful when you want to safely enable access to applications that you do\nnot explicitly sanction, but that you want users to be able to access. For example, you may want\nto enable employees to choose their own office programs (such as Evernote, Google Docs, or\nMicrosoft Office 365) for business use. To safely enable these types of applications, you could\ncreate an application filter that matches on the Category business-systems and the Subcategory\noffice-programs. As new applications office programs emerge and new App-IDs get created,\nthese new applications will automatically match the filter you defined; you will not have to make\nany additional changes to your policy rulebase to safely enable any application that matches the\nattributes you defined for the filter.\nSTEP 1 |\nSelect Objects > Application Filters.\nSTEP 2 |\nAdd a filter and give it a descriptive Name.\nSTEP 3 |\n(Optional) Select Shared to create the object in a shared location for access as a shared\nobject in Panorama or for use across all virtual systems in a multiple virtual system firewall.\nSTEP 4 |\nDefine the filter by selecting attribute values from the Category, Subcategory, Technology,\nRisk, and Characteristic sections. As you select values, notice that the list of matching\napplications at the bottom of the dialog narrows. When you have adjusted the filter\nattributes to match the types of applications you want to safely enable, click OK.\nSTEP 5 |\nCommit the configuration.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n816\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 816,
+      "end": 817
+    },
+    "content_stats": {
+      "char_count": 1753,
+      "word_count": 280
+    },
+    "hierarchy": {
+      "parent": "Use Application Objects in Policy",
+      "children": []
+    }
+  }
+}

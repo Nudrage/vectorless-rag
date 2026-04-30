@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_224",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n429\nshared\nowner\nowner_id\nowner_name\nowner_uuid\nuser_permissions\nagents_count\nagents\npagination\nGET\n/scanners/null/agent-groups/{group_id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"id\": 106592,\n\"uuid\": \"9bd87b50-7349-4a52-8a41-573b9a4b9bb6\",\n\"name\": \"Western Region\",\n\"creation_date\": 1544455100,\n\"last_modification_date\": 1544455100,\n\"timestamp\": 1544455100,\n\"shared\": 1,\n\"owner\": \"system\",\n\"owner_id\": 10621200,\n\"owner_name\": \"system\",\n\"owner_uuid\": \"1bd703af-b2aa-4a82-ad8d-b883381a873f\",\n\"user_permissions\": 128,\n\"agents_count\": 1,\nContent type\n\"agents\":\n-\n[\n- {\n\"id\": 9176838,\n\"uuid\": \"fdb1812c-2423-424d-9b67-5511e9bf0714\",\n\"name\": \"my.new-hostname.server\",\n\"platform\": \"LINUX\",\n\"distro\": \"es8-x86-64\",\n\"ip\": \"172.26.102.78\",\n\"last_scanned\": 1722961087,\n\"plugin_feed_id\": \"202408191220\",\n\"core_build\": \"2391\",\n\"core_version\": \"10.8.0\",\n\"linked_on\": 1722960266,\n\"last_connect\": 1724170973,\n\"status\": \"off\",\n\"groups\":\n-\n[\n- {\n\"name\": \"Western Region\",\n\"id\": 106592\n}\n],\n\"supports_remote_logs\": false,\n\"network_uuid\": \"00000000-0000-0000-0000-000000000000\",\n\"network_name\": \"Default\",\n\"profile_uuid\": \"00000000-0000-0000-0000-000000000000\",\n\"profile_name\": \"Default\",\n\"supports_remote_settings\": true,\n\"health\": 20,\n\"health_state_name\": \"CRITICAL\",\n\"fredi_status\": false\n}\n],\n\"pagination\":\n-\n{\n\"total\": 0,\n\"limit\": 50,\n\"offset\": 0,\n\"sort\":\n-\n[\n- {\n\"name\": \"name\",\n\"order\": \"asc\"\n}\n]\n}\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 221,
+      "end": 223
+    },
+    "content_stats": {
+      "char_count": 1400,
+      "word_count": 134
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

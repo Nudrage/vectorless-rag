@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_262",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4616(S): The system time was changed.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.Report all “Subject\\Security ID” not equals “LOCAL SERVICE”, which\nmeans that the time change was not made not by Windows Time service.\n\nReport all “Process Information\\Name” not equals “C:\\Windows\\System32\\svchost.exe” (path to svchost.exe can be different, you can search for “svchost.exe” substring),\nwhich means that the time change was not made not by Windows Time service.\n\nIf you have a pre-defined “Process Name” for the process reported in this event, monitor all events with “Process Name” not equal to your defined value.\n\nYou can monitor to see if “Process Name” is not in a standard folder (for example, not in System32 or Program Files) or is in a restricted folder (for example, Temporary Internet\nFiles).\n\nIf you have a pre-defined list of restricted substrings or words in process names (for example, “mimikatz” or “cain.exe”), check for these substrings in “Process Name.”\n4621(S): Administrator recovered system from CrashOnAuditFail.\nThis event is logged after a system reboots following CrashOnAuditFail. It generates when CrashOnAuditFail = 2.\nThere is no example of this event in this document.\nEvent Schema:\nAdministrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.\nValue of CrashOnAuditFail:%1\n© 2016 Microsoft. All rights reserved.\n699\nThis event is logged after a system reboots following CrashOnAuditFail.\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 699,
+      "end": 700
+    },
+    "content_stats": {
+      "char_count": 1776,
+      "word_count": 269
+    },
+    "hierarchy": {
+      "parent": "Audit Security State Change",
+      "children": []
+    }
+  }
+}

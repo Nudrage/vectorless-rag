@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1048",
+  "section_number": "1.24.4.2",
+  "header": "Configure Packet Based Attack Protection",
+  "content": "To enhance security for a zone, Packet-Based Attack Protection allows you to specify whether\nthe firewall drops IP, IPv6, TCP, ICMP, or ICMPv6 packets that have certain characteristics or\nstrips certain options from the packets.\nFor example, you can drop TCP SYN and SYN-ACK packets that contain data in the payload\nduring a TCP three-way handshake. A Zone Protection profile by default is set to drop SYN and\nSYN-ACK packets with data (you must apply the profile to the zone).\nThe TCP Fast Open option (RFC 7413) preserves the speed of a connection setup by including\ndata in the payload of SYN and SYN-ACK packets. A Zone Protection profile treats handshakes\nthat use the TCP Fast Open option separately from other SYN and SYN-ACK packets; the profile\nby default is set to allow the handshake packets if they contain a valid Fast Open cookie.\nIf you have existing Zone Protection profiles in place when you upgrade to PAN-OS 8.0,\nthe three default settings will apply to each profile and the firewall will act accordingly.\nBeginning with PAN-OS 8.1.2 and later releases, you can use a CLI command (Step 4 in this task)\nto enable the firewall to generate a Threat log when the firewall receives and drops the following\ntypes of packets, so that you can more easily analyze these occurrences and also fulfill audit and\ncompliance requirements:\n• Teardrop attack\n• DoS attack using ping of death\nFurthermore, the same CLI command also enables the firewall to generate Threat logs for the\nfollowing types of packets if you enable the corresponding Packet Based Attack Protection:\n• Fragmented IP packets\n• IP address spoofing\n• ICMP packets larger than 1024 bytes\n• Packets containing ICMP fragments\n• ICMP packets embedded with an error message\n• First packets for a TCP session that are not SYN packets\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1747\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 1 |\nCreate a Zone Protection profile and configure Packet-Based Attack Protection settings.\n1.\nSelect Network > Network Profiles > Zone Protection and Add a new profile.\n2.\nEnter a Name for the profile and an optional Description.\n3.\nSelect Packet Based Attack Protection.\n4.\nOn each tab (IP Drop, TCP Drop, ICMP Drop, IPv6 Drop, and ICMPv6 Drop), select the\nPacket-Based Attack Protection settings you want to enforce to protect a zone.\n5.\nClick OK.\nSTEP 2 |\nApply the Zone Protection profile to a security zone that is assigned to interfaces you want\nto protect.\n1.\nSelect Network > Zones and select the zone where you want to assign the Zone\nProtection profile.\n2.\nAdd the Interfaces belonging to the zone.\n3.\nFor Zone Protection Profile, select the profile you just created.\n4.\nClick OK.\nSTEP 3 |\nCommit your changes.\nSTEP 4 |\n(PAN-OS 8.1.2 and later releases) Enable the firewall to generate Threat logs for a teardrop\nattack and a DoS attack using ping of death, and also generate Threat logs for the types of\npackets listed above if you enable the corresponding packet-based attack protection (in Step\n1). For example, if you enable packet-based attack protection for Spoofed IP address, using\nthe following CLI causes the firewall to generate a Threat log when the firewall receives and\ndrops a packet with a spoofed IP address.\n1.\nAccess the CLI.\n2.\nUse the operational CLI command set system setting additional-threat-\nlog on. Default is off.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1747,
+      "end": 1748
+    },
+    "content_stats": {
+      "char_count": 3372,
+      "word_count": 572
+    },
+    "hierarchy": {
+      "parent": "Configure Zone Protection to Increase Network Security",
+      "children": []
+    }
+  }
+}

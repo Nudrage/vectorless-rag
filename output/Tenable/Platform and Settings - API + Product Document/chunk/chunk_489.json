@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_489",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the global scanner configuration was retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nobject\nAn object containing settings for concurrent scanner updates.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 403 Returned if you do not have permission to view the global scanner configuration.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\nconcurrent_update\nstatusCode\nerror\nmessage\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 501,
+      "end": 502
+    },
+    "content_stats": {
+      "char_count": 882,
+      "word_count": 137
+    },
+    "hierarchy": {
+      "parent": "Get scanner configuration",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

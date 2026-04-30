@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_500",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Vulnerability Management successfully created the directive task.\nRESPONSE SCHEMA:\napplication/json\nstring <UUID>\nThe UUID of the container where the task is operating.\nstring <UUID>\nThe UUID of the directive task.\nstring <UUID>\nThe UUID of the scanner (sensor).\nstring <UUID>\nThe UUID of the owner.\nstring\nThe type of instruction, either restart  or settings .\nstring\nEnum: \"pending\"\n\"running\"\n\"completed\"\n\"failed\"\n\"canceled\"\nThe status of the scan task. For a list of scan statuses and their\ndescriptions, see Scan Status.\ninteger\nThe creation date of the directive in unix time milliseconds.\ninteger\nThe date the directive was last modified in unix time milliseconds.\ninteger\noptions\ncontainer_uuid\nuuid\nsensor_uuid\nowner_uuid\ntype\nstatus\ncreated\nmodified\nresults_blob_size\nThe size of the log that the scanner returns when performing a log\ndirective. This value is always 0  for non-log directives.\nobject\nThe instructions to perform.\ninteger\nThe time to live for the directive. The status is updated to failed  if\nthe directive is not executed within the TTL time frame.\nstring <UUID>\nThe UUID of the directive task.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 403 Returned if you do not have the required permissions to send a directive to the scanner.\n— 404 Returned if the specified scanner was not found.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\ninteger\nThe standard HTTP error name.\noptions\nttl\nid\nstatusCode\nerror\nmessage\nstatusCode\nerror\nstring\nA brief message about the cause of the error.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 508,
+      "end": 510
+    },
+    "content_stats": {
+      "char_count": 1927,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Send instructions to scanner",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

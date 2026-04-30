@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_630",
+  "section_number": "1.17.18",
+  "header": "Prevent Credential Phishing",
+  "content": "Phishing sites are sites that attackers disguise as legitimate websites with the aim to steal user\ninformation, especially the credentials that provide access to your network. When a phishing\nemail enters a network, it takes just a single user to click the link and enter credentials to set a\nbreach into motion. You can detect and prevent in-progress phishing attacks, thereby preventing\ncredential theft, by controlling sites to which users can submit corporate credentials based on the\nsite’s URL category. This allows you to block users from submitting credentials to untrusted sites\nwhile allowing users to continue to submit credentials to corporate and sanctioned sites.\nCredential phishing prevention works by scanning username and password submissions to\nwebsites and comparing those submissions against valid corporate credentials. You can choose\nwhat websites you want to either allow or block corporate credential submissions to based on the\nURL category of the website. When the firewall detects a user attempting to submit credentials to\na site in a category you have restricted, it either displays a block response page that prevents the\nuser from submitting credentials, or presents a continue page that warns users against submitting\ncredentials to sites classified in certain URL categories, but still allows them to continue with the\ncredential submission. You can customize these block pages to educate users against reusing\ncorporate credentials, even on legitimate, non-phishing sites.\nTo enable credential phishing prevention you must configure both User-ID to detect when users\nsubmit valid corporate credentials to a site (as opposed to personal credentials) and URL filtering\nto specify the URL categories in which you want to prevent users from entering their corporate\ncredentials. The following topics describe the different methods you can use to detect credential\nsubmissions and provide instructions for configuring credential phishing protection.\n• Methods to Check for Corporate Credential Submissions\n• Configure Credential Detection with the Windows-based User-ID Agent\n• Set Up Credential Phishing Prevention",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1166,
+      "end": 1166
+    },
+    "content_stats": {
+      "char_count": 2145,
+      "word_count": 319
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": [
+        "Methods to Check for Corporate Credential Submissions",
+        "Configure Credential Detection with the Windows User-ID Agent",
+        "Set Up Credential Phishing Prevention"
+      ]
+    }
+  }
+}

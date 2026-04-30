@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1067",
+  "section_number": "1.25.3",
+  "header": "Scrub the Swap Memory on Firewalls or Appliances Running in FIPS-CC Mode",
+  "content": "Running in FIPS-CC Mode\nYou should ensure that sensitive information is removed from the swap memory before you\ndecommission a firewall or appliance (in FIPS-CC mode) or before you send it in for repair. Use\nthis procedure to remove all cryptographic security parameter (CSP) information from swap\npartitions.\nIf you send a firewall that is managed by Panorama in for repair, see Before Starting\nRMA Firewall Replacement.\nSTEP 1 |\nOpen an SSH management session to the firewall or appliance.\nSTEP 2 |\nRun the following operational command:\nrequest [restart | shutdown] system with-swap-scrub [dod | nnsa]\nFor example, to shut down the firewall or appliance and perform a Department of Defense\n(DoD) scrub, run the following command:\nrequest shutdown system with-swap-scrub dod\nSTEP 3 |\nPress Y at the warning prompt to start the scrub.\nSTEP 4 |\nVerify that the scrub completed successfully. View the System log and filter on the word\nswap. The System log indicates the scrub status for each swap partition (either one or two\npartitions depending on the model) and also displays a log entry that indicates the overall\nstatus of the scrub. If the scrub completed successfully on all swap partitions, the System log\nshows Swap space scrub was successful.\nIf the scrub failed on one or more swap partitions, the System log shows Swap space scrub\nwas unsuccessful. The following screen capture shows the log results for a firewall that\nhas two partitions.\nTo view the scrub logs using the CLI, run the show log system | match swap\ncommand.\nIf you initiate the scrub using the shutdown command, the firewall or appliance will\npower off after the scrub completes. Before you can power on the firewall or appliance,\nyou must first disconnect and reconnect the power source.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1776\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1776,
+      "end": 1776
+    },
+    "content_stats": {
+      "char_count": 1842,
+      "word_count": 307
+    },
+    "hierarchy": {
+      "parent": "Certifications",
+      "children": []
+    }
+  }
+}

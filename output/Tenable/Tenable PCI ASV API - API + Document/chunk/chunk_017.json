@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_017",
+  "section_number": "7",
+  "header": "PCI Scans",
+  "content": "Tenable's PCI ASV streamlines the quarterly external vulnerability scan submission and dispute\nprocess as required by PCI 11.2.2. With pre-configured scan templates and an efficient\nevidence/dispute resolution process, Tenable (an Approved Scanning Vendor) can quickly prepare a\ncompliant scan report for merchants and service providers. You can use the PCI ASV API to retrieve a\nlist of PCI ASV scans.\nExpand all\nCollapse all\nCopy\n{\n\"pagination\":\n-\n{\n\"total\": 1,\n\"offset\": 0,\n\"limit\": 200,\n\"sort\":\n-\n[\n- {\n\"name\": \"name\",\n\"order\": \"asc\"\n}\n]\n},\n\"assets\":\n-\n[\n- {\n\"excluded\": false,\n\"undisputed_failure_count\": 14,\n\"address\": \"127.0.0.1\",\n\"fqdn\": \"target.example.com\",\n\"attestation_uuid\": \"12ec4034-1fcb-11ee-be56-0242ac120002\",\n\"scan_uuid\": \"6e384626-5937-476d-9f15-224df98e3fd6\",\n\"name\": \"Asset Name\",\n\"operating_system\": \"Linux Kernel 3.13 on Ubuntu 14.04 (trusty)\",\n\"failure_count\": 14,\n\"scan_name\": \"Scan Name\",\n\"scan_date\": \"2023-07-06T15:57:26Z\",\n\"uuid\": \"2faa4bfe-1fcb-11ee-be56-0242ac120002\"\n}\n]\n}\nFor more information about PCI ASV, see Get Started with PCI ASV Scanning in the Tenable\nVulnerability Management User Guide.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 17,
+      "end": 18
+    },
+    "content_stats": {
+      "char_count": 1131,
+      "word_count": 147
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": []
+    }
+  }
+}

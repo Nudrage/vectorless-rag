@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_245",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5033(S): The Windows Firewall Driver has started successfully.\n\nTypically this event has an informational purpose. It’s logged during operating system startup process.\n\nYou should not see this event after system startup, so we recommend that you monitor it when it occurs outside the system startup process.\n5034(S): The Windows Firewall Driver was stopped.\nEvent Description:\nThis event generates when Windows Firewall driver (Windows Firewall Authorization Driver service) was stopped.\nThis event is NOT logged during the operating system shutdown process.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>5034</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12292</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-13T23:40:55.482270000Z\" />\n<EventRecordID>1101856</EventRecordID>\n<Correlation />\n© 2016 Microsoft. All rights reserved.\n682\n<Execution ProcessID=\"4\" ThreadID=\"140\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n<EventData />\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 682,
+      "end": 683
+    },
+    "content_stats": {
+      "char_count": 1403,
+      "word_count": 150
+    },
+    "hierarchy": {
+      "parent": "5027(F): The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the",
+      "children": []
+    }
+  }
+}

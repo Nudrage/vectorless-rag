@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_410",
+  "section_number": "1.12.5.2",
+  "header": "Configure User Mapping Using the Windows User-ID Agent",
+  "content": "In most cases, the majority of your network users will have logins to your monitored domain\nservices. For these users, the Palo Alto Networks User-ID agent monitors the servers for login\nevents and performs the IP address to username mapping. The way you configure the User-ID\nagent depends on the size of your environment and the location of your domain servers. As a\nbest practice, locate your User-ID agents near the servers it will monitor (that is, the monitored\nservers and the Windows User-ID agent should not be across a WAN link from each other). This is\nbecause most of the traffic for user mapping occurs between the agent and the monitored server,\nwith only a small amount of traffic—the delta of user mappings since the last update—from the\nagent to the firewall.\nThe following topics describe how to install and configure the User-ID Agent and how to\nconfigure the firewall to retrieve user mapping information from the agent:\n• Install the Windows-Based User-ID Agent\n• Configure the Windows User-ID Agent for User Mapping",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 726,
+      "end": 726
+    },
+    "content_stats": {
+      "char_count": 1037,
+      "word_count": 174
+    },
+    "hierarchy": {
+      "parent": "Map IP Addresses to Users",
+      "children": [
+        "Install the Windows-Based User-ID Agent",
+        "Configure the Windows User-ID Agent for User Mapping"
+      ]
+    }
+  }
+}

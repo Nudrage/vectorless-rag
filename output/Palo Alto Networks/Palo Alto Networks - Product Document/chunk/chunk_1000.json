@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1000",
+  "section_number": "1.23.1.1",
+  "header": "Virtual System Components and Segmentation",
+  "content": "A virtual system is an object that creates an administrative boundary, as shown in the following\nfigure.\nA virtual system consists of a set of physical and logical interfaces and subinterfaces (including\nVLANs and virtual wires), virtual routers, and security zones. You choose the deployment mode(s)\n(any combination of virtual wire, Layer 2, or Layer 3) of each virtual system. By using virtual\nsystems, you can segment any of the following:\n• Administrative access\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1700\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\n• The management of all policies (Security, NAT, QoS, Policy-based Forwarding, Decryption,\nApplication Override, Tunnel Inspection, Authentication, and DoS protection)\n• All objects (such as address objects, application groups and filters, external dynamic lists,\nsecurity profiles, decryption profiles, custom objects, etc.)\n• User-ID\n• Certificate management\n• Server profiles\n• Logging, reporting, and visibility functions\nVirtual systems affect the security functions of the firewall, but virtual systems alone do not affect\nnetworking functions such as static and dynamic routing. You can segment routing for each virtual\nsystem by creating one or more virtual routers for each virtual system, as in the following use\ncases:\n• If you have virtual systems for departments of one organization, and the network traffic for\nall of the departments is within a common network, you can create a single virtual router for\nmultiple virtual systems.\n• If you want routing segmentation and each virtual system’s traffic must be isolated from other\nvirtual systems, you can create one or more virtual routers for each virtual system.\n• If you want to segment the user mappings so that not all mappings are shared across virtual\nsystems, you can configure the User-ID sources on a virtual system that is not a User-ID hub.\nSee Share User-ID Mappings Across Virtual Systems.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1700,
+      "end": 1701
+    },
+    "content_stats": {
+      "char_count": 1926,
+      "word_count": 299
+    },
+    "hierarchy": {
+      "parent": "Virtual Systems Overview",
+      "children": []
+    }
+  }
+}

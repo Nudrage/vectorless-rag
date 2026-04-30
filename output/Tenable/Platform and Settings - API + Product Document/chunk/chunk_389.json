@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_389",
+  "section_number": "17.1",
+  "header": "Create OT connector",
+  "content": "Creates an OT connector.\nThe response includes a token when you create the OT connector. The token is the only credential\nthat is used for authentication when the OT connector connects to Tenable Vulnerability\nManagement.\nNote: You can generate the required linking key and retrieve the target site with the Create linking key\nendpoint.\nAUTHORIZATIONS:\ncloud\nHEADER PARAMETERS\nstring\nThe linking key for the OT connector. You can generate the required linking\nkey with the Create linking key endpoint.\nstring\nExample: us-2b\nThe target site for the OT connector. The target site value is returned when\nyou generate a linking key with the Create linking key endpoint.\nREQUEST BODY SCHEMA:\napplication/json\nstring\n<= 64 characters\nThe name of the OT connector. The maximum character length is 64 chars.\nstring\nEnum: \"icp\"\n\"em\"\nx-linking-key\nrequired\nx-target-site\nrequired\nname\nrequired\nsubType\nrequired\nThe type of OT connector. There are two types of OT connectors, Industrial\nCore Platform (ICP) and Enterprise Manager (EM).\nboolean\nIndicates whether or not the OT connector is enabled.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 371,
+      "end": 372
+    },
+    "content_stats": {
+      "char_count": 1086,
+      "word_count": 170
+    },
+    "hierarchy": {
+      "parent": "OT Connectors",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

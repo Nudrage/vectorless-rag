@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_329",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n429\n500\n503\nGET\n/credentials/types\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"credentials\":\n-\n[\n- {\n\"id\": \"Cloud Services\",\n\"category\": \"Cloud Services\",\n\"default_expand\": false,\n\"types\":\n-\n[\n,\n- {\n\"id\": \"Amazon AWS\",\n\"name\": \"Amazon AWS\",\n\"max\": 1,\n\"configuration\":\n-\n[\n,\n- {\n\"type\": \"password\",\n\"name\": \"AWS Access Key ID\",\n\"required\": true,\n\"id\": \"access_key_id\"\n}\n- {\n\"type\": \"password\",\n\"name\": \"AWS Secret Key\",\n\"required\": true,\n\"id\": \"secret_key\"\n}\n],\n\"expand_settings\": true\n}\n- {\n\"id\": \"Microsoft Azure\",\n\"name\": \"Microsoft Azure\",\n\"max\": 1,\n\"configuration\":\n-\n[\n,\n- {\n\"type\": \"text\",\n\"name\": \"Username\",\n\"required\": true,\n\"id\": \"username\"\n}\n,\n- {\n\"type\": \"password\",\n\"name\": \"Password\",\n\"required\": true,\n\"id\": \"password\"\n}\n- {\n\"type\": \"text\",\n,\nyp\n,\n\"name\": \"Client Id\",\n\"required\": true,\n\"id\": \"client_id\"\n}\n],\n\"expand_settings\": true\n}\n- {\n\"id\": \"Office 365\",\n\"name\": \"Office 365\",\n\"max\": 1,\n\"configuration\":\n-\n[\n,\n- {\n\"type\": \"text\",\n\"name\": \"Username\",\n\"required\": true,\n\"id\": \"username\"\n}\n,\n- {\n\"type\": \"password\",\n\"name\": \"Password\",\n\"required\": true,\n\"id\": \"password\"\n}\n,\n- {\n\"type\": \"text\",\n\"name\": \"Client Id\",\n\"required\": true,\n\"id\": \"client_id\"\n}\n- {\n\"type\": \"password\",\n\"name\": \"Client Secret\",\n\"required\": true,\n\"id\": \"client_secret\"\n}\n]\n}\n]\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 321,
+      "end": 324
+    },
+    "content_stats": {
+      "char_count": 1295,
+      "word_count": 201
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

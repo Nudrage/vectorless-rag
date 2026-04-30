@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_662",
+  "section_number": "1.18.2.4",
+  "header": "QoS Classes",
+  "content": "A QoS class determines the priority and bandwidth for traffic matching a QoS Policy rule. You\ncan use a QoS Profile rule to define QoS classes. There are up to eight definable QoS classes\nin a single QoS profile. Unless otherwise configured, traffic that does not match a QoS class is\nassigned a class of 4.\nQoS Priority Queuing and QoS Bandwidth Management, the fundamental mechanisms of a QoS\nconfiguration, are configured within the QoS class definition (see Step Add a QoS profile rule.).\nFor each QoS class, you can set a priority (real-time, high, medium, and low) and the maximum\nand guaranteed bandwidth for matching traffic. QoS priority queuing and bandwidth management\ndetermine the order of traffic and how traffic is handled upon entering or leaving a network.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1219\n©2025 Palo Alto Networks, Inc.\nQuality of Service",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1219,
+      "end": 1220
+    },
+    "content_stats": {
+      "char_count": 869,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "QoS Concepts",
+      "children": []
+    }
+  }
+}

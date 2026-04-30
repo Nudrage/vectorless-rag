@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_058",
+  "section_number": "1.18.7",
+  "header": "Users",
+  "content": "GET\n© July 2024 Vectra AI, Inc. | 91\nURL: https://<vectra_portal_url>/api/v3.4/users\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"count\": 4,\n\"next\": null,\n\"previous\": null,\n\"results\": [\n{\n\"id\": 24,\n\"email\": \"example@vectra.ai\",\n\"role\": \"Super Admin\",\n\"last_login_timestamp\": \"2023-05-03T14:49:09Z\",\n\"verified \": true\n“identities”: [\n{“type”: “local”},\n{“type”: “SAML”, “saml_profile_id”: 1}\n]\n},\n{\n\"id\": 27,\n\"email\": \"example1@vectra.ai\",\n\"role\": \"Super Admin\",\n\"last_login_timestamp\": \"2023-05-03T14:47:33Z\",\n\"verified \": true\n“identities”: [\n{“type”: “local”},\n{“type”: “SAML”, “saml_profile_id”: 1}\n]\n},\n]\n}\nPOST\nURL: https://<vectra_portal_url>/api/v3.4/users\nTo create users with a local profile (non SAML profile) use this endpoint.\nThe endpoint cannot create local user profiles for user emails that have logged in with an existing SAML\nprofile. Input your desired user role using the corresponding snake-case standardized name. Refer to the\n/users/role endpoint to list available roles and their standardized names.\n© July 2024 Vectra AI, Inc. | 92\nThe following request body and all its fields are required to use this endpoint.\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nBody:\n{\n\"name\": “firstname lastname”,\n“role”: “auditor”,\n“email”: “first.last@gmail.com”\n}\nResponse:\n{\n\"id\": 4,\n“role”: “Auditor”,\n“email”: “first.last@gmail.com”,\n“name”: “firstname lastname”\n“identities”:[\n{“type”: “local”}\n],\n\"last_login_timestamp\": null,\n\"verified \": false\n}\nGET\nURL: https://<vectra_portal_url>/api/v3.4/users/<user_id>\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"id\": 4,\n“email”: “first.last@gmail.com”,\n“name”: “newfirstname newlastname”\n“role”: “super_admins”,\n\"last_login_timestamp\": null,\n\"verified \": false\n}\nPATCH\nURL: https://<vectra_portal_url>/api/v3.4/users/<user_id>\n© July 2024 Vectra AI, Inc. | 93\nTo modify users, use this endpoint. The endpoint will not update roles for users that only have a SAML\naccount. Input your desired user role using the corresponding snake-case standardized name. Refer to\nthe /users/role endpoint to list available roles and their standardized names.\nThe following request body is used and none of the fields shown are required.\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nBody:\n{\n\"name\": “newfirstname newlastname”,\n“role”: “super_admins”\n}\nResponse:\n{\n\"id\": 4,\n“role”: “super_admins”,\n“email”: “first.last@gmail.com”,\n“name”: “newfirstname newlastname”\n“identities”:[\n{“type”: “local”}\n],\n\"last_login_timestamp\": null,\n\"verified \": false\n}\nDELETE\nURL: https://<vectra_portal_url>/api/v3.4/users/<user_id>\nTo delete users, use this endpoint. This will deactivate a user’s local and SAML profiles; SAML profiles\ncan be reactivated by logging in again via the external provider. Note that the last verified super admin\nuser cannot be deleted using this endpoint.\nHeaders:\n\"Authorization\": \"Bearer <access_token>\",\n\"Content-Type\": \"application/json\"\nGET\nURL: https://<vectra_portal_url>/api/v3.4/users/roles\n© July 2024 Vectra AI, Inc. | 94\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n[\n{\n\"id\": 2,\n\"name\": \"Admin\",\n\"standardized_name\": \"admins\",\n},\n{\n\"id\": 1,\n\"name\": \"Super Admin\",\n\"standardized_name\": \"super_admins\",\n}\n]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 90,
+      "end": 94
+    },
+    "content_stats": {
+      "char_count": 3306,
+      "word_count": 405
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

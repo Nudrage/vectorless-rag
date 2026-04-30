@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_141",
+  "section_number": "6.1",
+  "header": "Create access group",
+  "content": "Deprecated\nCreates an access group.\nCaution: Access groups were deprecated in Tenable Vulnerability Management on February 4th,\n2022. Tenable recommends that customers use access control instead to manage user and group\naccess to resources in Tenable Vulnerability Management. Please update any existing integrations\nthat your organization has. For more information about access control, see Access Control in the\nTenable Vulnerability Management User Guide.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the access group you want to create. This name must be:\nUnique within your Tenable Vulnerability Management instance.\nA maximum of 255 characters.\nAlphanumeric, but can include limited special characters (underscore,\ndash, parenthesis, brackets, colon).\nNote: You can add a maximum of 5,000 access groups to an individual\ncontainer.\nstring\nEnum: \"MANAGE_ASSETS\"\n\"SCAN_TARGETS\"\n\"ALL\"\nThe type of access group. It can be one of three possible types:\nname\nrequired\naccess_group_type\nMANAGE_ASSETS—Users in this access group can view the asset\nrecords created during previous scans and scan the associated\ntargets for those assets.\nSCAN_TARGETS—Users in this access group can scan targets\nassociated with the access group and view the results of those\nscans. Targets may be associated with existing assets.\nALL—This access group type is only applicable to the default system-\ngenerated \"All Assets\" access group that contains all assets in your\norganization. This group is referred to as the \"All Assets\" group in the\nuser interface. By default, Tenable Vulnerability Management grants\nall users in this access group both CAN VIEW and CAN SCAN\npermissions.\nboolean\nSpecifies whether assets in the access group can be viewed by all or only\nsome users in your organization:\nIf true , all users in your organization have Can View access to the\nassets defined in the rules parameter. Tenable Vulnerability\nManagement ignores any principal parameters in your request.\nIf false , only specified users have Can View access to the assets\ndefined in the rules parameter. You define which users or user groups\nhave access in the principals parameter of the request.\nIf you omit this parameter, Tenable Vulnerability Management sets the\nparameter to false  by default.\nboolean\nThis parameter must always be false  or omitted from create requests\nto specify that the access group is a user-created group. If you submit a\ncreate request with this parameter set to true , the create request fails.\nArray of objects\nAn array of principals. Each principal represents a user or user group\nassigned to the access group. You cannot add an access group as a\nprincipal to another access group.\nTenable Vulnerability Management handles data in this array based on the\nall_users parameter of the request:\nIf all_users is true , Tenable Vulnerability Management ignores any\nprincipal data in the request. You can omit this parameter from the\nrequest.\nIf all_users is false , Tenable Vulnerability Management adds the\nprincipal data to the access group.\nArray of objects\nall_users\nall_assets\nprincipals\nrules\nAn array of asset rules. Tenable Vulnerability Management uses these\nrules to assign assets to the access group. You can specify a maximum\nof 1,000 rules for an individual access group. If you specify multiple rules\nfor an access group, Tenable Vulnerability Management assigns an asset\nto the access group if the asset matches any of the rules. You can only\nadd rules to access groups if the all_assets  parameter is set to\nfalse .\nNote: When configuring rules for an access_group_type  of\nSCAN_TARGETS , the asset attribute type ( rules.type ) must match the\ntarget format used in the related scan. For example, if a SCAN_TARGETS\ntype access group rule filters on the FQDN/Hostname attribute, the\nrelated scan succeeds if the scan target is specified in FQDN or hostname\nformat, but fails if the scan target is specified in IPv4 address format.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 105,
+      "end": 107
+    },
+    "content_stats": {
+      "char_count": 4018,
+      "word_count": 632
+    },
+    "hierarchy": {
+      "parent": "Access Groups v2",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

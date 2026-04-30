@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_553",
+  "section_number": "1.16.7",
+  "header": "Configure SSH Proxy",
+  "content": "Configuring SSH Proxy does not require certificates and the key used to decrypt SSH sessions is\ngenerated automatically on the firewall during boot up. With SSH decryption enabled, the firewall\ndecrypts SSH traffic and blocks and or restricts the SSH traffic based on your decryption policy\nand decryption profile settings. Traffic is re-encrypted as it exits the firewall.\nWhen you configure SSH Proxy, the proxied traffic does not support DSCP code points or\nQoS.\nSTEP 1 |\nEnsure that the appropriate interfaces are configured as either virtual wire, Layer 2, or Layer\n3 interfaces. Decryption can only be performed on virtual wire, Layer 2, or Layer 3 interfaces.\nView configured interfaces on the Network > Interfaces > Ethernet tab. The Interface\nType column displays if an interface is configured to be a Virtual Wire or Layer 2, or Layer\n3 interface. You can select an interface to modify its configuration, including what type of\ninterface it is.\nSTEP 2 |\nCreate a Decryption Policy Rule to define traffic for the firewall to decrypt and Create a\nDecryption Profile to apply checks to the SSH traffic.\nAlthough Decryption profiles are optional, it is a best practice to include a Decryption\nprofile with each Decryption policy rule to prevent weak, vulnerable protocols and\nalgorithms from allowing questionable traffic on your network.\n1.\nSelect Policies > Decryption, Add or modify an existing rule, and define traffic to be\ndecrypted.\n2.\nSelect Options and:\n• Set the rule Action to Decrypt matching traffic.\n• Set the rule Type to SSH Proxy.\n• (Optional but a best practice) Configure or select an existing Decryption Profile to\nblock and control various aspects of the decrypted traffic (for example, create a\nDecryption profile to terminate sessions with unsupported versions and unsupported\nalgorithms).\n3.\nClick OK to save.\nSTEP 3 |\nCommit the configuration.\nSTEP 4 |\n(Optional) Continue to Decryption Exclusions to disable decryption for certain types of\ntraffic.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1019\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1019,
+      "end": 1020
+    },
+    "content_stats": {
+      "char_count": 2068,
+      "word_count": 334
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_166",
+  "section_number": "1.8.14.1",
+  "header": "Authentication Timestamps",
+  "content": "When configuring an Authentication policy rule, you can specify a timeout period during which a\nuser authenticates only for initial access to services and applications, not for subsequent access.\nYour goal is to specify a timeout that strikes a balance between the need to secure services\nand applications and the need to minimize interruptions to the user workflow. When a user\nauthenticates, the firewall records a timestamp for the first authentication challenge (factor)\nand a timestamp for any additional Multi-Factor Authentication (MFA) factors. When the user\nsubsequently requests services and applications that match an Authentication rule, the firewall\nevaluates the timeout specified in the rule relative to each timestamp. This means the firewall\nreissues authentication challenges on a per-factor basis when timeouts expire. If you Redistribute\nUser Mappings and Authentication Timestamps, all your firewalls will enforce Authentication\npolicy timeouts consistently for all users.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n307\n©2025 Palo Alto Networks, Inc.\nAuthentication\nThe firewall records a separate timestamp for each MFA vendor. For example, if you use\nDuo v2 and PingID servers to issue challenges for MFA factors, the firewall records one\ntimestamp for the response to the Duo factor and one timestamp for the response to the\nPingID factor.\nWithin the timeout period, a user who successfully authenticates for one Authentication rule\ncan access services or applications that other rules protect. However, this portability applies\nonly to rules that trigger the same authentication factors. For example, a user who successfully\nauthenticates for a rule that triggers TACACS+ authentication must authenticate again for a rule\nthat triggers SAML authentication, even if the access requests are within the timeout period for\nboth rules.\nWhen evaluating the timeout in each Authentication rule and the global timer defined in the\nAuthentication Portal settings (see Configure Authentication Portal), the firewall prompts the user\nto re-authenticate for whichever setting expires first. Upon re-authenticating, the firewall records\nnew authentication timestamps for the rules and resets the time count for the Authentication\nPortal timer. Therefore, to enable different timeout periods for different Authentication rules, set\nthe Authentication Portal timer to a value that is the same as or higher than the timeout in any\nrule.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 307,
+      "end": 308
+    },
+    "content_stats": {
+      "char_count": 2443,
+      "word_count": 361
+    },
+    "hierarchy": {
+      "parent": "Authentication Policy",
+      "children": []
+    }
+  }
+}

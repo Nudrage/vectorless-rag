@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_742",
+  "section_number": "1.21.1.2.6",
+  "header": "Zone Protection for a Virtual Wire Interface",
+  "content": "You can apply zone protection to a virtual wire interface, but because virtual wire interfaces\ndon’t perform routing, you can’t apply Packet-Based Attack Protection to packets coming with a\nspoofed IP address, nor can you suppress ICMP TTL Expired error packets or ICMP Frag Needed\npackets.\nBy default, a virtual wire interface forwards all non-IP traffic it receives. However, you can apply a\nzone protection profile with Protocol Protection to block or allow certain non-IP protocol packets\nbetween security zones on a virtual wire.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1336,
+      "end": 1336
+    },
+    "content_stats": {
+      "char_count": 534,
+      "word_count": 84
+    },
+    "hierarchy": {
+      "parent": "Virtual Wire Interfaces",
+      "children": []
+    }
+  }
+}

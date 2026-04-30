@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_768",
+  "section_number": "1.21.6.1.1",
+  "header": "OSPFv3",
+  "content": "OSPFv3 provides support for the OSPF routing protocol within an IPv6 network. As such, it\nprovides support for IPv6 addresses and prefixes. It retains most of the structure and functions in\nOSPFv2 (for IPv4) with some minor changes. The following are some of the additions and changes\nto OSPFv3:\n• Support for multiple instances per link—With OSPFv3, you can run multiple instances of the\nOSPF protocol over a single link. This is accomplished by assigning an OSPFv3 instance ID\nnumber. An interface that is assigned to an instance ID drops packets that contain a different\nID.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1381\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Protocol Processing Per-link—OSPFv3 operates per-link instead of per-IP-subnet as on\nOSPFv2.\n• Changes to Addressing—IPv6 addresses are not present in OSPFv3 packets, except for LSA\npayloads within link state update packets. Neighboring routers are identified by the Router ID.\n• Authentication Changes—OSPFv3 doesn't include any authentication capabilities. Configuring\nOSPFv3 on a firewall requires an authentication profile that specifies Encapsulating Security\nPayload (ESP) or IPv6 Authentication Header (AH).The re-keying procedure specified in RFC\n4552 is not supported in this release.\n• Support for multiple instances per-link—Each instance corresponds to an instance ID\ncontained in the OSPFv3 packet header.\n• New LSA Types—OSPFv3 supports two new LSA types: Link LSA and Intra Area Prefix LSA.\nAll additional changes are described in detail in RFC 5340.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1381,
+      "end": 1382
+    },
+    "content_stats": {
+      "char_count": 1533,
+      "word_count": 232
+    },
+    "hierarchy": {
+      "parent": "OSPF Concepts",
+      "children": []
+    }
+  }
+}

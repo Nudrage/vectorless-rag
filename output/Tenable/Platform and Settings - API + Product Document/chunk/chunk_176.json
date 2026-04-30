@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_176",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully retrieved the agent safe mode summary.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe unique ID of the container associated with the user's API\nkeys.\ncontainer_uuid\nstring\nThe unique ID of the user that requested the agent summary.\nstring\nThe cloud region in which the container is located.\nobject\nThe number of agents in safe mode by version and operating\nsystem platform.\ninteger\nA Unix timestamp indicating the date and time when the\nsummary was requested.\n— 403 Returned if you do not have permission to view the agent safe mode summary.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500\nReturned if Tenable Vulnerability Management encountered an internal server error. Wait a moment,\nand try your request again.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 172,
+      "end": 173
+    },
+    "content_stats": {
+      "char_count": 860,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "Get agent safe mode summary",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

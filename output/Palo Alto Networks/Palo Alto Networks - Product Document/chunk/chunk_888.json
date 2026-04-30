@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_888",
+  "section_number": "1.21.18.2",
+  "header": "ECMP Model, Interface, and IP Routing Support",
+  "content": "ECMP is supported on all Palo Alto Networks firewall models, with hardware forwarding support\non the PA-7000 Series, PA-5200 Series, and PA-3200 Series. VM-Series firewalls support ECMP\nthrough software only. Performance is affected for sessions that cannot be hardware offloaded.\nECMP is supported on Layer 3, Layer 3 subinterface, VLAN, tunnel, and Aggregated Ethernet\ninterfaces.\nECMP can be configured for static routes and any of the dynamic routing protocols the firewall\nsupports.\nECMP affects the route table capacity because the capacity is based on the number of paths,\nso an ECMP route with four paths will consume four entries of route table capacity. ECMP\nimplementation might slightly decrease the route table capacity because more memory is being\nused by session-based tags to map traffic flows to particular interfaces.\nVirtual router-to-virtual router routing using static routes does not support ECMP.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1530,
+      "end": 1530
+    },
+    "content_stats": {
+      "char_count": 919,
+      "word_count": 139
+    },
+    "hierarchy": {
+      "parent": "ECMP",
+      "children": []
+    }
+  }
+}

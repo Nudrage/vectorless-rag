@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_022",
+  "section_number": "54.1.1",
+  "header": "Request samples",
+  "content": "Payload\nschedule\npause_window\nschedule_windows\nnotifications\npermissions\nsettings\nrequired\nPUT\n/was/v2/configs/{config_id}\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"name\": \"string\",\n\"targets\":\n-\n[\n\"https://example.com\"\n],\n\"target\": \"http://example.com\",\n\"description\": \"My cool scan configuration.\",\n\"folder_id\": \"7695bac3-9397-4ec2-9335-45a2a16f1901\",\n\"owner_id\": \"d30881ae-6b5c-4b1e-ad60-f2643d0da492\",\n\"template_id\": \"c6d67e98-83ea-49f0-8812-e4abae2b68bc\",\n\"user_template_id\": \"cbebdd36-06be-477f-a81f-ac280da4c9ff\",\n\"scanner_id\": 0,\n\"schedule\":\n-\n{\n\"rrule\": \"FREQ=MONTHLY;BYDAY=MO,TU,WE,TH,FR;BYSETPOS=-1\",\n\"starttime\": \"19970105T083000 or 19970105T083000Z (utc)\",\n\"timezone\": \"America/New_York\",\n\"enabled\": true,\n\"launch\": \"DAILY\"\n},\nContent type\n\"pause_window\":\n-\n{\n\"enabled\": true,\n\"timezone\": \"America/New_York\",\n\"pause_window_schedule\":\n-\n{\n\"sunday\":\n-\n{\n\"start\": \"09:00\",\n\"end\": \"18:00\"\n},\n\"monday\":\n-\n{\n\"start\": \"09:00\",\n\"end\": \"18:00\"\n},\n\"tuesday\":\n-\n{\n\"start\": \"09:00\",\n\"end\": \"18:00\"\n},\n\"wednesday\":\n-\n{\n\"start\": \"09:00\",\n\"end\": \"18:00\"\n},\n\"thursday\":\n-\n{\n\"start\": \"09:00\",\n\"end\": \"18:00\"\n},\n\"friday\":\n-\n{\n\"start\": \"09:00\",\n\"end\": \"18:00\"\n},\n\"saturday\":\n-\n{\n\"start\": \"09:00\",\n\"end\": \"18:00\"\n}\n}\n},\n\"schedule_windows\":\n-\n{\n\"enabled\": true,\n\"time_zone\": \"America/Chicago\",\n\"windows\":\n-\n[\n,\n- {\n\"type\": \"scan\",\n\"start\":\n-\n{\n\"day_of_week\": \"monday\",\n\"time\": \"10:00\"\n},\n\"end\":\n-\n{\n\"day_of_week\": \"tuesday\",\n\"time\": \"11:00\"\n}\n}\n- {\n\"type\": \"scan\",\n\"start\":\n-\n{\n\"day_of_week\": \"tuesday\",\n\"time\": \"13:00\"\n},\n\"end\":\n-\n{\n\"day_of_week\": \"tuesday\",\n\"time\": \"15:00\"\n}\n}\n]\n},\n\"notifications\":\n-\n{\n\"emails\": [ ]\n},\n\"permissions\":\n-\n[\n- {\n\"entity\": \"user\",\n\"entity_id\": \"8161163a-f227-466f-bc01-090a01e80165\",\n\"level\": \"no_access\",\n\"permissions_id\": \"4c8b606e-a14a-437d-a58a-e0732a2a365b\"\n}\n],\n\"settings\":\n-\n{\n\"description\": \"Security scan configuration for Facebook applications.\",\n\"timeout\": \"08:00:00\",\n\"debug_mode\": true,\n\"input_force\": true,\n\"credentials\":\n-\n{\n\"credential_ids\":\n-\n[\n\"497f6eca-6276-4993-bfeb-53cbbbba6f08\"\n]\n},\n\"scope\":\n-\n{\n\"option\": \"all\",\n\"urls\": [ ],\n\"exclude_file_extensions\": [ ],\n\"exclude_path_patterns\": [ ],\n\"dom_depth_limit\": 5,\n\"directory_depth_limit\": 10,\n\"page_limit\": 10000,\n\"crawl_script\": { },\n\"decompose_paths\": false,\n\"exclude_binaries\": true,\n\"auto_redundant_paths\": 1,\n\"crawl_script_filename\": \"string\",\n\"openapi_file\": \"string\",\n\"openapi_filename\": \"string\",\n\"openapi_file_url\": \"string\",\n\"graphql_file\": \"string\",\n\"graphql_filename\": \"string\",\n\"graphql_file_url\": \"string\",\n\"graphql_introspection\": true,\n\"soap_file\": \"string\",\n\"soap_filename\": \"string\",\n\"soap_file_url\": \"string\"\n},\n\"plugin\":\n-\n{\n\"rate_limiter\":\n-\n{\n\"requests_per_second\": 25,\n\"autothrottle\": true,\n\"timeout_threshold\": 100\n},\n\"mode\": \"disable\",\n\"ids\":\n-\n[\n98000,\n98001\n]\n],\n\"names\":\n-\n[\n\"path_traversal\"\n],\n\"families\":\n-\n[\n\"web_servers\",\n\"csrf\"\n]\n},\n\"browser\":\n-\n{\n\"screen_width\": 1600,\n\"screen_height\": 1200,\n\"ignore_images\": true,\n\"job_timeout\": 10000,\n\"analysis\": true,\n\"pool_size\": 0\n},\n\"http\":\n-\n{\n\"response_max_size\": 500000,\n\"request_redirect_limit\": 1,\n\"user_agent\": \"Nessus WAS/%v\",\n\"custom_user_agent\": true,\n\"request_headers\": { },\n\"request_concurrency\": 10,\n\"request_timeout\": 5000\n},\n\"chrome_script\":\n-\n{\n\"finish_wait\": 5000,\n\"page_load_wait\": 10000,\n\"command_wait\": 500,\n\"disable_web_security\": false\n},\n\"assessment\":\n-\n{\n\"rfi_remote_url\": \"http://rfi.nessus.org/rfi.txt\",\n\"dictionary\": \"limited\",\n\"fingerprinting\": true,\n\"enable\": true,\n\"element_exclusions\":\n-\n[\n- {\n\"element_type\": \"dom_element\",\n\"selector_type\": \"text\",\n\"selector\": \"string\"\n}\n]\n},",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 42,
+      "end": 47
+    },
+    "content_stats": {
+      "char_count": 3581,
+      "word_count": 389
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

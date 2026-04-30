@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_270",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "\nThis event can be a sign of hardware issues or lack of system resources (for example, RAM). We recommend monitoring this event and investigating the reason for the condition.\n4615(S): Invalid use of LPC port.\nIt appears that this event never occurs.\nEvent Schema:\nInvalid use of LPC port.\nSubject:\n© 2016 Microsoft. All rights reserved.\n713\nSecurity ID%1\nAccount Name:%2\nAccount Domain:%3\nLogon ID:%4\nProcess Information:\nPID:%7\nName:%8\nInvalid Use:%5\nLPC Server Port Name:%6\nWindows Local Security Authority (LSA) communicates with the Windows kernel using Local Procedure Call (LPC) ports. If you see this event, an application has inadvertently or\nintentionally accessed this port which is reserved exclusively for LSA’s use. The application (process) should be investigated to ensure that it is not attempting to tamper with this\ncommunications channel.\"\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 713,
+      "end": 714
+    },
+    "content_stats": {
+      "char_count": 964,
+      "word_count": 147
+    },
+    "hierarchy": {
+      "parent": "Audit System Integrity",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_698",
+  "section_number": "1.19.4.2.1",
+  "header": "Define IKE Crypto Profiles",
+  "content": "The IKE crypto profile is used to set up the encryption and authentication algorithms used for the\nkey exchange process in IKE Phase 1, and lifetime of the keys, which specifies how long the keys\nare valid. To invoke the profile, you must attach it to the IKE Gateway configuration.\nAll IKE gateways configured on the same interface or local IP address must use the same\ncrypto profile when the IKE gateway’s Peer IP Address Type is configured as Dynamic and\nIKEv1 main mode or IKEv2 is applied.\nSTEP 1 |\nCreate a new IKE profile.\n1.\nSelect Network > Network Profiles > IKE Crypto and select Add.\n2.\nEnter a Name for the new profile.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1264\n©2025 Palo Alto Networks, Inc.\nVPNs\nSTEP 2 |\nSpecify the DH (Diffie–Hellman) Group for key exchange and the Authentication and\nEncryption algorithms.\nClick Add in the corresponding sections (DH Group, Authentication, and Encryption) and select\nfrom the menus.\nIf you are not certain what the VPN peers support, add multiple groups or algorithms in the\norder of most-to-least secure; the peers negotiate the strongest supported group or algorithm\nto establish the tunnel.\n• DH Group—\n• group20\n• group19\n• group14\n• group5\n• group2\n• group1\n• Authentication—\n• sha512\n• sha384\n• sha256\n• sha1\n• md5\n• (PAN-OS 10.0.3 and later 10.0 releases) none\nIf you select an AES-GCM algorithm for encryption, you must select the\nAuthentication setting none or the commit will fail. The hash is automatically\nselected based on the DH Group selected. DH Group 19 and below uses sha256;\nDH Group 20 uses sha384.\n• Encryption—\n• (PAN-OS 10.0.3 and later 10.0 releases) aes-256-gcm (requires IKEv2; DH Group should\nbe set to group20)\n• (PAN-OS 10.0.3 and later 10.0 releases) aes-128-gcm (requires IKEv2 and DH Group set\nto group19)\n• aes-256-cbc\n• aes-192-cbc\n• aes-128-cbc\n• 3des\n• des\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1265\n©2025 Palo Alto Networks, Inc.\nVPNs\nChoose the strongest authentication and encryption algorithms the peer can support.\nFor the authentication algorithm, use SHA-256 or higher (SHA-384 or higher preferred\nfor long-lived transactions). Do not use SHA-1 or MD5. For the encryption algorithm,\nuse AES; DES and 3DES are weak and vulnerable. AES with Galois/Counter Mode\n(AES-GCM) provides the strongest security and has built-in authentication, so\nyou must set Authentication to none if you select aes-256-gcm or aes-128-gcm\nencryption.\nSTEP 3 |\nSpecify the duration for which the key is valid and the re-authentication interval.\nFor details, see SA Key Lifetime and Re-Authentication Interval.\n1.\nIn the Key Lifetime fields, specify the period (in seconds, minutes, hours, or days) for\nwhich the key is valid (range is 3 minutes to 365 days; default is 8 hours). When the\nkey expires, the firewall renegotiates a new key. A lifetime is the period between each\nrenegotiation.\n2.\nFor the IKEv2 Authentication Multiple, specify a value (range is 0-50; default is 0) that is\nmultiplied by the Key Lifetime to determine the authentication count. The default value\nof 0 disables the re-authentication feature.\nSTEP 4 |\nCommit your IKE Crypto profile.\nClick OK and click Commit.\nSTEP 5 |\nAttach the IKE Crypto profile to the IKE Gateway configuration.\nSee Configure advanced options for the gateway.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1264,
+      "end": 1266
+    },
+    "content_stats": {
+      "char_count": 3285,
+      "word_count": 546
+    },
+    "hierarchy": {
+      "parent": "Define Cryptographic Profiles",
+      "children": []
+    }
+  }
+}

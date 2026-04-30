@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_009",
+  "section_number": "1.6.2",
+  "header": "Authenticating as an API Client",
+  "content": "Many REST API tools and libraries can programmatically manage access tokens for you once provided\nthe OAuth 2.0 parameters described below, or you can manually make requests to obtain them as\nneeded.\nFirst you must authenticate using the Client ID and Secret Key you obtained when creating your API\nClient.\nExample Request:\nPOST https://<vectra_portal_url>/oauth2/token\nAuthorization: Basic <HTTPBasic(<client_id>:<secret_key>)>\nContent-Type: application/x-www-form-urlencoded\ngrant_type=client_credentials\nExample Response:\n{\n\"access_token\": \"Z0FBQUFB...\",\n\"expires_in\": 21600,\n\"refresh_expires_in\": 86400,\n© July 2024 Vectra AI, Inc. | 12\n\"refresh_token\": \"eyJzdWIi...\",\n\"token_type\": \"Bearer\"\n}\nNotice that the response includes an access_token and refresh_token which will be used to make\nsubsequent API requests as a client, outlined in the next sections.\nAlso, be sure to note the differences in the expires_in and refresh_expires_in timers, which are\nexpressed in seconds. An access_token will expire in 6 hours, while a refresh_token will take 24 hours to\nexpire. Once your access_token has expired, you will need to reauthenticate your API client with your\nclient_id and secret_key in order to receive a new access_token. If your refresh_token has not expired,\nyou may use it to obtain a new access token using the previous authorization grant.\nManually Refreshing Token via API Client (e.g. Postman or Insomnia)\nA refresh token will have the following syntax when returned as part of the /oauth2/token response:\n“refresh_token”: “eyJzdWIi...\"\nAs of March 2023, if you manually attempt to refresh your token via an API Client, copying and pasting\nthis value as is will be valid.\nRefreshing Token via Script\nThere should be no formatting changes required for using the refresh token via script. For example, in\nPython, accessing and saving the refresh token should look like this:\nrefresh_token = response.get(‘refresh_token’)\nwhere response is the dictionary received from authenticating via /oauth2/token.\nAuto-Refresh Token via Insomnia\nIf you are using Insomnia for API requests, we recommend the following setup for basic Authentication\nand refresh token requests:\n1. Create a new environment with your API client credentials. Select the “No Environment”\ndropdown found on the top left corner of Insomnia, choose “Manage Environments”.\n2. Use the example data below to create a new sub environment. Give the environment a unique\nname.\n© July 2024 Vectra AI, Inc. | 13\n3. Repeat for any other desired tenants.\n4. Select your desired environment to start making requests.\n5. Create a new request for /oauth2/token & set up basic authentication. Reference the client_id\nand secret from your environment file via Insomnia variables in the Basic auth tab (example\nbelow).\nNext, we’ll need to populate Form data for both types of requests: initial auth and refresh.\nWhen authenticating initially for basic auth, form data should just include grant_type:\nclient_credentials (example below):\n© July 2024 Vectra AI, Inc. | 14\nWhen refreshing your token, use grant_type and refresh_token form data (example\nbelow). refresh_token can be populated automatically via an Insomnia tag. To create a tag, enter\n“Response => Body Attribute” in the refresh_token form data field and Insomnia will auto-\npopulate a configurable interface. Select the interface and input the following (Request should\nbe the /oauth2/token request):\n© July 2024 Vectra AI, Inc. | 15\nPress “Done”, and your refresh form data should appear as the following:\nInsomnia should now be configured to automatically grab and use the refresh_token field\nreturned.\nRequests via Postman\nIf you prefer Postman, we have a public API collection you can import to your environment and use.\nExample Request:\nPOST https://<vectra_portal_url>/oauth2/token\nAuthorization: Basic <HTTPBasic(client_id:secret_key)>\nContent-Type: application/x-www-form-urlencoded\ngrant_type=refresh_token\nrefresh_token=<refresh_token>\nExample Response:\n{\n\"access_token\": \"Z0FBQUFB...\",\n\"expires_in\": 21600,\n\"token_type\": \"Bearer\"\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 11,
+      "end": 15
+    },
+    "content_stats": {
+      "char_count": 4065,
+      "word_count": 582
+    },
+    "hierarchy": {
+      "parent": "API Clients",
+      "children": []
+    }
+  }
+}

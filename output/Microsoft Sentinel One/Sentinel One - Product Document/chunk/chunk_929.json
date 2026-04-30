@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_929",
+  "section_number": "25.2",
+  "header": "Update Configuration",
+  "content": "PUT    /web/api/v2.1/firewall-control/configuration\nChange the Firewall Control configuration for a given scope.\nTo get the ID of a scope, run \"accounts\", \"sites\", or \"groups\". To change the Global configuration, leave the filters empty and set \"tenant\" to \"true\". In the Body, you can set if\nFirewall Control is enabled for the scope, if Location Awareness is enabled, the higher scope from which this scope inherits the configuration (\"Global\" or a scope ID),\nwhether the lower scopes inherit this configuration, and whether blocked actions are reported.\nFirewall Control requires Control SKU.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1097,
+      "end": 1097
+    },
+    "content_stats": {
+      "char_count": 595,
+      "word_count": 89
+    },
+    "hierarchy": {
+      "parent": "Firewall Control",
+      "children": [
+        "Response Messages",
+        "Response Schema",
+        "Body Schema"
+      ]
+    }
+  }
+}

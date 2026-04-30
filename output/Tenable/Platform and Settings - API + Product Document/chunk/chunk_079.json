@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_079",
+  "section_number": "4.7",
+  "header": "Change user role",
+  "content": "Changes the role for the specified user.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe unique ID of the user whose role you want to change.\nREQUEST BODY SCHEMA:\napplication/json\nArray of strings <uuid>\n= 1 items\nThe UUID of the role to assign to the user.\nNote: Although the role UUID is defined within an array, you can only provide\none role UUID.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 58,
+      "end": 58
+    },
+    "content_stats": {
+      "char_count": 412,
+      "word_count": 71
+    },
+    "hierarchy": {
+      "parent": "Access Control (Users)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_556",
+  "section_number": "1.16.9.1",
+  "header": "Palo Alto Networks Predefined Decryption Exclusions",
+  "content": "The firewall provides a predefined SSL Decryption Exclusion list to exclude from decryption\ncommonly used sites that break decryption because of technical reasons such as pinned\ncertificates and mutual authentication. The predefined decryption exclusions are enabled by\ndefault and Palo Alto Networks delivers new and updated predefined decryption exclusions to\nthe firewall as part of the Applications and Threats content update (or the Applications content\nupdate, if you do not have a Threat Prevention license). The firewall does not decrypt traffic that\nmatches predefined exclusions and allows the encrypted traffic based on the Security policy that\ngoverns that traffic. However, the firewall can’t inspect the encrypted traffic or enforce Security\npolicy on it.\nThe SSL Decryption Exclusion list is not for sites that you choose not to decrypt for legal,\nregulatory, business, privacy, or other volitional reasons, it is only for sites that break\ndecryption technically (decrypting these sites blocks their traffic). For traffic such as IP\naddresses, users, URL categories, services, and even entire zones that you choose not to\ndecrypt, Create a Policy-Based Decryption Exclusion.\nBecause the traffic of sites on the SSL Decryption Exclusion list remains encrypted, the firewall\ndoes not inspect or provide further security enforcement the traffic. You can disable a predefined\nexclusion. For example, you may choose to disable predefined exclusions to enforce a strict\nsecurity policy that allows only applications and services that the firewall can inspect and\non which the firewall can enforce Security policy. However, the firewall blocks sites whose\napplications and services break decryption technically if they are not enabled on the SSL\nDecryption Exclusion list.\nYou can view and manage all Palo Alto Networks predefined SSL decryption exclusions directly on\nthe firewall (Device > Certificate Management > SSL Decryption Exclusions).\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1022\n©2025 Palo Alto Networks, Inc.\nDecryption\nThe Hostname displays the name of the host that houses the application or service that breaks\ndecryption technically. You can also Add hosts to Exclude a Server from Decryption for Technical\nReasons if it is not on the predfined list.\nThe Description displays the reason the firewall can’t decrypt the site’s traffic, for example,\npinned-cert (a pinned certificate) or client-cert-auth (client authentication).\nThe firewall automatically removes enabled predefined SSL decryption exclusions from the list\nwhen they become obsolete (the firewall removes an application that decryption previously\ncaused to break when the application becomes supported with decryption). Show Obsoletes\nchecks if any disabled predefined exclusions remain on the list and are no longer needed. The\nfirewall does not remove disabled predefined decryption exclusions from the list automatically,\nbut you can select and Delete obsolete entries.\nYou can select a hostname’s checkbox and then click Disable to remove predefined sites from\nthe list. Use the SSL Decryption Exclusion list only for sites that break decryption for technical\nreasons, don’t use it for sites that you choose not to decrypt.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1022,
+      "end": 1023
+    },
+    "content_stats": {
+      "char_count": 3216,
+      "word_count": 480
+    },
+    "hierarchy": {
+      "parent": "Decryption Exclusions",
+      "children": []
+    }
+  }
+}

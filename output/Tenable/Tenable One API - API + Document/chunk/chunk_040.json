@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_040",
+  "section_number": "15",
+  "header": "Export assets",
+  "content": "Exports assets in your organization that match the specified search criteria.\nCaution: This endpoint is available for use but is currently in beta. The response structure is subject\nto change as we continue to enhance the data model.\nRequires the Basic [16] user role or the ASSET_INVENTORY.CYBER_ASSET_MANAGEMENT.READ  and\nAD.TOGGLE_AD.USE  custom role privileges. See Roles.\nAUTHORIZATIONS:\ncloud\nQUERY PARAMETERS\nstring ^[a-zA-Z0-9_]+(,[a-zA-Z0-9_]+)*$\nExample: properties=prop1,prop2,prop3\nSpecifies which asset properties to include in the export. Provide\nmultiple properties as a comma-separated list.\nBy default, if no properties are provided, the export includes the\nfollowing properties: asset_name , asset_id , asset_class ,\naes , and asset_criticality_rating_(acr)\nUse the List assets properties endpoint to retrieve a list of valid\nproperties for this parameter. For example, you might include\ncreated_at , sources , and fqdns .\nboolean\nDefault: true\nWhen set to true , returns the human-readable names of properties\ninstead of internal key names.\ninteger\n[ 5242880 .. 104857600 ]\nDefault: 20971520\nMaximum size, in bytes, for each export chunk when exporting large\ndatasets.\nIf omitted, the default is 20971520  bytes (20 MB). The maximum\nvalue is 104857600  (100 MB) and the minimum value is 5242880  (5\nMB).\nstring ^[a-zA-Z0-9_]+:(asc|desc)$\nDefault: \"application:asc\"\nExample: sort=acr:desc\nThe property and direction to sort the results by, in the format\nproperty:direction . For example: asset_name:asc  or\nacr:desc\nstring\nDefault: \"JSON\"\nEnum: \"CSV\"\n\"JSON\"\nExample: file_format=CSV\nproperties\nuse_readable_name\nmax_chunk_file_size\nsort\nfile_format\nSpecifies the file format for the export.\nDefaults to JSON  if not provided. Valid values are CSV  and JSON .\nboolean\nDefault: false\nExample: compress=true\nWhen set to true , the exported file is compressed using GZIP.\nThe compressed file retains its original format (CSV or JSON) but is\nsmaller in size, which helps reduce download time and storage\nrequirements. You must decompress the file with a standard GZIP tool\nbefore processing. This option is particularly useful for large exports or\nlimited-bandwidth environments.\nREQUEST BODY SCHEMA:\napplication/json\noptional\nArray of objects or null\nA set of asset properties used to filter the export results.\nUse the List asset properties endpoint to view available asset properties\nthat can be used as filters.\nobject\nFilter the export results by query. A query consists of the search mode and\nquery text.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 135,
+      "end": 137
+    },
+    "content_stats": {
+      "char_count": 2523,
+      "word_count": 368
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

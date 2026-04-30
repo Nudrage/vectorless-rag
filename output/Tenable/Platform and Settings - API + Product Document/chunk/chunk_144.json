@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_144",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "POST\n/v2/access-groups\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"name\": \"string\",\n\"access_group_type\": \"MANAGE_ASSETS\",\n\"all_users\": true,\n\"all_assets\": true,\n\"principals\":\n-\n[\n- {\n\"principal_name\": \"string\",\n\"principal_id\": \"string\",\n\"type\": \"all_users\",\n\"permissions\": \"CAN_VIEW\"\n}\n],\n\"rules\":\n-\n[\n- {\n\"type\": \"string\",\n\"operator\": \"string\",\n\"terms\":\n-\n[\n\"string\"\n]\n}\n]\n}\nContent type\n200\n429\napplication/json\nExpand all\nCollapse all\nCopy\n{\n\"container_uuid\": \"5c910460-38cc-4edb-bda4-49b148a1ce93\",\n\"created_at\": \"2020-05-03T17:26:59.465Z\",\n\"updated_at\": \"2020-05-03T17:26:59.465Z\",\n\"id\": \"7eed61fd-3985-4d1b-8b22-dfc466b5b8da\",\n\"name\": \"Test Group\",\n\"all_assets\": false,\n\"version\": 1,\n\"status\": \"PROCESSING\",\n\"access_group_type\": \"MANAGE_ASSETS\",\n\"rules\":\n-\n[\n- {\n\"type\": \"fqdn\",\n\"operator\": \"eq\",\n\"terms\":\n-\n[\n\"example.com\"\n]\n}\n],\n\"principals\":\n-\n[\n,\n- {\n\"type\": \"all_users\",\n\"principal_id\": \"00000000-0000-0000-0000-000000000000\",\n\"principal_name\": \"All Users\",\n\"permissions\":\n-\n[\n\"CAN_VIEW\"\n]\n}\n- {\n\"type\": \"user\",\n\"principal_id\": \"3d5df50a-4de8-4b0e-9496-54a19a76ddcc\",\n\"principal_name\": \"user1@example.com\",\n\"permissions\":\n-\n[\n\"CAN_VIEW\",\n\"CAN_SCAN\"\n]\n}\n],\nContent type\n\"created_by_uuid\": \"2460c1d6-0bfb-41e1-93b4-67fffcd9b0e5\",\n\"updated_by_uuid\": \"2460c1d6-0bfb-41e1-93b4-67fffcd9b0e5\",\n\"updated_by_name\": \"admin@example.com\",\n\"created_by_name\": \"admin@example.com\",\n\"processing_percent_complete\": 0\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 110,
+      "end": 112
+    },
+    "content_stats": {
+      "char_count": 1417,
+      "word_count": 143
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_242",
+  "section_number": "1.10.4.3.3",
+  "header": "Use Case: Configure Active/Active HA with ARP Load-Sharing",
+  "content": "In this example, hosts in a Layer 3 deployment need gateway services from the HA firewalls. The\nfirewalls are configured with a single shared IP address, which allows ARP Load-Sharing. The end\nhosts are configured with the same gateway, which is the shared IP address of the HA firewalls.\nSTEP 1 |\nPerform Step 1 through Step 15 of Configure Active/Active HA.\nSTEP 2 |\nConfigure an HA virtual address.\nThe virtual address is the shared IP address that allows ARP Load-Sharing.\n1.\nSelect Device > High Availability > Active/Active Config > Virtual Address and click\nAdd.\n2.\nEnter or select an Interface.\n3.\nSelect the IPv4 or IPv6 tab and click Add.\n4.\nEnter an IPv4 Address or IPv6 Address.\n5.\nFor Type, select ARP Load Sharing, which allows both peers to use the virtual IP address\nfor ARP Load-Sharing.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n424\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nSTEP 3 |\nConfigure ARP Load-Sharing.\nThe device selection algorithm determines which HA firewall responds to the ARP requests to\nprovide load sharing.\n1.\nFor Device Selection Algorithm, select one of the following:\n• IP Modulo—The firewall that will respond to ARP requests is based on the parity of\nthe ARP requester's IP address.\n• IP Hash—The firewall that will respond to ARP requests is based on a hash of the ARP\nrequester's IP address.\n2.\nClick OK.\nSTEP 4 |\nEnable jumbo frames on firewalls other than PA-7000 Series firewalls.\nSTEP 5 |\nDefine HA Failover Conditions\nSTEP 6 |\nCommit the configuration.\nSTEP 7 |\nConfigure the peer firewall in the same way, except selecting a different Device ID.\nFor example, if you selected Device ID 0 for the first firewall, select Device ID 1 for the peer\nfirewall.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 424,
+      "end": 425
+    },
+    "content_stats": {
+      "char_count": 1708,
+      "word_count": 295
+    },
+    "hierarchy": {
+      "parent": "Determine Your Active/Active Use Case",
+      "children": []
+    }
+  }
+}

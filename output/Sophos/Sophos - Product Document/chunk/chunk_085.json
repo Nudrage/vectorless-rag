@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_085",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Syslog field name\nName\nLog viewer -\nDetail view field\nname\nData\ntype\nLength Format/Description Possible\nvalues\nNotes/Examples\nlog_type\nlog_type\nlog_type\nu_int8_t\n8\nlog type\nAnti-\nvirus\nlog_component\nlog_component log_component\nu_int8_t\n8\ncomponent of log\nSMTP\nSMTPS\nlog_subtype\nlog_subtype\nlog_subtype\nu_int8_t\n8\nsubtype of log\nVirus\npriority\nseverity\nu_int8_t\nseverity of mail\nvirus\nCritical\nfw_rule_id\nfw_rule_id\nfw_rule_id\nNumber\nint32\nuser_name\nuser\nav_policy_name\navaspolicy\npolicy_name\nString\n32\npolicy name\neg. avaspolicy=\"policy1\"\nfrom_email_address sender\nsender\nString\n1024\nemail address of\nsender\neg. sender=\"test@test.local\"\nto_email_address\nrcpts\nrecipient\nString\n1024\nemail address of\nrecipient\neg. rcpts=\"test1@test.local\"\nsubject\nsubject\nsubject\nString\n1024\nsubject of mail\neg. subject=\"test\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 90\nmailid\nmessageid\nmessage_id\nString\n64\nmessage id\neg. messageid=\"10001\"\nmailsize\nmail_size\nemail_size\nu_int32_t int32\nmail size\neg. mail_size=\"1111\"\nvirus\nvirusname\nvirus\nString\n32\nvirus name\neg. virusname=\"eicar\"\nfilename\nqname\nfile_name\nString\n64\nfile name\neg.\nqname=\"QBin.2/1960x2000000c.em\nquarantine\nqname\nquarantine\nString\n64\nquarantine file name\neg.\nqname=\"QBin.2/1960x2000000c.em\nsrc_domainname\nhost\ndst_domainname\ndomain\nsrc_ip\nsrc_ip\nsrc_ip\nipaddr_t\n32\nsource ip address\neg. src_ip=\"1.1.1.1\",src_ip=\"345::12\nsrc_country_code\nsrc_country\ndst_ip\ndst_ip\ndst_ip\nipaddr_t\n32\ndestination ip\naddress\neg. dst_ip=\"1.1.1.2\",dst_ip=\"345::11\ndst_country_code\ndst_country\nsrc_port\nsrc_port\nsrc_port\nu_int16_t 16\nsource port\neg. src_port=\"12345\"\ndst_port\ndst_port\ndst_port\nu_int16_t 16\ndestination port\neg. dst_port=\"12345\"\nsent_bytes\nbytes_sent\nrecv_bytes\nbytes_received\nquarantine_reason\nreason\nquarantine_reason u_int32_t 32\nreason for mail\nquarantine\neg. quarantine_reason=\"Infected\"\nquarantine_reason=\"Mail Unscannab",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 90,
+      "end": 91
+    },
+    "content_stats": {
+      "char_count": 1897,
+      "word_count": 224
+    },
+    "hierarchy": {
+      "parent": "Email (antivirus)",
+      "children": []
+    }
+  }
+}

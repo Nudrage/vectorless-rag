@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_036",
+  "section_number": "1.18.23",
+  "header": "Vectra Match Enablement",
+  "content": "Version 3.4 of Vectra Match enablement API supports GET and POST.  Changing the enablement state\non a given device using the POST endpoint requires a license for Vectra Match, and an audit log will be\nemitted (NOTE: a valid Vectra Match license is not required to disable Match on a previously enabled\ndevice if your license has expired).  The API endpoint for accessing version 3.4 is\nhttps://<vectra_management_ip>/api/v3.4/vectra-match/enablement.\nThe enablement GET endpoint requires a single query parameters, device_serial:\nQUERY PARAMETER\nDESCRIPTION\ndevice_serial\nSerial number of the paired device in question\nThe following table lists the top-level fields present in the response for a GET request to the v3.4 API for\nVectra Match enablement\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nis_enabled\nWhether Vectra Match is\nenabled on the\nrequested paired device\nbool\ndetails\nError output\nstring\nOnly returned with an\nunsuccessful return code\nThe enablement POST endpoint requires a json body with two parameters, device_serial and\ndesired_state (WARNING: POSTing to the enablement endpoint causes a reboot if changing state):\nJSON BODY PARAMETER\nDESCRIPTION\ndevice_serial\nSerial number of the paired device in question\ndesired_state\nBoolean, true to enable, false to disable Vectra Match\nThe following table lists the top-level fields present in the response for a POST request to the v3.4 API\nfor Vectra Match enablement\n© July 2024 Vectra AI, Inc. | 59\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nis_enabled\nWhether Vectra Match is\nenabled on the\nrequested paired device\nbool\ndetails\nError output\nstring\nOnly present with an unsuccessful\nreturn code\nExamples of GET and POST methods on the vectra-match/enablement endpoint are shown in Appendix\nA.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 58,
+      "end": 59
+    },
+    "content_stats": {
+      "char_count": 1731,
+      "word_count": 261
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

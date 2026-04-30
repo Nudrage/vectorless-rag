@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1031",
+  "section_number": "1.24.3.3",
+  "header": "Firewall Placement for DoS Protection",
+  "content": "The firewall is a session-based device that isn’t designed to scale to millions of connections-per-\nsecond (CPS) to defend against large volumetric DoS attacks. The firewall treats each unique\nflow (based on ingress and egress zone, source and destination IP, protocol, and application) as a\nsession, spends CPU cycles on packet inspection at the port and the IP level to provide visibility\ninto application traffic, and must count each session for the flood threshold counters, so firewall\nplacement is critical to avoid flooding the firewall.\nFor the best DoS protection, place firewalls as close to the resources you’re protecting as possible.\nThis reduces the number of sessions the firewall needs to handle and therefore the amount of\nfirewall resources required to provide DoS protection.\nAt the internet-facing perimeter, do not place firewalls you use for DoS protection or zone\nprotection in front of dedicated DDoS devices and perimeter routers and switches. Make those\nhigh-volume devices your first line of DoS defense to mitigate volumetric flood attacks. For zone\nand DoS protection at the perimeter, use high-capacity firewalls and place them behind the high-\nvolume devices. As a rule, the closer a firewall is to the perimeter, the higher capacity it must be\nto handle the volume of traffic.\nThe way you segment your network into zones can help mitigate internal DoS attacks. Smaller\nzones provide greater visibility into traffic and prevent lateral movement of malware better\nbecause more traffic must cross zones, and to allow interzonal traffic requires you to create a\nspecific Security policy rule (all intrazonal traffic is allowed by default). Consider revisiting your\nsegmentation approach if your network is relatively unsegmented.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1731,
+      "end": 1731
+    },
+    "content_stats": {
+      "char_count": 1757,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "Zone Defense",
+      "children": []
+    }
+  }
+}

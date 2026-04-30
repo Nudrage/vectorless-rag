@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_118",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if Tenable Vulnerability Management successfully creates an access group.\nRESPONSE SCHEMA:\napplication/json\nstring\nThe UUID of your Tenable Vulnerability Management\ninstance.\nstring\nAn ISO timestamp indicating the date and time on which\nthe access group was created.\nstring\nAn ISO timestamp indicating the date and time on which\nthe access group was last modified.\nstring\nThe UUID of the access group.\nstring\nThe name of the access group. This name must be:\nUnique within your Tenable Vulnerability Management\ninstance.\nA maximum of 255 characters.\nAlphanumeric, but can include limited special\ncharacters (underscore, dash, parenthesis, brackets,\ncolon).\ncontainer_uuid\ncreated_at\nupdated_at\nid\nname\nboolean\nSpecifies whether the access group is the system-\nprovided All Assets access group:\nIf true , the access group is the All Assets access\ngroup. The only change you can make to this access\ngroup is to refine user membership in the group. For\nmore information, see descriptions of the all_users\nand principals parameters for the PUT /access-\ngroups/{id} endpoint.\nIf false , the access group is a user-defined access\ngroup, and you can change all parameters for the\ngroup. This parameter is false  for all access\ngroups you create.\nboolean\nSpecifies whether assets in the access group can be\nviewed by all or only some users in your organization:\nIf true , all users in your organization have Can View\naccess to the assets defined in the rules parameter. If\ntrue  in a POST /access-groups or PUT /access-\ngroups/{id} request, Tenable Vulnerability\nManagement ignores any principal parameters in the\nrequest.\nIf false , only specified users have Can View access\nto the assets defined in the rules parameter. You\ndefine which users or user groups have access in the\nprincipals parameter of a POST /access-groups or\nPUT /access-groups/{id} request.\nNote: If a [PUT /access-groups/{id}]ref:io-v1-access-\ngroups-edit) endpoint request sets this parameter to\ntrue  for an access group where the parameter was\npreviously set to false , Tenable Vulnerability\nManagement removes all principal data previously\nassociated with the access group.\nstring\nThe status of the process evaluating and assigning assets\nto the access group. Possible values are:\nPROCESSING—Tenable Vulnerability Management is\ncurrently evaluating assets against the asset rules for\nthe access group. For an indication of evaluation\nprogress, see the processing_percent_complete\nattribute for the access group.\nall_assets\nall_users\nstatus\nCOMPLETED—Tenable Vulnerability Management has\nsuccessfully completed its evaluation of assets\nagainst the asset rules for the group.\nERROR—Tenable Vulnerability Management\nencountered an error while evaluating assets against\nasset rules for the access group. Rule validation\ntypically prevents this status from occurring.\nHowever, if you encounter an ERROR status, Tenable\nrecommends that you delete the existing asset rules,\nthen recreate the rules after a short time has elapsed.\nstring\nThe UUID of the user who created the access group.\nstring\nThe name of the user who created the access group.\nstring\nThe UUID of the user who last modified the access group.\nstring\nThe name of the user who last modified the access group.\ninteger\nThe percentage of assets that Tenable Vulnerability\nManagement has evaluated against the asset rules for the\naccess group.\n— 400\nReturned if Tenable Vulnerability Management encountered any of the following error conditions:\nmax_entries—your request exceeds the maximum number of 5,000 access groups.\nduplicate—an access group with the name you specified already exists.\nprotected—you attempted to set the all_assets parameter to true , and you cannot create the\nsystem-provided access group, All Assets.\n— 403 Returned if you do not have permission to create access groups.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\ncreated_by_uuid\ncreated_by_name\nupdated_by_uuid\nupdated_by_name\nprocessing_percent_complete",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 79,
+      "end": 81
+    },
+    "content_stats": {
+      "char_count": 4047,
+      "word_count": 609
+    },
+    "hierarchy": {
+      "parent": "Create access group",
+      "children": [
+        "Request samples",
+        "Response samples"
+      ]
+    }
+  }
+}

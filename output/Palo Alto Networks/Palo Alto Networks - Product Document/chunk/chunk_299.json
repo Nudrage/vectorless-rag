@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_299",
+  "section_number": "1.11.7.1.7",
+  "header": "Tunnel Inspection Logs",
+  "content": "Tunnel inspection logs are like traffic logs for tunnel sessions; they display entries of non-\nencrypted tunnel sessions. To prevent double counting, the firewall saves only the inner flows\nin traffic logs, and sends tunnel sessions to the tunnel inspection logs. The tunnel inspection\nlog entries include Receive Time (date and time the log was received), the tunnel ID, monitor\ntag, session ID, the Security rule applied to the tunnel session, number of bytes in the session,\nparent session ID (session ID for the tunnel session), source address, source user and source zone,\ndestination address, destination user, and destination zone.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n523\n©2025 Palo Alto Networks, Inc.\nMonitoring\nWhen the Decryption logs introduced in PAN-OS 10.0 are enabled, the firewall sends\nHTTP/2 logs as Tunnel Inspection logs (when Decryption logs are disabled, HTTP/2\nlogs are sent as Traffic logs), so you need to check the Tunnel Inspection logs instead of\nthe Traffic logs for HTTP/2 events. In this case, you must also enable Tunnel Content\nInspection to obtain the App-ID for HTTP/2 traffic.\nClick the Detailed Log view to see details for an entry, such as the tunnel protocol used, and the\nflag indicating whether the tunnel content was inspected or not. Only a session that has a parent\nsession will have the Tunnel Inspected flag set, which means the session is in a tunnel-in-tunnel\n(two levels of encapsulation). The first outer header of a tunnel will not have the Tunnel Inspected\nflag set.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 523,
+      "end": 524
+    },
+    "content_stats": {
+      "char_count": 1524,
+      "word_count": 248
+    },
+    "hierarchy": {
+      "parent": "Log Types and Severity Levels",
+      "children": []
+    }
+  }
+}

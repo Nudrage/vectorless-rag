@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_497",
+  "section_number": "1.15.4",
+  "header": "Use DNS Queries to Identify Infected Hosts on the Network",
+  "content": "Network\nThe DNS sinkhole action in Anti-Spyware profiles enables the firewall to forge a response to a\nDNS query for a known malicious domain or to a custom domain, so that you can identify hosts\non your network that have been infected with malware. A compromised host might initiate\ncommunication with a command-and-control (C2) server—once the connection is made, an\nattacker can remotely control the infected host, in order to further infiltrate the network or\nexfiltrate data.\nDNS queries to any domain included in the Palo Alto Networks DNS signatures list is sinkholed to\na Palo Alto Networks server IP address.\nThe firewall has two sources of DNS signatures that it can use to identify malicious and C2\ndomains:\n• (Requires Threat Prevention) Local DNS signatures—This is a limited, on-box set of DNS\nsignatures that the firewall can use to identify malicious domains. The firewall gets new DNS\nsignatures as part of daily antivirus updates.\n• (Requires DNS Security) DNS Security signatures—The firewall accesses the Palo Alto\nNetworks DNS Security cloud service to check for malicious domains against the complete\ndatabase of DNS signatures. Certain signatures—that only DNS Security provides—can\nuniquely detect C2 attacks that use machine learning techniques, like domain generation\nalgorithms (DGAs) and DNS tunneling.\nDNS queries to domains in the local DNS signature set or the DNS Security signature set are\nredirected to a Palo Alto Networks server, and the host is unable to access the malicious domain.\nThe following topics provide details on how to enable DNS sinkholing so that you can identify\ninfected hosts.\n• Learn How DNS Sinkholing Works.\n• Configure DNS Sinkholing.\n• Configure DNS Sinkholing for a List of Custom Domains.\n• Enable DNS Security to sinkhole C2 domains.\n• Configurethe Sinkhole IPAddress to a Local Server on Your Network.\n• See Infected Hosts that Attempted to Connect to a Malicious Domain.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 913,
+      "end": 913
+    },
+    "content_stats": {
+      "char_count": 1934,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Threat Prevention",
+      "children": [
+        "How DNS Sinkholing Works",
+        "Configure DNS Sinkholing",
+        "Configure DNS Sinkholing for a List of Custom Domains",
+        "Configure the Sinkhole IP Address to a Local Server on Your Network",
+        "See Infected Hosts that Attempted to Connect to a Malicious Domain"
+      ]
+    }
+  }
+}

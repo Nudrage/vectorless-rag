@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_010",
+  "section_number": "1.6.3",
+  "header": "Make API request as a client",
+  "content": "Now that you have obtained an access_token, you will use that token to make API requests as an API\nClient to all the Vectra Platform API endpoints. Here are a couple quick examples.\nExample Request to accounts endpoint:\n© July 2024 Vectra AI, Inc. | 16\nGET /api/v3.4/accounts\nAuthorization: Bearer <access_token>\nExample Response:\n{\n\"count\": 16,\n\"next\": \"http://<vectra_portal_url>/api/v3.4/accounts?page=1\",\n\"previous\": null,\n\"results\": [\n...\n}\nExample Request to detections endpoint:\nGET /api/v3.4/detections\nAuthorization: Bearer <access_token>\nExample Response:\n{\n\"count\": 25,\n\"next\": \"http://<vectra_portal_url>/api/v3.4/detections?page=2\",\n\"previous\": null,\n\"results\": [\n...\n}\nFull sample output for accounts and detections endpoints can be found in Appendix A.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 15,
+      "end": 16
+    },
+    "content_stats": {
+      "char_count": 767,
+      "word_count": 101
+    },
+    "hierarchy": {
+      "parent": "API Clients",
+      "children": []
+    }
+  }
+}

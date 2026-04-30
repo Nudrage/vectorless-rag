@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_165",
+  "section_number": "8.12",
+  "header": "Audit Removable Storage",
+  "content": "Audit Removable Storage allows you to audit user attempts to access file system objects on a removable storage device. A security audit event is generated for all objects and all types of\naccess requested, with no dependency on object’s SACL.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nYes\nYes\nYes\nYes\nThis subcategory will help identify when and which files or folders were accessed or modified on removable\ndevices.\nIt is often useful to track actions with removable storage devices and the files or folders on them, because\nmalicious software very often uses removable devices as a method to get into the system. At the same time,\nyou will be able to track which files were written or executed from a removable storage device.\nYou can track, for example, actions with files or folders on USB flash drives or sticks that were inserted into\ndomain controllers or high value servers, which is typically not allowed.\nWe recommend Failure auditing to track failed access attempts.\nMember Server\nYes\nYes\nYes\nYes\nWorkstation\nYes\nYes\nYes\nYes\nEvents List:\n\n4656\n(S, F): A handle to an object was requested.\n\n4658\n(S): The handle to an object was closed.\n\n4663\n(S): An attempt was made to access an object.\n4656(S, F): A handle to an object was requested.\nThis event also belongs in the Audit File System subcategory, and is described there. See “4656(S, F): A handle to an object was requested.”\n4658(S): The handle to an object was closed.\nThis event also belongs in the Audit File System subcategory, and is described there. See “4658(S): The handle to an object was closed.”\n4663(S): An attempt was made to access an object.\nThis event also belongs in the Audit File System subcategory, and is described there. See “4663(S): An attempt was made to access an object.”\n© 2016 Microsoft. All rights reserved.\n489",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 489,
+      "end": 490
+    },
+    "content_stats": {
+      "char_count": 1856,
+      "word_count": 317
+    },
+    "hierarchy": {
+      "parent": "Object Access",
+      "children": []
+    }
+  }
+}

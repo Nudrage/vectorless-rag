@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_295",
+  "section_number": "1.11.7.1.3",
+  "header": "URL Filtering Logs",
+  "content": "URL filtering logs (Monitor > Logs > URL Filtering) display comprehensive information about\ntraffic to URL categories monitored in Security policy rules. Attributes or properties recorded for\neach session include receive time, category, URL, from zone, to zone, source,\nand source user. You can customize your log view so that only the attributes you are most\ninterested in display. The firewall generates URL filtering log entries in the following cases:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n521\n©2025 Palo Alto Networks, Inc.\nMonitoring\n• Traffic matches a Security policy rule with a URL category as match criteria. The rule enforces\none of the following actions for the traffic: deny, drop, or reset (client, server,\nboth).\n• Traffic matches a Security policy rule with a URL Filtering Profile attached. Site Access for\ncategories in the profile is set to alert, block, continue, or override.\nBy default, categories set to allow do not generate URL filtering log entries. The exception\nis if you configure log forwarding.\nIf you want the firewall to log traffic to categories that you allow but would like more\nvisibility into, set Site Access for these categories to alert in your URL Filtering profiles.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 521,
+      "end": 522
+    },
+    "content_stats": {
+      "char_count": 1213,
+      "word_count": 195
+    },
+    "hierarchy": {
+      "parent": "Log Types and Severity Levels",
+      "children": []
+    }
+  }
+}

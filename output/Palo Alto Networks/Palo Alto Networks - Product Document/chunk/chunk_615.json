@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_615",
+  "section_number": "1.17.9.2",
+  "header": "Verify Advanced URL Filtering",
+  "content": "If you have an Advanced URL Filtering subscription, follow the steps below to test and verify that\nreal-time URL analysis is happening.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1132\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nPalo Alto Networks recommends setting the real-time-detection action setting to alert for\nyour active URL filtering profiles. This provides visibility into URLs analyzed in real-time\nand will block (or allow, depending on your policy settings) based on the category settings\nconfigured for specific web threats.\nThe firewall enforces the most severe action of the actions configured for detected URL\ncategories of a given URL. For example, suppose example.com is categorized as real-time-\ndetection, command-and-control, and shopping—categories with an alert, block, and allow\naction configured, respectively. The firewall will block the URL because block is the most\nsevere action from the detected categories.\nVerify that URLs are being analyzed and categorized using the advanced URL Filtering service.\n1.\nVisit each of the following test URLs to verify that the advanced URL Filtering service is\nproperly categorizing URLs:\n• Malware—urlfiltering.paloaltonetworks.com/test-real-time-detection-malware\n• Phishing—urlfiltering.paloaltonetworks.com/test-real-time-detection-phishing\n• C2—urlfiltering.paloaltonetworks.com/test-real-time-detection-command-and-control\n• Grayware—urlfiltering.paloaltonetworks.com/test-real-time-detection-grayware\n• Benign (unknown)—urlfiltering.paloaltonetworks.com/test-real-time-detection\n2.\nMonitor the activity on the firewall to verify that the tested URLs have been properly\ncategorized as real-time-detection.\n1. Select Monitor > Logs > URL Filtering and filter by (url_category_list\ncontains real-time-detection) to view logs that have been analyzed using\nadvanced URL filtering. Additional web page category matches are also displayed and\ncorresponds to the categories as defined by PAN-DB.\n2. Take a detailed look at the logs to verify that each type of web threat is correctly\nanalyzed and categorized. In the example below, the URL is categorized as having\nbeen analyzed in real-time, and, additionally, as possessing qualities that define it as\ncommand and control. Because C&C has a more severe action compared to real-time-\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1133\n©2025 Palo Alto Networks, Inc.\nURL Filtering\ndetection (block as opposed to alert), this URL has been categorized as command and\ncontrol and has been blocked.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1134\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1132,
+      "end": 1135
+    },
+    "content_stats": {
+      "char_count": 2595,
+      "word_count": 345
+    },
+    "hierarchy": {
+      "parent": "Test URL Filtering Configuration",
+      "children": []
+    }
+  }
+}

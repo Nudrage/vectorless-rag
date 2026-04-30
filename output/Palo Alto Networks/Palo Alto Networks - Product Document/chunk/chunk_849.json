@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_849",
+  "section_number": "1.21.15.6.6",
+  "header": "Modify the Oversubscription Rate for DIPP NAT",
+  "content": "If you have enough public IP addresses that you do not need to use DIPP NAT oversubscription,\nyou can reduce the oversubscription rate and thereby gain more DIP and DIPP NAT rules allowed.\nSTEP 1 |\nView the DIPP NAT oversubscription rate.\n1.\nSelect Device > Setup > Session > Session Settings. View the NAT Oversubscription\nRate setting.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1497\n©2025 Palo Alto Networks, Inc.\nNetworking\nSTEP 2 |\nSet the DIPP NAT oversubscription rate.\n1.\nEdit the Session Settings section.\n2.\nIn the NAT Oversubscription Rate list, select 1x, 2x, 4x, or 8x, depending on which ratio\nyou want.\nThe Platform Default setting applies the default oversubscription setting for the\nmodel. If you want no oversubscription, select 1x.\n3.\nClick OK and Commit the change.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1497,
+      "end": 1498
+    },
+    "content_stats": {
+      "char_count": 783,
+      "word_count": 130
+    },
+    "hierarchy": {
+      "parent": "Configure NAT",
+      "children": []
+    }
+  }
+}

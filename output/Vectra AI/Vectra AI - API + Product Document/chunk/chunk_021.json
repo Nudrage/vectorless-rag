@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_021",
+  "section_number": "1.11",
+  "header": "Event-based endpoints",
+  "content": "Event-based endpoints provide a mechanism for API clients to poll Detect for system events. These\nendpoints provide a SaaS analog to syslog on the Detect appliance, where data is aggregated at an\nexternal collector for storage and analysis, such as a SIEM.\nEvent-based endpoints include the following event types:\n•\nDetection Events\n•\nAudit Log Events\n•\nEntity Scoring Events\nThese endpoints make use of a checkpoint value, which is used in subsequent requests to get new\nevents beginning from the last checkpoint.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 34,
+      "end": 34
+    },
+    "content_stats": {
+      "char_count": 514,
+      "word_count": 83
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_439",
+  "section_number": "1.12.9.3",
+  "header": "Redistribute Data and Authentication Timestamps",
+  "content": "In a large-scale network, instead of configuring all your firewalls to directly query the mapping\ninformation sources, you can streamline resource usage by configuring some firewalls to collect\nmapping information through redistribution.\nYou can redistribute user mapping information collected through any method except\nTerminal Server (TS) agents. You cannot redistribute Group Mapping or HIP match\ninformation.\nIf you use Panorama to manage firewalls and aggregate firewall logs, you can use\nPanorama to manage User-ID redistribution. Leveraging Panorama is a simpler solution\nthan creating extra connections between firewalls to redistribute User-ID information.\nIf you Configure Authentication Policy, your firewalls must also redistribute the Authentication\nTimestamps that are generated when users authenticate to access applications and services.\nFirewalls use the timestamps to evaluate the timeouts for Authentication policy rules. The\ntimeouts allow a user who successfully authenticates to later request services and applications\nwithout authenticating again within the timeout periods. Redistributing timestamps enables you to\nenforce consistent timeouts across all the firewalls in your network.\nFirewalls share data and authentication timestamps as part of the same redistribution flow; you\ndon’t have to configure redistribution for each information type separately.\n• Firewall Deployment for Data Redistribution\n• Configure Data Redistribution",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 791,
+      "end": 791
+    },
+    "content_stats": {
+      "char_count": 1459,
+      "word_count": 197
+    },
+    "hierarchy": {
+      "parent": "Deploy User-ID in a Large-Scale Network",
+      "children": [
+        "Firewall Deployment for Data Redistribution",
+        "Configure Data Redistribution"
+      ]
+    }
+  }
+}

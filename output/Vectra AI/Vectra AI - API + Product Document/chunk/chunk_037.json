@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_037",
+  "section_number": "1.18.24",
+  "header": "Vectra Match Stats",
+  "content": "Version 3.4 of Vectra Match stats API supports GET.  Use of the stats endpoint for Vectra Match does\nnot require a valid license. The API endpoint for accessing version 3.4 is\nhttps://<vectra_management_ip>/api/v3.4/vectra-match/stats\nThe stats GET endpoint allows for a single optional query parameter, device_serial.  If device_serial is\nnot provided, information for all enabled and previously-enabled devices will be returned.\nQUERY PARAMETER\nDESCRIPTION\ndevice_serial\nSerial number of the paired device in question\nThe following table lists the top-level fields present in the response for a GET request to the v3.4 API for\nVectra Match stats\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nstats\nList of json objects, each\nof which represents stats\nfrom a paired device with\nMatch enabled\nlist object\nAn example response can be\nfound in Appendix A\ndetails\nError output\nstring\nOnly present with an unsuccessful\nreturn code\nExamples of the GET method on the vectra-match/stats endpoint is shown in Appendix A.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 59,
+      "end": 59
+    },
+    "content_stats": {
+      "char_count": 996,
+      "word_count": 151
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

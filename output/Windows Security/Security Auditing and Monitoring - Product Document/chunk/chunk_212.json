@@ -1,0 +1,38 @@
+{
+  "chunk_id": "chunk_212",
+  "section_number": "9.7",
+  "header": "Audit Other Policy Change Events",
+  "content": "Audit Other Policy Change Events contains events about EFS Data Recovery Agent policy changes, changes in Windows Filtering Platform filter, status on Security policy settings updates\nfor local Group Policy settings, Central Access Policy changes, and detailed troubleshooting events for Cryptographic Next Generation (CNG) operations.\nEvent volume: Low.\nComputer Type\nGeneral\nStronger\nComments\nSuccess\nFailure\nSuccess\nFailure\nDomain Controller\nIF\nYes\nIF\nYes\nIF - We do not recommend Success auditing because of event “5447: A Windows Filtering Platform filter has\nbeen changed”—this event generates many times during group policy updates and typically is used for\ntroubleshooting purposes for Windows Filtering Platform filters. But you would still need to enable Success\nauditing for this subcategory if, for example, you must monitor changes in Boot Configuration Data or Central\nAccess Policies.\nWe recommend Failure auditing, to detect errors in applied Security settings which came from Group Policy,\nand failure events related to Cryptographic Next Generation (CNG) functions.\nMember Server\nIF\nYes\nIF\nYes\nIF - We do not recommend Success auditing because of event “5447: A Windows Filtering Platform filter has\nbeen changed”—this event generates many times during group policy updates and typically is used for\ntroubleshooting purposes for Windows Filtering Platform filters. But you would still need to enable Success\nauditing for this subcategory if, for example, you must monitor changes in Boot Configuration Data or Central\nAccess Policies.\nWe recommend Failure auditing, to detect errors in applied Security settings which came from Group Policy,\nand failure events related to Cryptographic Next Generation (CNG) functions.\nWorkstation\nIF\nYes\nIF\nYes\nIF - We do not recommend Success auditing because of event “5447: A Windows Filtering Platform filter has\nbeen changed”—this event generates many times during group policy updates and typically is used for\ntroubleshooting purposes for Windows Filtering Platform filters. But you would still need to enable Success\nauditing for this subcategory if, for example, you must monitor changes in Boot Configuration Data or Central\nAccess Policies.\nWe recommend Failure auditing, to detect errors in applied Security settings which came from Group Policy,\nand failure events related to Cryptographic Next Generation (CNG) functions.\nEvents List:\n\n4714\n(S): Encrypted data recovery policy was changed.\n\n4819\n(S): Central Access Policies on the machine have been changed.\n\n4826\n(S): Boot Configuration Data loaded.\n\n4909\n(-): The local policy settings for the TBS were changed.\n\n4910\n(-): The group policy settings for the TBS were changed.\n\n5063\n(S, F): A cryptographic provider operation was attempted.\n\n5064\n(S, F): A cryptographic context operation was attempted.\n\n5065\n(S, F): A cryptographic context modification was attempted.\n© 2016 Microsoft. All rights reserved.\n635\n\n5066\n(S, F): A cryptographic function operation was attempted.\n\n5067\n(S, F): A cryptographic function modification was attempted.\n\n5068\n(S, F): A cryptographic function provider operation was attempted.\n\n5069\n(S, F): A cryptographic function property operation was attempted.\n\n5070\n(S, F): A cryptographic function property modification was attempted.\n\n5447\n(S): A Windows Filtering Platform filter has been changed.\n\n6144\n(S): Security policy in the group policy objects has been applied successfully.\n\n6145\n(F): One or more errors occurred while processing security policy in the group policy objects.\n4714(S): Encrypted data recovery policy was changed.\nEvent Description:\nThis event generates when a Data Recovery Agent group policy for Encrypting File System (EFS) has changed.\nThis event generates when a Data Recovery Agent certificate or Data Recovery Agent policy was changed for the computer or\ndevice.\nIn the background, this event generates when the \\HKLM\\Software\\Policies\\Microsoft\\SystemCertificates\\EFS\\EfsBlob\nregistry value is changed during a Group Policy update.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-a5ba-3e3b0328c30d}\" />\n<EventID>4714</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13573</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-08T05:27:40.740602500Z\" />\n<EventRecordID>1080883</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"524\" ThreadID=\"4856\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <ProcessingErrorData>\n© 2016 Microsoft. All rights reserved.\n636\n<ErrorCode>13</ErrorCode>\n<DataItemName>SubjectUserSid</DataItemName>\n<EventPayload />\n</ProcessingErrorData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 635,
+      "end": 637
+    },
+    "content_stats": {
+      "char_count": 4991,
+      "word_count": 676
+    },
+    "hierarchy": {
+      "parent": "Policy Change",
+      "children": [
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:",
+        "Security Monitoring Recommendations:"
+      ]
+    }
+  }
+}

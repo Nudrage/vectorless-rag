@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_542",
+  "section_number": "1.16.2.15",
+  "header": "Decryption Mirroring",
+  "content": "Decryption mirroring creates a copy of decrypted traffic from a firewall and sends it to a traffic\ncollection tool such as NetWitness or Solera, which can receive raw packet captures for archiving\nand analysis. Organizations that require comprehensive data capture for forensic and historical\npurposes or for data leak prevention (DLP) can install a free license to enable the feature.\nAfter you install the license, connect the traffic collection tool directly to an Ethernet interface on\nthe firewall and set the Interface Type to Decrypt Mirror. The firewall simulates a TCP handshake\nwith the collection tool and then sends every data packet through that interface, decrypted (as\ncleartext).\nDecryption port mirroring is not available on the VM-Series for public cloud platforms\n(AWS, Azure, Google Cloud Platform) and VMware NSX.\nKeep in mind that the decryption, storage, inspection, and/or use of SSL traffic is governed\nin certain countries and user consent might be required in order to use the decryption mirror\nfeature. Additionally, use of this feature could enable malicious users with administrative access\nto the firewall to harvest usernames, passwords, social security numbers, credit card numbers,\nor other sensitive information submitted using an encrypted channel. Palo Alto Networks\nrecommends that you consult with your corporate counsel before activating and using this feature\nin a production environment.\nThe following graphic shows the process for mirroring decrypted traffic and the section Configure\nDecryption Port Mirroring describes how to license and enable this feature.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n995\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 995,
+      "end": 996
+    },
+    "content_stats": {
+      "char_count": 1690,
+      "word_count": 253
+    },
+    "hierarchy": {
+      "parent": "Decryption Concepts",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_048",
+  "section_number": "1.18.35",
+  "header": "Unique Hosts Observed",
+  "content": "API responses may vary depending on product subscriptions (Network, AWS, M365).\nThe unique hosts observed API can be used to view the count of all distinct hosts seen during a given\ntimespan dating back one year. The endpoint is only available to Restricted Admin clients.\nTo obtain the list of unique hosts observed (GET) use the following URL:\nhttps://<vectra_management_ip>/api/v3.4/unique_hosts_observed/\n© July 2024 Vectra AI, Inc. | 71\nThe following table lists the fields and a description of the various elements for the month results.\nDetailed examples of using GET on unique_hosts_observed is described in Appendix A\nELEMENT\nDESCRIPTION\nTYPE\nNOTES\nstart\nFirst day of timespan\nstring\nend\nLast day of timespan\nstring\nunique_hosts_observed\nCount of unique hosts\nobserved between start\nand end\ninteger\nIncludes hosts seen from 00:00\nUTC on start day through 23:59\nUTC on end day of timespan\nThe available query parameters to filter for Unique Hosts Observed are listed below.\nQUERY PARAMETER\nTYPE\nDESCRIPTION\nstart\nstring\nISO8601\nStart date of data list. Example: ‘2023-08-15’\nend\nstring\nISO8601\nEnd date of data list. Example: ‘2023-09-31’\noffset\nstring\nISO8601\nTimezone offset to be used. Example: ‘+0700’",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 13,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 70,
+      "end": 71
+    },
+    "content_stats": {
+      "char_count": 1213,
+      "word_count": 187
+    },
+    "hierarchy": {
+      "parent": "Vectra Platform API Guide",
+      "children": []
+    }
+  }
+}

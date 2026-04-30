@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_989",
+  "section_number": "1.22.16.3",
+  "header": "Use the IP Address in the XFF Header to Troubleshoot Events",
+  "content": "By default, the firewall does not log the source address of a client behind a proxy server, even if\nyou are using this address from the X-Forwarded-For (XFF) header for user mapping. Therefore,\nwhile you can identify the specific user associated with a log event, you will not be able to\nidentify the source device that originated the log event easily. To simplify the debugging and\ntroubleshooting of events for users behind a proxy server, enable the X-Forwarded-For option in\nthe URL Filtering profile that you attach to Security policy rules that allow access to web-based\napplications. With this option enabled, the firewall logs the IP address from the XFF header as the\nSource address for all traffic that matches the rule.\nURL Filtering logs do not display the X-Forwarded For IP field. To view X-Forwarded-For\nIP log events, you must export the logs to CSV format.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1681\n©2025 Palo Alto Networks, Inc.\nPolicy\nEnabling the firewall to use the XFF header as the Source address in URL Filtering logs\ndoes not enable user mapping of the source address. To populate the source user fields,\nsee Use XFF Values for Policies and Logging Source Users.\nSTEP 1 |\nEnable the X-Forwarded-For option in the URL Filtering profile.\n1.\nSelect Objects > Security Profiles > URL Filtering and select the URL Filtering profile\nyou want to configure or add a new one.\nYou can’t enable XFF logging in the default URL Filtering profile.\n2.\nSelect the URL Filtering Settings tab and enable X-Forwarded-For.\n3.\nClick OK to save the profile.\nSTEP 2 |\nAttach the URL Filtering profile to the Security policy rule(s) that enable access to web\napplications.\n1.\nSelect Policies > Security and click the rule.\n2.\nSelect the Actions tab, set the Profile Type to Profiles, and select the URL Filtering\nprofile you just configured for X-Forwarded-For HTTP Header Logging.\n3.\nClick OK and Commit.\nSTEP 3 |\nVerify the firewall is logging XFF values.\nThe XFF column is not visible in the URL Filtering logs on the firewall.\n1.\nSelect Monitor > Logs > URL Filtering.\n2.\nView the XFF values in one of the following ways:\n• Click Export to CSV (\n) to export the URL Filtering log to a comma-separated value\nfile. When the download is complete, click Download file to save a copy of the file to\nyour local device.\n• Use the show log url csv-output equal yes CLI command.\nSTEP 4 |\nUse the XFF field in the URL Filtering log to troubleshoot a log event in another log type.\nIf you notice an event associated with HTTP/HTTPS traffic but cannot identify the source IP\naddress because it is that of the proxy server, you can use the X-Forwarded-For value in a\ncorrelated URL Filtering log to help you identify the source address associated with the log\nevent. To do this:\n1.\nFind an event you want investigate in a Traffic, Threat, or WildFire Submissions log that\nshows the IP address of the proxy server as the source address.\n2.\nClick the spyglass icon for the log to display its details and look for an associated URL\nFiltering log at the bottom of the Detailed Log Viewer window.\n3.\nExport the associated URL Filtering log to a CSV file and look for the X-Forwarded For\nIP column. The IP address in this column represents the IP address of the source user\nbehind the proxy server. Use this IP address to track down the device that triggered the\nevent you are investigating.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1682\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1681,
+      "end": 1683
+    },
+    "content_stats": {
+      "char_count": 3465,
+      "word_count": 607
+    },
+    "hierarchy": {
+      "parent": "Enforce Policy on Endpoints and Users Behind an Upstream Device",
+      "children": []
+    }
+  }
+}

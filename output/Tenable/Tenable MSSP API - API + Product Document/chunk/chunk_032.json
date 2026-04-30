@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_032",
+  "section_number": "44.1",
+  "header": "Responses",
+  "content": "200\nReturned if the Tenable MSSP Portal successfully retrieved the details for the specified account group.\nRESPONSE SCHEMA:\napplication/json\nstring <uuid>\nThe UUID of the account group.\nstring <uuid>\nThe UUID of the account group's parent container.\nstring\nThe name of the account group.\ninteger\nA Unix timestamp indicating the date and time when the account\ngroup was last modified. For example, 1710256733 .\ninteger\nThe number of accounts contained in the account group.\naccount_group_uuid\nrequired\naccountGroupUuid\nparentContainerUuid\nname\nlastModified\ncount\nArray of strings <uuid> [ items <uuid > ]\nAn array of account UUIDs that belong to the account group.\n— 403\nReturned if you do not have permissions to retrieve the details for the specified account group. For\nmore information, see Permissions.\n— 404 Returned if the Tenable MSSP Platform could not find the specified account group.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred in the Tenable MSSP Portal.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 25,
+      "end": 26
+    },
+    "content_stats": {
+      "char_count": 1092,
+      "word_count": 174
+    },
+    "hierarchy": {
+      "parent": "Get account group details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

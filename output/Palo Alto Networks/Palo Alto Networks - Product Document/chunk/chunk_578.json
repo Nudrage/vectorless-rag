@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_578",
+  "section_number": "1.16.15.5.1",
+  "header": "Investigate Decryption Failure Reasons",
+  "content": "The most common reasons for decryption failures are TLS protocol errors, cipher version errors\n(client and server version mismatches and also client and Decryption profile version mismatches),\nand certificate errors. To investigate decryption errors, start with the Application Command\nCenter (ACC) to identify failures and then go to the Decryption logs to drill down into details.\nSTEP 1 |\nBegin your investigation at ACC > SSL Activity and look at the Decryption Failure Reasons\nwidget.\nIn this example, we investigate certificate errors. You can use the same process to investigate\nversion and protocol errors.\nSTEP 2 |\nClick the green bar next to Certificate to see which hosts (SNIs) experienced certificate\nerrors and see a list of hosts that experienced the largest number of certificate errors.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1070\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 3 |\nGo to Monitor > Logs > Decryption to drill down into the logs.\nUse the query (err_index eq Certificate) to filter the Decryption logs to view all\nDecryption sessions that experienced certificate errors.\nThe Error column shows the reason for the certificate error. To filter for all Decryption\nsessions that had the same error, click the error message to add it to the query and then\nexecute the query. For example, to find all errors based on receiving a fatal alert from the\nclient, clicking the error produces the query (err_index eq Certificate) and (error\neq ‘Received fatal alert CertificateUnknown from client’):\nTo filter for the certificate errors that a specific host received, add that SNI to the\nquery instead of adding error message text. For example, to find all certificate errors for\nexpired.badssl.comm use the query (err_index eq Certificate) and (sni eq\n‘expired.badssl.com’):\nThe Error column shows the specific reason for each certificate error associated with\nexpired.badssl.com.\nOnce you know the reason for the certificate issue that caused the decryption failure, you can\naddress it. For example, if the certificate chain is incomplete, you can repair the incomplete\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1071\n©2025 Palo Alto Networks, Inc.\nDecryption\ncertificate chain. If a certificate is expired, you can notify the site administrator or create a\npolicy-based exception if you need to access the site.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1070,
+      "end": 1072
+    },
+    "content_stats": {
+      "char_count": 2332,
+      "word_count": 367
+    },
+    "hierarchy": {
+      "parent": "Decryption Troubleshooting Workflow Examples",
+      "children": []
+    }
+  }
+}

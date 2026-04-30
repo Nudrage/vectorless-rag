@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_461",
+  "section_number": "1.13.6.4",
+  "header": "Resolve Application Dependencies",
+  "content": "You can see application dependencies when you create a new Security policy rule and when\nperforming Commits. When a policy does not include all application dependencies, you can\ndirectly access the associated Security policy rule to add the required applications.\nSTEP 1 |\nCreate a security policy rule.\nSTEP 2 |\nSpecify the application that the rule will allow or block.\n1.\nIn the Applications tab, Add the Application you want to safely enable. You can select\nmultiple applications or you can use application groups or application filters.\n2.\nView dependencies for selected applications and Add To Current Rule or Add To\nExisting Rule.\n3.\nIf adding to an existing rule, Select Rule and click OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n821\n©2025 Palo Alto Networks, Inc.\nApp-ID\nSTEP 3 |\nClick OK and Commit your changes.\n1.\nReview any Commit warnings in the App Dependency tab.\n2.\nSelect the Count to view the application dependencies not included.\n3.\nSelect the Rule name to open the policy and add the dependencies.\nResolve any dependent applications or they’ll continue to generate warnings on\nCommits.\n4.\nClick OK and Commit your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n822\n©2025 Palo Alto Networks, Inc.\nApp-ID",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 821,
+      "end": 823
+    },
+    "content_stats": {
+      "char_count": 1228,
+      "word_count": 202
+    },
+    "hierarchy": {
+      "parent": "Use Application Objects in Policy",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_153",
+  "section_number": "54.1.2",
+  "header": "Response samples",
+  "content": "200\n400\n404\n429\n500\nvuln_id\nrequired\nGET\n/was/v2/vulnerabilities/{vuln_id}\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"vuln_id\": \"1790eedf-2118-45ea-abff-bcaf3d9d1e0a\",\n\"scan_id\": \"ffab19d4-7d09-412b-bfc9-3addb0d569e5\",\n\"plugin_id\": 98123,\n\"created_at\": \"2021-02-23T20:40:06Z\",\n\"uri\": \"http://example.com/foo\",\n\"is_page\": false,\n\"details\":\n-\n{\n\"input_name\": \"cmd\",\n\"input_type\": \"form\",\n\"output\": \"URL\\n-----\\nhttp://example.com/foo\\n\\n\\nDetection Information\\n-\n\"proof\": \":x:0:0:root:/root:/bin/bash\",\n\"payload\": \" ; /bin/cat /etc/passwd ; \",\n\"selector\": \"//form[@action = \\\"/foo\\\"]\",\n\"selector_url\": \"http://example.com/foo\",\n\"signature\": \"(?-mix::.+:\\\\d+:\\\\d+:.+:[0-9a-zA-Z\\\\/]+)\",\n\"request\":\n-\n{\n\"headers\": \"POST /foo HTTP/1.1\\r\\nHost: example.com\\r\\nAccept-Encoding\n\"body\": \"cmd -->  ; /bin/cat /etc/passwd ; \"\n},\n\"response\":\n-\n{\n\"headers\": \"HTTP/1.1 200 OK\\r\\nX-Powered-By: Express\\r\\nContent-Type: t\n\"body\": \"\\nroot:x:0:0:root:/root:/bin/bash\",\n\"time\": 0.330748\n}\n},\n\"attachments\":\n-\n[\n,\n- {\n\"attachment_id\": \"09974297-afc0-4544-b1ff-00a4157fd8f7\",\n\"created_at\": \"2021-02-23T20:40:35.784674Z\",\n\"attachment_name\": \"HTTP Request\",\n\"md5\": \"md5:635b587d0ec8dfb01d31a6683f3c5325\",\n\"file_type\": \"text/plain\",\n\"size\": 575\n}\n- {\n\"attachment_id\": \"eae5163e-61b5-4697-b96a-489185c3a0a5\",\n\"created_at\": \"2021-02-23T20:40:35.947036Z\",\n\"attachment_name\": \"HTTP Response\",\n\"md5\": \"md5:6c0981f85ed170488f7f69237e74898c\",\n\"file_type\": \"text/plain\",\n\"size\": 838\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 189,
+      "end": 191
+    },
+    "content_stats": {
+      "char_count": 1475,
+      "word_count": 127
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

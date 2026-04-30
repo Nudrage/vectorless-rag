@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_190",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the global agent configuration was retrieved successfully.\nRESPONSE SCHEMA:\napplication/json\nobject\nobject\nboolean\nauto_unlink\nconcurrent_update\nsoftware_update\nContent type\nIndicates whether software updates are enabled for agents,\nsubject to any configured agent exclusions.\nboolean\nIndicates whether hybrid scanning is enabled for agents.\n401 Returned if the API keys specified in your request are invalid.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\n— 403 Returned if you do not have permission to view the global agent configuration.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n500 Returned if an internal error occurred.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code of the error.\nstring\nThe standard HTTP error name.\nstring\nA brief message about the cause of the error.\nhybrid_scanning_enabled\nstatusCode\nerror\nmessage\nstatusCode\nerror\nmessage\nGET\n/scanners/null/agents/config",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 195,
+      "end": 196
+    },
+    "content_stats": {
+      "char_count": 1122,
+      "word_count": 164
+    },
+    "hierarchy": {
+      "parent": "Get agent configuration",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

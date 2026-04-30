@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_245",
+  "section_number": "1.10.4.3.6",
+  "header": "Use Case: Configure Separate Source NAT IP Address Pools for Active/Active HA Firewalls",
+  "content": "Firewalls\nIf you want to use IP address pools for source NAT in Active/Active HA Mode, each firewall must\nhave its own pool, which you then bind to a Device ID in a NAT rule.\nAddress objects and NAT rules are synchronized (in both active/passive and active/active mode),\nso they need to be configured on only one of the firewalls in the HA pair.\nThis example configures an address object named Dyn-IP-Pool-dev0 containing the IP address\npool 10.1.1.140-10.1.1.150. It also configures an address object named Dyn-IP-Pool-dev1\ncontaining the IP address pool 10.1.1.160-10.1.1.170. The first address object is bound to Device\nID 0; the second address object is bound to Device ID 1.\nSTEP 1 |\nOn one HA firewall, create address objects.\n1.\nSelect Objects > Addresses and Add an address object Name, in this example, Dyn-IP-\nPool-dev0.\n2.\nFor Type, select IP Range and enter the range 10.1.1.140-10.1.1.150.\n3.\nClick OK.\n4.\nRepeat this step to configure another address object named Dyn-IP-Pool-dev1 with the\nIP Range of 10.1.1.160-10.1.1.170.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n431\n©2025 Palo Alto Networks, Inc.\nHigh Availability\nSTEP 2 |\nCreate the source NAT rule for Device ID 0.\n1.\nSelect Policies > NAT and Add a NAT policy rule with a Name, for example, Src-NAT-\ndev0.\n2.\nFor Original Packet, for Source Zone, select Any.\n3.\nFor Destination Zone, select the destination zone for which you want to translate the\nsource address, such as Untrust.\n4.\nFor Translated Packet, for Translation Type, select Dynamic IP and Port.\n5.\nFor Translated Address, Add the address object you created for the pool of addresses\nbelonging to Device ID 0: Dyn-IP-Pool-dev0.\n6.\nFor Active/Active HA Binding, select 0 to bind the NAT rule to Device ID 0.\n7.\nClick OK.\nSTEP 3 |\nCreate the source NAT rule for Device ID 1.\n1.\nSelect Policies > NAT and Add a NAT policy rule with a Name, for example, Src-NAT-\ndev1.\n2.\nFor Original Packet, for Source Zone, select Any.\n3.\nFor Destination Zone, select the destination zone for which you want to translate the\nsource address, such as Untrust.\n4.\nFor Translated Packet, for Translation Type, select Dynamic IP and Port.\n5.\nFor Translated Address, Add the address object you created for the pool of addresses\nbelonging to Device ID 1: Dyn-IP-Pool-dev1.\n6.\nFor Active/Active HA Binding, select 1 to bind the NAT rule to Device ID 1.\n7.\nClick OK.\nSTEP 4 |\nCommit the configuration.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 431,
+      "end": 432
+    },
+    "content_stats": {
+      "char_count": 2407,
+      "word_count": 410
+    },
+    "hierarchy": {
+      "parent": "Determine Your Active/Active Use Case",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "chunk_id": "chunk_094",
+  "section_number": "1.6.5.1",
+  "header": "Web Interface Access Privileges",
+  "content": "If you want to prevent a role-based administrator from accessing specific tabs on the web\ninterface, you can disable the tab and the administrator will not even see it when logging in using\nthe associated role-based administrative account. For example, you could create an Admin Role\nProfile for your operations staff that provides access to the Device and Network tabs only and a\nseparate profile for your security administrators that provides access to the Object, Policy, and\nMonitor tabs.\nAn admin role can apply at the Device level or Virtual System level as defined by the Device\nor Virtual System radio button. If you select Virtual System, the admin assigned this profile is\nrestricted to the virtual system(s) he or she is assigned to. Furthermore, only the Device > Setup >\nServices > Virtual Systems tab is available to that admin, not the Global tab.\nThe following topics describe how to set admin role privileges to the different parts of the web\ninterface:\n• Define Access to the Web Interface Tabs\n• Provide Granular Access to the Monitor Tab\n• Provide Granular Access to the Policy Tab\n• Provide Granular Access to the Objects Tab\n• Provide Granular Access to the Network Tab\n• Provide Granular Access to the Device Tab\n• Define User Privacy Settings in the Admin Role Profile\n• Restrict Administrator Access to Commit and Validate Functions\n• Provide Granular Access to Global Settings\n• Provide Granular Access to the Panorama Tab\n• Provide Granular Access to Operations Settings\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n138\n©2025 Palo Alto Networks, Inc.\nFirewall Administration",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 138,
+      "end": 139
+    },
+    "content_stats": {
+      "char_count": 1597,
+      "word_count": 265
+    },
+    "hierarchy": {
+      "parent": "Reference: Web Interface Administrator Access",
+      "children": [
+        "Define Access to the Web Interface Tabs",
+        "Provide Granular Access to the Monitor Tab",
+        "Provide Granular Access to the Policy Tab",
+        "Provide Granular Access to the Objects Tab",
+        "Provide Granular Access to the Network Tab",
+        "Provide Granular Access to the Device Tab",
+        "Define User Privacy Settings in the Admin Role Profile",
+        "Restrict Administrator Access to Commit and Validate Functions",
+        "Provide Granular Access to Global Settings",
+        "Provide Granular Access to the Panorama Tab",
+        "Provide Granular Access to Operations Settings"
+      ]
+    }
+  }
+}

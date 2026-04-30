@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_034",
+  "section_number": "3.1",
+  "header": "Create permission",
+  "content": "Creates a permission.\nContent type\nNote: The AllAssets  object type is only compatible with CanView , CanScan , or empty\npermissions. The Tag  object type is only compatible with CanUse  and CanEdit  permissions.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the permission.\nNote: The name must be unique, 255 characters or less, and alphanumeric.\nThe following special characters are allowed: underscore, dash,\nparenthesis, brackets, and colon.\nArray of strings\nItems Enum: \"CanScan\"\n\"CanView\"\n\"CanEdit\"\n\"CanUse\"\nA list of actions to apply to the tags or the assets grouped by tags. Possible\nactions are CanScan , CanView , CanEdit , and CanUse .\nCanScan—Users assigned this permission can scan assets or targets\nspecified in the tag.\nCanView—Users assigned this permission can view the assets and\nrelated vulnerabilities specified in the tag in aggregated scan results\n(workbenches/dashboards).\nCanEdit—Users assigned this permission can edit the tag value. If you\nassign this permission to the All Users (Default) user group, all users\ncan edit the tag value.\nCanUse—Users assigned this permission can use the tag to scan the\nassets or targets specified in the tag and use the tag for filtering in\naggregated scan results (workbenches/dashboards).\nArray of objects\nA list of objects (tags or assets) that will have the specified permission\napplied to them.\nArray of objects\nA list of users or user groups that you want the permission applied to.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 18,
+      "end": 19
+    },
+    "content_stats": {
+      "char_count": 1535,
+      "word_count": 239
+    },
+    "hierarchy": {
+      "parent": "Access Control (Permissions)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_094",
+  "section_number": "4.11",
+  "header": "Update user authorizations",
+  "content": "Updates user authorizations for accessing a Tenable Vulnerability Management instance. Use the\nendpoint to grant and revoke authorizations.\nNote: You cannot update authorizations for the current user.\nFor background information about managing user authorizations, see Manage User Access\nAuthorizations in the Tenable Vulnerability Management User Guide.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe UUID of the user. To determine the UUID, use the GET /users endpoint.\nREQUEST BODY SCHEMA:\napplication/json\nboolean\nIndicates whether API access is authorized for the specified user.\nboolean\nIndicates whether user name and password login is authorized for\nthe specified user.\nboolean\nIndicates whether SSO with SAML is authorized for the specified\nuser.\nboolean\nIndicates whether or not two-factor authentication is required for\nthe specified user.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 67,
+      "end": 67
+    },
+    "content_stats": {
+      "char_count": 912,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Access Control (Users)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

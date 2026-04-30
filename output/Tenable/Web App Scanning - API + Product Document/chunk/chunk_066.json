@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_066",
+  "section_number": "54.1.2",
+  "header": "Response samples",
+  "content": "200\n429\nGET\n/was/v2/vulnerabilities/filters\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\n{\n\"filters\":\n-\n[\n,\n- {\n\"name\": \"asset_id\",\n\"readable_name\": \"asset_id\",\n\"operators\":\n-\n[\n\"eq\"\n],\n\"control\": null\n}\n,\n- {\n\"name\": \"uri\",\n\"readable_name\": \"uri\",\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n\"readable_regex\": null\n}\n}\n,\n- {\n\"name\": \"input_type\",\n\"readable_name\": \"input_type\",\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n\"readable_regex\": null\n}\n}\n- {\n\"name\": \"input_name\",\n\"readable_name\": \"input_name\",\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n,\n\"readable_regex\": null\n}\n}\n,\n- {\n\"name\": \"plugin_id\",\n\"readable_name\": \"plugin_id\",\n\"operators\":\n-\n[\n\"eq\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": \"^[1-9]\\\\d*$\",\n\"readable_regex\": \"NUMBER\"\n}\n}\n,\n- {\n\"name\": \"output\",\n\"readable_name\": \"output\",\n\"operators\":\n-\n[\n\"eq\",\n\"match\"\n],\n\"control\":\n-\n{\n\"type\": \"entry\",\n\"regex\": null,\n\"readable_regex\": null\n}\n}\n- {\n\"name\": \"vulns.created_at\",\n\"readable_name\": \"vulns.created_at\",\n\"operators\":\n-\n[\n\"lt\",\n\"lte\",\n\"gt\",\n\"gte\"\n],\n\"control\":\n-\n{\n\"type\": \"datefield\",\n\"regex\": \"^[0-9]{4}/[0-9]{2}/[0-9]{2}$\",\n\"readable_regex\": \"YYYY/MM/DD\"\n}\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 96,
+      "end": 100
+    },
+    "content_stats": {
+      "char_count": 1262,
+      "word_count": 177
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

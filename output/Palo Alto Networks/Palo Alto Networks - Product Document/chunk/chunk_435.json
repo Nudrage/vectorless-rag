@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_435",
+  "section_number": "1.12.9.1.2",
+  "header": "Plan a Large-Scale User-ID Deployment",
+  "content": "When deciding whether to use Windows Log Forwarding and Global Catalog servers for your\nUser-ID implementation, consult your system administrator to determine:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n786\n©2025 Palo Alto Networks, Inc.\nUser-ID\nBandwidth required for domain controllers to forward login events to member servers.\nThe bandwidth is a multiple of the login rate (number of logins per minute) of the domain\ncontrollers and the byte size of each login event.\nDomain controllers won’t forward their entire security logs, they forward only the events that\nthe user mapping process requires per login: four events for Windows Server 2012 and MS\nExchange.\nWhether the following network elements support the required bandwidth:\n• Domain controllers—Must support the processing load associated with forwarding the\nevents.\n• Member Servers—Must support the processing load associated with receiving the events.\n• Connections—The geographic distribution (local or remote) of the domain controllers,\nmember servers, and Global Catalog servers is a factor. Generally, a remote distribution\nsupports less bandwidth.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 786,
+      "end": 787
+    },
+    "content_stats": {
+      "char_count": 1115,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Deploy User-ID for Numerous Mapping Information Sources",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_134",
+  "section_number": "1.8.1.4",
+  "header": "Kerberos",
+  "content": "Kerberos is an authentication protocol that enables a secure exchange of information between\nparties over an insecure network using unique keys (called tickets) to identify the parties. The\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n241\n©2025 Palo Alto Networks, Inc.\nAuthentication\nfirewall and Panorama support two types of Kerberos authentication for administrators and end\nusers:\n• Kerberos server authentication—A Kerberos server profile enables users to natively\nauthenticate to an Active Directory domain controller or a Kerberos V5-compliant\nauthentication server. This authentication method is interactive, requiring users to enter\nusernames and passwords. For the configuration steps, see Configure Kerberos Server\nAuthentication.\n• Kerberos single sign-on (SSO)—A network that supports Kerberos V5 SSO prompts a user to\nlog in only for initial access to the network (such as logging in to Microsoft Windows). After\nthis initial login, the user can access any browser-based service in the network (such as the\nfirewall web interface) without having to log in again until the SSO session expires. (Your\nKerberos administrator sets the duration of SSO sessions.) If you enable both Kerberos SSO\nand another external authentication service (such as a TACACS+ server), the firewall first tries\nSSO and, only if that fails, falls back to the external service for authentication. To support\nKerberos SSO, your network requires:\n• A Kerberos infrastructure, including a key distribution center (KDC) with an authentication\nserver (AS) and ticket-granting service (TGS).\n• A Kerberos account for the firewall or Panorama that will authenticate users. An account\nis required to create a Kerberos keytab, which is a file that contains the principal name and\nhashed password of the firewall or Panorama. The SSO process requires the keytab.\nFor the configuration steps, see Configure Kerberos Single Sign-On.\nKerberos SSO is available only for services and applications that are internal to your\nKerberos environment. To enable SSO for external services and applications, use\nSAML.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 241,
+      "end": 242
+    },
+    "content_stats": {
+      "char_count": 2078,
+      "word_count": 310
+    },
+    "hierarchy": {
+      "parent": "Authentication Types",
+      "children": []
+    }
+  }
+}

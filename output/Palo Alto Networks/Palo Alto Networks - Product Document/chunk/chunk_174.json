@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_174",
+  "section_number": "1.9.3.2",
+  "header": "Online Certificate Status Protocol (OCSP)",
+  "content": "When establishing an SSL/TLS session, clients can use Online Certificate Status Protocol (OCSP)\nto check the revocation status of the authentication certificate. The authenticating client sends\na request containing the serial number of the certificate to the OCSP responder (server). The\nresponder searches the database of the certificate authority (CA) that issued the certificate and\nreturns a response containing the status (good, revoked or unknown) to the client. The advantage\nof the OCSP method is that it can verify status in real-time, instead of depending on the issue\nfrequency (hourly, daily, or weekly) of CRLs.\nThe Palo Alto Networks firewall downloads and caches OCSP status information for every CA\nlisted in the trusted CA list of the firewall. Caching only applies to validated certificates; if a\nfirewall never validated a certificate, the firewall cache does not store the OCSP information for\nthe issuing CA. If your enterprise has its own public key infrastructure (PKI), you can configure the\nfirewall as an OCSP responder (see Configure an OCSP Responder).\nTo use OCSP for verifying the revocation status of certificates when the firewall functions as\nan SSL forward proxy, perform the steps under Configure Revocation Status Verification of\nCertificates Used for SSL/TLS Decryption.\nThe following applications use certificates to authenticate users and/or devices: Authentication\nPortal, GlobalProtect (remote user-to-site or large scale), site-to-site IPSec VPN, and web\ninterface access to Palo Alto Networks firewalls or Panorama. To use OCSP for verifying the\nrevocation status of the certificates:\nConfigure an OCSP responder (if you are configuring the firewall as an OCSP responder).\nEnable the HTTP OCSP service on the firewall (if you are configuring the firewall as an OCSP\nresponder).\nCreate or obtain a certificate for each application.\nConfigure a certificate profile for each application.\nAssign the certificate profile to the relevant application.\nTo cover situations where the OCSP responder is unavailable, configure CRL as a fall-back\nmethod. For details, see Configure Revocation Status Verification of Certificates.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n320\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 320,
+      "end": 321
+    },
+    "content_stats": {
+      "char_count": 2259,
+      "word_count": 336
+    },
+    "hierarchy": {
+      "parent": "Certificate Revocation",
+      "children": []
+    }
+  }
+}

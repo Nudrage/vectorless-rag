@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1019",
+  "section_number": "1.23.7.1",
+  "header": "Customize Service Routes to Services for Virtual Systems",
+  "content": "When you enable Multi Virtual System Capability, any virtual system that does not have specific\nservice routes configured inherits the global service and service route settings for the firewall.\nYou can instead configure a virtual system to use a different service route, as described in the\nfollowing workflow.\nA firewall with multiple virtual systems must have interfaces and subinterfaces with non-\noverlapping IP addresses. A per-virtual system service route for SNMP traps or for Kerberos is for\nIPv4 only.\nThe service route for a service strictly follows how you configured the server profile for the\nservice:\n• If you define a server profile (Device > Server Profiles) for the Shared location, the firewall\nuses the global service route for that service.\n• If you define a server profile for a specific virtual system, the firewall uses the virtual system-\nspecific service route for that service.\n• If you define a server profile for a specific virtual system but the virtual system-specific service\nroute for that service is not configured, the firewall uses the global service route for that\nservice.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1718\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nThe firewall supports syslog forwarding on a virtual system basis. When multiple virtual\nsystems on a firewall are connecting to a syslog server using SSL transport, the firewall\ncan generate only one certificate for secure communication. The firewall does not support\neach virtual system having its own certificate.\nSTEP 1 |\nCustomize service routes for a virtual system.\n1.\nSelect Device > Setup > Services > Virtual Systems, and select the virtual system you\nwant to configure.\n2.\nClick the Service Route Configuration link.\n3.\nSelect one:\n• Inherit Global Service Route Configuration—Causes the virtual system to inherit the\nglobal service route settings relevant to a virtual system. If you choose this option,\nskip the step to customize.\n• Customize—Allows you to specify a source address for each service.\n4.\nIf you chose Customize, select the IPv4 or IPv6 tab, depending on what type of\naddressing the server offering the service uses. You can specify both IPv4 and IPv6\naddresses for a service. Click on a service. (Only services that are relevant to a virtual\nsystem are available.)\nTo easily use the same source address for multiple services, select the checkbox\nfor the services, click Set Selected Routes, and continue.\n• To limit the list for Source Address, select a Source Interface, then select a Source\nAddress (from that interface) as the service route. Selecting Any Source Interface\nmakes all IP addresses on all interfaces for the virtual system available in the Source\nAddress list from which you select an address. You can select Inherit Global Setting.\n• Source Address will indicate Inherited if you selected Inherit Global Setting for the\nSource Interface or it will indicate the source address you selected. If you selected\nAny for Source Interface, select an IP address or enter an IP address (using the IPv4\nor IPv6 format that matches the tab you chose) to specify the source address that will\nbe used in packets sent to the external service.\n• If you modify an address object and the IP family type (IPv4/IPv6) changes, a Commit\nis required to update the service route family to use.\n5.\nClick OK.\n6.\nRepeat the prior steps to configure source addresses for other external services.\n7.\nClick OK.\nSTEP 2 |\nCommit your changes.\nClick Commit and OK.\nIf you are configuring per-virtual system service routes for logging services for a PA-7000\nSeries firewall, continue to the task Configure a PA-7000 Series Firewall for Logging Per\nVirtual System.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1719\n©2025 Palo Alto Networks, Inc.\nVirtual Systems",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1718,
+      "end": 1720
+    },
+    "content_stats": {
+      "char_count": 3772,
+      "word_count": 616
+    },
+    "hierarchy": {
+      "parent": "Customize Service Routes for a Virtual System",
+      "children": []
+    }
+  }
+}

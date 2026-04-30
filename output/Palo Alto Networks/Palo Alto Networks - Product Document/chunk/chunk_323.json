@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_323",
+  "section_number": "1.11.9.7",
+  "header": "Generate Botnet Reports",
+  "content": "The botnet report enables you to use heuristic and behavior-based mechanisms to identify\npotential malware- or botnet-infected hosts in your network. To evaluate botnet activity and\ninfected hosts, the firewall correlates user and network activity data in Threat, URL, and Data\nFiltering logs with the list of malware URLs in PAN-DB, known dynamic DNS domain providers,\nand domains registered within the last 30 days. You can configure the report to identify hosts that\nvisited those sites, as well as hosts that communicated with Internet Relay Chat (IRC) servers or\nthat used unknown applications. Malware often use dynamic DNS to avoid IP blocking, while IRC\nservers often use bots for automated functions.\nThe firewall requires Threat Prevention and URL Filtering licenses to use the botnet report.\nYou can Use the Automated Correlation Engine to monitor suspicious activities based\non additional indicators besides those that the botnet report uses. However, the botnet\nreport is the only tool that uses newly registered domains as an indicator.\n• Configure a Botnet Report\n• Interpret Botnet Report Output",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 540,
+      "end": 540
+    },
+    "content_stats": {
+      "char_count": 1111,
+      "word_count": 173
+    },
+    "hierarchy": {
+      "parent": "View and Manage Reports",
+      "children": [
+        "Configure a Botnet Report",
+        "Interpret Botnet Report Output"
+      ]
+    }
+  }
+}

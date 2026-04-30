@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_822",
+  "section_number": "1.21.12.4",
+  "header": "Multi-Tenant DNS Deployments",
+  "content": "The firewall determines how to handle DNS requests based on where the request originated. An\nenvironment where an ISP has multiple tenants on a firewall is known as multi-tenancy. There are\nthree use cases for multi-tenant DNS deployments:\n• Global Management DNS Resolution—The firewall needs DNS resolution for its own purposes,\nfor example, the request comes from the management plane to resolve an FQDN for a\nmanagement event such as a software update service. The firewall uses the service route to\nget to a DNS server because DNS request isn’t coming in on a specific virtual router.\n• Policy and Report FQDN Resolution for a Virtual System—For DNS queries from a security\npolicy, a report, or a service, you can specify a set of DNS servers specific to the virtual system\n(tenant) or you can default to the global DNS servers. If your use case requires a different set\nof DNS servers per virtual system, you must configure a DNS Proxy Object. The resolution is\nspecific to the virtual system to which the DNS proxy is assigned. If you don’t have specific\nDNS servers applicable to this virtual system, the firewall uses the global DNS settings.\n• Dataplane DNS Resolution for a Virtual System—This method is also known as a Network\nRequest for DNS Resolution. The tenant’s virtual system can be configured so that specified\ndomain names are resolved on the tenant’s DNS server in its network. This method supports\nsplit DNS, meaning that the tenant can also use its own ISP DNS servers for the remaining\nDNS queries not resolved on its own server. DNS Proxy Object rules control the split DNS;\nthe tenant’s domain redirects DNS requests to its DNS servers, which are configured in a DNS\nserver profile. The DNS server profile has primary and secondary DNS servers designated, and\nalso DNS service routes for IPv4 and IPv6, which override the default DNS settings.\nThe following table summarizes the DNS resolution types. The binding location determines which\nDNS proxy object is used for the resolution. For illustration purposes, the use cases show how a\nservice provider might configure DNS settings to provide DNS services for resolving DNS queries\nrequired on the firewall and for tenant (subscriber) virtual systems.\nResolution Type\nLocation: Shared\nLocation: Specific Vsys\nFirewall DNS resolution—\nperformed by management\nplane\nBinding: Global\nIllustrated in Use Case 1\nN/A\nSecurity profile, reporting,\nand server profile resolution\n—performed by management\nplane\nBinding: Global\nSame behavior as Use Case 1\nBinding: Specific vsys\nIllustrated in Use Case 2\nDNS proxy resolution for\nDNS client hosts connected\nto interface on firewall, going\nthrough the firewall to a DNS\nServer—performed by dataplane\nBinding: Interface\nService Route: Interface and IP address on which the DNS\nRequest was received.\nIllustrated in Use Case 3\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1458\n©2025 Palo Alto Networks, Inc.\nNetworking\n• Use Case 1: Firewall Requires DNS Resolution\n• Use Case 2: ISP Tenant Uses DNS Proxy to Handle DNS Resolution for Security Policies,\nReporting, and Services within its Virtual System\n• Use Case 3: Firewall Acts as DNS Proxy Between Client and Server",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1458,
+      "end": 1459
+    },
+    "content_stats": {
+      "char_count": 3177,
+      "word_count": 518
+    },
+    "hierarchy": {
+      "parent": "DNS",
+      "children": []
+    }
+  }
+}

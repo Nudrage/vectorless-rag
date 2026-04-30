@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_648",
+  "section_number": "1.17.24.3",
+  "header": "URLs Classified as Not-Resolved",
+  "content": "URLs are classified as not-resolved if your firewall cannot connect to the PAN-DB URL\nfiltering cloud service to perform lookups, or if PAN-DB takes too long to respond to URL queries.\nThe cloud connection status and URL classification does not apply to expired subscription licenses\nor unlicensed users. For a detailed explanation of the URL categorization process, see How URL\nFiltering Works.\nUse the following workflow to troubleshoot why some or all of the URLs being identified by PAN-\nDB are classified as Not-resolved:\nSTEP 1 |\nCheck the PAN-DB cloud connection by running the show url-cloud status CLI\ncommand.\nThe Cloud connection: field should show connected. If you see anything other than\nconnected, then any URL that does not exist in the management plane cache will be\ncategorized as not-resolved. To resolve this issue, see PAN-DB Cloud Connectivity Issues.\nSTEP 2 |\nIf the cloud connection status shows connected, check the current utilization of the\nfirewall.\nIf firewall utilization is spiking, URL requests may be dropped (may not reach the management\nplane) and will be categorized as not-resolved.\nTo view system resources, run the show system resources CLI command. Then, view the\n%CPU and %MEM columns.\nYou can also view system resources on the System Resources widget on the Dashboard in the\nweb interface.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1200\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 3 |\nConsider increasing the Category lookup timeout (sec) value.\nIncreasing the category lookup timeout value improves the likelihood that the URL category\ngets resolved and reduces the frequency of not-resolved URLs in logs.\n1.\nSelect Device > Setup > Content-ID and edit the URL Filtering settings.\n2.\nClick OK and Commit your changes.\nYou can also update the value using the set deviceconfig setting ctd url-\nwait-timeout CLI command.\nSTEP 4 |\nIf the problem persists, contact Palo Alto Networks support.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1200,
+      "end": 1201
+    },
+    "content_stats": {
+      "char_count": 1935,
+      "word_count": 311
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot URL Filtering",
+      "children": []
+    }
+  }
+}

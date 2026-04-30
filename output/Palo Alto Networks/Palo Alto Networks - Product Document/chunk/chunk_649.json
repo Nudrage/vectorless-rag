@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_649",
+  "section_number": "1.17.24.4",
+  "header": "Incorrect Categorization",
+  "content": "Sometimes you may come across a URL that you believe is categorized incorrectly. Use the\nfollowing workflow to determine the URL categorization for a site and request a category change,\nif appropriate.\nSTEP 1 |\nVerify the category in the dataplane by running the following command:\nshow running url <URL>\nFor example, to view the category for the Palo Alto Networks website, run the following\ncommand:\nshow running url paloaltonetworks.com\nIf the URL stored in the dataplane cache has the correct category (computer-and-internet-\ninfo in this example), then the categorization is correct and no further action is required. If the\ncategory is not correct, continue to the next step.\nSTEP 2 |\nVerify if the category in the management plane by running the command:\ntest url-info-host <URL>\nFor example:\ntest url-info-host paloaltonetworks.com\nIf the URL stored in the management plane cache has the correct category, remove the URL\nfrom the dataplane cache by running the following command:\nclear url-cache url <URL>\nThe next time the firewall requests the category for this URL, the request will be forwarded to\nthe management plane. This will resolve the issue and no further action is required. If this does\nnot solve the issue, go to the next step to check the URL category on the cloud systems.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1201\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 3 |\nVerify the category in the cloud by running the following command:\ntest url-info-cloud <URL>\nSTEP 4 |\nIf the URL stored in the cloud has the correct category, remove the URL from the dataplane\nand the management plane caches.\nRun the following command to delete a URL from the dataplane cache:\nclear url-cache url <URL>\nRun the following command to delete a URL from the management plane cache:\ndelete url-database url <URL>\nThe next time the firewall queries for the category of the given URL, the request will be\nforwarded to the management plane and then to the cloud. This should resolve the category\nlookup issue. If problems persist, see the next step to submit a categorization change request.\nSTEP 5 |\nTo submit a change request from the web interface, go to the URL log and select the log\nentry for the URL you would like to have changed.\nSTEP 6 |\nClick the Request Categorization change link and follow instructions. You can also request\na category change from the Palo Alto Networks Test A Site website by searching for the\nURL and then clicking the Request Change icon. To view a list of all available categories\nwith descriptions of each category, refer to https://urlfiltering.paloaltonetworks.com/\nCategoryList.aspx.\nIf your change request is approved, you will receive an email notification. You then have two\noptions to ensure that the URL category is updated on the firewall:\n• Wait until the URL in the cache expires and the next time the URL is accessed by a user, the\nnew categorization update will be put in the cache.\n• Run the following command to force an update in the cache:\nrequest url-filtering update url <URL>\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1202\n©2025 Palo Alto Networks, Inc.\nURL Filtering",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1201,
+      "end": 1203
+    },
+    "content_stats": {
+      "char_count": 3128,
+      "word_count": 524
+    },
+    "hierarchy": {
+      "parent": "Troubleshoot URL Filtering",
+      "children": []
+    }
+  }
+}

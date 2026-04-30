@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_162",
+  "section_number": "1.8.11",
+  "header": "Configure Local Database Authentication",
+  "content": "You can configure a user database that is local to the firewall to authenticate administrators\nwho access the firewall web interface and to authenticate end users who access applications\nthrough Authentication Portal or GlobalProtect. Perform the following steps to configure Local\nAuthentication with a local database.\nExternal Authentication Services are usually preferable to local authentication because\nthey provide the benefit of central account management.\nYou can also configure local authentication without a database, but only for firewall or\nPanorama administrators.\nSTEP 1 |\nAdd the user account to the local database.\n1.\nSelect Device > Local User Database > Users and click Add.\n2.\nEnter a user Name for the administrator.\n3.\nEnter a Password and Confirm Password or enter a Password Hash.\n4.\nEnable the account (enabled by default) and click OK.\nSTEP 2 |\nAdd the user group to the local database.\nRequired if your users require group membership.\n1.\nSelect Device > Local User Database > User Groups and click Add.\n2.\nEnter a Name to identify the group.\n3.\nAdd each user who is a member of the group and click OK.\nSTEP 3 |\nConfigure an authentication profile.\nThe authentication profile defines authentication settings that are common to a set of users.\nSet the authentication Type to Local Database.\nSTEP 4 |\nAssign the authentication profile to an administrator account or to an Authentication policy\nrule for end users.\n• Administrators—Configure a Firewall Administrator Account:\nSpecify the Name of a user you defined earlier in this procedure.\nAssign the Authentication Profile that you configured for the account.\n• End users—For the full procedure to configure authentication for end users, see Configure\nAuthentication Policy.\nSTEP 5 |\nVerify that the firewall can Test Authentication Server Connectivity to authenticate users.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n300\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 300,
+      "end": 301
+    },
+    "content_stats": {
+      "char_count": 1941,
+      "word_count": 305
+    },
+    "hierarchy": {
+      "parent": "Authentication",
+      "children": []
+    }
+  }
+}

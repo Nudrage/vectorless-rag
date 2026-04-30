@@ -1,0 +1,31 @@
+{
+  "chunk_id": "chunk_1055",
+  "section_number": "1.24.5",
+  "header": "DoS Protection Against Flooding of New Sessions",
+  "content": "DoS protection against flooding of new sessions is beneficial against high-volume single-session\nand multiple-session attacks. In a single-session attack, an attacker uses a single session to target\na device behind the firewall. If a Security rule allows the traffic, the session is established and the\nattacker initiates an attack by sending packets at a very high rate with the same source IP address\nand port number, destination IP address and port number, and protocol, trying to overwhelm the\ntarget. In a multiple-session attack, an attacker uses multiple sessions (or connections per second\n[cps]) from a single host to launch a DoS attack.\nThis feature defends against DoS attacks of new sessions only, that is, traffic that has\nnot been offloaded to hardware. An offloaded attack is not protected by this feature.\nHowever, this topic describes how you can create a Security policy rule to reset the client;\nthe attacker reinitiates the attack with numerous connections per second and is blocked\nby the defenses illustrated in this topic.\nDoS Protection Profiles and Policy Rules work together to provide protection against flooding\nof many incoming SYN, UDP, ICMP, and ICMPv6 packets, and other types of IP packets. You\ndetermine what thresholds constitute flooding. In general, the DoS Protection profile sets the\nthresholds at which the firewall generates a DoS alarm, takes action such as Random Early Drop,\nand drops additional incoming connections. A DoS Protection policy rule configured to protect\n(rather than to allow or deny packets) determines the criteria for packets to match (such as source\naddress) in order to be counted toward the thresholds. This flexibility allows you to block certain\ntraffic, or allow certain traffic and treat other traffic as DoS traffic. When the incoming rate\nexceeds your maximum threshold, the firewall blocks incoming traffic from the source address.\n• Multiple-Session DoS Attack\n• Single-Session DoS Attack\n• Configure DoS Protection Against Flooding of New Sessions\n• End a Single Session DoS Attack\n• Identify Sessions That Use Too Much of the On-Chip Packet Descriptor\n• Discard a Session Without a Commit",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1756,
+      "end": 1756
+    },
+    "content_stats": {
+      "char_count": 2164,
+      "word_count": 343
+    },
+    "hierarchy": {
+      "parent": "Zone Protection and DoS Protection",
+      "children": [
+        "Multiple-Session DoS Attack",
+        "Single-Session DoS Attack",
+        "Configure DoS Protection Against Flooding of New Sessions",
+        "End a Single Session DoS Attack",
+        "Identify Sessions That Use Too Much of the On-Chip Packet Descriptor",
+        "Discard a Session Without a Commit"
+      ]
+    }
+  }
+}

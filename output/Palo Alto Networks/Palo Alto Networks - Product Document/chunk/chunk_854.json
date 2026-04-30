@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_854",
+  "section_number": "1.21.15.7.2",
+  "header": "Destination NAT with Port Translation Example",
+  "content": "In this example, the web server is configured to listen for HTTP traffic on port 8080. The clients\naccess the web server using the IP address 192.0.2.100 and TCP Port 80. The destination NAT\nrule is configured to translate both IP address and port to 10.1.1.100 and TCP port 8080. Address\nobjects are configured for webserver-private (10.1.1.100) and Servers-public (192.0.2.100).\nThe following NAT and security rules must be configured on the firewall:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1501\n©2025 Palo Alto Networks, Inc.\nNetworking\nUse the show session all CLI command to verify the translation.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1501,
+      "end": 1502
+    },
+    "content_stats": {
+      "char_count": 605,
+      "word_count": 95
+    },
+    "hierarchy": {
+      "parent": "NAT Configuration Examples",
+      "children": []
+    }
+  }
+}

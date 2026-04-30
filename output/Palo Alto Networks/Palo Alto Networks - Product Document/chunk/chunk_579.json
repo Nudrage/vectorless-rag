@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_579",
+  "section_number": "1.16.15.5.2",
+  "header": "Troubleshoot Unsupported Cipher Suites",
+  "content": "Identifying and troubleshooting unsupported cipher suites in the Decryption log is an aspect of\nversion error investigation that is worth examining on its own.\nSTEP 1 |\nIn the Decryption log (Monitor > Logs > Decryption), use the query (error contains\n‘Client and decrypt profile mismatch’ to identify all cipher suite version\nmismatches.\nFiltering the logs for these mismatches identifies finds all instances where the client and the\nDecryption profile cipher suite support don’t match.\nTo find all Decryption sessions that experienced the same error, click the error message to add\nit to the query and remove the original query, for example:\nThe hexadecimal codes identify the exact version that the client supports and the exact\nversion that the Decryption profile supports.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1072\n©2025 Palo Alto Networks, Inc.\nDecryption\nSTEP 2 |\nLog in to the CLI and look up the bitmask values.\nThe errors show a client and Decryption profile mismatch. The supported client bitmask is\n0x08 and the supported Decryption profile bitmask is 0x70:\nadmin@vm1>debug dataplane show ssl-decrypt bitmask-version 0x08\nTLSv1.0\nThis output shows that the client supports only TLSv1.0.\nadmin@vm1>debug dataplane show ssl-decrypt bitmask-version 0x70\nTLSv1.1\nTSLv1.2\nTLSv1.3\nThis output shows that the Decryption profile supports TLSv1.1, TLSv1.2, and TLSv1.3, but not\nTLSv1.0. Now you know that the client only supports an old version of the TLS protocol and\nthe Decryption profile attached to the Decryption policy rule that controls the traffic does not\nallow that version.\nSTEP 3 |\nDecide what action to take.\nYou could update the client so that it accepts a more secure TLS version. If the client requires\nTLSv1.0 for some reason, you can continue let the firewall continue to block the traffic, or you\ncan update the Decryption profile to allow all TLSv1.0 traffic (not recommended), or you can\ncreate a Decryption policy and profile that allow TLSv1.0 and apply it only to the client devices\nthat must use TLSv1.0 and cannot support a more secure protocol (most secure option for\nallowing the traffic).\nSTEP 4 |\nIf you choose to edit the Decryption profile, to find the Decryption policy that controls the\nsession traffic, check the Policy Name column in the log (or click the magnifying glass icon\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1073\n©2025 Palo Alto Networks, Inc.\nDecryption\nnext to the Decryption log to see the information in the General section of the Detailed Log\nView).\n1.\nIn this example, the Decryption policy name is Big Brother; to find the Decryption\nprofile, go to Policies > Decryption and check the Decryption Profile column.\nThe name of the Decryption profile is bp tls1.1-tls1.3-1. You can also select the Big\nBrother policy and then select the Options tab to see the name of the Decryption\nprofile.\nGo to Objects > Decryption > Decryption Profile, select the appropriate Decryption\nprofile, and edit it to address the version issue.\n2.\nGo to Objects > Decryption > Decryption Profile.\nSelect the bp tls1.1-tls1.3-1 Decryption profile and click the SSL Protocol Settings tab.\nThe minimum TLS protocol version (Min Version) that the profile supports is TLSv1.1.\nTo allow the traffic that the version mismatch blocks, you could change the Min Version\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1074\n©2025 Palo Alto Networks, Inc.\nDecryption\nto TLSv1.0. However, a more secure option is to update the client to use a recent TLS\nprotocol version. If you can’t update the client, you can create a Decryption policy and\nprofile that apply only to that user, device, or source address (and to any similar users,\ndevices, or source addresses so that one policy and profile control all of this traffic)\ninstead of applying a general Decryption policy that allows TLSv1.0 traffic.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1072,
+      "end": 1075
+    },
+    "content_stats": {
+      "char_count": 3818,
+      "word_count": 618
+    },
+    "hierarchy": {
+      "parent": "Decryption Troubleshooting Workflow Examples",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_596",
+  "section_number": "1.16.16.5",
+  "header": "Transparent Bridge Security Chain Guidelines",
+  "content": "Follow these guidelines when configuring Transparent Bridge security chain devices to support\ndecryption brokering:\n• Each security chain device must be configured with two interfaces in Transparent Bridge mode;\nthese two interfaces connect the device to the security chain network. The security chain\ndevices does not use a local routing table, and the Transparent Bridge interfaces do not have\nassigned IP addresses, subnet masks, default gateways.\n• Do not include devices that modify IP or TCP headers in a security chain, or be sure to disable\nany features that perform these functions. If the security chain returns a session to the firewall\nwith a modified IP or TCP header, the firewall drops the sessions as it can no longer match it to\nthe original client-to-server or server-to-client session.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1103\n©2025 Palo Alto Networks, Inc.\nDecryption\n• When configuring multiple security chains, it is a best practice to deploy enough security\nchains to provide excess capacity in the event of a security chain failure. If you enable the\nfirewall to perform Security Chain Health Checks, and a security chain fails, the firewall\ncontinues to distribute decrypted sessions among the healthy security chains. If there are not\nenough healthy chains to cover the additional load, that single security chain failure could\nresult in cascading failures as the remaining healthy security chains are oversubscribed.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1103,
+      "end": 1104
+    },
+    "content_stats": {
+      "char_count": 1448,
+      "word_count": 226
+    },
+    "hierarchy": {
+      "parent": "Decryption Broker",
+      "children": []
+    }
+  }
+}

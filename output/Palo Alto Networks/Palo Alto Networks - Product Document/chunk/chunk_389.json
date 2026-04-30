@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_389",
+  "section_number": "1.11.19",
+  "header": "Monitor Transceivers",
+  "content": "You can monitor the status of transceivers in your physical appliance to enable easier installation\nand troubleshooting. Diagnostics that can be viewed are transmitted bias current, transmitted\npower, received power, transceiver temperature, and power supply voltage. The following devices\nsupport transceiver monitoring.\n• PA-800 Series\n• PA-3200 Series\n• PA-5200 Series\n• PA-7000 Series\nUse the Command Line Interface to run transceiver monitoring. See the following table for all\navailable CLI commands.\nIf you run commands on an incompatible transceiver, the CLI will return n/a for any\ndiagnostic information it cannot read.\nCLI\nDefinition\nshow transceiver <interface nam\ne>\nView a summary of the specified transceiver\nwith values for each diagnostic.\nExample:\nadmin@PA-7080> show transceiver\nethernet11/25\nThe CLI returns values for Temperature,\nVoltage, Current, Tx Power, and Rx Power.\nshow transceiver-detail <interfa\nce name>\nReceive more detailed transceiver\nspecifications, including vendor information\nand link lengths. The CLI also provides more\ndetailed diagnostic information.\nshow transceiver all\nView a list of all active transceivers as well as\na summary of each of their diagnostics.\nshow transceiver-detail all\nGet comprehensive details on each\ntransceiver in the device.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n686\n©2025 Palo Alto Networks, Inc.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 686,
+      "end": 686
+    },
+    "content_stats": {
+      "char_count": 1368,
+      "word_count": 196
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

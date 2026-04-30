@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_806",
+  "section_number": "1.21.11.5.1",
+  "header": "Predefined DHCP Options",
+  "content": "Palo Alto Networks firewalls support user-defined and predefined DHCP options in the DHCP\nserver implementation. Such options are configured on the DHCP server and sent to the clients\nthat sent a DHCPREQUEST to the server. The clients are said to inherit and implement the options\nthat they are programmed to accept.\nThe firewall supports the following predefined options on its DHCP servers, shown in the order in\nwhich they appear on the DHCP Server configuration screen:\nDHCP Option\nDHCP Option Name\n51\nLease duration\n3\nGateway\n1\nIP Pool Subnet (mask)\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1441\n©2025 Palo Alto Networks, Inc.\nNetworking\nDHCP Option\nDHCP Option Name\n6\nDomain Name System (DNS) server address (primary and secondary)\n44\nWindows Internet Name Service (WINS) server address (primary and\nsecondary)\n41\nNetwork Information Service (NIS) server address (primary and\nsecondary)\n42\nNetwork Time Protocol (NTP) server address (primary and secondary)\n70\nPost Office Protocol Version 3 (POP3) server address\n69\nSimple Mail Transfer Protocol (SMTP) server address\n15\nDNS suffix\nAs mentioned, you can also configure vendor-specific and customized options, which support\na wide variety of office equipment, such as IP phones and wireless infrastructure devices. Each\noption code supports multiple values, which can be IP address, ASCII, or hexadecimal format.\nWith the firewall enhanced DCHP option support, branch offices do not need to purchase and\nmanage their own DHCP servers in order to provide vendor-specific and customized options to\nDHCP clients.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1441,
+      "end": 1442
+    },
+    "content_stats": {
+      "char_count": 1564,
+      "word_count": 241
+    },
+    "hierarchy": {
+      "parent": "DHCP Options",
+      "children": []
+    }
+  }
+}

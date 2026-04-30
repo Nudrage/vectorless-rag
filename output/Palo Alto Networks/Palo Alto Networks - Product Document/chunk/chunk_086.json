@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_086",
+  "section_number": "1.6.4.3",
+  "header": "Administrative Authentication",
+  "content": "You can configure the following types of authentication and authorization (role and access domain\nassignment) for firewall administrators:\nAuthentication\nMethod\nAuthorization\nMethod\nDescription\nLocal\nLocal\nThe administrative account credentials and authentication\nmechanisms are local to the firewall. You can define the accounts\nwith or without a user database that is local to the firewall—\nsee Local Authentication for the advantages and disadvantages\nof using a local database. You use the firewall to manage role\nassignments but access domains are not supported. For details,\nsee Configure Local or External Authentication for Firewall\nAdministrators.\nSSH Keys\nLocal\nThe administrative accounts are local to the firewall, but\nauthentication to the CLI is based on SSH keys. You use the\nfirewall to manage role assignments but access domains are\nnot supported. For details, see Configure SSH Key-Based\nAdministrator Authentication to the CLI.\nCertificates\nLocal\nThe administrative accounts are local to the firewall, but\nauthentication to the web interface is based on client certificates.\nYou use the firewall to manage role assignments but access\ndomains are not supported. For details, see Configure Certificate-\nBased Administrator Authentication to the Web Interface.\nExternal\nservice\nLocal\nThe administrative accounts you define locally on the firewall\nserve as references to the accounts defined on an external Multi-\nFactor Authentication, SAML, Kerberos, TACACS+, RADIUS, or\nLDAP server. The external server performs authentication. You\nuse the firewall to manage role assignments but access domains\nare not supported. For details, see Configure Local or External\nAuthentication for Firewall Administrators.\nExternal\nservice\nExternal\nservice\nThe administrative accounts are defined on an external SAML,\nTACACS+, or RADIUS server. The server performs both\nauthentication and authorization. For authorization, you define\nVendor-Specific Attributes (VSAs) on the TACACS+ or RADIUS\nserver, or SAML attributes on the SAML server. PAN-OS maps\nthe attributes to administrator roles, access domains, user groups,\nand virtual systems that you define on the firewall. For details,\nsee:\n• Configure SAML Authentication\n• Configure TACACS+ Authentication\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n129\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nAuthentication\nMethod\nAuthorization\nMethod\nDescription\n• Configure RADIUS Authentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 129,
+      "end": 130
+    },
+    "content_stats": {
+      "char_count": 2444,
+      "word_count": 344
+    },
+    "hierarchy": {
+      "parent": "Manage Firewall Administrators",
+      "children": []
+    }
+  }
+}

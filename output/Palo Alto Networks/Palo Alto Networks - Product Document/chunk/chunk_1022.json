@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1022",
+  "section_number": "1.23.7.2.2",
+  "header": "Configure a PA-7000 Series LFC for Logging per Virtual System",
+  "content": "If you have enabled multiple virtual system (multi-vsys) capability on a PA-7000 Series firewall\nwith a Log Forwarding Card (LFC) installed, you can configure logging for different virtual systems.\nThe LFC can then forward logs to a Panorama Log Collector or syslog server.\nYou can choose to configure only the physical interface. Because syslog forwarding via\nsubinterfaces is not yet supported on LFCs, each virtual system uses the single untagged\nphysical interface.\nIf you configure an LFC subinterface to forward logs externally, the interfaces will no\nlonger work as expected.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1721\n©2025 Palo Alto Networks, Inc.\nVirtual Systems\nFor a PA-7000 Series firewall managed by a Panorama management server, you cannot\noverride or revert the LFC configuration locally on the firewall if the LFC configuration is\npushed from Panorama. To override the LFC configuration pushed from Panorama, you\nmust log in to the firewall CLI and delete the Panorama pushed configuration.\nadmin> configure\nadmin# delete deviceconfig log-fwd-card\nadmin# commit",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1721,
+      "end": 1722
+    },
+    "content_stats": {
+      "char_count": 1081,
+      "word_count": 164
+    },
+    "hierarchy": {
+      "parent": "Configure a PA-7000 Series Firewall for Logging Per Virtual System",
+      "children": []
+    }
+  }
+}

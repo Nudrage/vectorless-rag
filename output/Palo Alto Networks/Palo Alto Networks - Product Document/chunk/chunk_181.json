@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_181",
+  "section_number": "1.9.7",
+  "header": "Master Key Encryption",
+  "content": "On physical and virtual Palo Alto Networks devices, you can configure the master key to use\nthe AES-256-CBC or the AES-256-GCM (introduced in PAN-OS 10.0) encryption algorithm to\nencrypt data such as keys and passwords. AES-256-GCM provides stronger encryption than\nAES-256-CBC and improves your security posture. It also includes a built-in integrity check. The\nmaster key uses the configured encryption algorithm to encrypt sensitive data stored on the\nfirewall and on Panorama. When you set the encryption algorithm to AES-256-GCM, you can still\nuse an HSM to encrypt the master key with an encryption key that is stored on the HSM.\nThe default encryption algorithm that the master key uses to encrypt data is AES-256-CBC—\nthe same algorithm that the master key used prior to PAN-OS 10.0. AES-256-CBC is the default\nencryption level because when you manage firewalls with Panorama, the managed firewalls may\nbe on different PAN-OS releases, and firewalls on PAN-OS releases earlier than PAN-OS 10.0 do\nnot support AES-256-GCM. This is why Panorama must use the lowest level of encryption that its\nmanaged devices can use. For example, if some managed devices run PAN-OS 10.0 and some run\nearlier versions, Panorama must use AES-256-CBC. However, if all managed devices run PAN-OS\n10.0 or later, then Panorama and all of its managed devices can use AES-256-GCM.\nUse the same encryption level on Panorama and its managed devices and use the same\nencryption level on firewall pairs. Upgrade devices to use the strongest possible encryption\nalgorithm. If all Panorama-managed devices run PAN-OS 10.0, use AES-256-GCM on\nall devices. The configuration of managed or paired devices that use different encryption\nlevels may become out of sync.\nWhen you change the encryption algorithm to AES-256-GCM, devices use it instead of AES-256-\nCBC to encrypt sensitive data. When you change from one algorithm to another, you can also\nspecify whether to:\n• Re-encrypt existing encrypted data with the new algorithm.\n• Leave existing data encrypted with the old encryption algorithm and use the new algorithm\nonly for new (future) encryptions.\nBy default, when you change the encryption algorithm, the device uses the new algorithm\nto re-encrypt existing encrypted data as well as to encrypt new data. If you manage\ndevices with Panorama, they may be on different versions of PAN-OS and may not\nsupport the newest encryption algorithms. Be sure you understand which encryption\nalgorithms Panorama and its managed devices support before you change the encryption\nalgorithm or re-encrypt data that has already been encrypted.\n• Configure Master Key Encryption Level\n• Master Key Encryption on a Firewall HA Pair\n• Master Key Encryption Logs\n• Unique Master Key Encryptions for AES-256-GCM\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n328\n©2025 Palo Alto Networks, Inc.\nCertificate Management",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 328,
+      "end": 329
+    },
+    "content_stats": {
+      "char_count": 2872,
+      "word_count": 453
+    },
+    "hierarchy": {
+      "parent": "Certificate Management",
+      "children": [
+        "Configure Master Key Encryption Level",
+        "Master Key Encryption on a Firewall HA Pair",
+        "Master Key Encryption Logs",
+        "Unique Master Key Encryptions for AES-256-GCM"
+      ]
+    }
+  }
+}

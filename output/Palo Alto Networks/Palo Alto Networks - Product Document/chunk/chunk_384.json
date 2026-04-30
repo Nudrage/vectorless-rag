@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_384",
+  "section_number": "1.11.16",
+  "header": "Forward Logs to an HTTP/S Destination",
+  "content": "The firewall and Panorama™ can forward logs to an HTTP/S server. You can choose to forward\nall logs or specific logs to trigger an action on an external HTTP-based service when an event\noccurs. When forwarding logs to an HTTP server, configure the firewall to send an HTTP-based\nAPI request directly to a third-party service to trigger an action that is based on the attributes in a\nfirewall log. You can configure the firewall to work with any HTTP-based service that exposes an\nAPI and you can modify the URL, HTTP header, parameters, and the payload in the HTTP request\nto meet your integration needs.\nSTEP 1 |\nCreate an HTTP server profile to forward logs to an HTTP/S destination.\nThe HTTP server profile allows you to specify how to access the server and define the\nformat in which to forward logs to the HTTP/S destination. By default, the firewall uses the\nmanagement port to forward these logs. However, you can assign a different source interface\nand IP address in Device > Setup > Services > Service Route Configuration.\n1.\nSelect Device > Server Profiles > HTTP and Add a new profile.\n2.\nSpecify a Name for the server profile, and select the Location. The profile can be Shared\nacross all virtual systems or can belong to a specific virtual system.\n3.\nAdd the details for each server. Each profile can have a maximum of four servers.\n4.\nEnter a Name and IP Address.\n5.\nSelect the Protocol (HTTP or HTTPS). The default Port is 80 or 443 respectively but you\ncan modify the port number to match the port on which your HTTP server listens.\n6.\nSelect the TLS Version supported on the server—1.0, 1.1, or 1.2 (default).\n7.\nSelect the Certificate Profile to use for the TLS connection with the server.\n8.\nSelect the HTTP Method that the third-party service supports—DELETE,GET, POST\n(default), or PUT.\n9.\n(Optional) Enter the Username and Password for authenticating to the server, if needed.\n10. (Optional) Select Test Server Connection to verify network connectivity between the\nfirewall and the HTTP/S server.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n672\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 2 |\nSelect the Payload Format for the HTTP request.\n1.\nSelect the Log Type link for each log type for which you want to define the HTTP\nrequest format.\n2.\nSelect the Pre-defined Formats (available through content updates) or create a custom\nformat.\nIf you create a custom format, the URI is the resource endpoint on the HTTP service.\nThe firewall appends the URI to the IP address you defined earlier to construct the URL\nfor the HTTP request. Ensure that the URI and payload format matches the syntax that\nyour third-party vendor requires. You can use any attribute supported on the selected\nlog type within the HTTP Header, the Parameter and Value pairs, and in the request\npayload.\n3.\nSend Test Log to verify that the HTTP server receives the request. When you\ninteractively send a test log, the firewall uses the format as is and does not replace\nthe variable with a value from a firewall log. If your HTTP server sends a 404\nresponse, provide values for the parameters so that the server can process the request\nsuccessfully.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n673\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 3 |\nDefine the match criteria for when the firewall will forward logs to the HTTP server and\nattach the HTTP server profile you will use.\n1.\nSelect the log types for which you want to trigger a workflow:\n• Add a Log Forwarding Profile (Objects > Log Forwarding) for logs that pertain to user\nactivity (for example, Traffic, Threat, or Authentication logs).\n• Select Device > Log Settings for logs that pertain to system events, such as\nConfiguration or System logs.\n2.\nSelect the Log Type and use the new Filter Builder to define the match criteria.\n3.\nAdd the HTTP server profile for forwarding logs to the HTTP destination.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n674\n©2025 Palo Alto Networks, Inc.\nMonitoring",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 672,
+      "end": 675
+    },
+    "content_stats": {
+      "char_count": 3946,
+      "word_count": 679
+    },
+    "hierarchy": {
+      "parent": "Monitoring",
+      "children": []
+    }
+  }
+}

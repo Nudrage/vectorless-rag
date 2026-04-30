@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_050",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 5376(S): Credential Manager credentials were backed up.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.Every 5376 event should be recorded for all local and domain\naccounts, because this action (back up Credential Manager) is very rarely used by users and can indicate a virus, or other harmful or malicious activity.\n© 2016 Microsoft. All rights reserved.\n176\n5377(S): Credential Manager credentials were restored from a backup.\nEvent Description:\nThis event generates every time the user (Subject) successfully restores the credential manager database.\nTypically this can be done by clicking “Restore Credentials” in Credential Manager in the Control Panel.\nThis event generates on domain controllers, member servers, and workstations.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>5377</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>13824</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-08-22T03:35:47.523266300Z\" />\n<EventRecordID>175780</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"520\" ThreadID=\"1236\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"SubjectUserSid\">S-1-5-21-3457937927-2839227994-823803824-1104</Data>\n<Data Name=\"SubjectUserName\">dadmin</Data>\n<Data Name=\"SubjectDomainName\">CONTOSO</Data>\n<Data Name=\"SubjectLogonId\">0x30d7c</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nSubject:\n© 2016 Microsoft. All rights reserved.\n177\n\nSecurity ID [Type = SID]: SID of account that performed the restore operation. Event Viewer automatically tries to resolve SIDs and show the account name. If the SID cannot be\nresolved, you will see the source data in the event.\nA security identifier (SID) is a unique value of variable length used to identify a trustee (security principal). Each account has a unique SID that is issued by an authority, such\nas an Active Directory domain controller, and stored in a security database. Each time a user logs on, the system retrieves the SID for that user from the database and places it\nin the access token for that user. The system uses the SID in the access token to identify the user in all subsequent interactions with Windows security. When a SID has been\nused as the unique identifier for a user or group, it cannot ever be used again to identify another user or group. For more information about SIDs, see Security Identifiers.\n\nAccount Name [Type = UnicodeString]: the name of the account that performed the restore operation.\n\nAccount Domain [Type = UnicodeString]: subject’s domain or computer name. Formats vary, and include the following:\no\nDomain NETBIOS name example: CONTOSO\no\nLowercase full domain name: contoso.local\no\nUppercase full domain name: CONTOSO.LOCAL\no\nFor some well-known security principals, such as LOCAL SERVICE or ANONYMOUS LOGON, the value of this field is “NT AUTHORITY”.\no\nFor local user accounts, this field will contain the name of the computer or device that this account belongs to, for example: “Win81”.\n\nLogon ID [Type = HexInt64]: hexadecimal value that can help you correlate this event with recent events that might contain the same Logon ID, for example, “4624: An account\nwas successfully logged on.”",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 176,
+      "end": 178
+    },
+    "content_stats": {
+      "char_count": 3722,
+      "word_count": 501
+    },
+    "hierarchy": {
+      "parent": "Audit User Account Management",
+      "children": []
+    }
+  }
+}

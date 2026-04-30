@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_231",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4674(S, F): An operation was attempted on a privileged object.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.Monitor for this event where “Subject\\Security ID” is not one of\nthese well-known security principals: LOCAL SYSTEM, NETWORK SERVICE, LOCAL SERVICE, and where “Subject\\Security ID” is not an administrative account that is expected to\nhave the listed Privileges. Especially monitor Failure events.\n\nIf you need to monitor events related to specific Windows subsystems (“Object Server”), for example LSA or Security Account Manager, monitor this event for the corresponding\n“Object Server.”\n\nIf you need to monitor events related to specific Windows object types (“Object Type”), for example File or Key, monitor this event for the corresponding “Object Type.”\n\n\n\nIf you have a pre-defined “Process Name” for the process reported in this event, monitor all events with “Process Name” not equal to your defined value.\n\nIf you know that specific “Subject\\Security ID” should only be able to use the privileges in a pre-defined list, monitor for events in which “Subject\\Security ID” used “Privileges”\nthat are not on that list.\n© 2016 Microsoft. All rights reserved.\n671\n\nIf you have a list of specific user rights which should never be used, or used only by a few accounts (for example, SeDebugPrivilege), trigger an alert for those “Privileges.”\n\nIf you have a list of specific user rights for which every use must be reported or monitored (for example, SeRemoteShutdownPrivilege), trigger an alert for those “Privileges.”\n4985(S): The state of a transaction has changed.\nFor some reason event “4985(S): The state of a transaction has changed.\" from Audit File System subcategory generates also in this subcategory. See description of this event in Audit File\nSystem subcategory.\n© 2016 Microsoft. All rights reserved.\n672",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 671,
+      "end": 673
+    },
+    "content_stats": {
+      "char_count": 1974,
+      "word_count": 311
+    },
+    "hierarchy": {
+      "parent": "Audit Sensitive Privilege Use",
+      "children": []
+    }
+  }
+}

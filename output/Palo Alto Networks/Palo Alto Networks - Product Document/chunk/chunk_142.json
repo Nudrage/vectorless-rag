@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_142",
+  "section_number": "1.8.3.1.1",
+  "header": "Get the RSA SecurID Access Cloud Authentication Service Details",
+  "content": "In order to securely pass user authentication requests to and from the firewall and the RSA\nSecurID Access Cloud Authentication Service, you must first go to the RSA SecurID Access\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n252\n©2025 Palo Alto Networks, Inc.\nAuthentication\nConsole and configure the RSA Access ID, the authentication service URL, and the client API key\nthat the firewall needs to authenticate to and interact with the service. The firewall also needs the\nAccess Policy ID that uses either the RSA Approve or RSA Tokencode authentication method to\nauthenticate to the identity source.\nGenerate the RSA SecurID API key—Log on to RSA SecurID Access Console and select My\nAccount > Company Settings > Authentication API Keys. Add a new key and then Save\nSettings and Publish Changes.\nGet the RSA SecurID Access endpoint API (Authentication Service Domain) to which the\nfirewall must connect—Select Platform > Identity Routers, pick an Identity Router to Edit\nand jot down the Authentication Service Domain. In this example it is https://rsaready.auth-\ndemo.auth.\nGet the Access Policy ID—Select Access > Policies and jot down the name of the access policy\nthat will allow the firewall to act as an authentication client to the RSA SecurID service. The\npolicy must be configured to use either the RSA Approve or the RSA Tokencode authentication\nmethods only.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n253\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 252,
+      "end": 254
+    },
+    "content_stats": {
+      "char_count": 1459,
+      "word_count": 232
+    },
+    "hierarchy": {
+      "parent": "Configure MFA Between RSA SecurID and the Firewall",
+      "children": []
+    }
+  }
+}

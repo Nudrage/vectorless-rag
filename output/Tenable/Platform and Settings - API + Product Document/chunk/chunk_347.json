@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_347",
+  "section_number": "15.5",
+  "header": "Update exclusion",
+  "content": "Updates the specified exclusion.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nThe ID of the exclusion. The value can be either the integer ID or the\nexclusion UUID.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nThe name of the exclusion.\nstring\nThe description of the exclusion.\nstring\nThe targets that you want excluded from scans. Specify multiple targets as\na comma-separated string. Targets can be in the following formats:\nAn individual IPv4 address ( 192.0.2.1 )\nexclusion_id\nrequired\nname\nrequired\ndescription\nmembers\nrequired\nA range of IPv4 addresses ( 192.0.2.1-192.0.2.255 )\nCIDR notation ( 192.0.2.0/24 )\nA fully-qualified domain name (FQDN) ( host.domain.com )\nobject\nThe schedule parameters for the exclusion.\nstring\nThe ID of the network object associated with scanners where Tenable\nVulnerability Management applies the exclusion. The default network ID is\n00000000-0000-0000-0000-000000000000 . To determine the ID of a\ncustom network, use the GET /networks endpoint. For more information\nabout network objects, see Manage Networks.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 338,
+      "end": 339
+    },
+    "content_stats": {
+      "char_count": 1101,
+      "word_count": 162
+    },
+    "hierarchy": {
+      "parent": "Exclusions",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

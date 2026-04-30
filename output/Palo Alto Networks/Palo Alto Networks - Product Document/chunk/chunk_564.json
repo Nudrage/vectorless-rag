@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_564",
+  "section_number": "1.16.10.4",
+  "header": "Verify Private Key Blocking",
+  "content": "You can verify whether a private key is blocked from export in several ways.\nCheck the Key column in Device > Certificate Management > Certificates > Device\nCertificates.\nIn this example, the forward-trust-certificate is blocked:\nWhen you attempt to export a certificate whose private key is blocked from export, the Export\nPrivate Key checkbox is not available and you can’t export the key, you can only export the\ncertificate.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1035\n©2025 Palo Alto Networks, Inc.\nDecryption\nUse the following operational CLI command to list all certificates on the device or in a\nparticular Vsys that have private keys blocked from export:\nadmin@pa-220> request certificate show-blocked <shared | vsys>\nUse the following operational CLI command to check whether a particular certificate’s private\nkey is blocked from export:\nadmin@pa-220> request certificate is-blocked certificate-name\n<name>\nIf the certificate is blocked from export, the command returns yes and if the certificate is not\nblocked the command returns no.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1036\n©2025 Palo Alto Networks, Inc.\nDecryption",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1035,
+      "end": 1037
+    },
+    "content_stats": {
+      "char_count": 1136,
+      "word_count": 171
+    },
+    "hierarchy": {
+      "parent": "Block Private Key Export",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_014",
+  "section_number": "6",
+  "header": "Get card details",
+  "content": "Retrieves details for the specified exposure view card. By default, the response includes SLA\nefficiency and trend data for the past 30 days. You can modify the time frame using optional\nparameters.\nCaution: This endpoint is available for use but is currently in beta. The response structure is subject\nto change as we continue to enhance the data model.\nRequires the Basic [16] user role or the TONE_UI.TONE_EXPOSURE_CARD.READ ,\nLUMIN_EXPOSURE_VIEW.EXPOSURE_CARD.READ  and AD.TOGGLE_AD.USE  custom role privileges.\nSee Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring\nThe unique ID of the card to retrieve details for.\nQUERY PARAMETERS\nstring <date-time>\nThe start date for trend data. Use this parameter in combination\nwith the trend_end_date  parameter to define the time frame\nfor the trend data.\nThe date must be specified as a UTC timestamp in ISO 8601\nformat (e.g., 2025-06-28T00:00:00.000Z ).\nstring <date-time>\nThe end date for trend data. Use this parameter in combination\nwith the trend_start_date  parameter to define the time\nframe for the trend data.\ncard_id\nrequired\ntrend_start_date\ntrend_end_date\nThe date must be specified as a UTC timestamp in ISO 8601\nformat (e.g., 2025-06-28T00:00:00.000Z ).\nstring <date-time>\nThe start date for SLA efficiency data. Use this parameter in\ncombination with the sla_efficiency_end_date  parameter\nto define the time frame for the SLA efficiency.\nThe date must be specified as a UTC timestamp in ISO 8601\nformat (e.g., 2025-06-28T00:00:00.000Z ).\nstring <date-time>\nThe end date for SLA efficiency data. Use this parameter in\ncombination with the sla_efficiency_start_date\nparameter to define the time frame for the SLA efficiency.\nThe date must be specified as a UTC timestamp in ISO 8601\nformat (e.g., 2025-06-28T00:00:00.000Z ).\nstring\nDefault: \"ANY\"\nEnum: \"ANY\"\n\"REMEDIATED\"\n\"NON_REMEDIATED\"\nFilter SLA breakdown data by REMEDIATED ,\nNON_REMEDIATED , or ANY .\nboolean\nDefault: false\nIndicates whether or not to include trend events.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 22,
+      "end": 23
+    },
+    "content_stats": {
+      "char_count": 1992,
+      "word_count": 298
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

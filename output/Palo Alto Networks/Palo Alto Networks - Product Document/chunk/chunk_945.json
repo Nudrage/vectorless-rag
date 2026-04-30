@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_945",
+  "section_number": "1.22.6",
+  "header": "Enforce Policy Rule Description, Tag, and Audit Comment",
+  "content": "Comment\nWhen creating or modifying rules, you can require a rule description, tag, and audit comment to\nensure your policy rulebase is correctly organized and grouped, and to preserve important rule\nhistory for auditing purposes. By requiring a rule description, tag, and audit comment, you can\nsimplify your policy rulebase review by ensuring that rules are appropriately grouped, and that\nthe rule change history is tracked when creating or modifying a rule. For uniformity, you can set\nspecific requirements for what the audit comment can include.\nBy default, enforcement of a description, tag, and audit comment is not enabled. You can specify\nwhether a description, tag, audit comment, or any combination of these three is required to\nsuccessfully add or modify a rule. The audit comment archive allows you to view the audit\ncomments entered for a selected rule, review the configuration log history, and compare rule\nconfiguration versions.\nSTEP 1 |\nLaunch the Web Interface.\nSTEP 2 |\nSelect Device > Setup > Management and edit the Policy Rulebase Settings.\nSTEP 3 |\nConfigure the settings you want to enforce. In this example, tags and audit comments are\nrequired for all policies.\nEnforce audit comments for policy rules to capture the reason an administrator\ncreates or modifies a rule. Requiring audit comments on policy rules helps maintain an\naccurate rule history for auditing purposes.\nSTEP 4 |\nConfigure the Audit Comment Regular Expression to specify the audit comment format.\nWhen administrators create or modify a rule, you can require they enter a comment those\naudit comments adhere to a specific format that fits your business and auditing needs by\nspecifying letter and number expressions. For example, you can use this setting to specify\nregular expressions that match your ticketing number formats:\n• [0-9]{<Number of digits>}—Requires the audit comment to contain a minimum\nnumber of digits that range from 0 to 9. For example, [0-9]{6} requires a minimum of six\ndigit in a numerical expression with numbers 0 to 9.\n• <Letter Expression>—Requires the audit comment to contain a letter expression. For\nexample, Reason for Change- requires that the administrator begin the audit comment\nwith this letter expression.\n• <Letter Expression>-[0-9]{<Number of digits>}—Requires the audit comment\nto contain a predetermined character followed by a minimum number of digits that range\nfrom 0 to 9. For example, SB-[0-9]{6} requires the audit comment format to begin with\nSB-, followed by a minimum six digits in a numerical expression with values from 0 to 9. For\nexample, SB-012345.\n• (<Letter Expression>)|(<Letter Expression>)|(<Letter\nExpression>)|-[0-9]{<Number of digits>}—Requires the audit comment to\ncontain a prefix using any one of the predetermined letter expressions with a minimum\nnumber of digits that range from 0 to 9. For example, (SB|XY|PN)-[0-9]{6} requires\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1618\n©2025 Palo Alto Networks, Inc.\nPolicy\nthe audit comment format to begin with SB-, XY-, or PN- followed by a minimum of\nsix digits in a numerical expression with values from 0 to 9. For example, SB-012345,\nXY-654321, or PN-012543.\nSTEP 5 |\nClick OK to apply the new policy rulebase settings.\nSTEP 6 |\nCommit the changes.\nAfter you commit the policy rulebase settings changes, modify the existing policy rule\nbased on the rulebase settings you decided to enforce.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1619\n©2025 Palo Alto Networks, Inc.\nPolicy\nSTEP 7 |\nVerify that the firewall is enforcing the new policy rulebase settings.\n1.\nSelect Policies and Add a new rule.\n2.\nConfirm that you must add a tag and enter an audit comment click OK.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1620\n©2025 Palo Alto Networks, Inc.\nPolicy",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1618,
+      "end": 1621
+    },
+    "content_stats": {
+      "char_count": 3762,
+      "word_count": 600
+    },
+    "hierarchy": {
+      "parent": "Policy",
+      "children": []
+    }
+  }
+}

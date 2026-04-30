@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_266",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4611(S): A trusted logon process has been registered with the Local Security Authority.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.Because this event is typically triggered by the SYSTEM account, we\nrecommend that you report it whenever “Subject\\Security ID” is not SYSTEM.\n\nTypically this event has an informational purpose. If you defined the list of allowed Logon Processes in the system, then you can check is “Logon Process Name” field value in the\nwhitelist or not.\n\n4614(S): A notification package has been loaded by the Security Account Manager.\nEvent Description:\nThis event generates every time a Notification Package has been loaded by the Security Account Manager.\nIn reality, starting with Windows Vista, a notification package should be interpreted as afs Password Filter.\nPassword Filters are DLLs that are loaded or called when passwords are set or changed.\nEach time a system starts, it loads the notification package DLLs from\nHKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Notification Packages registry value and performs the\ninitialization sequence for every package.\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4614</EventID>\n<Version>0</Version>\n<Level>0</Level>\n<Task>12289</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-14T03:36:43.073484900Z\" />\n<EventRecordID>1048140</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"516\" ThreadID=\"520\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n© 2016 Microsoft. All rights reserved.\n705\n</System>\n- <EventData>\n<Data Name=\"NotificationPackageName\">WDIGEST</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nNotification Package Name [Type = UnicodeString]: the name of loaded Notification Package.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 705,
+      "end": 706
+    },
+    "content_stats": {
+      "char_count": 2256,
+      "word_count": 265
+    },
+    "hierarchy": {
+      "parent": "Audit Security System Extension",
+      "children": []
+    }
+  }
+}

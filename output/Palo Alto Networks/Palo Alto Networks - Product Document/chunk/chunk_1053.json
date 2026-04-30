@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_1053",
+  "section_number": "1.24.4.5",
+  "header": "Configure Packet Buffer Protection Based on Latency",
+  "content": "Configure packet buffer protection based on latency and apply it to zones that have traffic\nconsisting of protocols and applications that are latency-sensitive.\nSTEP 1 |\nSelect Device > Setup > Session.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1753\n©2025 Palo Alto Networks, Inc.\nZone Protection and DoS Protection\nSTEP 2 |\nEdit the Session Settings section and enable Packet Buffer Protection.\nSTEP 3 |\nEnable Buffering Latency Based.\nSTEP 4 |\nEnter the Latency Alert (milliseconds) threshold above which the firewall starts generating\nan Alert log event every minute; range is 1 to 20,000; default is 50.\nSTEP 5 |\nEnter the Latency Activate (milliseconds) threshold above which the firewall activates\nrandom early drop (RED) on incoming packets and starts generating an Activate log every 10\nseconds; range is 1 to 20,000ms; default is 200ms.\nSTEP 6 |\nEnter the Latency Max Tolerate (milliseconds) threshold above which the firewall uses RED\nwith close to 100% drop probability; range is 1 to 20,000ms; default is 500ms.\nIf the current latency is a value between the Latency Activate threshold and the Latency Max\nTolerate threshold, the firewall calculates the RED drop probability as follows: (current latency\n- Latency Activate threshold) / (Latency Max Tolerate threshold - Latency Activate threshold).\nFor example, if the current latency is 300, Latency Activate is 200, and Latency Max Tolerate\nis 500, then (300-200)/(500-200) = 1/3, meaning the firewall uses approximately 33% RED\ndrop probability.\nSTEP 7 |\nConfigure the Block Hold Time and Block Duration as for Packet Buffer Protection based on\nutilization.\nSTEP 8 |\nClick OK.\nSTEP 9 |\nEnable the second layer of protection for each zone where you want packet buffer\nprotection based on latency.\n1.\nSelect Network > Zones and select a zone.\n2.\nEnable Packet Buffer Protection.\nSTEP 10 | Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1753,
+      "end": 1754
+    },
+    "content_stats": {
+      "char_count": 1857,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "Configure Zone Protection to Increase Network Security",
+      "children": []
+    }
+  }
+}

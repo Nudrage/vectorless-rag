@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_324",
+  "section_number": "1.86.1.1",
+  "header": "Response samples",
+  "content": "201\nPOST\n/api/syslogs\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"ip\": \"string\",\n\"port\": 0,\n\"protocol\": \"UDP\",\n\"tls\": true,\n\"criticityThreshold\": 0,\n\"directories\":\n-\n[\n0\n],\n\"description\": \"string\",\n\"inputType\": \"deviances\",\n\"shouldNotifyOnInitialFullSecurityCheck\": true,\n\"relayId\": 0\n}\n]\napplication/json\nExpand all\nCollapse all\nCopy\nContent type\nContent type\n[\n- {\n\"id\": 0,\n\"ip\": \"string\",\n\"port\": 0,\n\"protocol\": \"UDP\",\n\"tls\": true,\n\"criticityThreshold\": 0,\n\"description\": \"string\",\n\"filterExpression\": { },\n\"inputType\": \"deviances\",\n\"directories\":\n-\n[\n0\n],\n\"checkers\":\n-\n[\n0\n],\n\"attackTypes\":\n-\n[\n0\n],\n\"profiles\":\n-\n[\n0\n],\n\"shouldNotifyOnInitialFullSecurityCheck\": true,\n\"relayId\": 0,\n\"healthCheckNames\":\n-\n[\n\"string\"\n]\n}\n]\nGet syslog instance by id.\nRequired license type: ioa, ioaPreview, ioe\nAUTHORIZATIONS:\nApiKey\nPATH PARAMETERS\nstring ^[0-9]+$\nid\nrequired\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 188,
+      "end": 190
+    },
+    "content_stats": {
+      "char_count": 948,
+      "word_count": 128
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

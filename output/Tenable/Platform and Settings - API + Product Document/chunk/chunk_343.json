@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_343",
+  "section_number": "27.5.1.2",
+  "header": "Response samples",
+  "content": "200\n429\n500\nname\ndescription\nid\nschedule\ncreation_date\nlast_modification_date\nnetwork_id\nPOST\n/exclusions/import\napplication/json\nExpand all\nCollapse all\nCopy\n[\n- {\n\"uuid\": \"3584b24b-7f26-4684-b644-a2a92103d6c2\",\n\"members\": \"host.domain.com, 192.0.2.1, 192.0.2.1-192.0.2.255\",\n\"name\": \"My-Exclusion\",\n\"description\": \"My description.\",\n\"id\": 1,\n\"schedule\":\n-\n{\n\"enabled\": true,\n\"starttime\": \"2023-09-01 00:00:00\",\n\"endtime\": \"2023-09-02 00:00:00\",\n\"rrules\":\n-\n{\n\"freq\": \"WEEKLY\",\n\"interval\": 1,\n\"byweekday\": \"TU,SU,MO,WE,TH\",\n\"bymonthday\": 1\n},\n\"timezone\": \"America/New_York\"\n},\n\"creation_date\": 1561643735,\n\"last_modification_date\": 1561643785,\n\"network_id\": \"00000000-0000-0000-0000-000000000000\"\n}\n]",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 12,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 334,
+      "end": 335
+    },
+    "content_stats": {
+      "char_count": 701,
+      "word_count": 68
+    },
+    "hierarchy": {
+      "parent": "Responses",
+      "children": []
+    }
+  }
+}

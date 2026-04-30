@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_620",
+  "section_number": "1.17.12.2",
+  "header": "View the User Activity Report",
+  "content": "This report provides a quick method of viewing user or group activity and also provides an option\nto view browse time activity.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1144\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 1 |\nConfigure a User Activity Report.\n1.\nSelect Monitor > PDF Reports > User Activity Report.\n2.\nAdd a report and enter a Name for it.\n3.\nSelect the report Type:\n• Select User to generate a report for one person.\n• Select Group for a group of users.\nYou must enable User-ID in order to be able to select user or group names. If\nUser-ID is not configured, you can select the type User and enter the IP address\nof the user’s computer.\n4.\nEnter the Username/IP Address for a user report or enter the group name for a user\ngroup report.\n5.\nSelect the time period. You can select an existing time period, or select Custom.\n6.\nSelect the Include Detailed Browsing check box, so browsing information is included in\nthe report.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1145\n©2025 Palo Alto Networks, Inc.\nURL Filtering\nSTEP 2 |\nRun the report.\n1.\nClick Run Now.\n2.\nWhen the firewall finishes generating report, click one of the links to download it:\n• Click Download User Activity Report to download a PDF version of the report.\n• Click Download URL Logs to download a CSV file of the corresponding log entries.\n3.\nAfter downloading the report, click Cancel.\n4.\nIf you want to save the user activity report settings so you can run the same report again\nlater, click OK; otherwise click Cancel.\nSTEP 3 |\nView the user activity report by opening the file that you downloaded. The PDF version of\nthe report shows the user or group on which you based the report, the report time frame,\nand a table of contents:\nSTEP 4 |\nClick an item in the table of contents to view the report details. For example, click Traffic\nSummary by URL Category to view statistics for the selected user or group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1144,
+      "end": 1146
+    },
+    "content_stats": {
+      "char_count": 1900,
+      "word_count": 344
+    },
+    "hierarchy": {
+      "parent": "Monitor Web Activity",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_836",
+  "section_number": "1.21.15.1.3",
+  "header": "Proxy ARP for NAT Address Pools",
+  "content": "NAT address pools are not bound to any interfaces. The following figure illustrates the behavior\nof the firewall when it is performing proxy ARP for an address in a NAT address pool.\nThe firewall performs source NAT for a client, translating the source address 10.1.1.1 to the\naddress in the NAT pool, 192.168.2.2. The translated packet is sent on to a router.\nFor the return traffic, the router does not know how to reach 192.168.2.2 (because that IP\naddress is just an address in the NAT address pool), so it sends an ARP request packet to the\nfirewall.\n• If the address pool (192.168.2.2) is in the same subnet as the egress/ingress interface IP\naddress (192.168.2.3/24), the firewall can send a proxy ARP reply to the router, indicating the\nLayer 2 MAC address of the IP address, as shown in the figure above.\n• If the address pool (192.168.2.2) is not a subnet of an interface on the firewall, the firewall\nwill not send a proxy ARP reply to the router. This means that the router must be configured\nwith the necessary route to know where to send packets destined for 192.168.2.2, in order to\nensure the return traffic is routed back to the firewall, as shown in the figure below.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1480,
+      "end": 1480
+    },
+    "content_stats": {
+      "char_count": 1185,
+      "word_count": 211
+    },
+    "hierarchy": {
+      "parent": "NAT Policy Rules",
+      "children": []
+    }
+  }
+}

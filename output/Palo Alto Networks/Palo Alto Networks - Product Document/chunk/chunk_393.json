@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_393",
+  "section_number": "1.12.2.1",
+  "header": "Group Mapping",
+  "content": "To define policy rules based on user or group, first you create an LDAP server profile that defines\nhow the firewall connects and authenticates to your directory server. The firewall supports a\nvariety of directory servers, including Microsoft Active Directory (AD), Novell eDirectory, and\nSun ONE Directory Server. The server profile also defines how the firewall searches the directory\nto retrieve the list of groups and the corresponding list of members. If you are using a directory\nserver that is not natively supported by the firewall, you can integrate the group mapping function\nusing the XML API. You can then create a group mapping configuration to Map Users to Groups\nand Enable User- and Group-Based Policy.\nDefining policy rules based on group membership rather than on individual users simplifies\nadministration because you don’t have to update the rules whenever new users are added\nto a group. When configuring group mapping, you can limit which groups will be available\nin policy rules. You can specify groups that already exist in your directory service or define\ncustom groups based on LDAP filters. Defining custom groups can be quicker than creating new\ngroups or changing existing ones on an LDAP server, and doesn’t require an LDAP administrator\nto intervene. User-ID maps all the LDAP directory users who match the filter to the custom\ngroup. For example, you might want a security policy that allows contractors in the Marketing\nDepartment to access social networking sites. If no Active Directory group exists for that\ndepartment, you can configure an LDAP filter that matches users for whom the LDAP attribute\nDepartment is set to Marketing. Log queries and reports that are based on user groups will\ninclude custom groups.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 690,
+      "end": 690
+    },
+    "content_stats": {
+      "char_count": 1750,
+      "word_count": 283
+    },
+    "hierarchy": {
+      "parent": "User-ID Concepts",
+      "children": []
+    }
+  }
+}

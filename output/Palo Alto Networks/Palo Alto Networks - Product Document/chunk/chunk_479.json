@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_479",
+  "section_number": "1.13.12.3",
+  "header": "Create HTTP Header Insertion Entries using Predefined Types",
+  "content": "STEP 1 |\nIf there are no upstream devices already decrypting HTTPS traffic, configure Decryption\nusing Configure SSL Forward Proxy.\nIf you are configuring SSL decryption for Dropbox, then you must also configure your\nDropbox clients to allow SSL traffic. These procedures are specific and private to\nDropbox — to obtain these procedures, contact your Dropbox account representative.\n1.\nAdd a Custom URL Category for the SaaS application you are managing (Objects >\nCustom Objects > URL Category).\n2.\nSpecify a Name for the category.\n3.\nAdd the domains specific to the SaaS application you are managing or for which you\nwant to insert the username and domain in the headers. See Domains used by the\nPredefined SaaS Application Types for a list of the domains that you use for each of\nthe predefined SaaS applications. See Insert Username in HTTP Headers for more\ninformation on configuring the firewall to include the username and domain in the HTTP\nheaders.\nEach domain name can be up to 254 characters and you can identify a maximum\nof 50 domains for each entry. The domain list supports wildcards (for example,\n*.example.com). As a best practice, do not nest wildcards (for example, *.*.*) and do\nnot overlap domains within the same URL profile.\n4.\nFor SaaS application management, Create a Decryption Policy Rule and, as you follow\nthis procedure, configure the following:\n• In the Service/URL Category tab, Add the URL Category that you created in the\nprevious step.\n• In the Options tab, make sure the Action is set to Decrypt and that the Type is set to\nSSL Forward Proxy.\nSTEP 2 |\nEdit or add a URL filtering profile.\nSTEP 3 |\nSelect HTTP Header Insertion in the URL Filtering Profile dialog.\nSTEP 4 |\nAdd an entry.\n1.\nSpecify a Name (up to 100 characters) for this entry.\n2.\nSelect a predefined Type.\nThis populates the Domains and Headers lists.\n3.\nFor each Header, enter a Value.\n4.\n(Optional) Select Log to enable logging of insertion activity for the headers.\nAllowed traffic is not logged, so header insertions are not logged for allowed traffic.\n5.\nClick OK to save your changes.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n860\n©2025 Palo Alto Networks, Inc.\nApp-ID\nSTEP 5 |\nAdd or edit a Security Policy rule (Policies > Security) to include the HTTP header insertion\nURL filtering profile.\n• For SaaS application management, allow users to access the SaaS application for which you\nare configuring this header insertion rule.\n• To include the username and domain in the HTTP headers, apply the URL filtering profile to\nthe security policy rule for HTTP or HTTPS traffic.\n1.\nChoose the URL filtering profile (Actions > URL Filtering) that you edited or created in\nStep 2.\n2.\nClick OK to save and then Commit your changes.\nSTEP 6 |\nVerify that the firewall correctly inserts the header.\n• For Saas application management, from an endpoint, confirm that access to the SaaS\napplication is working in the way you expect.\n1. Try to access an account or content that you expect to be able to access. If you cannot\naccess the SaaS account or content, then the configuration is not working.\n2. Try to access an account or content that you expect will be blocked. If you can access\nthe SaaS account or content, then the configuration is not working.\n3. If both of the previous steps work as expected, then you can View Logs (if you\nconfigured logging in step 4.4) and you should see the recorded HTTP header insertion\nactivity.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 860,
+      "end": 861
+    },
+    "content_stats": {
+      "char_count": 3430,
+      "word_count": 595
+    },
+    "hierarchy": {
+      "parent": "Use HTTP Headers to Manage SaaS Application Access",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_476",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returned if the specified scanner was deleted successfully.\nRESPONSE SCHEMA:\napplication/json\nany\nscanner_id\nrequired\n— 403 Returned if you attempt to delete the local scanner.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500 Returned if Tenable Vulnerability Management fails to delete the scanner.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 494,
+      "end": 495
+    },
+    "content_stats": {
+      "char_count": 387,
+      "word_count": 61
+    },
+    "hierarchy": {
+      "parent": "Delete scanner",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

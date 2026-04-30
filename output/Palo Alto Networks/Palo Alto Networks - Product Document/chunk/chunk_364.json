@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_364",
+  "section_number": "1.11.15.3",
+  "header": "Enable SNMP Services for Firewall-Secured Network Elements",
+  "content": "If you will use Simple Network Management Protocol (SNMP) to monitor or manage network\nelements (for example, switches and routers) that are within the security zones of Palo Alto\nNetworks firewalls, you must create a security rule that allows SNMP services for those elements.\nYou don’t need a security rule to enable SNMP monitoring of Palo Alto Networks firewalls,\nPanorama, or WF-500 appliances. For details, see Monitor Statistics Using SNMP.\nSTEP 1 |\nCreate an application group.\n1.\nSelect Objects > Application Group and click Add.\n2.\nEnter a Name to identify the application group.\n3.\nClick Add, type snmp, and select snmp and snmp-trap from the drop-down.\n4.\nClick OK to save the application group.\nSTEP 2 |\nCreate a security rule to allow SNMP services.\n1.\nSelect Policies > Security and click Add.\n2.\nIn the General tab, enter a Name for the rule.\n3.\nIn the Source and Destination tabs, click Add and enter a Source Zone and a Destination\nZone for the traffic.\n4.\nIn the Applications tab, click Add, type the name of the applications group you just\ncreated, and select it from the drop-down.\n5.\nIn the Actions tab, verify that the Action is set to Allow, and then click OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 659,
+      "end": 659
+    },
+    "content_stats": {
+      "char_count": 1195,
+      "word_count": 209
+    },
+    "hierarchy": {
+      "parent": "SNMP Monitoring and Traps",
+      "children": []
+    }
+  }
+}

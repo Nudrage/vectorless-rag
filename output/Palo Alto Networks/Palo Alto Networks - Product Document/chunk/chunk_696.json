@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_696",
+  "section_number": "1.19.4.1.5",
+  "header": "Configure IKEv2 Traffic Selectors",
+  "content": "In IKEv2, you can configure Traffic Selectors, which are components of network traffic that are\nused during IKE negotiation. Traffic selectors are used during the CHILD_SA (tunnel creation)\nPhase 2 to set up the tunnel and to determine what traffic is allowed through the tunnel. The\ntwo IKE gateway peers must negotiate and agree on their traffic selectors; otherwise, one side\nnarrows its address range to reach agreement. One IKE connection can have multiple tunnels; for\nexample, you can assign different tunnels to each department to isolate their traffic. Separation\nof traffic also allows features such as QoS to be implemented. Use the following workflow to\nconfigure traffic selectors.\nSTEP 1 |\nSelect Network > IPSec Tunnels > Proxy IDs.\nSTEP 2 |\nSelect the IPv4 or IPv6 tab.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1263\n©2025 Palo Alto Networks, Inc.\nVPNs\nSTEP 3 |\nClick Add and enter the Name in the Proxy ID field.\nSTEP 4 |\nIn the Local field, enter the Source IP Address.\nSTEP 5 |\nIn the Remote field, enter the Destination IP Address.\nSTEP 6 |\nIn the Protocol field, select the transport protocol (TCP or UDP).\nSTEP 7 |\nClick OK.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1263,
+      "end": 1264
+    },
+    "content_stats": {
+      "char_count": 1145,
+      "word_count": 198
+    },
+    "hierarchy": {
+      "parent": "Set Up an IKE Gateway",
+      "children": []
+    }
+  }
+}

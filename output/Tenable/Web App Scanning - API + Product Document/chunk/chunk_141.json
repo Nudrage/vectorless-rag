@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_141",
+  "section_number": "54.1",
+  "header": "Responses",
+  "content": "200 Returns details for the specified user-defined template.\nRESPONSE SCHEMA:\napplication/json\nstring <uuid>\nThe UUID of the user-defined template resource.\nstring\nThe UUID of your organization's Tenable Web App Scanning instance.\nobject (UserTemplateResponse)\n400 Returned if your request specifies an invalid UUID for a user-defined template.\nRESPONSE SCHEMA:\napplication/json\nArray of objects [ items\nnon-empty\n]\nA list of reasons for the Tenable Web App Scanning error.\n404 Returned if Tenable Web App Scanning cannot find the specified user-defined template.\nRESPONSE SCHEMA:\napplication/json\nArray of objects [ items\nnon-empty\n]\nA list of reasons for the Tenable Web App Scanning error.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 183,
+      "end": 183
+    },
+    "content_stats": {
+      "char_count": 819,
+      "word_count": 124
+    },
+    "hierarchy": {
+      "parent": "Get user-defined template details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

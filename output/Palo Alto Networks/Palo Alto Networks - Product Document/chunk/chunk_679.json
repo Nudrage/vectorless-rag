@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_679",
+  "section_number": "1.19.3.3",
+  "header": "Tunnel Monitoring",
+  "content": "For a VPN tunnel, you can check connectivity to a destination IP address across the tunnel. The\nnetwork monitoring profile on the firewall allows you to verify connectivity (using ICMP) to a\ndestination IP address or a next hop at a specified polling interval, and to specify an action on\nfailure to access the monitored IP address.\nIf the destination IP is unreachable, you either configure the firewall to wait for the tunnel to\nrecover or configure automatic failover to another tunnel. In either case, the firewall generates\na system log that alerts you to a tunnel failure and renegotiates the IPSec keys to accelerate\nrecovery.\nSee Set Up Tunnel Monitoring for configuration details.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1250,
+      "end": 1250
+    },
+    "content_stats": {
+      "char_count": 689,
+      "word_count": 114
+    },
+    "hierarchy": {
+      "parent": "Site-to-Site VPN Concepts",
+      "children": []
+    }
+  }
+}

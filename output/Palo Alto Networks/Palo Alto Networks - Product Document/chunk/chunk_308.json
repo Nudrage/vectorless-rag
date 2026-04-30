@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_308",
+  "section_number": "1.11.7.2",
+  "header": "View Logs",
+  "content": "You can view the different log types on the firewall in a tabular format. The firewall locally stores\nall log files and automatically generates Configuration and System logs by default. To learn more\nabout the security rules that trigger the creation of entries for the other types of logs, see Log\nTypes and Severity Levels.\nTo configure the firewall to forward logs as syslog messages, email notifications, or Simple\nNetwork Management Protocol (SNMP) traps, Use External Services for Monitoring.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n526\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 1 |\nSelect a log type to view.\n1.\nSelect Monitor > Logs.\n2.\nSelect a log type from the list.\nThe firewall displays only the logs you have permission to see. For example,\nif your administrative account does not have permission to view WildFire\nSubmissions logs, the firewall does not display that log type when you access the\nlogs pages. Administrative Role Types define the permissions.\nSTEP 2 |\n(Optional) Customize the log column display.\n1.\nClick the arrow to the right of any column header, and select Columns.\n2.\nSelect columns to display from the list. The log updates automatically to match your\nselections.\nSTEP 3 |\nView additional details about log entries.\n• Click the spyglass (\n) for a specific log entry. The Detailed Log View has more information\nabout the source and destination of the session, as well as a list of sessions related to the\nlog entry.\n• (Threat log only) Click\nnext to an entry to access local packet captures of the threat. To\nenable local packet captures, see Take Packet Captures.\n• (Traffic, Threat, URL Filtering, WildFire Submissions, Data Filtering, and Unified logs only)\nView AutoFocus threat data for a log entry.\n1. Enable AutoFocus Threat Intelligence.\nEnable AutoFocus in Panorama to view AutoFocus threat data for all Panorama\nlog entries, including those from firewalls that are not connected to AutoFocus\nand/or are running PAN-OS 7.0 and earlier release versions (Panorama > Setup\n> Management > AutoFocus).\n2. Hover over an IP address, URL, user agent, threat name (subtype: virus and wildfire-virus\nonly), filename, or SHA-256 hash.\n3. Click the drop-down (\n) and select AutoFocus.\n4. Content Delivery Network Infrastructure.\nNext Steps...\n• Filter Logs.\n• Export Logs.\n• Configure Log Storage Quotas and Expiration Periods.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 526,
+      "end": 527
+    },
+    "content_stats": {
+      "char_count": 2365,
+      "word_count": 387
+    },
+    "hierarchy": {
+      "parent": "View and Manage Logs",
+      "children": []
+    }
+  }
+}

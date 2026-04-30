@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_154",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is sdwan_GWnRT_log_fmt.\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 176\nSyslog Field\nName\nLog Viewer\nData\nType\nLength Format/Description\nPossible Values\nNotes / Example\ndevice\nN/A\nString\nSFW\ndevice_name\nN/A\nString\nSF01V\ndevice_id\nN/A\nString\nSFDemo-ff87495\nlog_id\nN/A\nString\neg.\nlog_id=\"010101600001\"\nlog_type\nlog_type\nString\nSD-WAN\neg. log_type=\"SD-WAN\"\nlog_component log_component String\nProfile\neg.\nlog_component=\"Profile\"\nlog_subtype\nlog_subtype\nString\nHealth check\nRoute change\neg. log_subtype=\"Health\ncheck\"\npriority\npriority\nString\nNotice\neg. priority=\"Notice\"\nstatus\nstatus\nString\nAvailable\nUnavailable\neg. status=\"Available\"\nprofile_id\nprofile_id\nNumber\neg. profile_id=123\nprofile_name\nprofile_name\nString\neg.\nprofile_name=\"test_profile\"\ngw_id\ngw_id\nNumber\neg. gw_id=2\ngw_name\ngw_name\nString\neg. gw_name=\"gw1\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 177\nmessage\nmessage\nString\n•\nGateway <name>\n(<IP\naddress>) available. <\nprobe protocol TCP\nprobe/Ping>\nto <destination\nIP> successful.\n•\nGateway <name>\n(<IP\naddress>) unavailable.\n<probe protocol TCP\nprobe/Ping>\nto<destination\nIP> failed.\n•\nGateway <name>\n(<IP\naddress>) unavailable.\n<probe protocol TCP\nprobe/Ping>\nto <destination IP>,\n<destination\nIP> failed.\n•\nSD-WAN route\nchanged for SD-WAN\nprofile <name> from\ngateway <name> (<IP\naddress>) to <name>\n(<IP address>\neg.\nmessage=\"Gateway gw1\n(10.20.30.40) available.\nprobe protocol TCP probe\nto 10.20.30.50 successful.\"\nprobe_target\nprobe_target\nString\n<IP Address>\nprobe_target=\"1.2.3.4,\n5.6.7.8\"\nprotocol\nprotocol\nString\nPING/TCP\nprotocol=\"PING\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 178",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 176,
+      "end": 178
+    },
+    "content_stats": {
+      "char_count": 1724,
+      "word_count": 220
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (Legacy)",
+      "children": []
+    }
+  }
+}

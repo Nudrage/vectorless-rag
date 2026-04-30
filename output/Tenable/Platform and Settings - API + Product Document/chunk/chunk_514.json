@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_514",
+  "section_number": "23.6",
+  "header": "Allow control of running scans",
+  "content": "Allows control of scans that are currently running on a scanner.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\ninteger <int32>\nThe ID of the scanner.\nstring\nThe UUID of the scan.\nREQUEST BODY SCHEMA:\napplication/json\nstring\nEnum: \"stop\"\n\"pause\"\n\"resume\"\nscanner_id\nrequired\nscan_uuid\nrequired\naction\nrequired\nContent type\nAn action to perform on a scan. Valid values are stop , pause , and\nresume .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 521,
+      "end": 522
+    },
+    "content_stats": {
+      "char_count": 443,
+      "word_count": 71
+    },
+    "hierarchy": {
+      "parent": "Scanner Tasks",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

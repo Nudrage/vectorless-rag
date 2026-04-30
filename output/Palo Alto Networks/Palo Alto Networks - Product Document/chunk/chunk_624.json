@@ -1,0 +1,28 @@
+{
+  "chunk_id": "chunk_624",
+  "section_number": "1.17.15",
+  "header": "URL Category Exceptions",
+  "content": "You can exclude specific websites from URL category enforcement, ensuring that these websites\nare blocked or allowed regardless of the policy action associated with its URL categories. For\nexample, you might block the social-networking URL category but allow access to LinkedIn. To\ncreate exceptions to URL category policy enforcement:\n• Add the IP addresses or URLs of sites you want to block or allow to a custom URL category\nof type URL List (Objects > Custom Objects > URL Category). Then, define site access for the\ncustom URL category in a URL Filtering profile. Finally, attach the profile to a Security policy\nrule.\nYou can also use a custom URL category as match criteria in a Security policy rule\n(Policies > Security, and select Service/URL Category). The exception rule must be\nplaced above any rules that block or allow the categories to which the URL exceptions\nbelong.\n• Add the URLs of sites you want to block or allow to an external dynamic list of type URL List\n(Objects > External Dynamic Lists). Then, use the external dynamic list in a URL Filtering\nprofile or as match criteria in a Security policy rule. The benefit to using an external dynamic\nlist is that you can update the list without performing a configuration change or commit on the\nfirewall.\nExternal dynamic lists of type URL List should not be confused with external dynamic\nlists of type Domain List or IP Address. While external dynamic lists of URLs permit\ndomains and IP addresses, the reverse is not true and result in invalid entries.\nThe following guidelines describe how to populate URL category exception lists—custom URL\ncategories or external dynamic lists of URLs:\n• Basic Guidelines For URL Category Exception Lists\n• Wildcard Guidelines for URL Category Exception Lists\n• URL Category Exception List—Examples",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1154,
+      "end": 1154
+    },
+    "content_stats": {
+      "char_count": 1806,
+      "word_count": 301
+    },
+    "hierarchy": {
+      "parent": "URL Filtering",
+      "children": [
+        "Basic Guidelines For URL Category Exception Lists",
+        "Wildcard Guidelines for URL Category Exception Lists",
+        "URL Category Exception List—Examples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_353",
+  "section_number": "1.11.14.2.15",
+  "header": "Correlated Events Log Fields",
+  "content": "Format: FUTURE_USE, Receive Time, Serial Number, Type, Content/Threat Type, FUTURE_USE,\nGenerated Time, Source Address. Source User, Virtual System, Category, Severity, Device Group\nHierarchy Level 1, Device Group Hierarchy Level 2, Device Group Hierarchy Level 3, Device\nGroup Hierarchy Level 4, Virtual System Name, Device Name, Virtual System ID, Object Name,\nObject ID, Evidence\nField Name\nDescription\nReceive Time\n(receive_time or\ncef-formatted-\nreceive_time)\nTime the log was received at the management plane.\nSerial Number (serial)\nSerial number of the device that generated the log.\nType (type)\nSpecifies the type of log; value is CORRELATION.\nContent/Threat Type\n(subtype)\nSubtype of the system log; refers to the system daemon generating\nthe log; values are crypto, dhcp, dnsproxy, dos, general, global-protect,\nha, hw, nat, ntpd, pbf, port, pppoe, ras, routing, satd, sslmgr, sslvpn,\nuserid, url-filtering, vpn.\nGenerated Time\n(time_generated\nor cef-formatted-\ntime_generated)\nTime the log was generated on the dataplane.\nSource Address (src)\nIP address of the user who initiated the event.\nSource User (srcuser)\nUsername of the user who initiated the event.\nVirtual System (vsys)\nVirtual System associated with the configuration log.\nCategory (category)\nA summary of the kind of threat or harm posed to the network, user,\nor host.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n648\n©2025 Palo Alto Networks, Inc.\nMonitoring\nField Name\nDescription\nSeverity (severity)\nSeverity associated with the event; values are informational, low,\nmedium, high, critical.\nDevice Group\nHierarchy\n(dg_hier_level_1 to\ndg_hier_level_4)\nA sequence of identification numbers that indicate the device group’s\nlocation within a device group hierarchy. The firewall (or virtual\nsystem) generating the log includes the identification number of each\nancestor in its device group hierarchy. The shared device group (level\n0) is not included in this structure.\nIf the log values are 12, 34, 45, 0, it means that the log was generated\nby a firewall (or virtual system) that belongs to device group 45,\nand its ancestors are 34, and 12. To view the device group names\nthat correspond to the value 12, 34 or 45, use one of the following\nmethods:\nAPI query:\n/api/?type=op&cmd=<show><dg-hierarchy></dg-\nhierarchy></show>\nVirtual System Name\n(vsys_name)\nThe name of the virtual system associated with the session; only valid\non firewalls enabled for multiple virtual systems.\nDevice Name\n(device_name)\nThe hostname of the firewall on which the session was logged.\nVirtual System ID\n(vsys_id)\nA unique identifier for a virtual system on a Palo Alto Networks\nfirewall.\nObject Name\n(objectname)\nName of the correlation object that was matched on.\nObject ID (object_id)\nName of the object associated with the system event.\nEvidence (evidence)\nA summary statement that indicates how many times the host has\nmatched against the conditions defined in the correlation object. For\nexample, Host visited known malware URl (19 times).",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 648,
+      "end": 649
+    },
+    "content_stats": {
+      "char_count": 2996,
+      "word_count": 449
+    },
+    "hierarchy": {
+      "parent": "Syslog Field Descriptions",
+      "children": []
+    }
+  }
+}

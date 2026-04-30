@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_690",
+  "section_number": "1.19.4",
+  "header": "Set Up Site-to-Site VPN",
+  "content": "To set up site-to-site VPN:\nMake sure that your Ethernet interfaces, virtual routers, and zones are configured properly. For\nmore information, see Configure Interfaces and Zones.\nCreate your tunnel interfaces. Ideally, put the tunnel interfaces in a separate zone, so that\ntunneled traffic can use different policies.\nSet up static routes or assign routing protocols to redirect traffic to the VPN tunnels. To\nsupport dynamic routing (OSPF, BGP, RIP are supported), you must assign an IP address to the\ntunnel interface.\nDefine IKE gateways for establishing communication between the peers across each end of the\nVPN tunnel; also define the cryptographic profile that specifies the protocols and algorithms\nfor identification, authentication, and encryption to be used for setting up VPN tunnels in\nIKEv1 Phase 1. See Set Up an IKE Gateway and Define IKE Crypto Profiles.\nConfigure the parameters that are needed to establish the IPSec connection for transfer of\ndata across the VPN tunnel; See Set Up an IPSec Tunnel. For IKEv1 Phase-2, see Define IPSec\nCrypto Profiles.\n(Optional) Specify how the firewall will monitor the IPSec tunnels. See Set Up Tunnel\nMonitoring.\nDefine security policies to filter and inspect the traffic.\nIf there is a deny rule at the end of the security rulebase, intra-zone traffic is blocked\nunless otherwise allowed. Rules to allow IKE and IPSec applications must be explicitly\nincluded above the deny rule.\nIf your VPN traffic is passing through (not originating or terminating on) a PA-7000\nSeries or PA-5200 Series firewall, configure bi-directional Security policy rules to allow\nthe ESP or AH traffic in both directions.\nWhen these tasks are complete, the tunnel is ready for use. Traffic destined for the zones/\naddresses defined in policy is automatically routed properly based on the destination route in the\nrouting table, and handled as VPN traffic. For a few examples on site-to-site VPN, see Site-to-Site\nVPN Quick Configs.\nFor troubleshooting purposes, you can Enable/Disable, Refresh or Restart an IKE Gateway or\nIPSec Tunnel.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1257,
+      "end": 1257
+    },
+    "content_stats": {
+      "char_count": 2070,
+      "word_count": 327
+    },
+    "hierarchy": {
+      "parent": "VPNs",
+      "children": [
+        "Set Up an IKE Gateway",
+        "Define Cryptographic Profiles",
+        "Set Up an IPSec Tunnel",
+        "Set Up Tunnel Monitoring",
+        "Enable/Disable, Refresh or Restart an IKE Gateway or IPSec Tunnel",
+        "Test VPN Connectivity",
+        "Interpret VPN Error Messages"
+      ]
+    }
+  }
+}

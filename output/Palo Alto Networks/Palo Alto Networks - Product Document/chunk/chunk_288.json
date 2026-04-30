@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_288",
+  "section_number": "1.11.5.5.2",
+  "header": "Take a Custom Application Packet Capture",
+  "content": "You can configure a Palo Alto Networks firewall to take a packet capture based on an application\nname and filters that you define. You can then use the packet capture to troubleshoot issues with\ncontrolling an application. When configuring an application packet capture, you must use the\napplication name defined in the App-ID database. You can view a list of all App-ID applications\nusing Applipedia or from the web interface on the firewall in Objects > Applications.\nSTEP 1 |\nUsing a terminal emulation application, such as PuTTY, launch an SSH session to the firewall.\nSTEP 2 |\nTurn on the application packet capture and define filters.\nadmin@PA-220>set application dump on application <application-name>\nrule <rule-name>\nFor example, to capture packets for the linkedin-base application that matches the security\nrule named Social Networking Apps, run the following CLI command:\nadmin@PA-220>set application dump on application linkedin-base rule\n\"Social Networking Apps\"\nYou can also apply other filters, such as source IP address and destination IP address.\nSTEP 3 |\nView the packet capture output to ensure that the correct filters are applied. The output\ndisplays after you enable the packet capture.\nThe following output confirms that application capture filtering is now based on the linkedin-\nbase application for traffic that matches the Social Networking Apps rule.\nSTEP 4 |\nAccess linkedin.com from a web browser and perform some LinkedIn tasks to generate\nLinkedIn traffic, and then run the following CLI command to turn off application packet\ncapture:\nadmin@PA-220>set application dump off\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n514\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 5 |\nView/export the packet capture.\n1.\nLog in to the web interface on the firewall and select Monitor > Logs > Traffic.\n2.\nIn the log entry that you are interested in, click the green packet capture icon\n.\n3.\nView the packet capture directly or Export it to your computer. The following screen\ncapture shows the linkedin-base packet capture.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 514,
+      "end": 515
+    },
+    "content_stats": {
+      "char_count": 2040,
+      "word_count": 322
+    },
+    "hierarchy": {
+      "parent": "Take an Application Packet Capture",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_542",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully retrieved the list of scanners in the\nspecified group.\nRESPONSE SCHEMA:\napplication/json\nArray of objects\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 403 Returned if you do not have permission to list scanners within scanner groups.\n— 404 Returned if Tenable Vulnerability Management could not find the specified scanner group.\ngroup_id\nrequired\nscanners\nContent type\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 540,
+      "end": 541
+    },
+    "content_stats": {
+      "char_count": 619,
+      "word_count": 95
+    },
+    "hierarchy": {
+      "parent": "List scanners within scanner group",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

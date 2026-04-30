@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_055",
+  "section_number": "1.18.4",
+  "header": "Accounts",
+  "content": "GET\nURL: https://<vectra_portal_url>/api/v3.4/accounts/1\nHeaders:\n\"Authorization\": \"Bearer <access_token>\"\nResponse:\n{\n\"id\": 1,\n\"url\": \"http://123456789.uw2.portal.vectra.ai/api/v3.4/accounts/1\",\n\"name\": \"O365:jmalacara@vectra.ai\",\n\"state\": \"inactive\",\n\"threat\": 0,\n\"certainty\": 0,\n\"severity\": \"Low\",\n\"account_type\": [\n\"o365\"\n],\n\"tags\": [],\n\"note\": null,\n\"notes\": [],\n\"note_modified_by\": null,\n\"note_modified_timestamp\": null,\n\"privilege_level\": null,\n\"privilege_category\": null,\n\"last_detection_timestamp\": \"2021-12-20T18:11:16Z\",\n\"detection_set\": [\n\"http://123456789.uw2.portal.vectra.ai/api/v3.4/detections/1\",\n\"http://123456789.uw2.portal.vectra.ai/api/v3.4/detections/4\"\n],\n\"probable_home\": null,\n\"assignment\": null,\n\"past_assignments\": [],\n\"sensors\": [\n\"tzlgmx99\"\n],\n\"detection_summaries\": [\n{\n© July 2024 Vectra AI, Inc. | 82\n\"detection_id\": 1,\n\"detection_url\":\n\"http://123456789.uw2.portal.vectra.ai/api/v3.4/detections/1\",\n\"detection_type\": \"O365 Internal Spearphishing\",\n\"detection_category\": \"LATERAL MOVEMENT\",\n\"is_targeting_key_asset\": false,\n\"state\": \"inactive\",\n\"threat\": 0,\n\"certainty\": 0,\n\"is_triaged\": false,\n\"tags\": [],\n\"summary\": {\n\"subject\": [\n\"Sandbox: Congratulations, you just won!\"\n],\n\"recipients\": [\n\"tkawale@example.com\",\n\"johnny@example.com\",\n\"idolcetest@example.com\",\n\"abacsmith@example.com\",\n\"monty@example.com\"\n],\n\"recipients_count\": 24,\n\"description\": \"This account sent emails containing malware,\nsuspicious links, or bad reputation.\"\n},\n\"assigned_to\": null,\n\"assigned_date\": null\n},\n{\n\"detection_id\": 4,\n\"detection_url\":\n\"http://123456789.uw2.portal.vectra.ai/api/v3.4/detections/4\",\n\"detection_type\": \"Azure AD Privilege Operation Anomaly\",\n\"detection_category\": \"LATERAL MOVEMENT\",\n\"is_targeting_key_asset\": false,\n\"state\": \"inactive\",\n\"threat\": 0,\n\"certainty\": 0,\n\"is_triaged\": false,\n\"tags\": [],\n\"summary\": {\n\"user_type\": \"Regular\",\n\"azure_ad_privilege\": {\n\"privilege\": 2,\n\"privilegeCategory\": \"Low\"\n},\n\"num_events\": 2,\n© July 2024 Vectra AI, Inc. | 83\n\"operations\": [\n\"Consent to application.\",\n\"Add delegated permission grant.\"\n],\n\"src_ips\": [],\n\"target_entities\": [\n\"atlassian\",\n\"microsoft graph\"\n],\n\"description\": \"This account was seen using an operation associated\nwith a high privilege admin activity that was anomalous for the user.\"\n},\n\"assigned_to\": null,\n\"assigned_date\": null\n}\n]\n}",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 11,
+    "font_name": "HelveticaNeue-Bold",
+    "page_range": {
+      "start": 81,
+      "end": 83
+    },
+    "content_stats": {
+      "char_count": 2331,
+      "word_count": 224
+    },
+    "hierarchy": {
+      "parent": "Appendix A",
+      "children": []
+    }
+  }
+}

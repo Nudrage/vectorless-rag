@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_313",
+  "section_number": "1.11.7.5",
+  "header": "Configure Log Storage Quotas and Expiration Periods",
+  "content": "The firewall automatically deletes logs that exceed the expiration period. When the firewall\nreaches the storage quota for a log type, it automatically deletes older logs of that type to create\nspace even if you don’t set an expiration period.\nIf you want to manually delete logs, select Device > Log Settings and, in the Manage Logs\nsection, click the links to clear logs by type.\nSTEP 1 |\nSelect Device > Setup > Management and edit the Logging and Reporting Settings.\nSTEP 2 |\nSelect Log Storage and enter a Quota (%) for each log type. When you change a percentage\nvalue, the dialog refreshes to display the corresponding absolute value (Quota GB/MB\ncolumn).\nSTEP 3 |\nEnter the Max Days (expiration period) for each log type (range is 1-2,000). The fields are\nblank by default, which means the logs never expire.\nThe firewall synchronizes expiration periods across high availability (HA) pairs. Because\nonly the active HA peer generates logs, the passive peer has no logs to delete unless\nfailover occurs and it starts generating logs.\nSTEP 4 |\nClick OK and Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 529,
+      "end": 529
+    },
+    "content_stats": {
+      "char_count": 1069,
+      "word_count": 184
+    },
+    "hierarchy": {
+      "parent": "View and Manage Logs",
+      "children": []
+    }
+  }
+}

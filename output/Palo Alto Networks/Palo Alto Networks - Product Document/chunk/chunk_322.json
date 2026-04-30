@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_322",
+  "section_number": "1.11.9.6",
+  "header": "Generate Custom Reports",
+  "content": "You can configure custom reports that the firewall generates immediately (on demand) or on\nschedule (each night). To understand the selections available to create a purposeful custom\nreport, see Custom Reports.\nAfter the firewall has generated a scheduled custom report, you risk invalidating the past\nresults of that report if you modify its configuration to change its future output. If you\nneed to modify a scheduled report configuration, the best practice is to create a new\nreport.\nSTEP 1 |\nSelect Monitor > Manage Custom Reports.\nSTEP 2 |\nClick Add and then enter a Name for the report.\nTo base a report on an predefined template, click Load Template and choose the\ntemplate. You can then edit the template and save it as a custom report.\nSTEP 3 |\nSelect the Database to use for the report.\nEach time you create a custom report, a log view report is automatically created. This\nreport show the logs that were used to build the custom report. The log view report\nuses the same name as the custom report, but appends the phrase (Log View) to the\nreport name.\nWhen creating a report group, you can include the log view report with the custom report. For\nmore information, see Manage Report Groups.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n537\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 4 |\nSelect the Scheduled check box to run the report each night. The report is then available for\nviewing in the Reports column on the side.\nTo generate a scheduled custom report using logs stored in Cortex Data Lake on the\nPanorama™ management server, Cloud Service plugin 1.8 or later release must be\ninstalled on Panorama.\nSTEP 5 |\nDefine the filtering criteria. Select the Time Frame, the Sort By order, Group By preference,\nand select the columns that must display in the report.\nSTEP 6 |\n(Optional) Select the Query Builder attributes if you want to further refine the selection\ncriteria. To build a report query, specify the following and click Add. Repeat as needed to\nconstruct the full query.\n• Connector—Choose the connector (and/or) to precede the expression you are adding.\n• Negate—Select the check box to interpret the query as a negation. If, for example, you\nchoose to match entries in the last 24 hours and/or are originating from the untrust zone,\nthe negate option causes a match on entries that are not in the past 24 hours and/or are\nnot from the untrust zone.\n• Attribute—Choose a data element. The available options depend on the choice of database.\n• Operator—Choose the criterion to determine whether the attribute applies (such as =). The\navailable options depend on the choice of database.\n• Value—Specify the attribute value to match.\nFor example, the following figure (based on the Traffic Log database) shows a query that\nmatches if the Traffic log entry was received in the past 24 hours and is from the untrust zone.\nSTEP 7 |\nTo test the report settings, select Run Now. Modify the settings as required to change the\ninformation that is displayed in the report.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n538\n©2025 Palo Alto Networks, Inc.\nMonitoring\nSTEP 8 |\nClick OK to save the custom report.\nExamples of Custom Reports\nIf you want to set up a simple report in which you use the traffic summary database from the\nlast 30 days, and sort the data by the top 10 sessions and these sessions are grouped into 5\ngroups by day of the week. You would set up the custom report to look like this:\nAnd the PDF output for the report would look as follows:\nNow, if you want to use the query builder to generate a custom report that represents the top\nconsumers of network resources within a user group, you would set up the report to look like\nthis:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n539\n©2025 Palo Alto Networks, Inc.\nMonitoring\nThe report would display the top users in the product management user group sorted by bytes.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 537,
+      "end": 540
+    },
+    "content_stats": {
+      "char_count": 3843,
+      "word_count": 671
+    },
+    "hierarchy": {
+      "parent": "View and Manage Reports",
+      "children": []
+    }
+  }
+}

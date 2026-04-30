@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_014",
+  "section_number": "6",
+  "header": "List attestation assets",
+  "content": "Returns a list of PCI assets attested in the specified attestation in PCI ASV.\nNote: You need to request access to this endpoint through Tenable support even if you have a valid\nPCI ASV license.\nRequires the Administrator [64] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nPATH PARAMETERS\nstring <uuid>\nThe UUID of the PCI attestation you want to retrieve assets for.\nQUERY PARAMETERS\nstring\nThe field you want to use to sort the results by along with the sort order.\nThe field is specified first, followed by a colon, and the order is specified\nattestation_uuid\nrequired\nsort\nsecond ( asc  or desc ). For example, fqdn:desc  would sort results by\nthe fqdn  field in descending order.\nIf you specify multiple fields, the fields must be separated by commas. For\nexample, fqdn:desc,scan_name:asc  would first sort results by the\nfqdn  field in descending order and then by the scan_name  field in\nascending order.\ninteger <int32>\nThe number of records to retrieve.\ninteger <int32>\nThe starting record to retrieve. If this parameter is omitted, Tenable PCI ASV\nuses the default value of 0 .",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 1,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 15,
+      "end": 16
+    },
+    "content_stats": {
+      "char_count": 1085,
+      "word_count": 181
+    },
+    "hierarchy": {
+      "parent": null,
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

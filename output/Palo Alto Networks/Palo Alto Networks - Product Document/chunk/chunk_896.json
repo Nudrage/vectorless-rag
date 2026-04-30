@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_896",
+  "section_number": "1.21.19.4",
+  "header": "Configure LLDP",
+  "content": "To configure LLDP and create an LLDP profile, you must be a superuser or device administrator\n(deviceadmin). A firewall interface supports a maximum of five LLDP peers.\nSTEP 1 |\nEnable LLDP on the firewall.\nSelect Network > LLDP and edit the LLDP General section; select Enable.\nSTEP 2 |\n(Optional) Change LLDP global settings.\n1.\nFor Transmit Interval (sec), specify the interval (in seconds) at which LLDPDUs are\ntransmitted. Default: 30 seconds. Range: 1-3600 seconds.\n2.\nFor Transmit Delay (sec), specify the delay time (in seconds) between LLDP\ntransmissions sent after a change is made in a TLV element. The delay helps to prevent\nflooding the segment with LLDPDUs if many network changes spike the number of LLDP\nchanges, or if the interface flaps. The Transmit Delay must be less than the Transmit\nInterval. Default: 2 seconds. Range: 1-600 seconds.\n3.\nFor Hold Time Multiple, specify a value that is multiplied by the Transmit Interval to\ndetermine the total TTL Hold Time. Default: 4. Range: 1-100. The maximum TTL Hold\nTime is 65535 seconds, regardless of the multiplier value.\n4.\nFor Notification Interval, specify the interval (in seconds) at which LLDP Syslog\nMessages and SNMP Traps are transmitted when MIB changes occur. Default: 5\nseconds. Range: 1-3600 seconds.\n5.\nClick OK.\nSTEP 3 |\nCreate an LLDP profile.\nFor descriptions of the optional TLVs, see Supported TLVs in LLDP.\n1.\nSelect Network > Network Profiles > LLDP Profile and Add a Name for the LLDP\nprofile.\n2.\nFor Mode, select transmit-receive (default), transmit-only, or receive-only.\n3.\nSelect SNMP Syslog Notification to enable SNMP notifications and syslog messages. If\nenabled, the global Notification Interval is used. The firewall will send both an SNMP\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1537\n©2025 Palo Alto Networks, Inc.\nNetworking\ntrap and a syslog event as configured in the Device > Log Settings > System > SNMP\nTrap Profile and Syslog Profile.\n4.\nFor Optional TLVs, select the TLVs you want transmitted:\n• Port Description\n• System Name\n• System Description\n• System Capabilities\n5.\n(Optional) Select Management Address to add one or more management addresses and\nAdd a Name.\n6.\nSelect the Interface from which to obtain the management address. At least one\nmanagement address is required if Management Address TLV is enabled. If no\nmanagement IP address is configured, the system uses the MAC address of the\ntransmitting interface as the management address TLV.\n7.\nSelect IPv4 or IPv6, and in the adjacent field, select an IP address from the list (which\nlists the addresses configured on the selected interface), or enter an address.\n8.\nClick OK.\n9.\nUp to four management addresses are allowed. If you specify more than one\nManagement Address, they will be sent in the order they are specified, starting at the\ntop of the list. To change the order of the addresses, select an address and use the Move\nUp or Move Down buttons.\n10. Click OK.\nSTEP 4 |\nAssign an LLDP profile to an interface.\n1.\nSelect Network > Interfaces and select the interface where you will assign an LLDP\nprofile.\n2.\nSelect Advanced > LLDP.\n3.\nSelect Enable LLDP to assign an LLDP profile to the interface.\n4.\nFor Profile, select the profile you created. Selecting None enables LLDP with basic\nfunctionality: sends the three mandatory TLVs and enables transmit-receive mode.\nIf you want to create a new profile, click LLDP Profile and follow the instructions steps\nabove.\n5.\nClick OK.\nSTEP 5 |\nCommit your changes.\nClick Commit.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1537,
+      "end": 1538
+    },
+    "content_stats": {
+      "char_count": 3498,
+      "word_count": 584
+    },
+    "hierarchy": {
+      "parent": "LLDP",
+      "children": []
+    }
+  }
+}

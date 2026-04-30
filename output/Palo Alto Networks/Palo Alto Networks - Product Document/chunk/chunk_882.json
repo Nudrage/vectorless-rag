@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_882",
+  "section_number": "1.21.17.5",
+  "header": "IPv6-Initiated Communication",
+  "content": "IPv6-initiated communication to the firewall is similar to source NAT for an IPv4 topology.\nConfigure NAT64 for IPv6-Initiated Communication when your IPv6 host needs to communicate\nwith an IPv4 server.\nIn the NAT64 policy rule, configure the original source to be an IPv6 host address or Any.\nConfigure the destination IPv6 address as either the Well-Known Prefix or the NSP that the\nDNS64 server uses. (You do not configure the full IPv6 destination address in the rule.)\nIf you need to use a DNS, you need to use a DNS64 Server to convert an IPv4 DNS “A” result\ninto an “AAAA” result merged with the NAT64 prefix. If you don’t use a DNS, you need to create\nthe address using the IPv4 destination address and the NAT64 prefix configured on the firewall,\nfollowing RFC 6052 rules.\nFor environments that use a DNS, the example topology below illustrates communication with the\nDNS64 server. The DNS64 server must be set up to use the Well-Known Prefix 64:FF9B::/96 or\nyour Network-Specific Prefix, which must comply with RFC 6052 (/32, /40,/48,/56,/64, or /96).\nOn the translated side of the firewall, the translation type must be Dynamic IP and Port in order\nto implement stateful NAT64. You configure the source translated address to be the IPv4 address\nof the egress interface on the firewall. You do not configure the destination translation field; the\nfirewall translates the address by first finding the prefix length in the original destination address\nof the rule and then based on the prefix, extracting the encoded IPv4 address from the original\ndestination IPv6 address in the incoming packet.\nBefore the firewall looks at the NAT64 rule, the firewall must do a route lookup to find the\ndestination security zone for an incoming packet. You must ensure that the NAT64 prefix can\nbe reached through the destination zone assignment because the NAT64 prefix should not be\nroutable by the firewall. The firewall would likely assign the NAT64 prefix to the default route\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1518\n©2025 Palo Alto Networks, Inc.\nNetworking\nor drop the NAT64 prefix because there is no route for it. The firewall will not find a destination\nzone because the NAT64 prefix is not in its routing table, associated with an egress interface and\nzone.\nYou must also configure a tunnel interface (with no termination point). You apply the NAT64\nprefix to the tunnel and apply the appropriate zone to ensure that IPv6 traffic with the NAT64\nprefix is assigned to the proper destination zone. The tunnel also has the advantage of dropping\nIPv6 traffic with the NAT64 prefix if the traffic does not match the NAT64 rule. Your configured\nrouting protocol on the firewall looks up the IPv6 prefix in its routing table to find the destination\nzone and then looks at the NAT64 rule.\nThe following figure illustrates the role of the DNS64 server in the name resolution process. In\nthis example, the DNS64 server is configured to use Well-Known Prefix 64:FF9B::/96.\n1. A user at the IPv6 host enters the URL www.abc.com, which generates a name server lookup\n(nslookup) to the DNS64 server.\n2. The DNS64 Server sends an nslookup to the public DNS server for www.abc.com, requesting\nits IPv4 address.\n3. The DNS server returns an A record that provides the IPv4 address to the DNS64 server.\n4. The DNS64 server sends an AAAA record to the IPv6 user, converting the IPv4 dotted\ndecimal address 198.51.100.1 into C633:6401 hexadecimal and embedding it into its own IPv6\nprefix, 64:FF9B::/96. [198 = C6 hex; 51 = 33 hex; 100 = 64 hex; 1 = 01 hex.] The result is IPv4-\nEmbedded IPv6 Address 64:FF9B::C633:6401.\nKeep in mind that in a /96 prefix, the IPv4 address is the last four octets encoded in the IPv6\naddress. If the DNS64 server uses a /32, /40, /48, /56 or /64 prefix, the IPv4 address is encoded\nas shown in RFC 6052.\nUpon the transparent name resolution, the IPv6 host sends a packet to the firewall containing\nits IPv6 source address and destination IPv6 address 64:FF9B::C633:6401 as determined by the\nDNS64 server. The firewall performs the NAT64 translation based on your NAT64 rule.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1518,
+      "end": 1519
+    },
+    "content_stats": {
+      "char_count": 4099,
+      "word_count": 695
+    },
+    "hierarchy": {
+      "parent": "NAT64",
+      "children": []
+    }
+  }
+}

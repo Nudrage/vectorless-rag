@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_625",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200 Returns the group details.\nRESPONSE SCHEMA:\napplication/json\nArray of objects\nThe Access Control Lists applicable to the group.\ninteger\nThe unique ID of the group.\ngroup_id\nrequired\nacls\nid\nboolean\nIf true, this group is the default.\nstring\nThe name of the group.\nstring\nThe members of the group.\nstring\nThe group type (user or system). Note that the system group\ntype is deprecated. Tenable recommends that you create only\nuser target groups.\nstring\nThe name of the owner of the group. A user of\nnessus_ms_agent  indicates it is a system target group.\ninteger\nThe unique ID of the owner of the group.\ninteger\nThe last modification date for the group in unixtime.\ninteger\nThe shared status of the group.\ninteger\nThe current user permissions for the group.\n— 403 Returned if you do not have permission to view the group.\n— 404 Returned if Tenable Vulnerability Management cannot find the specified group.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 647,
+      "end": 648
+    },
+    "content_stats": {
+      "char_count": 1034,
+      "word_count": 177
+    },
+    "hierarchy": {
+      "parent": "Get target group details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_132",
+  "section_number": "1.8.1.2",
+  "header": "Multi-Factor Authentication",
+  "content": "You can Configure Multi-Factor Authentication (MFA) to ensure that each user authenticates\nusing multiple methods (factors) when accessing highly sensitive services and applications. For\nexample, you can force users to enter a login password and then enter a verification code that\nthey receive by phone before allowing access to important financial documents. This approach\nhelps to prevent attackers from accessing every service and application in your network just by\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n239\n©2025 Palo Alto Networks, Inc.\nAuthentication\nstealing passwords. Of course, not every service and application requires the same degree of\nprotection, and MFA might not be necessary for less sensitive services and applications that users\naccess frequently. To accommodate a variety of security needs, you can Configure Authentication\nPolicy rules that trigger MFA or a single authentication factor (such as login credentials or\ncertificates) based on specific services, applications, and end users.\nWhen choosing how many and which types of authentication factors to enforce, it’s important\nto understand how policy evaluation affects the user experience. When a user requests a service\nor application, the firewall first evaluates Authentication policy. If the request matches an\nAuthentication policy rule with MFA enabled, the firewall displays a Authentication Portal web\nform so that users can authenticate for the first factor. If authentication succeeds, the firewall\ndisplays an MFA login page for each additional factor. Some MFA services prompt the user\nto choose one factor out of two to four, which is useful when some factors are unavailable. If\nauthentication succeeds for all factors, the firewall evaluates Security policy for the requested\nservice or application.\nTo reduce the frequency of authentication challenges that interrupt the user workflow,\nconfigure the first factor to use Kerberos or SAML single sign-on (SSO) authentication.\nTo implement MFA for GlobalProtect, refer to Configure GlobalProtect to facilitate multi-\nfactor authentication notifications.\nYou cannot use MFA authentication profiles in authentication sequences.\nFor end-user authentication via Authentication Policy, the firewall directly integrates with several\nMFA platforms (Duo v2, Okta Adaptive, PingID, and RSA SecurID), as well as integrating through\nRADIUS or SAML for all other MFA platforms. For remote user authentication to GlobalProtect\nportals and gateways and for administrator authentication to the Panorama and PAN-OS web\ninterface, the firewall integrates with MFA vendors using RADIUS and SAML only.\nThe firewall supports the following MFA factors:\nFactor\nDescription\nPush\nAn endpoint device (such as a phone or tablet) prompts the user to\nallow or deny authentication.\nShort message\nservice (SMS)\nAn SMS message on the endpoint device prompts the user to allow\nor deny authentication. In some cases, the endpoint device provides a\ncode that the user must enter in the MFA login page.\nVoice\nAn automated phone call prompts the user to authenticate by pressing\na key on the phone or entering a code in the MFA login page.\nOne-time password\n(OTP)\nAn endpoint device provides an automatically generated alphanumeric\nstring, which the user enters in the MFA login page to enable\nauthentication for a single transaction or session.\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n240\n©2025 Palo Alto Networks, Inc.\nAuthentication",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 239,
+      "end": 241
+    },
+    "content_stats": {
+      "char_count": 3445,
+      "word_count": 514
+    },
+    "hierarchy": {
+      "parent": "Authentication Types",
+      "children": []
+    }
+  }
+}

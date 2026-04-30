@@ -1,0 +1,30 @@
+{
+  "chunk_id": "chunk_1025",
+  "section_number": "1.24",
+  "header": "Zone Protection and DoS Protection",
+  "content": "Protection\nSegmenting the network into functional and organizational zones reduces the network’s attack\nsurface—the portion of the network exposed to potential attackers. Zone protection defends\nnetwork zones against flood attacks, reconnaissance attempts, packet-based attacks, and attacks\nthat use non-IP protocols. Tailor a Zone Protection profile to protect each zone (you can apply the\nsame profile to similar zones). Denial-of-service (DoS) protection defends specific critical systems\nagainst flood attacks, especially devices that user access from the internet such as web servers\nand database servers, and protects resources from session floods. Tailor DoS Protection profiles\nand policy rules to protect each set of critical devices. Visit the Best Practices documentation\nportal to get a checklist of Zone Protection and DoS Protection best practices.\nCheck and monitor firewall dataplane CPU consumption to ensure that each firewall is\nproperly sized to support DoS and Zone Protection along with any other features that\nconsume CPU cycles, such as decryption. If you use Panorama to manage your firewalls,\nuse Device Monitor (Panorama > Managed Devices > Health) to check and monitor the\nCPU consumption of all managed firewalls at one time.\n• Network Segmentation Using Zones\n• How Do Zones Protect the Network?\n• Zone Defense\n• Configure Zone Protection to Increase Network Security\n• DoS Protection Against Flooding of New Sessions\n1725\nZone Protection and DoS Protection",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 28,
+    "font_name": "Lato-Black",
+    "page_range": {
+      "start": 1725,
+      "end": 1726
+    },
+    "content_stats": {
+      "char_count": 1487,
+      "word_count": 222
+    },
+    "hierarchy": {
+      "parent": "PAN-OS® Administrator’s Guide",
+      "children": [
+        "Network Segmentation Using Zones",
+        "How Do Zones Protect the Network?",
+        "Zone Defense",
+        "Configure Zone Protection to Increase Network Security",
+        "DoS Protection Against Flooding of New Sessions"
+      ]
+    }
+  }
+}

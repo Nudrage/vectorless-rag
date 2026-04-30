@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_191",
+  "section_number": "9.2",
+  "header": "Update agent configuration",
+  "content": "Updates the global agent configuration.\nRequires the Scan Manager [40] user role. See Roles.\nAUTHORIZATIONS:\ncloud\nREQUEST BODY SCHEMA:\napplication/json\nobject\nSpecifies settings for automatic unlinking of agents.\nobject\nSpecifies settings for controlling concurrent agent updates.\nboolean\nEnables or disables software updates for agents, subject to any\nconfigured agent exclusions.\nboolean\nauto_unlink\nconcurrent_update\nsoftware_update\nhybrid_scanning_enabled\nContent type\nEnables or disables hybrid scanning for agents.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 197,
+      "end": 198
+    },
+    "content_stats": {
+      "char_count": 521,
+      "word_count": 64
+    },
+    "hierarchy": {
+      "parent": "Agent Config",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

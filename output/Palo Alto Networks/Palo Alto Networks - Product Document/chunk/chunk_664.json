@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_664",
+  "section_number": "1.18.2.6",
+  "header": "QoS Bandwidth Management",
+  "content": "QoS bandwidth management allows you to control traffic flows on a network so that traffic does\nnot exceed network capacity (resulting in network congestion) and also allows you to allocate\nbandwidth for certain types of traffic and for applications and users. With QoS, you can enforce\nbandwidth for traffic on a narrow or a broad scale. A QoS profile rule allows you to set bandwidth\nlimits for individual QoS classes and the total combined bandwidth for all eight QoS classes. As\npart of the steps to Configure QoS, you can attach the QoS profile rule to a physical interface to\nenforce bandwidth settings on the traffic exiting that interface—the individual QoS class settings\nare enforced for traffic matching that QoS class (QoS classes are assigned to traffic matching QoS\nPolicy rules) and the overall bandwidth limit for the profile can be applied to all clear text traffic,\nspecific clear text traffic originating from source interfaces and source subnets, all tunneled traffic,\nand individual tunnel interfaces. You can add multiple profile rules to a single QoS interface to\napply varying bandwidth settings to the traffic exiting that interface.\nThe following fields support QoS bandwidth settings:\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1220\n©2025 Palo Alto Networks, Inc.\nQuality of Service\n• Egress Guaranteed—The amount of bandwidth guaranteed for matching traffic. When the\negress guaranteed bandwidth is exceeded, the firewall passes traffic on a best-effort basis.\nBandwidth that is guaranteed but is unused continues to remain available for all traffic.\nDepending on your QoS configuration, you can guarantee bandwidth for a single QoS class, for\nall or some clear text traffic, and for all or some tunneled traffic.\nExample:\nClass 1 traffic has 5 Gbps of egress guaranteed bandwidth, which means that 5 Gbps is\navailable but is not reserved for class 1 traffic. If Class 1 traffic does not use or only partially\nuses the guaranteed bandwidth, the remaining bandwidth can be used by other classes of\ntraffic. However, during high traffic periods, 5 Gbps of bandwidth is absolutely available for\nclass 1 traffic. During these periods of congestion, any Class 1 traffic that exceeds 5 Gbps is\nbest effort.\n• Egress Max—The overall bandwidth allocation for matching traffic. The firewall drops traffic\nthat exceeds the egress max limit that you set. Depending on your QoS configuration, you can\nset a maximum bandwidth limit for a QoS class, for all or some clear text traffic, for all or some\ntunneled traffic, and for all traffic exiting the QoS interface.\nThe cumulative guaranteed bandwidth for the QoS profile rules attached to the\ninterface must not exceed the total bandwidth allocated to the interface.\nTo define bandwidth settings for QoS classes, see Step Add a QoS profile rule. To then apply\nthose bandwidth settings to clear text and tunneled traffic, and to set the overall bandwidth limit\nfor a QoS interface, see Step Enable QoS on a physical interface.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 17,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1220,
+      "end": 1221
+    },
+    "content_stats": {
+      "char_count": 2988,
+      "word_count": 485
+    },
+    "hierarchy": {
+      "parent": "QoS Concepts",
+      "children": []
+    }
+  }
+}

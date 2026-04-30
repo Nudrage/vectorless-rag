@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_164",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Log format name under crformatter.conf is tls_log_fmt.\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 190\nSyslog Field\nName\nLog Viewer\nData Type Length Format/Description\nPossible\nValues\nNotes / Example\ntimestamp\nN/A\nTimestamp\nISO 8601\neg. timestamp=\"2018-12-07T10:03:48+0000\"\ndevice\nN/A\nString\nSFW\ndevice_name\nN/A\nString\nSF01V\ndevice_id\nN/A\nString\nSFDemo-ff87495\nlog_id\nN/A\nString\neg. log_id=\"010101600001\"\nlog_type\nlog_type\nString\nSSL\neg. log_type=\"SSL\"\nlog_component\nlog_component\nString\nSSL\neg. log_component=\"SSL\"\nlog_subtype\nlog_subtype\nString\nDecrypt\nReject\nReject and\nnotify\nDo not\ndecrypt\nError\neg. log_subtype=\"Decrypt\"\nseverity\nseverity\nString\nInformation eg. severity=\"Information\"\nuser_name\nuser\nString\neg. user_name=\"gaurav\"\nuser_gp\nuser_group\nString\neg. user_gp=\"student\"\nsrc_ip\nsrc_ip\nINET\nIPv4,IPv6\neg. src_ip=\"10.10.10.10\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 191\nsrc_country\nsrc_country\nString\nISO 3166 (A 3)\nCode\neg. src_country=\"IND\"\nsrc_port\nsrc_port\nNumber\neg. src_port=514\ndst_ip\ndst_ip\nINET\nIPv4,IPv6\neg. dst_ip=\"20.20.20.20\"\ndst_country\ndst_country\nString\nISO 3166 (A 3)\nCode\neg. dst_country=\"USA\"\ndst_port\ndst_port\nNumber\neg. dst_port=514\napp_name\napp_name\nString\neg. app_name=\"Skype\"\ncon_id\ncon_id\nString\neg. con_id=1084482152\nrule_id\nrule_id\nNumber\neg. rule_id=11\nprofile_id\nprofile_id\nNumber\neg. profile_id=8448215\nbitmask\nbitmask\nString\nServer certificate\nvalidity bit-mask\neg. bitmask=\"xxx\"\nkey_type\nkey_type\nString\neg. key_type=\"RSA\"\nresumed\nresumed\nNumber\nIs TLS resumed flag\nvalue\ncert_chain_served cert_chain_served String\neg. cert_chain_served=\"xxx\"\nkey_param\nkey_param\nString\neg. key_param=\"xxx\"\nfingerprint\nfingerprint\nString\neg.\nfingerprint=\"d4:1d:8c:d9:8f:00:b2:04:e9:80:09:98:e\ncipher_suite\ncipher_suite\nString\neg. cipher_suite=\"TLS\"\nsni\nsni\nString\neg. sni=\"HTTPS\"\nrule_name\nrule_name\nString\neg. rule_name=\"Network\"\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 192\nprofile_name\nprofile_name\nString\neg. profile_name=\"xxx\"\ntls_version\ntls_version\nString\neg. tls_version=\"xxx\"\nreason\nreason\nString\neg. reason=\"eligible\"\nexceptions\nexception\nString\neg. exceptions=\"av\"\ncategory\ncategory\nString\ne.g. \"Information Technology\"\ncon_name\ncon_name\nString\nconnectionname\nmessage\nmessage\nString\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 193",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 4,
+    "font_size": 14,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 190,
+      "end": 193
+    },
+    "content_stats": {
+      "char_count": 2375,
+      "word_count": 286
+    },
+    "hierarchy": {
+      "parent": "Device Standard Format (Legacy)",
+      "children": []
+    }
+  }
+}

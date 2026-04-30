@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_175",
+  "section_number": "12.1",
+  "header": "Security Monitoring Recommendations:",
+  "content": "For 4907(S): Auditing settings on object were changed.\nAppendix A: Security monitoring recommendations for many audit events\n\nImportant   For this event, also see Appendix A: Security monitoring recommendations for many audit events.\n\nIf you need to monitor events related to specific Windows object types (“Object Type”), for example File or Key, monitor this event for the corresponding “Object Type.”If you\nneed to monitor all SACL changes for specific files, folders, registry keys, or other object types, monitor for “Object Name” field value which has specific object name.\n\nIf you have critical file or registry objects and you need to monitor all modifications (especially changes in SACL), monitor for specific “Object\\Object Name”.\n\nIf you have high-value computers for which you need to monitor all changes for all or specific file or registry objects, monitor for all 4907 events on these computers.\n4908(S): Special Groups Logon table modified.\nEvent Description:\nThis event generates every time Special Groups logon table was modified.\nThis event also generates during system startup.\nThis event is always logged regardless of the \"Audit Policy Change\" sub-category setting.\nMore information about Special Groups auditing can be found here:\nhttp://blogs.technet.com/b/askds/archive/2008/03/11/special-groups-auditing-via-group-policy-preferences.aspx\nhttps://support.microsoft.com/en-us/kb/947223\nNote   For recommendations, see Security Monitoring Recommendations for this event.\nEvent XML:\n- <Event xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\">\n- <System>\n<Provider Name=\"Microsoft-Windows-Security-Auditing\" Guid=\"{54849625-5478-4994-A5BA-3E3B0328C30D}\" />\n<EventID>4908</EventID>\n<Version>0</Version>\n<Level>0</Level>\n© 2016 Microsoft. All rights reserved.\n519\n<Task>13568</Task>\n<Opcode>0</Opcode>\n<Keywords>0x8020000000000000</Keywords>\n<TimeCreated SystemTime=\"2015-10-01T00:20:40.210246600Z\" />\n<EventRecordID>1049511</EventRecordID>\n<Correlation />\n<Execution ProcessID=\"516\" ThreadID=\"532\" />\n<Channel>Security</Channel>\n<Computer>DC01.contoso.local</Computer>\n<Security />\n</System>\n- <EventData>\n<Data Name=\"SidList\">%{S-1-5-21-3457937927-2839227994-823803824-512}</Data>\n</EventData>\n</Event>\nRequired Server Roles: None.\nMinimum OS Version: Windows Server 2008, Windows Vista.\nEvent Versions: 0.\nField Descriptions:\nSpecial Groups [Type = UnicodeString]: contains current list of SIDs (groups or accounts) which are members of Special Groups. Event Viewer automatically tries to resolve SIDs and show\nthe account name. If the SID cannot be resolved, you will see the source data in the event.\nA security identifier (SID) is a unique value of variable length used to identify a trustee (security principal). Each account has a unique SID that is issued by an authority, such\nas an Active Directory domain controller, and stored in a security database. Each time a user logs on, the system retrieves the SID for that user from the database and places it\nin the access token for that user. The system uses the SID in the access token to identify the user in all subsequent interactions with Windows security. When a SID has been\nused as the unique identifier for a user or group, it cannot ever be used again to identify another user or group. For more information about SIDs, see Security Identifiers.\n“HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\Audit\\SpecialGroups” registry value contains current list of SIDs which are included in Special Groups:\n© 2016 Microsoft. All rights reserved.\n520",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 12,
+    "font_name": "Calibri",
+    "page_range": {
+      "start": 519,
+      "end": 521
+    },
+    "content_stats": {
+      "char_count": 3548,
+      "word_count": 459
+    },
+    "hierarchy": {
+      "parent": "Audit Policy Change",
+      "children": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_166",
+  "section_number": "1.38.3",
+  "header": "Field descriptions",
+  "content": "Syslog field\nname\nLog viewer -\nDetail view field\nname\nData\ntype\nLength\nFormat/Description\nPossible values\nNotes/Examples\nlog_type\nlog_type\nString\nEvent\nlog_component\nlog_component\nString\nSSL VPN\nlog_subtype\nlog_subtype\nString\nSystem\npriority\nString\nInformation\nmode\naccess_type\nString\nThe type of connection.\n\"Site to Site\"\n\"Remote Access\"\nstarttime\nstart_time\nTime of the beginning of\nthe connection\n1489578289\nuser_name\nuser\nString\n384\n\"-\" in case of mode \"Site to\nSite\"\n\"someusername\" else\nipaddress\nsrc_ip\nip address of our side\ne.g. \"10.81.234.5\"\nsent_bytes\nbytes_sent\nNumber int32\nNumber of bytes sent\nrecv_bytes\nbytes_received\nNumber int32\nNumber of bytes received\nSophos Firewall 21.5 - Syslog file guide\n© 2025 Sophos Limited.\nPage 194\nstatus\nstatus\nString\n\"Established\"\n\"Terminated\"\nmessage\nmessage\nString\n1024\nMessage describing the\ncurrent event\n\"\"SSL VPN Site to site\nconnection '%s'\nestablished\"\n\"SSL VPN User '%s'\nconnected \"\n\"SSL VPN Site to site\nconnection '%s'\ndisconnected\"\n\"SSL VPN User '%s'\ndisconnected\"\ntimestamp\nevent_timestamp\nconnectionname con_name\nString\n384\nremote_ip\ndst_ip\nip address of other side\ne.g. \"10.81.234.5\"",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 18,
+    "font_name": "TimesNewRomanPS-BoldMT",
+    "page_range": {
+      "start": 194,
+      "end": 195
+    },
+    "content_stats": {
+      "char_count": 1147,
+      "word_count": 163
+    },
+    "hierarchy": {
+      "parent": "SSL VPN",
+      "children": []
+    }
+  }
+}

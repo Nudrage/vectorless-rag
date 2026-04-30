@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_686",
+  "section_number": "1.19.3.5.2",
+  "header": "Cookie Activation Threshold and Strict Cookie Validation",
+  "content": "Cookie validation is always enabled for IKEv2; it helps protect against half-SA DoS attacks. You\ncan configure the global threshold number of half-open SAs that will trigger cookie validation. You\ncan also configure individual IKE gateways to enforce cookie validation for every new IKEv2 SA.\n• The Cookie Activation Threshold is a global VPN session setting that limits the number of\nsimultaneous half-opened IKE SAs (default is 500). When the number of half-opened IKE\nSAs exceeds the Cookie Activation Threshold, the Responder will request a cookie, and the\nInitiator must respond with an IKE_SA_INIT containing a cookie to validate the connection. If\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1254\n©2025 Palo Alto Networks, Inc.\nVPNs\nthe cookie validation is successful, another SA can be initiated. A value of 0 means that cookie\nvalidation is always on.\nThe Responder does not maintain a state of the Initiator, nor does it perform a Diffie-Hellman\nkey exchange, until the Initiator returns the cookie. IKEv2 cookie validation mitigates a DoS\nattack that would try to leave numerous connections half open.\nThe Cookie Activation Threshold must be lower than the Maximum Half Opened SA setting.\nIf you Change the Cookie Activation Threshold for IKEv2 to a very high number (for example,\n65534) and the Maximum Half Opened SA setting remained at the default value of 65535,\ncookie validation is essentially disabled.\n• You can enable Strict Cookie Validation if you want cookie validation performed for every\nnew IKEv2 SA a gateway receives, regardless of the global threshold. Strict Cookie Validation\naffects only the IKE gateway being configured and is disabled by default. With Strict Cookie\nValidation disabled, the system uses the Cookie Activation Threshold to determine whether a\ncookie is needed or not.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 1254,
+      "end": 1255
+    },
+    "content_stats": {
+      "char_count": 1814,
+      "word_count": 287
+    },
+    "hierarchy": {
+      "parent": "IKEv2",
+      "children": []
+    }
+  }
+}

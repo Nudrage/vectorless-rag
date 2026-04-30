@@ -1,0 +1,29 @@
+{
+  "chunk_id": "chunk_476",
+  "section_number": "1.13.12",
+  "header": "Use HTTP Headers to Manage SaaS Application Access",
+  "content": "Unsanctioned usage of SaaS applications can be a way for your users to transmit sensitive\ninformation outside of your network, usually by accessing a consumer version of an application.\nHowever, if you need to allow access to the enterprise version of these applications for specific\nindividuals or organizations, then you can't block the SaaS application entirely.\nYou can use custom HTTP headers to disallow SaaS consumer accounts while allowing a specific\nenterprise account. Many SaaS applications allow or disallow access to applications based on\ninformation contained in specific HTTP headers. You can Create HTTP Header Insertion Entries\nusing Predefined Types to manage access to popular SaaS applications, such as Google G Suite\nand Microsoft Office 365. Palo Alto Networks® uses content updates to maintain predefined rule\nsets specific to these applications, as well as to add new predefined rule sets.\nYou can also Create Custom HTTP Header Insertion Entries if you want to manage access to a\nSaaS application—that uses HTTP headers to limit service access—for which Palo Alto Networks\nhas not provided a predefined set of rules.\nBe aware that commercial SaaS applications always use SSL so decryption is necessary to perform\nHTTP header insertion. You can configure the firewall to decrypt traffic using SSL Forward Proxy\ndecryption if traffic is not already decrypted by an upstream firewall.\nYou don't need a URL Filtering license to use this feature.\nTo understand how to use HTTP headers to manage SaaS applications, see the following:\n• Understand SaaS Custom Headers\n• Domains used by the Predefined SaaS Application Types\n• Create HTTP Header Insertion Entries using Predefined Types\n• Create Custom HTTP Header Insertion Entries",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 856,
+      "end": 856
+    },
+    "content_stats": {
+      "char_count": 1749,
+      "word_count": 274
+    },
+    "hierarchy": {
+      "parent": "App-ID",
+      "children": [
+        "Understand SaaS Custom Headers",
+        "Domains used by the Predefined SaaS Application Types",
+        "Create HTTP Header Insertion Entries using Predefined Types",
+        "Create Custom HTTP Header Insertion Entries"
+      ]
+    }
+  }
+}

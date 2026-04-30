@@ -1,0 +1,27 @@
+{
+  "chunk_id": "chunk_548",
+  "section_number": "1.16.4",
+  "header": "Define Traffic to Decrypt",
+  "content": "A Decryption policy rule allows you to define traffic that you want the firewall to decrypt and\nto define traffic that you choose to exclude from decryption because the traffic is personal or\nbecause of local regulations, for example.\nAttach a Decryption profile to each Decryption policy rule to enable certificate checks, session\nmode checks, failure checks, and protocol and algorithm checks, depending on the profile. These\nchecks prevent risky connections, such as sessions with untrusted certificate issuers, weak\nprotocols, ciphers, and algorithms, and servers that have certificate issues.\nReview the Decryption deployment best practices checklist to ensure that you\nunderstand the recommended best practices.\nBlock known dangerous URL Filtering categories such as malware, phishing, dynamic-dns,\nunknown, command-and-control, proxy-avoidance-and-anonymizers, copyright-infringement,\nextremism, newly-registered-domain, grayware, and parked. If you must allow any of these\ncategories for business reasons, decrypt them and apply strict Security profiles to the traffic.\nURL categories that you should always decrypt if you allow them include: online-storage-and-\nbackup, web-based-email, web-hosting, personal-sites-and-blogs, and content-delivery-networks.\nIn Security policy, block Quick UDP Internet Connections (QUIC) protocol unless for\nbusiness reasons, you want to allow encrypted browser traffic. Chrome and some other\nbrowsers establish sessions using QUIC instead of TLS, but QUIC uses proprietary\nencryption that the firewall can’t decrypt, so potentially dangerous traffic may enter the\nnetwork as encrypted traffic. Blocking QUIC forces the browser to fall back to TLS and\nenables the firewall to decrypt the traffic.\nCreate a Security policy rule to block QUIC on its UDP service ports (80 and 443) and\ncreate a separate rule to block the QUIC application. For the rule that blocks UDP ports\n80 and 443, create a Service (Objects > Services) that includes UDP ports 80 and 443:\nUse the Service to specify the UDP ports to block for QUIC. In the second rule, block the\nQUIC application:\n• Create a Decryption Profile\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n1003\n©2025 Palo Alto Networks, Inc.\nDecryption\n• Create a Decryption Policy Rule",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1003,
+      "end": 1004
+    },
+    "content_stats": {
+      "char_count": 2259,
+      "word_count": 329
+    },
+    "hierarchy": {
+      "parent": "Decryption",
+      "children": [
+        "Create a Decryption Profile",
+        "Create a Decryption Policy Rule"
+      ]
+    }
+  }
+}

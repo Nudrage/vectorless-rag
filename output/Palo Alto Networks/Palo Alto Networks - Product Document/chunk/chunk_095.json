@@ -1,0 +1,24 @@
+{
+  "chunk_id": "chunk_095",
+  "section_number": "1.6.5.1.1",
+  "header": "Define Access to the Web Interface Tabs",
+  "content": "The following table describes the top-level access privileges you can assign to an admin role\nprofile (Device > Admin Roles). You can enable, disable, or define read-only access privileges at\nthe top-level tabs in the web interface.\nAccess Level\nDescription\nEnable\nRead\nOnly\nDisable\nDashboard\nControls access to the Dashboard\ntab. If you disable this privilege, the\nadministrator will not see the tab and will\nnot have access to any of the Dashboard\nwidgets.\nYes\nNo\nYes\nACC\nControls access to the Application\nCommand Center (ACC). If you disable\nthis privilege, the ACC tab will not display\nin the web interface. Keep in mind that if\nyou want to protect the privacy of your\nusers while still providing access to the\nACC, you can disable the Privacy > Show\nFull IP Addresses option and/or the Show\nUser Names In Logs And Reports option.\nYes\nNo\nYes\nMonitor\nControls access to the Monitor tab. If you\ndisable this privilege, the administrator\nwill not see the Monitor tab and will not\nhave access to any of the logs, packet\ncaptures, session information, reports or\nto App Scope. For more granular control\nover what monitoring information the\nadministrator can see, leave the Monitor\noption enabled and then enable or disable\nspecific nodes on the tab as described in\nProvide Granular Access to the Monitor\nTab.\nYes\nNo\nYes\nPolicies\nControls access to the Policies tab. If you\ndisable this privilege, the administrator\nwill not see the Policies tab and will not\nhave access to any policy information. For\nmore granular control over what policy\ninformation the administrator can see,\nfor example to enable access to a specific\ntype of policy or to enable read-only\naccess to policy information, leave the\nPolicies option enabled and then enable\nor disable specific nodes on the tab as\nYes\nNo\nYes\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n139\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nAccess Level\nDescription\nEnable\nRead\nOnly\nDisable\ndescribed in Provide Granular Access to\nthe Policy Tab.\nObjects\nControls access to the Objects tab. If you\ndisable this privilege, the administrator\nwill not see the Objects tab and will\nnot have access to any objects, security\nprofiles, log forwarding profiles,\ndecryption profiles, or schedules. For\nmore granular control over what objects\nthe administrator can see, leave the\nObjects option enabled and then enable\nor disable specific nodes on the tab as\ndescribed in Provide Granular Access to\nthe Objects Tab.\nYes\nNo\nYes\nNetwork\nControls access to the Network tab. If you\ndisable this privilege, the administrator\nwill not see the Network tab and will\nnot have access to any interface, zone,\nVLAN, virtual wire, virtual router, IPsec\ntunnel, DHCP, DNS Proxy, GlobalProtect,\nor QoS configuration information or\nto the network profiles. For more\ngranular control over what objects the\nadministrator can see, leave the Network\noption enabled and then enable or disable\nspecific nodes on the tab as described in\nProvide Granular Access to the Network\nTab.\nYes\nNo\nYes\nDevice\nControls access to the Device tab. If you\ndisable this privilege, the administrator\nwill not see the Device tab and will\nnot have access to any firewall-wide\nconfiguration information, such as User-\nID, high availability, server profile or\ncertificate configuration information. For\nmore granular control over what objects\nthe administrator can see, leave the\nObjects option enabled and then enable\nor disable specific nodes on the tab as\ndescribed in Provide Granular Access to\nthe Device Tab.\nYes\nNo\nYes\nPAN-OS® Administrator’s Guide 10.0 (EoL)\n140\n©2025 Palo Alto Networks, Inc.\nFirewall Administration\nAccess Level\nDescription\nEnable\nRead\nOnly\nDisable\nYou cannot enable access\nto the Admin Roles or\nAdministrators nodes for a\nrole-based administrator even\nif you enable full access to the\nDevice tab.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 5,
+    "font_size": 13,
+    "font_name": "Lato-Bold",
+    "page_range": {
+      "start": 139,
+      "end": 141
+    },
+    "content_stats": {
+      "char_count": 3820,
+      "word_count": 623
+    },
+    "hierarchy": {
+      "parent": "Web Interface Access Privileges",
+      "children": []
+    }
+  }
+}

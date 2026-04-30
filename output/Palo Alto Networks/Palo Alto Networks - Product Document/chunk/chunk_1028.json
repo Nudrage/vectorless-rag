@@ -1,0 +1,32 @@
+{
+  "chunk_id": "chunk_1028",
+  "section_number": "1.24.3",
+  "header": "Zone Defense",
+  "content": "Zone Protection profiles defend zones against flood, reconnaissance, packet-based, and non-\nIP-protocol-based attacks. DoS Protection profiles used in DoS Protection policy rules defend\nspecific, critical devices against targeted flood and resource-based attacks. A DoS attack\noverloads the network or targeted critical systems with large amounts of unwanted traffic an\nattempt to disrupt network services.\nPlan to defend your network against different types of DoS attacks:\n• Application-Based Attacks—Target weaknesses in a particular application and try to exhaust its\nresources so legitimate users can’t use it. An example of this is the Slowloris attack.\n• Protocol-Based Attacks—Also known as state-exhaustion attacks, these attacks target protocol\nweaknesses. A common example is a SYN flood attack.\n• Volumetric Attacks—High-volume attacks that attempt to overwhelm the available network\nresources, especially bandwidth, and bring down the target to prevent legitimate users from\naccessing those resources. An example of this is a UDP flood attack.\nThere are no default Zone Protection profiles or DoS Protection profiles and DoS Protection\npolicy rules. Configure and apply zone protection based on each zone’s traffic characteristics and\nconfigure DoS protection based on the individual critical systems you want to protect in each\nzone.\n• Zone Defense Tools\n• How Do the Zone Defense Tools Work?\n• Firewall Placement for DoS Protection\n• Zone Protection Profiles\n• Packet Buffer Protection\n• DoS Protection Profiles and Policy Rules",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 20,
+    "font_name": "Lato-Regular",
+    "page_range": {
+      "start": 1728,
+      "end": 1728
+    },
+    "content_stats": {
+      "char_count": 1543,
+      "word_count": 226
+    },
+    "hierarchy": {
+      "parent": "Zone Protection and DoS Protection",
+      "children": [
+        "Zone Defense Tools",
+        "How Do the Zone Defense Tools Work?",
+        "Firewall Placement for DoS Protection",
+        "Baseline CPS Measurements for Setting Flood Thresholds",
+        "Zone Protection Profiles",
+        "Packet Buffer Protection",
+        "DoS Protection Profiles and Policy Rules"
+      ]
+    }
+  }
+}

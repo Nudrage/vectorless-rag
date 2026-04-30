@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_548",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully removed the scanner from the scanner\ngroup.\nRESPONSE SCHEMA:\napplication/json\nany\n— 400\nReturned if your request specified invalid parameters or if your request was improperly formatted.\n— 403 Returned if you do not have permission to remove scanners from scanner groups.\ngroup_id\nrequired\nscanner_id\nrequired\nContent type\n— 404\nReturned if Tenable Vulnerability Management could not find the specified scanner or scanner group.\n— 429\nReturned if you attempt to send too many requests in a specific period of time. For more information,\nsee Rate Limiting.\n— 500\nReturned if Tenable Vulnerability Management fails to remove the scanner from the scanner group.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 546,
+      "end": 547
+    },
+    "content_stats": {
+      "char_count": 720,
+      "word_count": 110
+    },
+    "hierarchy": {
+      "parent": "Remove scanner from scanner group",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}

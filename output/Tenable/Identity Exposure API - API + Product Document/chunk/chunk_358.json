@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_358",
+  "section_number": "1.78",
+  "header": "Update a user's password",
+  "content": "Required license type: none\nAUTHORIZATIONS:\nApiKey\nHEADER PARAMETERS\nstring\nDefault: put-your-api-key-here\nThe user's API key\nREQUEST BODY SCHEMA:\napplication/json\nrequired\nstring\n>= 12 characters\n^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\\W).\n{12,}...\nShow pattern\nUser password (one lowercase, one uppercase, one number & one special\ncharacter)\nstring\n>= 12 characters\n^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\\W).\n{12,}...\nShow pattern\nUser password (one lowercase, one uppercase, one number & one special\ncharacter)\nx-api-key\nrequired\noldPassword\nrequired\nnewPassword\nrequired\nContent type",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 2,
+    "font_size": 16,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 211,
+      "end": 211
+    },
+    "content_stats": {
+      "char_count": 582,
+      "word_count": 68
+    },
+    "hierarchy": {
+      "parent": "Identity Exposure (production)",
+      "children": [
+        "Responses"
+      ]
+    }
+  }
+}

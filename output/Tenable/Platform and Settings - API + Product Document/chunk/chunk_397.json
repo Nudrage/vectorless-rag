@@ -1,0 +1,26 @@
+{
+  "chunk_id": "chunk_397",
+  "section_number": "27.5.1",
+  "header": "Responses",
+  "content": "200\nReturned if Tenable Vulnerability Management successfully retrieved the details for the specified OT\nconnector.\ntype\nrequired\nid\nrequired\nRESPONSE SCHEMA:\napplication/json\nstring\nThe unique ID of your Tenable Vulnerability Management instance.\nstring\nThe unique ID of the OT connector.\nstring\nThe OT connectors name.\nstring\nThe sensor type. This value is always ot  for OT connectors.\nstring\nThe OT connector's type. There are two types of OT connectors,\nIndustrial Core Platform (ICP) and Enterprise Manager (EM).\ninteger <int64>\nThe Unix timestamp of when the OT connector was created.\ninteger <int64>\nThe Unix timestamp of when the OT connector was last modified.\ninteger <int64>\nThe Unix timestamp of when the OT connector was last authenticated.\nboolean\nIndicates whether or not the OT connector is enabled.\n— 400 Returned if the OT connector id or type is missing or invalid.\n— 403 Returned if you do not have permission to view the OT connector.\n— 404 Returned if the specified OT connector id doesn't exist.\n500\nReturned if Tenable Vulnerability Management encountered an error while attempting to retrieve the\nOT connector details.\nRESPONSE SCHEMA:\napplication/json\ninteger\nThe HTTP status code.\ncontainerUuid\nid\nname\ntype\nsubType\ncreated\nmodified\nlastAuth\nenabled\nstatusCode\nstring\nThe HTTP status text.\nstring\nA brief message describing the error Tenable Vulnerability Management\nencountered.",
+  "chunk_type": "font_based",
+  "metadata": {
+    "header_level": 3,
+    "font_size": 14,
+    "font_name": "Unnamed-T3",
+    "page_range": {
+      "start": 378,
+      "end": 380
+    },
+    "content_stats": {
+      "char_count": 1407,
+      "word_count": 215
+    },
+    "hierarchy": {
+      "parent": "Get OT connector details",
+      "children": [
+        "Response samples"
+      ]
+    }
+  }
+}
